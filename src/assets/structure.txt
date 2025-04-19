@@ -1,0 +1,17 @@
+/assets
+    /videos
+        - engineering-bg.mp4 (Video de fondo mostrando trabajo de ingeniería)
+        - testimonial1.mp4 (Testimonio cliente satisfecho)
+        - testimonial2.mp4 (Testimonio abogado colaborador)
+    /images
+        /cases
+            - structural-damage.jpg
+            - water-damage.jpg
+            - construction-defect.jpg
+        /logos
+            - trustpilot.svg
+            - logo-tribunal.png
+            - logo-colegio.png
+        /team
+            - engineer1.jpg
+            - engineer2.jpg

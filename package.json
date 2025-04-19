@@ -1,0 +1,25 @@
+{
+  "name": "perito11ty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx eleventy",
+    "serve": "npx eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/postcss": "^4.0.17",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.17"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^6.0.1",
+    "@grimlink/eleventy-plugin-lucide-icons": "^2.1.3"
+  }
+}

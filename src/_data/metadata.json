@@ -1,0 +1,117 @@
+{
+  "site": {
+    "title": "Perito Barcelona - Informes Periciales de Construcción y Seguros",
+    "description": "Expertos en peritaciones técnicas, judiciales y de seguros en Barcelona. Ofrecemos soluciones profesionales y rigurosas para particulares y empresas.",
+    "url": "https://peritobarcelona.com",
+    "themeColor": "#2048e6"
+  },
+  "contact": {
+    "email": "info@peritobarcelona.com",
+    "phoneNumber": "+34 932 123 456",
+    "address": {
+      "street": "Calle Aragón 123",
+      "city": "Barcelona",
+      "postalCode": "08015",
+      "region": "Cataluña",
+      "country": "España"
+    },
+    "socialMedia": {
+      "linkedin": "https://linkedin.com/company/peritobarcelona",
+      "twitter": "https://twitter.com/peritobarcelona",
+      "facebook": "https://facebook.com/peritobarcelona",
+      "instagram": "https://instagram.com/peritobarcelona"
+    }
+  },
+  "languages": {
+    "es": "Español",
+    "ca": "Català",
+    "en": "English"
+  },
+  "mainMenu": [
+    {
+      "name": "Inicio",
+      "path": "/",
+      "icon": "Home",
+      "hasDropdown": false
+    },
+    {
+      "name": "Servicios",
+      "path": "/servicios",
+      "icon": "Services",
+      "hasDropdown": true
+    },
+    {
+      "name": "Sobre Nosotros",
+      "path": "/sobre-nosotros",
+      "icon": "Team",
+      "hasDropdown": false
+    },
+    {
+      "name": "Blog",
+      "path": "/blog",
+      "icon": "Blog",
+      "hasDropdown": false
+    },
+    {
+      "name": "Contacto",
+      "path": "/contacto",
+      "icon": "Contact",
+      "hasDropdown": false
+    }
+  ],
+  "services": [
+    {
+      "name": "Peritaje de Seguros",
+      "path": "peritaje-seguros",
+      "icon": "Shield",
+      "description": "Valoración de daños y siniestros para aseguradoras"
+    },
+    {
+      "name": "Peritaje Técnico",
+      "path": "peritaje-tecnico",
+      "icon": "Building",
+      "description": "Análisis de estructuras e instalaciones"
+    },
+    {
+      "name": "Peritaje Judicial",
+      "path": "peritaje-judicial",
+      "icon": "Scale",
+      "description": "Informes periciales para procedimientos judiciales"
+    },
+    {
+      "name": "Valoraciones",
+      "path": "valoraciones",
+      "icon": "Calculator",
+      "description": "Tasación de inmuebles y activos"
+    },
+    {
+      "name": "Patologías Constructivas",
+      "path": "patologias-constructivas",
+      "icon": "Microscope",
+      "description": "Diagnóstico de defectos en edificaciones"
+    },
+    {
+      "name": "ITE y Certificados",
+      "path": "ite-certificados",
+      "icon": "Document",
+      "description": "Inspecciones técnicas y certificaciones"
+    }
+  ],
+  "translations": {
+    "nav": {
+      "budget": "Solicitar Presupuesto",
+      "contact": "Contacto",
+      "services": "Servicios",
+      "about": "Sobre Nosotros"
+    },
+    "cta": {
+      "request": "Solicitar Peritaje",
+      "learn": "Más Información",
+      "contact": "Contactar Ahora"
+    },
+    "hero": {
+      "title": "Informes Periciales que Ganan Casos",
+      "subtitle": "Especialistas en construcción y seguros"
+    }
+  }
+}
