@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perito Barcelona - Informes Periciales de Construcción y Seguros</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         :root {
             --color-dark: #0B1030;
@@ -119,37 +118,47 @@
             align-items: center;
             padding: 15px 0;
             height: 64px;
+            font-weight: 600;
         }
         
         /* Logo */
         .logo-link {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 1em;
             text-decoration: none;
             color: var(--color-dark);
-            transition: color 0.3s, transform 0.3s;
+            font-size: 2rem;
+            transition: color 0.3s, transform 0.2s;
         }
         
-        .logo-link:hover {
-            transform: translateY(-2px);
-        }
         
         .logo-svg {
-            height: 40px;
+            height: 3.5rem;
             width: auto;
             color: var(--color-accent);
-            filter: drop-shadow(0 2px 4px rgba(0, 184, 212, 0.2));
+            filter: drop-shadow(0 4px 8px rgba(0, 184, 212, 0.2));
             transition: transform 0.3s, filter 0.3s;
+        }
+
+        .logo-svg:hover {
+            color: var(--color-accent);
         }
         
         .logo-link:hover .logo-svg {
-            transform: scale(1.05);
             filter: drop-shadow(0 4px 8px rgba(0, 184, 212, 0.3));
         }
         
         .logo h1 {
             flex: 1;
+        }
+
+        .logo {
+            transition: color 0.3s ease-in-out;
+        }
+
+        .logo:hover {
+            color: var(--color-accent);
         }
         
         .nav-list {
@@ -169,7 +178,7 @@
             gap: 8px;
             padding: 8px 0;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
             letter-spacing: 1px;
             text-transform: uppercase;
             color: #666;
@@ -423,7 +432,6 @@
         }
         
         .service-card:hover {
-            transform: translateY(-15px);
             box-shadow: 0 25px 45px rgba(0,0,0,0.12);
         }
         
@@ -522,7 +530,6 @@
         }
         
         .process-step:hover {
-            transform: translateY(-5px);
             background-color: rgba(255, 255, 255, 0.1);
         }
         
@@ -588,7 +595,6 @@
         }
         
         .testimonial-card:hover {
-            transform: translateY(-10px);
         }
         
         .testimonial-text {
@@ -1119,7 +1125,6 @@
         }
 
         .cta-btn:hover {
-            transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 184, 212, 0.3);
         }
 
@@ -1417,37 +1422,35 @@
                     <ul class="nav-list">
                         <li class="nav-item">
                             <a href="/" class="nav-link">
-                                <i class="fas fa-home nav-icon"></i>
+                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
                                 <span>Inicio</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#servicios" class="nav-link">
-                                <i class="fas fa-file-alt nav-icon"></i>
+                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text-icon lucide-file-text"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
                                 <span>Servicios</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#proceso" class="nav-link">
-                                <i class="fas fa-book nav-icon"></i>
-                                <span>Metodología</span>
+                            <a href="#casos" class="nav-link">
+                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-icon lucide-book-open"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+                                <span>Casos de éxito</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#testimonios" class="nav-link">
-                                <i class="fas fa-comment nav-icon"></i>
-                                <span>Casos</span>
+                            <a href="#blog" class="nav-link">
+                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square-icon lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <span>Blog</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#contacto" class="nav-link">
-                                <i class="fas fa-envelope nav-icon"></i>
+                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                                 <span>Contacto</span>
                             </a>
                         </li>
-                    </ul>
-                    
-                   
+                    </ul>                   
                 </nav>
             </div>
         </div>
@@ -1736,9 +1739,9 @@
                         </div>
                         <p class="footer-about">Expertos en informes periciales de construcción y seguros. Garantía de calidad y profesionalidad.</p>
                         <div class="footer-socials">
-                            <a href="#" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+                            <a href="#" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+                            <a href="#" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
                         </div>
                     </div>
                     <div class="footer-col">
