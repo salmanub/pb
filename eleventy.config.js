@@ -1,24 +1,48 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 import cssnano from 'cssnano';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
 
+// Definir __dirname para módulos ES
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/scripts");
+  eleventyConfig.addPassthroughCopy("src/assets/fonts");
 
-   // Favicon shortcode
-   let faviconPath = fs
-      .readFileSync(path.join( "src", "assets", "images", "logos", "favicon.txt"), "utf8")
-      .trim();
+  // Leer el contenido del favicon SVG como Data URI (opcional)
+  const faviconPath = path.join(__dirname, "src", "assets", "images", "logos", "favicon.txt");
+  const faviconSVGDataURI = fs.existsSync(faviconPath) 
+    ? fs.readFileSync(faviconPath, "utf8").trim()
+    : null;
+
+  // Shortcode para favicons - nombre cambiado a "favicon" para coincidir con {% favicon %}
+  eleventyConfig.addShortcode("favicons", function () {
+    return `
+      <!-- Favicons básicos -->
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any">
+      ${faviconSVGDataURI ? `<link rel="icon" type="image/svg+xml" href="${faviconSVGDataURI}">` : ''}
+      <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48x48.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
       
-    eleventyConfig.addShortcode("favicon", function () {
-      return `<link rel="icon" type="image/svg+xml" href="${faviconPath}">`;
-    });
+      <!-- PWA/Mobile icons -->
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+      <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+      
+      <!-- Manifest y configuración del navegador -->
+      <link rel="manifest" href="/site.webmanifest">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+    `;
+  });
     
   //compile tailwind before eleventy processes the files
   eleventyConfig.on('eleventy.before', async () => {

@@ -3,7 +3,8 @@
     "title": "Perito Barcelona - Informes Periciales de Construcción y Seguros",
     "description": "Expertos en peritaciones técnicas, judiciales y de seguros en Barcelona. Ofrecemos soluciones profesionales y rigurosas para particulares y empresas.",
     "url": "https://peritobarcelona.com",
-    "themeColor": "#2048e6"
+    "themeColor": "#2048e6",
+    "faviconDataUriPath": "/images/logos/favicon.txt"
   },
   "contact": {
     "email": "info@peritobarcelona.com",
