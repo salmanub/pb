@@ -4,7 +4,6 @@ import path from 'path';
 import cssnano from 'cssnano';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
-import eleventyLucideicons from "@grimlink/eleventy-plugin-lucide-icons";
 
 
 export default function (eleventyConfig) {
@@ -12,15 +11,15 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/scripts");
 
-  eleventyConfig.addPlugin(eleventyLucideicons, {
-    class: "w-4 h-4",
-    width: "1em",
-    height: "1em",
-    stroke: "currentColor",
-    "stroke-width": 2,
-    "aria-hidden": true
-  });
-
+   // Favicon shortcode
+   let faviconPath = fs
+      .readFileSync(path.join( "src", "assets", "images", "logos", "favicon.txt"), "utf8")
+      .trim();
+      
+    eleventyConfig.addShortcode("favicon", function () {
+      return `<link rel="icon" type="image/svg+xml" href="${faviconPath}">`;
+    });
+    
   //compile tailwind before eleventy processes the files
   eleventyConfig.on('eleventy.before', async () => {
     const tailwindInputPath = path.resolve('./src/assets/styles/index.css');

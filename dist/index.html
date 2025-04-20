@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=width=device-width, initial-scale=1.0">
     <title>Perito Barcelona - Informes Periciales de Construcción y Seguros</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='500' zoomAndPan='magnify' viewBox='0 0 375 374.999991' height='500' preserveAspectRatio='xMidYMid meet' %3E%3Cdefs%3E%3CclipPath id='2717b77dc4'%3E%3Cpath d='M 223.109375 37.496094 L 314.597656 37.496094 L 314.597656 337.6875 L 223.109375 337.6875 Z M 223.109375 37.496094 ' clip-rule='nonzero'/%3E%3C/clipPath%3E%3CclipPath id='9422b2d12e'%3E%3Cpath d='M 314.597656 67.992188 L 314.597656 337.496094 L 223.109375 307 L 223.109375 37.496094 Z M 314.597656 67.992188 ' clip-rule='nonzero'/%3E%3C/clipPath%3E%3CclipPath id='b07c821656'%3E%3Cpath d='M 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 L 146.625 249.945312 Z M 146.625 37.496094 ' clip-rule='nonzero'/%3E%3C/clipPath%3E%3CclipPath id='55959a45ff'%3E%3Cpath d='M 146.625 62.996094 L 146.625 249.945312 L 223.117188 224.449219 L 223.117188 37.496094 Z M 146.625 62.996094 ' clip-rule='nonzero'/%3E%3C/clipPath%3E%3CclipPath id='a83aa56b9b'%3E%3Cpath d='M 112.101562 111.523438 L 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 Z M 112.101562 111.523438 ' clip-rule='nonzero'/%3E%3C/clipPath%3E%3CclipPath id='1c3af9afe2'%3E%3Cpath d='M 177.742188 133.402344 L 177.742188 291.402344 L 112.101562 269.523438 L 112.101562 111.523438 Z M 177.742188 133.402344 ' clip-rule='nonzero'/%3E%3C/clipPath%3E%3CclipPath id='a2157cede2'%3E%3Cpath d='M 60.398438 111.367188 L 112.109375 111.367188 L 112.109375 237.410156 L 60.398438 237.410156 Z M 60.398438 111.367188 ' clip-rule='nonzero'/%3E%3C/clipPath%3E%3CclipPath id='1adccc21aa'%3E%3Cpath d='M 60.398438 128.75 L 60.398438 237.410156 L 112.109375 220.175781 L 112.109375 111.515625 Z M 60.398438 128.75 ' clip-rule='nonzero'/%3E%3C/clipPath%3E%3C/defs%3E%3Crect x='-37.5' width='450' fill='%23ffffff' y='-37.499999' height='449.999989' fill-opacity='1'/%3E%3Crect x='-37.5' width='450' fill='%230056b3' y='-37.499999' height='449.999989' fill-opacity='1'/%3E%3Cg clip-path='url(%232717b77dc4)'%3E%3Cg clip-path='url(%239422b2d12e)'%3E%3Cpath fill='%23ffffff' d='M 314.597656 37.496094 L 314.597656 337.332031 L 223.109375 337.332031 L 223.109375 37.496094 Z M 314.597656 37.496094 ' fill-opacity='1' fill-rule='nonzero'/%3E%3C/g%3E%3C/g%3E%3Cg clip-path='url(%23b07c821656)'%3E%3Cg clip-path='url(%2355959a45ff)'%3E%3Cpath fill='%23c0c0c0' d='M 146.625 249.945312 L 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 Z M 146.625 249.945312 ' fill-opacity='1' fill-rule='nonzero'/%3E%3C/g%3E%3C/g%3E%3Cg clip-path='url(%23a83aa56b9b)'%3E%3Cg clip-path='url(%231c3af9afe2)'%3E%3Cpath fill='%23ffffff' d='M 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 L 112.101562 111.523438 Z M 177.742188 111.523438 ' fill-opacity='1' fill-rule='nonzero'/%3E%3C/g%3E%3C/g%3E%3Cg clip-path='url(%23a2157cede2)'%3E%3Cg clip-path='url(%231adccc21aa)'%3E%3Cpath fill='%23c0c0c0' d='M 60.398438 237.410156 L 60.398438 111.570312 L 112.109375 111.570312 L 112.109375 237.410156 Z M 60.398438 237.410156 ' fill-opacity='1' fill-rule='nonzero'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E">
     <style>
         :root {
             --color-dark: #0B1030;
@@ -269,6 +270,63 @@
         .mobile-menu-container {
             padding-top: 90px;
             padding-bottom: 32px;
+        }
+        
+        .mobile-nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .mobile-nav-item {
+            margin-bottom: 1rem;
+        }
+        
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--color-dark);
+            font-size: 1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-nav-link:hover {
+            color: var(--color-accent);
+        }
+        
+        .mobile-nav-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--color-accent);
+        }
+        
+        .mobile-footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .mobile-contact-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--color-dark);
+            font-size: 1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-contact-link:hover {
+            color: var(--color-accent);
+        }
+        
+        .mobile-cta-container {
+            text-align: center;
         }
         
         /* Hero Section - Updated */
@@ -1480,11 +1538,54 @@
     <div id="mobileMenu" class="mobile-menu">
         <div class="container mobile-menu-container">
             <nav class="mobile-nav">
-                <!-- ...existing mobile navigation code... -->
+                <ul class="mobile-nav-list">
+                    <li class="mobile-nav-item">
+                        <a href="/" class="mobile-nav-link">
+                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#servicios" class="mobile-nav-link">
+                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                            <span>Servicios</span>
+                        </a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#casos" class="mobile-nav-link">
+                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+                            <span>Casos de éxito</span>
+                        </a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#blog" class="mobile-nav-link">
+                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#contacto" class="mobile-nav-link">
+                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
             </nav>
             
             <div class="mobile-footer">
-                <!-- ...existing mobile footer code... -->
+                <div class="mobile-footer-contact">
+                    <a href="tel:+34932123456" class="mobile-contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>+34 932 123 456</span>
+                    </a>
+                    <a href="mailto:info@peritobarcelona.com" class="mobile-contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>info@peritobarcelona.com</span>
+                    </a>
+                </div>
+                <div class="mobile-cta-container">
+                    <a href="/presupuesto" class="cta-btn" style="width: 100%;">SOLICITAR PRESUPUESTO</a>
+                </div>
             </div>
         </div>
     </div>

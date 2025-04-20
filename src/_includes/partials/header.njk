@@ -1,0 +1,65 @@
+{% set currentLanguage = page.lang or lang %} 
+{% set defaultLanguage = metadata.default_lang %}
+{% set navPages = collections.langCollections[currentLanguage] | eleventyNavigation %}
+
+{% macro renderNavListItem(entry) %}
+    {% if not entry.notshow %}
+    <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="{{ entry.url }}" 
+         class="{% if entry.url == page.url %}active{% endif %}"
+         itemprop="url"
+         {% if entry.url == page.url %} aria-current="page" {% endif %}>
+        <span itemprop="name">{{ entry.title }}</span>
+      </a>
+    </li>
+    {% endif %}
+{% endmacro %}
+
+<header class="site-header" itemscope itemtype="https://schema.org/WPHeader">
+    <div class="container">
+        <nav class="main-nav">
+            <a href="{% if lang == 'es' %}/{% else %}/{{ lang | slugify }}/{% endif %}" class="logo">   
+                {% favicon %}
+
+                <span class="logo-text" itemprop="name">
+                    {{metadata.title}}.
+                </span>
+                
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="hamburger-menu" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+                
+                <li class="language-switcher">
+                    <ul class="language-list">
+                        {% for language in metadata.languages %}
+                            {% set translatedUrl = '' %}
+                            {% for translation in translations %}
+                                {% if translation.lang == language %}
+                                    {% set translatedUrl = translation.permalink %}
+                                {% endif %}
+                            {% endfor %}
+                            
+                            <li>
+                                <a href="{{ translatedUrl }}" 
+                                   class="lang-link {% if language == currentLanguage %}active{% endif %}"
+                                   {% if language == currentLanguage %}aria-current="true"{% endif %}>
+                                    {{ language | upper }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="{{ metadata.headerCTA[lang].btn1.link }}" class="btn btn-secondary">{{metadata.headerCTA[lang].btn1.title}}</a>
+                <a href="{{ metadata.headerCTA[lang].btn1.link }}" class="btn btn-primary">{{metadata.headerCTA[lang].btn2.title}}</a>
+            </div>
+        </nav>
+    </div>
+</header>
