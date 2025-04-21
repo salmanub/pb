@@ -2561,7 +2561,7 @@ h2 strong {
     border-top: 1px solid rgba(255,255,255,0.1);
     order: 5;
     position: relative;
-    max-width: 100%;
+    justify-content: space-between;
 }
 
 .trust-logos img {
@@ -2580,11 +2580,12 @@ h2 strong {
 }
 
 .trust-caption {
-    width: 100%;
-    text-align: center;
-    margin-top: 1.5rem;
     color: rgba(255,255,255,0.6);
     font-size: 0.875rem;
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+    text-align: right;
 }
 
 @media (max-width: 991px) {
@@ -2616,9 +2617,13 @@ h2 strong {
 
     .trust-logos {
         justify-content: center;
-        padding: 2rem 0;
-        margin: 2rem auto 0;
-        max-width: 400px;
+        gap: 1.5rem;
+    }
+
+    .trust-caption {
+        text-align: center;
+        margin-top: 1.5rem;
+        flex: 0 0 100%;
     }
 }
 
