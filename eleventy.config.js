@@ -46,17 +46,43 @@ export default function (eleventyConfig) {
     
   //compile tailwind before eleventy processes the files
   eleventyConfig.on('eleventy.before', async () => {
-    const tailwindInputPath = path.resolve('./src/assets/styles/index.css');
-
-    const tailwindOutputPath = './dist/assets/styles/index.css';
-
-    const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
-
-    const outputDir = path.dirname(tailwindOutputPath);
+    // Procesar global.css
+    const globalInputPath = path.resolve('./src/assets/styles/global.css');
+    const globalOutputPath = './dist/assets/styles/global.css';
+    
+    const globalContent = fs.readFileSync(globalInputPath, 'utf8');
+    
+    // Asegurar que existe el directorio de salida
+    const outputDir = path.dirname(globalOutputPath);
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
+    // Procesar global.css
+    const globalResult = await postcss([
+      cssnano({
+        preset: ['default', {
+          discardComments: {
+            removeAll: true,
+          },
+          normalizeWhitespace: true,
+          minifyFontValues: true,
+          minifyGradients: true
+        }]
+      })
+    ]).process(globalContent, {
+      from: globalInputPath,
+      to: globalOutputPath
+    });
+
+    fs.writeFileSync(globalOutputPath, globalResult.css);
+
+    // Procesar tailwind
+    const tailwindInputPath = path.resolve('./src/assets/styles/index.css');
+    const tailwindOutputPath = './dist/assets/styles/index.css';
+    
+    const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
+    
     const result = await processor.process(cssContent, {
       from: tailwindInputPath,
       to: tailwindOutputPath,
@@ -76,7 +102,14 @@ export default function (eleventyConfig) {
     }),
     //minify tailwind css
     cssnano({
-      preset: 'default',
+      preset: ['default', {
+        discardComments: {
+          removeAll: true,
+        },
+        normalizeWhitespace: true,
+        minifyFontValues: true,
+        minifyGradients: true
+      }]
     }),
   ]);
 

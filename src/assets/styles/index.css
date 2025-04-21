@@ -1,1 +1,48 @@
 @import 'tailwindcss';
+
+/* Configuración de fuentes */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@layer base {
+  html {
+    @apply font-main text-dark bg-gray-50 antialiased;
+  }
+  
+  body {
+    @apply overflow-x-hidden leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white bg-accent rounded-lg shadow-cta transition-all duration-300 hover:shadow-cta-hover hover:-translate-y-0.5;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent text-accent border-2 border-accent shadow-none hover:bg-accent/10;
+  }
+  
+  .nav-link {
+    @apply flex items-center gap-2 px-2 py-2 text-nav font-semibold uppercase tracking-wider text-gray-600 transition-colors hover:text-accent;
+  }
+}
+
+@layer utilities {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}

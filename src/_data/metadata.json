@@ -23,11 +23,21 @@
       "instagram": "https://instagram.com/peritobarcelona"
     }
   },
-  "languages": {
-    "es": "Español",
-    "ca": "Català",
-    "en": "English"
-  },
+  "defaultLanguage": "es",
+  "availableLanguages": [
+    {
+      "code": "es",
+      "name": "Español"
+    },
+    {
+      "code": "ca",
+      "name": "Català"
+    },
+    {
+      "code": "en",
+      "name": "English"
+    }
+  ],
   "mainMenu": [
     {
       "name": "Inicio",
