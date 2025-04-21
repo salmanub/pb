@@ -2,6 +2,7 @@
     <div class="hero-wrapper">
         <div class="hero-container">
             <div class="hero-text">
+                <span class="hero-tag">PERITO JUDICIAL EN BARCELONA</span>
                 <div class="proof-header">
                     <div class="trust-badges">
                         <div class="badge-item">
@@ -70,33 +71,37 @@
 
 <style>
 .hero-full {
-    min-height: max(92vh, 700px);
-    padding-top: var(--header-height, 70px); /* Añadido padding-top fijo */
+    min-height: 90vh; /* Reducido de 100vh a 90vh */
+    padding-top: var(--header-height, 70px);
+    margin-top: 0;
     background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
     color: white;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .hero-wrapper {
     position: relative;
     z-index: 2;
+    width: 100%;
+    min-height: calc(90vh - var(--header-height, 70px)); /* Ajustado para coincidir */
     display: flex;
     align-items: center;
-    min-height: calc(92vh - var(--header-height, 70px)); /* Ajustado para compensar el padding */
 }
 
 .hero-container {
     width: min(1400px, 95%);
     margin-left: max(5%, 2rem);
-    padding: clamp(3rem, 8vh, 6rem) 0;
+    padding: clamp(2rem, 6vh, 4rem) 0; /* Reducido el padding vertical */
 }
 
 .hero-image {
     position: absolute;
     top: 0;
     right: 0;
-    width: 55%;
+    width: 45%; /* Reducido de 55% a 45% */
     height: 100%;
     z-index: 1;
 }
@@ -109,47 +114,88 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    clip-path: polygon(100px 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(150px 0, 100% 0, 100% 100%, 50px 100%); /* Ajustada la diagonal */
     opacity: 0.9;
+}
+
+.hero-tag {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    display: inline-block;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.hero-tag::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--color-accent);
+    transform: translateY(-50%);
 }
 
 @media (max-width: 991px) {
     .hero-full {
-        min-height: auto;
+        min-height: 90vh;
+        padding-top: var(--header-height, 70px);
     }
 
     .hero-wrapper {
-        flex-direction: column;
-        padding: 2rem 0; /* Eliminado padding-top extra */
         min-height: auto;
+        padding: rem 0;
+        flex-direction: column;
     }
 
     .hero-container {
         width: min(650px, 95%);
         margin: 0 auto;
-        padding: 2rem 0;
+        padding: 0;
     }
 
     .hero-image {
         position: relative;
         width: 100%;
-        height: 400px;
-        margin-top: 2rem;
+        height: 300px;
     }
 
     .hero-image img {
         clip-path: none;
         opacity: 0.8;
     }
+
+    .hero-tag {
+        padding: 0;
+        margin-bottom: rem;
+    }
+
+    .hero-tag::before {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
+    .hero-wrapper {
+        padding: 0rem 0;
+        min-height: auto; /* Permite altura automática en móvil */
+    }
+
     .hero-container {
-        padding-top: 1rem; /* Reducido el padding superior en móvil */
+        padding-top: 1rem;
     }
 
     .hero-image {
         height: 300px;
+    }
+
+    h2 {
+        font-size: clamp(2rem, 3vw + 1rem, 2.5rem);
     }
 }
 
