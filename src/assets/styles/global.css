@@ -1,8 +1,24 @@
 /* Configuración de fuentes locales */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
 :root {
     --color-dark: #0B1030;
     --color-accent: #00B8D4;
-    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-main: 'Montserrat', sans-serif;
 }
 
 * {
@@ -22,7 +38,7 @@ body {
 .container {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 clamp(1rem, 3vw, 5%);
+    padding: 0 5%;
 }
 
 /* Main Nav Styling - Updated */
@@ -60,56 +76,12 @@ body {
     }
     
     .mobile-controls {
-        display: flex !important;
-        gap: 8px; /* Reducido de 12px */
+        display: flex;
     }
     
     /* Ajuste para el contenido principal */
     .hero {
         padding-top: 0 !important; /* Anular el padding porque ya lo tenemos en el body */
-    }
-}
-
-/* Navegación responsive mejorada */
-@media (min-width: 992px) {
-    .nav-list {
-        display: flex;
-        flex-wrap: nowrap;
-        margin-right: 24px;
-        width: auto;
-    }
-
-    .nav-item {
-        white-space: nowrap;
-        margin-left: 20px; /* Reducido de 40px */
-    }
-
-    .nav-link {
-        font-size: 13px; /* Reducido de 14px */
-        padding: 8px 4px;
-    }
-}
-
-/* Control de visibilidad basado en el espacio disponible */
-@media (max-width: 1200px) {
-    .nav-link {
-        gap: 4px; /* Reducido de 8px */
-    }
-    
-    .nav-icon {
-        width: 14px; /* Reducido de 16px */
-        height: 14px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .nav-item {
-        margin-left: 15px;
-    }
-    
-    .nav-link {
-        font-size: 12px;
-        letter-spacing: 0.5px;
     }
 }
 
@@ -291,7 +263,7 @@ body {
 .mobile-controls {
     display: flex;
     align-items: center;
-    gap: 8px; /* Reducido de 12px */
+    gap: 12px;
 }
 
 .mobile-cta {
@@ -306,8 +278,8 @@ body {
 .menu-toggle {
     position: relative;
     z-index: 50;
-    width: 36px; /* Reducido de 40px */
-    height: 36px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -315,8 +287,6 @@ body {
     border: none;
     cursor: pointer;
     color: var(--color-dark);
-    padding: 0;
-    margin: 0;
 }
 
 .menu-icon {
@@ -651,6 +621,175 @@ body {
     opacity: 0.9;
     max-width: 90%;
     line-height: 1.8;
+}
+
+/* Hero Sections - Nueva estructura */
+.section-hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
+    color: white;
+    padding: var(--section-padding);
+    display: grid;
+    align-items: center;
+}
+
+.section-hero .container {
+    width: 100%;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.trust-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+/* Badges System */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 100px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.primary-badge {
+    background: rgba(0, 184, 212, 0.1);
+    color: var(--color-accent);
+}
+
+.rating-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 100px;
+    font-size: 0.875rem;
+}
+
+.stars {
+    color: #FFD700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+}
+
+.feature-icon {
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.feature-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+}
+
+.feature-icon.success {
+    background: linear-gradient(135deg, #00B8D4, #00E5FF);
+}
+
+.feature-icon.speed {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.feature-text strong {
+    font-size: 1.125rem;
+    color: white;
+    line-height: 1;
+}
+
+.feature-text span {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Icons System */
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        text-align: center;
+        align-items: center;
+    }
+
+    .trust-wrapper {
+        justify-content: center;
+    }
+
+    .feature-card {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-hero {
+        min-height: auto;
+        padding-top: calc(var(--header-height) + 2rem);
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
 
 /* Servicios Section - Mejorado */

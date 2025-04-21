@@ -18,46 +18,11 @@
     
     {% include "partials/navBar.njk" %}
     
-    <header class="hero">
-        <div class="hero-left">
-            <div class="logo-text">PERITO JUDICIAL EN BARCELONA</div>
-            <h1>INFORMES PERICIALES <strong>QUE GANAN CASOS</strong></h1>
-            <p class="tagline">Informes de ingeniería civil con rigor científico y claridad expositiva. Especialistas en construcción y seguros.</p>
-            <a href="#contacto" class="cta-btn">SOLICITAR AHORA</a>
-        </div>
-        <div class="hero-right">
-            <div class="form-container">
-                <h2 class="form-title">EVALUACIÓN EXPRÉS</h2>
-                <p style="margin-bottom: 2rem;">Respuesta profesional en menos de 24 horas</p>
-                <form id="express-form">
-                    <div class="input-group">
-                        <input type="text" class="input-field" placeholder="Nombre y Apellidos" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="tel" class="input-field" placeholder="Teléfono" required>
-                    </div>
-                    <div class="input-group">
-                        <select class="input-field" required>
-                            <option value="" disabled selected>Seleccione tipo de informe</option>
-                            <option value="construccion">Peritaje de Construcción</option>
-                            <option value="seguros">Peritaje para Seguros</option>
-                            <option value="judicial">Informe Judicial</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="cta-btn" style="width: 100%;">SOLICITAR EVALUACIÓN</button>
-                </form>
-            </div>
-        </div>
-    </header>
+    {# {% include "partials/heroWithProof.njk" %} #}
+
+    {# {% include "partials/heroWithForm.njk" %} #}
+    {% include "partials/heroWithImage.njk" %}
     
-    <header class="hero-alt">
-        <div class="hero-alt-content">
-            <div class="logo-text">PERITO EXPERTO EN EDIFICACIÓN</div>
-            <h2>INFORMES TÉCNICOS <strong>CON GARANTÍA</strong></h2>
-            <p class="tagline">Soluciones técnicas avanzadas para casos complejos en construcción y seguros. Confianza y profesionalidad.</p>
-            <a href="#contacto" class="cta-btn">SOLICITAR INFORME</a>
-        </div>
-    </header>
     
     <section id="servicios">
         <div class="container">
@@ -88,6 +53,25 @@
     </section>
 
     <section id="proceso" class="process-section">
+        <picture class="process-background">
+            <source
+                media="(min-width: 1200px)"
+                srcset="/assets/images/perito-construccion-obra-edificacion-1280.avif"
+                type="image/avif"
+            >
+            <source
+                media="(min-width: 768px)"
+                srcset="/assets/images/perito-construccion-obra-edificacion-800.avif"
+                type="image/avif"
+            >
+            <img
+                src="/assets/images/perito-construccion-obra-edificacion-640.avif"
+                alt="Fondo proceso pericial"
+                loading="lazy"
+                decoding="async"
+                style="position: absolute; top: 0; right: 0; width: 50%; height: 100%; object-fit: cover; opacity: 0.08; z-index: 0;"
+            >
+        </picture>
         <div class="container">
             <h2 class="section-title">METODOLOGÍA</h2>
             <div class="process-container">

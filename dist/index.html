@@ -9,10 +9,26 @@
         
         <style>
              /* Configuración de fuentes locales */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
 :root {
     --color-dark: #0B1030;
     --color-accent: #00B8D4;
-    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-main: 'Montserrat', sans-serif;
 }
 
 * {
@@ -32,7 +48,7 @@ body {
 .container {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 clamp(1rem, 3vw, 5%);
+    padding: 0 5%;
 }
 
 /* Main Nav Styling - Updated */
@@ -70,56 +86,12 @@ body {
     }
     
     .mobile-controls {
-        display: flex !important;
-        gap: 8px; /* Reducido de 12px */
+        display: flex;
     }
     
     /* Ajuste para el contenido principal */
     .hero {
         padding-top: 0 !important; /* Anular el padding porque ya lo tenemos en el body */
-    }
-}
-
-/* Navegación responsive mejorada */
-@media (min-width: 992px) {
-    .nav-list {
-        display: flex;
-        flex-wrap: nowrap;
-        margin-right: 24px;
-        width: auto;
-    }
-
-    .nav-item {
-        white-space: nowrap;
-        margin-left: 20px; /* Reducido de 40px */
-    }
-
-    .nav-link {
-        font-size: 13px; /* Reducido de 14px */
-        padding: 8px 4px;
-    }
-}
-
-/* Control de visibilidad basado en el espacio disponible */
-@media (max-width: 1200px) {
-    .nav-link {
-        gap: 4px; /* Reducido de 8px */
-    }
-    
-    .nav-icon {
-        width: 14px; /* Reducido de 16px */
-        height: 14px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .nav-item {
-        margin-left: 15px;
-    }
-    
-    .nav-link {
-        font-size: 12px;
-        letter-spacing: 0.5px;
     }
 }
 
@@ -301,7 +273,7 @@ body {
 .mobile-controls {
     display: flex;
     align-items: center;
-    gap: 8px; /* Reducido de 12px */
+    gap: 12px;
 }
 
 .mobile-cta {
@@ -316,8 +288,8 @@ body {
 .menu-toggle {
     position: relative;
     z-index: 50;
-    width: 36px; /* Reducido de 40px */
-    height: 36px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -325,8 +297,6 @@ body {
     border: none;
     cursor: pointer;
     color: var(--color-dark);
-    padding: 0;
-    margin: 0;
 }
 
 .menu-icon {
@@ -661,6 +631,175 @@ body {
     opacity: 0.9;
     max-width: 90%;
     line-height: 1.8;
+}
+
+/* Hero Sections - Nueva estructura */
+.section-hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
+    color: white;
+    padding: var(--section-padding);
+    display: grid;
+    align-items: center;
+}
+
+.section-hero .container {
+    width: 100%;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.trust-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+/* Badges System */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 100px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.primary-badge {
+    background: rgba(0, 184, 212, 0.1);
+    color: var(--color-accent);
+}
+
+.rating-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 100px;
+    font-size: 0.875rem;
+}
+
+.stars {
+    color: #FFD700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+}
+
+.feature-icon {
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.feature-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+}
+
+.feature-icon.success {
+    background: linear-gradient(135deg, #00B8D4, #00E5FF);
+}
+
+.feature-icon.speed {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.feature-text strong {
+    font-size: 1.125rem;
+    color: white;
+    line-height: 1;
+}
+
+.feature-text span {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Icons System */
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        text-align: center;
+        align-items: center;
+    }
+
+    .trust-wrapper {
+        justify-content: center;
+    }
+
+    .feature-card {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-hero {
+        min-height: auto;
+        padding-top: calc(var(--header-height) + 2rem);
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
 
 /* Servicios Section - Mejorado */
@@ -2099,46 +2238,511 @@ select.input-field {
     </a>
 
     
-    <header class="hero">
-        <div class="hero-left">
-            <div class="logo-text">PERITO JUDICIAL EN BARCELONA</div>
-            <h1>INFORMES PERICIALES <strong>QUE GANAN CASOS</strong></h1>
-            <p class="tagline">Informes de ingeniería civil con rigor científico y claridad expositiva. Especialistas en construcción y seguros.</p>
-            <a href="#contacto" class="cta-btn">SOLICITAR AHORA</a>
-        </div>
-        <div class="hero-right">
-            <div class="form-container">
-                <h2 class="form-title">EVALUACIÓN EXPRÉS</h2>
-                <p style="margin-bottom: 2rem;">Respuesta profesional en menos de 24 horas</p>
-                <form id="express-form">
-                    <div class="input-group">
-                        <input type="text" class="input-field" placeholder="Nombre y Apellidos" required>
+    
+
+    
+    <header class="hero-full">
+    <div class="hero-wrapper">
+        <div class="hero-container">
+            <div class="hero-text">
+                <div class="proof-header">
+                    <div class="trust-badges">
+                        <div class="badge-item">
+                            <svg viewBox="0 0 24 24" class="badge-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>Nº1 EN PERITAJES</span>
+                        </div>
+                        <div class="rating-item">
+                            <div class="stars">★★★★★</div>
+                            <span>4.9/5 en Google</span>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <input type="tel" class="input-field" placeholder="Teléfono" required>
+                    <h2>INFORMES PERICIALES<br><strong>QUE GANAN CASOS</strong></h2>
+                </div>
+
+                <div class="proof-metrics">
+                    <div class="metric">
+                        <div class="metric-icon">97%</div>
+                        <div class="metric-text">
+                            <strong>Casos Exitosos</strong>
+                            <span>En tribunales</span>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <select class="input-field" required>
-                            <option value="" disabled selected>Seleccione tipo de informe</option>
-                            <option value="construccion">Peritaje de Construcción</option>
-                            <option value="seguros">Peritaje para Seguros</option>
-                            <option value="judicial">Informe Judicial</option>
-                        </select>
+                    <div class="metric">
+                        <div class="metric-icon">24h</div>
+                        <div class="metric-text">
+                            <strong>Respuesta</strong>
+                            <span>Garantizada</span>
+                        </div>
                     </div>
-                    <button type="submit" class="cta-btn" style="width: 100%;">SOLICITAR EVALUACIÓN</button>
-                </form>
+                </div>
+
+                <p class="tagline">Soluciones técnicas avanzadas para casos complejos en construcción y seguros.</p>
+
+                <div class="cta-group">
+                    <a href="#contacto" class="cta-btn">SOLICITAR INFORME</a>
+                    <span class="cta-guarantee">✓ Primera consulta gratuita</span>
+                </div>
+
+                <div class="trust-logos">
+                    <img src="/assets/images/logo-colegio.svg" alt="Colegio Oficial" width="100">
+                    <img src="/assets/images/logo-tribunal.svg" alt="Tribunal Superior" width="100">
+                    <p class="trust-caption">Informes aceptados por todos los tribunales españoles</p>
+                </div>
             </div>
         </div>
-    </header>
-    
-    <header class="hero-alt">
-        <div class="hero-alt-content">
-            <div class="logo-text">PERITO EXPERTO EN EDIFICACIÓN</div>
-            <h2>INFORMES TÉCNICOS <strong>CON GARANTÍA</strong></h2>
-            <p class="tagline">Soluciones técnicas avanzadas para casos complejos en construcción y seguros. Confianza y profesionalidad.</p>
-            <a href="#contacto" class="cta-btn">SOLICITAR INFORME</a>
+        <div class="hero-image">
+            <picture>
+                <source
+                    media="(min-width: 992px)"
+                    srcset="/assets/images/perito-construccion-obra-edificacion-1280.avif"
+                >
+                <source
+                    media="(min-width: 768px)"
+                    srcset="/assets/images/perito-construccion-obra-edificacion-768.avif"
+                >
+                <img
+                    src="/assets/images/perito-construccion-obra-edificacion-640.avif"
+                    alt="Perito experto realizando inspección técnica"
+                    loading="eager"
+                    decoding="async"
+                >
+            </picture>
         </div>
-    </header>
+    </div>
+</header>
+
+<style>
+.hero-full {
+    min-height: max(92vh, 700px);
+    padding-top: var(--header-height, 70px); /* Añadido padding-top fijo */
+    background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    min-height: calc(92vh - var(--header-height, 70px)); /* Ajustado para compensar el padding */
+}
+
+.hero-container {
+    width: min(1400px, 95%);
+    margin-left: max(5%, 2rem);
+    padding: clamp(3rem, 8vh, 6rem) 0;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-image picture {
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(100px 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 0.9;
+}
+
+@media (max-width: 991px) {
+    .hero-full {
+        min-height: auto;
+    }
+
+    .hero-wrapper {
+        flex-direction: column;
+        padding: 2rem 0; /* Eliminado padding-top extra */
+        min-height: auto;
+    }
+
+    .hero-container {
+        width: min(650px, 95%);
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .hero-image {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        margin-top: 2rem;
+    }
+
+    .hero-image img {
+        clip-path: none;
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        padding-top: 1rem; /* Reducido el padding superior en móvil */
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+}
+
+.proof-header {
+    margin-bottom: 1rem;
+}
+
+.trust-badges {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.badge-item, .rating-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 1rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 100px;
+    font-size: 1rem;
+}
+
+.badge-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--color-accent);
+}
+
+.stars {
+    color: #FFD700;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+h2 strong {
+    display: block;
+    color: var(--color-accent);
+    font-size: 1.1em;
+}
+
+.proof-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.metric {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+}
+
+.metric-icon {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: var(--color-accent);
+    line-height: 1;
+}
+
+.metric-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.metric-text strong {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: white;
+}
+
+.metric-text span {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.cta-guarantee {
+    color: var(--color-accent);
+    font-size: 0.875rem;
+}
+
+.trust-logos {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.trust-logos img {
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.trust-logos img:hover {
+    opacity: 1;
+}
+
+.trust-caption {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.7);
+}
+
+@media (min-width: 1200px) {
+    .hero-container {
+        padding-left: max(10%, 2rem);
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        text-align: center;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: clamp(2.25rem, 3vw + 1rem, 3rem);
+        text-align: center;
+    }
+
+    .trust-badges, .proof-metrics {
+        justify-content: center;
+    }
+
+    .proof-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-group {
+        align-items: center;
+    }
+
+    .trust-logos {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        padding: 2rem 1rem;
+    }
+
+    .trust-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proof-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .metric {
+        padding: 0.875rem;
+        justify-content: center;
+    }
+}
+.hero-conversion {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
+    color: white;
+    padding: clamp(5rem, 10vh, 8rem) 1rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    width: min(1400px, 100%);
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+    padding: 0 max(5%, 1rem);
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 650px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    padding: 0.75rem 1.25rem;
+    background: rgba(0, 184, 212, 0.1);
+    border: 1px solid rgba(0, 184, 212, 0.2);
+    border-radius: 100px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw + 1rem, 4rem);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.hero-title strong {
+    display: block;
+    color: var(--color-accent);
+    font-size: 1.1em;
+    margin-top: 0.2em;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin: 0.5rem 0;
+}
+
+.stat-item {
+    font-size: 1.125rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.stat-item strong {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.9);
+    margin: 0.5rem 0 1.5rem;
+}
+
+.cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2rem;
+    background: linear-gradient(45deg, var(--color-accent), #00d4ff);
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.cta-primary svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+}
+
+.cta-guarantee {
+    font-size: 0.875rem;
+    color: var(--color-accent);
+}
+
+.hero-visual {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .hero-content {
+        grid-template-columns: 1.2fr 0.8fr;
+    }
+
+    .hero-visual {
+        height: 100%;
+    }
+
+    .hero-visual img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-conversion {
+        padding: 6rem 0 3rem;
+        min-height: auto;
+    }
+
+    .hero-text {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero-badge {
+        margin: 0 auto;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .cta-group {
+        align-items: center;
+    }
+
+    .hero-visual {
+        margin: 0 -1rem;
+        border-radius: 0;
+    }
+}
+</style>
+    
     
     <section id="servicios">
         <div class="container">
@@ -2169,6 +2773,25 @@ select.input-field {
     </section>
 
     <section id="proceso" class="process-section">
+        <picture class="process-background">
+            <source
+                media="(min-width: 1200px)"
+                srcset="/assets/images/perito-construccion-obra-edificacion-1280.avif"
+                type="image/avif"
+            >
+            <source
+                media="(min-width: 768px)"
+                srcset="/assets/images/perito-construccion-obra-edificacion-800.avif"
+                type="image/avif"
+            >
+            <img
+                src="/assets/images/perito-construccion-obra-edificacion-640.avif"
+                alt="Fondo proceso pericial"
+                loading="lazy"
+                decoding="async"
+                style="position: absolute; top: 0; right: 0; width: 50%; height: 100%; object-fit: cover; opacity: 0.08; z-index: 0;"
+            >
+        </picture>
         <div class="container">
             <h2 class="section-title">METODOLOGÍA</h2>
             <div class="process-container">
