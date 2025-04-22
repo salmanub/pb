@@ -1,23 +1,23 @@
-<header id="mainHeader" class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 transition-all duration-300">
+<header id="mainHeader" class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
     <div class="max-w-[1600px] mx-auto px-[5%]">
         <!-- Top Bar - Solo Desktop -->
-        <div class="hidden lg:flex justify-end items-center h-12 border-b border-slate-100">
+        <div class="hidden lg:flex justify-end items-center h-10 border-b border-slate-100">
             <!-- Language Selector -->
-            <div class="flex items-center gap-1 px-4 border-l border-slate-100">
-                <a href="/" class="py-1 px-3 text-xs font-medium tracking-wider uppercase rounded bg-cyan-400 text-white hover:bg-cyan-500 transition-colors">ES</a>
-                <a href="/en" class="py-1 px-3 text-xs font-medium tracking-wider uppercase rounded text-slate-600 hover:bg-cyan-50 hover:text-cyan-500 transition-colors">EN</a>
-                <a href="/ca" class="py-1 px-3 text-xs font-medium tracking-wider uppercase rounded text-slate-600 hover:bg-cyan-50 hover:text-cyan-500 transition-colors">CA</a>
+            <div class="flex items-center gap-1.5 px-4 border-l border-slate-100">
+                <a href="/" class="py-1 px-2.5 text-xs font-medium tracking-wider uppercase rounded-md bg-gradient-to-br from-cyan-400 to-cyan-500 text-white hover:shadow-md hover:shadow-cyan-200 transition-all">ES</a>
+                <a href="/en" class="py-1 px-2.5 text-xs font-medium tracking-wider uppercase rounded-md text-slate-500 hover:bg-slate-50 hover:text-cyan-500 transition-all">EN</a>
+                <a href="/ca" class="py-1 px-2.5 text-xs font-medium tracking-wider uppercase rounded-md text-slate-500 hover:bg-slate-50 hover:text-cyan-500 transition-all">CA</a>
             </div>
 
             <!-- CTAs -->
             <div class="flex items-center">
-                <a href="tel:+34932123456" class="flex items-center gap-2 px-4 py-2 text-sm text-slate-600 hover:text-cyan-500 border-l border-slate-100 transition-colors">
-                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <a href="tel:+34932123456" class="flex items-center gap-2 px-4 py-1.5 text-sm text-slate-500 hover:text-cyan-500 border-l border-slate-100 transition-all group">
+                    <svg class="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                     </svg>
                     <span>{{metadata.contact.phoneNumber}}</span>
                 </a>
-                <a href="/presupuesto" class="px-4 py-2 text-sm font-semibold text-white bg-cyan-400 hover:bg-cyan-500 transition-colors border-l border-slate-100">
+                <a href="/presupuesto" class="px-4 py-1.5 text-sm font-semibold text-white bg-gradient-to-br from-cyan-400 to-cyan-500 hover:shadow-md hover:shadow-cyan-200 border-l border-slate-100 transition-all">
                     SOLICITAR PRESUPUESTO
                 </a>
             </div>
