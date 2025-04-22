@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=width=device-width, initial-scale=1.0">
     <title>Perito Barcelona - Informes Periciales de Construcción y Seguros</title>
-    <link rel="stylesheet" href="assets/styles/index.css">
-    {% block pageStyles %}
         
-        {% set indexCSS %} {% include "src/assets/styles/index.css" %} {% endset %}
+        {% set indexCSS %} {% include "assets/styles/index.css" %} {% endset %}
         <style>
 
             {{ indexCSS | safe }}
@@ -19,9 +17,6 @@
     
     {% include "partials/navBar.njk" %}
     
-    {# {% include "partials/heroWithProof.njk" %} #}
-
-    {# {% include "partials/heroWithForm.njk" %} #}
     {% include "partials/heroWithImage.njk" %}
     {% include "partials/problem-solution.njk" %}
     {% include "partials/servicios-home.njk" %}
