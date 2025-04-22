@@ -40,7 +40,7 @@ export default function (eleventyConfig) {
       <!-- Manifest y configuración del navegador -->
       <link rel="manifest" href="/site.webmanifest">
       <meta name="msapplication-TileColor" content="#da532c">
-      <meta name="theme-color" content="#ffffff">
+      <meta name="theme-color" content="#06B6D">
     `;
   });
     
