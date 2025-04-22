@@ -1,0 +1,11 @@
+:root {
+  /* Cyan en RGB */
+  --color-cyan-400: rgb(34, 211, 238);  /* #22D3EE */
+  --color-cyan-500: rgb(6, 182, 212);   /* #06B6D4 */
+  --color-cyan-600: rgb(8, 145, 178);   /* #0891B2 */
+
+  /* Cyan en HEX */
+  --color-cyan-400-hex: #22D3EE;
+  --color-cyan-500-hex: #06B6D4;
+  --color-cyan-600-hex: #0891B2;
+}
