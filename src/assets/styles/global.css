@@ -1510,46 +1510,6 @@ select.input-field {
     padding-right: 3.5rem;
 }
 
-/* Botones CTA - Actualizado */
-.cta-btn {
-    display: inline-block;
-    padding: 1.2rem 3.5rem;
-    background-color: var(--color-accent);
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
-    position: relative;
-    overflow: hidden;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 184, 212, 0.2);
-}
-
-.cta-btn:hover {
-    box-shadow: 0 10px 25px rgba(0, 184, 212, 0.3);
-}
-
-.cta-btn:active {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 184, 212, 0.3);
-}
-
-.outline-btn {
-    background-color: transparent;
-    color: var(--color-accent);
-    border: 2px solid var(--color-accent);
-    box-shadow: none;
-}
-
-.outline-btn:hover {
-    background-color: rgba(0, 184, 212, 0.1);
-    box-shadow: 0 5px 15px rgba(0, 184, 212, 0.1);
-}
 
 /* Animación sutil para inputs */
 @keyframes focusAnimation {
@@ -1601,11 +1561,7 @@ select.input-field {
         order: -1;
     }
     
-    .cta-buttons {
-        flex-direction: column;
-        max-width: 400px;
-        margin: 0 auto;
-    }
+
 }
 
 @media (max-width: 992px) {
@@ -1866,10 +1822,7 @@ select.input-field {
         padding: 1rem;
     }
 
-    .cta-btn {
-        padding: 1rem 2rem;
-        font-size: 0.9rem;
-    }
+    
 
     .footer-primary {
         padding: 3rem 0 2rem;

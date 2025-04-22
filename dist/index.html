@@ -4,1963 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=width=device-width, initial-scale=1.0">
     <title>Perito Barcelona - Informes Periciales de Construcción y Seguros</title>
+    <link rel="stylesheet" href="assets/styles/index.css">
     
         
         
         <style>
-             /* Configuración de fuentes locales */
-@font-face {
-    font-family: 'Montserrat';
-    src: url('/assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'Montserrat';
-    src: url('/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype-variations');
-    font-weight: 100 900;
-    font-style: italic;
-    font-display: swap;
-}
-
-:root {
-    --color-dark: #0B1030;
-    --color-accent: #00B8D4;
-    --font-main: 'Montserrat', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-main);
-    background-color: #F9FAFB;
-    color: var(--color-dark);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 5%;
-}
-
-/* Main Nav Styling - Updated */
-.main-header {
-    background-color: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    position: fixed;
-    width: 100vw;
-    z-index: 100;
-    transition: all 0.3s ease;
-}
-
-/* Mejorado: barra de navegación fija en móvil */
-@media (max-width: 991px) {
-    .main-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: white;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-        z-index: 50;
-    }
-    
-    .desktop-nav, .top-bar {
-        display: none !important;
-    }
-    
-    .header-content {
-        height: 70px;
-        padding: 0 16px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    .mobile-controls {
-        display: flex;
-    }
-    
-    /* Ajuste para el contenido principal */
-    .hero {
-        padding-top: 0 !important; /* Anular el padding porque ya lo tenemos en el body */
-    }
-}
-
-/* Top Bar */
-.top-bar {
-    display: none;
-    height: 48px;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    justify-content: flex-end;
-    align-items: center;
-    transition: all 0.3s;
-}
-
-.language-selector {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 0 16px;
-    border-left: 1px solid rgba(0,0,0,0.1);
-}
-
-.language-link {
-    padding: 4px 12px;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 500;
-    color: #666;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: all 0.3s;
-}
-
-.language-link:hover {
-    color: var(--color-accent);
-    background-color: rgba(0, 184, 212, 0.1);
-}
-
-.language-link.active {
-    background-color: var(--color-accent);
-    color: white;
-}
-
-.top-cta {
-    display: flex;
-    align-items: center;
-    border-left: 1px solid rgba(0,0,0,0.1);
-}
-
-.phone-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    color: #666;
-    text-decoration: none;
-    font-size: 14px;
-    border-right: 1px solid rgba(0,0,0,0.1);
-    transition: color 0.3s;
-}
-
-.phone-link:hover {
-    color: var(--color-accent);
-}
-
-.top-cta-button {
-    padding: 8px 16px;
-    font-size: 14px;
-    background-color: var(--color-accent);
-    color: white;
-}
-
-/* Header Content */
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    height: 64px;
-    font-weight: 600;
-}
-
-/* Logo */
-.logo-link {
-    display: flex;
-    align-items: center;
-    gap: 0.6em;  /* Reducido desde 1.2em */
-    text-decoration: none;
-    color: var(--color-dark);
-    font-size: 1.8rem;
-    transition: all 0.3s ease;
-    padding: 8px 0;
-}
-
-.logo-link:hover {
-    transform: translateY(-2px);
-}
-
-.logo-svg {
-    height: 3.2rem;
-    width: auto;
-    color: var(--color-accent);
-    filter: drop-shadow(0 2px 4px rgba(0, 184, 212, 0.2));
-    transition: all 0.3s ease;
-}
-
-.logo-link:hover .logo-svg {
-    transform: scale(1.05);
-    filter: drop-shadow(0 4px 8px rgba(0, 184, 212, 0.3));
-    color: var(--color-accent);
-}
-
-.logo {
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: 0;
-    transition: color 0.3s ease;
-    white-space: nowrap;
-}
-
-.logo-link:hover .logo {
-    color: var(--color-accent);
-}
-
-@media (max-width: 768px) {
-    .logo-link {
-        font-size: 1.5rem;
-        gap: 0.4em;  /* Reducido desde 0.8em */
-    }
-    
-    .logo-svg {
-        height: 2.8rem;
-    }
-    
-    .logo {
-        font-size: 1rem;
-        letter-spacing: 0.5px;
-    }
-}
-
-.nav-list {
-    display: flex;
-    list-style: none;
-    margin-right: 24px;
-}
-
-.nav-item {
-    position: relative;
-    margin-left: 40px;
-}
-
-.nav-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 0;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #666;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.nav-link:hover {
-    color: var(--color-accent);
-}
-
-.nav-icon {
-    width: 16px;
-    height: 16px;
-    color: var(--color-accent);
-}
-
-/* Mobile Controls */
-.mobile-controls {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.mobile-cta {
-    display: none;
-    padding: 8px 16px;
-    font-size: 14px;
-    border-radius: 30px;
-    background-color: var(--color-accent);
-    color: white;
-}
-
-.menu-toggle {
-    position: relative;
-    z-index: 50;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--color-dark);
-}
-
-.menu-icon {
-    width: 24px;
-    height: 24px;
-}
-
-/* Mobile Menu - Mejorado para mobile-first */
-.mobile-menu {
-    position: fixed;
-    inset: 0;
-    background-color: var(--color-dark);
-    z-index: 49; /* Un nivel por debajo del menu toggle */
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    overflow-y: auto;
-}
-
-.mobile-menu-open {
-    transform: translateX(0);
-}
-
-.mobile-menu-container {
-    padding-top: 90px;
-    padding-bottom: 32px;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.mobile-nav {
-    flex: 1;
-}
-
-.mobile-nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 30px 0;
-}
-
-.mobile-nav-item {
-    margin-bottom: 1rem;
-}
-
-.mobile-nav-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border-radius: 8px;
-}
-
-.mobile-nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.mobile-nav-icon {
-    width: 24px;
-    height: 24px;
-    color: var(--color-accent);
-}
-
-.mobile-footer {
-    margin-top: auto;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.mobile-footer-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-/* Mejorado: contacto en móvil */
-.mobile-contact-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px;
-    margin-bottom: 8px;
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.08);
-}
-
-.mobile-contact-link:hover {
-    color: white;
-    background-color: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
-}
-
-.mobile-contact-link svg {
-    color: var(--color-accent);
-    flex-shrink: 0;
-}
-
-/* Mejorado: selector de idiomas en móvil */
-.language-selector-mobile {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 25px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    padding: 6px;
-}
-
-.language-link-mobile {
-    flex: 1;
-    padding: 10px 16px;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    text-align: center;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.language-link-mobile:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.language-link-mobile.active {
-    background-color: var(--color-accent);
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(0, 184, 212, 0.3);
-}
-
-.mobile-cta-container {
-    margin-top: 20px;
-}
-
-/* Nuevo: Botón flotante de hablar con un perito */
-.talk-to-expert {
-    position: fixed;
-    bottom: 28px;
-    right: 20px;
-    z-index: 48;
-    display: none; /* Inicialmente oculto, se muestra con JS */
-}
-
-.talk-to-expert-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 24px;
-    background-color: var(--color-accent);
-    color: white;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0, 184, 212, 0.3);
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-
-.talk-to-expert-btn:hover {
-    background-color: #00A5C0;
-    box-shadow: 0 6px 15px rgba(0, 184, 212, 0.4);
-    transform: translateY(-2px);
-}
-
-.talk-to-expert-btn svg {
-    width: 20px;
-    height: 20px;
-}
-
-.talk-to-expert.visible {
-    display: block;
-    animation: fadeInUp 0.5s ease forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Hero Section - Updated */
-.hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
-    position: relative;
-    padding-top: 100px;
-}
-
-.hero-left {
-    padding: 15% 8%;
-    position: relative;
-    background-color: white;
-}
-
-.hero-right {
-    background-color: var(--color-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-shadow: -20px 0 40px rgba(0,0,0,0.1);
-}
-
-.logo-text {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 6px;
-    color: var(--color-accent);
-    margin-bottom: 4rem;
-    position: relative;
-    display: inline-block;
-}
-
-.logo-text::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 40px;
-    height: 3px;
-    background-color: var(--color-accent);
-}
-
-.hero h1 {
-    font-size: clamp(3rem, 6vw, 5rem);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-}
-
-.hero h1 strong {
-    display: block;
-    font-weight: 700;
-    color: var(--color-accent);
-}
-
-.tagline {
-    font-size: 1.4rem;
-    margin-bottom: 4rem;
-    max-width: 90%;
-}
-
-/* Nuevo Hero con imagen a la derecha */
-.hero-alt {
-    background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
-    color: white;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding-top: 80px;
-}
-
-.hero-alt::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background-image: url('/assets/images/perito-construccion-obra-edificacion-640.avif');
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(100px 0, 100% 0, 100% 100%, 0 100%);
-    opacity: 0.9;
-    z-index: 1;
-}
-
-.hero-alt-content {
-    width: 55%;
-    position: relative;
-    z-index: 2;
-    padding: 0 5%;
-    max-width: 800px;
-}
-
-.hero-alt .logo-text {
-    font-size: 1.3rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: var(--color-accent);
-    margin-bottom: 2rem;
-    position: relative;
-    display: inline-block;
-    text-transform: uppercase;
-}
-
-.hero-alt .logo-text::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 40px;
-    height: 3px;
-    background-color: var(--color-accent);
-}
-
-.hero-alt h2 {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-}
-
-.hero-alt h2 strong {
-    display: block;
-    font-weight: 700;
-    color: var(--color-accent);
-}
-
-.hero-alt .tagline {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-    opacity: 0.9;
-    max-width: 90%;
-    line-height: 1.8;
-}
-
-/* Hero Sections - Nueva estructura */
-.section-hero {
-    min-height: 100vh;
-    background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
-    color: white;
-    padding: var(--section-padding);
-    display: grid;
-    align-items: center;
-}
-
-.section-hero .container {
-    width: 100%;
-}
-
-.hero-content {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: clamp(2rem, 5vw, 4rem);
-    align-items: center;
-}
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.5rem, 3vw, 2.5rem);
-}
-
-.trust-wrapper {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: clamp(1rem, 2vw, 2rem);
-}
-
-/* Badges System */
-.badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1.25rem;
-    border-radius: 100px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1;
-}
-
-.primary-badge {
-    background: rgba(0, 184, 212, 0.1);
-    color: var(--color-accent);
-}
-
-.rating-badge {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 100px;
-    font-size: 0.875rem;
-}
-
-.stars {
-    color: #FFD700;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
-}
-
-/* Features Grid */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: clamp(1rem, 2vw, 1.5rem);
-}
-
-.feature-card {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    backdrop-filter: blur(8px);
-}
-
-.feature-icon {
-    width: 42px;
-    height: 42px;
-    padding: 10px;
-    border-radius: 10px;
-    display: grid;
-    place-items: center;
-}
-
-.feature-icon svg {
-    width: 100%;
-    height: 100%;
-    stroke: white;
-    stroke-width: 2;
-    fill: none;
-}
-
-.feature-icon.success {
-    background: linear-gradient(135deg, #00B8D4, #00E5FF);
-}
-
-.feature-icon.speed {
-    background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
-}
-
-.feature-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.feature-text strong {
-    font-size: 1.125rem;
-    color: white;
-    line-height: 1;
-}
-
-.feature-text span {
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Icons System */
-.icon {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-}
-
-/* Responsive */
-@media (max-width: 991px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-text {
-        text-align: center;
-        align-items: center;
-    }
-
-    .trust-wrapper {
-        justify-content: center;
-    }
-
-    .feature-card {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .section-hero {
-        min-height: auto;
-        padding-top: calc(var(--header-height) + 2rem);
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .trust-wrapper {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-
-/* Servicios Section - Mejorado */
-section {
-    padding: 8% 5%;
-}
-
-.section-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 4rem;
-    position: relative;
-    display: inline-block;
-    text-align: left;
-    width: 100%;
-}
-
-.section-title::after {
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 80px;
-    height: 4px;
-    background-color: var(--color-accent);
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-}
-
-.service-card {
-    padding: 3.5rem 3rem;
-    background-color: white;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-    position: relative;
-    transition: all 0.4s ease;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.service-card:hover {
-    box-shadow: 0 25px 45px rgba(0,0,0,0.12);
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background-color: var(--color-accent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.service-card:hover::before {
-    opacity: 1;
-}
-
-.service-number {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    font-size: 6rem;
-    font-weight: 700;
-    color: #F0F4F8;
-    line-height: 0.8;
-    z-index: 0;
-    transition: color 0.3s ease;
-}
-
-.service-card:hover .service-number {
-    color: var(--color-accent);
-}
-
-.service-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: var(--color-dark);
-    position: relative;
-    z-index: 1;
-}
-
-.service-card p {
-    color: #666;
-    margin-bottom: 2.5rem;
-    position: relative;
-    z-index: 1;
-}
-
-.service-card .cta-btn {
-    position: relative;
-    z-index: 1;
-}
-
-/* Process Section - Mejorado */
-.process-section {
-    background-color: var(--color-dark);
-    background-image: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
-    color: white;
-    padding: 10% 5%;
-    position: relative;
-    overflow: hidden;
-}
-
-.process-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.08;
-    z-index: 0;
-}
-
-.process-section .section-title {
-    color: white;
-    position: relative;
-    z-index: 1;
-}
-
-.process-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2.5rem;
-    position: relative;
-    z-index: 1;
-}
-
-.process-step {
-    position: relative;
-    padding: 2.5rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    backdrop-filter: blur(5px);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.process-step:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.process-step-number {
-    font-size: 4rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    opacity: 0.7;
-    margin-bottom: 1.5rem;
-    transition: opacity 0.3s ease;
-}
-
-.process-step:hover .process-step-number {
-    opacity: 1;
-}
-
-.process-step h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.2rem;
-    color: var(--color-accent);
-}
-
-.process-step p {
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.7;
-}
-
-/* Testimonials Section - Mejorado */
-.testimonials-section {
-    background-color: var(--light-bg);
-    position: relative;
-    overflow: hidden;
-}
-
-.testimonials-intro {
-    max-width: 700px;
-    margin-bottom: 3.5rem;
-}
-
-.testimonials-intro h2 {
-    margin-bottom: 1.5rem;
-}
-
-.testimonials-intro p {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.8;
-}
-
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 3rem;
-}
-
-.testimonial-card {
-    padding: 3.5rem;
-    background-color: white;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-    border-radius: 8px;
-    border-left: 4px solid var(--color-accent);
-    transition: transform 0.3s ease;
-}
-
-.testimonial-card:hover {
-}
-
-.testimonial-text {
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    color: #444;
-    line-height: 1.8;
-    position: relative;
-}
-
-.testimonial-text::before {
-    content: '"';
-    font-family: Georgia, serif;
-    font-size: 5rem;
-    color: rgba(0, 184, 212, 0.1);
-    position: absolute;
-    top: -2.5rem;
-    left: -1rem;
-    z-index: 0;
-}
-
-.testimonial-author {
-    font-weight: 700;
-    color: var(--color-accent);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.testimonial-author::before {
-    content: '';
-    width: 3rem;
-    height: 2px;
-    background-color: var(--color-accent);
-    opacity: 0.5;
-}
-
-/* Contact Section - Mejorado */
-.contact-section {
-    background-color: white;
-    position: relative;
-    padding: 8% 5%;
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-}
-
-.contact-info {
-    margin-bottom: 3rem;
-}
-
-.contact-info h2 {
-    margin-bottom: 1.5rem;
-}
-
-.contact-info p {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-}
-
-.contact-features {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
-
-.contact-feature {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-.contact-feature-icon {
-    width: 48px;
-    height: 48px;
-    background-color: rgba(0, 184, 212, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-accent);
-    font-size: 1.5rem;
-}
-
-.contact-feature-text {
-    flex: 1;
-}
-
-.contact-feature-title {
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-dark);
-}
-
-.contact-feature-desc {
-    color: #666;
-    font-size: 0.95rem;
-}
-
-.contact-methods {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.contact-method {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    color: var(--color-dark);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-method:hover {
-    color: var(--color-accent);
-}
-
-.contact-method i {
-    font-size: 1.2rem;
-    color: var(--color-accent);
-}
-
-.contact-form {
-    width: 100%;
-    max-width: 700px;
-    padding: 3.5rem;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
-}
-
-.contact-form h3 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: var(--color-dark);
-    position: relative;
-    padding-bottom: 1rem;
-}
-
-.contact-form h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background-color: var(--color-accent);
-}
-
-/* Footer - Comercial Mejorado */
-footer {
-    background-color: #f9fafb;
-    padding: 0;
-    color: var(--color-dark);
-}
-
-.footer-primary {
-    background-color: white;
-    padding: 6rem 0 4rem;
-    border-top: 1px solid rgba(0,0,0,0.05);
-    position: relative;
-}
-
-.footer-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: linear-gradient(90deg, var(--color-accent) 0%, #16d6ff 100%);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.footer-logo svg {
-    height: 40px;
-    width: auto;
-    color: var(--color-accent);
-    filter: drop-shadow(0 2px 4px rgba(0, 184, 212, 0.2));
-    transition: transform 0.3s, filter 0.3s;
-}
-
-.footer-logo:hover svg {
-    transform: scale(1.05);
-    filter: drop-shadow(0 4px 8px rgba(0, 184, 212, 0.3));
-}
-
-.footer-logo h4 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-dark);
-}
-
-.footer-about {
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    max-width: 90%;
-}
-
-.footer-socials {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.footer-social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(0, 184, 212, 0.1);
-    color: var(--color-accent);
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-}
-
-.footer-social-link:hover {
-    background-color: var(--color-accent);
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 184, 212, 0.2);
-}
-
-.footer-col h5 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 1.8rem;
-    color: var(--color-dark);
-    position: relative;
-    padding-bottom: 0.8rem;
-}
-
-.footer-col h5::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background-color: var(--color-accent);
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 1rem;
-}
-
-.footer-links a {
-    color: #666;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-size: 1rem;
-}
-
-.footer-links a:hover {
-    color: var(--color-accent);
-    transform: translateX(5px);
-}
-
-.footer-links a i {
-    font-size: 0.7rem;
-    color: var(--color-accent);
-}
-
-.footer-contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.footer-contact-icon {
-    color: var(--color-accent);
-    font-size: 1.2rem;
-    margin-top: 0.2rem;
-}
-
-.footer-contact-text {
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.footer-contact-label {
-    display: block;
-    margin-bottom: 0.3rem;
-    color: var(--color-dark);
-    font-weight: 500;
-}
-
-.footer-secondary {
-    background-color: var(--color-dark);
-    padding: 1.8rem 0;
-    color: white;
-}
-
-.footer-secondary-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-copyright {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.9rem;
-}
-
-.footer-policies {
-    display: flex;
-    gap: 2rem;
-}
-
-.footer-policy-link {
-    color: rgba(255,255,255,0.7);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-.footer-policy-link:not(:last-child)::after {
-    content: '•';
-    position: absolute;
-    right: -1.2rem;
-    color: rgba(255,255,255,0.3);
-}
-
-.footer-policy-link:hover {
-    color: white;
-}
-
-/* Modal Corregido */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(11, 16, 48, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none; /* Asegura que no captura eventos cuando está oculto */
-}
-
-.modal.show {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all; /* Permite interacciones cuando está visible */
-}
-
-.modal-content {
-    width: 90%;
-    max-width: 600px;
-    background-color: white;
-    padding: 3.5rem;
-    position: relative;
-    transform: translateY(50px);
-    transition: all 0.4s ease;
-    border-radius: 10px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-}
-
-.modal.show .modal-content {
-    transform: translateY(0);
-}
-
-.modal-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: #94A3B8;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background-color: #F0F4F8;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-.modal-close:hover {
-    color: var(--color-dark);
-    background-color: #E2E8F0;
-    transform: rotate(90deg);
-}
-
-/* Floating CTA ajustado con z-index correcto */
-.floating-cta {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 100;
-}
-
-/* Formulario - Estilo mejorado */
-.form-container {
-    width: 80%;
-    padding: 3.5rem;
-    background-color: white;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    z-index: 2;
-    border-radius: 10px;
-}
-
-.form-title {
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-    color: var(--color-dark);
-    font-weight: 700;
-    position: relative;
-    padding-bottom: 1rem;
-}
-
-.form-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background-color: var(--color-accent);
-}
-
-.input-group {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.input-field {
-    width: 100%;
-    padding: 1.2rem 1.5rem;
-    background-color: #F0F4F8;
-    border: 1px solid rgba(0,0,0,0.05);
-    font-family: var(--font-main);
-    font-size: 1rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    color: var(--color-dark);
-}
-
-.input-field:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px var(--color-accent);
-    background-color: #fff;
-    border-color: var(--color-accent);
-}
-
-.input-field::placeholder {
-    color: #94A3B8;
-    font-weight: 400;
-}
-
-textarea.input-field {
-    resize: vertical;
-    min-height: 120px;
-    line-height: 1.6;
-}
-
-select.input-field {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394A3B8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1.5rem center;
-    background-size: 1.5em;
-    padding-right: 3.5rem;
-}
-
-/* Botones CTA - Actualizado */
-.cta-btn {
-    display: inline-block;
-    padding: 1.2rem 3.5rem;
-    background-color: var(--color-accent);
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
-    position: relative;
-    overflow: hidden;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 184, 212, 0.2);
-}
-
-.cta-btn:hover {
-    box-shadow: 0 10px 25px rgba(0, 184, 212, 0.3);
-}
-
-.cta-btn:active {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 184, 212, 0.3);
-}
-
-.outline-btn {
-    background-color: transparent;
-    color: var(--color-accent);
-    border: 2px solid var(--color-accent);
-    box-shadow: none;
-}
-
-.outline-btn:hover {
-    background-color: rgba(0, 184, 212, 0.1);
-    box-shadow: 0 5px 15px rgba(0, 184, 212, 0.1);
-}
-
-/* Animación sutil para inputs */
-@keyframes focusAnimation {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-    100% { transform: scale(1); }
-}
-
-.input-field:focus {
-    animation: focusAnimation 0.3s ease;
-}
-
-/* Responsive - Actualizado */
-@media (min-width: 576px) {
-    .mobile-cta {
-        display: inline-flex;
-    }
-}
-
-@media (min-width: 992px) {
-    .top-bar {
-        display: flex;
-    }
-    
-    .header-content {
-        height: 80px;
-    }
-    
-    .desktop-nav {
-        display: flex;
-    }
-    
-    .mobile-controls {
-        display: none;
-    }
-}
-
-@media (max-width: 1200px) {
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-form {
-        max-width: 100%;
-        order: -1;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 992px) {
-    .hero {
-        grid-template-columns: 1fr;
-    }
-    
-    .services-grid, .process-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero-alt::after {
-        width: 40%;
-    }
-    
-    .hero-alt-content {
-        width: 60%;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-alt {
-        height: auto;
-        padding: 120px 0 80px;
-        flex-direction: column;
-    }
-    
-    .hero-alt::after {
-        display: none;
-    }
-    
-    .hero-alt-content {
-        width: 100%;
-        padding: 0 5%;
-        margin-bottom: 40px;
-        text-align: center;
-        margin-left: 0;
-    }
-    
-    .hero-alt .logo-text::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .process-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-secondary-content {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .contact-features {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Desktop/Mobile Visibility Control */
-@media (max-width: 991px) {
-    .desktop-nav, .top-bar {
-        display: none !important;
-    }
-    
-    .header-content {
-        height: 70px;
-    }
-    
-    .mobile-controls {
-        display: flex;
-    }
-}
-
-@media (min-width: 992px) {
-    .mobile-controls {
-        display: none !important;
-    }
-    
-    .top-bar {
-        display: flex;
-    }
-    
-    .desktop-nav {
-        display: flex;
-    }
-    
-    .header-content {
-        height: 80px;
-    }
-}
-
-/* Media Queries Completas */
-@media (max-width: 1400px) {
-    .hero h1 {
-        font-size: clamp(2.5rem, 4vw, 4rem);
-    }
-    
-    .services-grid {
-        gap: 2rem;
-    }
-    
-    .process-container {
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 1200px) {
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3rem 4rem;
-    }
-    
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .process-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .hero-alt-content {
-        width: 65%;
-    }
-}
-
-@media (max-width: 991px) {
-    .main-header {
-        position: fixed !important;
-        height: 70px;
-    }
-
-    .container {
-        padding: 0 1rem;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        padding-top: 70px;
-        min-height: auto;
-    }
-
-    .hero-left {
-        padding: 3rem 1.5rem;
-    }
-
-    .hero-right {
-        padding: 2rem 1rem;
-    }
-
-    .form-container {
-        width: 100%;
-        padding: 2rem;
-    }
-
-    .section-title {
-        font-size: 2.5rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .service-card {
-        padding: 2.5rem 2rem;
-    }
-
-    .testimonial-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo-text {
-        font-size: 1.4rem;
-        letter-spacing: 4px;
-        margin-bottom: 2rem;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .tagline {
-        font-size: 1.1rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .process-container {
-        grid-template-columns: 1fr;
-    }
-
-    .process-step {
-        padding: 2rem;
-    }
-
-    .contact-form {
-        padding: 2rem;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .mobile-menu-container {
-        padding-top: 80px;
-    }
-
-    .mobile-nav-link {
-        font-size: 1rem;
-        padding: 10px 16px;
-    }
-}
-
-@media (max-width: 576px) {
-    .logo-link {
-        font-size: 1.3rem;
-    }
-
-    .logo-svg {
-        height: 2.4rem;
-    }
-
-    .logo {
-        font-size: 0.9rem;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .service-card {
-        padding: 2rem 1.5rem;
-    }
-
-    .service-number {
-        font-size: 4rem;
-    }
-
-    .testimonial-card {
-        padding: 2rem 1.5rem;
-    }
-
-    .form-container {
-        padding: 1.5rem;
-    }
-
-    .input-field {
-        padding: 1rem;
-    }
-
-    .cta-btn {
-        padding: 1rem 2rem;
-        font-size: 0.9rem;
-    }
-
-    .footer-primary {
-        padding: 3rem 0 2rem;
-    }
-
-    .footer-secondary {
-        padding: 1.5rem 0;
-    }
-
-    .footer-secondary-content {
-        text-align: center;
-    }
-
-    .footer-policies {
-        gap: 1rem;
-        justify-content: center;
-        margin-top: 1rem;
-    }
-
-    .mobile-contact-link {
-        font-size: 0.9rem;
-        padding: 12px;
-    }
-}
-
-@media (max-width: 360px) {
-    .logo-wrapper {
-        max-width: 200px;
-    }
-
-    .mobile-cta {
-        display: none;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .logo-text {
-        font-size: 1.2rem;
-        letter-spacing: 2px;
-    }
-
-    .service-card h3 {
-        font-size: 1.5rem;
-    }
-
-    .footer-logo h4 {
-        font-size: 1.3rem;
-    }
-
-    .mobile-nav-link {
-        font-size: 0.9rem;
-        padding: 8px 12px;
-    }
-}
-
-/* Ajustes específicos para dispositivos de alto DPI */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .hero-alt::after {
-        background-image: url('/assets/images/perito-construccion-obra-edificacion-1280.avif');
-    }
-}
-
-/* Ajustes para orientación landscape en móviles */
-@media (max-height: 600px) and (orientation: landscape) {
-    .hero {
-        min-height: auto;
-        padding: 100px 0;
-    }
-
-    .mobile-menu-container {
-        padding-top: 70px;
-    }
-
-    .mobile-nav-list {
-        columns: 2;
-    }
-}
-
- 
              @import 'tailwindcss'; 
         </style>
     
@@ -1985,1432 +34,848 @@ select.input-field {
 </head>
 <body>
     
-    <header id="mainHeader" class="main-header">
-        <div class="container">
-            <!-- Top Bar - Solo visible en desktop -->
-            <div class="top-bar">
-                <!-- Language Selector -->
-                <div class="language-selector">
-                    <a href="/" class="language-link active">ES</a>
-                    <a href="/en" class="language-link">EN</a>
-                    <a href="/ca" class="language-link">CA</a>
-                </div>
-                <!-- CTAs con traducciones -->
-                <div class="top-cta">
-                    <a href="tel:+34932123456" class="phone-link">
-                        <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        <span>+34 932 123 456</span>
-                    </a>
-                    <a href="/presupuesto" class="cta-button top-cta-button">
-                        SOLICITAR PRESUPUESTO
-                    </a>
-                </div>
+    <header id="mainHeader" class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 transition-all duration-300">
+    <div class="max-w-[1600px] mx-auto px-[5%]">
+        <!-- Top Bar - Solo Desktop -->
+        <div class="hidden lg:flex justify-end items-center h-12 border-b border-slate-100">
+            <!-- Language Selector -->
+            <div class="flex items-center gap-1 px-4 border-l border-slate-100">
+                <a href="/" class="py-1 px-3 text-xs font-medium tracking-wider uppercase rounded bg-cyan-400 text-white hover:bg-cyan-500 transition-colors">ES</a>
+                <a href="/en" class="py-1 px-3 text-xs font-medium tracking-wider uppercase rounded text-slate-600 hover:bg-cyan-50 hover:text-cyan-500 transition-colors">EN</a>
+                <a href="/ca" class="py-1 px-3 text-xs font-medium tracking-wider uppercase rounded text-slate-600 hover:bg-cyan-50 hover:text-cyan-500 transition-colors">CA</a>
             </div>
 
-            <!-- Main Bar -->
-            <div class="header-content">
-                <!-- Logo -->
-                <div class="logo-wrapper">
-                    <a href="/" class="logo-link">
-                        <svg class="logo-svg"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 375 375"
-                            width="48" 
-                            height="48"
-                            preserveAspectRatio="xMidYMid meet">
-                            <defs>
-                                <clipPath id="2717b77dc4">
-                                    <path
-                                        d="M 223.109375 37.496094 L 314.597656 37.496094 L 314.597656 337.6875 L 223.109375 337.6875 Z M 223.109375 37.496094"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="9422b2d12e">
-                                    <path
-                                        d="M 314.597656 67.992188 L 314.597656 337.496094 L 223.109375 307 L 223.109375 37.496094 Z M 314.597656 67.992188"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="b07c821656">
-                                    <path
-                                        d="M 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 L 146.625 249.945312 Z M 146.625 37.496094"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="55959a45ff">
-                                    <path
-                                        d="M 146.625 62.996094 L 146.625 249.945312 L 223.117188 224.449219 L 223.117188 37.496094 Z M 146.625 62.996094"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="a83aa56b9b">
-                                    <path
-                                        d="M 112.101562 111.523438 L 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 Z M 112.101562 111.523438"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="1c3af9afe2">
-                                    <path
-                                        d="M 177.742188 133.402344 L 177.742188 291.402344 L 112.101562 269.523438 L 112.101562 111.523438 Z M 177.742188 133.402344"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="a2157cede2">
-                                    <path
-                                        d="M 60.398438 111.367188 L 112.109375 111.367188 L 112.109375 237.410156 L 60.398438 237.410156 Z M 60.398438 111.367188"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="1adccc21aa">
-                                    <path
-                                        d="M 60.398438 128.75 L 60.398438 237.410156 L 112.109375 220.175781 L 112.109375 111.515625 Z M 60.398438 128.75"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-                            </defs>
-
-                            <g clip-path="url(#2717b77dc4)">
-                                <g clip-path="url(#9422b2d12e)">
-                                    <path
-                                        fill="currentColor"
-                                        d="M 314.597656 37.496094 L 314.597656 337.332031 L 223.109375 337.332031 L 223.109375 37.496094 Z M 314.597656 37.496094"
-                                        fill-opacity="1"
-                                        fill-rule="nonzero"
-                                    />
-                                </g>
-                            </g>
-
-                            <g clip-path="url(#b07c821656)">
-                                <g clip-path="url(#55959a45ff)">
-                                    <path
-                                        fill="currentColor"
-                                        d="M 146.625 249.945312 L 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 Z M 146.625 249.945312"
-                                        fill-opacity="1"
-                                        fill-rule="nonzero"
-                                    />
-                                </g>
-                            </g>
-
-                            <g clip-path="url(#a83aa56b9b)">
-                                <g clip-path="url(#1c3af9afe2)">
-                                    <path
-                                        fill="currentColor"
-                                        d="M 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 L 112.101562 111.523438 Z M 177.742188 111.523438"
-                                        fill-opacity="1"
-                                        fill-rule="nonzero"
-                                    />
-                                </g>
-                            </g>
-
-                            <g clip-path="url(#a2157cede2)">
-                                <g clip-path="url(#1adccc21aa)">
-                                    <path
-                                        fill="currentColor"
-                                        d="M 60.398438 237.410156 L 60.398438 111.570312 L 112.109375 111.570312 L 112.109375 237.410156 Z M 60.398438 237.410156"
-                                        fill-opacity="1"
-                                        fill-rule="nonzero"
-                                    />
-                                </g>
-                            </g>
-                        </svg>
-                        <span class="logo">PERITO BARCELONA</span>
-                    </a>
-                </div>
-                
-                <!-- Mobile CTA + Menu Button - Solo visible en móvil -->
-                <div class="mobile-controls">
-                    <!-- CTA solo visible si hay espacio (breakpoint sm) -->
-                    <a href="/presupuesto" class="cta-button mobile-cta">
-                        SOLICITAR
-                    </a>
-                    
-                    <button class="menu-toggle" id="menuButton" aria-label="Toggle menu">
-                        <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Desktop Navigation - Solo visible en desktop -->
-                <nav class="desktop-nav">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="/" class="nav-link">
-                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-                                <span>Inicio</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#servicios" class="nav-link">
-                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-                                <span>Servicios</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#casos" class="nav-link">
-                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
-                                <span>Casos de éxito</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#blog" class="nav-link">
-                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                                <span>Blog</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contacto" class="nav-link">
-                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                                <span>Contacto</span>
-                            </a>
-                        </li>
-                    </ul>                   
-                </nav>
+            <!-- CTAs -->
+            <div class="flex items-center">
+                <a href="tel:+34932123456" class="flex items-center gap-2 px-4 py-2 text-sm text-slate-600 hover:text-cyan-500 border-l border-slate-100 transition-colors">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>+34 932 123 456</span>
+                </a>
+                <a href="/presupuesto" class="px-4 py-2 text-sm font-semibold text-white bg-cyan-400 hover:bg-cyan-500 transition-colors border-l border-slate-100">
+                    SOLICITAR PRESUPUESTO
+                </a>
             </div>
         </div>
-    </header>
 
-    
-    <!-- Mobile Menu (oculto por defecto) -->
-    <div id="mobileMenu" class="mobile-menu">
-        <div class="container mobile-menu-container">
-            <nav class="mobile-nav">
-                <ul class="mobile-nav-list">
-                    <li class="mobile-nav-item">
-                        <a href="/" class="mobile-nav-link">
-                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        <!-- Main Navigation -->
+        <div class="flex justify-between items-center h-[70px] lg:h-20">
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-2 group hover:-translate-y-0.5 transition-transform duration-300">
+                <svg class="w-12 h-12 text-cyan-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 375 375"
+                    preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <clipPath id="2717b77dc4">
+                            <path
+                                d="M 223.109375 37.496094 L 314.597656 37.496094 L 314.597656 337.6875 L 223.109375 337.6875 Z M 223.109375 37.496094"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="9422b2d12e">
+                            <path
+                                d="M 314.597656 67.992188 L 314.597656 337.496094 L 223.109375 307 L 223.109375 37.496094 Z M 314.597656 67.992188"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="b07c821656">
+                            <path
+                                d="M 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 L 146.625 249.945312 Z M 146.625 37.496094"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="55959a45ff">
+                            <path
+                                d="M 146.625 62.996094 L 146.625 249.945312 L 223.117188 224.449219 L 223.117188 37.496094 Z M 146.625 62.996094"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="a83aa56b9b">
+                            <path
+                                d="M 112.101562 111.523438 L 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 Z M 112.101562 111.523438"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="1c3af9afe2">
+                            <path
+                                d="M 177.742188 133.402344 L 177.742188 291.402344 L 112.101562 269.523438 L 112.101562 111.523438 Z M 177.742188 133.402344"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="a2157cede2">
+                            <path
+                                d="M 60.398438 111.367188 L 112.109375 111.367188 L 112.109375 237.410156 L 60.398438 237.410156 Z M 60.398438 111.367188"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="1adccc21aa">
+                            <path
+                                d="M 60.398438 128.75 L 60.398438 237.410156 L 112.109375 220.175781 L 112.109375 111.515625 Z M 60.398438 128.75"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+                    </defs>
+
+                    <g clip-path="url(#2717b77dc4)">
+                        <g clip-path="url(#9422b2d12e)">
+                            <path
+                                fill="currentColor"
+                                d="M 314.597656 37.496094 L 314.597656 337.332031 L 223.109375 337.332031 L 223.109375 37.496094 Z M 314.597656 37.496094"
+                                fill-opacity="1"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </g>
+
+                    <g clip-path="url(#b07c821656)">
+                        <g clip-path="url(#55959a45ff)">
+                            <path
+                                fill="currentColor"
+                                d="M 146.625 249.945312 L 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 Z M 146.625 249.945312"
+                                fill-opacity="1"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </g>
+
+                    <g clip-path="url(#a83aa56b9b)">
+                        <g clip-path="url(#1c3af9afe2)">
+                            <path
+                                fill="currentColor"
+                                d="M 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 L 112.101562 111.523438 Z M 177.742188 111.523438"
+                                fill-opacity="1"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </g>
+
+                    <g clip-path="url(#a2157cede2)">
+                        <g clip-path="url(#1adccc21aa)">
+                            <path
+                                fill="currentColor"
+                                d="M 60.398438 237.410156 L 60.398438 111.570312 L 112.109375 111.570312 L 112.109375 237.410156 Z M 60.398438 237.410156"
+                                fill-opacity="1"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </g>
+                </svg>
+                <span class="text-lg lg:text-xl font-bold text-slate-800 group-hover:text-cyan-500 transition-colors">PERITO BARCELONA</span>
+            </a>
+
+            <!-- Mobile Controls -->
+            <div class="flex items-center gap-4 lg:hidden">
+                <a href="/presupuesto" class="hidden sm:block px-3 py-2 text-sm font-medium text-white bg-cyan-400 rounded hover:bg-cyan-500 transition-colors">
+                    SOLICITAR
+                </a>
+                <button id="menuButton" class="p-2 text-slate-600 hover:text-cyan-500 transition-colors focus:outline-none" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:block">
+                <ul class="flex items-center gap-6">
+                    <li>
+                        <a href="/" class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 font-medium transition-colors">
+                            <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                                <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            </svg>
                             <span>Inicio</span>
                         </a>
                     </li>
-                    <li class="mobile-nav-item">
-                        <a href="#servicios" class="mobile-nav-link">
-                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                    <li>
+                        <a href="#servicios" class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 font-medium transition-colors">
+                            <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2h12a2 2 0 0 0 2-2V7Z"/>
+                                <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                                <path d="M10 9H8"/>
+                                <path d="M16 13H8"/>
+                                <path d="M16 17H8"/>
+                            </svg>
                             <span>Servicios</span>
                         </a>
                     </li>
-                    <li class="mobile-nav-item">
-                        <a href="#casos" class="mobile-nav-link">
-                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+                    <li>
+                        <a href="#casos" class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 font-medium transition-colors">
+                            <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 7v14"/>
+                                <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>
+                            </svg>
                             <span>Casos de éxito</span>
                         </a>
                     </li>
-                    <li class="mobile-nav-item">
-                        <a href="#blog" class="mobile-nav-link">
-                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <li>
+                        <a href="#blog" class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 font-medium transition-colors">
+                            <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
                             <span>Blog</span>
                         </a>
                     </li>
-                    <li class="mobile-nav-item">
-                        <a href="#contacto" class="mobile-nav-link">
-                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <li>
+                        <a href="#contacto" class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 font-medium transition-colors">
+                            <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
                             <span>Contacto</span>
                         </a>
                     </li>
                 </ul>
             </nav>
-            
-            <div class="mobile-footer">
-                <div class="language-selector-mobile">
-                    <a href="/" class="language-link-mobile active">ES</a>
-                    <a href="/en" class="language-link-mobile">EN</a>
-                    <a href="/ca" class="language-link-mobile">CA</a>
-                </div>
-                <div class="mobile-footer-contact">
-                    <a href="tel:+34932123456" class="mobile-contact-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        <span>+34 932 123 456</span>
-                    </a>
-                    <a href="mailto:info@peritobarcelona.com" class="mobile-contact-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        <span>info@perito.barcelona</span>
-                    </a>
-                </div>
-                <div class="mobile-cta-container">
-                    <a href="/presupuesto" class="cta-btn" style="width: 100%;">SOLICITAR PRESUPUESTO</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Botón flotante para hablar con un perito - Implementación con !important -->
-    <a href="tel:+34932123456" id="talkToExpert" style="position: fixed; bottom: 28px; right: 20px; z-index: 1000 !important; display: none; padding: 12px 24px; background-color: #00B8D4; color: white; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 12px rgba(0, 184, 212, 0.3); font-size: 0.9rem; align-items: center; gap: 10px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Hablar con un perito
-    </a>
-
-    
-    
-
-    
-    <header class="hero-full">
-    <div class="hero-wrapper">
-        <div class="hero-container">
-            <div class="hero-text">
-                <span class="hero-tag">PERITO JUDICIAL EN BARCELONA</span>
-                <div class="proof-header">
-                    <div class="trust-badges">
-                        <div class="badge-item">
-                            <svg viewBox="0 0 24 24" class="badge-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                            <span>Nº1 EN PERITAJES</span>
-                        </div>
-                        <div class="rating-item">
-                            <div class="stars">★★★★★</div>
-                            <span>4.9/5 en Google</span>
-                        </div>
-                    </div>
-                    <h2>INFORMES PERICIALES<br><strong>QUE GANAN CASOS</strong></h2>
-                </div>
-
-                <div class="cta-group">
-                    <a href="#contacto" class="cta-btn primary">SOLICITAR PRESUPUESTO</a>
-                    <a href="tel:+34932123456" class="cta-btn outline">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        HABLAR CON UN PERITO
-                    </a>
-                    <span class="cta-guarantee">✓ Primera consulta gratuita</span>
-                </div>
-
-                <div class="proof-metrics">
-                    <div class="metric">
-                        <div class="metric-icon">97%</div>
-                        <div class="metric-text">
-                            <strong>Casos Exitosos</strong>
-                            <span>En tribunales</span>
-                        </div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-icon">24h</div>
-                        <div class="metric-text">
-                            <strong>Respuesta</strong>
-                            <span>Garantizada</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trust-logos">
-                    <img src="/assets/images/logos/logo_ECCAT.avif" alt="Col·legi de l'Enginyeria Civil de Catalunya" width="100" loading="lazy">
-                    <img src="/assets/images/logos/INESE_Formación_CMYK.avif" alt="INESE" width="100" loading="lazy">
-                    <img src="/assets/images/logos/upc-logo.svg" alt="Universitat politècnica de catalunya" width="100" loading="lazy">
-                    <p class="trust-caption">Informes aceptados por todos los tribunales españoles</p>
-                </div>
-            </div>
-        </div>
-        <div class="hero-image">
-            <picture>
-                <source
-                    media="(min-width: 992px)"
-                    srcset="/assets/images/perito-construccion-obra-edificacion-1280.avif"
-                >
-                <source
-                    media="(min-width: 768px)"
-                    srcset="/assets/images/perito-construccion-obra-edificacion-768.avif"
-                >
-                <img
-                    src="/assets/images/perito-construccion-obra-edificacion-640.avif"
-                    alt="Perito experto realizando inspección técnica"
-                    loading="eager"
-                    decoding="async"
-                >
-            </picture>
         </div>
     </div>
 </header>
 
-<style>
-.hero-full {
-    padding-top: var(--header-height, 70px);
-    margin-top: 0;
-    background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
-    color: white;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-.hero-wrapper {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    min-height: calc(85vh - var(--header-height, 70px)); /* Ajustado para coincidir */
-    display: flex;
-    align-items: flex-start; /* Cambiado de center a flex-start */
-    padding-top: 5vh; /* Añadido padding superior */
-}
-
-.hero-container {
-    width: min(1400px, 95%);
-    margin-left: max(5%, 2rem);
-    padding: clamp(2rem, 6vh, 4rem) 0; /* Reducido el padding vertical */
-}
-
-.hero-image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%; /* Reducido de 55% a 45% */
-    height: 100%;
-    z-index: 1;
-}
-
-.hero-image picture {
-    height: 100%;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    clip-path: polygon(150px 0, 100% 0, 100% 100%, 50px 100%); /* Ajustada la diagonal */
-    opacity: 0.8;
-}
-
-.hero-tag {
-    font-size: 0.875rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    margin-bottom: 1rem;
-    display: inline-block;
-    position: relative;
-    padding-left: 3rem;
-}
-
-.hero-tag::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 2rem;
-    height: 2px;
-    background-color: var(--color-accent);
-    transform: translateY(-50%);
-}
-
-
-@media (max-width: 991px) {
-    .hero-full {
-        min-height: 85vh;
-        padding-top: var(--header-height, 70px);
-    }
-
-    .hero-wrapper {
-        min-height: auto;
-        padding: rem 0;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 2vh;
-    }
-
-    .hero-container {
-        width: min(650px, 95%);
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .hero-image {
-        position: relative;
-        width: 100%;
-        height: 300px;
-    }
-
-    .hero-image img {
-        clip-path: none;
-        opacity: 0.8;
-    }
-
-    .hero-tag {
-        padding: 0;
-        margin-bottom: 0rem;
-    }
-
-    .hero-tag::before {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-wrapper {
-        padding: 0rem 0;
-        min-height: auto; /* Permite altura automática en móvil */
-    }
-
-    .hero-container {
-        padding-top: 1rem;
-    }
-
-    .hero-image {
-        height: 300px;
-    }
-
-    h2 {
-        font-size: clamp(2rem, 3vw + 1rem, 2.5rem);
-    }
-
-    .hero-full {
-        margin-top: 0;
-        background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
-        color: white;
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-    }
-
-    .hero-wrapper {
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        display: flex;
-        align-items: flex-start; /* Cambiado de center a flex-start */
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-    .hero-container {
-        max-width: 50%; /* Reducir el ancho del contenedor */
-        margin-left: max(4%, 2rem);
-    }
-
-    .hero-image {
-        width: 48%; /* Ajustar el ancho de la imagen */
-    }
-
-    h2 {
-        font-size: clamp(2.25rem, 3vw + 1rem, 3.5rem); /* Reducir tamaño de título */
-    }
-
-    .trust-badges {
-        gap: 0.75rem; /* Reducir espaciado */
-    }
-}
-
-.proof-header {
-    margin-bottom: 1rem;
-}
-
-.trust-badges {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.badge-item, .rating-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.625rem 1rem;
-    background: rgba(255,255,255,0.1);
-    border-radius: 100px;
-    font-size: 1rem;
-}
-
-.badge-icon {
-    width: 20px;
-    height: 20px;
-    fill: var(--color-accent);
-}
-
-.stars {
-    color: #FFD700;
-    letter-spacing: 2px;
-}
-
-h2 {
-    font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin-bottom: 1rem;
-}
-
-h2 strong {
-    display: block;
-    color: var(--color-accent);
-    font-size: 1.1em;
-}
-
-.proof-metrics {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    margin: 1rem 0; /* Reducido el margen */
-    order: 4; /* Movido después del CTA */
-}
-
-.metric {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: rgba(255,255,255,0.05);
-    border-radius: 12px;
-}
-
-.metric-icon {
-    font-size: clamp(2rem, 3vw, 2.5rem);
-    font-weight: 800;
-    color: var(--color-accent);
-    line-height: 1;
-}
-
-.metric-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.metric-text strong {
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    color: white;
-}
-
-.metric-text span {
-    font-size: 0.875rem;
-    color: rgba(255,255,255,0.7);
-}
-
-.cta-group {
-    display: flex;
-    flex-direction: row; /* Cambiado de column a row */
-    gap: 1rem;
-    align-items: center;
-    order: 3;
-    margin-top: 2rem;
-    width: 100%;
-}
-
-.cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1.2rem 2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    width: 100%; /* Botones a ancho completo */
-    justify-content: center; /* Centra el contenido */
-    flex: 1; /* Hace que ambos botones ocupen el mismo espacio */
-}
-
-.cta-btn.primary {
-    background: var(--color-accent);
-    color: white;
-    box-shadow: 0 4px 15px rgba(0, 184, 212, 0.3);
-}
-
-.cta-btn.outline {
-    background: transparent;
-    color: var(--color-accent);
-    border: 2px solid var(--color-accent);
-}
-
-.cta-btn:hover {
-    transform: translateY(-2px);
-}
-
-.cta-btn.primary:hover {
-    box-shadow: 0 6px 20px rgba(0, 184, 212, 0.4);
-}
-
-.cta-btn.outline:hover {
-    background: rgba(0, 184, 212, 0.1);
-}
-
-.cta-guarantee {
-    color: var(--color-accent);
-    font-size: 0.875rem;
-    width: 100%;
-    text-align: center;
-    margin-top: 1rem;
-}
-
-@media (min-width: 992px) {
-    .cta-group {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .cta-btn {
-        flex: 0 1 auto; /* Permite que los botones crezcan pero mantengan su tamaño base */
-        width: auto; /* Ancho automático en desktop */
-        min-width: 250px; /* Asegura un ancho mínimo */
-        white-space: nowrap; /* Evita saltos de línea */
-    }
-
-    .cta-guarantee {
-        text-align: left;
-        width: 100%;
-        margin-top: 0.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .cta-group {
-        flex-direction: column; /* En móvil sí los apilamos */
-        max-width: 100%;
-    }
-    
-    .cta-btn {
-        width: 100%;
-    }
-}
-
-.trust-logos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-    margin-top: 2.5rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    order: 5;
-    position: relative;
-    justify-content: space-between;
-}
-
-.trust-logos img {
-    height: 40px;
-    width: auto;
-    max-width: 120px;
-    filter: brightness(0) invert(1);
-    opacity: 0.7;
-    transition: all 0.3s ease;
-    object-fit: contain;
-}
-
-.trust-logos img:hover {
-    opacity: 1;
-    transform: translateY(-2px);
-}
-
-.trust-caption {
-    color: rgba(255,255,255,0.6);
-    font-size: 0.875rem;
-    margin: 0;
-    flex: 1;
-    min-width: 200px;
-    text-align: right;
-}
-
-@media (max-width: 991px) {
-    .hero-container {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-text {
-        text-align: center;
-        align-items: center;
-    }
-
-    h2 {
-        font-size: clamp(2.25rem, 3vw + 1rem, 3rem);
-        text-align: center;
-    }
-
-    .trust-badges, .proof-metrics {
-        justify-content: center;
-    }
-
-    .proof-metrics {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cta-group {
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .trust-logos {
-        justify-content: center;
-        gap: 1.5rem;
-    }
-
-    .trust-caption {
-        text-align: center;
-        margin-top: 1.5rem;
-        flex: 0 0 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-container {
-        padding: 2rem 1rem;
-    }
-
-    .trust-badges {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .proof-metrics {
-        grid-template-columns: 1fr;
-    }
-
-    .metric {
-        padding: 0.875rem;
-        justify-content: center;
-    }
-
-    .cta-group {
-        max-width: 100%;
-        padding: 0 1rem;
-    }
-    
-    .cta-btn {
-        padding: 1rem 1.5rem;
-        font-size: 0.9rem;
-    }
-}
-
-.mobile-menu-container {
-    padding-top: calc(var(--header-height, 70px) + 2rem); /* Ajustado el padding superior */
-    padding-bottom: 32px;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.mobile-nav-list {
-    list-style: none;
-    padding: 1rem;
-    margin: 0 0 30px 0;
-}
-
-@media (max-width: 991px) {
-    .mobile-menu {
-        padding-top: var(--header-height, 70px); /* Añadido padding superior */
-    }
-    
-    .mobile-menu-container {
-        padding-top: 1rem; /* Reducido porque ya tenemos padding en el contenedor padre */
-    }
-}
-
-.hero-conversion {
-    min-height: 100vh;
-    background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
-    color: white;
-    padding: clamp(5rem, 10vh, 8rem) 1rem;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.hero-content {
-    width: min(1400px, 100%);
-    margin: 0 auto;
-    display: grid;
-    gap: 3rem;
-    align-items: center;
-    padding: 0 max(5%, 1rem);
-}
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 850px;
-}
-
-.hero-badge {
-    display: inline-flex;
-    padding: 0.75rem 1.25rem;
-    background: rgba(0, 184, 212, 0.1);
-    border: 1px solid rgba(0, 184, 212, 0.2);
-    border-radius: 100px;
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    margin-bottom: 1rem;
-}
-
-.hero-title {
-    font-size: clamp(2.5rem, 5vw + 1rem, 4rem);
-    line-height: 1.1;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
-
-.hero-title strong {
-    display: block;
-    color: var(--color-accent);
-    font-size: 1.1em;
-    margin-top: 0.2em;
-}
-
-.hero-stats {
-    display: flex;
-    gap: 2rem;
-    margin: 0.5rem 0;
-}
-
-.stat-item {
-    font-size: 1.125rem;
-    color: rgba(255,255,255,0.9);
-}
-
-.stat-item strong {
-    display: block;
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--color-accent);
-    line-height: 1;
-    margin-bottom: 0.25rem;
-}
-
-.hero-description {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: rgba(255,255,255,0.9);
-    margin: 0.5rem 0 1.5rem;
-}
-
-.cta-group {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.cta-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1.25rem 2rem;
-    background: linear-gradient(45deg, var(--color-accent), #00d4ff);
-    border-radius: 8px;
-    color: white;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    width: fit-content;
-}
-
-.cta-primary svg {
-    width: 20px;
-    height: 20px;
-    stroke: currentColor;
-    stroke-width: 2;
-    fill: none;
-}
-
-.cta-guarantee {
-    font-size: 0.875rem;
-    color: var(--color-accent);
-}
-
-.hero-visual {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-}
-
-.hero-visual img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-@media (min-width: 992px) {
-    .hero-content {
-        grid-template-columns: 1.2fr 0.8fr;
-    }
-
-    .hero-visual {
-        height: 100%;
-    }
-
-    .hero-visual img {
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-conversion {
-        padding: 6rem 0 3rem;
-        min-height: auto;
-    }
-
-    .hero-text {
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .hero-badge {
-        margin: 0 auto;
-    }
-
-    .hero-stats {
-        justify-content: center;
-    }
-
-    .cta-group {
-        align-items: center;
-    }
-
-    .hero-visual {
-        margin: 0 -1rem;
-        border-radius: 0;
-    }
-}
-</style>
-    
-    
-    <section id="servicios">
-        <div class="container">
-            <h2 class="section-title">SERVICIOS EXPERTOS</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-number">01</div>
-                    <h3>PERITAJES DE CONSTRUCCIÓN</h3>
-                    <p>Análisis exhaustivo de patologías constructivas, defectos estructurales y vicios ocultos en edificaciones de cualquier tipología.</p>
-                    <a href="#contacto" class="cta-btn outline-btn" style="margin-top: 2rem;">SOLICITAR</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-number">02</div>
-                    <h3>PERITAJES PARA SEGUROS</h3>
-                    <p>Valoración técnica independiente de daños en siniestros, tasaciones para compañías aseguradoras y dictámenes periciales concluyentes.</p>
-                    <a href="#contacto" class="cta-btn outline-btn" style="margin-top: 2rem;">SOLICITAR</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-number">03</div>
-                    <h3>INFORMES JUDICIALES</h3>
-                    <p>Elaboración de informes técnicos contundentes para procedimientos judiciales con defensa oral en sala y asesoramiento especializado.</p>
-                    <a href="#contacto" class="cta-btn outline-btn" style="margin-top: 2rem;">SOLICITAR</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="proceso" class="process-section">
-        <div class="container">
-            <h2 class="section-title">METODOLOGÍA</h2>
-            <div class="process-container">
-                <div class="process-step">
-                    <div class="process-step-number">01</div>
-                    <h3>ANÁLISIS INICIAL</h3>
-                    <p>Estudio exhaustivo del caso y planificación estratégica de la intervención pericial con objetivos técnicos claramente definidos.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="process-step-number">02</div>
-                    <h3>INSPECCIÓN TÉCNICA</h3>
-                    <p>Visita presencial con equipamiento especializado, toma de datos in situ y documentación fotográfica detallada para análisis preciso.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="process-step-number">03</div>
-                    <h3>INFORME PERICIAL</h3>
-                    <p>Redacción del dictamen técnico aplicando normativa vigente con rigor científico y claridad expositiva para máxima efectividad.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="process-step-number">04</div>
-                    <h3>DEFENSA PROFESIONAL</h3>
-                    <p>Presentación y defensa del informe ante tribunales o partes interesadas con acompañamiento técnico hasta la resolución completa.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonios">
-        <div class="container">
-            <h2 class="section-title">CASOS DE ÉXITO</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"El informe pericial fue determinante para ganar nuestro caso. La claridad técnica y la contundencia de las conclusiones resultaron decisivas ante el tribunal."</p>
-                    <p class="testimonial-author">Bufete Legal Martínez & Asociados</p>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"La valoración de daños estructurales tras el siniestro fue aceptada íntegramente por la aseguradora gracias a la solidez técnica del informe."</p>
-                    <p class="testimonial-author">Comunidad de Propietarios Edificio Victoria</p>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"La intervención pericial permitió identificar el origen exacto de las humedades recurrentes que otros técnicos no habían logrado diagnosticar en cinco años."</p>
-                    <p class="testimonial-author">Promotora Inmobiliaria Nuevo Horizonte</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">CONTACTO DIRECTO</h2>
-            <div class="contact-form">
-                <form id="contact-form">
-                    <div class="input-group">
-                        <input type="text" class="input-field" placeholder="Nombre y Apellidos" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="email" class="input-field" placeholder="Email" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="tel" class="input-field" placeholder="Teléfono" required>
-                    </div>
-                    <div class="input-group">
-                        <select class="input-field" required>
-                            <option value="" disabled selected>Tipo de Informe</option>
-                            <option value="construccion">Peritaje de Construcción</option>
-                            <option value="seguros">Peritaje para Seguros</option>
-                            <option value="judicial">Informe Judicial</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <textarea class="input-field" placeholder="Describa brevemente su caso" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="cta-btn" style="width: 100%;">ENVIAR SOLICITUD</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-primary">
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-col">
-                        <div class="footer-logo">
-                            <svg class="h-10 w-auto text-white group-hover:text-blue-400 transition-colors"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 375 374.999991"
-                            preserveAspectRatio="xMidYMid meet">
-                            <defs>
-                                <clipPath id="2717b77dc4">
-                                    <path
-                                        d="M 223.109375 37.496094 L 314.597656 37.496094 L 314.597656 337.6875 L 223.109375 337.6875 Z M 223.109375 37.496094"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="9422b2d12e">
-                                    <path
-                                        d="M 314.597656 67.992188 L 314.597656 337.496094 L 223.109375 307 L 223.109375 37.496094 Z M 314.597656 67.992188"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="b07c821656">
-                                    <path
-                                        d="M 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 L 146.625 249.945312 Z M 146.625 37.496094"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="55959a45ff">
-                                    <path
-                                        d="M 146.625 62.996094 L 146.625 249.945312 L 223.117188 224.449219 L 223.117188 37.496094 Z M 146.625 62.996094"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="a83aa56b9b">
-                                    <path
-                                        d="M 112.101562 111.523438 L 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 Z M 112.101562 111.523438"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="1c3af9afe2">
-                                    <path
-                                        d="M 177.742188 133.402344 L 177.742188 291.402344 L 112.101562 269.523438 L 112.101562 111.523438 Z M 177.742188 133.402344"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="a2157cede2">
-                                    <path
-                                        d="M 60.398438 111.367188 L 112.109375 111.367188 L 112.109375 237.410156 L 60.398438 237.410156 Z M 60.398438 111.367188"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="1adccc21aa">
-                                    <path
-                                        d="M 60.398438 128.75 L 60.398438 237.410156 L 112.109375 220.175781 L 112.109375 111.515625 Z M 60.398438 128.75"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-                            </defs>
-
-                            <g clip-path="url(#2717b77dc4)">
-                                <g clip-path="url(#9422b2d12e)">
-                                    <path
-                                        fill="currentColor"
-                                        d="M 314.597656 37.496094 L 314.597656 337.332031 L 223.109375 337.332031 L 223.109375 37.496094 Z M 314.597656 37.496094"
-                                        fill-opacity="1"
-                                        fill-rule="nonzero"
-                                    />
-                                </g>
-                            </g>
-
-                            <g clip-path="url(#b07c821656)">
-                                <g clip-path="url(#55959a45ff)">
-                                    <path
-                                        fill="currentColor"
-                                        d="M 146.625 249.945312 L 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 Z M 146.625 249.945312"
-                                        fill-opacity="1"
-                                        fill-rule="nonzero"
-                                    />
-                                </g>
-                            </g>
-
-                            <g clip-path="url(#a83aa56b9b)">
-                                <g clip-path="url(#1c3af9afe2)">
-                                    <path
-                                        fill="currentColor"
-                                        d="M 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 L 112.101562 111.523438 Z M 177.742188 111.523438"
-                                        fill-opacity="1"
-                                        fill-rule="nonzero"
-                                    />
-                                </g>
-                            </g>
-
-                            <g clip-path="url(#a2157cede2)">
-                                <g clip-path="url(#1adccc21aa)">
-                                    <path
-                                        fill="currentColor"
-                                        d="M 60.398438 237.410156 L 60.398438 111.570312 L 112.109375 111.570312 L 112.109375 237.410156 Z M 60.398438 237.410156"
-                                        fill-opacity="1"
-                                        fill-rule="nonzero"
-                                    />
-                                </g>
-                            </g>
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed inset-0 bg-[#0B1030] transform translate-x-full transition-transform duration-300 ease-in-out z-40">
+    <div class="max-w-[1600px] mx-auto px-[5%] h-full pt-[80px] flex flex-col">
+        <!-- Navigation -->
+        <nav class="flex-1 py-8">
+            <ul class="space-y-4">
+                <li>
+                    <a href="/" class="flex items-center gap-3 px-4 py-3 text-white text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg transition-all">
+                        <svg class="w-6 h-6 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                            <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                         </svg>
-                            <h4>PERITO BARCELONA</h4>
-                        </div>
-                        <p class="footer-about">Expertos en informes periciales de construcción y seguros. Garantía de calidad y profesionalidad.</p>
-                        <div class="footer-socials">
-                            <a href="#" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
-                            <a href="#" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
-                            <a href="#" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
-                        </div>
-                    </div>
-                    <div class="footer-col">
-                        <h5>Servicios</h5>
-                        <ul class="footer-links">
-                            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Peritajes de Construcción</a></li>
-                            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Peritajes para Seguros</a></li>
-                            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Informes Judiciales</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h5>Contacto</h5>
-                        <div class="footer-contact-item">
-                            <i class="fas fa-phone footer-contact-icon"></i>
-                            <div class="footer-contact-text">
-                                <span class="footer-contact-label">Teléfono:</span>
-                                +34 932 123 456
-                            </div>
-                        </div>
-                        <div class="footer-contact-item">
-                            <i class="fas fa-envelope footer-contact-icon"></i>
-                            <div class="footer-contact-text">
-                                <span class="footer-contact-label">Email:</span>
-                                info@peritobarcelona.com
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-col">
-                        <h5>Ubicación</h5>
-                        <p class="footer-contact-text">Barcelona · Madrid · Valencia · Sevilla</p>
-                    </div>
-                </div>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#servicios" class="flex items-center gap-3 px-4 py-3 text-white text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg transition-all">
+                        <svg class="w-6 h-6 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2h12a2 2 0 0 0 2-2V7Z"/>
+                            <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                            <path d="M10 9H8"/>
+                            <path d="M16 13H8"/>
+                            <path d="M16 17H8"/>
+                        </svg>
+                        <span>Servicios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#casos" class="flex items-center gap-3 px-4 py-3 text-white text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg transition-all">
+                        <svg class="w-6 h-6 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 7v14"/>
+                            <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>
+                        </svg>
+                        <span>Casos de éxito</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#blog" class="flex items-center gap-3 px-4 py-3 text-white text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg transition-all">
+                        <svg class="w-6 h-6 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        <span>Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contacto" class="flex items-center gap-3 px-4 py-3 text-white text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg transition-all">
+                        <svg class="w-6 h-6 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span>Contacto</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Footer actions -->
+        <div class="py-6 border-t border-slate-800/50">
+            <!-- Language selector -->
+            <div class="flex gap-4 mb-6 px-4">
+                <a href="/" class="text-cyan-400 font-medium px-3 py-2 bg-white/5 rounded-md">ES</a>
+                <a href="/en" class="text-slate-400 hover:text-cyan-400 font-medium px-3 py-2 hover:bg-white/5 rounded-md">EN</a>
+                <a href="/ca" class="text-slate-400 hover:text-cyan-400 font-medium px-3 py-2 hover:bg-white/5 rounded-md">CA</a>
+            </div>
+            
+            <!-- Contact options -->
+            <div class="space-y-3 mb-6">
+                <a href="tel:+34932123456" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-cyan-400 bg-white/5 hover:bg-white/10 rounded-lg transition-all">
+                    <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>+34 932 123 456</span>
+                </a>
+                <a href="mailto:info@peritobarcelona.com" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-cyan-400 bg-white/5 hover:bg-white/10 rounded-lg transition-all">
+                    <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <span>info@perito.barcelona</span>
+                </a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="px-4">
+                <a href="/presupuesto" class="block w-full bg-cyan-400 text-white text-center py-4 rounded-lg font-medium hover:bg-cyan-500 transition-colors">
+                    SOLICITAR PRESUPUESTO
+                </a>
             </div>
         </div>
-        <div class="footer-secondary">
-            <div class="container">
-                <div class="footer-secondary-content">
-                    <p class="footer-copyright">© 2025 PERITO BARCELONA | Informes Periciales</p>
-                    <div class="footer-policies">
-                        <a href="#" class="footer-policy-link">Política de Privacidad</a>
-                        <a href="#" class="footer-policy-link">Términos y Condiciones</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div class="floating-cta">
-        <a href="#" class="floating-cta-btn" id="showModal">
-            <i class="fas fa-bolt"></i>
-            <span>SOLICITAR INFORME</span>
-        </a>
     </div>
+</div>
 
-    <div class="modal" id="contactModal">
-        <div class="modal-content">
-            <div class="modal-close" id="closeModal"><i class="fas fa-times"></i></div>
-            <h2 style="color: var(--color-accent); font-size: 2rem; margin-bottom: 1.5rem;">SOLICITUD PRIORITARIA</h2>
-            <p style="margin-bottom: 2rem;">Complete este formulario para recibir atención preferente en las próximas 12 horas.</p>
-            <form id="modal-form">
-                <div class="input-group">
-                    <input type="text" class="input-field" placeholder="Nombre" required>
-                </div>
-                <div class="input-group">
-                    <input type="tel" class="input-field" placeholder="Teléfono" required>
-                </div>
-                <div class="input-group">
-                    <input type="email" class="input-field" placeholder="Email" required>
-                </div>
-                <div class="input-group">
-                    <select class="input-field" required>
-                        <option value="" disabled selected>Tipo de informe</option>
-                        <option value="construccion">Peritaje de Construcción</option>
-                        <option value="seguros">Peritaje para Seguros</option>
-                        <option value="judicial">Informe Judicial</option>
-                    </select>
-                </div>
-                <button type="submit" class="cta-btn" style="width: 100%;">SOLICITAR AHORA</button>
-            </form>
-        </div>
-    </div>
+<!-- Botón flotante para hablar con un perito -->
+<a href="tel:+34932123456" id="talkToExpert" class="fixed bottom-7 right-5 z-40 hidden md:flex items-center bg-cyan-400 text-white py-3 px-6 rounded-full font-semibold shadow-lg hover:bg-cyan-500 transition-colors">
+    <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    Hablar con un perito
+</a>
+
+<script>
+    // Toggle para el menú móvil
+    document.getElementById('menuButton').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('translate-x-full');
+    });
+
+    // Mostrar/ocultar botón flotante al hacer scroll
+    window.addEventListener('scroll', function() {
+        const talkButton = document.getElementById('talkToExpert');
+        if (window.scrollY > 300) {
+            talkButton.classList.remove('hidden');
+            talkButton.classList.add('flex');
+        } else {
+            talkButton.classList.add('hidden');
+            talkButton.classList.remove('flex');
+        }
+    });
+</script>
     
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Depuración para verificar que los elementos existen
-            console.log("Header:", document.getElementById('mainHeader'));
-            console.log("Menu Button:", document.getElementById('menuButton'));
-            console.log("Mobile Menu:", document.getElementById('mobileMenu'));
-            console.log("Talk to Expert:", document.getElementById('talkToExpert'));
+    
 
-            const header = document.getElementById('mainHeader');
-            const menuButton = document.getElementById('menuButton');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const talkToExpert = document.getElementById('talkToExpert');
-            
-            // Forzar visibilidad del menú hamburguesa en pantallas pequeñas
-            if (menuButton) {
-                menuButton.style.display = 'flex';
-                menuButton.style.alignItems = 'center';
-                menuButton.style.justifyContent = 'center'; 
-                menuButton.style.zIndex = '1000';
-            }
-            
-            // Asegurar que el botón flotante aparezca después de 300px de scroll
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 300 && window.innerWidth < 992) {
-                    if (talkToExpert) {
-                        talkToExpert.style.display = 'flex';
-                    }
-                } else {
-                    if (talkToExpert) {
-                        talkToExpert.style.display = 'none';
-                    }
-                }
-            });
-            
-            // Forzar una evaluación inicial
-            if (window.scrollY > 300 && window.innerWidth < 992) {
-                if (talkToExpert) {
-                    talkToExpert.style.display = 'flex';
-                }
-            }
-            
-            // Manejo del toggle del menú móvil
-            if (menuButton && mobileMenu) {
-                menuButton.addEventListener('click', function() {
-                    console.log("Menú clickeado");
-                    const isOpen = mobileMenu.classList.contains('mobile-menu-open');
+    
+    <header class="relative pt-16 sm:pt-6 md:pt-[70px] min-h-screen bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white overflow-hidden">
+    <div class="relative z-10 w-full min-h-[calc(85vh-70px)] flex items-start md:pt-[5vh]">
+        <!-- Contenedor principal - ajustado para móvil y tablets -->
+        <div class="w-full px-4 sm:px-8 md:px-0 md:w-[95%] max-w-[1400px] md:mx-auto lg:ml-[5%] py-8 lg:py-20">
+            <!-- Hero Content - centrado en móvil y tablets -->
+            <div class="flex flex-col items-center md:items-center lg:items-start w-full lg:w-[70%] space-y-8 lg:space-y-16 mx-auto lg:mx-0">
+                <!-- Tag y badges con espaciado optimizado para móvil -->
+                <div class="space-y-6 md:space-y-8 w-full max-w-xl mx-auto md:mx-0">
+                    <!-- Hero tag -->
+                    <span class="flex justify-center md:justify-start items-center text-sm md:text-base font-semibold tracking-[2px] uppercase text-cyan-400">
+                        <span class="hidden lg:block w-8 h-0.5 bg-cyan-400 mr-3"></span>
+                        PERITO JUDICIAL EN BARCELONA
+                    </span>
+
+                    <!-- Trust badges - centrados en móvil -->
+                    <div class="flex flex-col lg:flex-row gap-4 w-full justify-center md:justify-start">
+                        <div class="inline-flex items-center px-4 py-2.5 bg-white/10 rounded-full w-full sm:w-auto justify-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            <span>Nº1 EN PERITAJES</span>
+                        </div>
+                        <div class="inline-flex items-center px-4 py-2.5 bg-white/10 rounded-full w-full sm:w-auto justify-center">
+                            <div class="text-yellow-400 tracking-wider mr-3">★★★★★</div>
+                            <span>4.9/5 en Google</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Headline - ajustado para una línea -->
+                <div class="space-y-12 text-center md:text-left w-full md:max-w-[90%] lg:max-w-[85%] xl:max-w-[80%]">
+                    <h1 class="text-[2.5rem] md:text-[3.5rem] lg:text-[4.2rem] xl:text-[4.8rem] 2xl:text-[5.2rem] font-light leading-[1.1] tracking-tight whitespace-normal lg:whitespace-nowrap">
+                        INFORMES PERICIALES
+                        <strong class="block text-cyan-400 mt-6 text-[1.2em]">QUE GANAN CASOS</strong>
+                    </h1>
+                </div>
+
+                <!-- CTAs y Métricas - centrados y ajustados para no romper líneas -->
+                <div class="space-y-12 w-full sm:max-w-2xl md:max-w-3xl mx-auto lg:mx-0">
+                    <!-- CTAs - ajustados para mantener una línea -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contacto" 
+                           class="flex-1 inline-flex items-center justify-center px-4 sm:px-8 py-4 bg-cyan-400 text-white font-semibold uppercase tracking-wider rounded-lg shadow-lg hover:bg-cyan-500 transition-all duration-300 text-sm sm:text-base whitespace-nowrap">
+                            SOLICITAR PRESUPUESTO
+                        </a>
+                        <a href="tel:+34932123456" 
+                           class="flex-1 inline-flex items-center justify-center px-4 sm:px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold uppercase tracking-wider rounded-lg hover:bg-cyan-400/10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            HABLAR CON UN PERITO
+                        </a>
+                    </div>
+
+                    <!-- Métricas -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl">
+                            <div class="text-2xl md:text-3xl font-extrabold text-cyan-400 leading-none">97%</div>
+                            <div class="flex flex-col gap-1">
+                                <strong class="text-base md:text-lg text-white">Casos Exitosos</strong>
+                                <span class="text-sm text-white/70">En tribunales</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl">
+                            <div class="text-2xl md:text-3xl font-extrabold text-cyan-400 leading-none">24h</div>
+                            <div class="flex flex-col gap-1">
+                                <strong class="text-base md:text-lg text-white">Respuesta</strong>
+                                <span class="text-sm text-white/70">Garantizada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logos y texto de aceptación -->
+                <div class="flex flex-col lg:flex-row items-center gap-6 pt-12 border-t border-white/10 w-full max-w-2xl mx-auto md:mx-0">
+                    <!-- Contenedor de logos - sin scroll -->
+                    <div class="flex items-center justify-center lg:justify-start gap-6 xl:gap-8 flex-grow">
+                        <img src="/assets/images/logos/logo_ECCAT.avif" 
+                             alt="Col·legi de l'Enginyeria Civil de Catalunya" 
+                             class="h-8 lg:h-10 w-auto brightness-0 invert opacity-70 hover:opacity-100 hover:-translate-y-0.5 transition-all object-contain" 
+                             loading="lazy">
+                        <img src="/assets/images/logos/INESE_Formación_CMYK.avif" 
+                             alt="INESE" 
+                             class="h-8 lg:h-10 w-auto brightness-0 invert opacity-70 hover:opacity-100 hover:-translate-y-0.5 transition-all object-contain" 
+                             loading="lazy">
+                        <img src="/assets/images/logos/upc-logo.svg" 
+                             alt="Universitat politècnica de catalunya" 
+                             class="h-8 lg:h-10 w-auto brightness-0 invert opacity-70 hover:opacity-100 hover:-translate-y-0.5 transition-all object-contain" 
+                             loading="lazy">
+                    </div>
+                    <!-- Texto de aceptación -->
+                    <p class="text-white/60 text-sm text-center lg:text-right whitespace-normal lg:whitespace-nowrap">
+                        Informes aceptados por todos los tribunales españoles
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Image - Ajustado margen izquierdo -->
+    <div class="hidden lg:block absolute top-0 right-0 w-[45%] h-full z-[1]">
+        <picture class="h-full">
+            <source media="(min-width: 992px)" srcset="/assets/images/perito-construccion-obra-edificacion-1280.avif">
+            <source media="(min-width: 768px)" srcset="/assets/images/perito-construccion-obra-edificacion-768.avif">
+            <img
+                src="/assets/images/perito-construccion-obra-edificacion-640.avif"
+                alt="Perito experto realizando inspección técnica"
+                class="w-full h-full object-cover opacity-80"
+                style="clip-path: polygon(150px 0, 100% 0, 100% 100%, 50px 100%);"
+                loading="eager"
+                decoding="async">
+        </picture>
+    </div>
+</header>
+
+<!-- Hero Image - Mobile -->
+<div class="lg:hidden relative w-full h-[300px]">
+    <img
+        src="/assets/images/perito-construccion-obra-edificacion-640.avif"
+        alt="Perito experto realizando inspección técnica"
+        class="w-full h-full object-cover opacity-80"
+        loading="eager"
+        decoding="async">
+</div>
+    <section id="servicios" class="py-24 px-4 md:px-[5%] bg-gray-50">
+    <div class="max-w-[1600px] mx-auto">
+        <!-- Título de sección con línea decorativa -->
+        <h2 class="text-[2.5rem] md:text-[3.5rem] font-bold text-slate-800 mb-16 relative inline-block w-full">
+            SERVICIOS EXPERTOS
+            <span class="absolute bottom-[-15px] left-0 w-20 h-1 bg-cyan-400"></span>
+        </h2>
+
+        <!-- Grid de servicios -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Servicio 1 -->
+            <div class="bg-white p-14 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group">
+                <!-- Borde superior con animación -->
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <!-- Número decorativo -->
+                <div class="absolute top-8 right-8 text-[6rem] font-bold text-gray-100 leading-none transition-colors duration-300 group-hover:text-cyan-400">01</div>
+                
+                <!-- Contenido -->
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">PERITAJES DE CONSTRUCCIÓN</h3>
+                    <p class="text-gray-600 mb-8">Análisis exhaustivo de patologías constructivas, defectos estructurales y vicios ocultos en edificaciones de cualquier tipología.</p>
+                    <a href="#contacto" class="inline-flex items-center justify-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold tracking-wider rounded-lg hover:bg-cyan-50 transition-colors">
+                        SOLICITAR
+                    </a>
+                </div>
+            </div>
+
+            <!-- Servicio 2 -->
+            <div class="bg-white p-14 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group">
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute top-8 right-8 text-[6rem] font-bold text-gray-100 leading-none transition-colors duration-300 group-hover:text-cyan-400">02</div>
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">PERITAJES PARA SEGUROS</h3>
+                    <p class="text-gray-600 mb-8">Valoración técnica independiente de daños en siniestros, tasaciones para compañías aseguradoras y dictámenes periciales concluyentes.</p>
+                    <a href="#contacto" class="inline-flex items-center justify-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold tracking-wider rounded-lg hover:bg-cyan-50 transition-colors">
+                        SOLICITAR
+                    </a>
+                </div>
+            </div>
+
+            <!-- Servicio 3 -->
+            <div class="bg-white p-14 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group">
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute top-8 right-8 text-[6rem] font-bold text-gray-100 leading-none transition-colors duration-300 group-hover:text-cyan-400">03</div>
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">INFORMES JUDICIALES</h3>
+                    <p class="text-gray-600 mb-8">Elaboración de informes técnicos contundentes para procedimientos judiciales con defensa oral en sala y asesoramiento especializado.</p>
+                    <a href="#contacto" class="inline-flex items-center justify-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold tracking-wider rounded-lg hover:bg-cyan-50 transition-colors">
+                        SOLICITAR
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="proceso" class="py-24 px-4 md:px-[5%] bg-gradient-to-br from-[#0B1030] to-[#1a2452] relative overflow-hidden">
+    <!-- Overlay decorativo -->
+    <div class="absolute inset-0 bg-[url('/assets/images/pattern-dark.png')] opacity-5 mix-blend-overlay"></div>
+
+    <div class="max-w-[1600px] mx-auto relative z-10">
+        <!-- Título de sección -->
+        <h2 class="text-[2.5rem] md:text-[3.5rem] font-bold text-white mb-16 relative inline-block">
+            METODOLOGÍA
+            <span class="absolute bottom-[-15px] left-0 w-20 h-1 bg-cyan-400"></span>
+        </h2>
+
+        <!-- Grid de proceso -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Paso 1 -->
+            <div class="bg-white/5 backdrop-blur-sm p-10 rounded-xl relative group hover:bg-white/10 transition-all duration-300">
+                <div class="text-[4rem] font-bold text-cyan-400/40 mb-6 group-hover:text-cyan-400/60 transition-colors">01</div>
+                <h3 class="text-xl font-bold text-cyan-400 mb-4">ANÁLISIS INICIAL</h3>
+                <p class="text-white/80 leading-relaxed">Estudio exhaustivo del caso y planificación estratégica de la intervención pericial con objetivos técnicos claramente definidos.</p>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="bg-white/5 backdrop-blur-sm p-10 rounded-xl relative group hover:bg-white/10 transition-all duration-300">
+                <div class="text-[4rem] font-bold text-cyan-400/40 mb-6 group-hover:text-cyan-400/60 transition-colors">02</div>
+                <h3 class="text-xl font-bold text-cyan-400 mb-4">INSPECCIÓN TÉCNICA</h3>
+                <p class="text-white/80 leading-relaxed">Visita presencial con equipamiento especializado, toma de datos in situ y documentación fotográfica detallada para análisis preciso.</p>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="bg-white/5 backdrop-blur-sm p-10 rounded-xl relative group hover:bg-white/10 transition-all duration-300">
+                <div class="text-[4rem] font-bold text-cyan-400/40 mb-6 group-hover:text-cyan-400/60 transition-colors">03</div>
+                <h3 class="text-xl font-bold text-cyan-400 mb-4">INFORME PERICIAL</h3>
+                <p class="text-white/80 leading-relaxed">Redacción del dictamen técnico aplicando normativa vigente con rigor científico y claridad expositiva para máxima efectividad.</p>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="bg-white/5 backdrop-blur-sm p-10 rounded-xl relative group hover:bg-white/10 transition-all duration-300">
+                <div class="text-[4rem] font-bold text-cyan-400/40 mb-6 group-hover:text-cyan-400/60 transition-colors">04</div>
+                <h3 class="text-xl font-bold text-cyan-400 mb-4">DEFENSA PROFESIONAL</h3>
+                <p class="text-white/80 leading-relaxed">Presentación y defensa del informe ante tribunales o partes interesadas con acompañamiento técnico hasta la resolución completa.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="casos" class="py-24 px-4 md:px-[5%] bg-white">
+    <div class="max-w-[1600px] mx-auto">
+        <!-- Título de sección -->
+        <h2 class="text-[2.5rem] md:text-[3.5rem] font-bold text-slate-800 mb-16 relative inline-block">
+            CASOS DE ÉXITO
+            <span class="absolute bottom-[-15px] left-0 w-20 h-1 bg-cyan-400"></span>
+        </h2>
+
+        <!-- Grid de testimonios -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimonio 1 -->
+            <div class="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative border-l-4 border-cyan-400">
+                <p class="text-gray-700 mb-6 text-lg relative pl-6">
+                    <span class="absolute top-[-1rem] left-[-0.5rem] text-[4rem] text-cyan-400/20 font-serif">"</span>
+                    El informe pericial fue determinante para ganar nuestro caso. La claridad técnica y la contundencia de las conclusiones resultaron decisivas ante el tribunal.
+                </p>
+                <div class="flex items-center">
+                    <span class="w-12 h-[2px] bg-cyan-400/30 mr-4"></span>
+                    <p class="font-semibold text-cyan-500">Bufete Legal Martínez & Asociados</p>
+                </div>
+            </div>
+
+            <!-- Testimonio 2 -->
+            <div class="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative border-l-4 border-cyan-400">
+                <p class="text-gray-700 mb-6 text-lg relative pl-6">
+                    <span class="absolute top-[-1rem] left-[-0.5rem] text-[4rem] text-cyan-400/20 font-serif">"</span>
+                    La valoración de daños estructurales tras el siniestro fue aceptada íntegramente por la aseguradora gracias a la solidez técnica del informe.
+                </p>
+                <div class="flex items-center">
+                    <span class="w-12 h-[2px] bg-cyan-400/30 mr-4"></span>
+                    <p class="font-semibold text-cyan-500">Comunidad de Propietarios Edificio Victoria</p>
+                </div>
+            </div>
+
+            <!-- Testimonio 3 -->
+            <div class="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative border-l-4 border-cyan-400">
+                <p class="text-gray-700 mb-6 text-lg relative pl-6">
+                    <span class="absolute top-[-1rem] left-[-0.5rem] text-[4rem] text-cyan-400/20 font-serif">"</span>
+                    La intervención pericial permitió identificar el origen exacto de las humedades recurrentes que otros técnicos no habían logrado diagnosticar en cinco años.
+                </p>
+                <div class="flex items-center">
+                    <span class="w-12 h-[2px] bg-cyan-400/30 mr-4"></span>
+                    <p class="font-semibold text-cyan-500">Promotora Inmobiliaria Nuevo Horizonte</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
+    <footer class="bg-white">
+    <!-- Footer Principal -->
+    <div class="relative pt-1">
+        <!-- Línea decorativa superior -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-cyan-500"></div>
+        
+        <div class="max-w-[1400px] mx-auto px-4 md:px-[5%] py-16 md:py-24">
+            <!-- Grid principal -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+                <!-- Columna de marca -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-8 group">
+                        <svg class="h-10 w-auto text-cyan-400 transition-all duration-300 group-hover:scale-105" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 375">
+                            
+                    <defs>
+                        <clipPath id="2717b77dc4">
+                            <path
+                                d="M 223.109375 37.496094 L 314.597656 37.496094 L 314.597656 337.6875 L 223.109375 337.6875 Z M 223.109375 37.496094"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="9422b2d12e">
+                            <path
+                                d="M 314.597656 67.992188 L 314.597656 337.496094 L 223.109375 307 L 223.109375 37.496094 Z M 314.597656 67.992188"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="b07c821656">
+                            <path
+                                d="M 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 L 146.625 249.945312 Z M 146.625 37.496094"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="55959a45ff">
+                            <path
+                                d="M 146.625 62.996094 L 146.625 249.945312 L 223.117188 224.449219 L 223.117188 37.496094 Z M 146.625 62.996094"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="a83aa56b9b">
+                            <path
+                                d="M 112.101562 111.523438 L 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 Z M 112.101562 111.523438"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="1c3af9afe2">
+                            <path
+                                d="M 177.742188 133.402344 L 177.742188 291.402344 L 112.101562 269.523438 L 112.101562 111.523438 Z M 177.742188 133.402344"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="a2157cede2">
+                            <path
+                                d="M 60.398438 111.367188 L 112.109375 111.367188 L 112.109375 237.410156 L 60.398438 237.410156 Z M 60.398438 111.367188"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="1adccc21aa">
+                            <path
+                                d="M 60.398438 128.75 L 60.398438 237.410156 L 112.109375 220.175781 L 112.109375 111.515625 Z M 60.398438 128.75"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+                    </defs>
+
+                    <g clip-path="url(#2717b77dc4)">
+                        <g clip-path="url(#9422b2d12e)">
+                            <path
+                                fill="currentColor"
+                                d="M 314.597656 37.496094 L 314.597656 337.332031 L 223.109375 337.332031 L 223.109375 37.496094 Z M 314.597656 37.496094"
+                                fill-opacity="1"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </g>
+
+                    <g clip-path="url(#b07c821656)">
+                        <g clip-path="url(#55959a45ff)">
+                            <path
+                                fill="currentColor"
+                                d="M 146.625 249.945312 L 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 Z M 146.625 249.945312"
+                                fill-opacity="1"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </g>
+
+                    <g clip-path="url(#a83aa56b9b)">
+                        <g clip-path="url(#1c3af9afe2)">
+                            <path
+                                fill="currentColor"
+                                d="M 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 L 112.101562 111.523438 Z M 177.742188 111.523438"
+                                fill-opacity="1"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </g>
+
+                    <g clip-path="url(#a2157cede2)">
+                        <g clip-path="url(#1adccc21aa)">
+                            <path
+                                fill="currentColor"
+                                d="M 60.398438 237.410156 L 60.398438 111.570312 L 112.109375 111.570312 L 112.109375 237.410156 Z M 60.398438 237.410156"
+                                fill-opacity="1"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </g>
+                
+                        </svg>
+                        <h4 class="text-xl font-bold text-slate-800">PERITO BARCELONA</h4>
+                    </div>
                     
-                    if (!isOpen) {
-                        mobileMenu.classList.add('mobile-menu-open');
-                        document.body.style.overflow = 'hidden';
-                        menuButton.innerHTML = `<svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 24px; height: 24px;">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>`;
-                        if (talkToExpert) talkToExpert.style.display = 'none';
-                    } else {
-                        mobileMenu.classList.remove('mobile-menu-open');
-                        document.body.style.overflow = '';
-                        menuButton.innerHTML = `<svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 24px; height: 24px;">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>`;
-                        if (talkToExpert && window.scrollY > 300 && window.innerWidth < 992) {
-                            talkToExpert.style.display = 'flex';
-                        }
-                    }
-                });
-            }
-            
-            // Activar el botón flotante con un tiempo para asegurar que cargue todo
-            setTimeout(function() {
-                if (talkToExpert && window.scrollY > 300 && window.innerWidth < 992) {
-                    talkToExpert.style.display = 'flex';
-                    console.log("Botón de perito activado por timeout");
-                }
-            }, 1000);
-        });
-    </script>
+                    <p class="text-gray-600 text-base leading-relaxed mb-8">
+                        Expertos en informes periciales de construcción y seguros. Garantía de calidad y profesionalidad.
+                    </p>
+                    
+                    <!-- Social links -->
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-cyan-50 text-cyan-500 hover:bg-cyan-500 hover:text-white hover:-translate-y-1 transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect width="4" height="12" x="2" y="9"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-cyan-50 text-cyan-500 hover:bg-cyan-500 hover:text-white hover:-translate-y-1 transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
 
-    <style>
-    /* Estilos críticos que siempre deben aplicarse */
-    @media (max-width: 991px) {
-        .main-header {
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            width: 100% !important;
-            background-color: white !important;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
-            z-index: 50 !important;
-        }
-        
-        .mobile-controls {
-            display: flex !important;
-        }
-        
-        .menu-toggle {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            width: 40px !important;
-            height: 40px !important;
-            background: none !important;
-            border: none !important;
-            cursor: pointer !important;
-            z-index: 1000 !important;
-        }
-        
-        body {
-            padding-top: 70px !important;
-        }
-    }
+                <!-- Columna Servicios -->
+                <div>
+                    <h5 class="text-lg font-bold text-slate-800 mb-6 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-0.5 after:bg-cyan-400">
+                        Servicios
+                    </h5>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#servicios" class="text-gray-600 hover:text-cyan-500 transition-colors flex items-center gap-2 group">
+                                <svg class="w-4 h-4 text-cyan-400 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 5l7 7-7 7"/>
+                                </svg>
+                                Peritajes de Construcción
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#servicios" class="text-gray-600 hover:text-cyan-500 transition-colors flex items-center gap-2 group">
+                                <svg class="w-4 h-4 text-cyan-400 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 5l7 7-7 7"/>
+                                </svg>
+                                Peritajes para Seguros
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#servicios" class="text-gray-600 hover:text-cyan-500 transition-colors flex items-center gap-2 group">
+                                <svg class="w-4 h-4 text-cyan-400 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 5l7 7-7 7"/>
+                                </svg>
+                                Informes Judiciales
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-    /* Mobile Menu - Arreglo directo */
-    .mobile-menu {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        bottom: 0 !important;
-        z-index: 49 !important; 
-        background-color: #0B1030 !important;
-        transform: translateX(100%) !important;
-        transition: transform 0.3s ease !important;
-    }
+                <!-- Columna Contacto -->
+                <div>
+                    <h5 class="text-lg font-bold text-slate-800 mb-6 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-0.5 after:bg-cyan-400">
+                        Contacto
+                    </h5>
+                    <div class="space-y-6">
+                        <a href="tel:+34932123456" class="flex items-start gap-3 text-gray-600 hover:text-cyan-500 transition-colors group">
+                            <svg class="w-5 h-5 text-cyan-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <div>
+                                <span class="block text-sm font-medium text-slate-800 group-hover:text-cyan-500">Teléfono:</span>
+                                <span class="text-gray-600 group-hover:text-cyan-500">+34 932 123 456</span>
+                            </div>
+                        </a>
+                        <a href="mailto:info@peritobarcelona.com" class="flex items-start gap-3 text-gray-600 hover:text-cyan-500 transition-colors group">
+                            <svg class="w-5 h-5 text-cyan-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <path d="M22 6l-10 7L2 6"/>
+                            </svg>
+                            <div>
+                                <span class="block text-sm font-medium text-slate-800 group-hover:text-cyan-500">Email:</span>
+                                <span class="text-gray-600 group-hover:text-cyan-500">info@peritobarcelona.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-    .mobile-menu-open {
-        transform: translateX(0) !important;
-    }
-    </style>
+                <!-- Columna Ubicación -->
+                <div>
+                    <h5 class="text-lg font-bold text-slate-800 mb-6 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-0.5 after:bg-cyan-400">
+                        Ubicación
+                    </h5>
+                    <p class="flex items-start gap-3 text-gray-600">
+                        <svg class="w-5 h-5 text-cyan-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>Barcelona · Madrid · Valencia · Sevilla</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Secundario -->
+    <div class="bg-slate-900 py-6">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-[5%]">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/70 text-sm text-center md:text-left">© 2025 PERITO BARCELONA | Informes Periciales</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-white/70 text-sm hover:text-white transition-colors">Política de Privacidad</a>
+                    <span class="text-white/20">·</span>
+                    <a href="#" class="text-white/70 text-sm hover:text-white transition-colors">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>

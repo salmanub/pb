@@ -25,8 +25,8 @@ module.exports = {
   safelist: [
     'text-accent',
     'bg-accent',
-    'border-accent
-    ',
+    'border-accent',
+    'shadow-accent-sm',
     'ring-accent',
     'font-montserrat'
   ],

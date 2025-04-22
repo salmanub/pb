@@ -1,718 +1,124 @@
-<header class="hero-full">
-    <div class="hero-wrapper">
-        <div class="hero-container">
-            <div class="hero-text">
-                <span class="hero-tag">PERITO JUDICIAL EN BARCELONA</span>
-                <div class="proof-header">
-                    <div class="trust-badges">
-                        <div class="badge-item">
-                            <svg viewBox="0 0 24 24" class="badge-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+<header class="relative pt-16 sm:pt-6 md:pt-[70px] min-h-screen bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white overflow-hidden">
+    <div class="relative z-10 w-full min-h-[calc(85vh-70px)] flex items-start md:pt-[5vh]">
+        <!-- Contenedor principal - ajustado para móvil y tablets -->
+        <div class="w-full px-4 sm:px-8 md:px-0 md:w-[95%] max-w-[1400px] md:mx-auto lg:ml-[5%] py-8 lg:py-20">
+            <!-- Hero Content - centrado en móvil y tablets -->
+            <div class="flex flex-col items-center md:items-center lg:items-start w-full lg:w-[70%] space-y-8 lg:space-y-16 mx-auto lg:mx-0">
+                <!-- Tag y badges con espaciado optimizado para móvil -->
+                <div class="space-y-6 md:space-y-8 w-full max-w-xl mx-auto md:mx-0">
+                    <!-- Hero tag -->
+                    <span class="flex justify-center md:justify-start items-center text-sm md:text-base font-semibold tracking-[2px] uppercase text-cyan-400">
+                        <span class="hidden lg:block w-8 h-0.5 bg-cyan-400 mr-3"></span>
+                        PERITO JUDICIAL EN BARCELONA
+                    </span>
+
+                    <!-- Trust badges - centrados en móvil -->
+                    <div class="flex flex-col lg:flex-row gap-4 w-full justify-center md:justify-start">
+                        <div class="inline-flex items-center px-4 py-2.5 bg-white/10 rounded-full w-full sm:w-auto justify-center">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
                             <span>Nº1 EN PERITAJES</span>
                         </div>
-                        <div class="rating-item">
-                            <div class="stars">★★★★★</div>
+                        <div class="inline-flex items-center px-4 py-2.5 bg-white/10 rounded-full w-full sm:w-auto justify-center">
+                            <div class="text-yellow-400 tracking-wider mr-3">★★★★★</div>
                             <span>4.9/5 en Google</span>
                         </div>
                     </div>
-                    <h2>INFORMES PERICIALES<br><strong>QUE GANAN CASOS</strong></h2>
                 </div>
 
-                <div class="cta-group">
-                    <a href="#contacto" class="cta-btn primary">SOLICITAR PRESUPUESTO</a>
-                    <a href="tel:+34932123456" class="cta-btn outline">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        HABLAR CON UN PERITO
-                    </a>
-                    <span class="cta-guarantee">✓ Primera consulta gratuita</span>
+                <!-- Headline - ajustado para una línea -->
+                <div class="space-y-12 text-center md:text-left w-full md:max-w-[90%] lg:max-w-[85%] xl:max-w-[80%]">
+                    <h1 class="text-[2.5rem] md:text-[3.5rem] lg:text-[4.2rem] xl:text-[4.8rem] 2xl:text-[5.2rem] font-light leading-[1.1] tracking-tight whitespace-normal lg:whitespace-nowrap">
+                        INFORMES PERICIALES
+                        <strong class="block text-cyan-400 mt-6 text-[1.2em]">QUE GANAN CASOS</strong>
+                    </h1>
                 </div>
 
-                <div class="proof-metrics">
-                    <div class="metric">
-                        <div class="metric-icon">97%</div>
-                        <div class="metric-text">
-                            <strong>Casos Exitosos</strong>
-                            <span>En tribunales</span>
+                <!-- CTAs y Métricas - centrados y ajustados para no romper líneas -->
+                <div class="space-y-12 w-full sm:max-w-2xl md:max-w-3xl mx-auto lg:mx-0">
+                    <!-- CTAs - ajustados para mantener una línea -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contacto" 
+                           class="flex-1 inline-flex items-center justify-center px-4 sm:px-8 py-4 bg-cyan-400 text-white font-semibold uppercase tracking-wider rounded-lg shadow-lg hover:bg-cyan-500 transition-all duration-300 text-sm sm:text-base whitespace-nowrap">
+                            SOLICITAR PRESUPUESTO
+                        </a>
+                        <a href="tel:+34932123456" 
+                           class="flex-1 inline-flex items-center justify-center px-4 sm:px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold uppercase tracking-wider rounded-lg hover:bg-cyan-400/10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            HABLAR CON UN PERITO
+                        </a>
+                    </div>
+
+                    <!-- Métricas -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl">
+                            <div class="text-2xl md:text-3xl font-extrabold text-cyan-400 leading-none">97%</div>
+                            <div class="flex flex-col gap-1">
+                                <strong class="text-base md:text-lg text-white">Casos Exitosos</strong>
+                                <span class="text-sm text-white/70">En tribunales</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl">
+                            <div class="text-2xl md:text-3xl font-extrabold text-cyan-400 leading-none">24h</div>
+                            <div class="flex flex-col gap-1">
+                                <strong class="text-base md:text-lg text-white">Respuesta</strong>
+                                <span class="text-sm text-white/70">Garantizada</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="metric">
-                        <div class="metric-icon">24h</div>
-                        <div class="metric-text">
-                            <strong>Respuesta</strong>
-                            <span>Garantizada</span>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="trust-logos">
-                    <img src="/assets/images/logos/logo_ECCAT.avif" alt="Col·legi de l'Enginyeria Civil de Catalunya" width="100" loading="lazy">
-                    <img src="/assets/images/logos/INESE_Formación_CMYK.avif" alt="INESE" width="100" loading="lazy">
-                    <img src="/assets/images/logos/upc-logo.svg" alt="Universitat politècnica de catalunya" width="100" loading="lazy">
-                    <p class="trust-caption">Informes aceptados por todos los tribunales españoles</p>
+                <!-- Logos y texto de aceptación -->
+                <div class="flex flex-col lg:flex-row items-center gap-6 pt-12 border-t border-white/10 w-full max-w-2xl mx-auto md:mx-0">
+                    <!-- Contenedor de logos - sin scroll -->
+                    <div class="flex items-center justify-center lg:justify-start gap-6 xl:gap-8 flex-grow">
+                        <img src="/assets/images/logos/logo_ECCAT.avif" 
+                             alt="Col·legi de l'Enginyeria Civil de Catalunya" 
+                             class="h-8 lg:h-10 w-auto brightness-0 invert opacity-70 hover:opacity-100 hover:-translate-y-0.5 transition-all object-contain" 
+                             loading="lazy">
+                        <img src="/assets/images/logos/INESE_Formación_CMYK.avif" 
+                             alt="INESE" 
+                             class="h-8 lg:h-10 w-auto brightness-0 invert opacity-70 hover:opacity-100 hover:-translate-y-0.5 transition-all object-contain" 
+                             loading="lazy">
+                        <img src="/assets/images/logos/upc-logo.svg" 
+                             alt="Universitat politècnica de catalunya" 
+                             class="h-8 lg:h-10 w-auto brightness-0 invert opacity-70 hover:opacity-100 hover:-translate-y-0.5 transition-all object-contain" 
+                             loading="lazy">
+                    </div>
+                    <!-- Texto de aceptación -->
+                    <p class="text-white/60 text-sm text-center lg:text-right whitespace-normal lg:whitespace-nowrap">
+                        Informes aceptados por todos los tribunales españoles
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="hero-image">
-            <picture>
-                <source
-                    media="(min-width: 992px)"
-                    srcset="/assets/images/perito-construccion-obra-edificacion-1280.avif"
-                >
-                <source
-                    media="(min-width: 768px)"
-                    srcset="/assets/images/perito-construccion-obra-edificacion-768.avif"
-                >
-                <img
-                    src="/assets/images/perito-construccion-obra-edificacion-640.avif"
-                    alt="Perito experto realizando inspección técnica"
-                    loading="eager"
-                    decoding="async"
-                >
-            </picture>
-        </div>
+    </div>
+
+    <!-- Hero Image - Ajustado margen izquierdo -->
+    <div class="hidden lg:block absolute top-0 right-0 w-[45%] h-full z-[1]">
+        <picture class="h-full">
+            <source media="(min-width: 992px)" srcset="/assets/images/perito-construccion-obra-edificacion-1280.avif">
+            <source media="(min-width: 768px)" srcset="/assets/images/perito-construccion-obra-edificacion-768.avif">
+            <img
+                src="/assets/images/perito-construccion-obra-edificacion-640.avif"
+                alt="Perito experto realizando inspección técnica"
+                class="w-full h-full object-cover opacity-80"
+                style="clip-path: polygon(150px 0, 100% 0, 100% 100%, 50px 100%);"
+                loading="eager"
+                decoding="async">
+        </picture>
     </div>
 </header>
 
-<style>
-.hero-full {
-    padding-top: var(--header-height, 70px);
-    margin-top: 0;
-    background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
-    color: white;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-.hero-wrapper {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    min-height: calc(85vh - var(--header-height, 70px)); /* Ajustado para coincidir */
-    display: flex;
-    align-items: flex-start; /* Cambiado de center a flex-start */
-    padding-top: 5vh; /* Añadido padding superior */
-}
-
-.hero-container {
-    width: min(1400px, 95%);
-    margin-left: max(5%, 2rem);
-    padding: clamp(2rem, 6vh, 4rem) 0; /* Reducido el padding vertical */
-}
-
-.hero-image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%; /* Reducido de 55% a 45% */
-    height: 100%;
-    z-index: 1;
-}
-
-.hero-image picture {
-    height: 100%;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    clip-path: polygon(150px 0, 100% 0, 100% 100%, 50px 100%); /* Ajustada la diagonal */
-    opacity: 0.8;
-}
-
-.hero-tag {
-    font-size: 0.875rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    margin-bottom: 1rem;
-    display: inline-block;
-    position: relative;
-    padding-left: 3rem;
-}
-
-.hero-tag::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 2rem;
-    height: 2px;
-    background-color: var(--color-accent);
-    transform: translateY(-50%);
-}
-
-
-@media (max-width: 991px) {
-    .hero-full {
-        min-height: 85vh;
-        padding-top: var(--header-height, 70px);
-    }
-
-    .hero-wrapper {
-        min-height: auto;
-        padding: rem 0;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 2vh;
-    }
-
-    .hero-container {
-        width: min(650px, 95%);
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .hero-image {
-        position: relative;
-        width: 100%;
-        height: 300px;
-    }
-
-    .hero-image img {
-        clip-path: none;
-        opacity: 0.8;
-    }
-
-    .hero-tag {
-        padding: 0;
-        margin-bottom: 0rem;
-    }
-
-    .hero-tag::before {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-wrapper {
-        padding: 0rem 0;
-        min-height: auto; /* Permite altura automática en móvil */
-    }
-
-    .hero-container {
-        padding-top: 1rem;
-    }
-
-    .hero-image {
-        height: 300px;
-    }
-
-    h2 {
-        font-size: clamp(2rem, 3vw + 1rem, 2.5rem);
-    }
-
-    .hero-full {
-        margin-top: 0;
-        background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
-        color: white;
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-    }
-
-    .hero-wrapper {
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        display: flex;
-        align-items: flex-start; /* Cambiado de center a flex-start */
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-    .hero-container {
-        max-width: 50%; /* Reducir el ancho del contenedor */
-        margin-left: max(4%, 2rem);
-    }
-
-    .hero-image {
-        width: 48%; /* Ajustar el ancho de la imagen */
-    }
-
-    h2 {
-        font-size: clamp(2.25rem, 3vw + 1rem, 3.5rem); /* Reducir tamaño de título */
-    }
-
-    .trust-badges {
-        gap: 0.75rem; /* Reducir espaciado */
-    }
-}
-
-.proof-header {
-    margin-bottom: 1rem;
-}
-
-.trust-badges {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.badge-item, .rating-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.625rem 1rem;
-    background: rgba(255,255,255,0.1);
-    border-radius: 100px;
-    font-size: 1rem;
-}
-
-.badge-icon {
-    width: 20px;
-    height: 20px;
-    fill: var(--color-accent);
-}
-
-.stars {
-    color: #FFD700;
-    letter-spacing: 2px;
-}
-
-h2 {
-    font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin-bottom: 1rem;
-}
-
-h2 strong {
-    display: block;
-    color: var(--color-accent);
-    font-size: 1.1em;
-}
-
-.proof-metrics {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    margin: 1rem 0; /* Reducido el margen */
-    order: 4; /* Movido después del CTA */
-}
-
-.metric {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: rgba(255,255,255,0.05);
-    border-radius: 12px;
-}
-
-.metric-icon {
-    font-size: clamp(2rem, 3vw, 2.5rem);
-    font-weight: 800;
-    color: var(--color-accent);
-    line-height: 1;
-}
-
-.metric-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.metric-text strong {
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    color: white;
-}
-
-.metric-text span {
-    font-size: 0.875rem;
-    color: rgba(255,255,255,0.7);
-}
-
-.cta-group {
-    display: flex;
-    flex-direction: row; /* Cambiado de column a row */
-    gap: 1rem;
-    align-items: center;
-    order: 3;
-    margin-top: 2rem;
-    width: 100%;
-}
-
-.cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1.2rem 2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    width: 100%; /* Botones a ancho completo */
-    justify-content: center; /* Centra el contenido */
-    flex: 1; /* Hace que ambos botones ocupen el mismo espacio */
-}
-
-.cta-btn.primary {
-    background: var(--color-accent);
-    color: white;
-    box-shadow: 0 4px 15px rgba(0, 184, 212, 0.3);
-}
-
-.cta-btn.outline {
-    background: transparent;
-    color: var(--color-accent);
-    border: 2px solid var(--color-accent);
-}
-
-.cta-btn:hover {
-    transform: translateY(-2px);
-}
-
-.cta-btn.primary:hover {
-    box-shadow: 0 6px 20px rgba(0, 184, 212, 0.4);
-}
-
-.cta-btn.outline:hover {
-    background: rgba(0, 184, 212, 0.1);
-}
-
-.cta-guarantee {
-    color: var(--color-accent);
-    font-size: 0.875rem;
-    width: 100%;
-    text-align: center;
-    margin-top: 1rem;
-}
-
-@media (min-width: 992px) {
-    .cta-group {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .cta-btn {
-        flex: 0 1 auto; /* Permite que los botones crezcan pero mantengan su tamaño base */
-        width: auto; /* Ancho automático en desktop */
-        min-width: 250px; /* Asegura un ancho mínimo */
-        white-space: nowrap; /* Evita saltos de línea */
-    }
-
-    .cta-guarantee {
-        text-align: left;
-        width: 100%;
-        margin-top: 0.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .cta-group {
-        flex-direction: column; /* En móvil sí los apilamos */
-        max-width: 100%;
-    }
-    
-    .cta-btn {
-        width: 100%;
-    }
-}
-
-.trust-logos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-    margin-top: 2.5rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    order: 5;
-    position: relative;
-    justify-content: space-between;
-}
-
-.trust-logos img {
-    height: 40px;
-    width: auto;
-    max-width: 120px;
-    filter: brightness(0) invert(1);
-    opacity: 0.7;
-    transition: all 0.3s ease;
-    object-fit: contain;
-}
-
-.trust-logos img:hover {
-    opacity: 1;
-    transform: translateY(-2px);
-}
-
-.trust-caption {
-    color: rgba(255,255,255,0.6);
-    font-size: 0.875rem;
-    margin: 0;
-    flex: 1;
-    min-width: 200px;
-    text-align: right;
-}
-
-@media (max-width: 991px) {
-    .hero-container {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-text {
-        text-align: center;
-        align-items: center;
-    }
-
-    h2 {
-        font-size: clamp(2.25rem, 3vw + 1rem, 3rem);
-        text-align: center;
-    }
-
-    .trust-badges, .proof-metrics {
-        justify-content: center;
-    }
-
-    .proof-metrics {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cta-group {
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .trust-logos {
-        justify-content: center;
-        gap: 1.5rem;
-    }
-
-    .trust-caption {
-        text-align: center;
-        margin-top: 1.5rem;
-        flex: 0 0 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-container {
-        padding: 2rem 1rem;
-    }
-
-    .trust-badges {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .proof-metrics {
-        grid-template-columns: 1fr;
-    }
-
-    .metric {
-        padding: 0.875rem;
-        justify-content: center;
-    }
-
-    .cta-group {
-        max-width: 100%;
-        padding: 0 1rem;
-    }
-    
-    .cta-btn {
-        padding: 1rem 1.5rem;
-        font-size: 0.9rem;
-    }
-}
-
-.mobile-menu-container {
-    padding-top: calc(var(--header-height, 70px) + 2rem); /* Ajustado el padding superior */
-    padding-bottom: 32px;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.mobile-nav-list {
-    list-style: none;
-    padding: 1rem;
-    margin: 0 0 30px 0;
-}
-
-@media (max-width: 991px) {
-    .mobile-menu {
-        padding-top: var(--header-height, 70px); /* Añadido padding superior */
-    }
-    
-    .mobile-menu-container {
-        padding-top: 1rem; /* Reducido porque ya tenemos padding en el contenedor padre */
-    }
-}
-
-.hero-conversion {
-    min-height: 100vh;
-    background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
-    color: white;
-    padding: clamp(5rem, 10vh, 8rem) 1rem;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.hero-content {
-    width: min(1400px, 100%);
-    margin: 0 auto;
-    display: grid;
-    gap: 3rem;
-    align-items: center;
-    padding: 0 max(5%, 1rem);
-}
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 850px;
-}
-
-.hero-badge {
-    display: inline-flex;
-    padding: 0.75rem 1.25rem;
-    background: rgba(0, 184, 212, 0.1);
-    border: 1px solid rgba(0, 184, 212, 0.2);
-    border-radius: 100px;
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    margin-bottom: 1rem;
-}
-
-.hero-title {
-    font-size: clamp(2.5rem, 5vw + 1rem, 4rem);
-    line-height: 1.1;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
-
-.hero-title strong {
-    display: block;
-    color: var(--color-accent);
-    font-size: 1.1em;
-    margin-top: 0.2em;
-}
-
-.hero-stats {
-    display: flex;
-    gap: 2rem;
-    margin: 0.5rem 0;
-}
-
-.stat-item {
-    font-size: 1.125rem;
-    color: rgba(255,255,255,0.9);
-}
-
-.stat-item strong {
-    display: block;
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--color-accent);
-    line-height: 1;
-    margin-bottom: 0.25rem;
-}
-
-.hero-description {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: rgba(255,255,255,0.9);
-    margin: 0.5rem 0 1.5rem;
-}
-
-.cta-group {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.cta-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1.25rem 2rem;
-    background: linear-gradient(45deg, var(--color-accent), #00d4ff);
-    border-radius: 8px;
-    color: white;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    width: fit-content;
-}
-
-.cta-primary svg {
-    width: 20px;
-    height: 20px;
-    stroke: currentColor;
-    stroke-width: 2;
-    fill: none;
-}
-
-.cta-guarantee {
-    font-size: 0.875rem;
-    color: var(--color-accent);
-}
-
-.hero-visual {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-}
-
-.hero-visual img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-@media (min-width: 992px) {
-    .hero-content {
-        grid-template-columns: 1.2fr 0.8fr;
-    }
-
-    .hero-visual {
-        height: 100%;
-    }
-
-    .hero-visual img {
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-conversion {
-        padding: 6rem 0 3rem;
-        min-height: auto;
-    }
-
-    .hero-text {
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .hero-badge {
-        margin: 0 auto;
-    }
-
-    .hero-stats {
-        justify-content: center;
-    }
-
-    .cta-group {
-        align-items: center;
-    }
-
-    .hero-visual {
-        margin: 0 -1rem;
-        border-radius: 0;
-    }
-}
-</style>
+<!-- Hero Image - Mobile -->
+<div class="lg:hidden relative w-full h-[300px]">
+    <img
+        src="/assets/images/perito-construccion-obra-edificacion-640.avif"
+        alt="Perito experto realizando inspección técnica"
+        class="w-full h-full object-cover opacity-80"
+        loading="eager"
+        decoding="async">
+</div>

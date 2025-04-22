@@ -1,259 +1,329 @@
-<header id="mainHeader" class="main-header">
-        <div class="container">
-            <!-- Top Bar - Solo visible en desktop -->
-            <div class="top-bar">
-                <!-- Language Selector -->
-                <div class="language-selector">
-                    <a href="/" class="language-link active">ES</a>
-                    <a href="/en" class="language-link">EN</a>
-                    <a href="/ca" class="language-link">CA</a>
-                </div>
-                <!-- CTAs con traducciones -->
-                <div class="top-cta">
-                    <a href="tel:+34932123456" class="phone-link">
-                        <svg style="font-size: 14px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        <span>{{metadata.contact.phoneNumber}}</span>
-                    </a>
-                    <a href="/presupuesto" class="cta-button top-cta-button">
-                        SOLICITAR PRESUPUESTO
-                    </a>
-                </div>
+<header id="mainHeader" class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 transition-all duration-300">
+    <div class="max-w-[1600px] mx-auto px-[5%]">
+        <!-- Top Bar - Solo Desktop -->
+        <div class="hidden lg:flex justify-end items-center h-12 border-b border-slate-100">
+            <!-- Language Selector -->
+            <div class="flex items-center gap-1 px-4 border-l border-slate-100">
+                <a href="/" class="py-1 px-3 text-xs font-medium tracking-wider uppercase rounded bg-cyan-400 text-white hover:bg-cyan-500 transition-colors">ES</a>
+                <a href="/en" class="py-1 px-3 text-xs font-medium tracking-wider uppercase rounded text-slate-600 hover:bg-cyan-50 hover:text-cyan-500 transition-colors">EN</a>
+                <a href="/ca" class="py-1 px-3 text-xs font-medium tracking-wider uppercase rounded text-slate-600 hover:bg-cyan-50 hover:text-cyan-500 transition-colors">CA</a>
             </div>
 
-            <!-- Main Bar -->
-            <div class="header-content">
-                <!-- Logo -->
-                <div class="logo-wrapper">
-                    <a href="/" class="logo-link">
-                        <svg class="logo-svg"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 375 375"
-                            width="48" 
-                            height="48"
-                            preserveAspectRatio="xMidYMid meet">
-                            <defs>
-                                <clipPath id="2717b77dc4">
-                                    <path
-                                        d="M 223.109375 37.496094 L 314.597656 37.496094 L 314.597656 337.6875 L 223.109375 337.6875 Z M 223.109375 37.496094"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="9422b2d12e">
-                                    <path
-                                        d="M 314.597656 67.992188 L 314.597656 337.496094 L 223.109375 307 L 223.109375 37.496094 Z M 314.597656 67.992188"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="b07c821656">
-                                    <path
-                                        d="M 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 L 146.625 249.945312 Z M 146.625 37.496094"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="55959a45ff">
-                                    <path
-                                        d="M 146.625 62.996094 L 146.625 249.945312 L 223.117188 224.449219 L 223.117188 37.496094 Z M 146.625 62.996094"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="a83aa56b9b">
-                                    <path
-                                        d="M 112.101562 111.523438 L 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 Z M 112.101562 111.523438"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="1c3af9afe2">
-                                    <path
-                                        d="M 177.742188 133.402344 L 177.742188 291.402344 L 112.101562 269.523438 L 112.101562 111.523438 Z M 177.742188 133.402344"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="a2157cede2">
-                                    <path
-                                        d="M 60.398438 111.367188 L 112.109375 111.367188 L 112.109375 237.410156 L 60.398438 237.410156 Z M 60.398438 111.367188"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-
-                                <clipPath id="1adccc21aa">
-                                    <path
-                                        d="M 60.398438 128.75 L 60.398438 237.410156 L 112.109375 220.175781 L 112.109375 111.515625 Z M 60.398438 128.75"
-                                        clip-rule="nonzero"
-                                    />
-                                </clipPath>
-                            </defs>
-
-                            <g clip-path="url(#2717b77dc4)">
-                                <g clip-path="url(#9422b2d12e)">
-                                    <path
-                                        fill="currentColor"
-                                        d="M 314.597656 37.496094 L 314.597656 337.332031 L 223.109375 337.332031 L 223.109375 37.496094 Z M 314.597656 37.496094"
-                                        fill-opacity="1"
-                                        fill-rule="nonzero"
-                                    />
-                                </g>
-                            </g>
-
-                            <g clip-path="url(#b07c821656)">
-                                <g clip-path="url(#55959a45ff)">
-                                    <path
-                                        fill="currentColor"
-                                        d="M 146.625 249.945312 L 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 Z M 146.625 249.945312"
-                                        fill-opacity="1"
-                                        fill-rule="nonzero"
-                                    />
-                                </g>
-                            </g>
-
-                            <g clip-path="url(#a83aa56b9b)">
-                                <g clip-path="url(#1c3af9afe2)">
-                                    <path
-                                        fill="currentColor"
-                                        d="M 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 L 112.101562 111.523438 Z M 177.742188 111.523438"
-                                        fill-opacity="1"
-                                        fill-rule="nonzero"
-                                    />
-                                </g>
-                            </g>
-
-                            <g clip-path="url(#a2157cede2)">
-                                <g clip-path="url(#1adccc21aa)">
-                                    <path
-                                        fill="currentColor"
-                                        d="M 60.398438 237.410156 L 60.398438 111.570312 L 112.109375 111.570312 L 112.109375 237.410156 Z M 60.398438 237.410156"
-                                        fill-opacity="1"
-                                        fill-rule="nonzero"
-                                    />
-                                </g>
-                            </g>
-                        </svg>
-                        <span class="logo">PERITO BARCELONA</span>
-                    </a>
-                </div>
-                
-                <!-- Mobile CTA + Menu Button - Solo visible en móvil -->
-                <div class="mobile-controls">
-                    <!-- CTA solo visible si hay espacio (breakpoint sm) -->
-                    <a href="/presupuesto" class="cta-button mobile-cta">
-                        SOLICITAR
-                    </a>
-                    
-                    <button class="menu-toggle" id="menuButton" aria-label="Toggle menu">
-                        <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Desktop Navigation - Solo visible en desktop -->
-                <nav class="desktop-nav">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="/" class="nav-link">
-                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-                                <span>Inicio</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#servicios" class="nav-link">
-                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-                                <span>Servicios</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#casos" class="nav-link">
-                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
-                                <span>Casos de éxito</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#blog" class="nav-link">
-                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                                <span>Blog</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contacto" class="nav-link">
-                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                                <span>Contacto</span>
-                            </a>
-                        </li>
-                    </ul>                   
-                </nav>
+            <!-- CTAs -->
+            <div class="flex items-center">
+                <a href="tel:+34932123456" class="flex items-center gap-2 px-4 py-2 text-sm text-slate-600 hover:text-cyan-500 border-l border-slate-100 transition-colors">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>{{metadata.contact.phoneNumber}}</span>
+                </a>
+                <a href="/presupuesto" class="px-4 py-2 text-sm font-semibold text-white bg-cyan-400 hover:bg-cyan-500 transition-colors border-l border-slate-100">
+                    SOLICITAR PRESUPUESTO
+                </a>
             </div>
         </div>
-    </header>
 
-    
-    <!-- Mobile Menu (oculto por defecto) -->
-    <div id="mobileMenu" class="mobile-menu">
-        <div class="container mobile-menu-container">
-            <nav class="mobile-nav">
-                <ul class="mobile-nav-list">
-                    <li class="mobile-nav-item">
-                        <a href="/" class="mobile-nav-link">
-                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        <!-- Main Navigation -->
+        <div class="flex justify-between items-center h-[70px] lg:h-20">
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-2 group hover:-translate-y-0.5 transition-transform duration-300">
+                <svg class="w-12 h-12 text-cyan-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 375 375"
+                    preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <clipPath id="2717b77dc4">
+                            <path
+                                d="M 223.109375 37.496094 L 314.597656 37.496094 L 314.597656 337.6875 L 223.109375 337.6875 Z M 223.109375 37.496094"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="9422b2d12e">
+                            <path
+                                d="M 314.597656 67.992188 L 314.597656 337.496094 L 223.109375 307 L 223.109375 37.496094 Z M 314.597656 67.992188"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="b07c821656">
+                            <path
+                                d="M 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 L 146.625 249.945312 Z M 146.625 37.496094"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="55959a45ff">
+                            <path
+                                d="M 146.625 62.996094 L 146.625 249.945312 L 223.117188 224.449219 L 223.117188 37.496094 Z M 146.625 62.996094"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="a83aa56b9b">
+                            <path
+                                d="M 112.101562 111.523438 L 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 Z M 112.101562 111.523438"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="1c3af9afe2">
+                            <path
+                                d="M 177.742188 133.402344 L 177.742188 291.402344 L 112.101562 269.523438 L 112.101562 111.523438 Z M 177.742188 133.402344"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="a2157cede2">
+                            <path
+                                d="M 60.398438 111.367188 L 112.109375 111.367188 L 112.109375 237.410156 L 60.398438 237.410156 Z M 60.398438 111.367188"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+
+                        <clipPath id="1adccc21aa">
+                            <path
+                                d="M 60.398438 128.75 L 60.398438 237.410156 L 112.109375 220.175781 L 112.109375 111.515625 Z M 60.398438 128.75"
+                                clip-rule="nonzero"
+                            />
+                        </clipPath>
+                    </defs>
+
+                    <g clip-path="url(#2717b77dc4)">
+                        <g clip-path="url(#9422b2d12e)">
+                            <path
+                                fill="currentColor"
+                                d="M 314.597656 37.496094 L 314.597656 337.332031 L 223.109375 337.332031 L 223.109375 37.496094 Z M 314.597656 37.496094"
+                                fill-opacity="1"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </g>
+
+                    <g clip-path="url(#b07c821656)">
+                        <g clip-path="url(#55959a45ff)">
+                            <path
+                                fill="currentColor"
+                                d="M 146.625 249.945312 L 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 Z M 146.625 249.945312"
+                                fill-opacity="1"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </g>
+
+                    <g clip-path="url(#a83aa56b9b)">
+                        <g clip-path="url(#1c3af9afe2)">
+                            <path
+                                fill="currentColor"
+                                d="M 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 L 112.101562 111.523438 Z M 177.742188 111.523438"
+                                fill-opacity="1"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </g>
+
+                    <g clip-path="url(#a2157cede2)">
+                        <g clip-path="url(#1adccc21aa)">
+                            <path
+                                fill="currentColor"
+                                d="M 60.398438 237.410156 L 60.398438 111.570312 L 112.109375 111.570312 L 112.109375 237.410156 Z M 60.398438 237.410156"
+                                fill-opacity="1"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </g>
+                </svg>
+                <span class="text-lg lg:text-xl font-bold text-slate-800 group-hover:text-cyan-500 transition-colors">PERITO BARCELONA</span>
+            </a>
+
+            <!-- Mobile Controls -->
+            <div class="flex items-center gap-4 lg:hidden">
+                <a href="/presupuesto" class="hidden sm:block px-3 py-2 text-sm font-medium text-white bg-cyan-400 rounded hover:bg-cyan-500 transition-colors">
+                    SOLICITAR
+                </a>
+                <button id="menuButton" class="p-2 text-slate-600 hover:text-cyan-500 transition-colors focus:outline-none" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:block">
+                <ul class="flex items-center gap-6">
+                    <li>
+                        <a href="/" class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 font-medium transition-colors">
+                            <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                                <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            </svg>
                             <span>Inicio</span>
                         </a>
                     </li>
-                    <li class="mobile-nav-item">
-                        <a href="#servicios" class="mobile-nav-link">
-                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                    <li>
+                        <a href="#servicios" class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 font-medium transition-colors">
+                            <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2h12a2 2 0 0 0 2-2V7Z"/>
+                                <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                                <path d="M10 9H8"/>
+                                <path d="M16 13H8"/>
+                                <path d="M16 17H8"/>
+                            </svg>
                             <span>Servicios</span>
                         </a>
                     </li>
-                    <li class="mobile-nav-item">
-                        <a href="#casos" class="mobile-nav-link">
-                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+                    <li>
+                        <a href="#casos" class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 font-medium transition-colors">
+                            <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 7v14"/>
+                                <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>
+                            </svg>
                             <span>Casos de éxito</span>
                         </a>
                     </li>
-                    <li class="mobile-nav-item">
-                        <a href="#blog" class="mobile-nav-link">
-                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <li>
+                        <a href="#blog" class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 font-medium transition-colors">
+                            <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
                             <span>Blog</span>
                         </a>
                     </li>
-                    <li class="mobile-nav-item">
-                        <a href="#contacto" class="mobile-nav-link">
-                            <svg class="mobile-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <li>
+                        <a href="#contacto" class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 font-medium transition-colors">
+                            <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
                             <span>Contacto</span>
                         </a>
                     </li>
                 </ul>
             </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed inset-0 bg-[#0B1030] transform translate-x-full transition-transform duration-300 ease-in-out z-40">
+    <div class="max-w-[1600px] mx-auto px-[5%] h-full pt-[80px] flex flex-col">
+        <!-- Navigation -->
+        <nav class="flex-1 py-8">
+            <ul class="space-y-4">
+                <li>
+                    <a href="/" class="flex items-center gap-3 px-4 py-3 text-white text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg transition-all">
+                        <svg class="w-6 h-6 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                            <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        </svg>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#servicios" class="flex items-center gap-3 px-4 py-3 text-white text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg transition-all">
+                        <svg class="w-6 h-6 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2h12a2 2 0 0 0 2-2V7Z"/>
+                            <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                            <path d="M10 9H8"/>
+                            <path d="M16 13H8"/>
+                            <path d="M16 17H8"/>
+                        </svg>
+                        <span>Servicios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#casos" class="flex items-center gap-3 px-4 py-3 text-white text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg transition-all">
+                        <svg class="w-6 h-6 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 7v14"/>
+                            <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>
+                        </svg>
+                        <span>Casos de éxito</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#blog" class="flex items-center gap-3 px-4 py-3 text-white text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg transition-all">
+                        <svg class="w-6 h-6 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        <span>Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contacto" class="flex items-center gap-3 px-4 py-3 text-white text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg transition-all">
+                        <svg class="w-6 h-6 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span>Contacto</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Footer actions -->
+        <div class="py-6 border-t border-slate-800/50">
+            <!-- Language selector -->
+            <div class="flex gap-4 mb-6 px-4">
+                <a href="/" class="text-cyan-400 font-medium px-3 py-2 bg-white/5 rounded-md">ES</a>
+                <a href="/en" class="text-slate-400 hover:text-cyan-400 font-medium px-3 py-2 hover:bg-white/5 rounded-md">EN</a>
+                <a href="/ca" class="text-slate-400 hover:text-cyan-400 font-medium px-3 py-2 hover:bg-white/5 rounded-md">CA</a>
+            </div>
             
-            <div class="mobile-footer">
-                <div class="language-selector-mobile">
-                    <a href="/" class="language-link-mobile active">ES</a>
-                    <a href="/en" class="language-link-mobile">EN</a>
-                    <a href="/ca" class="language-link-mobile">CA</a>
-                </div>
-                <div class="mobile-footer-contact">
-                    <a href="tel:+34932123456" class="mobile-contact-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        <span>+34 932 123 456</span>
-                    </a>
-                    <a href="mailto:info@peritobarcelona.com" class="mobile-contact-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        <span>info@perito.barcelona</span>
-                    </a>
-                </div>
-                <div class="mobile-cta-container">
-                    <a href="/presupuesto" class="cta-btn" style="width: 100%;">SOLICITAR PRESUPUESTO</a>
-                </div>
+            <!-- Contact options -->
+            <div class="space-y-3 mb-6">
+                <a href="tel:+34932123456" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-cyan-400 bg-white/5 hover:bg-white/10 rounded-lg transition-all">
+                    <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>+34 932 123 456</span>
+                </a>
+                <a href="mailto:info@peritobarcelona.com" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-cyan-400 bg-white/5 hover:bg-white/10 rounded-lg transition-all">
+                    <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <span>info@perito.barcelona</span>
+                </a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="px-4">
+                <a href="/presupuesto" class="block w-full bg-cyan-400 text-white text-center py-4 rounded-lg font-medium hover:bg-cyan-500 transition-colors">
+                    SOLICITAR PRESUPUESTO
+                </a>
             </div>
         </div>
     </div>
-    
-    <!-- Botón flotante para hablar con un perito - Implementación con !important -->
-    <a href="tel:+34932123456" id="talkToExpert" style="position: fixed; bottom: 28px; right: 20px; z-index: 1000 !important; display: none; padding: 12px 24px; background-color: #00B8D4; color: white; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 12px rgba(0, 184, 212, 0.3); font-size: 0.9rem; align-items: center; gap: 10px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Hablar con un perito
-    </a>
+</div>
+
+<!-- Botón flotante para hablar con un perito -->
+<a href="tel:+34932123456" id="talkToExpert" class="fixed bottom-7 right-5 z-40 hidden md:flex items-center bg-cyan-400 text-white py-3 px-6 rounded-full font-semibold shadow-lg hover:bg-cyan-500 transition-colors">
+    <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    Hablar con un perito
+</a>
+
+<script>
+    // Toggle para el menú móvil
+    document.getElementById('menuButton').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('translate-x-full');
+    });
+
+    // Mostrar/ocultar botón flotante al hacer scroll
+    window.addEventListener('scroll', function() {
+        const talkButton = document.getElementById('talkToExpert');
+        if (window.scrollY > 300) {
+            talkButton.classList.remove('hidden');
+            talkButton.classList.add('flex');
+        } else {
+            talkButton.classList.add('hidden');
+            talkButton.classList.remove('flex');
+        }
+    });
+</script>
