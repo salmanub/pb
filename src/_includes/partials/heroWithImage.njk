@@ -15,7 +15,7 @@
                     <div class="text-center md:text-left w-full md:max-w-[90%] lg:max-w-[85%] xl:max-w-[80%]">
                         <h1 class="text-[2.5rem] md:text-[3.5rem] lg:text-[4.2rem] xl:text-[4.8rem] 2xl:text-[5.2rem] font-light leading-[1.1] tracking-tight whitespace-normal lg:whitespace-nowrap">
                             INFORMES PERICIALES
-                            <strong class="block text-cyan-400 mt-6 text-[1.2em]">QUE GANAN CASOS</strong>
+                            <strong id="heroTextRotator" class="block text-cyan-400 mt-6 text-[1.2em] transition-opacity duration-500">QUE GANAN CASOS</strong>
                         </h1>
                     </div>
                 </div>
@@ -123,6 +123,35 @@
                 decoding="async">
         </picture>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const phrases = [
+                "QUE GANAN CASOS",
+                "QUE RESUELVEN CONFLICTOS",
+                "QUE MARCAN LA DIFERENCIA",
+                "CON RIGOR TÉCNICO",
+                "QUE CREAN PRECEDENTES",
+                "CON PRESTIGIO JUDICIAL"
+            ];
+            
+            const rotator = document.getElementById('heroTextRotator');
+            let currentIndex = 0;
+            
+            function rotateText() {
+                rotator.style.opacity = '0';
+                
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % phrases.length;
+                    rotator.textContent = phrases[currentIndex];
+                    rotator.style.opacity = '1';
+                }, 500);
+            }
+
+            // Cambiar cada 4 segundos
+            setInterval(rotateText, 4000);
+        });
+    </script>
 </header>
 
 <!-- Hero Image - Mobile -->
