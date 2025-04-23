@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Perito Barcelona - Informes Periciales de Construcción y Seguros</title>
     
-    
-        <!-- CSS Inlined for Production -->
+    {% block pageStyles %}
+    {% set indexcss %} {% include "assets/styles/index.css" %} {% endset %}
         <style>
-            {% include "assets/styles/index.css" %}
+             {{ indexcss | safe }}
         </style>
+    {% endblock pageStyles %}
 
+    
     
     {% favicons %}
 </head>
