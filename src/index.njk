@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Perito Barcelona - Informes Periciales de Construcción y Seguros</title>
-    <link rel="stylesheet" href="assets/styles/index.css">
+    
+    {% if env.NODE_ENV == "production" %}
+            <!-- CSS Inlined for Production -->
+            <style>
+                {% include "src/assets/styles/index.css" %}
+            </style>
+        {% else %}
+            <!-- CSS Linked for Development -->
+            <link rel="stylesheet" href="assets/styles/index.css">
+    {% endif %}
+    
     {% favicons %}
 </head>
 <body>
