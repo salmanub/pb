@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Perito Barcelona - Informes Periciales de Construcción y Seguros</title>
+    <link rel="stylesheet" href="src/assets/styles/index.css">
     
-    {% block pageStyles %}
-    {% set indexcss %} {% include "assets/styles/index.css" %} {% endset %}
+    
+    {% set indexcss %} {% include "dist/assets/styles/index.css" %} {% endset %}
         <style>
              {{ indexcss | safe }}
         </style>
-    {% endblock pageStyles %}
 
     
     
