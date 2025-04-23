@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Perito Barcelona - Informes Periciales de Construcción y Seguros</title>
     
-    {% if env.NODE_ENV == "production" %}
-            <!-- CSS Inlined for Production -->
-            <style>
-                {% include "src/assets/styles/index.css" %}
-            </style>
-        {% else %}
-            <!-- CSS Linked for Development -->
-            <link rel="stylesheet" href="assets/styles/index.css">
+    {% if env.CF_PAGES_BRANCH == "main" %}
+        <!-- CSS Inlined for Production -->
+        <style>
+            {% include "src/assets/styles/index.css" %}
+        </style>
+    {% else %}
+        <!-- CSS Linked for Development -->
+        <link rel="stylesheet" href="assets/styles/index.css">
     {% endif %}
     
     {% favicons %}
