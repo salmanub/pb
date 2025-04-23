@@ -79,7 +79,7 @@ export default function (eleventyConfig) {
 
     // Procesar tailwind
     const tailwindInputPath = path.resolve('./src/assets/styles/index.css');
-    const tailwindOutputPath = './src/assets/styles/output.css';
+    const tailwindOutputPath = './dist/assets/styles/index.css';
     
     const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
     
