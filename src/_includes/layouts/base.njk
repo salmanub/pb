@@ -1,57 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="{{lang}}" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} | Perito {{ location.city }}</title>
-    <meta name="description" content="Professional technical surveyor services in {{ location.city }}. Expert assessments, valuations, and technical reports.">
-
-    {# Google Fonts #}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    {# Inline Styles #}
-    <style>
-        {% include "../../assets/css/styles.css" %}
-    </style>
-
-    {# Favicon #}
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-    {# Lucide Icons #}
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    {# Open Graph Tags #}
-    <meta property="og:title" content="{{ title }} | Perito {{ location.city }}">
-    <meta property="og:description" content="Professional technical surveyor services in {{ location.city }}. Expert assessments, valuations, and technical reports.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://perito.barcelona{{ page.url }}">
-
-    {# Twitter Card #}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ title }} | Perito {{ location.city }}">
-    <meta name="twitter:description" content="Professional technical surveyor services in {{ location.city }}. Expert assessments, valuations, and technical reports.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <meta name="description" content="Perito Barcelona ofrece informes periciales de construcción y seguros, con más de 15 años de experiencia. Contacta para una consulta gratuita.">
+    {% block pageStyles %}{% endblock pageStyles %}
+    {% favicons %}
 </head>
-<body class="min-h-screen bg-background font-sans antialiased">
-    {% include "components/header.njk" %}
-
-    <main>
-        {{ content | safe }}
-    </main>
-
-    {% include "components/footer.njk" %}
+<body>
+    {% include "partials/navBar.njk" %}
     
-    {# Initialize Lucide Icons #}
-    <script>
-        lucide.createIcons();
-    </script>
-    <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js');
-      });
-    }
-  </script>
+    {% block content %}
+    {% endblock content %}
+
+    {% include "partials/footer.njk" %}
+    {% include "partials/head.njk" %}
+    {% block scripts %}
+    {% endblock scripts %}
 </body>
 </html>

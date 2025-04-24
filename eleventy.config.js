@@ -35,12 +35,12 @@ export default function (eleventyConfig) {
       
       <!-- PWA/Mobile icons -->
       <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-      <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+      <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#06b6d4">
       
       <!-- Manifest y configuración del navegador -->
       <link rel="manifest" href="/site.webmanifest">
-      <meta name="msapplication-TileColor" content="#da532c">
-      <meta name="theme-color" content="#06B6D">
+      <meta name="msapplication-TileColor" content="#06b6d4">
+      <meta name="theme-color" content="#06b6d4">
     `;
   });
     
