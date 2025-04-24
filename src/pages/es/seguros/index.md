@@ -12,6 +12,7 @@ translations:
 
 # Hero Section
 hero:
+  tag: "Perito de Seguros"
   title: "Perito de Seguros"
   subtitle: "Defendemos tus Derechos ante la Aseguradora"
   description: "¿Te han rechazado un siniestro? ¿La indemnización es insuficiente? Somos expertos independientes en valoración de daños y reclamaciones a aseguradoras."
