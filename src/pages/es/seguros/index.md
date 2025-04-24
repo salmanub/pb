@@ -14,7 +14,7 @@ translations:
 hero:
   title: "Perito de Seguros"
   subtitle: "Defendemos tus Derechos ante la Aseguradora"
-  description: "¿La aseguradora rechaza tu siniestro? ¿No estás conforme con la indemnización? Te ayudamos a obtener lo que te corresponde."
+  description: "¿Te han rechazado un siniestro? ¿La indemnización es insuficiente? Somos expertos independientes en valoración de daños y reclamaciones a aseguradoras."
   image: "/assets/images/servicios/peritaje-seguros-hero.jpg"
 
 # Sections Content
@@ -43,51 +43,90 @@ sections:
 
 # Service Cluster
 serviceCluster:
-  intro: Servicios Especializados. Defendemos tus Intereses.
-  title: "Nuestros Servicios"
-  subtitle: "Servicios Especializados"
-  heading: |
-    Defendemos tus <strong class="text-cyan-500 font-bold">Intereses</strong>
+  intro: "Servicios especializados en peritajes de seguros"
   services:
-    - title: "Contraperitajes"
-      description: "Valoración independiente cuando no estás de acuerdo con el perito de la compañía."
-      url: "/seguros/contraperitajes/"
-      icon: "shield-check"
+    - title: "Valoración de Daños"
+      description: "Evaluación técnica profesional e independiente de los daños producidos por cualquier tipo de siniestro. Documentación exhaustiva para tu reclamación."
+      url: "/seguros/valoracion-danos/"
+      icon: "search"
       features:
         - "Inspección detallada"
-        - "Valoración objetiva"
+        - "Valoración económica"
+        - "Documentación fotográfica"
+
+    - title: "Análisis de Coberturas"
+      description: "Estudio minucioso de tu póliza para determinar las coberturas aplicables y maximizar tu indemnización dentro del marco legal."
+      url: "/seguros/analisis-coberturas/"
+      icon: "document"
+      features:
+        - "Revisión de póliza"
+        - "Interpretación técnica"
+        - "Informe de coberturas"
+
+    - title: "Contraperitajes"
+      description: "Valoración independiente cuando no estás de acuerdo con el perito de la compañía. Defensa técnica de tus intereses."
+      url: "/seguros/contraperitajes/"
+      icon: "shield"
+      features:
+        - "Segunda opinión"
         - "Defensa técnica"
+        - "Negociación efectiva"
+
+    - title: "Seguros de Hogar"
+      description: "Especialistas en siniestros de viviendas: agua, incendio, robo, responsabilidad civil y otros daños cubiertos por tu seguro."
+      url: "/seguros/hogar/"
+      icon: "home"
+      features:
+        - "Daños por agua"
+        - "Daños por incendio"
+        - "Robos y vandalismo"
+
+    - title: "Seguros de Comunidades"
+      description: "Peritajes para comunidades de propietarios. Valoración de daños comunes y asesoramiento al administrador de fincas."
+      url: "/seguros/comunidades/"
+      icon: "building"
+      features:
+        - "Zonas comunes"
+        - "Instalaciones"
+        - "Responsabilidad civil"
 
     - title: "Reclamaciones"
-      description: "Apoyo técnico en reclamaciones a aseguradoras."
+      description: "Gestión integral de reclamaciones a aseguradoras. Desde la valoración inicial hasta la defensa ante tribunales si es necesario."
       url: "/seguros/reclamaciones/"
-      icon: "document-check"
+      icon: "scale"
       features:
-        - "Informes técnicos"
-        - "Negociación efectiva"
-        - "Defensa legal"
+        - "Informes periciales"
+        - "Defensa técnica"
+        - "Apoyo judicial"
+
+# Testimonials Section
+testimonials:
+  title: "Casos de Éxito"
+  items:
+    - quote: "Gracias al informe pericial independiente, la aseguradora rectificó su valoración inicial y obtuvimos una indemnización justa por los daños."
+      author: "Comunidad de Propietarios Barcelona"
+      role: "Caso: Daños por agua"
+    
+    - quote: "La claridad técnica del informe y su conocimiento de las coberturas fueron clave para que la aseguradora aceptara nuestra reclamación."
+      author: "Carlos García"
+      role: "Caso: Rechazo de siniestro"
 
 # Benefits Section
 benefits:
-  title: |
-    <div class="max-w-3xl mx-auto text-center mb-16">
-      <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800">
-        Por Qué <strong class="text-cyan-500 font-bold">Confiar</strong> en Nosotros
-      </h2>
-    </div>
+  title: "¿Por Qué Elegirnos?"
   items:
     - title: "Independencia Total"
-      description: "Defendemos TUS intereses, no los de la aseguradora"
+      description: "Defendemos exclusivamente TUS intereses, nunca trabajamos para aseguradoras"
       icon: "shield-check"
-    - title: "Experiencia en Seguros"
-      description: "Perito especializado en valoraciones"
+    - title: "Doble Expertise"
+      description: "Ingenieros + Peritos: conocimiento técnico y asegurador"
       icon: "certificate"
-    - title: "Capacidad Negociadora"
-      description: "Argumentación técnica sólida"
-      icon: "handshake"
-    - title: "Objetividad Garantizada"
-      description: "Sin conflicto de intereses"
-      icon: "scale"
+    - title: "Especialización"
+      description: "Dedicación exclusiva a peritajes de seguros"
+      icon: "star"
+    - title: "Resultados Probados"
+      description: "97% de casos resueltos favorablemente"
+      icon: "chart"
 
 # Process Section
 process:
