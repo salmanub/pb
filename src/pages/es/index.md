@@ -4,6 +4,7 @@ title: 'Perito en Barcelona | Experto en Edificación, Construcción y Seguros'
 description: "Perito en Barcelona experto en construcción, seguros y peritaje judicial. Informes técnicos y asesoramiento profesional."
 permalink: /es/
 lang: es
+herotag: "PERITO JUDICIAL EN BARCELONA"
 translations:
   - lang: ca
     permalink: /ca/
