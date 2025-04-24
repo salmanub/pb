@@ -2,7 +2,7 @@
 layout: 'layouts/service-pillar.njk'
 title: 'Perito de Seguros en Barcelona: Defendemos tus Derechos Frente a la Aseguradora'
 description: 'Perito independiente especializado en contraperitajes y defensa del asegurado. Valoración objetiva de daños y reclamaciones efectivas a compañías aseguradoras.'
-permalink: '/seguros/index.html'
+permalink: /seguros/
 lang: es
 translations:
   - lang: ca
@@ -12,23 +12,27 @@ translations:
 
 # Hero Section
 hero:
-  title: "Perito de Seguros Independiente"
+  title: "Perito de Seguros"
   subtitle: "Defendemos tus Derechos ante la Aseguradora"
-  intro: "¿La aseguradora rechaza tu siniestro? ¿No estás conforme con la indemnización? Te ayudamos a obtener lo que te corresponde."
+  description: "¿La aseguradora rechaza tu siniestro? ¿No estás conforme con la indemnización? Te ayudamos a obtener lo que te corresponde."
   image: "/assets/images/servicios/peritaje-seguros-hero.jpg"
 
 # Sections Content
 sections:
-  title: "¿Qué es un Peritaje de Seguros y Cuándo lo Necesitas?"
+  title: "¿Qué es un Peritaje de Seguros y Por Qué lo Necesitas?"
   intro: |
-    <div class="max-w-3xl">
+    <div class="max-w-3xl mx-auto">
       <p class="mb-6">¿La aseguradora ha rechazado tu siniestro? ¿La indemnización ofrecida es insuficiente? ¿No estás de acuerdo con la valoración del perito de la compañía? Entendemos lo frustrante que puede ser esta situación.</p>
       
       <p>Como Perito de Seguros de Riesgos Diversos, proporcionamos informes técnicos independientes para defender tus intereses ante las compañías aseguradoras, cubriendo todo tipo de siniestros y pólizas.</p>
     </div>
   
   what_is:
-    title: "¿Qué es un Peritaje de Seguros y Cuándo lo Necesitas?"
+    title: ""
+    intro: |
+      <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 mb-8 leading-tight">
+        Peritajes de <strong class="text-cyan-500 font-bold">Seguros</strong> Independientes
+      </h2>
     text: "Un peritaje de seguros independiente es un informe técnico realizado por un perito que TÚ contratas, no la aseguradora, para equilibrar la relación con la compañía y:"
     features:
       - "Valorar objetivamente los daños de tu siniestro"
@@ -39,7 +43,11 @@ sections:
 
 # Service Cluster
 serviceCluster:
-  intro: "Servicios especializados en defensa del asegurado:"
+  intro: Servicios Especializados. Defendemos tus Intereses.
+  title: "Nuestros Servicios"
+  subtitle: "Servicios Especializados"
+  heading: |
+    Defendemos tus <strong class="text-cyan-500 font-bold">Intereses</strong>
   services:
     - title: "Contraperitajes"
       description: "Valoración independiente cuando no estás de acuerdo con el perito de la compañía."
@@ -61,7 +69,12 @@ serviceCluster:
 
 # Benefits Section
 benefits:
-  title: "Ventajas de Contar con tu Propio Perito"
+  title: |
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800">
+        Por Qué <strong class="text-cyan-500 font-bold">Confiar</strong> en Nosotros
+      </h2>
+    </div>
   items:
     - title: "Independencia Total"
       description: "Defendemos TUS intereses, no los de la aseguradora"
@@ -78,7 +91,13 @@ benefits:
 
 # Process Section
 process:
-  title: "Proceso de Defensa"
+  title: |
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-white mb-6">
+        Nuestro <strong class="text-cyan-400 font-bold">Proceso</strong>
+      </h2>
+      <p class="text-xl text-white/80">Un método transparente para defender tus intereses</p>
+    </div>
   steps:
     - title: "Análisis Inicial"
       description: "Evaluación de póliza y siniestro"
