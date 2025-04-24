@@ -16,8 +16,10 @@
     {% endblock content %}
 
     {% include "partials/footer.njk" %}
-    {% include "partials/head.njk" %}
+    
     {% block scripts %}
+{% include "partials/head.njk" %}
+
     {% endblock scripts %}
 </body>
 </html>

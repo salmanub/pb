@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import markdownIt from 'markdown-it';
 
 import cssnano from 'cssnano';
 import postcss from 'postcss';
@@ -15,6 +16,31 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/scripts");
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
+
+  eleventyConfig.addCollection("langCollections", function (collectionApi) {
+    const collectionsByLang = {};
+
+    // Obtener todos los items de la colección
+    const allItems = collectionApi.getAll();
+
+    // Iterar sobre los items y clasificarlos por 'lang'
+    allItems.forEach((item) => {
+      const lang = item.data.lang;
+
+      // Asegúrate de que el item tenga un 'lang' definido
+      if (lang) {
+        // Si la colección para ese idioma no existe, crearla
+        if (!collectionsByLang[lang]) {
+          collectionsByLang[lang] = [];
+        }
+
+        // Añadir el item a la colección correspondiente
+        collectionsByLang[lang].push(item);
+      }
+    });
+
+    return collectionsByLang;
+  });
 
   // Leer el contenido del favicon SVG como Data URI (opcional)
   const faviconPath = path.join(__dirname, "src", "assets", "images", "logos", "favicon.txt");
@@ -44,6 +70,18 @@ export default function (eleventyConfig) {
     `;
   });
     
+  // Configurar markdown-it
+  const md = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  });
+
+  // Añadir filtro markdown
+  eleventyConfig.addFilter("markdown", function(content) {
+    return md.render(content);
+  });
+
   //compile tailwind before eleventy processes the files
   eleventyConfig.on('eleventy.before', async () => {
     // Procesar global.css
