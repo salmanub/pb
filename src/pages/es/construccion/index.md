@@ -35,9 +35,9 @@ sections:
       - "Valorar económicamente las reparaciones necesarias"
       - "Fundamentar reclamaciones judiciales o extrajudiciales"
 
-# Servicios Cluster
+# Service Cluster
 serviceCluster:
-  intro: "Servicios especializados para cada tipo de problema constructivo:"
+  intro: "Soluciones técnicas especializadas para cada patología constructiva:"
   services:
     - title: "Grietas y Problemas Estructurales"
       description: "Evaluación experta de fisuras en paredes, grietas en forjados y problemas de estabilidad que requieren refuerzo estructural. Determinamos la gravedad y proponemos soluciones efectivas."
@@ -75,23 +75,23 @@ serviceCluster:
         - "Estudios geotécnicos"
         - "Soluciones técnicas"
     
-    - title: "Conflictos con Seguros"
-      description: "Apoyo técnico cuando tu aseguradora no cubre los daños o minimiza la indemnización. Informes independientes para defender tus derechos y obtener una compensación justa."
-      url: "/construccion/seguros/"
-      icon: "scale"
+    - title: "Vicios Ocultos y Defectos"
+      description: "Detección y documentación de defectos constructivos ocultos. Informes técnicos detallados para fundamentar reclamaciones por vicios de construcción."
+      url: "/construccion/vicios-ocultos/"
+      icon: "search"
       features:
-        - "Valoración independiente"
-        - "Contraperitajes"
-        - "Defensa técnica"
+        - "Inspección especializada"
+        - "Pruebas técnicas"
+        - "Documentación exhaustiva"
     
-    - title: "Certificación de Obra"
-      description: "Verificación detallada de unidades ejecutadas, calidad y conformidad con proyecto en obras paralizadas o en disputa. Documentación técnica para resolución de conflictos."
-      url: "/construccion/certificacion/"
+    - title: "Certificación Técnica"
+      description: "Verificación de calidad y conformidad en obras. Documentación técnica especializada para validar ejecución y materiales."
+      url: "/construccion/certificacion-tecnica/"
       icon: "document"
       features:
         - "Control de calidad"
         - "Medición de obra"
-        - "Informes técnicos"
+        - "Informes normativos"
 
 # Ventajas Section
 benefits:
@@ -122,6 +122,18 @@ process:
       description: "Informe detallado"
     - title: "Seguimiento"
       description: "Apoyo continuo"
+
+# Testimonials Section
+testimonials:
+  title: "Lo que Dicen Nuestros Clientes"
+  items:
+    - quote: "La claridad técnica del informe fue decisiva para demostrar los defectos estructurales. Excelente trabajo documentando cada detalle."
+      author: "Comunidad de Propietarios Barcelona"
+      role: "Caso: Grietas estructurales"
+    
+    - quote: "Gran profesionalidad identificando el origen de las humedades. Las soluciones propuestas resolvieron definitivamente el problema."
+      author: "Juan García"
+      role: "Caso: Filtraciones"
 
 # Call to Action
 cta:
