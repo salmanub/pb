@@ -1,0 +1,314 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<main class="contact-page">
+    {# Hero Section más compacto sin métricas #}
+    <header class="relative pt-28 min-h-[40vh] bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white overflow-hidden">
+        <div class="relative z-10 w-full flex items-center py-12">
+            <div class="w-full px-4 sm:px-8 md:px-12 lg:px-0 md:w-[95%] max-w-[1400px] md:mx-auto lg:ml-[5%]">
+                <div class="flex flex-col items-center lg:items-start w-full lg:w-[70%] space-y-6">
+                    <div class="space-y-6 w-full">
+                        <span class="flex justify-center lg:justify-start items-center text-sm md:text-base font-semibold tracking-[2px] uppercase text-cyan-400">
+                            <span class="hidden lg:block w-8 h-0.5 bg-cyan-400 mr-3"></span>
+                            CONTACTO
+                        </span>
+                        
+                        <h1 class="text-[2.5rem] md:text-[3.5rem] font-light leading-[1.1] text-center lg:text-left">
+                            HABLEMOS DE 
+                            <strong class="block text-cyan-400 mt-4">TU PROYECTO</strong>
+                        </h1>
+                        
+                        <p class="text-xl text-cyan-50 font-light max-w-3xl mx-auto lg:mx-0 text-center lg:text-left">
+                            Si necesitas un informe pericial para un problema de construcción o una disputa con tu seguro, estamos aquí para ayudarte. Primera valoración sin compromiso.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        {# Patrón de fondo #}
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+    </header>
+
+    {# Contenido Principal - 2 Columnas #}
+    <section class="py-20 -mt-8 relative z-10">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid lg:grid-cols-2 items-start gap-12">
+                {# Columna Izquierda - Formulario con estilos mejorados #}
+                <div class="order-2 lg:order-1">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border border-slate-100 hover:shadow-2xl transition-all duration-300">
+                        <h2 class="text-2xl font-bold text-slate-800 mb-8 flex items-center">
+                            <span class="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-500 mr-4">📝</span>
+                            Enviar Consulta
+                        </h2>
+                        <form id="contactForm" class="space-y-8" autocomplete="on">
+                            <div class="grid gap-6">
+                                <div class="form-group focus-within:scale-[1.01] transition-transform">
+                                    <label for="nombre" class="block text-sm font-medium text-slate-700 mb-2">
+                                        Nombre completo <span class="text-red-500">*</span>
+                                        <span class="ml-1 text-xs text-slate-500">(requerido)</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="nombre" 
+                                        name="nombre" 
+                                        required 
+                                        aria-required="true"
+                                        class="w-full px-4 py-3 rounded-xl border-slate-200 focus:border-cyan-500 focus:ring focus:ring-cyan-200 focus:ring-opacity-50 transition-all shadow-sm"
+                                        placeholder="Escribe tu nombre completo aquí">
+                                </div>
+                                
+                                <div class="form-group focus-within:scale-[1.01] transition-transform">
+                                    <label for="email" class="block text-sm font-medium text-slate-700 mb-2">
+                                        Email <span class="text-red-500">*</span>
+                                        <span class="ml-1 text-xs text-slate-500">(requerido)</span>
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        required 
+                                        aria-required="true"
+                                        class="w-full px-4 py-3 rounded-xl border-slate-200 focus:border-cyan-500 focus:ring focus:ring-cyan-200 focus:ring-opacity-50 transition-all shadow-sm"
+                                        placeholder="tu@email.com">
+                                </div>
+                                
+                                <div class="form-group focus-within:scale-[1.01] transition-transform">
+                                    <label for="telefono" class="block text-sm font-medium text-slate-700 mb-2">
+                                        Teléfono
+                                        <span class="ml-1 text-xs text-slate-500">(opcional)</span>
+                                    </label>
+                                    <input 
+                                        type="tel" 
+                                        id="telefono" 
+                                        name="telefono"
+                                        class="w-full px-4 py-3 rounded-xl border-slate-200 focus:border-cyan-500 focus:ring focus:ring-cyan-200 focus:ring-opacity-50 transition-all shadow-sm"
+                                        placeholder="+34 000 000 000">
+                                </div>
+                                
+                                <div class="form-group focus-within:scale-[1.01] transition-transform">
+                                    <label for="mensaje" class="block text-sm font-medium text-slate-700 mb-2">
+                                        Mensaje <span class="text-red-500">*</span>
+                                        <span class="ml-1 text-xs text-slate-500">(requerido)</span>
+                                    </label>
+                                    <textarea 
+                                        id="mensaje" 
+                                        name="mensaje" 
+                                        required 
+                                        aria-required="true"
+                                        rows="4" 
+                                        class="w-full px-4 py-3 rounded-xl border-slate-200 focus:border-cyan-500 focus:ring focus:ring-cyan-200 focus:ring-opacity-50 transition-all shadow-sm"
+                                        placeholder="Describe brevemente tu consulta..."></textarea>
+                                </div>
+                                
+                                <div class="flex items-start gap-3">
+                                    <input 
+                                        type="checkbox" 
+                                        id="privacidad" 
+                                        name="privacidad" 
+                                        required 
+                                        aria-required="true"
+                                        class="mt-1.5 w-5 h-5 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500 cursor-pointer">
+                                    <label for="privacidad" class="text-sm text-slate-600 cursor-pointer">
+                                        He leído y acepto la <a href="/privacidad" class="text-cyan-600 hover:underline font-medium">Política de Privacidad</a> <span class="text-red-500">*</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <button 
+                                type="submit" 
+                                class="w-full inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium py-4 px-6 rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all group">
+                                Enviar Consulta
+                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                {# Columna Derecha - Info de Contacto con estilos mejorados #}
+                <div class="order-1 lg:order-2">
+                    <div class="sticky top-24 space-y-8">
+                        {# Info de Contacto #}
+                        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-slate-100">
+                            <h2 class="text-2xl font-bold text-slate-800 mb-6">Contacto Directo</h2>
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <span class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-500">📞</span>
+                                    <div>
+                                        <a href="tel:+34932123456" class="text-lg font-medium text-cyan-600 hover:text-cyan-700">+34 932 123 456</a>
+                                        <p class="text-slate-600">Lunes a Viernes: 9:00 - 19:00</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-500">✉️</span>
+                                    <div>
+                                        <a href="mailto:info@perito.barcelona" class="text-lg font-medium text-cyan-600 hover:text-cyan-700">info@perito.barcelona</a>
+                                        <p class="text-slate-600">Respuesta en < 24h</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {# Ubicaciones con tabs para mapas #}
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-100">
+                            {# Tabs de ubicaciones #}
+                            <div class="tabs-header flex border-b border-slate-200">
+                                <button id="tab-barcelona" class="tab-btn flex-1 px-5 py-4 font-medium text-slate-800 bg-white border-b-2 border-cyan-500 focus:outline-none" onclick="switchTab('barcelona')">
+                                    <div class="flex items-center justify-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-500">📍</span>
+                                        <span>Barcelona</span>
+                                    </div>
+                                </button>
+                                <button id="tab-granollers" class="tab-btn flex-1 px-5 py-4 font-medium text-slate-500 bg-slate-50 border-b-2 border-transparent hover:bg-white focus:outline-none" onclick="switchTab('granollers')">
+                                    <div class="flex items-center justify-center gap-3">
+                                        <span class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-500">📍</span>
+                                        <span>Granollers</span>
+                                    </div>
+                                </button>
+                            </div>
+                            
+                            {# Contenido de las tabs #}
+                            <div class="tabs-content">
+                                <div id="content-barcelona" class="tab-content">
+                                    <div class="p-5 bg-white">
+                                        <div class="flex items-start gap-4 mb-4">
+                                            <div>
+                                                <p class="text-lg font-medium text-slate-800">Barcelona</p>
+                                                <p class="text-slate-600">C/ Numancia 95, Local 5</p>
+                                                <p class="text-sm text-slate-500 mt-1">Metro L5 Entença</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="h-[300px]">
+                                        <div id="map-barcelona" class="w-full h-full"></div>
+                                    </div>
+                                </div>
+                                
+                                <div id="content-granollers" class="tab-content hidden">
+                                    <div class="p-5 bg-white">
+                                        <div class="flex items-start gap-4 mb-4">
+                                            <div>
+                                                <p class="text-lg font-medium text-slate-800">Granollers</p>
+                                                <p class="text-slate-600">C/ Navarra 14</p>
+                                                <p class="text-sm text-slate-500 mt-1">Cerca estación Renfe</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="h-[300px]">
+                                        <div id="map-granollers" class="w-full h-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# CTA Final con estilos adaptados al sitio #}
+    <section class="py-20 bg-gradient-to-br from-slate-50 to-cyan-50/40">
+        <div class="container mx-auto px-4 md:px-8 text-center max-w-4xl">
+            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-slate-100">
+                <h3 class="text-2xl font-bold text-slate-800 mb-6">¿Prefieres hablar directamente?</h3>
+                <p class="text-lg text-slate-600 mb-8">Llámanos ahora y te atenderemos personalmente</p>
+                <a href="tel:+34932123456" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-cyan-500/25 transition-all group">
+                    <svg class="w-5 h-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    Llamar al +34 932 123 456
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    // Add smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Add form steps functionality
+    const form = document.getElementById('stepForm');
+    const formFields = form.querySelectorAll('.form-field');
+    let currentStep = 0;
+
+    function showStep(step) {
+        formFields.forEach((field, index) => {
+            field.style.display = index === step ? 'block' : 'none';
+        });
+    }
+
+    // Initialize first step
+    showStep(currentStep);
+
+    // Funcionalidad para las tabs de ubicaciones
+    function switchTab(location) {
+        // Ocultar todos los contenidos
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.add('hidden');
+        });
+        
+        // Mostrar el contenido seleccionado
+        document.getElementById(`content-${location}`).classList.remove('hidden');
+        
+        // Actualizar estilos de los botones de tabs
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('border-cyan-500', 'text-slate-800', 'bg-white');
+            btn.classList.add('border-transparent', 'text-slate-500', 'bg-slate-50');
+        });
+        
+        // Resaltar el botón activo
+        document.getElementById(`tab-${location}`).classList.remove('border-transparent', 'text-slate-500', 'bg-slate-50');
+        document.getElementById(`tab-${location}`).classList.add('border-cyan-500', 'text-slate-800', 'bg-white');
+    }
+
+    // Inicializar mapas para ambas ubicaciones cuando se carga la página
+    function initMaps() {
+        // Mapa de Barcelona
+        const mapBarcelona = new google.maps.Map(document.getElementById('map-barcelona'), {
+            center: { lat: 41.385064, lng: 2.1385816 }, // Coordenadas de Barcelona
+            zoom: 16
+        });
+        
+        // Marcador para Barcelona
+        new google.maps.Marker({
+            position: { lat: 41.385064, lng: 2.1385816 },
+            map: mapBarcelona,
+            title: "Perito Barcelona - Calle Numancia 95"
+        });
+        
+        // Mapa de Granollers
+        const mapGranollers = new google.maps.Map(document.getElementById('map-granollers'), {
+            center: { lat: 41.6082985, lng: 2.2862264 }, // Coordenadas de Granollers
+            zoom: 16
+        });
+        
+        // Marcador para Granollers
+        new google.maps.Marker({
+            position: { lat: 41.6082985, lng: 2.2862264 },
+            map: mapGranollers,
+            title: "Perito Barcelona - Calle Navarra 14"
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMaps"></script>
+
+{% endblock %}
+
+{% block pageStyles %}
+    {% set indexCSS %} {% include "dist/assets/styles/index.css" %} {% endset %}
+    <style>
+        {{ indexCSS | safe }}
+    </style>
+{% endblock %}
+
