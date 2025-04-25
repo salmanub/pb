@@ -2,25 +2,55 @@
 
 {% block content %}
 <main class="contact-page">
-    {# Hero Section más compacto sin métricas #}
-    <header class="relative pt-28 min-h-[40vh] bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white overflow-hidden">
-        <div class="relative z-10 w-full flex items-center py-12">
-            <div class="w-full px-4 sm:px-8 md:px-12 lg:px-0 md:w-[95%] max-w-[1400px] md:mx-auto lg:ml-[5%]">
-                <div class="flex flex-col items-center lg:items-start w-full lg:w-[70%] space-y-6">
-                    <div class="space-y-6 w-full">
-                        <span class="flex justify-center lg:justify-start items-center text-sm md:text-base font-semibold tracking-[2px] uppercase text-cyan-400">
-                            <span class="hidden lg:block w-8 h-0.5 bg-cyan-400 mr-3"></span>
+    {# Hero Section con dos columnas visibles en todas las pantallas #}
+    <header class="relative pt-36 pb-24 md:pt-40 md:pb-28 flex items-center bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white overflow-hidden min-h-[60vh] md:min-h-[50vh]">
+        <div class="relative z-10 w-full">
+            {# Centrado en pantallas grandes #}
+            <div class="w-full px-4 sm:px-8 md:px-12 lg:px-0 md:w-[95%] max-w-[1400px] mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    {# Columna izquierda - Info principal #}
+                    <div class="space-y-6">
+                        <span class="flex justify-center md:justify-start items-center text-sm md:text-base font-semibold tracking-[2px] uppercase text-cyan-400">
+                            <span class="hidden md:block w-8 h-0.5 bg-cyan-400 mr-3"></span>
                             CONTACTO
                         </span>
                         
-                        <h1 class="text-[2.5rem] md:text-[3.5rem] font-light leading-[1.1] text-center lg:text-left">
+                        <h1 class="text-[2.5rem] md:text-[3.5rem] font-light leading-[1.1] text-center md:text-left">
                             HABLEMOS DE 
                             <strong class="block text-cyan-400 mt-4">TU PROYECTO</strong>
                         </h1>
                         
-                        <p class="text-xl text-cyan-50 font-light max-w-3xl mx-auto lg:mx-0 text-center lg:text-left">
-                            Si necesitas un informe pericial para un problema de construcción o una disputa con tu seguro, estamos aquí para ayudarte. Primera valoración sin compromiso.
+                        <p class="text-lg md:text-xl text-cyan-50 font-light max-w-3xl mx-auto md:mx-0 text-center md:text-left">
+                            Si necesitas un informe pericial para un problema de construcción o una disputa con tu seguro, estamos aquí para ayudarte.
                         </p>
+                    </div>
+                    
+                    {# Contacto rápido en hero - Columna derecha, visible siempre #}
+                    <div class="space-y-6">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                            <h3 class="text-xl font-medium text-white mb-4 text-center md:text-left">Contacto Directo</h3>
+                            <div class="space-y-4">
+                                <a href="tel:+34932123456" class="flex items-center gap-3 p-3 bg-white/5 hover:bg-white/10 rounded-xl transition-colors group">
+                                    <svg class="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                    </svg>
+                                    <div>
+                                        <div class="text-white font-medium">+34 932 123 456</div>
+                                        <p class="text-xs text-white/70">Lunes a Viernes: 9:00 - 19:00</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="mailto:info@perito.barcelona" class="flex items-center gap-3 p-3 bg-white/5 hover:bg-white/10 rounded-xl transition-colors group">
+                                    <svg class="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                    <div>
+                                        <div class="text-white font-medium">info@perito.barcelona</div>
+                                        <p class="text-xs text-white/70">Respuesta en < 24h</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -30,141 +60,223 @@
         <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
     </header>
 
-    {# Contenido Principal - 2 Columnas #}
-    <section class="py-20 -mt-8 relative z-10">
-        <div class="container mx-auto px-4 md:px-8">
+    {# Contenido Principal - 2 Columnas con Typeform y Mapas - Estilos homogeneizados #}
+    <section class="py-24 -mt-8 relative z-10 bg-gradient-to-br from-slate-50 to-white">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8">
             <div class="grid lg:grid-cols-2 items-start gap-12">
-                {# Columna Izquierda - Formulario con estilos mejorados #}
-                <div class="order-2 lg:order-1">
+                {# Columna Izquierda - Formulario estilo Typeform (Primero en móvil) #}
+                <div class="order-1">
                     <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border border-slate-100 hover:shadow-2xl transition-all duration-300">
-                        <h2 class="text-2xl font-bold text-slate-800 mb-8 flex items-center">
-                            <span class="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-500 mr-4">📝</span>
-                            Enviar Consulta
-                        </h2>
-                        <form id="contactForm" class="space-y-8" autocomplete="on">
-                            <div class="grid gap-6">
-                                <div class="form-group focus-within:scale-[1.01] transition-transform">
-                                    <label for="nombre" class="block text-sm font-medium text-slate-700 mb-2">
-                                        Nombre completo <span class="text-red-500">*</span>
-                                        <span class="ml-1 text-xs text-slate-500">(requerido)</span>
-                                    </label>
-                                    <input 
-                                        type="text" 
-                                        id="nombre" 
-                                        name="nombre" 
-                                        required 
-                                        aria-required="true"
-                                        class="w-full px-4 py-3 rounded-xl border-slate-200 focus:border-cyan-500 focus:ring focus:ring-cyan-200 focus:ring-opacity-50 transition-all shadow-sm"
-                                        placeholder="Escribe tu nombre completo aquí">
+                        {# Encabezado descriptivo para el formulario #}
+                        <div class="mb-10 text-center lg:text-left">
+                            <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3">Consulta Online Detallada</h2>
+                            <p class="text-lg text-slate-600">Rellena los pasos para darnos más información sobre tu caso.</p>
+                        </div>
+                        
+                        <div id="typeform-container" class="space-y-16">
+                            {# Introducción #}
+                            <div class="typeform-step active space-y-6" data-step="intro">
+                                <h3 class="text-2xl font-light text-slate-800">👋 Cuéntanos sobre tu caso</h3>
+                                <p class="text-lg text-slate-600">Te asesoraremos sin compromiso y te ofreceremos una primera valoración gratuita.</p>
+                                <button class="typeform-next mt-6 px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex items-center gap-2">
+                                    Comenzar
+                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            {# Paso 1: Nombre #}
+                            <div class="typeform-step hidden space-y-8" data-step="nombre">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-light text-slate-800">¿Cuál es tu nombre?</h3>
+                                    <p class="text-slate-500 text-sm">Esta información es necesaria para poder atenderte personalmente</p>
                                 </div>
-                                
-                                <div class="form-group focus-within:scale-[1.01] transition-transform">
-                                    <label for="email" class="block text-sm font-medium text-slate-700 mb-2">
-                                        Email <span class="text-red-500">*</span>
-                                        <span class="ml-1 text-xs text-slate-500">(requerido)</span>
-                                    </label>
-                                    <input 
-                                        type="email" 
-                                        id="email" 
-                                        name="email" 
-                                        required 
-                                        aria-required="true"
-                                        class="w-full px-4 py-3 rounded-xl border-slate-200 focus:border-cyan-500 focus:ring focus:ring-cyan-200 focus:ring-opacity-50 transition-all shadow-sm"
-                                        placeholder="tu@email.com">
+                                <input 
+                                    type="text" 
+                                    name="nombre" 
+                                    class="w-full px-0 py-4 text-xl bg-transparent border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-cyan-500 transition-colors" 
+                                    placeholder="Escribe tu nombre completo aquí"
+                                    required>
+                                <div class="pt-6 flex justify-between">
+                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2">
+                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                        Atrás
+                                    </button>
+                                    <button class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex items-center gap-2">
+                                        Continuar
+                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </button>
                                 </div>
-                                
-                                <div class="form-group focus-within:scale-[1.01] transition-transform">
-                                    <label for="telefono" class="block text-sm font-medium text-slate-700 mb-2">
-                                        Teléfono
-                                        <span class="ml-1 text-xs text-slate-500">(opcional)</span>
-                                    </label>
-                                    <input 
-                                        type="tel" 
-                                        id="telefono" 
-                                        name="telefono"
-                                        class="w-full px-4 py-3 rounded-xl border-slate-200 focus:border-cyan-500 focus:ring focus:ring-cyan-200 focus:ring-opacity-50 transition-all shadow-sm"
-                                        placeholder="+34 000 000 000">
+                            </div>
+                            
+                            {# Paso 2: Email #}
+                            <div class="typeform-step hidden space-y-8" data-step="email">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-light text-slate-800">¿A qué correo electrónico podemos contactarte?</h3>
+                                    <p class="text-slate-500 text-sm">Te enviaremos nuestra valoración a este email</p>
                                 </div>
-                                
-                                <div class="form-group focus-within:scale-[1.01] transition-transform">
-                                    <label for="mensaje" class="block text-sm font-medium text-slate-700 mb-2">
-                                        Mensaje <span class="text-red-500">*</span>
-                                        <span class="ml-1 text-xs text-slate-500">(requerido)</span>
-                                    </label>
-                                    <textarea 
-                                        id="mensaje" 
-                                        name="mensaje" 
-                                        required 
-                                        aria-required="true"
-                                        rows="4" 
-                                        class="w-full px-4 py-3 rounded-xl border-slate-200 focus:border-cyan-500 focus:ring focus:ring-cyan-200 focus:ring-opacity-50 transition-all shadow-sm"
-                                        placeholder="Describe brevemente tu consulta..."></textarea>
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    class="w-full px-0 py-4 text-xl bg-transparent border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-cyan-500 transition-colors" 
+                                    placeholder="tu@email.com"
+                                    required>
+                                <div class="pt-6 flex justify-between">
+                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2">
+                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                        Atrás
+                                    </button>
+                                    <button class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex items-center gap-2">
+                                        Continuar
+                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </button>
                                 </div>
-                                
-                                <div class="flex items-start gap-3">
+                            </div>
+                            
+                            {# Paso 3: Teléfono #}
+                            <div class="typeform-step hidden space-y-8" data-step="telefono">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-light text-slate-800">¿Cuál es tu número de teléfono?</h3>
+                                    <p class="text-slate-500 text-sm">Opcional, pero útil para poder contactarte más rápidamente</p>
+                                </div>
+                                <input 
+                                    type="tel" 
+                                    name="telefono" 
+                                    class="w-full px-0 py-4 text-xl bg-transparent border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-cyan-500 transition-colors" 
+                                    placeholder="+34 000 000 000">
+                                <div class="pt-6 flex justify-between">
+                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2">
+                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                        Atrás
+                                    </button>
+                                    <button class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex items-center gap-2">
+                                        Continuar
+                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            {# Paso 4: Mensaje #}
+                            <div class="typeform-step hidden space-y-8" data-step="mensaje">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-light text-slate-800">Cuéntanos un poco sobre tu caso</h3>
+                                    <p class="text-slate-500 text-sm">¿Qué tipo de problema tienes? ¿Cuándo comenzó? ¿Has intentado solucionarlo?</p>
+                                </div>
+                                <textarea 
+                                    name="mensaje" 
+                                    rows="4" 
+                                    class="w-full px-0 py-4 text-xl bg-transparent border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-cyan-500 transition-colors"
+                                    placeholder="Describe brevemente tu situación..."
+                                    required></textarea>
+                                <div class="pt-6 flex justify-between">
+                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2">
+                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                        Atrás
+                                    </button>
+                                    <button class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex items-center gap-2">
+                                        Continuar
+                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            {# Paso 5: Privacidad y Envío #}
+                            <div class="typeform-step hidden space-y-8" data-step="privacidad">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-light text-slate-800">Último paso</h3> {/* Cambiado h2 a h3 y tamaño */}
+                                    <p class="text-slate-500 text-sm">Para poder procesar tu consulta, necesitamos que aceptes nuestra política de privacidad</p>
+                                </div>
+                                <div class="flex items-start gap-3 py-4">
                                     <input 
                                         type="checkbox" 
                                         id="privacidad" 
                                         name="privacidad" 
                                         required 
-                                        aria-required="true"
                                         class="mt-1.5 w-5 h-5 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500 cursor-pointer">
-                                    <label for="privacidad" class="text-sm text-slate-600 cursor-pointer">
-                                        He leído y acepto la <a href="/privacidad" class="text-cyan-600 hover:underline font-medium">Política de Privacidad</a> <span class="text-red-500">*</span>
+                                    <label for="privacidad" class="text-slate-600 cursor-pointer">
+                                        He leído y acepto la <a href="/privacidad" class="text-cyan-600 hover:underline font-medium">Política de Privacidad</a> y el tratamiento de mis datos.
                                     </label>
+                                </div>
+                                <div class="pt-6 flex justify-between">
+                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2">
+                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                        Atrás
+                                    </button>
+                                    <button type="submit" form="contactForm" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex items-center gap-2">
+                                        Enviar Consulta
+                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
                             
-                            <button 
-                                type="submit" 
-                                class="w-full inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium py-4 px-6 rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all group">
-                                Enviar Consulta
-                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                                </svg>
-                            </button>
+
+                            {# Progreso #}
+                            <div class="mt-6 w-full bg-slate-100 h-1 rounded-full overflow-hidden">
+                                <div id="typeform-progress" class="bg-cyan-500 h-full w-0 transition-all duration-300"></div>
+                            </div>
+                        </div>
+                        
+                        <form id="contactForm" class="hidden" method="POST">
+                            <input type="hidden" name="nombre" id="form-nombre">
+                            <input type="hidden" name="email" id="form-email">
+                            <input type="hidden" name="telefono" id="form-telefono">
+                            <input type="hidden" name="mensaje" id="form-mensaje">
+                            <input type="hidden" name="privacidad" id="form-privacidad">
                         </form>
                     </div>
                 </div>
 
-                {# Columna Derecha - Info de Contacto con estilos mejorados #}
-                <div class="order-1 lg:order-2">
+                {# Columna Derecha - Tabs de ubicaciones (Segundo en móvil) #}
+                <div class="order-2">
                     <div class="sticky top-24 space-y-8">
-                        {# Info de Contacto #}
-                        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-slate-100">
-                            <h2 class="text-2xl font-bold text-slate-800 mb-6">Contacto Directo</h2>
-                            <div class="space-y-6">
-                                <div class="flex items-start gap-4">
-                                    <span class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-500">📞</span>
-                                    <div>
-                                        <a href="tel:+34932123456" class="text-lg font-medium text-cyan-600 hover:text-cyan-700">+34 932 123 456</a>
-                                        <p class="text-slate-600">Lunes a Viernes: 9:00 - 19:00</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-start gap-4">
-                                    <span class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-500">✉️</span>
-                                    <div>
-                                        <a href="mailto:info@perito.barcelona" class="text-lg font-medium text-cyan-600 hover:text-cyan-700">info@perito.barcelona</a>
-                                        <p class="text-slate-600">Respuesta en < 24h</p>
-                                    </div>
-                                </div>
-                            </div>
+                        {# Encabezado descriptivo para las ubicaciones #}
+                        <div class="text-center lg:text-left">
+                             <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3">Nuestras Oficinas</h2>
+                             <p class="text-lg text-slate-600">Visítanos en Barcelona o Granollers.</p>
                         </div>
-
+                        
                         {# Ubicaciones con tabs para mapas #}
                         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-100">
                             {# Tabs de ubicaciones #}
                             <div class="tabs-header flex border-b border-slate-200">
-                                <button id="tab-barcelona" class="tab-btn flex-1 px-5 py-4 font-medium text-slate-800 bg-white border-b-2 border-cyan-500 focus:outline-none" onclick="switchTab('barcelona')">
+                                <button id="tab-barcelona" class="tab-btn flex-1 px-5 py-4 font-medium text-slate-800 bg-white border-b-2 border-cyan-500 focus:outline-none group" onclick="switchTab('barcelona')">
                                     <div class="flex items-center justify-center gap-3">
-                                        <span class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-500">📍</span>
+                                        {# Icono SVG estilo hero #}
+                                        <svg class="w-6 h-6 text-cyan-500 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
                                         <span>Barcelona</span>
                                     </div>
                                 </button>
-                                <button id="tab-granollers" class="tab-btn flex-1 px-5 py-4 font-medium text-slate-500 bg-slate-50 border-b-2 border-transparent hover:bg-white focus:outline-none" onclick="switchTab('granollers')">
+                                <button id="tab-granollers" class="tab-btn flex-1 px-5 py-4 font-medium text-slate-500 bg-slate-50 border-b-2 border-transparent hover:bg-white focus:outline-none group" onclick="switchTab('granollers')">
                                     <div class="flex items-center justify-center gap-3">
-                                        <span class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-500">📍</span>
+                                        {# Icono SVG estilo hero #}
+                                        <svg class="w-6 h-6 text-cyan-500 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
                                         <span>Granollers</span>
                                     </div>
                                 </button>
@@ -174,11 +286,19 @@
                             <div class="tabs-content">
                                 <div id="content-barcelona" class="tab-content">
                                     <div class="p-5 bg-white">
-                                        <div class="flex items-start gap-4 mb-4">
+                                        {# Contenedor Flex para dirección y horario #}
+                                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                                            {# Dirección #}
                                             <div>
                                                 <p class="text-lg font-medium text-slate-800">Barcelona</p>
                                                 <p class="text-slate-600">C/ Numancia 95, Local 5</p>
                                                 <p class="text-sm text-slate-500 mt-1">Metro L5 Entença</p>
+                                            </div>
+                                            {# Horario - Alineado a la derecha en pantallas medianas+ #}
+                                            <div class="md:pl-4 md:border-l md:border-slate-100 flex-shrink-0">
+                                                <p class="text-sm font-medium text-slate-700">Horario</p>
+                                                <p class="text-sm text-slate-600">L-J: 9-18h | V: 9-14h</p>
+                                                <p class="text-xs text-slate-500 mt-1">* Visitas con cita previa</p>
                                             </div>
                                         </div>
                                     </div>
@@ -189,11 +309,19 @@
                                 
                                 <div id="content-granollers" class="tab-content hidden">
                                     <div class="p-5 bg-white">
-                                        <div class="flex items-start gap-4 mb-4">
+                                        {# Contenedor Flex para dirección y horario #}
+                                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                                            {# Dirección #}
                                             <div>
                                                 <p class="text-lg font-medium text-slate-800">Granollers</p>
                                                 <p class="text-slate-600">C/ Navarra 14</p>
                                                 <p class="text-sm text-slate-500 mt-1">Cerca estación Renfe</p>
+                                            </div>
+                                            {# Horario - Alineado a la derecha en pantallas medianas+ #}
+                                            <div class="md:pl-4 md:border-l md:border-slate-100 flex-shrink-0">
+                                                <p class="text-sm font-medium text-slate-700">Horario</p>
+                                                <p class="text-sm text-slate-600">L-J: 9-18h | V: 9-14h</p>
+                                                <p class="text-xs text-slate-500 mt-1">* Visitas con cita previa</p>
                                             </div>
                                         </div>
                                     </div>
@@ -210,13 +338,20 @@
     </section>
 
     {# CTA Final con estilos adaptados al sitio #}
-    <section class="py-20 bg-gradient-to-br from-slate-50 to-cyan-50/40">
-        <div class="container mx-auto px-4 md:px-8 text-center max-w-4xl">
-            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-slate-100">
-                <h3 class="text-2xl font-bold text-slate-800 mb-6">¿Prefieres hablar directamente?</h3>
-                <p class="text-lg text-slate-600 mb-8">Llámanos ahora y te atenderemos personalmente</p>
-                <a href="tel:+34932123456" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-cyan-500/25 transition-all group">
-                    <svg class="w-5 h-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <section class="py-24 px-4 md:px-[5%] bg-gradient-to-br from-slate-100 via-white to-slate-50 relative overflow-hidden">
+        {# Overlay decorativo con gradientes #}
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-50/30 via-transparent to-slate-100/20"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,0,0,.02)_0%,transparent_50%)] mix-blend-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-transparent"></div>
+        </div>
+        
+        <div class="max-w-[1400px] mx-auto relative z-10 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-6">¿Prefieres hablar directamente?</h3>
+                <p class="text-lg md:text-xl text-slate-600 mb-10">Llámanos ahora y te atenderemos personalmente para resolver tus dudas.</p>
+                <a href="tel:+34932123456" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-cyan-500/25 transition-all group text-lg">
+                    <svg class="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                     </svg>
                     Llamar al +34 932 123 456
@@ -237,19 +372,83 @@
         });
     });
 
-    // Add form steps functionality
-    const form = document.getElementById('stepForm');
-    const formFields = form.querySelectorAll('.form-field');
-    let currentStep = 0;
-
-    function showStep(step) {
-        formFields.forEach((field, index) => {
-            field.style.display = index === step ? 'block' : 'none';
+    // Typeform functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const steps = document.querySelectorAll('.typeform-step');
+        const progress = document.getElementById('typeform-progress');
+        const hiddenForm = document.getElementById('contactForm');
+        let currentStep = 0;
+        
+        // Botones para avanzar
+        document.querySelectorAll('.typeform-next').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Validar campo actual si es requerido
+                const currentStepEl = steps[currentStep];
+                const input = currentStepEl.querySelector('input:not([type="checkbox"]), textarea');
+                
+                if (input && input.required && !input.value.trim()) {
+                    input.classList.add('border-red-500');
+                    input.focus();
+                    return;
+                }
+                
+                // Si es el checkbox de privacidad
+                if (currentStepEl.dataset.step === 'privacidad') {
+                    const checkbox = currentStepEl.querySelector('input[type="checkbox"]');
+                    if (checkbox.required && !checkbox.checked) {
+                        return;
+                    }
+                }
+                
+                // Guardar valor en form oculto
+                if (input) {
+                    const formInput = document.getElementById(`form-${currentStepEl.dataset.step}`);
+                    if (formInput) {
+                        if (input.type === 'checkbox') {
+                            formInput.value = input.checked ? 'si' : 'no';
+                        } else {
+                            formInput.value = input.value;
+                        }
+                    }
+                }
+                
+                // Avanzar al siguiente paso
+                steps[currentStep].classList.remove('active');
+                steps[currentStep].classList.add('hidden');
+                currentStep++;
+                
+                if (currentStep < steps.length) {
+                    steps[currentStep].classList.add('active');
+                    steps[currentStep].classList.remove('hidden');
+                    
+                    // Actualizar progreso
+                    const progressPercentage = (currentStep / (steps.length - 1)) * 100;
+                    progress.style.width = `${progressPercentage}%`;
+                    
+                    // Autofocus en el nuevo input
+                    const newInput = steps[currentStep].querySelector('input, textarea');
+                    if (newInput) setTimeout(() => newInput.focus(), 300);
+                }
+            });
         });
-    }
-
-    // Initialize first step
-    showStep(currentStep);
+        
+        // Botones para retroceder
+        document.querySelectorAll('.typeform-prev').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (currentStep > 0) {
+                    steps[currentStep].classList.remove('active');
+                    steps[currentStep].classList.add('hidden');
+                    currentStep--;
+                    steps[currentStep].classList.add('active');
+                    steps[currentStep].classList.remove('hidden');
+                    
+                    // Actualizar progreso
+                    const progressPercentage = (currentStep / (steps.length - 1)) * 100;
+                    progress.style.width = `${progressPercentage}%`;
+                }
+            });
+        });
+    });
 
     // Funcionalidad para las tabs de ubicaciones
     function switchTab(location) {
