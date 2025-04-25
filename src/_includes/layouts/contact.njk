@@ -2,7 +2,7 @@
 
 {% block content %}
 <main class="contact-page">
-    {# Hero Section con dos columnas visibles en todas las pantallas #}
+    {# Hero Section con dos columnas visibles en todas las pantallas - Estilos ya consistentes #}
     <header class="relative pt-36 pb-24 md:pt-40 md:pb-28 flex items-center bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white overflow-hidden min-h-[60vh] md:min-h-[50vh]">
         <div class="relative z-10 w-full">
             {# Centrado en pantallas grandes #}
@@ -62,32 +62,37 @@
     </header>
 
     {# Contenido Principal - 2 Columnas con Typeform y Mapas - Estilos homogeneizados #}
-    <section class="py-24 -mt-8 relative z-10 bg-gradient-to-br from-slate-50 to-white">
+    {# Aplicando gradiente de fondo similar a secciones home #}
+    <section class="py-24 -mt-8 relative z-10 bg-gradient-to-br from-slate-50 via-white to-slate-100">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8">
-            <div class="grid lg:grid-cols-2 items-start gap-12">
+            {# Grid con gap consistente #}
+            <div class="grid lg:grid-cols-2 items-start lg:items-stretch gap-12 lg:gap-16">
                 {# Columna Izquierda - Formulario estilo Typeform (Primero en móvil) #}
                 <div class="order-1">
-                    <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border border-slate-100 hover:shadow-2xl transition-all duration-300">
-                        {# Encabezado descriptivo para el formulario #}
+                    {# Estilos de card consistentes con home (bg, shadow, border, padding, rounded) #}
+                    <div class="bg-white rounded-2xl shadow-lg p-8 lg:p-12 border border-slate-100 hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
+                        {# Encabezado descriptivo para el formulario - Estilos de texto home #}
                         <div class="mb-10 text-center lg:text-left">
                             <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3">Consulta Online Detallada</h2>
                             <p class="text-lg text-slate-600">Rellena los pasos para darnos más información sobre tu caso.</p>
                         </div>
                         
-                        <div id="typeform-container" class="space-y-16">
-                            {# Introducción #}
+                        {# Contenedor Typeform #}
+                        <div id="typeform-container" class="space-y-16 flex-grow flex flex-col justify-between">
+                            {# Introducción - Estilos de texto y botón home #}
                             <div class="typeform-step active space-y-6" data-step="intro">
                                 <h3 class="text-2xl font-light text-slate-800">👋 Cuéntanos sobre tu caso</h3>
                                 <p class="text-lg text-slate-600">Te asesoraremos sin compromiso y te ofreceremos una primera valoración gratuita.</p>
-                                <button class="typeform-next mt-6 px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex items-center gap-2">
+                                {# Botón estilo home #}
+                                <button class="typeform-next mt-6 px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors duration-300 group flex items-center gap-2">
                                     Comenzar
-                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                                     </svg>
                                 </button>
                             </div>
                             
-                            {# Paso 1: Nombre #}
+                            {# Paso 1: Nombre - Estilos de texto, input y botones home #}
                             <div class="typeform-step hidden space-y-8" data-step="nombre">
                                 <div class="space-y-2">
                                     <h3 class="text-xl font-light text-slate-800">¿Cuál es tu nombre?</h3>
@@ -96,26 +101,28 @@
                                 <input 
                                     type="text" 
                                     name="nombre" 
-                                    class="w-full px-0 py-4 text-xl bg-transparent border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-cyan-500 transition-colors" 
+                                    class="w-full px-0 py-4 text-xl bg-transparent border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-cyan-500 transition-colors placeholder-slate-400" 
                                     placeholder="Escribe tu nombre completo aquí"
                                     required>
-                                <div class="pt-6 flex justify-between">
-                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2">
-                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <div class="pt-6 flex justify-between items-center">
+                                    {# Botón atrás estilo sutil #}
+                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                                         </svg>
                                         Atrás
                                     </button>
-                                    <button class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex items-center gap-2">
+                                    {# Botón continuar estilo home #}
+                                    <button class="typeform-next px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors duration-300 group flex items-center gap-2 text-sm">
                                         Continuar
-                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                                         </svg>
                                     </button>
                                 </div>
                             </div>
                             
-                            {# Paso 2: Email #}
+                            {# Paso 2: Email - Estilos consistentes #}
                             <div class="typeform-step hidden space-y-8" data-step="email">
                                 <div class="space-y-2">
                                     <h3 class="text-xl font-light text-slate-800">¿A qué correo electrónico podemos contactarte?</h3>
@@ -124,26 +131,26 @@
                                 <input 
                                     type="email" 
                                     name="email" 
-                                    class="w-full px-0 py-4 text-xl bg-transparent border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-cyan-500 transition-colors" 
+                                    class="w-full px-0 py-4 text-xl bg-transparent border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-cyan-500 transition-colors placeholder-slate-400" 
                                     placeholder="tu@email.com"
                                     required>
-                                <div class="pt-6 flex justify-between">
-                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2">
-                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <div class="pt-6 flex justify-between items-center">
+                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                                         </svg>
                                         Atrás
                                     </button>
-                                    <button class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex items-center gap-2">
+                                    <button class="typeform-next px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors duration-300 group flex items-center gap-2 text-sm">
                                         Continuar
-                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                                         </svg>
                                     </button>
                                 </div>
                             </div>
                             
-                            {# Paso 3: Teléfono #}
+                            {# Paso 3: Teléfono - Estilos consistentes #}
                             <div class="typeform-step hidden space-y-8" data-step="telefono">
                                 <div class="space-y-2">
                                     <h3 class="text-xl font-light text-slate-800">¿Cuál es tu número de teléfono?</h3>
@@ -152,25 +159,25 @@
                                 <input 
                                     type="tel" 
                                     name="telefono" 
-                                    class="w-full px-0 py-4 text-xl bg-transparent border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-cyan-500 transition-colors" 
+                                    class="w-full px-0 py-4 text-xl bg-transparent border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-cyan-500 transition-colors placeholder-slate-400" 
                                     placeholder="+34 000 000 000">
-                                <div class="pt-6 flex justify-between">
-                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2">
-                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <div class="pt-6 flex justify-between items-center">
+                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                                         </svg>
                                         Atrás
                                     </button>
-                                    <button class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex items-center gap-2">
+                                    <button class="typeform-next px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors duration-300 group flex items-center gap-2 text-sm">
                                         Continuar
-                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                                         </svg>
                                     </button>
                                 </div>
                             </div>
                             
-                            {# Paso 4: Mensaje #}
+                            {# Paso 4: Mensaje - Estilos consistentes #}
                             <div class="typeform-step hidden space-y-8" data-step="mensaje">
                                 <div class="space-y-2">
                                     <h3 class="text-xl font-light text-slate-800">Cuéntanos un poco sobre tu caso</h3>
@@ -179,29 +186,29 @@
                                 <textarea 
                                     name="mensaje" 
                                     rows="4" 
-                                    class="w-full px-0 py-4 text-xl bg-transparent border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-cyan-500 transition-colors"
+                                    class="w-full px-0 py-4 text-xl bg-transparent border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-cyan-500 transition-colors placeholder-slate-400"
                                     placeholder="Describe brevemente tu situación..."
                                     required></textarea>
-                                <div class="pt-6 flex justify-between">
-                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2">
-                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <div class="pt-6 flex justify-between items-center">
+                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                                         </svg>
                                         Atrás
                                     </button>
-                                    <button class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex items-center gap-2">
+                                    <button class="typeform-next px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors duration-300 group flex items-center gap-2 text-sm">
                                         Continuar
-                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                                         </svg>
                                     </button>
                                 </div>
                             </div>
                             
-                            {# Paso 5: Privacidad y Envío #}
+                            {# Paso 5: Privacidad y Envío - Estilos consistentes #}
                             <div class="typeform-step hidden space-y-8" data-step="privacidad">
                                 <div class="space-y-2">
-                                    <h3 class="text-xl font-light text-slate-800">Último paso</h3> {/* Cambiado h2 a h3 y tamaño */}
+                                    <h3 class="text-xl font-light text-slate-800">Último paso</h3>
                                     <p class="text-slate-500 text-sm">Para poder procesar tu consulta, necesitamos que aceptes nuestra política de privacidad</p>
                                 </div>
                                 <div class="flex items-start gap-3 py-4">
@@ -211,29 +218,30 @@
                                         name="privacidad" 
                                         required 
                                         class="mt-1.5 w-5 h-5 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500 cursor-pointer">
-                                    <label for="privacidad" class="text-slate-600 cursor-pointer">
+                                    <label for="privacidad" class="text-slate-600 cursor-pointer text-sm"> {/* Ajustado tamaño texto */}
                                         He leído y acepto la <a href="/privacidad" class="text-cyan-600 hover:underline font-medium">Política de Privacidad</a> y el tratamiento de mis datos.
                                     </label>
                                 </div>
-                                <div class="pt-6 flex justify-between">
-                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2">
-                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <div class="pt-6 flex justify-between items-center">
+                                    <button class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-700 transition-colors flex items-center gap-2 text-sm">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                                         </svg>
                                         Atrás
                                     </button>
-                                    <button type="submit" form="contactForm" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all flex items-center gap-2">
+                                    {# Botón Enviar estilo home #}
+                                    <button type="submit" form="contactForm" class="px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors duration-300 group flex items-center gap-2">
                                         Enviar Consulta
-                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                                         </svg>
                                     </button>
                                 </div>
                             </div>
                             
 
-                            {# Progreso #}
-                            <div class="mt-6 w-full bg-slate-100 h-1 rounded-full overflow-hidden">
+                            {# Progreso - Estilo barra home #}
+                            <div class="mt-6 w-full bg-slate-200 h-1.5 rounded-full overflow-hidden"> {/* Más grueso y color base */}
                                 <div id="typeform-progress" class="bg-cyan-500 h-full w-0 transition-all duration-300"></div>
                             </div>
                         </div>
@@ -250,31 +258,30 @@
 
                 {# Columna Derecha - Tabs de ubicaciones (Segundo en móvil) #}
                 <div class="order-2">
+                    {# Sticky wrapper #}
                     <div class="sticky top-24 space-y-8">
-                        {# Encabezado descriptivo para las ubicaciones #}
+                        {# Encabezado descriptivo para las ubicaciones - Estilos home #}
                         <div class="text-center lg:text-left">
                              <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3">Nuestras Oficinas</h2>
                              <p class="text-lg text-slate-600">Visítanos en Barcelona o Granollers.</p>
                         </div>
                         
-                        {# Ubicaciones con tabs para mapas #}
-                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-100">
-                            {# Tabs de ubicaciones #}
+                        {# Ubicaciones con tabs para mapas - Estilos card home #}
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col">
+                            {# Tabs de ubicaciones - Estilos botones home #}
                             <div class="tabs-header flex border-b border-slate-200">
-                                <button id="tab-barcelona" class="tab-btn flex-1 px-5 py-4 font-medium text-slate-800 bg-white border-b-2 border-cyan-500 focus:outline-none group" onclick="switchTab('barcelona')">
+                                <button id="tab-barcelona" class="tab-btn flex-1 px-5 py-4 font-semibold text-slate-800 bg-white border-b-2 border-cyan-500 focus:outline-none group transition-colors duration-200" onclick="switchTab('barcelona')">
                                     <div class="flex items-center justify-center gap-3">
-                                        {# Icono SVG estilo hero #}
-                                        <svg class="w-6 h-6 text-cyan-500 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg class="w-5 h-5 text-cyan-500 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                         </svg>
                                         <span>Barcelona</span>
                                     </div>
                                 </button>
-                                <button id="tab-granollers" class="tab-btn flex-1 px-5 py-4 font-medium text-slate-500 bg-slate-50 border-b-2 border-transparent hover:bg-white focus:outline-none group" onclick="switchTab('granollers')">
+                                <button id="tab-granollers" class="tab-btn flex-1 px-5 py-4 font-semibold text-slate-500 bg-slate-50 border-b-2 border-transparent hover:bg-slate-100 focus:outline-none group transition-colors duration-200" onclick="switchTab('granollers')">
                                     <div class="flex items-center justify-center gap-3">
-                                        {# Icono SVG estilo hero #}
-                                        <svg class="w-6 h-6 text-cyan-500 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg class="w-5 h-5 text-cyan-500 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                         </svg>
@@ -284,49 +291,47 @@
                             </div>
                             
                             {# Contenido de las tabs #}
-                            <div class="tabs-content">
-                                <div id="content-barcelona" class="tab-content">
-                                    <div class="p-5 bg-white">
-                                        {# Contenedor Flex para dirección y horario #}
+                            <div class="tabs-content flex-grow">
+                                <div id="content-barcelona" class="tab-content h-full flex flex-col">
+                                    {# Info dirección/horario - Estilos home #}
+                                    <div class="p-6 lg:p-8 bg-white">
                                         <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                                            {# Dirección #}
                                             <div>
-                                                <p class="text-lg font-medium text-slate-800">Barcelona</p>
+                                                <p class="text-lg font-bold text-slate-800 mb-1">Barcelona</p>
                                                 <p class="text-slate-600">C/ Numancia 95, Local 5</p>
                                                 <p class="text-sm text-slate-500 mt-1">Metro L5 Entença</p>
                                             </div>
-                                            {# Horario - Alineado a la derecha en pantallas medianas+ #}
-                                            <div class="md:pl-4 md:border-l md:border-slate-100 flex-shrink-0">
-                                                <p class="text-sm font-medium text-slate-700">Horario</p>
+                                            <div class="md:pl-4 md:border-l md:border-slate-200 flex-shrink-0 mt-4 md:mt-0">
+                                                <p class="text-sm font-semibold text-slate-700">Horario</p>
                                                 <p class="text-sm text-slate-600">L-J: 9-18h | V: 9-14h</p>
                                                 <p class="text-xs text-slate-500 mt-1">* Visitas con cita previa</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="h-[300px]">
+                                    {# Mapa #}
+                                    <div class="h-[300px] flex-grow">
                                         <div id="map-barcelona" class="w-full h-full"></div>
                                     </div>
                                 </div>
                                 
-                                <div id="content-granollers" class="tab-content hidden">
-                                    <div class="p-5 bg-white">
-                                        {# Contenedor Flex para dirección y horario #}
+                                <div id="content-granollers" class="tab-content hidden h-full flex flex-col">
+                                    {# Info dirección/horario - Estilos home #}
+                                    <div class="p-6 lg:p-8 bg-white">
                                         <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                                            {# Dirección #}
                                             <div>
-                                                <p class="text-lg font-medium text-slate-800">Granollers</p>
+                                                <p class="text-lg font-bold text-slate-800 mb-1">Granollers</p> {/* Más bold */}
                                                 <p class="text-slate-600">C/ Navarra 14</p>
                                                 <p class="text-sm text-slate-500 mt-1">Cerca estación Renfe</p>
                                             </div>
-                                            {# Horario - Alineado a la derecha en pantallas medianas+ #}
-                                            <div class="md:pl-4 md:border-l md:border-slate-100 flex-shrink-0">
-                                                <p class="text-sm font-medium text-slate-700">Horario</p>
+                                            <div class="md:pl-4 md:border-l md:border-slate-200 flex-shrink-0 mt-4 md:mt-0"> {/* Ajuste borde y margen */}
+                                                <p class="text-sm font-semibold text-slate-700">Horario</p> {/* Más bold */}
                                                 <p class="text-sm text-slate-600">L-J: 9-18h | V: 9-14h</p>
                                                 <p class="text-xs text-slate-500 mt-1">* Visitas con cita previa</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="h-[300px]">
+                                    {# Mapa #}
+                                    <div class="h-[300px] flex-grow">
                                         <div id="map-granollers" class="w-full h-full"></div>
                                     </div>
                                 </div>
@@ -338,7 +343,7 @@
         </div>
     </section>
 
-    {# CTA Final con estilos adaptados al sitio #}
+    {# CTA Final con estilos adaptados al sitio - Ya consistente #}
     <section class="py-24 px-4 md:px-[5%] bg-gradient-to-br from-slate-100 via-white to-slate-50 relative overflow-hidden">
         {# Overlay decorativo con gradientes #}
         <div class="absolute inset-0">
@@ -379,76 +384,227 @@
         const progress = document.getElementById('typeform-progress');
         const hiddenForm = document.getElementById('contactForm');
         let currentStep = 0;
-        
-        // Botones para avanzar
-        document.querySelectorAll('.typeform-next').forEach(btn => {
-            btn.addEventListener('click', function() {
-                // Validar campo actual si es requerido
-                const currentStepEl = steps[currentStep];
-                const input = currentStepEl.querySelector('input:not([type="checkbox"]), textarea');
-                
-                if (input && input.required && !input.value.trim()) {
-                    input.classList.add('border-red-500');
-                    input.focus();
-                    return;
-                }
-                
-                // Si es el checkbox de privacidad
-                if (currentStepEl.dataset.step === 'privacidad') {
-                    const checkbox = currentStepEl.querySelector('input[type="checkbox"]');
-                    if (checkbox.required && !checkbox.checked) {
-                        return;
+
+        function goToNextStep() {
+            // Validar campo actual si es requerido
+            const currentStepEl = steps[currentStep];
+            const input = currentStepEl.querySelector('input:not([type="checkbox"]), textarea');
+            const nextButton = currentStepEl.querySelector('.typeform-next'); // Get the next button for the current step
+
+            // Check if input exists and is required but empty
+            if (input && input.required && !input.value.trim()) {
+                input.classList.add('border-red-500');
+                input.focus();
+                // Remove red border on input change
+                input.addEventListener('input', () => input.classList.remove('border-red-500'), { once: true });
+                return; // Stop if validation fails
+            } else if (input) {
+                 input.classList.remove('border-red-500'); // Ensure border is removed if valid
+            }
+
+            // Si es el checkbox de privacidad
+            if (currentStepEl.dataset.step === 'privacidad') {
+                const checkbox = currentStepEl.querySelector('input[type="checkbox"]');
+                if (checkbox.required && !checkbox.checked) {
+                    // Maybe add some visual feedback for the checkbox
+                    const label = currentStepEl.querySelector('label[for="privacidad"]');
+                    if (label) {
+                        label.classList.add('text-red-600');
+                        checkbox.addEventListener('change', () => label.classList.remove('text-red-600'), { once: true });
                     }
+                    return; // Stop if privacy not checked
+                } else {
+                     const label = currentStepEl.querySelector('label[for="privacidad"]');
+                     if (label) label.classList.remove('text-red-600');
                 }
-                
-                // Guardar valor en form oculto
-                if (input) {
-                    const formInput = document.getElementById(`form-${currentStepEl.dataset.step}`);
-                    if (formInput) {
-                        if (input.type === 'checkbox') {
-                            formInput.value = input.checked ? 'si' : 'no';
-                        } else {
-                            formInput.value = input.value;
-                        }
+            }
+
+            // Guardar valor en form oculto (only if input exists)
+            if (input) {
+                const formInputId = `form-${currentStepEl.dataset.step}`;
+                const formInput = document.getElementById(formInputId);
+                if (formInput) {
+                    if (input.type === 'checkbox') {
+                        formInput.value = input.checked ? 'si' : 'no';
+                    } else {
+                        formInput.value = input.value;
                     }
+                } else {
+                    console.warn(`Hidden form input with id ${formInputId} not found.`);
                 }
-                
-                // Avanzar al siguiente paso
+            }
+             // Handle checkbox separately for hidden form
+            if (currentStepEl.dataset.step === 'privacidad') {
+                 const checkbox = currentStepEl.querySelector('input[type="checkbox"]');
+                 const formInput = document.getElementById('form-privacidad');
+                 if (checkbox && formInput) {
+                     formInput.value = checkbox.checked ? 'si' : 'no';
+                 }
+            }
+
+
+            // Avanzar al siguiente paso
+            steps[currentStep].classList.remove('active');
+            steps[currentStep].classList.add('hidden');
+            currentStep++;
+
+            if (currentStep < steps.length) {
+                steps[currentStep].classList.add('active');
+                steps[currentStep].classList.remove('hidden');
+
+                // Actualizar progreso
+                const progressPercentage = (currentStep / (steps.length - 1)) * 100;
+                progress.style.width = `${progressPercentage}%`;
+
+                // Autofocus en el nuevo input/textarea
+                const newInput = steps[currentStep].querySelector('input:not([type="checkbox"]), textarea');
+                if (newInput) {
+                    setTimeout(() => newInput.focus(), 300); // Delay focus slightly for transition
+                }
+                 // Add Enter key listener to the new input
+                addEnterKeyListener(steps[currentStep]);
+
+            } else {
+                 // If it was the last step, and we clicked next (which is submit), the form should submit
+                 // This case is handled by the submit button's default behavior or an explicit submit handler if added later.
+                 console.log("Reached end of steps or submitting form.");
+                 // Potentially trigger form submission if needed, though the button type="submit" should handle it.
+                 // hiddenForm.submit();
+            }
+        }
+
+        function goToPrevStep() {
+             if (currentStep > 0) {
                 steps[currentStep].classList.remove('active');
                 steps[currentStep].classList.add('hidden');
-                currentStep++;
-                
-                if (currentStep < steps.length) {
-                    steps[currentStep].classList.add('active');
-                    steps[currentStep].classList.remove('hidden');
-                    
-                    // Actualizar progreso
-                    const progressPercentage = (currentStep / (steps.length - 1)) * 100;
-                    progress.style.width = `${progressPercentage}%`;
-                    
-                    // Autofocus en el nuevo input
-                    const newInput = steps[currentStep].querySelector('input, textarea');
-                    if (newInput) setTimeout(() => newInput.focus(), 300);
-                }
+                currentStep--;
+                steps[currentStep].classList.add('active');
+                steps[currentStep].classList.remove('hidden');
+
+                // Actualizar progreso
+                const progressPercentage = (currentStep / (steps.length - 1)) * 100;
+                progress.style.width = `${progressPercentage}%`;
+
+                 // Autofocus on the input of the previous step
+                 const prevInput = steps[currentStep].querySelector('input:not([type="checkbox"]), textarea');
+                 if (prevInput) {
+                     setTimeout(() => prevInput.focus(), 300);
+                 }
+                 // Re-add Enter key listener if needed (though it should persist)
+                 addEnterKeyListener(steps[currentStep]);
+            }
+        }
+
+        // Add Enter key listener function
+        function addEnterKeyListener(stepElement) {
+            const input = stepElement.querySelector('input:not([type="checkbox"]):not([type="tel"]), textarea'); // Exclude tel for now, Enter might be used differently
+            const nextButton = stepElement.querySelector('.typeform-next');
+            const submitButton = stepElement.querySelector('button[type="submit"]');
+
+            if (input) {
+                input.removeEventListener('keydown', handleEnterKey); // Remove previous listener if any
+                input.addEventListener('keydown', handleEnterKey);
+            }
+             // Special handling for tel input if needed
+             const telInput = stepElement.querySelector('input[type="tel"]');
+             if (telInput) {
+                 telInput.removeEventListener('keydown', handleEnterKey);
+                 telInput.addEventListener('keydown', handleEnterKey);
+             }
+        }
+
+        // Handler for Enter key
+        function handleEnterKey(event) {
+            // Check if Enter key was pressed and it's not Shift+Enter (for textarea)
+            if (event.key === 'Enter' && !event.shiftKey) {
+                 event.preventDefault(); // Prevent default form submission or newline in textarea
+
+                 // Find the correct button (Next or Submit) for the current step
+                 const currentStepEl = steps[currentStep];
+                 const nextButton = currentStepEl.querySelector('.typeform-next');
+                 const submitButton = currentStepEl.querySelector('button[type="submit"]');
+
+                 if (submitButton) {
+                     // If there's a submit button, click it (handles validation within its click)
+                     // Need to check privacy checkbox validation before clicking submit
+                     if (currentStepEl.dataset.step === 'privacidad') {
+                         const checkbox = currentStepEl.querySelector('input[type="checkbox"]');
+                         if (checkbox.required && !checkbox.checked) {
+                             event.preventDefault(); // Prevent submission if checkbox not checked
+                             const label = currentStepEl.querySelector('label[for="privacidad"]');
+                             if (label) {
+                                 label.classList.add('text-red-600');
+                                 checkbox.addEventListener('change', () => label.classList.remove('text-red-600'), { once: true });
+                             }
+                         } else {
+                             const label = currentStepEl.querySelector('label[for="privacidad"]');
+                             if (label) label.classList.remove('text-red-600');
+                         }
+                     }
+                     submitButton.click();
+                 } else if (nextButton) {
+                     // Otherwise, trigger the next step logic
+                     goToNextStep(); // Use the function that includes validation
+                 }
+            }
+        }
+
+
+        // Initial setup for the first step
+        addEnterKeyListener(steps[0]);
+
+
+        // Botones para avanzar (Click)
+        document.querySelectorAll('.typeform-next').forEach(btn => {
+            btn.addEventListener('click', function(event) {
+                 // Check if the button is NOT a submit button before calling goToNextStep
+                 if (btn.getAttribute('type') !== 'submit') {
+                     event.preventDefault(); // Prevent default if it's just a 'next' button
+                     goToNextStep();
+                 }
+                 // If it IS a submit button, let the default form submission proceed after validation (handled by browser or submit handler)
+                 // However, we need to ensure privacy checkbox is checked if required
+                 else if (steps[currentStep].dataset.step === 'privacidad') {
+                     const checkbox = steps[currentStep].querySelector('input[type="checkbox"]');
+                     if (checkbox.required && !checkbox.checked) {
+                         event.preventDefault(); // Prevent submission if checkbox not checked
+                         const label = steps[currentStep].querySelector('label[for="privacidad"]');
+                         if (label) {
+                             label.classList.add('text-red-600');
+                             checkbox.addEventListener('change', () => label.classList.remove('text-red-600'), { once: true });
+                         }
+                     } else {
+                         // If checkbox is checked, transfer data to hidden form before submitting
+                         const formInput = document.getElementById('form-privacidad');
+                         if (checkbox && formInput) {
+                             formInput.value = checkbox.checked ? 'si' : 'no';
+                         }
+                         // Also ensure other fields are transferred (might be redundant if done in goToNextStep, but safe)
+                         steps.forEach((step, index) => {
+                             if (index < currentStep) { // Only for steps before the final one
+                                 const input = step.querySelector('input:not([type="checkbox"]), textarea');
+                                 if (input) {
+                                     const formInputId = `form-${step.dataset.step}`;
+                                     const formInput = document.getElementById(formInputId);
+                                     if (formInput) formInput.value = input.value;
+                                 }
+                             }
+                         });
+                     }
+                 }
             });
         });
-        
-        // Botones para retroceder
+
+        // Botones para retroceder (Click)
         document.querySelectorAll('.typeform-prev').forEach(btn => {
-            btn.addEventListener('click', function() {
-                if (currentStep > 0) {
-                    steps[currentStep].classList.remove('active');
-                    steps[currentStep].classList.add('hidden');
-                    currentStep--;
-                    steps[currentStep].classList.add('active');
-                    steps[currentStep].classList.remove('hidden');
-                    
-                    // Actualizar progreso
-                    const progressPercentage = (currentStep / (steps.length - 1)) * 100;
-                    progress.style.width = `${progressPercentage}%`;
-                }
+            btn.addEventListener('click', function(event) {
+                event.preventDefault(); // Always prevent default for previous buttons
+                goToPrevStep();
             });
         });
+
+         // Add listener for form submission success/failure if using AJAX later
+         // hiddenForm.addEventListener('submit', function(e) { ... });
     });
 
     // Funcionalidad para las tabs de ubicaciones
@@ -464,12 +620,13 @@
         // Actualizar estilos de los botones de tabs
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.classList.remove('border-cyan-500', 'text-slate-800', 'bg-white');
-            btn.classList.add('border-transparent', 'text-slate-500', 'bg-slate-50');
+            btn.classList.add('border-transparent', 'text-slate-500', 'bg-slate-50', 'hover:bg-slate-100'); // Añadido hover state para inactivos
         });
         
         // Resaltar el botón activo
-        document.getElementById(`tab-${location}`).classList.remove('border-transparent', 'text-slate-500', 'bg-slate-50');
-        document.getElementById(`tab-${location}`).classList.add('border-cyan-500', 'text-slate-800', 'bg-white');
+        const activeBtn = document.getElementById(`tab-${location}`);
+        activeBtn.classList.remove('border-transparent', 'text-slate-500', 'bg-slate-50', 'hover:bg-slate-100');
+        activeBtn.classList.add('border-cyan-500', 'text-slate-800', 'bg-white');
     }
 
     // Inicializar mapas para ambas ubicaciones cuando se carga la página

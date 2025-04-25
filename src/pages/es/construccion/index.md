@@ -123,9 +123,9 @@ process:
     - title: "Seguimiento"
       description: "Apoyo continuo"
 
-# Testimonials Section
+# Testimonials Section (Data is ready for the layout)
 testimonials:
-  title: "Lo que Dicen Nuestros Clientes"
+  title: "Lo que Dicen Nuestros Clientes de Construcción" # Title adjusted slightly
   items:
     - quote: "La claridad técnica del informe fue decisiva para demostrar los defectos estructurales. Excelente trabajo documentando cada detalle."
       author: "Comunidad de Propietarios Barcelona"
@@ -137,7 +137,7 @@ testimonials:
 
 # Call to Action
 cta:
-  title: "¿Necesitas un Informe Pericial?"
+  title: "¿Necesitas un Informe Pericial de Construcción?" # Title adjusted slightly
   description: "Contacta ahora para una evaluación gratuita de tu caso"
   button:
     text: "Solicitar Presupuesto"
