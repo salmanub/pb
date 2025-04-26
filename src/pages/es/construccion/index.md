@@ -58,14 +58,14 @@ serviceCluster:
         - "Evaluación de daños"
         - "Soluciones técnicas"
     
-    - title: "Problemas de Aislamiento"
-      description: "Análisis de ruidos molestos, pérdidas energéticas y deficiencias en el aislamiento térmico-acústico. Verificación del cumplimiento normativo y propuestas de mejora."
-      url: "/construccion/aislamiento/"
-      icon: "shield"
+    - title: "Reparación de Hormigón Armado"
+      description: "Diagnóstico de corrosión de armaduras, carbonatación y patologías en hormigón estructural. Definimos protocolos detallados para garantizar la durabilidad de la reparación."
+      url: "/construccion/reparacion-hormigon-armado/"
+      icon: "tools"
       features:
-        - "Mediciones acústicas"
-        - "Análisis termográfico"
-        - "Mejoras de eficiencia"
+        - "Análisis de carbonatación"
+        - "Evaluación de corrosión"
+        - "Protocolos de reparación"
     
     - title: "Patologías en Obra Civil"
       description: "Inspección especializada de problemas en infraestructuras, puentes, túneles o edificios singulares. Análisis técnico avanzado y soluciones de ingeniería."
