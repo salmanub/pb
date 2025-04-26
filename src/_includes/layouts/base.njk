@@ -18,8 +18,15 @@
     {% include "partials/footer.njk" %}
     
     {% block scripts %}
-{% include "partials/head.njk" %}
+    {% include "partials/head.njk" %}
+    
+        <script>
+            {% linkPreloader %}
+        </script>
+    
 
     {% endblock scripts %}
+
+    
 </body>
 </html>
