@@ -2,7 +2,7 @@
 
 {% block content %}
 <main class="contact-page">
-    {# Hero Section con dos columnas visibles en todas las pantallas - Estilos ya consistentes #}
+    {# Hero Section con dos columnas visibles en todas las pantallas #}
     <header class="relative pt-36 pb-24 md:pt-40 md:pb-28 flex items-center bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white overflow-hidden min-h-[60vh] md:min-h-[50vh]">
         <div class="relative z-10 w-full">
             {# Centrado en pantallas grandes #}
@@ -36,7 +36,6 @@
                                     </svg>
                                     <div>
                                         <div class="text-white font-medium">+34 932 123 456</div>
-                                        {# Horario actualizado #}
                                         <p class="text-xs text-white/70">L-J: 9-18h | V: 9-14h</p>
                                     </div>
                                 </a>
@@ -61,17 +60,14 @@
         <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
     </header>
 
-    {# Contenido Principal - 2 Columnas con Typeform y Mapas - Estilos homogeneizados #}
-    {# Aplicando gradiente de fondo similar a secciones home #}
+    {# Contenido Principal - 2 Columnas con Typeform y Mapas #}
     <section class="py-24 -mt-8 relative z-10 bg-gradient-to-br from-slate-50 via-white to-slate-100">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8">
             {# Grid con gap consistente #}
             <div class="grid lg:grid-cols-2 items-start lg:items-stretch gap-12 lg:gap-16">
-                {# Columna Izquierda - Formulario estilo Typeform (Primero en móvil) #}
+                {# Columna Izquierda - Formulario estilo Typeform #}
                 <div class="order-1">
-                    {# Estilos de card consistentes con home (bg, shadow, border, padding, rounded) #}
                     <div class="bg-white rounded-2xl shadow-lg p-8 lg:p-12 border border-slate-100 hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
-                        {# Encabezado descriptivo para el formulario - Estilos de texto home #}
                         <div class="mb-10 text-center lg:text-left">
                             <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3">Consulta Online Detallada</h2>
                             <p class="text-lg text-slate-600">Rellena los pasos para darnos más información sobre tu caso.</p>
@@ -79,11 +75,10 @@
                         
                         {# Contenedor Typeform #}
                         <div id="typeform-container" class="space-y-16 flex-grow flex flex-col justify-between">
-                            {# Introducción - Estilos de texto y botón home #}
+                            {# Introducción #}
                             <div class="typeform-step active space-y-6" data-step="intro">
                                 <h3 class="text-2xl font-light text-slate-800">👋 Cuéntanos sobre tu caso</h3>
                                 <p class="text-lg text-slate-600">Te asesoraremos sin compromiso y te ofreceremos una primera valoración gratuita.</p>
-                                {# Botón estilo home #}
                                 <button class="typeform-next mt-6 px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors duration-300 group flex items-center gap-2">
                                     Comenzar
                                     <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -92,7 +87,7 @@
                                 </button>
                             </div>
                             
-                            {# Paso 1: Nombre - Estilos de texto, input y botones home #}
+                            {# Paso 1: Nombre #}
                             <div class="typeform-step hidden space-y-8" data-step="nombre">
                                 <div class="space-y-2">
                                     <h3 class="text-xl font-light text-slate-800">¿Cuál es tu nombre?</h3>
@@ -122,7 +117,7 @@
                                 </div>
                             </div>
                             
-                            {# Paso 2: Email - Estilos consistentes #}
+                            {# Paso 2: Email #}
                             <div class="typeform-step hidden space-y-8" data-step="email">
                                 <div class="space-y-2">
                                     <h3 class="text-xl font-light text-slate-800">¿A qué correo electrónico podemos contactarte?</h3>
@@ -150,7 +145,7 @@
                                 </div>
                             </div>
                             
-                            {# Paso 3: Teléfono - Estilos consistentes #}
+                            {# Paso 3: Teléfono #}
                             <div class="typeform-step hidden space-y-8" data-step="telefono">
                                 <div class="space-y-2">
                                     <h3 class="text-xl font-light text-slate-800">¿Cuál es tu número de teléfono?</h3>
@@ -177,7 +172,7 @@
                                 </div>
                             </div>
                             
-                            {# Paso 4: Mensaje - Estilos consistentes #}
+                            {# Paso 4: Mensaje #}
                             <div class="typeform-step hidden space-y-8" data-step="mensaje">
                                 <div class="space-y-2">
                                     <h3 class="text-xl font-light text-slate-800">Cuéntanos un poco sobre tu caso</h3>
@@ -205,7 +200,7 @@
                                 </div>
                             </div>
                             
-                            {# Paso 5: Privacidad y Envío - Estilos consistentes #}
+                            {# Paso 5: Privacidad y Envío #}
                             <div class="typeform-step hidden space-y-8" data-step="privacidad">
                                 <div class="space-y-2">
                                     <h3 class="text-xl font-light text-slate-800">Último paso</h3>
@@ -218,7 +213,7 @@
                                         name="privacidad" 
                                         required 
                                         class="mt-1.5 w-5 h-5 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500 cursor-pointer">
-                                    <label for="privacidad" class="text-slate-600 cursor-pointer text-sm"> {/* Ajustado tamaño texto */}
+                                    <label for="privacidad" class="text-slate-600 cursor-pointer text-sm">
                                         He leído y acepto la <a href="/privacidad" class="text-cyan-600 hover:underline font-medium">Política de Privacidad</a> y el tratamiento de mis datos.
                                     </label>
                                 </div>
@@ -239,9 +234,8 @@
                                 </div>
                             </div>
                             
-
-                            {# Progreso - Estilo barra home #}
-                            <div class="mt-6 w-full bg-slate-200 h-1.5 rounded-full overflow-hidden"> {/* Más grueso y color base */}
+                            {# Progreso #}
+                            <div class="mt-6 w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
                                 <div id="typeform-progress" class="bg-cyan-500 h-full w-0 transition-all duration-300"></div>
                             </div>
                         </div>
@@ -256,19 +250,19 @@
                     </div>
                 </div>
 
-                {# Columna Derecha - Tabs de ubicaciones (Segundo en móvil) #}
+                {# Columna Derecha - Tabs de ubicaciones #}
                 <div class="order-2">
                     {# Sticky wrapper #}
                     <div class="sticky top-24 space-y-8">
-                        {# Encabezado descriptivo para las ubicaciones - Estilos home #}
+                        {# Encabezado descriptivo para las ubicaciones #}
                         <div class="text-center lg:text-left">
                              <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3">Nuestras Oficinas</h2>
                              <p class="text-lg text-slate-600">Visítanos en Barcelona o Granollers.</p>
                         </div>
                         
-                        {# Ubicaciones con tabs para mapas - Estilos card home #}
+                        {# Ubicaciones con tabs para mapas #}
                         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col">
-                            {# Tabs de ubicaciones - Estilos botones home #}
+                            {# Tabs de ubicaciones #}
                             <div class="tabs-header flex border-b border-slate-200">
                                 <button id="tab-barcelona" class="tab-btn flex-1 px-5 py-4 font-semibold text-slate-800 bg-white border-b-2 border-cyan-500 focus:outline-none group transition-colors duration-200" onclick="switchTab('barcelona')">
                                     <div class="flex items-center justify-center gap-3">
@@ -308,19 +302,37 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {# Mapa #}
-                                    <div class="h-[300px] flex-grow">
-                                        <div id="map-barcelona" class="w-full h-full"></div>
+                                    {# Mapa - Versión mejorada sin API key #}
+                                    <div class="h-[300px] flex-grow relative">
+                                        <iframe 
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.6856624264604!2d2.136047!3d41.3850643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4987ae76a9c89%3A0xd6c91a8d003a5417!2sC.%20de%20Numancia%2C%2095%2C%20L-5%2C%2008029%20Barcelona!5e0!3m2!1ses!2ses!4v1660123456789!5m2!1ses!2ses"
+                                            class="w-full h-full border-0"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            title="Oficina de Barcelona - C/ Numancia 95, Local 5">
+                                        </iframe>
+                                        
+                                        <a 
+                                            href="https://goo.gl/maps/dHBfys4j8VnKCfyBA" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            class="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-lg shadow-md text-cyan-500 font-medium hover:bg-cyan-50 transition-colors"
+                                            aria-label="Ver en Google Maps">
+                                            Ver en Google Maps
+                                            <svg class="w-4 h-4 ml-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
                                     </div>
                                 </div>
-                                
                                 <div id="content-granollers" class="tab-content hidden h-full flex flex-col">
                                     {# Info dirección/horario - Estilos home #}
                                     <div class="p-6 lg:p-8 bg-white">
                                         <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                                            <div>
+                                            <div> 
                                                 <p class="text-lg font-bold text-slate-800 mb-1">Granollers</p>
-                                                <p class="text-slate-600">C/ Navarra 14</p>
+                                                <p class="text-slate-600">C/ Navarra 14</p> 
                                                 <p class="text-sm text-slate-500 mt-1">Cerca estación Renfe</p>
                                             </div>
                                             <div class="md:pl-4 md:border-l md:border-slate-200 flex-shrink-0 mt-4 md:mt-0">
@@ -330,9 +342,28 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {# Mapa #}
-                                    <div class="h-[300px] flex-grow">
-                                        <div id="map-granollers" class="w-full h-full"></div>
+                                    {# Mapa Granollers - Versión mejorada sin API key #}
+                                    <div class="h-[300px] flex-grow relative">
+                                        <iframe 
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.9574654721266!2d2.2862264!3d41.6082985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4c7d5708e4acf%3A0x617a54b79c245caa!2sC.%20Navarra%2C%2014%2C%2008401%20Granollers%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1660123456789!5m2!1ses!2ses"
+                                            class="w-full h-full border-0"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            title="Oficina de Granollers - C/ Navarra 14">
+                                        </iframe>
+                                        
+                                        <a 
+                                            href="https://goo.gl/maps/5HZpZm9KzYgk4DLHA" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            class="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-lg shadow-md text-cyan-500 font-medium hover:bg-cyan-50 transition-colors"
+                                            aria-label="Ver en Google Maps">
+                                            Ver en Google Maps
+                                            <svg class="w-4 h-4 ml-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -343,7 +374,7 @@
         </div>
     </section>
 
-    {# CTA Final con estilos adaptados al sitio - Ya consistente #}
+    {# CTA Final #}
     <section class="py-24 px-4 md:px-[5%] bg-gradient-to-br from-slate-100 via-white to-slate-50 relative overflow-hidden">
         {# Overlay decorativo con gradientes #}
         <div class="absolute inset-0">
@@ -389,8 +420,8 @@
             // Validar campo actual si es requerido
             const currentStepEl = steps[currentStep];
             const input = currentStepEl.querySelector('input:not([type="checkbox"]), textarea');
-            const nextButton = currentStepEl.querySelector('.typeform-next'); // Get the next button for the current step
-
+            const nextButton = currentStepEl.querySelector('.typeform-next');
+            
             // Check if input exists and is required but empty
             if (input && input.required && !input.value.trim()) {
                 input.classList.add('border-red-500');
@@ -399,9 +430,9 @@
                 input.addEventListener('input', () => input.classList.remove('border-red-500'), { once: true });
                 return; // Stop if validation fails
             } else if (input) {
-                 input.classList.remove('border-red-500'); // Ensure border is removed if valid
+                input.classList.remove('border-red-500'); // Ensure border is removed if valid
             }
-
+            
             // Si es el checkbox de privacidad
             if (currentStepEl.dataset.step === 'privacidad') {
                 const checkbox = currentStepEl.querySelector('input[type="checkbox"]');
@@ -414,11 +445,11 @@
                     }
                     return; // Stop if privacy not checked
                 } else {
-                     const label = currentStepEl.querySelector('label[for="privacidad"]');
-                     if (label) label.classList.remove('text-red-600');
+                    const label = currentStepEl.querySelector('label[for="privacidad"]');
+                    if (label) label.classList.remove('text-red-600');
                 }
             }
-
+            
             // Guardar valor en form oculto (only if input exists)
             if (input) {
                 const formInputId = `form-${currentStepEl.dataset.step}`;
@@ -433,168 +464,119 @@
                     console.warn(`Hidden form input with id ${formInputId} not found.`);
                 }
             }
-             // Handle checkbox separately for hidden form
+            
+            // Handle checkbox separately for hidden form
             if (currentStepEl.dataset.step === 'privacidad') {
-                 const checkbox = currentStepEl.querySelector('input[type="checkbox"]');
-                 const formInput = document.getElementById('form-privacidad');
-                 if (checkbox && formInput) {
-                     formInput.value = checkbox.checked ? 'si' : 'no';
-                 }
+                const checkbox = currentStepEl.querySelector('input[type="checkbox"]');
+                const formInput = document.getElementById('form-privacidad');
+                if (checkbox && formInput) {
+                    formInput.value = checkbox.checked ? 'si' : 'no';
+                }
             }
-
-
+            
             // Avanzar al siguiente paso
             steps[currentStep].classList.remove('active');
             steps[currentStep].classList.add('hidden');
             currentStep++;
-
+            
             if (currentStep < steps.length) {
                 steps[currentStep].classList.add('active');
                 steps[currentStep].classList.remove('hidden');
-
+                
                 // Actualizar progreso
                 const progressPercentage = (currentStep / (steps.length - 1)) * 100;
                 progress.style.width = `${progressPercentage}%`;
-
+                
                 // Autofocus en el nuevo input/textarea
                 const newInput = steps[currentStep].querySelector('input:not([type="checkbox"]), textarea');
                 if (newInput) {
                     setTimeout(() => newInput.focus(), 300); // Delay focus slightly for transition
                 }
-                 // Add Enter key listener to the new input
+                
+                // Add Enter key listener to the new input
                 addEnterKeyListener(steps[currentStep]);
-
             } else {
-                 // If it was the last step, and we clicked next (which is submit), the form should submit
-                 // This case is handled by the submit button's default behavior or an explicit submit handler if added later.
-                 console.log("Reached end of steps or submitting form.");
-                 // Potentially trigger form submission if needed, though the button type="submit" should handle it.
-                 // hiddenForm.submit();
+                // If it was the last step, and we clicked next (which is submit), the form should submit
+                console.log("Reached end of steps or submitting form.");
             }
         }
 
         function goToPrevStep() {
-             if (currentStep > 0) {
+            if (currentStep > 0) {
                 steps[currentStep].classList.remove('active');
                 steps[currentStep].classList.add('hidden');
                 currentStep--;
                 steps[currentStep].classList.add('active');
                 steps[currentStep].classList.remove('hidden');
-
+                
                 // Actualizar progreso
                 const progressPercentage = (currentStep / (steps.length - 1)) * 100;
                 progress.style.width = `${progressPercentage}%`;
-
-                 // Autofocus on the input of the previous step
-                 const prevInput = steps[currentStep].querySelector('input:not([type="checkbox"]), textarea');
-                 if (prevInput) {
-                     setTimeout(() => prevInput.focus(), 300);
-                 }
-                 // Re-add Enter key listener if needed (though it should persist)
-                 addEnterKeyListener(steps[currentStep]);
+                
+                // Autofocus on the input of the previous step
+                const prevInput = steps[currentStep].querySelector('input:not([type="checkbox"]), textarea');
+                if (prevInput) {
+                    setTimeout(() => prevInput.focus(), 300);
+                }
+                
+                // Re-add Enter key listener if needed
+                addEnterKeyListener(steps[currentStep]);
             }
         }
-
+        
         // Add Enter key listener function
         function addEnterKeyListener(stepElement) {
-            const input = stepElement.querySelector('input:not([type="checkbox"]):not([type="tel"]), textarea'); // Exclude tel for now, Enter might be used differently
+            const input = stepElement.querySelector('input:not([type="checkbox"]):not([type="tel"]), textarea');
             const nextButton = stepElement.querySelector('.typeform-next');
             const submitButton = stepElement.querySelector('button[type="submit"]');
-
+            
             if (input) {
-                input.removeEventListener('keydown', handleEnterKey); // Remove previous listener if any
+                input.removeEventListener('keydown', handleEnterKey);
                 input.addEventListener('keydown', handleEnterKey);
             }
-             // Special handling for tel input if needed
-             const telInput = stepElement.querySelector('input[type="tel"]');
-             if (telInput) {
-                 telInput.removeEventListener('keydown', handleEnterKey);
-                 telInput.addEventListener('keydown', handleEnterKey);
-             }
+            
+            // Special handling for tel input if needed
+            const telInput = stepElement.querySelector('input[type="tel"]');
+            if (telInput) {
+                telInput.removeEventListener('keydown', handleEnterKey);
+                telInput.addEventListener('keydown', handleEnterKey);
+            }
         }
-
+        
         // Handler for Enter key
         function handleEnterKey(event) {
             // Check if Enter key was pressed and it's not Shift+Enter (for textarea)
             if (event.key === 'Enter' && !event.shiftKey) {
-                 event.preventDefault(); // Prevent default form submission or newline in textarea
-
-                 // Find the correct button (Next or Submit) for the current step
-                 const currentStepEl = steps[currentStep];
-                 const nextButton = currentStepEl.querySelector('.typeform-next');
-                 const submitButton = currentStepEl.querySelector('button[type="submit"]');
-
-                 if (submitButton) {
-                     // If there's a submit button, click it (handles validation within its click)
-                     // Need to check privacy checkbox validation before clicking submit
-                     if (currentStepEl.dataset.step === 'privacidad') {
-                         const checkbox = currentStepEl.querySelector('input[type="checkbox"]');
-                         if (checkbox.required && !checkbox.checked) {
-                             event.preventDefault(); // Prevent submission if checkbox not checked
-                             const label = currentStepEl.querySelector('label[for="privacidad"]');
-                             if (label) {
-                                 label.classList.add('text-red-600');
-                                 checkbox.addEventListener('change', () => label.classList.remove('text-red-600'), { once: true });
-                             }
-                         } else {
-                             const label = currentStepEl.querySelector('label[for="privacidad"]');
-                             if (label) label.classList.remove('text-red-600');
-                         }
-                     }
-                     submitButton.click();
-                 } else if (nextButton) {
-                     // Otherwise, trigger the next step logic
-                     goToNextStep(); // Use the function that includes validation
-                 }
+                event.preventDefault(); // Prevent default form submission or newline in textarea
+                
+                // Find the correct button (Next or Submit) for the current step
+                const currentStepEl = steps[currentStep];
+                const nextButton = currentStepEl.querySelector('.typeform-next');
+                const submitButton = currentStepEl.querySelector('button[type="submit"]');
+                
+                if (submitButton) {
+                    // If there's a submit button, click it
+                    submitButton.click();
+                } else if (nextButton) {
+                    // Otherwise, trigger the next step logic
+                    goToNextStep();
+                }
             }
         }
-
-
-        // Initial setup for the first step
+        
+        // Initial setup
         addEnterKeyListener(steps[0]);
-
-
+        
         // Botones para avanzar (Click)
         document.querySelectorAll('.typeform-next').forEach(btn => {
             btn.addEventListener('click', function(event) {
-                 // Check if the button is NOT a submit button before calling goToNextStep
-                 if (btn.getAttribute('type') !== 'submit') {
-                     event.preventDefault(); // Prevent default if it's just a 'next' button
-                     goToNextStep();
-                 }
-                 // If it IS a submit button, let the default form submission proceed after validation (handled by browser or submit handler)
-                 // However, we need to ensure privacy checkbox is checked if required
-                 else if (steps[currentStep].dataset.step === 'privacidad') {
-                     const checkbox = steps[currentStep].querySelector('input[type="checkbox"]');
-                     if (checkbox.required && !checkbox.checked) {
-                         event.preventDefault(); // Prevent submission if checkbox not checked
-                         const label = steps[currentStep].querySelector('label[for="privacidad"]');
-                         if (label) {
-                             label.classList.add('text-red-600');
-                             checkbox.addEventListener('change', () => label.classList.remove('text-red-600'), { once: true });
-                         }
-                     } else {
-                         // If checkbox is checked, transfer data to hidden form before submitting
-                         const formInput = document.getElementById('form-privacidad');
-                         if (checkbox && formInput) {
-                             formInput.value = checkbox.checked ? 'si' : 'no';
-                         }
-                         // Also ensure other fields are transferred (might be redundant if done in goToNextStep, but safe)
-                         steps.forEach((step, index) => {
-                             if (index < currentStep) { // Only for steps before the final one
-                                 const input = step.querySelector('input:not([type="checkbox"]), textarea');
-                                 if (input) {
-                                     const formInputId = `form-${step.dataset.step}`;
-                                     const formInput = document.getElementById(formInputId);
-                                     if (formInput) formInput.value = input.value;
-                                 }
-                             }
-                         });
-                     }
-                 }
+                if (btn.getAttribute('type') !== 'submit') {
+                    event.preventDefault();
+                    goToNextStep();
+                }
             });
         });
-
+        
         // Botones para retroceder (Click)
         document.querySelectorAll('.typeform-prev').forEach(btn => {
             btn.addEventListener('click', function(event) {
@@ -602,9 +584,6 @@
                 goToPrevStep();
             });
         });
-
-         // Add listener for form submission success/failure if using AJAX later
-         // hiddenForm.addEventListener('submit', function(e) { ... });
     });
 
     // Funcionalidad para las tabs de ubicaciones
@@ -620,7 +599,7 @@
         // Actualizar estilos de los botones de tabs
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.classList.remove('border-cyan-500', 'text-slate-800', 'bg-white');
-            btn.classList.add('border-transparent', 'text-slate-500', 'bg-slate-50', 'hover:bg-slate-100'); // Añadido hover state para inactivos
+            btn.classList.add('border-transparent', 'text-slate-500', 'bg-slate-50', 'hover:bg-slate-100');
         });
         
         // Resaltar el botón activo
@@ -628,38 +607,7 @@
         activeBtn.classList.remove('border-transparent', 'text-slate-500', 'bg-slate-50', 'hover:bg-slate-100');
         activeBtn.classList.add('border-cyan-500', 'text-slate-800', 'bg-white');
     }
-
-    // Inicializar mapas para ambas ubicaciones cuando se carga la página
-    function initMaps() {
-        // Mapa de Barcelona
-        const mapBarcelona = new google.maps.Map(document.getElementById('map-barcelona'), {
-            center: { lat: 41.385064, lng: 2.1385816 }, // Coordenadas de Barcelona
-            zoom: 16
-        });
-        
-        // Marcador para Barcelona
-        new google.maps.Marker({
-            position: { lat: 41.385064, lng: 2.1385816 },
-            map: mapBarcelona,
-            title: "Perito Barcelona - Calle Numancia 95"
-        });
-        
-        // Mapa de Granollers
-        const mapGranollers = new google.maps.Map(document.getElementById('map-granollers'), {
-            center: { lat: 41.6082985, lng: 2.2862264 }, // Coordenadas de Granollers
-            zoom: 16
-        });
-        
-        // Marcador para Granollers
-        new google.maps.Marker({
-            position: { lat: 41.6082985, lng: 2.2862264 },
-            map: mapGranollers,
-            title: "Perito Barcelona - Calle Navarra 14"
-        });
-    }
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMaps"></script>
-
 {% endblock %}
 
 {% block pageStyles %}
