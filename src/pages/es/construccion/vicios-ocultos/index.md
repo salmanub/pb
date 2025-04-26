@@ -1,11 +1,11 @@
 ---
 layout: 'layouts/service-child.njk'
-title: 'Perito Experto en Vicios Ocultos y Defectos Constructivos en Barcelona'
-subtitle: 'Informes periciales técnicos para reclamar defectos graves no visibles'
-description: 'Perito especializado en la detección y documentación de vicios ocultos en construcción. Informes técnicos para reclamar defectos constructivos en Barcelona.'
+title: 'Informe Pericial de Vicios Ocultos y Defectos Constructivos en Barcelona'
+subtitle: 'Dictamen técnico especializado para fundamentar reclamaciones por defectos no evidentes'
+description: 'Perito especializado en vicios ocultos y defectos constructivos. Análisis técnico e informes periciales para reclamaciones a vendedores, promotoras o constructoras en Barcelona.'
 permalink: '/construccion/vicios-ocultos/'
 lang: 'es'
-serviceTitle: 'vicios ocultos'
+serviceTitle: 'vicios ocultos y defectos constructivos'
 
 # Parent Service (for breadcrumb and linking back to pillar)
 parentService:
@@ -14,251 +14,273 @@ parentService:
 
 # Key features in the hero section
 keyFeatures:
-  - 'Detección técnica de defectos graves no visibles a simple vista'
-  - 'Documentación exhaustiva y rigurosa de cada vicio oculto'
+  - 'Identificación y documentación técnica de defectos constructivos ocultos'
+  - 'Análisis del carácter oculto y la gravedad del vicio según normativa'
+  - 'Determinación de responsabilidades técnicas y plazos legales aplicables'
   - 'Valoración económica precisa de las reparaciones necesarias'
-  - 'Informes periciales redactados para procedimientos judiciales'
 
 # Service Process (for sidebar)
 serviceProcess:
-  - title: 'Análisis documental'
-    description: 'Revisión de contratos, memoria de calidades y documentación técnica'
   - title: 'Inspección técnica'
-    description: 'Examen detallado del inmueble buscando indicios de vicios ocultos'
-  - title: 'Pruebas específicas'
-    description: 'Realización de catas y ensayos para verificar defectos no visibles'
-  - title: 'Elaboración del informe'
-    description: 'Documentación fotográfica, análisis técnico y valoración de reparaciones'
+    description: 'Análisis detallado del inmueble y documentación de defectos'
+  - title: 'Estudio documental'
+    description: 'Revisión de proyecto, memoria de calidades y garantías'
+  - title: 'Análisis normativo'
+    description: 'Verificación del cumplimiento de normativa técnica aplicable'
+  - title: 'Informe pericial'
+    description: 'Dictamen fundamentado, valoración económica y conclusiones'
 
 # Service Benefits (for sidebar)
 serviceBenefits:
-  - 'Prueba técnica objetiva para demostrar la existencia del vicio oculto'
-  - 'Fundamento sólido para reclamar reparaciones o rebaja del precio'
-  - 'Cumplimiento del requisito legal para iniciar acciones legales'
-  - 'Determinación de la preexistencia del defecto a la entrega o compra'
-  - 'Valoración precisa de la gravedad y el coste de las reparaciones'
+  - 'Dictamen técnico riguroso que fundamenta legalmente su reclamación'
+  - 'Valoración económica objetiva de los costes de reparación necesarios'
+  - 'Identificación del alcance real de los defectos, incluso los no visibles'
+  - 'Determinación de plazos de garantía aplicables según la LOE y Código Civil'
+  - 'Base técnica sólida para negociaciones o procedimientos judiciales'
 
 # Related Problems (optional)
 relatedProblems:
   - title: 'Humedades y Filtraciones'
-    description: 'Los vicios ocultos en impermeabilización suelen manifestarse como problemas persistentes de humedad'
+    description: 'Uno de los vicios ocultos más frecuentes en viviendas son las humedades y filtraciones'
     url: '/construccion/humedades-filtraciones/'
-  - title: 'Grietas Estructurales'
-    description: 'Defectos constructivos graves pueden provocar grietas y problemas de estabilidad'
-    url: '/construccion/grietas-estructurales/'
+  - title: 'Problemas de Aislamiento'
+    description: 'Deficiencias en aislamiento térmico o acústico que afectan a la habitabilidad'
+    url: '/construccion/aislamiento/'
 
 # Client Testimonials
 testimonials:
-  - quote: 'Gracias al informe pericial pudimos demostrar que los problemas de humedades se debían a un vicio oculto en la impermeabilización. La promotora asumió todos los costes de reparación.'
-    author: 'Miguel Ángel Ruiz'
-    role: "Propietario de vivienda en L'Eixample"
-  - quote: 'El detalle del informe sobre los defectos ocultos en la cimentación fue clave para que el juez reconociera nuestro derecho a ser indemnizados. Un trabajo excepcional.'
-    author: 'Comunidad de Propietarios Diagonal Mar'
-    role: 'Edificio de 48 viviendas'
+  - quote: 'El informe pericial fue determinante para demostrar que los defectos no eran apreciables en el momento de la compra. Gracias a la solidez técnica del dictamen, conseguimos que el vendedor asumiera íntegramente los costes de reparación.'
+    author: 'Carlos y María Rodríguez'
+    role: 'Compradores de vivienda con vicios ocultos'
+  - quote: 'La valoración económica detallada de las reparaciones necesarias nos dio una posición de fuerza en la negociación con la promotora. El acuerdo extrajudicial nos ahorró tiempo y disgustos.'
+    author: 'Comunidad de Propietarios Vila Olímpica'
+    role: 'Edificio con defectos constructivos'
 
 # CTA Section
-ctaTitle: '¿Has descubierto defectos graves tras la compra?'
-ctaDescription: 'Actúa antes de que expire el plazo legal. Solicita un informe pericial de vicios ocultos.'
+ctaTitle: '¿Ha descubierto defectos ocultos en su inmueble?'
+ctaDescription: 'Contacte con nuestro especialista para evaluar técnicamente su caso y determinar sus derechos.'
 
 # Introduction (shown in hero section)
 intro: |
-  <p>¿Has comprado o recibido una propiedad y ahora descubres defectos graves que no eran visibles durante la inspección inicial? ¿Te enfrentas a costes inesperados por reparaciones de problemas que deberían haberse construido correctamente?</p>
+  <p>¿Ha descubierto defectos en su vivienda o edificio que no eran evidentes en el momento de la compra? ¿Problemas constructivos que han aparecido con el tiempo y que un comprador prudente no podría haber detectado sin conocimientos técnicos especializados?</p>
   
-  <p>Estos podrían ser vicios ocultos y, como parte de nuestros <a href="/construccion/">servicios integrales de peritaje de construcción</a>, ofrecemos informes técnicos específicos que documentan rigurosamente estos defectos, constituyendo la base fundamental para reclamaciones exitosas frente a vendedores, constructoras o promotoras.</p>
+  <p>Como parte de nuestros <a href="/construccion/">servicios especializados de peritaje en construcción</a>, elaboramos informes técnicos rigurosos para identificar, documentar y valorar vicios ocultos y defectos constructivos, determinando su gravedad, origen y responsabilidad técnica, proporcionando la base esencial para fundamentar reclamaciones dentro de los plazos legales establecidos.</p>
 ---
 
-## ¿Qué son exactamente los vicios ocultos en construcción?
+## ¿Qué son los vicios ocultos en construcción?
 
-Los vicios ocultos son defectos graves en la edificación que **no resultan visibles o detectables** mediante una inspección ordinaria realizada por un comprador o propietario medio en el momento de la compra o recepción de la obra. Estos defectos:
+Los vicios ocultos son defectos o deficiencias en un inmueble que no resultan evidentes a simple vista ni son fácilmente detectables mediante una inspección ordinaria por parte de un comprador prudente sin conocimientos técnicos especializados. Estos defectos, que suelen manifestarse con el tiempo o bajo determinadas circunstancias, afectan significativamente al valor, uso o disfrute de la propiedad.
 
-- **No son evidentes** a simple vista (están ocultos bajo acabados, dentro de elementos constructivos o sólo se manifiestan con el tiempo)
-- **Preexisten al momento de la entrega o venta** del inmueble
-- **Hacen el inmueble impropio para su uso** o disminuyen significativamente su valor
-- **Están contemplados en el Código Civil** español (artículos 1484 y siguientes) bajo la figura del "saneamiento por vicios ocultos"
+### Definición legal y normativa aplicable
 
-A diferencia de los defectos aparentes, que son visibles y deberían detectarse en una inspección normal, los vicios ocultos requieren conocimientos técnicos o pruebas específicas para su detección y documentación.
+El concepto de vicio oculto tiene relevancia tanto en el ámbito civil general como en el específico de la edificación:
 
-> **Importante:** Existen plazos legales estrictos para reclamar vicios ocultos (generalmente de 6 meses a 1 año desde la entrega para viviendas de segunda mano, y plazos específicos según la LOE para viviendas nuevas). Es fundamental actuar con rapidez y consultar con un abogado especializado para conocer los plazos aplicables a su caso concreto.
+#### Código Civil (Art. 1484 y siguientes)
+Establece que el vendedor responde frente al comprador por los defectos ocultos que tuviera la cosa vendida, si la hacen impropia para el uso al que se destina o disminuyen de tal modo este uso que, de haberlos conocido el comprador, no la habría adquirido o habría dado menos precio por ella.
 
-## Ejemplos comunes de vicios ocultos que peritamos
+#### Ley de Ordenación de la Edificación (LOE)
+Define tres tipos de defectos constructivos con diferentes plazos de garantía:
+- **Defectos estructurales**: Afectan a elementos estructurales y comprometen la resistencia y estabilidad del edificio (garantía de 10 años).
+- **Defectos de habitabilidad**: Afectan a la higiene, salud, protección del medio ambiente, protección contra el ruido, aislamiento térmico o funcionalidad (garantía de 3 años).
+- **Defectos de terminación o acabado**: Afectan a elementos de terminación o acabado de las obras (garantía de 1 año).
 
-### Problemas estructurales no visibles
+### Características esenciales de un vicio oculto
 
-Defectos graves en elementos estructurales como cimentaciones, pilares, vigas o forjados que quedan ocultos por acabados decorativos:
+Para que un defecto pueda considerarse legalmente como un vicio oculto debe cumplir varias condiciones:
 
-- Ausencia o insuficiencia de armaduras en elementos de hormigón armado
-- Cimentaciones infradimensionadas o mal ejecutadas
-- Juntas estructurales incorrectas o inexistentes
-- Elementos estructurales con secciones reducidas respecto al proyecto
+#### Carácter oculto
+El defecto no debe ser visible ni detectable mediante una inspección ordinaria realizada por un comprador prudente sin conocimientos técnicos específicos. No basta con que el defecto no sea visible; debe ser razonablemente indetectable.
 
-Estos problemas pueden amenazar la estabilidad y seguridad del edificio, manifestándose progresivamente a través de grietas, deformaciones o movimientos anormales.
+#### Preexistencia
+El defecto debe existir en el momento de la transmisión del bien, aunque sus manifestaciones aparezcan posteriormente. No se consideran vicios ocultos los derivados del uso o desgaste posterior a la compra.
 
-### Impermeabilizaciones defectuosas
+#### Gravedad
+El defecto debe tener entidad suficiente para afectar significativamente al uso, valor o disfrute del inmueble. Pequeñas imperfecciones o defectos menores no suelen considerarse vicios ocultos.
 
-Fallos en los sistemas de impermeabilización que sólo se manifiestan con el tiempo o tras periodos prolongados de lluvia:
+#### Desconocimiento por el comprador
+El comprador no debe haber tenido conocimiento real del defecto ni posibilidad razonable de conocerlo en el momento de la compra.
 
-- Impermeabilización mal ejecutada o inexistente en cubiertas y terrazas
-- Defectos en la impermeabilización de fachadas
-- Ausencia de barreras antihumedad en contacto con el terreno
-- Sellados deficientes en juntas de dilatación o encuentros críticos
+## Tipos comunes de vicios ocultos en edificación
 
-Estos defectos suelen manifestarse como humedades persistentes que aparecen mucho después de la entrega de la vivienda.
+Los defectos ocultos pueden afectar a diversas partes y sistemas de un edificio. Los más frecuentes incluyen:
 
-### Defectos graves en instalaciones ocultas
+### Defectos estructurales ocultos
 
-Problemas serios en instalaciones que discurren empotradas en paredes, techos o bajo el suelo:
+Afectan a elementos que garantizan la estabilidad y resistencia del edificio:
+- **Armaduras insuficientes o mal colocadas**: Reducen la capacidad portante sin ser visibles.
+- **Cimentaciones inadecuadas**: Pueden manifestarse años después mediante asentamientos.
+- **Errores de cálculo estructural**: No evidentes hasta que la estructura se somete a ciertas cargas.
+- **Fallos en uniones o conexiones estructurales**: Ocultos dentro de la construcción.
 
-- Tuberías de fontanería de materiales inadecuados o mal instaladas
-- Conductos de ventilación obstruidos o mal dimensionados
-- Instalaciones eléctricas con secciones insuficientes o protecciones inadecuadas
-- Redes de saneamiento con pendientes incorrectas o sin registros obligatorios
+### Problemas de estanqueidad e impermeabilización
 
-Estos vicios pueden provocar averías recurrentes, funcionamiento deficiente de los sistemas o incluso situaciones de riesgo.
+Relacionados con la penetración de agua en el edificio:
+- **Impermeabilización deficiente en cubiertas**: A menudo solo visible tras periodos prolongados de lluvia.
+- **Fallos en la impermeabilización de sótanos**: Que pueden manifestarse estacionalmente.
+- **Filtraciones en fachadas**: Que requieren ciertas condiciones climáticas para evidenciarse.
+- **Sellados defectuosos en carpinterías**: Que permiten la entrada de agua bajo determinadas condiciones.
 
-### Aislamiento térmico o acústico inexistente o deficiente
+### Deficiencias en instalaciones
 
-Incumplimientos graves en el aislamiento del edificio, imposibles de detectar sin ensayos específicos:
+Problemas en sistemas que no son visibles por estar empotrados:
+- **Dimensionado insuficiente de instalaciones eléctricas**: Que se manifiesta al cargar la red.
+- **Redes de fontanería defectuosas**: Con materiales inadecuados o conexiones mal ejecutadas.
+- **Sistemas de evacuación mal ejecutados**: Con pendientes inadecuadas o conexiones deficientes.
+- **Instalaciones de climatización infradimensionadas**: Que no proporcionan el confort prometido.
 
-- Ausencia total o parcial de aislamiento térmico en fachadas o cubiertas
-- Puentes térmicos excesivos no contemplados en proyecto
-- Soluciones acústicas insuficientes entre viviendas
-- Incumplimientos de la normativa térmica y acústica aplicable
+### Problemas de aislamiento
 
-Estos defectos afectan al confort, eficiencia energética y habitabilidad, generando elevados costes energéticos o problemas de ruido.
+Deficiencias que afectan al confort térmico y acústico:
+- **Aislamiento térmico insuficiente**: Que provoca pérdidas energéticas excesivas.
+- **Puentes térmicos no tratados**: Que generan condensaciones y moho.
+- **Aislamiento acústico deficiente**: Que permite la transmisión excesiva de ruido entre viviendas.
+- **Soluciones constructivas inadecuadas para protección acústica**: Especialmente en separaciones entre unidades de uso.
 
-### Uso de materiales de calidad inferior a la pactada
+### Incumplimientos normativos
 
-Sustitución de materiales por otros de menor calidad o prestaciones cuando esto no resulta evidente a simple vista:
+Aspectos que contravienen la normativa aplicable:
+- **Incumplimientos del Código Técnico de la Edificación (CTE)**: En cualquiera de sus documentos básicos.
+- **Vulneraciones de normativas urbanísticas**: Que pueden afectar a la legalidad del inmueble.
+- **Defectos en protección contra incendios**: Que comprometen la seguridad.
+- **Incumplimientos de accesibilidad**: Que afectan al uso del edificio.
 
-- Hormigones de resistencia inferior a la especificada
-- Impermeabilizaciones de baja calidad o espesor insuficiente
-- Aislamientos de menor espesor o características técnicas inferiores
-- Tuberías o conductos de categoría inferior a la contratada
+### Incumplimiento de calidades contratadas
 
-Estos casos requieren análisis comparativos y a veces ensayos destructivos para su comprobación.
+Diferencias significativas entre lo prometido y lo ejecutado:
+- **Materiales de calidad inferior a la especificada**: Sin equivalencia técnica o estética.
+- **Sistemas constructivos diferentes a los contratados**: Con prestaciones inferiores.
+- **Equipamientos o acabados distintos a los pactados**: Que reducen el valor o prestaciones.
+- **Superficies reales menores a las indicadas en contrato**: Más allá de las tolerancias admisibles.
 
-## Nuestra metodología para detectar y documentar vicios ocultos
+## Nuestro proceso de análisis de vicios ocultos
 
-En Perito Barcelona aplicamos un protocolo riguroso para la detección y documentación de vicios ocultos, siguiendo estos pasos:
+En Perito Barcelona aplicamos una metodología rigurosa para la identificación y documentación de vicios ocultos:
 
-### 1. Análisis exhaustivo de la documentación
+### 1. Inspección técnica exhaustiva
 
-Revisamos meticulosamente:
-- Contratos de compraventa o construcción
-- Memoria de calidades y documentación técnica
-- Libro del edificio y manuales de uso y mantenimiento
-- Proyectos técnicos y modificaciones aprobadas
-- Certificados finales de obra
+Realizamos un reconocimiento detallado que incluye:
+- Inspección visual especializada de todos los elementos constructivos
+- Análisis de síntomas y manifestaciones de posibles defectos
+- Documentación fotográfica detallada
+- Mediciones in situ cuando son necesarias
+- Comprobaciones específicas según la tipología
 
-Este análisis permite determinar lo que debería haberse ejecutado correctamente según lo contratado.
+### 2. Análisis documental completo
 
-### 2. Inspección técnica detallada
+Estudiamos toda la documentación relevante:
+- Proyecto de ejecución y sus modificaciones
+- Memoria de calidades y documentación comercial
+- Libro del edificio y documentación final de obra
+- Licencias y certificados de instalaciones
+- Contratos de compraventa y garantías específicas
 
-Realizamos una inspección técnica especializada del inmueble:
-- Examen visual experto de todos los elementos constructivos
-- Utilización de equipos especializados (cámaras termográficas, medidores de humedad, etc.)
-- Identificación de indicios y síntomas de posibles vicios ocultos
-- Comprobación de dimensiones, niveles y acabados
+### 3. Pruebas y ensayos específicos
 
-### 3. Realización de pruebas específicas
-
-Según los indicios encontrados, podemos realizar:
-- Catas puntuales para verificar elementos ocultos
+Según cada caso, podemos realizar o coordinar:
 - Pruebas de estanqueidad en cubiertas o fachadas
-- Ensayos de materiales si se requiere y autoriza
-- Mediciones acústicas o térmicas para comprobar prestaciones
-- Inspecciones con cámaras endoscópicas en cavidades y conductos
+- Termografías para detectar deficiencias de aislamiento
+- Ensayos acústicos para verificar el aislamiento a ruido
+- Comprobaciones de instalaciones para verificar su adecuación
+- Mediciones de deformaciones o movimientos estructurales
 
-### 4. Análisis técnico y causal
+### 4. Análisis normativo y técnico
 
-Una vez recopilada toda la información:
-- Determinamos la causa técnica de cada defecto
-- Analizamos su preexistencia a la entrega o compra
-- Evaluamos su gravedad y consecuencias presentes y futuras
-- Determinamos las responsabilidades técnicas
+Verificamos el cumplimiento de:
+- Código Técnico de la Edificación (CTE) en sus diversos documentos básicos
+- Normativas específicas de instalaciones (REBT, RITE, etc.)
+- Normativa urbanística aplicable
+- Buenas prácticas constructivas y reglas del arte
+- Especificaciones contractuales y memoria de calidades
 
-### 5. Documentación exhaustiva
+### 5. Diagnóstico técnico fundamentado
 
-Documentamos rigurosamente cada vicio oculto con:
-- Fotografías detalladas con escalas de referencia
-- Videos cuando resulta relevante
-- Planos y esquemas explicativos
-- Comparativas con normativa aplicable y soluciones correctas
+Establecemos con precisión:
+- La naturaleza exacta de cada defecto identificado
+- Su carácter oculto y preexistente
+- La gravedad y afectación al uso o valor del inmueble
+- Las causas técnicas que lo originaron
+- Las responsabilidades técnicas correspondientes
 
-### 6. Elaboración del informe pericial
+### 6. Evaluación de plazos de reclamación
 
-Finalmente, redactamos un informe técnico completo que incluye:
+Determinamos de manera fundamentada:
+- La clasificación del defecto según la LOE (estructural, habitabilidad o acabado)
+- La fecha de manifestación o descubrimiento del defecto
+- Los plazos de garantía y reclamación aplicables
+- La viabilidad temporal de la reclamación
+
+### 7. Valoración económica detallada
+
+Elaboramos una estimación precisa de:
+- Coste de reparación o subsanación de cada defecto
+- Valoración de daños derivados si existen
+- Alternativas técnicas y su coste comparativo
+- Depreciación del inmueble si procede
+
+### 8. Informe pericial completo
+
+Redactamos un documento técnico riguroso con:
 - Descripción detallada de cada vicio oculto detectado
-- Justificación técnica de su carácter oculto y preexistencia
-- Análisis del incumplimiento de normativas o contratos
-- Valoración económica detallada de las reparaciones necesarias
-- Conclusiones claras y contundentes, comprensibles para no técnicos
+- Fundamentación técnica del carácter oculto y su gravedad
+- Análisis de cumplimiento normativo
+- Documentación gráfica exhaustiva
+- Valoración económica desglosada
+- Conclusiones sobre responsabilidades y plazos
+- Documentación anexa relevante
 
-## ¿Por qué necesitas un informe pericial para reclamar vicios ocultos?
+## Beneficios de un informe pericial de vicios ocultos
 
-### Prueba objetiva e irrefutable
+### Base jurídica sólida para reclamaciones
 
-Nuestro informe pericial proporciona una prueba técnica de carácter objetivo que demuestra:
-- La existencia real del vicio oculto
-- Su carácter no visible en una inspección ordinaria
-- Su preexistencia al momento de la compra o entrega
-- Su gravedad y repercusión en el uso o valor del inmueble
+Un dictamen técnico especializado proporciona:
+- Evidencia técnica objetiva sobre la existencia y entidad del defecto
+- Justificación del carácter oculto según criterios técnicos y legales
+- Fundamentación de la preexistencia del vicio en el momento de la compra
+- Valoración técnica de la gravedad y afectación al uso
+- Soporte documental para procedimientos judiciales o extrajudiciales
 
-### Fundamento sólido para la reclamación
+Esto incrementa significativamente las posibilidades de éxito en reclamaciones frente a vendedores, promotores o constructores.
 
-Con el informe pericial podrás:
-- Solicitar la reparación completa del defecto (acción redhibitoria)
-- Reclamar una rebaja proporcional del precio (acción quanti minoris)
-- Negociar desde una posición de fuerza con vendedores o constructoras
-- Contar con un documento técnico reconocido en mediaciones y arbitrajes
-
-### Cumplimiento del requisito legal
-
-En procedimientos judiciales, el informe pericial es generalmente un requisito indispensable para:
-- Fundamentar técnicamente la demanda
-- Probar la existencia y entidad de los vicios ocultos
-- Justificar las cantidades reclamadas
-- Contrarrestar posibles informes periciales de la parte contraria
-
-### Valoración económica precisa
+### Valoración económica objetiva
 
 Nuestros informes incluyen:
-- Presupuesto detallado de las reparaciones necesarias
-- Valoración de daños indirectos si procede
-- Justificación técnica de cada partida presupuestada
-- Mediciones precisas y precios de mercado actualizados
+- Cuantificación precisa del coste real de subsanación
+- Metodología de valoración transparente y justificada
+- Consideración de todas las intervenciones necesarias
+- Análisis de alternativas técnicas y su coste
 
-## Casos de éxito en vicios ocultos
+Esta valoración proporciona una base sólida para negociaciones o indemnizaciones.
 
-A lo largo de nuestra trayectoria hemos realizado numerosos informes sobre vicios ocultos en todo tipo de edificaciones. Algunos ejemplos representativos incluyen:
+### Determinación técnica de responsabilidades
 
-- **Comunidad de propietarios en Sant Gervasi**: Detectamos fallos graves en la impermeabilización bajo solado de terrazas que no eran visibles hasta que se produjeron filtraciones generalizadas. El informe permitió obtener una sentencia favorable que obligó a la promotora a realizar la impermeabilización correcta en todas las terrazas del edificio.
+El informe establece claramente:
+- El origen técnico del defecto (diseño, materiales, ejecución)
+- Los agentes potencialmente responsables según la LOE
+- La cadena causal completa que generó el problema
+- El grado de responsabilidad de cada interviniente
 
-- **Vivienda unifamiliar en Maresme**: Documentamos la ausencia total de aislamiento térmico en fachadas pese a estar especificado en la memoria de calidades. Este vicio oculto, no detectable sin catas, supuso una indemnización de 65.000€ para los propietarios.
+### Optimización de plazos de reclamación
 
-- **Local comercial en El Born**: Nuestro informe demostró graves deficiencias ocultas en la red de saneamiento que provocaban olores y humedades recurrentes. El vendedor asumió el coste íntegro de la reconstrucción completa del sistema.
+El dictamen técnico ayuda a:
+- Clasificar correctamente el defecto según la LOE
+- Establecer el momento de manifestación o detección
+- Determinar los plazos de garantía aplicables
+- Actuar con diligencia dentro de los términos legales
 
-## Problemas relacionados con vicios ocultos
+### Negociación informada
 
-Los vicios ocultos pueden manifestarse a través de diversos síntomas o problemas derivados:
+Un informe técnico riguroso permite:
+- Negociar desde una posición de conocimiento y fuerza
+- Descartar argumentaciones técnicas infundadas de la contraparte
+- Facilitar acuerdos extrajudiciales favorables
+- Evitar costes y dilaciones de procedimientos judiciales
 
-- Un vicio oculto en la impermeabilización puede provocar [humedades y filtraciones persistentes](/construccion/humedades-filtraciones/) que dañan la estructura y acabados.
+## Casos representativos
 
-- Defectos constructivos graves ocultos pueden, con el tiempo, derivar en [grietas estructurales](/construccion/grietas-estructurales/) que comprometan la estabilidad del edificio.
+A lo largo de nuestra trayectoria profesional, hemos analizado numerosos casos de vicios ocultos en edificación:
 
-- La ausencia de aislamientos adecuados suele manifestarse como [problemas de aislamiento térmico y acústico](/construccion/aislamiento/) que afectan al confort y la eficiencia energética.
+- **Defectos en la impermeabilización de cubierta**: En una vivienda de reciente adquisición, las filtraciones aparecieron tras el primer periodo de lluvias intensas. Nuestro informe demostró que la impermeabilización se había ejecutado incorrectamente, sin las pendientes mínimas requeridas y con material inadecuado. El dictamen técnico permitió al comprador reclamar con éxito al vendedor la reparación íntegra.
 
-En muchos casos, estos problemas están interrelacionados y requieren un análisis holístico para determinar las causas raíz y las mejores soluciones.
+- **Aislamiento acústico deficiente**: Los propietarios de un piso nuevo descubrieron que el ruido de los vecinos se transmitía excesivamente. Mediante ensayos acústicos, demostramos que la solución constructiva empleada no cumplía los requisitos del DB-HR del CTE, pese a estar correctamente especificada en proyecto. El informe fundamentó la reclamación contra la constructora por defectos de ejecución.
 
-## Actúa con rapidez: plazos para reclamar
-
-Es fundamental tener en cuenta que los plazos legales para reclamar vicios ocultos son estrictos y varían según el caso:
-
-- En **viviendas de segunda mano**, generalmente 6 meses desde la entrega según el Código Civil (aunque la jurisprudencia ha flexibilizado este plazo en algunos casos)
-
-- En **viviendas nuevas**, según la Ley de Ordenación de la Edificación (LOE):
-  - 1 año para defectos de acabado
-  - 3 años para defectos de habitabilidad
-  - 10 años para defectos estructurales
-
-Por ello, si detectas posibles vicios ocultos, es crucial actuar con rapidez y contar con un informe pericial profesional que documente técnicamente el problema.
+- **Dimensionado insuficiente de instalación eléctrica**: Una familia experimentaba continuos saltos del diferencial al utilizar varios electrodomésticos simultáneamente. Nuestro análisis reveló que la instalación estaba infradimensionada respecto a lo especificado en proyecto y no cumplía el REBT. La valoración económica del informe permitió negociar con el promotor la adecuación completa de la instalación.

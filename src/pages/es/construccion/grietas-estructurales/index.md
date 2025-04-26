@@ -1,8 +1,8 @@
 ---
 layout: 'layouts/service-child.njk'
 title: 'Informe Pericial de Grietas y Problemas Estructurales en Barcelona'
-subtitle: 'Evaluación experta de fisuras, grietas y riesgos de estabilidad en edificios'
-description: 'Perito especializado en el análisis de grietas estructurales. Dictaminamos causas, evaluamos riesgos y proponemos soluciones técnicas para problemas de estabilidad.'
+subtitle: 'Diagnóstico experto de fisuras, deformaciones y evaluación de la seguridad estructural'
+description: 'Perito especializado en análisis de grietas estructurales. Evaluación de patologías, refuerzos y soluciones técnicas para edificios con problemas de estabilidad en Barcelona.'
 permalink: '/construccion/grietas-estructurales/'
 lang: 'es'
 serviceTitle: 'grietas y problemas estructurales'
@@ -14,291 +14,287 @@ parentService:
 
 # Key features in the hero section
 keyFeatures:
-  - 'Diagnóstico preciso del origen y gravedad de las grietas'
-  - 'Monitorización de la evolución mediante testigos o fisurómetros'
-  - 'Verificación de la afectación real a la estructura'
-  - 'Propuesta técnica de soluciones de refuerzo o reparación'
+  - 'Diagnóstico preciso del origen y gravedad de grietas estructurales'
+  - 'Evaluación técnica de la seguridad estructural y estabilidad del edificio'
+  - 'Diseño y validación de sistemas de refuerzo (incluido fibra de carbono)'
+  - 'Monitorización de movimientos y evolución de fisuras en estructuras'
 
 # Service Process (for sidebar)
 serviceProcess:
-  - title: 'Inspección visual'
-    description: 'Examen detallado de grietas, fisuras y elementos estructurales'
-  - title: 'Análisis y medición'
-    description: 'Documentación precisa de patrones, dimensiones y ubicación'
-  - title: 'Estudio de causas'
-    description: 'Determinación del origen y mecanismos de formación'
+  - title: 'Inspección inicial'
+    description: 'Análisis visual experto y documentación fotográfica'
+  - title: 'Mediciones y ensayos'
+    description: 'Control de fisuras, pruebas de resistencia, monitorización'
+  - title: 'Análisis estructural'
+    description: 'Evaluación de causas y afectación a la capacidad portante'
   - title: 'Informe técnico'
-    description: 'Valoración de riesgos, soluciones y costes de reparación'
+    description: 'Diagnóstico, soluciones y valoración económica'
 
 # Service Benefits (for sidebar)
 serviceBenefits:
-  - 'Determinación del nivel real de riesgo para la seguridad del edificio'
-  - 'Identificación de la causa raíz para aplicar soluciones duraderas'
-  - 'Base técnica para reclamar reparaciones a constructora o seguro'
-  - 'Valoración económica precisa de los refuerzos necesarios'
-  - 'Tranquilidad o plan de acción claro según la gravedad del problema'
+  - 'Determinación precisa del origen real de las grietas estructurales'
+  - 'Evaluación objetiva del nivel de riesgo para los ocupantes y la propiedad'
+  - 'Base técnica sólida para reclamaciones a constructoras o promotoras'
+  - 'Verificación independiente de las soluciones propuestas y su efectividad'
+  - 'Documentación técnica válida para procedimientos judiciales y arbitrajes'
 
 # Related Problems (optional)
 relatedProblems:
-  - title: 'Humedades y Filtraciones'
-    description: 'Las humedades persistentes pueden debilitar materiales y provocar asientos que generan grietas'
-    url: '/construccion/humedades-filtraciones/'
-  - title: 'Vicios Ocultos'
-    description: 'Grietas estructurales ocultadas deliberadamente pueden constituir vicios ocultos reclamables'
-    url: '/construccion/vicios-ocultos/'
+  - title: 'Problemas de Cimentación'
+    description: 'Las grietas estructurales a menudo están relacionadas con asentamientos o problemas en la cimentación'
+    url: '/construccion/informe-pericial-cimentaciones/'
+  - title: 'Reparación de Hormigón Armado'
+    description: 'Deterioro por corrosión de armaduras que afecta a la integridad estructural'
+    url: '/construccion/reparacion-hormigon-armado/'
 
 # Client Testimonials
 testimonials:
-  - quote: 'Tras años preocupados por las grietas en nuestra fachada, el informe pericial nos dio la tranquilidad de saber que no afectaban a la estructura. El perito explicó todo con claridad y propuso soluciones asequibles.'
-    author: 'Comunidad de Propietarios Eixample Dreta'
-    role: 'Edificio de 12 viviendas'
-  - quote: 'El dictamen pericial sobre las grietas fue crucial para que el seguro aceptara cubrir los daños estructurales causados por una obra vecina. Un trabajo impecable y muy detallado.'
-    author: 'Elena Martínez'
-    role: 'Propietaria de vivienda en Gràcia'
+  - quote: 'El informe pericial nos permitió identificar el verdadero origen de las grietas, descartando problemas de cimentación y centrándonos en el refuerzo estructural necesario, ahorrando costes considerables.'
+    author: 'Comunidad de Propietarios Sant Gervasi'
+    role: 'Edificio con problemas estructurales en Barcelona'
+  - quote: 'La claridad técnica del informe fue determinante para que el juez entendiera la gravedad de los defectos estructurales y dictaminara a nuestro favor contra la constructora.'
+    author: 'José Martínez'
+    role: 'Propietario de vivienda con defectos estructurales'
 
 # CTA Section
-ctaTitle: '¿Preocupado por las grietas en tu edificio?'
-ctaDescription: 'No pongas en riesgo tu seguridad. Solicita una evaluación estructural profesional.'
+ctaTitle: '¿Problemas de grietas o estabilidad estructural?'
+ctaDescription: 'Solicite una evaluación técnica independiente para conocer el alcance real y las soluciones adecuadas.'
 
 # Introduction (shown in hero section)
 intro: |
-  <p>¿Has detectado grietas en paredes, techos o fachadas de tu edificio? ¿Te preocupa que puedan comprometer la estabilidad y seguridad de tu vivienda o propiedad?</p>
+  <p>¿Ha detectado grietas significativas en su vivienda o edificio? ¿Observa deformaciones en techos, movimientos en pilares o problemas de estabilidad que le preocupan? Las patologías estructurales pueden comprometer seriamente la seguridad de un inmueble y requieren un análisis técnico especializado.</p>
   
-  <p>No todas las grietas son iguales ni tienen la misma gravedad, pero algunas pueden ser indicativas de problemas estructurales serios que requieren evaluación profesional urgente. Como parte de nuestros <a href="/construccion/">servicios especializados de peritaje de construcción</a>, analizamos en profundidad el origen, tipo y gravedad de las grietas, determinando si existe riesgo y cuáles son las soluciones técnicas necesarias.</p>
+  <p>Como parte de nuestros <a href="/construccion/">servicios especializados de peritaje en construcción</a>, realizamos informes técnicos rigurosos para diagnosticar el origen exacto de fisuras y problemas estructurales, evaluar su gravedad, determinar responsabilidades y proponer las soluciones más adecuadas, incluyendo sistemas de refuerzo avanzados como la fibra de carbono.</p>
 ---
 
-## Tipos de grietas: diferenciar lo superficial de lo estructural
+## Tipos de grietas estructurales y su significado
 
-Cuando aparecen grietas en un edificio, el primer paso es determinar si son simples fisuras superficiales o verdaderos indicios de problemas estructurales. Esta distinción es fundamental para evaluar los riesgos reales y las acciones necesarias.
+Las grietas que aparecen en edificios pueden tener diversos orígenes y significados. Su correcta interpretación es fundamental para establecer un diagnóstico acertado y proponer soluciones efectivas.
 
-### Grietas estructurales: señales de alarma
+### Grietas por asentamientos diferenciales
 
-Las grietas estructurales son aquellas que afectan a elementos portantes del edificio (cimientos, pilares, vigas, forjados o muros de carga) y pueden comprometer su estabilidad y seguridad. Estas grietas suelen presentar características distintivas:
+Cuando distintas partes de la estructura se asientan de manera desigual sobre el terreno, se generan tensiones que producen grietas características:
 
-- **Anchura significativa**: Generalmente superiores a 3 mm, aunque grietas más finas también pueden ser estructurales
-- **Patrón direccional**: Suelen seguir líneas diagonales (a 45°) o verticales definidas
-- **Atraviesan elementos completos**: No se limitan a acabados, sino que afectan a todo el espesor del elemento
-- **Extensión**: Pueden extenderse a través de varios elementos estructurales conectados
-- **Evolución progresiva**: Tienden a aumentar de tamaño (longitud y anchura) con el tiempo
+- **Grietas inclinadas a 45°**: Son típicas de asentamientos diferenciales y suelen ser más anchas en un extremo que en otro.
+- **Patrón escalonado en fábricas**: En muros de ladrillo, siguen un recorrido escalonado por las juntas de mortero.
+- **Forma de arco de descarga**: Aparecen sobre dinteles y huecos, mostrando cómo la estructura redistribuye las cargas.
 
-Las causas más frecuentes de grietas estructurales incluyen:
+Estas grietas pueden deberse a:
+- Compresibilidad variable del terreno
+- Excavaciones cercanas que alteran el estado tensional
+- Fugas de agua que afectan al suelo de cimentación
+- Sobrecargas no previstas en zonas específicas
 
-- Asentamientos diferenciales de la cimentación
-- Defectos en el diseño o cálculo estructural
-- Deficiencias en la ejecución de la estructura
-- Sobrecargas no previstas
-- Empujes horizontales no compensados
-- Degradación de materiales estructurales
+### Grietas por fallos en elementos estructurales
 
-Estas grietas requieren **atención inmediata por parte de un profesional**, ya que pueden indicar problemas de seguridad importantes.
+Las patologías en vigas, pilares, forjados o muros de carga generan grietas con patrones específicos:
 
-### Grietas no estructurales (o superficiales)
+- **Fisuras verticales en pilares**: Pueden indicar exceso de compresión o pandeo.
+- **Grietas horizontales en muros**: Suelen relacionarse con empujes laterales excesivos.
+- **Fisuras a 45° en vigas**: Indican problemas de cortante.
+- **Grietas en centro de vano**: Señalan flexión excesiva en vigas o forjados.
+- **Fisuraciones en cuadrícula**: A menudo relacionadas con retracción del hormigón.
 
-Las grietas no estructurales afectan principalmente a elementos de acabado o particiones no portantes, sin comprometer la estabilidad del edificio. Presentan características como:
+Las causas habituales incluyen:
+- Errores de cálculo estructural
+- Defectos de ejecución
+- Modificaciones estructurales inadecuadas
+- Deterioro de materiales (corrosión de armaduras, ataque químico)
 
-- **Anchura reducida**: Generalmente inferiores a 2 mm
-- **Superficiales**: Afectan solo a acabados (yeso, enlucido, pintura, alicatados)
-- **Patrón irregular o mapeado**: En forma de tela de araña o sin dirección definida
-- **Estables**: No evolucionan significativamente con el tiempo
+### Grietas por deformaciones térmicas
+
+Los movimientos de dilatación y contracción provocados por cambios de temperatura generan:
+
+- **Grietas rectilíneas**: Normalmente en la unión entre elementos constructivos distintos.
+- **Fisuras periódicas**: Aparecen y desaparecen o varían su anchura según la temperatura.
+- **Grietas en esquinas de huecos**: Puntos débiles donde se concentran tensiones térmicas.
 
 Estas fisuras suelen deberse a:
+- Ausencia o insuficiencia de juntas de dilatación
+- Conexión rígida entre materiales con distinto coeficiente de dilatación
+- Exposición a grandes variaciones térmicas
 
-- Procesos normales de retracción de materiales
-- Dilataciones y contracciones térmicas
-- Vibraciones menores
-- Pequeños asientos de la edificación ya estabilizados
-- Defectos en la aplicación de acabados
+### Grietas por acciones horizontales
 
-Aunque las grietas no estructurales no suelen implicar riesgos para la seguridad, pueden indicar otros problemas como humedades o defectos constructivos que conviene solucionar para evitar su agravamiento.
+Los empujes laterales producidos por sismo, viento o empujes del terreno generan patrones específicos:
 
-### La importancia de la evolución
+- **Grietas en forma de X**: Típicas de acciones sísmicas.
+- **Fisuras horizontales en muros**: Cuando la flexión supera la resistencia a tracción.
+- **Separación entre elementos estructurales y no estructurales**: Por movimientos diferenciales.
 
-Un factor determinante para evaluar la gravedad de una grieta es su evolución temporal. Una grieta "viva" (activa) que aumenta progresivamente de tamaño indica un problema no estabilizado que requiere intervención, mientras que una grieta "muerta" (estable) puede representar un problema ya resuelto o estabilizado.
+## Nuestro proceso de análisis y diagnóstico estructural
 
-La monitorización sistemática mediante testigos de yeso, fisurómetros u otros métodos de control es fundamental para determinar si una grieta está activa o no, independientemente de su apariencia inicial.
+En Perito Barcelona aplicamos una metodología rigurosa para el diagnóstico de problemas estructurales:
 
-## Nuestro proceso de análisis estructural y diagnóstico
+### 1. Inspección técnica inicial
 
-En Perito Barcelona aplicamos una metodología rigurosa y sistemática para el análisis de problemas relacionados con grietas estructurales:
+Realizamos un reconocimiento detallado que incluye:
+- Levantamiento y cartografía de todas las fisuras y grietas
+- Documentación fotográfica exhaustiva
+- Análisis de patrones de agrietamiento
+- Verificación de desplomes, flechas y deformaciones
+- Evaluación del estado general de la estructura
 
-### 1. Inspección visual exhaustiva
+### 2. Análisis del proyecto y la ejecución
 
-Realizamos un examen detallado de:
-- Todas las grietas y fisuras visibles
-- Elementos estructurales principales (cimentación si es accesible, pilares, vigas, forjados)
-- Posibles deformaciones en elementos horizontales y verticales
-- Signos de otros problemas asociados (humedades, oxidación, degradación de materiales)
+Estudiamos la documentación disponible:
+- Proyecto estructural original y modificaciones
+- Características de los materiales empleados
+- Proceso constructivo y posibles incidencias
+- Historial de intervenciones previas
+- Condiciones ambientales y de uso
 
-### 2. Medición precisa y mapeo
+### 3. Técnicas de diagnóstico especializado
 
-Documentamos con exactitud:
-- Ubicación exacta de cada grieta (mediante planos y fotografías referenciadas)
-- Longitud, anchura y profundidad de las fisuras
-- Dirección y patrón de propagación
-- Relación con elementos estructurales
-- Distribución global de las grietas en el edificio
+Según cada caso, empleamos:
+- **Monitorización de fisuras**: Mediante testigos, fisurómetros o sensores electrónicos para determinar si están activas y su evolución.
+- **Ensayos no destructivos**: Esclerómetro para estimar resistencia superficial, ultrasonidos para detectar heterogeneidades, termografía infrarroja para localizar zonas húmedas o defectos.
+- **Ensayos semi-destructivos**: Extracción de testigos, ensayos de microprofundidad, detección de armaduras y recubrimientos.
+- **Catas y comprobaciones**: Verificación in situ de dimensiones, armados, conexiones y estados reales de los elementos.
 
-### 3. Clasificación y análisis preliminar
+### 4. Análisis estructural y modelización
 
-Categorizamos las grietas según:
-- Su naturaleza (estructural o no estructural)
-- Patrón típico (diagonal de tracción, diagonal de compresión, vertical, horizontal, mapeada)
-- Posible mecanismo formador
-- Nivel de riesgo aparente
+Realizamos los cálculos necesarios para:
+- Verificar la capacidad portante actual
+- Evaluar la influencia de las patologías en la seguridad estructural
+- Analizar la evolución previsible del problema si no se interviene
+- Dimensionar posibles refuerzos o reparaciones
 
-### 4. Análisis de documentación técnica
+### 5. Diagnóstico técnico fundamentado
 
-Estudiamos, cuando está disponible:
-- Proyecto original del edificio
-- Memorias de cálculo estructural
-- Estudios geotécnicos
-- Historial de intervenciones o reformas
-- Informes previos sobre el edificio
+Establecemos con precisión:
+- Las causas exactas de las grietas y deformaciones
+- El grado de afectación a la capacidad resistente
+- La evaluación del nivel de riesgo estructural
+- Las responsabilidades técnicas cuando procede
+- La urgencia de las intervenciones necesarias
 
-### 5. Monitorización (si es necesario)
+### 6. Propuesta de soluciones técnicas
 
-En casos que requieren seguimiento temporal:
-- Instalación de testigos de yeso sobre las grietas
-- Colocación de fisurómetros mecánicos o electrónicos
-- Establecimiento de puntos de control para nivelación
-- Mediciones periódicas para evaluar la evolución
+Desarrollamos especificaciones detalladas para:
+- Sistemas de refuerzo adecuados según el problema
+- Reparación de elementos dañados
+- Medidas preventivas para evitar recurrencias
+- Planificación de intervenciones según prioridad
+- Monitorización posterior para verificar la efectividad
 
-### 6. Análisis causal y diagnóstico
+### 7. Valoración económica y viabilidad
 
-Determinamos:
-- La causa raíz del problema (no solo los síntomas)
-- Los mecanismos de formación y propagación
-- La afectación real a la estructura
-- El nivel de riesgo para la estabilidad y seguridad
-- La previsible evolución futura si no se interviene
+Incluimos una estimación detallada de:
+- Coste de las distintas alternativas de reparación
+- Plazo de ejecución estimado
+- Relación coste-beneficio de cada solución
+- Interferencias esperables durante la ejecución
 
-### 7. Propuesta de soluciones técnicas
+### 8. Informe pericial completo
 
-Desarrollamos:
-- Medidas urgentes si son necesarias
-- Soluciones definitivas (reparación, refuerzo estructural, recalce)
-- Sistemas de control y seguimiento
-- Recomendaciones de mantenimiento futuro
+Elaboramos un documento técnico riguroso con:
+- Descripción detallada de las patologías
+- Fundamentación técnica del diagnóstico
+- Análisis estructural y resultados de ensayos
+- Documentación gráfica completa
+- Soluciones técnicas propuestas y su justificación
+- Valoración económica de las reparaciones
+- Anexos técnicos y fotográficos
 
-### 8. Elaboración del informe pericial
+## Técnicas de refuerzo estructural
 
-Redactamos un informe completo con:
-- Descripción detallada del problema y sus manifestaciones
-- Análisis técnico fundamentado de causas
-- Documentación gráfica exhaustiva
-- Diagnóstico claro del nivel de riesgo
-- Propuestas de intervención y su justificación
-- Valoración económica de las reparaciones necesarias
-- Conclusiones expuestas en lenguaje accesible pero técnicamente riguroso
+Según el tipo y gravedad de los problemas estructurales detectados, podemos recomendar diferentes sistemas de refuerzo:
 
-## Beneficios clave de un informe pericial de grietas estructurales
+### Refuerzos con materiales tradicionales
 
-### Determinar el riesgo real
+Para problemas convencionales o cuando es importante mantener cierta compatibilidad estructural:
 
-Un informe pericial profesional te permite:
-- Conocer si existe peligro inmediato para los ocupantes del edificio
-- Saber si la estabilidad estructural está comprometida
-- Identificar si las grietas son sintomáticas de problemas graves o solo estéticas
-- Actuar con la urgencia adecuada según el nivel de riesgo real
+- **Recrecidos de hormigón armado**: Aumento de sección en pilares, vigas o forjados para incrementar su capacidad portante.
+- **Empresillado metálico**: Refuerzo de pilares mediante perfiles metálicos que confinan el elemento original.
+- **Refuerzos con perfilería metálica**: Adición de elementos metálicos para absorber esfuerzos específicos en vigas, forjados o cerchas.
+- **Inyecciones de grietas**: Sellado estructural mediante resinas epoxídicas u otros materiales específicos.
 
-### Identificar la causa raíz
+### Refuerzos con materiales compuestos avanzados
 
-Es fundamental conocer el origen exacto del problema para:
-- Aplicar la solución correcta y duradera (no solo "maquillar" las grietas)
-- Evitar reparaciones ineficaces que no atajen la causa real
-- Prevenir la reaparición futura de las grietas
-- Optimizar los recursos necesarios para la intervención
+Para situaciones que requieren alta eficiencia, mínimo incremento de peso o intervenciones poco invasivas:
 
-### Base técnica para exigir reparaciones
+- **Refuerzos con fibra de carbono (CFRP)**: Laminados o tejidos pegados con resinas para absorber tracciones o esfuerzos cortantes.
+- **Sistemas de fibra de vidrio (GFRP)**: Similar al carbono pero con diferentes propiedades mecánicas y coste.
+- **Sistemas de fibra de aramida**: Para situaciones con requerimientos especiales de resistencia al impacto o fuego.
 
-Un informe pericial de grietas constituye:
-- Documento técnico imprescindible para reclamaciones
-- Fundamento para exigir responsabilidades a constructora, promotora o técnicos
-- Justificación para solicitar intervenciones a la comunidad de propietarios
-- Prueba técnica aceptada en procedimientos judiciales
-- Base para negociar con compañías de seguros cuando hay cobertura aplicable
+### Mejoras en cimentación
 
-### Valoración económica del refuerzo/reparación
+Cuando el origen del problema está en la cimentación o el terreno:
 
-Nuestros informes incluyen:
-- Presupuesto detallado de las intervenciones necesarias
-- Desglose por partidas de obra
-- Priorización de actuaciones según urgencia y funcionalidad
-- Análisis coste-beneficio de diferentes alternativas de reparación
+- **Recalces mediante micropilotes**: Transferencia de cargas a estratos más resistentes.
+- **Inyecciones de consolidación**: Mejora de las características del terreno.
+- **Ampliación de cimentación**: Incremento de la superficie de contacto con el terreno.
+- **Vigas de atado**: Conexión entre elementos de cimentación para redistribuir cargas.
 
-### Tranquilidad o plan de acción
+### Sistemas específicos para muros y fábricas
 
-Con un diagnóstico profesional obtendrás:
-- Certeza sobre la gravedad real del problema
-- Eliminación de la incertidumbre y preocupación
-- Plan de acción claro y priorizado si se requiere intervención
-- Documentación técnica para tomar decisiones informadas
+Para estructuras de muros portantes o fábricas:
 
-## Problemas relacionados con grietas estructurales
+- **Cosido de grietas**: Mediante varillas de acero inoxidable, fibra de vidrio o materiales compuestos.
+- **Atirantamiento**: Control de empujes horizontales mediante tirantes.
+- **Rejuntado estructural**: Recuperación de resistencia en fábricas mediante morteros específicos.
+- **Sistemas de confinamiento**: Con mallas, encamisados o encadenados perimetrales.
 
-Las grietas rara vez aparecen de forma aislada. Suelen estar relacionadas con otros problemas constructivos que pueden ser causa o consecuencia:
+## Beneficios de un informe pericial estructural especializado
 
-- Las [humedades persistentes](/construccion/humedades-filtraciones/) pueden debilitar materiales estructurales, provocar expansiones de terreno o generar oxidación de armaduras, derivando en grietas y problemas de estabilidad.
+### Seguridad y tranquilidad
 
-- Cuando se ocultan grietas estructurales en una compraventa, podrían constituir [vicios ocultos](/construccion/vicios-ocultos/) reclamables, especialmente si comprometen la seguridad o habitabilidad de la vivienda.
+Un diagnóstico técnico riguroso proporciona:
+- Certeza sobre la seguridad real de la estructura
+- Evaluación objetiva del nivel de riesgo
+- Priorización de intervenciones según criticidad
+- Fundamentación para decidir entre reparar o desalojar temporalmente
 
-- Los problemas de [aislamiento](/construccion/aislamiento/) térmico pueden causar dilataciones y contracciones diferenciales que, con el tiempo, provocan fisuras y grietas en elementos constructivos.
+### Base sólida para reclamaciones
 
-Nuestro enfoque integral nos permite identificar estas interrelaciones y proponer soluciones que aborden el problema en su conjunto.
+Nuestros informes constituyen:
+- Documentación técnica irrefutable para procedimientos judiciales
+- Evidencia para reclamar a promotoras o constructoras
+- Base para la ejecución de garantías o pólizas de seguro
+- Justificación técnica para negociaciones con terceros
 
-## Soluciones técnicas para problemas estructurales
+### Optimización económica
 
-Dependiendo del tipo y gravedad del problema estructural, existen diferentes intervenciones posibles:
+Un diagnóstico preciso permite:
+- Intervenir solo donde es realmente necesario
+- Evitar sobrecostes por diagnósticos erróneos o incompletos
+- Seleccionar las técnicas más adecuadas y económicamente viables
+- Planificar intervenciones por fases según prioridad
 
-### Para grietas por asentamientos diferenciales
+### Viabilidad técnica
 
-- Recalce de cimentaciones mediante micropilotes o inyecciones
-- Mejora del terreno bajo cimentación
-- Creación de vigas de atado o arriostramiento
+Aseguramos soluciones:
+- Técnicamente correctas y adaptadas a cada caso
+- Compatibles con el uso del edificio
+- Durables y con mantenimiento definido
+- Que cumplen la normativa técnica vigente
 
-### Para grietas en muros de carga
+## Casos representativos
 
-- Cosido de grietas con grapas o varillas de acero inoxidable
-- Refuerzo con mallas de fibra de carbono o fibra de vidrio
-- Inyecciones estructurales con resinas o morteros especiales
+A lo largo de nuestra experiencia profesional, hemos analizado numerosos casos de problemas estructurales:
 
-### Para problemas en estructuras de hormigón
+- **Edificio residencial con grietas generalizadas**: Mediante la monitorización y análisis estructural, identificamos que el origen no era un asentamiento como se temía inicialmente, sino deformaciones térmicas por ausencia de juntas de dilatación. Esto permitió una solución mucho más económica y menos invasiva que un recalce de cimentación.
 
-- Refuerzo con fibra de carbono (CFRP)
-- Recrecidos estructurales
-- Inyección de fisuras con resinas epoxi
-- Reparación o sustitución de armaduras oxidadas
+- **Grietas en pilares de hormigón armado**: En un edificio industrial, diagnosticamos problemas de corrosión avanzada en las armaduras que comprometían la capacidad portante. El informe permitió fundamentar la reclamación a la constructora por vicios ocultos y definir un protocolo de refuerzo con fibra de carbono que evitó la necesidad de demolición.
 
-### Para estructuras metálicas
+- **Grietas en muros de carga**: En una vivienda histórica, el análisis reveló que las grietas eran consecuencia de intervenciones inadecuadas realizadas años atrás. El informe detallado permitió diseñar un sistema de refuerzo compatible con el valor patrimonial del edificio.
 
-- Refuerzo con nuevos perfiles
-- Tratamiento anticorrosión
-- Sustitución de elementos degradados
+- **Deformaciones excesivas en forjados**: Diagnosticamos un error de cálculo en el proyecto original, que no consideraba adecuadamente las cargas de uso. El informe fundamentó la reclamación judicial contra el proyectista y sirvió de base para el diseño del refuerzo necesario.
 
-En todos los casos, un diagnóstico preciso es crucial para seleccionar la técnica de reparación más adecuada, eficaz y económica.
+En todos estos casos, el diagnóstico técnico preciso fue la clave para abordar correctamente el problema, evitando costes innecesarios y proporcionando la seguridad estructural requerida.
 
-## Casos representativos de éxito
+## ¿Cuándo solicitar un informe pericial estructural?
 
-A lo largo de nuestra trayectoria profesional hemos resuelto numerosos casos de problemas estructurales:
+Es recomendable realizar una evaluación técnica profesional cuando:
 
-- **Edificio de viviendas en Ciutat Vella**: Grietas diagonales en muros de carga debidas a un asentamiento diferencial por filtración continuada de agua. El informe permitió identificar el origen en la red de saneamiento del edificio colindante y fundamentar la reclamación.
+- Aparecen grietas significativas y progresivas en elementos estructurales
+- Se observan deformaciones excesivas en forjados o vigas
+- Existen desplomes o inclinaciones en elementos verticales
+- Se han realizado modificaciones estructurales sin proyecto técnico adecuado
+- Tras eventos extraordinarios como sismos, inundaciones o impactos
+- Antes de adquirir un inmueble con indicios de problemas estructurales
+- Como segunda opinión ante propuestas de refuerzo o reparación costosas
+- Para fundamentar reclamaciones por defectos constructivos
 
-- **Vivienda unifamiliar en Maresme**: Graves grietas en forjados por un error de cálculo en la estructura metálica. El informe pericial permitió la reclamación al constructor dentro del periodo de garantía decenal, evitando costes de más de 80.000€ al propietario.
-
-- **Nave industrial en Zona Franca**: Grietas en pilares de hormigón por reacción álcali-silice del árido. El dictamen pericial demostró que se trataba de un defecto en la fabricación del hormigón, logrando que la empresa suministradora asumiera los costes de reparación.
-
-En todos estos casos, la clave fue un análisis técnico riguroso que permitió identificar las causas reales y fundamentar sólidamente las reclamaciones correspondientes.
-
-## ¿Cuándo solicitar una inspección urgente?
-
-Hay situaciones que requieren una evaluación inmediata por parte de un técnico especializado:
-
-- Grietas que han aparecido súbitamente tras un evento concreto (obras cercanas, lluvias torrenciales, etc.)
-- Fisuras que aumentan visiblemente de tamaño en poco tiempo
-- Grietas acompañadas de deformaciones en elementos horizontales (flechas)
-- Descuadres en puertas o ventanas que antes cerraban correctamente
-- Inclinaciones perceptibles en pilares o muros
-- Ruidos extraños procedentes de elementos estructurales
-- Desprendimientos de material en zonas críticas
-
-Ante cualquiera de estos síntomas, recomendamos contactar inmediatamente con un perito especializado para evaluar la situación y determinar si son necesarias medidas urgentes.
+Una intervención temprana basada en un diagnóstico técnico riguroso puede marcar la diferencia entre una reparación sencilla y económica, y una rehabilitación estructural compleja y costosa cuando el problema se ha agravado con el tiempo.
