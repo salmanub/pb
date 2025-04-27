@@ -1,15 +1,15 @@
 ---
 layout: 'layouts/service-child.njk'
-title: 'Informe de Estado para Recepción y Entrega de Alquileres Industriales en Barcelona'
-subtitle: 'Documentación técnica exhaustiva del estado de naves industriales y locales comerciales'
-description: 'Perito especializado en informes de estado para alquiler de naves y locales. Documentación profesional de defectos preexistentes y valoración técnica del estado real.'
+title: 'Informe de Estado para Recepción y Entrega de Alquileres Industriales en Barcelona | Acta Técnica'
+subtitle: 'Documentación profesional del estado de naves industriales y locales comerciales para alquiler'
+description: 'Perito especializado en informes y actas de estado para alquiler de naves y locales en Barcelona. Documentación exhaustiva de defectos preexistentes, revisión de instalaciones y valoración técnica independiente para evitar conflictos con la fianza.'
 permalink: '/construccion/informe-recepcion-alquiler-industrial/'
 lang: 'es'
-serviceTitle: 'recepción de alquileres industriales'
+serviceTitle: 'recepción y entrega de alquileres industriales'
 
 # Parent Service (for breadcrumb and linking back to pillar)
 parentService:
-  title: 'Peritajes de Construcción'
+  title: 'Peritajes'
   url: '/construccion/'
 
 # Key features in the hero section

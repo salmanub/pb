@@ -23,7 +23,7 @@ hero:
         secondaryUrl: "#servicios"
     badges:
         - text: "15+ años de experiencia"
-        - text: "Ingeniero colegiado"
+        - text: "Ingenieros colegiados"
         - text: "Respuesta en 24h"
 
 # Servicios Section

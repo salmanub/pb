@@ -3,6 +3,7 @@ layout: 'layouts/service-child.njk'
 title: 'Informe Pericial de Patologías en Obra Civil e Infraestructuras en Barcelona'
 subtitle: 'Diagnóstico técnico especializado por Ingeniero de Obras Públicas'
 description: 'Perito especializado en patologías de obra civil. Análisis de infraestructuras, puentes, muros de contención, urbanizaciones y problemas geotécnicos en Barcelona.'
+image: /assets/images/patologia-estructural-puente-barcelona-768.avif
 permalink: '/construccion/obra-civil/'
 lang: 'es'
 serviceTitle: 'patologías en obra civil'
