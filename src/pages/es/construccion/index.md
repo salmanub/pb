@@ -16,7 +16,7 @@ hero:
   title: "Peritajes de Construcción"
   strong: "en Barcelona"
   subtitle: "Informes Técnicos para Problemas Constructivos"
-  description: "¿Necesitas un dictamen técnico sobre defectos en tu edificio, vivienda o nave industrial? Como Ingeniero de Obras Públicas especializado en patologías constructivas, proporciono los informes periciales que fundamentarán tus reclamaciones."
+  description: "¿Necesitas un dictamen técnico sobre defectos en tu edificio, vivienda o nave industrial? Como Ingenieros d especializados en patologías constructivas, proporcionamos los informes periciales que fundamentarán tus reclamaciones."
   intro: "Un informe pericial de calidad es la base técnica esencial para cualquier reclamación por defectos constructivos, ya sea frente a constructoras, promotoras, en disputas de comunidades de propietarios o para la recepción de obras."
 
 # Sections Content
