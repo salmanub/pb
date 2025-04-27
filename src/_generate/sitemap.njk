@@ -9,15 +9,15 @@ eleventyExcludeFromCollections: true
        {% if not page.data.draft %}
        {% if not page.data.notshow %}
         <url>
-            <loc>{{ metadata.url }}{{ page.url | url }}</loc>
+            <loc>{{ metadata.site.url }}{{ page.url | url }}</loc>
             
             <!-- Self-referencing hreflang (con el idioma de la página actual) -->
-            <xhtml:link rel="alternate" hreflang="{{ page.data.lang }}" href="{{ metadata.url }}{{ page.url | url }}" />
+            <xhtml:link rel="alternate" hreflang="{{ page.data.lang }}" href="{{ metadata.site.url }}{{ page.url | url }}" />
 
             <!-- Alternate language versions -->
             {% if page.data.translations %}
             {% for translation in page.data.translations %}
-              <xhtml:link rel="alternate" hreflang="{{ translation.lang }}" href="{{ metadata.url }}{{ translation.permalink }}" />
+              <xhtml:link rel="alternate" hreflang="{{ translation.lang }}" href="{{ metadata.site.url }}{{ translation.permalink }}" />
             {% endfor %}
             {% endif %}
             
@@ -25,11 +25,11 @@ eleventyExcludeFromCollections: true
             {% if page.data.lang != "es" %}
             {% for translation in page.data.translations %}
               {% if translation.lang == "es" %}
-              <xhtml:link rel="alternate" hreflang="x-default" href="{{ metadata.url }}{{ translation.permalink }}" />
+              <xhtml:link rel="alternate" hreflang="x-default" href="{{ metadata.site.url }}{{ translation.permalink }}" />
               {% endif %}
             {% endfor %}
             {% else %}
-            <xhtml:link rel="alternate" hreflang="x-default" href="{{ metadata.url }}{{ page.url | url }}" />
+            <xhtml:link rel="alternate" hreflang="x-default" href="{{ metadata.site.url }}{{ page.url | url }}" />
             {% endif %}
             
             <lastmod>{{ page.date.toISOString() }}</lastmod>
