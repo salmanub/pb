@@ -225,7 +225,7 @@
                                         Atrás
                                     </button>
                                     {# Botón Enviar estilo home #}
-                                    <button type="submit" form="contactForm" class="px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors duration-300 group flex items-center gap-2">
+                                    <button id="submit-form-btn" type="button" class="px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors duration-300 group flex items-center gap-2">
                                         Enviar Consulta
                                         <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -234,18 +234,57 @@
                                 </div>
                             </div>
                             
+                            {# Estado de éxito - Inicialmente oculto #}
+                            <div id="success-message" class="typeform-step hidden space-y-6 text-center" data-step="success">
+                                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full mx-auto flex items-center justify-center mb-6">
+                                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-light text-slate-800">¡Mensaje enviado con éxito!</h3>
+                                <p class="text-lg text-slate-600">Gracias por contactarnos. Te responderemos en menos de 24 horas.</p>
+                                <a href="/" class="inline-flex items-center justify-center mt-6 px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors duration-300">
+                                    Volver al inicio
+                                </a>
+                            </div>
+                            
+                            {# Estado de error - Inicialmente oculto #}
+                            <div id="error-message" class="typeform-step hidden space-y-6 text-center" data-step="error">
+                                <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full mx-auto flex items-center justify-center mb-6">
+                                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-light text-slate-800">Ha ocurrido un error</h3>
+                                <p class="text-lg text-slate-600">No hemos podido enviar tu mensaje. Por favor, inténtalo de nuevo o llámanos directamente.</p>
+                                <button id="retry-button" class="inline-flex items-center justify-center mt-6 px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors duration-300">
+                                    Intentar de nuevo
+                                </button>
+                            </div>
+                            
+                            {# Estado de carga - Inicialmente oculto #}
+                            <div id="loading-state" class="typeform-step hidden space-y-6 text-center" data-step="loading">
+                                <div class="w-16 h-16 mx-auto mb-6 relative">
+                                    <div class="w-16 h-16 border-4 border-cyan-200 border-t-cyan-500 rounded-full animate-spin"></div>
+                                </div>
+                                <h3 class="text-2xl font-light text-slate-800">Enviando tu mensaje...</h3>
+                                <p class="text-lg text-slate-600">Por favor, espera un momento.</p>
+                            </div>
+                            
                             {# Progreso #}
                             <div class="mt-6 w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
                                 <div id="typeform-progress" class="bg-cyan-500 h-full w-0 transition-all duration-300"></div>
                             </div>
                         </div>
                         
-                        <form id="contactForm" class="hidden" method="POST">
+                        <form id="contactForm" class="hidden">
                             <input type="hidden" name="nombre" id="form-nombre">
                             <input type="hidden" name="email" id="form-email">
                             <input type="hidden" name="telefono" id="form-telefono">
                             <input type="hidden" name="mensaje" id="form-mensaje">
                             <input type="hidden" name="privacidad" id="form-privacidad">
+                            <input type="hidden" name="origen" id="form-origen" value="Formulario Web">
+                            <input type="hidden" name="fecha" id="form-fecha">
                         </form>
                     </div>
                 </div>
@@ -414,7 +453,16 @@
         const steps = document.querySelectorAll('.typeform-step');
         const progress = document.getElementById('typeform-progress');
         const hiddenForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submit-form-btn');
+        const retryBtn = document.getElementById('retry-button');
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+        const loadingState = document.getElementById('loading-state');
+        const webhookUrl = 'https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma';
         let currentStep = 0;
+
+        // Añadir la fecha actual al formulario
+        document.getElementById('form-fecha').value = new Date().toISOString();
 
         function goToNextStep() {
             // Validar campo actual si es requerido
@@ -562,6 +610,86 @@
                     goToNextStep();
                 }
             }
+        }
+        
+        // Función para enviar los datos al webhook
+        async function submitFormToWebhook() {
+            // Mostrar estado de carga
+            document.querySelectorAll('.typeform-step.active').forEach(step => {
+                step.classList.remove('active');
+                step.classList.add('hidden');
+            });
+            loadingState.classList.remove('hidden');
+            loadingState.classList.add('active');
+            
+            try {
+                // Obtener los datos del formulario
+                const formData = {
+                    nombre: document.getElementById('form-nombre').value,
+                    email: document.getElementById('form-email').value,
+                    telefono: document.getElementById('form-telefono').value || 'No proporcionado',
+                    mensaje: document.getElementById('form-mensaje').value,
+                    privacidad: document.getElementById('form-privacidad').value,
+                    origen: document.getElementById('form-origen').value,
+                    fecha: document.getElementById('form-fecha').value
+                };
+                
+                // Enviar datos al webhook
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                // Verificar si la respuesta fue exitosa
+                if (response.ok) {
+                    // Mostrar mensaje de éxito
+                    loadingState.classList.remove('active');
+                    loadingState.classList.add('hidden');
+                    successMessage.classList.remove('hidden');
+                    successMessage.classList.add('active');
+                    
+                    // Ocultar la barra de progreso
+                    document.querySelector('.mt-6.w-full.bg-slate-200').style.display = 'none';
+                } else {
+                    throw new Error('Error en la respuesta del servidor');
+                }
+            } catch (error) {
+                console.error('Error al enviar el formulario:', error);
+                
+                // Mostrar mensaje de error
+                loadingState.classList.remove('active');
+                loadingState.classList.add('hidden');
+                errorMessage.classList.remove('hidden');
+                errorMessage.classList.add('active');
+                
+                // Ocultar la barra de progreso
+                document.querySelector('.mt-6.w-full.bg-slate-200').style.display = 'none';
+            }
+        }
+        
+        // Event listener para el botón de envío
+        if (submitBtn) {
+            submitBtn.addEventListener('click', submitFormToWebhook);
+        }
+        
+        // Event listener para el botón de reintento
+        if (retryBtn) {
+            retryBtn.addEventListener('click', function() {
+                // Ocultar mensaje de error
+                errorMessage.classList.remove('active');
+                errorMessage.classList.add('hidden');
+                
+                // Mostrar paso de privacidad nuevamente
+                const privacidadStep = document.querySelector('.typeform-step[data-step="privacidad"]');
+                privacidadStep.classList.remove('hidden');
+                privacidadStep.classList.add('active');
+                
+                // Mostrar la barra de progreso
+                document.querySelector('.mt-6.w-full.bg-slate-200').style.display = 'block';
+            });
         }
         
         // Initial setup
