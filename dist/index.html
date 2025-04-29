@@ -33,7 +33,13 @@
       <meta name="theme-color" content="#06b6d4">
     
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
+    <header>
+        <meta itemprop="name" content="Perito en Barcelona | Experto en Edificación, Construcción y Seguros">
+        <meta itemprop="description" content="Perito en Barcelona expertos en construcción, seguros y peritaje judicial. Informes técnicos y asesoramiento profesional.">
+        <meta itemprop="url" content="https://perito.barcelona">
+    </header>
+
     <header id="mainHeader" class="fixed top-0 left-0 right-0 bg-white/85 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
     <div class="max-w-[1600px] mx-auto px-[5%]">
         <!-- Top Bar - Solo Desktop -->
@@ -1509,6 +1515,42 @@
     </div>
 </footer>
 
+
+    <!-- Schema for LocalBusiness -->
+    <div itemscope itemtype="https://schema.org/LocalBusiness" hidden>
+        <meta itemprop="name" content="Perito Barcelona">
+        <meta itemprop="description" content="Expertos en peritajes técnicos y resolución de conflictos legales en construcción.">
+        <meta itemprop="url" content="https://perito.barcelona">
+        <meta itemprop="telephone" content="+34 614 194 985">
+        <meta itemprop="email" content="info@perito.barcelona">
+        <meta itemprop="address" content="C/ Numancia 95, Local 5, 08029 Barcelona, España">
+        <meta itemprop="priceRange" content="€€">
+        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <meta itemprop="streetAddress" content="C/ Numancia 95, Local 5">
+            <meta itemprop="addressLocality" content="Barcelona">
+            <meta itemprop="addressRegion" content="Cataluña">
+            <meta itemprop="postalCode" content="08029">
+            <meta itemprop="addressCountry" content="ES">
+        </div>
+        <meta itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+        <meta itemprop="latitude" content="41.3850643">
+        <meta itemprop="longitude" content="2.136047">
+        <meta itemprop="openingHours" content="Mo-Fr 09:00-18:00">
+    </div>
+
+    <!-- Schema for Author -->
+    <div itemscope itemtype="https://schema.org/Person" hidden>
+        <meta itemprop="name" content="Equipo Perito Barcelona">
+        <meta itemprop="email" content="info@perito.barcelona">
+        <meta itemprop="telephone" content="+34 614 194 985">
+    </div>
+
+    <!-- Social Media Links -->
+    <div itemprop="sameAs" hidden>
+        <link href="https://www.facebook.com/peritobarcelona" rel="nofollow">
+        <link href="https://www.linkedin.com/company/peritobarcelona" rel="nofollow">
+        <link href="https://twitter.com/peritobarcelona" rel="nofollow">
+    </div>
     
     
     <script>
@@ -1642,10 +1684,6 @@
       
     
         </script>
-    
-
-    
-
     
 </body>
 </html>
