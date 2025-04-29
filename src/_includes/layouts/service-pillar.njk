@@ -1,239 +1,238 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-<!-- Hero Section -->
-<header class="relative bg-gradient-to-br from-[#0B1030] to-[#1a2452] mt-[70px] lg:mt-[90px] overflow-hidden">
-    <!-- Modern Pattern Background -->
-    <div aria-hidden="true" class="absolute inset-0">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,slate-500_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.15]"></div>
-    </div>
+<main itemscope itemtype="https://schema.org/Article">
+    <!-- Hero Section -->
+    <header class="relative bg-gradient-to-br from-[#0B1030] to-[#1a2452] mt-[70px] lg:mt-[90px] overflow-hidden">
+        <!-- Modern Pattern Background -->
+        <div aria-hidden="true" class="absolute inset-0">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,slate-500_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.15]"></div>
+        </div>
 
-    <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16 relative z-10">
-        <div class="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center py-12 lg:py-16">
-            <!-- Left Column -->
-            <div class="lg:col-span-7">
-                <div class="space-y-6">
-                    <h1 class="text-[2.75rem] md:text-[3.5rem] xl:text-[4rem] font-light text-white leading-[1.1] tracking-tight">
-                        <span class="text-white font-light">{{ hero.title }}</span>
-                        <strong class="text-cyan-400 font-bold block mt-2">{{ hero.strong }}</strong>
-                        <span class="block text-[0.85em] text-cyan-400 font-normal mt-6">{{ hero.subtitle }}</span>
-                    </h1>
-                    
-                    <!-- Añadido description -->
-                    <p class="text-xl text-slate-200 mt-8">{{ hero.description }}</p>
-                    
-                    <div class="prose prose-lg prose-invert mt-8">
-                        <div class="text-lg text-slate-300 tracking-wide">
-                            {{ hero.intro }}
+        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center py-12 lg:py-16">
+                <!-- Left Column -->
+                <div class="lg:col-span-7">
+                    <div class="space-y-6">
+                        <h1 class="text-[2.75rem] md:text-[3.5rem] xl:text-[4rem] font-light text-white leading-[1.1] tracking-tight" itemprop="headline">
+                            <span class="text-white font-light">{{ hero.title }}</span>
+                            <strong class="text-cyan-400 font-bold block mt-2">{{ hero.strong }}</strong>
+                            <span class="block text-[0.85em] text-cyan-400 font-normal mt-6">{{ hero.subtitle }}</span>
+                        </h1>
+                        <p class="text-xl text-slate-200 mt-8" itemprop="description">{{ hero.description }}</p>
+                        <div class="prose prose-lg prose-invert mt-8">
+                            <div class="text-lg text-slate-300 tracking-wide" itemprop="articleBody">
+                                {{ hero.intro }}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Right Column -->
-            <div class="lg:col-span-5">
-                <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl relative">
-                    <!-- Overlay gradiente modernizado -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-slate-900/30 via-transparent to-transparent mix-blend-overlay z-10"></div>
-                    <img src="{{ hero.image }}" 
-                         alt="{{ hero.title }}"
-                         class="w-full h-full object-cover scale-105 transition-transform duration-700 ease-out hover:scale-110"
-                         style="clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);"
-                         fetchpriority="high"
-                         loading="lazy"
-                         decoding="async">
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Service Grid Section -->
-<section class="py-20 bg-white">
-    <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
-        <div class="max-w-3xl mx-auto text-center mb-16">
-            <span class="text-cyan-500 font-medium uppercase tracking-wider mb-4 block">Nuestros Servicios</span>
-            <h2 class="text-3xl md:text-4xl font-light text-slate-800">
-                {{ serviceCluster.intro }}
-            </h2>
-        </div>
-
-        <!-- Grid actualizado para coincidir con problem-solution.njk -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {% for service in serviceCluster.services %}
-            <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden flex flex-col h-full">
-                <div class="p-6 lg:p-8 flex flex-col h-full">
-                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
-                        <div class="w-8 h-8 text-cyan-500">
-                            {% include "icons/" + service.icon + ".svg" %}
-                        </div>
+                <!-- Right Column -->
+                <div class="lg:col-span-5">
+                    <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl relative">
+                        <!-- Overlay gradiente modernizado -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-slate-900/30 via-transparent to-transparent mix-blend-overlay z-10"></div>
+                        <img src="{{ hero.image }}" 
+                             alt="{{ hero.title }}"
+                             class="w-full h-full object-cover scale-105 transition-transform duration-700 ease-out hover:scale-110"
+                             style="clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);"
+                             fetchpriority="high"
+                             loading="lazy"
+                             decoding="async">
                     </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-4">{{ service.title }}</h3>
-                    <p class="text-slate-600 mb-6 flex-grow">{{ service.description }}</p>
-                    <ul class="space-y-3 mb-6">
-                        {% for feature in service.features %}
-                        <li class="flex items-start gap-2">
-                            <span class="p-1 rounded bg-cyan-50 flex-shrink-0 mt-0.5">
-                                <svg class="w-4 h-4 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                            </span>
-                            <span class="text-slate-600 text-sm">{{ feature }}</span>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    <a href="{{ service.url }}" class="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold group mt-auto">
-                        Ver más sobre {{ service.title | lower }}
-                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
                 </div>
             </div>
-            {% endfor %}
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- What Is Section -->
-<section class="py-24 bg-gradient-to-b from-slate-50 to-white">
-    <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            <!-- Left Column - Title -->
-            <div>
-                <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 leading-tight max-w-xl">
-                    {{ sections.title | safe }}
+    <!-- Service Grid Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-cyan-500 font-medium uppercase tracking-wider mb-4 block">Nuestros Servicios</span>
+                <h2 class="text-3xl md:text-4xl font-light text-slate-800" itemprop="about">
+                    {{ serviceCluster.intro }}
                 </h2>
             </div>
 
-            <!-- Right Column - Content -->
-            <div class="prose prose-lg prose-slate">
-                <div class="space-y-8">
-                    {{ sections.what_is.text }}
-                    <ul class="space-y-4">
-                        {% for feature in sections.what_is.features %}
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-cyan-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            <!-- Grid actualizado para coincidir con problem-solution.njk -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                {% for service in serviceCluster.services %}
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden flex flex-col h-full" itemprop="hasPart" itemscope itemtype="https://schema.org/Service">
+                    <div class="p-6 lg:p-8 flex flex-col h-full">
+                        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
+                            <div class="w-8 h-8 text-cyan-500">
+                                {% include "icons/" + service.icon + ".svg" %}
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-4" itemprop="name">{{ service.title }}</h3>
+                        <p class="text-slate-600 mb-6 flex-grow" itemprop="description">{{ service.description }}</p>
+                        <ul class="space-y-3 mb-6">
+                            {% for feature in service.features %}
+                            <li class="flex items-start gap-2">
+                                <span class="p-1 rounded bg-cyan-50 flex-shrink-0 mt-0.5">
+                                    <svg class="w-4 h-4 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </span>
+                                <span class="text-slate-600 text-sm" itemprop="feature">{{ feature }}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <a href="{{ service.url }}" class="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold group mt-auto">
+                            Ver más sobre {{ service.title | lower }}
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                             </svg>
-                            <span class="text-slate-600">{{ feature }}</span>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Process Section -->
-<section class="relative py-24 md:py-32 bg-gradient-to-br from-[#0B1030] to-[#1a2452]">
-    <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
-        <div class="max-w-3xl mx-auto text-center mb-16">
-            <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-white mb-6">
-                Nuestro <strong class="text-cyan-400 font-bold">Proceso</strong>
-            </h2>
-            <p class="text-xl text-white/80">Un método claro y transparente para resolver tu caso</p>
-        </div>
-
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {% for step in process.steps %}
-            <div class="bg-white/5 backdrop-blur-sm p-8 rounded-xl relative group hover:bg-white/10 transition-all duration-300">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-cyan-400/20 text-cyan-400 group-hover:scale-110 transition-transform">
-                        <span class="text-2xl font-bold">{{ loop.index }}</span>
+                        </a>
                     </div>
                 </div>
-                <h3 class="text-xl font-bold text-cyan-400 mb-4">{{ step.title }}</h3>
-                <p class="text-white/80">{{ step.description }}</p>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Benefits Section -->
-<section class="relative py-24 md:py-32 bg-gradient-to-b from-slate-50 to-white">
-    <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
-        <div class="max-w-3xl mx-auto text-center mb-16">
-            <span class="text-cyan-500 font-semibold tracking-wider uppercase mb-4 block">¿Por Qué Elegirnos?</span>
-            <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 mb-6">
-                Expertos en <strong class="text-cyan-500 font-bold">Peritajes</strong>
-            </h2>
-        </div>
-
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {% for item in benefits.items %}
-            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group border border-slate-100">
-                <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
-                    <div class="w-8 h-8 text-cyan-500 group-hover:scale-110 transition-transform">
-                        {% include "icons/" + item.icon + ".svg" %}
-                    </div>
+    <!-- What Is Section -->
+    <section class="py-24 bg-gradient-to-b from-slate-50 to-white">
+        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                <!-- Left Column - Title -->
+                <div>
+                    <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 leading-tight max-w-xl" itemprop="about">
+                        {{ sections.title | safe }}
+                    </h2>
                 </div>
-                <h3 class="text-xl font-bold text-slate-800 mb-3">{{ item.title }}</h3>
-                <p class="text-slate-600">{{ item.description }}</p>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
 
-{# New Testimonials Section - Conditionally Rendered #}
-{% if testimonials and testimonials.items %}
-<section class="py-24 px-4 md:px-[5%] bg-white">
-    <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
-        <!-- Título de sección -->
-        <div class="max-w-3xl mx-auto text-center mb-16">
-             <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 mb-6">
-                {{ testimonials.title | default("Casos de Éxito Relevantes") }}
-            </h2>
-        </div>
-
-        <!-- Grid de testimonios -->
-        {# Adaptado de casos-home.njk para 2 columnas #}
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-            {% for item in testimonials.items %}
-            <div class="bg-white p-8 lg:p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative border-l-4 border-cyan-400">
-                <p class="text-slate-700 mb-6 text-lg relative pl-6">
-                    <span class="absolute top-[-1rem] left-[-0.5rem] text-[4rem] text-cyan-400/20 font-serif">"</span>
-                    {{ item.quote }}
-                </p>
-                <div class="flex items-center mt-auto pt-4">
-                    <span class="w-12 h-[2px] bg-cyan-400/30 mr-4"></span>
-                    <div>
-                        <p class="font-semibold text-cyan-500">{{ item.author }}</p>
-                        {% if item.role %}
-                        <p class="text-sm text-slate-500">{{ item.role }}</p>
-                        {% endif %}
+                <!-- Right Column - Content -->
+                <div class="prose prose-lg prose-slate">
+                    <div class="space-y-8" itemprop="articleBody">
+                        {{ sections.what_is.text }}
+                        <ul class="space-y-4">
+                            {% for feature in sections.what_is.features %}
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-cyan-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-slate-600" itemprop="feature">{{ feature }}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
             </div>
-            {% endfor %}
         </div>
-    </div>
-</section>
-{% endif %}
+    </section>
 
+    <!-- Process Section -->
+    <section class="relative py-24 md:py-32 bg-gradient-to-br from-[#0B1030] to-[#1a2452]">
+        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-white mb-6">
+                    Nuestro <strong class="text-cyan-400 font-bold">Proceso</strong>
+                </h2>
+                <p class="text-xl text-white/80">Un método claro y transparente para resolver tu caso</p>
+            </div>
 
-<!-- CTA Section -->
-<section class="relative py-24 md:py-32 bg-gradient-to-br from-slate-900 to-slate-800">
-    
-
-    <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16 relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-white mb-6">
-                {{ cta.title }}
-            </h2>
-            <p class="text-xl text-white/80 mb-12">{{ cta.description }}</p>
-            <a href="{{ cta.button.url }}" class="inline-flex items-center px-8 py-4 text-lg font-semibold bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition-all group">
-                {{ cta.button.text }}
-                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-            </a>
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                {% for step in process.steps %}
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-xl relative group hover:bg-white/10 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-cyan-400/20 text-cyan-400 group-hover:scale-110 transition-transform">
+                            <span class="text-2xl font-bold">{{ loop.index }}</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4">{{ step.title }}</h3>
+                    <p class="text-white/80">{{ step.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="relative py-24 md:py-32 bg-gradient-to-b from-slate-50 to-white">
+        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-cyan-500 font-semibold tracking-wider uppercase mb-4 block">¿Por Qué Elegirnos?</span>
+                <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 mb-6">
+                    Expertos en <strong class="text-cyan-500 font-bold">Peritajes</strong>
+                </h2>
+            </div>
+
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                {% for item in benefits.items %}
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group border border-slate-100">
+                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
+                        <div class="w-8 h-8 text-cyan-500 group-hover:scale-110 transition-transform">
+                            {% include "icons/" + item.icon + ".svg" %}
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">{{ item.title }}</h3>
+                    <p class="text-slate-600">{{ item.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    {# New Testimonials Section - Conditionally Rendered #}
+    {% if testimonials and testimonials.items %}
+    <section class="py-24 px-4 md:px-[5%] bg-white">
+        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+            <!-- Título de sección -->
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                 <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 mb-6">
+                    {{ testimonials.title | default("Casos de Éxito Relevantes") }}
+                </h2>
+            </div>
+
+            <!-- Grid de testimonios -->
+            {# Adaptado de casos-home.njk para 2 columnas #}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                {% for item in testimonials.items %}
+                <div class="bg-white p-8 lg:p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative border-l-4 border-cyan-400">
+                    <p class="text-slate-700 mb-6 text-lg relative pl-6">
+                        <span class="absolute top-[-1rem] left-[-0.5rem] text-[4rem] text-cyan-400/20 font-serif">"</span>
+                        {{ item.quote }}
+                    </p>
+                    <div class="flex items-center mt-auto pt-4">
+                        <span class="w-12 h-[2px] bg-cyan-400/30 mr-4"></span>
+                        <div>
+                            <p class="font-semibold text-cyan-500">{{ item.author }}</p>
+                            {% if item.role %}
+                            <p class="text-sm text-slate-500">{{ item.role }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+
+    <!-- CTA Section -->
+    <section class="relative py-24 md:py-32 bg-gradient-to-br from-slate-900 to-slate-800">
+        
+
+        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-white mb-6">
+                    {{ cta.title }}
+                </h2>
+                <p class="text-xl text-white/80 mb-12">{{ cta.description }}</p>
+                <a href="{{ cta.button.url }}" class="inline-flex items-center px-8 py-4 text-lg font-semibold bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition-all group">
+                    {{ cta.button.text }}
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
 {% endblock %}
 
 {% block pageStyles %}
