@@ -325,8 +325,9 @@
                             
                             {# Contenido de las tabs #}
                             <div class="tabs-content flex-grow">
+                                <!-- Dirección Barcelona -->
                                 <div id="content-barcelona" class="tab-content h-full flex flex-col" itemscope itemtype="https://schema.org/Place">
-                                    {# Info dirección/horario - Estilos home #}
+                                    <meta itemprop="name" content="Oficina de Barcelona">
                                     <div class="p-6 lg:p-8 bg-white">
                                         <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                                             <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
@@ -341,7 +342,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {# Mapa - Versión mejorada sin API key #}
                                     <div class="h-[300px] flex-grow relative">
                                         <iframe 
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.6856624264604!2d2.136047!3d41.3850643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4987ae76a9c89%3A0xd6c91a8d003a5417!2sC.%20de%20Numancia%2C%2095%2C%20L-5%2C%2008029%20Barcelona!5e0!3m2!1ses!2ses!4v1660123456789!5m2!1ses!2ses"
@@ -351,27 +351,17 @@
                                             referrerpolicy="no-referrer-when-downgrade"
                                             title="Oficina de Barcelona - C/ Numancia 95, Local 5">
                                         </iframe>
-                                        
-                                        <a 
-                                            href="https://www.google.es/maps/place/Carrer+de+Numància,+95,+Local+5,+08029+Barcelona/"
-                                            target="_blank" 
-                                            rel="noopener noreferrer" 
-                                            class="absolute top-4 right-4 bg-slate-800/80 hover:bg-slate-800 px-4 py-2 rounded-lg shadow-md text-white font-medium hover:shadow-lg transition-all duration-300 backdrop-blur-sm border border-white/10"
-                                            aria-label="Ver en Google Maps">
-                                            <svg class="w-4 h-4 mr-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                                            </svg>
-                                            Ver en Google Maps
-                                        </a>
                                     </div>
                                 </div>
+
+                                <!-- Dirección Granollers -->
                                 <div id="content-granollers" class="tab-content hidden h-full flex flex-col" itemscope itemtype="https://schema.org/Place">
-                                    {# Info dirección/horario - Estilos home #}
+                                    <meta itemprop="name" content="Oficina de Granollers">
                                     <div class="p-6 lg:p-8 bg-white">
                                         <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                                            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"> 
+                                            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
                                                 <p class="text-lg font-bold text-slate-800 mb-1" itemprop="addressLocality">Granollers</p>
-                                                <p class="text-slate-600" itemprop="streetAddress">C/ Navarra 14</p> 
+                                                <p class="text-slate-600" itemprop="streetAddress">C/ Navarra 14</p>
                                                 <p class="text-sm text-slate-500 mt-1">Cerca estación Renfe</p>
                                             </div>
                                             <div class="md:pl-4 md:border-l md:border-slate-200 flex-shrink-0 mt-4 md:mt-0">
@@ -381,7 +371,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {# Mapa Granollers - Versión mejorada sin API key #}
                                     <div class="h-[300px] flex-grow relative">
                                         <iframe 
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.9574654721266!2d2.2862264!3d41.6082985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4c7d5708e4acf%3A0x617a54b79c245caa!2sC.%20Navarra%2C%2014%2C%2008401%20Granollers%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1660123456789!5m2!1ses!2ses"
@@ -391,18 +380,6 @@
                                             referrerpolicy="no-referrer-when-downgrade"
                                             title="Oficina de Granollers - C/ Navarra 14">
                                         </iframe>
-                                        
-                                        <a 
-                                            href="https://www.google.es/maps/place/Carrer+de+Navarra,+14,+08401+Granollers,+Barcelona/"
-                                            target="_blank" 
-                                            rel="noopener noreferrer" 
-                                            class="absolute top-4 right-4 bg-slate-800/80 hover:bg-slate-800 px-4 py-2 rounded-lg shadow-md text-white font-medium hover:shadow-lg transition-all duration-300 backdrop-blur-sm border border-white/10"
-                                            aria-label="Ver en Google Maps">
-                                            <svg class="w-4 h-4 mr-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                                            </svg>
-                                            Ver en Google Maps
-                                        </a>
                                     </div>
                                 </div>
                             </div>
