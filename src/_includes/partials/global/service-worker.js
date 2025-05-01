@@ -19,10 +19,7 @@ const CACHE_KEYS = {
   // URLs que queremos cachear cuando el worker se instala (assets críticos)
   const PRE_CACHE_URLS = [
     '/',
-    '/index.html',
-    '/fonts/lora-v13-latin-700.woff',
-    '/css/main.css',
-    '/js/main.js'
+    '/index.html'
   ];
   
   // Hosts que queremos ignorar (no cachear)
