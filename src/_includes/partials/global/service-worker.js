@@ -127,26 +127,25 @@ const CACHE_KEYS = {
   // Evento de activación - limpia los caches antiguos
   self.addEventListener('activate', evt => {
     console.log(`[Service Worker] Activando versión ${VERSION}`);
-    
     evt.waitUntil(
-      clearOldCaches()
-        .then(() => {
-          // Comienza a controlar todas las pestañas sin recargar
-          return self.clients.claim();
-        })
-        .then(() => {
-          // Notifica a los clientes sobre la actualización
-          return self.clients.matchAll().then(clients => {
-            return Promise.all(
-              clients.map(client => {
-                return client.postMessage({
-                  type: 'SW_UPDATED',
-                  version: VERSION
+        clearOldCaches()
+            .then(() => {
+                console.log('[Service Worker] Caches antiguos eliminados.');
+                return self.clients.claim();
+            })
+            .then(() => {
+                console.log('[Service Worker] Ahora controla todas las pestañas.');
+                return self.clients.matchAll().then(clients => {
+                    return Promise.all(
+                        clients.map(client => {
+                            return client.postMessage({
+                                type: 'SW_UPDATED',
+                                version: VERSION
+                            });
+                        })
+                    );
                 });
-              })
-            );
-          });
-        })
+            })
     );
   });
   
