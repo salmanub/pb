@@ -202,10 +202,10 @@
             </nav>
 
             <!-- Hamburger Menu Button -->
-            <button id="menuButton" class="lg:hidden flex items-center justify-center w-10 h-10 rounded-md bg-cyan-400 text-white hover:bg-cyan-500 transition-all">
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
+            <button id="menuButton" class="lg:hidden flex items-center justify-center w-10 h-10 rounded-md bg-cyan-400 text-white hover:bg-cyan-500 transition-all relative">
+                <span class="block w-6 h-0.5 bg-white transition-transform duration-300 origin-center transform" id="line1"></span>
+                <span class="block w-6 h-0.5 bg-white mt-1.5 transition-transform duration-300 origin-center transform" id="line2"></span>
+                <span class="block w-6 h-0.5 bg-white mt-1.5 transition-transform duration-300 origin-center transform" id="line3"></span>
             </button>
         </div>
     </div>
@@ -294,14 +294,29 @@
 </a>
 
 <script>
-    // Toggle para el menú móvil
     const menuButton = document.getElementById('menuButton');
     const mobileMenu = document.getElementById('mobileMenu');
     const talkToExpert = document.getElementById('talkToExpert');
+    const line1 = document.getElementById('line1');
+    const line2 = document.getElementById('line2');
+    const line3 = document.getElementById('line3');
 
-    menuButton.addEventListener('click', function() {
+    menuButton.addEventListener('click', function () {
         const isMenuOpen = !mobileMenu.classList.contains('translate-x-full');
         mobileMenu.classList.toggle('translate-x-full');
+
+        // Animación del botón de hamburguesa
+        if (isMenuOpen) {
+            line1.classList.remove('rotate-45', 'translate-y-2');
+            line2.classList.remove('opacity-0');
+            line3.classList.remove('-rotate-45', '-translate-y-2');
+        } else {
+            line1.classList.add('rotate-45', 'translate-y-2');
+            line2.classList.add('opacity-0');
+            line3.classList.add('-rotate-45', '-translate-y-2');
+        }
+
+        // Mostrar/ocultar el botón flotante
         if (isMenuOpen) {
             talkToExpert.classList.remove('hidden');
             talkToExpert.classList.add('flex');
@@ -323,3 +338,18 @@
         }
     });
 </script>
+
+<style>
+    .rotate-45 {
+        transform: rotate(45deg);
+    }
+    .-rotate-45 {
+        transform: rotate(-45deg);
+    }
+    .translate-y-2 {
+        transform: translateY(0.5rem);
+    }
+    .-translate-y-2 {
+        transform: translateY(-0.5rem);
+    }
+</style>
