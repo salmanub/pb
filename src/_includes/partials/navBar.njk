@@ -324,8 +324,15 @@
     const talkToExpert = document.getElementById('talkToExpert');
 
     menuButton.addEventListener('click', function() {
+        const isMenuOpen = !mobileMenu.classList.contains('translate-x-full');
         mobileMenu.classList.toggle('translate-x-full');
-        talkToExpert.classList.toggle('hidden'); // Oculta el botón al abrir el menú
+        if (isMenuOpen) {
+            talkToExpert.classList.remove('hidden');
+            talkToExpert.classList.add('flex');
+        } else {
+            talkToExpert.classList.add('hidden');
+            talkToExpert.classList.remove('flex');
+        }
     });
 
     // Mostrar/ocultar botón flotante al hacer scroll
