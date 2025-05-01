@@ -27,6 +27,9 @@ const CACHE_KEYS = {
   
   // Hosts que queremos ignorar (no cachear)
   const IGNORED_HOSTS = ['localhost', 'unpkg.com'];
+
+  // Hosts específicos que queremos manejar explícitamente
+  const HANDLED_HOSTS = ['maps.gstatic.com', 'maps.googleapis.com'];
   
   // Tipos de archivos estáticos que se pueden cachear agresivamente
   const STATIC_CACHE_TYPES = [
@@ -154,9 +157,15 @@ const CACHE_KEYS = {
     const request = evt.request;
     const url = new URL(request.url);
     
-    // Ignoramos los hosts definidos
+    // Ignoramos los hosts definidos en IGNORED_HOSTS
     if (IGNORED_HOSTS.some(host => url.hostname.includes(host))) {
       return;
+    }
+
+    // Manejo explícito de hosts específicos (maps.gstatic.com, maps.googleapis.com)
+    if (HANDLED_HOSTS.some(host => url.hostname.includes(host))) {
+        evt.respondWith(staleWhileRevalidate(request));
+        return;
     }
     
     // Ignoramos URLs excluidas
