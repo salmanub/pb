@@ -325,13 +325,13 @@
                             
                             {# Contenido de las tabs #}
                             <div class="tabs-content flex-grow">
-                                <div id="content-barcelona" class="tab-content h-full flex flex-col">
+                                <div id="content-barcelona" class="tab-content h-full flex flex-col" itemscope itemtype="https://schema.org/Place">
                                     {# Info dirección/horario - Estilos home #}
                                     <div class="p-6 lg:p-8 bg-white">
                                         <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                                            <div>
-                                                <p class="text-lg font-bold text-slate-800 mb-1">Barcelona</p>
-                                                <p class="text-slate-600">C/ Numancia 95, Local 5</p>
+                                            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                                <p class="text-lg font-bold text-slate-800 mb-1" itemprop="addressLocality">Barcelona</p>
+                                                <p class="text-slate-600" itemprop="streetAddress">C/ Numancia 95, Local 5</p>
                                                 <p class="text-sm text-slate-500 mt-1">Metro L5 Entença</p>
                                             </div>
                                             <div class="md:pl-4 md:border-l md:border-slate-200 flex-shrink-0 mt-4 md:mt-0">
@@ -365,13 +365,13 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div id="content-granollers" class="tab-content hidden h-full flex flex-col">
+                                <div id="content-granollers" class="tab-content hidden h-full flex flex-col" itemscope itemtype="https://schema.org/Place">
                                     {# Info dirección/horario - Estilos home #}
                                     <div class="p-6 lg:p-8 bg-white">
                                         <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                                            <div> 
-                                                <p class="text-lg font-bold text-slate-800 mb-1">Granollers</p>
-                                                <p class="text-slate-600">C/ Navarra 14</p> 
+                                            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"> 
+                                                <p class="text-lg font-bold text-slate-800 mb-1" itemprop="addressLocality">Granollers</p>
+                                                <p class="text-slate-600" itemprop="streetAddress">C/ Navarra 14</p> 
                                                 <p class="text-sm text-slate-500 mt-1">Cerca estación Renfe</p>
                                             </div>
                                             <div class="md:pl-4 md:border-l md:border-slate-200 flex-shrink-0 mt-4 md:mt-0">
