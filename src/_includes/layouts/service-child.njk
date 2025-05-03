@@ -267,8 +267,17 @@
 }
 
 .prose li {
-    @apply relative flex items-start py-2 px-8 rounded-lg transition-all;
+    @apply relative py-3 pl-8 pr-4 rounded-lg;
     background: linear-gradient(to right, rgba(8, 145, 178, 0.05) 0%, transparent 100%);
+}
+
+.prose li > * {
+    @apply my-0;  /* Elimina márgenes verticales dentro de los items */
+    display: inline; /* Mantiene el contenido en línea */
+}
+
+.prose li > strong {
+    @apply mr-1; /* Espacio después del texto en negrita */
 }
 
 .prose li:hover {
@@ -276,13 +285,28 @@
     background: linear-gradient(to right, rgba(8, 145, 178, 0.1) 0%, transparent 100%);
 }
 
-/* Solo un marcador para listas desordenadas */
 .prose ul > li::before {
     content: '→';
-    @apply absolute left-3 text-cyan-500 font-medium;
+    @apply absolute left-3 top-[0.9em] transform -translate-y-1/2 text-cyan-500;
 }
 
-/* Solo un marcador para listas ordenadas */
+/* Ajustes específicos para párrafos dentro de listas */
+.prose li p {
+    display: inline; /* Mantiene el párrafo en línea con el resto del contenido */
+    margin: 0;
+}
+
+/* Marcador único para listas */
+.prose ul > li::before {
+    content: '→';
+    @apply absolute left-3 top-2 text-cyan-500 font-medium;
+}
+
+.prose ul > li p {
+    @apply mt-0;
+}
+
+/* Marcador para listas ordenadas */
 .prose ol {
     counter-reset: item;
 }
@@ -293,7 +317,7 @@
 
 .prose ol > li::before {
     content: counter(item);
-    @apply absolute left-2 flex items-center justify-center w-6 h-6 rounded-full bg-cyan-100 text-cyan-600 font-bold text-sm;
+    @apply absolute left-2 top-2 flex items-center justify-center w-6 h-6 rounded-full bg-cyan-100 text-cyan-600 font-bold text-sm;
 }
 
 /* Definiciones con estilo moderno */
