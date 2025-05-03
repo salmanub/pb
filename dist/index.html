@@ -1499,13 +1499,33 @@
                     <h5 class="text-lg font-bold text-slate-800 mb-6 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-0.5 after:bg-cyan-400">
                         Ubicación
                     </h5>
-                    <p class="flex items-start gap-3 text-gray-600" itemscope itemtype="https://schema.org/Place">
-                        <svg class="w-5 h-5 text-cyan-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        <span itemprop="address">Barcelona · Madrid · Valencia · Sevilla</span>
-                    </p>
+                    <div class="space-y-6" itemscope itemtype="https://schema.org/Place">
+                        <!-- Barcelona -->
+                        <div class="flex items-start gap-3 text-gray-600" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                            <svg class="w-5 h-5 text-cyan-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <p class="font-medium text-slate-800" itemprop="addressLocality">Barcelona</p>
+                                <p itemprop="streetAddress">C/ Numancia 95, Local 5</p>
+                                <p class="text-sm text-slate-500 mt-1">Metro L5 Entença</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Granollers -->
+                        <div class="flex items-start gap-3 text-gray-600" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                            <svg class="w-5 h-5 text-cyan-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <p class="font-medium text-slate-800" itemprop="addressLocality">Granollers</p>
+                                <p itemprop="streetAddress">C/ Navarra 14</p>
+                                <p class="text-sm text-slate-500 mt-1">Cerca estación Renfe</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
