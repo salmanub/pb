@@ -267,17 +267,17 @@
 }
 
 .prose li {
-    @apply relative py-3 pl-8 pr-4 rounded-lg;
+    @apply relative py-3 pl-6 pr-4 rounded-lg;
     background: linear-gradient(to right, rgba(8, 145, 178, 0.05) 0%, transparent 100%);
 }
 
 .prose li > * {
-    @apply my-0;  /* Elimina márgenes verticales dentro de los items */
-    display: inline; /* Mantiene el contenido en línea */
+    @apply my-0;
+    display: inline;
 }
 
 .prose li > strong {
-    @apply mr-1; /* Espacio después del texto en negrita */
+    @apply mr-1;
 }
 
 .prose li:hover {
@@ -285,25 +285,14 @@
     background: linear-gradient(to right, rgba(8, 145, 178, 0.1) 0%, transparent 100%);
 }
 
-.prose ul > li::before {
-    content: '→';
-    @apply absolute left-3 top-[0.9em] transform -translate-y-1/2 text-cyan-500;
+.prose li p {
+    @apply mt-0;
 }
 
 /* Ajustes específicos para párrafos dentro de listas */
 .prose li p {
-    display: inline; /* Mantiene el párrafo en línea con el resto del contenido */
+    display: inline;
     margin: 0;
-}
-
-/* Marcador único para listas */
-.prose ul > li::before {
-    content: '→';
-    @apply absolute left-3 top-2 text-cyan-500 font-medium;
-}
-
-.prose ul > li p {
-    @apply mt-0;
 }
 
 /* Marcador para listas ordenadas */
