@@ -1,0 +1,49 @@
+<meta name="description" content="{{description}}" />
+<!-- Self-referencing hreflang -->
+<link rel="alternate" 
+hreflang="{{ lang }}" 
+href="{{ metadata.url }}{{ page.url }}">
+
+<!-- Alternate language versions -->
+{% if translations %}
+{% for translation in translations %}
+  <link rel="alternate" 
+        hreflang="{{ translation.lang }}" 
+        href="{{ metadata.url }}{{ translation.permalink }}">
+{% endfor %}
+{% endif %}
+
+<!-- x-default (usando la versión en español como predeterminada) -->
+{% if lang != "es" %}
+{% for translation in translations %}
+  {% if translation.lang == "es" %}
+      <link rel="alternate" 
+            hreflang="x-default" 
+            href="{{ metadata.url }}{{ translation.permalink }}">
+  {% endif %}
+{% endfor %}
+{% else %}
+<link rel="alternate" 
+    hreflang="x-default" 
+    href="{{ metadata.url }}{{ page.url }}">
+{% endif %}
+
+{% favicons %}
+
+<!-- Canonical URL -->
+<link
+    rel="canonical"
+    href="{{ metadata.url }}{{ permalink or post.permalink or comparison.permalink}}"
+/>
+
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:type" content="website"> {%- if permalink == "/" %}
+<meta property="og:type" content="website"> {%- else %}
+<meta property="og:type" content="article">{%- endif %} <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+{%- if featuredImage %}
+<meta property="og:image" content="{{ metadata.url }}{{ featuredImage.src }}">
+<meta property="og:image:alt" content="{{ featuredImage.alt }}">
+{%- endif %}
+
+
