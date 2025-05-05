@@ -131,7 +131,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/scripts");
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy("src/assets/icons");
-  eleventyConfig.addPassthroughCopy("src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("src/site.webmanifest");
 
   eleventyConfig.addCollection("langCollections", function (collectionApi) {
     const collectionsByLang = {};
@@ -168,7 +168,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addShortcode("favicons", function () {
     return `
       <!-- Favicons básicos -->
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any">
       ${faviconSVGDataURI ? `<link rel="icon" type="image/svg+xml" href="${faviconSVGDataURI}">` : ''}
       <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
       <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48x48.png">
