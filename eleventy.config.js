@@ -67,7 +67,7 @@ export default function (eleventyConfig) {
       <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#06b6d4">
       
       <!-- Manifest y configuración del navegador -->
-      <link rel="manifest" href="/site.webmanifest">
+      <link rel="manifest" href="https://perito.barcelona/site.webmanifest">
       <meta name="msapplication-TileColor" content="#06b6d4">
       <meta name="theme-color" content="#06b6d4">
     `;
