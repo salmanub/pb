@@ -25,19 +25,7 @@ testimonial:
   author: "Propietaria de la vivienda"
   role: "La Pobla de Claramunt"
 
-images:
-  - url: '/assets/images/casos/humedad-capilaridad-la-pobla-1.jpg'
-    alt: 'Humedad por capilaridad en muro de la vivienda'
-    caption: 'Detalle de la humedad por capilaridad en los tabiques'
-  - url: '/assets/images/casos/fisura-pavimento-la-pobla-1.jpg'
-    alt: 'Fisura en pavimento exterior'
-    caption: 'Fisura en el pavimento cerámico exterior tras asentamiento'
-  - url: '/assets/images/casos/medicion-humedades-la-pobla-1.jpg'
-    alt: 'Medición de humedades con higrómetro'
-    caption: 'Proceso de diagnóstico técnico con instrumentación'
-  - url: '/assets/images/casos/resultado-la-pobla-1.jpg'
-    alt: 'Zona afectada marcada para tratamiento'
-    caption: 'Identificación de zonas para tratamiento de impermeabilización'
+
 ---
 
 ## El Desafío: Preocupación por Humedades y Grietas en Vivienda
