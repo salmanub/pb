@@ -1,0 +1,160 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<main itemscope itemtype="https://schema.org/CollectionPage">
+    {# Hero Section #}
+    <header class="relative mt-[70px] lg:mt-[120px] bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white overflow-hidden">
+        <div class="relative z-10 w-full py-16 lg:py-24">
+            <div class="w-full px-4 sm:px-8 md:px-12 lg:px-0 md:w-[95%] max-w-[1400px] mx-auto">
+                {# Breadcrumbs #}
+                <nav class="mb-8 text-sm text-cyan-300/80">
+                    <div class="flex items-center gap-2">
+                        <a href="/" class="hover:text-cyan-300 transition-colors">Inicio</a>
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                        <span class="text-white">Casos de Éxito</span>
+                    </div>
+                </nav>
+
+                <div class="max-w-[1000px] mx-auto text-center">
+                    <h1 class="text-[2.5rem] md:text-[3.5rem] font-light leading-[1.1] mb-8" itemprop="headline">
+                        Resultados Reales:
+                        <span class="block text-cyan-400 mt-4">Vea Cómo Ayudamos a Nuestros Clientes</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-cyan-50/90 max-w-3xl mx-auto" itemprop="description">
+                        Descubra ejemplos concretos de cómo nuestros informes periciales técnicos y de seguros han resuelto conflictos, fundamentado reclamaciones y proporcionado claridad en situaciones complejas en Barcelona y provincia.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        {# Patrón de fondo #}
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+    </header>
+
+    {# Filtros y Grid de Casos #}
+    <section class="py-16 px-4 md:px-[5%] bg-gradient-to-br from-slate-50 via-white to-slate-100">
+        <div class="max-w-[1400px] mx-auto">
+            {# Filtros #}
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-12">
+                <button class="px-4 py-2 rounded-full bg-cyan-500 text-white font-medium hover:bg-cyan-600 transition-colors" data-filter="all">
+                    Todos los casos
+                </button>
+                <button class="px-4 py-2 rounded-full bg-white text-slate-600 font-medium hover:bg-slate-50 border border-slate-200 transition-colors" data-filter="construccion">
+                    Construcción
+                </button>
+                <button class="px-4 py-2 rounded-full bg-white text-slate-600 font-medium hover:bg-slate-50 border border-slate-200 transition-colors" data-filter="seguros">
+                    Seguros
+                </button>
+                <select class="px-4 py-2 rounded-full bg-white text-slate-600 font-medium border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500" id="filtro-problema">
+                    <option value="all">Tipo de Problema...</option>
+                    <option value="humedades">Humedades y Filtraciones</option>
+                    <option value="estructurales">Grietas y Estructurales</option>
+                    <option value="pavimentos">Defectos en Pavimentos</option>
+                    <option value="alquileres">Recepción de Alquileres</option>
+                    <option value="contraperitajes">Contraperitajes de Seguros</option>
+                </select>
+            </div>
+
+            {# Grid de Casos #}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="grid-casos-exito">
+                {% for caso in casos.casos %}
+                <div class="caso-snippet bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col" data-category="{{ caso.categories | join(' ') }}">
+                    <img src="{{ caso.image }}" alt="{{ caso.imageAlt }}" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-4 flex flex-wrap gap-2">
+                            {% for tag in caso.tags %}
+                            <span class="tag-categoria text-xs font-semibold px-3 py-1 rounded-full
+                                       {% if tag == 'Construcción' %}bg-cyan-100 text-cyan-700
+                                       {% elif tag == 'Seguros' %}bg-green-100 text-green-700
+                                       {% else %}bg-slate-100 text-slate-700{% endif %}">
+                                {{ tag }}
+                            </span>
+                            {% endfor %}
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-800 mb-3">{{ caso.title }}</h2>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">{{ caso.excerpt }}</p>
+                        <a href="{{ caso.url }}" class="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold group">
+                            Leer Caso Completo
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    {# CTA Final #}
+    <section class="py-24 bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div class="relative z-10 max-w-[1400px] mx-auto px-4 md:px-[5%] text-center">
+            <h2 class="text-[2.5rem] font-light mb-6">¿Tiene un caso similar?</h2>
+            <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+                Permítanos evaluar su situación. Un informe pericial puede ser la clave para su solución.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contacto/" class="inline-flex items-center justify-center px-8 py-4 bg-cyan-400 text-white font-semibold rounded-lg hover:bg-cyan-500 transition-all group">
+                    Solicitar Consulta Gratuita
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+                <a href="tel:+34932123456" class="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-400 text-cyan-300 font-semibold rounded-lg hover:bg-white/5 transition-all">
+                    <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    Llamar Ahora
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    // Funcionalidad de filtros
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('[data-filter]');
+        const filterSelect = document.getElementById('filtro-problema');
+        const cases = document.querySelectorAll('.caso-snippet');
+
+        function updateFilters() {
+            const activeFilter = document.querySelector('[data-filter].active')?.dataset.filter || 'all';
+            const selectFilter = filterSelect.value;
+
+            cases.forEach(caso => {
+                const categories = caso.dataset.category.split(' ');
+                const showForButton = activeFilter === 'all' || categories.includes(activeFilter);
+                const showForSelect = selectFilter === 'all' || categories.includes(selectFilter);
+                
+                caso.style.display = (showForButton && showForSelect) ? 'flex' : 'none';
+            });
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-cyan-500', 'text-white');
+                    btn.classList.add('bg-white', 'text-slate-600');
+                });
+                button.classList.add('active', 'bg-cyan-500', 'text-white');
+                button.classList.remove('bg-white', 'text-slate-600');
+                updateFilters();
+            });
+        });
+
+        filterSelect.addEventListener('change', updateFilters);
+    });
+</script>
+{% endblock %}
+
+{% block pageStyles %}
+ {% set indexCSS %} {% include "dist/assets/styles/index.css" %} {% endset %}
+
+<style>
+    {{ indexCSS | safe }}
+</style>
+{% endblock pageStyles %}
