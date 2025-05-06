@@ -12,7 +12,7 @@ translations:
 
 # Hero Section
 hero:
-    tag: "PERITO JUDICIAL EN BARCELONA"
+    tag: "Perito Barcelona | Peritajes Técnicos de Construcción y Seguros"
     title: "Perito en Barcelona"
     subtitle: "Experto en Edificación, Construcción y Seguros"
     description: "Informes periciales independientes y profesionales para la resolución de conflictos en construcción y seguros."
