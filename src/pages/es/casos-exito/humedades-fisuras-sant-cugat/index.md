@@ -25,19 +25,7 @@ testimonial:
   author: "Propietarios de la vivienda"
   role: "Sant Cugat del Vallès"
 
-images:
-  - url: '/assets/images/casos/humedad-filtracion-sant-cugat-1.jpg'
-    alt: 'Humedades en muro medianero de la vivienda'
-    caption: 'Manchas de humedad y deterioro en muro medianero'
-  - url: '/assets/images/casos/fisura-medianera-sant-cugat-1.jpg'
-    alt: 'Fisuras en pared medianera'
-    caption: 'Patrón de fisuración indicativo de asentamiento diferencial'
-  - url: '/assets/images/casos/inspeccion-sant-cugat-1.jpg'
-    alt: 'Inspección técnica con instrumentación'
-    caption: 'Proceso de diagnóstico con cámara termográfica'
-  - url: '/assets/images/casos/reparacion-sant-cugat-1.jpg'
-    alt: 'Proceso de reparación estructural'
-    caption: 'Trabajos de reparación e impermeabilización'
+
 ---
 
 ## El Desafío: Filtraciones y Fisuras en Vivienda Adosada
