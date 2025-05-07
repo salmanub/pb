@@ -1,9 +1,9 @@
 ---
 layout: 'layouts/success-case.njk'
-title: 'Informe Pericial de Humedades por Capilaridad y Fisuras en Vivienda de La Pobla de Claramunt'
+title: 'Informe Pericial de Humedades por Capilaridad y Fisuras en Vivienda Calldetenes, Barcelona.'
 description: 'Caso de éxito: Diagnóstico técnico de humedades por capilaridad y fisuras en vivienda unifamiliar. El informe pericial determinó las causas y la solución efectiva.'
 date: 2025-02-20
-permalink: '/casos-exito/humedades-fisuras-la-pobla-claramunt/'
+permalink: '/casos-exito/humedades-fisuras-calldetenes-barcelona/'
 tags: ['Construcción', 'Humedades', 'Estructural']
 
 summary:
@@ -23,14 +23,14 @@ relatedService:
 testimonial:
   quote: "El informe pericial nos dio la tranquilidad que necesitábamos, diferenciando claramente los problemas estructurales de las humedades y proporcionando una solución concreta."
   author: "Propietaria de la vivienda"
-  role: "La Pobla de Claramunt"
+  role: "Calldetenes"
 
 
 ---
 
 ## El Desafío: Preocupación por Humedades y Grietas en Vivienda
 
-La propietaria de una vivienda unifamiliar en La Pobla de Claramunt (Barcelona) nos contactó alarmada por la aparición de graves problemas de humedad por capilaridad y fisuras en tabiques y pavimento exterior. La construcción, datada de 1975, presentaba deterioros que generaban seria preocupación sobre su integridad estructural.
+La propietaria de una vivienda unifamiliar en Calldetenes (Barcelona) nos contactó alarmada por la aparición de graves problemas de humedad por capilaridad y fisuras en tabiques y pavimento exterior. La construcción, datada de 1975, presentaba deterioros que generaban seria preocupación sobre su integridad estructural.
 
 ## Nuestra Intervención: Diagnóstico Técnico Preciso
 
@@ -71,7 +71,7 @@ El informe pericial permitió:
 
 > "El informe pericial nos dio la tranquilidad que necesitábamos, diferenciando claramente los problemas estructurales de las humedades y proporcionando una solución concreta."
 >
-> -- Propietaria de la vivienda, La Pobla de Claramunt
+> -- Propietaria de la vivienda, Calldetenes
 
 ### Impacto del Caso
 

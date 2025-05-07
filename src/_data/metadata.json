@@ -6,16 +6,40 @@
     "themeColor": "#2048e6",
     "faviconDataUriPath": "/images/logos/favicon.txt"
   },
+  "author": {
+    "name": "Albert Vilardell",
+    "email": "info@perito.barcelona",
+    "url": "https://perito.barcelona",
+    "jobTitle": {"es": "Ingeniero Técnico de Obras Públicas",
+                 "ca": "Enginyer Tècnic d'Obres Públiques",
+                 "en": "Civil Engineer"
+                 },
+    "sameAs": {
+      "linkedin": "https://www.linkedin.com/in/albert-vilardell"
+    },
+    "website": "https://perito.barcelona"
+  },
   "contact": {
     "email": "info@perito.barcelona",
     "phoneNumber": "+34 614 194 985",
-    "address": {
-      "street": "Calle Numància, 95, Local 5",
-      "city": "Barcelona",
-      "postalCode": "08029",
+    "addresses": [
+      {
+        "name": "Oficina Barcelona",
+        "street": "Calle Numància, 95, Local 5",
+        "city": "Barcelona",
+        "postalCode": "08029",
+        "region": "Cataluña",
+        "country": "España"
+    },
+    {
+      "name": "Oficina Granollers",
+      "street": "Carrer Navarra, 14",
+      "city": "Granollers",
+      "postalCode": "08401",
       "region": "Cataluña",
       "country": "España"
-    },
+    }
+    ],
     "socialMedia": {
       "linkedin": "https://linkedin.com/company/peritobarcelona",
       "twitter": "https://twitter.com/peritobarcelona",
