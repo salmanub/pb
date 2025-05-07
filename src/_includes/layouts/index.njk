@@ -2,12 +2,19 @@
 
 {% block content %}
     <main itemscope itemtype="https://schema.org/Article">
+        {# Hero Section - fuera del articleBody #}
         {% include "partials/heroWithImage.njk" %}
-        {% include "partials/problem-solution-v2.njk" %}
-        {% include "partials/solucion-tecnica.njk" %}
-        {% include "partials/servicios-home.njk" %}
-        {% include "partials/testimonios-home.njk" %}
-        {% include "partials/proceso-home.njk" %}
+        
+        {# Article Body Content #}
+        <article class="article-body" itemprop="articleBody">
+            {% include "partials/problem-solution-v2.njk" %}
+            {% include "partials/solucion-tecnica.njk" %}
+            {% include "partials/servicios-home.njk" %}
+            {% include "partials/testimonios-home.njk" %}
+            {% include "partials/proceso-home.njk" %}
+        </article>
+        
+        {# CTA Section - fuera del articleBody #}
         {% include "partials/cta-contacto.njk" %}
     </main>
 {% endblock content %}
