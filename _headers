@@ -1,0 +1,75 @@
+# Global headers for all paths
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer-when-downgrade
+  Permissions-Policy: interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+  Content-Security-Policy: cross-origin
+
+# Chatbot Worker
+/worker.js
+  Content-Type: application/javascript; charset=utf-8
+  Cache-Control: public, max-age=3600, must-revalidate
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Resource-Policy: same-site
+  Service-Worker-Allowed: /
+  Access-Control-Allow-Origin: same-origin
+
+# Form endpoint
+/form/*
+  Access-Control-Allow-Origin: https://hook.eu2.make.com
+  Access-Control-Allow-Methods: POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type, Accept
+  Cross-Origin-Resource-Policy: cross-origin
+
+# Service Worker
+/sw.js
+  Content-Type: application/javascript; charset=utf-8
+  Cache-Control: public, max-age=0, must-revalidate
+  Service-Worker-Allowed: /
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Resource-Policy: same-site
+  Access-Control-Allow-Origin: same-origin
+
+# Chatbot API endpoints
+/api/chat/*
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-store
+  Access-Control-Allow-Origin: same-origin
+  Access-Control-Allow-Methods: POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type
+  Cross-Origin-Resource-Policy: same-site
+
+# Chatbot static assets
+/assets/js/chatbot/*
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/javascript; charset=utf-8
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Resource-Policy: same-site
+
+# HTML files
+/*.html
+  Content-Type: text/html; charset=utf-8
+  Cache-Control: public, max-age=3600, must-revalidate
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
+# Other static assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  Cross-Origin-Resource-Policy: same-site
+
+# Analytics (if needed)
+/gtm.js
+  Cache-Control: public, max-age=86400
+  Priority: High
+  
+/clarity.js
+  Cache-Control: public, max-age=86400
+  Priority: Low
