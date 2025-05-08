@@ -12,13 +12,13 @@ translations:
 
 # Hero Section
 hero:
-    tag: "Perito en Barcelona especializado en construcción, seguros e informes judiciales"
+    tag: "Perito Judicial en Barcelona. Especializado en construcción, seguros e informes judiciales"
     title: "Perito en Barcelona"
     subtitle: "Experto en Edificación, Construcción y Seguros"
     description: "Informes periciales independientes y profesionales para la resolución de conflictos en construcción y seguros."
     cta:
         primary: "Solicitar Presupuesto"
-        primaryUrl: "/presupuesto/"
+        primaryUrl: "/contacto/"
         secondary: "Ver Servicios"
         secondaryUrl: "#servicios"
     badges:
