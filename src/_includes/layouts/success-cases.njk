@@ -2,8 +2,8 @@
 
 {% block content %}
 <main itemscope itemtype="https://schema.org/CollectionPage">
-    {# Hero Section #}
-    <header class="relative mt-[70px] lg:mt-[120px] bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white overflow-hidden">
+    {# Hero Section con microdata integrada #}
+    <header class="relative mt-[70px] lg:mt-[120px] bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white overflow-hidden" itemprop="mainContentOfPage">
         <div class="relative z-10 w-full py-8 lg:py-12">
             <div class="w-full px-4 sm:px-8 md:px-12 lg:px-0 md:w-[95%] max-w-[1400px] mx-auto">
                 {# Breadcrumbs #}
@@ -33,8 +33,8 @@
         <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
     </header>
 
-    {# Filtros y Grid de Casos #}
-    <section class="py-16 px-4 md:px-[5%] bg-gradient-to-br from-slate-50 via-white to-slate-100">
+    {# Filtros y Grid de Casos con microdata #}
+    <section class="py-16 px-4 md:px-[5%] bg-gradient-to-br from-slate-50 via-white to-slate-100" itemprop="hasPart" itemscope itemtype="https://schema.org/ItemList">
         <div class="max-w-[1400px] mx-auto">
             {# Filtros #}
             <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-12">
@@ -60,23 +60,34 @@
             {# Grid de Casos #}
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="grid-casos-exito">
                 {% for caso in casos.casos %}
-                <div class="caso-snippet bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col" data-category="{{ caso.categories | join(' ') }}">
-                    <img src="{{ caso.image }}" alt="{{ caso.imageAlt }}" class="w-full h-48 object-cover">
+                <div class="caso-snippet bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col" 
+                     data-category="{{ caso.categories | join(' ') }}"
+                     itemprop="itemListElement" 
+                     itemscope 
+                     itemtype="https://schema.org/Article">
+                    <meta itemprop="position" content="{{ loop.index }}">
+                    <img src="{{ caso.image }}" 
+                         alt="{{ caso.imageAlt }}" 
+                         class="w-full h-48 object-cover"
+                         itemprop="image">
                     <div class="p-6 flex flex-col flex-grow">
                         <div class="mb-4 flex flex-wrap gap-2">
                             {% for tag in caso.tags %}
                             <span class="tag-categoria text-xs font-semibold px-3 py-1 rounded-full
                                        {% if tag == 'Construcción' %}bg-cyan-100 text-cyan-700
                                        {% elif tag == 'Seguros' %}bg-green-100 text-green-700
-                                       {% else %}bg-slate-100 text-slate-700{% endif %}">
+                                       {% else %}bg-slate-100 text-slate-700{% endif %}"
+                                  itemprop="keywords">
                                 {{ tag }}
                             </span>
                             {% endfor %}
                         </div>
-                        <h2 class="text-xl font-bold text-slate-800 mb-3">{{ caso.title }}</h2>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">{{ caso.excerpt }}</p>
-                        <a href="{{ caso.url }}" class="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold group">
-                            Leer Caso Completo
+                        <h2 class="text-xl font-bold text-slate-800 mb-3" itemprop="headline">{{ caso.title }}</h2>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow" itemprop="description">{{ caso.excerpt }}</p>
+                        <a href="{{ caso.url }}" 
+                           class="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold group"
+                           itemprop="url">
+                            Ver detalles del caso {{ caso.title | lower }}
                             <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                             </svg>
@@ -88,8 +99,8 @@
         </div>
     </section>
 
-    {# CTA Final #}
-    <section class="py-24 bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white relative overflow-hidden">
+    {# CTA Final con microdata #}
+    <section class="py-24 bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white relative overflow-hidden" itemprop="hasPart" itemscope itemtype="https://schema.org/ContactPoint">
         <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div class="relative z-10 max-w-[1400px] mx-auto px-4 md:px-[5%] text-center">
             <h2 class="text-[2.5rem] font-light mb-6">¿Tiene un caso similar?</h2>
