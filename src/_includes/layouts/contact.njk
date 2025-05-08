@@ -12,23 +12,22 @@
                     <div class="space-y-6">
                         <span class="flex justify-center md:justify-start items-center text-sm md:text-base font-semibold tracking-[2px] uppercase text-cyan-400">
                             <span class="hidden md:block w-8 h-0.5 bg-cyan-400 mr-3"></span>
-                            CONTACTO
+                            {{eleventyNavigation.title}}
                         </span>
                         
                         <h1 class="text-[2.5rem] md:text-[3.5rem] font-light leading-[1.1] text-center md:text-left" itemprop="headline">
-                            HABLEMOS DE 
-                            <strong class="block text-cyan-400 mt-4">TU PROYECTO</strong>
+                            {{ contact.title | safe}}
                         </h1>
                         
                         <p class="text-lg md:text-xl text-cyan-50 font-light max-w-3xl mx-auto md:mx-0 text-center md:text-left" itemprop="description">
-                            Si necesitas un informe pericial para un problema de construcción o una disputa con tu seguro, estamos aquí para ayudarte.
+                        {{ contact.intro }}
                         </p>
                     </div>
                     
                     {# Contacto rápido en hero - Columna derecha, visible siempre #}
                     <div class="space-y-6" itemscope itemtype="https://schema.org/ContactPoint">
                         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                            <h3 class="text-xl font-medium text-white mb-4 text-center md:text-left">Contacto Directo</h3>
+                            <h3 class="text-xl font-medium text-white mb-4 text-center md:text-left">{{contact.direct_contact.title }}</h3>
                             <div class="space-y-4">
                                 <a href="tel:{{metadata.contact.phoneNumber}}" class="flex items-center gap-3 p-3 bg-white/5 hover:bg-white/10 rounded-xl transition-colors group" itemprop="telephone">
                                     <svg class="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -46,7 +45,7 @@
                                     </svg>
                                     <div>
                                         <div class="text-white font-medium">{{metadata.contact.email}}</div>
-                                        <p class="text-xs text-white/70">Respuesta en < 24h</p>
+                                        <p class="text-xs text-white/70">{{contact.direct_contact.email_response }}</p>
                                     </div>
                                 </a>
                             </div>

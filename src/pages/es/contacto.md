@@ -18,11 +18,12 @@ eleventyNavigation:
 
 # Contact Page Content
 contact:
-    title: "Hablemos de tu caso"
+    title: "HABLEMOS DE<strong class='block text-cyan-400 mt-4'>TU PROYECTO</strong>"
     intro: "Si tienes un problema relacionado con defectos de construcción o una disputa con tu seguro, estamos aquí para ayudarte. Cuéntanos tu caso y te ofreceremos una primera valoración sin compromiso en menos de 24 horas."
     
     # Información de contacto directo
     direct_contact:
+        title: "Contacto Directo"
         phone: "+34 93 XXX XX XX"
         phone_hours: "Lunes a Viernes: 9:00 - 19:00"
         email: "info@perito.barcelona"
