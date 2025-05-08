@@ -5,6 +5,11 @@ subtitle: 'Diagnóstico especializado del origen y soluciones técnicas para pro
 description: 'Perito especialista en humedades y filtraciones. Análisis de causas de manchas, goteras, condensaciones y deterioros por agua en edificios. Soluciones efectivas en Barcelona.'
 permalink: '/construccion/humedades-filtraciones/'
 lang: 'es'
+eleventyNavigation:
+  key: "humedades y filtraciones"
+  title: "humedades y filtraciones"
+  notshow: true
+  order: 2
 serviceTitle: 'humedades y filtraciones'
 
 # Parent Service (for breadcrumb and linking back to pillar)

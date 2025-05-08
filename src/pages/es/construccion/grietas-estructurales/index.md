@@ -5,6 +5,11 @@ subtitle: 'Diagnóstico experto de fisuras, deformaciones y evaluación de la se
 description: 'Perito especializado en análisis de grietas estructurales. Evaluación de patologías, refuerzos y soluciones técnicas para edificios con problemas de estabilidad en Barcelona.'
 permalink: '/construccion/grietas-estructurales/'
 lang: 'es'
+eleventyNavigation:
+  key: "grietas y problemas estructurales"
+  title: "grietas y problemas estructurales"
+  notshow: true
+  order: 2
 serviceTitle: 'grietas y problemas estructurales'
 
 # Parent Service (for breadcrumb and linking back to pillar)

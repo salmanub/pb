@@ -5,6 +5,12 @@ description: 'Caso de éxito: Diagnóstico técnico de humedades por filtracione
 date: 2025-01-15
 permalink: '/casos-exito/humedades-fisuras-sant-cugat/'
 tags: ['Construcción', 'Humedades', 'Estructural']
+lang: es
+eleventyNavigation:
+  key: "Informe Pericial por Humedades y Fisuras en Vivienda Adosada de Sant Cugat del Vallès"
+  title: "Informe Pericial por Humedades y Fisuras en Vivienda Adosada de Sant Cugat del Vallès"
+  notshow: true
+  order: 2
 
 summary:
   - label: 'Cliente'

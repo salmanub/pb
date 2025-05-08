@@ -5,6 +5,12 @@ subtitle: 'Soluciones técnicas para problemas de ruido, temperatura y eficienci
 description: 'Perito especializado en problemas de aislamiento acústico y térmico. Analizamos deficiencias, ruidos molestos y pérdidas de energía. Soluciones efectivas en Barcelona.'
 permalink: '/construccion/aislamiento/'
 lang: 'es'
+eleventyNavigation:
+  key: "aislamiento térmico y acústico"
+  title: "aislamiento térmico y acústico"
+  notshow: true
+  order: 2
+
 serviceTitle: 'aislamiento térmico y acústico'
 
 # Parent Service (for breadcrumb and linking back to pillar)

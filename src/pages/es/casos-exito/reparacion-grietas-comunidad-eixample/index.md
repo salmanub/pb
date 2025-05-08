@@ -5,6 +5,12 @@ description: 'Caso de éxito: Nuestro informe pericial técnico fundamentó la r
 date: 2024-02-15
 permalink: '/casos-exito/reparacion-grietas-comunidad-eixample/'
 tags: ['Construcción', 'Estructural', 'Comunidades']
+lang: es
+eleventyNavigation:
+  key: "Informe Pericial de Grietas Estructurales Logra Reparación Integral en Edificio Comunitario de Eixample, Barcelona"
+  title: "Informe Pericial de Grietas Estructurales Logra Reparación Integral en Edificio Comunitario de Eixample, Barcelona"
+  notshow: true
+  order: 2
 
 summary:
   - label: 'Cliente'

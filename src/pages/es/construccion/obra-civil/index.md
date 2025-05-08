@@ -6,6 +6,11 @@ description: 'Perito especializado en patologías de obra civil. Análisis de in
 image: /assets/images/patologia-estructural-puente-barcelona-768.avif
 permalink: '/construccion/obra-civil/'
 lang: 'es'
+eleventyNavigation:
+  key: "patologías en obra civil"
+  title: "patologías en obra civil"
+  notshow: true
+  order: 2
 serviceTitle: 'patologías en obra civil'
 
 # Parent Service (for breadcrumb and linking back to pillar)

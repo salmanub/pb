@@ -5,6 +5,11 @@ subtitle: 'Análisis técnico de fisuras, hundimientos y fallos en pavimentos de
 description: 'Perito especializado en patologías de pavimentos industriales y exteriores. Dictaminamos causas de fisuras, baches, levantamientos y defectos en superficies de hormigón o asfalto.'
 permalink: '/construccion/informe-pericial-pavimentos/'
 lang: 'es'
+eleventyNavigation:
+  key: "pavimentos industriales y exteriores"
+  title: "pavimentos industriales y exteriores"
+  notshow: true
+  order: 2
 serviceTitle: 'pavimentos industriales y exteriores'
 
 # Parent Service (for breadcrumb and linking back to pillar)

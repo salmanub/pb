@@ -9,7 +9,11 @@ translations:
     permalink: /ca/assegurances/
   - lang: es
     permalink: /seguros/
-
+eleventyNavigation:
+  key: "Insurance"
+  title: "Insurance"
+  notshow: false
+  order: 1
 # Hero Section
 hero:
   title: "Peritajes de Seguros"

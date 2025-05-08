@@ -5,6 +5,11 @@ subtitle: 'Dictamen técnico especializado para fundamentar reclamaciones por de
 description: 'Perito especializado en vicios ocultos y defectos constructivos. Análisis técnico e informes periciales para reclamaciones a vendedores, promotoras o constructoras en Barcelona.'
 permalink: '/construccion/vicios-ocultos/'
 lang: 'es'
+eleventyNavigation:
+  key: "vicios ocultos y defectos constructivos"
+  title: "vicios ocultos y defectos constructivos"
+  notshow: true
+  order: 2
 serviceTitle: 'vicios ocultos y defectos constructivos'
 
 # Parent Service (for breadcrumb and linking back to pillar)

@@ -5,6 +5,11 @@ subtitle: 'Diagnóstico especializado de patologías, carbonatación y corrosió
 description: 'Perito experto en diagnóstico de hormigón armado deteriorado. Análisis de corrosión, carbonatación y soluciones técnicas para garantizar la durabilidad estructural.'
 permalink: '/construccion/reparacion-hormigon-armado/'
 lang: 'es'
+eleventyNavigation:
+  key: "reparación de hormigón armado"
+  title: "reparación de hormigón armado"
+  notshow: true
+  order: 2
 serviceTitle: 'reparación de hormigón armado'
 
 # Parent Service (for breadcrumb and linking back to pillar)

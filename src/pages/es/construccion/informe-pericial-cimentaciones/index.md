@@ -5,6 +5,11 @@ subtitle: 'Diagnóstico experto de problemas en cimentaciones, asientos y estabi
 description: 'Perito especializado en problemas de cimentación. Análisis de asentamientos diferenciales, fallos en muros de contención y soluciones técnicas en Barcelona.'
 permalink: '/construccion/informe-pericial-cimentaciones/'
 lang: 'es'
+eleventyNavigation:
+  key: "cimentaciones y asentamientos"
+  title: "cimentaciones y asentamientos"
+  notshow: true
+  order: 2
 serviceTitle: 'cimentaciones y asentamientos'
 
 # Parent Service (for breadcrumb and linking back to pillar)

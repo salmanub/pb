@@ -5,6 +5,11 @@ subtitle: 'Actas técnicas para documentar el estado de inmuebles industriales e
 description: 'Peritaje técnico especializado en documentación del estado de naves industriales y locales en alquiler. Análisis exhaustivo de defectos previos, verificación de instalaciones y redacción de informes con validez legal para prevenir conflictos sobre la fianza.'
 permalink: '/construccion/informe-recepcion-alquiler-industrial/'
 lang: 'es'
+eleventyNavigation:
+  key: "Informe de Estado para Alquiler de Naves Industriales y Locales Comerciales"
+  title: "Informe de Estado para Alquiler de Naves Industriales y Locales Comerciales"
+  notshow: true
+  order: 2
 serviceTitle: 'Informe de entrega y recepción en alquiler industrial'
 
 # Parent Service (for breadcrumb and linking back to pillar)

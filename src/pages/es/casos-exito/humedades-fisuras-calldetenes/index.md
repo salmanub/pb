@@ -5,6 +5,12 @@ description: 'Caso de éxito: Diagnóstico técnico de humedades por capilaridad
 date: 2025-02-20
 permalink: '/casos-exito/humedades-fisuras-calldetenes-barcelona/'
 tags: ['Construcción', 'Humedades', 'Estructural']
+lang: es
+eleventyNavigation:
+  key: "Informe Pericial de Humedades por Capilaridad y Fisuras en Vivienda Calldetenes, Barcelona."
+  title: "Informe Pericial de Humedades por Capilaridad y Fisuras en Vivienda Calldetenes, Barcelona."
+  notshow: true
+  order: 2
 
 summary:
   - label: 'Cliente'

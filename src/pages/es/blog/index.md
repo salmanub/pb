@@ -2,18 +2,17 @@
 layout: 'layouts/success-cases.njk'
 title: 'Casos de Éxito en Peritajes de Construcción y Seguros'
 description: 'Descubra ejemplos reales de cómo nuestros informes periciales han resuelto conflictos y fundamentado reclamaciones en Barcelona.'
-permalink: '/casos-exito/'
+permalink: '/blog/'
 lang: es
 translations:
   - lang: ca
-    permalink: /ca/casos-exit/
+    permalink: /ca/blog/
   - lang: en
-    permalink: /en/cases/
-
+    permalink: /en/blog/
 eleventyNavigation:
-  key: "Casos de éxito"
-  title: "Casos de éxito"
+  key: "Blog"
+  title: "Blog"
   notshow: false
   order: 1
-  icon: <path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>
+  icon: <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
 ---
