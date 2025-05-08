@@ -1,21 +1,21 @@
 {
-  "casos": [
+  "destacados": [
     {
-      "title": "Informe Pericial Clave para Reparación de Grietas en Comunidad",
-      "excerpt": "La comunidad enfrentaba graves problemas de fisuración. Nuestro informe identificó la causa y fundamentó la reclamación que obligó a la reparación.",
-      "image": "/assets/images/casos/grietas-edificio-1.jpg",
-      "imageAlt": "Resolución de grietas estructurales en edificio Barcelona",
-      "categories": ["construccion", "estructurales"],
+      "title": "Informe Pericial Logra 120.000€ en Reparaciones",
+      "image": "/assets/images/casos/grietas-fachada-1.jpg",
+      "imageAlt": "Grietas en fachada del edificio",
       "tags": ["Construcción", "Estructural"],
+      "excerpt": "Nuestro informe técnico fundamentó la reclamación por daños estructurales.",
+      "result": "Reparación integral valorada en 120.000€",
       "url": "/casos-exito/reparacion-grietas-comunidad-eixample/"
     },
     {
-      "title": "Aumento de Indemnización en Siniestro de Hogar Gracias a Contraperitaje",
-      "excerpt": "La aseguradora ofrecía una compensación mínima. Nuestro contraperitaje demostró el valor real de los daños, logrando una indemnización justa.",
-      "image": "/assets/images/casos/seguro-hogar-1.jpg",
-      "imageAlt": "Contraperitaje seguro hogar aumenta indemnización",
-      "categories": ["seguros", "contraperitajes"],
+      "title": "Contraperitaje Aumenta 45% la Indemnización",
+      "image": "/assets/images/casos/danos-agua-1.jpg",
+      "imageAlt": "Daños por agua en vivienda",
       "tags": ["Seguros", "Contraperitaje"],
+      "excerpt": "La aseguradora aumentó la indemnización tras nuestro informe pericial.",
+      "result": "Incremento del 45% en la indemnización",
       "url": "/casos-exito/aumento-indemnizacion-seguro-hogar/"
     }
   ]

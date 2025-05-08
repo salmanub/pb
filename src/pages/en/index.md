@@ -7,8 +7,8 @@ lang: en
 translations:
   - lang: es
     permalink: /
-  - lang: en
-    permalink: /en/
+  - lang: ca
+    permalink: /ca/
 
 # Hero Section
 hero:

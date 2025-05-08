@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import markdownIt from 'markdown-it';
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+
 
 import cssnano from 'cssnano';
 import postcss from 'postcss';
@@ -14,7 +16,7 @@ const __dirname = path.dirname(__filename);
 
 export default function (eleventyConfig) {
   
-
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/scripts");
   eleventyConfig.addPassthroughCopy("src/assets/fonts");

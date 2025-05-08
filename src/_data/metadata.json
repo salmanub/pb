@@ -1,99 +1,31 @@
 {
   "site": {
-    "title": "Perito Barcelona - Informes Periciales de Construcción y Seguros",
-    "description": "Expertos en peritaciones técnicas, judiciales y de seguros en Barcelona. Ofrecemos soluciones profesionales y rigurosas para particulares y empresas.",
+    "title": "Perito Barcelona",
+    "description": "Informes periciales técnicos y de seguros en Barcelona",
     "url": "https://perito.barcelona",
     "themeColor": "#2048e6",
     "faviconDataUriPath": "/images/logos/favicon.txt"
   },
+  "default_lang": "es",
+  "languages": ["es", "en", "ca"],
   "author": {
-    "name": "Albert Vilardell",
-    "email": "info@perito.barcelona",
-    "url": "https://perito.barcelona",
-    "jobTitle": {"es": "Ingeniero Técnico de Obras Públicas",
-                 "ca": "Enginyer Tècnic d'Obres Públiques",
-                 "en": "Civil Engineer"
-                 },
-    "sameAs": {
-      "linkedin": "https://www.linkedin.com/in/albert-vilardell"
-    },
-    "website": "https://perito.barcelona"
+    "name": "Perito Barcelona",
+    "email": "info@perito.barcelona"
   },
   "contact": {
     "email": "info@perito.barcelona",
-    "phoneNumber": "+34 614 194 985",
-    "addresses": [
-      {
-        "name": "Oficina Barcelona",
-        "street": "Calle Numància, 95, Local 5",
-        "city": "Barcelona",
-        "postalCode": "08029",
-        "region": "Cataluña",
-        "country": "España"
-    },
-    {
-      "name": "Oficina Granollers",
-      "street": "Carrer Navarra, 14",
-      "city": "Granollers",
-      "postalCode": "08401",
-      "region": "Cataluña",
+    "phoneNumber": "+34932123456",
+    "address": {
+      "street": "C/ Numancia 95",
+      "city": "Barcelona",
+      "postalCode": "08029",
       "country": "España"
-    }
-    ],
-    "socialMedia": {
-      "linkedin": "https://linkedin.com/company/peritobarcelona",
-      "twitter": "https://twitter.com/peritobarcelona",
-      "facebook": "https://facebook.com/peritobarcelona",
-      "instagram": "https://instagram.com/peritobarcelona"
+    },
+    "social": {
+      "linkedin": "https://www.linkedin.com/company/perito-barcelona",
+      "twitter": "https://twitter.com/peritobarcelona"
     }
   },
-  "defaultLanguage": "es",
-  "availableLanguages": [
-    {
-      "code": "es",
-      "name": "Español"
-    },
-    {
-      "code": "ca",
-      "name": "Català"
-    },
-    {
-      "code": "en",
-      "name": "English"
-    }
-  ],
-  "mainMenu": [
-    {
-      "name": "Inicio",
-      "path": "/",
-      "icon": "Home",
-      "hasDropdown": false
-    },
-    {
-      "name": "Servicios",
-      "path": "/servicios",
-      "icon": "Services",
-      "hasDropdown": true
-    },
-    {
-      "name": "Sobre Nosotros",
-      "path": "/sobre-nosotros",
-      "icon": "Team",
-      "hasDropdown": false
-    },
-    {
-      "name": "Blog",
-      "path": "/blog",
-      "icon": "Blog",
-      "hasDropdown": false
-    },
-    {
-      "name": "Contacto",
-      "path": "/contacto",
-      "icon": "Contact",
-      "hasDropdown": false
-    }
-  ],
   "services": [
     {
       "name": "Peritaje de Seguros",
@@ -147,6 +79,38 @@
     "hero": {
       "title": "Informes Periciales que Ganan Casos",
       "subtitle": "Especialistas en construcción y seguros"
+    }
+  },
+  "headerCTA": {
+    "es": {
+      "btn1": {
+        "title": "LLAMAR AHORA",
+        "link": "tel:+34932123456"
+      },
+      "btn2": {
+        "title": "SOLICITAR PRESUPUESTO",
+        "link": "/contacto/"
+      }
+    },
+    "en": {
+      "btn1": {
+        "title": "CALL NOW",
+        "link": "tel:+34932123456"
+      },
+      "btn2": {
+        "title": "REQUEST QUOTE",
+        "link": "/en/contact/"
+      }
+    },
+    "ca": {
+      "btn1": {
+        "title": "TRUCAR ARA",
+        "link": "tel:+34932123456"
+      },
+      "btn2": {
+        "title": "SOL·LICITAR PRESSUPOST",
+        "link": "/ca/contacte/"
+      }
     }
   }
 }

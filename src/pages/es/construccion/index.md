@@ -3,6 +3,7 @@ layout: 'layouts/service-pillar.njk'
 title: 'Informes Periciales de Construcción en Barcelona | Ingeniero Experto en Patologías y Defectos'
 description: 'Perito especializado en construcción. Análisis de patologías, defectos constructivos y vicios ocultos. Informes técnicos detallados en Barcelona.'
 permalink: /construccion/
+notshow: false
 lang: es
 translations:
   - lang: ca

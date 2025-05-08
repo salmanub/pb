@@ -1,12 +1,53 @@
+{% set currentLanguage = page.lang or lang %} 
+{% set defaultLanguage = metadata.default_lang %}
+{% set navPages = collections.langCollections[currentLanguage] | eleventyNavigation %}
+
+{% macro renderNavListItem(entry) %}
+    {% if not entry.notshow %}
+
+        <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ entry.url }}"
+            class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 font-medium transition-colors"
+            itemprop="url"
+            {% if entry.url == page.url %} aria-current="page" {% endif %}>
+                {% if entry.icon %}
+                    <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="{{ entry.icon.path }}"/>
+                    </svg>
+                {% endif %}
+
+                <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                    <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                </svg>
+                <span itemprop="name">{{ entry.title }}</span>
+            </a>
+        </li>
+    {% endif %}
+{% endmacro %}
+
 <header id="mainHeader" class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm shadow-sm z-60 transition-all duration-300" itemscope itemtype="https://schema.org/SiteNavigationElement">
     <div class="max-w-[1600px] mx-auto px-[5%]">
         <!-- Top Bar - Solo Desktop -->
         <div class="hidden lg:flex justify-end items-center h-10 border-b border-slate-100">
             <!-- Language Selector -->
             <div class="flex items-center gap-1.5 px-4 border-l border-slate-100">
-                <a href="/" class="py-1 px-2.5 text-xs font-medium tracking-wider uppercase rounded-md bg-gradient-to-br from-cyan-400 to-cyan-500 text-white hover:shadow-md hover:shadow-cyan-200 transition-all" itemprop="url">ES</a>
-                <a href="/en" class="py-1 px-2.5 text-xs font-medium tracking-wider uppercase rounded-md text-slate-500 hover:bg-slate-50 hover:text-cyan-500 transition-all" itemprop="url">EN</a>
-                <a href="/ca" class="py-1 px-2.5 text-xs font-medium tracking-wider uppercase rounded-md text-slate-500 hover:bg-slate-50 hover:text-cyan-500 transition-all" itemprop="url">CA</a>
+                {% for language in metadata.languages %}
+                    {% set translatedUrl = '/' %}
+                    {% if translations and translations.length %}
+                        {% for translation in translations %}
+                            {% if translation.lang == language %}
+                                {% set translatedUrl = translation.permalink %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    
+                    <a href="{% if language == currentLanguage %}{{permalink}}{% else %}{{ translatedUrl }}{% endif %}" 
+                       class="py-1 px-2.5 text-xs font-medium tracking-wider uppercase rounded-md {% if language == currentLanguage %}bg-gradient-to-br from-cyan-400 to-cyan-500 text-white hover:shadow-md hover:shadow-cyan-200{% else %}text-slate-500 hover:bg-slate-50 hover:text-cyan-500{% endif %} transition-all"
+                       {% if language == currentLanguage %}aria-current="true"{% endif %}>
+                        {{ language | upper }}
+                    </a>
+                {% endfor %}
             </div>
 
             <!-- CTAs -->
@@ -142,6 +183,24 @@
             <!-- Desktop Navigation -->
             <nav class="hidden lg:block" itemprop="hasPart" itemscope itemtype="https://schema.org/SiteNavigationElement">
                 <ul class="flex items-center gap-6">
+                    <ul class="language-list">
+                        {% for language in metadata.languages %}
+                            {% set translatedUrl = '' %}
+                            {% for translation in translations %}
+                                {% if translation.lang == language %}
+                                    {% set translatedUrl = translation.permalink %}
+                                {% endif %}
+                            {% endfor %}
+                            
+                            <li>
+                                <a href="{{ translatedUrl }}" 
+                                   class="lang-link {% if language == currentLanguage %}active{% endif %}"
+                                   {% if language == currentLanguage %}aria-current="true"{% endif %}>
+                                    {{ language | upper }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
                     <li>
                         <a href="/" class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 font-medium transition-colors" itemprop="url">
                             <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
