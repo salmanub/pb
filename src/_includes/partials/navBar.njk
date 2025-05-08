@@ -183,24 +183,7 @@
             <!-- Desktop Navigation -->
             <nav class="hidden lg:block" itemprop="hasPart" itemscope itemtype="https://schema.org/SiteNavigationElement">
                 <ul class="flex items-center gap-6">
-                    <ul class="language-list">
-                        {% for language in metadata.languages %}
-                            {% set translatedUrl = '' %}
-                            {% for translation in translations %}
-                                {% if translation.lang == language %}
-                                    {% set translatedUrl = translation.permalink %}
-                                {% endif %}
-                            {% endfor %}
-                            
-                            <li>
-                                <a href="{{ translatedUrl }}" 
-                                   class="lang-link {% if language == currentLanguage %}active{% endif %}"
-                                   {% if language == currentLanguage %}aria-current="true"{% endif %}>
-                                    {{ language | upper }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
+                    
                     <li>
                         <a href="/" class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 font-medium transition-colors" itemprop="url">
                             <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
