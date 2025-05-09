@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Perito en Barcelona | Experto en Edificación, Construcción y Seguros'
+title: 'Perito en Barcelona | Construcción, Seguros y Judicial'
 description: "Perito técnico en Barcelona, especializado en construcción, seguros e informes judiciales. Servicio en Cataluña y resto de España."
 permalink: /
 lang: es
