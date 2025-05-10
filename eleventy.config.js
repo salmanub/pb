@@ -165,7 +165,6 @@ export default function (eleventyConfig) {
         removeRedundantAttributes: true,
         useShortDoctype: true,
         removeEmptyAttributes: true,
-        minifyCSS: true,
         minifyJS: true,
       });
     }
