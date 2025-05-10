@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import markdownIt from 'markdown-it';
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
-
+import htmlminifier from 'html-minifier-terser';
 
 import cssnano from 'cssnano';
 import postcss from 'postcss';
@@ -156,7 +156,21 @@ export default function (eleventyConfig) {
       }]
     }),
   ]);
-
+  // Minify HTML output
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      return htmlminifier.minify(content, {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        minifyCSS: true,
+        minifyJS: true,
+      });
+    }
+    return content;
+  });
   return {
     dir: { 
       input: 'src', 
