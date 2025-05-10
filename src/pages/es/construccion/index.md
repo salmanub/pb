@@ -44,6 +44,7 @@ sections:
 
 # Service Cluster - Mantenemos esta sección para la vista previa básica, pero el detalle estará en el HUB
 serviceCluster:
+  title: "Nuestroa servicios"
   intro: "Soluciones técnicas especializadas para cada patología constructiva:"
   services:
     - title: "Grietas y Problemas Estructurales"
