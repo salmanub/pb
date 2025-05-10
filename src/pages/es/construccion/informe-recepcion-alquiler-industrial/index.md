@@ -1,8 +1,8 @@
 ---
 layout: 'layouts/service-child.njk'
-title: 'Informe de Estado para Alquiler de Naves Industriales y Locales Comerciales en Barcelona | Acta Técnica'
-subtitle: 'Actas técnicas para documentar el estado de inmuebles industriales en procesos de alquiler'
-description: 'Peritaje técnico especializado en documentación del estado de naves industriales y locales en alquiler. Análisis exhaustivo de defectos previos, verificación de instalaciones y redacción de informes con validez legal para prevenir conflictos sobre la fianza.'
+title: 'Informe de Estado para Recepción y Entrega de Alquileres Industriales en Barcelona | Acta Técnica'
+subtitle: 'Documentación profesional del estado de naves industriales y locales comerciales para alquiler'
+description: 'Perito especializado en informes y actas de estado para alquiler de naves y locales en Barcelona. Documentación exhaustiva de defectos preexistentes, revisión de instalaciones y valoración técnica independiente para evitar conflictos con la fianza.'
 permalink: '/construccion/informe-recepcion-alquiler-industrial/'
 lang: 'es'
 eleventyNavigation:
@@ -10,7 +10,7 @@ eleventyNavigation:
   title: "Informe de Estado para Alquiler de Naves Industriales y Locales Comerciales"
   notshow: true
   order: 2
-serviceTitle: 'Informe de entrega y recepción en alquiler industrial'
+serviceTitle: 'recepción y entrega de alquileres industriales'
 
 # Parent Service (for breadcrumb and linking back to pillar)
 parentService:
@@ -19,30 +19,30 @@ parentService:
 
 # Key features in the hero section
 keyFeatures:
-  - 'Informe técnico independiente con validez probatoria'
+  - 'Documentación exhaustiva del estado inicial de naves industriales y locales'
   - 'Identificación y registro detallado de defectos preexistentes'
-  - 'Revisión funcional y normativa de instalaciones industriales'
-  - 'Base documental para entrega o devolución del inmueble sin conflictos'
+  - 'Valoración técnica independiente de instalaciones y elementos constructivos'
+  - 'Verificación del cumplimiento de normativa en el momento de la entrega'
 
 # Service Process (for sidebar)
 serviceProcess:
-  - title: 'Inspección presencial'
-    description: 'Evaluación técnica in situ de cada espacio y sistema del inmueble'
-  - title: 'Análisis constructivo'
-    description: 'Valoración del estado de elementos estructurales y acabados'
-  - title: 'Revisión de instalaciones'
-    description: 'Comprobación operativa de electricidad, fontanería, climatización y otros sistemas críticos'
-  - title: 'Redacción del informe'
-    description: 'Elaboración de un documento técnico completo con fotografías, esquemas y observaciones'
+  - title: 'Inspección técnica'
+    description: 'Visita y evaluación detallada del inmueble industrial'
+  - title: 'Documentación fotográfica'
+    description: 'Registro sistemático del estado de todos los elementos'
+  - title: 'Verificación instalaciones'
+    description: 'Comprobación del funcionamiento de sistemas e instalaciones'
+  - title: 'Informe técnico'
+    description: 'Documento completo con registro de estado y deficiencias'
 
 # Service Benefits (for sidebar)
 serviceBenefits:
-  - 'Evita reclamaciones sobre desperfectos anteriores al arrendamiento'
-  - 'Justificación profesional para exigir reparaciones o retenciones de fianza'
-  - 'Documento objetivo para la resolución de posibles litigios'
-  - 'Tranquilidad jurídica y técnica para ambas partes'
-  - 'Verificación del cumplimiento de condiciones pactadas en contrato'
-  
+  - 'Prevención de conflictos futuros entre arrendador y arrendatario'
+  - 'Documentación objetiva del estado real previo al inicio del contrato'
+  - 'Base técnica para determinar responsabilidades al finalizar el arrendamiento'
+  - 'Registro de defectos preexistentes para evitar reclamaciones improcedentes'
+  - 'Verificación del estado de instalaciones críticas para la actividad industrial'
+
 # Related Problems (optional)
 relatedProblems:
   - title: 'Defectos en Pavimentos Industriales'
