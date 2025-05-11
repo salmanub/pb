@@ -20,14 +20,16 @@
         "Tasaciones y Valoraciones"
       ],
       "en": [
-        "Technical Expertise",
-        "Insurance Reports",
-        "Appraisals and Valuations"
+        "WITH TECHNICAL RIGOUR",
+        "THAT RESOLVE CONFLICTS",
+        "THAT MAKE THE DIFFERENCE",
+        "THAT WIN CASES"
       ],
       "ca": [
-        "Peritatges Tècnics",
-        "Informes d'Assegurances",
-        "Taxacions i Valoracions"
+        "AMB RIGOR TÈCNIC",
+        "QUE RESOLEN CONFLICTES",
+        "QUE MARQUEN LA DIFERÈNCIA",
+        "QUE GUANYEN CASOS"
       ]
     }
   },
@@ -43,6 +45,11 @@
     "social": {
       "linkedin": "https://www.linkedin.com/company/perito-barcelona",
       "twitter": "https://twitter.com/peritobarcelona"
+    },
+    "floating_cta_text": {
+      "es": "Hablar con un perito",
+      "en": "Talk to an expert",
+      "ca": "Parlar amb un pèrit"
     }
   },
   "services": [
