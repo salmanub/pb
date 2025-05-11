@@ -12,6 +12,25 @@
     "name": "Perito Barcelona",
     "email": "info@perito.barcelona"
   },
+  "hero": {
+    "rotatingText": {
+      "es": [
+        "Peritajes Técnicos",
+        "Informes de Seguros",
+        "Tasaciones y Valoraciones"
+      ],
+      "en": [
+        "Technical Expertise",
+        "Insurance Reports",
+        "Appraisals and Valuations"
+      ],
+      "ca": [
+        "Peritatges Tècnics",
+        "Informes d'Assegurances",
+        "Taxacions i Valoracions"
+      ]
+    }
+  },
   "contact": {
     "email": "info@perito.barcelona",
     "phoneNumber": "+34 614 194 985",

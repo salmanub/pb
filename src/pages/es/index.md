@@ -23,18 +23,17 @@ hero:
     subtitle: "Especialista en Edificación, Construcción y Seguros"
     description: "Elaboramos informes periciales independientes con rigor técnico que respaldan con éxito reclamaciones judiciales y extrajudiciales."
     rotatingTexts:
-    default: "With Technical Rigour"
-    items:
-        - "WITH TECHNICAL RIGOUR"
-        - "THAT RESOLVE CONFLICTS"
-        - "THAT MAKE THE DIFFERENCE"
-        - "THAT WIN CASES"
+      default: "con rigor técnico"
+      items:
+          - "con rigor técnioco"
+          - "que resuelven conflictos"
+          - "que marcan la diferencia"
+          - "que ganan casos"
     cta:
         primary: "Solicitar Presupuesto"
         primaryUrl: "/contacto/"
         secondary: "Hablar con un Perito"
         secondaryUrl: "#servicios"
-        DescubrirMas: "Descubre más"
     badges:
         - text: "+15 años de experiencia"
         - text: "Ingenieros Colegiados"

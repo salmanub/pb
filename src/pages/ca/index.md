@@ -23,12 +23,12 @@ hero:
     subtitle: "Especialista en Edificació, Construcció i Assegurances"
     description: "Elaborem informes pericials independents amb rigor tècnic que donen suport amb èxit a reclamacions judicials i extrajudicials."
     rotatingTexts:
-    default: "Amb Rigor Tècnic"
-    items:
-        - "AMB RIGOR TÈCNIC"
-        - "QUE RESOLEN CONFLICTES"
-        - "QUE MARQUEN LA DIFERÈNCIA"
-        - "QUE GUANYEN CASOS"
+      default: "Amb Rigor Tècnic"
+      items:
+          - "AMB RIGOR TÈCNIC"
+          - "QUE RESOLEN CONFLICTES"
+          - "QUE MARQUEN LA DIFERÈNCIA"
+          - "QUE GUANYEN CASOS"
     cta:
         primary: "Sol·licitar Pressupost"
         primaryUrl: "/contacte/"
