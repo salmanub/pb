@@ -34,7 +34,7 @@ hero:
         primaryUrl: "/contacto/"
         secondary: "Hablar con un Perito"
         secondaryUrl: "#servicios"
-        descubreMas: "Descubrir más"
+        descubreMas: "Descubre más"
     badges:
         - text: "+15 años de experiencia"
         - text: "Ingenieros Colegiados"
