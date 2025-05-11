@@ -2,7 +2,7 @@
 layout: 'layouts/service-pillar.njk'
 title: 'Construction Expert Reports in Barcelona | Engineer Specialised in Pathologies and Defects'
 description: 'Expert witness in construction. Analysis of pathologies, construction defects and hidden flaws. Detailed technical reports in Barcelona.'
-permalink: /construction/
+permalink: /en/construction/
 notshow: false
 lang: en
 translations:
