@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Perito Barcelona | Experts in Forensic Reports on Construction and Insurance Claims'
+title: 'Perito Barcelona | Judical Surveyors. Experts in Forensic Reports on Construction and Insurance Claims'
 description: "We provide construction and insurance expert reports. 15 years of experience in technical assessments. Expert testimonies accepted in all courts."
 permalink: /en/
 lang: en
