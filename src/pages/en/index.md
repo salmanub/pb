@@ -18,7 +18,7 @@ eleventyNavigation:
 
 # Hero Section
 hero:
-    tag: "Expert Witness in Barcelona"
+    tag: "Judicial Surveyor Barcelona"
     title: "Expert Witness"
     strong: "in Barcelona"
     subtitle: "Specialist in Building, Construction and Insurance"
