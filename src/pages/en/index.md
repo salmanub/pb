@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Expert Witness Barcelona | Construction and Insurance Technical Reports'
+title: 'Perito Barcelona | Experts in Forensic Reports on Construction and Insurance Claims'
 description: "We provide construction and insurance expert reports. 15 years of experience in technical assessments. Expert testimonies accepted in all courts."
 permalink: /
 lang: en
