@@ -31,7 +31,7 @@ hero:
           - "QUE GUANYEN CASOS"
     cta:
         primary: "Sol·licitar Pressupost"
-        primaryUrl: "/contacte/"
+        primaryUrl: "/ca/contacte/"
         secondary: "Parlar amb un Pèrit"
         secondaryUrl: "#serveis"
         descubreMas: "Descobreix més"

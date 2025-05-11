@@ -32,7 +32,7 @@ hero:
         - "SUPPORTED TO WIN CASES"
     cta:
         primary: "Request Quote"
-        primaryUrl: "/contact/"
+        primaryUrl: "/en/contact/"
         secondary: "Talk to an Expert"
         secondaryUrl: "#services"
         descubreMas: "Learn More"
