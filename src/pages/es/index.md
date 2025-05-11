@@ -17,19 +17,27 @@ eleventyNavigation:
   icon: <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
 # Hero Section
 hero:
-    tag: "Perito Judicial en Barcelona"
-    title: "Perito Judicial"
+    tag: "Perito Judicial Barcelona"
+    title: "Informes Periciales"
     strong: "en Barcelona"
-    subtitle: "Experto en Edificación, Construcción y Seguros"
-    description: "Elaboramos informes periciales independientes con rigor técnico que fundamentan con éxito reclamaciones judiciales y extrajudiciales."
+    subtitle: "Especialista en Edificación, Construcción y Seguros"
+    description: "Elaboramos informes periciales independientes con rigor técnico que respaldan con éxito reclamaciones judiciales y extrajudiciales."
+    rotatingTexts:
+    default: "With Technical Rigour"
+    items:
+        - "WITH TECHNICAL RIGOUR"
+        - "THAT RESOLVE CONFLICTS"
+        - "THAT MAKE THE DIFFERENCE"
+        - "THAT WIN CASES"
     cta:
         primary: "Solicitar Presupuesto"
         primaryUrl: "/contacto/"
-        secondary: "Ver Servicios"
+        secondary: "Hablar con un Perito"
         secondaryUrl: "#servicios"
+        DescubrirMas: "Descubre más"
     badges:
-        - text: "15+ años de experiencia"
-        - text: "Ingenieros colegiados"
+        - text: "+15 años de experiencia"
+        - text: "Ingenieros Colegiados"
         - text: "Respuesta en 24h"
 
 # Servicios Section

@@ -17,19 +17,28 @@ eleventyNavigation:
   icon: <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
 # Hero Section
 hero:
-    tag: PÈRIT JUDICIAL BARCELONA
-    title: "Perito en Barcelona"
-    subtitle: "Experto en Edificación, Construcción y Seguros"
-    description: "Informes periciales independientes y profesionales para la resolución de conflictos en construcción y seguros."
+    tag: "Pèrit Judicial Barcelona"
+    title: "Informes Pericials"
+    strong: "a Barcelona"
+    subtitle: "Especialista en Edificació, Construcció i Assegurances"
+    description: "Elaborem informes pericials independents amb rigor tècnic que donen suport amb èxit a reclamacions judicials i extrajudicials."
+    rotatingTexts:
+    default: "Amb Rigor Tècnic"
+    items:
+        - "AMB RIGOR TÈCNIC"
+        - "QUE RESOLEN CONFLICTES"
+        - "QUE MARQUEN LA DIFERÈNCIA"
+        - "QUE GUANYEN CASOS"
     cta:
-        primary: "Solicitar Presupuesto"
-        primaryUrl: "/presupuesto/"
-        secondary: "Ver Servicios"
-        secondaryUrl: "#servicios"
+        primary: "Sol·licitar Pressupost"
+        primaryUrl: "/contacte/"
+        secondary: "Veure Serveis"
+        secondaryUrl: "#serveis"
+        descubreMas: "Descobreix més"
     badges:
-        - text: "15+ años de experiencia"
-        - text: "Ingeniero colegiado"
-        - text: "Respuesta en 24h"
+        - text: "+15 anys d'experiència"
+        - text: "Enginyers Col·legiats"
+        - text: "Resposta en 24h"
 
 # Servicios Section
 servicios:

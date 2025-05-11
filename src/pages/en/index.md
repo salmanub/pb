@@ -19,19 +19,27 @@ eleventyNavigation:
 # Hero Section
 hero:
     tag: "Judicial Surveyor Barcelona"
-    title: "Expert Witness"
+    title: "Technical expert reports"
     strong: "in Barcelona"
     subtitle: "Specialist in Building, Construction and Insurance"
     description: "We prepare independent expert reports with technical rigour that successfully support judicial and out-of-court claims."
+    rotatingTexts:
+      default: "With Technical Rigour"
+      items:
+        - "WITH TECHNICAL PRECISION"
+        - "DESIGNED TO RESOLVE DISPUTES"
+        - "ENGINEERED TO MAKE A DIFFERENCE"
+        - "SUPPORTED TO WIN CASES"
     cta:
         primary: "Request Quote"
         primaryUrl: "/contact/"
-        secondary: "View Services"
+        secondary: "Talk to an Expert"
         secondaryUrl: "#services"
+        descubreMas: "Learn More"
     badges:
-        - text: "15+ years of experience"
-        - text: "Chartered Engineers"
-        - text: "24h Response"
+        - text1: "15+ years of experience"
+        - text2: "Chartered Engineers"  
+        - text3: "24h Response"
 
 # Services Section
 services:
