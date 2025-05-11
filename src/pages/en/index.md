@@ -1,12 +1,12 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Perito en Barcelona | Experto en Edificación, Construcción y Seguros'
-description: "Perito en Barcelona experto en construcción, seguros y peritaje judicial. Informes técnicos y asesoramiento profesional."
-permalink: /en/
+title: 'Expert Witness Barcelona | Construction and Insurance Technical Reports'
+description: "We provide construction and insurance expert reports. 15 years of experience in technical assessments. Expert testimonies accepted in all courts."
+permalink: /
 lang: en
 translations:
   - lang: es
-    permalink: /
+    permalink: /es/
   - lang: ca
     permalink: /ca/
 eleventyNavigation:
@@ -15,39 +15,41 @@ eleventyNavigation:
   notshow: false
   order: 1
   icon: <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+
 # Hero Section
 hero:
-    tag: PERITO JUDICIAL EN BARCELONA
-    title: "Perito en Barcelona"
-    subtitle: "Experto en Edificación, Construcción y Seguros"
-    description: "Informes periciales independientes y profesionales para la resolución de conflictos en construcción y seguros."
+    tag: "Expert Witness in Barcelona"
+    title: "Expert Witness"
+    strong: "in Barcelona"
+    subtitle: "Specialist in Building, Construction and Insurance"
+    description: "We prepare independent expert reports with technical rigour that successfully support judicial and out-of-court claims."
     cta:
-        primary: "Solicitar Presupuesto"
-        primaryUrl: "/presupuesto/"
-        secondary: "Ver Servicios"
-        secondaryUrl: "#servicios"
+        primary: "Request Quote"
+        primaryUrl: "/contact/"
+        secondary: "View Services"
+        secondaryUrl: "#services"
     badges:
-        - text: "15+ años de experiencia"
-        - text: "Ingeniero colegiado"
-        - text: "Respuesta en 24h"
+        - text: "15+ years of experience"
+        - text: "Chartered Engineers"
+        - text: "24h Response"
 
-# Servicios Section
-servicios:
-  title: "Nuestros Servicios Periciales"
-  description: "Ofrecemos soluciones técnicas y jurídicas precisas, respaldadas por más de 15 años de experiencia y una doble visión como Ingeniero y Perito de Seguros."
+# Services Section
+services:
+  title: "Our Expert Services"
+  description: "We offer precise technical and legal solutions, backed by over 15 years of experience and a dual perspective as both Engineer and Insurance Expert."
   items:
-    - title: "Peritajes de Construcción"
-      description: "Analizamos a fondo patologías, vicios ocultos y defectos constructivos."
+    - title: "Construction Surveys"
+      description: "We thoroughly analyse building pathologies, hidden defects and construction flaws."
       features:
-        - "Análisis de humedades y filtraciones"
-        - "Inspección de grietas estructurales"
-        - "Informes para comunidades"
-      url: "/peritajes-construccion/"
-    - title: "Peritajes de Seguros"
-      description: "Valoramos daños, analizamos coberturas y realizamos contraperitajes."
+        - "Dampness and water leakage analysis"
+        - "Structural crack inspection"
+        - "Property community reports"
+      url: "/construction-surveys/"
+    - title: "Insurance Assessments"
+      description: "We assess damages, analyse coverage and perform counter-assessments."
       features:
-        - "Valoración de daños por agua y robo"
-        - "Contraperitajes y coberturas"
-        - "Reclamaciones a aseguradoras"
-      url: "/peritajes-seguros/"
+        - "Water damage and theft assessment"
+        - "Counter-reports and coverage"
+        - "Insurance claims"
+      url: "/insurance-assessments/"
 ---
