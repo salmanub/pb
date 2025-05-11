@@ -188,6 +188,10 @@ services_hub:
       image: "/assets/images/servicio-estructuras.jpg"
       url: "/construccion/grietas-estructurales/"
       cta_text: "Ver detalles sobre informes estructurales"
+      urbenis_cta:
+        show: true
+        text: "¿Necesitas realizar el refuerzo estructural?"
+        url: "https://urbenis.com/refuerzos-estructurales/"
       order: "normal"
       
     - title: "Diagnóstico y Peritaje para Reparación de Hormigón Armado"
@@ -195,6 +199,10 @@ services_hub:
       image: "/assets/images/servicio-hormigon.jpg"
       url: "/construccion/reparacion-hormigon-armado/"
       cta_text: "Más información sobre reparación de hormigón"
+      urbenis_cta:
+        show: true
+        text: "¿Necesitas reparar el hormigón?"
+        url: "https://urbenis.com/reparacion-hormigon/"
       order: "reversed"
       
     - title: "Peritajes de Cimentaciones y Análisis de Asentamientos"
@@ -209,6 +217,10 @@ services_hub:
       image: "/assets/images/servicio-humedades.jpg"
       url: "/construccion/humedades-filtraciones/"
       cta_text: "Detalles sobre peritajes de humedades"
+      urbenis_cta:
+        show: true
+        text: "¿Necesitas impermeabilizar?"
+        url: "https://urbenis.com/impermeabilizacion/"
       order: "reversed"
       
     - title: "Peritajes de Defectos en Pavimentos (Industriales y Exteriores)"

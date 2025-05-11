@@ -1,0 +1,23 @@
+{% if urbenisLink %}
+<section class="py-16 bg-gradient-to-br from-emerald-50 to-white">
+    <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-[2rem] md:text-[2.5rem] font-light text-emerald-800 mb-6">
+                ¿Necesitas realizar la obra?
+            </h2>
+            <p class="text-lg text-emerald-700/80 mb-8">
+                Nuestro equipo de ingenieros puede ejecutar las soluciones técnicas que recomendamos en nuestros informes
+            </p>
+            <a href="{{ urbenisLink }}" 
+               target="_blank"
+               rel="noopener"
+               class="inline-flex items-center justify-center px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all group shadow-lg">
+                Ver soluciones técnicas
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}

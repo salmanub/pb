@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Perito Barcelona | Informes Periciales en Construcción, Seguros y Judicial'
-description: "Perito ingeniero en Barcelona, especializado en construcción, seguros e informes judiciales. Servicio en Cataluña y resto de España."
+title: 'Perito Judicial Barcelona | Informes Periciales de Construcción y Seguros'
+description: "Perito judicial en Barcelona especializado en informes periciales de construcción y seguros. 15 años de experiencia en peritaciones técnicas. Dictámenes judiciales aceptados en todos los tribunales."
 permalink: /
 lang: es
 translations:
@@ -18,9 +18,10 @@ eleventyNavigation:
 # Hero Section
 hero:
     tag: "Perito Judicial en Barcelona"
-    title: "Perito en Barcelona"
+    title: "Perito Judicial"
+    strong: "en Barcelona"
     subtitle: "Experto en Edificación, Construcción y Seguros"
-    description: "Informes periciales independientes y profesionales para la resolución de conflictos en construcción y seguros."
+    description: "Elaboramos informes periciales independientes con rigor técnico que fundamentan con éxito reclamaciones judiciales y extrajudiciales."
     cta:
         primary: "Solicitar Presupuesto"
         primaryUrl: "/contacto/"
