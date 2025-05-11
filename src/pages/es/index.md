@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
 title: 'Perito Judicial Barcelona | Informes Periciales de Construcción y Seguros'
-description: "Perito judicial en Barcelona especializado en informes periciales de construcción y seguros. 15 años de experiencia en peritaciones técnicas. Dictámenes judiciales aceptados en todos los tribunales."
+description: "Realizamos informes periciales de construcción y seguros. 15 años de experiencia en peritaciones técnicas. Dictámenes judiciales aceptados en todos los tribunales."
 permalink: /
 lang: es
 translations:
