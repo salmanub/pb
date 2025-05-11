@@ -32,7 +32,7 @@ hero:
     cta:
         primary: "Sol·licitar Pressupost"
         primaryUrl: "/contacte/"
-        secondary: "Veure Serveis"
+        secondary: "Parlar amb un Pèrit"
         secondaryUrl: "#serveis"
         descubreMas: "Descobreix més"
     badges:
