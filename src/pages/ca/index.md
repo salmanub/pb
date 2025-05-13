@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Perito en Barcelona | Experto en Edificación, Construcción y Seguros'
-description: "Perito en Barcelona experto en construcción, seguros y peritaje judicial. Informes técnicos y asesoramiento profesional."
+title: 'Pèrit Judicial a Barcelona | Expert en Edificació, Construcció i Peritatges d'Assegurances'
+description: "Pèrit a Barcelona especialitzat en informes pericials de construcció i assegurances. Més de 15 anys d'experiència en peritatges judicials. Dictàmens acceptats a tots els tribunals."
 permalink: /ca/
 lang: ca
 translations:
@@ -20,15 +20,15 @@ hero:
     tag: "Pèrit Judicial Barcelona"
     title: "Informes Pericials"
     strong: "a Barcelona"
-    subtitle: "Especialista en Edificació, Construcció i Assegurances"
-    description: "Elaborem informes pericials independents amb rigor tècnic que donen suport amb èxit a reclamacions judicials i extrajudicials."
+    subtitle: "Experts en Edificació, Construcció i Assegurances"
+    description: "Som especialistes en peritatges tècnics amb més de 15 anys d'experiència. Elaborem informes pericials independents amb rigor tècnic que resolen amb èxit reclamacions judicials i extrajudicials."
     rotatingTexts:
-      default: "Amb Rigor Tècnic"
+      default: "amb rigor tècnic"
       items:
-          - "AMB RIGOR TÈCNIC"
-          - "QUE RESOLEN CONFLICTES"
-          - "QUE MARQUEN LA DIFERÈNCIA"
-          - "QUE GUANYEN CASOS"
+          - "amb màxima professionalitat"
+          - "que resolen conflictes"
+          - "que guanyen casos"
+          - "amb garantia d'èxit"
     cta:
         primary: "Sol·licitar Pressupost"
         primaryUrl: "/ca/contacte/"
@@ -42,21 +42,21 @@ hero:
 
 # Servicios Section
 servicios:
-  title: "Nuestros Servicios Periciales"
-  description: "Ofrecemos soluciones técnicas y jurídicas precisas, respaldadas por más de 15 años de experiencia y una doble visión como Ingeniero y Perito de Seguros."
+  title: "Els nostres Serveis Pericials"
+  description: "Oferim solucions tècniques i jurídiques precises, recolzades per més de 15 anys d'experiència i una doble visió com a Enginyer i Pèrit d'Assegurances."
   items:
-    - title: "Peritajes de Construcción"
-      description: "Analizamos a fondo patologías, vicios ocultos y defectos constructivos."
+    - title: "Peritatges de Construcció"
+      description: "Analitzem a fons patologies, vicis ocults i defectes constructius."
       features:
-        - "Análisis de humedades y filtraciones"
-        - "Inspección de grietas estructurales"
-        - "Informes para comunidades"
-      url: "/peritajes-construccion/"
-    - title: "Peritajes de Seguros"
-      description: "Valoramos daños, analizamos coberturas y realizamos contraperitajes."
+        - "Anàlisi d'humitats i filtracions"
+        - "Inspecció de fissures estructurals"
+        - "Informes per a comunitats"
+      url: "/peritatges-construccio/"
+    - title: "Peritatges d'Assegurances"
+      description: "Valorem danys, analitzem cobertures i realitzem contraperitatges."
       features:
-        - "Valoración de daños por agua y robo"
-        - "Contraperitajes y coberturas"
-        - "Reclamaciones a aseguradoras"
-      url: "/peritajes-seguros/"
+        - "Valoració de danys per aigua i robatori"
+        - "Contraperitatges i cobertures"
+        - "Reclamacions a asseguradores"
+      url: "/peritatges-assegurances/"
 ---
