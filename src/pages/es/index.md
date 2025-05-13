@@ -25,7 +25,7 @@ hero:
     rotatingTexts:
       default: "con rigor técnico"
       items:
-          - "con rigor técnioco"
+          - "con rigor técnico"
           - "que resuelven conflictos"
           - "que marcan la diferencia"
           - "que ganan casos"
