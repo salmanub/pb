@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Perito Barcelona | Technical Expert Reports on Construction and Insurance Surveyors.'
-description: "We provide construction and insurance expert reports. 15 years of experience in technical assessments. Expert testimonies accepted in all courts."
+title: 'Expert Surveyor Barcelona | Construction & Insurance Reports'
+description: "Barcelona Expert Witness. Technical reports solving construction & insurance disputes. Experienced & rigorous defense of your interests. Discuss your case!"
 permalink: /en/
 lang: en
 translations:

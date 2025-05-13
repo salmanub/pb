@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Pèrit Judicial a Barcelona | Expert en Edificació, Construcció i Peritatges d'Assegurances'
-description: "Pèrit a Barcelona especialitzat en informes pericials de construcció i assegurances. Més de 15 anys d'experiència en peritatges judicials. Dictàmens acceptats a tots els tribunals."
+title: 'Informes Pericials Barcelona | Solució Defectes i Assegurances'
+description: "Enginyer i Pèrit a Barcelona. Més de 15 anys elaborant informes pericials de construcció i assegurances. Solucions tècniques."
 permalink: /ca/
 lang: ca
 translations:
