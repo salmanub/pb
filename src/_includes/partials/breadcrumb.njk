@@ -29,10 +29,10 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                 </svg>
             {% else %}
-                <span itemprop="item">
+                <a href="{{ metadata.url }}{{ entry.url }}" itemprop="item" class="text-white" aria-current="page">
                     <meta content="{{ metadata.url }}{{ entry.url }}" itemprop="url">
-                    <span itemprop="name" class="text-white" aria-current="page">{{ entry.title }}</span>
-                </span>
+                    <span itemprop="name">{{ entry.title }}</span>
+                </a>
             {% endif %}
             <meta itemprop="position" content="{{ loop.index + 1 }}">
         </li>
