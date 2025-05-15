@@ -18,7 +18,7 @@ eleventyNavigation:
 
 # Contact Page Content
 contact:
-    title: "HABLEMOS DE<strong class='block text-cyan-400 mt-4'>TU PROYECTO</strong>"
+    title: "HABLEMOS DE<strong class='block text-cyan-400 mt-4'>TU CASO</strong>"
     intro: "Si tienes un problema relacionado con defectos de construcción o una disputa con tu seguro, estamos aquí para ayudarte. Cuéntanos tu caso y te ofreceremos una primera valoración sin compromiso en menos de 24 horas."
     
     # Información de contacto directo
