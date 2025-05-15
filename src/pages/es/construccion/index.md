@@ -233,7 +233,7 @@ services_hub:
     - title: "Informes de Estado para Recepción/Entrega de Alquileres (Naves, Locales)"
       description: "Elaboramos informes técnicos exhaustivos (actas de estado) que documentan con precisión el estado de conservación de <strong>naves industriales, locales comerciales</strong> y otras propiedades al inicio o finalización de un contrato de alquiler. Este servicio es esencial para prevenir futuros litigios al registrar objetivamente <strong>defectos preexistentes</strong>, desperfectos o el estado de las instalaciones."
       image: "/assets/images/servicio-alquiler-nave.jpg"
-      url: "/construccion/informe-recepcion-alquiler-industrial/"
+      url: "/construccion/peritaje-alquiler-naves-industriales-barcelona/"
       cta_text: "Informes para alquileres industriales y locales"
       order: "reversed"
       
