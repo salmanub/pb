@@ -1,12 +1,12 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Expert Surveyor Barcelona | Construction & Insurance Reports'
-description: "Barcelona Expert Witness. Technical reports solving construction & insurance disputes. Experienced & rigorous defense of your interests. Discuss your case!"
+title: 'Expert Building Surveyor Barcelona | Technical Reports for Construction & Insurance Claims'
+description: "Certified Engineering Expert in Barcelona specializing in construction defect reports, industrial property surveys, structural reinforcement assessments & insurance claims. Over 15 years of experience in technical and judicial expertise."
 permalink: /en/
 lang: en
 translations:
   - lang: es
-    permalink: /es/
+    permalink: /
   - lang: ca
     permalink: /ca/
 eleventyNavigation:
@@ -18,46 +18,46 @@ eleventyNavigation:
 
 # Hero Section
 hero:
-    tag: "Judicial Surveyor Barcelona"
-    title: "Technical expert reports"
+    tag: "Technical & Judicial Expert Barcelona"
+    title: "Expert Technical Reports"
     strong: "in Barcelona"
-    subtitle: "Specialist in Building, Construction and Insurance"
-    description: "We prepare independent expert reports with technical rigour that successfully support judicial and out-of-court claims."
+    subtitle: "Specialists in Building Surveys, Structural Engineering & Insurance Claims"
+    description: "We deliver comprehensive technical reports for construction defects, industrial property surveys, and insurance claims. Our expertise includes carbon fiber structural reinforcement and detailed property condition assessments."
     rotatingTexts:
-      default: "With Technical Rigour"
+      default: "With Technical Excellence"
       items:
-        - "WITH TECHNICAL PRECISION"
-        - "DESIGNED TO RESOLVE DISPUTES"
-        - "ENGINEERED TO MAKE A DIFFERENCE"
-        - "SUPPORTED TO WIN CASES"
+        - "SPECIALIZED IN INDUSTRIAL SURVEYS"
+        - "EXPERTS IN STRUCTURAL REINFORCEMENT"
+        - "TRUSTED BY INSURANCE COMPANIES"
+        - "COURT-APPROVED REPORTS"
     cta:
-        primary: "Request Quote"
+        primary: "Request Technical Assessment"
         primaryUrl: "/en/contact/"
-        secondary: "Talk to an Expert"
-        secondaryUrl: "#services"
+        secondary: "Discuss Your Case"
+        secondaryUrl: "#expertise-areas"
         descubreMas: "Learn More"
     badges:
-        - text1: "15+ years of experience"
-        - text2: "Chartered Engineers"  
-        - text3: "24h Response"
+        - text: "15+ Years Experience"
+        - text: "Chartered Engineers"
+        - text: "24h Response Time"
+        - text: "Court-Accepted Reports"
 
-# Services Section
-services:
-  title: "Our Expert Services"
-  description: "We offer precise technical and legal solutions, backed by over 15 years of experience and a dual perspective as both Engineer and Insurance Expert."
-  items:
-    - title: "Construction Surveys"
-      description: "We thoroughly analyse building pathologies, hidden defects and construction flaws."
-      features:
-        - "Dampness and water leakage analysis"
-        - "Structural crack inspection"
-        - "Property community reports"
-      url: "/construction-surveys/"
-    - title: "Insurance Assessments"
-      description: "We assess damages, analyse coverage and perform counter-assessments."
-      features:
-        - "Water damage and theft assessment"
-        - "Counter-reports and coverage"
-        - "Insurance claims"
-      url: "/insurance-assessments/"
+# Expertise Areas
+expertise:
+    title: "Specialized Technical Services"
+    description: "Comprehensive engineering solutions backed by over 15 years of experience in technical assessments and judicial expertise"
+    areas:
+      - title: "Industrial Property Surveys"
+        description: "Detailed technical inspections for industrial property leases and purchases"
+        features:
+          - "Pre-lease condition assessments"
+          - "Hidden defects documentation"
+          - "Legal compliance verification"
+          
+      - title: "Structural Engineering"
+        description: "Advanced structural solutions including carbon fiber reinforcement"
+        features:
+          - "Carbon fiber structural reinforcement"
+          - "Load-bearing capacity assessment"
+          - "Structural rehabilitation planning"
 ---

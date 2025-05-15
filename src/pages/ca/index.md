@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Informes Pericials Barcelona | Solució Defectes i Assegurances'
-description: "Enginyer i Pèrit a Barcelona. Més de 15 anys elaborant informes pericials de construcció i assegurances. Solucions tècniques."
+title: 'Pèrit Judicial Barcelona | Expert en Informes Tècnics de Construcció i Assegurances'
+description: "Pèrit i Enginyer certificat a Barcelona especialitzat en informes de defectes constructius, peritatges de naus industrials, reforços estructurals i reclamacions d'assegurances. Més de 15 anys d'experiència."
 permalink: /ca/
 lang: ca
 translations:
@@ -20,25 +20,26 @@ hero:
     tag: "Pèrit Judicial Barcelona"
     title: "Informes Pericials"
     strong: "a Barcelona"
-    subtitle: "Experts en Edificació, Construcció i Assegurances"
-    description: "Som especialistes en peritatges tècnics amb més de 15 anys d'experiència. Elaborem informes pericials independents amb rigor tècnic que resolen amb èxit reclamacions judicials i extrajudicials."
+    subtitle: "Especialistes en Edificació, Estructures i Assegurances"
+    description: "Realitzem informes pericials complets per defectes constructius, peritatges de naus industrials i reclamacions d'assegurances. Experts en reforç estructural amb fibra de carboni i valoracions tècniques detallades."
     rotatingTexts:
-      default: "amb rigor tècnic"
+      default: "Amb Excel·lència Tècnica"
       items:
-          - "amb màxima professionalitat"
-          - "que resolen conflictes"
-          - "que guanyen casos"
-          - "amb garantia d'èxit"
+        - "ESPECIALISTES EN NAUS INDUSTRIALS"
+        - "EXPERTS EN REFORÇ ESTRUCTURAL"
+        - "CONFIANÇA D'ASSEGURADORES"
+        - "INFORMES AVALATS PELS TRIBUNALS"
     cta:
-        primary: "Sol·licitar Pressupost"
+        primary: "Sol·licitar Valoració Tècnica"
         primaryUrl: "/ca/contacte/"
-        secondary: "Parlar amb un Pèrit"
-        secondaryUrl: "#serveis"
-        descubreMas: "Descobreix més"
+        secondary: "Consultar Cas"
+        secondaryUrl: "#arees-expertesa"
+        descubreMas: "Saber Més"
     badges:
         - text: "+15 anys d'experiència"
         - text: "Enginyers Col·legiats"
         - text: "Resposta en 24h"
+        - text: "Informes Judicials"
 
 # Servicios Section
 servicios:

@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Informes Periciales Barcelona | Solución Defectos y Seguros'
-description: "Ingeniero y Perito en Barcelona. Más de 15 años elaborando informes periciales de construcción (grietas, humedades) y seguros (contraperitajes). Soluciones técnicas."
+title: 'Perito Judicial Barcelona | Experto en Informes Técnicos de Construcción y Seguros'
+description: "Perito e Ingeniero certificado en Barcelona especializado en informes de defectos constructivos, peritajes de naves industriales, refuerzos estructurales y reclamaciones de seguros. Más de 15 años de experiencia."
 permalink: /
 lang: es
 translations:
@@ -20,25 +20,26 @@ hero:
     tag: "Perito Judicial Barcelona"
     title: "Informes Periciales"
     strong: "en Barcelona"
-    subtitle: "Especialista en Edificación, Construcción y Seguros"
-    description: "Elaboramos informes periciales independientes con rigor técnico que respaldan con éxito reclamaciones judiciales y extrajudiciales."
+    subtitle: "Especialistas en Edificación, Estructuras y Seguros"
+    description: "Realizamos informes periciales completos para defectos constructivos, peritajes de naves industriales y reclamaciones de seguros. Expertos en refuerzo estructural con fibra de carbono y valoraciones técnicas detalladas."
     rotatingTexts:
-      default: "con rigor técnico"
+      default: "Con Excelencia Técnica"
       items:
-          - "con rigor técnico"
-          - "que resuelven conflictos"
-          - "que marcan la diferencia"
-          - "que ganan casos"
+        - "ESPECIALISTAS EN NAVES INDUSTRIALES"
+        - "EXPERTOS EN REFUERZO ESTRUCTURAL"
+        - "CONFIANZA DE ASEGURADORAS"
+        - "INFORMES AVALADOS POR TRIBUNALES"
     cta:
-        primary: "Solicitar Presupuesto"
+        primary: "Solicitar Valoración Técnica"
         primaryUrl: "/contacto/"
-        secondary: "Hablar con un Perito"
-        secondaryUrl: "#servicios"
-        descubreMas: "Descubre más"
+        secondary: "Consultar Caso"
+        secondaryUrl: "#areas-expertise"
+        descubreMas: "Saber Más"
     badges:
         - text: "+15 años de experiencia"
         - text: "Ingenieros Colegiados"
         - text: "Respuesta en 24h"
+        - text: "Informes Judiciales"
 
 # Servicios Section
 servicios:
