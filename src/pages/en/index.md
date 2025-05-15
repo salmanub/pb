@@ -31,9 +31,9 @@ hero:
         - "TRUSTED BY INSURANCE COMPANIES"
         - "COURT-APPROVED REPORTS"
     cta:
-        primary: "Request Technical Assessment"
+        primary: "Request a quotation"
         primaryUrl: "/en/contact/"
-        secondary: "Discuss Your Case"
+        secondary: "Talk to an expert"
         secondaryUrl: "#expertise-areas"
         descubreMas: "Learn More"
     badges:

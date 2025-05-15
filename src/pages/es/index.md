@@ -30,9 +30,9 @@ hero:
         - "CONFIANZA DE ASEGURADORAS"
         - "INFORMES AVALADOS POR TRIBUNALES"
     cta:
-        primary: "Solicitar Valoración Técnica"
+        primary: "Solicitar Presupuesto"
         primaryUrl: "/contacto/"
-        secondary: "Consultar Caso"
+        secondary: "Llamar ahora"
         secondaryUrl: "#areas-expertise"
         descubreMas: "Saber Más"
     badges:

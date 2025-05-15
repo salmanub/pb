@@ -30,9 +30,9 @@ hero:
         - "CONFIANÇA D'ASSEGURADORES"
         - "INFORMES AVALATS PELS TRIBUNALS"
     cta:
-        primary: "Sol·licitar Valoració Tècnica"
+        primary: "Demanar pressupost"
         primaryUrl: "/ca/contacte/"
-        secondary: "Consultar Cas"
+        secondary: "Parlar amb un Pèrit"
         secondaryUrl: "#arees-expertesa"
         descubreMas: "Saber Més"
     badges:
