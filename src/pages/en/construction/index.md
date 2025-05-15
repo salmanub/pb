@@ -49,7 +49,7 @@ serviceCluster:
   services:
     - title: "Cracks and Structural Problems"
       description: "Expert evaluation of wall cracks, slab cracks and stability problems requiring structural reinforcement. We determine severity and propose effective solutions."
-      url: "/construction/structural-cracks/"
+      url: "/en/construction/structural-cracks/"
       icon: "building"
       features:
         - "Structural stability analysis"
@@ -58,7 +58,7 @@ serviceCluster:
     
     - title: "Damp and Leaks"
       description: "Detection and analysis of damp stains, leaks or infiltrations that damage your home and affect health. We identify the source and propose definitive solutions."
-      url: "/construction/damp-leaks/"
+      url: "/en/construction/damp-leaks/"
       icon: "water"
       features:
         - "Source detection"
@@ -67,7 +67,7 @@ serviceCluster:
     
     - title: "Reinforced Concrete Repair"
       description: "Diagnosis of reinforcement corrosion, carbonation and structural concrete pathologies. We define detailed protocols to ensure the durability of the repair."
-      url: "/construction/reinforced-concrete-repair/"
+      url: "/en/construction/reinforced-concrete-repair/"
       icon: "tools"
       features:
         - "Carbonation analysis"
@@ -76,7 +76,7 @@ serviceCluster:
     
     - title: "Civil Works Pathologies"
       description: "Specialised inspection of problems in infrastructures, bridges, tunnels or unique buildings. Advanced technical analysis and engineering solutions."
-      url: "/construction/civil-works/"
+      url: "/en/construction/civil-works/"
       icon: "blueprint"
       features:
         - "Structural analysis"
@@ -85,7 +85,7 @@ serviceCluster:
     
     - title: "Hidden Flaws and Defects"
       description: "Detection and documentation of hidden construction defects. Detailed technical reports to support claims for construction flaws."
-      url: "/construction/hidden-flaws/"
+      url: "/en/construction/hidden-flaws/"
       icon: "search"
       features:
         - "Specialised inspection"
@@ -94,7 +94,7 @@ serviceCluster:
     
     - title: "Property Acceptance"
       description: "Technical verification of the initial or final state of industrial warehouses and commercial premises. Documentation of pre-existing defects."
-      url: "/construction/property-acceptance/"
+      url: "/en/construction/property-acceptance/"
       icon: "document"
       features:
         - "Condition control"
@@ -176,7 +176,7 @@ cta:
   description: "Contact us now for a preliminary analysis of your specific case"
   button:
     text: "Request Technical Evaluation"
-    url: "/contact/"
+    url: "/en/contact/"
 
 # Content for the detailed HUB of services
 services_hub:
