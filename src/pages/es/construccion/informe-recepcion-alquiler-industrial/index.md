@@ -8,6 +8,11 @@ subtitle: 'Inspecciones técnicas profesionales para documentar el estado de nav
 description: 'Perito especializado en informes técnicos para alquiler de naves industriales en Barcelona. Documentación detallada del estado inicial y final, identificación de defectos y vicios ocultos. Evite disputas legales y proteja su inversión con informes periciales profesionales.'
 permalink: '/construccion/peritaje-alquiler-naves-industriales-barcelona/'
 lang: 'es'
+translations:
+  - lang: ca
+    permalink: "/ca/construccio/peritatge-lloguer-naus-industrials-barcelona/"
+  - lang: en
+    permalink: "/en/construction/industrial-lease-inspection-barcelona/"
 eleventyNavigation:
   key: "Peritaje Técnico Alquiler Industrial"
   parent: "Construcción"

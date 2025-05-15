@@ -6,6 +6,11 @@ subtitle: "Inspeccions tècniques professionals per documentar l'estat de naus i
 description: "Pèrit especialitzat en informes tècnics per a lloguer de naus industrials a Barcelona. Documentació detallada de l'estat inicial i final, identificació de defectes i vicis ocults. Eviti disputes legals i protegeixi la seva inversió amb informes pericials professionals."
 permalink: "/ca/construccio/peritatge-lloguer-naus-industrials-barcelona/"
 lang: "ca"
+translations:
+  - lang: es
+    permalink: /construccion/peritaje-alquiler-naves-industriales-barcelona/
+  - lang: en
+    permalink: "/en/construction/industrial-lease-inspection-barcelona/"
 eleventyNavigation:
   key: "Peritatge Tècnic Lloguer Industrial"
   parent: "Construcció"
