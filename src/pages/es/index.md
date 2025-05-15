@@ -23,12 +23,12 @@ hero:
     subtitle: "Especialistas en Edificación, Estructuras y Seguros"
     description: "Realizamos informes periciales completos para defectos constructivos, peritajes de naves industriales y reclamaciones de seguros. Expertos en refuerzo estructural con fibra de carbono y valoraciones técnicas detalladas."
     rotatingTexts:
-      default: "Con Excelencia Técnica"
+      default: "con rigor técnico"
       items:
-        - "ESPECIALISTAS EN NAVES INDUSTRIALES"
-        - "EXPERTOS EN REFUERZO ESTRUCTURAL"
-        - "CONFIANZA DE ASEGURADORAS"
-        - "INFORMES AVALADOS POR TRIBUNALES"
+          - "con rigor técnico"
+          - "que resuelven conflictos"
+          - "que marcan la diferencia"
+          - "que ganan casos"
     cta:
         primary: "Solicitar Presupuesto"
         primaryUrl: "/contacto/"

@@ -71,3 +71,104 @@ intro: |
   
   <p>Un <strong>informe técnico independiente</strong> es fundamental para documentar la realidad de la obra, verificar la conformidad con el proyecto y resolver disputas de forma objetiva. Como <strong>Ingeniero especialista en construcción</strong>, ofrezco mi experiencia para analizar y dictaminar sobre estos complejos escenarios en <strong>Barcelona</strong> y su área metropolitana.</p>
 ---
+
+## ¿En Qué Situaciones es Crucial un Informe de Control de Ejecución de Obra?
+
+Los **informes periciales de ejecución** son especialmente importantes en estas situaciones:
+
+### Obras Mal Ejecutadas o con Defectos de Calidad
+- Incumplimientos de proyecto y normativa (CTE)
+- Acabados deficientes o materiales inadecuados
+- Instalaciones mal ejecutadas o que no funcionan correctamente
+- Incumplimiento de las especificaciones técnicas
+
+### Desacuerdos en Mediciones y Certificaciones
+- Discrepancias entre unidades ejecutadas y certificadas
+- Conflictos por precios contradictorios
+- Trabajos extra no reconocidos
+- Certificaciones infladas o incorrectas
+
+### Disputas en Liquidaciones de Obra
+- Desacuerdos sobre el saldo final
+- Controversias por retenciones y penalizaciones
+- Reclamaciones por sobrecostes
+- Liquidaciones injustas o mal documentadas
+
+### Obras Paralizadas o Abandonadas
+- Documentación del estado actual
+- Valoración de lo ejecutado correctamente
+- Identificación de trabajos pendientes
+- Base para reclamaciones o cambio de contratista
+
+## Nuestros Servicios de Control y Supervisión de Obra
+
+### Análisis de Calidad de Ejecución
+- Inspección detallada de conformidad con proyecto
+- Verificación de materiales y sistemas constructivos
+- Comprobación de tolerancias y acabados
+- Documentación fotográfica exhaustiva
+
+### Verificación de Mediciones
+- Mediciones in situ de todas las unidades
+- Contraste con certificaciones emitidas
+- Cubicación de elementos ejecutados
+- Análisis de modificaciones y cambios
+
+### Revisión de Certificaciones
+- Análisis de precios unitarios
+- Verificación de partidas ejecutadas
+- Valoración de calidades y cantidades
+- Control de modificados y precios contradictorios
+
+### Informes para Liquidaciones
+- Valoración técnica del estado final
+- Cuantificación de partidas pendientes
+- Análisis de reclamaciones y compensaciones
+- Propuesta de liquidación objetiva
+
+## Proceso de Trabajo en Informes de Ejecución
+
+### 1. Estudio Previo
+- Análisis de proyecto y documentación
+- Revisión de contratos y modificados
+- Estudio de certificaciones emitidas
+- Evaluación de comunicaciones previas
+
+### 2. Inspección Técnica
+- Visitas detalladas a obra
+- Toma de mediciones y fotografías
+- Verificación de elementos ejecutados
+- Identificación de deficiencias
+
+### 3. Elaboración del Informe
+- Redacción técnica detallada
+- Documentación gráfica y fotográfica
+- Valoraciones económicas si procede
+- Conclusiones y recomendaciones
+
+### 4. Defensa y Asesoramiento
+- Presentación del informe a las partes
+- Soporte en negociaciones
+- Ratificación judicial si es necesario
+- Seguimiento de medidas correctoras
+
+## Ventajas de Nuestros Informes de Ejecución
+
+- **Objetividad y rigor técnico** en todas las valoraciones
+- Documentación exhaustiva con **soporte fotográfico**
+- Base sólida para **reclamaciones o negociaciones**
+- Experiencia en **resolución de conflictos** constructivos
+- Conocimiento profundo de **normativa y buenas prácticas**
+
+## ¿Cuándo Solicitar un Informe de Ejecución?
+
+Es recomendable solicitar nuestros servicios:
+
+- Al detectar **defectos de ejecución** importantes
+- Antes de firmar **certificaciones controvertidas**
+- Para documentar el estado en **obras paralizadas**
+- Como soporte en **reclamaciones judiciales**
+- Para verificar el cumplimiento de **contratos de obra**
+- En caso de **desacuerdos en la liquidación**
+
+No espere a que los problemas se agraven. Un **informe pericial** a tiempo puede evitar costes mayores y facilitar la resolución de conflictos en obra.

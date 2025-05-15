@@ -24,12 +24,12 @@ hero:
     subtitle: "Specialists in Building Surveys, Structural Engineering & Insurance Claims"
     description: "We deliver comprehensive technical reports for construction defects, industrial property surveys, and insurance claims. Our expertise includes carbon fiber structural reinforcement and detailed property condition assessments."
     rotatingTexts:
-      default: "With Technical Excellence"
+      default: "With Technical Rigour"
       items:
-        - "SPECIALIZED IN INDUSTRIAL SURVEYS"
-        - "EXPERTS IN STRUCTURAL REINFORCEMENT"
-        - "TRUSTED BY INSURANCE COMPANIES"
-        - "COURT-APPROVED REPORTS"
+        - "WITH TECHNICAL PRECISION"
+        - "DESIGNED TO RESOLVE DISPUTES"
+        - "ENGINEERED TO MAKE A DIFFERENCE"
+        - "SUPPORTED TO WIN CASES"
     cta:
         primary: "Request a quotation"
         primaryUrl: "/en/contact/"

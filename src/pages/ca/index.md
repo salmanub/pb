@@ -23,12 +23,12 @@ hero:
     subtitle: "Especialistes en Edificació, Estructures i Assegurances"
     description: "Realitzem informes pericials complets per defectes constructius, peritatges de naus industrials i reclamacions d'assegurances. Experts en reforç estructural amb fibra de carboni i valoracions tècniques detallades."
     rotatingTexts:
-      default: "Amb Excel·lència Tècnica"
+      default: "amb rigor tècnic"
       items:
-        - "ESPECIALISTES EN NAUS INDUSTRIALS"
-        - "EXPERTS EN REFORÇ ESTRUCTURAL"
-        - "CONFIANÇA D'ASSEGURADORES"
-        - "INFORMES AVALATS PELS TRIBUNALS"
+          - "amb màxima professionalitat"
+          - "que resolen conflictes"
+          - "que guanyen casos"
+          - "amb garantia d'èxit"
     cta:
         primary: "Demanar pressupost"
         primaryUrl: "/ca/contacte/"
