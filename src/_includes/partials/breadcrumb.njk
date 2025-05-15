@@ -1,7 +1,7 @@
 {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
 
 <nav aria-label="Breadcrumb" class="mb-8" itemscope itemtype="https://schema.org/BreadcrumbList">
-    <meta itemprop="name" content="{{ title or post.title }}" />
+    <meta itemprop="name" content="{{ eleventyNavigation.title or post.title }}" />
     <ol class="flex items-center text-sm text-cyan-300/80" itemscope itemtype="https://schema.org/BreadcrumbList">
         {% set homeUrl = "/" + (lang if lang != "es" else "") %}
         
