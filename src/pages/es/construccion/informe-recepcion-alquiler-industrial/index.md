@@ -1,44 +1,44 @@
 ---
 layout: 'layouts/service-child.njk'
-# Title SEO (Keyword Principal + Ubicación + Beneficio)
-title: 'Informe de Estado para Alquiler de Naves Industriales y Locales en Barcelona | Acta Técnica Pericial'
-# Subtitle para Hero (Más descriptivo y con keyword)
-subtitle: 'Actas técnicas periciales para documentar el estado de naves y locales en Barcelona antes y después del alquiler.'
-# Meta Description (Enganchar + Keywords + CTA implícito)
-description: 'Servicio de peritaje en Barcelona para informes de estado en alquiler de naves industriales y locales. Documentamos defectos preexistentes y el estado de instalaciones. Evite conflictos y proteja su fianza con un acta técnica profesional.'
-permalink: '/construccion/informe-recepcion-alquiler-industrial/'
+# Title SEO optimizado para búsquedas específicas
+title: 'Peritaje Técnico para Alquiler de Naves Industriales Barcelona | Informes de Estado y Recepción'
+# Subtitle más específico y orientado a la necesidad
+subtitle: 'Inspecciones técnicas profesionales para documentar el estado de naves industriales y locales comerciales al inicio y fin del alquiler en Barcelona'
+# Meta description orientada a la resolución del problema
+description: 'Perito especializado en informes técnicos para alquiler de naves industriales en Barcelona. Documentación detallada del estado inicial y final, identificación de defectos y vicios ocultos. Evite disputas legales y proteja su inversión con informes periciales profesionales.'
+permalink: '/construccion/peritaje-alquiler-naves-industriales-barcelona/'
 lang: 'es'
 eleventyNavigation:
-  key: "Informe de Estado para Alquiler de Naves Industriales y Locales Comerciales"
+  key: "Peritaje Técnico Alquiler Industrial"
   parent: "Construcción"
-  title: "Informe de Estado para Alquiler de Naves Industriales y Locales Comerciales"
-  notshow: true # Asumo que esto lo oculta de una navegación principal automática
-  order: 2 # Orden dentro de su posible grupo
-# ServiceTitle para mostrar en la página (más conciso)
-serviceTitle: 'Informe de Estado para Alquiler Industrial y Comercial'
+  title: "Peritaje Naves Industriales"
+  notshow: true
+  order: 2
 
-# Parent Service (para breadcrumb y enlazar al pilar)
+serviceTitle: 'Peritaje Técnico para Alquiler de Naves Industriales'
+
 parentService:
-  title: 'Peritajes de Construcción' # Más específico que solo 'Peritajes'
+  title: 'Peritajes de Construcción'
   url: '/construccion/'
 
-# Key features en el hero (Keywords + Beneficios)
+# Key features actualizadas y más específicas
 keyFeatures:
-  - 'Acta técnica independiente con validez probatoria en Barcelona'
-  - 'Registro detallado de <strong>defectos preexistentes</strong> en naves y locales'
-  - 'Revisión funcional de instalaciones (eléctricas, PCI, climatización)'
-  - 'Base documental para entrega o devolución del inmueble sin conflictos'
+  - 'Informes técnicos detallados para contratos de alquiler industrial'
+  - 'Identificación y documentación de <strong>vicios ocultos y defectos preexistentes</strong>'
+  - 'Inspección exhaustiva de sistemas e instalaciones industriales'
+  - 'Documentación probatoria para prevención de disputas legales'
+  - 'Valoración técnica para entrega y devolución de fianzas'
 
-# Service Process (mantener claridad)
+# Service Process más detallado
 serviceProcess:
-  - title: 'Inspección presencial exhaustiva del inmueble'
-    description: 'Evaluación técnica in situ de cada espacio y sistema de su nave o local en [Barcelona/Provincia].'
-  - title: 'Análisis constructivo detallado'
-    description: 'Valoración del estado de elementos estructurales, cerramientos, pavimentos y acabados.'
-  - title: 'Revisión de instalaciones críticas'
-    description: 'Comprobación operativa de electricidad, fontanería, climatización, PCI y otros sistemas.'
-  - title: 'Redacción del informe pericial'
-    description: 'Elaboración de un documento técnico completo con fotografías, planos y observaciones con validez legal.'
+  - title: 'Inspección técnica inicial exhaustiva'
+    description: 'Evaluación completa del estado de la nave industrial o local comercial antes del inicio del contrato.'
+  - title: 'Documentación detallada de defectos'
+    description: 'Registro fotográfico y técnico de todos los defectos preexistentes y estado de instalaciones.'
+  - title: 'Verificación de sistemas industriales'
+    description: 'Revisión del estado y funcionamiento de instalaciones específicas industriales.'
+  - title: 'Elaboración de informe pericial'
+    description: 'Generación de documento técnico completo con validez legal y probatoria.'
 
 # Service Benefits (enfocado al cliente)
 serviceBenefits:
