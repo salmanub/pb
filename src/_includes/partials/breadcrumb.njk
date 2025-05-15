@@ -1,13 +1,12 @@
 {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
 
-<nav aria-label="Breadcrumb" class="mb-8">
+<nav aria-label="Breadcrumb" class="mb-8" itemscope itemtype="https://schema.org/BreadcrumbList">
     <meta itemprop="name" content="{{ title or post.title }}" />
     <ol class="flex items-center text-sm text-cyan-300/80" itemscope itemtype="https://schema.org/BreadcrumbList">
         {% set homeUrl = "/" + (lang if lang != "es" else "") %}
         
         <li class="flex items-center" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a href="{{ homeUrl }}" class="hover:text-cyan-300 transition-colors" itemprop="item">
-                <meta content="{{ metadata.url }}{{ homeUrl }}" itemprop="url">
                 <span itemprop="name">
                     {% if lang == "es" %}Inicio
                     {% elif lang == "en" %}Home
@@ -24,7 +23,6 @@
         <li class="flex items-center" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             {% if not loop.last %}
                 <a href="{{ entry.url }}" class="hover:text-cyan-300 transition-colors" itemprop="item">
-                    <meta content="{{ metadata.url }}{{ entry.url }}" itemprop="url">
                     <span itemprop="name">{{ entry.title }}</span>
                 </a>
                 <svg class="mx-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
