@@ -6,8 +6,9 @@ description: 'Perito especializado en análisis de grietas estructurales. Evalua
 permalink: '/construccion/grietas-estructurales/'
 lang: 'es'
 eleventyNavigation:
-  key: "grietas y problemas estructurales"
-  title: "grietas y problemas estructurales"
+  key: "Grietas y problemas estructurales"
+  parent: "Construcción"
+  title: "Grietas y problemas estructurales"
   notshow: true
   order: 2
 serviceTitle: 'grietas y problemas estructurales'

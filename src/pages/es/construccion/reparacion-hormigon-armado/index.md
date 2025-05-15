@@ -6,8 +6,9 @@ description: 'Perito experto en diagnóstico de hormigón armado deteriorado. An
 permalink: '/construccion/reparacion-hormigon-armado/'
 lang: 'es'
 eleventyNavigation:
-  key: "reparación de hormigón armado"
-  title: "reparación de hormigón armado"
+  key: "Reparación de hormigón armado"
+  parent: "Construcción"
+  title: "Reparación de hormigón armado"
   notshow: true
   order: 2
 serviceTitle: 'reparación de hormigón armado'

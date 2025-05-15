@@ -8,6 +8,7 @@ permalink: '/construccion/obra-civil/'
 lang: 'es'
 eleventyNavigation:
   key: "patologías en obra civil"
+  parent: "Construcción"
   title: "patologías en obra civil"
   notshow: true
   order: 2

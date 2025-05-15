@@ -1,0 +1,37 @@
+{% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
+
+<nav aria-label="Breadcrumb" class="mb-8" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <ol class="flex items-center text-sm text-cyan-300/80" itemscope itemtype="https://schema.org/BreadcrumbList">
+        {% set homeUrl = "/" + (lang if lang != "es" else "") %}
+        
+        <li class="flex items-center" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ homeUrl }}" class="hover:text-cyan-300 transition-colors" itemprop="item">
+                <span itemprop="name">
+                    {% if lang == "es" %}Inicio
+                    {% elif lang == "en" %}Home
+                    {% else %}Inici{% endif %}
+                </span>
+            </a>
+            <meta itemprop="position" content="1">
+            <svg class="mx-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+        </li>
+
+        {% for entry in navPages %}
+        <li class="flex items-center" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            {% if not loop.last %}
+                <a href="{{ entry.url }}" class="hover:text-cyan-300 transition-colors" itemprop="item">
+                    <span itemprop="name">{{ entry.title }}</span>
+                </a>
+                <svg class="mx-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            {% else %}
+                <span class="text-white" itemprop="name" aria-current="page">{{ entry.title }}</span>
+            {% endif %}
+            <meta itemprop="position" content="{{ loop.index + 1 }}">
+        </li>
+        {% endfor %}
+    </ol>
+</nav>

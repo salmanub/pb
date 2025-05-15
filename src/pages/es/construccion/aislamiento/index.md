@@ -7,6 +7,7 @@ permalink: '/construccion/aislamiento/'
 lang: 'es'
 eleventyNavigation:
   key: "aislamiento térmico y acústico"
+  parent: "Construcción"
   title: "aislamiento térmico y acústico"
   notshow: true
   order: 2

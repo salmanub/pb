@@ -10,6 +10,7 @@ permalink: '/construccion/informe-recepcion-alquiler-industrial/'
 lang: 'es'
 eleventyNavigation:
   key: "Informe de Estado para Alquiler de Naves Industriales y Locales Comerciales"
+  parent: "Construcción"
   title: "Informe de Estado para Alquiler de Naves Industriales y Locales Comerciales"
   notshow: true # Asumo que esto lo oculta de una navegación principal automática
   order: 2 # Orden dentro de su posible grupo

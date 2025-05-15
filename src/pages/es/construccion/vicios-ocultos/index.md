@@ -7,6 +7,7 @@ permalink: '/construccion/vicios-ocultos/'
 lang: 'es'
 eleventyNavigation:
   key: "vicios ocultos y defectos constructivos"
+  parent: "Construcción"
   title: "vicios ocultos y defectos constructivos"
   notshow: true
   order: 2

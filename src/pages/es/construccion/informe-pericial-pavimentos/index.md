@@ -7,6 +7,7 @@ permalink: '/construccion/informe-pericial-pavimentos/'
 lang: 'es'
 eleventyNavigation:
   key: "pavimentos industriales y exteriores"
+  parent: "Construcción"
   title: "pavimentos industriales y exteriores"
   notshow: true
   order: 2

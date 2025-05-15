@@ -6,8 +6,9 @@ description: 'Perito especialista en humedades y filtraciones. Análisis de caus
 permalink: '/construccion/humedades-filtraciones/'
 lang: 'es'
 eleventyNavigation:
-  key: "humedades y filtraciones"
-  title: "humedades y filtraciones"
+  key: "Humedades y filtraciones"
+  parent: "Construcción"
+  title: "Humedades y filtraciones"
   notshow: true
   order: 2
 serviceTitle: 'humedades y filtraciones'

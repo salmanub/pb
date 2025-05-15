@@ -7,6 +7,7 @@ permalink: '/construccion/informe-pericial-cimentaciones/'
 lang: 'es'
 eleventyNavigation:
   key: "cimentaciones y asentamientos"
+  parent: "Construcción"
   title: "cimentaciones y asentamientos"
   notshow: true
   order: 2
