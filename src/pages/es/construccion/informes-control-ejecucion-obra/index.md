@@ -72,7 +72,7 @@ intro: |
   <p>Un <strong>informe técnico independiente</strong> es fundamental para documentar la realidad de la obra, verificar la conformidad con el proyecto y resolver disputas de forma objetiva. Como <strong>Ingeniero especialista en construcción</strong>, ofrezco mi experiencia para analizar y dictaminar sobre estos complejos escenarios en <strong>Barcelona</strong> y su área metropolitana.</p>
 ---
 
-## ¿En Qué Situaciones es Crucial un Informe de Control de Ejecución de Obra?
+## ¿En Qué Situaciones es Importante un Informe de Control de Ejecución de Obra?
 
 Los **informes periciales de ejecución** son especialmente importantes en estas situaciones:
 
