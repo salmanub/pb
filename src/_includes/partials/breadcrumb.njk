@@ -2,7 +2,7 @@
 
 <nav aria-label="Breadcrumb" class="mb-8" itemscope itemtype="https://schema.org/BreadcrumbList">
     <meta itemprop="name" content="{{ eleventyNavigation.title or post.title }}" />
-    <ol class="flex items-center text-sm text-cyan-300/80" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <ol class="flex items-center text-sm text-cyan-300/80">
         {% set homeUrl = "/" + (lang if lang != "es" else "") %}
         
         <li class="flex items-center" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
