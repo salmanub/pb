@@ -44,7 +44,7 @@ sections:
 
 # Service Cluster - Mantenemos esta sección para la vista previa básica, pero el detalle estará en el HUB
 serviceCluster:
-  title: "Nuestroa servicios"
+  title: "Nuestros servicios"
   intro: "Soluciones técnicas especializadas para cada patología constructiva:"
   services:
     - title: "Grietas y Problemas Estructurales"
@@ -94,7 +94,7 @@ serviceCluster:
     
     - title: "Recepción de Propiedades"
       description: "Verificación técnica del estado inicial o final de naves industriales y locales comerciales. Documentación de defectos preexistentes."
-      url: "/construccion/informe-recepcion-alquiler-industrial/"
+      url: "/construccion/peritaje-alquiler-naves-industriales-barcelona/"
       icon: "document"
       features:
         - "Control de estado"
