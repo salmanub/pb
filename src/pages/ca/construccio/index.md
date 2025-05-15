@@ -94,7 +94,7 @@ serviceCluster:
     
     - title: "Recepció de Propietats"
       description: "Verificació tècnica de l'estat inicial o final de naus industrials i locals comercials. Documentació de defectes preexistents."
-      url: "/ca/construccio/informe-recepcio-lloguer-industrial/"
+      url: "/ca/construccio/peritatge-lloguer-naus-industrials-barcelona/"
       icon: "document"
       features:
         - "Control d'estat"
