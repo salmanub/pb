@@ -27,7 +27,7 @@ hero:
 
 # Sections Content
 sections:
-  title: "¿Por Qué un Informe Pericial de Construcción es Esencial?"
+  title: "¿Por Qué un Informe Perial de Construcción es Esencial?"
   intro: |
     <div class="max-w-3xl mx-auto">
       <p class="mb-6">Un dictamen técnico riguroso es mucho más que un documento: es la herramienta clave que marca la diferencia entre el éxito y el fracaso en cualquier proceso relacionado con defectos constructivos.</p>
@@ -92,14 +92,14 @@ serviceCluster:
         - "Pruebas técnicas"
         - "Documentación exhaustiva"
     
-    - title: "Recepción de Propiedades"
-      description: "Verificación técnica del estado inicial o final de naves industriales y locales comerciales. Documentación de defectos preexistentes."
+    - title: "Informes de Estado para Alquiler Industrial"
+      description: "Inspecciones técnicas profesionales para documentar el estado de naves industriales y locales comerciales. Evite conflictos y proteja su fianza con informes periciales detallados."
       url: "/construccion/peritaje-alquiler-naves-industriales-barcelona/"
       icon: "document"
       features:
-        - "Control de estado"
-        - "Medición de daños"
-        - "Informes detallados"
+        - "Documentación de defectos preexistentes"
+        - "Verificación de instalaciones industriales"
+        - "Informes para entrega y devolución"
 
 # Sección sobre ventaja técnica
 engineer_advantage:
@@ -230,9 +230,8 @@ services_hub:
       cta_text: "Consultar peritajes de pavimentos"
       order: "normal"
       
-    - title: "Informes de Estado para Recepción/Entrega de Alquileres (Naves, Locales)"
-      description: "Elaboramos informes técnicos exhaustivos (actas de estado) que documentan con precisión el estado de conservación de <strong>naves industriales, locales comerciales</strong> y otras propiedades al inicio o finalización de un contrato de alquiler. Este servicio es esencial para prevenir futuros litigios al registrar objetivamente <strong>defectos preexistentes</strong>, desperfectos o el estado de las instalaciones."
-      image: "/assets/images/servicio-alquiler-nave.jpg"
+    - title: "Informes de Estado para Alquiler Industrial"
+      description: "Inspecciones técnicas profesionales para documentar el estado de naves industriales y locales comerciales. Evite conflictos y proteja su fianza con informes periciales detallados."
       url: "/construccion/peritaje-alquiler-naves-industriales-barcelona/"
       cta_text: "Informes para alquileres industriales y locales"
       order: "reversed"
