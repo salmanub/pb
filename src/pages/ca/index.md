@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Pèrit Barcelona | Expert en Informes Tècnics de Construcció i Assegurances'
-description: "Pèrit i Enginyer certificat a Barcelona especialitzat en informes de defectes constructius, peritatges de naus industrials, reforços estructurals i reclamacions d'assegurances. Més de 15 anys d'experiència."
+title: 'Pèrit Barcelona | Expert en Construcció i Assegurances'
+description: "Realitzem informes pericials d'assegurances, tècnics i judicials. Oferim serveis professionals i rigorosos per a particulars i empreses."
 permalink: /ca/
 lang: ca
 translations:

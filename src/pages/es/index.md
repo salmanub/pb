@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Perito Barcelona | Experto en Informes Técnicos de Construcción y Seguros'
-description: "Perito e Ingeniero certificado en Barcelona especializado en informes de defectos constructivos, peritajes de naves industriales, refuerzos estructurales y reclamaciones de seguros. Más de 15 años de experiencia."
+title: 'Perito Barcelona | Experto en Construcción y Seguros'
+description: "Realizamos informes periciales de seguros, técnicos y judiciales. Ofrecemos servicios profesionales y rigurosos para particulares y empresas."
 permalink: /
 lang: es
 translations:
