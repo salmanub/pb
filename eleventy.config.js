@@ -23,7 +23,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/icons");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
-
+  
+  eleventyConfig.addFilter('renderMarkdown', function(content) {
+        return md.render(content);
+    });
   eleventyConfig.addCollection("langCollections", function (collectionApi) {
     const collectionsByLang = {};
 

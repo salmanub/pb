@@ -1,0 +1,326 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<main class="overflow-hidden relative h-auto">
+    <!-- Hero Section - Ajustado para alinear con navbar -->
+    <header class="relative bg-gradient-to-br from-[#0B1030] to-[#1a2452] mt-[70px] lg:mt-[90px] mt-[70px] lg:mt-[120px]">
+        <!-- Pattern Background -->
+        <div aria-hidden="true" class="absolute inset-0">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,slate-500_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.15]"></div>
+        </div>
+
+        <div class="relative mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-8">
+            <div class="py-12 lg:py-16">
+                <!-- Hero Content -->
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="w-full lg:w-7/12">
+                        <h1 class="text-[2.5rem] md:text-[3.5rem] font-light text-white leading-[1.1] tracking-tight mb-6">
+                            {{ title }}
+                            {% if subtitle %}
+                            <span class="block text-[0.7em] text-cyan-300 font-normal mt-4">{{ subtitle }}</span>
+                            {% endif %}
+                        </h1>
+                        {% if hero.socialProof %}
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="flex items-center">
+                                {% for i in range(0, hero.rating) %}
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                {% endfor %}
+                            </div>
+                            <span class="text-slate-300">{{ hero.socialProof }}</span>
+                        </div>
+                        {% endif %}
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="{{ hero.cta.primaryUrl }}" 
+                               class="inline-flex items-center justify-center px-8 py-4 bg-cyan-400 text-white font-semibold uppercase tracking-wider rounded-lg shadow-lg hover:bg-cyan-500 transition-all duration-300">
+                                {{ hero.cta.primary }}
+                            </a>
+                            <a href="{{ hero.cta.secondaryUrl }}" 
+                               class="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold uppercase tracking-wider rounded-lg hover:bg-cyan-400/10 transition-all duration-300">
+                                {{ hero.cta.secondary }}
+                            </a>
+                        </div>
+                    </div>
+                    {% if hero.image %}
+                    <div class="w-full lg:w-5/12">
+                        <img src="{{ hero.image }}" 
+                             alt="{{ hero.imageAlt }}" 
+                             class="w-full h-auto rounded-xl shadow-2xl"
+                             loading="eager"
+                             decoding="async">
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Sections - Sistema de contenedores unificado -->
+    <div class="relative">
+        <!-- Pattern Background - Ajustado para todo el contenido -->
+        <div aria-hidden="true" class="absolute inset-0">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,slate-500_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.03]"></div>
+        </div>
+
+        <div class="relative">
+            <!-- What Is Section -->
+            <section class="py-24 md:py-32">
+                <div class="relative mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-8">
+                    <div class="max-w-[1000px] mx-auto grid md:grid-cols-2 gap-10 items-center">
+                        <div>
+                            <h2 class="font-display text-4xl font-bold text-slate-800 mb-6">{{ whatIs.title }}</h2>
+                            <div class="prose prose-lg">
+                                {{ whatIs.content | safe }}
+                                <ul class="list-disc list-inside space-y-2 text-slate-600 pl-4 mt-4">
+                                    {% for benefit in whatIs.benefits %}
+                                    <li>{{ benefit }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="{{ whatIs.image.src }}" 
+                                 alt="{{ whatIs.image.alt }}" 
+                                 class="rounded-lg shadow-xl w-full object-cover aspect-square">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Benefits -->
+            <section class="py-24 md:py-32">
+                <div class="relative mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-display text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">{{ keyBenefits.title }}</h2>
+                    </div>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {% for benefit in keyBenefits.benefits %}
+                        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <use href="#icon-{{ benefit.icon }}"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ benefit.title }}</h3>
+                            <p class="text-slate-600">{{ benefit.description }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+
+            <!-- Inspection Details -->
+            <section class="py-24 md:py-32 bg-white/50 backdrop-blur-sm">
+                <div class="relative mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="font-display text-4xl font-bold mb-6">{{ inspectionDetails.title }}</h2>
+                        <p class="text-xl text-slate-600">{{ inspectionDetails.description }}</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {% for system in inspectionDetails.systems %}
+                        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                            <div class="flex flex-col h-full">
+                                <div class="flex-1">
+                                    <div class="w-full h-40 rounded-xl bg-slate-100 mb-4 overflow-hidden">
+                                        {% if system.image %}
+                                        <img src="{{ system.image }}" 
+                                             alt="{{ system.imageAlt }}" 
+                                             class="w-full h-full object-cover"
+                                             loading="lazy"
+                                             decoding="async">
+                                        {% endif %}
+                                    </div>
+                                    <h3 class="text-lg font-semibold text-slate-900 mb-2">{{ system.title }}</h3>
+                                    <p class="text-slate-600">{{ system.description }}</p>
+                                </div>
+                                <div class="mt-4">
+                                    <a href="{{ system.cta.url }}" 
+                                       class="inline-flex items-center justify-center px-4 py-2 bg-cyan-400 text-white font-semibold text-sm rounded-lg shadow-md hover:bg-cyan-500 transition-all duration-300">
+                                        {{ system.cta.text }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% if inspectionDetails.outroText %}
+                    <div class="mt-12 text-center" set:html="{{ inspectionDetails.outroText }}"></div>
+                    {% endif %}
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section id="proceso" class="py-24 md:py-32">
+                <div class="relative mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-8">
+                    <h2 class="font-display text-4xl font-bold text-center mb-16">{{ process.title }}</h2>
+                    <div class="grid md:grid-cols-2 gap-x-12 gap-y-16">
+                        <div class="space-y-12">
+                            {% for step in process.steps %}
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold">
+                                    {{ loop.index }}
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2">{{ step.title }}</h3>
+                                    <p class="text-slate-600">{{ step.description }}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="bg-white rounded-xl p-8 shadow-sm">
+                            <h3 class="text-2xl font-bold mb-6">{{ process.secondaryContentTitle }}</h3>
+                            <div class="prose prose-lg">{{ process.secondaryContent | safe }}</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            {% if faq %}
+            <section class="py-24 md:py-32 bg-white/50 backdrop-blur-sm">
+                <div class="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+                    <h2 class="font-display text-4xl font-bold text-center mb-16">{{ faq.title }}</h2>
+                    <div class="space-y-8">
+                        {% for item in faq.questions %}
+                        <div class="bg-slate-50 rounded-xl p-6">
+                            <h3 class="text-xl font-semibold mb-3">{{ item.question }}</h3>
+                            <p class="text-slate-600">{{ item.answer }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+            {% endif %}
+
+            <!-- Testimonials -->
+            {% if testimonials %}
+            <section class="py-24 md:py-32">
+                <div class="relative mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        {% for testimonial in testimonials %}
+                        <div class="bg-white p-8 rounded-xl shadow-sm">
+                            <blockquote class="text-lg text-slate-600 mb-6">{{ testimonial.quote }}</blockquote>
+                            <cite class="flex items-center gap-2">
+                                <span class="font-semibold text-slate-900">{{ testimonial.author }}</span>
+                                <span class="text-slate-500">—</span>
+                                <span class="text-slate-500">{{ testimonial.role }}</span>
+                            </cite>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+            {% endif %}
+
+            <!-- Strategic Content Section -->
+            {% if strategicContent %}
+            <section id="strategic-content" class="relative py-24 md:py-32 bg-white border-y border-slate-200">
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-50/80 to-white/90"></div>
+                <div class="absolute inset-0">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,cyan-600_1px,transparent_1px)] bg-[size:24px_24px] opacity-[0.03]"></div>
+                </div>
+                <div class="relative w-full px-4 sm:px-6 md:px-8 lg:px-12 mx-auto max-w-[1400px]">
+                    <div class="mb-16 text-center">
+                        <div class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-cyan-600 rounded-lg mb-6">
+                            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                            </svg>
+                            <span class="text-white font-bold tracking-wider text-sm uppercase">Colaboración Estratégica</span>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-bold text-slate-900">Para Despachos de Abogados</h2>
+                    </div>
+
+                    <div class="prose prose-lg max-w-4xl mx-auto 
+                        prose-headings:font-display prose-headings:text-slate-900 prose-headings:font-bold
+                        prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6
+                        prose-h3:text-2xl prose-h3:mt-12 prose-h3:mb-4
+                        prose-p:text-lg prose-p:text-slate-700 prose-p:leading-relaxed
+                        prose-strong:text-cyan-700 prose-strong:font-semibold
+                        prose-a:text-cyan-600 prose-a:font-medium prose-a:no-underline hover:prose-a:text-cyan-700
+                        prose-ul:mt-6 prose-ul:space-y-3 prose-li:text-slate-700
+                        [&>*:first-child]:mt-0">
+                        {{ strategicContent | renderMarkdown | safe }}
+                    </div>
+
+                    <div class="mt-16 text-center">
+                        <a href="/contacto/?tipo=abogado" 
+                           class="group inline-flex items-center justify-center px-8 py-4 bg-cyan-600 text-white font-bold text-lg rounded-lg shadow-xl hover:bg-cyan-700 transform hover:-translate-y-0.5 transition-all duration-300">
+                            <span>Contactar para Colaboración Profesional</span>
+                            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            {% endif %}
+
+            <!-- Final CTA -->
+            <section class="relative py-24 md:py-32 bg-gradient-to-br from-[#0B1030] to-[#1a2452] overflow-hidden">
+                <div class="absolute inset-0">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,slate-400_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.15]"></div>
+                </div>
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl"></div>
+
+                <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="font-display text-5xl md:text-6xl font-light text-white leading-[1.1] tracking-tight mb-8">{{ finalCTA.title }}</h2>
+                    <p class="text-xl md:text-2xl text-cyan-100 mb-12 font-medium">{{ finalCTA.description }}</p>
+                    <div class="inline-flex items-center gap-4 p-1 bg-white/10 rounded-2xl backdrop-blur-sm">
+                        <a href="{{ finalCTA.buttonUrl }}" 
+                           class="inline-flex items-center justify-center px-8 py-4 bg-cyan-400 text-white font-semibold uppercase tracking-wider rounded-xl shadow-lg hover:bg-cyan-500 transition-all duration-300">
+                            {{ finalCTA.button }}
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+
+
+{% block pageStyles %}
+{% set semiPillarv2CSS %} {% include "dist/assets/styles/index.css" %} {% endset %}
+<style>
+    {{ semiPillarv2CSS | safe }}
+    // Base styles
+    .prose-lg {
+        --tw-prose-headings: theme('colors.slate.800');
+        --tw-prose-body: theme('colors.slate.700');
+        --tw-prose-links: theme('colors.cyan.600');
+        --tw-prose-links-hover: theme('colors.cyan.700');
+    }
+    
+    .font-display {
+        font-feature-settings: "ss01";
+    }
+
+    // Grid pattern styles
+    .bg-grid-slate-100 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(241 245 249 / 0.1)'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E");
+    }
+
+    // Custom animations
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+
+    .animate-float {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    // Responsive adjustments
+    @media (min-width: 1024px) {
+        .hero-clip-path {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+        }
+    }
+</style>
+{% endblock %}

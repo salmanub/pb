@@ -1,0 +1,214 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<main>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white mt-[70px]">
+            <div class="relative max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 lg:px-0 lg:ml-[5%] py-12 md:py-16">
+                <nav class="text-sm text-slate-300 mb-6">
+                    <a href="/" class="hover:text-cyan-400 transition-colors">Inicio</a> >
+                    <span class="font-semibold">{{ eleventyNavigation.title }}</span>
+                </nav>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl">{{ title }}</h1>
+                <p class="text-xl md:text-2xl text-slate-300 max-w-3xl mb-8">
+                    {{ subTitle }}
+                </p>
+                <a href="{{ ctaUrl | default('/contacto/') }}" 
+                   class="inline-flex items-center justify-center px-8 py-4 bg-cyan-400 text-white font-semibold uppercase tracking-wider rounded-lg shadow-lg hover:bg-cyan-500 transition-all duration-300">
+                    {{ ctaText | default('Solicitar Inspección') }}
+                </a>
+            </div>
+        </section>
+
+        <!-- Content Sections -->
+        <div class="space-y-16 md:space-y-24">
+            <!-- What Is Section -->
+            <section class="py-16 md:py-24 bg-gradient-to-b from-slate-50/50">
+                <div class="max-w-[1000px] mx-auto grid md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-800 mb-6">¿Qué es un Home Inspector y Por Qué Necesita Uno en Barcelona?</h2>
+                        <p class="text-lg text-slate-700 leading-relaxed mb-4">
+                            Un <strong>Home Inspector</strong> realiza una evaluación técnica visual y no invasiva del estado de conservación de una vivienda. El objetivo es identificar <strong>defectos existentes, problemas potenciales y vicios ocultos</strong> que podrían suponer costes inesperados o afectar a su seguridad y confort.
+                        </p>
+                        <p class="text-lg text-slate-700 leading-relaxed">
+                            Contratar este servicio en Barcelona antes de una transacción inmobiliaria es crucial para:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-slate-600 pl-4 mt-4">
+                            <li>Conocer el estado real de la propiedad.</li>
+                            <li>Identificar reparaciones necesarias y estimar costes.</li>
+                            <li>Disponer de argumentos sólidos para negociar el precio de compra/venta.</li>
+                            <li>Evitar sorpresas desagradables y costosas tras la firma.</li>
+                            <li>Tomar una decisión de compra o venta mucho más informada y segura.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="/images/home-inspector-trabajando.jpg" alt="Home inspector revisando una vivienda en Barcelona" class="rounded-lg shadow-xl w-full object-cover aspect-square">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Grid Section -->
+            <section class="py-16 md:py-24 bg-white relative overflow-hidden">
+                <div class="max-w-[1200px] mx-auto px-4 md:px-[5%]">
+                    <div class="text-center mb-12">
+                        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600">
+                            ¿Qué Revisamos en una Inspección de Vivienda?
+                        </h2>
+                        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                            Nuestra inspección técnica abarca todos los elementos fundamentales de la vivienda para ofrecerle una visión completa de su estado:
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Item Inspección -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoEstructura/></div>
+                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Estructura y Cimentación</h3>
+                            <p class="text-sm text-slate-600">Signos de asientos, grietas visibles en muros, forjados y elementos portantes.</p>
+                        </div>
+                        <!-- Item Inspección -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoTejado/></div>
+                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Cubiertas y Tejados</h3>
+                            <p class="text-sm text-slate-600">Estado de tejas/impermeabilización, canalones, posibles filtraciones desde cubierta.</p>
+                        </div>
+                        <!-- Item Inspección -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoFachada/></div>
+                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Fachadas y Revestimientos Exteriores</h3>
+                            <p class="text-sm text-slate-600">Fisuras, humedades, desprendimientos, estado de juntas y carpinterías exteriores.</p>
+                        </div>
+                        <!-- Item Inspección -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoFontaneria/></div>
+                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Instalaciones de Fontanería y Saneamiento</h3>
+                            <p class="text-sm text-slate-600">Estado de tuberías visibles, grifería, sanitarios, posibles fugas, evacuación de aguas.</p>
+                        </div>
+                        <!-- Item Inspección -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                             <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoElectricidad/></div>
+                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Instalación Eléctrica</h3>
+                            <p class="text-sm text-slate-600">Cuadro general, estado de cableado visible, interruptores, enchufes, seguridad.</p>
+                        </div>
+                        <!-- Item Inspección -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoClima/></div>
+                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Sistemas de Climatización (Calefacción/AACC)</h3>
+                            <p class="text-sm text-slate-600">Funcionamiento básico, estado de conservación de equipos visibles, distribución.</p>
+                        </div>
+                        <!-- Item Inspección -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoHumedad/></div>
+                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Detección de Humedades y Ventilación</h3>
+                            <p class="text-sm text-slate-600">Búsqueda de manchas, moho, condensaciones, evaluación de la ventilación general.</p>
+                        </div>
+                         <!-- Item Inspección -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoAcabados/></div>
+                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Acabados Interiores y Carpinterías</h3>
+                            <p class="text-sm text-slate-600">Estado de suelos, paredes, techos, puertas, ventanas, posibles defectos.</p>
+                        </div>
+                         <!-- Item Inspección -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoBusqueda/></div>
+                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Identificación de Posibles Vicios Ocultos</h3>
+                            <p class="text-sm text-slate-600">Búsqueda de indicios de problemas no evidentes a primera vista.</p>
+                        </div>
+                    </div>
+                    <p class="text-center mt-8 text-slate-600">
+                        Si durante la inspección se detectan problemas que requieren un análisis más profundo, le asesoraremos sobre la necesidad de <a href="/construccion/" class="text-indigo-600 hover:underline font-medium">informes periciales de construcción</a> específicos.
+                    </p>
+                </div>
+                
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,transparent,black,transparent)]"></div>
+            </section>
+
+            <!-- Process Section -->
+            <section class="py-16 md:py-24 bg-gradient-to-br from-slate-50/50 to-white">
+                <div class="max-w-[1000px] mx-auto grid md:grid-cols-2 gap-10 items-start">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-slate-800 mb-4">Nuestro Proceso de Inspección</h2>
+                        <ol class="list-decimal list-inside space-y-3 text-slate-700">
+                            <li><strong>Contacto Inicial y Presupuesto:</strong> Nos cuenta sus necesidades y le proporcionamos un presupuesto detallado.</li>
+                            <li><strong>Coordinación de la Visita:</strong> Agendamos la inspección en el momento más conveniente.</li>
+                            <li><strong>Inspección Exhaustiva:</strong> Realizamos una revisión visual minuciosa de todos los elementos acordados, tomando notas y fotografías. Utilizamos herramientas como medidores de humedad y cámaras térmicas cuando es necesario.</li>
+                            <li><strong>Análisis de la Información:</strong> Procesamos todos los datos recopilados.</li>
+                            <li><strong>Redacción del Informe Técnico:</strong> Elaboramos un informe claro, detallado y fácil de entender.</li>
+                            <li><strong>Entrega y Aclaraciones:</strong> Le entregamos el informe y resolvemos cualquier duda que pueda tener.</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-semibold text-slate-800 mb-4">¿Qué Incluye el Informe de Home Inspection?</h2>
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="text-slate-700 mb-3">Recibirá un documento completo que típicamente incluye:</p>
+                            <ul class="list-disc list-inside space-y-2 text-slate-600">
+                                <li>Descripción detallada de cada sistema y componente inspeccionado.</li>
+                                <li>Identificación de cualquier defecto o problema encontrado.</li>
+                                <li>Fotografías ilustrativas de los hallazgos.</li>
+                                <li>Grado de importancia o urgencia de las reparaciones.</li>
+                                <li>Recomendaciones sobre posibles acciones o reparaciones (sin ser un presupuesto de obra).</li>
+                                <li>Conclusiones generales sobre el estado de la vivienda.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Us -->
+            <section class="py-16 md:py-24 bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white relative overflow-hidden">
+                <div class="max-w-[1000px] mx-auto text-center">
+                    <h2 class="text-3xl font-bold mb-8">¿Por Qué Elegirnos como su Home Inspector en Barcelona?</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-white/20 text-white flex items-center justify-center mb-3 mx-auto"><IconoIngeniero/></div>
+                            <h3 class="text-xl font-semibold mb-2">Experiencia como Ingeniero</h3>
+                            <p class="text-indigo-100 text-sm">Mi formación y experiencia en ingeniería de obras públicas aportan una visión técnica profunda para detectar problemas estructurales y constructivos.</p>
+                        </div>
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-white/20 text-white flex items-center justify-center mb-3 mx-auto"><IconoObjetividad/></div>
+                            <h3 class="text-xl font-semibold mb-2">Objetividad e Independencia</h3>
+                            <p class="text-indigo-100 text-sm">No estamos vinculados a agencias inmobiliarias ni empresas de reformas. Nuestro único interés es proporcionarle información veraz.</p>
+                        </div>
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-white/20 text-white flex items-center justify-center mb-3 mx-auto"><IconoInformeClaro/></div>
+                            <h3 class="text-xl font-semibold mb-2">Informes Claros y Detallados</h3>
+                            <p class="text-indigo-100 text-sm">Le entregamos un informe fácil de entender, con fotografías y explicaciones precisas, para que tome la mejor decisión.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final CTA -->
+            <section class="py-20 md:py-28 bg-gradient-to-b from-slate-50/50">
+                <div class="max-w-[1000px] mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">¿Listo para Conocer el Verdadero Estado de su Futura Vivienda?</h2>
+                    <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">Una inspección pre-compra es una inversión inteligente. Contacte hoy mismo para solicitar su inspección en Barcelona y provincia.</p>
+                    <a href="/contacto/?servicio=home-inspector" class="inline-block px-10 py-5 bg-cyan-400 text-white font-bold text-lg rounded-lg hover:bg-cyan-500 transition-all">
+                        {{ ctaText | default('Contactar para Inspección de Vivienda') }}
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+{% endblock %}
+
+{% block pageStyles %}
+    {% set semiServicePillar %} {% include "dist/assets/styles/index.css" %} {% endset %}
+<style>
+    {{ semiServicePillar | safe }}
+    .prose-lg {
+        --tw-prose-headings: theme('colors.slate.800');
+        --tw-prose-body: theme('colors.slate.700');
+        --tw-prose-links: theme('colors.cyan.600');
+        --tw-prose-links-hover: theme('colors.cyan.700');
+    }
+    
+    .font-display {
+        font-feature-settings: "ss01";
+    }
+
+    .bg-grid-slate-100 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(241 245 249 / 0.1)'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E");
+    }
+</style>
+{% endblock %}

@@ -1,12 +1,14 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-    <main itemscope itemtype="https://schema.org/Article">
-        {# Hero Section - fuera del articleBody #}
-        {% include "partials/heroWithImage.njk" %}
+    <main itemscope itemtype="https://schema.org/Article" class="">
+        {# Hero Section con ajuste preciso para navbar #}
         
-        {# Article Body Content #}
-        <article class="article-body" itemprop="articleBody">
+            {% include "partials/heroWithImage.njk" %}
+        
+        
+        {# Article Body Content - Ajustado para evitar solapamientos #}
+        <article class="article-body relative" itemprop="articleBody">
             {% include "partials/problem-solution-v2.njk" %}
             {% include "partials/solucion-tecnica.njk" %}
             {% include "partials/servicios-home.njk" %}
@@ -17,7 +19,7 @@
             {% include "partials/proceso-home.njk" %}
         </article>
         
-        {# CTA Section - fuera del articleBody #}
+        {# CTA Section #}
         {% include "partials/cta-contacto.njk" %}
     </main>
 {% endblock content %}
@@ -27,6 +29,11 @@
   
   <style>
     {{ indexCSS | safe }}
+    .article-body {
+        margin-top: 0;
+        position: relative;
+        z-index: 10;
+    }
   </style>
 {% endblock pageStyles %}
 
