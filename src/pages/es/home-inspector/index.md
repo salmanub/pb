@@ -17,8 +17,6 @@ eleventyNavigation:
   services: true
   notshow: false
   order: 2
-  icon: <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v2m0 0C7.03 5 3 9.03 3 14c0 2.21 1.79 4 4 4h10c2.21 0 4-1.79 4-4 0-4.97-4.03-9-9-9zm0 0v2m0 4h.01m-.01 4h.01"/>
-
 # Hero Section
 hero:
   image: "/assets/images/home-inspector-barcelona-hero.avif"

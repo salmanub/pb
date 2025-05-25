@@ -5,7 +5,7 @@
 {% macro renderNavListItem(entry) %}
     {% if not entry.notshow %}
         <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            {% if entry.children %}
+            {% if entry.key == "Servicios" and entry.children %}
                 <div class="group relative">
                     <button class="flex items-center gap-2 lg:text-slate-600 lg:hover:text-cyan-500 font-medium text-sm
                                  {% if entry.url == page.url %}lg:text-cyan-500{% endif %}
@@ -52,6 +52,52 @@
                 </a>
             {% endif %}
         </li>
+    {% endif %}
+{% endmacro %}
+
+{% macro renderMobileNavItems(entry) %}
+    {% if not entry.notshow %}
+        {% if entry.children %}
+            <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="{{ entry.url }}" class="flex items-center gap-2 text-white/90 font-medium transition-colors text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg px-4 py-2.5">
+                    {% if entry.icon %}
+                        <svg class="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            {{ entry.icon | safe }}
+                        </svg>
+                    {% endif %}
+                    <span>{{ entry.title }}</span>
+                </a>
+                <ul class="space-y-0.5 border-l border-slate-800 ml-4 mt-1">
+                    {% for child in entry.children %}
+                        <li class="nav-item">
+                            <a href="{{ child.url }}" 
+                               class="flex items-center gap-2 text-white/70 font-medium transition-colors text-sm hover:text-cyan-500 hover:bg-white/5 rounded-lg pl-4 py-2">
+                                {% if child.icon %}
+                                    <svg class="w-4 h-4 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        {{ child.icon | safe }}
+                                    </svg>
+                                {% else %}
+                                    <span class="text-cyan-500">→</span>
+                                {% endif %}
+                                <span>{{ child.title }}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% elif entry.key != "Servicios" and not entry.parent %}
+            <li class="nav-item">
+                <a href="{{ entry.url }}"
+                   class="flex items-center gap-2 text-white/90 font-medium transition-colors text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg px-4 py-2.5">
+                    {% if entry.icon %}
+                        <svg class="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            {{ entry.icon | safe }}
+                        </svg>
+                    {% endif %}
+                    <span>{{ entry.title }}</span>
+                </a>
+            </li>
+        {% endif %}
     {% endif %}
 {% endmacro %}
 
@@ -247,7 +293,7 @@
         <!-- Navigation -->
         <nav class="flex-1 flex items-stretch">
             <ul class="space-y-4 w-full flex flex-col justify-around py-8">
-                {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+                {%- for entry in navPages %}{{ renderMobileNavItems(entry) }}{%- endfor -%}
             </ul>
         </nav>
     </div>
