@@ -176,7 +176,7 @@ testimonials:
 
 # What Is Section
 whatIs:
-  title: "¿Qué es un Home Inspector en Barcelona? Guía Completa"
+  title: "¿Qué es un Home Inspector en Barcelona?"
   content: |
     Un <strong>Home Inspector en Barcelona</strong> es un profesional especializado que realiza una <strong>evaluación técnica exhaustiva</strong> del estado de conservación de una vivienda. A través de una inspección visual no invasiva, nuestro objetivo es identificar <strong>defectos existentes, problemas potenciales y vicios ocultos</strong> que podrían suponer costes inesperados o afectar a su seguridad y confort durante la compra o venta de su propiedad.
     
