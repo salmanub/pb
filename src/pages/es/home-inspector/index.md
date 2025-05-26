@@ -188,7 +188,7 @@ whatIs:
     - "Prevenir sorpresas desagradables y sobrecostes tras la firma"
     - "Tomar decisiones informadas y seguras en su inversión inmobiliaria"
   image:
-    src: "/images/home-inspector-barcelona-trabajando.jpg"
+    src: "/assets/images/home-inspector-barcelona-640.avif"
     alt: "Home Inspector profesional realizando una inspección técnica de vivienda en Barcelona"
     title: "Inspección técnica profesional de vivienda en Barcelona"
     width: 800
