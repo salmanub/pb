@@ -73,7 +73,7 @@
                         <div>
                             <h2 class="font-display text-4xl font-bold text-slate-800 mb-6">{{ whatIs.title }}</h2>
                             <div class="prose prose-lg">
-                                {{ whatIs.content | safe }}
+                                {{ whatIs.content | renderMarkdown | safe }}
                                 <ul class="list-disc list-inside space-y-2 text-slate-600 pl-4 mt-4">
                                     {% for benefit in whatIs.benefits %}
                                     <li>{{ benefit }}</li>
