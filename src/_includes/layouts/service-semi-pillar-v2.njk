@@ -1,13 +1,7 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-<main class="overflow-hidden relative h-auto" itemscope itemtype="https://schema.org/Article">
-    <meta itemprop="author" content="{{ metadata.author.name }}">
-    <meta itemprop="datePublished" content="{{ page.date | htmlDateString }}">
-    <meta itemprop="dateModified" content="{{ page.date | htmlDateString }}">
-    <meta itemprop="publisher" content="{{ metadata.publisher.name }}">
-    <meta itemprop="image" content="{{ metadata.url }}{{ hero.image }}">
-
+<main class="overflow-hidden relative h-auto">
     <!-- Hero Section - Ajustado para alinear con navbar -->
     <header class="relative bg-gradient-to-br from-[#0B1030] to-[#1a2452] mt-[70px] lg:mt-[90px] mt-[70px] lg:mt-[120px]">
         <!-- Pattern Background -->
@@ -20,13 +14,12 @@
                 <!-- Hero Content -->
                 <div class="flex flex-col lg:flex-row gap-12 items-center">
                     <div class="w-full lg:w-7/12">
-                        <h1 itemprop="headline" class="text-[2.5rem] md:text-[3.5rem] font-light text-white leading-[1.1] tracking-tight mb-6">
+                        <h1 class="text-[2.5rem] md:text-[3.5rem] font-light text-white leading-[1.1] tracking-tight mb-6">
                             {{ title }}
                             {% if subtitle %}
-                            <span itemprop="alternativeHeadline" class="block text-[0.7em] text-cyan-300 font-normal mt-4">{{ subtitle }}</span>
+                            <span class="block text-[0.7em] text-cyan-300 font-normal mt-4">{{ subtitle }}</span>
                             {% endif %}
                         </h1>
-                        <div itemprop="description" class="hidden">{{ metaDescription }}</div>
                         {% if hero.socialProof %}
                         <div class="flex items-center gap-4 mb-8">
                             <div class="flex items-center">
