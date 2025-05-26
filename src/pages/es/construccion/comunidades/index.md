@@ -12,7 +12,7 @@ translations:
     permalink: /en/property-owners/
 eleventyNavigation:
   key: "Comunidades"
-  title: "Comunidades"
+  title: "Comunidades de propietarios"
   parent: "Servicios"
   order: 3
 
