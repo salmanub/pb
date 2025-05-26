@@ -124,34 +124,61 @@ inspectionDetails:
 
 # Process Section
 process:
-  title: "El Proceso del Peritaje en Sede Judicial"
-  steps: [
-    {
-      title: "Designación o Encargo",
-      description: "Aceptación del cargo como perito judicial o contratación como perito de parte."
-    },
-    {
-      title: "Estudio del Caso",
-      description: "Revisión exhaustiva de la documentación y antecedentes del caso."
-    },
-    {
-      title: "Elaboración del Informe Pericial",
-      description: "Redacción del informe con las conclusiones técnicas del peritaje."
-    },
-    {
-      title: "Ratificación en Juicio",
-      description: "Defensa del informe pericial ante el juez y las partes en el juicio."
-    }
-  ]
-  secondaryContentTitle: "La Ratificación Judicial: Clave del Proceso"
+  title1: "El Proceso del Peritaje Judicial"
+  steps:
+    - title: "Estudio Preliminar"
+      description: "Análisis de la documentación y requisitos del procedimiento."
+    - title: "Investigación Técnica"
+      description: "Recopilación de evidencias y datos necesarios."
+    - title: "Elaboración del Dictamen"
+      description: "Redacción del informe pericial según normativa."
+    - title: "Revisión y Validación"
+      description: "Control de calidad del informe y anexos."
+    - title: "Ratificación en Juicio"
+      description: "Defensa del informe ante el tribunal."
+  secondaryContentTitle: "Contenido del Dictamen Pericial"
   secondaryContent: |
-    <p>La <strong>ratificación del informe pericial en el acto del juicio oral</strong> es una fase crucial. En esta etapa:</p>
-    <ul class="list-disc list-inside space-y-2">
-      <li>Expongo y defiendo las conclusiones ante el Juez y las partes</li>
-      <li>Respondo a preguntas y aclaraciones de los abogados</li>
-      <li>Aporto visión técnica para la toma de decisiones</li>
-      <li>Mi experiencia garantiza la solidez del dictamen</li>
-    </ul>
+    <div class="bg-gradient-to-br from-slate-50 to-white p-6 rounded-xl shadow-sm">
+      <h3 class="text-xl font-semibold text-slate-800 mb-4">Su informe pericial judicial incluirá:</h3>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Juramento o promesa de objetividad</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Descripción detallada de antecedentes</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Metodología y documentación analizada</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Análisis técnico fundamentado</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Conclusiones claras y objetivas</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Documentación gráfica y anexos probatorios</span>
+        </li>
+      </ul>
+    </div>
 
 # Why Choose Us
 whyChooseUs:

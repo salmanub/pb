@@ -85,7 +85,7 @@ process:
       description: "Redacción del informe técnico con conclusiones."
     - title: "Presentación de Resultados"
       description: "Exposición del informe a la comunidad."
-  secondaryContentTitle: "¿Qué Incluye el Informe para Comunidades?"
+  secondaryContentTitle: "Contenido del Informe Pericial para Comunidades"
   secondaryContent: |
     <div class="bg-gradient-to-br from-slate-50 to-white p-6 rounded-xl shadow-sm">
       <h3 class="text-xl font-semibold text-slate-800 mb-4">Su informe pericial incluirá:</h3>
@@ -94,25 +94,37 @@ process:
           <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
-          <span class="text-slate-700">Análisis detallado de elementos comunes</span>
+          <span class="text-slate-700">Estado detallado de elementos comunes</span>
         </li>
         <li class="flex items-start gap-3">
           <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
-          <span class="text-slate-700">Documentación fotográfica exhaustiva</span>
+          <span class="text-slate-700">Análisis de instalaciones comunitarias</span>
         </li>
         <li class="flex items-start gap-3">
           <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
-          <span class="text-slate-700">Diagnóstico técnico de patologías</span>
+          <span class="text-slate-700">Documentación fotográfica de patologías</span>
         </li>
         <li class="flex items-start gap-3">
           <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
-          <span class="text-slate-700">Recomendaciones y soluciones propuestas</span>
+          <span class="text-slate-700">Valoración de deficiencias constructivas</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Estimación de costes de reparación</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Conclusiones y recomendaciones técnicas</span>
         </li>
       </ul>
     </div>

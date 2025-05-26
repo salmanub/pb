@@ -115,17 +115,49 @@ process:
       description: "Elaboramos un informe claro, detallado y fácil de entender."
     - title: "Entrega y Aclaraciones"
       description: "Le entregamos el informe y resolvemos cualquier duda que pueda tener."
-  secondaryContentTitle: "¿Qué Incluye el Informe de Home Inspection?"
+  secondaryContentTitle: "Contenido del Informe de Home Inspector"
   secondaryContent: |
-    <p class="text-slate-700 mb-3">Recibirá un documento completo que típicamente incluye:</p>
-    <ul class="list-disc list-inside space-y-2 text-slate-600">
-        <li>Descripción detallada de cada sistema y componente inspeccionado.</li>
-        <li>Identificación de cualquier defecto o problema encontrado.</li>
-        <li>Fotografías ilustrativas de los hallazgos.</li>
-        <li>Grado de importancia o urgencia de las reparaciones.</li>
-        <li>Recomendaciones sobre posibles acciones o reparaciones (sin ser un presupuesto de obra).</li>
-        <li>Conclusiones generales sobre el estado de la vivienda.</li>
-    </ul>
+    <div class="bg-gradient-to-br from-slate-50 to-white p-6 rounded-xl shadow-sm">
+      <h3 class="text-xl font-semibold text-slate-800 mb-4">Su informe de inspección incluirá:</h3>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-indigo-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Evaluación de estructura y cimentación</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-indigo-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Análisis de instalaciones (fontanería, electricidad, clima)</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-indigo-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Detección de humedades y problemas de ventilación</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-indigo-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Reportaje fotográfico completo</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-indigo-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Identificación de vicios ocultos</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-indigo-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Recomendaciones y presupuesto estimado</span>
+        </li>
+      </ul>
+    </div>
 
 # Sección Por Qué Elegirnos
 whyChooseUs:
