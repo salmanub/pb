@@ -20,7 +20,7 @@ eleventyNavigation:
 # Hero Section
 hero:
   tag: "Peritajes Judiciales"
-  title: "Perito Judicial Experto en"
+  title: "Perito Judicial en"
   rotatingTexts:
     default: "Barcelona"
     items: ["Barcelona", "Casos Judiciales", "Informes Periciales"]

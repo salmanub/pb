@@ -85,6 +85,49 @@ process:
       description: "Redacción de un informe técnico con hallazgos y recomendaciones."
     - title: "Reunión de Resultados"
       description: "Presentación del informe y discusión de resultados con el cliente."
+  secondaryContentTitle: "Contenido del Informe Pericial Industrial"
+  secondaryContent: |
+    <div class="bg-gradient-to-br from-slate-50 to-white p-6 rounded-xl shadow-sm">
+      <h3 class="text-xl font-semibold text-slate-800 mb-4">Su informe pericial incluirá:</h3>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-cyan-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Evaluación estructural completa del edificio industrial</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-cyan-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Análisis detallado de pavimentos y soleras</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-cyan-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Inspección de sistemas e instalaciones</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-cyan-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Documentación fotográfica exhaustiva</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-cyan-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Valoración de patologías y deficiencias</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-cyan-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          <span class="text-slate-700">Recomendaciones técnicas y estimación de costes</span>
+        </li>
+      </ul>
+    </div>
 
 # Why Choose Us Section
 whyChooseUs:
