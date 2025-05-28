@@ -3,7 +3,7 @@ layout: "layouts/service-semi-pillar-v2.njk"
 title: "Perito Judicial en Barcelona | Informes Técnicos para Juicios"
 subtitle: "Elaboración de dictámenes periciales rigurosos y defensa experta en juicio. Especialistas en casos de construcción y seguros."
 metaDescription: "Servicio de peritaje judicial en Barcelona. Informes periciales con validez legal, ratificación en juicio y colaboración con abogados. Expertos en construcción y seguros."
-permalink: "/peritajes-judiciales/"
+permalink: "/judicial/"
 lang: es
 translations:
   - lang: ca
