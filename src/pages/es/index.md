@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Perito Barcelona | Experto en Construcción y Seguros'
-description: "Realizamos informes periciales de seguros, técnicos y judiciales. Ofrecemos servicios profesionales y rigurosos para particulares y empresas."
+  title: 'Perito Judicial en Construcción y Obra civil en Barcelona | Perito Barcelona'
+  description: "Informes periciales de construcción, obra civil y patologías estructurales. Perito judicial en Barcelona para comunidades, particulares y empresas. Asesoramiento técnico riguroso."
 permalink: /
 lang: es
 translations:
