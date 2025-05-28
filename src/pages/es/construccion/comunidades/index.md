@@ -3,7 +3,7 @@ layout: "layouts/service-semi-pillar-v2.njk"
 title: "Perito para Comunidades de Propietarios en Barcelona | Informes Técnicos"
 subtitle: "Soluciones técnicas e informes periciales especializados para edificios y elementos comunes. Desde diagnóstico de patologías hasta reclamaciones profesionales."
 metaDescription: "Servicio experto de peritajes para Comunidades de Propietarios en Barcelona. Informes técnicos detallados para fachadas, cubiertas, estructuras y elementos comunes."
-permalink: "/comunidades/"
+permalink: "/comunidades-propietarios/"
 lang: es
 translations:
   - lang: ca
