@@ -9,7 +9,7 @@ translations:
   - lang: ca
     permalink: /ca/construccio/peritatges-naus-industrials/
   - lang: en
-    permalink: /en/construction/industrial-building-inspections/
+    permalink: /en/industrial-premises/
 eleventyNavigation:
   key: "Naves Industriales"
   title: "Naves Industriales"
