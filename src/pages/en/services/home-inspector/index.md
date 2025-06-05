@@ -125,4 +125,54 @@ whatIs:
     height: 600
     caption: "Our Home Inspector performing a detailed technical evaluation in Barcelona"
 
+whyChooseUs:
+  title: "Why Choose Us as Your Home Inspector in Barcelona"
+  benefits:
+    - title: "Engineering Background"
+      description: "My training and experience in civil engineering provides deep technical insight to detect structural and construction issues."
+      iconBgColor: "bg-white/20"
+      iconTextColor: "text-white"
+      iconSvg: '<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>'
+    - title: "Objectivity & Independence"
+      description: "We are not affiliated with real estate agencies or renovation companies. Our only interest is providing you with accurate information."
+      iconBgColor: "bg-white/20"
+      iconTextColor: "text-white"
+      iconSvg: '<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>'
+    - title: "Clear & Detailed Reports"
+      description: "We deliver an easy-to-understand report with photos and precise explanations to help you make the best decision."
+      iconBgColor: "bg-white/20"
+      iconTextColor: "text-white"
+      iconSvg: '<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>'
+
+finalCTA:
+  title: "Ready to Know the True Condition of Your Future Home?"
+  description: "Protect your investment with a professional inspection"
+  button: "Request Inspection"
+  buttonUrl: "/en/contact/?service=home-inspector"
+
+faq:
+  title: "Frequently Asked Questions about Home Inspection"
+  questions:
+    - question: "How long does an inspection take?"
+      answer: "A typical inspection takes 2-3 hours, depending on the property size and characteristics."
+    - question: "Can I attend the inspection?"
+      answer: "Yes, in fact we recommend it. You'll be able to see the property's condition firsthand and ask questions."
+    - question: "What's the difference from an appraisal?"
+      answer: "An appraisal determines economic value, while our inspection evaluates technical condition and detects potential problems."
+    - question: "Do you provide a written report?"
+      answer: "Yes, you'll receive a comprehensive report with photos, findings, and recommendations within 48-72 hours."
+
+testimonials:
+  - quote: "The inspection saved us over €15,000 in repairs we would have had to assume."
+    author: "Maria Garcia"
+    role: "Buyer in L'Eixample"
+  - quote: "Detailed and very professional report. Gave us the peace of mind we needed to buy."
+    author: "John Martinez"
+    role: "Buyer in Gràcia"
+  - quote: "Excellent service and thorough inspection. Highly recommended."
+    author: "Sophie Williams"
+    role: "Property investor"
+
+outroText: |
+  If problems requiring deeper analysis are detected during the inspection, we'll advise you on the need for specific <a href="/en/construction/" class="text-indigo-600 hover:underline font-medium">construction expert reports</a>.
 ---
