@@ -76,31 +76,40 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                         </svg>
                     </button>
-                    <div id="cta-contacto-msg" style="display:none; color:green; margin-top:10px;">
-                        ¡Datos enviados correctamente!
+
+                    <!-- Notificaciones -->
+                    <div id="cta-contacto-msg" class="hidden mt-6">
+                        <div class="flex items-center gap-3 p-4 rounded-lg bg-green-50 border border-green-200 text-green-800">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>¡Datos enviados correctamente!</span>
+                        </div>
                     </div>
-                    <div id="cta-contacto-error" style="display:none; color:red; margin-top:10px;">
-                        Ha ocurrido un error al enviar los datos. Por favor, inténtalo de nuevo más tarde.
+                    <div id="cta-contacto-error" class="hidden mt-6">
+                        <div class="flex items-center gap-3 p-4 rounded-lg bg-red-50 border border-red-200 text-red-800">
+                            <svg class="w-6 h-6 text-red-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                            <span>Ha ocurrido un error al enviar los datos. Por favor, inténtalo de nuevo más tarde.</span>
+                        </div>
                     </div>
                 </form>
                 <script>
-                    document.getElementById('cta-contacto-form').addEventListener('submit', async function(e) {
-                    e.preventDefault();
-                    const form = e.target;
-                    const data = new FormData(form);
+                    const form = document.getElementById('cta-contacto-form');
                     const msg = document.getElementById('cta-contacto-msg');
-                    try {
-                        await fetch('https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma', {
-                        method: 'POST',
-                        body: data
-                        });
-                        msg.style.display = 'block';
-                        form.reset();
-                    } catch (err) {
-                        msg.style.display = 'block';
-                        msg.style.color = 'red';
-                        msg.textContent = 'Hubo un error al enviar los datos.';
-                    }
+                    const error = document.getElementById('cta-contacto-error');
+                    form.addEventListener('submit', async function(e) {
+                        e.preventDefault();
+                        msg.classList.add('hidden');
+                        error.classList.add('hidden');
+                        const data = new FormData(form);
+                        try {
+                            await fetch('https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma', {
+                                method: 'POST',
+                                body: data
+                            });
+                            msg.classList.remove('hidden');
+                            form.reset();
+                        } catch (err) {
+                            error.classList.remove('hidden');
+                        }
                     });
                 </script>
             </div>
