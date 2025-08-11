@@ -3,7 +3,7 @@ layout: 'layouts/service-child.njk'
 title: 'Informe Pericial de Humedades y Filtraciones en Barcelona'
 subtitle: 'Diagnóstico especializado del origen y soluciones técnicas para problemas de humedad'
 description: 'Perito especialista en humedades y filtraciones. Análisis de causas de manchas, goteras, condensaciones y deterioros por agua en edificios. Soluciones efectivas en Barcelona.'
-permalink: '/construccion/humedades-filtraciones/'
+permalink: '/humedades-filtraciones/'
 lang: 'es'
 eleventyNavigation:
   key: "Humedades y filtraciones"
