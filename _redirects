@@ -1,11 +1,11 @@
-/construccion/vicios-ocultos/ /vicios-ocultos/ 301
+# --- Redirecciones específicas ---
+/construccion/vicios-ocultos /vicios-ocultos 301
 /construccion/vicios-ocultos/ /vicios-ocultos/ 301
 /perito-judicial/ /judicial/ 301
 /home-inspector/servicios/ /home-inspector/pre-compra/ 301
 /seguros/humedades/ /construccion/patologias/humedades/ 301
 /construccion/humedades/ /construccion/patologias/humedades/ 301
 /construccion/defectos/ /construccion/ 301
-/seguros/service1/ / 301
 /seguros/service1/ / 301
 /casos-de-exito/3 / 301
 /ca/construccio/informes-tecnic/ / 301
@@ -25,7 +25,7 @@
 /en/legal-expert-witness/what-is/ / 301
 /ca/seguros/reclamacions/ / 301
 /assegurances/danys-aigua/ /ca/assegurances/danys-aigua/ 301
-/ca/seguros/responsabilitat-civil/ /ca/assegurances/responsabilitat-civil// 301
+/ca/seguros/responsabilitat-civil/ /ca/assegurances/responsabilitat-civil/ 301
 /en/insurance-policy-assessment/ / 301
 /ca/perit-assegurances/ / 301
 /ca/construccio/patologies/aillament/ / 301
@@ -60,7 +60,7 @@
 /tasaciones-inmobiliarias/terrenos/ / 301
 /peritaje-estructuras/ite/ / 301
 /peritaje-estructuras/patologias/ / 301
-/buscar?q=%7Bsearch_term_string%7D / 301
+/buscar / 301
 /lib/partytown/ / 301
 /casos-de-exito/2 / 301
 /casos-de-exito/1 / 301
@@ -74,10 +74,12 @@
 /tasaciones-inmobiliarias/judicial/ / 301
 /tasaciones-inmobiliarias/viviendas/ / 301
 /politica-de-privacitat/ / 301
-/construccion/grietas-estructurales/ /grietas-estructurales/ 301 
+/construccion/grietas-estructurales/ /grietas-estructurales/ 301
 /construccion/humedades-filtraciones/ /humedades-filtraciones/ 301
 /construccion/reparacion-hormigon-armado/ /reparacion-hormigon-armado/ 301
 /construccion/obra-civil/ /obra-civil/ 301
 /construccion/peritaje-alquiler-naves-industriales-barcelona/ /peritaje-alquiler-naves-industriales-barcelona/ 301
+
+# --- Catch-all para servir contenido ---
 /* /:splat 200
 /* /:splat/ 200
