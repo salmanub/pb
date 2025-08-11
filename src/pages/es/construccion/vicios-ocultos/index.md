@@ -3,7 +3,7 @@ layout: 'layouts/service-child.njk'
 title: 'Informe Pericial de Vicios Ocultos y Defectos Constructivos en Barcelona'
 subtitle: 'Dictamen técnico especializado para fundamentar reclamaciones por defectos no evidentes'
 description: 'Perito especializado en vicios ocultos y defectos constructivos. Análisis técnico e informes periciales para reclamaciones a vendedores, promotoras o constructoras en Barcelona.'
-permalink: '/construccion/vicios-ocultos/'
+permalink: '/vicios-ocultos/'
 lang: 'es'
 eleventyNavigation:
   key: "vicios ocultos y defectos constructivos"

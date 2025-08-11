@@ -3,7 +3,7 @@ layout: 'layouts/service-child.njk'
 title: 'Informe Pericial para Reparación de Hormigón Armado en Barcelona'
 subtitle: 'Diagnóstico especializado de patologías, carbonatación y corrosión de armaduras'
 description: 'Perito experto en diagnóstico de hormigón armado deteriorado. Análisis de corrosión, carbonatación y soluciones técnicas para garantizar la durabilidad estructural.'
-permalink: '/construccion/reparacion-hormigon-armado/'
+permalink: '/reparacion-hormigon-armado/'
 lang: 'es'
 eleventyNavigation:
   key: "Reparación de hormigón armado"

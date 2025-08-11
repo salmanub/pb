@@ -3,7 +3,7 @@ layout: 'layouts/service-child.njk'
 title: 'Informe Pericial de Defectos en Pavimentos Industriales y Exteriores en Barcelona'
 subtitle: 'Análisis técnico de fisuras, hundimientos y fallos en pavimentos de hormigón y asfalto'
 description: 'Perito especializado en patologías de pavimentos industriales y exteriores. Dictaminamos causas de fisuras, baches, levantamientos y defectos en superficies de hormigón o asfalto.'
-permalink: '/construccion/informe-pericial-pavimentos/'
+permalink: '/informe-pericial-pavimentos/'
 lang: 'es'
 eleventyNavigation:
   key: "pavimentos industriales y exteriores"

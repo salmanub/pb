@@ -3,7 +3,7 @@ layout: 'layouts/service-child.njk'
 title: 'Informe Pericial de Grietas y Problemas Estructurales en Barcelona'
 subtitle: 'Diagnóstico experto de fisuras, deformaciones y evaluación de la seguridad estructural'
 description: 'Perito especializado en análisis de grietas estructurales. Evaluación de patologías, refuerzos y soluciones técnicas para edificios con problemas de estabilidad en Barcelona.'
-permalink: '/construccion/grietas-estructurales/'
+permalink: '/grietas-estructurales/'
 lang: 'es'
 eleventyNavigation:
   key: "Grietas y problemas estructurales"

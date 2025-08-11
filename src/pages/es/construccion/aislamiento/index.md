@@ -3,7 +3,7 @@ layout: 'layouts/service-child.njk'
 title: 'Informe Pericial de Aislamiento Térmico y Acústico en Barcelona'
 subtitle: 'Soluciones técnicas para problemas de ruido, temperatura y eficiencia energética'
 description: 'Perito especializado en problemas de aislamiento acústico y térmico. Analizamos deficiencias, ruidos molestos y pérdidas de energía. Soluciones efectivas en Barcelona.'
-permalink: '/construccion/aislamiento/'
+permalink: '/aislamiento/'
 lang: 'es'
 eleventyNavigation:
   key: "aislamiento térmico y acústico"

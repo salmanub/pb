@@ -8,7 +8,7 @@ permalink: "/ca/construccio/peritatge-lloguer-naus-industrials-barcelona/"
 lang: "ca"
 translations:
   - lang: es
-    permalink: /construccion/peritaje-alquiler-naves-industriales-barcelona/
+    permalink: /peritaje-alquiler-naves-industriales-barcelona/
   - lang: en
     permalink: "/en/construction/industrial-lease-inspection-barcelona/"
 eleventyNavigation:

@@ -3,7 +3,7 @@ layout: 'layouts/service-child.njk'
 title: 'Informe Pericial de Cimentaciones y Asentamientos en Barcelona'
 subtitle: 'Diagnóstico experto de problemas en cimentaciones, asientos y estabilidad del terreno'
 description: 'Perito especializado en problemas de cimentación. Análisis de asentamientos diferenciales, fallos en muros de contención y soluciones técnicas en Barcelona.'
-permalink: '/construccion/informe-pericial-cimentaciones/'
+permalink: '/informe-pericial-cimentaciones/'
 lang: 'es'
 eleventyNavigation:
   key: "cimentaciones y asentamientos"

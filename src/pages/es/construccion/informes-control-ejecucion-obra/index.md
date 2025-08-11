@@ -3,7 +3,7 @@ layout: "layouts/service-child.njk"
 title: "Informes Periciales de Ejecución de Obra en Barcelona | Control de Calidad y Mediciones"
 subtitle: "Soluciones técnicas para disputas sobre calidad, mediciones y certificaciones en proyectos de construcción"
 description: "Perito experto en informes técnicos sobre obras mal ejecutadas, desacuerdos en certificaciones, mediciones y liquidaciones en Barcelona. Asegure la calidad y el pago justo."
-permalink: "/construccion/peritajes-ejecucion-obra/"
+permalink: "/peritajes-ejecucion-obra/"
 lang: "es"
 translations:
   - lang: "ca"
