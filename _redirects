@@ -4,8 +4,6 @@
 /construccion/humedades/ /construccion/patologias/humedades/ 301
 /construccion/defectos/ /construccion/ 301
 /seguros/service1/ / 301
-/* /:splat 200
-/* /:splat/ 200
 https://perito.barcelona/seguros/service1/ / 301
 https://perito.barcelona/casos-de-exito/3 / 301
 https://perito.barcelona/ca/construccio/informes-tecnic/ / 301
@@ -54,7 +52,7 @@ https://perito.barcelona/ca/construccio/reformes/reclamacions-asseguranca/ / 301
 https://perito.barcelona/en/construction/patologies/ / 301
 https://perito.barcelona/servicios/construccion/patologias/ / 301
 https://perito.barcelona/tasaciones-inmobiliarias/locales/ / 301
-https://perito.barcelona/construccion/patologias/aislamiento/ / 301
+https://perito.barcelona/construccion/patologias/aislamiento/ /aislamiento/ 301
 https://perito.barcelona/tasaciones-inmobiliarias/hipotecaria/ / 301
 https://perito.barcelona/peritaje-estructuras/inspeccion/ / 301
 https://perito.barcelona/tasaciones-inmobiliarias/terrenos/ / 301
@@ -80,3 +78,5 @@ https://perito.barcelona/construccion/reparacion-hormigon-armado/ /reparacion-ho
 https://perito.barcelona/construccion/obra-civil/ /obra-civil/ 301
 https://perito.barcelona/construccion/vicios-ocultos/ /vicios-ocultos/ 301
 https://perito.barcelona/construccion/peritaje-alquiler-naves-industriales-barcelona/ /peritaje-alquiler-naves-industriales-barcelona/ 301
+/* /:splat 200
+/* /:splat/ 200
