@@ -48,10 +48,10 @@ serviceBenefits:
 relatedProblems:
   - title: 'Grietas Estructurales'
     description: 'Cuando el hormigón presenta grietas graves que pueden comprometer la estabilidad estructural'
-    url: '/construccion/grietas-estructurales/'
+    url: '/grietas-estructurales/'
   - title: 'Vicios Ocultos'
     description: 'La corrosión de armaduras es uno de los defectos ocultos más graves en viviendas y estructuras'
-    url: '/construccion/vicios-ocultos/'
+    url: '/vicios-ocultos/'
 
 # Client Testimonials
 testimonials:

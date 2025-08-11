@@ -50,10 +50,10 @@ serviceBenefits:
 relatedProblems:
   - title: "Patologías Constructivas"
     description: "Si la mala ejecución ha derivado en defectos estructurales."
-    url: "/construccion/patologias-constructivas/"
+    url: "/patologias-constructivas/"
   - title: "Defectos en Acabados"
     description: "Análisis detallado de la calidad de los acabados ejecutados."
-    url: "/construccion/defectos-acabados/"
+    url: "/defectos-acabados/"
 
 testimonials:
   - quote: "El <strong>informe pericial</strong> fue clave para demostrar las irregularidades en las certificaciones y conseguir un acuerdo favorable."

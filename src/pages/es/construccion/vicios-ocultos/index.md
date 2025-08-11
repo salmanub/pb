@@ -48,10 +48,10 @@ serviceBenefits:
 relatedProblems:
   - title: 'Humedades y Filtraciones'
     description: 'Uno de los vicios ocultos más frecuentes en viviendas son las humedades y filtraciones'
-    url: '/construccion/humedades-filtraciones/'
+    url: '/humedades-filtraciones/'
   - title: 'Problemas de Aislamiento'
     description: 'Deficiencias en aislamiento térmico o acústico que afectan a la habitabilidad'
-    url: '/construccion/aislamiento/'
+    url: '/aislamiento/'
 
 # Client Testimonials
 testimonials:

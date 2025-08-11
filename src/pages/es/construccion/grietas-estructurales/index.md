@@ -48,10 +48,10 @@ serviceBenefits:
 relatedProblems:
   - title: 'Problemas de Cimentación'
     description: 'Las grietas estructurales a menudo están relacionadas con asentamientos o problemas en la cimentación'
-    url: '/construccion/informe-pericial-cimentaciones/'
+    url: '/informe-pericial-cimentaciones/'
   - title: 'Reparación de Hormigón Armado'
     description: 'Deterioro por corrosión de armaduras que afecta a la integridad estructural'
-    url: '/construccion/reparacion-hormigon-armado/'
+    url: '/reparacion-hormigon-armado/'
 
 # Client Testimonials
 testimonials:

@@ -48,10 +48,10 @@ serviceBenefits:
 relatedProblems:
   - title: 'Grietas Estructurales'
     description: 'Los asentamientos diferenciales son una de las principales causas de grietas estructurales en edificios'
-    url: '/construccion/grietas-estructurales/'
+    url: '/grietas-estructurales/'
   - title: 'Obra Civil'
     description: 'Problemas en muros de contención, taludes y otras estructuras geotécnicas de obra civil'
-    url: '/construccion/obra-civil/'
+    url: '/obra-civil/'
 
 # Client Testimonials
 testimonials:

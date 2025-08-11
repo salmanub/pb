@@ -48,10 +48,10 @@ serviceBenefits:
 relatedProblems:
   - title: 'Problemas de Cimentación'
     description: 'Los fallos en pavimentos pueden estar relacionados con asentamientos o defectos en el soporte base'
-    url: '/construccion/informe-pericial-cimentaciones/'
+    url: '/informe-pericial-cimentaciones/'
   - title: 'Patologías en Obra Civil'
     description: 'Análisis técnico de problemas en urbanizaciones, viales y otras infraestructuras'
-    url: '/construccion/obra-civil/'
+    url: '/obra-civil/'
 
 # Client Testimonials
 testimonials:

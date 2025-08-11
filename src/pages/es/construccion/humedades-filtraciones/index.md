@@ -48,10 +48,10 @@ serviceBenefits:
 relatedProblems:
   - title: 'Problemas de Aislamiento'
     description: 'Las deficiencias en aislamiento térmico son causa frecuente de condensaciones y moho'
-    url: '/construccion/aislamiento/'
+    url: '/aislamiento/'
   - title: 'Vicios Ocultos'
     description: 'Las humedades suelen constituir vicios ocultos reclamables si no eran evidentes en la compra'
-    url: '/construccion/vicios-ocultos/'
+    url: '/vicios-ocultos/'
 
 # Client Testimonials
 testimonials:

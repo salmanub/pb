@@ -49,10 +49,10 @@ serviceBenefits:
 relatedProblems:
   - title: 'Humedades y Condensaciones'
     description: 'Un mal aislamiento térmico y la presencia de puentes térmicos suelen provocar humedades por condensación'
-    url: '/construccion/humedades-filtraciones/'
+    url: '/humedades-filtraciones/'
   - title: 'Vicios Ocultos'
     description: 'Deficiencias en aislamiento no detectables fácilmente pueden constituir vicios ocultos reclamables'
-    url: '/construccion/vicios-ocultos/'
+    url: '/vicios-ocultos/'
 
 # Client Testimonials
 testimonials:

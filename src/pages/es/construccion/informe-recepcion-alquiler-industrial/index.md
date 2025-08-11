@@ -57,10 +57,10 @@ serviceBenefits:
 relatedProblems:
   - title: 'Defectos en Pavimentos Industriales'
     description: 'Si detectamos problemas en la solera durante la inspección, este servicio puede profundizar.'
-    url: '/construccion/informe-pericial-pavimentos/'
+    url: '/informe-pericial-pavimentos/'
   - title: 'Vicios Ocultos en Construcción'
     description: 'Identificación de problemas no evidentes que podrían surgir tras el alquiler.'
-    url: '/construccion/defectos-vicios-ocultos/'
+    url: '/defectos-vicios-ocultos/'
 
 # Client Testimonials (idealmente de este servicio y con ubicación)
 testimonials:
