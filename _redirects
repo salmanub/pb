@@ -1,6 +1,5 @@
-# --- Redirecciones específicas ---
-/construccion/vicios-ocultos /vicios-ocultos 301
-/construccion/vicios-ocultos/ /vicios-ocultos/ 301
+# --- Redirecciones prioritarias ---
+/construccion/vicios-ocultos* /vicios-ocultos/ 301
 /perito-judicial/ /judicial/ 301
 /home-inspector/servicios/ /home-inspector/pre-compra/ 301
 /seguros/humedades/ /construccion/patologias/humedades/ 301
