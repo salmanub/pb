@@ -50,7 +50,7 @@ serviceCluster:
   services:
     - title: "Grietas y Problemas Estructurales"
       description: "Evaluación experta de fisuras en paredes, grietas en forjados y problemas de estabilidad que requieren refuerzo estructural. Determinamos la gravedad y proponemos soluciones efectivas."
-      url: "/construccion/grietas-estructurales/"
+      url: "/grietas-estructurales/"
       icon: "building"
       features:
         - "Análisis de estabilidad estructural"
@@ -59,7 +59,7 @@ serviceCluster:
     
     - title: "Humedades y Filtraciones"
       description: "Detección y análisis de manchas de humedad, goteras o filtraciones que dañan tu vivienda y afectan a la salubridad. Identificamos el origen y planteamos soluciones definitivas."
-      url: "/construccion/humedades-filtraciones/"
+      url: "/humedades-filtraciones/"
       icon: "water"
       features:
         - "Detección de origen"
@@ -68,7 +68,7 @@ serviceCluster:
     
     - title: "Reparación de Hormigón Armado"
       description: "Diagnóstico de corrosión de armaduras, carbonatación y patologías en hormigón estructural. Definimos protocolos detallados para garantizar la durabilidad de la reparación."
-      url: "/construccion/reparacion-hormigon-armado/"
+      url: "/reparacion-hormigon-armado/"
       icon: "tools"
       features:
         - "Análisis de carbonatación"
@@ -77,7 +77,7 @@ serviceCluster:
     
     - title: "Patologías en Obra Civil"
       description: "Inspección especializada de problemas en infraestructuras, puentes, túneles o edificios singulares. Análisis técnico avanzado y soluciones de ingeniería."
-      url: "/construccion/obra-civil/"
+      url: "/obra-civil/"
       icon: "blueprint"
       features:
         - "Análisis estructural"
@@ -86,7 +86,7 @@ serviceCluster:
     
     - title: "Vicios Ocultos y Defectos"
       description: "Detección y documentación de defectos constructivos ocultos. Informes técnicos detallados para fundamentar reclamaciones por vicios de construcción."
-      url: "/construccion/vicios-ocultos/"
+      url: "/vicios-ocultos/"
       icon: "search"
       features:
         - "Inspección especializada"
@@ -95,7 +95,7 @@ serviceCluster:
     
     - title: "Informes de Estado para Alquiler Industrial"
       description: "Inspecciones técnicas profesionales para documentar el estado de naves industriales y locales comerciales. Evite conflictos y proteja su fianza con informes periciales detallados."
-      url: "/construccion/peritaje-alquiler-naves-industriales-barcelona/"
+      url: "/peritaje-alquiler-naves-industriales-barcelona/"
       icon: "document"
       features:
         - "Documentación de defectos preexistentes"
