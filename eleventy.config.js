@@ -23,8 +23,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/icons");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
-  eleventyConfig.addPassthroughCopy("_redirects");
-  eleventyConfig.addPassthroughCopy("_headers");
+  eleventyConfig.addPassthroughCopy("src/_redirects");
+  eleventyConfig.addPassthroughCopy("src/_headers");
   
   eleventyConfig.addFilter('renderMarkdown', function(content) {
         return md.render(content);
