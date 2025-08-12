@@ -66,4 +66,38 @@ servicios:
         - "Contraperitajes y coberturas"
         - "Reclamaciones a aseguradoras"
       url: "/peritajes-seguros/"
+
+# Sección "En qué podemos ayudarte"
+ayuda:
+  encabezado:
+    title: "¿En Qué Podemos"
+    highlight: "Ayudarte"
+    subtitle: "Soluciones técnicas y periciales especializadas para cada tipo de propiedad, proyecto o conflicto en Barcelona."
+  introduccion:
+    title: "Algunos de los problemas técnicos que abordamos con frecuencia:"
+  problemas:
+    - title: "Grietas y Deformaciones Estructurales"
+      description: "Análisis y diagnóstico de patologías estructurales, detección de fisuras y recomendaciones de reparación."
+      url: "/grietas-deformaciones-estructurales/"
+      icon: "alert-triangle"
+    - title: "Humedades y Filtraciones Persistentes"
+      description: "Detección de orígenes, informes técnicos y soluciones para problemas de humedad en edificaciones."
+      url: "/humedades-filtraciones/"
+      icon: "droplet"
+    - title: "Disputas en Certificaciones y Mediciones"
+      description: "Asesoramiento pericial para conflictos derivados de certificaciones, mediciones y cumplimiento normativo."
+      url: "/certificaciones-metricas/"
+      icon: "file-text"
+    - title: "Vicios Ocultos en Obra Nueva"
+      description: "Identificación y documentación de defectos ocultos en proyectos de construcción reciente."
+      url: "/vicios-ocultos-obra-nueva/"
+      icon: "search"
+    - title: "Desprendimientos y Daños por Mala Ejecución"
+      description: "Evaluación pericial de daños causados por deficiencias en ejecución y recomendaciones para su reparación."
+      url: "/desprendimientos-daños-ejecucion/"
+      icon: "alert-circle"
+    - title: "Refuerzo Estructural con Fibra de Carbono y Perfiles Metálicos"
+      description: "Estudios técnicos y proyectos de refuerzo estructural para garantizar la estabilidad y seguridad."
+      url: "/refuerzo-estructural/"
+      icon: "tool"
 ---

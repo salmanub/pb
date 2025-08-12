@@ -1,60 +1,41 @@
-<!-- ======= INICIO: SECCIÓN COMBINADA DE PROBLEMAS Y SOLUCIÓN ======= -->
 <section class="py-28 px-4 md:px-[5%] bg-gradient-to-br from-slate-50 to-white relative overflow-hidden">
     <div class="max-w-[1400px] mx-auto relative z-10">
 
-        <!-- === PASO 1: Encabezado Amplio === -->
+        <!-- Encabezado -->
         <div class="max-w-4xl mx-auto mb-16 text-center">
             <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 mb-6 leading-tight">
-                ¿En Qué Podemos <strong class="text-cyan-500 font-bold">Ayudarte</strong>?
+                {{ ayuda.encabezado.title }} <strong class="text-cyan-500 font-bold">{{ ayuda.encabezado.highlight }}</strong>?
             </h2>
             <p class="text-xl text-slate-600 max-w-3xl mx-auto">
-                Soluciones técnicas y periciales especializadas para cada tipo de propiedad, proyecto o conflicto en Barcelona.
+                {{ ayuda.encabezado.subtitle }}
             </p>
         </div>
 
-        <!-- === PASO 2: Grid de tarjetas de problemas (Ejemplos Específicos) === -->
+        <!-- Introducción -->
         <div class="mb-12">
-            <h3 class="text-2xl font-semibold text-slate-700 mb-8 text-center md:text-left">Algunos de los problemas técnicos que abordamos con frecuencia:</h3>
+            <h3 class="text-2xl font-semibold text-slate-700 mb-8 text-center md:text-left">
+                {{ ayuda.introduccion.title }}
+            </h3>
         </div>
+
+        <!-- Grid de problemas -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Entrada 1: Home Inspector -->
-            <a href="/home-inspector/" class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-4"><IconoHome/></div>
-                <h3 class="text-xl font-semibold text-cyan-700 mb-2">Inspección de Viviendas (Home Inspector)</h3>
-                <p class="text-sm text-slate-600">Informes pre-compra/venta, detección de vicios ocultos, estado de conservación para viviendas y pisos.</p>
+            {% for problema in ayuda.problemas %}
+            <a href="{{ problema.url }}" class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-4">
+                    {% if problema.icon %}
+                        {% include "icons/" + problema.icon + ".svg" ignore missing %}
+                    {% else %}
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    {% endif %}
+                </div>
+                <h3 class="text-xl font-semibold text-cyan-700 mb-2">{{ problema.title }}</h3>
+                <p class="text-sm text-slate-600">{{ problema.description }}</p>
             </a>
-            <!-- Entrada 2: Naves Industriales -->
-            <a href="/naves-industriales/" class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                 <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-4"><IconoNave/></div>
-                <h3 class="text-xl font-semibold text-cyan-700 mb-2">Peritajes para Naves Industriales</h3>
-                <p class="text-sm text-slate-600">Diagnóstico de pavimentos, estructuras, cubiertas, recepción de alquileres y patologías en naves.</p>
-            </a>
-            <!-- Entrada 3: Obra Civil -->
-            <a href="/construccion/informes-tecnicos-obra-civil/" class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-4"><IconoObraCivil/></div>
-                <h3 class="text-xl font-semibold text-cyan-700 mb-2">Informes Técnicos de Obra Civil</h3>
-                <p class="text-sm text-slate-600">Peritajes para muros, taludes, viales, redes de saneamiento y otras infraestructuras.</p>
-            </a>
-            <!-- Entrada 4: Edificios y Comunidades -->
-            <a href="/construccion/informes-comunidades-propietarios/" class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-4"><IconoEdificio/></div>
-                <h3 class="text-xl font-semibold text-cyan-700 mb-2">Soluciones para Edificios y Comunidades</h3>
-                <p class="text-sm text-slate-600">Informes para fachadas, cubiertas, estructuras y elementos comunes en comunidades de propietarios.</p>
-            </a>
-            <!-- Entrada 5: Conflictos con Seguros -->
-            <a href="/seguros/" class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-4"><IconoSeguro/></div>
-                <h3 class="text-xl font-semibold text-cyan-700 mb-2">Conflictos con Seguros</h3>
-                <p class="text-sm text-slate-600">Contraperitajes, valoración de daños y defensa del asegurado frente a compañías de seguros.</p>
-            </a>
-            <!-- Entrada 6: Peritajes Judiciales -->
-            <a href="/judicial/" class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                 <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-4"><IconoJudicial/></div>
-                <h3 class="text-xl font-semibold text-cyan-700 mb-2">Peritajes Judiciales</h3>
-                <p class="text-sm text-slate-600">Elaboración y ratificación de informes periciales para procesos judiciales en construcción y seguros.</p>
-            </a>
+            {% endfor %}
         </div>
-    </div> <!-- Fin .max-w-[1400px] -->
-</section> <!-- Fin sección cards problemas -->
 
-
+    </div>
+</section>
