@@ -1,13 +1,8 @@
 ---
 permalink: '/service-worker.js'
+headers:
+  Content-Security-Policy: "default-src 'self' *.cloudflareinsights.com; script-src 'self' 'unsafe-inline' *.cloudflareinsights.com; img-src 'self' data: *.cloudflareinsights.com; connect-src 'self' *.cloudflareinsights.com"
+  Referrer-Policy: strict-origin-when-cross-origin
 ---
 const VERSION = '{{ global.random() }}';
-
-// Configuración de seguridad
-const SECURITY_HEADERS = {
-  'Content-Security-Policy': "default-src 'self'",
-  'X-Content-Type-Options': 'nosniff',
-  'X-Frame-Options': 'DENY'
-};
-
 {% include "partials/global/service-worker.js" %}
