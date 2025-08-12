@@ -15,6 +15,7 @@ eleventyNavigation:
   notshow: false
   order: 1
   icon: <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+
 # Hero Section
 hero:
     tag: "Perito Judicial en Construcción y Obra Civil en Barcelona"
@@ -25,10 +26,12 @@ hero:
     rotatingTexts:
       default: "con rigor técnico"
       items:
-          - "con rigor técnico"
-          - "que resuelven conflictos"
-          - "que marcan la diferencia"
-          - "que ganan casos"
+        - "con rigor técnico"
+        - "que resuelven litigios de obra"
+        - "aceptados por todos los tribunales"
+        - "que aceleran la resolución de conflictos"
+        - "que garantizan éxito judicial"
+        - "con diagnósticos estructurales precisos"
     cta:
         primary: "Solicitar Presupuesto"
         primaryUrl: "/contacto/"
@@ -36,10 +39,13 @@ hero:
         secondaryUrl: "#areas-expertise"
         descubreMas: "Saber Más"
     badges:
-        - text: "+15 años de experiencia"
-        - text: "Ingenieros Colegiados"
-        - text: "Respuesta en 24h"
-        - text: "Informes Judiciales"
+        - value: "97%"
+          text: "Casos Exitosos"
+          subtext: "En tribunales"
+        - value: "24h"
+          text: "Respuesta Rápida"
+          subtext: "Garantizada"
+    logosText: "Informes aceptados por todos los tribunales españoles"
 
 # Servicios Section
 servicios:

@@ -41,6 +41,7 @@ hero:
         - text: "Chartered Engineers"
         - text: "24h Response Time"
         - text: "Court-Accepted Reports"
+    logosText: Reports accepted by all Spanish courts
 
 # Expertise Areas
 expertise:

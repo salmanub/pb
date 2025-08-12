@@ -45,20 +45,17 @@
 
                         <!-- Métricas con padding ajustado -->
                         <div class="grid grid-cols-2 gap-2">
+                            {% for badge in hero.badges %}
                             <div class="flex items-center gap-3 p-3 md:p-4 bg-white/5 rounded-lg">
-                                <div class="text-xl md:text-2xl font-extrabold text-cyan-400 leading-none">97%</div>
+                                <div class="text-xl md:text-2xl font-extrabold text-cyan-400 leading-none">{{ badge.value }}</div>
                                 <div class="flex flex-col">
-                                    <strong class="text-sm md:text-base text-white leading-tight">Casos Exitosos</strong>
-                                    <span class="text-xs text-white/70">En tribunales</span>
+                                    <strong class="text-sm md:text-base text-white leading-tight">{{ badge.text }}</strong>
+                                    {% if badge.subtext %}
+                                    <span class="text-xs text-white/70">{{ badge.subtext }}</span>
+                                    {% endif %}
                                 </div>
                             </div>
-                            <div class="flex items-center gap-3 p-3 md:p-4 bg-white/5 rounded-lg">
-                                <div class="text-xl md:text-2xl font-extrabold text-cyan-400 leading-none">24h</div>
-                                <div class="flex flex-col">
-                                    <strong class="text-sm md:text-base text-white leading-tight">Respuesta</strong>
-                                    <span class="text-xs text-white/70">Garantizada</span>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -87,7 +84,7 @@
                                  height="40">
                         </div>
                         <p class="text-white/60 text-sm text-center lg:text-left flex items-center">
-                            Informes aceptados por todos los tribunales españoles
+                            {{ hero.logosText | safe }}
                         </p>
                     </div>
                 </div>

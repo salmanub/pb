@@ -40,6 +40,7 @@ hero:
         - text: "Enginyers Col·legiats"
         - text: "Resposta en 24h"
         - text: "Informes Judicials"
+    logosText: "Informes acceptats per tots els tribunals espanyols"
 
 # Servicios Section
 servicios:
