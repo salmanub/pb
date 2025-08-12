@@ -100,4 +100,33 @@ ayuda:
       description: "Estudis tècnics i projectes de reforç estructural per garantir l’estabilitat i la seguretat."
       url: "/ca/reforc-estructural/"
       icon: "tool"
+
+# Sección Solución Técnica
+solucion:
+  imagen:
+    src: "/assets/images/professional-civil-engineer-examining-modern-build-480.avif"
+    alt: "Enginyer analitzant problemes estructurals"
+    badge: "Informe Pericial"
+    caption: "Informes tècnics amb rigor i claredat"
+  contenido:
+    titulo: "La"
+    highlight: "Solució Tècnica"
+    subtitulo: "que Necessites"
+    descripcion: "Resolem la incertesa tècnica en conflictes constructius i asseguradors. Els nostres informes pericials identifiquen causes, responsabilitats i solucions amb rigor tècnic, proporcionant la base sòlida que necessites per defensar els teus interessos."
+    caracteristicas:
+      - icono: "search"
+        titulo: "Aclarim la Causa Arrel"
+        descripcion: "Identifiquem amb precisió tècnica l'origen d'esquerdes, humitats, defectes constructius o la validesa de cobertures d'assegurança mitjançant anàlisis rigoroses i documentades."
+      - icono: "clipboard-check"
+        titulo: "Determinem Responsabilitats"
+        descripcion: "Establim amb objectivitat qui és responsable de cada defecte constructiu i analitzem si les cobertures d'assegurança són aplicables en cada cas."
+      - icono: "calculator"
+        titulo: "Valorem amb Precisió"
+        descripcion: "Quantifiquem els danys i el cost real de les reparacions necessàries, evitant sobrecostos i proporcionant valoracions defensables tècnicament."
+      - icono: "shield-check"
+        titulo: "Prevenim Conflictes"
+        descripcion: "Documentem l'estat real d'immobles en lloguers, compravendes o recepcions d'obra per evitar disputes futures i protegir els teus interessos."
+    cta:
+      texto: "Sol·licitar Assessorament Gratuït"
+      url: "/ca/contacte/"
 ---

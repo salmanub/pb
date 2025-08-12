@@ -100,4 +100,33 @@ ayuda:
       description: "Estudios técnicos y proyectos de refuerzo estructural para garantizar la estabilidad y seguridad."
       url: "/refuerzo-estructural/"
       icon: "tool"
+
+# Sección Solución Técnica
+solucion:
+  imagen:
+    src: "/assets/images/professional-civil-engineer-examining-modern-build-480.avif"
+    alt: "Ingeniero analizando problemas estructurales"
+    badge: "Informe Pericial"
+    caption: "Informes técnicos con rigor y claridad"
+  contenido:
+    titulo: "La"
+    highlight: "Solución Técnica"
+    subtitulo: "que Necesitas"
+    descripcion: "Resolvemos la incertidumbre técnica en conflictos constructivos y aseguradores. Nuestros informes periciales identifican causas, responsabilidades y soluciones con rigor técnico, proporcionando la base sólida que necesitas para defender tus intereses."
+    caracteristicas:
+      - icono: "search"
+        titulo: "Aclaramos la Causa Raíz"
+        descripcion: "Identificamos con precisión técnica el origen de grietas, humedades, defectos constructivos o la validez de coberturas de seguro mediante análisis rigurosos y documentados."
+      - icono: "clipboard-check"
+        titulo: "Determinamos Responsabilidades"
+        descripcion: "Establecemos con objetividad quién es responsable de cada defecto constructivo y analizamos si las coberturas de seguro son aplicables en cada caso."
+      - icono: "calculator"
+        titulo: "Valoramos con Precisión"
+        descripcion: "Cuantificamos los daños y el coste real de las reparaciones necesarias, evitando sobrecostes y proporcionando valoraciones defendibles técnicamente."
+      - icono: "shield-check"
+        titulo: "Prevenimos Conflictos"
+        descripcion: "Documentamos el estado real de inmuebles en alquileres, compraventas o recepciones de obra para evitar disputas futuras y proteger tus intereses."
+    cta:
+      texto: "Solicitar Asesoramiento Gratuito"
+      url: "/contacto/"
 ---

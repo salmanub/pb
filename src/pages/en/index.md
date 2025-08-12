@@ -100,4 +100,32 @@ ayuda:
       description: "Technical studies and reinforcement projects to ensure stability and safety."
       url: "/en/structural-reinforcement/"
       icon: "tool"
+
+solucion:
+  imagen:
+    src: "/assets/images/professional-civil-engineer-examining-modern-build-480.avif"
+    alt: "Engineer analyzing structural problems"
+    badge: "Expert Report"
+    caption: "Technical reports with rigor and clarity"
+  contenido:
+    titulo: "The"
+    highlight: "Technical Solution"
+    subtitulo: "You Need"
+    descripcion: "We resolve technical uncertainties in construction and insurance conflicts. Our expert reports identify causes, responsibilities, and solutions with technical rigor, providing the solid foundation you need to defend your interests."
+    caracteristicas:
+      - icono: "search"
+        titulo: "We Clarify Root Causes"
+        descripcion: "We precisely identify the origin of cracks, moisture, construction defects, or insurance coverage validity through rigorous and documented analysis."
+      - icono: "clipboard-check"
+        titulo: "We Determine Responsibilities"
+        descripcion: "We objectively establish who is responsible for each construction defect and analyze whether insurance coverage applies in each case."
+      - icono: "calculator"
+        titulo: "We Value with Precision"
+        descripcion: "We quantify damages and real costs of necessary repairs, avoiding overcharges and providing technically defensible valuations."
+      - icono: "shield-check"
+        titulo: "We Prevent Conflicts"
+        descripcion: "We document the real condition of properties in rentals, sales, or construction handovers to avoid future disputes and protect your interests."
+    cta:
+      texto: "Request Free Consultation"
+      url: "/en/contact/"
 ---
