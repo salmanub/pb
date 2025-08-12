@@ -2,4 +2,12 @@
 permalink: '/service-worker.js'
 ---
 const VERSION = '{{ global.random() }}';
+
+// Configuración de seguridad
+const SECURITY_HEADERS = {
+  'Content-Security-Policy': "default-src 'self'",
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'DENY'
+};
+
 {% include "partials/global/service-worker.js" %}
