@@ -1,14 +1,14 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Expert Building Surveyor Barcelona | Technical Reports for Construction & Insurance Claims'
-description: "Certified Engineering Expert in Barcelona specializing in construction defect reports, industrial property surveys, structural reinforcement assessments & insurance claims. Over 15 years of experience in technical and judicial expertise."
+title: 'Judicial Expert in Barcelona | Expert Reports in Construction and Civil Works | Expert Barcelona'
+description: "Expert reports in construction and civil works. Pathology diagnosis, valuations, and judicial assistance in Barcelona. Certified expert with professional registration."
 permalink: /en/
 lang: en
 translations:
-  - lang: es
-    permalink: /
   - lang: ca
     permalink: /ca/
+  - lang: es
+    permalink: /
 eleventyNavigation:
   key: "Home"
   title: "Home"
@@ -18,47 +18,52 @@ eleventyNavigation:
 
 # Hero Section
 hero:
-    tag: "Technical & Judicial Expert Barcelona"
-    title: "Expert Technical Reports"
-    strong: "in Barcelona"
-    subtitle: "Specialists in Building Surveys, Structural Engineering & Insurance Claims"
-    description: "We deliver comprehensive technical reports for construction defects, industrial property surveys, and insurance claims. Our expertise includes carbon fiber structural reinforcement and detailed property condition assessments."
-    rotatingTexts:
-      default: "With Technical Rigour"
-      items:
-        - "WITH TECHNICAL PRECISION"
-        - "DESIGNED TO RESOLVE DISPUTES"
-        - "ENGINEERED TO MAKE A DIFFERENCE"
-        - "SUPPORTED TO WIN CASES"
-    cta:
-        primary: "Request a quotation"
-        primaryUrl: "/en/contact/"
-        secondary: "Talk to an expert"
-        secondaryUrl: "#expertise-areas"
-        descubreMas: "Learn More"
-    badges:
-        - text: "15+ Years Experience"
-        - text: "Chartered Engineers"
-        - text: "24h Response Time"
-        - text: "Court-Accepted Reports"
-    logosText: Reports accepted by all Spanish courts
+  tag: "Judicial Expert in Construction and Civil Works in Barcelona"
+  title: "Expert Reports"
+  strong: "in Barcelona"
+  subtitle: "Specialists in Building, Structures, and Insurance"
+  description: "We provide comprehensive expert reports for construction defects, industrial warehouse inspections, and insurance claims. Experts in structural reinforcement with carbon fiber and detailed technical valuations."
+  rotatingTexts:
+    default: "with technical rigor"
+    items:
+      - "with technical rigor"
+      - "that resolve construction disputes"
+      - "accepted by all courts"
+      - "that accelerate conflict resolution"
+      - "that guarantee judicial success"
+      - "with precise structural diagnostics"
+  cta:
+    primary: "Request a Quote"
+    primaryUrl: "/contact/"
+    secondary: "Call Now"
+    secondaryUrl: "#areas-expertise"
+    descubreMas: "Learn More"
+  badges:
+    - value: "97%"
+      text: "Successful Cases"
+      subtext: "In courts"
+    - value: "24h"
+      text: "Fast Response"
+      subtext: "Guaranteed"
+  logosText: "Reports accepted by all Spanish courts"
 
-# Expertise Areas
-expertise:
-    title: "Specialized Technical Services"
-    description: "Comprehensive engineering solutions backed by over 15 years of experience in technical assessments and judicial expertise"
-    areas:
-      - title: "Industrial Property Surveys"
-        description: "Detailed technical inspections for industrial property leases and purchases"
-        features:
-          - "Pre-lease condition assessments"
-          - "Hidden defects documentation"
-          - "Legal compliance verification"
-          
-      - title: "Structural Engineering"
-        description: "Advanced structural solutions including carbon fiber reinforcement"
-        features:
-          - "Carbon fiber structural reinforcement"
-          - "Load-bearing capacity assessment"
-          - "Structural rehabilitation planning"
+# Services Section
+servicios:
+  title: "Our Expert Services"
+  description: "We offer precise technical and legal solutions, backed by over 15 years of experience and a dual perspective as Engineer and Insurance Expert."
+  items:
+    - title: "Construction Inspections"
+      description: "Thorough analysis of pathologies, hidden defects, and construction faults."
+      features:
+        - "Analysis of moisture and leaks"
+        - "Inspection of structural cracks"
+        - "Reports for communities"
+      url: "/construction-inspections/"
+    - title: "Insurance Assessments"
+      description: "We evaluate damages, analyze coverages, and perform counter-assessments."
+      features:
+        - "Damage valuation for water and theft"
+        - "Counter-assessments and coverages"
+        - "Claims against insurers"
+      url: "/insurance-assessments/"
 ---

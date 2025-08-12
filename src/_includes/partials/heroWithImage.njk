@@ -1,57 +1,51 @@
 {% block content %}
 
-<header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] min-h-[calc(100vh-70px)] sm:min-h-0 bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white overflow-hidden border-slate-800/30">
+<header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] min-h-[calc(100vh-70px)] sm:min-h-0 bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white overflow-hidden border-slate-800/30" role="banner" aria-label="Sección principal del héroe con imagen y llamada a la acción">
     <div class="relative z-10 w-full min-h-[calc(100vh-70px)] md:min-h-[600px] lg:h-[640px] flex items-center">
-        <!-- Container ajustado para todos los dispositivos -->
-        <div class="w-full px-4 sm:px-6 md:px-8 lg:px-8 xl:px-12 mx-auto max-w-[1400px] h-full flex flex-col">
-            <!-- Hero Content wrapper con distribución vertical -->
+        <div class="w-full px-4 sm:px-6 md:px-8 lg:px-8 xl:px-12 mx-auto max-w-[1400px] h-full flex flex-col" role="main">
             <div class="flex-1 flex flex-col justify-between h-full py-6 md:py-8 lg:py-12">
-                <!-- Contenido principal -->
                 <div class="flex-1 flex flex-col items-center md:items-start justify-start md:justify-center">
-                    <!-- Título y texto rotativo con espaciado optimizado -->
                     <div class="w-full mb-8 md:mb-6">
                         <h1 class="flex justify-center md:justify-start items-center text-sm md:text-base font-semibold tracking-[2px] uppercase text-cyan-400 mb-3 sm:mb-4 md:mb-6" itemprop="headline">
-                            <span class="hidden lg:block w-8 h-0.5 bg-cyan-400 mr-3"></span>
-                            {{ hero.tag }}
+                            <span class="hidden lg:block w-8 h-0.5 bg-cyan-400 mr-3" aria-hidden="true"></span>
+                            {{ hero.tag | escape }}
                         </h1>
 
-                        <!-- Headline con más espacio vertical -->
                         <div class="text-center md:text-left mt-4 md:mt-4">
-                            <div class="text-[2.5rem] sm:text-[2.75rem] md:text-[3rem] lg:text-[3.75rem] font-light leading-[1.1] tracking-tight uppercase">
+                            <div class="text-[2.5rem] sm:text-[2.75rem] md:text-[3rem] lg:text-[3.75rem] font-light leading-[1.1] tracking-tight uppercase" aria-label="Título principal del héroe">
                                 {{ hero.title | safe }}
-                                <div class="min-h-[3em] md:min-h-0 flex items-center md:items-start justify-center md:justify-start mt-4 md:mt-4">
-                                    <strong id="heroTextRotator" class="block text-cyan-400 transition-opacity duration-500 leading-[1.1] text-[2.25rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.75rem]">{{ hero.rotatingTexts.default }}</strong>
+                                <div class="min-h-[3em] md:min-h-0 flex items-center md:items-start justify-center md:justify-start mt-4 md:mt-4" aria-live="polite" aria-atomic="true">
+                                    <strong role="list" id="heroTextRotator" class="block text-cyan-400 transition-opacity duration-500 leading-[1.1] text-[2.25rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.75rem]" aria-label="Texto rotativo destacado">{{ hero.rotatingTexts.default | escape }}</strong>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- CTAs con márgenes verticales -->
                     <div class="w-full max-w-2xl lg:max-w-3xl my-8 md:my-12">
-                        <!-- CTAs con espaciado reducido -->
-                        <div class="flex flex-col sm:flex-row gap-2 md:gap-3 mb-4 md:mb-6">
-                            <a href="{{hero.cta.primaryUrl}}" 
-                               class="flex-1 inline-flex items-center justify-center px-4 sm:px-8 py-4 bg-cyan-400 text-white font-semibold uppercase tracking-wider rounded-lg shadow-lg hover:bg-cyan-500 transition-all duration-300 text-sm sm:text-base whitespace-nowrap">
-                                {{hero.cta.primary}}
+                        <div class="flex flex-col sm:flex-row gap-2 md:gap-3 mb-4 md:mb-6" role="group" aria-label="Llamadas a la acción">
+                            <a href="{{ hero.cta.primaryUrl | url }}" 
+                               class="flex-1 inline-flex items-center justify-center px-4 sm:px-8 py-4 bg-cyan-400 text-white font-semibold uppercase tracking-wider rounded-lg shadow-lg hover:bg-cyan-500 transition-all duration-300 text-sm sm:text-base whitespace-nowrap"
+                               aria-label="Botón principal: {{ hero.cta.primary | escape }}">
+                                {{ hero.cta.primary | escape }}
                             </a>
-                            <a href="tel:{{metadata.contact.phoneNumber}}" 
-                               class="flex-1 inline-flex items-center justify-center px-4 sm:px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold uppercase tracking-wider rounded-lg hover:bg-cyan-400/10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <a href="tel:{{ metadata.contact.phoneNumber | url }}" 
+                               class="flex-1 inline-flex items-center justify-center px-4 sm:px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold uppercase tracking-wider rounded-lg hover:bg-cyan-400/10 transition-all duration-300 text-sm sm:text-base whitespace-nowrap"
+                               aria-label="Botón secundario: llamar al {{ metadata.contact.phoneNumber | escape }}">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                                 </svg>
-                                {{hero.cta.secondary}}
+                                {{ hero.cta.secondary | escape }}
                             </a>
                         </div>
 
-                        <!-- Métricas con padding ajustado -->
-                        <div class="grid grid-cols-2 gap-2">
+                        <div class="grid grid-cols-2 gap-2" role="list" aria-label="Indicadores destacados">
                             {% for badge in hero.badges %}
-                            <div class="flex items-center gap-3 p-3 md:p-4 bg-white/5 rounded-lg">
-                                <div class="text-xl md:text-2xl font-extrabold text-cyan-400 leading-none">{{ badge.value }}</div>
+                            <div class="flex items-center gap-3 p-3 md:p-4 bg-white/5 rounded-lg" role="listitem">
+                                <div class="text-xl md:text-2xl font-extrabold text-cyan-400 leading-none" aria-label="{{ badge.value }}">{{ badge.value }}</div>
                                 <div class="flex flex-col">
-                                    <strong class="text-sm md:text-base text-white leading-tight">{{ badge.text }}</strong>
+                                    <strong class="text-sm md:text-base text-white leading-tight">{{ badge.text | escape }}</strong>
                                     {% if badge.subtext %}
-                                    <span class="text-xs text-white/70">{{ badge.subtext }}</span>
+                                    <span class="text-xs text-white/70">{{ badge.subtext | escape }}</span>
                                     {% endif %}
                                 </div>
                             </div>
@@ -60,10 +54,9 @@
                     </div>
                 </div>
 
-                <!-- Logos con espacio al final -->
                 <div class="w-full pt-4 md:pt-6 border-t border-white/10 mb-4 md:mb-8">
                     <div class="flex flex-col lg:flex-row items-center gap-6 xl:gap-8">
-                        <div class="flex items-center justify-center lg:justify-start gap-6 xl:gap-8">
+                        <div class="flex items-center justify-center lg:justify-start gap-6 xl:gap-8" aria-label="Logos de asociaciones y certificaciones">
                             <img src="/assets/images/logos/logo_ECCAT.avif" 
                                  alt="Col·legi de l'Enginyeria Civil de Catalunya" 
                                  class="h-8 lg:h-10 w-auto brightness-0 invert opacity-70 hover:opacity-100 hover:-translate-y-0.5 transition-all object-contain" 
@@ -71,19 +64,19 @@
                                  width="100"
                                  height="40">
                             <img src="/assets/images/logos/INESE_Formación_CMYK.avif" 
-                                 alt="INESE" 
+                                 alt="Instituto de Formación INESE" 
                                  class="h-8 lg:h-10 w-auto brightness-0 invert opacity-70 hover:opacity-100 hover:-translate-y-0.5 transition-all object-contain" 
                                  loading="lazy"
                                  width="100"
                                  height="40">
                             <img src="/assets/images/logos/upc-logo.svg" 
-                                 alt="Universitat politècnica de catalunya" 
+                                 alt="Universitat Politècnica de Catalunya" 
                                  class="h-8 lg:h-10 w-auto brightness-0 invert opacity-70 hover:opacity-100 hover:-translate-y-0.5 transition-all object-contain" 
                                  loading="lazy"
                                  width="100"
                                  height="40">
                         </div>
-                        <p class="text-white/60 text-sm text-center lg:text-left flex items-center">
+                        <p class="text-white/60 text-sm text-center lg:text-left flex items-center" aria-label="Texto descriptivo de logos asociados">
                             {{ hero.logosText | safe }}
                         </p>
                     </div>
@@ -93,13 +86,14 @@
     </div>
 
     <!-- Hero Image para tablets -->
-    <div class="hidden sm:block lg:hidden relative w-full h-[400px] mt-8">
+    <div class="hidden sm:block lg:hidden relative w-full h-[400px] mt-8" role="img" aria-label="Imagen hero del perito experto en inspección técnica para tabletas">
+        <div class="absolute inset-0 bg-[#0B1030]/60 z-10"></div>
         <picture class="h-full w-full">
-            <source srcset="/assets/images/perito-construccion-obra-edificacion-768.avif">
+            <source srcset="/assets/images/perito-construccion-obra-edificacion-768.avif" type="image/avif">
             <img
                 src="/assets/images/perito-construccion-obra-edificacion-640.avif"
                 alt="Perito experto realizando inspección técnica"
-                class="w-full h-full object-cover opacity-80"
+                class="w-full h-full object-cover opacity-60"
                 loading="eager"
                 width="100%"
                 height="100%">
@@ -107,14 +101,15 @@
     </div>
 
     <!-- Hero Image - Desktop -->
-    <div class="hidden lg:block absolute top-0 right-0 w-[45%] h-full z-[1]">
+    <div class="hidden lg:block absolute top-0 right-0 w-[45%] h-full z-[1]" role="img" aria-label="Imagen hero del perito experto en inspección técnica para escritorio">
+        <div class="absolute inset-0 bg-[#0B1030]/60 z-10" style="clip-path: polygon(100px 0, 100% 0, 100% 100%, 30px 100%);"></div>
         <picture class="h-full">
-            <source media="(min-width: 992px)" srcset="/assets/images/perito-construccion-obra-edificacion-1280.avif">
-            <source media="(min-width: 768px)" srcset="/assets/images/perito-construccion-obra-edificacion-768.avif">
+            <source media="(min-width: 992px)" srcset="/assets/images/perito-construccion-obra-edificacion-1280.avif" type="image/avif">
+            <source media="(min-width: 768px)" srcset="/assets/images/perito-construccion-obra-edificacion-768.avif" type="image/avif">
             <img
                 src="/assets/images/perito-construccion-obra-edificacion-640.avif"
                 alt="Perito experto realizando inspección técnica"
-                class="w-full h-full object-cover opacity-80"
+                class="w-full h-full object-cover opacity-60"
                 style="clip-path: polygon(100px 0, 100% 0, 100% 100%, 30px 100%);"
                 loading="eager"
                 width="100%"
@@ -124,39 +119,38 @@
 </header>
 
 <!-- Hero Image - Mobile -->
-<div class="sm:hidden relative w-full h-[300px]">
+<div class="sm:hidden relative w-full h-[300px]" role="img" aria-label="Imagen hero del perito experto en inspección técnica para dispositivos móviles">
+    <div class="absolute inset-0 bg-[#0B1030]/60 z-10"></div>
     <img
         src="/assets/images/perito-construccion-obra-edificacion-640.avif"
         alt="Perito experto realizando inspección técnica"
-        class="w-full h-full object-cover opacity-80"
+        class="w-full h-full object-cover opacity-60"
         loading="eager"
         decoding="async"
         itemprop="image">
 </div>
+
 {% endblock content %}
 
 {% block scripts %}
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const phrases = {{ hero.rotatingTexts.items | dump | safe }};
-            
-            const rotator = document.getElementById('heroTextRotator');
-            let currentIndex = 0;
-            
-            function rotateText() {
-                rotator.style.opacity = '0';
-                
-                setTimeout(() => {
-                    currentIndex = (currentIndex + 1) % phrases.length;
-                    rotator.textContent = phrases[currentIndex];
-                    rotator.style.opacity = '1';
-                }, 500);
-            }
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const phrases = {{ hero.rotatingTexts.items | dump | safe }};
+        
+        const rotator = document.getElementById('heroTextRotator');
+        if (!rotator || !phrases.length) return;
 
-            // Cambiar cada 4 segundos
-            setInterval(rotateText, 4000);
-        });
-    </script>
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % phrases.length;
+            rotator.style.opacity = '0';
+            setTimeout(() => {
+                rotator.textContent = phrases[index];
+                rotator.style.opacity = '1';
+            }, 400);
+        }, 3500);
+    });
+</script>
 
 {% endblock scripts %}
