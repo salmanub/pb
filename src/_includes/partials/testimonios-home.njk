@@ -7,26 +7,27 @@
     </div>
 
     <div class="max-w-[1400px] mx-auto relative z-10">
-        <!-- Encabezado ajustado para maximizar ancho -->
         <div class="max-w-4xl mx-auto text-center mb-16">
-            <span class="text-cyan-500 font-semibold tracking-wider uppercase mb-4 block">Casos de Éxito</span>
+            <span class="text-cyan-500 font-semibold tracking-wider uppercase mb-4 block">{{ testimonios.tag }}</span>
             <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 mb-6 leading-none">
-                Clientes Satisfechos <strong class="text-cyan-500 font-bold">Comparten su Experiencia</strong>
+                {{ testimonios.titulo }} <strong class="text-cyan-500 font-bold">{{ testimonios.highlight }}</strong>
             </h2>
-            <p class="text-lg text-slate-600 max-w-3xl mx-auto">Descubre cómo hemos ayudado a otros clientes a resolver sus casos con éxito.</p>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto">{{ testimonios.descripcion }}</p>
         </div>
 
-        <!-- Grid de testimonios -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Testimonio 1 -->
+            {% for testimonio in testimonios.items %}
             <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col">
                 <div class="flex items-center gap-4 mb-6">
                     <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden">
-                        <img src="/assets/images/testimonios/cliente1.jpg" alt="Foto de cliente" class="w-full h-full object-cover" loading="lazy">
+                        <img src="{{ testimonio.imagen }}" 
+                             alt="Foto de {{ testimonio.nombre }}" 
+                             class="w-full h-full object-cover" 
+                             loading="lazy">
                     </div>
                     <div>
-                        <h3 class="font-bold text-slate-800">Carlos R.</h3>
-                        <p class="text-slate-500 text-sm">Comunidad de Propietarios</p>
+                        <h3 class="font-bold text-slate-800">{{ testimonio.nombre }}</h3>
+                        <p class="text-slate-500 text-sm">{{ testimonio.rol }}</p>
                     </div>
                 </div>
                 <div class="flex-grow">
@@ -34,19 +35,18 @@
                         <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"/>
                     </svg>
                     <blockquote class="text-slate-600 leading-relaxed mb-6">
-                        "Gracias al informe pericial, pudimos demostrar el origen de las humedades y la aseguradora finalmente aceptó nuestra reclamación. Un trabajo profesional y decisivo."
+                        "{{ testimonio.cita }}"
                     </blockquote>
                 </div>
                 <div class="flex items-center gap-2">
                     <div class="text-cyan-400">★★★★★</div>
-                    <span class="text-slate-400 text-sm">hace 2 meses</span>
+                    <span class="text-slate-400 text-sm">{{ testimonio.fecha }}</span>
                 </div>
             </div>
-
-            <!-- Testimonio 2 -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden">
+            {% endfor %}
+        </div>
+    </div>
+</section>
                         <img src="/assets/images/testimonios/cliente2.jpg" alt="Foto de cliente" class="w-full h-full object-cover" loading="lazy">
                     </div>
                     <div>

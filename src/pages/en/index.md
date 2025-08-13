@@ -150,4 +150,30 @@ solucion:
     cta:
       texto: "Request Free Consultation"
       url: "/en/contact/"
+
+# Testimonials Section
+testimonials:
+  tag: "Success Stories"
+  titulo: "Satisfied Clients"
+  highlight: "Share Their Experience"
+  descripcion: "Discover how we have helped our clients resolve construction and property issues successfully"
+  items:
+    - nombre: "Greenwood Condominiums"
+      rol: "Property Manager"
+      imagen: "/assets/images/testimonios/condo-association.jpg"
+      cita: "The expert report was essential in resolving the roofing dispute. Repairs were carried out according to their recommendations, and no further issues occurred."
+      fecha: "2 months ago"
+
+    - nombre: "Sunrise Builders"
+      rol: "Technical Director"
+      imagen: "/assets/images/testimonios/construction-company.jpg"
+      cita: "The technical audit helped us detect and correct deficiencies before project handover. Their advice prevented future problems with buyers."
+      fecha: "1 month ago"
+
+    - nombre: "Emily J."
+      rol: "Homeowner"
+      imagen: "/assets/images/testimonios/homeowner.jpg"
+      cita: "Thanks to their report, we could prove the hidden defects in our new home. Their intervention was decisive in getting the developer to cover the repairs."
+      fecha: "3 months ago"
+
 ---

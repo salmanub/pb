@@ -151,4 +151,29 @@ solucion:
     cta:
       texto: "Solicitar Asesoramiento Gratuito"
       url: "/contacto/"
+
+# Sección Testimonios
+testimonios:
+  tag: "Casos de Éxito"
+  titulo: "Clientes Satisfechos"
+  highlight: "Comparten su Experiencia"
+  descripcion: "Descubre cómo hemos ayudado a otros clientes a resolver sus casos con éxito"
+  items:
+    - nombre: "Comunidad de Propietarios Les Corts"
+      rol: "Administrador de Fincas"
+      imagen: "/assets/images/testimonios/comunidad-propietarios.jpg"
+      cita: "El informe pericial fue decisivo para resolver el litigio de la cubierta. La reparación se ejecutó según sus recomendaciones y no hemos vuelto a tener problemas."
+      fecha: "hace 2 meses"
+
+    - nombre: "Constructora Técnica BCN"
+      rol: "Director Técnico"
+      imagen: "/assets/images/testimonios/constructora.jpg"
+      cita: "La auditoría técnica nos permitió detectar y corregir deficiencias antes de la entrega. Su asesoramiento nos ahorró futuros problemas con los compradores."
+      fecha: "hace 1 mes"
+
+    - nombre: "Ana S."
+      rol: "Propietaria"
+      imagen: "/assets/images/testimonios/particular.jpg"
+      cita: "Gracias a su informe pudimos demostrar los vicios ocultos en nuestra vivienda nueva. Su intervención fue clave para conseguir que la promotora asumiera las reparaciones."
+      fecha: "hace 3 meses"
 ---

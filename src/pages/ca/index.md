@@ -152,4 +152,30 @@ solucion:
     cta:
       texto: "Sol·licitar Assessorament Gratuït"
       url: "/ca/contacte/"
+
+# Secció de Testimonis
+testimonis:
+  tag: "Cases d'Èxit"
+  titulo: "Clients Satisfets"
+  highlight: "Expliquen la Seva Experiència"
+  descripcion: "Descobreix com hem ajudat els nostres clients a resoldre problemes de construcció i habitatge amb èxit"
+  items:
+    - nombre: "Residencial Les Fonts"
+      rol: "Administrador de Finques"
+      imagen: "/assets/images/testimonios/comunitat-propietaris.jpg"
+      cita: "L’informe pericial va ser clau per resoldre el litigi de la coberta. Les reparacions es van executar segons les seves recomanacions i no hem tingut més problemes."
+      fecha: "fa 2 mesos"
+
+    - nombre: "Constructora Sol i Mar"
+      rol: "Director Tècnic"
+      imagen: "/assets/images/testimonios/constructora-girona.jpg"
+      cita: "L’auditoria tècnica ens va permetre detectar i corregir deficiències abans de l’entrega de l’obra. El seu assessorament va evitar futurs conflictes amb els compradors."
+      fecha: "fa 1 mes"
+
+    - nombre: "Anna P."
+      rol: "Propietària"
+      imagen: "/assets/images/testimonios/propietaria.jpg"
+      cita: "Gràcies al seu informe vam poder demostrar els vicis ocults a la nostra vivenda nova. La seva intervenció va ser decisiva perquè la promotora assumís les reparacions."
+      fecha: "fa 3 mesos"
+
 ---
