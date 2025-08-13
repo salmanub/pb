@@ -222,4 +222,42 @@ testimonios:
       fecha: "hace 3 meses"
       servicioRelacionado: "Peritaje Judicial"
       tipoProyecto: "Demanda por Vicios Ocultos"
----
+
+# Sección CTA Contacto
+contactCTA:
+  titulo: "¿Listo para Obtener"
+  highlight: "Claridad y Soluciones"
+  descripcion: "Contacta con nosotros hoy mismo y obtén una evaluación inicial gratuita de tu caso."
+  contactInfo:
+    - titulo: "Llámanos ahora"
+      valor: "+34 614 194 985"
+      url: "tel:934687235"
+      horario: "Lunes a Viernes: 9:00 - 19:00"
+      icon: "phone"
+    - titulo: "Escríbenos"
+      valor: "info@perito.barcelona"
+      url: "mailto:info@perito.barcelona"
+      horario: "Respondemos en menos de 24h"
+      icon: "mail"
+  form:
+    campos:
+      - id: "nombre"
+        label: "Nombre completo"
+        tipo: "text"
+        grid: ""
+      - id: "email"
+        label: "Email"
+        tipo: "email"
+        grid: "grid grid-cols-1 md:grid-cols-2 gap-6"
+      - id: "telefono"
+        label: "Teléfono"
+        tipo: "tel"
+        grid: "grid grid-cols-1 md:grid-cols-2 gap-6"
+      - id: "mensaje"
+        label: "Cuéntanos brevemente tu caso"
+        tipo: "textarea"
+        grid: ""
+    submitText: "Enviar Consulta"
+    successMessage: "¡Datos enviados correctamente!"
+    errorMessage: "Ha ocurrido un error al enviar los datos. Por favor, inténtalo de nuevo más tarde."
+    endpoint: "https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma"

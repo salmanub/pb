@@ -243,5 +243,43 @@ testimonios:
       cita: "Gràcies al seu informe vam poder demostrar els vicis ocults a la nostra vivenda nova. La seva intervenció va ser decisiva per aconseguir que la promotora assumís les reparacions."
       fecha: "fa 3 mesos"
 
+# Sección CTA Contacto
+contactCTA:
+  titulo: "Preparat per obtenir"
+  highlight: "Claredat i Solucions"
+  descripcion: "Contacta amb nosaltres avui mateix i obtén una avaluació inicial gratuïta del teu cas."
+  contactInfo:
+    - titulo: "Truca'ns ara"
+      valor: "+34 614 194 985"
+      url: "tel:934687235"
+      horario: "Dilluns a Divendres: 9:00 - 19:00"
+      icon: "phone"
+    - titulo: "Escriu-nos"
+      valor: "info@perito.barcelona"
+      url: "mailto:info@perito.barcelona"
+      horario: "Respondem en menys de 24h"
+      icon: "mail"
+  form:
+    campos:
+      - id: "nombre"
+        label: "Nom complet"
+        tipo: "text"
+        grid: ""
+      - id: "email"
+        label: "Correu electrònic"
+        tipo: "email"
+        grid: "grid grid-cols-1 md:grid-cols-2 gap-6"
+      - id: "telefono"
+        label: "Telèfon"
+        tipo: "tel"
+        grid: "grid grid-cols-1 md:grid-cols-2 gap-6"
+      - id: "mensaje"
+        label: "Explica breument el teu cas"
+        tipo: "textarea"
+        grid: ""
+    submitText: "Enviar Consulta"
+    successMessage: "Dades enviades correctament!"
+    errorMessage: "S'ha produït un error en enviar les dades. Si us plau, torna-ho a intentar més tard."
+    endpoint: "https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma"
 
 ---

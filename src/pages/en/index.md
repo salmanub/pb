@@ -216,6 +216,44 @@ testimonios:
       cita: "Their expert assessment was instrumental in my insurance claim. The detailed report provided clear evidence of structural damage, leading to a successful settlement."
       fecha: "3 months ago"
 
+# Sección CTA Contacto
+contactCTA:
+  titulo: "Ready to Get"
+  highlight: "Clarity and Solutions"
+  descripcion: "Contact us today and receive a free initial assessment of your case."
+  contactInfo:
+    - titulo: "Call Us Now"
+      valor: "+34 614 194 985"
+      url: "tel:934687235"
+      horario: "Monday to Friday: 9:00 AM - 7:00 PM"
+      icon: "phone"
+    - titulo: "Write to Us"
+      valor: "info@perito.barcelona"
+      url: "mailto:info@perito.barcelona"
+      horario: "We respond within 24h"
+      icon: "mail"
+  form:
+    campos:
+      - id: "nombre"
+        label: "Full Name"
+        tipo: "text"
+        grid: ""
+      - id: "email"
+        label: "Email"
+        tipo: "email"
+        grid: "grid grid-cols-1 md:grid-cols-2 gap-6"
+      - id: "telefono"
+        label: "Phone Number"
+        tipo: "tel"
+        grid: "grid grid-cols-1 md:grid-cols-2 gap-6"
+      - id: "mensaje"
+        label: "Briefly Describe Your Case"
+        tipo: "textarea"
+        grid: ""
+    submitText: "Send Inquiry"
+    successMessage: "Your information has been sent successfully!"
+    errorMessage: "An error occurred while sending your information. Please try again later."
+    endpoint: "https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma"
 
 
 ---
