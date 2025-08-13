@@ -84,7 +84,7 @@ ayuda:
       description: "Detecció de l’origen, informes tècnics i solucions per a problemes d’humitat en edificacions."
       url: "/ca/humitats-filtracions/"
       icon: "droplet"
-    - title: "Disputes en Certificacions i Mesuraments"
+    - title: "Disputes en Certificacions i Amidaments"
       description: "Assessorament pericial per a conflictes derivats de certificacions, mesuraments i compliment normatiu."
       url: "/ca/certificacions-mesures/"
       icon: "file-text"
