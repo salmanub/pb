@@ -161,7 +161,8 @@ testimonios:
   items:
     - nombre: "Comunidad de Propietarios Les Corts"
       rol: "Presidente de la Comunidad"
-      imagen: "/assets/images/testimonios/comunidad-propietarios.jpg"
+      tipo: "empresa"
+      imagen: ""
       cita: "El informe pericial identificó el origen de las filtraciones en la cubierta y gracias a su intervención, conseguimos que el seguro cubriera la reparación completa, valorada en más de 45.000€."
       fecha: "hace 2 meses"
       servicioRelacionado: "Peritajes de Seguros"
@@ -169,7 +170,8 @@ testimonios:
 
     - nombre: "CONSTRUCCIONES TÉCNICAS BCN, S.L."
       rol: "Director de Proyectos"
-      imagen: "/assets/images/testimonios/constructora.jpg"
+      tipo: "empresa"
+      imagen: ""
       cita: "La auditoría técnica preventiva nos permitió detectar y corregir deficiencias antes de la entrega de 24 viviendas, evitando futuras reclamaciones y sobrecostes estimados en 120.000€."
       fecha: "hace 1 mes"
       servicioRelacionado: "Auditoría Técnica de Obras"
@@ -177,7 +179,7 @@ testimonios:
 
     - nombre: "Ana S. García"
       rol: "Propietaria Afectada"
-      imagen: "/assets/images/testimonios/particular.jpg"
+      tipo: "persona"
       cita: "Gracias a su informe pericial demostramos los vicios ocultos en nuestra vivienda nueva. Su diagnóstico estructural fue clave para que la promotora asumiera las reparaciones valoradas en 75.000€."
       fecha: "hace 3 meses"
       servicioRelacionado: "Peritaje Judicial"

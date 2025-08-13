@@ -160,21 +160,24 @@ testimonios:
   items:
     - nombre: "Greenwood Residents Association"
       rol: "Property Manager"
-      imagen: "/assets/images/testimonios/comunidad-propietarios.jpg"
+      tipo: "empresa"
+      imagen: ""
       cita: "The expert report was decisive in resolving the roofing dispute. The repair was carried out following their recommendations, and we haven’t had any issues since."
       fecha: "2 months ago"
 
     - nombre: "Sunrise Construction"
       rol: "Technical Director"
-      imagen: "/assets/images/testimonios/constructora.jpg"
+      tipo: "empresa"
+      imagen: ""
       cita: "The technical audit allowed us to identify and fix deficiencies before project handover. Their advice saved us from future problems with buyers."
       fecha: "1 month ago"
 
-    - nombre: "Laura M."
-      rol: "Homeowner"
-      imagen: "/assets/images/testimonios/particular.jpg"
-      cita: "Thanks to their report, we were able to prove hidden defects in our new home. Their intervention was key to getting the developer to cover the repairs."
+    - nombre: "Richard T."
+      rol: "Property Owner"
+      imagen: ""
+      cita: "Their expert assessment was instrumental in my insurance claim. The detailed report provided clear evidence of structural damage, leading to a successful settlement."
       fecha: "3 months ago"
+
 
 
 ---
