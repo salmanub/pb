@@ -92,8 +92,8 @@ servicios:
 # 'How We Can Help You' Section
 ayuda:
   encabezado:
-    title: "How Can We"
-    highlight: "Help You"
+    title: "How Can"
+    highlight: "We Help You"
     subtitle: "Specialized technical and expert solutions for any type of property, project, or dispute in Barcelona."
   introduccion:
     title: "Some of the technical issues we frequently address:"
