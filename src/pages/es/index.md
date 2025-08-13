@@ -67,6 +67,28 @@ servicios:
         - "Reclamaciones a aseguradoras"
       url: "/peritajes-seguros/"
 
+# Servicios Destacados
+highlightedServices:
+  titulo: "Nuestros"
+  highlight: "Servicios Principales"
+  descripcion: "Soluciones técnicas especializadas para resolver conflictos constructivos y garantizar la calidad en edificación"
+  items:
+    - titulo: "Auditoría Técnica de Obras"
+      descripcion: "Evaluación exhaustiva de calidad constructiva, cumplimiento normativo y detección temprana de deficiencias."
+      url: "/auditoria-tecnica-obra/"
+      icon: "clipboard-list"
+      cta: "Saber más"
+    - titulo: "Peritaje Judicial y de Parte"
+      descripcion: "Informes técnicos especializados para procesos judiciales y mediación, con análisis de causas y valoraciones."
+      url: "/peritaje-judicial-obra/"
+      icon: "scale"
+      cta: "Saber más"
+    - titulo: "Inspecciones Técnicas Especializadas"
+      descripcion: "Diagnóstico detallado del estado de obras de ingeniería civil y edificación. Análisis estructural y recomendaciones para mantenimiento preventivo y correctivo."
+      url: "/inspecciones-tecnicas-especializadas/"
+      icon: "search-check"
+      cta: "Saber más"
+
 # Sección "En qué podemos ayudarte"
 ayuda:
   encabezado:

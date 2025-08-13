@@ -47,6 +47,29 @@ hero:
           subtext: "Garantida"
     logosText: "Informes acceptats per tots els tribunals espanyols"
 
+# Serveis Destacats
+highlightedServices:
+  titulo: "Els nostres"
+  highlight: "Serveis Principals"
+  descripcion: "Solucions tècniques especialitzades per resoldre conflictes constructius, garantir la qualitat edificatòria i oferir peritatges professionals."
+  items:
+    - titulo: "Auditoria Tècnica d'Obres"
+      descripcion: "Avaluació exhaustiva de la qualitat constructiva, compliment normatiu i detecció precoç de deficiències o riscos."
+      url: "/auditoria-tecnica-obres/"
+      icon: "clipboard-list"
+      cta: "Més informació"
+    - titulo: "Peritatge Judicial i de Part"
+      descripcion: "Informes tècnics especialitzats per a processos judicials i mediació, amb anàlisi de causes, valoracions i diagnòstics estructurals."
+      url: "/peritatge-judicial-obres/"
+      icon: "scale"
+      cta: "Més informació"
+    - titulo: "Inspeccions Tècniques Especialitzades"
+      descripcion: "Diagnòstic detallat de l'estat d'obres d'enginyeria civil i edificació, amb anàlisi estructural i recomanacions per al manteniment preventiu i correctiu."
+      url: "/inspeccions-tecniques-especialitzades/"
+      icon: "search-check"
+      cta: "Més informació"
+
+
 # Serveis Section
 servicios:
   title: "Els Nostres Serveis Pericials"

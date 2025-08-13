@@ -47,6 +47,28 @@ hero:
           subtext: "Guaranteed"
     logosText: "Reports accepted by all Spanish courts"
 
+# Featured Services
+highlightedServices:
+  titulo: "Our"
+  highlight: "Main Services"
+  descripcion: "Specialized technical solutions to resolve construction disputes, ensure building quality, and provide expert assessments."
+  items:
+    - titulo: "Technical Audit of Construction Works"
+      descripcion: "Comprehensive evaluation of construction quality, regulatory compliance, and early detection of defects or risks."
+      url: "/technical-audit-construction/"
+      icon: "clipboard-list"
+      cta: "Learn more"
+    - titulo: "Judicial and Private Expert Reports"
+      descripcion: "Specialized technical reports for court cases and mediation, including cause analysis, structural evaluations, and valuations."
+      url: "/judicial-private-expert-report/"
+      icon: "scale"
+      cta: "Learn more"
+    - titulo: "Specialized Technical Inspections"
+      descripcion: "Detailed diagnosis of civil engineering and building works, including structural analysis and tailored recommendations for preventive and corrective maintenance."
+      url: "/specialized-technical-inspections/"
+      icon: "search-check"
+      cta: "Learn more"
+
 # Services Section
 servicios:
   title: "Our Expert Witness Services"
