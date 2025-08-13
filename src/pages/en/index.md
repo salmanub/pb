@@ -174,6 +174,7 @@ testimonios:
 
     - nombre: "Richard T. Robinson"
       rol: "Property Owner"
+      tipo: "persona"
       imagen: ""
       cita: "Their expert assessment was instrumental in my insurance claim. The detailed report provided clear evidence of structural damage, leading to a successful settlement."
       fecha: "3 months ago"

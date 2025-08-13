@@ -180,6 +180,7 @@ testimonios:
     - nombre: "Ana S. García"
       rol: "Propietaria Afectada"
       tipo: "persona"
+      imagen: ""
       cita: "Gracias a su informe pericial demostramos los vicios ocultos en nuestra vivienda nueva. Su diagnóstico estructural fue clave para que la promotora asumiera las reparaciones valoradas en 75.000€."
       fecha: "hace 3 meses"
       servicioRelacionado: "Peritaje Judicial"

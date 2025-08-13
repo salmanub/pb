@@ -192,11 +192,11 @@ testimonios:
       cita: "L’informe pericial va ser clau per resoldre el litigi de la coberta. La reparació es va executar segons les seves recomanacions i no hem tornat a tenir problemes."
       fecha: "fa 2 mesos"
 
-    - nombre: "Constructora Mediterrània"
-      rol: "Director Tècnic"
+    - nombre: "Construccions Delta"
+      rol: "Director de Projectes"
       tipo: "empresa"
       imagen: ""
-      cita: "L’auditoria tècnica ens va permetre detectar i corregir deficiències abans de l’entrega de l’obra. El seu assessorament ens ha estalviat futurs problemes amb els compradors."
+      cita: "L’auditoria tècnica ens va ajudar a corregir deficiències abans de lliurar l’obra, evitant conflictes legals."
       fecha: "fa 1 mes"
 
     - nombre: "Laura M."
