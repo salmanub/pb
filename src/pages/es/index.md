@@ -152,6 +152,43 @@ solucion:
       texto: "Solicitar Asesoramiento Gratuito"
       url: "/contacto/"
 
+# Sección Proceso
+proceso:
+  titulo: "¿Cómo"
+  highlight: "Empezamos"
+  descripcion: "Un proceso claro y transparente para ayudarte a resolver tu caso con la máxima profesionalidad."
+  pasos:
+    - numero: "01"
+      titulo: "Contacto Inicial"
+      descripcion: "Cuéntanos tu caso por teléfono o email. Realizamos un análisis preliminar sin compromiso."
+      icon: "message-circle"
+      tiempoLabel: "Tiempo estimado"
+      tiempo: "24h"
+
+    - numero: "02"
+      titulo: "Inspección y Análisis"
+      descripcion: "Visitamos el lugar, recopilamos evidencias y analizamos toda la documentación técnica necesaria."
+      icon: "inspect-check"
+      tiempoLabel: "Duración"
+      tiempo: "2-3 días"
+
+    - numero: "03"
+      titulo: "Informe Pericial"
+      descripcion: "Redacción del dictamen técnico aplicando normativa vigente con rigor científico y claridad expositiva."
+      icon: "report-tech"
+      tiempoLabel: "Entrega"
+      tiempo: "5-7 días"
+
+    - numero: "04"
+      titulo: "Defensa Profesional"
+      descripcion: "Presentación y defensa del informe ante tribunales con acompañamiento técnico hasta la resolución."
+      icon: "shield-court"
+      tiempoLabel: "Duración"
+      tiempo: "Según procedimiento"
+  cta:
+    texto: "Empieza Ahora - Contacto Inicial Gratuito"
+    url: "/contacto/"
+
 # Sección Testimonios
 testimonios:
   tag: "Casos de Éxito"

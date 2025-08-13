@@ -151,6 +151,43 @@ solucion:
       texto: "Request Free Consultation"
       url: "/en/contact/"
 
+# Sección Proceso
+proceso:
+  titulo: "How"
+  highlight: "We Start"
+  descripcion: "A clear and transparent process to help you resolve your case with maximum professionalism."
+  pasos:
+    - numero: "01"
+      titulo: "Initial Contact"
+      descripcion: "Tell us about your case by phone or email. We conduct a preliminary analysis with no obligation."
+      icon: "message-circle"
+      tiempoLabel: "Estimated time"
+      tiempo: "24h"
+
+    - numero: "02"
+      titulo: "Inspection and Analysis"
+      descripcion: "We visit the site, gather evidence, and analyze all necessary technical documentation."
+      icon: "inspect-check"
+      tiempoLabel: "Duration"
+      tiempo: "2-3 days"
+
+    - numero: "03"
+      titulo: "Expert Report"
+      descripcion: "Writing of the technical report applying current regulations with scientific rigor and expository clarity."
+      icon: "report-tech"
+      tiempoLabel: "Delivery"
+      tiempo: "5-7 days"
+
+    - numero: "04"
+      titulo: "Professional Defense"
+      descripcion: "Presentation and defense of the report in court with technical support until resolution."
+      icon: "shield-court"
+      tiempoLabel: "Duration"
+      tiempo: "As per procedure"
+  cta:
+    texto: "Start Now - Free Initial Contact"
+    url: "/en/contact/"
+
 # Testimonials Section
 testimonios:
   tag: "Success Stories"

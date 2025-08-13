@@ -178,6 +178,43 @@ testimonis:
       cita: "Gràcies al seu informe vam poder demostrar els vicis ocults a la nostra vivenda nova. La seva intervenció va ser decisiva perquè la promotora assumís les reparacions."
       fecha: "fa 3 mesos"
 
+# Sección Proceso
+proceso:
+  titulo: "Com"
+  highlight: "Comencem"
+  descripcion: "Un procés clar i transparent per ajudar-te a resoldre el teu cas amb la màxima professionalitat."
+  pasos:
+    - numero: "01"
+      titulo: "Contacte Inicial"
+      descripcion: "Explica'ns el teu cas per telèfon o email. Realitzem una anàlisi preliminar sense compromís."
+      icon: "message-circle"
+      tiempoLabel: "Temps estimat"
+      tiempo: "24h"
+
+    - numero: "02"
+      titulo: "Inspecció i Anàlisi"
+      descripcion: "Visitem el lloc, recopilem evidències i analitzem tota la documentació tècnica necessària."
+      icon: "inspect-check"
+      tiempoLabel: "Durada"
+      tiempo: "2-3 dies"
+
+    - numero: "03"
+      titulo: "Informe Pericial"
+      descripcion: "Redacció del dictamen tècnic aplicant normativa vigent amb rigor científic i claredat expositiva."
+      icon: "report-tech"
+      tiempoLabel: "Lliurament"
+      tiempo: "5-7 dies"
+
+    - numero: "04"
+      titulo: "Defensa Professional"
+      descripcion: "Presentació i defensa de l'informe davant tribunals amb acompanyament tècnic fins a la resolució."
+      icon: "shield-court"
+      tiempoLabel: "Durada"
+      tiempo: "Segons procediment"
+  cta:
+    texto: "Comença Ara - Contacte Inicial Gratuït"
+    url: "/ca/contacte/"
+
 # Secció de Testimonis
 testimonios:
   tag: "Cases d'Èxit"
@@ -199,7 +236,7 @@ testimonios:
       cita: "L’auditoria tècnica ens va ajudar a corregir deficiències abans de lliurar l’obra, evitant conflictes legals."
       fecha: "fa 1 mes"
 
-    - nombre: "Laura M."
+    - nombre: "Laura M. Roig"
       rol: "Propietària"
       tipo: "persona"
       imagen: ""
