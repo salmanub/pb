@@ -185,14 +185,14 @@ testimonios:
   highlight: "Expliquen la Seva Experiència"
   descripcion: "Descobreix com hem ajudat altres clients a resoldre els seus casos amb èxit"
   items:
-    - nombre: "Associació de Veïns La Font"
+    - nombre: "Associació de Veïns La Plaça"
       rol: "Administrador de Finques"
       tipo: "empresa"
       imagen: ""
       cita: "L’informe pericial va ser clau per resoldre el litigi de la coberta. La reparació es va executar segons les seves recomanacions i no hem tornat a tenir problemes."
       fecha: "fa 2 mesos"
 
-    - nombre: "Construccions Sol Naixent"
+    - nombre: "Constructora Mediterrània"
       rol: "Director Tècnic"
       tipo: "empresa"
       imagen: ""

@@ -172,7 +172,7 @@ testimonios:
       cita: "The technical audit allowed us to identify and fix deficiencies before project handover. Their advice saved us from future problems with buyers."
       fecha: "1 month ago"
 
-    - nombre: "Richard T."
+    - nombre: "Richard T. Robinson"
       rol: "Property Owner"
       imagen: ""
       cita: "Their expert assessment was instrumental in my insurance claim. The detailed report provided clear evidence of structural damage, leading to a successful settlement."
