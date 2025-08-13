@@ -152,28 +152,29 @@ solucion:
       url: "/en/contact/"
 
 # Testimonials Section
-testimonials:
+testimonios:
   tag: "Success Stories"
   titulo: "Satisfied Clients"
   highlight: "Share Their Experience"
-  descripcion: "Discover how we have helped our clients resolve construction and property issues successfully"
+  descripcion: "Discover how we have helped other clients successfully resolve their cases"
   items:
-    - nombre: "Greenwood Condominiums"
+    - nombre: "Greenwood Residents Association"
       rol: "Property Manager"
-      imagen: "/assets/images/testimonios/condo-association.jpg"
-      cita: "The expert report was essential in resolving the roofing dispute. Repairs were carried out according to their recommendations, and no further issues occurred."
+      imagen: "/assets/images/testimonios/comunidad-propietarios.jpg"
+      cita: "The expert report was decisive in resolving the roofing dispute. The repair was carried out following their recommendations, and we haven’t had any issues since."
       fecha: "2 months ago"
 
-    - nombre: "Sunrise Builders"
+    - nombre: "Sunrise Construction"
       rol: "Technical Director"
-      imagen: "/assets/images/testimonios/construction-company.jpg"
-      cita: "The technical audit helped us detect and correct deficiencies before project handover. Their advice prevented future problems with buyers."
+      imagen: "/assets/images/testimonios/constructora.jpg"
+      cita: "The technical audit allowed us to identify and fix deficiencies before project handover. Their advice saved us from future problems with buyers."
       fecha: "1 month ago"
 
-    - nombre: "Emily J."
+    - nombre: "Laura M."
       rol: "Homeowner"
-      imagen: "/assets/images/testimonios/homeowner.jpg"
-      cita: "Thanks to their report, we could prove the hidden defects in our new home. Their intervention was decisive in getting the developer to cover the repairs."
+      imagen: "/assets/images/testimonios/particular.jpg"
+      cita: "Thanks to their report, we were able to prove hidden defects in our new home. Their intervention was key to getting the developer to cover the repairs."
       fecha: "3 months ago"
+
 
 ---

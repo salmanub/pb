@@ -98,7 +98,7 @@ ayuda:
     subtitle: "Solucions tècniques i pericials especialitzades per a qualsevol tipus de propietat, projecte o conflicte a Barcelona."
   introduccion:
     title: "Alguns dels problemes tècnics que abordem amb més freqüència:"
-  problemas:
+  problemes:
     - title: "Esquerdes i Deformacions Estructurals"
       description: "Anàlisi i diagnòstic de patologies estructurals, detecció de fissures i recomanacions de reparació."
       url: "/ca/esquerdes-deformacions-estructurals/"
@@ -153,29 +153,36 @@ solucion:
       texto: "Sol·licitar Assessorament Gratuït"
       url: "/ca/contacte/"
 
-# Secció de Testimonis
-testimonis:
-  tag: "Cases d'Èxit"
+# Secció Testimonis
+testimonios:
+  tag: "Casos d'Èxit"
   titulo: "Clients Satisfets"
-  highlight: "Expliquen la Seva Experiència"
-  descripcion: "Descobreix com hem ajudat els nostres clients a resoldre problemes de construcció i habitatge amb èxit"
+  highlight: "Avalen la Nostra Experiència"
+  descripcion: "Descobreix com ajudem a propietaris, comunitats i constructores a resoldre els seus casos tècnics amb èxit"
   items:
-    - nombre: "Residencial Les Fonts"
-      rol: "Administrador de Finques"
-      imagen: "/assets/images/testimonios/comunitat-propietaris.jpg"
-      cita: "L’informe pericial va ser clau per resoldre el litigi de la coberta. Les reparacions es van executar segons les seves recomanacions i no hem tingut més problemes."
+    - nombre: "Comunitat de Propietaris Sant Gervasi"
+      rol: "President de la Comunitat"
+      imagen: "/assets/images/testimonios/comunidad-propietarios.jpg"
+      cita: "L'informe pericial va identificar l'origen de les filtracions a la coberta i gràcies a la seva intervenció, vam aconseguir que l'assegurança cobrís la reparació completa, valorada en més de 45.000€."
       fecha: "fa 2 mesos"
+      servicioRelacionado: "Peritatges d'Assegurances"
+      tipoProyecto: "Reclamació a Assegurança"
 
-    - nombre: "Constructora Sol i Mar"
-      rol: "Director Tècnic"
-      imagen: "/assets/images/testimonios/constructora-girona.jpg"
-      cita: "L’auditoria tècnica ens va permetre detectar i corregir deficiències abans de l’entrega de l’obra. El seu assessorament va evitar futurs conflictes amb els compradors."
+    - nombre: "EDIFICACIONS CATALUNYA, S.L."
+      rol: "Director de Projectes"
+      imagen: "/assets/images/testimonios/constructora.jpg"
+      cita: "L'auditoria tècnica preventiva ens va permetre detectar i corregir deficiències abans del lliurament de 24 habitatges, evitant futures reclamacions i sobrecostos estimats en 120.000€."
       fecha: "fa 1 mes"
+      servicioRelacionado: "Auditoria Tècnica d'Obres"
+      tipoProyecto: "Control de Qualitat"
 
-    - nombre: "Anna P."
-      rol: "Propietària"
-      imagen: "/assets/images/testimonios/propietaria.jpg"
-      cita: "Gràcies al seu informe vam poder demostrar els vicis ocults a la nostra vivenda nova. La seva intervenció va ser decisiva perquè la promotora assumís les reparacions."
+    - nombre: "Maria R. Puig"
+      rol: "Propietària Afectada"
+      imagen: "/assets/images/testimonios/particular.jpg"
+      cita: "Gràcies al seu informe pericial vam demostrar els vicis ocults al nostre habitatge nou. El seu diagnòstic estructural va ser clau perquè la promotora assumís les reparacions valorades en 75.000€."
       fecha: "fa 3 mesos"
+      servicioRelacionado: "Peritatge Judicial"
+      tipoProyecto: "Demanda per Vicis Ocults"
+
 
 ---
