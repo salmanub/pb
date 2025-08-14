@@ -15,15 +15,22 @@
   "navBar": {
         "es": {
           "ctaAbogados": "Soy Abogado",
-          "linkAbogados": "https://perito.barcelona/judicial/#strategic-content"
+          "linkAbogados": "https://perito.barcelona/judicial/#strategic-content",
+          "ctaPresupuesto": "Solicitar Presupuesto",
+          "linkPresupuesto": "/contacto/"
+
         },
         "ca": {
           "ctaAbogados": "Sóc Advocat",
-          "linkAbogados": "https://perito.barcelona/judicial/#strategic-content"
+          "linkAbogados": "https://perito.barcelona/judicial/#strategic-content",
+          "ctaPresupuesto": "Sol·licitar Pressupost",
+          "linkPresupuesto": "/ca/contacte/"
         },
         "en": {
           "ctaAbogados": "I'm a Lawyer",
-          "linkAbogados": "https://perito.barcelona/judicial/#strategic-content"
+          "linkAbogados": "https://perito.barcelona/judicial/#strategic-content",
+          "ctaPresupuesto": "Request Quote",
+          "linkPresupuesto": "/en/contact/"
         }
       
     },
