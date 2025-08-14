@@ -146,7 +146,7 @@
                     <span>{{metadata.contact.phoneNumber}}</span>
                 </a>
                 <a href="{{ metadata.navBar[lang].linkPresupuesto }}" class="px-4 py-1.5 text-sm font-semibold text-white bg-gradient-to-br from-cyan-400 to-cyan-500 hover:shadow-md hover:shadow-cyan-200 border-l border-slate-100 transition-all" itemprop="url">
-                    {{ metadata.navBar[lang].ctaPresupuesto }}
+                    {{ metadata.navBar[lang].ctaPresupuesto | upper }}
                 </a>
             </div>
         </div>
