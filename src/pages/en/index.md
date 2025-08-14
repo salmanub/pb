@@ -153,8 +153,8 @@ solucion:
 
 # Sección Proceso
 proceso:
-  titulo: "How"
-  highlight: "We Start"
+  titulo: "How We"
+  highlight: "Start"
   descripcion: "A clear and transparent process to help you resolve your case with maximum professionalism."
   pasos:
     - numero: "01"
