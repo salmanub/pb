@@ -71,6 +71,7 @@ highlightedServices:
   titulo: "Nuestros"
   highlight: "Servicios Principales"
   descripcion: "Servicios periciales de alta especialización para garantizar la calidad constructiva y la resolución de conflictos."
+  cta: "Saber más"
   items:
     - titulo: "Auditoría Técnica de Obras"
       descripcion: "Evaluación de calidad constructiva, cumplimiento normativo y detección temprana de deficiencias."
