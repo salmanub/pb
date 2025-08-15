@@ -2,11 +2,13 @@
 
 {% block content %}
 <main class="overflow-hidden relative h-auto">
-    <!-- Hero Section - Ajustado para alinear con navbar -->
-    <header class="relative bg-gradient-to-br from-[#0B1030] to-[#1a2452] mt-[70px] lg:mt-[90px] mt-[70px] lg:mt-[120px]">
-        <!-- Pattern Background -->
-        <div aria-hidden="true" class="absolute inset-0">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,slate-500_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.15]"></div>
+    <!-- Hero Section - Con nuevos efectos decorativos -->
+    <header class="relative bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] mt-[70px] lg:mt-[120px] overflow-hidden isolate">
+        <!-- Efectos decorativos -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:48px_48px] opacity-25"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-cyan-400/5"></div>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-400/20 blur-[100px] rounded-full"></div>
         </div>
 
         <div class="relative mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-8">
@@ -60,9 +62,10 @@
 
     <!-- Content Sections - Sistema de contenedores unificado -->
     <div class="relative">
-        <!-- Pattern Background - Ajustado para todo el contenido -->
-        <div aria-hidden="true" class="absolute inset-0">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,slate-500_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.03]"></div>
+        <!-- Efectos decorativos globales -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(203,213,225,0.1)_1px,transparent_1px)] [background-size:48px_48px]"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-50/40 via-transparent to-slate-50/30"></div>
         </div>
 
         <div class="relative">
@@ -215,13 +218,16 @@
             </section>
             {% endif %}
 
-            <!-- Strategic Content Section -->
+            <!-- Strategic Content Section - Con nuevos estilos -->
             {% if strategicContent %}
-            <section id="strategic-content" class="relative py-24 md:py-32 bg-white border-y border-slate-200">
-                <div class="absolute inset-0 bg-gradient-to-br from-slate-50/80 to-white/90"></div>
+            <section id="strategic-content" class="relative py-24 md:py-32 bg-gradient-to-br from-slate-50 via-white to-slate-50 overflow-hidden isolate">
+                <!-- Efectos decorativos -->
                 <div class="absolute inset-0">
-                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,cyan-600_1px,transparent_1px)] bg-[size:24px_24px] opacity-[0.03]"></div>
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(203,213,225,0.1)_1px,transparent_1px)] [background-size:48px_48px]"></div>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-cyan-50/40 via-transparent to-slate-50/30"></div>
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-200/20 blur-[100px] rounded-full"></div>
                 </div>
+
                 <div class="relative w-full px-4 sm:px-6 md:px-8 lg:px-12 mx-auto max-w-[1400px]">
                     <div class="mb-16 text-center">
                         <div class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-cyan-600 rounded-lg mb-6">
@@ -247,24 +253,22 @@
 
                     <div class="mt-16 text-center">
                         <a href="/contacto/?tipo=abogado" 
-                           class="group inline-flex items-center justify-center px-8 py-4 bg-cyan-600 text-white font-bold text-lg rounded-lg shadow-xl hover:bg-cyan-700 transform hover:-translate-y-0.5 transition-all duration-300">
+                           class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-cyan-500/25 transition-all group text-lg">
                             <span>Contactar para Colaboración Profesional</span>
-                            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                            </svg>
                         </a>
                     </div>
                 </div>
             </section>
             {% endif %}
 
-            <!-- Final CTA -->
-            <section class="relative py-24 md:py-32 bg-gradient-to-br from-[#0B1030] to-[#1a2452] overflow-hidden">
+            <!-- Final CTA - Con nuevos efectos -->
+            <section class="relative py-24 md:py-32 bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] overflow-hidden isolate">
+                <!-- Efectos decorativos -->
                 <div class="absolute inset-0">
-                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,slate-400_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.15]"></div>
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:48px_48px] opacity-25"></div>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-cyan-400/5"></div>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-400/20 blur-[100px] rounded-full"></div>
                 </div>
-                <div class="absolute -top-24 -right-24 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl"></div>
-                <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl"></div>
 
                 <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
                     <h2 class="font-display text-5xl md:text-6xl font-light text-white leading-[1.1] tracking-tight mb-8">{{ finalCTA.title }}</h2>
