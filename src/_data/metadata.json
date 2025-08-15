@@ -160,5 +160,244 @@
         "link": "/ca/contacte/"
       }
     }
+  },
+  "footer": {
+    "es": {
+      "brand": {
+        "description": "Expertos en informes periciales de construcción y seguros. Garantía de calidad y profesionalidad.",
+        "social": [
+          {
+            "url": "https://www.linkedin.com/company/peritobarcelona",
+            "label": "LinkedIn",
+            "icon": "linkedin"
+          },
+          {
+            "url": "https://twitter.com/peritobarcelona",
+            "label": "Twitter",
+            "icon": "twitter"
+          }
+        ]
+      },
+      "services": {
+        "title": "Servicios",
+        "items": [
+          {
+            "title": "Peritajes de Construcción",
+            "url": "#servicios"
+          },
+          {
+            "title": "Peritajes para Seguros",
+            "url": "#servicios"
+          },
+          {
+            "title": "Informes Judiciales",
+            "url": "#servicios"
+          }
+        ]
+      },
+      "contact": {
+        "title": "Contacto",
+        "items": [
+          {
+            "label": "Teléfono",
+            "value": "+34 614 194 985",
+            "url": "tel:+34614194985",
+            "icon": "phone"
+          },
+          {
+            "label": "Email",
+            "value": "info@perito.barcelona",
+            "url": "mailto:info@perito.barcelona",
+            "icon": "mail"
+          }
+        ]
+      },
+      "location": {
+        "title": "Ubicación",
+        "offices": [
+          {
+            "city": "Barcelona",
+            "address": "C/ Numancia 95, Local 5",
+            "transport": "Metro L5 Entença"
+          },
+          {
+            "city": "Granollers",
+            "address": "C/ Navarra 14",
+            "transport": "Cerca estación Renfe"
+          }
+        ]
+      },
+      "bottom": {
+        "copyright": "© 2025 PERITO BARCELONA | Informes Periciales",
+        "links": [
+          {
+            "text": "Política de Privacidad",
+            "url": "/privacidad/"
+          },
+          {
+            "text": "Términos y Condiciones",
+            "url": "/terminos/"
+          }
+        ]
+      }
+    },
+    "ca": {
+      "brand": {
+        "description": "Experts en informes pericials de construcció i assegurances. Garantia de qualitat i professionalitat.",
+        "social": [
+          {
+            "url": "https://www.linkedin.com/company/peritobarcelona",
+            "label": "LinkedIn",
+            "icon": "linkedin"
+          },
+          {
+            "url": "https://twitter.com/peritobarcelona",
+            "label": "Twitter",
+            "icon": "twitter"
+          }
+        ]
+      },
+      "services": {
+        "title": "Serveis",
+        "items": [
+          {
+            "title": "Peritatges de Construcció",
+            "url": "#serveis"
+          },
+          {
+            "title": "Peritatges per Assegurances",
+            "url": "#serveis"
+          },
+          {
+            "title": "Informes Judicials",
+            "url": "#serveis"
+          }
+        ]
+      },
+      "contact": {
+        "title": "Contacte",
+        "items": [
+          {
+            "label": "Telèfon",
+            "value": "+34 614 194 985",
+            "url": "tel:+34614194985",
+            "icon": "phone"
+          },
+          {
+            "label": "Email",
+            "value": "info@perito.barcelona",
+            "url": "mailto:info@perito.barcelona",
+            "icon": "mail"
+          }
+        ]
+      },
+      "location": {
+        "title": "Ubicació",
+        "offices": [
+          {
+            "city": "Barcelona",
+            "address": "C/ Numància 95, Local 5",
+            "transport": "Metro L5 Entença"
+          },
+          {
+            "city": "Granollers",
+            "address": "C/ Navarra 14",
+            "transport": "Prop estació Renfe"
+          }
+        ]
+      },
+      "bottom": {
+        "copyright": "© 2025 PERITO BARCELONA | Informes Pericials",
+        "links": [
+          {
+            "text": "Política de Privacitat",
+            "url": "/ca/privacitat/"
+          },
+          {
+            "text": "Termes i Condicions",
+            "url": "/ca/termes/"
+          }
+        ]
+      }
+    },
+    "en": {
+      "brand": {
+        "description": "Experts in construction and insurance expert reports. Quality and professionalism guaranteed.",
+        "social": [
+          {
+            "url": "https://www.linkedin.com/company/peritobarcelona",
+            "label": "LinkedIn",
+            "icon": "linkedin"
+          },
+          {
+            "url": "https://twitter.com/peritobarcelona",
+            "label": "Twitter",
+            "icon": "twitter"
+          }
+        ]
+      },
+      "services": {
+        "title": "Services",
+        "items": [
+          {
+            "title": "Construction Expertise",
+            "url": "#services"
+          },
+          {
+            "title": "Insurance Reports",
+            "url": "#services"
+          },
+          {
+            "title": "Legal Reports",
+            "url": "#services"
+          }
+        ]
+      },
+      "contact": {
+        "title": "Contact",
+        "items": [
+          {
+            "label": "Phone",
+            "value": "+34 614 194 985",
+            "url": "tel:+34614194985",
+            "icon": "phone"
+          },
+          {
+            "label": "Email",
+            "value": "info@perito.barcelona",
+            "url": "mailto:info@perito.barcelona",
+            "icon": "mail"
+          }
+        ]
+      },
+      "location": {
+        "title": "Location",
+        "offices": [
+          {
+            "city": "Barcelona",
+            "address": "C/ Numancia 95, Local 5",
+            "transport": "Metro L5 Entença"
+          },
+          {
+            "city": "Granollers",
+            "address": "C/ Navarra 14",
+            "transport": "Near Renfe station"
+          }
+        ]
+      },
+      "bottom": {
+        "copyright": "© 2025 PERITO BARCELONA | Expert Reports",
+        "links": [
+          {
+            "text": "Privacy Policy",
+            "url": "/en/privacy/"
+          },
+          {
+            "text": "Terms & Conditions",
+            "url": "/en/terms/"
+          }
+        ]
+      }
+    }
   }
 }

@@ -1,11 +1,10 @@
+{% set currentLanguage = page.lang or lang %} 
+
 <footer class="bg-white" itemscope itemtype="https://schema.org/WPFooter">
-    <!-- Footer Principal -->
     <div class="relative pt-1">
-        <!-- Línea decorativa superior -->
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-cyan-500"></div>
         
         <div class="max-w-[1400px] mx-auto px-4 md:px-[5%] py-16 md:py-24">
-            <!-- Grid principal -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
                 <!-- Columna de marca -->
                 <div class="lg:col-span-1" itemscope itemtype="https://schema.org/Organization">
@@ -126,118 +125,79 @@
                     </div>
                     
                     <p class="text-gray-600 text-base leading-relaxed mb-8" itemprop="description">
-                        Expertos en informes periciales de construcción y seguros. Garantía de calidad y profesionalidad.
+                        {{ metadata.footer[currentLanguage].brand.description }}
                     </p>
                     
                     <!-- Social links -->
                     <div class="flex gap-4" itemprop="sameAs">
-                        <a href="https://www.linkedin.com/company/peritobarcelona" class="w-10 h-10 flex items-center justify-center rounded-full bg-cyan-50 text-cyan-500 hover:bg-cyan-500 hover:text-white hover:-translate-y-1 transition-all duration-300" aria-label="LinkedIn">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                                <rect width="4" height="12" x="2" y="9"/>
-                                <circle cx="4" cy="4" r="2"/>
-                            </svg>
+                        {% for social in metadata.footer[currentLanguage].brand.social %}
+                        <a href="{{ social.url }}" class="w-10 h-10 flex items-center justify-center rounded-full bg-cyan-50 text-cyan-500 hover:bg-cyan-500 hover:text-white hover:-translate-y-1 transition-all duration-300" aria-label="{{ social.label }}">
+                            {% include "icons/" + social.icon + ".svg" ignore missing %}
                         </a>
-                        <a href="https://twitter.com/peritobarcelona" class="w-10 h-10 flex items-center justify-center rounded-full bg-cyan-50 text-cyan-500 hover:bg-cyan-500 hover:text-white hover:-translate-y-1 transition-all duration-300" aria-label="Twitter">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
-                            </svg>
-                        </a>
+                        {% endfor %}
                     </div>
                 </div>
 
                 <!-- Columna Servicios -->
                 <div>
                     <h5 class="text-lg font-bold text-slate-800 mb-6 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-0.5 after:bg-cyan-400">
-                        Servicios
+                        {{ metadata.footer[currentLanguage].services.title }}
                     </h5>
                     <ul class="space-y-4">
+                        {% for service in metadata.footer[currentLanguage].services.items %}
                         <li>
-                            <a href="#servicios" class="text-gray-600 hover:text-cyan-500 transition-colors flex items-center gap-2 group" itemprop="url">
+                            <a href="{{ service.url }}" class="text-gray-600 hover:text-cyan-500 transition-colors flex items-center gap-2 group">
                                 <svg class="w-4 h-4 text-cyan-400 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M9 5l7 7-7 7"/>
                                 </svg>
-                                Peritajes de Construcción
+                                {{ service.title }}
                             </a>
                         </li>
-                        <li>
-                            <a href="#servicios" class="text-gray-600 hover:text-cyan-500 transition-colors flex items-center gap-2 group">
-                                <svg class="w-4 h-4 text-cyan-400 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 5l7 7-7 7"/>
-                                </svg>
-                                Peritajes para Seguros
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#servicios" class="text-gray-600 hover:text-cyan-500 transition-colors flex items-center gap-2 group">
-                                <svg class="w-4 h-4 text-cyan-400 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 5l7 7-7 7"/>
-                                </svg>
-                                Informes Judiciales
-                            </a>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
 
                 <!-- Columna Contacto -->
                 <div>
                     <h5 class="text-lg font-bold text-slate-800 mb-6 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-0.5 after:bg-cyan-400">
-                        Contacto
+                        {{ metadata.footer[currentLanguage].contact.title }}
                     </h5>
-                    <div class="space-y-6" itemscope itemtype="https://schema.org/ContactPoint">
-                        <a href="tel:{{ metadata.contact.phoneNumber }}" class="flex items-start gap-3 text-gray-600 hover:text-cyan-500 transition-colors group" itemprop="telephone">
-                            <svg class="w-5 h-5 text-cyan-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
+                    <div class="space-y-6">
+                        {% for item in metadata.footer[currentLanguage].contact.items %}
+                        <a href="{{ item.url }}" class="flex items-start gap-3 text-gray-600 hover:text-cyan-500 transition-colors group">
+                            {% include "icons/" + item.icon + ".svg" ignore missing %}
                             <div>
-                                <span class="block text-sm font-medium text-slate-800 group-hover:text-cyan-500">Teléfono:</span>
-                                <span class="text-gray-600 group-hover:text-cyan-500">{{ metadata.contact.phoneNumber }}</span>
+                                <span class="block text-sm font-medium text-slate-800 group-hover:text-cyan-500">{{ item.label }}:</span>
+                                <span class="text-gray-600 group-hover:text-cyan-500">{{ item.value }}</span>
                             </div>
                         </a>
-                        <a href="mailto:info@perito.barcelona" class="flex items-start gap-3 text-gray-600 hover:text-cyan-500 transition-colors group" itemprop="email">
-                            <svg class="w-5 h-5 text-cyan-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <path d="M22 6l-10 7L2 6"/>
-                            </svg>
-                            <div>
-                                <span class="block text-sm font-medium text-slate-800 group-hover:text-cyan-500">Email:</span>
-                                <span class="text-gray-600 group-hover:text-cyan-500">{{ metadata.contact.email }}</span>
-                            </div>
-                        </a>
+                        {% endfor %}
                     </div>
                 </div>
 
                 <!-- Columna Ubicación -->
                 <div>
                     <h5 class="text-lg font-bold text-slate-800 mb-6 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-0.5 after:bg-cyan-400">
-                        Ubicación
+                        {{ metadata.footer[currentLanguage].location.title }}
                     </h5>
-                    <div class="space-y-6" itemscope itemtype="https://schema.org/Place">
-                        <!-- Barcelona -->
-                        <div class="flex items-start gap-3 text-gray-600" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                            <svg class="w-5 h-5 text-cyan-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
+                    <div class="space-y-6">
+                        {% for office in metadata.footer[currentLanguage].location.offices %}
+                        <div class="flex items-start gap-3 text-gray-600 group">
+                            <div class="w-10 h-10 rounded-xl bg-cyan-50 flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-100 transition-colors">
+                                <svg class="w-5 h-5 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
                             <div>
-                                <p class="font-medium text-slate-800" itemprop="addressLocality">Barcelona</p>
-                                <p itemprop="streetAddress">C/ Numancia 95, Local 5</p>
-                                <p class="text-sm text-slate-500 mt-1">Metro L5 Entença</p>
+                                <p class="font-medium text-slate-800">{{ office.city }}</p>
+                                <p class="text-slate-600">{{ office.address }}</p>
+                                <p class="text-sm text-slate-500 mt-1">{{ office.transport }}</p>
                             </div>
                         </div>
-                        
-                        <!-- Granollers -->
-                        <div class="flex items-start gap-3 text-gray-600" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                            <svg class="w-5 h-5 text-cyan-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                            <div>
-                                <p class="font-medium text-slate-800" itemprop="addressLocality">Granollers</p>
-                                <p itemprop="streetAddress">C/ Navarra 14</p>
-                                <p class="text-sm text-slate-500 mt-1">Cerca estación Renfe</p>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -248,11 +208,12 @@
     <div class="bg-slate-900 py-6">
         <div class="max-w-[1400px] mx-auto px-4 md:px-[5%]">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-white/70 text-sm text-center md:text-left">© 2025 PERITO BARCELONA | Informes Periciales</p>
+                <p class="text-white/70 text-sm text-center md:text-left">{{ footer[currentLanguage].bottom.copyright }}</p>
                 <div class="flex gap-6">
-                    <a href="#" class="text-white/70 text-sm hover:text-white transition-colors">Política de Privacidad</a>
-                    <span class="text-white/20">·</span>
-                    <a href="#" class="text-white/70 text-sm hover:text-white transition-colors">Términos y Condiciones</a>
+                    {% for link in footer[currentLanguage].bottom.links %}
+                    <a href="{{ link.url }}" class="text-white/70 text-sm hover:text-white transition-colors">{{ link.text }}</a>
+                    {% if not loop.last %}<span class="text-white/20">·</span>{% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
