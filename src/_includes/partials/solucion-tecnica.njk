@@ -1,9 +1,10 @@
-<section class="py-20 md:py-28 px-4 md:px-[5%] bg-gradient-to-b from-slate-100 via-white to-slate-100 relative overflow-hidden">
-    <!-- Decorative pattern -->
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,slate-400_1px,transparent_1px)] bg-[size:32px_32px] opacity-[0.15] mix-blend-multiply"></div>
-    
-    <!-- Subtle decorative gradient -->
-    <div class="absolute inset-0 bg-gradient-to-tr from-cyan-100/30 via-transparent to-slate-200/40"></div>
+<section class="py-20 md:py-28 px-4 md:px-[5%] bg-gradient-to-br from-slate-100 via-white to-slate-50 relative overflow-hidden isolate">
+    <!-- Efectos decorativos -->
+    <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(203,213,225,0.1)_1px,transparent_1px)] [background-size:48px_48px]"></div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-50/40 via-transparent to-slate-100/30"></div>
+        <div class="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-200/20 blur-[100px] rounded-full"></div>
+    </div>
     
     <div class="max-w-[1400px] mx-auto relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -38,10 +39,11 @@
                 
                 <p class="text-lg text-slate-600 mb-10">{{ solucion.contenido.descripcion }}</p>
                 
+                <!-- Características actualizadas -->
                 <div class="grid gap-6 mb-12">
                     {% for caracteristica in solucion.contenido.caracteristicas %}
-                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50/50 transition-colors group/card">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center">
+                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-white/50 transition-colors group/card">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center group-hover/card:scale-110 group-hover/card:bg-cyan-500/20 transition-all duration-500">
                             {% include "icons/" + caracteristica.icono + ".svg" ignore missing %}
                         </div>
                         <div>
