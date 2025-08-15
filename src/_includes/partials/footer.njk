@@ -1,7 +1,15 @@
 {% set currentLanguage = page.lang or lang %} 
 
-<footer class="bg-white" itemscope itemtype="https://schema.org/WPFooter">
+<footer class="relative bg-gradient-to-br from-slate-50 to-white overflow-hidden isolate" itemscope itemtype="https://schema.org/WPFooter">
+    <!-- Efectos decorativos -->
+    <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:48px_48px] opacity-25"></div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-cyan-400/5"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-400/20 blur-[100px] rounded-full"></div>
+    </div>
+
     <div class="relative pt-1">
+        <!-- Nueva decoración superior -->
         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-cyan-500"></div>
         
         <div class="max-w-[1400px] mx-auto px-4 md:px-[5%] py-16 md:py-24">
