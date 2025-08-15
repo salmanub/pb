@@ -134,7 +134,7 @@ solucion:
     titulo: "La"
     highlight: "Solución Técnica"
     subtitulo: "que Necesitas"
-    descripcion: "Resolvemos la incertidumbre técnica en conflictos constructivos y aseguradores. Nuestros informes periciales identifican causas, responsabilidades y soluciones con rigor técnico, proporcionando la base sólida que necesitas para defender tus intereses."
+    descripcion: "En perito.barcelona, combinamos experiencia en ingeniería civil con metodología pericial rigurosa para ofrecer informes precisos, imparciales y técnicamente sólidos. Nuestra intervención te da argumentos claros para tomar decisiones, reclamar daños o ejecutar soluciones constructivas seguras."
     caracteristicas:
       - icono: "search"
         titulo: "Aclaramos la Causa Raíz"

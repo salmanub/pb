@@ -164,7 +164,7 @@
   "footer": {
     "es": {
       "brand": {
-        "description": "Expertos en informes periciales de construcción y seguros. Garantía de calidad y profesionalidad.",
+        "description": "Perito judicial en Barcelona especializado en informes periciales de construcción, patologías estructurales y valoración de daños por siniestros. Más de 15 años de experiencia en peritajes técnicos y judiciales.",
         "social": [
           {
             "url": "https://www.linkedin.com/company/peritobarcelona",
@@ -182,16 +182,16 @@
         "title": "Servicios",
         "items": [
           {
-            "title": "Peritajes de Construcción",
-            "url": "#servicios"
+            "title": "Auditoría Técnica de Obras",
+            "url": "/auditoria-tecnica-obra/"
           },
           {
-            "title": "Peritajes para Seguros",
-            "url": "#servicios"
+            "title": "Peritaje Judicial y de Parte",
+            "url": "/peritaje-judicial-obra/"
           },
           {
-            "title": "Informes Judiciales",
-            "url": "#servicios"
+            "title": "Inspecciones Técnicas Especializadas",
+            "url": "/inspecciones-tecnicas-especializadas/"
           }
         ]
       },
@@ -243,7 +243,7 @@
     },
     "ca": {
       "brand": {
-        "description": "Experts en informes pericials de construcció i assegurances. Garantia de qualitat i professionalitat.",
+        "description": "Pèrit judicial a Barcelona especialitzat en informes pericials de construcció, patologies estructurals i valoració de danys per sinistres. Més de 15 anys d'experiència en peritatges tècnics i judicials.",
         "social": [
           {
             "url": "https://www.linkedin.com/company/peritobarcelona",
@@ -261,16 +261,16 @@
         "title": "Serveis",
         "items": [
           {
-            "title": "Peritatges de Construcció",
-            "url": "#serveis"
+            "title": "Auditoria Tècnica d'Obres",
+            "url": "/auditoria-tecnica-obres/"
           },
           {
-            "title": "Peritatges per Assegurances",
-            "url": "#serveis"
+            "title": "Peritatge Judicial i de Part",
+            "url": "/peritatge-judicial-obres/"
           },
           {
-            "title": "Informes Judicials",
-            "url": "#serveis"
+            "title": "Inspeccions Tècniques Especialitzades",
+            "url": "/inspeccions-tecniques-especialitzades/"
           }
         ]
       },
@@ -322,7 +322,7 @@
     },
     "en": {
       "brand": {
-        "description": "Experts in construction and insurance expert reports. Quality and professionalism guaranteed.",
+        "description": "Expert witness in Barcelona specializing in construction expert reports, structural pathologies and insurance damage assessment. Over 15 years of experience in technical and judicial expertise.",
         "social": [
           {
             "url": "https://www.linkedin.com/company/peritobarcelona",
@@ -340,16 +340,16 @@
         "title": "Services",
         "items": [
           {
-            "title": "Construction Expertise",
-            "url": "#services"
+            "title": "Technical Audit of Construction Works",
+            "url": "/technical-audit-construction/"
           },
           {
-            "title": "Insurance Reports",
-            "url": "#services"
+            "title": "Judicial and Private Expert Reports",
+            "url": "/judicial-private-expert-report/"
           },
           {
-            "title": "Legal Reports",
-            "url": "#services"
+            "title": "Specialized Technical Inspections",
+            "url": "/specialized-technical-inspections/"
           }
         ]
       },

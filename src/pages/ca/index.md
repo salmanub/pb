@@ -135,7 +135,7 @@ solucion:
     titulo: "La"
     highlight: "Solució Tècnica"
     subtitulo: "que Necessites"
-    descripcion: "Resolem la incertesa tècnica en conflictes constructius i asseguradors. Els nostres informes pericials identifiquen causes, responsabilitats i solucions amb rigor tècnic, proporcionant la base sòlida que necessites per defensar els teus interessos."
+    descripcion: "A perito.barcelona, combinem una àmplia experiència en enginyeria civil amb una metodologia pericial rigorosa per oferir informes precisos, imparcials i tècnicament sòlids. La nostra intervenció et proporciona arguments clars i fonamentats per prendre decisions, reclamar danys o executar solucions constructives segures i eficaces."
     caracteristicas:
       - icono: "search"
         titulo: "Aclarim la Causa Arrel"
