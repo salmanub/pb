@@ -1,8 +1,16 @@
 {% set currentLanguage = page.lang or lang %} 
 
-<footer class="bg-white" itemscope itemtype="https://schema.org/WPFooter">
+<footer class="relative bg-white overflow-hidden isolate" itemscope itemtype="https://schema.org/WPFooter">
+    <!-- Efectos decorativos optimizados -->
+    <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(203,213,225,0.1)_1px,transparent_1px)] [background-size:48px_48px]"></div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-50/40 via-transparent to-slate-50/30"></div>
+        <div class="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-200/20 blur-[100px] rounded-full"></div>
+    </div>
+
     <div class="relative pt-1">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-cyan-500"></div>
+        <!-- Gradiente superior mejorado -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-400"></div>
         
         <div class="max-w-[1400px] mx-auto px-4 md:px-[5%] py-16 md:py-24">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
@@ -204,9 +212,16 @@
         </div>
     </div>
 
-    <!-- Footer Secundario -->
-    <div class="bg-slate-900 py-6">
-        <div class="max-w-[1400px] mx-auto px-4 md:px-[5%]">
+    <!-- Footer Secundario con degradado y efectos optimizados -->
+    <div class="relative bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] py-6 overflow-hidden isolate">
+        <!-- Efectos decorativos -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:48px_48px] opacity-25"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-cyan-400/5"></div>
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-cyan-400/10 blur-[60px] rounded-full"></div>
+        </div>
+
+        <div class="relative max-w-[1400px] mx-auto px-4 md:px-[5%]">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-white/70 text-sm text-center md:text-left">{{ footer[currentLanguage].bottom.copyright }}</p>
                 <div class="flex gap-6">
@@ -219,3 +234,18 @@
         </div>
     </div>
 </footer>
+
+<style>
+/* Optimizaciones de rendimiento para gradientes y efectos */
+@media (prefers-reduced-motion: no-preference) {
+    .footer-hover-effect {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-hover-effect {
+        transition: none;
+    }
+}
+</style>
