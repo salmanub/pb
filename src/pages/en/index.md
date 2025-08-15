@@ -133,7 +133,7 @@ solucion:
     titulo: "The"
     highlight: "Technical Solution"
     subtitulo: "You Need"
-    descripcion: "At perito.barcelona, we combine extensive civil engineering expertise with a rigorous forensic methodology to deliver accurate, impartial, and technically sound reports. Our intervention provides you with clear, evidence-based arguments to make informed decisions, claim damages, or implement safe and effective construction solutions."
+    descripcion: "At perito.barcelona, we blend solid civil engineering expertise with a meticulous forensic assessment methodology to deliver accurate, unbiased, and structurally reliable technical reports. Our professional involvement equips you with clear, evidence-backed insights to make informed decisions, pursue construction claims, resolve disputes, or implement safe and compliant structural solutions."
     caracteristicas:
       - icono: "search"
         titulo: "We Clarify Root Causes"
