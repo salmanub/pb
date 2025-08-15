@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Perit Judicial a Barcelona | Informes Pericials en Construcció i Obra Civil | Perit Barcelona'
-description: "Informes pericials en construcció i obra civil. Diagnòstic de patologies, valoracions i assistència judicial a Barcelona. Perit expert col·legiat."
+title: 'Perit Judicial a Barcelona | Informes Pericials en Construcció i Obra Civil | Perito Barcelona'
+description: "Informes pericials en construcció i enginyeria civil. Diagnosi de patologies, valoracions i assistència judicial a Barcelona. Perit expert col·legiat."
 permalink: /ca/
 lang: ca
 translations:
@@ -16,18 +16,17 @@ eleventyNavigation:
   order: 1
   icon: <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
 
-# Hero Section
 hero:
-    tag: "Perit Judicial en Construcció i Obra Civil a Barcelona"
+    tag: "Perit Judicial en Construcció i Enginyeria Civil a Barcelona"
     title: "Informes Pericials"
     strong: "a Barcelona"
-    subtitle: "Especialistes en Edificació, Estructures i Assegurances"
-    description: "Realitzem informes pericials complets per defectes constructius, peritatges de naus industrials i reclamacions d’assegurances. Experts en reforç estructural amb fibra de carboni i valoracions tècniques detallades."
+    subtitle: "Especialistes en Edificació, Estructures i Litigis d'Obra"
+    description: "Realitzem informes pericials complets per a defectes constructius, inspeccions de naus industrials i litigis contractuals. Experts en diagnosi estructural i valoracions tècniques detallades."
     rotatingTexts:
       default: "amb rigor tècnic"
       items:
         - "amb rigor tècnic"
-        - "que resolen litigis d’obra"
+        - "que resolen litigis d'obra"
         - "acceptats per tots els tribunals"
         - "que acceleren la resolució de conflictes"
         - "que garanteixen èxit judicial"
@@ -40,34 +39,38 @@ hero:
         descubreMas: "Saber Més"
     badges:
         - value: "97%"
-          text: "Casos amb Èxit"
+          text: "Casos d'Èxit"
           subtext: "Als tribunals"
         - value: "24h"
           text: "Resposta Ràpida"
           subtext: "Garantida"
     logosText: "Informes acceptats per tots els tribunals espanyols"
 
-# Serveis Destacats
 highlightedServices:
-  titulo: "Els nostres"
+  titulo: "Els Nostres"
   highlight: "Serveis Principals"
-  descripcion: "Solucions tècniques especialitzades per resoldre conflictes constructius, garantir la qualitat edificatòria i oferir peritatges professionals."
+  descripcion: "Serveis pericials d'alta especialització per garantir la qualitat constructiva i la resolució de conflictes."
   items:
     - titulo: "Auditoria Tècnica d'Obres"
-      descripcion: "Avaluació exhaustiva de la qualitat constructiva, compliment normatiu i detecció precoç de deficiències o riscos."
-      url: "/auditoria-tecnica-obres/"
+      descripcion: "Avaluació exhaustiva de la qualitat constructiva, compliment normatiu i detecció precoç de deficiències."
+      url: "/ca/auditoria-tecnica-obra/"
       icon: "clipboard-list"
-      cta: "Més informació"
+      cta: "Saber més"
     - titulo: "Peritatge Judicial i de Part"
-      descripcion: "Informes tècnics especialitzats per a processos judicials i mediació, amb anàlisi de causes, valoracions i diagnòstics estructurals."
-      url: "/peritatge-judicial-obres/"
+      descripcion: "Informes tècnics per a processos judicials i mediació, amb anàlisi de causes i valoracions econòmiques."
+      url: "/ca/peritatge-judicial-obra/"
       icon: "scale"
-      cta: "Més informació"
+      cta: "Saber més"
     - titulo: "Inspeccions Tècniques Especialitzades"
-      descripcion: "Diagnòstic detallat de l'estat d'obres d'enginyeria civil i edificació, amb anàlisi estructural i recomanacions per al manteniment preventiu i correctiu."
-      url: "/inspeccions-tecniques-especialitzades/"
+      descripcion: "Diagnosi detallada de l'estat d'obres d'enginyeria civil i edificació, amb recomanacions preventives i correctives."
+      url: "/ca/inspeccions-tecniques-especialitzades/"
       icon: "search-check"
-      cta: "Més informació"
+      cta: "Saber més"
+    - titulo: "Assessorament en Disputes d'Obra"
+      descripcion: "Anàlisi tècnica i suport pericial per resoldre discrepàncies en certificacions, amidaments o compliment contractual."
+      url: "/ca/assessorament-disputes-obra/"
+      icon: "gavel"
+      cta: "Saber més"
 
 
 # Serveis Section
@@ -93,36 +96,37 @@ servicios:
 # Secció "En què et podem ajudar"
 ayuda:
   encabezado:
-    title: "En Què Podem"
-    highlight: "Ajudar-te"
-    subtitle: "Solucions tècniques i pericials especialitzades per a qualsevol tipus de propietat, projecte o conflicte a Barcelona."
+    title: "En Què Et Podem"
+    highlight: "Ajudar"
+    subtitle: "Solucions tècniques i pericials especialitzades per a qualsevol propietat, projecte o conflicte a Barcelona."
   introduccion:
-    title: "Alguns dels problemes tècnics que abordem amb més freqüència:"
+    title: "Alguns dels problemes tècnics que abordem amb freqüència:"
   problemas:
     - title: "Esquerdes i Deformacions Estructurals"
-      description: "Anàlisi i diagnòstic de patologies estructurals, detecció de fissures i recomanacions de reparació."
+      description: "Anàlisi i diagnosi de patologies estructurals, detecció de fissures i recomanacions de reparació."
       url: "/ca/esquerdes-deformacions-estructurals/"
       icon: "alert-triangle"
     - title: "Humitats i Filtracions Persistents"
-      description: "Detecció de l’origen, informes tècnics i solucions per a problemes d’humitat en edificacions."
+      description: "Detecció dels orígens, informes tècnics i solucions per a problemes d'humitat en edificis."
       url: "/ca/humitats-filtracions/"
       icon: "droplet"
     - title: "Disputes en Certificacions i Amidaments"
-      description: "Assessorament pericial per a conflictes derivats de certificacions, mesuraments i compliment normatiu."
-      url: "/ca/certificacions-mesures/"
+      description: "Assessorament pericial per a conflictes derivats de certificacions, amidaments i compliment normatiu."
+      url: "/ca/disputes-certificacions-amidaments/"
       icon: "file-text"
     - title: "Vicis Ocults en Obra Nova"
       description: "Identificació i documentació de defectes ocults en projectes de construcció recent."
       url: "/ca/vicis-ocults-obra-nova/"
       icon: "search"
     - title: "Despreniments i Danys per Mala Execució"
-      description: "Avaluació pericial de danys causats per deficiències d’execució i recomanacions per a la seva reparació."
+      description: "Avaluació pericial de danys causats per deficiències d'execució i recomanacions per a la seva reparació."
       url: "/ca/despreniments-danys-execucio/"
       icon: "alert-circle"
     - title: "Assessorament Pericial en Reparació i Reforç d'Estructures"
-      description: "Estudis tècnics i projectes de reforç estructural per garantir l’estabilitat i la seguretat."
-      url: "/ca/reforc-estructural/"
+      description: "Estudis tècnics i propostes de reparació per garantir l'estabilitat i seguretat estructural."
+      url: "/ca/assessorament-reparacio-reforc-estructures/"
       icon: "tool"
+
 
 # Sección Solución Técnica
 solucion:
@@ -135,14 +139,14 @@ solucion:
     titulo: "La"
     highlight: "Solució Tècnica"
     subtitulo: "que Necessites"
-    descripcion: "A perito.barcelona, unim una sòlida experiència en enginyeria civil amb una metodologia de valoració pericial minuciosa per oferir informes tècnics precisos, imparcials i estructuralment fiables. La nostra intervenció et proporciona arguments clars i fonamentats amb proves per prendre decisions, reclamar danys en obres, resoldre disputes o executar solucions estructurals segures i conformes a la normativa."
+    descripcion: "A perito.barcelona, combinem experiència en enginyeria civil amb metodologia pericial rigorosa per oferir informes precisos, imparcials i tècnicament sòlids. La nostra intervenció et dóna arguments clars per prendre decisions, reclamar danys o executar solucions constructives segures."
     caracteristicas:
       - icono: "search"
         titulo: "Aclarim la Causa Arrel"
         descripcion: "Identifiquem amb precisió tècnica l'origen d'esquerdes, humitats, defectes constructius o la validesa de cobertures d'assegurança mitjançant anàlisis rigoroses i documentades."
       - icono: "clipboard-check"
         titulo: "Determinem Responsabilitats"
-        descripcion: "Establim amb objectivitat qui és responsable de cada defecte constructiu i analitzem si les cobertures d'assegurança són aplicables en cada cas."
+        descripcion: "Establim amb objectivitat qui és responsable de cada defecte constructiu i analitzem si les cobertures d'assegurança són aplicables."
       - icono: "calculator"
         titulo: "Valorem amb Precisió"
         descripcion: "Quantifiquem els danys i el cost real de les reparacions necessàries, evitant sobrecostos i proporcionant valoracions defensables tècnicament."

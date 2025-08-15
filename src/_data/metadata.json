@@ -192,6 +192,10 @@
           {
             "title": "Inspecciones Técnicas Especializadas",
             "url": "/inspecciones-tecnicas-especializadas/"
+          },
+          {
+            "title": "Asesoría en Disputas de Obra",
+            "url": "/asesoria-disputas-obra/"
           }
         ]
       },
@@ -262,15 +266,19 @@
         "items": [
           {
             "title": "Auditoria Tècnica d'Obres",
-            "url": "/auditoria-tecnica-obres/"
+            "url": "/ca/auditoria-tecnica-obra/"
           },
           {
             "title": "Peritatge Judicial i de Part",
-            "url": "/peritatge-judicial-obres/"
+            "url": "/ca/peritatge-judicial-obra/"
           },
           {
             "title": "Inspeccions Tècniques Especialitzades",
-            "url": "/inspeccions-tecniques-especialitzades/"
+            "url": "/ca/inspeccions-tecniques-especialitzades/"
+          },
+          {
+            "title": "Assessorament en Disputes d'Obra",
+            "url": "/ca/assessorament-disputes-obra/"
           }
         ]
       },
@@ -340,16 +348,20 @@
         "title": "Services",
         "items": [
           {
-            "title": "Technical Audit of Construction Works",
-            "url": "/technical-audit-construction/"
+            "title": "Technical Construction Audit",
+            "url": "/en/construction-technical-audit/"
           },
           {
-            "title": "Judicial and Private Expert Reports",
-            "url": "/judicial-private-expert-report/"
+            "title": "Judicial and Private Expert Witness Services",
+            "url": "/en/judicial-expert-witness/"
           },
           {
             "title": "Specialized Technical Inspections",
-            "url": "/specialized-technical-inspections/"
+            "url": "/en/specialized-technical-inspections/"
+          },
+          {
+            "title": "Construction Dispute Advisory",
+            "url": "/en/construction-dispute-advisory/"
           }
         ]
       },

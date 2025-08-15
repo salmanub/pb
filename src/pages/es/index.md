@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
 title: 'Perito Judicial en Barcelona | Informes Periciales en Construcción y Obra Civil | Perito Barcelona'
-description: "Informes periciales en construcción y obra civil. Diagnóstico de patologías, valoraciones y asistencia judicial en Barcelona. Perito experto colegiado."
+description: "Informes periciales en construcción y obra civil. Auditorías técnicas, diagnóstico de patologías y asistencia judicial en Barcelona. Perito experto colegiado."
 permalink: /
 lang: es
 translations:
@@ -18,75 +18,79 @@ eleventyNavigation:
 
 # Hero Section
 hero:
-    tag: "Perito Judicial en Construcción y Obra Civil en Barcelona"
-    title: "Informes Periciales"
-    strong: "en Barcelona"
-    subtitle: "Especialistas en Edificación, Estructuras y Seguros"
-    description: "Realizamos informes periciales completos para defectos constructivos, peritajes de naves industriales y reclamaciones de seguros. Expertos en refuerzo estructural con fibra de carbono y valoraciones técnicas detalladas."
-    rotatingTexts:
-      default: "con rigor técnico"
-      items:
-        - "con rigor técnico"
-        - "que resuelven litigios de obra"
-        - "aceptados por todos los tribunales"
-        - "que aceleran la resolución de conflictos"
-        - "que garantizan éxito judicial"
-        - "con diagnósticos estructurales precisos"
-    cta:
-        primary: "Solicitar Presupuesto"
-        primaryUrl: "/contacto/"
-        secondary: "Llamar ahora"
-        secondaryUrl: "#areas-expertise"
-        descubreMas: "Saber Más"
-    badges:
-        - value: "97%"
-          text: "Casos Exitosos"
-          subtext: "En tribunales"
-        - value: "24h"
-          text: "Respuesta Rápida"
-          subtext: "Garantizada"
-    logosText: "Informes aceptados por todos los tribunales españoles"
+  tag: "Perito Judicial en Construcción y Obra Civil en Barcelona"
+  title: "Informes Periciales"
+  strong: "en Barcelona"
+  subtitle: "Especialistas en Edificación, Estructuras y Auditorías de Obra"
+  description: "Informes técnicos para patologías constructivas, auditorías de calidad y resolución de disputas en proyectos de construcción y obra civil."
+  rotatingTexts:
+    default: "con rigor técnico"
+    items:
+      - "con rigor técnico"
+      - "que resuelven litigios de obra"
+      - "aceptados por todos los tribunales"
+      - "que aceleran la resolución de conflictos"
+      - "con diagnósticos estructurales precisos"
+  cta:
+    primary: "Solicitar Presupuesto"
+    primaryUrl: "/contacto/"
+    secondary: "Llamar ahora"
+    secondaryUrl: "#areas-expertise"
+    descubreMas: "Saber Más"
+  badges:
+    - value: "97%"
+      text: "Casos Exitosos"
+      subtext: "En tribunales"
+    - value: "24h"
+      text: "Respuesta Rápida"
+      subtext: "Garantizada"
+  logosText: "Informes aceptados por todos los tribunales españoles"
 
-# Servicios Section
+# Servicios (listado breve en home)
 servicios:
   title: "Nuestros Servicios Periciales"
-  description: "Ofrecemos soluciones técnicas y jurídicas precisas, respaldadas por más de 15 años de experiencia y una doble visión como Ingeniero y Perito de Seguros."
+  description: "Soluciones técnicas y jurídicas respaldadas por más de 15 años de experiencia en ingeniería civil y peritaje especializado."
   items:
     - title: "Peritajes de Construcción"
-      description: "Analizamos a fondo patologías, vicios ocultos y defectos constructivos."
+      description: "Análisis de patologías, vicios ocultos y defectos constructivos con informes claros y defendibles."
       features:
-        - "Análisis de humedades y filtraciones"
-        - "Inspección de grietas estructurales"
-        - "Informes para comunidades"
+        - "Diagnóstico de humedades y filtraciones"
+        - "Evaluación de grietas y deformaciones"
+        - "Informes técnicos para comunidades"
       url: "/peritajes-construccion/"
-    - title: "Peritajes de Seguros"
-      description: "Valoramos daños, analizamos coberturas y realizamos contraperitajes."
+    - title: "Auditorías Técnicas"
+      description: "Control de calidad y verificación del cumplimiento normativo en obra para prevenir reclamaciones."
       features:
-        - "Valoración de daños por agua y robo"
-        - "Contraperitajes y coberturas"
-        - "Reclamaciones a aseguradoras"
-      url: "/peritajes-seguros/"
+        - "Revisión técnica de proyectos"
+        - "Evaluación de acabados"
+        - "Detección temprana de deficiencias"
+      url: "/auditoria-tecnica-obra/"
 
-# Servicios Destacados
+# Servicios Destacados (4 tarjetas principales)
 highlightedServices:
   titulo: "Nuestros"
   highlight: "Servicios Principales"
-  descripcion: "Soluciones técnicas especializadas para resolver conflictos constructivos y garantizar la calidad en edificación"
+  descripcion: "Servicios periciales de alta especialización para garantizar la calidad constructiva y la resolución de conflictos."
   items:
     - titulo: "Auditoría Técnica de Obras"
-      descripcion: "Evaluación exhaustiva de calidad constructiva, cumplimiento normativo y detección temprana de deficiencias."
+      descripcion: "Evaluación de calidad constructiva, cumplimiento normativo y detección temprana de deficiencias."
       url: "/auditoria-tecnica-obra/"
       icon: "clipboard-list"
       cta: "Saber más"
     - titulo: "Peritaje Judicial y de Parte"
-      descripcion: "Informes técnicos especializados para procesos judiciales y mediación, con análisis de causas y valoraciones."
+      descripcion: "Informes técnicos para procesos judiciales y mediación, con análisis de causas y valoraciones económicas."
       url: "/peritaje-judicial-obra/"
       icon: "scale"
       cta: "Saber más"
     - titulo: "Inspecciones Técnicas Especializadas"
-      descripcion: "Diagnóstico detallado del estado de obras de ingeniería civil y edificación. Análisis estructural y recomendaciones para mantenimiento preventivo y correctivo."
+      descripcion: "Diagnóstico del estado de estructuras y patologías en edificación y obra civil, con recomendaciones preventivas y correctivas."
       url: "/inspecciones-tecnicas-especializadas/"
       icon: "search-check"
+      cta: "Saber más"
+    - titulo: "Asesoría en Disputas de Obra"
+      descripcion: "Análisis técnico y soporte pericial para discrepancias en certificaciones, mediciones y cumplimiento contractual."
+      url: "/asesoria-disputas-obra/"
+      icon: "balance-scale"
       cta: "Saber más"
 
 # Sección "En qué podemos ayudarte"
@@ -115,12 +119,12 @@ ayuda:
       url: "/vicios-ocultos-obra-nueva/"
       icon: "search"
     - title: "Desprendimientos y Daños por Mala Ejecución"
-      description: "Evaluación pericial de daños causados por deficiencias en ejecución y recomendaciones para su reparación."
+      description: "Evaluación pericial de daños causados por deficiencias en ejecución y propuestas de reparación."
       url: "/desprendimientos-daños-ejecucion/"
       icon: "alert-circle"
-    - title: "Asesoramiento Pericial en Reparación y Refuerzo de Estructuras"
-      description: "Estudios técnicos y proyectos de refuerzo estructural para garantizar la estabilidad y seguridad."
-      url: "/refuerzo-estructural/"
+    - title: "Asesoramiento Pericial en Refuerzo Estructural"
+      description: "Valoración técnica de alternativas de refuerzo para garantizar estabilidad y seguridad (sin ejecución)."
+      url: "/asesoramiento-refuerzo-estructural/"
       icon: "tool"
 
 # Sección Solución Técnica
@@ -134,20 +138,20 @@ solucion:
     titulo: "La"
     highlight: "Solución Técnica"
     subtitulo: "que Necesitas"
-    descripcion: "En perito.barcelona, combinamos experiencia en ingeniería civil con metodología pericial rigurosa para ofrecer informes precisos, imparciales y técnicamente sólidos. Nuestra intervención te da argumentos claros para tomar decisiones, reclamar daños o ejecutar soluciones constructivas seguras."
+    descripcion: "En perito.barcelona combinamos experiencia en ingeniería civil con metodología pericial para entregar informes precisos, imparciales y técnicamente sólidos. Nuestra intervención proporciona argumentos claros para tomar decisiones, reclamar por defectos o definir soluciones constructivas seguras."
     caracteristicas:
       - icono: "search"
         titulo: "Aclaramos la Causa Raíz"
-        descripcion: "Identificamos con precisión técnica el origen de grietas, humedades, defectos constructivos o la validez de coberturas de seguro mediante análisis rigurosos y documentados."
+        descripcion: "Identificamos con precisión el origen de grietas, humedades y defectos constructivos mediante análisis documentados."
       - icono: "clipboard-check"
         titulo: "Determinamos Responsabilidades"
-        descripcion: "Establecemos con objetividad quién es responsable de cada defecto constructivo y analizamos si las coberturas de seguro son aplicables en cada caso."
+        descripcion: "Definimos con objetividad la responsabilidad de cada defecto o incumplimiento técnico."
       - icono: "calculator"
         titulo: "Valoramos con Precisión"
-        descripcion: "Cuantificamos los daños y el coste real de las reparaciones necesarias, evitando sobrecostes y proporcionando valoraciones defendibles técnicamente."
+        descripcion: "Cuantificamos daños y costes de reparación con criterios técnicos defendibles."
       - icono: "shield-check"
         titulo: "Prevenimos Conflictos"
-        descripcion: "Documentamos el estado real de inmuebles en alquileres, compraventas o recepciones de obra para evitar disputas futuras y proteger tus intereses."
+        descripcion: "Documentamos el estado real para evitar disputas en alquileres, compraventas o recepciones de obra."
     cta:
       texto: "Solicitar Asesoramiento Gratuito"
       url: "/contacto/"
@@ -164,24 +168,21 @@ proceso:
       icon: "message-circle"
       tiempoLabel: "Tiempo estimado"
       tiempo: "24h"
-
     - numero: "02"
       titulo: "Inspección y Análisis"
-      descripcion: "Visitamos el lugar, recopilamos evidencias y analizamos toda la documentación técnica necesaria."
+      descripcion: "Visitamos el lugar, recopilamos evidencias y analizamos la documentación técnica necesaria."
       icon: "inspect-check"
       tiempoLabel: "Duración"
       tiempo: "2-3 días"
-
     - numero: "03"
       titulo: "Informe Pericial"
-      descripcion: "Redacción del dictamen técnico aplicando normativa vigente con rigor científico y claridad expositiva."
+      descripcion: "Redacción del dictamen técnico aplicando normativa vigente con rigor científico y claridad."
       icon: "report-tech"
       tiempoLabel: "Entrega"
       tiempo: "5-7 días"
-
     - numero: "04"
       titulo: "Defensa Profesional"
-      descripcion: "Presentación y defensa del informe ante tribunales con acompañamiento técnico hasta la resolución."
+      descripcion: "Presentación y defensa del informe ante tribunales con acompañamiento técnico."
       icon: "shield-court"
       tiempoLabel: "Duración"
       tiempo: "Según procedimiento"
@@ -194,34 +195,32 @@ testimonios:
   tag: "Casos de Éxito"
   titulo: "Clientes Satisfechos"
   highlight: "Avalan Nuestra Experiencia"
-  descripcion: "Descubre cómo ayudamos a propietarios, comunidades y constructoras a resolver sus casos técnicos con éxito"
+  descripcion: "Descubre cómo ayudamos a propietarios, comunidades y constructoras a resolver sus casos técnicos con éxito."
   items:
     - nombre: "Comunidad de Propietarios Les Corts"
       rol: "Presidente de la Comunidad"
       tipo: "empresa"
       imagen: ""
-      cita: "El informe pericial identificó el origen de las filtraciones en la cubierta y gracias a su intervención, conseguimos que el seguro cubriera la reparación completa, valorada en más de 45.000€."
+      cita: "El informe pericial identificó el origen de las filtraciones en la cubierta y facilitó la asunción de las reparaciones necesarias por la parte responsable."
       fecha: "hace 2 meses"
-      servicioRelacionado: "Peritajes de Seguros"
-      tipoProyecto: "Reclamación a Seguro"
-
+      servicioRelacionado: "Auditoría Técnica de Obras"
+      tipoProyecto: "Patología de Cubierta"
     - nombre: "CONSTRUCCIONES TÉCNICAS BCN, S.L."
       rol: "Director de Proyectos"
       tipo: "empresa"
       imagen: ""
-      cita: "La auditoría técnica preventiva nos permitió detectar y corregir deficiencias antes de la entrega de 24 viviendas, evitando futuras reclamaciones y sobrecostes estimados en 120.000€."
+      cita: "La auditoría técnica preventiva permitió corregir deficiencias antes de la entrega de 24 viviendas, evitando reclamaciones y sobrecostes."
       fecha: "hace 1 mes"
       servicioRelacionado: "Auditoría Técnica de Obras"
       tipoProyecto: "Control de Calidad"
-
     - nombre: "Ana S. García"
       rol: "Propietaria Afectada"
       tipo: "persona"
       imagen: ""
-      cita: "Gracias a su informe pericial demostramos los vicios ocultos en nuestra vivienda nueva. Su diagnóstico estructural fue clave para que la promotora asumiera las reparaciones valoradas en 75.000€."
+      cita: "El peritaje acreditó vicios ocultos en la vivienda y fundamentó las reparaciones que se ejecutaron posteriormente."
       fecha: "hace 3 meses"
       servicioRelacionado: "Peritaje Judicial"
-      tipoProyecto: "Demanda por Vicios Ocultos"
+      tipoProyecto: "Vicios Ocultos"
 
 # Sección CTA Contacto
 contactCTA:
@@ -231,7 +230,7 @@ contactCTA:
   contactInfo:
     - titulo: "Llámanos ahora"
       valor: "+34 614 194 985"
-      url: "tel:934687235"
+      url: "tel:+34614194985"
       horario: "Lunes a Viernes: 9:00 - 19:00"
       icon: "phone"
     - titulo: "Escríbenos"
@@ -261,3 +260,4 @@ contactCTA:
     successMessage: "¡Datos enviados correctamente!"
     errorMessage: "Ha ocurrido un error al enviar los datos. Por favor, inténtalo de nuevo más tarde."
     endpoint: "https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma"
+---
