@@ -1,41 +1,47 @@
-<section id="proceso" class="py-24 px-4 md:px-[5%] bg-gradient-to-br from-[#0B1030] to-[#1a2452] relative overflow-hidden">
-    <!-- Overlay decorativo con gradientes -->
+<section id="proceso" class="py-28 px-4 md:px-[5%] bg-gradient-to-br from-[#0B1030] to-[#1a2452] relative overflow-hidden isolate">
+    <!-- Decorative overlays -->
     <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-cyan-900/5"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,.02)_0%,transparent_50%)] mix-blend-overlay"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-transparent"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:48px_48px] opacity-[0.15]"></div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 via-transparent to-cyan-900/10"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-400/10 blur-3xl rounded-full"></div>
     </div>
 
     <div class="max-w-[1400px] mx-auto relative z-10">
-        <div class="max-w-2xl mb-16">
+        <header class="max-w-2xl mb-20">
             <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-white mb-6">
                 {{ proceso.titulo }} <strong class="text-cyan-400 font-bold">{{ proceso.highlight }}</strong>?
             </h2>
             <p class="text-xl text-white/80">{{ proceso.descripcion }}</p>
-        </div>
+        </header>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {% for paso in proceso.pasos %}
-            <div class="bg-white/5 backdrop-blur-sm p-8 lg:p-10 rounded-xl relative group hover:bg-white/10 transition-all duration-300 flex flex-col">
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="w-12 h-12 flex items-center justify-center rounded-xl bg-cyan-400/20 text-cyan-400 group-hover:scale-110 transition-transform">
-                        {% include "icons/" + paso.icon + ".svg" ignore missing %}
-                    </span>
-                    <div class="text-[2.5rem] font-bold text-cyan-400/40 group-hover:text-cyan-400/60 transition-colors">{{ paso.numero }}</div>
-                </div>
-                <h3 class="text-xl font-bold text-cyan-400 mb-4">{{ paso.titulo }}</h3>
-                <p class="text-white/80 leading-relaxed mb-auto">{{ paso.descripcion }}</p>
-                <div class="h-[1px] w-full bg-white/10 my-4"></div>
-                <div class="flex items-center justify-between">
-                    <span class="text-cyan-400/80 text-sm">{{ paso.tiempoLabel }}:</span>
-                    <span class="text-white font-medium">{{ paso.tiempo }}</span>
+            <div class="group/card relative bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm p-8 rounded-2xl hover:bg-white/10 transition-all duration-500">
+                <!-- Hover gradient -->
+                <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="w-12 h-12 flex items-center justify-center rounded-xl bg-cyan-400/20 text-cyan-400 group-hover:scale-110 transition-transform">
+                            {% include "icons/" + paso.icon + ".svg" ignore missing %}
+                        </span>
+                        <div class="text-[2.5rem] font-bold text-cyan-400/40 group-hover:text-cyan-400/60 transition-colors">{{ paso.numero }}</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4">{{ paso.titulo }}</h3>
+                    <p class="text-white/80 leading-relaxed mb-auto">{{ paso.descripcion }}</p>
+                    <div class="h-[1px] w-full bg-white/10 my-4"></div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-cyan-400/80 text-sm">{{ paso.tiempoLabel }}:</span>
+                        <span class="text-white font-medium">{{ paso.tiempo }}</span>
+                    </div>
                 </div>
             </div>
             {% endfor %}
         </div>
 
+        <!-- CTA Button -->
         <div class="text-center">
-            <a href="{{ proceso.cta.url }}" class="inline-flex items-center gap-3 px-8 py-4 bg-cyan-400 hover:bg-cyan-500 text-white font-semibold rounded-lg transition-colors group">
+            <a href="{{ proceso.cta.url }}" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-400 to-cyan-500 hover:from-cyan-500 hover:to-cyan-600 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/25 group">
                 {{ proceso.cta.texto }}
                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -44,4 +50,3 @@
         </div>
     </div>
 </section>
-                 

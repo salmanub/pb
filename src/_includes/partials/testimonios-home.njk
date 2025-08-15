@@ -17,7 +17,7 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {% for testimonio in testimonios.items %}
-            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="bg-white p-8 pb-16 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col group/card relative">
                 <div class="flex items-center gap-4 mb-6">
                     <div class="w-16 h-16 rounded-full bg-cyan-50 overflow-hidden flex items-center justify-center p-3 group transition-all duration-300 hover:bg-cyan-100">
                         {% if testimonio.imagen %}
@@ -49,6 +49,12 @@
                 <div class="flex items-center gap-2">
                     <div class="text-cyan-400">★★★★★</div>
                     <span class="text-slate-400 text-sm">{{ testimonio.fecha }}</span>
+                </div>
+                <div class="absolute bottom-4 right-4 w-12 h-12 flex items-center justify-center overflow-hidden">
+                    <div class="w-24 h-24 bg-cyan-500/10 rounded-full group-hover/card:scale-100 scale-0 transition-transform duration-500"></div>
+                    <svg class="absolute w-5 h-5 text-cyan-500 transform group-hover/card:translate-x-0 group-hover/card:translate-y-0 translate-x-6 translate-y-6 transition-all duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
                 </div>
             </div>
             {% endfor %}

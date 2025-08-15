@@ -40,13 +40,19 @@
                 
                 <div class="grid gap-6 mb-12">
                     {% for caracteristica in solucion.contenido.caracteristicas %}
-                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50/50 transition-colors">
+                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50/50 transition-colors group/card relative pb-16">
                         <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center">
                             {% include "icons/" + caracteristica.icono + ".svg" ignore missing %}
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-slate-800 mb-2">{{ caracteristica.titulo }}</h3>
                             <p class="text-slate-600">{{ caracteristica.descripcion }}</p>
+                        </div>
+                        <div class="absolute bottom-4 right-4 w-12 h-12 flex items-center justify-center overflow-hidden">
+                            <div class="w-24 h-24 bg-cyan-500/10 rounded-full group-hover/card:scale-100 scale-0 transition-transform duration-500"></div>
+                            <svg class="absolute w-5 h-5 text-cyan-500 transform group-hover/card:translate-x-0 group-hover/card:translate-y-0 translate-x-6 translate-y-6 transition-all duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
                         </div>
                     </div>
                     {% endfor %}
@@ -58,10 +64,6 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                     </svg>
                 </a>
-            </div>
-        </div>
-    </div>
-</section>
             </div>
         </div>
     </div>
