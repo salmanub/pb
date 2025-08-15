@@ -50,6 +50,8 @@ highlightedServices:
   titulo: "Els Nostres"
   highlight: "Serveis Principals"
   descripcion: "Serveis pericials d'alta especialització per garantir la qualitat constructiva i la resolució de conflictes."
+  tag: "Serveis Especialitzats"
+  cta: "Saber-ne més"
   items:
     - titulo: "Auditoria Tècnica d'Obres"
       descripcion: "Avaluació exhaustiva de la qualitat constructiva, compliment normatiu i detecció precoç de deficiències."
@@ -101,6 +103,7 @@ ayuda:
     subtitle: "Solucions tècniques i pericials especialitzades per a qualsevol propietat, projecte o conflicte a Barcelona."
   introduccion:
     title: "Alguns dels problemes tècnics que abordem amb freqüència:"
+  cta: "Saber-ne més"  # Añadido
   problemas:
     - title: "Esquerdes i Deformacions Estructurals"
       description: "Anàlisi i diagnosi de patologies estructurals, detecció de fissures i recomanacions de reparació."

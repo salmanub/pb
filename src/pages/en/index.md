@@ -50,6 +50,8 @@ highlightedServices:
   titulo: "Our"
   highlight: "Main Services"
   descripcion: "Specialized expert services to ensure construction quality and resolve disputes effectively."
+  tag: Specialized Services
+  cta: "Learn More"
   items:
     - titulo: "Technical Construction Audit"
       descripcion: "Comprehensive evaluation of construction quality, regulatory compliance, and early detection of deficiencies."
@@ -101,6 +103,7 @@ ayuda:
     subtitle: "Specialized technical and expert solutions for any property, project, or dispute in Barcelona."
   introduccion:
     title: "Some of the most common technical issues we address:"
+  cta: "Learn more"  # Añadido
   problemas:
     - title: "Cracks and Structural Deformations"
       description: "Analysis and diagnosis of structural pathologies, crack detection, and repair recommendations."

@@ -101,6 +101,7 @@ ayuda:
     subtitle: "Soluciones técnicas y periciales especializadas para cada tipo de propiedad, proyecto o conflicto en Barcelona."
   introduccion:
     title: "Algunos de los problemas técnicos que abordamos con frecuencia:"
+  cta: "Saber más"  # Añadido
   problemas:
     - title: "Grietas y Deformaciones Estructurales"
       description: "Análisis y diagnóstico de patologías estructurales, detección de fisuras y recomendaciones de reparación."
