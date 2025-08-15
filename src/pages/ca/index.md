@@ -119,7 +119,7 @@ ayuda:
       description: "Avaluació pericial de danys causats per deficiències d’execució i recomanacions per a la seva reparació."
       url: "/ca/despreniments-danys-execucio/"
       icon: "alert-circle"
-    - title: "Reforç Estructural amb Fibra de Carboni i Perfils Metàl·lics"
+    - title: "Assessorament Pericial en Reparació i Reforç Estructural"
       description: "Estudis tècnics i projectes de reforç estructural per garantir l’estabilitat i la seguretat."
       url: "/ca/reforc-estructural/"
       icon: "tool"

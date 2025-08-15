@@ -118,7 +118,7 @@ ayuda:
       description: "Evaluación pericial de daños causados por deficiencias en ejecución y recomendaciones para su reparación."
       url: "/desprendimientos-daños-ejecucion/"
       icon: "alert-circle"
-    - title: "Refuerzo Estructural con Fibra de Carbono y Perfiles Metálicos"
+    - title: "Asesoramiento Pericial en Reparación y Refuerzo de Estructuras"
       description: "Estudios técnicos y proyectos de refuerzo estructural para garantizar la estabilidad y seguridad."
       url: "/refuerzo-estructural/"
       icon: "tool"

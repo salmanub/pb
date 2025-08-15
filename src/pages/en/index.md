@@ -118,7 +118,7 @@ ayuda:
       description: "Expert evaluation of damage caused by poor workmanship and repair recommendations."
       url: "/en/detachment-poor-execution/"
       icon: "alert-circle"
-    - title: "Structural Reinforcement with Carbon Fiber and Metal Profiles"
+    - title: "Expert Assessment in Structural Repair and Reinforcement"
       description: "Technical studies and reinforcement projects to ensure stability and safety."
       url: "/en/structural-reinforcement/"
       icon: "tool"
