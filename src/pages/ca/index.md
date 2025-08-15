@@ -261,7 +261,7 @@ contactCTA:
     - titulo: "Escriu-nos"
       valor: "info@perito.barcelona"
       url: "mailto:info@perito.barcelona"
-      horario: "Respondem en menys de 24h"
+      horario: "Responem en menys de 24h"
       icon: "mail"
   form:
     campos:
