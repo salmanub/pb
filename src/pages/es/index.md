@@ -79,7 +79,7 @@ ayuda:
     title: "Algunos de los problemas que solucionamos con más frecuencia:"
   cta: "Saber más"
   problemas:
-    - title: "Grietas y Deformaciones Estructurales"
+    - title: "Grietas y Patologías Estructurales"
       description: "Análisis y diagnóstico de patologías estructurales, detección de fisuras y recomendaciones de reparación."
       url: "/peritajes/patologias-estructurales/"
       icon: "alert-triangle"
