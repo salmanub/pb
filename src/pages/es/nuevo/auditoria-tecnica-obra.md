@@ -145,3 +145,39 @@ cta:
     text: "Solicitar evaluación"
     url: "/contacto/"
 ---
+
+# Auditoría Técnica de Obras en Barcelona
+
+En **perito.barcelona** ofrecemos un servicio especializado de **auditoría técnica de obras**, orientado a promotores, comunidades de propietarios y empresas constructoras que necesitan un control independiente sobre la ejecución, los costes y la calidad de sus proyectos.
+
+## ¿Qué es una auditoría técnica de obra?
+
+La auditoría técnica es una **revisión independiente** de la obra para comprobar:
+- La **calidad de ejecución** de materiales y acabados.  
+- El **cumplimiento del proyecto y normativa vigente (CTE, ordenanzas locales, pliegos)**.  
+- La **validez de certificaciones y mediciones económicas**.  
+- La detección temprana de **desviaciones y no conformidades**.  
+
+El resultado es un **informe pericial claro, imparcial y defendible**, con hallazgos trazables y propuestas de corrección.
+
+## Cuándo conviene solicitarla
+
+- Antes de la **recepción de obra**, para evitar reclamaciones futuras.  
+- Si hay **discrepancias en certificaciones o mediciones**.  
+- Cuando aparecen **patologías durante la ejecución**.  
+- En proyectos con **varios contratistas o subcontratas**.  
+
+## Nuestro proceso de trabajo
+
+1. **Análisis preliminar** – recopilamos documentación, planos y objetivos de la auditoría.  
+2. **Inspección técnica in situ** – relevé fotográfico, toma de datos, ensayos no destructivos si procede.  
+3. **Contraste y evaluación** – verificamos proyecto, normativa, certificaciones y costes.  
+4. **Informe pericial** – dictamen con conclusiones, evidencias y plan de acciones correctoras.  
+
+## Beneficios para el cliente
+
+- **Independencia técnica**: visión objetiva y contrastada.  
+- **Prevención de riesgos**: detectamos desviaciones a tiempo.  
+- **Acciones claras**: entregamos un plan de corrección priorizado.  
+- **Informe defendible**: válido para negociación, mediación o juicio.  
+
