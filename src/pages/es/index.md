@@ -93,7 +93,7 @@ ayuda:
       icon: "file-text"
     - title: "Vicios Ocultos en Compraventa o Post-obra"
       description: "Identificación y documentación de defectos no visibles tras la entrega o compra de un inmueble."
-      url: "/peritajes/vicios-ocultos-defectos-constructivos/"
+      url: "/peritajes/vicios-ocultos/"
       icon: "search"
     - title: "Mala Ejecución de Obras"
       description: "Evaluación pericial de daños causados por deficiencias en ejecución y propuestas de subsanación."
