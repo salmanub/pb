@@ -4,13 +4,14 @@ title: "Auditoría Técnica de Obras en Barcelona | Peritaje independiente y con
 description: "Auditoría técnica de obras en edificación y obra civil: revisión de calidad, certificaciones, normativas y detección de desviaciones. Informe pericial defendible en Barcelona."
 permalink: "/auditoria-tecnica-obra/"
 lang: "es"
+
 translations:
   - lang: ca
     permalink: /ca/auditoria-tecnica-obra/
     title: "Auditoria Tècnica d’Obres"
     description: "Auditories tècniques d’edificació i obra civil: revisió de qualitat, compliment normatiu i desviacions. Informe pericial independent a Barcelona."
   - lang: en
-    permalink: /en/technical-audit-construction/
+    permalink: /en/technical-construction-audit/
     title: "Technical Audit of Construction Works"
     description: "Technical audits for buildings and civil works: quality control, compliance review and deviation detection. Independent expert reports in Barcelona."
 
@@ -20,7 +21,8 @@ eleventyNavigation:
   title: "Auditoría Técnica de Obras"
   notshow: false
   order: 2
-  
+
+# Hero Section
 hero:
   title: "Auditoría Técnica de Obras"
   strong: "Peritaje independiente y control de calidad"
@@ -29,64 +31,66 @@ hero:
   intro: "Aplicamos metodología pericial, contraste documental y normativa vigente para evaluar objetivamente la obra. Priorizamos la evidencia técnica y la trazabilidad de hallazgos."
   image: "/assets/images/auditoria-tecnica-obra-hero.avif"
 
+# Grid de ámbitos que sí se auditan
 serviceCluster:
-  title: "Áreas especializadas"
-  intro: "Selecciona el ámbito específico que necesitas auditar"
+  title: "Ámbitos de auditoría"
+  intro: "Selecciona el alcance específico que necesitas auditar"
   services:
-    - title: "Peritajes de Construcción"
-      description: "Patologías, defectos de ejecución y vicios ocultos en edificaciones y obra civil."
-      url: "/peritajes-construccion/"
-      icon: "home-repair"
+    - title: "Auditoría de Ejecución y Calidad"
+      description: "Verificación en obra de materiales, soluciones constructivas y acabados."
+      url: "/auditoria-ejecucion-calidad/"
+      icon: "check-square"
       features:
-        - "Grietas y deformaciones"
-        - "Humedades y filtraciones"
+        - "Materiales y soluciones"
         - "Acabados y remates"
-    - title: "Peritaje Judicial y de Parte"
-      description: "Informes periciales, ratificación y apoyo técnico en mediación o juicio."
-      url: "/peritaje-judicial-obra/"
-      icon: "scale"
+        - "No conformidades"
+    - title: "Auditoría de Certificaciones y Mediciones"
+      description: "Revisión de partidas, mediciones y precios con trazabilidad económica."
+      url: "/auditoria-certificaciones-mediciones/"
+      icon: "clipboard-list"
       features:
-        - "Dictamen y conclusiones"
-        - "Evidencia fotográfica"
-        - "Anexos técnicos"
-    - title: "Inspecciones Técnicas"
-      description: "Inspecciones con instrumentación y ensayos no destructivos según norma."
+        - "Contraste de partidas"
+        - "Precios y pliegos"
+        - "Detección de desviaciones"
+    - title: "Auditoría de Pre-entrega y Recepción"
+      description: "Revisión exhaustiva antes de la entrega para evitar reclamaciones."
+      url: "/auditoria-preentrega-recepcion/"
+      icon: "file-check"
+      features:
+        - "Listas de repasos"
+        - "Pruebas de servicio"
+        - "Actas de recepción"
+    - title: "Revisión Documental y Normativa"
+      description: "Comprobación de cumplimiento del CTE, pliegos y normativa local."
+      url: "/revision-documental-normativa/"
+      icon: "file-text"
+      features:
+        - "CTE y normativa local"
+        - "Plan de control de calidad"
+        - "Trazabilidad de cambios"
+    - title: "Inspecciones Técnicas Especializadas"
+      description: "Apoyo con instrumentación y ensayos no destructivos según norma."
       url: "/inspecciones-tecnicas-especializadas/"
       icon: "search-check"
       features:
-        - "Termografía / humedímetros"
+        - "Termografía y humedad"
         - "Relevé y fisuración"
         - "END in situ"
-    - title: "Auditoría de Certificaciones"
-      description: "Revisión de partidas, mediciones y precios. Detección de desviaciones."
-      url: "/disputas-certificaciones-obra/"
-      icon: "clipboard-list"
-      features:
-        - "Contraste de mediciones"
-        - "Control de cambios"
-        - "Trazabilidad económica"
-    - title: "Asesoramiento Pericial en Refuerzo"
-      description: "Evaluación de estabilidad y necesidad de reparación/refuerzo (sin ejecución)."
+    - title: "Asesoramiento Pericial en Refuerzo Estructural"
+      description: "Evaluación de estabilidad y necesidad de reparación o refuerzo (sin ejecución) de estructuras de hormigón armado, ..."
       url: "/asesoramiento-estructural/"
       icon: "tool"
       features:
         - "Criterios de intervención"
         - "Priorización de riesgos"
         - "Recomendaciones técnicas"
-    - title: "Peritajes de Seguros (secundario)"
-      description: "Valoraciones y contraperitajes cuando el caso lo requiere."
-      url: "/peritajes-seguros/"
-      icon: "shield"
-      features:
-        - "Daños por agua/incendio"
-        - "Coberturas"
-        - "Reclamación técnica"
 
+# Sección “Qué es”
 sections:
   title: "¿Qué es una auditoría técnica de obras?"
   what_is:
     text: >
-      Es una revisión independiente de la obra —técnica, documental y normativa— para verificar calidad de ejecución, cumplimiento de proyecto, mediciones y certificaciones. Su resultado es un informe pericial con hallazgos trazables y recomendaciones accionables.
+      Es una revisión independiente de la obra, técnica, documental y normativa, para verificar la calidad de ejecución, el ajuste al proyecto, las mediciones y las certificaciones. El resultado es un informe pericial con hallazgos trazables y recomendaciones accionables.
     features:
       - "Inspección in situ y contraste documental"
       - "Revisión de calidad, seguridad y normativa"
@@ -94,6 +98,7 @@ sections:
       - "Detección de no conformidades y sobrecostes"
       - "Conclusiones y plan de acciones correctoras"
 
+# Proceso (el template usa loop.index para numeración)
 process:
   steps:
     - title: "Análisis preliminar"
@@ -104,6 +109,8 @@ process:
       description: "Revisión normativa, proyecto, certificaciones y costes."
     - title: "Informe pericial"
       description: "Hallazgos motivados, conclusiones y recomendaciones."
+
+# Beneficios
 benefits:
   items:
     - icon: "check-shield"
@@ -119,6 +126,7 @@ benefits:
       title: "Prevención de riesgos"
       description: "Detecta desviaciones a tiempo."
 
+# Testimonios (el template usa quote/author/role)
 testimonials:
   title: "Casos de éxito relevantes"
   items:
@@ -129,6 +137,7 @@ testimonials:
       author: "Comunidad de propietarios"
       role: "Administración de fincas"
 
+# CTA final (el template espera cta.title / cta.description / cta.button.{text,url})
 cta:
   title: "¿Necesitas una auditoría técnica independiente?"
   description: "Cuéntanos tu caso y te proponemos el enfoque pericial adecuado."

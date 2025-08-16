@@ -35,7 +35,7 @@ hero:
     primary: "Solicitar Presupuesto"
     primaryUrl: "/contacto/"
     secondary: "Llamar ahora"
-    secondaryUrl: "#areas-expertise"
+    secondaryUrl: "#highlighted-services"
     descubreMas: "Saber Más"
   badges:
     - value: "97%"
@@ -46,27 +46,7 @@ hero:
       subtext: "Garantizada"
   logosText: "Informes aceptados por todos los tribunales españoles"
 
-# Servicios (listado breve en home)
-servicios:
-  title: "Nuestros Servicios Periciales"
-  description: "Soluciones técnicas y jurídicas respaldadas por más de 15 años de experiencia en ingeniería civil y peritaje especializado."
-  items:
-    - title: "Peritajes de Construcción"
-      description: "Análisis de patologías, vicios ocultos y defectos constructivos con informes claros y defendibles."
-      features:
-        - "Diagnóstico de humedades y filtraciones"
-        - "Evaluación de grietas y deformaciones"
-        - "Informes técnicos para comunidades"
-      url: "/peritajes-construccion/"
-    - title: "Auditorías Técnicas"
-      description: "Control de calidad y verificación del cumplimiento normativo en obra para prevenir reclamaciones."
-      features:
-        - "Revisión técnica de proyectos"
-        - "Evaluación de acabados"
-        - "Detección temprana de deficiencias"
-      url: "/auditoria-tecnica-obra/"
-
-# Servicios Destacados (4 tarjetas principales)
+# Servicios Destacados (5 tarjetas principales)
 highlightedServices:
   titulo: "Nuestros"
   highlight: "Servicios Principales"
@@ -77,6 +57,11 @@ highlightedServices:
       descripcion: "Evaluación de calidad constructiva, cumplimiento normativo y detección temprana de deficiencias."
       url: "/auditoria-tecnica-obra/"
       icon: "clipboard-list"
+      cta: "Saber más"
+    - titulo: "Peritajes de Construcción"
+      descripcion: "Análisis de patologías, vicios ocultos y defectos constructivos con informes claros y defendibles."
+      url: "/peritajes-construccion/"
+      icon: "home-repair"
       cta: "Saber más"
     - titulo: "Peritaje Judicial y de Parte"
       descripcion: "Informes técnicos para procesos judiciales y mediación, con análisis de causas y valoraciones económicas."
@@ -102,7 +87,7 @@ ayuda:
     subtitle: "Soluciones técnicas y periciales especializadas para cada tipo de propiedad, proyecto o conflicto en Barcelona."
   introduccion:
     title: "Algunos de los problemas técnicos que abordamos con frecuencia:"
-  cta: "Saber más"  # Añadido
+  cta: "Saber más"
   problemas:
     - title: "Grietas y Deformaciones Estructurales"
       description: "Análisis y diagnóstico de patologías estructurales, detección de fisuras y recomendaciones de reparación."
@@ -128,6 +113,14 @@ ayuda:
       description: "Valoración técnica de alternativas de refuerzo para garantizar estabilidad y seguridad (sin ejecución)."
       url: "/asesoramiento-refuerzo-estructural/"
       icon: "tool"
+    - title: "Informes Técnicos para Comunidades"
+      description: "Dictámenes claros para juntas y administraciones de fincas: filtraciones, daños por ejecución y mantenimiento."
+      url: "/informes-tecnicos-comunidades/"
+      icon: "users"
+    - title: "Evaluación de Acabados y Remates"
+      description: "Revisión técnica de calidades y terminaciones antes de la entrega para evitar reclamaciones posteriores."
+      url: "/evaluacion-acabados-remates/"
+      icon: "check-square"
 
 # Sección Solución Técnica
 solucion:
@@ -202,7 +195,6 @@ testimonios:
     - nombre: "Comunidad de Propietarios Les Corts"
       rol: "Presidente de la Comunidad"
       tipo: "empresa"
-      imagen: ""
       cita: "El informe pericial identificó el origen de las filtraciones en la cubierta y facilitó la asunción de las reparaciones necesarias por la parte responsable."
       fecha: "hace 2 meses"
       servicioRelacionado: "Auditoría Técnica de Obras"
@@ -210,7 +202,6 @@ testimonios:
     - nombre: "CONSTRUCCIONES TÉCNICAS BCN, S.L."
       rol: "Director de Proyectos"
       tipo: "empresa"
-      imagen: ""
       cita: "La auditoría técnica preventiva permitió corregir deficiencias antes de la entrega de 24 viviendas, evitando reclamaciones y sobrecostes."
       fecha: "hace 1 mes"
       servicioRelacionado: "Auditoría Técnica de Obras"
@@ -218,7 +209,6 @@ testimonios:
     - nombre: "Ana S. García"
       rol: "Propietaria Afectada"
       tipo: "persona"
-      imagen: ""
       cita: "El peritaje acreditó vicios ocultos en la vivienda y fundamentó las reparaciones que se ejecutaron posteriormente."
       fecha: "hace 3 meses"
       servicioRelacionado: "Peritaje Judicial"
@@ -245,19 +235,15 @@ contactCTA:
       - id: "nombre"
         label: "Nombre completo"
         tipo: "text"
-        grid: ""
       - id: "email"
         label: "Email"
         tipo: "email"
-        grid: "grid grid-cols-1 md:grid-cols-2 gap-6"
       - id: "telefono"
         label: "Teléfono"
         tipo: "tel"
-        grid: "grid grid-cols-1 md:grid-cols-2 gap-6"
       - id: "mensaje"
         label: "Cuéntanos brevemente tu caso"
         tipo: "textarea"
-        grid: ""
     submitText: "Enviar Consulta"
     successMessage: "¡Datos enviados correctamente!"
     errorMessage: "Ha ocurrido un error al enviar los datos. Por favor, inténtalo de nuevo más tarde."
