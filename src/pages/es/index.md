@@ -99,7 +99,7 @@ ayuda:
       icon: "file-text"
     - title: "Vicios Ocultos en Obra Nueva"
       description: "Identificación y documentación de defectos ocultos en proyectos de construcción reciente."
-      url: "/vicios-ocultos-obra-nueva/"
+      url: "/vicios-ocultos/"
       icon: "search"
     - title: "Mala Ejecución de obras"
       description: "Evaluación pericial de daños causados por deficiencias en ejecución y propuestas de reparación."
