@@ -15,14 +15,12 @@ translations:
     description: "Technical audits for buildings and civil works: quality control, compliance review and deviation detection. Independent expert reports in Barcelona."
 
 eleventyNavigation:
-  key: "Servicios"
-  title: 
-    es: "Servicios"
-    ca: "Serveis"
-    en: "Services"
+  key: "Auditoría Técnica de Obras"
+  parent: "Servicios"
+  title: "Auditoría Técnica de Obras"
   notshow: false
   order: 2
-
+  
 hero:
   title: "Auditoría Técnica de Obras"
   strong: "Peritaje independiente y control de calidad"
