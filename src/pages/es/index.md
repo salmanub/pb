@@ -60,7 +60,7 @@ highlightedServices:
       cta: "Ver más"
     - titulo: "Auditorías de Obra"
       descripcion: "Realizamos el control de calidad, supervisión de la ejecución y mediación técnica en disputas sobre certificaciones y pagos."
-      url: "/auditorias-de-obra/"
+      url: "/auditorias-obra/"
       icon: "clipboard-list"
       cta: "Ver más"
     - titulo: "Asesoramiento Estructural"
