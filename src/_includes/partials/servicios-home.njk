@@ -18,9 +18,21 @@
             <p class="text-xl text-slate-600 max-w-2xl mx-auto">{{ highlightedServices.descripcion }}</p>
         </header>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+        {% set numItems = (highlightedServices.items | length) %}
+        <div class="grid gap-6 lg:gap-8 mx-auto w-full
+            grid-cols-1 
+            sm:grid-cols-2 
+            {% if numItems == 1 %}
+                max-w-lg
+            {% elif numItems == 2 %}
+                lg:max-w-3xl
+            {% elif numItems == 3 %}
+                lg:grid-cols-3 lg:max-w-5xl
+            {% else %}
+                xl:grid-cols-4
+            {% endif %}">
             {% for servicio in highlightedServices.items %}
-            <article class="group/card">
+            <article class="group/card {% if numItems == 3 and loop.last and (highlightedServices.items | length) % 2 != 0 %}sm:col-span-2 lg:col-span-1{% endif %}">
                 <a href="{{ servicio.url }}" class="group/card relative block h-full bg-gradient-to-br from-white to-slate-50/80 rounded-2xl p-6 pb-20 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden isolate" title="Ver detalles de {{ servicio.titulo }}" aria-labelledby="service-title-{{ loop.index }}">
                     <!-- Efecto de hover background -->
                     <div class="absolute inset-0 bg-gradient-to-br from-cyan-50 to-white opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
