@@ -75,14 +75,16 @@ serviceCluster:
         - "Evaluación de corrosión"
         - "Protocolos de reparación"
     
-    - title: "Patologías en Obra Civil"
-      description: "Inspección especializada de problemas en infraestructuras, puentes, túneles o edificios singulares. Análisis técnico avanzado y soluciones de ingeniería."
-      url: "/obra-civil/"
+    # --- INICIO DE LA CORRECCIÓN ---
+    - title: "Peritajes de Obras Públicas" # TÍTULO: Corregido para ser específico.
+      description: "Dictámenes técnicos para licitaciones, modificados y reclamaciones en proyectos de infraestructuras y obra pública." # DESCRIPCIÓN: Corregida y alineada.
+      url: "/obras-publicas/" # URL: Corregida para apuntar a la página correcta.
       icon: "blueprint"
-      features:
-        - "Análisis estructural"
-        - "Estudios geotécnicos"
-        - "Soluciones técnicas"
+      features: # CARACTERÍSTICAS: Corregidas para ser específicas de Obra Pública.
+        - "Informes para licitaciones"
+        - "Análisis de modificados"
+        - "Reclamaciones de contratos"
+    # --- FIN DE LA CORRECCIÓN ---
     
     - title: "Vicios Ocultos y Defectos"
       description: "Detección y documentación de defectos constructivos ocultos. Informes técnicos detallados para fundamentar reclamaciones por vicios de construcción."
@@ -101,6 +103,8 @@ serviceCluster:
         - "Documentación de defectos preexistentes"
         - "Verificación de instalaciones industriales"
         - "Informes para entrega y devolución"
+
+# (El resto del frontmatter se mantiene igual ya que no requiere cambios)
 
 # Sección sobre ventaja técnica
 engineer_advantage:

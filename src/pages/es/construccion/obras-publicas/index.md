@@ -1,8 +1,10 @@
 ---
 layout: 'layouts/service-child.njk'
-title: 'Perito de Obras Públicas en Barcelona | Informes Periciales en Infraestructuras'
-subtitle: 'Dictámenes técnicos especializados en proyectos de obra pública e ingeniería civil'
-description: "Peritajes técnicos especializados en obras públicas e infraestructuras. Dictámenes periciales para conflictos en proyectos de ingeniería civil y obra pública en Barcelona."
+# SEO: Título más activo y con keywords de intención de compra (Licitaciones, Contratos).
+title: 'Perito Obras Públicas Barcelona | Informes para Licitaciones y Contratos'
+subtitle: 'Dictámenes técnicos especializados para proyectos de obra pública e ingeniería civil'
+# SEO: Meta Description más activa, clara y centrada en los problemas del cliente.
+description: "Realizamos informes periciales para obras públicas en Barcelona. Asesoramiento técnico experto en licitaciones, modificados de obra y reclamaciones en contratos públicos."
 permalink: /obras-publicas/
 lang: es
 translations:
@@ -12,6 +14,7 @@ translations:
     permalink: /en/public-works/
 eleventyNavigation:
   key: "Obras Públicas"
+  # ESTRUCTURA: Parent actualizado para coincidir con el pilar principal.
   parent: "Construcción"
   title: "Perito Obras Públicas"
   notshow: true
@@ -20,15 +23,17 @@ serviceTitle: 'Peritaje de Obras Públicas'
 
 # Parent Service (for breadcrumb and linking back to pillar)
 parentService:
-  title: 'Peritajes de Construcción'
-  url: '/construccion/'
+  title: 'Peritajes en Construcción'
+  # ESTRUCTURA: Corregido enlace al pilar principal para una correcta arquitectura SEO.
+  url: '/peritajes-construccion/'
 
 # Key features in the hero section
 keyFeatures:
-  - 'Informes técnicos especializados para proyectos de infraestructuras'
-  - 'Dictámenes periciales en licitaciones y modificados de obra pública'
-  - 'Auditorías técnicas de calidad en obras civiles'
-  - 'Valoración de reclamaciones en contratos públicos'
+  # CLARIDAD: Textos más orientados al beneficio y la solución.
+  - 'Dictámenes técnicos para licitaciones y modificados de obra'
+  - 'Auditorías de calidad y cumplimiento normativo en obra civil'
+  - 'Argumentación técnica sólida para reclamaciones en contratos públicos'
+  - 'Valoración de sobrecostes, plazos y responsabilidades'
 
 # Service Process (for sidebar)
 serviceProcess:
@@ -44,19 +49,19 @@ serviceProcess:
 # Service Benefits (for sidebar)
 serviceBenefits:
   - 'Dictámenes técnicos con validez judicial y administrativa'
-  - 'Análisis especializado de proyectos de infraestructuras'
+  - 'Análisis experto de proyectos complejos de infraestructuras'
   - 'Valoración objetiva de modificados y reclamaciones'
   - 'Base técnica sólida para procedimientos administrativos'
   - 'Experiencia en tribunales y órganos de contratación'
 
 # Related Problems (optional)
 relatedProblems:
-  - title: 'Defectos Constructivos'
-    description: 'Análisis de patologías y deficiencias en obra pública'
-    url: '/defectos-constructivos/'
-  - title: 'Valoración de Daños'
-    description: 'Cuantificación de daños y perjuicios en infraestructuras'
-    url: '/valoracion-danos/'
+  - title: 'Disputas en Certificaciones'
+    description: 'Análisis de mediciones y pagos en obra pública.'
+    url: '/auditorias-obra/disputas-certificaciones-pago/'
+  - title: 'Vicios Ocultos y Defectos'
+    description: 'Identificación de defectos post-construcción en infraestructuras.'
+    url: '/peritajes/vicios-ocultos-defectos-constructivos/'
 
 # Client Testimonials
 testimonials:
@@ -68,27 +73,30 @@ testimonials:
     role: 'Departamento de Infraestructuras'
 
 # CTA Section
-ctaTitle: '¿Necesita un dictamen técnico para obra pública?'
-ctaDescription: 'Contacte con nuestro especialista para evaluar su caso y determinar la mejor estrategia técnica.'
+ctaTitle: '¿Necesita un dictamen técnico para una obra pública?'
+# TONO: Adaptado a "nosotros" y a un tono más formal (usted).
+ctaDescription: 'Contacte con nuestro equipo de peritos para evaluar su caso y determinar la mejor estrategia técnica.'
 
 # Introduction (shown in hero section)
 intro: |
-  <p>¿Necesita un informe pericial especializado en obra pública? ¿Está enfrentando conflictos técnicos en proyectos de infraestructuras o reclamaciones en contratos públicos?</p>
+  <p>¿Necesita un informe pericial especializado en obra pública? ¿Se enfrenta a conflictos técnicos en proyectos de infraestructuras o a reclamaciones en contratos públicos?</p>
   
-  <p>Como parte de nuestros <a href="/construccion/">servicios especializados de peritaje en construcción</a>, ofrecemos dictámenes técnicos rigurosos para resolver conflictos en proyectos de obra pública, desde análisis de modificados hasta auditorías de calidad y valoración de reclamaciones.</p>
+  <p>Como parte de nuestros <a href="/peritajes-construccion/">servicios de peritaje</a>, ofrecemos dictámenes técnicos rigurosos para resolver disputas en proyectos de obra pública, desde análisis de modificados hasta auditorías de calidad y valoración de reclamaciones.</p>
 
 # Hero Section
 hero:
-  tag: "Perito de Obras Públicas"
+  # TONO: Adaptado a "nosotros".
+  tag: "Peritos de Obras Públicas"
   title: "Peritajes en Obras Públicas"
   strong: "e Infraestructuras"
   description: "Informes periciales especializados en infraestructuras y obra pública. Dictámenes técnicos para licitaciones, modificados y reclamaciones en proyectos de ingeniería civil."
 
 # Servicios Específicos
 serviciosEspecificos:
-  titulo: "Servicios de"
+  # TONO: Adaptado a "nosotros".
+  titulo: "Nuestros Servicios de"
   highlight: "Peritaje en Obra Pública"
-  descripcion: "Servicios periciales especializados para resolver conflictos técnicos en proyectos de infraestructuras y obra pública."
+  descripcion: "Ofrecemos cobertura pericial experta para resolver conflictos técnicos en todo tipo de proyectos de infraestructuras y obra pública."
   servicios:
     - titulo: "Peritajes en Infraestructuras Viarias"
       descripcion: "Informes técnicos sobre calidad, patologías y cumplimiento normativo en carreteras, puentes y obras de fábrica."
@@ -107,26 +115,28 @@ serviciosEspecificos:
 porqueElegirnos:
   titulo: "Por Qué"
   highlight: "Elegirnos"
-  descripcion: "Experiencia contrastada en peritajes de obra pública y resolución de conflictos técnicos en infraestructuras."
+  descripcion: "Experiencia contrastada en peritajes de obra pública y en la resolución de conflictos técnicos en infraestructuras complejas."
   razones:
     - titulo: "Experiencia en Obra Pública"
-      descripcion: "Amplia trayectoria en proyectos de infraestructuras y conocimiento específico de normativa técnica."
+      descripcion: "Amplia trayectoria en proyectos de infraestructuras y conocimiento específico de la normativa técnica."
       icon: "certificate"
     - titulo: "Rigor Técnico"
-      descripcion: "Informes periciales fundamentados en análisis exhaustivos y normativa vigente."
+      descripcion: "Nuestros informes periciales se fundamentan en análisis exhaustivos y la normativa vigente."
       icon: "clipboard-check"
-    - titulo: "Perito Judicial Especializado"
-      descripcion: "Peritos colegiados con experiencia en tribunales y procedimientos administrativos."
+    - titulo: "Peritos Judiciales Especializados"
+      # TONO: Adaptado a "nosotros".
+      descripcion: "Somos peritos colegiados con experiencia en tribunales y procedimientos administrativos."
       icon: "shield-court"
     - titulo: "Respuesta Rápida"
-      descripcion: "Atención inmediata y plazos de entrega ajustados a las necesidades del procedimiento."
+      descripcion: "Ofrecemos atención inmediata y plazos de entrega ajustados a las necesidades del procedimiento."
       icon: "clock"
 
 # Proceso de Trabajo
 proceso:
-  titulo: "Proceso de"
+  # TONO: Adaptado a "nosotros".
+  titulo: "Nuestro Proceso de"
   highlight: "Trabajo"
-  descripcion: "Metodología clara y eficiente para la elaboración de informes periciales en obra pública."
+  descripcion: "Aplicamos una metodología clara y eficiente para la elaboración de informes periciales en obra pública."
   pasos:
     - numero: "01"
       titulo: "Análisis Inicial"
@@ -144,7 +154,6 @@ proceso:
       titulo: "Defensa del Informe"
       descripcion: "Presentación y defensa del dictamen ante tribunales o en procedimientos administrativos."
       icon: "shield-court"
-
 ---
 
 ## Peritaje en Obras Públicas: Expertise Técnica para Infraestructuras
