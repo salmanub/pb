@@ -1,9 +1,8 @@
 ---
-layout: "layouts/services-overview.njk"
-title: "Servicios Periciales en Barcelona | Informes Técnicos Profesionales"
-metaDescription: "Servicios expertos de peritaje en Barcelona: construcción, Home Inspector, seguros y peritajes judiciales. Informes técnicos detallados y certificados."
-permalink: /servicios/
-
+layout: "layouts/service-pillar.njk"
+title: "Servicios Periciales en Construcción | Perito Barcelona"
+description: "Servicios periciales en construcción y obra civil: auditorías técnicas, peritaje judicial, inspecciones y asesoramiento en estabilidad y refuerzo estructural en Barcelona."
+permalink: "/servicios-periciales/"
 lang: es
 translations:
   - lang: ca
@@ -16,84 +15,103 @@ eleventyNavigation:
   title: "Servicios"
   notshow: false
   order: 2
-
 hero:
-  title: "Nuestros Ámbitos de Especialización Pericial"
-  description: "Desde la inspección detallada de su futura vivienda hasta la resolución de complejos conflictos constructivos o la defensa de sus derechos frente a aseguradoras, aportamos rigor técnico y experiencia."
-  cta:
-    text: "Consultar mi Caso"
-    url: "/contacto/"
-
-servicesSection:
-  title: "Servicios Principales"
-  description: "Soluciones técnicas especializadas para cada necesidad"
+  title: "Servicios Periciales"
+  strong: "en Construcción y Obra Civil"
+  subtitle: "Auditorías, peritaje judicial, inspecciones y asesoramiento estructural"
+  description: "Evaluación independiente, diagnósticos precisos y dictámenes técnicos defendibles para resolver disputas y tomar decisiones informadas."
+  intro: "Como ingenieros técnicos y peritos colegiado, integramos metodología pericial y normativa para ofrecer informes sólidos, claros y accionables."
+  image: "/assets/images/hero-servicios-periciales.avif"
+serviceCluster:
+  title: "Áreas Especializadas"
+  intro: "Selecciona el ámbito de peritaje que necesitas"
   services:
-    - title: "Construcción e Inspección Técnica"
-      description: "Análisis exhaustivo de <strong>patologías, defectos constructivos, problemas estructurales y vicios ocultos</strong> en todo tipo de edificaciones."
-      icon: '<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>'
-      iconBgColor: "bg-cyan-500/10"
-      iconTextColor: "text-cyan-600"
-      url: "/construccion/"
-      ctaText: "Explorar Peritajes de Construcción →"
-      ctaBgColor: "bg-cyan-500"
-      ctaHoverBgColor: "hover:bg-cyan-600"
-
-    - title: "Inspección de Viviendas (Home Inspector)"
-      description: "Informes técnicos detallados <strong>pre-compra y pre-venta para pisos y casas en Barcelona</strong>."
-      icon: '<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>'
-      iconBgColor: "bg-indigo-500/10"
-      iconTextColor: "text-indigo-600"
-      url: "/home-inspector/"
-      ctaText: "Servicios de Home Inspector →"
-      ctaBgColor: "bg-indigo-500"
-      ctaHoverBgColor: "hover:bg-indigo-600"
-
-    - title: "Peritajes de Seguros"
-      description: "Defensa de los derechos del asegurado. <strong>Contraperitajes, valoraciones de daños</strong> y reclamaciones."
-      icon: '<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>'
-      iconBgColor: "bg-emerald-500/10"
-      iconTextColor: "text-emerald-600"
-      url: "/seguros/"
-      ctaText: "Explorar Peritajes de Seguros →"
-      ctaBgColor: "bg-emerald-500"
-      ctaHoverBgColor: "hover:bg-emerald-600"
-
-    - title: "Actuación como Perito Judicial"
-      description: "Elaboración de informes periciales y ratificación en juicio para <strong>procesos legales</strong>."
-      icon: '<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
-      iconBgColor: "bg-amber-500/10"
-      iconTextColor: "text-amber-600"
-      url: "/peritajes-judiciales/"
-      ctaText: "Más sobre Peritajes Judiciales →"
-      ctaBgColor: "bg-amber-500"
-      ctaHoverBgColor: "hover:bg-amber-600"
-
-processSection:
-  title: "Nuestro Proceso"
-  description: "Metodología clara y transparente en cada servicio"
+    - title: "Peritajes de Construcción"
+      description: "Patologías, defectos de ejecución y vicios ocultos en edificación y obra civil."
+      url: "/peritajes-construccion/"
+      icon: "home-repair"
+      features:
+        - "Grietas y deformaciones estructurales"
+        - "Humedades y filtraciones"
+        - "Defectos de ejecución"
+    - title: "Peritaje Judicial y de Parte"
+      description: "Informes periciales, ratificación y defensa técnica en litigios y mediaciones."
+      url: "/peritaje-judicial-obra/"
+      icon: "scale"
+      features:
+        - "Dictamen, conclusiones y evidencias"
+        - "Audiencia y ratificación"
+        - "Asistencia a mediación/arbitraje"
+    - title: "Auditoría Técnica de Obras"
+      description: "Control de calidad, cumplimiento normativo y detección temprana de deficiencias."
+      url: "/auditoria-tecnica-obra/"
+      icon: "clipboard-list"
+      features:
+        - "Revisión de partidas y mediciones"
+        - "No conformidades y propuestas"
+        - "Plan de acciones correctoras"
+    - title: "Inspecciones Técnicas Especializadas"
+      description: "Diagnóstico con instrumentación y ensayos no destructivos."
+      url: "/inspecciones-tecnicas-especializadas/"
+      icon: "search-check"
+      features:
+        - "Termografía / humedad"
+        - "Relevés y fisuración"
+        - "END según norma"
+    - title: "Asesoramiento Pericial en Reparación y Refuerzo"
+      description: "Evaluación de estabilidad y necesidad de intervención. (La ejecución/cálculo se realiza en otra empresa)."
+      url: "/asesoramiento-estructural/"
+      icon: "tool"
+      features:
+        - "Diagnóstico de seguridad estructural"
+        - "Criterios de reparación y refuerzo"
+        - "Memoria técnica de recomendaciones"
+    - title: "Peritajes de Seguros (secundario)"
+      description: "Valoraciones y contraperitajes cuando el caso lo requiere."
+      url: "/peritajes-seguros/"
+      icon: "shield"
+      features:
+        - "Daños por agua/incendio"
+        - "Coberturas y discrepancias"
+        - "Informes para reclamación"
+sections:
+  title: "¿Qué incluye un servicio pericial?"
+  what_is:
+    text: "<p>Aplicamos metodología pericial, normativa vigente y evidencia documental para emitir informes defensables, orientados a resolver disputas o prevenirlas.</p>"
+    features:
+      - "Inspección técnica in situ y análisis documental"
+      - "Hipótesis, pruebas y conclusiones motivadas"
+      - "Estimación de daños y cuantificación económica"
+      - "Propuestas de actuación: reparación/prevención"
+process:
   steps:
-    - title: "Consulta Inicial"
-      description: "Evaluamos su caso y necesidades específicas."
-      icon: "📞"
-    - title: "Propuesta Personalizada"
-      description: "Elaboramos un plan de acción detallado y presupuesto."
-      icon: "📝"
-    - title: "Ejecución del Servicio"
-      description: "Realizamos el peritaje o inspección con los más altos estándares."
-      icon: "🔍"
-    - title: "Entrega de Informe"
-      description: "Presentamos un informe técnico detallado y claro."
-      icon: "📊"
-    - title: "Seguimiento y Soporte"
-      description: "Brindamos asesoría y soporte post-servicio."
-      icon: "📞"
-
-finalCta:
-  title: "¿Necesita un Perito Experto en Barcelona?"
-  description: "Contáctenos para discutir su caso específico"
-  buttonText: "Solicitar Presupuesto"
-  url: "/contacto/"
+    - title: "Contacto y análisis preliminar"
+      description: "Comprensión del caso y alcance pericial."
+    - title: "Inspección y toma de datos"
+      description: "Visita técnica, ensayos y evidencias."
+    - title: "Informe pericial"
+      description: "Conclusiones motivadas y anexos."
+    - title: "Defensa"
+      description: "Ratificación y apoyo técnico."
+benefits:
+  items:
+    - icon: "check-shield"
+      title: "Independencia y rigor"
+      description: "Criterios técnicos objetivos."
+    - icon: "law"
+      title: "Defendible"
+      description: "Estructura pensada para litigio."
+    - icon: "target"
+      title: "Accionable"
+      description: "Recomendaciones claras."
+cta:
+  title: "¿Necesitas un informe pericial sólido?"
+  description: "Cuéntanos tu caso y te proponemos el enfoque técnico adecuado."
+  button:
+    text: "Solicitar evaluación"
+    url: "/contacto/"
 ---
+
 
 <section class="prose prose-lg max-w-3xl mx-auto mt-12">
   <h1>{{ intro.title }}</h1>

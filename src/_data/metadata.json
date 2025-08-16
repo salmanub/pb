@@ -4,7 +4,8 @@
     "description": "Informes periciales técnicos y de seguros en Barcelona",
     "url": "https://perito.barcelona",
     "themeColor": "#2048e6",
-    "faviconDataUriPath": "/images/logos/favicon.txt"
+    "faviconDataUriPath": "/images/logos/favicon.txt",
+    "revisandoContenidos": true
   },
   "default_lang": "es",
   "languages": ["es", "en", "ca"],
@@ -409,6 +410,22 @@
             "url": "/en/terms/"
           }
         ]
+      }
+    }
+  },
+  "notificaciones": {
+    "actualizandoContenidos": {
+      "es": {
+        "titulo": "🔄 Actualizando contenidos",
+        "mensaje": "Estamos mejorando la información de nuestra web. Disculpe las molestias."
+      },
+      "en": {
+        "titulo": "🔄 Updating contents",
+        "mensaje": "We are improving our website information. Sorry for the inconvenience."
+      },
+      "ca": {
+        "titulo": "🔄 Actualitzant continguts",
+        "mensaje": "Estem millorant la informació del nostre web. Disculpeu les molèsties."
       }
     }
   }

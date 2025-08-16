@@ -1,0 +1,39 @@
+{% if metadata.site.revisandoContenidos %}
+<div id="floating-notice" 
+     class="fixed bottom-24 md:bottom-8 left-[50%] -translate-x-[50%] z-50 px-6 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-lg shadow-lg flex items-center gap-3 transform opacity-0 translate-y-2" 
+     style="visibility: hidden;">
+    <div class="flex flex-col text-sm">
+        <strong class="font-medium">
+            {{ metadata.notificaciones.actualizandoContenidos[lang].titulo }}
+        </strong>
+        <span class="text-white/90">
+            {{ metadata.notificaciones.actualizandoContenidos[lang].mensaje }}
+        </span>
+    </div>
+    <button onclick="closeNotice()" class="text-white/80 hover:text-white p-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+    </button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const notice = document.getElementById('floating-notice');
+    
+    // Mostrar el aviso después de un pequeño delay
+    setTimeout(() => {
+        notice.style.visibility = 'visible';
+        notice.classList.add('opacity-100', 'translate-y-0', 'transition-all', 'duration-500', 'ease-out');
+        notice.classList.remove('opacity-0', 'translate-y-2');
+    }, 500);
+});
+
+function closeNotice() {
+    const notice = document.getElementById('floating-notice');
+    notice.classList.remove('opacity-100', 'translate-y-0');
+    notice.classList.add('opacity-0', 'translate-y-2');
+    setTimeout(() => notice.remove(), 500);
+}
+</script>
+{% endif %}
