@@ -85,10 +85,11 @@
                     <div class="relative z-10">
                         <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 group-hover/card:scale-110 group-hover/card:bg-cyan-500/20 transition-all duration-500">
                             <div class="w-8 h-8 text-cyan-500">
+                                {% set iconPath = "icons/" + service.icon + ".svg" %}
                                 {% if service.icon %}
-                                    {% include "icons/" + service.icon + ".svg" ignore missing %}
+                                    {% include iconPath ignore missing %}
                                 {% else %}
-                                    {% include "icons/building.svg" %}
+                                    {% include "icons/document.svg" %}
                                 {% endif %}
                             </div>
                         </div>
@@ -175,7 +176,11 @@
                 <div class="bg-white/5 backdrop-blur-sm p-8 rounded-xl relative group hover:bg-white/10 transition-all duration-300">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-cyan-400/20 text-cyan-400 group-hover:scale-110 transition-transform">
-                            <span class="text-2xl font-bold">{{ loop.index }}</span>
+                            {% if step.icon %}
+                                {% include "icons/" + step.icon + ".svg" ignore missing %}
+                            {% else %}
+                                {% include "icons/clock.svg" %}
+                            {% endif %}
                         </div>
                     </div>
                     <h3 class="text-xl font-bold text-cyan-400 mb-4">{{ step.title }}</h3>
