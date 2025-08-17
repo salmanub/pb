@@ -74,6 +74,23 @@
 /peritaje-estructuras/* / 301
 /home-inspector/* / 301
 
+# --- Redirecciones por idioma no disponible ---
+
+# Español - verifica si la página existe en otros idiomas
+/es/* /no-disponible/ 301 !exists:/:splat.html
+/es/* /no-disponible/ 301 !exists:/es/:splat.html
+/es/* /:splat 301 exists:/:splat.html
+
+# Catalán - verifica si la página existe en otros idiomas
+/ca/* /ca/no-disponible/ 301 !exists:/ca/:splat.html
+/ca/* /ca/no-disponible/ 301 !exists:/:splat.html
+/ca/* /ca/:splat 301 exists:/ca/:splat.html
+
+# Inglés - verifica si la página existe en otros idiomas
+/en/* /en/not-available/ 301 !exists:/en/:splat.html
+/en/* /en/not-available/ 301 !exists:/:splat.html
+/en/* /en/:splat 301 exists:/en/:splat.html
+
 # --- Redirección por defecto para 404s ---
 /* / 302
 
