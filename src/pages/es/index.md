@@ -55,7 +55,7 @@ highlightedServices:
   items:
     - titulo: "Informes Periciales"
       descripcion: "Elaboramos informes periciales (de parte y judiciales) para analizar patologías, vicios ocultos y todo tipo de defectos constructivos."
-      url: "/peritajes-construccion/"
+      url: "/informes-periciales/"
       icon: "scale"
       cta: "Ver más"
     - titulo: "Auditorías de Obra"
@@ -65,7 +65,7 @@ highlightedServices:
       cta: "Ver más"
     - titulo: "Asesoramiento Estructural"
       descripcion: "Emitimos un diagnóstico experto de patologías estructurales y ofrecemos consultoría sobre las mejores soluciones de refuerzo."
-      url: "/asesoramiento-reparacion-refuerzo-estructural/"
+      url: "/asesoramiento-estructural/"
       icon: "tool"
       cta: "Ver más"
 

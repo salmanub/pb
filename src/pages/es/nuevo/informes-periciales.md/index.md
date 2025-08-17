@@ -1,0 +1,150 @@
+---
+layout: "layouts/service-pillar.njk"
+# SEO: Título potente con las keywords principales y geolocalización.
+title: "Informes Periciales en Barcelona | Peritos Judiciales Expertos"
+# SEO: Descripción activa que resume el valor y los casos de uso.
+description: "Elaboramos informes periciales técnicos, de parte y judiciales en Barcelona. Nuestros dictámenes sobre patologías, vicios ocultos y disputas de obra son la prueba clave para su reclamación."
+permalink: "/informes-periciales/"
+lang: "es"
+
+translations:
+  - lang: ca
+    permalink: /ca/informes-pericials/
+    title: "Informes Pericials a Barcelona | Pèrits Judicials Experts"
+    description: "Elaborem informes pericials tècnics, de part i judicials a Barcelona. Els nostres dictàmens sobre patologies, vicis ocults i disputes d'obra són la prova clau per a la seva reclamació."
+  - lang: en
+    permalink: /en/expert-witness-reports/
+    title: "Expert Witness Reports in Barcelona | Expert Judicial Engineers"
+    description: "We produce technical, party-appointed, and judicial expert reports in Barcelona. Our findings on pathologies, hidden defects, and construction disputes are the key evidence for your claim."
+
+eleventyNavigation:
+  key: "Informes Periciales"
+  title: "Informes Periciales"
+  notshow: false
+  order: 1 # El servicio más importante, va primero en el menú.
+
+# Hero Section
+hero:
+  title: "Informes Periciales Técnicos"
+  strong: "La Prueba Clave para su Reclamación"
+  subtitle: "Dictámenes objetivos sobre patologías, defectos constructivos y disputas de obra"
+  description: "Como peritos ingenieros colegiados, elaboramos informes periciales con el máximo rigor técnico para que disponga de una prueba sólida, clara y defendible. Nuestro objetivo es traducir la complejidad técnica en argumentos irrefutables para proteger sus intereses."
+  intro: "Un dictamen pericial bien fundamentado es la herramienta esencial para negociar con seguridad, resolver conflictos y, si es necesario, obtener una sentencia favorable en un procedimiento judicial."
+  image: "/assets/images/informe-pericial-barcelona-hero.avif"
+
+# Sección "Qué es un Informe Pericial"
+sections:
+  title: "¿Qué es un Informe Pericial y por qué es fundamental?"
+  what_is:
+    text: >
+      Un informe pericial es un documento técnico redactado por un experto cualificado, que analiza un hecho o estado de cosas desde una perspectiva técnica para exponer unas conclusiones objetivas. En el ámbito de la construcción, es la prueba determinante para demostrar la causa de un daño, valorar una negligencia o cuantificar una reparación.
+    features:
+      - "Identifica la causa raíz de patologías (grietas, humedades, etc.)"
+      - "Determina responsabilidades técnicas en defectos constructivos"
+      - "Cuantifica económicamente los daños y el coste de la reparación"
+      - "Documenta vicios ocultos para poder reclamar legalmente"
+      - "Actúa como prueba fundamental en procedimientos judiciales"
+      - "Aporta solidez técnica en negociaciones con aseguradoras y constructoras"
+
+# Service Cluster: Los diferentes tipos de informes que se ofrecen
+serviceCluster:
+  title: "Tipos de Informes Periciales que Realizamos"
+  intro: "Ofrecemos una solución pericial para cada necesidad, adaptando nuestro análisis al objetivo y al contexto de la reclamación:"
+  services:
+    - title: "Informe Pericial de Parte"
+      description: "Elaborado a petición de una de las partes para fundamentar su postura en una negociación, mediación o demanda judicial."
+      url: "/informes-periciales/informe-de-parte/"
+      icon: "file-text"
+      features:
+        - "Visión técnica experta"
+        - "Argumentación para demanda"
+        - "Base para negociación"
+    - title: "Dictamen Pericial Judicial"
+      description: "Realizado por designación directa de un juzgado, actuando como auxiliares de la justicia con total imparcialidad."
+      url: "/informes-periciales/dictamen-judicial/"
+      icon: "scale"
+      features:
+        - "Designación judicial"
+        - "Máxima objetividad"
+        - "Ratificación en sede judicial"
+    - title: "Informe de Patologías Estructurales"
+      description: "Análisis de grietas, fisuras, deformaciones y otros daños que afectan a la seguridad y estabilidad de un inmueble."
+      url: "/informes-periciales/patologias-estructurales/"
+      icon: "alert-triangle"
+      features:
+        - "Diagnóstico de grietas"
+        - "Evaluación de seguridad"
+        - "Propuestas de refuerzo"
+    - title: "Informe por Vicios Ocultos"
+      description: "Identificación y documentación de defectos graves no aparentes en el momento de la compraventa de un inmueble."
+      url: "/informes-periciales/vicios-ocultos/"
+      icon: "search-check"
+      features:
+        - "Inspección post-compra"
+        - "Pruebas no destructivas"
+        - "Base para reclamación"
+    - title: "Informes para Comunidades de Propietarios"
+      description: "Dictámenes sobre elementos comunes (fachadas, cubiertas, garajes) para reclamaciones a la constructora o al seguro."
+      url: "/informes-periciales/comunidades-propietarios/"
+      icon: "users"
+      features:
+        - "Análisis de elementos comunes"
+        - "Reclamaciones a constructora"
+        - "ITE desfavorable"
+    - title: "Contrainformes o Informes Contradictorios"
+      description: "Análisis crítico y técnico de un informe pericial presentado por la parte contraria, detectando errores o carencias."
+      url: "/informes-periciales/contrainforme-pericial/"
+      icon: "copy-x"
+      features:
+        - "Revisión de informes"
+        - "Detección de errores"
+        - "Nuevas líneas de defensa"
+
+# Proceso de Trabajo
+process:
+  title: "Nuestra Metodología de Actuación"
+  steps:
+    - title: "Estudio Previo y Viabilidad"
+      description: "Analizamos su caso y la documentación disponible para confirmar la viabilidad de la pericial."
+    - title: "Inspección Técnica y Toma de Datos"
+      description: "Visitamos el inmueble o la obra para realizar una inspección exhaustiva y recopilar todas las evidencias."
+    - title: "Análisis y Redacción del Informe"
+      description: "Estudiamos los datos, aplicamos la normativa y redactamos un dictamen claro, estructurado y bien fundamentado."
+    - title: "Entrega y Ratificación Judicial"
+      description: "Le entregamos el informe y, si el procedimiento lo requiere, acudimos a sede judicial para defenderlo y ratificarlo."
+
+# Beneficios
+benefits:
+  items:
+    - icon: "check-shield"
+      title: "Rigor Técnico e Imparcialidad"
+      description: "Nuestras conclusiones se basan en datos y normativas, no en opiniones."
+    - icon: "construction"
+      title: "Visión de Ingenieros"
+      description: "Aportamos un profundo conocimiento de estructuras, materiales y procesos constructivos."
+    - icon: "law"
+      title: "Validez Judicial"
+      description: "Redactamos informes diseñados para ser una prueba sólida y defendible en un juicio."
+    - icon: "file-check"
+      title: "Claridad Expositiva"
+      description: "Explicamos conceptos técnicos complejos de forma comprensible para abogados, jueces y clientes."
+
+# Testimonios
+testimonials:
+  title: "La Confianza de Nuestros Clientes"
+  items:
+    - quote: "El informe pericial fue la pieza clave que nos permitió ganar el caso. Su claridad y rigor técnico fueron alabados por nuestro abogado."
+      author: "Marta Puig, Propietaria Afectada"
+      role: "Caso: Reclamación por vicios ocultos"
+    - quote: "Necesitábamos un contrainforme sólido para rebatir la pericial de la parte contraria y lo consiguieron. Un trabajo impecable y muy profesional."
+      author: "Bufete de Abogados BCN"
+      role: "Caso: Disputa de obra"
+
+# CTA final
+cta:
+  title: "¿Necesita un Informe Pericial para fundamentar su caso?"
+  description: "Contacte con nuestro equipo. Realizaremos un análisis preliminar sin compromiso para orientarle sobre la mejor estrategia."
+  button:
+    text: "Solicitar Análisis del Caso"
+    url: "/contacto/"
+---
