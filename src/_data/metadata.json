@@ -452,5 +452,34 @@
         "mensaje": "Estem millorant la informació del nostre web. Disculpeu les molèsties."
       }
     }
+  },
+  "servicePillar": {
+    "es": {
+      "processTitle": "Nuestro Proceso",
+      "processStrong": "Proceso",
+      "processDescription": "Un método claro y transparente para resolver tu caso",
+      "whyChooseUs": "¿Por Qué Elegirnos?",
+      "expertsTitle": "Expertos en",
+      "expertsStrong": "Peritajes",
+      "successCasesTitle": "Casos de Éxito Relevantes"
+    },
+    "en": {
+      "processTitle": "Our Process",
+      "processStrong": "Process",
+      "processDescription": "A clear and transparent method to resolve your case",
+      "whyChooseUs": "Why Choose Us?",
+      "expertsTitle": "Experts in",
+      "expertsStrong": "Expert Reports",
+      "successCasesTitle": "Relevant Success Cases"
+    },
+    "ca": {
+      "processTitle": "El Nostre Procés",
+      "processStrong": "Procés",
+      "processDescription": "Un mètode clar i transparent per resoldre el teu cas",
+      "whyChooseUs": "Per Què Escollir-nos?",
+      "expertsTitle": "Experts en",
+      "expertsStrong": "Peritatges",
+      "successCasesTitle": "Casos d'Èxit Rellevants"
+    }
   }
 }

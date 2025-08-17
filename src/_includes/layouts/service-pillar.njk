@@ -166,9 +166,9 @@
         <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
             <div class="max-w-3xl mx-auto text-center mb-16">
                 <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-white mb-6">
-                    Nuestro <strong class="text-cyan-400 font-bold">Proceso</strong>
+                    {{ metadata.servicePillar[lang].processTitle | replace(metadata.servicePillar[lang].processStrong, '<strong class="text-cyan-400 font-bold">' + metadata.servicePillar[lang].processStrong + '</strong>') | safe }}
                 </h2>
-                <p class="text-xl text-white/80">Un método claro y transparente para resolver tu caso</p>
+                <p class="text-xl text-white/80">{{ metadata.servicePillar[lang].processDescription }}</p>
             </div>
 
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -195,9 +195,9 @@
     <section class="relative py-24 md:py-32 bg-gradient-to-b from-slate-50 to-white">
         <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
             <div class="max-w-3xl mx-auto text-center mb-16">
-                <span class="text-cyan-500 font-semibold tracking-wider uppercase mb-4 block">¿Por Qué Elegirnos?</span>
+                <span class="text-cyan-500 font-semibold tracking-wider uppercase mb-4 block">{{ metadata.servicePillar[lang].whyChooseUs }}</span>
                 <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 mb-6">
-                    Expertos en <strong class="text-cyan-500 font-bold">Peritajes</strong>
+                    {{ metadata.servicePillar[lang].expertsTitle }} <strong class="text-cyan-500 font-bold">{{ metadata.servicePillar[lang].expertsStrong }}</strong>
                 </h2>
             </div>
 
@@ -224,7 +224,7 @@
             <!-- Título de sección -->
             <div class="max-w-3xl mx-auto text-center mb-16">
                  <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 mb-6">
-                    {{ testimonials.title | default("Casos de Éxito Relevantes") }}
+                    {{ testimonials.title | default(metadata.servicePillar[lang].successCasesTitle) }}
                 </h2>
             </div>
 
