@@ -1,25 +1,19 @@
 # Redirecciones del sitio antiguo al nuevo
 # Última actualización: Agosto 2025
 
-# --- Rutas actuales del sitio (mantener estas exactamente como están) ---
-/asesoramiento-estructural/diagnostico-patologias /asesoramiento-estructural/diagnostico-patologias 200
-/asesoramiento-estructural/refuerzo-fibra-carbono /asesoramiento-estructural/refuerzo-fibra-carbono 200
-/asesoramiento-estructural/inspeccion-puentes /asesoramiento-estructural/inspeccion-puentes 200
-/asesoramiento-estructural/muros-contencion-taludes /asesoramiento-estructural/muros-contencion-taludes 200
-/asesoramiento-estructural/refuerzo-cimentaciones /asesoramiento-estructural/refuerzo-cimentaciones 200
-/asesoramiento-estructural/reparacion-hormigon /asesoramiento-estructural/reparacion-hormigon 200
+# --- Rutas base importantes (redirección a versión con trailing slash) ---
+/asesoramiento-estructural /asesoramiento-estructural/ 301
+/informes-periciales /informes-periciales/ 301
+/auditorias-de-obra /auditorias-de-obra/ 301
+/colaboracion-abogados /colaboracion-abogados/ 301
 
-# Rutas base importantes (sin trailing slash)
-/asesoramiento-estructural /asesoramiento-estructural/ 200
-/informes-periciales /informes-periciales/ 200
-/auditorias-de-obra /auditorias-de-obra/ 200
-/colaboracion-abogados /colaboracion-abogados/ 200
-
-# Rutas con trailing slash
-/asesoramiento-estructural/ /asesoramiento-estructural 200
-/informes-periciales/ /informes-periciales 200
-/auditorias-de-obra/ /auditorias-de-obra 200
-/colaboracion-abogados/ /colaboracion-abogados 200
+# --- Servicios de asesoramiento estructural ---
+/asesoramiento-estructural/diagnostico-patologias /asesoramiento-estructural/diagnostico-patologias/ 301
+/asesoramiento-estructural/refuerzo-fibra-carbono /asesoramiento-estructural/refuerzo-fibra-carbono/ 301
+/asesoramiento-estructural/inspeccion-puentes /asesoramiento-estructural/inspeccion-puentes/ 301
+/asesoramiento-estructural/muros-contencion-taludes /asesoramiento-estructural/muros-contencion-taludes/ 301
+/asesoramiento-estructural/refuerzo-cimentaciones /asesoramiento-estructural/refuerzo-cimentaciones/ 301
+/asesoramiento-estructural/reparacion-hormigon /asesoramiento-estructural/reparacion-hormigon/ 301
 
 # --- Redirecciones del sitio antiguo ---
 
