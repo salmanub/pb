@@ -165,38 +165,33 @@
   "footer": {
     "es": {
       "brand": {
-        "description": "Perito judicial en Barcelona especializado en informes periciales de construcción, patologías estructurales y valoración de daños por siniestros. Más de 15 años de experiencia en peritajes técnicos y judiciales.",
+        "description": "Despacho de peritos ingenieros colegiados en Barcelona, especializados en informes técnicos, auditorías de obra y asesoramiento estructural para edificación y obra civil.",
         "social": [
           {
             "url": "https://www.linkedin.com/company/peritobarcelona",
             "label": "LinkedIn",
             "icon": "linkedin"
-          },
-          {
-            "url": "https://twitter.com/peritobarcelona",
-            "label": "Twitter",
-            "icon": "twitter"
           }
         ]
       },
       "services": {
-        "title": "Servicios",
+        "title": "Nuestros Servicios",
         "items": [
           {
-            "title": "Auditoría Técnica de Obras",
-            "url": "/auditoria-tecnica-obra/"
+            "title": "Informes Periciales",
+            "url": "/informes-periciales/"
           },
           {
-            "title": "Peritaje Judicial y de Parte",
-            "url": "/peritaje-judicial-obra/"
+            "title": "Asesoramiento Estructural",
+            "url": "/asesoramiento-estructural/"
           },
           {
-            "title": "Inspecciones Técnicas Especializadas",
-            "url": "/inspecciones-tecnicas-especializadas/"
+            "title": "Auditorías de Obra",
+            "url": "/auditorias-de-obra/"
           },
           {
-            "title": "Asesoría en Disputas de Obra",
-            "url": "/asesoria-disputas-obra/"
+            "title": "Peritajes de Obras Públicas",
+            "url": "/obras-publicas/"
           }
         ]
       },
@@ -233,53 +228,48 @@
         ]
       },
       "bottom": {
-        "copyright": "© 2025 PERITO BARCELONA | Informes Periciales",
+        "copyright": "© 2025 Perito.Barcelona | Todos los derechos reservados",
         "links": [
           {
             "text": "Política de Privacidad",
             "url": "/privacidad/"
           },
           {
-            "text": "Términos y Condiciones",
-            "url": "/terminos/"
+            "text": "Aviso Legal",
+            "url": "/aviso-legal/"
           }
         ]
       }
     },
     "ca": {
       "brand": {
-        "description": "Pèrit judicial a Barcelona especialitzat en informes pericials de construcció, patologies estructurals i valoració de danys per sinistres. Més de 15 anys d'experiència en peritatges tècnics i judicials.",
+        "description": "Despatx de pèrits enginyers col·legiats a Barcelona, especialitzats en informes tècnics, auditories d'obra i assessorament estructural per a edificació i obra civil.",
         "social": [
           {
             "url": "https://www.linkedin.com/company/peritobarcelona",
             "label": "LinkedIn",
             "icon": "linkedin"
-          },
-          {
-            "url": "https://twitter.com/peritobarcelona",
-            "label": "Twitter",
-            "icon": "twitter"
           }
         ]
       },
       "services": {
-        "title": "Serveis",
+        "title": "Els Nostres Serveis",
         "items": [
           {
-            "title": "Auditoria Tècnica d'Obres",
-            "url": "/ca/auditoria-tecnica-obra/"
+            "title": "Informes Pericials",
+            "url": "/ca/informes-pericials/"
           },
           {
-            "title": "Peritatge Judicial i de Part",
-            "url": "/ca/peritatge-judicial-obra/"
+            "title": "Assessorament Estructural",
+            "url": "/ca/assessorament-estructural/"
           },
           {
-            "title": "Inspeccions Tècniques Especialitzades",
-            "url": "/ca/inspeccions-tecniques-especialitzades/"
+            "title": "Auditories d'Obra",
+            "url": "/ca/auditories-d-obra/"
           },
           {
-            "title": "Assessorament en Disputes d'Obra",
-            "url": "/ca/assessorament-disputes-obra/"
+            "title": "Peritatges d'Obres Públiques",
+            "url": "/ca/obres-publiques/"
           }
         ]
       },
@@ -316,53 +306,48 @@
         ]
       },
       "bottom": {
-        "copyright": "© 2025 PERITO BARCELONA | Informes Pericials",
+        "copyright": "© 2025 Perito.Barcelona | Tots els drets reservats",
         "links": [
           {
             "text": "Política de Privacitat",
             "url": "/ca/privacitat/"
           },
           {
-            "text": "Termes i Condicions",
-            "url": "/ca/termes/"
+            "text": "Avís Legal",
+            "url": "/ca/avis-legal/"
           }
         ]
       }
     },
     "en": {
       "brand": {
-        "description": "Expert witness in Barcelona specializing in construction expert reports, structural pathologies and insurance damage assessment. Over 15 years of experience in technical and judicial expertise.",
+        "description": "Office of chartered engineers in Barcelona, specializing in technical reports, construction audits, and structural consulting for buildings and civil works.",
         "social": [
           {
             "url": "https://www.linkedin.com/company/peritobarcelona",
             "label": "LinkedIn",
             "icon": "linkedin"
-          },
-          {
-            "url": "https://twitter.com/peritobarcelona",
-            "label": "Twitter",
-            "icon": "twitter"
           }
         ]
       },
       "services": {
-        "title": "Services",
+        "title": "Our Services",
         "items": [
           {
-            "title": "Technical Construction Audit",
-            "url": "/en/construction-technical-audit/"
+            "title": "Expert Witness Reports",
+            "url": "/en/expert-witness-reports/"
           },
           {
-            "title": "Judicial and Private Expert Witness Services",
-            "url": "/en/judicial-expert-witness/"
+            "title": "Structural Consulting",
+            "url": "/en/structural-consulting/"
           },
           {
-            "title": "Specialized Technical Inspections",
-            "url": "/en/specialized-technical-inspections/"
+            "title": "Construction Audits",
+            "url": "/en/construction-audits/"
           },
           {
-            "title": "Construction Dispute Advisory",
-            "url": "/en/construction-dispute-advisory/"
+            "title": "Public Works Expertise",
+            "url": "/en/public-works/"
           }
         ]
       },
@@ -399,20 +384,20 @@
         ]
       },
       "bottom": {
-        "copyright": "© 2025 PERITO BARCELONA | Expert Reports",
+        "copyright": "© 2025 Perito.Barcelona | All rights reserved",
         "links": [
           {
             "text": "Privacy Policy",
             "url": "/en/privacy/"
           },
           {
-            "text": "Terms & Conditions",
-            "url": "/en/terms/"
+            "text": "Legal Notice",
+            "url": "/en/legal-notice/"
           }
         ]
       }
     }
-  },
+},
   "notificaciones": {
     "actualizandoContenidos": {
       "es": {
