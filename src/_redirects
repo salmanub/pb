@@ -1,7 +1,15 @@
 # Redirecciones del sitio antiguo al nuevo
 # Última actualización: Agosto 2025
 
-# --- Redirecciones principales ---
+# --- Primero servir todas las URLs nuevas y válidas ---
+/asesoramiento-estructural/* /:splat 200
+/informes-periciales/* /:splat 200
+/auditorias-de-obra/* /:splat 200
+/colaboracion-abogados/* /:splat 200
+/ca/* /:splat 200
+/en/* /:splat 200
+
+# --- Redirecciones del sitio antiguo ---
 
 # Informes Periciales (sección principal)
 /servicios-periciales/* /informes-periciales/ 301
@@ -74,29 +82,24 @@
 /peritaje-estructuras/* / 301
 /home-inspector/* / 301
 
+# Diagnóstico de Patologías
+/asesoramiento-estructural/diagnostico-patologias/* /asesoramiento-estructural/diagnostico-patologias/ 200
+/ca/assessorament-estructural/diagnostic-patologies/* /ca/assessorament-estructural/diagnostic-patologies/ 200
+/en/structural-consulting/pathology-diagnosis/* /en/structural-consulting/pathology-diagnosis/ 200
+
 # --- Redirecciones por idioma no disponible ---
 
-# Español - verifica si la página existe en otros idiomas
-/es/* /no-disponible/ 301 !exists:/:splat.html
-/es/* /no-disponible/ 301 !exists:/es/:splat.html
-/es/* /:splat 301 exists:/:splat.html
+# Español - redirige a no-disponible solo si la página no existe
+/es/* /no-disponible/ 301 !exists:/:splat
 
-# Catalán - verifica si la página existe en otros idiomas
-/ca/* /ca/no-disponible/ 301 !exists:/ca/:splat.html
-/ca/* /ca/no-disponible/ 301 !exists:/:splat.html
-/ca/* /ca/:splat 301 exists:/ca/:splat.html
+# Catalán - redirige a no-disponible solo si la página no existe
+/ca/* /ca/no-disponible/ 301 !exists:/ca/:splat
 
-# Inglés - verifica si la página existe en otros idiomas
-/en/* /en/not-available/ 301 !exists:/en/:splat.html
-/en/* /en/not-available/ 301 !exists:/:splat.html
-/en/* /en/:splat 301 exists:/en/:splat.html
+# Inglés - redirige a no-disponible solo si la página no existe
+/en/* /en/not-available/ 301 !exists:/en/:splat
 
-# --- Redirección por defecto para 404s ---
-/* / 302
-
-# --- Servir contenido existente ---
+# --- Servir el resto del contenido existente ---
 /* /:splat 200
-/seguros/service1/ / 301
 /casos-de-exito/3 / 301
 /ca/construccio/informes-tecnic/ / 301
 /en/structural-survey/ / 301
