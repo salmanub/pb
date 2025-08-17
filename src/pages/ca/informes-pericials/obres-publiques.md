@@ -3,7 +3,7 @@ layout: layouts/service-child.njk
 title: "Pèrit Obres Públiques Barcelona | Informes per a Licitacions i Contractes"
 subtitle: "Dictàmens tècnics especialitzats en projectes d'obra pública i enginyeria civil"
 description: "Realitzem informes pericials per a obres públiques a Barcelona. Assessorament tècnic expert en licitacions, modificats d'obra i reclamacions en contractes públics."
-permalink: "/ca/informes-pericials/obres-publiques/"
+permalink: "/ca/obres-publiques/"
 lang: "ca"
 eleventyNavigation:
   key: "Obres Públiques"
