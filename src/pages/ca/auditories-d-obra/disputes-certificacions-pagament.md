@@ -5,6 +5,11 @@ subtitle: "Anàlisi tècnica independent d'amidaments, preus i obra realment exe
 description: "Resolem conflictes en el pagament de certificacions d'obra a Barcelona mitjançant una auditoria tècnica. Verifiquem amidaments reals i detectem sobrecostos o treballs no executats."
 permalink: "/ca/auditories-d-obra/disputes-certificacions-pagament/"
 lang: "ca"
+translations:
+  - lang: "es"
+    permalink: "/auditorias-obra/disputas-certificaciones-pago/"
+  - lang: "en"
+    permalink: "/en/construction-audits/payment-certification-disputes/"
 eleventyNavigation:
   key: "Disputes en Certificacions"
   parent: "Auditories d'Obra"

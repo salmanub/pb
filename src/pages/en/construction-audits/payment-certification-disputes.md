@@ -5,6 +5,11 @@ subtitle: "Independent technical analysis of measurements, prices, and actual ex
 description: "We resolve construction payment certificate disputes in Barcelona through technical audits. We verify actual measurements and detect cost overruns or unexecuted work."
 permalink: "/en/construction-audits/payment-certification-disputes/"
 lang: "en"
+translations:
+  - lang: "es"
+    permalink: "/auditorias-obra/disputas-certificaciones-pago/"
+  - lang: "ca"
+    permalink: "/ca/auditories-d-obra/disputes-certificacions-pagament/"
 eleventyNavigation:
   key: "Payment Certificate Disputes"
   parent: "Construction Audits"

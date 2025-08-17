@@ -7,7 +7,7 @@ permalink: "/ca/informes-pericials/vicis-ocults/"
 lang: "ca"
 translations:
   - lang: "es"
-    permalink: "/informes-pericials/vicios-ocultos/"
+    permalink: "/informes-periciales/vicios-ocultos/"
   - lang: "en"
     permalink: "/en/expert-witness-reports/hidden-defects/"
 eleventyNavigation:

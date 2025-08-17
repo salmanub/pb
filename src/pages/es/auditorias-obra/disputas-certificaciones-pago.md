@@ -5,6 +5,11 @@ subtitle: 'Análisis técnico independiente de mediciones, precios y obra realme
 description: "Resolvemos conflictos en el pago de certificaciones de obra en Barcelona mediante una auditoría técnica. Verificamos mediciones reales y detectamos sobrecostes o trabajos no ejecutados."
 permalink: "/auditorias-obra/disputas-certificaciones-pago/"
 lang: 'es'
+translations:
+  - lang: 'ca'
+    permalink: '/ca/auditories-d-obra/disputes-certificacions-pagament/'
+  - lang: 'en'
+    permalink: '/en/construction-audits/payment-certification-disputes/'
 eleventyNavigation:
   key: "Disputas en Certificaciones"
   parent: "Auditorías de Obra"
