@@ -144,3 +144,37 @@ cta:
     text: "Solicitar Diagnóstico Estructural"
     url: "/contacto/"
 ---
+
+## La Decisión más Importante: Un Diagnóstico Estructural Independiente
+
+Cuando una estructura presenta síntomas preocupantes —una grieta que crece, una viga que se deforma, la corrosión que avanza— la primera decisión es la más crítica: ¿quién debe diagnosticar el problema? Acudir directamente a una empresa que repara y ejecuta puede llevar a soluciones sobredimensionadas o que no atacan la causa real del problema.
+
+Nuestro servicio de **asesoramiento estructural** se basa en un principio fundamental: **primero, el diagnóstico experto e imparcial; después, la solución.** Como ingenieros civiles independientes, nuestro único compromiso es con la seguridad, la durabilidad y la eficiencia económica. Analizamos su estructura, determinamos el origen exacto de la patología y proyectamos la solución técnica óptima para su caso concreto.
+
+## Nuestro Campo de Actuación: De Edificios a Grandes Infraestructuras
+
+Nuestra experiencia como Ingenieros Civiles nos permite abordar un amplio espectro de estructuras, aplicando los mismos principios de rigor técnico en cada una de ellas:
+
+* **En Edificación:** Analizamos y proyectamos soluciones para todo tipo de inmuebles: edificios residenciales, naves industriales, aparcamientos, viviendas unifamiliares, etc. Nos centramos en problemas comunes como el refuerzo de forjados, la reparación de vigas y pilares, o el recalce de cimentaciones.
+* **En Obra Civil:** Ofrecemos consultoría experta para infraestructuras. Realizamos inspecciones de puentes y pasarelas, analizamos la estabilidad de muros de contención y taludes, y proyectamos reparaciones para estructuras de hormigón de gran envergadura sometidas a condiciones exigentes.
+
+## Soluciones Avanzadas: Más Allá de la Reparación Tradicional
+
+La ingeniería de estructuras avanza constantemente. No nos limitamos a las soluciones convencionales; estamos especializados en el cálculo y la proyección de técnicas avanzadas que ofrecen mejores prestaciones con una menor intervención. Destacamos especialmente en el diseño de **refuerzos con composites como la fibra de carbono (CFRP)**, utilizando sistemas de empresas líderes como SIKA®, para aumentar la capacidad portante de vigas y pilares de forma eficaz y duradera.
+
+## El Puente hacia la Ejecución: El Rol de Urbenis.com
+
+Creemos en la especialización. Nuestra excelencia reside en el diagnóstico y la ingeniería: el "qué" y el "cómo" se debe hacer. Para la fase de ejecución, el "quién" lo hace, es fundamental contar con aplicadores expertos.
+
+Por ello, una vez definido el proyecto de reparación o refuerzo desde **perito.barcelona**, facilitamos el contacto con **urbenis.com**, nuestra empresa colaboradora especializada en la ejecución de estos trabajos. Esta sinergia garantiza un proceso sin fisuras: el mejor proyecto de ingeniería, ejecutado por los mejores especialistas.
+
+## ¿Cuándo Necesita Asesoramiento Estructural Urgente?
+
+No ignore las señales que le da su edificio o estructura. Contacte con nosotros si observa:
+* Aparición o crecimiento de grietas en muros, vigas o forjados.
+* Desprendimiento de trozos de hormigón que dejan a la vista las armaduras oxidadas.
+* Deformaciones o "flechas" visibles en vigas o balcones.
+* Una ITE (Inspección Técnica de Edificios) con resultado desfavorable en el apartado de estructura.
+* La necesidad de aumentar la capacidad de carga de un forjado para un nuevo uso.
+
+Un diagnóstico a tiempo es la mejor garantía de seguridad y puede ahorrarle costes significativamente mayores en el futuro.

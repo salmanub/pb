@@ -142,38 +142,35 @@ cta:
     url: "/contacto/"
 ---
 
-# Auditoría Técnica de Obras en Barcelona
+## ¿Qué es una Auditoría Técnica de Obra y Cuándo Debería Considerarla?
 
-En **perito.barcelona** ofrecemos un servicio especializado de **auditoría técnica de obras**, orientado a promotores, comunidades de propietarios y empresas constructoras que necesitan un control independiente sobre la ejecución, los costes y la calidad de sus proyectos.
+Una auditoría técnica de obra es un examen exhaustivo e independiente de un proyecto de construcción en curso o recién finalizado. Piense en ello como una "ITV" de alta precisión para su inversión. No se basa en opiniones, sino en la **verificación objetiva** de tres pilares fundamentales: que la **calidad** se corresponda con la pactada, que los **costes** se ajusten a la realidad de la obra ejecutada y que todo el proceso cumpla con la **normativa** vigente.
 
-## ¿Qué es una auditoría técnica de obra?
+Debería considerar una auditoría si se encuentra en alguna de estas situaciones:
+* **Durante la ejecución:** Si tiene dudas sobre la calidad de los materiales, la correcta ejecución de una partida o la validez de las certificaciones que está pagando.
+* **Antes de la recepción de la obra:** Es el momento crítico para identificar y documentar todos los repasos y defectos pendientes antes de dar la conformidad final y liberar las retenciones.
+* **Cuando surgen conflictos:** Si existe una disputa con la constructora sobre mediciones, pagos o calidades, un informe de auditoría es la prueba técnica que puede resolver el conflicto sin llegar a un litigio.
 
-La auditoría técnica es una **revisión independiente** de la obra para comprobar:
-- La **calidad de ejecución** de materiales y acabados.  
-- El **cumplimiento del proyecto y normativa vigente (CTE, ordenanzas locales, pliegos)**.  
-- La **validez de certificaciones y mediciones económicas**.  
-- La detección temprana de **desviaciones y no conformidades**.  
+## Nuestra Visión: La Auditoría como Herramienta de Prevención y Solución
 
-El resultado es un **informe pericial claro, imparcial y defendible**, con hallazgos trazables y propuestas de corrección.
+En nuestro despacho, no vemos la auditoría como un mero informe de "problemas", sino como una herramienta estratégica.
 
-## Cuándo conviene solicitarla
+* **Como prevención:** Una auditoría a tiempo permite detectar y corregir desviaciones antes de que se conviertan en problemas graves y costosos. Es la forma más eficaz de garantizar la calidad final y evitar sobrecostes inesperados.
+* **Como solución:** Ante un conflicto, nuestro informe pericial de auditoría se convierte en una hoja de ruta clara y objetiva. Documenta cada hallazgo, lo fundamenta en el contrato o la normativa, y propone acciones correctoras, sirviendo como una base sólida para la negociación o, si fuera necesario, para una reclamación judicial.
 
-- Antes de la **recepción de obra**, para evitar reclamaciones futuras.  
-- Si hay **discrepancias en certificaciones o mediciones**.  
-- Cuando aparecen **patologías durante la ejecución**.  
-- En proyectos con **varios contratistas o subcontratas**.  
+## Ámbitos Clave de Nuestra Auditoría
 
-## Nuestro proceso de trabajo
+Aunque podemos adaptar el alcance a sus necesidades, nuestras auditorías suelen centrarse en las áreas más críticas de un proyecto:
 
-1. **Análisis preliminar** – recopilamos documentación, planos y objetivos de la auditoría.  
-2. **Inspección técnica in situ** – relevé fotográfico, toma de datos, ensayos no destructivos si procede.  
-3. **Contraste y evaluación** – verificamos proyecto, normativa, certificaciones y costes.  
-4. **Informe pericial** – dictamen con conclusiones, evidencias y plan de acciones correctoras.  
+* **Control de Costes (Certificaciones y Mediciones):** Verificamos que cada euro que paga se corresponde con una obra real y correctamente ejecutada. Contrastamos las mediciones de las certificaciones con la realidad de la obra, revisamos los precios contradictorios y detectamos posibles duplicidades o errores que impactan directamente en su presupuesto.
+* **Control de Calidad (Ejecución y Materiales):** Inspeccionamos in situ la ejecución de las partidas más importantes (estructura, impermeabilización, instalaciones, acabados) para asegurar que se ajustan a lo especificado en el proyecto y cumplen con la *lex artis* de la construcción. Documentamos cualquier no conformidad para su subsanación.
+* **Control de Riesgos (Recepción de Obra):** La fase final es la más delicada. Realizamos una inspección exhaustiva para elaborar una "snag list" (lista de repasos) técnica y completa, asegurando que el proyecto se entrega en las condiciones pactadas y sin vicios ocultos que puedan aparecer en el futuro.
 
-## Beneficios para el cliente
+## ¿Para Quién es Esencial Nuestro Servicio de Auditoría?
 
-- **Independencia técnica**: visión objetiva y contrastada.  
-- **Prevención de riesgos**: detectamos desviaciones a tiempo.  
-- **Acciones claras**: entregamos un plan de corrección priorizado.  
-- **Informe defendible**: válido para negociación, mediación o juicio.  
+Trabajamos principalmente con:
+* **Promotores e Inversores:** Que necesitan una visión externa e independiente para asegurar la rentabilidad y la calidad de su inversión.
+* **Comunidades de Propietarios:** Ante la recepción de obras de rehabilitación o en elementos comunes, para garantizar que la ejecución es correcta.
+* **Empresas Constructoras:** Que desean una auditoría de calidad externa para validar sus procesos o para mediar en conflictos con subcontratas.
+* **Administraciones Públicas:** Para el control y supervisión de obras licitadas.
 

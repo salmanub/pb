@@ -253,6 +253,15 @@
     </section>
     {% endif %}
 
+    <!-- Content Section -->
+    <section class="py-24 px-4 md:px-[5%] bg-white">
+        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+            <div class="prose prose-lg prose-slate max-w-4xl mx-auto">
+                <!-- Renderiza el contenido markdown -->
+                {{ content | safe }}
+            </div>
+        </div>
+    </section>
 
     <!-- CTA Section -->
     <section class="relative py-24 md:py-32 bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] overflow-hidden isolate">
@@ -416,31 +425,7 @@
 
 {% block scripts %}
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const titleRotator = document.getElementById('heroTextRotator');
-        const phrases = [
-            titleRotator.textContent,
-            "QUE RESUELVEN CONFLICTOS",
-            "QUE DEFIENDEN TUS DERECHOS",
-            "CON RIGOR TÉCNICO"
-        ];
-        
-        let currentIndex = 0;
-        
-        function rotateText() {
-            titleRotator.style.opacity = '0';
-            
-            setTimeout(() => {
-                currentIndex = (currentIndex + 1) % phrases.length;
-                titleRotator.textContent = phrases[currentIndex];
-                titleRotator.style.opacity = '1';
-            }, 500);
-        }
 
-        setInterval(rotateText, 4000);
-    });
-</script>
 {% endblock %}
 
 
