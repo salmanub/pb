@@ -67,7 +67,28 @@ ctaDescription: 'El tiempo es crucial. Contacte con nosotros para evaluar su cas
 
 # Introduction (shown in hero section)
 intro: |
-  <p>Comprar una propiedad y descubrir después problemas graves que no estaban a la vista es una de las peores experiencias para un propietario. La ley le protege frente a estos **vicios ocultos**, pero exige una prueba técnica para poder reclamar.</p>
+  <p>Comprar una propiedad y descubrir después problemas graves que no estaban a la vista es una de las peores experiencias para un propietario. La ley le protege frente a estos <strong>vicios ocultos</strong>, pero exige una prueba técnica para poder reclamar.</p>
   
   <p>Nuestro trabajo como peritos, dentro de nuestros <a href="/informes-periciales/">servicios de informes periciales</a>, es elaborar ese documento indispensable: un dictamen que demuestre la gravedad y preexistencia del defecto, convirtiéndose en la herramienta fundamental para su abogado.</p>
 ---
+
+## ¿Ha Descubierto un Defecto Grave en su Nueva Propiedad?
+
+La compra de una vivienda es una de las mayores inversiones de la vida. Descubrir después de la firma que existen problemas graves que no estaban a la vista (humedades estructurales, problemas de cimentación, instalaciones defectuosas, aluminosis) puede ser devastador. Estos son los denominados **vicios ocultos**.
+
+La ley le protege, pero para poder reclamar con éxito necesita demostrar tres cosas: que el defecto es grave, que no era visible en el momento de la compra y, lo más importante, que ya existía previamente. Aquí es donde nuestro informe pericial se vuelve imprescindible.
+
+### El Plazo para Reclamar es Crucial: Actúe a Tiempo
+
+Es vital saber que el plazo legal para reclamar por vicios ocultos en la compra de una vivienda de segunda mano es, por lo general, de **seis meses desde la entrega**. En obra nueva, los plazos varían según la Ley de Ordenación de la Edificación (LOE). Por ello, es fundamental actuar con rapidez en cuanto se detecta el problema.
+
+### Nuestro Papel: Documentar el Defecto y Fundamentar su Reclamación
+
+Un juez no es un técnico. Para que su demanda prospere, necesita una prueba objetiva y profesional. Nuestro informe pericial para vicios ocultos se centra en:
+
+1.  **Acreditar la Preexistencia del Defecto:** Utilizamos nuestra experiencia técnica para demostrar que el problema es anterior a la fecha de compraventa.
+2.  **Demostrar la Gravedad:** Describimos técnicamente por qué el defecto hace que la vivienda sea "impropia para el uso al que se destina" o disminuye notablemente su valor.
+3.  **Documentar que no era "Aparente":** Justificamos por qué un comprador medio, sin conocimientos técnicos, no podría haber detectado el problema en una visita normal.
+4.  **Valorar el Coste de Reparación:** Cuantificamos económicamente la subsanación del defecto, que será la base de su reclamación económica.
+
+No inicie una reclamación sin la prueba técnica que la sustente. Nuestro informe es su mejor garantía.

@@ -66,8 +66,17 @@
         <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
     </header>
 
+    {# Contenido Markdown #}
+    <section class="py-16 lg:py-24 relative z-10 bg-white">
+        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+            <div class="prose prose-lg prose-slate max-w-4xl mx-auto">
+                {{ content | safe }}
+            </div>
+        </div>
+    </section>
+
     {# Contenido Principal - 2 Columnas con Typeform y Mapas #}
-    <section class="py-24 -mt-8 relative z-10 bg-gradient-to-br from-slate-100 via-white to-slate-50 overflow-hidden isolate">
+    <section class="py-24 relative z-10 bg-gradient-to-br from-slate-100 via-white to-slate-50 overflow-hidden isolate">
         <!-- Efectos decorativos -->
         <div class="absolute inset-0">
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(203,213,225,0.1)_1px,transparent_1px)] [background-size:48px_48px]"></div>
