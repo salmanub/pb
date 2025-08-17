@@ -3,7 +3,7 @@ layout: layouts/service-child.njk
 title: "Public Works Expert in Barcelona | Reports for Tenders and Contracts"
 subtitle: "Specialized technical reports in public works and civil engineering projects"
 description: "We produce expert reports for public works in Barcelona. Expert technical advice on tenders, project modifications, and claims in public contracts."
-permalink: "/en/expert-witness-reports/public-works/"
+permalink: "/en/public-works/"
 lang: "en"
 eleventyNavigation:
   key: "Public Works"
