@@ -115,8 +115,7 @@
 /en/*/no-disponible /en/not-available 301
 
 # --- Servir contenido existente y manejar 404s ---
-/* /:splat 200
-/* /404.html 404
+
 /casos-de-exito/3 / 301
 /ca/construccio/informes-tecnic/ / 301
 /en/structural-survey/ / 301
