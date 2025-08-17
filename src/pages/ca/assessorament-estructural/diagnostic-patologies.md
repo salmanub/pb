@@ -5,6 +5,11 @@ subtitle: "Identifiquem la causa arrel d'esquerdes, corrosió, deformacions i al
 description: "Servei expert de diagnòstic de patologies estructurals a Barcelona. Analitzem esquerdes, corrosió d'armadures i deformacions per determinar-ne l'origen, risc i solució."
 permalink: "/ca/assessorament-estructural/diagnostic-patologies/"
 lang: "ca"
+translations:
+  - lang: "es"
+    permalink: "/asesoramiento-estructural/diagnostico-patologias/"
+  - lang: "en"
+    permalink: "/en/structural-consulting/pathology-diagnosis/"
 eleventyNavigation:
   key: "Diagnòstic de Patologies"
   parent: "Assessorament Estructural"

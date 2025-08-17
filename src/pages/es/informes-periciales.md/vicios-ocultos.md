@@ -5,6 +5,11 @@ subtitle: "Elaboramos el informe pericial técnico para fundamentar su reclamaci
 description: "¿Ha descubierto defectos graves en su vivienda recién comprada en Barcelona? Realizamos el informe pericial de vicios ocultos que necesita para demostrar su preexistencia y reclamar."
 permalink: "/informes-periciales/vicios-ocultos/"
 lang: "es"
+translations:
+  - lang: "ca"
+    permalink: "/ca/informes-pericials/vicis-ocults/"
+  - lang: "en"
+    permalink: "/en/expert-witness-reports/hidden-defects/"
 eleventyNavigation:
   key: "Vicios Ocultos"
   parent: "Informes Periciales"

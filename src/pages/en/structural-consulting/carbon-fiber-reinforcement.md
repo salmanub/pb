@@ -5,6 +5,11 @@ subtitle: "We design and calculate reinforcement solutions with composites (CFRP
 description: "Expert CFRP structural reinforcement consulting in Barcelona. We design carbon fiber solutions to increase load capacity of buildings efficiently."
 permalink: "/en/structural-consulting/carbon-fiber-reinforcement/"
 lang: "en"
+translations:
+  - lang: "es"
+    permalink: "/asesoramiento-estructural/refuerzo-fibra-carbono/"
+  - lang: "ca"
+    permalink: "/ca/assessorament-estructural/reforc-fibra-carboni/"
 eleventyNavigation:
   key: "Carbon Fiber Reinforcement"
   parent: "Structural Consulting"

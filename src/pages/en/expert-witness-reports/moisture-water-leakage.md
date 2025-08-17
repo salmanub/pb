@@ -5,6 +5,11 @@ subtitle: "Technical diagnosis of moisture origin from leakage, capillarity, or 
 description: "Suffering from persistent moisture or water leakage? We produce an expert report that identifies the exact origin of the problem to ensure a definitive repair in Barcelona."
 permalink: "/en/expert-witness-reports/moisture-water-leakage/"
 lang: "en"
+translations:
+  - lang: "es"
+    permalink: "/informes-periciales/humedades-filtraciones/"
+  - lang: "ca"
+    permalink: "/ca/informes-pericials/humitats-filtracions/"
 eleventyNavigation:
   key: "Moisture and Water Leakage"
   parent: "Expert Reports"

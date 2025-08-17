@@ -5,6 +5,11 @@ subtitle: "Diagnostiquem la causa del deteriorament i definim el protocol de rep
 description: "Servei d'assessorament i elaboració de projectes per a la reparació de formigó armat a Barcelona. Diagnostiquem la corrosió d'armadures, carbonatació i definim la solució tècnica."
 permalink: "/ca/assessorament-estructural/reparacio-formigo/"
 lang: "ca"
+translations:
+  - lang: "es"
+    permalink: "/asesoramiento-estructural/reparacion-hormigon/"
+  - lang: "en"
+    permalink: "/en/structural-consulting/concrete-repair/"
 eleventyNavigation:
   key: "Reparació de Formigó"
   parent: "Assessorament Estructural"

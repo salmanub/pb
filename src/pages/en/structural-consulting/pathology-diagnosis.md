@@ -5,6 +5,11 @@ subtitle: "We identify the root cause of cracks, corrosion, deformations, and ot
 description: "Expert structural pathology diagnosis service in Barcelona. We analyze cracks, reinforcement corrosion, and deformations to determine their origin, risk, and solution."
 permalink: "/en/structural-consulting/pathology-diagnosis/"
 lang: "en"
+translations:
+  - lang: "es"
+    permalink: "/asesoramiento-estructural/diagnostico-patologias/"
+  - lang: "ca"
+    permalink: "/ca/assessorament-estructural/diagnostic-patologies/"
 eleventyNavigation:
   key: "Pathology Diagnosis"
   parent: "Structural Consulting"

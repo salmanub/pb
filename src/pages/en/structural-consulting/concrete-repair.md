@@ -5,6 +5,11 @@ subtitle: 'We diagnose the cause of deterioration and define the repair protocol
 description: "Consulting service and project development for reinforced concrete repair in Barcelona. We diagnose reinforcement corrosion, carbonation, and define the technical solution."
 permalink: "/en/structural-consulting/concrete-repair/"
 lang: 'en'
+translations:
+  - lang: 'es'
+    permalink: '/asesoramiento-estructural/reparacion-hormigon/'
+  - lang: 'ca'
+    permalink: '/ca/assessorament-estructural/reparacio-formigo/'
 eleventyNavigation:
   key: "Concrete Repair"
   parent: "Structural Consulting"

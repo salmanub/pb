@@ -5,6 +5,11 @@ subtitle: 'Diagnóstico técnico del origen de humedades por filtración, capila
 description: "¿Sufre de humedades o filtraciones persistentes? Elaboramos un informe pericial que identifica el origen exacto del problema para garantizar una reparación definitiva en Barcelona."
 permalink: "/informes-periciales/humedades-filtraciones/"
 lang: 'es'
+translations:
+  - lang: 'ca'
+    permalink: '/ca/informes-pericials/humitats-filtracions/'
+  - lang: 'en'
+    permalink: '/en/expert-witness-reports/moisture-water-leakage/'
 eleventyNavigation:
   key: "Humedades y Filtraciones"
   parent: "Informes Periciales"

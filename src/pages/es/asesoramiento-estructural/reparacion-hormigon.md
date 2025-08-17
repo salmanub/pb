@@ -5,6 +5,11 @@ subtitle: 'Diagnosticamos la causa del deterioro y definimos el protocolo de rep
 description: "Servicio de asesoramiento y elaboración de proyectos para la reparación de hormigón armado en Barcelona. Diagnosticamos la corrosión de armaduras, carbonatación y definimos la solución técnica."
 permalink: "/asesoramiento-estructural/reparacion-hormigon/"
 lang: 'es'
+translations:
+  - lang: 'ca'
+    permalink: '/ca/assessorament-estructural/reparacio-formigo/'
+  - lang: 'en'
+    permalink: '/en/structural-consulting/concrete-repair/'
 eleventyNavigation:
   key: "Reparación de Hormigón"
   parent: "Asesoramiento Estructural"

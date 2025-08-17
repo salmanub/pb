@@ -5,6 +5,11 @@ subtitle: 'Identificamos la causa raíz de grietas, corrosión, deformaciones y 
 description: "Servicio experto de diagnóstico de patologías estructurales en Barcelona. Analizamos grietas, corrosión de armaduras y deformaciones para determinar su origen, riesgo y solución."
 permalink: "/asesoramiento-estructural/diagnostico-patologias/"
 lang: 'es'
+translations:
+  - lang: 'ca'
+    permalink: '/ca/assessorament-estructural/diagnostic-patologies/'
+  - lang: 'en'
+    permalink: '/en/structural-consulting/pathology-diagnosis/'
 eleventyNavigation:
   key: "Diagnóstico de Patologías"
   parent: "Asesoramiento Estructural"

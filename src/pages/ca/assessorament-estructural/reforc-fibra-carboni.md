@@ -5,6 +5,11 @@ subtitle: "Dissenyem i calculem solucions de reforç amb composites (CFRP) per a
 description: "Servei d'assessorament i càlcul de projectes de reforç estructural amb fibra de carboni (CFRP) a Barcelona. Augmenteu la capacitat de càrrega de bigues, forjats i pilars amb la màxima eficiència."
 permalink: "/ca/assessorament-estructural/reforc-fibra-carboni/"
 lang: "ca"
+translations:
+  - lang: "es"
+    permalink: "/asesoramiento-estructural/refuerzo-fibra-carbono/"
+  - lang: "en"
+    permalink: "/en/structural-consulting/carbon-fiber-reinforcement/"
 eleventyNavigation:
     key: "Reforç Fibra de Carboni"
     parent: "Assessorament Estructural"
