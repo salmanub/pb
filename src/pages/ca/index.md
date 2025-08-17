@@ -88,7 +88,7 @@ ayuda:
       icon: "droplet"
     - title: "Disputes en Certificacions i Pagaments"
       description: "Auditoria tècnica per a conflictes derivats de certificacions, amidaments i compliment de contracte."
-      url: "/ca/auditories-obra/disputes-certificacions-pagament/"
+      url: "/ca/auditories-d-obra/disputes-certificacions-pagament/"
       icon: "file-text"
     - title: "Vicis Ocults en Compravenda o Post-obra"
       description: "Identificació i documentació de defectes no visibles després del lliurament o compra d'un immoble."

@@ -88,7 +88,7 @@ ayuda:
       icon: "droplet"
     - title: "Certification & Payment Disputes"
       description: "Technical audit for conflicts arising from certifications, measurements, and contract compliance."
-      url: "/en/construction-audits/certification-payment-disputes/"
+      url: "/en/construction-audits/payment-certification-disputes/"
       icon: "file-text"
     - title: "Hidden Defects in Property Sales"
       description: "Identification and documentation of defects not visible upon handover or purchase of a property."
