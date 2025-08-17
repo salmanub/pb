@@ -7,7 +7,7 @@ permalink: "/ca/collaboracio-advocats/"
 lang: "ca"
 translations:
   - lang: "es"
-    permalink: "/es/colaboracion-abogados/"
+    permalink: "/colaboracion-abogados/"
   - lang: "en"
     permalink: "/en/lawyer-collaboration/"
 eleventyNavigation:

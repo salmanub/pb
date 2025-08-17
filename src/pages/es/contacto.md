@@ -18,7 +18,7 @@ eleventyNavigation:
 
 # Contact Page Content
 contact:
-    title: "CONTACTE CON<strong class=\"block text-cyan-400 mt-4\">NUESTRO EQUIPO</strong>"
+    title: "HABLEMOS DE<strong class='block text-cyan-400 mt-4'>SU CASO</strong>"
     intro: "Si necesita un análisis técnico para su caso, ya sea un informe pericial, una auditoría de obra o asesoramiento estructural, estamos aquí para ayudarle. Explíquenos su situación y le ofreceremos una primera valoración sin compromiso."
     
     # Información de contacto directo
