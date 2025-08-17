@@ -12,7 +12,9 @@ eleventyNavigation:
   notshow: true
   order: 2
 serviceTitle: "dictamen pericial judicial"
-
+parentService:
+  title: "Informes Pericials"
+  url: "/ca/informes-pericials/"
 
 keyFeatures:
   - "Actuació com a pèrits per designació judicial en llistes oficials"

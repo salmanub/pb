@@ -6,13 +6,9 @@
     <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] min-h-[calc(100vh-70px)] sm:min-h-0 bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] text-white overflow-hidden isolate">
         <!-- Efectos decorativos modernos -->
         <div class="absolute inset-0">
-            <!-- Patrón de puntos con mejor contraste -->
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:48px_48px] opacity-25"></div>
-            <!-- Gradientes suaves -->
             <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-cyan-400/5"></div>
-            <!-- Efecto de luz moderna -->
             <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-cyan-400/20 blur-[100px] rounded-full"></div>
-            <!-- Velo sutil para mejorar legibilidad -->
             <div class="absolute inset-0 bg-gradient-to-b from-slate-900/10 to-slate-900/30 mix-blend-overlay"></div>
         </div>
 
@@ -23,11 +19,11 @@
                     {% include "partials/breadcrumb.njk" %}
                     <div class="space-y-6">
                         <h1 class="text-[2.75rem] md:text-[3.5rem] xl:text-[4rem] font-light text-white leading-[1.1] tracking-tight" itemprop="headline">
-                            <span class="text-white font-light">{{ hero.title }}</span>
-                            <strong class="text-cyan-400 font-bold block mt-2">{{ hero.strong }}</strong>
-                            <span class="block text-[0.85em] text-cyan-400 font-normal mt-6">{{ hero.subtitle }}</span>
+                            <span class="text-white font-light">{{ metadata.hero.rotatingText[locale][0] }}</span>
+                            <strong class="text-cyan-400 font-bold block mt-2">{{ metadata.translations.hero.title }}</strong>
+                            <span class="block text-[0.85em] text-cyan-400 font-normal mt-6">{{ metadata.translations.hero.subtitle }}</span>
                         </h1>
-                        <p class="text-xl text-white/90 mt-8" itemprop="description">{{ hero.description }}</p>
+                        <p class="text-xl text-white/90 mt-8" itemprop="description">{{ metadata.footer[locale].brand.description }}</p>
                         <div class="prose prose-lg prose-invert mt-8">
                             <div class="text-lg text-white/80 tracking-wide" itemprop="articleBody">
                                 {{ hero.intro }}
@@ -36,20 +32,17 @@
                     </div>
                 </div>
 
-                <!-- Columna derecha - Imagen con efectos mejorados -->
+                <!-- Columna derecha - Imagen -->
                 <div class="lg:col-span-5">
                     <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl relative">
-                        <!-- Overlay gradiente mejorado -->
                         <div class="absolute inset-0 bg-gradient-to-tr from-slate-900/50 via-slate-900/30 to-transparent mix-blend-overlay z-10"></div>
-                        <!-- Imagen con clip-path y hover suave -->
                         <img src="{{ hero.image }}" 
-                             alt="{{ hero.title }}"
+                             alt="{{ metadata.translations.hero.title }}"
                              class="w-full h-full object-cover scale-105 transition-transform duration-700 ease-out hover:scale-110"
                              fetchpriority="high"
                              loading="eager"
                              decoding="async"
                              itemprop="image">
-                        <!-- Efecto de brillo en hover -->
                         <div class="absolute inset-0 bg-gradient-to-tr from-cyan-400/0 to-cyan-400/0 opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20"></div>
                     </div>
                 </div>

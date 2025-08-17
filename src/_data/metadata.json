@@ -73,6 +73,47 @@
       "ca": "Parlar amb un pèrit"
     }
   },
+  "serviceChild": {
+    "es": {
+      "sufresProblema": "¿Sufre este problema?",
+      "contacteAnalisis": "Contacte ahora para un análisis preliminar gratuito de su caso.",
+      "solicitarAnalisis": "Solicitar Análisis del Caso",
+      "llamarAhora": "Llamar ahora",
+      "parteServicios": "Parte de Nuestros Servicios de",
+      "problemaEspecifico": "Este es uno de los problemas específicos que resolvemos. Vea todos nuestros servicios relacionados.",
+      "verTodos": "Ver todos los",
+      "casosExito": "Casos de éxito relacionados",
+      "listoSolucion": "¿Listo para obtener una solución técnica?",
+      "noDejeProblema": "No deje que el problema se agrave. Contáctenos para obtener un análisis profesional y proteger su propiedad.",
+      "contactarAhora": "Contactar Ahora"
+    },
+    "ca": {
+      "sufresProblema": "Pateix aquest problema?",
+      "contacteAnalisis": "Contacti ara per una anàlisi preliminar gratuïta del seu cas.",
+      "solicitarAnalisis": "Sol·licitar Anàlisi del Cas",
+      "llamarAhora": "Trucar ara",
+      "parteServicios": "Part dels Nostres Serveis de",
+      "problemaEspecifico": "Aquest és un dels problemes específics que resolem. Vegeu tots els nostres serveis relacionats.",
+      "verTodos": "Veure tots els",
+      "casosExito": "Casos d'èxit relacionats",
+      "listoSolucion": "Preparat per obtenir una solució tècnica?",
+      "noDejeProblema": "No deixi que el problema s'agreugi. Contacti amb nosaltres per obtenir una anàlisi professional i protegir la seva propietat.",
+      "contactarAhora": "Contactar Ara"
+    },
+    "en": {
+      "sufresProblema": "Are you facing this issue?",
+      "contacteAnalisis": "Contact us now for a free preliminary analysis of your case.",
+      "solicitarAnalisis": "Request Case Analysis",
+      "llamarAhora": "Call Now",
+      "parteServicios": "Part of Our Services in",
+      "problemaEspecifico": "This is one of the specific problems we solve. See all our related services.",
+      "verTodos": "View all",
+      "casosExito": "Related success cases",
+      "listoSolucion": "Ready to get a technical solution?",
+      "noDejeProblema": "Don't let the problem get worse. Contact us for a professional analysis and protect your property.",
+      "contactarAhora": "Contact Now"
+    }
+  },
   "services": [
     {
       "name": "Peritaje de Seguros",
