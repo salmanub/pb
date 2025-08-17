@@ -1,0 +1,148 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<main itemscope itemtype="https://schema.org/Article">
+    <!-- Hero Section -->
+    <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] text-white overflow-hidden isolate">
+        <!-- Efectos decorativos -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:48px_48px] opacity-25"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-cyan-400/5"></div>
+            <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-cyan-400/20 blur-[100px] rounded-full"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/10 to-slate-900/30 mix-blend-overlay"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
+            <div class="py-16 lg:py-24">
+                <!-- Breadcrumb -->
+                {% include "partials/breadcrumb.njk" %}
+                
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-[2.75rem] md:text-[3.5rem] font-light text-white leading-[1.1] tracking-tight mb-8" itemprop="headline">
+                        {{ title }}
+                    </h1>
+                    <p class="text-xl text-white/90" itemprop="description">
+                        {{ description }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <article class="py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
+            <div class="max-w-4xl mx-auto">
+                <!-- Content Zone -->
+                <div class="prose prose-lg prose-slate mx-auto">
+                    <!-- Estilos personalizados para el contenido markdown -->
+                    <style>
+                        .prose h2 {
+                            @apply text-3xl font-light text-slate-800 mt-16 mb-8;
+                            background: linear-gradient(to right, #0891b2, #0e7490);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                        
+                        .prose h3 {
+                            @apply text-2xl font-semibold text-slate-700 mt-12 mb-6;
+                        }
+                        
+                        .prose strong {
+                            @apply text-cyan-700 bg-cyan-50 px-1 rounded;
+                        }
+                        
+                        .prose ul {
+                            @apply space-y-4 my-8;
+                        }
+                        
+                        .prose ul li {
+                            @apply flex items-start gap-3;
+                        }
+                        
+                        .prose ul li::before {
+                            content: '';
+                            @apply w-2 h-2 mt-2 bg-cyan-500 rounded-full flex-shrink-0;
+                        }
+                        
+                        .prose ol {
+                            @apply space-y-4 my-8 list-none counter-reset-none;
+                        }
+                        
+                        .prose ol > li {
+                            @apply relative pl-10 py-2;
+                        }
+                        
+                        .prose ol > li::before {
+                            @apply absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center text-cyan-700 font-bold;
+                            content: counter(list-item) ".";
+                        }
+                        
+                        .prose hr {
+                            @apply my-12 border-slate-200;
+                        }
+                        
+                        .prose a {
+                            @apply text-cyan-600 font-medium hover:text-cyan-700 transition-colors no-underline;
+                        }
+                        
+                        .prose a[href^="#"] {
+                            @apply inline-flex items-center gap-2 px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all no-underline;
+                        }
+                    </style>
+                    
+                    {{ content | safe }}
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] relative overflow-hidden isolate">
+        <!-- Efectos decorativos -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:48px_48px] opacity-25"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-cyan-400/5"></div>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-400/20 blur-[100px] rounded-full"></div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-[2.5rem] md:text-[3rem] font-light text-white mb-8">
+                    ¿Necesita soporte técnico para su caso?
+                </h2>
+                <p class="text-xl text-white/80 mb-12">Contacte con nosotros para una evaluación preliminar gratuita de la viabilidad técnica.</p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="/contacto/" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-cyan-200/20 hover:-translate-y-0.5 transition-all">
+                        Solicitar Consulta
+                    </a>
+                    <a href="/contacto/" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all">
+                        Agendar Llamada
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block pageStyles %}
+ {% set indexCSS %} {% include "dist/assets/styles/index.css" %} {% endset %}
+<style>
+/* Mejoras visuales para contenido específico de colaboración */
+.collaboration-feature {
+    @apply relative pl-12 py-4;
+}
+
+.collaboration-feature::before {
+    content: '';
+    @apply absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-cyan-100 rounded-xl flex items-center justify-center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%230891b2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+{{ indexCSS | safe }}
+</style>
+{% endblock %}

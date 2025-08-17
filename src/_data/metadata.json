@@ -14,27 +14,25 @@
     "email": "info@perito.barcelona"
   },
   "navBar": {
-        "es": {
-          "ctaAbogados": "Soy Abogado",
-          "linkAbogados": "https://perito.barcelona/judicial/#strategic-content",
-          "ctaPresupuesto": "Solicitar Presupuesto",
-          "linkPresupuesto": "/contacto/"
-
-        },
-        "ca": {
-          "ctaAbogados": "Sóc Advocat",
-          "linkAbogados": "https://perito.barcelona/judicial/#strategic-content",
-          "ctaPresupuesto": "Sol·licitar Pressupost",
-          "linkPresupuesto": "/ca/contacte/"
-        },
-        "en": {
-          "ctaAbogados": "I'm a Lawyer",
-          "linkAbogados": "https://perito.barcelona/judicial/#strategic-content",
-          "ctaPresupuesto": "Request Quote",
-          "linkPresupuesto": "/en/contact/"
-        }
-      
+    "es": {
+      "ctaAbogados": "Área para Abogados",
+      "linkAbogados": "/colaboracion-abogados/",
+      "ctaPresupuesto": "Solicitar Presupuesto",
+      "linkPresupuesto": "/contacto/"
     },
+    "ca": {
+      "ctaAbogados": "Àrea per a Advocats",
+      "linkAbogados": "/ca/colaboracion-abogados/",
+      "ctaPresupuesto": "Sol·licitar Pressupost",
+      "linkPresupuesto": "/ca/contacte/"
+    },
+    "en": {
+      "ctaAbogados": "For Lawyers",
+      "linkAbogados": "/en/lawyer-collaboration/",
+      "ctaPresupuesto": "Request a Quote",
+      "linkPresupuesto": "/en/contact/"
+    }
+},
   "hero": {
     "rotatingText": {
       "es": [
