@@ -1,13 +1,25 @@
 # Redirecciones del sitio antiguo al nuevo
 # Última actualización: Agosto 2025
 
-# --- Primero servir todas las URLs nuevas y válidas ---
-/asesoramiento-estructural/* /:splat 200
-/informes-periciales/* /:splat 200
-/auditorias-de-obra/* /:splat 200
-/colaboracion-abogados/* /:splat 200
-/ca/* /:splat 200
-/en/* /:splat 200
+# --- Rutas actuales del sitio (mantener estas exactamente como están) ---
+/asesoramiento-estructural/diagnostico-patologias /asesoramiento-estructural/diagnostico-patologias 200
+/asesoramiento-estructural/refuerzo-fibra-carbono /asesoramiento-estructural/refuerzo-fibra-carbono 200
+/asesoramiento-estructural/inspeccion-puentes /asesoramiento-estructural/inspeccion-puentes 200
+/asesoramiento-estructural/muros-contencion-taludes /asesoramiento-estructural/muros-contencion-taludes 200
+/asesoramiento-estructural/refuerzo-cimentaciones /asesoramiento-estructural/refuerzo-cimentaciones 200
+/asesoramiento-estructural/reparacion-hormigon /asesoramiento-estructural/reparacion-hormigon 200
+
+# Rutas base importantes (sin trailing slash)
+/asesoramiento-estructural /asesoramiento-estructural 200
+/informes-periciales /informes-periciales 200
+/auditorias-de-obra /auditorias-de-obra 200
+/colaboracion-abogados /colaboracion-abogados 200
+
+# Rutas con trailing slash
+/asesoramiento-estructural/ /asesoramiento-estructural 200
+/informes-periciales/ /informes-periciales 200
+/auditorias-de-obra/ /auditorias-de-obra 200
+/colaboracion-abogados/ /colaboracion-abogados 200
 
 # --- Redirecciones del sitio antiguo ---
 
@@ -89,17 +101,22 @@
 
 # --- Redirecciones por idioma no disponible ---
 
-# Español - redirige a no-disponible solo si la página no existe
-/es/* /no-disponible/ 301 !exists:/:splat
+# Catalán
+/ca/asesoramiento-estructural/* /ca/assessorament-estructural/:splat 301
+/ca/* /ca/:splat 200
 
-# Catalán - redirige a no-disponible solo si la página no existe
-/ca/* /ca/no-disponible/ 301 !exists:/ca/:splat
+# Inglés
+/en/asesoramiento-estructural/* /en/structural-consulting/:splat 301
+/en/* /en/:splat 200
 
-# Inglés - redirige a no-disponible solo si la página no existe
-/en/* /en/not-available/ 301 !exists:/en/:splat
+# Páginas no disponibles por idioma
+/es/*/no-disponible /no-disponible 301
+/ca/*/no-disponible /ca/no-disponible 301
+/en/*/no-disponible /en/not-available 301
 
-# --- Servir el resto del contenido existente ---
+# --- Servir contenido existente y manejar 404s ---
 /* /:splat 200
+/* /404.html 404
 /casos-de-exito/3 / 301
 /ca/construccio/informes-tecnic/ / 301
 /en/structural-survey/ / 301
