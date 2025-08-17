@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Informes Periciales Barcelona | Peritos Ingenieros en Construcción'
+title: 'Perito Barcelona | Despacho de Peritos Ingenieros Colegiados'
 description: "Somos un despacho de peritos ingenieros colegiados en Barcelona, especializados en la elaboración de informes periciales técnicos, auditorías de obra y asesoramiento estructural."
 permalink: /
 lang: es

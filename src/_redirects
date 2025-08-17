@@ -1,9 +1,84 @@
-# --- Redirecciones prioritarias ---
-/perito-judicial/ /judicial/ 301
-/home-inspector/servicios/ /home-inspector/pre-compra/ 301
-/seguros/humedades/ /construccion/patologias/humedades/ 301
-/construccion/humedades/ /construccion/patologias/humedades/ 301
-/construccion/defectos/ /construccion/ 301
+# Redirecciones del sitio antiguo al nuevo
+# Última actualización: Agosto 2025
+
+# --- Redirecciones principales ---
+
+# Informes Periciales (sección principal)
+/servicios-periciales/* /informes-periciales/ 301
+/peritajes/* /informes-periciales/ 301
+/ca/serveis-pericials/* /ca/informes-pericials/ 301
+/en/expert-services/* /en/expert-witness-reports/ 301
+
+# Patologías Estructurales
+/construccion/patologias/* /informes-periciales/patologias-estructurales/ 301
+/patologias/* /informes-periciales/patologias-estructurales/ 301
+/ca/construccio/patologies/* /ca/informes-pericials/patologies-estructurals/ 301
+/en/construction/pathologies/* /en/expert-witness-reports/structural-pathologies/ 301
+
+# Dictamen Judicial
+/judicial/* /informes-periciales/dictamen-judicial/ 301
+/perito-judicial/* /informes-periciales/dictamen-judicial/ 301
+/ca/peritatge-judicial/* /ca/informes-pericials/dictamen-judicial/ 301
+/en/legal-expert/* /en/expert-witness-reports/judicial-expert/ 301
+
+# Vicios Ocultos
+/vicios-ocultos/* /informes-periciales/vicios-ocultos/ 301
+/defectos-construccion/* /informes-periciales/vicios-ocultos/ 301
+/ca/vicis-ocults/* /ca/informes-pericials/vicis-ocults/ 301
+/en/hidden-defects/* /en/expert-witness-reports/hidden-defects/ 301
+
+# Humedades y Filtraciones
+/humedades/* /informes-periciales/humedades-filtraciones/ 301
+/filtraciones/* /informes-periciales/humedades-filtraciones/ 301
+/construccion/humedades/* /informes-periciales/humedades-filtraciones/ 301
+/ca/humitats/* /ca/informes-pericials/humitats-filtracions/ 301
+/en/dampness/* /en/expert-witness-reports/dampness-leaks/ 301
+
+# Reclamación Mala Ejecución
+/construccion/defectos/* /informes-periciales/reclamacion-mala-ejecucion/ 301
+/mala-ejecucion/* /informes-periciales/reclamacion-mala-ejecucion/ 301
+/ca/mala-execucio/* /ca/informes-pericials/reclamacio-mala-execucio/ 301
+/en/poor-execution/* /en/expert-witness-reports/poor-execution-claim/ 301
+
+# Auditorías de Obra
+/auditoria/* /auditorias-de-obra/ 301
+/control-obra/* /auditorias-de-obra/ 301
+/ca/auditoria/* /ca/auditories-d-obra/ 301
+/en/audit/* /en/construction-audits/ 301
+
+# Disputas de Certificaciones
+/certificaciones/* /auditorias-obra/disputas-certificaciones-pago/ 301
+/pagos-obra/* /auditorias-obra/disputas-certificaciones-pago/ 301
+/ca/certificacions/* /ca/auditories-obra/disputes-certificacions-pagament/ 301
+/en/certifications/* /en/construction-audits/payment-certification-disputes/ 301
+
+# Asesoramiento Estructural
+/estructuras/* /asesoramiento-estructural/ 301
+/consultoria-estructural/* /asesoramiento-estructural/ 301
+/ca/estructures/* /ca/assessorament-estructural/ 301
+/en/structures/* /en/structural-consulting/ 301
+
+# Colaboración con Abogados
+/abogados/* /colaboracion-abogados/ 301
+/servicios-juridicos/* /colaboracion-abogados/ 301
+/ca/advocats/* /ca/colaboracio-advocats/ 301
+/en/lawyers/* /en/lawyer-collaboration/ 301
+
+# Contacto
+/contactar/* /contacto/ 301
+/ca/contactar/* /ca/contacte/ 301
+/en/contact-us/* /en/contact/ 301
+
+# --- Redirecciones de secciones eliminadas ---
+/tasaciones/* / 301
+/peritaje-estructuras/* / 301
+/home-inspector/* / 301
+
+# --- Redirección por defecto para 404s ---
+/* / 302
+
+# --- Servir contenido existente ---
+/* /:splat 200
 /seguros/service1/ / 301
 /casos-de-exito/3 / 301
 /ca/construccio/informes-tecnic/ / 301
