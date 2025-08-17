@@ -9,7 +9,7 @@ translations:
   - lang: 'ca'
     permalink: '/ca/informes-pericials/humitats-filtracions/'
   - lang: 'en'
-    permalink: '/en/expert-witness-reports/moisture-water-leakage/'
+    permalink: '/en/expert-witness-reports/damp-leaks/'
 eleventyNavigation:
   key: "Humedades y Filtraciones"
   parent: "Informes Periciales"

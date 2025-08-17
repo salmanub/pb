@@ -5,6 +5,11 @@ subtitle: "Diagnòstic tècnic de l'origen d'humitats per filtració, capil·lar
 description: "Pateix d'humitats o filtracions persistents? Elaborem un informe pericial que identifica l'origen exacte del problema per garantir una reparació definitiva a Barcelona."
 permalink: "/ca/informes-pericials/humitats-filtracions/"
 lang: "ca"
+translations:
+  - lang: "es"
+    permalink: "/informes-periciales/humedades-filtraciones/"
+  - lang: "en"
+    permalink: "/en/expert-witness-reports/damp-leaks/"
 eleventyNavigation:
   key: "Humitats i Filtracions"
   parent: "Informes Pericials"
