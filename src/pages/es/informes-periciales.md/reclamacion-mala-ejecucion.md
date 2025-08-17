@@ -1,69 +1,69 @@
 ---
-layout: 'layouts/service-child.njk'
+layout: "layouts/service-child.njk"
 title: "Perito por Mala Ejecución de Obra | Reclamación a Constructora"
-subtitle: 'Documentamos incumplimientos y defectos para fundamentar su reclamación'
+subtitle: "Documentamos incumplimientos y defectos para fundamentar su reclamación"
 description: "¿La calidad de su obra o reforma no es la pactada en Barcelona? Documentamos incumplimientos y defectos de ejecución en un informe pericial para que pueda reclamar a la constructora."
 permalink: "/informes-periciales/reclamacion-mala-ejecucion/"
-lang: 'es'
+lang: "es"
 eleventyNavigation:
   key: "Mala Ejecución de Obra"
   parent: "Informes Periciales"
   title: "Mala Ejecución de Obra"
   notshow: true
   order: 4
-serviceTitle: 'mala ejecución de obra'
+serviceTitle: "mala ejecución de obra"
 
 # Parent Service (for breadcrumb and linking back to pillar)
 parentService:
-  title: 'Informes Periciales'
-  url: '/informes-periciales/'
+  title: "Informes Periciales"
+  url: "/informes-periciales/"
 
 # Key features in the hero section
 keyFeatures:
-  - 'Contraste objetivo de la obra ejecutada con el contrato y presupuesto'
-  - 'Documentación técnica de incumplimientos de calidad en materiales y acabados'
-  - 'Verificación del cumplimiento de la normativa (Código Técnico de la Edificación)'
-  - 'Cuantificación económica de los defectos para la reclamación'
+  - "Contraste objetivo de la obra ejecutada con el contrato y presupuesto"
+  - "Documentación técnica de incumplimientos de calidad en materiales y acabados"
+  - "Verificación del cumplimiento de la normativa (Código Técnico de la Edificación)"
+  - "Cuantificación económica de los defectos para la reclamación"
 
 # Service Process (for sidebar)
 serviceProcess:
-  - title: 'Revisión de contrato y proyecto'
-    description: 'Analizamos la documentación para establecer la base de la reclamación'
-  - title: 'Inspección detallada de la obra'
-    description: 'Documentamos fotográficamente cada defecto e incumplimiento'
-  - title: 'Análisis de desviaciones'
-    description: 'Comparamos lo ejecutado con lo pactado y con la buena práctica'
-  - title: 'Informe pericial para reclamación'
-    description: 'Dictamen con todas las pruebas para negociar o demandar'
+  - title: "Revisión de contrato y proyecto"
+    description: "Analizamos la documentación para establecer la base de la reclamación"
+  - title: "Inspección detallada de la obra"
+    description: "Documentamos fotográficamente cada defecto e incumplimiento"
+  - title: "Análisis de desviaciones"
+    description: "Comparamos lo ejecutado con lo pactado y con la buena práctica"
+  - title: "Informe pericial para reclamación"
+    description: "Dictamen con todas las pruebas para negociar o demandar"
 
 # Service Benefits (for sidebar)
 serviceBenefits:
-  - 'Convierta su insatisfacción en un argumento técnico irrefutable'
-  - 'Facilita enormemente la negociación con la constructora para la subsanación'
-  - 'Aporta a su abogado la prueba pericial que necesita para una demanda'
-  - 'Evite pagar por trabajos mal ejecutados o con calidades inferiores'
+  - "Convierta su insatisfacción en un argumento técnico irrefutable"
+  - "Facilita enormemente la negociación con la constructora para la subsanación"
+  - "Aporta a su abogado la prueba pericial que necesita para una demanda"
+  - "Evite pagar por trabajos mal ejecutados o con calidades inferiores"
 
 # Related Problems (optional)
 relatedProblems:
-  - title: 'Auditorías de Obra'
-    description: 'Una auditoría durante la ejecución puede prevenir estos problemas.'
-    url: '/auditorias-de-obra/'
-  - title: 'Patologías Estructurales'
-    description: 'Una mala ejecución puede derivar en graves problemas estructurales.'
-    url: '/informes-periciales/patologias-estructurales/'
+  - title: "Auditorías de Obra"
+    description: "Una auditoría durante la ejecución puede prevenir estos problemas."
+    url: "/auditorias-de-obra/"
+  - title: "Patologías Estructurales"
+    description: "Una mala ejecución puede derivar en graves problemas estructurales."
+    url: "/informes-periciales/patologias-estructurales/"
 
 # Client Testimonials
 testimonials:
-  - quote: 'La constructora negaba los defectos en los acabados. El informe pericial, con cientos de fotos y referencias a la memoria de calidades, fue tan detallado que no tuvieron más remedio que aceptar y reparar todo.'
-    author: 'Promotora Residencial'
-    role: 'Caso: Defectos en entrega de obra nueva'
-  - quote: 'Pagamos por una impermeabilización que no funcionó. El informe demostró la mala ejecución y nos permitió reclamar con éxito la devolución del dinero y el coste de la nueva reparación.'
-    author: 'Carlos Fernández'
-    role: 'Propietario de vivienda reformada'
+  - quote: "La constructora negaba los defectos en los acabados. El informe pericial, con cientos de fotos y referencias a la memoria de calidades, fue tan detallado que no tuvieron más remedio que aceptar y reparar todo."
+    author: "Promotora Residencial"
+    role: "Caso: Defectos en entrega de obra nueva"
+  - quote: "Pagamos por una impermeabilización que no funcionó. El informe demostró la mala ejecución y nos permitió reclamar con éxito la devolución del dinero y el coste de la nueva reparación."
+    author: "Carlos Fernández"
+    role: "Propietario de vivienda reformada"
 
 # CTA Section
-ctaTitle: '¿El resultado de su obra no es el que esperaba?'
-ctaDescription: 'No se conforme. Documente los defectos con un informe pericial y reclame lo que es justo.'
+ctaTitle: "¿El resultado de su obra no es el que esperaba?"
+ctaDescription: "No se conforme. Documente los defectos con un informe pericial y reclame lo que es justo."
 
 # Introduction (shown in hero section)
 intro: |

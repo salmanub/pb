@@ -1,14 +1,14 @@
 ---
-layout: 'layouts/contact.njk'
-title: 'Contacto | Peritos Ingenieros en Barcelona'
+layout: "layouts/contact.njk"
+title: "Contacto | Peritos Ingenieros en Barcelona"
 description: "Contacte con nuestro despacho de peritos ingenieros en Barcelona para una evaluación de su caso. Ofrecemos una primera valoración sin compromiso para informes, auditorías y asesoramiento."
-permalink: /contacto/
-lang: es
+permalink: "/contacto/"
+lang: "es"
 translations:
-  - lang: ca
-    permalink: /ca/contacte/
-  - lang: en
-    permalink: /en/contact/
+  - lang: "ca"
+    permalink: "/ca/contacte/"
+  - lang: "en"
+    permalink: "/en/contact/"
 eleventyNavigation:
   key: "Contacto"
   title: "Contacto"
@@ -18,7 +18,7 @@ eleventyNavigation:
 
 # Contact Page Content
 contact:
-    title: "CONTACTE CON<strong class='block text-cyan-400 mt-4'>NUESTRO EQUIPO</strong>"
+    title: "CONTACTE CON<strong class=\"block text-cyan-400 mt-4\">NUESTRO EQUIPO</strong>"
     intro: "Si necesita un análisis técnico para su caso, ya sea un informe pericial, una auditoría de obra o asesoramiento estructural, estamos aquí para ayudarle. Explíquenos su situación y le ofreceremos una primera valoración sin compromiso."
     
     # Información de contacto directo

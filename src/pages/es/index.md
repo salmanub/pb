@@ -1,14 +1,14 @@
 ---
-layout: 'layouts/index.njk'
-title: 'Perito Barcelona | Despacho de Peritos Ingenieros Colegiados'
+layout: "layouts/index.njk"
+title: "Perito Barcelona | Despacho de Peritos Ingenieros Colegiados"
 description: "Somos un despacho de peritos ingenieros colegiados en Barcelona, especializados en la elaboración de informes periciales técnicos, auditorías de obra y asesoramiento estructural."
-permalink: /
-lang: es
+permalink: "/"
+lang: "es"
 translations:
-  - lang: ca
-    permalink: /ca/
-  - lang: en
-    permalink: /en/
+  - lang: "ca"
+    permalink: "/ca/"
+  - lang: "en"
+    permalink: "/en/"
 eleventyNavigation:
   key: "Inicio"
   title: "Inicio"

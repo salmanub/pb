@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Expert Witness in Barcelona | Construction and Civil Works Technical Reports | Perito Barcelona'
-description: "Technical expert reports in construction and civil engineering. Diagnosis of pathologies, valuations, and judicial assistance in Barcelona. Licensed and accredited expert witness."
+title: 'Perito Barcelona | Chartered Engineer Expert Witness Firm'
+description: "Perito Barcelona: We are a firm of chartered engineers specializing in technical expert reports, construction audits, and structural consulting in Barcelona and its province."
 permalink: /en/
 lang: en
 translations:
@@ -16,251 +16,175 @@ eleventyNavigation:
   order: 1
   icon: <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
 
+# Hero Section
 hero:
-    tag: "Expert Witness in Construction and Civil Engineering in Barcelona"
-    title: "Technical Expert Reports"
-    strong: "in Barcelona"
-    subtitle: "Specialists in Building, Structures, and Construction Disputes"
-    description: "We prepare comprehensive technical reports for construction defects, industrial building inspections, and contractual disputes. Experts in structural assessments and detailed technical valuations."
-    rotatingTexts:
-      default: "with technical rigor"
-      items:
-        - "with technical rigor"
-        - "that resolve construction disputes"
-        - "accepted by all courts"
-        - "that speed up conflict resolution"
-        - "that ensure judicial success"
-        - "with precise structural diagnoses"
-    cta:
-        primary: "Request a Quote"
-        primaryUrl: "/en/contact/"
-        secondary: "Call Now"
-        secondaryUrl: "#areas-expertise"
-        descubreMas: "Learn More"
-    badges:
-        - value: "97%"
-          text: "Successful Cases"
-          subtext: "In court"
-        - value: "24h"
-          text: "Quick Response"
-          subtext: "Guaranteed"
-    logosText: "Reports accepted by all Spanish courts"
+  tag: "Chartered Engineer Expert Witnesses in Barcelona"
+  title: "Technical Expert Witness Reports"
+  strong: "to Defend Your Interests"
+  subtitle: "Specialists in Expert Reports, Construction Audits, and Structural Consulting"
+  description: "We produce independent technical reports to resolve litigation, audit project quality, and diagnose structural safety with the utmost rigor."
+  rotatingTexts:
+    default: "with technical rigor"
+    items:
+      - "with technical rigor"
+      - "that resolve construction disputes"
+      - "with guaranteed judicial validity"
+      - "to ensure your project's quality"
+      - "with precise structural diagnostics"
+  cta:
+    primary: "Evaluate Your Case"
+    primaryUrl: "/en/contact/"
+    secondary: "Call Now"
+    secondaryUrl: "tel:+34614194985"
+    descubreMas: "Learn More"
+  badges:
+    - value: "15+"
+      text: "Years of Experience"
+      subtext: "In the field"
+    - value: "97%"
+      text: "Reports Ratified"
+      subtext: "In court proceedings"
+  logosText: "Our reports are accepted by major courts and insurance entities."
 
+# Highlighted Services
 highlightedServices:
   titulo: "Our"
-  highlight: "Main Services"
-  descripcion: "Specialized expert services to ensure construction quality and resolve disputes effectively."
-  tag: Specialized Services
-  cta: "Learn More"
+  highlight: "Specialized Services"
+  descripcion: "We offer technical solutions designed to provide clarity, safety, and resolve conflicts at any stage of a construction project."
+  cta: "Learn more"
   items:
-    - titulo: "Technical Construction Audit"
-      descripcion: "Comprehensive evaluation of construction quality, regulatory compliance, and early detection of deficiencies."
-      url: "/en/construction-technical-audit/"
-      icon: "clipboard-list"
-      cta: "Learn More"
-    - titulo: "Judicial and Private Expert Witness Services"
-      descripcion: "Technical reports for court proceedings and mediation, with cause analysis and economic valuations."
-      url: "/en/judicial-expert-witness/"
+    - titulo: "Expert Witness Reports"
+      descripcion: "We produce party-appointed and judicial expert reports to analyze pathologies, hidden defects, and all types of construction flaws."
+      url: "/en/expert-witness-reports/"
       icon: "scale"
-      cta: "Learn More"
-    - titulo: "Specialized Technical Inspections"
-      descripcion: "Detailed diagnosis of civil engineering and building works, with preventive and corrective recommendations."
-      url: "/en/specialized-technical-inspections/"
-      icon: "search-check"
-      cta: "Learn More"
-    - titulo: "Construction Dispute Advisory"
-      descripcion: "Technical analysis and expert support to resolve discrepancies in certifications, measurements, or contractual compliance."
-      url: "/en/construction-dispute-advisory/"
-      icon: "gavel"
-      cta: "Learn More"
+      cta: "View more"
+    - titulo: "Construction Audits"
+      descripcion: "We perform quality control, execution supervision, and technical mediation in disputes over certifications and payments."
+      url: "/en/construction-audits/"
+      icon: "clipboard-list"
+      cta: "View more"
+    - titulo: "Structural Consulting"
+      descripcion: "An independent diagnosis before the repair. We analyze the real cause of the problem to define the safest and most cost-effective reinforcement solution."
+      url: "/en/structural-consulting/"
+      icon: "tool"
+      cta: "View more"
 
-
-# Services Section
-servicios:
-  title: "Our Expert Witness Services"
-  description: "We offer precise technical and legal solutions backed by over 15 years of experience and a dual perspective as both Engineer and Insurance Expert."
-  items:
-    - title: "Construction Expert Reports"
-      description: "In-depth analysis of pathologies, hidden defects, and construction flaws."
-      features:
-        - "Moisture and leakage analysis"
-        - "Inspection of structural cracks"
-        - "Reports for communities and HOAs"
-      url: "/en/construction-expert-reports/"
-    - title: "Insurance Expert Reports"
-      description: "Damage assessments, coverage analysis, and counter-expert reports."
-      features:
-        - "Assessment of water and theft damages"
-        - "Counter-expert reports and coverage reviews"
-        - "Insurance claim disputes"
-      url: "/en/insurance-expert-reports/"
-
-# 'How We Can Help You' Section
+# "How can we help you" Section
 ayuda:
   encabezado:
     title: "How Can We"
     highlight: "Help You"
-    subtitle: "Specialized technical and expert solutions for any property, project, or dispute in Barcelona."
+    subtitle: "We address the most common technical problems in building and civil works to offer you a clear and documented solution."
   introduccion:
-    title: "Some of the most common technical issues we address:"
-  cta: "Learn more"  # Añadido
+    title: "Some of the problems we solve most frequently:"
   problemas:
-    - title: "Cracks and Structural Deformations"
+    - title: "Cracks & Structural Pathologies"
       description: "Analysis and diagnosis of structural pathologies, crack detection, and repair recommendations."
-      url: "/en/structural-cracks-deformations/"
+      url: "/en/expert-witness-reports/structural-pathologies/"
       icon: "alert-triangle"
-    - title: "Persistent Dampness and Leaks"
-      description: "Identification of causes, technical reports, and solutions for moisture problems in buildings."
-      url: "/en/persistent-dampness-leaks/"
+    - title: "Persistent Damp & Leaks"
+      description: "Origin detection, technical reports, and solutions for moisture problems in buildings."
+      url: "/en/expert-witness-reports/damp-leaks/"
       icon: "droplet"
-    - title: "Certification and Measurement Disputes"
-      description: "Expert advice for conflicts arising from certifications, measurements, and regulatory compliance."
-      url: "/en/certification-measurement-disputes/"
+    - title: "Certification & Payment Disputes"
+      description: "Technical audit for conflicts arising from certifications, measurements, and contract compliance."
+      url: "/en/construction-audits/certification-payment-disputes/"
       icon: "file-text"
-    - title: "Hidden Defects in New Buildings"
-      description: "Identification and documentation of concealed defects in recently completed construction projects."
-      url: "/en/hidden-defects-new-buildings/"
+    - title: "Hidden Defects in Property Sales"
+      description: "Identification and documentation of defects not visible upon handover or purchase of a property."
+      url: "/en/expert-witness-reports/hidden-defects/"
       icon: "search"
-    - title: "Detachment and Damage from Poor Workmanship"
-      description: "Expert assessment of damage caused by poor workmanship and recommendations for repairs."
-      url: "/en/detachment-damage-poor-workmanship/"
+    - title: "Poor Workmanship"
+      description: "Expert assessment of damages caused by deficient execution and proposals for remediation."
+      url: "/en/expert-witness-reports/poor-workmanship-claims/"
       icon: "alert-circle"
-    - title: "Expert Advisory in Structural Repairs"
-      description: "Technical studies and repair proposals to ensure structural stability and safety."
-      url: "/en/structural-repair-advisory/"
-      icon: "tool"
+    - title: "Public Works Expertise"
+      description: "Specialized technical reports for infrastructure projects, civil works, and public tenders."
+      url: "/en/public-works/"
+      icon: "building"
 
+# Technical Solution Section
 solucion:
   imagen:
     src: "/assets/images/professional-civil-engineer-examining-modern-build-480.avif"
-    alt: "Engineer analyzing structural issues"
-    badge: "Technical Report"
+    alt: "Team of engineers analyzing structural problems"
+    badge: "Expert Report"
     caption: "Technical reports with rigor and clarity"
   contenido:
     titulo: "The"
     highlight: "Technical Solution"
     subtitulo: "You Need"
-    descripcion: "At perito.barcelona, we combine civil engineering expertise with a rigorous expert methodology to deliver accurate, impartial, and technically sound reports. Our intervention provides you with clear arguments to make decisions, claim damages, or implement safe construction solutions."
+    descripcion: "At perito.barcelona we combine civil engineering experience with expert witness methodology to deliver precise, impartial, and technically sound reports. Our intervention provides clear arguments to make decisions, claim for defects, or define safe construction solutions."
     caracteristicas:
       - icono: "search"
-        titulo: "We Identify the Root Cause"
-        descripcion: "We accurately identify the origin of cracks, dampness, construction defects, or insurance coverage validity through rigorous, documented analysis."
+        titulo: "We Clarify the Root Cause"
+        descripcion: "We accurately identify the origin of cracks, dampness, and construction defects through documented analysis."
       - icono: "clipboard-check"
         titulo: "We Determine Responsibilities"
-        descripcion: "We objectively establish responsibility for each construction defect and assess whether insurance coverage applies."
+        descripcion: "We objectively define the responsibility for each defect or technical non-compliance."
       - icono: "calculator"
         titulo: "We Value with Precision"
-        descripcion: "We quantify damages and the real cost of necessary repairs, avoiding overruns and providing technically defensible valuations."
+        descripcion: "We quantify damages and repair costs with defensible technical criteria."
       - icono: "shield-check"
-        titulo: "We Prevent Disputes"
-        descripcion: "We document the actual condition of properties in rentals, sales, or project handovers to avoid future disputes and protect your interests."
+        titulo: "We Prevent Conflicts"
+        descripcion: "We document the actual state to avoid disputes in rentals, sales, or work receptions."
     cta:
-      texto: "Request Free Consultation"
+      texto: "Request Initial Advice"
       url: "/en/contact/"
 
-# Sección Proceso
+# Process Section
 proceso:
-  titulo: "How We"
-  highlight: "Start"
-  descripcion: "A clear and transparent process to help you resolve your case with maximum professionalism."
+  titulo: "Our"
+  highlight: "Process"
+  descripcion: "A clear and transparent process to help you resolve your case with the utmost professionalism."
   pasos:
     - numero: "01"
       titulo: "Initial Contact"
-      descripcion: "Tell us about your case by phone or email. We conduct a preliminary analysis with no obligation."
+      descripcion: "Tell us about your case by phone or email. We perform a preliminary analysis with no commitment."
       icon: "message-circle"
-      tiempoLabel: "Estimated time"
-      tiempo: "24h"
-
     - numero: "02"
-      titulo: "Inspection and Analysis"
-      descripcion: "We visit the site, gather evidence, and analyze all necessary technical documentation."
+      titulo: "Inspection & Analysis"
+      descripcion: "We visit the site, gather evidence, and analyze the necessary technical documentation."
       icon: "inspect-check"
-      tiempoLabel: "Duration"
-      tiempo: "2-3 days"
-
     - numero: "03"
       titulo: "Expert Report"
-      descripcion: "Writing of the technical report applying current regulations with scientific rigor and expository clarity."
+      descripcion: "Drafting of the technical opinion applying current regulations with scientific rigor and clarity."
       icon: "report-tech"
-      tiempoLabel: "Delivery"
-      tiempo: "5-7 days"
-
     - numero: "04"
-      titulo: "Professional Defense"
-      descripcion: "Presentation and defense of the report in court with technical support until resolution."
+      titulo: "Ratification & Defense"
+      descripcion: "Presentation, clarification, and defense of the report before the parties or in court."
       icon: "shield-court"
-      tiempoLabel: "Duration"
-      tiempo: "As per procedure"
   cta:
-    texto: "Start Now - Free Initial Contact"
+    texto: "Start Now - Evaluate Your Case"
     url: "/en/contact/"
 
 # Testimonials Section
 testimonios:
   tag: "Success Stories"
   titulo: "Satisfied Clients"
-  highlight: "Share Their Experience"
-  descripcion: "Discover how we have helped other clients successfully resolve their cases"
+  highlight: "Endorse Our Experience"
+  descripcion: "Discover how we have helped property owners, communities, and companies to successfully resolve their technical cases."
   items:
-    - nombre: "Greenwood Residents Association"
-      rol: "Property Manager"
-      tipo: "empresa"
-      imagen: ""
-      cita: "The expert report was decisive in resolving the roofing dispute. The repair was carried out following their recommendations, and we haven’t had any issues since."
-      fecha: "2 months ago"
+    - nombre: "Les Corts Homeowners Association"
+      rol: "President of the Association"
+      cita: "The expert report identified the source of the roof leaks and facilitated the assumption of the necessary repairs by the responsible party."
+    - nombre: "CONSTRUCCIONES TÉCNICAS BCN, S.L."
+      rol: "Project Manager"
+      cita: "The preventive technical audit allowed for the correction of deficiencies before the handover of 24 homes, avoiding claims and cost overruns."
+    - nombre: "Ana S. Garcia"
+      rol: "Affected Homeowner"
+      cita: "The expert assessment proved the existence of hidden defects in the home, providing the basis for the legal claim that allowed us to repair the damages."
 
-    - nombre: "Sunrise Construction"
-      rol: "Technical Director"
-      tipo: "empresa"
-      imagen: ""
-      cita: "The technical audit allowed us to identify and fix deficiencies before project handover. Their advice saved us from future problems with buyers."
-      fecha: "1 month ago"
-
-    - nombre: "Richard T. Robinson"
-      rol: "Property Owner"
-      tipo: "persona"
-      imagen: ""
-      cita: "Their expert assessment was instrumental in my insurance claim. The detailed report provided clear evidence of structural damage, leading to a successful settlement."
-      fecha: "3 months ago"
-
-# Sección CTA Contacto
+# Contact CTA Section
 contactCTA:
   titulo: "Ready to Get"
   highlight: "Clarity and Solutions"
-  descripcion: "Contact us today and receive a free initial assessment of your case."
+  descripcion: "Contact our team today and get an initial evaluation of your case with no commitment."
   contactInfo:
-    - titulo: "Call Us Now"
+    - titulo: "Call us now"
       valor: "+34 614 194 985"
-      url: "tel:934687235"
-      horario: "Monday to Friday: 9:00 AM - 7:00 PM"
-      icon: "phone"
-    - titulo: "Write to Us"
+      url: "tel:+34614194985"
+    - titulo: "Write to us"
       valor: "info@perito.barcelona"
       url: "mailto:info@perito.barcelona"
-      horario: "We respond within 24h"
-      icon: "mail"
-  form:
-    campos:
-      - id: "nombre"
-        label: "Full Name"
-        tipo: "text"
-        grid: ""
-      - id: "email"
-        label: "Email"
-        tipo: "email"
-        grid: "grid grid-cols-1 md:grid-cols-2 gap-6"
-      - id: "telefono"
-        label: "Phone Number"
-        tipo: "tel"
-        grid: "grid grid-cols-1 md:grid-cols-2 gap-6"
-      - id: "mensaje"
-        label: "Briefly Describe Your Case"
-        tipo: "textarea"
-        grid: ""
-    submitText: "Send Inquiry"
-    successMessage: "Your information has been sent successfully!"
-    errorMessage: "An error occurred while sending your information. Please try again later."
-    endpoint: "https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma"
-
-
 ---

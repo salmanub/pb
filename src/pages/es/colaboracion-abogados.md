@@ -1,69 +1,74 @@
 ---
-layout: 'layouts/collaboration.njk'
+layout: "layouts/collaboration.njk"
 title: "Colaboración con Abogados | Perito Ingeniero para Despachos en Barcelona"
-subtitle: 'Soporte técnico-pericial para reforzar la solidez probatoria de sus casos'
+subtitle: "Soporte técnico-pericial para reforzar la solidez probatoria de sus casos"
 description: "Ofrecemos un servicio de peritaje especializado para despachos de abogados en Barcelona. Aportamos la prueba técnica indispensable para ganar casos de construcción, vicios ocultos y disputas."
 permalink: "/colaboracion-abogados/"
-lang: 'es'
+lang: "es"
+translations:
+  - lang: "ca"
+    permalink: "/ca/collaboracio-advocats/"
+  - lang: "en"
+    permalink: "/en/lawyer-collaboration/"
 eleventyNavigation:
   key: "Colaboración con Abogados"
   title: "Área para Abogados"
   notshow: true # Esta página se accede desde el botón de la navbar, no necesita estar en el menú principal.
   order: 99
-serviceTitle: 'colaboración con despachos de abogados'
+serviceTitle: "colaboración con despachos de abogados"
 
 # Parent Service (for breadcrumb and linking back to pillar)
 parentService:
-  title: 'Inicio'
-  url: '/'
+  title: "Inicio"
+  url: "/"
 
 # Key features in the hero section
 keyFeatures:
-  - 'Refuerzo de su estrategia procesal con argumentos técnicos irrefutables'
-  - 'Peritos solventes con experiencia probada en ratificación judicial'
-  - 'Análisis de viabilidad técnica para evaluar la solidez de un caso antes de la demanda'
-  - 'Colaboración ágil y confidencial adaptada a los plazos procesales'
+  - "Refuerzo de su estrategia procesal con argumentos técnicos irrefutables"
+  - "Peritos solventes con experiencia probada en ratificación judicial"
+  - "Análisis de viabilidad técnica para evaluar la solidez de un caso antes de la demanda"
+  - "Colaboración ágil y confidencial adaptada a los plazos procesales"
 
 # Service Process (for sidebar)
 serviceProcess:
-  - title: 'Análisis confidencial del caso'
-    description: 'Estudiamos la documentación para ofrecerle una primera valoración de viabilidad técnica'
-  - title: 'Propuesta de enfoque pericial'
-    description: 'Definimos la estrategia y el alcance del informe para maximizar su impacto'
-  - title: 'Elaboración del informe técnico'
-    description: 'Redactamos un dictamen sólido, claro y enfocado en los puntos clave de su demanda'
-  - title: 'Soporte y defensa en juicio'
-    description: 'Le ofrecemos apoyo continuo y defendemos el informe en sede judicial con convicción'
+  - title: "Análisis confidencial del caso"
+    description: "Estudiamos la documentación para ofrecerle una primera valoración de viabilidad técnica"
+  - title: "Propuesta de enfoque pericial"
+    description: "Definimos la estrategia y el alcance del informe para maximizar su impacto"
+  - title: "Elaboración del informe técnico"
+    description: "Redactamos un dictamen sólido, claro y enfocado en los puntos clave de su demanda"
+  - title: "Soporte y defensa en juicio"
+    description: "Le ofrecemos apoyo continuo y defendemos el informe en sede judicial con convicción"
 
 # Service Benefits (for sidebar)
 serviceBenefits:
-  - 'Aumente la probabilidad de éxito de sus demandas y reclamaciones'
-  - 'Ahorre tiempo y recursos delegando toda la parte técnica en un experto'
-  - 'Aporte a sus clientes una solución integral y de máxima profesionalidad'
-  - 'Cuente con un aliado técnico de confianza para colaboraciones a largo plazo'
-  - 'Fundamente sus argumentos legales con pruebas objetivas e irrefutables'
+  - "Aumente la probabilidad de éxito de sus demandas y reclamaciones"
+  - "Ahorre tiempo y recursos delegando toda la parte técnica en un experto"
+  - "Aporte a sus clientes una solución integral y de máxima profesionalidad"
+  - "Cuente con un aliado técnico de confianza para colaboraciones a largo plazo"
+  - "Fundamente sus argumentos legales con pruebas objetivas e irrefutables"
 
 # Related Problems (optional)
 relatedProblems:
-  - title: 'Informes Periciales'
-    description: 'Explore en detalle los tipos de informes que elaboramos para sus casos.'
-    url: '/informes-periciales/'
-  - title: 'Auditorías de Obra'
-    description: 'Un servicio clave para disputas de certificaciones y liquidaciones de obra.'
-    url: '/auditorias-de-obra/'
+  - title: "Informes Periciales"
+    description: "Explore en detalle los tipos de informes que elaboramos para sus casos."
+    url: "/informes-periciales/"
+  - title: "Auditorías de Obra"
+    description: "Un servicio clave para disputas de certificaciones y liquidaciones de obra."
+    url: "/auditorias-de-obra/"
 
 # Client Testimonials
 testimonials:
-  - quote: 'Su informe pericial fue la pieza central de nuestra demanda por vicios ocultos. La claridad expositiva y la contundencia técnica fueron determinantes para obtener una sentencia favorable.'
-    author: 'Sánchez & Martí Advocats'
-    role: 'Despacho especialista en Derecho Inmobiliario'
-  - quote: 'La colaboración ha sido excepcional. No solo entregan un informe impecable, sino que su disponibilidad para resolver dudas y su solvencia durante la ratificación en el juicio marcan la diferencia.'
-    author: 'Bufete Legal Garrido'
-    role: 'Área de Litigación Civil'
+  - quote: "Su informe pericial fue la pieza central de nuestra demanda por vicios ocultos. La claridad expositiva y la contundencia técnica fueron determinantes para obtener una sentencia favorable."
+    author: "Sánchez & Martí Advocats"
+    role: "Despacho especialista en Derecho Inmobiliario"
+  - quote: "La colaboración ha sido excepcional. No solo entregan un informe impecable, sino que su disponibilidad para resolver dudas y su solvencia durante la ratificación en el juicio marcan la diferencia."
+    author: "Bufete Legal Garrido"
+    role: "Área de Litigación Civil"
 
 # CTA Section
-ctaTitle: '¿Tiene un caso que necesita soporte técnico?'
-ctaDescription: 'Contacte con nosotros para una consulta de viabilidad inicial sin compromiso. Convirtámonos en aliados estratégicos.'
+ctaTitle: "¿Tiene un caso que necesita soporte técnico?"
+ctaDescription: "Contacte con nosotros para una consulta de viabilidad inicial sin compromiso. Convirtámonos en aliados estratégicos."
 
 # Introduction (shown in hero section)
 intro: |
