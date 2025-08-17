@@ -65,13 +65,9 @@
     {% block scripts %}
     {% include "partials/head.njk" %}
     
-        <script>
-        if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js');
-        });
-        }
-        </script>
+        <!-- Service Worker Handler -->
+        <script src="/assets/js/service-worker-handler.js" defer></script>
+        
         <script>
             const menuButton = document.getElementById('menuButton');
             const mobileMenu = document.getElementById('mobileMenu');

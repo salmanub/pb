@@ -5,4 +5,176 @@ headers:
   Referrer-Policy: strict-origin-when-cross-origin
 ---
 const VERSION = '{{ global.random() }}';
-{% include "partials/global/service-worker.js" %}
+const BUILD_TIME = '{{ global.currentTime() }}';
+
+// Nombre de los caches con timestamp para forzar actualización
+const CACHE_KEYS = {
+  PRE_CACHE: `precache-${VERSION}-${BUILD_TIME}`,
+  RUNTIME: `runtime-${VERSION}-${BUILD_TIME}`,
+  STATIC: `static-${VERSION}-${BUILD_TIME}`
+};
+
+// Recursos críticos a pre-cachear
+const PRE_CACHE_URLS = [
+  '/',
+  '/index.html',
+  '/assets/styles/index.css',
+  '/assets/js/main.js'
+];
+
+// URLs a excluir del caché
+const EXCLUDED_URLS = [
+  'admin',
+  '.netlify',
+  '/contact',
+  '/thank-you',
+  '/api/'
+];
+
+// Verificación de versión cada 1 hora (en milisegundos)
+const VERSION_CHECK_INTERVAL = 60 * 60 * 1000;
+
+// Función para verificar actualizaciones
+const checkForUpdates = async () => {
+  try {
+    const response = await fetch('/service-worker.js');
+    const text = await response.text();
+    const match = text.match(/const VERSION = '(.+)'/);
+    if (match && match[1] !== VERSION) {
+      notifyClientsOfUpdate();
+    }
+  } catch (error) {
+    console.error('Error checking for updates:', error);
+  }
+};
+
+// Notifica a todos los clientes sobre la actualización
+const notifyClientsOfUpdate = async () => {
+  const clients = await self.clients.matchAll();
+  clients.forEach(client => {
+    client.postMessage({
+      type: 'NEW_VERSION_AVAILABLE',
+      version: VERSION
+    });
+  });
+};
+
+// Estrategia de caché mejorada
+const networkFirst = async (request) => {
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const cache = await caches.open(CACHE_KEYS.RUNTIME);
+      cache.put(request, networkResponse.clone());
+      return networkResponse;
+    }
+  } catch (error) {
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    throw error;
+  }
+  throw new Error('Network and cache both failed');
+};
+
+// Evento de instalación
+self.addEventListener('install', event => {
+  event.waitUntil(
+    (async () => {
+      const cache = await caches.open(CACHE_KEYS.PRE_CACHE);
+      await cache.addAll(PRE_CACHE_URLS);
+      await self.skipWaiting();
+    })()
+  );
+});
+
+// Evento de activación
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    (async () => {
+      // Limpiar caches antiguos
+      const keys = await caches.keys();
+      await Promise.all(
+        keys.map(key => {
+          if (!Object.values(CACHE_KEYS).includes(key)) {
+            return caches.delete(key);
+          }
+        })
+      );
+      
+      // Tomar control inmediatamente
+      await self.clients.claim();
+      
+      // Notificar a los clientes
+      const clients = await self.clients.matchAll();
+      clients.forEach(client => {
+        client.postMessage({
+          type: 'SW_ACTIVATED',
+          version: VERSION
+        });
+      });
+      
+      // Iniciar verificación periódica de actualizaciones
+      setInterval(checkForUpdates, VERSION_CHECK_INTERVAL);
+    })()
+  );
+});
+
+// Evento de fetch
+self.addEventListener('fetch', event => {
+  const url = new URL(event.request.url);
+  
+  // Ignorar URLs excluidas
+  if (EXCLUDED_URLS.some(excluded => url.pathname.includes(excluded))) {
+    return;
+  }
+  
+  // Estrategia según el tipo de solicitud
+  if (event.request.method === 'GET') {
+    if (url.pathname.endsWith('.html') || url.pathname === '/') {
+      // Para páginas HTML, siempre ir a la red primero
+      event.respondWith(networkFirst(event.request));
+    } else {
+      // Para otros recursos, usar cache first con background update
+      event.respondWith(
+        (async () => {
+          const cache = await caches.open(CACHE_KEYS.STATIC);
+          const cachedResponse = await cache.match(event.request);
+          
+          // Actualizar caché en segundo plano
+          const updateCache = async () => {
+            try {
+              const networkResponse = await fetch(event.request);
+              if (networkResponse.ok) {
+                await cache.put(event.request, networkResponse.clone());
+              }
+            } catch (error) {
+              console.error('Background fetch failed:', error);
+            }
+          };
+          
+          if (cachedResponse) {
+            // Si hay caché, usarla y actualizar en segundo plano
+            updateCache();
+            return cachedResponse;
+          }
+          
+          // Si no hay caché, ir a la red
+          const networkResponse = await fetch(event.request);
+          if (networkResponse.ok) {
+            await cache.put(event.request, networkResponse.clone());
+          }
+          return networkResponse;
+        })()
+      );
+    }
+  }
+});
+
+// Evento de mensaje
+self.addEventListener('message', event => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
