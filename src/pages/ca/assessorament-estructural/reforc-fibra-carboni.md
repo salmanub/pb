@@ -70,7 +70,7 @@ El reforç d'una estructura ja no es limita a afegir pesats perfils d'acer o a a
 
 El nostre rol com a enginyers consultors és determinar si aquesta tecnologia és l'adequada per al vostre cas i, en cas afirmatiu, dissenyar un projecte de reforç
   <p>Com a part del nostre servei d'<a href="/ca/assessorament-estructural/">assessorament estructural</a>, ens especialitzem en el càlcul i disseny de projectes de reforç amb aquests materials composites, garantint una intervenció de màxima eficàcia i durabilitat.</p>
----
+
 
 ## Reforç amb Fibra de Carboni (CFRP): La Solució d'Avantguarda
 
