@@ -5,6 +5,13 @@ subtitle: "Specialized technical reports in public works and civil engineering p
 description: "We produce expert reports for public works in Barcelona. Expert technical advice on tenders, project modifications, and claims in public contracts."
 permalink: "/en/public-works/"
 lang: "en"
+translations:
+  - lang: "ca"
+    permalink: "/ca/obres-publiques/"
+  - lang: "es"
+    permalink: "/es/obras-publicas/"
+  - lang: "en"
+    permalink: "/en/public-works/"
 eleventyNavigation:
   key: "Public Works"
   parent: "Expert Reports"

@@ -5,6 +5,11 @@ subtitle: "Dictàmens tècnics especialitzats en projectes d'obra pública i eng
 description: "Realitzem informes pericials per a obres públiques a Barcelona. Assessorament tècnic expert en licitacions, modificats d'obra i reclamacions en contractes públics."
 permalink: "/ca/obres-publiques/"
 lang: "ca"
+translations:
+  - lang: "es"
+    permalink: "/es/obras-publicas/"
+  - lang: "en"
+    permalink: "/en/public-works/"
 eleventyNavigation:
   key: "Obres Públiques"
   parent: "Informes Pericials"
