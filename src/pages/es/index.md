@@ -69,7 +69,7 @@ highlightedServices:
       icon: "tool"
       cta: "Ver más"
 
-# Sección "En qué podemos ayudarte"
+# Sección "En qué podemos ayudarte" (CORREGIDA)
 ayuda:
   encabezado:
     title: "¿En Qué Podemos"
@@ -81,11 +81,11 @@ ayuda:
   problemas:
     - title: "Grietas y Patologías Estructurales"
       description: "Análisis y diagnóstico de patologías estructurales, detección de fisuras y recomendaciones de reparación."
-      url: "/peritajes/patologias-estructurales/"
+      url: "/informes-periciales/patologias-estructurales/"
       icon: "alert-triangle"
     - title: "Humedades y Filtraciones Persistentes"
       description: "Detección de orígenes, informes técnicos y soluciones para problemas de humedad en edificaciones."
-      url: "/humedades-filtraciones/"
+      url: "/informes-periciales/humedades-filtraciones/"
       icon: "droplet"
     - title: "Disputas en Certificaciones y Pagos"
       description: "Auditoría técnica para conflictos derivados de certificaciones, mediciones y cumplimiento de contrato."
@@ -93,11 +93,12 @@ ayuda:
       icon: "file-text"
     - title: "Vicios Ocultos en Compraventa o Post-obra"
       description: "Identificación y documentación de defectos no visibles tras la entrega o compra de un inmueble."
-      url: "/vicios-ocultos/"
+      # URL CORREGIDA para mantener la estructura del pilar "Informes Periciales"
+      url: "/informes-periciales/vicios-ocultos/"
       icon: "search"
     - title: "Mala Ejecución de Obras"
       description: "Evaluación pericial de daños causados por deficiencias en ejecución y propuestas de subsanación."
-      url: "/peritajes-construccion/"
+      url: "/informes-periciales/reclamacion-mala-ejecucion/"
       icon: "alert-circle"
     - title: "Peritajes para Obras Públicas"
       description: "Dictámenes técnicos especializados para proyectos de infraestructuras, obra civil y licitaciones públicas."

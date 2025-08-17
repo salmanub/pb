@@ -1,35 +1,25 @@
 ---
 layout: 'layouts/service-child.njk'
-# SEO: Título más activo y con keywords de intención de compra (Licitaciones, Contratos).
 title: 'Perito Obras Públicas Barcelona | Informes para Licitaciones y Contratos'
 subtitle: 'Dictámenes técnicos especializados para proyectos de obra pública e ingeniería civil'
-# SEO: Meta Description más activa, clara y centrada en los problemas del cliente.
 description: "Realizamos informes periciales para obras públicas en Barcelona. Asesoramiento técnico experto en licitaciones, modificados de obra y reclamaciones en contratos públicos."
-permalink: /obras-publicas/
-lang: es
-translations:
-  - lang: ca
-    permalink: /ca/obres-publiques/
-  - lang: en
-    permalink: /en/public-works/
+permalink: "/obras-publicas/"
+lang: 'es'
 eleventyNavigation:
   key: "Obras Públicas"
-  # ESTRUCTURA: Parent actualizado para coincidir con el pilar principal.
-  parent: "Construcción"
+  parent: "Informes Periciales"
   title: "Perito Obras Públicas"
   notshow: true
-  order: 2
-serviceTitle: 'Peritaje de Obras Públicas'
+  order: 5
+serviceTitle: 'peritajes de obras públicas'
 
 # Parent Service (for breadcrumb and linking back to pillar)
 parentService:
-  title: 'Peritajes en Construcción'
-  # ESTRUCTURA: Corregido enlace al pilar principal para una correcta arquitectura SEO.
-  url: '/peritajes-construccion/'
+  title: 'Informes Periciales'
+  url: '/informes-periciales/'
 
 # Key features in the hero section
 keyFeatures:
-  # CLARIDAD: Textos más orientados al beneficio y la solución.
   - 'Dictámenes técnicos para licitaciones y modificados de obra'
   - 'Auditorías de calidad y cumplimiento normativo en obra civil'
   - 'Argumentación técnica sólida para reclamaciones en contratos públicos'
@@ -57,11 +47,11 @@ serviceBenefits:
 # Related Problems (optional)
 relatedProblems:
   - title: 'Disputas en Certificaciones'
-    description: 'Análisis de mediciones y pagos en obra pública.'
+    description: 'Análisis de mediciones y pagos, un conflicto común en obra pública.'
     url: '/auditorias-obra/disputas-certificaciones-pago/'
-  - title: 'Vicios Ocultos y Defectos'
-    description: 'Identificación de defectos post-construcción en infraestructuras.'
-    url: '/peritajes/vicios-ocultos-defectos-constructivos/'
+  - title: 'Auditorías de Obra'
+    description: 'La auditoría es clave para el control de los proyectos públicos.'
+    url: '/auditorias-de-obra/'
 
 # Client Testimonials
 testimonials:
@@ -74,255 +64,50 @@ testimonials:
 
 # CTA Section
 ctaTitle: '¿Necesita un dictamen técnico para una obra pública?'
-# TONO: Adaptado a "nosotros" y a un tono más formal (usted).
 ctaDescription: 'Contacte con nuestro equipo de peritos para evaluar su caso y determinar la mejor estrategia técnica.'
 
 # Introduction (shown in hero section)
 intro: |
-  <p>¿Necesita un informe pericial especializado en obra pública? ¿Se enfrenta a conflictos técnicos en proyectos de infraestructuras o a reclamaciones en contratos públicos?</p>
+  <p>Los proyectos de infraestructuras y obra civil se rigen por un marco normativo y contractual muy estricto. Cualquier conflicto, desviación o reclamación requiere un soporte técnico-pericial especializado.</p>
   
-  <p>Como parte de nuestros <a href="/peritajes-construccion/">servicios de peritaje</a>, ofrecemos dictámenes técnicos rigurosos para resolver disputas en proyectos de obra pública, desde análisis de modificados hasta auditorías de calidad y valoración de reclamaciones.</p>
-
-# Hero Section
-hero:
-  # TONO: Adaptado a "nosotros".
-  tag: "Peritos de Obras Públicas"
-  title: "Peritajes en Obras Públicas"
-  strong: "e Infraestructuras"
-  description: "Informes periciales especializados en infraestructuras y obra pública. Dictámenes técnicos para licitaciones, modificados y reclamaciones en proyectos de ingeniería civil."
-
-# Servicios Específicos
-serviciosEspecificos:
-  # TONO: Adaptado a "nosotros".
-  titulo: "Nuestros Servicios de"
-  highlight: "Peritaje en Obra Pública"
-  descripcion: "Ofrecemos cobertura pericial experta para resolver conflictos técnicos en todo tipo de proyectos de infraestructuras y obra pública."
-  servicios:
-    - titulo: "Peritajes en Infraestructuras Viarias"
-      descripcion: "Informes técnicos sobre calidad, patologías y cumplimiento normativo en carreteras, puentes y obras de fábrica."
-      icon: "blueprint"
-    - titulo: "Auditoría de Obras Hidráulicas"
-      descripcion: "Control y verificación técnica de obras hidráulicas, canalizaciones y sistemas de saneamiento."
-      icon: "water"
-    - titulo: "Dictámenes en Obras Ferroviarias"
-      descripcion: "Peritajes especializados en infraestructuras ferroviarias, vías y obras complementarias."
-      icon: "inspect-check"
-    - titulo: "Valoración de Modificados"
-      descripcion: "Análisis técnico-económico de modificaciones y reclamaciones en contratos de obra pública."
-      icon: "calculator"
-
-# Sección Por Qué Elegirnos
-porqueElegirnos:
-  titulo: "Por Qué"
-  highlight: "Elegirnos"
-  descripcion: "Experiencia contrastada en peritajes de obra pública y en la resolución de conflictos técnicos en infraestructuras complejas."
-  razones:
-    - titulo: "Experiencia en Obra Pública"
-      descripcion: "Amplia trayectoria en proyectos de infraestructuras y conocimiento específico de la normativa técnica."
-      icon: "certificate"
-    - titulo: "Rigor Técnico"
-      descripcion: "Nuestros informes periciales se fundamentan en análisis exhaustivos y la normativa vigente."
-      icon: "clipboard-check"
-    - titulo: "Peritos Judiciales Especializados"
-      # TONO: Adaptado a "nosotros".
-      descripcion: "Somos peritos colegiados con experiencia en tribunales y procedimientos administrativos."
-      icon: "shield-court"
-    - titulo: "Respuesta Rápida"
-      descripcion: "Ofrecemos atención inmediata y plazos de entrega ajustados a las necesidades del procedimiento."
-      icon: "clock"
-
-# Proceso de Trabajo
-proceso:
-  # TONO: Adaptado a "nosotros".
-  titulo: "Nuestro Proceso de"
-  highlight: "Trabajo"
-  descripcion: "Aplicamos una metodología clara y eficiente para la elaboración de informes periciales en obra pública."
-  pasos:
-    - numero: "01"
-      titulo: "Análisis Inicial"
-      descripcion: "Estudio de la documentación técnica y administrativa del proyecto."
-      icon: "search-check"
-    - numero: "02"
-      titulo: "Inspección Técnica"
-      descripcion: "Visitas de campo y toma de datos para documentar el estado actual."
-      icon: "inspect-check"
-    - numero: "03"
-      titulo: "Elaboración del Informe"
-      descripcion: "Redacción del dictamen pericial con conclusiones técnicas fundamentadas."
-      icon: "report-tech"
-    - numero: "04"
-      titulo: "Defensa del Informe"
-      descripcion: "Presentación y defensa del dictamen ante tribunales o en procedimientos administrativos."
-      icon: "shield-court"
+  <p>Como parte de nuestros <a href="/informes-periciales/">servicios de informes periciales</a>, ofrecemos dictámenes técnicos rigurosos para constructoras y administraciones en todas las fases de un proyecto de obra pública, desde la licitación hasta la recepción final.</p>
 ---
 
-## Peritaje en Obras Públicas: Expertise Técnica para Infraestructuras
+## La Clave del Peritaje en la Contratación Pública
 
-El peritaje en obras públicas requiere un conocimiento especializado de la normativa técnica y administrativa que rige los proyectos de infraestructuras. Nuestros servicios abarcan todas las fases del ciclo de vida de una obra pública, desde la licitación hasta la recepción y período de garantía.
+Un proyecto de obra pública no es solo un desafío de ingeniería, sino también un complejo proceso administrativo. La **Ley de Contratos del Sector Público** y los pliegos técnicos establecen un marco estricto donde cualquier desviación, modificado o conflicto requiere una justificación técnica impecable. Un informe pericial es la herramienta fundamental que aporta objetividad y rigor técnico en este contexto.
 
-### Marco Legal y Normativo
+Nuestro equipo de peritos actúa como un traductor técnico-legal, analizando la situación para determinar si las actuaciones se ajustan al proyecto, a la normativa y a la *lex artis* de la construcción. Un dictamen sólido es la mejor defensa ante reclamaciones y la garantía para la viabilidad de un proyecto.
 
-El peritaje en obra pública se enmarca en un contexto normativo específico:
+### Nuestra Metodología en Proyectos de Infraestructuras
 
-#### Ley de Contratos del Sector Público
+Abordamos cada caso con un proceso metódico que garantiza la máxima fiabilidad de nuestras conclusiones. Más allá de una simple inspección, nuestro trabajo se centra en conectar los hechos observados con la documentación del proyecto y el marco normativo aplicable.
 
-- Regulación de modificados y reclamaciones
-- Procedimientos de contratación pública
-- Requisitos técnicos y administrativos
-- Garantías y responsabilidades
+1.  **Análisis Documental Exhaustivo:** Profundizamos en el proyecto constructivo, los pliegos, las actas y toda la correspondencia técnica para entender el contexto completo.
+2.  **Inspección Técnica y Toma de Datos:** Realizamos visitas de campo para documentar la realidad de la obra, realizando mediciones y pruebas si es necesario.
+3.  **Análisis Técnico-Normativo:** Contrastamos los hallazgos con las especificaciones del contrato y la normativa sectorial vigente para identificar desviaciones y responsabilidades.
+4.  **Elaboración del Dictamen:** Plasmamos todo el análisis en un informe pericial claro, con conclusiones bien fundamentadas, valoraciones económicas precisas y material gráfico de apoyo.
 
-#### Normativa Técnica Específica
-
-- Pliegos de prescripciones técnicas generales
-- Instrucciones técnicas sectoriales
-- Normas UNE aplicables
-- Recomendaciones técnicas oficiales
-
-### Tipos de Actuaciones Periciales
-
-Nuestros servicios cubren diferentes tipos de actuaciones:
-
-#### Auditorías Técnicas Preventivas
-
-- Control de calidad en ejecución
-- Verificación de cumplimiento normativo
-- Seguimiento de plazos y costes
-- Documentación de incidencias
-
-#### Peritajes en Fase de Ejecución
-
-- Análisis de modificados
-- Valoración de sobrecostes
-- Estudio de retrasos y causas
-- Evaluación de soluciones alternativas
-
-#### Dictámenes Post-Construcción
-
-- Análisis de patologías
-- Valoración de defectos
-- Estudios de responsabilidad
-- Propuestas de reparación
-
-## Especialización por Tipos de Infraestructuras
-
-### Obras Viarias
-
-- Carreteras y autovías
-- Puentes y viaductos
-- Túneles
-- Obras de fábrica
-
-### Obras Hidráulicas
-
-- Presas y embalses
-- Canalizaciones
-- Depuradoras
-- Redes de distribución
-
-### Obras Ferroviarias
-
-- Plataforma y vía
-- Electrificación
-- Señalización
-- Estaciones
-
-### Obras Portuarias
-
-- Diques y muelles
-- Pavimentos portuarios
-- Instalaciones específicas
-- Áreas logísticas
-
-## Proceso de Actuación Pericial
-
-### 1. Análisis Documental Exhaustivo
-
-Revisión detallada de:
-
-- Proyecto constructivo completo
-- Pliegos de condiciones
-- Modificaciones aprobadas
-- Actas e informes de obra
-- Correspondencia técnica
-
-### 2. Inspección Técnica In Situ
-
-Desarrollo de:
-
-- Visitas programadas de inspección
-- Toma de datos y mediciones
-- Documentación fotográfica
-- Identificación de incidencias
-- Pruebas específicas necesarias
-
-### 3. Análisis Técnico-Normativo
-
-Evaluación de:
-
-- Cumplimiento de especificaciones
-- Adecuación a normativa
-- Justificación de modificaciones
-- Idoneidad de soluciones adoptadas
-
-### 4. Elaboración del Dictamen
-
-Incluye:
-
-- Análisis técnico fundamentado
-- Conclusiones objetivas
-- Valoraciones económicas
-- Documentación gráfica
-- Anexos técnicos necesarios
-
-## Casos Representativos
-
-Ejemplos de actuaciones periciales realizadas:
-
-- **Modificado en Obra Viaria**: Análisis técnico-económico de un modificado en la construcción de un viaducto, justificando la necesidad de cambios estructurales y su impacto en plazo y coste.
-
-- **Patologías en Obra Hidráulica**: Dictamen sobre defectos en la impermeabilización de un depósito de agua potable, estableciendo causas y responsabilidades técnicas.
-
-- **Retrasos en Obra Ferroviaria**: Evaluación pericial de retrasos en la construcción de una línea de metro, determinando causas imputables y valorando costes asociados.
-
-## Ventajas de Nuestro Servicio Pericial
-
-### Experiencia Específica
-
-- Conocimiento profundo de obra pública
-- Especialización en infraestructuras
-- Comprensión de procedimientos administrativos
-- Experiencia en contratación pública
-
-### Rigor Técnico
-
-- Metodología contrastada
-- Análisis exhaustivo
-- Conclusiones fundamentadas
-- Documentación completa
-
-### Validez Judicial y Administrativa
-
-- Informes aceptados por tribunales
-- Dictámenes válidos en vía administrativa
-- Experiencia en ratificación judicial
-- Defensa técnica sólida
-
-### Servicio Integral
-
-- Asesoramiento previo
-- Desarrollo del dictamen
-- Defensa del informe
-- Seguimiento del caso
-
-## Contacto y Consulta
-
-Para una evaluación inicial de su caso o más información sobre nuestros servicios de peritaje en obra pública, puede:
-
-- Llamar al: +34 614 194 985
-- Escribir a: [info@perito.barcelona](mailto:info@perito.barcelona)
-- Solicitar una consulta a través de nuestro formulario de contacto
-
-## Plazo de Respuesta
-
-Evaluación preliminar sin compromiso en 24-48 horas
 ---
+
+### Preguntas Frecuentes (FAQ) sobre Peritajes en Obra Pública
+
+<details>
+  <summary><strong>¿Cuándo es necesario un peritaje en una obra pública?</strong></summary>
+  <p>Un informe pericial es crucial durante disputas sobre modificados de proyecto, reclamaciones económicas por sobrecostes o retrasos, defectos constructivos detectados antes o después de la recepción de la obra, o como parte de una auditoría de calidad preventiva.</p>
+</details>
+
+<details>
+  <summary><strong>¿Qué diferencia a un perito de obra pública?</strong></summary>
+  <p>Un perito de obra pública posee un conocimiento profundo de la Ley de Contratos del Sector Público, los pliegos de prescripciones técnicas generales (PG-3, etc.) y la normativa específica de infraestructuras (viarias, hidráulicas, etc.), que es muy diferente a la de la edificación residencial (CTE).</p>
+</details>
+
+<details>
+  <summary><strong>¿Pueden ayudarnos en una disputa con la Administración Pública?</strong></summary>
+  <p>Sí. Nuestro papel es aportar un dictamen técnico objetivo e independiente que sirva como base probatoria sólida en procedimientos administrativos, contencioso-administrativos o reclamaciones ante la propia Administración. El informe pericial traduce la complejidad técnica en argumentos defendibles.</p>
+</details>
+
+<details>
+  <summary><strong>¿Realizan contraperitajes de informes emitidos por la Administración?</strong></summary>
+  <p>Sí. Una de nuestras funciones habituales es analizar informes técnicos emitidos por la dirección de obra o la propia Administración y, si procede, elaborar un informe contrapericial que refute, matice o complemente las conclusiones iniciales con nuevos datos y análisis.</p>
+</details>
