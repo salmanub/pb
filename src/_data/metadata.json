@@ -557,6 +557,200 @@
       ]
     }
   },
+  "ctaForm": {
+    "es": {
+      "formTitle": "Contacto Rápido",
+      "formSubtitle": "Rellene el formulario y nos pondremos en contacto con usted.",
+      "questions": {
+        "tipoContacto": {
+          "title": "¿Nos contactas como particular o empresa?",
+          "number": "Pregunta 1 de 7",
+          "options": [
+            {"value": "particular", "label": "Como particular"},
+            {"value": "empresa", "label": "En nombre de una empresa"}
+          ]
+        },
+        "nombreEmpresa": {
+          "title": "¿Cuál es el nombre de la empresa?",
+          "number": "Pregunta 2 de 7"
+        },
+        "nombre": {
+          "title": "¿Cuál es tu nombre?",
+          "number": "Pregunta 3 de 7"
+        },
+        "email": {
+          "title": "¿Cuál es tu email?",
+          "number": "Pregunta 4 de 7"
+        },
+        "telefono": {
+          "title": "¿Y tu número de teléfono?",
+          "number": "Pregunta 5 de 7"
+        },
+        "areaInteres": {
+          "title": "¿Sobre qué área es tu consulta?",
+          "number": "Pregunta 6 de 7",
+          "options": [
+            {"value": "informes_periciales", "label": "Informes Periciales (grietas, vicios ocultos, etc.)"},
+            {"value": "asesoramiento_estructural", "label": "Asesoramiento Estructural (reparación, refuerzo)"},
+            {"value": "auditorias_obra", "label": "Auditorías de Obra (certificaciones, calidad)"},
+            {"value": "otra_consulta", "label": "Otra consulta"}
+          ]
+        },
+        "mensaje": {
+          "title": "¿En qué podemos ayudarte?",
+          "number": "Pregunta 7 de 7"
+        }
+      },
+      "helpText": {
+        "nombre": "Nos ayudará a dirigirnos a usted correctamente",
+        "email": "Le responderemos en menos de 24h laborables",
+        "telefono": "Solo si prefiere que le llamemos",
+        "mensaje": "Cuéntenos brevemente en qué podemos ayudarle"
+      },
+      "messages": {
+        "loading": {
+          "title": "Enviando su mensaje...",
+          "subtitle": "Por favor, espere un momento"
+        },
+        "success": {
+          "title": "¡Mensaje recibido!",
+          "subtitle": "Gracias por contactar con nosotros. Le responderemos en menos de 24h laborables."
+        },
+        "error": {
+          "title": "Error al enviar",
+          "subtitle": "Ha ocurrido un error. Por favor, inténtelo de nuevo o llámenos directamente."
+        }
+      }
+    },
+    "ca": {
+      "formTitle": "Contacte Ràpid",
+      "formSubtitle": "Ompliu el formulari i ens posarem en contacte amb vostè.",
+      "questions": {
+        "tipoContacto": {
+          "title": "Ens contactes com a particular o empresa?",
+          "number": "Pregunta 1 de 7",
+          "options": [
+            {"value": "particular", "label": "Com a particular"},
+            {"value": "empresa", "label": "En nom d'una empresa"}
+          ]
+        },
+        "nombreEmpresa": {
+          "title": "Quin és el nom de l'empresa?",
+          "number": "Pregunta 2 de 7"
+        },
+        "nombre": {
+          "title": "Quin és el teu nom?",
+          "number": "Pregunta 3 de 7"
+        },
+        "email": {
+          "title": "Quin és el teu email?",
+          "number": "Pregunta 4 de 7"
+        },
+        "telefono": {
+          "title": "I el teu número de telèfon?",
+          "number": "Pregunta 5 de 7"
+        },
+        "areaInteres": {
+          "title": "Sobre quina àrea és la teva consulta?",
+          "number": "Pregunta 6 de 7",
+          "options": [
+            {"value": "informes_periciales", "label": "Informes Pericials (esquerdes, vicis ocults, etc.)"},
+            {"value": "asesoramiento_estructural", "label": "Assessorament Estructural (reparació, reforç)"},
+            {"value": "auditorias_obra", "label": "Auditories d'Obra (certificacions, qualitat)"},
+            {"value": "otra_consulta", "label": "Altra consulta"}
+          ]
+        },
+        "mensaje": {
+          "title": "En què podem ajudar-te?",
+          "number": "Pregunta 7 de 7"
+        }
+      },
+      "helpText": {
+        "nombre": "Ens ajudarà a dirigir-nos a vostè correctament",
+        "email": "Li respondrem en menys de 24h laborables",
+        "telefono": "Només si prefereix que el truquem",
+        "mensaje": "Expliqui'ns breument en què podem ajudar-lo"
+      },
+      "messages": {
+        "loading": {
+          "title": "Enviant el seu missatge...",
+          "subtitle": "Si us plau, esperi un moment"
+        },
+        "success": {
+          "title": "Missatge rebut!",
+          "subtitle": "Gràcies per contactar amb nosaltres. Li respondrem en menys de 24h laborables."
+        },
+        "error": {
+          "title": "Error en enviar",
+          "subtitle": "Hi ha hagut un error. Si us plau, torni-ho a provar o truqui'ns directament."
+        }
+      }
+    },
+    "en": {
+      "formTitle": "Quick Contact",
+      "formSubtitle": "Fill out the form and we will get back to you.",
+      "questions": {
+        "tipoContacto": {
+          "title": "Are you contacting us as an individual or on behalf of a company?",
+          "number": "Question 1 of 7",
+          "options": [
+            {"value": "particular", "label": "As an individual"},
+            {"value": "empresa", "label": "On behalf of a company"}
+          ]
+        },
+        "nombreEmpresa": {
+          "title": "What is the company name?",
+          "number": "Question 2 of 7"
+        },
+        "nombre": {
+          "title": "What's your name?",
+          "number": "Question 3 of 7"
+        },
+        "email": {
+          "title": "What's your email?",
+          "number": "Question 4 of 7"
+        },
+        "telefono": {
+          "title": "And your phone number?",
+          "number": "Question 5 of 7"
+        },
+        "areaInteres": {
+          "title": "What area is your inquiry about?",
+          "number": "Question 6 of 7",
+          "options": [
+            {"value": "informes_periciales", "label": "Expert Reports (cracks, hidden defects, etc.)"},
+            {"value": "asesoramiento_estructural", "label": "Structural Consulting (repair, reinforcement)"},
+            {"value": "auditorias_obra", "label": "Construction Audits (certifications, quality)"},
+            {"value": "otra_consulta", "label": "Other inquiry"}
+          ]
+        },
+        "mensaje": {
+          "title": "How can we help you?",
+          "number": "Question 7 of 7"
+        }
+      },
+      "helpText": {
+        "nombre": "This will help us address you properly",
+        "email": "We'll respond within 24 business hours",
+        "telefono": "Only if you prefer us to call you",
+        "mensaje": "Tell us briefly how we can help you"
+      },
+      "messages": {
+        "loading": {
+          "title": "Sending your message...",
+          "subtitle": "Please wait a moment"
+        },
+        "success": {
+          "title": "Message received!",
+          "subtitle": "Thank you for contacting us. We will respond within 24 business hours."
+        },
+        "error": {
+          "title": "Error sending",
+          "subtitle": "An error occurred. Please try again or call us directly."
+        }
+      }
+    }
+  },
   "error404": {
     "es": {
       "title": "Página no encontrada",
@@ -587,6 +781,71 @@
       "contactButton": "Contactar",
       "servicesPath": "informes-pericials/",
       "contactPath": "contacte/"
+    }
+  },
+  "ctaContact": {
+    "es": {
+      "form": {
+        "submitText": "Enviar Consulta"
+      },
+      "contactInfo": [
+        {
+          "titulo": "Teléfono",
+          "valor": "+34 614 194 985",
+          "url": "tel:+34614194985",
+          "icon": "phone",
+          "horario": "Lunes a Viernes 9:00-18:00h"
+        },
+        {
+          "titulo": "Email",
+          "valor": "info@perito.barcelona",
+          "url": "mailto:info@perito.barcelona",
+          "icon": "mail",
+          "horario": "Respondemos en 24h laborables"
+        }
+      ]
+    },
+    "ca": {
+      "form": {
+        "submitText": "Enviar Consulta"
+      },
+      "contactInfo": [
+        {
+          "titulo": "Telèfon",
+          "valor": "+34 614 194 985",
+          "url": "tel:+34614194985",
+          "icon": "phone",
+          "horario": "Dilluns a Divendres 9:00-18:00h"
+        },
+        {
+          "titulo": "Email",
+          "valor": "info@perito.barcelona",
+          "url": "mailto:info@perito.barcelona",
+          "icon": "mail",
+          "horario": "Responem en 24h laborables"
+        }
+      ]
+    },
+    "en": {
+      "form": {
+        "submitText": "Send Inquiry"
+      },
+      "contactInfo": [
+        {
+          "titulo": "Phone",
+          "valor": "+34 614 194 985",
+          "url": "tel:+34614194985",
+          "icon": "phone",
+          "horario": "Monday to Friday 9:00-18:00h"
+        },
+        {
+          "titulo": "Email",
+          "valor": "info@perito.barcelona",
+          "url": "mailto:info@perito.barcelona",
+          "icon": "mail",
+          "horario": "We respond within 24 business hours"
+        }
+      ]
     }
   },
   "servicePillar": {
