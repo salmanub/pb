@@ -608,6 +608,7 @@
         "mensaje": "Cuéntenos brevemente en qué podemos ayudarle"
       },
       "privacyText": "He leído y acepto la <a href='/privacidad/' class='text-cyan-600 hover:underline font-medium'>Política de Privacidad</a>.",
+      "privacyError": "Por favor, acepta nuestra política de privacidad antes de continuar",
       "messages": {
         "loading": {
           "title": "Enviando su mensaje...",
@@ -673,6 +674,7 @@
         "mensaje": "Expliqui'ns breument en què podem ajudar-lo"
       },
       "privacyText": "He llegit i accepto la <a href='/ca/privacitat/' class='text-cyan-600 hover:underline font-medium'>Política de Privacitat</a>.",
+      "privacyError": "Si us plau, accepta la nostra política de privacitat abans de continuar",
       "messages": {
         "loading": {
           "title": "Enviant el seu missatge...",
@@ -738,6 +740,7 @@
         "mensaje": "Tell us briefly how we can help you"
       },
       "privacyText": "I have read and accept the <a href='/en/privacy/' class='text-cyan-600 hover:underline font-medium'>Privacy Policy</a>.",
+      "privacyError": "Please accept our privacy policy before continuing",
       "messages": {
         "loading": {
           "title": "Sending your message...",

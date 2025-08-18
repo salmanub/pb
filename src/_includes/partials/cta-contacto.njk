@@ -46,7 +46,7 @@
                             <!-- Paso Inicial - Tipo de Contacto -->
                             <div class="typeform-step active space-y-8" data-step="tipo-contacto">
                                 <div class="space-y-3 mb-6">
-                                    <p class="text-base text-slate-500">{{ metadata.ctaForm[lang].questions.tipoContacto.number }}</p>
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.tipoContacto.number }}</p>
                                     <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.tipoContacto.title }}</h3>
                                 </div>
                                 <div class="space-y-4">
@@ -61,7 +61,7 @@
                             <!-- Paso Nombre Empresa (Condicional) -->
                             <div class="typeform-step hidden space-y-8" data-step="nombre-empresa">
                                 <div class="space-y-3 mb-6">
-                                    <p class="text-base text-slate-500">{{ metadata.ctaForm[lang].questions.nombreEmpresa.number }}</p>
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.nombreEmpresa.number }}</p>
                                     <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.nombreEmpresa.title }}</h3>
                                 </div>
                                 <input type="text" id="nombreEmpresa" name="nombreEmpresa" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200" required>
@@ -84,7 +84,7 @@
                             <!-- Paso Nombre -->
                             <div class="typeform-step hidden space-y-8" data-step="intro">
                                 <div class="space-y-3 mb-6">
-                                    <p class="text-base text-slate-500">{{ metadata.ctaForm[lang].questions.nombre.number }}</p>
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.nombre.number }}</p>
                                     <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.nombre.title }}</h3>
                                 </div>
                                 <input type="text" id="nombre" name="nombre" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200" required>
@@ -108,7 +108,7 @@
                             <!-- Paso Email -->
                             <div class="typeform-step hidden space-y-8" data-step="email">
                                 <div class="space-y-3 mb-6">
-                                    <p class="text-base text-slate-500">{{ metadata.ctaForm[lang].questions.email.number }}</p>
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.email.number }}</p>
                                     <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.email.title }}</h3>
                                 </div>
                                 <input type="email" id="email" name="email" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200" required>
@@ -132,7 +132,7 @@
                             <!-- Paso Teléfono -->
                             <div class="typeform-step hidden space-y-8" data-step="telefono">
                                 <div class="space-y-3 mb-6">
-                                    <p class="text-base text-slate-500">{{ metadata.ctaForm[lang].questions.telefono.number }}</p>
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.telefono.number }}</p>
                                     <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.telefono.title }}</h3>
                                 </div>
                                 <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200">
@@ -156,7 +156,7 @@
                             <!-- Paso Área de Interés -->
                             <div class="typeform-step hidden space-y-8" data-step="area-interes">
                                 <div class="space-y-3 mb-6">
-                                    <p class="text-base text-slate-500">{{ metadata.ctaForm[lang].questions.areaInteres.number }}</p>
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.areaInteres.number }}</p>
                                     <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.areaInteres.title }}</h3>
                                 </div>
                                 <div class="space-y-4">
@@ -185,22 +185,29 @@
                             <!-- Paso Mensaje -->
                             <div class="typeform-step hidden space-y-8" data-step="mensaje">
                                 <div class="space-y-3 mb-6">
-                                    <p class="text-base text-slate-500">{{ metadata.ctaForm[lang].questions.mensaje.number }}</p>
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.mensaje.number }}</p>
                                     <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.mensaje.title }}</h3>
                                 </div>
                                 <textarea id="mensaje" name="mensaje" rows="3" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200 resize-none" required></textarea>
                                 <p class="text-sm text-slate-500 mt-2">{{ metadata.ctaForm[lang].helpText.mensaje }}</p>
                                 <div class="space-y-6">
                                     <!-- Casilla de privacidad -->
-                                    <div class="flex items-start gap-3 py-4">
-                                        <input type="checkbox" 
-                                               id="privacidad" 
-                                               name="privacidad" 
-                                               class="mt-1 w-5 h-5 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500 cursor-pointer"
-                                               required>
-                                        <label for="privacidad" class="text-slate-600 cursor-pointer text-base">
-                                            {{ metadata.ctaForm[lang].privacyText | safe }}
-                                        </label>
+                                    <!-- Casilla de privacidad con mejor feedback visual -->
+                                    <div class="space-y-2">
+                                        <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors group">
+                                            <input type="checkbox" 
+                                                   id="privacidad" 
+                                                   name="privacidad" 
+                                                   class="mt-1 w-5 h-5 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500 cursor-pointer group-hover:border-cyan-500 transition-colors"
+                                                   required>
+                                            <label for="privacidad" class="text-slate-600 cursor-pointer text-base group-hover:text-slate-900 transition-colors">
+                                                {{ metadata.ctaForm[lang].privacyText | safe }}
+                                            </label>
+                                        </div>
+                                        <!-- Mensaje de error para la privacidad -->
+                                        <p id="privacy-error" class="text-red-500 text-sm hidden ml-4">
+                                            {{ metadata.ctaForm[lang].privacyError }}
+                                        </p>
                                     </div>
 
                                     <div class="flex justify-between">
@@ -210,7 +217,10 @@
                                             </svg>
                                             {{ metadata.contactForm[lang].buttons.prev }}
                                         </button>
-                                        <button type="button" id="submit-form-btn" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-200 group flex items-center gap-2">
+                                        <button type="button" 
+                                                id="submit-form-btn" 
+                                                class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-lg transition-all duration-200 group flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-lg enabled:hover:shadow-xl enabled:hover:shadow-cyan-500/25"
+                                                disabled>
                                             {{ metadata.ctaContact[lang].form.submitText }}
                                             <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -295,18 +305,41 @@
                         return true;
                     }
 
+                    // Función para actualizar el estado del botón de envío
+                    function updateSubmitButton() {
+                        const privacidadCheckbox = document.getElementById('privacidad');
+                        const submitButton = document.getElementById('submit-form-btn');
+                        const privacyError = document.getElementById('privacy-error');
+                        
+                        if (privacidadCheckbox.checked) {
+                            submitButton.removeAttribute('disabled');
+                            privacyError.classList.add('hidden');
+                        } else {
+                            submitButton.setAttribute('disabled', '');
+                            // Solo mostrar el error si el checkbox ha sido tocado
+                            if (privacidadCheckbox.dataset.touched === 'true') {
+                                privacyError.classList.remove('hidden');
+                            }
+                        }
+                    }
+
+                    // Escuchar cambios en la casilla de privacidad
+                    const privacidadCheckbox = document.getElementById('privacidad');
+                    privacidadCheckbox.addEventListener('change', updateSubmitButton);
+                    privacidadCheckbox.addEventListener('blur', () => {
+                        privacidadCheckbox.dataset.touched = 'true';
+                        updateSubmitButton();
+                    });
+
                     async function submitForm() {
                         // Validar que la casilla de privacidad está marcada
                         const privacidadCheckbox = document.getElementById('privacidad');
+                        const privacyError = document.getElementById('privacy-error');
+                        
                         if (!privacidadCheckbox.checked) {
+                            privacidadCheckbox.dataset.touched = 'true';
                             privacidadCheckbox.focus();
-                            const label = document.querySelector('label[for="privacidad"]');
-                            if (label) {
-                                label.classList.add('text-red-500', 'font-semibold');
-                                privacidadCheckbox.addEventListener('change', () => {
-                                    label.classList.remove('text-red-500', 'font-semibold');
-                                }, { once: true });
-                            }
+                            privacyError.classList.remove('hidden');
                             return;
                         }
 
