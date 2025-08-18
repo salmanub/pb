@@ -239,7 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateProgress();
         const newStepEl = steps[currentStepIndex];
         const input = newStepEl.querySelector('input:not([type="checkbox"]):not([type="hidden"]), textarea');
-        if (input) setTimeout(() => input.focus(), 300);
     };
 
     const validateCurrentStep = () => {
