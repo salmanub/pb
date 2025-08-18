@@ -5,16 +5,20 @@ subtitle: "Actuem com a pèrits judicials per designació oficial als jutjats de
 description: "Elaborem dictàmens pericials judicials per designació del jutjat a Barcelona. Com a pèrits enginyers, aportem una visió tècnica, objectiva i imparcial per esclarir els fets en un procediment judicial."
 permalink: "/ca/informes-pericials/dictamen-judicial/"
 lang: "ca"
+translations:
+  - lang: "es"
+    permalink: "/informes-periciales/dictamen-judicial/"
+  - lang: "en"
+    permalink: "/en/expert-witness-reports/court-appointed-report/"
 eleventyNavigation:
   key: "Dictamen Pericial Judicial"
   parent: "Informes Pericials"
   title: "Dictamen Judicial"
   notshow: true
   order: 2
-serviceTitle: "dictamen pericial judicial"
 parentService:
-  title: "Informes Pericials"
-  url: "/ca/informes-pericials/"
+  title: 'Informes Pericials'
+  url: '/ca/informes-pericials/'
 
 keyFeatures:
   - "Actuació com a pèrits per designació judicial en llistes oficials"

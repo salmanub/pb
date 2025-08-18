@@ -5,18 +5,21 @@ subtitle: 'Actuamos como peritos judiciales por designación oficial en los juzg
 description: "Elaboramos dictámenes periciales judiciales por designación del juzgado en Barcelona. Como peritos ingenieros, aportamos una visión técnica, objetiva e imparcial para esclarecer los hechos en un procedimiento judicial."
 permalink: "/informes-periciales/dictamen-judicial/"
 lang: 'es'
+translations:
+  - lang: 'ca'
+    permalink: '/ca/informes-pericials/dictamen-judicial/'
+  - lang: 'en'
+    permalink: '/en/expert-witness-reports/court-appointed-report/'
 eleventyNavigation:
   key: "Dictamen Pericial Judicial"
   parent: "Informes Periciales"
   title: "Dictamen Judicial"
   notshow: true
   order: 2
-serviceTitle: 'dictamen pericial judicial'
-
-# Parent Service (for breadcrumb and linking back to pillar)
 parentService:
   title: 'Informes Periciales'
   url: '/informes-periciales/'
+
 
 # Key features in the hero section
 keyFeatures:

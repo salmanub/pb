@@ -5,6 +5,11 @@ subtitle: "We act as court-appointed experts by official designation in Barcelon
 description: "We produce court-appointed expert reports by court designation in Barcelona. As engineering experts, we provide a technical, objective, and impartial view to clarify facts in legal proceedings."
 permalink: "/en/expert-witness-reports/court-appointed-report/"
 lang: "en"
+translations:
+  - lang: "es"
+    permalink: "/informes-periciales/dictamen-judicial/"
+  - lang: "ca"
+    permalink: "/ca/informes-pericials/dictamen-judicial/"
 eleventyNavigation:
   key: "Court-Appointed Expert Report"
   parent: "Expert Reports"
