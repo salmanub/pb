@@ -20,7 +20,7 @@ serviceTitle: "disputes en certificacions"
 
 parentService:
   title: "Auditories d'Obra"
-  url: "/ca/auditories-d-obra/"
+  url: "/ca/auditories-obra/"
 
 keyFeatures:
   - "Verificació d'amidaments realitzats 'in situ' enfront dels certificats"

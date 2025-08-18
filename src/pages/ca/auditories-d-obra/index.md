@@ -7,7 +7,7 @@ lang: "ca"
 
 translations:
   - lang: es
-    permalink: /auditorias-de-obra/
+    permalink: /auditorias-obra/
     title: "Auditoría de Obras en Barcelona | Control de Costes, Calidad y Certificaciones"
     description: "Realizamos auditorías de obra para resolver disputas en certificaciones, controlar sobrecostes y asegurar la calidad. Obtenga un informe pericial para proteger su inversión en Barcelona."
   - lang: en
