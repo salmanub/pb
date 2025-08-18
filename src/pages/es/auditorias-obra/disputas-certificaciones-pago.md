@@ -7,7 +7,7 @@ permalink: "/auditorias-obra/disputas-certificaciones-pago/"
 lang: 'es'
 translations:
   - lang: 'ca'
-    permalink: '/ca/auditories-d-obra/disputes-certificacions-pagament/'
+    permalink: '/ca/auditories--obra/disputes-certificacions-pagament/'
   - lang: 'en'
     permalink: '/en/construction-audits/payment-certification-disputes/'
 eleventyNavigation:

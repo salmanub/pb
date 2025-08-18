@@ -9,7 +9,7 @@ translations:
   - lang: "es"
     permalink: "/auditorias-obra/disputas-certificaciones-pago/"
   - lang: "ca"
-    permalink: "/ca/auditories-d-obra/disputes-certificacions-pagament/"
+    permalink: "/ca/auditories-obra/disputes-certificacions-pagament/"
 eleventyNavigation:
   key: "Payment Certificate Disputes"
   parent: "Construction Audits"

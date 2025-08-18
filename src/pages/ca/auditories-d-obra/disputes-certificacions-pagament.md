@@ -3,7 +3,7 @@ layout: layouts/service-child.njk
 title: "Pèrit per a Disputes de Certificacions d'Obra | Auditoria Barcelona"
 subtitle: "Anàlisi tècnica independent d'amidaments, preus i obra realment executada"
 description: "Resolem conflictes en el pagament de certificacions d'obra a Barcelona mitjançant una auditoria tècnica. Verifiquem amidaments reals i detectem sobrecostos o treballs no executats."
-permalink: "/ca/auditories-d-obra/disputes-certificacions-pagament/"
+permalink: "/ca/auditories-obra/disputes-certificacions-pagament/"
 lang: "ca"
 translations:
   - lang: "es"

@@ -2,7 +2,7 @@
 layout: "layouts/service-pillar.njk"
 title: "Auditoria d'Obres a Barcelona | Control de Costos i Qualitat"
 description: "Realitzem auditories d'obra per resoldre disputes en certificacions, controlar sobrecostos i assegurar la qualitat. Obtingui un informe pericial per protegir la seva inversió."
-permalink: "/ca/auditories-d-obra/"
+permalink: "/ca/auditories-obra/"
 lang: "ca"
 
 translations:
