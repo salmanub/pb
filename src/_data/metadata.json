@@ -456,6 +456,38 @@
       }
     }
   },
+  "error404": {
+    "es": {
+      "title": "Página no encontrada",
+      "description": "Lo sentimos, la página que está buscando no existe o ha sido movida. Es posible que el enlace esté roto o que la URL se haya escrito incorrectamente.",
+      "suggestions": "Le sugerimos volver al inicio o visitar una de nuestras secciones principales:",
+      "homeButton": "Ir a la Página de Inicio",
+      "servicesButton": "Ver Informes Periciales",
+      "contactButton": "Contactar",
+      "servicesPath": "informes-periciales/",
+      "contactPath": "contacto/"
+    },
+    "en": {
+      "title": "Page Not Found",
+      "description": "Sorry, the page you are looking for does not exist or has been moved. The link might be broken or the URL may have been typed incorrectly.",
+      "suggestions": "We suggest going back to the home page or visiting one of our main sections:",
+      "homeButton": "Go to Homepage",
+      "servicesButton": "View Expert Reports",
+      "contactButton": "Contact Us",
+      "servicesPath": "expert-witness-reports/",
+      "contactPath": "contact/"
+    },
+    "ca": {
+      "title": "Pàgina no trobada",
+      "description": "Ho sentim, la pàgina que esteu cercant no existeix o ha estat moguda. És possible que l'enllaç estigui trencat o que l'URL s'hagi escrit incorrectament.",
+      "suggestions": "Us suggerim tornar a l'inici o visitar una de les nostres seccions principals:",
+      "homeButton": "Anar a la Pàgina d'Inici",
+      "servicesButton": "Veure Informes Pericials",
+      "contactButton": "Contactar",
+      "servicesPath": "informes-pericials/",
+      "contactPath": "contacte/"
+    }
+  },
   "servicePillar": {
     "es": {
       "processTitle": "Nuestro Proceso",
