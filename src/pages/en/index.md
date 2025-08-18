@@ -18,19 +18,19 @@ eleventyNavigation:
 
 # Hero Section
 hero:
-  tag: "Chartered Engineer Expert Witnesses in Barcelona"
-  title: "Technical Expert Witness Reports"
-  strong: "to Defend Your Interests"
-  subtitle: "Specialists in Expert Reports, Construction Audits, and Structural Consulting"
-  description: "We produce independent technical reports to resolve litigation, audit project quality, and diagnose structural safety with the utmost rigor."
+  tag: "Chartered Engineer Expert Witness Firm"
+  title: "Perito Barcelona"
+  strong: "The Technical Certainty Your Case Needs"
+  subtitle: "Expert Reports | Construction Audits | Structural Consulting"
+  description: "We provide independent technical reports and engineering solutions to resolve construction disputes, diagnose pathologies, and audit projects with the utmost professional rigor."
   rotatingTexts:
     default: "with technical rigor"
     items:
-      - "with technical rigor"
-      - "that resolve construction disputes"
-      - "with guaranteed judicial validity"
-      - "to ensure your project's quality"
-      - "with precise structural diagnostics"
+      - "with defensible reports"
+      - "with objective findings"
+      - "with judicial validity"
+      - "to resolve disputes"
+      - "with precise diagnostics"
   cta:
     primary: "Evaluate Your Case"
     primaryUrl: "/en/contact/"
@@ -38,13 +38,13 @@ hero:
     secondaryUrl: "tel:+34614194985"
     descubreMas: "Learn More"
   badges:
-    - value: "15+"
-      text: "Years of Experience"
+    - value: "15+ Years"
+      text: "of Experience"
       subtext: "In the field"
-    - value: "97%"
-      text: "Reports Ratified"
-      subtext: "In court proceedings"
-  logosText: "Our reports are accepted by major courts and insurance entities."
+    - value: "100%"
+      text: "Chartered Experts"
+      subtext: "Professional Guarantee"
+  logosText: "We collaborate with leading law firms and property managers."
 
 # Highlighted Services
 highlightedServices:
@@ -88,7 +88,7 @@ ayuda:
       icon: "droplet"
     - title: "Certification & Payment Disputes"
       description: "Technical audit for conflicts arising from certifications, measurements, and contract compliance."
-      url: "/en/construction-audits/payment-certification-disputes/"
+      url: "/en/construction-audits/certification-payment-disputes/"
       icon: "file-text"
     - title: "Hidden Defects in Property Sales"
       description: "Identification and documentation of defects not visible upon handover or purchase of a property."
