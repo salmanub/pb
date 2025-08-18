@@ -198,8 +198,8 @@
                         <!-- Título -->
                         <div class="text-center lg:text-left">
                             <span class="inline-block text-sm uppercase tracking-wider text-cyan-600 font-semibold mb-3">{{ metadata.footer[lang].location.title }}</span>
-                            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-4 leading-tight">Nuestras Oficinas</h2>
-                            <p class="text-lg text-slate-500 font-light leading-relaxed">Visítanos en cualquiera de nuestras oficinas principales.</p>
+                            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-4 leading-tight">{{ metadata.footer[lang].location.heading }}</h2>
+                            <p class="text-lg text-slate-500 font-light leading-relaxed">{{ metadata.footer[lang].location.description }}</p>
                         </div>
 
                         <!-- Lista de Oficinas -->
@@ -216,17 +216,61 @@
                                     <!-- Información -->
                                     <div class="flex-grow">
                                         <h3 class="text-xl font-bold text-slate-800 mb-2">{{ office.city }}</h3>
-                                        <p class="text-slate-600 mb-2">{{ office.address }}</p>
+                                        <a href="{{ office.mapUrl }}" target="_blank" rel="noopener noreferrer" class="group">
+                                            <div class="flex items-center gap-2 text-slate-600 hover:text-cyan-600 transition-colors mb-2">
+                                                <svg class="w-4 h-4 group-hover:text-cyan-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                                </svg>
+                                                <span>{{ office.address }}</span>
+                                            </div>
+                                        </a>
                                         <p class="text-sm text-slate-500">{{ office.transport }}</p>
+                                        <a href="{{ office.mapUrl }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-3 text-sm text-cyan-600 hover:text-cyan-700 font-medium">
+                                            <span>Ver en Google Maps</span>
+                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
                                     </div>
                                 </div>
                                 <!-- Mapa -->
-                                <div class="mt-4 rounded-xl overflow-hidden h-[200px] bg-slate-100">
-                                    {% if office.city == "Barcelona" %}
-                                    <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.6862831842784!2d2.1444813!3d41.3845096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a27c9d9b4489%3A0x18ae9952199f22c4!2sC%2F%20de%20Num%C3%A0ncia%2C%2095%2C%20Local%205%2C%2008029%20Barcelona!5e0!3m2!1ses!2ses!4v1650000000000!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                                    {% else %}
-                                    <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.4012668567366!2d2.2841666!3d41.6087499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4c7c91a647eb7%3A0x44b876c0c5cdec21!2sC%2F%20Navarra%2C%2014%2C%2008401%20Granollers%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1650000000000!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                                    {% endif %}
+                                <div class="mt-4">
+                                    <div class="rounded-xl overflow-hidden h-[250px] bg-slate-100 relative">
+                                        {% if office.city == "Barcelona" %}
+                                        <iframe
+                                            class="w-full h-full"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.6862831842784!2d2.1444813!3d41.3845096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a27c9d9b4489%3A0x18ae9952199f22c4!2sC%2F%20de%20Num%C3%A0ncia%2C%2095%2C%20Local%205%2C%2008029%20Barcelona!5e0!3m2!1ses!2ses!4v1650000000000!5m2!1ses!2ses"
+                                            style="border:0;"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                        ></iframe>
+                                        <a href="https://goo.gl/maps/QKf5H8Z9Z3Z2" target="_blank" rel="noopener noreferrer" 
+                                           class="absolute bottom-4 right-4 px-4 py-2 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-slate-900">
+                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                            Ampliar mapa
+                                        </a>
+                                        {% else %}
+                                        <iframe
+                                            class="w-full h-full"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.4012668567366!2d2.2841666!3d41.6087499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4c7c91a647eb7%3A0x44b876c0c5cdec21!2sC%2F%20Navarra%2C%2014%2C%2008401%20Granollers%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1650000000000!5m2!1ses!2ses"
+                                            style="border:0;"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                        ></iframe>
+                                        <a href="https://goo.gl/maps/XyZ123AbC" target="_blank" rel="noopener noreferrer" 
+                                           class="absolute bottom-4 right-4 px-4 py-2 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-slate-900">
+                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                            Ampliar mapa
+                                        </a>
+                                        {% endif %}
+                                    </div>
                                 </div>
                             </div>
                             {% endfor %}
