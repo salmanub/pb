@@ -64,7 +64,7 @@
     
     {% block scripts %}
     {% include "partials/head.njk" %}
-    
+{#     
         <!-- Service Worker Handler -->
         <script>
             class ServiceWorkerHandler {
@@ -169,7 +169,7 @@
             window.addEventListener('load', () => {
                 new ServiceWorkerHandler();
             });
-        </script>
+        </script> #}
         
         <script>
             const menuButton = document.getElementById('menuButton');
