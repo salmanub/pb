@@ -75,6 +75,7 @@ ayuda:
     title: "En Què Podem"
     highlight: "Ajudar-lo"
     subtitle: "Abordem els problemes tècnics més comuns en edificació i obra civil per oferir-li una solució clara i documentada."
+    cta: "Saber-ne més"
   introduccion:
     title: "Alguns dels problemes que solucionem amb més freqüència:"
   problemas:

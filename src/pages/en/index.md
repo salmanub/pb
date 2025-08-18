@@ -75,6 +75,7 @@ ayuda:
     title: "How Can We"
     highlight: "Help You"
     subtitle: "We address the most common technical problems in building and civil works to offer you a clear and documented solution."
+    cta: "Learn more"
   introduccion:
     title: "Some of the problems we solve most frequently:"
   problemas:
