@@ -3,7 +3,7 @@ layout: 'layouts/service-child.njk'
 title: "Expert Witness for Homeowners' Associations in Barcelona | Technical Reports"
 subtitle: "Expert reports on common elements for claims and decision-making"
 description: "Expert witness services for Homeowners' Associations (HOAs) in Barcelona. We produce technical reports on pathologies in facades, roofs, garages, and other common building elements."
-permalink: "/en/expert-witness-reports/homeowners-associations/"
+permalink: "/en/expert-witness-reports/owners-associations/"
 lang: 'en'
 translations:
   - lang: 'ca'

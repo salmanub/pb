@@ -80,7 +80,7 @@ serviceCluster:
         - "Claim foundation"
     - title: "Property Owners Association Reports"
       description: "Assessments of common elements (facades, roofs, garages) for claims against builders or insurance."
-      url: "/en/expert-witness-reports/owners-association/"
+      url: "/en/expert-witness-reports/owners-associations/"
       icon: "users"
       features:
         - "Common elements analysis"

@@ -9,7 +9,7 @@ translations:
   - lang: 'es'
     permalink: '/informes-periciales/comunidades-propietarios/'
   - lang: 'en'
-    permalink: '/en/expert-witness-reports/homeowners-associations/'
+    permalink: '/en/expert-witness-reports/owners-associations/'
 eleventyNavigation:
   key: "Comunitats de Propietaris"
   parent: "Informes Pericials"
