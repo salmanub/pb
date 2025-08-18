@@ -467,83 +467,100 @@
         "title": "👋 Cuéntanos sobre tu caso",
         "subtitle": "Te asesoraremos sin compromiso y te ofreceremos una primera valoración gratuita."
       },
-      "buttons": {
-        "start": "Comenzar",
-        "next": "Continuar",
-        "prev": "Anterior",
-        "submit": "Enviar Consulta",
-        "home": "Volver al inicio",
-        "retry": "Intentar de nuevo"
-      },
+      "buttons": { "start": "Comenzar", "next": "Continuar", "prev": "Anterior", "submit": "Enviar Consulta", "home": "Volver al inicio", "retry": "Intentar de nuevo" },
       "messages": {
-        "loading": {
-          "title": "Enviando tu consulta...",
-          "subtitle": "Por favor, espera un momento."
-        },
-        "success": {
-          "title": "¡Consulta recibida!",
-          "subtitle": "Gracias, hemos recibido tu mensaje. Te contactaremos en menos de 24h laborables."
-        },
-        "error": {
-          "title": "Error al enviar",
-          "subtitle": "Ha ocurrido un error. Por favor, inténtalo de nuevo o contacta por teléfono."
-        }
+        "loading": { "title": "Enviando tu consulta...", "subtitle": "Por favor, espera un momento." },
+        "success": { "title": "¡Consulta recibida!", "subtitle": "Gracias, hemos recibido tu mensaje. Te contactaremos en menos de 24h laborables." },
+        "error": { "title": "Error al enviar", "subtitle": "Ha ocurrido un error. Por favor, inténtalo de nuevo o contacta por teléfono." }
       },
       "steps": [
         { "name": "nombre", "label": "¿Cuál es tu nombre?", "helpText": "Nos ayuda a personalizar nuestra comunicación contigo.", "type": "text", "placeholder": "Escribe tu nombre completo", "required": true },
         { "name": "email", "label": "¿Cuál es tu email?", "helpText": "Te contactaremos por email en menos de 24h laborables.", "type": "email", "placeholder": "tu@email.com", "required": true },
         { "name": "telefono", "label": "¿Tu número de teléfono?", "helpText": "Solo si prefieres que te llamemos.", "type": "tel", "placeholder": "Tu teléfono (opcional)", "required": false },
+        {
+          "name": "area-interes",
+          "label": "¿Sobre qué área es tu consulta?",
+          "helpText": "Selecciona el servicio que mejor se ajusta a tu necesidad.",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Informes Periciales (grietas, vicios ocultos, etc.)",
+            "Asesoramiento Estructural (reparación, refuerzo)",
+            "Auditorías de Obra (certificaciones, calidad)",
+            "Otra consulta"
+          ]
+        },
         { "name": "mensaje", "label": "¿En qué podemos ayudarte?", "helpText": "Cuéntanos los detalles relevantes de tu situación.", "type": "textarea", "placeholder": "Describe brevemente tu caso o consulta", "required": true },
         { "name": "privacidad", "label": "Último paso", "helpText": "Para poder procesar tu consulta, necesitamos que aceptes nuestra política de privacidad.", "type": "checkbox", "text": "He leído y acepto la <a href='/privacidad/' class='text-cyan-600 hover:underline font-medium'>Política de Privacidad</a> y el tratamiento de mis datos.", "required": true }
       ]
     },
     "ca": {
-        "formTitle": "Consulta Online Detallada",
-        "formSubtitle": "Emplena els passos per donar-nos més informació sobre el teu cas.",
-        "finalCtaTitle": "Prefereixes parlar directament?",
-        "finalCtaSubtitle": "Truca'ns ara i t'atendrem personalment per resoldre els teus dubtes.",
-        "finalCtaButton": "Trucar al",
-        "intro": {
-            "title": "👋 Explica'ns el teu cas",
-            "subtitle": "T'assessorarem sense compromís i t'oferirem una primera valoració gratuïta."
+      "formTitle": "Consulta Online Detallada",
+      "formSubtitle": "Emplena els passos per donar-nos més informació sobre el teu cas.",
+      "finalCtaTitle": "Prefereixes parlar directament?",
+      "finalCtaSubtitle": "Truca'ns ara i t'atendrem personalment per resoldre els teus dubtes.",
+      "finalCtaButton": "Trucar al",
+      "intro": { "title": "👋 Explica'ns el teu cas", "subtitle": "T'assessorarem sense compromís i t'oferirem una primera valoració gratuïta." },
+      "buttons": { "start": "Començar", "next": "Continuar", "prev": "Anterior", "submit": "Enviar Consulta", "home": "Tornar a l'inici", "retry": "Tornar a provar" },
+      "messages": {
+        "loading": { "title": "Enviant la teva consulta...", "subtitle": "Si us plau, espera un moment." },
+        "success": { "title": "Consulta rebuda!", "subtitle": "Gràcies, hem rebut el teu missatge. Et contactarem en menys de 24h laborables." },
+        "error": { "title": "Error en l'enviament", "subtitle": "Hi ha hagut un error. Si us plau, torna-ho a provar o contacta per telèfon." }
+      },
+      "steps": [
+        { "name": "nombre", "label": "Quin és el teu nom?", "helpText": "Ens ajuda a personalitzar la nostra comunicació amb tu.", "type": "text", "placeholder": "Escriu el teu nom complet", "required": true },
+        { "name": "email", "label": "Quin és el teu email?", "helpText": "Et contactarem per email en menys de 24h laborables.", "type": "email", "placeholder": "el.teu@email.com", "required": true },
+        { "name": "telefono", "label": "El teu número de telèfon?", "helpText": "Només si prefereixes que et truquem.", "type": "tel", "placeholder": "El teu telèfon (opcional)", "required": false },
+        {
+          "name": "area-interes",
+          "label": "Sobre quina àrea és la teva consulta?",
+          "helpText": "Selecciona el servei que millor s'ajusta a la teva necessitat.",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Informes Pericials (esquerdes, vicis ocults, etc.)",
+            "Assessorament Estructural (reparació, reforç)",
+            "Auditories d'Obra (certificacions, qualitat)",
+            "Altra consulta"
+          ]
         },
-        "buttons": { "start": "Començar", "next": "Continuar", "prev": "Anterior", "submit": "Enviar Consulta", "home": "Tornar a l'inici", "retry": "Tornar a provar" },
-        "messages": {
-            "loading": { "title": "Enviant la teva consulta...", "subtitle": "Si us plau, espera un moment." },
-            "success": { "title": "Consulta rebuda!", "subtitle": "Gràcies, hem rebut el teu missatge. Et contactarem en menys de 24h laborables." },
-            "error": { "title": "Error en l'enviament", "subtitle": "Hi ha hagut un error. Si us plau, torna-ho a provar o contacta per telèfon." }
-        },
-        "steps": [
-            { "name": "nombre", "label": "Quin és el teu nom?", "helpText": "Ens ajuda a personalitzar la nostra comunicació amb tu.", "type": "text", "placeholder": "Escriu el teu nom complet", "required": true },
-            { "name": "email", "label": "Quin és el teu email?", "helpText": "Et contactarem per email en menys de 24h laborables.", "type": "email", "placeholder": "el.teu@email.com", "required": true },
-            { "name": "telefono", "label": "El teu número de telèfon?", "helpText": "Només si prefereixes que et truquem.", "type": "tel", "placeholder": "El teu telèfon (opcional)", "required": false },
-            { "name": "mensaje", "label": "En què podem ajudar-te?", "helpText": "Explica'ns els detalls rellevants de la teva situació.", "type": "textarea", "placeholder": "Descriu breument el teu cas o consulta", "required": true },
-            { "name": "privacidad", "label": "Últim pas", "helpText": "Per poder processar la teva consulta, necessitem que acceptis la nostra política de privacitat.", "type": "checkbox", "text": "He llegit i accepto la <a href='/ca/privacitat/' class='text-cyan-600 hover:underline font-medium'>Política de Privacitat</a> i el tractament de les meves dades.", "required": true }
-        ]
+        { "name": "mensaje", "label": "En què podem ajudar-te?", "helpText": "Explica'ns els detalls rellevants de la teva situació.", "type": "textarea", "placeholder": "Descriu breument el teu cas o consulta", "required": true },
+        { "name": "privacidad", "label": "Últim pas", "helpText": "Per poder processar la teva consulta, necessitem que acceptis la nostra política de privacitat.", "type": "checkbox", "text": "He llegit i accepto la <a href='/ca/privacitat/' class='text-cyan-600 hover:underline font-medium'>Política de Privacitat</a> i el tractament de les meves dades.", "required": true }
+      ]
     },
     "en": {
-        "formTitle": "Detailed Online Consultation",
-        "formSubtitle": "Fill out the steps to give us more information about your case.",
-        "finalCtaTitle": "Prefer to talk directly?",
-        "finalCtaSubtitle": "Call us now and we will personally assist you to resolve your doubts.",
-        "finalCtaButton": "Call",
-        "intro": {
-            "title": "👋 Tell us about your case",
-            "subtitle": "We will advise you without obligation and offer a free preliminary assessment."
+      "formTitle": "Detailed Online Consultation",
+      "formSubtitle": "Fill out the steps to give us more information about your case.",
+      "finalCtaTitle": "Prefer to talk directly?",
+      "finalCtaSubtitle": "Call us now and we will personally assist you to resolve your doubts.",
+      "finalCtaButton": "Call",
+      "intro": { "title": "👋 Tell us about your case", "subtitle": "We will advise you without obligation and offer a free preliminary assessment." },
+      "buttons": { "start": "Start", "next": "Continue", "prev": "Previous", "submit": "Send Inquiry", "home": "Back to home", "retry": "Try again" },
+      "messages": {
+        "loading": { "title": "Sending your inquiry...", "subtitle": "Please wait a moment." },
+        "success": { "title": "Inquiry received!", "subtitle": "Thank you, we have received your message. We will contact you within 24 business hours." },
+        "error": { "title": "Sending error", "subtitle": "An error occurred. Please try again or contact us by phone." }
+      },
+      "steps": [
+        { "name": "nombre", "label": "What's your name?", "helpText": "It helps us to personalize our communication with you.", "type": "text", "placeholder": "Enter your full name", "required": true },
+        { "name": "email", "label": "What's your email?", "helpText": "We will contact you by email within 24 business hours.", "type": "email", "placeholder": "your@email.com", "required": true },
+        { "name": "telefono", "label": "Your phone number?", "helpText": "Only if you prefer us to call you.", "type": "tel", "placeholder": "Your phone (optional)", "required": false },
+        {
+          "name": "area-interes",
+          "label": "What area is your inquiry about?",
+          "helpText": "Select the service that best fits your needs.",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Expert Reports (cracks, hidden defects, etc.)",
+            "Structural Consulting (repair, reinforcement)",
+            "Construction Audits (certifications, quality)",
+            "Other inquiry"
+          ]
         },
-        "buttons": { "start": "Start", "next": "Continue", "prev": "Previous", "submit": "Send Inquiry", "home": "Back to home", "retry": "Try again" },
-        "messages": {
-            "loading": { "title": "Sending your inquiry...", "subtitle": "Please wait a moment." },
-            "success": { "title": "Inquiry received!", "subtitle": "Thank you, we have received your message. We will contact you within 24 business hours." },
-            "error": { "title": "Sending error", "subtitle": "An error occurred. Please try again or contact us by phone." }
-        },
-        "steps": [
-            { "name": "nombre", "label": "What's your name?", "helpText": "It helps us to personalize our communication with you.", "type": "text", "placeholder": "Enter your full name", "required": true },
-            { "name": "email", "label": "What's your email?", "helpText": "We will contact you by email within 24 business hours.", "type": "email", "placeholder": "your@email.com", "required": true },
-            { "name": "telefono", "label": "Your phone number?", "helpText": "Only if you prefer us to call you.", "type": "tel", "placeholder": "Your phone (optional)", "required": false },
-            { "name": "mensaje", "label": "How can we help you?", "helpText": "Tell us the relevant details of your situation.", "type": "textarea", "placeholder": "Briefly describe your case or inquiry", "required": true },
-            { "name": "privacidad", "label": "Last step", "helpText": "To process your inquiry, we need you to accept our privacy policy.", "type": "checkbox", "text": "I have read and accept the <a href='/en/privacy/' class='text-cyan-600 hover:underline font-medium'>Privacy Policy</a> and the processing of my data.", "required": true }
-        ]
+        { "name": "mensaje", "label": "How can we help you?", "helpText": "Tell us the relevant details of your situation.", "type": "textarea", "placeholder": "Briefly describe your case or inquiry", "required": true },
+        { "name": "privacidad", "label": "Last step", "helpText": "To process your inquiry, we need you to accept our privacy policy.", "type": "checkbox", "text": "I have read and accept the <a href='/en/privacy/' class='text-cyan-600 hover:underline font-medium'>Privacy Policy</a> and the processing of my data.", "required": true }
+      ]
     }
   },
   "error404": {
