@@ -22,7 +22,7 @@
     {% endblock content %}
 
     {% include "partials/footer.njk" %}
-    {# {% include "partials/floating-notice.njk" %} #}
+    {% include "partials/floating-notice.njk" %}
 
     <!-- Schema for LocalBusiness -->
     <div itemscope itemtype="https://schema.org/LocalBusiness" hidden>
@@ -65,7 +65,7 @@
     {% block scripts %}
     {% include "partials/head.njk" %}
     
-        {# <!-- Service Worker Handler -->
+        <!-- Service Worker Handler -->
         <script>
             class ServiceWorkerHandler {
                 constructor() {
@@ -168,7 +168,7 @@
             // Inicializar el manejador cuando la página esté lista
             window.addEventListener('load', () => {
                 new ServiceWorkerHandler();
-            }); #}
+            });
         </script>
         
         <script>
