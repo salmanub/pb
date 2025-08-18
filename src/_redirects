@@ -69,14 +69,9 @@
 /en/construction/* /en/expert-witness-reports/               301
 
 
-# --- REGLAS PARA MANEJO DE 404 POR IDIOMA ---
-# Redirige las páginas 404 según el prefijo de idioma de la URL original
-
-# Catalán - redirige todas las URLs que empiecen con /ca/ a la página 404 en catalán
-/ca/*  /ca/404.html  404
-
-# Inglés - redirige todas las URLs que empiecen con /en/ a la página 404 en inglés
-/en/*  /en/404.html  404
-
-# Español (default) - redirige el resto de URLs a la página 404 en español
-/*  /404.html  404
+# --- REGLA FINAL PARA MANEJO DE 404 ---
+# Cloudflare Pages sirve automáticamente tu archivo 404.html si existe.
+# La siguiente regla es una buena práctica como "fallback", pero la mayoría de las veces no es necesaria.
+# Si tienes una Single Page Application (SPA), la regla /* /index.html 200 es la correcta, pero este no es tu caso.
+# Para un sitio estático, es mejor dejar que Cloudflare maneje el 404.
+# Por lo tanto, eliminamos las reglas /* /:splat 200 y /* /404.html 404 para evitar conflictos.
