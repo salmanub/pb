@@ -84,17 +84,18 @@
             <div class="grid lg:grid-cols-2 items-start lg:items-stretch gap-12 lg:gap-16">
                 <div class="order-1" itemscope itemtype="https://schema.org/ContactPoint">
                     <div id="typeform-wrapper" class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border border-slate-100 h-full flex flex-col">
-                        <div class="mb-10 text-center lg:text-left">
-                            <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3" itemprop="name">{{ metadata.contactForm[lang].formTitle }}</h2>
-                            <p class="text-lg text-slate-600" itemprop="description">{{ metadata.contactForm[lang].formSubtitle }}</p>
+                        <div class="mb-12 text-center lg:text-left">
+                            <span class="inline-block text-sm uppercase tracking-wider text-cyan-600 font-semibold mb-3">{{ metadata.contactForm[lang].formSubtitle }}</span>
+                            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-4 leading-tight" itemprop="name">{{ metadata.contactForm[lang].formTitle }}</h2>
+                            <p class="text-lg text-slate-500 font-light leading-relaxed max-w-2xl" itemprop="description">{{ metadata.contactForm[lang].formDescription }}</p>
                         </div>
                         <div id="typeform-container" class="flex-grow flex flex-col justify-between relative min-h-[350px]">
                             <div id="typeform-steps-container">
                                 {% for step in metadata.contactForm[lang].steps %}
                                 <div class="typeform-step hidden space-y-8" data-step="{{ step.name }}">
-                                    <div class="space-y-2">
-                                        <label for="input-{{ step.name }}" class="text-xl font-semibold text-slate-800 block">{{ step.label }}</label>
-                                        {% if step.helpText %}<p class="text-slate-500 text-sm">{{ step.helpText }}</p>{% endif %}
+                                    <div class="space-y-3">
+                                        <label for="input-{{ step.name }}" class="text-2xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent block leading-tight">{{ step.label }}</label>
+                                        {% if step.helpText %}<p class="text-slate-600 text-lg font-light leading-relaxed">{{ step.helpText }}</p>{% endif %}
                                     </div>
 
                                     {% if step.type == "textarea" %}
@@ -144,9 +145,45 @@
                                     </div>
                                 </div>
                                 {% endfor %}
-                                <div id="loading-state" class="typeform-step hidden space-y-6 text-center" data-step="loading"><div class="w-16 h-16 mx-auto mb-6 border-4 border-cyan-200 border-t-cyan-500 rounded-full animate-spin"></div><h3 class="text-2xl font-light text-slate-800">{{ metadata.contactForm[lang].messages.loading.title }}</h3><p class="text-lg text-slate-600">{{ metadata.contactForm[lang].messages.loading.subtitle }}</p></div>
-                                <div id="success-message" class="typeform-step hidden space-y-6 text-center" data-step="success"><div class="w-16 h-16 bg-green-100 text-green-600 rounded-full mx-auto flex items-center justify-center mb-6"><svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><h3 class="text-2xl font-light text-slate-800">{{ metadata.contactForm[lang].messages.success.title }}</h3><p class="text-lg text-slate-600">{{ metadata.contactForm[lang].messages.success.subtitle }}</p><a href="{% if lang != 'es' %}/{{ lang }}/{% else %}/{% endif %}" class="inline-flex items-center justify-center mt-6 px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors">{{ metadata.contactForm[lang].buttons.home }}</a></div>
-                                <div id="error-message" class="typeform-step hidden space-y-6 text-center" data-step="error"><div class="w-16 h-16 bg-red-100 text-red-600 rounded-full mx-auto flex items-center justify-center mb-6"><svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></div><h3 class="text-2xl font-light text-slate-800">{{ metadata.contactForm[lang].messages.error.title }}</h3><p class="text-lg text-slate-600">{{ metadata.contactForm[lang].messages.error.subtitle }}</p><button id="retry-button" type="button" class="inline-flex items-center justify-center mt-6 px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors">{{ metadata.contactForm[lang].buttons.retry }}</button></div>
+                                <div id="loading-state" class="typeform-step hidden space-y-6 text-center" data-step="loading">
+                                    <div class="w-16 h-16 mx-auto mb-6 border-4 border-cyan-200 border-t-cyan-500 rounded-full animate-spin"></div>
+                                    <h3 class="text-2xl font-light text-slate-800">{{ metadata.contactForm[lang].messages.loading.title }}</h3>
+                                    <p class="text-lg text-slate-600">{{ metadata.contactForm[lang].messages.loading.subtitle }}</p>
+                                </div>
+
+                                <div id="success-message" class="typeform-step hidden space-y-8 text-center" data-step="success">
+                                    <div class="relative">
+                                        <div class="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-green-50 to-green-100 rounded-full p-5">
+                                            <div class="w-full h-full bg-green-500 rounded-full flex items-center justify-center">
+                                                <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-3xl font-bold bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">{{ metadata.contactForm[lang].messages.success.title }}</h3>
+                                    <p class="text-lg text-slate-500 font-light max-w-md mx-auto">{{ metadata.contactForm[lang].messages.success.subtitle }}</p>
+                                    <a href="{% if lang != 'es' %}/{{ lang }}/{% else %}/{% endif %}" class="inline-flex items-center justify-center mt-6 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-200">
+                                        {{ metadata.contactForm[lang].buttons.home }}
+                                    </a>
+                                </div>
+
+                                <div id="error-message" class="typeform-step hidden space-y-8 text-center" data-step="error">
+                                    <div class="relative">
+                                        <div class="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-red-50 to-red-100 rounded-full p-5">
+                                            <div class="w-full h-full bg-red-500 rounded-full flex items-center justify-center">
+                                                <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">{{ metadata.contactForm[lang].messages.error.title }}</h3>
+                                    <p class="text-lg text-slate-500 font-light max-w-md mx-auto">{{ metadata.contactForm[lang].messages.error.subtitle }}</p>
+                                    <button id="retry-button" type="button" class="inline-flex items-center justify-center mt-6 px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-red-500/25 transform hover:scale-105 transition-all duration-200">
+                                        {{ metadata.contactForm[lang].buttons.retry }}
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <div id="progress-bar-container" class="mt-8 w-full bg-slate-200 h-2 rounded-full overflow-hidden">

@@ -67,13 +67,13 @@ testimonials:
     role: "Propietària d'habitatge d'obra nova"
 
 # CTA Section
-ctaTitle: 'Li preocupen les esquerdes de la seva propietat?'
-ctaDescription: 'Sol·liciti una avaluació tècnica independent per conèixer l'abast real del problema i les solucions més adequades.'
+ctaTitle: "Li preocupen les esquerdes de la seva propietat?"
+ctaDescription: "Sol·liciti una avaluació tècnica independent per conèixer l'abast real del problema i les solucions més adequades."
 
 # Introduction (shown in hero section)
 intro: |
   <p>Veure una esquerda créixer en una paret, un sostre o una biga és una de les situacions més alarmants per a un propietari. És un simple problema estètic o l'avís d'un error estructural greu?</p>
-  
+
   <p>Com a part dels nostres <a href="/ca/informes-pericials/">serveis d'informes pericials</a>, oferim una anàlisi tècnica rigorosa per diagnosticar l'origen exacte de qualsevol patologia estructural, avaluar-ne el nivell de risc i proporcionar-li un full de ruta clar per a la seva solució.</p>
 ---
 
