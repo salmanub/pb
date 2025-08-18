@@ -463,10 +463,6 @@
       "finalCtaTitle": "¿Prefieres hablar directamente?",
       "finalCtaSubtitle": "Llámanos ahora y te atenderemos personalmente para resolver tus dudas.",
       "finalCtaButton": "Llamar al",
-      "intro": {
-        "title": "👋 Cuéntanos sobre tu caso",
-        "subtitle": "Te asesoraremos sin compromiso y te ofreceremos una primera valoración gratuita."
-      },
       "buttons": { "start": "Comenzar", "next": "Continuar", "prev": "Anterior", "submit": "Enviar Consulta", "home": "Volver al inicio", "retry": "Intentar de nuevo" },
       "messages": {
         "loading": { "title": "Enviando tu consulta...", "subtitle": "Por favor, espera un momento." },
@@ -484,14 +480,14 @@
           "type": "select",
           "required": true,
           "options": [
-            "Informes Periciales (grietas, vicios ocultos, etc.)",
-            "Asesoramiento Estructural (reparación, refuerzo)",
-            "Auditorías de Obra (certificaciones, calidad)",
-            "Otra consulta"
+            { "key": "informes_periciales", "label": "Informes Periciales (grietas, vicios ocultos, etc.)" },
+            { "key": "asesoramiento_estructural", "label": "Asesoramiento Estructural (reparación, refuerzo)" },
+            { "key": "auditorias_obra", "label": "Auditorías de Obra (certificaciones, calidad)" },
+            { "key": "otra_consulta", "label": "Otra consulta" }
           ]
         },
         { "name": "mensaje", "label": "¿En qué podemos ayudarte?", "helpText": "Cuéntanos los detalles relevantes de tu situación.", "type": "textarea", "placeholder": "Describe brevemente tu caso o consulta", "required": true },
-        { "name": "privacidad", "label": "Último paso", "helpText": "Para poder procesar tu consulta, necesitamos que aceptes nuestra política de privacidad.", "type": "checkbox", "text": "He leído y acepto la <a href='/privacidad/' class='text-cyan-600 hover:underline font-medium'>Política de Privacidad</a> y el tratamiento de mis datos.", "required": true }
+        { "name": "privacidad", "label": "Último paso", "helpText": "Para poder procesar tu consulta, necesitamos que aceptes nuestra política de privacidad.", "type": "checkbox", "text": "He leído y acepto la <a href='/privacidad/' class='text-cyan-600 hover:underline font-medium'>Política de Privacidad</a>.", "required": true }
       ]
     },
     "ca": {
@@ -500,7 +496,6 @@
       "finalCtaTitle": "Prefereixes parlar directament?",
       "finalCtaSubtitle": "Truca'ns ara i t'atendrem personalment per resoldre els teus dubtes.",
       "finalCtaButton": "Trucar al",
-      "intro": { "title": "👋 Explica'ns el teu cas", "subtitle": "T'assessorarem sense compromís i t'oferirem una primera valoració gratuïta." },
       "buttons": { "start": "Començar", "next": "Continuar", "prev": "Anterior", "submit": "Enviar Consulta", "home": "Tornar a l'inici", "retry": "Tornar a provar" },
       "messages": {
         "loading": { "title": "Enviant la teva consulta...", "subtitle": "Si us plau, espera un moment." },
@@ -518,14 +513,14 @@
           "type": "select",
           "required": true,
           "options": [
-            "Informes Pericials (esquerdes, vicis ocults, etc.)",
-            "Assessorament Estructural (reparació, reforç)",
-            "Auditories d'Obra (certificacions, qualitat)",
-            "Altra consulta"
+            { "key": "informes_periciales", "label": "Informes Pericials (esquerdes, vicis ocults, etc.)" },
+            { "key": "asesoramiento_estructural", "label": "Assessorament Estructural (reparació, reforç)" },
+            { "key": "auditorias_obra", "label": "Auditories d'Obra (certificacions, qualitat)" },
+            { "key": "otra_consulta", "label": "Altra consulta" }
           ]
         },
         { "name": "mensaje", "label": "En què podem ajudar-te?", "helpText": "Explica'ns els detalls rellevants de la teva situació.", "type": "textarea", "placeholder": "Descriu breument el teu cas o consulta", "required": true },
-        { "name": "privacidad", "label": "Últim pas", "helpText": "Per poder processar la teva consulta, necessitem que acceptis la nostra política de privacitat.", "type": "checkbox", "text": "He llegit i accepto la <a href='/ca/privacitat/' class='text-cyan-600 hover:underline font-medium'>Política de Privacitat</a> i el tractament de les meves dades.", "required": true }
+        { "name": "privacidad", "label": "Últim pas", "helpText": "Per poder processar la teva consulta, necessitem que acceptis la nostra política de privacitat.", "type": "checkbox", "text": "He llegit i accepto la <a href='/ca/privacitat/' class='text-cyan-600 hover:underline font-medium'>Política de Privacitat</a>.", "required": true }
       ]
     },
     "en": {
@@ -534,7 +529,6 @@
       "finalCtaTitle": "Prefer to talk directly?",
       "finalCtaSubtitle": "Call us now and we will personally assist you to resolve your doubts.",
       "finalCtaButton": "Call",
-      "intro": { "title": "👋 Tell us about your case", "subtitle": "We will advise you without obligation and offer a free preliminary assessment." },
       "buttons": { "start": "Start", "next": "Continue", "prev": "Previous", "submit": "Send Inquiry", "home": "Back to home", "retry": "Try again" },
       "messages": {
         "loading": { "title": "Sending your inquiry...", "subtitle": "Please wait a moment." },
@@ -552,14 +546,14 @@
           "type": "select",
           "required": true,
           "options": [
-            "Expert Reports (cracks, hidden defects, etc.)",
-            "Structural Consulting (repair, reinforcement)",
-            "Construction Audits (certifications, quality)",
-            "Other inquiry"
+            { "key": "informes_periciales", "label": "Expert Reports (cracks, hidden defects, etc.)" },
+            { "key": "asesoramiento_estructural", "label": "Structural Consulting (repair, reinforcement)" },
+            { "key": "auditorias_obra", "label": "Construction Audits (certifications, quality)" },
+            { "key": "otra_consulta", "label": "Other inquiry" }
           ]
         },
         { "name": "mensaje", "label": "How can we help you?", "helpText": "Tell us the relevant details of your situation.", "type": "textarea", "placeholder": "Briefly describe your case or inquiry", "required": true },
-        { "name": "privacidad", "label": "Last step", "helpText": "To process your inquiry, we need you to accept our privacy policy.", "type": "checkbox", "text": "I have read and accept the <a href='/en/privacy/' class='text-cyan-600 hover:underline font-medium'>Privacy Policy</a> and the processing of my data.", "required": true }
+        { "name": "privacidad", "label": "Last step", "helpText": "To process your inquiry, we need you to accept our privacy policy.", "type": "checkbox", "text": "I have read and accept the <a href='/en/privacy/' class='text-cyan-600 hover:underline font-medium'>Privacy Policy</a>.", "required": true }
       ]
     }
   },
