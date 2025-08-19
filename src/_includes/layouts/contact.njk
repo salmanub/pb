@@ -64,16 +64,7 @@
         <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
     </header>
 
-    {# Contenido Markdown #}
-    {% if content | length > 10 %}
-    <section class="py-16 lg:py-24 relative z-10 bg-white">
-        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
-            <div class="prose prose-lg prose-slate max-w-4xl mx-auto">
-                {{ content | safe }}
-            </div>
-        </div>
-    </section>
-    {% endif %}
+    
 
     {# Contenido Principal - 2 Columnas con Typeform y Mapas #}
     <section class="py-24 relative z-10 bg-gradient-to-br from-slate-100 via-white to-slate-50 overflow-hidden isolate">
@@ -434,7 +425,50 @@
                         <div id="typeform-progress" class="bg-gradient-to-r from-cyan-400 to-cyan-600 h-full w-0 transition-all duration-300"></div>
                     </div>
                 </div>
-                <script>
+                
+                            
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {# Contenido Markdown #}
+    {% if content | length > 10 %}
+    <section class="py-16 lg:py-24 relative z-10 bg-white">
+        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+            <div class="prose prose-lg prose-slate max-w-4xl mx-auto">
+                {{ content | safe }}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const currentLang = '{{ lang }}';
+</script>
+<script>
+function switchTab(location) {
+    const tabs = ['barcelona', 'granollers'];
+    tabs.forEach(loc => {
+        const tabBtn = document.getElementById(`tab-${loc}`);
+        const content = document.getElementById(`content-${loc}`);
+        if (loc === location) {
+            tabBtn.classList.add('bg-white', 'border-cyan-500');
+            tabBtn.classList.remove('bg-slate-50', 'border-transparent', 'hover:bg-slate-100', 'text-slate-500');
+            content.classList.remove('hidden');
+        } else {
+            tabBtn.classList.remove('bg-white', 'border-cyan-500');
+            tabBtn.classList.add('bg-slate-50', 'border-transparent', 'hover:bg-slate-100', 'text-slate-500');
+            content.classList.add('hidden');
+        }
+    });
+}
+</script>
+<script>
                 document.addEventListener('DOMContentLoaded', () => {
                     const formWrapper = document.getElementById('typeform-wrapper');
                     const steps = Array.from(formWrapper.querySelectorAll('.typeform-step'));
@@ -515,7 +549,20 @@
                         formDataToSend.append('mensaje', document.getElementById('mensaje').value);
                         formDataToSend.append('privacidad', 'Aceptada');
                         formDataToSend.append('origen', 'CTA Form perito.barcelona');
-                        formDataToSend.append('fecha', new Date().toISOString());
+                        
+                        const now = new Date();
+                        const isoDate = now.toISOString();
+                        const localDate = now.toLocaleString('es-ES', {
+                            year: 'numeric',
+                            month: 'numeric',
+                            day: 'numeric',
+                            hour: 'numeric',
+                            minute: 'numeric',
+                            second: 'numeric',
+                            hour12: false
+                        });
+                        const formattedDate = `${isoDate}	${localDate}`;
+                        formDataToSend.append('fecha', formattedDate);
 
                         try {
                             const response = await fetch(webhookUrl, {
@@ -593,39 +640,6 @@
                     showStep(0);
                 });
                 </script>
-                            
-            </div>
-        </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-24 px-4 md:px-[5%] bg-gradient-to-br from-slate-100 via-white to-slate-50 relative overflow-hidden isolate">{# ... Contenido del CTA final ... #}</section>
-</main>
-{% endblock %}
-
-{% block scripts %}
-<script>
-    const currentLang = '{{ lang }}';
-</script>
-<script>
-function switchTab(location) {
-    const tabs = ['barcelona', 'granollers'];
-    tabs.forEach(loc => {
-        const tabBtn = document.getElementById(`tab-${loc}`);
-        const content = document.getElementById(`content-${loc}`);
-        if (loc === location) {
-            tabBtn.classList.add('bg-white', 'border-cyan-500');
-            tabBtn.classList.remove('bg-slate-50', 'border-transparent', 'hover:bg-slate-100', 'text-slate-500');
-            content.classList.remove('hidden');
-        } else {
-            tabBtn.classList.remove('bg-white', 'border-cyan-500');
-            tabBtn.classList.add('bg-slate-50', 'border-transparent', 'hover:bg-slate-100', 'text-slate-500');
-            content.classList.add('hidden');
-        }
-    });
-}
-</script>
 {% endblock scripts %}
 
 {% block pageStyles %}
