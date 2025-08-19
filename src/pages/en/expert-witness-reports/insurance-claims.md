@@ -20,8 +20,8 @@ serviceTitle: 'insurance claims'
 # hero object for the new template's header
 hero:
   title: "Expert Reports for Insurance Claims"
-  strong: "The Technical Defense a Policyholder Needs"
-  description: "If you feel at a disadvantage against your insurance company, our party-appointed expert report is the tool that levels the playing field. As certified experts, we provide the necessary technical evidence for you to receive the compensation you are entitled to."
+  strong: "Defending Your Interests Against the Insurer"
+  description: "If you feel at a disadvantage against your insurance company, our party-appointed expert report is the tool that levels the playing field. As certified FMR (Fire and Miscellaneous Risks) experts, we provide the necessary technical evidence for you to receive the settlement you are entitled to."
 
 # parentService object for the breadcrumb and sidebar link
 parentService:
