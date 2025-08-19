@@ -67,6 +67,9 @@
 /abogados/* /colaboracion-abogados/                   301
 /ca/construccio/* /ca/informes-pericials/                   301
 /en/construction/* /en/expert-witness-reports/               301
+/seguros/ /informes-periciales/reclamacion-seguros/         301
+/assegurances/ /ca/informes-pericials/reclamacio-assegurances/ 301
+/insurance/ /en/expert-witness-reports/insurance-claims/ 301
 
 
 # --- REGLA FINAL PARA MANEJO DE 404 ---
