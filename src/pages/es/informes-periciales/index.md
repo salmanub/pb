@@ -91,14 +91,14 @@ serviceCluster:
         - "Análisis de elementos comunes"
         - "Reclamaciones a constructora"
         - "ITE desfavorable"
-    - title: "Contrainformes o Informes Contradictorios"
-      description: "Análisis crítico y técnico de un informe pericial presentado por la parte contraria, detectando errores o carencias."
-      url: "/informes-periciales/contrainforme-pericial/"
-      icon: "copy-x"
+    - title: "Reclamaciones a Seguros"
+      description: "Informes periciales independientes para rebatir la valoración de la aseguradora y conseguir la indemnización que le corresponde."
+      url: "/informes-periciales/reclamacion-seguros/"
+      icon: "shield-check" # Un icono que transmita protección
       features:
-        - "Revisión de informes"
-        - "Detección de errores"
-        - "Nuevas líneas de defensa"
+        - "Valoración de daños por incendio"
+        - "Análisis de coberturas"
+        - "Defensa del asegurado"
 
 # Proceso de Trabajo
 process:
