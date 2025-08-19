@@ -4,6 +4,11 @@ title: "Pèrit d'Assegurances IRD a Barcelona | Reclamacions a Asseguradores"
 description: "Pèrit d'Assegurances independent (IRD per INESE) a Barcelona. Expert en contraperitatges i valoració de danys per incendi o aigua per reclamar la indemnització justa."
 permalink: "/ca/informes-pericials/reclamacio-assegurances/"
 lang: 'ca'
+translations:
+  - lang: 'es'
+    permalink: '/informes-periciales/reclamacion-seguros/'
+  - lang: 'en'
+    permalink: '/en/expert-witness-reports/insurance-claims/'
 eleventyNavigation:
   key: "Reclamacions a Assegurances"
   parent: "Informes Pericials"

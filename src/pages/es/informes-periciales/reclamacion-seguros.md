@@ -4,6 +4,11 @@ title: "Perito de Seguros IRD en Barcelona | Reclamaciones a Aseguradoras"
 description: "Perito de Seguros independiente (IRD por INESE) en Barcelona. Experto en contraperitajes y valoración de daños por incendio o agua para reclamar la indemnización justa."
 permalink: "/informes-periciales/reclamacion-seguros/"
 lang: 'es'
+translations:
+  - lang: 'ca'
+    permalink: '/ca/informes-pericials/reclamacio-assegurances/'
+  - lang: 'en'
+    permalink: '/en/expert-witness-reports/insurance-claims/'
 eleventyNavigation:
   key: "Reclamaciones a Seguros"
   parent: "Informes Periciales"

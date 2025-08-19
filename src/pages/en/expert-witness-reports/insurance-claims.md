@@ -4,6 +4,11 @@ title: "Insurance Claims Expert in Barcelona | Policyholder Advocacy"
 description: "Independent Insurance Claims Expert (specializing in Fire & Various Risks) in Barcelona. Expert in counter-appraisals and damage assessment for fire or water to claim your fair settlement."
 permalink: "/en/expert-witness-reports/insurance-claims/"
 lang: 'en'
+translations:
+  - lang: 'es'
+    permalink: '/informes-periciales/reclamacion-seguros/'
+  - lang: 'ca'
+    permalink: '/ca/informes-pericials/reclamacio-assegurances/'
 eleventyNavigation:
   key: "Insurance Claims"
   parent: "Expert Witness Reports"
