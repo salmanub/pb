@@ -94,6 +94,14 @@ serviceCluster:
         - "Revisió d'informes"
         - "Detecció d'errors"
         - "Noves línies de defensa"
+    - title: "Reclamacions a Assegurances"
+      description: "Informes pericials independents per rebatre la valoració de l'asseguradora i aconseguir la indemnització que li correspon."
+      url: "/ca/informes-pericials/reclamacio-assegurances/"
+      icon: "shield-check"
+      features:
+        - "Valoració de danys per incendi"
+        - "Anàlisi de cobertures"
+        - "Defensa de l'assegurat"
 
 process:
   title: "La Nostra Metodologia d'Actuació"

@@ -94,6 +94,14 @@ serviceCluster:
         - "Report review"
         - "Error detection"
         - "New defense lines"
+    - title: "Insurance Claims"
+      description: "Independent expert reports to challenge the insurer's valuation and secure the settlement you are entitled to."
+      url: "/en/expert-witness-reports/insurance-claims/"
+      icon: "shield-check"
+      features:
+        - "Fire damage assessment"
+        - "Policy coverage analysis"
+        - "Policyholder advocacy"
 
 process:
   title: "Our Working Methodology"
