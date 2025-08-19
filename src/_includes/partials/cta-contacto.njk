@@ -192,23 +192,20 @@
                                 <p class="text-sm text-slate-500 mt-2">{{ metadata.ctaForm[lang].helpText.mensaje }}</p>
                                 <div class="space-y-6">
                                     <!-- Casilla de privacidad -->
-                                    <!-- Casilla de privacidad con mejor feedback visual -->
-                                    <div class="space-y-2">
-                                        <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors group">
-                                            <input type="checkbox" 
-                                                   id="privacidad" 
-                                                   name="privacidad" 
-                                                   class="mt-1 w-5 h-5 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500 cursor-pointer group-hover:border-cyan-500 transition-colors"
-                                                   required>
-                                            <label for="privacidad" class="text-slate-600 cursor-pointer text-base group-hover:text-slate-900 transition-colors">
-                                                {{ metadata.ctaForm[lang].privacyText | safe }}
-                                            </label>
-                                        </div>
-                                        <!-- Mensaje de error para la privacidad -->
-                                        <p id="privacy-error" class="text-red-500 text-sm hidden ml-4">
-                                            {{ metadata.ctaForm[lang].privacyError }}
-                                        </p>
+                                    <div class="flex items-start gap-3 py-4">
+                                        <input type="checkbox" 
+                                               id="privacidad" 
+                                               name="privacidad" 
+                                               class="mt-1 w-5 h-5 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500 cursor-pointer"
+                                               required>
+                                        <label for="privacidad" class="text-slate-600 cursor-pointer text-base">
+                                            {{ metadata.ctaForm[lang].privacyText | safe }}
+                                        </label>
                                     </div>
+                                    <!-- Mensaje de error para la privacidad -->
+                                    <p id="privacy-error" class="text-red-500 text-sm hidden ml-4">
+                                        {{ metadata.ctaForm[lang].privacyError }}
+                                    </p>
 
                                     <div class="flex justify-between">
                                         <button type="button" class="typeform-prev group px-6 py-3 text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 text-sm rounded-lg hover:bg-slate-50">
@@ -237,24 +234,35 @@
                                 <p class="text-lg text-slate-600">{{ metadata.ctaForm[lang].messages.loading.subtitle }}</p>
                             </div>
 
-                            <div id="success-message" class="typeform-step hidden space-y-6 text-center" data-step="success">
-                                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full mx-auto flex items-center justify-center mb-6">
-                                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
+                            <div id="success-message" class="typeform-step hidden space-y-8 text-center" data-step="success">
+                                <div class="relative">
+                                    <div class="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-green-50 to-green-100 rounded-full p-5">
+                                        <div class="w-full h-full bg-green-500 rounded-full flex items-center justify-center">
+                                            <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3 class="text-2xl font-light text-slate-800">{{ metadata.ctaForm[lang].messages.success.title }}</h3>
-                                <p class="text-lg text-slate-600">{{ metadata.ctaForm[lang].messages.success.subtitle }}</p>
+                                <h3 class="text-3xl font-bold bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">{{ metadata.ctaForm[lang].messages.success.title }}</h3>
+                                <p class="text-lg text-slate-500 font-light max-w-md mx-auto">{{ metadata.ctaForm[lang].messages.success.subtitle }}</p>
+                                <a href="{% if lang != 'es' %}/{{ lang }}/{% else %}/{% endif %}" class="inline-flex items-center justify-center mt-6 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-200">
+                                    {{ metadata.contactForm[lang].buttons.home }}
+                                </a>
                             </div>
 
-                            <div id="error-message" class="typeform-step hidden space-y-6 text-center" data-step="error">
-                                <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full mx-auto flex items-center justify-center mb-6">
-                                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                    </svg>
+                            <div id="error-message" class="typeform-step hidden space-y-8 text-center" data-step="error">
+                                <div class="relative">
+                                    <div class="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-red-50 to-red-100 rounded-full p-5">
+                                        <div class="w-full h-full bg-red-500 rounded-full flex items-center justify-center">
+                                            <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3 class="text-2xl font-light text-slate-800">{{ metadata.ctaForm[lang].messages.error.title }}</h3>
-                                <p class="text-lg text-slate-600">{{ metadata.ctaForm[lang].messages.error.subtitle }}</p>
+                                <h3 class="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">{{ metadata.ctaForm[lang].messages.error.title }}</h3>
+                                <p class="text-lg text-slate-500 font-light max-w-md mx-auto">{{ metadata.ctaForm[lang].messages.error.subtitle }}</p>
                                 <button id="retry-button" type="button" class="inline-flex items-center justify-center mt-6 px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-red-500/25 transform hover:scale-105 transition-all duration-200">
                                     {{ metadata.contactForm[lang].buttons.retry }}
                                 </button>

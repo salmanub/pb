@@ -20,8 +20,6 @@
                         {# Breadcrumbs #}
                         {% include "partials/breadcrumb.njk" %}
                         
-                        
-                        
                         <h1 class="text-[2.5rem] md:text-[3.5rem] font-light leading-[1.1] text-center md:text-left" itemprop="headline">
                             {{ contact.title | safe}}
                         </h1>
@@ -82,200 +80,522 @@
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(203,213,225,0.1)_1px,transparent_1px)] [background-size:48px_48px]"></div>
         <div class="max-w-[1400px] mx-auto px-4 md:px-8">
             <div class="grid lg:grid-cols-2 items-start lg:items-stretch gap-12 lg:gap-16">
-                <div class="order-1" itemscope itemtype="https://schema.org/ContactPoint">
-                    <div id="typeform-wrapper" class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border border-slate-100 h-full flex flex-col">
-                        <div class="mb-12 text-center lg:text-left">
-                            <span class="inline-block text-sm uppercase tracking-wider text-cyan-600 font-semibold mb-3">{{ metadata.contactForm[lang].formSubtitle }}</span>
-                            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-4 leading-tight" itemprop="name">{{ metadata.contactForm[lang].formTitle }}</h2>
-                            <p class="text-lg text-slate-500 font-light leading-relaxed max-w-2xl" itemprop="description">{{ metadata.contactForm[lang].formDescription }}</p>
+                <div class="order-2 lg:order-1" itemscope itemtype="https://schema.org/Place">
+                    {# Sticky wrapper #}
+                    <div class="sticky top-24 space-y-8">
+                        {# Encabezado descriptivo para las ubicaciones #}
+                        <div class="text-center lg:text-left">
+                             <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3" itemprop="name">Nuestras Oficinas</h2>
+                             <p class="text-lg text-slate-600" itemprop="description">Visítanos en Barcelona o Granollers.</p>
                         </div>
-                        <div id="typeform-container" class="flex-grow flex flex-col justify-between relative min-h-[350px]">
-                            <div id="typeform-steps-container">
-                                {% for step in metadata.contactForm[lang].steps %}
-                                <div class="typeform-step hidden space-y-8" data-step="{{ step.name }}">
-                                    <div class="space-y-3">
-                                        <label for="input-{{ step.name }}" class="text-2xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent block leading-tight">{{ step.label }}</label>
-                                        {% if step.helpText %}<p class="text-slate-600 text-lg font-light leading-relaxed">{{ step.helpText }}</p>{% endif %}
+                        
+                        {# Ubicaciones con tabs para mapas #}
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col">
+                            {# Tabs de ubicaciones #}
+                            <div class="tabs-header flex border-b border-slate-200">
+                                <button id="tab-barcelona" class="tab-btn flex-1 px-5 py-4 font-semibold text-slate-800 bg-white border-b-2 border-cyan-500 focus:outline-none group transition-colors duration-200" onclick="switchTab('barcelona')">
+                                    <div class="flex items-center justify-center gap-3">
+                                        <svg class="w-5 h-5 text-cyan-500 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                        <span>Barcelona</span>
                                     </div>
-
-                                    {% if step.type == "textarea" %}
-                                        <textarea id="input-{{ step.name }}" name="{{ step.name }}" rows="4" class="w-full px-4 py-3 text-lg bg-slate-100 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200" placeholder="{{ step.placeholder }}" {% if step.required %}required{% endif %}></textarea>
-                                    
-                                    {% elif step.type == "checkbox" %}
-                                        <div class="flex items-start gap-3 py-4">
-                                            <input type="checkbox" id="input-{{ step.name }}" name="{{ step.name }}" {% if step.required %}required{% endif %} class="mt-1 w-5 h-5 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500 cursor-pointer">
-                                            <label for="input-{{ step.name }}" class="text-slate-600 cursor-pointer text-base">{{ step.text | safe }}</label>
+                                </button>
+                                <button id="tab-granollers" class="tab-btn flex-1 px-5 py-4 font-semibold text-slate-500 bg-slate-50 border-b-2 border-transparent hover:bg-slate-100 focus:outline-none group transition-colors duration-200" onclick="switchTab('granollers')">
+                                    <div class="flex items-center justify-center gap-3">
+                                        <svg class="w-5 h-5 text-cyan-500 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                        <span>Granollers</span>
+                                    </div>
+                                </button>
+                            </div>
+                            
+                            {# Contenido de las tabs #}
+                            <div class="tabs-content flex-grow">
+                                <!-- Dirección Barcelona -->
+                                <div id="content-barcelona" class="tab-content h-full flex flex-col" itemscope itemtype="https://schema.org/Place">
+                                    <meta itemprop="name" content="Oficina de Barcelona">
+                                    <div class="p-6 lg:p-8 bg-white">
+                                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                                            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                                <p class="text-lg font-bold text-slate-800 mb-1" itemprop="addressLocality">Barcelona</p>
+                                                <p class="text-slate-600" itemprop="streetAddress">C/ Numancia 95, Local 5</p>
+                                                <p class="text-sm text-slate-500 mt-1">Metro L5 Entença</p>
+                                            </div>
+                                            <div class="md:pl-4 md:border-l md:border-slate-200 flex-shrink-0 mt-4 md:mt-0">
+                                                <p class="text-sm font-semibold text-slate-700">Horario</p>
+                                                <p class="text-sm text-slate-600">L-J: 9-18h | V: 9-14h</p>
+                                                <p class="text-xs text-slate-500 mt-1">* Visitas con cita previa</p>
+                                            </div>
                                         </div>
-                                    
-                                    {% elif step.type == "select" %}
-                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
-                                            {% for option in step.options %}
-                                                <button type="button" class="interest-option-btn w-full text-left p-4 border-2 border-slate-200 rounded-xl text-slate-700 hover:border-cyan-400 hover:bg-cyan-50/50 transition-all duration-200 flex items-center justify-between" data-value="{{ option.key }}">
-                                                    <span class="font-medium pointer-events-none">{{ option.label }}</span>
-                                                    <span class="check-icon opacity-0 transition-opacity pointer-events-none">
-                                                        <svg class="w-6 h-6 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-                                                    </span>
-                                                </button>
-                                            {% endfor %}
-                                        </div>
-                                        <input type="hidden" id="input-{{ step.name }}" name="{{ step.name }}" {% if step.required %}required{% endif %}>
-                                    
-                                    {% else %}
-                                        <input type="{{ step.type }}" id="input-{{ step.name }}" name="{{ step.name }}" class="w-full px-4 py-3 text-lg bg-slate-100 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200" placeholder="{{ step.placeholder }}" {% if step.required %}required{% endif %}>
-                                    {% endif %}
+                                    </div>
+                                    <div class="h-[300px] flex-grow relative">
+                                        <iframe 
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.6856624264604!2d2.136047!3d41.3850643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4987ae76a9c89%3A0xd6c91a8d003a5417!2sC.%20de%20Numancia%2C%2095%2C%20L-5%2C%2008029%20Barcelona!5e0!3m2!1ses!2ses!4v1660123456789!5m2!1ses!2ses"
+                                            class="w-full h-full border-0"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            title="Oficina de Barcelona - C/ Numancia 95, Local 5">
+                                        </iframe>
+                                    </div>
+                                </div>
 
-                                    <div class="pt-6 flex justify-between items-center {% if step.type == 'select' %}hidden{% endif %}">
-                                        {% if not loop.first %}
-                                        <button type="button" class="typeform-prev px-5 py-2 text-slate-500 hover:text-slate-800 transition-colors flex items-center gap-2 text-sm font-medium">
-                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                                <!-- Dirección Granollers -->
+                                <div id="content-granollers" class="tab-content hidden h-full flex flex-col" itemscope itemtype="https://schema.org/Place">
+                                    <meta itemprop="name" content="Oficina de Granollers">
+                                    <div class="p-6 lg:p-8 bg-white">
+                                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                                            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                                <p class="text-lg font-bold text-slate-800 mb-1" itemprop="addressLocality">Granollers</p>
+                                                <p class="text-slate-600" itemprop="streetAddress">C/ Navarra 14</p>
+                                                <p class="text-sm text-slate-500 mt-1">Cerca estación Renfe</p>
+                                            </div>
+                                            <div class="md:pl-4 md:border-l md:border-slate-200 flex-shrink-0 mt-4 md:mt-0">
+                                                <p class="text-sm font-semibold text-slate-700">Horario</p>
+                                                <p class="text-sm text-slate-600">L-J: 9-18h | V: 9-14h</p>
+                                                <p class="text-xs text-slate-500 mt-1">* Visitas con cita previa</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="h-[300px] flex-grow relative">
+                                        <iframe 
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.9574654721266!2d2.2862264!3d41.6082985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4c7d5708e4acf%3A0x617a54b79c245caa!2sC.%20Navarra%2C%2014%2C%2008401%20Granollers%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1660123456789!5m2!1ses!2ses"
+                                            class="w-full h-full border-0"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            title="Oficina de Granollers - C/ Navarra 14">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2" itemscope itemtype="https://schema.org/ContactPoint">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border border-slate-100">
+                <div id="typeform-wrapper" class="flex flex-col h-full">
+                    <!-- Encabezado del formulario -->
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">{{ metadata.ctaForm[lang].formTitle }}</h3>
+                        <p class="text-slate-600">{{ metadata.ctaForm[lang].formSubtitle }}</p>
+                    </div>
+                    <div id="typeform-container" class="flex-grow flex flex-col justify-between relative min-h-[350px]">
+                        <div id="typeform-steps-container">
+                            <!-- Paso Inicial - Tipo de Contacto -->
+                            <div class="typeform-step active space-y-8" data-step="tipo-contacto">
+                                <div class="space-y-3 mb-6">
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.tipoContacto.number }}</p>
+                                    <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.tipoContacto.title }}</h3>
+                                </div>
+                                <div class="space-y-4">
+                                    {% for option in metadata.ctaForm[lang].questions.tipoContacto.options %}
+                                    <button type="button" data-value="{{ option.value }}" class="tipo-contacto-option w-full px-6 py-4 text-left bg-slate-50 hover:bg-slate-100 border-2 border-slate-200 rounded-xl transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-cyan-500/50">
+                                        <span class="text-lg text-slate-800">{{ option.label }}</span>
+                                    </button>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <!-- Paso Nombre Empresa (Condicional) -->
+                            <div class="typeform-step hidden space-y-8" data-step="nombre-empresa">
+                                <div class="space-y-3 mb-6">
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.nombreEmpresa.number }}</p>
+                                    <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.nombreEmpresa.title }}</h3>
+                                </div>
+                                <input type="text" id="nombreEmpresa" name="nombreEmpresa" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200" required>
+                                <div class="flex justify-between">
+                                    <button type="button" class="typeform-prev group px-6 py-3 text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 text-sm rounded-lg hover:bg-slate-50">
+                                        <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                        {{ metadata.contactForm[lang].buttons.prev }}
+                                    </button>
+                                    <button type="button" class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-200 group flex items-center gap-2 text-sm">
+                                        {{ metadata.contactForm[lang].buttons.next }}
+                                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Paso Nombre -->
+                            <div class="typeform-step hidden space-y-8" data-step="intro">
+                                <div class="space-y-3 mb-6">
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.nombre.number }}</p>
+                                    <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.nombre.title }}</h3>
+                                </div>
+                                <input type="text" id="nombre" name="nombre" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200" required>
+                                <p class="text-sm text-slate-500 mt-2">{{ metadata.ctaForm[lang].helpText.nombre }}</p>
+                                <div class="flex justify-between items-center">
+                                    <button type="button" class="typeform-prev group px-6 py-3 text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 text-sm rounded-lg hover:bg-slate-50 {% if currentStep == 0 %}hidden{% endif %}">
+                                        <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                        {{ metadata.contactForm[lang].buttons.prev }}
+                                    </button>
+                                    <button type="button" class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-200 group flex items-center gap-2 text-sm">
+                                        {{ metadata.contactForm[lang].buttons.next }}
+                                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Paso Email -->
+                            <div class="typeform-step hidden space-y-8" data-step="email">
+                                <div class="space-y-3 mb-6">
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.email.number }}</p>
+                                    <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.email.title }}</h3>
+                                </div>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200" required>
+                                <p class="text-sm text-slate-500 mt-2">{{ metadata.ctaForm[lang].helpText.email }}</p>
+                                <div class="flex justify-between">
+                                    <button type="button" class="typeform-prev group px-6 py-3 text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 text-sm rounded-lg hover:bg-slate-50">
+                                        <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                        {{ metadata.contactForm[lang].buttons.prev }}
+                                    </button>
+                                    <button type="button" class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-200 group flex items-center gap-2 text-sm">
+                                        {{ metadata.contactForm[lang].buttons.next }}
+                                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Paso Teléfono -->
+                            <div class="typeform-step hidden space-y-8" data-step="telefono">
+                                <div class="space-y-3 mb-6">
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.telefono.number }}</p>
+                                    <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.telefono.title }}</h3>
+                                </div>
+                                <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200">
+                                <p class="text-sm text-slate-500 mt-2">{{ metadata.ctaForm[lang].helpText.telefono }}</p>
+                                <div class="flex justify-between">
+                                    <button type="button" class="typeform-prev group px-6 py-3 text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 text-sm rounded-lg hover:bg-slate-50">
+                                        <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                        {{ metadata.contactForm[lang].buttons.prev }}
+                                    </button>
+                                    <button type="button" class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-200 group flex items-center gap-2 text-sm">
+                                        {{ metadata.contactForm[lang].buttons.next }}
+                                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Paso Área de Interés -->
+                            <div class="typeform-step hidden space-y-8" data-step="area-interes">
+                                <div class="space-y-3 mb-6">
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.areaInteres.number }}</p>
+                                    <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.areaInteres.title }}</h3>
+                                </div>
+                                <div class="space-y-4">
+                                    {% for option in metadata.ctaForm[lang].questions.areaInteres.options %}
+                                    <button type="button" data-value="{{ option.value }}" class="area-interes-option w-full px-6 py-4 text-left bg-slate-50 hover:bg-slate-100 border-2 border-slate-200 rounded-xl transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-cyan-500/50">
+                                        <span class="text-lg text-slate-800">{{ option.label }}</span>
+                                    </button>
+                                    {% endfor %}
+                                </div>
+                                <div class="flex justify-between">
+                                    <button type="button" class="typeform-prev group px-6 py-3 text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 text-sm rounded-lg hover:bg-slate-50">
+                                        <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                        {{ metadata.contactForm[lang].buttons.prev }}
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Paso Mensaje -->
+                            <div class="typeform-step hidden space-y-8" data-step="mensaje">
+                                <div class="space-y-3 mb-6">
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.mensaje.number }}</p>
+                                    <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.mensaje.title }}</h3>
+                                </div>
+                                <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200 resize-none" required></textarea>
+                                <p class="text-sm text-slate-500 mt-2">{{ metadata.ctaForm[lang].helpText.mensaje }}</p>
+                                <div class="flex justify-between">
+                                    <button type="button" class="typeform-prev group px-6 py-3 text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 text-sm rounded-lg hover:bg-slate-50">
+                                        <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                        {{ metadata.contactForm[lang].buttons.prev }}
+                                    </button>
+                                    <button type="button" class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-200 group flex items-center gap-2 text-sm">
+                                        {{ metadata.contactForm[lang].buttons.next }}
+                                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Paso Privacidad -->
+                            <div class="typeform-step hidden space-y-8" data-step="privacidad">
+                                <div class="space-y-3 mb-6">
+                                    <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.privacidad.number }}</p>
+                                    <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.privacidad.title }}</h3>
+                                </div>
+                                <div class="space-y-6">
+                                    <label for="privacidad" class="flex items-start gap-4 p-4 bg-slate-50 border-2 border-slate-200 rounded-xl cursor-pointer hover:bg-slate-100 transition-colors has-[:checked]:bg-cyan-50 has-[:checked]:border-cyan-400">
+                                        <input type="checkbox" 
+                                               id="privacidad" 
+                                               name="privacidad" 
+                                               class="mt-1 w-5 h-5 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500 shrink-0"
+                                               required>
+                                        <div class="text-slate-600 text-base">
+                                            {{ metadata.ctaForm[lang].privacyText | safe }}
+                                        </div>
+                                    </label>
+                                    <p id="privacy-error" class="text-red-500 text-sm hidden ml-4">
+                                        {{ metadata.ctaForm[lang].privacyError }}
+                                    </p>
+                                    <div class="flex justify-between items-center pt-4">
+                                        <button type="button" class="typeform-prev group px-6 py-3 text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 text-sm rounded-lg hover:bg-slate-50">
+                                            <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                            </svg>
                                             {{ metadata.contactForm[lang].buttons.prev }}
                                         </button>
-                                        {% else %}<div></div>{% endif %}
-                                        {% if loop.last %}
-                                        <button id="submit-form-btn" type="button" class="px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-200 group flex items-center gap-2">
-                                            {{ metadata.contactForm[lang].buttons.submit }}
-                                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                        <button type="button" 
+                                                id="submit-form-btn" 
+                                                class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-lg transition-all duration-200 group flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-lg enabled:hover:shadow-xl enabled:hover:shadow-cyan-500/25"
+                                                disabled>
+                                            {{ metadata.ctaContact[lang].form.submitText }}
+                                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                            </svg>
                                         </button>
-                                        {% else %}
-                                        <button type="button" class="typeform-next px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-200 group flex items-center gap-2 text-sm">
-                                            {{ metadata.contactForm[lang].buttons.next }}
-                                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                                        </button>
-                                        {% endif %}
                                     </div>
                                 </div>
-                                {% endfor %}
-                                <div id="loading-state" class="typeform-step hidden space-y-6 text-center" data-step="loading">
-                                    <div class="w-16 h-16 mx-auto mb-6 border-4 border-cyan-200 border-t-cyan-500 rounded-full animate-spin"></div>
-                                    <h3 class="text-2xl font-light text-slate-800">{{ metadata.contactForm[lang].messages.loading.title }}</h3>
-                                    <p class="text-lg text-slate-600">{{ metadata.contactForm[lang].messages.loading.subtitle }}</p>
-                                </div>
+                            </div>
 
-                                <div id="success-message" class="typeform-step hidden space-y-8 text-center" data-step="success">
-                                    <div class="relative">
-                                        <div class="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-green-50 to-green-100 rounded-full p-5">
-                                            <div class="w-full h-full bg-green-500 rounded-full flex items-center justify-center">
-                                                <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                                                </svg>
-                                            </div>
+                            <!-- Estados del formulario -->
+                            <div id="loading-state" class="typeform-step hidden space-y-6 text-center" data-step="loading">
+                                <div class="w-16 h-16 mx-auto mb-6 border-4 border-cyan-200 border-t-cyan-500 rounded-full animate-spin"></div>
+                                <h3 class="text-2xl font-light text-slate-800">{{ metadata.ctaForm[lang].messages.loading.title }}</h3>
+                                <p class="text-lg text-slate-600">{{ metadata.ctaForm[lang].messages.loading.subtitle }}</p>
+                            </div>
+
+                            <div id="success-message" class="typeform-step hidden space-y-8 text-center" data-step="success">
+                                <div class="relative">
+                                    <div class="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-green-50 to-green-100 rounded-full p-5">
+                                        <div class="w-full h-full bg-green-500 rounded-full flex items-center justify-center">
+                                            <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                                            </svg>
                                         </div>
                                     </div>
-                                    <h3 class="text-3xl font-bold bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">{{ metadata.contactForm[lang].messages.success.title }}</h3>
-                                    <p class="text-lg text-slate-500 font-light max-w-md mx-auto">{{ metadata.contactForm[lang].messages.success.subtitle }}</p>
-                                    <a href="{% if lang != 'es' %}/{{ lang }}/{% else %}/{% endif %}" class="inline-flex items-center justify-center mt-6 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-200">
+                                </div>
+                                <h3 class="text-3xl font-bold bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">{{ metadata.ctaForm[lang].messages.success.title }}</h3>
+                                <p class="text-lg text-slate-500 font-light max-w-md mx-auto">{{ metadata.ctaForm[lang].messages.success.subtitle }}</p>
+                                <a href="{% if lang != 'es' %}/{{ lang }}/{% else %}/{% endif %}" class="inline-flex items-center justify-center mt-6 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-200">
+                                    {{ metadata.contactForm[lang].buttons.home }}
+                                </a>
+                            </div>
+
+                            <div id="error-message" class="typeform-step hidden space-y-8 text-center" data-step="error">
+                                <div class="relative">
+                                    <div class="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-red-50 to-red-100 rounded-full p-5">
+                                        <div class="w-full h-full bg-red-500 rounded-full flex items-center justify-center">
+                                            <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">{{ metadata.ctaForm[lang].messages.error.title }}</h3>
+                                <p class="text-lg text-slate-500 font-light max-w-md mx-auto">{{ metadata.ctaForm[lang].messages.error.subtitle }}</p>
+                                <div class="flex justify-center items-center gap-4 mt-8">
+                                    <a href="{% if lang != 'es' %}/{{ lang }}/{% else %}/{% endif %}" class="px-6 py-3 text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 text-sm rounded-lg hover:bg-slate-100">
                                         {{ metadata.contactForm[lang].buttons.home }}
                                     </a>
-                                </div>
-
-                                <div id="error-message" class="typeform-step hidden space-y-8 text-center" data-step="error">
-                                    <div class="relative">
-                                        <div class="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-red-50 to-red-100 rounded-full p-5">
-                                            <div class="w-full h-full bg-red-500 rounded-full flex items-center justify-center">
-                                                <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3 class="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">{{ metadata.contactForm[lang].messages.error.title }}</h3>
-                                    <p class="text-lg text-slate-500 font-light max-w-md mx-auto">{{ metadata.contactForm[lang].messages.error.subtitle }}</p>
-                                    <button id="retry-button" type="button" class="inline-flex items-center justify-center mt-6 px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-red-500/25 transform hover:scale-105 transition-all duration-200">
+                                    <button id="retry-button" type="button" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-red-500/25 transform hover:scale-105 transition-all duration-200">
                                         {{ metadata.contactForm[lang].buttons.retry }}
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <div id="progress-bar-container" class="mt-8 w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                            <div id="typeform-progress" class="bg-gradient-to-r from-cyan-400 to-cyan-600 h-full w-0 transition-all duration-300"></div>
-                        </div>
-                        <form id="contactForm" class="hidden" aria-hidden="true"><input type="hidden" name="nombre" id="form-nombre"><input type="hidden" name="email" id="form-email"><input type="hidden" name="telefono" id="form-telefono"><input type="hidden" name="area-interes" id="form-area-interes"><input type="hidden" name="mensaje" id="form-mensaje"><input type="hidden" name="privacidad" id="form-privacidad"><input type="hidden" name="origen" value="Formulario Web perito.barcelona"><input type="hidden" name="fecha" id="form-fecha"></form>
+                    </div>
+                    <div id="progress-bar-container" class="mt-8 w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div id="typeform-progress" class="bg-gradient-to-r from-cyan-400 to-cyan-600 h-full w-0 transition-all duration-300"></div>
                     </div>
                 </div>
-                <div class="order-2" itemscope itemtype="https://schema.org/Place">
-                    <!-- Sección de Ubicaciones -->
-                    <div class="space-y-12">
-                        <!-- Título -->
-                        <div class="text-center lg:text-left">
-                            <span class="inline-block text-sm uppercase tracking-wider text-cyan-600 font-semibold mb-3">{{ metadata.footer[lang].location.title }}</span>
-                            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-4 leading-tight">{{ metadata.footer[lang].location.heading }}</h2>
-                            <p class="text-lg text-slate-500 font-light leading-relaxed">{{ metadata.footer[lang].location.description }}</p>
-                        </div>
+                <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const formWrapper = document.getElementById('typeform-wrapper');
+                    const steps = Array.from(formWrapper.querySelectorAll('.typeform-step'));
+                    const progress = document.getElementById('typeform-progress');
+                    const webhookUrl = 'https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma';
+                    let currentStep = 0;
+                    const totalSteps = steps.filter(s => !s.id.includes('-state') && !s.id.includes('-message')).length;
+                    let formData = {
+                        tipoContacto: '',
+                        nombreEmpresa: '',
+                        areaInteres: ''
+                    };
 
-                        <!-- Lista de Oficinas -->
-                        <div class="grid gap-6">
-                            {% for office in metadata.footer[lang].location.offices %}
-                            <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:border-cyan-400 transition-colors shadow-sm hover:shadow-md">
-                                <div class="flex items-start gap-4">
-                                    <!-- Icono -->
-                                    <div class="w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center flex-shrink-0">
-                                        <svg class="w-6 h-6 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                                        </svg>
-                                    </div>
-                                    <!-- Información -->
-                                    <div class="flex-grow">
-                                        <h3 class="text-xl font-bold text-slate-800 mb-2">{{ office.city }}</h3>
-                                        <a href="{{ office.mapUrl }}" target="_blank" rel="noopener noreferrer" class="group">
-                                            <div class="flex items-center gap-2 text-slate-600 hover:text-cyan-600 transition-colors mb-2">
-                                                <svg class="w-4 h-4 group-hover:text-cyan-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                                </svg>
-                                                <span>{{ office.address }}</span>
-                                            </div>
-                                        </a>
-                                        <p class="text-sm text-slate-500">{{ office.transport }}</p>
-                                        <a href="{{ office.mapUrl }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-3 text-sm text-cyan-600 hover:text-cyan-700 font-medium">
-                                            <span>Ver en Google Maps</span>
-                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- Mapa -->
-                                <div class="mt-4">
-                                    <div class="rounded-xl overflow-hidden h-[250px] bg-slate-100 relative">
-                                        {% if office.city == "Barcelona" %}
-                                        <iframe
-                                            class="w-full h-full"
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.6862831842784!2d2.1444813!3d41.3845096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a27c9d9b4489%3A0x18ae9952199f22c4!2sC%2F%20de%20Num%C3%A0ncia%2C%2095%2C%20Local%205%2C%2008029%20Barcelona!5e0!3m2!1ses!2ses!4v1650000000000!5m2!1ses!2ses"
-                                            style="border:0;"
-                                            allowfullscreen=""
-                                            loading="lazy"
-                                            referrerpolicy="no-referrer-when-downgrade"
-                                        ></iframe>
-                                        <a href="https://goo.gl/maps/QKf5H8Z9Z3Z2" target="_blank" rel="noopener noreferrer" 
-                                           class="absolute bottom-4 right-4 px-4 py-2 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-slate-900">
-                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                                            </svg>
-                                            Ampliar mapa
-                                        </a>
-                                        {% else %}
-                                        <iframe
-                                            class="w-full h-full"
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.4012668567366!2d2.2841666!3d41.6087499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4c7c91a647eb7%3A0x44b876c0c5cdec21!2sC%2F%20Navarra%2C%2014%2C%2008401%20Granollers%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1650000000000!5m2!1ses!2ses"
-                                            style="border:0;"
-                                            allowfullscreen=""
-                                            loading="lazy"
-                                            referrerpolicy="no-referrer-when-downgrade"
-                                        ></iframe>
-                                        <a href="https://goo.gl/maps/XyZ123AbC" target="_blank" rel="noopener noreferrer" 
-                                           class="absolute bottom-4 right-4 px-4 py-2 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-slate-900">
-                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                                            </svg>
-                                            Ampliar mapa
-                                        </a>
-                                        {% endif %}
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
+                    function showStep(stepIndex) {
+                        steps.forEach((step, index) => {
+                            step.classList.toggle('active', index === stepIndex);
+                            step.classList.toggle('hidden', index !== stepIndex);
+                        });
+                        if (progress) {
+                            const progressPercentage = Math.max(0, (stepIndex / (totalSteps - 1)) * 100);
+                            progress.style.width = `${progressPercentage}%`;
+                        }
+                        const newStepEl = steps[stepIndex];
+                        const input = newStepEl.querySelector('input, textarea');
+                        if (input) setTimeout(() => input.focus(), 300);
+                    }
+
+                    function validateCurrentStep() {
+                        const currentStepEl = steps[currentStep];
+                        const input = currentStepEl.querySelector('input[required]:not([type="checkbox"]), textarea[required]');
+                        if (input && !input.value.trim()) {
+                            input.classList.add('border-red-400');
+                            input.focus();
+                            input.addEventListener('input', () => input.classList.remove('border-red-400'), { once: true });
+                            return false;
+                        }
+                        const checkbox = currentStepEl.querySelector('input[type="checkbox"][required]');
+                        if (checkbox && !checkbox.checked) {
+                            const privacyError = document.getElementById('privacy-error');
+                            privacyError.classList.remove('hidden');
+                            checkbox.focus();
+                            return false;
+                        }
+                        return true;
+                    }
+
+                    function updateSubmitButton() {
+                        const privacidadCheckbox = document.getElementById('privacidad');
+                        const submitButton = document.getElementById('submit-form-btn');
+                        const privacyError = document.getElementById('privacy-error');
+                        
+                        if (privacidadCheckbox.checked) {
+                            submitButton.removeAttribute('disabled');
+                            privacyError.classList.add('hidden');
+                        } else {
+                            submitButton.setAttribute('disabled', '');
+                        }
+                    }
+
+                    const privacidadCheckbox = document.getElementById('privacidad');
+                    if (privacidadCheckbox) {
+                        privacidadCheckbox.addEventListener('change', updateSubmitButton);
+                    }
+
+                    async function submitForm() {
+                        if (!validateCurrentStep()) return;
+
+                        showStep(steps.findIndex(s => s.id === 'loading-state'));
+                        const formDataToSend = new FormData();
+                        formDataToSend.append('tipoContacto', formData.tipoContacto);
+                        if (formData.tipoContacto === 'empresa') {
+                            formDataToSend.append('nombreEmpresa', document.getElementById('nombreEmpresa').value);
+                        }
+                        formDataToSend.append('nombre', document.getElementById('nombre').value);
+                        formDataToSend.append('email', document.getElementById('email').value);
+                        formDataToSend.append('telefono', document.getElementById('telefono').value);
+                        formDataToSend.append('areaInteres', formData.areaInteres);
+                        formDataToSend.append('mensaje', document.getElementById('mensaje').value);
+                        formDataToSend.append('privacidad', 'Aceptada');
+                        formDataToSend.append('origen', 'CTA Form perito.barcelona');
+                        formDataToSend.append('fecha', new Date().toISOString());
+
+                        try {
+                            const response = await fetch(webhookUrl, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(Object.fromEntries(formDataToSend))
+                            });
+                            if (!response.ok) throw new Error('Network response was not ok');
+                            showStep(steps.findIndex(s => s.id === 'success-message'));
+                        } catch (error) {
+                            console.error('Error:', error);
+                            showStep(steps.findIndex(s => s.id === 'error-message'));
+                        }
+                    }
+
+                    formWrapper.addEventListener('click', (e) => {
+                        const target = e.target;
+                        const tipoContactoOption = target.closest('.tipo-contacto-option');
+                        const areaInteresOption = target.closest('.area-interes-option');
+                        
+                        if (tipoContactoOption) {
+                            formData.tipoContacto = tipoContactoOption.dataset.value;
+                            currentStep = formData.tipoContacto === 'empresa' ? 1 : 2;
+                            showStep(currentStep);
+                        } else if (areaInteresOption) {
+                            formData.areaInteres = areaInteresOption.dataset.value;
+                            currentStep++;
+                            showStep(currentStep);
+                        } else if (target.closest('.typeform-next')) {
+                            if (validateCurrentStep()) {
+                                currentStep++;
+                                showStep(currentStep);
+                            }
+                        } else if (target.closest('.typeform-prev')) {
+                            if (currentStep > 0) {
+                                if (currentStep === 2 && formData.tipoContacto !== 'empresa') {
+                                    currentStep = 0;
+                                } else {
+                                    currentStep--;
+                                }
+                                showStep(currentStep);
+                            }
+                        } else if (target.closest('#submit-form-btn')) {
+                            submitForm();
+                        } else if (target.closest('#retry-button')) {
+                            currentStep = 0;
+                            formData = { tipoContacto: '', nombreEmpresa: '', areaInteres: '' };
+                            // Reset form fields if needed
+                            formWrapper.querySelectorAll('input, textarea').forEach(el => {
+                                if(el.type === 'checkbox') el.checked = false;
+                                else el.value = '';
+                            });
+                            updateSubmitButton();
+                            showStep(currentStep);
+                        }
+                    });
+
+                    formWrapper.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                            const currentStepEl = steps[currentStep];
+                            const nextButton = currentStepEl.querySelector('.typeform-next');
+                            const submitButton = currentStepEl.querySelector('#submit-form-btn');
+                            
+                            if (currentStepEl.querySelector('textarea') && !e.ctrlKey) return;
+
+                            e.preventDefault();
+                            if (submitButton) {
+                                submitForm();
+                            } else if (nextButton) {
+                                nextButton.click();
+                            }
+                        }
+                    });
+
+                    showStep(0);
+                });
+                </script>
+                            
+            </div>
+        </div>
                 </div>
             </div>
         </div>
@@ -289,125 +609,22 @@
     const currentLang = '{{ lang }}';
 </script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const formWrapper = document.getElementById('typeform-wrapper');
-    if (!formWrapper) return;
-    const steps = Array.from(formWrapper.querySelectorAll('.typeform-step'));
-    const retryBtn = formWrapper.querySelector('#retry-button');
-    const webhookUrl = 'https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma';
-    let currentStepIndex = 0;
-    const totalInputSteps = formWrapper.querySelectorAll('.typeform-step[data-step]:not([data-step="loading"]):not([data-step="success"]):not([data-step="error"])').length;
-
-    const showStep = (stepIndex) => {
-        if (stepIndex < 0 || stepIndex >= steps.length) return;
-        currentStepIndex = stepIndex;
-        steps.forEach((step, index) => {
-            step.classList.toggle('active', index === currentStepIndex);
-            step.classList.toggle('hidden', index !== currentStepIndex);
-        });
-        const progress = formWrapper.querySelector('#typeform-progress');
-        if (progress) {
-            const activeInputSteps = steps.slice(0, currentStepIndex + 1).filter(s => s.dataset.step && !['loading','success','error'].includes(s.dataset.step)).length;
-            const progressPercentage = totalInputSteps > 1 ? ((activeInputSteps - 1) / (totalInputSteps - 1)) * 100 : 0;
-            progress.style.width = `${Math.max(0, progressPercentage)}%`;
-        }
-    };
-
-    const validateCurrentStep = () => {
-        const currentStepEl = steps[currentStepIndex];
-        const input = currentStepEl.querySelector('input:not([type="checkbox"]):not([type="hidden"]), textarea');
-        if (input && input.required && !input.value.trim()) {
-            input.classList.add('border-red-400');
-            input.focus();
-            input.addEventListener('input', () => input.classList.remove('border-red-400'), { once: true });
-            return false;
-        }
-        const checkbox = currentStepEl.querySelector('input[type="checkbox"]');
-        if (checkbox && checkbox.required && !checkbox.checked) {
-            const label = currentStepEl.querySelector('label');
-            if (label) {
-                label.classList.add('text-red-500', 'font-semibold');
-                checkbox.addEventListener('change', () => label.classList.remove('text-red-500', 'font-semibold'), { once: true });
-            }
-            return false;
-        }
-        const stepName = currentStepEl.dataset.step;
-        const hiddenInput = document.getElementById(`form-${stepName}`);
-        if (hiddenInput) {
-            if (input) hiddenInput.value = input.value;
-            if (checkbox) hiddenInput.value = checkbox.checked ? 'Aceptada' : 'No Aceptada';
-        }
-        return true;
-    };
-
-    const goToNextStep = () => {
-        if (!validateCurrentStep()) return;
-        showStep(currentStepIndex + 1);
-    };
-    const goToPrevStep = () => showStep(currentStepIndex - 1);
-
-    const submitForm = async () => {
-        if (!validateCurrentStep()) return;
-        showStep(steps.findIndex(s => s.id === 'loading-state'));
-        const localeLangMap = { 'es': 'es-ES', 'en': 'en-GB', 'ca': 'ca-ES' };
-        const locale = localeLangMap[currentLang] || 'es-ES';
-        const formData = {
-            nombre: document.getElementById('form-nombre')?.value,
-            email: document.getElementById('form-email')?.value,
-            telefono: document.getElementById('form-telefono')?.value || 'No proporcionado',
-            area_interes: document.getElementById('form-area-interes')?.value,
-            mensaje: document.getElementById('form-mensaje')?.value,
-            privacidad: document.getElementById('form-privacidad')?.value,
-            origen: "Formulario Web perito.barcelona",
-            fecha: new Date().toLocaleString(locale),
-            fechaISO: new Date().toISOString()
-        };
-        try {
-            const response = await fetch(webhookUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) });
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            showStep(steps.findIndex(s => s.id === 'success-message'));
-        } catch (error) {
-            console.error('Error al enviar el formulario:', error);
-            showStep(steps.findIndex(s => s.id === 'error-message'));
-        }
-    };
-
-    formWrapper.addEventListener('click', (e) => {
-        const target = e.target;
-        if (target.closest('.typeform-next')) goToNextStep();
-        else if (target.closest('.typeform-prev')) goToPrevStep();
-        else if (target.closest('#submit-form-btn')) submitForm();
-        else if (target.closest('.interest-option-btn')) {
-            const button = target.closest('.interest-option-btn');
-            if (!button) return;
-            const value = button.dataset.value;
-            const currentStepEl = steps[currentStepIndex];
-            const finalFormInput = document.getElementById('form-area-interes');
-            if (finalFormInput) finalFormInput.value = value;
-            const allButtons = currentStepEl.querySelectorAll('.interest-option-btn');
-            allButtons.forEach(btn => {
-                const checkIcon = btn.querySelector('.check-icon');
-                btn.classList.remove('bg-cyan-500', 'text-white', 'border-cyan-500', 'shadow-lg');
-                if (checkIcon) checkIcon.classList.add('opacity-0');
-            });
-            const currentCheckIcon = button.querySelector('.check-icon');
-            button.classList.add('bg-cyan-500', 'text-white', 'border-cyan-500', 'shadow-lg');
-            if (currentCheckIcon) currentCheckIcon.classList.remove('opacity-0');
-            setTimeout(() => showStep(currentStepIndex + 1), 200);
+function switchTab(location) {
+    const tabs = ['barcelona', 'granollers'];
+    tabs.forEach(loc => {
+        const tabBtn = document.getElementById(`tab-${loc}`);
+        const content = document.getElementById(`content-${loc}`);
+        if (loc === location) {
+            tabBtn.classList.add('bg-white', 'border-cyan-500');
+            tabBtn.classList.remove('bg-slate-50', 'border-transparent', 'hover:bg-slate-100', 'text-slate-500');
+            content.classList.remove('hidden');
+        } else {
+            tabBtn.classList.remove('bg-white', 'border-cyan-500');
+            tabBtn.classList.add('bg-slate-50', 'border-transparent', 'hover:bg-slate-100', 'text-slate-500');
+            content.classList.add('hidden');
         }
     });
-
-    if (retryBtn) retryBtn.addEventListener('click', () => showStep(steps.findIndex(s => s.dataset.step === 'privacidad')));
-    
-    const fechaInput = document.getElementById('form-fecha');
-    if (fechaInput) fechaInput.value = new Date().toISOString();
-    
-    steps[0].classList.add('active');
-    steps[0].classList.remove('hidden');
-    updateProgress();
-});
-
-function switchTab(location) { /* ... */ }
+}
 </script>
 {% endblock scripts %}
 
