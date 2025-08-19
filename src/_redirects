@@ -42,6 +42,10 @@
 /mala-ejecucion/                              /informes-periciales/reclamacion-mala-ejecucion/  301
 /certificaciones/                             /auditorias-obra/disputas-certificaciones-pago/   301
 /inspecciones-tecnicas-especializadas/        /auditorias-obra/inspecciones-tecnicas-especializadas/ 301
+/seguros/ /informes-periciales/reclamacion-seguros/         301
+/assegurances/ /ca/informes-pericials/reclamacio-assegurances/ 301
+/insurance/ /en/expert-witness-reports/insurance-claims/ 301
+
 
 # Versiones en Catalán
 /ca/vicis-ocults/                             /ca/informes-pericials/vicis-ocults/              301
@@ -67,10 +71,6 @@
 /abogados/* /colaboracion-abogados/                   301
 /ca/construccio/* /ca/informes-pericials/                   301
 /en/construction/* /en/expert-witness-reports/               301
-/seguros/ /informes-periciales/reclamacion-seguros/         301
-/assegurances/ /ca/informes-pericials/reclamacio-assegurances/ 301
-/insurance/ /en/expert-witness-reports/insurance-claims/ 301
-
 
 # --- REGLA FINAL PARA MANEJO DE 404 ---
 # Cloudflare Pages sirve automáticamente tu archivo 404.html si existe.
