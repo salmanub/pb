@@ -1,5 +1,6 @@
 {# Usamos una lógica más simple y directa en lugar del plugin de navegación #}
 <nav aria-label="Breadcrumb" class="mb-8" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <meta itemprop="name" content="{{ title or page.title }}" />
     <ol class="flex flex-wrap gap-y-2 items-center text-sm md:text-base text-cyan-300/80">
         
         {# 1. Enlace a la página de Inicio (se mantiene igual) #}
