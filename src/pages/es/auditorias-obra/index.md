@@ -4,7 +4,7 @@ layout: "layouts/service-pillar.njk"
 title: "Auditoría de Obras en Barcelona | Control de Costes, Calidad y Certificaciones"
 # SEO: Meta Description activa que aborda los problemas clave del cliente.
 description: "Realizamos auditorías de obra para resolver disputas en certificaciones, controlar sobrecostes y asegurar la calidad. Obtenga un informe pericial para proteger su inversión en Barcelona."
-permalink: "/auditorias-de-obra/" # URL: Más limpia y directa.
+permalink: "/auditorias-obra/" # URL: Más limpia y directa.
 lang: "es"
 
 translations:
