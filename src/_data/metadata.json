@@ -58,7 +58,7 @@
     "email": "info@perito.barcelona",
     "phoneNumber": "+34 614 194 985",
     "address": {
-      "street": "C/ Numancia 95",
+      "street": "C/ Numància 95, Local 5",
       "city": "Barcelona",
       "postalCode": "08029",
       "country": "España"
@@ -259,13 +259,8 @@
         "offices": [
           {
             "city": "Barcelona",
-            "address": "C/ Numancia 95, Local 5",
+            "address": "C/ Numancia 95 - Local 5",
             "transport": "Metro L5 Entença"
-          },
-          {
-            "city": "Granollers",
-            "address": "C/ Navarra 14",
-            "transport": "Cerca estación Renfe"
           }
         ]
       },
@@ -337,13 +332,8 @@
         "offices": [
           {
             "city": "Barcelona",
-            "address": "C/ Numància 95, Local 5",
+            "address": "C/ Numància 95 - Local 5",
             "transport": "Metro L5 Entença"
-          },
-          {
-            "city": "Granollers",
-            "address": "C/ Navarra 14",
-            "transport": "Prop estació Renfe"
           }
         ]
       },
@@ -415,13 +405,8 @@
         "offices": [
           {
             "city": "Barcelona",
-            "address": "C/ Numancia 95, Local 5",
+            "address": "C/ Numancia 95 - Local 5",
             "transport": "Metro L5 Entença"
-          },
-          {
-            "city": "Granollers",
-            "address": "C/ Navarra 14",
-            "transport": "Near Renfe station"
           }
         ]
       },
@@ -881,6 +866,35 @@
       "expertsTitle": "Experts en",
       "expertsStrong": "Peritatges",
       "successCasesTitle": "Casos d'Èxit Rellevants"
+    }
+  },
+  "contactLocation": {
+    "es": {
+      "title": "Dónde estamos",
+      "officeTitle": "Nuestra oficina",
+      "schedule": {
+        "title": "Horario",
+        "hours": "Lunes a Viernes 9:00-18:00h",
+        "note": "* Visitas con cita previa"
+      }
+    },
+    "en": {
+      "title": "Where we are",
+      "officeTitle": "Our office",
+      "schedule": {
+        "title": "Opening hours",
+        "hours": "Monday to Friday 9:00-18:00h",
+        "note": "* Visits by appointment only"
+      }
+    },
+    "ca": {
+      "title": "On som",
+      "officeTitle": "La nostra oficina",
+      "schedule": {
+        "title": "Horari",
+        "hours": "Dilluns a Divendres 9:00-18:00h",
+        "note": "* Visites amb cita prèvia"
+      }
     }
   }
 }

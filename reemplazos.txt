@@ -1,0 +1,131 @@
+Reemplazos necesarios en contact.njk:
+
+1. Reemplazar:
+{{ metadata.contactForm[lang].buttons.prev }}
+Por:
+{{ metadata.contactForm[currentLanguage].buttons.prev }}
+
+2. Reemplazar:
+{{ metadata.contactForm[lang].buttons.next }}
+Por:
+{{ metadata.contactForm[currentLanguage].buttons.next }}
+
+3. Reemplazar:
+{{ metadata.ctaForm[lang].questions.email.number }}
+Por:
+{{ metadata.ctaForm[currentLanguage].questions.email.number }}
+
+4. Reemplazar:
+{{ metadata.ctaForm[lang].questions.email.title }}
+Por:
+{{ metadata.ctaForm[currentLanguage].questions.email.title }}
+
+5. Reemplazar:
+{{ metadata.ctaForm[lang].helpText.email }}
+Por:
+{{ metadata.ctaForm[currentLanguage].helpText.email }}
+
+6. Reemplazar:
+{{ metadata.ctaForm[lang].questions.telefono.number }}
+Por:
+{{ metadata.ctaForm[currentLanguage].questions.telefono.number }}
+
+7. Reemplazar:
+{{ metadata.ctaForm[lang].questions.telefono.title }}
+Por:
+{{ metadata.ctaForm[currentLanguage].questions.telefono.title }}
+
+8. Reemplazar:
+{{ metadata.ctaForm[lang].helpText.telefono }}
+Por:
+{{ metadata.ctaForm[currentLanguage].helpText.telefono }}
+
+9. Reemplazar:
+{{ metadata.ctaForm[lang].questions.areaInteres.number }}
+Por:
+{{ metadata.ctaForm[currentLanguage].questions.areaInteres.number }}
+
+10. Reemplazar:
+{{ metadata.ctaForm[lang].questions.areaInteres.title }}
+Por:
+{{ metadata.ctaForm[currentLanguage].questions.areaInteres.title }}
+
+11. Reemplazar:
+{% for option in metadata.ctaForm[lang].questions.areaInteres.options %}
+Por:
+{% for option in metadata.ctaForm[currentLanguage].questions.areaInteres.options %}
+
+12. Reemplazar:
+{{ metadata.ctaForm[lang].questions.mensaje.number }}
+Por:
+{{ metadata.ctaForm[currentLanguage].questions.mensaje.number }}
+
+13. Reemplazar:
+{{ metadata.ctaForm[lang].questions.mensaje.title }}
+Por:
+{{ metadata.ctaForm[currentLanguage].questions.mensaje.title }}
+
+14. Reemplazar:
+{{ metadata.ctaForm[lang].helpText.mensaje }}
+Por:
+{{ metadata.ctaForm[currentLanguage].helpText.mensaje }}
+
+15. Reemplazar:
+{{ metadata.ctaForm[lang].questions.privacidad.number }}
+Por:
+{{ metadata.ctaForm[currentLanguage].questions.privacidad.number }}
+
+16. Reemplazar:
+{{ metadata.ctaForm[lang].questions.privacidad.title }}
+Por:
+{{ metadata.ctaForm[currentLanguage].questions.privacidad.title }}
+
+17. Reemplazar:
+{{ metadata.ctaForm[lang].privacyText | safe }}
+Por:
+{{ metadata.ctaForm[currentLanguage].privacyText | safe }}
+
+18. Reemplazar:
+{{ metadata.ctaForm[lang].privacyError }}
+Por:
+{{ metadata.ctaForm[currentLanguage].privacyError }}
+
+19. Reemplazar:
+{{ metadata.ctaForm[lang].messages.loading.title }}
+Por:
+{{ metadata.ctaForm[currentLanguage].messages.loading.title }}
+
+20. Reemplazar:
+{{ metadata.ctaForm[lang].messages.loading.subtitle }}
+Por:
+{{ metadata.ctaForm[currentLanguage].messages.loading.subtitle }}
+
+21. Reemplazar:
+{{ metadata.ctaForm[lang].messages.success.title }}
+Por:
+{{ metadata.ctaForm[currentLanguage].messages.success.title }}
+
+22. Reemplazar:
+{{ metadata.ctaForm[lang].messages.success.subtitle }}
+Por:
+{{ metadata.ctaForm[currentLanguage].messages.success.subtitle }}
+
+23. Reemplazar:
+{{ metadata.contactForm[lang].buttons.home }}
+Por:
+{{ metadata.contactForm[currentLanguage].buttons.home }}
+
+24. Reemplazar:
+{{ metadata.ctaForm[lang].messages.error.title }}
+Por:
+{{ metadata.ctaForm[currentLanguage].messages.error.title }}
+
+25. Reemplazar:
+{{ metadata.ctaForm[lang].messages.error.subtitle }}
+Por:
+{{ metadata.ctaForm[currentLanguage].messages.error.subtitle }}
+
+26. Reemplazar:
+{{ metadata.contactForm[lang].buttons.retry }}
+Por:
+{{ metadata.contactForm[currentLanguage].buttons.retry }}
