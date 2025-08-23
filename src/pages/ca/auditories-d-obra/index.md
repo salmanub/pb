@@ -27,7 +27,7 @@ hero:
   subtitle: "Control expert de qualitat, costos i terminis en projectes de construcció"
   description: "Com a perits enginyers independents, el nostre servei d'auditoria d'obra li proporciona una visió tècnica i objectiva de l'estat real del seu projecte. Detectem desviacions, verifiquem certificacions i documentem la qualitat perquè prengui decisions informades i eviti litigis costosos."
   intro: "Apliquem una metodologia rigorosa per contrastar l'execució en obra amb la documentació del projecte, els contractes i la normativa vigent, lliurant informes pericials clars i defensables."
-  image: "/assets/images/auditoria-tecnica-obra-hero.avif"
+  image: "/assets/images/auditoria-de-obra-control-costes-barcelona.jpg"
 
 serviceCluster:
   title: "Els Nostres Àmbits d'Auditoria"

@@ -30,7 +30,7 @@ hero:
   subtitle: "Dictámenes objetivos sobre patologías, defectos constructivos y disputas de obra"
   description: "Como peritos ingenieros colegiados, elaboramos informes periciales con el máximo rigor técnico para que disponga de una prueba sólida, clara y defendible. Nuestro objetivo es traducir la complejidad técnica en argumentos irrefutables para proteger sus intereses."
   intro: "Un dictamen pericial bien fundamentado es la herramienta esencial para negociar con seguridad, resolver conflictos y, si es necesario, obtener una sentencia favorable en un procedimiento judicial."
-  image: "/assets/images/informe-pericial-barcelona-hero.avif"
+  image: "/assets/images/informe-pericial-patologias-barcelona.jpg"
 
 # Sección "Qué es un Informe Pericial"
 sections:

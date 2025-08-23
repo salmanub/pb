@@ -31,7 +31,7 @@ hero:
   subtitle: "Diagnòstic, reparació i reforç d'estructures en edificis i infraestructures"
   description: "Com a enginyers civils experts, oferim un diagnòstic tècnic independent per a qualsevol tipus d'estructura, des de forjats d'habitatges fins a ponts o murs de contenció. Analitzem la causa del problema i projectem la solució de reforç més segura, duradora i eficient."
   intro: "La nostra tasca és proporcionar-vos la certesa tècnica que necessiteu per prendre la millor decisió, optimitzant costos i assegurant la màxima qualitat en la intervenció."
-  image: "/assets/images/asesoramiento-estructural-obra-civil-hero.avif"
+  image: "/assets/images/asesoramiento-refuerzo-estructural-barcelona.jpg"
 
 # Secció "Per què un diagnòstic independent?" (Aquest missatge és universal i molt potent per a ambdós sectors)
 sections:

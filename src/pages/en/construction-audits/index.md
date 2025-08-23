@@ -27,7 +27,7 @@ hero:
   subtitle: "Expert control of quality, costs, and deadlines in construction projects"
   description: "As independent engineering experts, our construction audit service provides you with a technical and objective view of your project's actual status. We detect deviations, verify certifications, and document quality so you can make informed decisions and avoid costly litigation."
   intro: "We apply a rigorous methodology to compare on-site execution with project documentation, contracts, and current regulations, delivering clear and defensible expert reports."
-  image: "/assets/images/auditoria-tecnica-obra-hero.avif"
+  image: "/assets/images/auditoria-de-obra-control-costes-barcelona.jpg"
 
 serviceCluster:
   title: "Our Audit Areas"
