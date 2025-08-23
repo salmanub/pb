@@ -58,10 +58,10 @@
     "email": "info@perito.barcelona",
     "phoneNumber": "+34 614 194 985",
     "address": {
-      "street": "C/ Numància 95, Local 5",
+      "street": "Carrer Numància, 95, Local 5, Distrito de Les Corts",
       "city": "Barcelona",
       "postalCode": "08029",
-      "country": "España"
+      "country": "Spain"
     },
     "social": {
       "linkedin": "https://www.linkedin.com/company/perito-barcelona",
@@ -259,7 +259,7 @@
         "offices": [
           {
             "city": "Barcelona",
-            "address": "C/ Numancia 95 - Local 5",
+            "address": "Carrer Numància, 95, Local 5, Distrito de Les Corts",
             "transport": "Metro L5 Entença"
           }
         ]
@@ -332,7 +332,7 @@
         "offices": [
           {
             "city": "Barcelona",
-            "address": "C/ Numància 95 - Local 5",
+            "address": "Carrer Numància, 95, Local 5, Districte de Les Corts",
             "transport": "Metro L5 Entença"
           }
         ]
@@ -405,7 +405,7 @@
         "offices": [
           {
             "city": "Barcelona",
-            "address": "C/ Numancia 95 - Local 5",
+            "address": "Carrer Numància, 95, Local 5, Les Corts District",
             "transport": "Metro L5 Entença"
           }
         ]
