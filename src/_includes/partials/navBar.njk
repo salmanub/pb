@@ -58,37 +58,42 @@
 {% macro renderMobileNavItems(entry) %}
     {% if not entry.notshow %}
         {% if entry.children %}
-            <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a href="{{ entry.url }}" class="flex items-center gap-2 text-white/90 font-medium transition-colors text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg px-4 py-2.5">
-                    {% if entry.icon %}
-                        <svg class="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            {{ entry.icon | safe }}
-                        </svg>
-                    {% endif %}
-                    <span>{{ entry.title }}</span>
-                </a>
-                <ul class="space-y-0.5 border-l border-slate-800 ml-4 mt-1">
-                    {% for child in entry.children %}
-                        <li class="nav-item">
-                            <a href="{{ child.url }}" 
-                               class="flex items-center gap-2 text-white/70 font-medium transition-colors text-sm hover:text-cyan-500 hover:bg-white/5 rounded-lg pl-4 py-2">
-                                {% if child.icon %}
-                                    <svg class="w-4 h-4 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        {{ child.icon | safe }}
-                                    </svg>
-                                {% else %}
-                                    <span class="text-cyan-500">→</span>
-                                {% endif %}
-                                <span>{{ child.title }}</span>
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
+            <!-- Para elementos con submenú - span completo en tablets -->
+            <li class="nav-item md:col-span-2 lg:col-span-1" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <div class="flex flex-col h-full">
+                    <a href="{{ entry.url }}" class="flex items-center gap-2 text-white/90 font-medium transition-colors text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg px-4 py-2.5">
+                        {% if entry.icon %}
+                            <svg class="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                {{ entry.icon | safe }}
+                            </svg>
+                        {% endif %}
+                        <span>{{ entry.title }}</span>
+                    </a>
+                    <!-- Submenú en grid para tablets -->
+                    <ul class="border-l border-slate-800 ml-4 mt-1 grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-1">
+                        {% for child in entry.children %}
+                            <li class="nav-item">
+                                <a href="{{ child.url }}" 
+                                class="flex items-center gap-2 text-white/70 font-medium transition-colors text-sm hover:text-cyan-500 hover:bg-white/5 rounded-lg pl-4 py-2">
+                                    {% if child.icon %}
+                                        <svg class="w-4 h-4 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            {{ child.icon | safe }}
+                                        </svg>
+                                    {% else %}
+                                        <span class="text-cyan-500">→</span>
+                                    {% endif %}
+                                    <span>{{ child.title }}</span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </li>
         {% elif entry.key != "Servicios" and not entry.parent %}
+            <!-- Elementos regulares - ocupan una celda en tablets -->
             <li class="nav-item">
                 <a href="{{ entry.url }}"
-                   class="flex items-center gap-2 text-white/90 font-medium transition-colors text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg px-4 py-2.5">
+                class="flex items-center gap-2 text-white/90 font-medium transition-colors text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg px-4 py-2.5 h-full">
                     {% if entry.icon %}
                         <svg class="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             {{ entry.icon | safe }}
@@ -277,26 +282,31 @@
                 </ul>
             </nav>
 
-            <!-- Hamburger Menu Button -->
-            <button id="menuButton" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 rounded-md bg-cyan-400 hover:bg-cyan-500 transition-all relative gap-1.5">
-                <span class="w-5 h-0.5 bg-white transition-all duration-300 ease-out"></span>
-                <span class="w-5 h-0.5 bg-white transition-all duration-300 ease-out"></span>
-                <span class="w-5 h-0.5 bg-white transition-all duration-300 ease-out"></span>
-            </button>
+            <!-- Hamburger Menu Button (Checkbox Hack) -->
+            <input type="checkbox" id="menuToggle" class="sr-only peer">
+            <label for="menuToggle" id="menuButton" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 rounded-md bg-cyan-400 hover:bg-cyan-500 transition-all relative gap-1.5 cursor-pointer">
+                <span class="w-5 h-0.5 bg-white transition-all duration-300 ease-out peer-checked:transform peer-checked:translate-y-[6px] peer-checked:rotate-45"></span>
+                <span class="w-5 h-0.5 bg-white transition-all duration-300 ease-out peer-checked:opacity-0 peer-checked:transform peer-checked:translate-x-[-10px]"></span>
+                <span class="w-5 h-0.5 bg-white transition-all duration-300 ease-out peer-checked:transform peer-checked:translate-y-[-6px] peer-checked:rotate-[-45deg]"></span>
+            </label>
         </div>
     </div>
 </header>
 
 <!-- Mobile Menu -->
-<div id="mobileMenu" class="fixed top-[70px] lg:top-[120px] inset-x-0 bottom-0 bg-gradient-to-br from-[#0B1030] to-[#1A1F45] transform translate-x-full transition-transform duration-300 ease-in-out z-50 flex flex-col">
+<div id="mobileMenu" class="fixed top-[70px] lg:top-[120px] inset-x-0 bottom-0 bg-gradient-to-br from-[#0B1030] to-[#1A1F45] transform translate-x-full transition-transform duration-300 ease-in-out z-50 flex flex-col peer-checked:translate-x-0">
     <div class="max-w-[1600px] mx-auto px-[5%] flex-1 overflow-y-auto flex flex-col">
         <!-- Navigation -->
         <nav class="flex-1 flex items-stretch">
-            <ul class="space-y-4 w-full flex flex-col justify-around py-8">
+            <!-- Layout adaptativo para diferentes tamaños de pantalla -->
+            <ul class="w-full py-8 
+                       grid grid-cols-1 gap-4 
+                       md:grid-cols-2 md:gap-3 
+                       lg:grid-cols-1">
                 {%- for entry in navPages %}{{ renderMobileNavItems(entry) }}{%- endfor -%}
                 
                 <!-- Botón de área de abogados -->
-                <li class="nav-item mt-4">
+                <li class="nav-item md:col-span-2 lg:col-span-1">
                     <a href="{{metadata.navBar[currentLanguage].linkAbogados}}" 
                     class="flex items-center gap-2 text-white/90 font-medium transition-colors text-lg hover:text-cyan-500 hover:bg-white/5 rounded-lg px-4 py-2.5">
                         <svg class="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
