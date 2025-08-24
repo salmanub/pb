@@ -5,6 +5,11 @@ subtitle: "Documentamos incumplimientos y defectos para fundamentar su reclamaci
 description: "¿La calidad de su obra o reforma no es la pactada en Barcelona? Documentamos incumplimientos y defectos de ejecución en un informe pericial para que pueda reclamar a la constructora."
 permalink: "/informes-periciales/reclamacion-mala-ejecucion/"
 lang: "es"
+translations:
+  - lang: "ca"
+    permalink: "/ca/informes-pericials/reclamacio-mala-execucio/"
+  - lang: "en"
+    permalink: "/en/expert-witness-reports/poor-workmanship-claim/"
 eleventyNavigation:
   key: "Mala Ejecución de Obra"
   parent: "Informes Periciales"

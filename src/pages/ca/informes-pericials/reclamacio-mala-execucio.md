@@ -7,9 +7,9 @@ permalink: "/ca/informes-pericials/reclamacio-mala-execucio/"
 lang: "ca"
 translations:
   - lang: "es"
-    permalink: "/informes-pericials/reclamacion-mala-ejecucion/"
+    permalink: "/informes-periciales/reclamacion-mala-ejecucion/"
   - lang: "en"
-    permalink: "/en/expert-witness-reports/poor-execution-claim/"
+    permalink: "/en/expert-witness-reports/poor-workmanship-claim/"
 eleventyNavigation:
   key: "Mala Execució d'Obra"
   parent: "Informes Pericials"
