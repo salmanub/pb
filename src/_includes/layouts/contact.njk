@@ -407,6 +407,8 @@
 {% endblock %}
 
 {% block scripts %}
+<!-- Scripts heredados de base.njk -->
+{{ super() }}
 <script>
     const currentLang = '{{ currentLanguage }}';
 </script>
