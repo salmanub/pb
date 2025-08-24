@@ -24,6 +24,6 @@
     "tailwindcss": "^4.0.17"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^6.0.1"
+    "@11ty/eleventy-img": "^6.0.4"
   }
 }

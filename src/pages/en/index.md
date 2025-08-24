@@ -23,6 +23,11 @@ hero:
   strong: "to Defend Your Interests"
   subtitle: "Specialists in Expert Reports, Construction Audits, and Structural Consulting"
   description: "We produce independent technical reports to resolve litigation, audit project quality, and diagnose structural safety with the utmost rigor."
+  image:
+    path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
+    alt: "Perito ingeniero inspeccionando una estructura de hormigón"
+    badge: "Perito Ingeniero"
+    caption: "Informes técnicos con rigor y claridad"
   rotatingTexts:
     default: "with technical rigor"
     items:

@@ -27,7 +27,7 @@ hero:
   subtitle: "Dictàmens objectius sobre patologies, defectes constructius i disputes d'obra"
   description: "Com a pèrits enginyers col·legiats, elaborem informes pericials amb el màxim rigor tècnic perquè disposi d'una prova sòlida, clara i defensable. El nostre objectiu és traduir la complexitat tècnica en arguments irrefutables per protegir els seus interessos."
   intro: "Un dictamen pericial ben fonamentat és l'eina essencial per negociar amb seguretat, resoldre conflictes i, si és necessari, obtenir una sentència favorable en un procediment judicial."
-  image: "/assets/images/informe-pericial-patologias-barcelona.jpg"
+  image: "src/assets/images/informe-pericial-patologias-barcelona.jpg"
 
 sections:
   title: "Què és un Informe Pericial i per què és fonamental?"

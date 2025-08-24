@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import markdownIt from 'markdown-it';
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import htmlminifier from 'html-minifier-terser';
+import Image from "@11ty/eleventy-img";
 
 import cssnano from 'cssnano';
 import postcss from 'postcss';
@@ -52,6 +53,51 @@ export default function (eleventyConfig) {
     });
 
     return collectionsByLang;
+  });
+
+  // El shortcode de imagen asíncrono (la lógica interna no cambia)
+  eleventyConfig.addAsyncShortcode("image", async function(src, alt, sizes = "100vw", loading = "lazy", fetchpriority = "auto", additionalClasses = "") {
+    if (alt === undefined) {
+      throw new Error(`Missing \`alt\` on image from: ${src}`);
+    }
+
+    // Normalizar la ruta de la imagen
+    if (src.startsWith('/')) {
+      // Si comienza con /, es una ruta relativa a la raíz del sitio
+      src = path.join(__dirname, 'src', src.substring(1));
+    } else if (!path.isAbsolute(src) && !src.startsWith("http")) {
+      // Si no es absoluta ni HTTP, asumimos que es relativa al directorio del proyecto
+      src = path.join(__dirname, src);
+    }
+
+    // Asegurar que el archivo existe
+    if (!fs.existsSync(src) && !src.startsWith("http")) {
+      console.warn(`Warning: Image file not found: ${src}`);
+      return `<img src="${src}" alt="${alt}" sizes="${sizes}" loading="${loading}" fetchpriority="${fetchpriority}" class="${additionalClasses}">`;
+    }
+
+    let metadata = await Image(src, {
+      widths: [320, 640, 960, 1280, 1920],
+      formats: ["avif", "webp", "jpeg"],
+      outputDir: "./dist/assets/images/optimized/", 
+      urlPath: "/assets/images/optimized/",
+      filenameFormat: function (id, src, width, format) {
+        const extension = path.extname(src);
+        const name = path.basename(src, extension);
+        return `${name}-${width}w.${format}`;
+      }
+    });
+
+    let imageAttributes = {
+      alt,
+      sizes,
+      loading,
+      fetchpriority,
+      decoding: "async",
+      class: additionalClasses || "" // Agregar clases adicionales si se proporcionan
+    };
+
+    return Image.generateHTML(metadata, imageAttributes);
   });
 
   // Leer el contenido del favicon SVG como Data URI (opcional)

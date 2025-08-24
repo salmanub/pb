@@ -31,7 +31,7 @@ hero:
   subtitle: "Diagnosis, repair, and reinforcement of structures in buildings and infrastructures"
   description: "As expert civil engineers, we provide independent technical diagnosis for any type of structure, from residential floor slabs to bridges or retaining walls. We analyze the cause of the problem and design the safest, most durable, and efficient reinforcement solution."
   intro: "Our mission is to provide you with the technical certainty you need to make the best decision, optimizing costs while ensuring maximum quality in the intervention."
-  image: "/assets/images/asesoramiento-refuerzo-estructural-barcelona.jpg"
+  image: "src/assets/images/asesoramiento-refuerzo-estructural-barcelona.jpg"
 
 # Section "Why Independent Diagnosis?" (This message is universal and very powerful for both sectors)
 sections:

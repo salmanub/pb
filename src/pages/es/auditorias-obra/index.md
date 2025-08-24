@@ -32,7 +32,7 @@ hero:
   # MENSAJE: Más directo, enfocado en el valor que se aporta.
   description: "Como peritos ingenieros independientes, nuestro servicio de auditoría de obra le proporciona una visión técnica y objetiva del estado real de su proyecto. Detectamos desviaciones, verificamos certificaciones y documentamos la calidad para que tome decisiones informadas y evite litigios costosos."
   intro: "Aplicamos una metodología rigurosa para contrastar la ejecución en obra con la documentación del proyecto, los contratos y la normativa vigente, entregando informes periciales claros y defendibles."
-  image: "/assets/images/auditoria-de-obra-control-costes-barcelona.jpg"
+  image: "src/assets/images/auditoria-de-obra-control-costes-barcelona.jpg"
 
 # Grid de ámbitos que sí se auditan
 serviceCluster:

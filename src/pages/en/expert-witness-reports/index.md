@@ -27,7 +27,7 @@ hero:
   subtitle: "Objective assessments of pathologies, construction defects, and building disputes"
   description: "As chartered engineering experts, we produce expert reports with the highest technical rigor to provide you with solid, clear, and defensible evidence. Our goal is to translate technical complexity into irrefutable arguments to protect your interests."
   intro: "A well-founded expert report is the essential tool for confident negotiation, conflict resolution, and, if necessary, obtaining a favorable ruling in legal proceedings."
-  image: "/assets/images/informe-pericial-patologias-barcelona.jpg"
+  image: "src/assets/images/informe-pericial-patologias-barcelona.jpg"
 
 sections:
   title: "What is an Expert Report and Why is it Essential?"

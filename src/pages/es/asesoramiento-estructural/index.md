@@ -31,7 +31,7 @@ hero:
   subtitle: "Diagnóstico, reparación y refuerzo de estructuras en edificios e infraestructuras"
   description: "Como ingenieros civiles expertos, ofrecemos un diagnóstico técnico independiente para cualquier tipo de estructura, desde forjados de viviendas hasta puentes o muros de contención. Analizamos la causa del problema y proyectamos la solución de refuerzo más segura, duradera y eficiente."
   intro: "Nuestra labor es proporcionarle la certeza técnica que necesita para tomar la mejor decisión, optimizando costes y asegurando la máxima calidad en la intervención."
-  image: "/assets/images/asesoramiento-refuerzo-estructural-barcelona.jpg"
+  image: "src/assets/images/asesoramiento-refuerzo-estructural-barcelona.jpg"
 
 # Sección "¿Por qué un diagnóstico independiente?" (Este mensaje es universal y muy potente para ambos sectores)
 sections:

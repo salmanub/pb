@@ -23,6 +23,11 @@ hero:
   strong: "per a Defensar els seus Interessos"
   subtitle: "Especialistes en Peritatges, Auditories d'Obra i Assessorament Estructural"
   description: "Elaborem informes tècnics independents per resoldre litigis, auditar la qualitat de projectes i diagnosticar la seguretat d'estructures amb el màxim rigor."
+  image:
+    path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
+    alt: "Pèrit enginyer inspeccionant una estructura de formigó"
+    badge: "Pèrit Enginyer"
+    caption: "Informes tècnics amb rigor i claredat"
   rotatingTexts:
     default: "amb rigor tècnic"
     items:
@@ -75,9 +80,9 @@ ayuda:
     title: "En Què Podem"
     highlight: "Ajudar-lo"
     subtitle: "Abordem els problemes tècnics més comuns en edificació i obra civil per oferir-li una solució clara i documentada."
-    cta: "Saber-ne més"
   introduccion:
     title: "Alguns dels problemes que solucionem amb més freqüència:"
+  cta: "Saber-ne més"
   problemas:
     - title: "Esquerdes i Patologies Estructurals"
       description: "Anàlisi i diagnòstic de patologies estructurals, detecció de fissures i recomanacions de reparació."
