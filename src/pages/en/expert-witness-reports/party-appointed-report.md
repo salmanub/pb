@@ -7,9 +7,9 @@ permalink: "/en/expert-witness-reports/party-appointed-report/"
 lang: 'en'
 translation:
     - lang: "es"
-        permalink: "/informes-periciales/informe-de-parte/"
+      permalink: "/informes-periciales/informe-de-parte/"
     - lang: "ca"
-        permalink: "/ca/informes-pericials/informe-de-part/"
+      permalink: "/ca/informes-pericials/informe-de-part/"
 eleventyNavigation:
   key: "Party-Appointed Report"
   parent: "Expert Witness Reports"
