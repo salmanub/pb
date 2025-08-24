@@ -32,9 +32,15 @@
                             <p class="text-xl text-white/90 leading-relaxed" itemprop="description">
                                 {{ hero.description | safe }}
                             </p>
+                            {% if subtitle %}
+                                <p class="text-lg text-cyan-300/80 mt-4 italic">{{ subtitle | safe }}</p>
+                            {% endif %}
                         </div>
                     {% else %}
                         <h1 class="text-[2.75rem] md:text-[3.5rem] xl:text-[4rem] font-light text-white leading-[1.1] tracking-tight" itemprop="headline">{{ title | safe }}</h1>
+                        {% if subtitle %}
+                            <p class="text-lg text-cyan-300/80 mt-4 italic">{{ subtitle | safe }}</p>
+                        {% endif %}
                     {% endif %}
                 </div>
             </div>
@@ -270,4 +276,9 @@
 
 {{ childPageCSS | safe }}
 </style>
+{% endblock %}
+
+{% block scripts %}
+<!-- Scripts heredados de base.njk -->
+{{ super() }}
 {% endblock %}
