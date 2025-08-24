@@ -77,3 +77,29 @@ intro: |
   <p>Como peritos expertos e independientes, dentro de nuestros <a href="/informes-periciales/">servicios de informes periciales</a>, elaboramos el documento técnico que su abogado necesita para construir la estrategia legal más sólida.</p>
 ---
 
+
+## Su Argumento Técnico en una Disputa
+
+Cuando se enfrenta a un conflicto técnico —ya sea con una constructora, una aseguradora o en un litigio—, la opinión de cada parte está, por naturaleza, sesgada. Para que su postura gane credibilidad y peso, necesita un argumento externo, objetivo y basado en pruebas: un **informe pericial de parte**.
+
+A diferencia del perito judicial (designado por el juez), el perito de parte es un experto que usted contrata para que se integre en su equipo de defensa. Nuestra función es analizar el caso desde una perspectiva de ingeniería, encontrar la evidencia técnica y plasmarla en un dictamen claro y riguroso que sirva como pilar para la estrategia de su abogado.
+
+### ¿Cuándo es Esencial un Informe de Parte?
+
+Este tipo de informe es su mejor herramienta en múltiples situaciones:
+
+* **Antes de una Demanda:** Para evaluar la solidez técnica de su reclamación y asegurarse de que tiene una base sólida antes de iniciar un costoso proceso judicial.
+* **Durante una Negociación:** Un informe contundente puede forzar a la parte contraria a llegar a un acuerdo favorable sin necesidad de ir a juicio.
+* **Como Prueba en un Juicio:** Es una de las pruebas periciales clave que su abogado presentará para demostrar los hechos técnicos ante el juez.
+* **Para Rebatir Otro Informe:** Si la parte contraria presenta su propio informe, elaboramos un contrainforme técnico que lo analiza y refuta.
+
+### Nuestra Metodología: Del Análisis a la Defensa
+
+Nuestro compromiso es doble: con el rigor técnico y con los objetivos de su caso.
+
+1.  **Inmersión en el Caso:** Trabajamos mano a mano con usted y su abogado para entender todos los matices del conflicto.
+2.  **Investigación Pericial:** Realizamos las inspecciones y análisis necesarios para recopilar pruebas irrefutables.
+3.  **Redacción Estratégica:** Escribimos el informe de forma clara y persuasiva, enfocándonos en los puntos que son cruciales para su estrategia legal.
+4.  **Defensa en Juicio:** Si es necesario, acudimos a sede judicial para ratificar el informe y responder a las preguntas del juez y de la parte contraria con la máxima solvencia.
+
+Un informe pericial de parte bien elaborado no es solo un documento; es la pieza que a menudo determina el resultado de una disputa.
