@@ -206,6 +206,7 @@
         <script>
             {% linkPreloader %}
         </script>
+        <!-- Desinstalar Service Worker al cargar la nueva versión del sitio -->
         <script>
             self.addEventListener('install', function(e) {
             self.skipWaiting();
