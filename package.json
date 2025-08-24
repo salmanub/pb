@@ -7,7 +7,8 @@
     "build": "npx eleventy",
     "serve": "npx eleventy --serve",
     "optimize-images": "node src/scripts/optimize-images.js",
-    "optimize-images-debug": "node src/scripts/optimize-images-debug.js"
+    "optimize-images-debug": "node src/scripts/optimize-images-debug.js",
+    "optimize-images-force": "node src/scripts/optimize-images-force.js"
   },
   "keywords": [],
   "author": "",

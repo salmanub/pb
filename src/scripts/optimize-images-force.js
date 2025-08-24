@@ -36,9 +36,61 @@ const formatOptions = {
   }
 };
 
+// Función para comprobar si una imagen tiene todas las versiones
+async function checkImageVersions(imagePath, relativePath) {
+  const dirName = path.dirname(relativePath);
+  const baseName = path.basename(relativePath, path.extname(relativePath));
+  const targetDir = path.join(rootDir, outputDir, dirName);
+  
+  // Si no existe el directorio, definitivamente necesitamos procesar la imagen
+  if (!fs.existsSync(targetDir)) {
+    return { complete: false, missingFormats: formats, missingWidths: widths };
+  }
+  
+  try {
+    const missingFormats = [];
+    const missingWidths = [];
+    
+    // Verificar cada formato y tamaño
+    for (const format of formats) {
+      let formatComplete = true;
+      let formatMissingWidths = [];
+      
+      for (const width of widths) {
+        const widthStr = width ? `${width}w` : 'null';
+        const filename = `${baseName}-${widthStr}.${format}`;
+        const filePath = path.join(targetDir, filename);
+        
+        if (!fs.existsSync(filePath)) {
+          formatComplete = false;
+          formatMissingWidths.push(width);
+        }
+      }
+      
+      if (!formatComplete) {
+        missingFormats.push(format);
+        missingWidths.push(...formatMissingWidths);
+      }
+    }
+    
+    return { 
+      complete: missingFormats.length === 0,
+      missingFormats: missingFormats,
+      missingWidths: [...new Set(missingWidths)] // Eliminar duplicados
+    };
+  } catch (err) {
+    console.error(`Error al verificar versiones de ${imagePath}:`, err.message);
+    // Si hay error, mejor procesar la imagen por completo
+    return { complete: false, missingFormats: formats, missingWidths: widths };
+  }
+}
+
 // Función para procesar una imagen
-async function processImage(imagePath) {
-  console.log(`⏳ Procesando: ${imagePath}`);
+async function processImage(imagePath, forceRegeneration = true) {
+  // Determinar la ruta relativa para mantener la estructura de directorios
+  const relativePath = path.relative(path.join(rootDir, 'assets/images'), imagePath);
+  
+  console.log(`⏳ Procesando: ${relativePath}`);
   
   try {
     // Verificar que el archivo existe
@@ -53,14 +105,26 @@ async function processImage(imagePath) {
       console.warn(`⚠️ Advertencia: Imagen grande (${fileSizeMB.toFixed(2)}MB): ${path.basename(imagePath)}`);
     }
     
-    // Determinar la ruta relativa para mantener la estructura de directorios
-    const relativePath = path.relative(path.join(rootDir, 'assets/images'), imagePath);
     const dirName = path.dirname(relativePath);
     const baseName = path.basename(relativePath, path.extname(relativePath));
     
     // Asegurarse de que existe el directorio de destino
     const targetDir = path.join(rootDir, outputDir, dirName);
     await fs.promises.mkdir(targetDir, { recursive: true });
+    
+    // Verificar si la imagen ya está completamente procesada (solo si no se fuerza regeneración)
+    if (!forceRegeneration) {
+      const versionCheck = await checkImageVersions(imagePath, relativePath);
+      if (versionCheck.complete) {
+        console.log(`✓ Omitiendo: ${relativePath} (ya está optimizada con todas las dimensiones)`);
+        return { 
+          success: true, 
+          imagePath,
+          skipped: true,
+          message: "Imagen ya procesada con todas las dimensiones requeridas"
+        };
+      }
+    }
     
     // Generar versiones optimizadas - con manejo específico según el formato
     const imageExt = path.extname(imagePath).toLowerCase();
@@ -77,7 +141,9 @@ async function processImage(imagePath) {
       sharpAvifOptions: formatOptions.avif,
       sharpWebpOptions: formatOptions.webp,
       sharpJpegOptions: formatOptions.jpg,
-      sharpPngOptions: formatOptions.png
+      sharpPngOptions: formatOptions.png,
+      // Siempre regenerar las imágenes incluso si existen
+      cacheDuration: forceRegeneration ? -1 : 60000
     };
     
     // Si es un GIF, no procesar en múltiples tamaños
@@ -88,7 +154,8 @@ async function processImage(imagePath) {
     // Generar versiones optimizadas
     let metadata = await Image(imagePath, options);
     
-    console.log(`✓ Generadas ${Object.values(metadata).flat().length} versiones para ${path.basename(imagePath)}`);
+    const totalVersions = Object.values(metadata).flat().length;
+    console.log(`✅ Generadas ${totalVersions} versiones para ${path.basename(imagePath)}`);
     
     // Generamos un resumen de las versiones creadas
     let summary = {};
@@ -104,11 +171,11 @@ async function processImage(imagePath) {
     return { 
       success: true, 
       imagePath, 
-      count: Object.values(metadata).flat().length,
+      count: totalVersions,
       summary
     };
   } catch (error) {
-    console.error(`✗ Error procesando ${imagePath}: ${error.message}`);
+    console.error(`❌ Error procesando ${relativePath}: ${error.message}`);
     return { 
       success: false, 
       imagePath, 
@@ -118,7 +185,7 @@ async function processImage(imagePath) {
 }
 
 // Función principal para procesar todas las imágenes
-async function processAllImages() {
+async function processAllImages(forceRegeneration = true) {
   try {
     console.log("Iniciando optimización de imágenes...");
     
@@ -241,6 +308,7 @@ async function processAllImages() {
     // Procesar cada imagen y recopilar resultados
     const results = {
       successful: 0,
+      skipped: 0,
       failed: 0,
       details: []
     };
@@ -252,6 +320,12 @@ async function processAllImages() {
     
     console.log("\n📊 PROGRESO DE OPTIMIZACIÓN");
     console.log("---------------------------");
+    
+    if (forceRegeneration) {
+      console.log("🔄 MODO: FORZAR REGENERACIÓN - Todas las imágenes serán procesadas de nuevo");
+    } else {
+      console.log("🔍 MODO: VERIFICACIÓN - Solo se procesarán imágenes incompletas");
+    }
     
     for (let i = 0; i < allImages.length; i += batchSize) {
       const batch = allImages.slice(i, i + batchSize);
@@ -277,16 +351,22 @@ async function processAllImages() {
         console.log(`   ⏱️ Tiempo restante estimado: ~${formatTime(estimatedRemainingSeconds)}`);
       }
       
-      const batchPromises = batch.map(img => processImage(img));
+      const batchPromises = batch.map(img => processImage(img, forceRegeneration));
       const batchResults = await Promise.all(batchPromises);
       
       let batchSuccesses = 0;
+      let batchSkipped = 0;
       let batchFailures = 0;
       
       for (const result of batchResults) {
         if (result.success) {
-          results.successful++;
-          batchSuccesses++;
+          if (result.skipped) {
+            results.skipped++;
+            batchSkipped++;
+          } else {
+            results.successful++;
+            batchSuccesses++;
+          }
         } else {
           results.failed++;
           batchFailures++;
@@ -295,6 +375,7 @@ async function processAllImages() {
       }
       
       console.log(`   ✅ Éxitos en este lote: ${batchSuccesses}`);
+      console.log(`   ⏭️ Omitidas en este lote: ${batchSkipped}`);
       console.log(`   ❌ Fallos en este lote: ${batchFailures}`);
       console.log(`   📈 Progreso total: ${percentComplete}% (${i + batch.length}/${allImages.length})`);
     }
@@ -317,20 +398,29 @@ async function processAllImages() {
     
     console.log("\n✨ RESUMEN DE OPTIMIZACIÓN DE IMÁGENES ✨");
     console.log("=========================================");
-    console.log(`📊 Total de imágenes procesadas: ${allImages.length}`);
-    console.log(`✅ Exitosas: ${results.successful}`);
+    console.log(`📊 Total de imágenes analizadas: ${allImages.length}`);
+    console.log(`✅ Generadas con éxito: ${results.successful}`);
+    console.log(`⏭️ Omitidas (ya optimizadas): ${results.skipped}`);
     console.log(`❌ Fallidas: ${results.failed}`);
     console.log(`⏱️ Tiempo total de procesamiento: ${formatDuration(totalTimeSeconds)}`);
     
     if (results.successful > 0) {
       const avgTimePerImage = totalTimeSeconds / results.successful;
-      console.log(`⚡ Promedio por imagen: ${avgTimePerImage.toFixed(2)} segundos`);
+      console.log(`⚡ Promedio por imagen procesada: ${avgTimePerImage.toFixed(2)} segundos`);
     }
     
     console.log(`📝 Informe detallado guardado en: ${reportPath}`);
     console.log("=========================================");
+    
+    return results;
   } catch (error) {
     console.error("Error general en el proceso de optimización:", error);
+    return {
+      successful: 0,
+      skipped: 0,
+      failed: 0,
+      error: error.message
+    };
   }
 }
 
@@ -341,15 +431,19 @@ async function runOptimization() {
     console.clear(); // Limpiar la terminal para mejor visibilidad
     
     console.log("\n");
-    console.log("🚀 INICIANDO PROCESO DE OPTIMIZACIÓN DE IMÁGENES");
-    console.log("==============================================");
-    console.log("Este proceso convertirá todas las imágenes en los");
-    console.log("formatos necesarios para el sitio web (AVIF, WebP, JPEG)");
-    console.log("y en múltiples dimensiones para carga responsiva.");
-    console.log("==============================================\n");
+    console.log("🚀 INICIANDO PROCESO DE OPTIMIZACIÓN COMPLETA DE IMÁGENES");
+    console.log("=======================================================");
+    console.log("Este script procesará TODAS las imágenes de nuevo,");
+    console.log("incluso las que ya estaban optimizadas previamente.");
+    console.log("Esto garantiza que todas las imágenes tengan todas");
+    console.log("las dimensiones y formatos necesarios.");
+    console.log("=======================================================\n");
     
     const startTime = Date.now();
-    await processAllImages();
+    
+    // true para forzar la regeneración de todas las imágenes
+    await processAllImages(true);
+    
     const totalTime = ((Date.now() - startTime) / 1000).toFixed(2);
     
     console.log("\n✨✨✨ PROCESO COMPLETADO CON ÉXITO ✨✨✨");
