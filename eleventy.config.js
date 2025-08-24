@@ -9,6 +9,7 @@ import Image from "@11ty/eleventy-img";
 import cssnano from 'cssnano';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
+import { linkPreloader } from './src/assets/js/link-preloader.js';
 
 
 // Definir __dirname para módulos ES
@@ -18,6 +19,9 @@ const __dirname = path.dirname(__filename);
 export default function (eleventyConfig) {
   
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  // Agregar el plugin de linkPreloader
+  linkPreloader(eleventyConfig);
+  
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/scripts");
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
