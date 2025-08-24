@@ -79,7 +79,7 @@ export default function (eleventyConfig) {
     let metadata = await Image(src, {
       widths: [320, 640, 960, 1280, 1920],
       formats: ["avif", "webp", "jpeg"],
-      outputDir: "./dist/assets/images/optimized/", 
+      outputDir: "./src/assets/images/optimized/", 
       urlPath: "/assets/images/optimized/",
       filenameFormat: function (id, src, width, format) {
         const extension = path.extname(src);

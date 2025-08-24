@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npx eleventy",
-    "serve": "npx eleventy --serve"
+    "serve": "npx eleventy --serve",
+    "optimize-images": "node src/scripts/optimize-images.js",
+    "optimize-images-debug": "node src/scripts/optimize-images-debug.js"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +26,7 @@
     "tailwindcss": "^4.0.17"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^6.0.4"
+    "@11ty/eleventy-img": "^6.0.4",
+    "glob": "^11.0.3"
   }
 }
