@@ -9,7 +9,7 @@ translations:
   - lang: "ca"
     permalink: "/ca/collaboracio-advocats/"
   - lang: "es"
-    permalink: "/es/colaboracion-abogados/"
+    permalink: "/colaboracion-abogados/"
 eleventyNavigation:
   key: "Lawyer Collaboration"
   title: "Lawyers Area"
