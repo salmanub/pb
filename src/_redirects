@@ -19,6 +19,7 @@
 /seguros/                                   /informes-periciales/reclamacion-seguros/ 301
 /seguros                                   /informes-periciales/reclamacion-seguros/ 301
 /seguros/contraperitajes/                   /informes-periciales/reclamacion-seguros/ 301
+/seguros/reclamaciones-aseguradoras/       /informes-periciales/reclamacion-seguros/ 301
 /construccion                            /informes-periciales/                   301
 /guia-peritajes                           /informes-periciales/                   301
 /servicios/                               /informes-periciales/                   301
@@ -36,6 +37,7 @@
 
 # Versiones en Inglés
 /en/construction/                           /en/expert-witness-reports/               301
+/en/construction-expert-reports/           /en/expert-witness-reports/ 301
 /en/legal-expert/                           /en/expert-witness-reports/judicial-expert/ 301
 /en/construction-technical-audit/           /en/construction-audits/                  301
 /en/structures/                             /en/structural-consulting/                301
