@@ -16,6 +16,8 @@
 /estructuras/                               /asesoramiento-estructural/               301
 /peritaje-estructuras/                      /asesoramiento-estructural/               301
 /abogados/                                  /colaboracion-abogados/                   301
+/seguros/                                   /informes-periciales/reclamacion-seguros/ 301
+/seguros                                   /informes-periciales/reclamacion-seguros/ 301
 
 # Versiones en Catalán
 /ca/construccio/                            /ca/informes-pericials/                   301
@@ -48,6 +50,8 @@
 /ca/auditories-d-obra/ /ca/auditories-obra/ 301
 /es/ / 301
 /ca/contacto/ /ca/contacte/ 301
+/desprendimientos-danos-ejecucion/ 
+
 # Versiones en Catalán
 /ca/vicis-ocults/                             /ca/informes-pericials/vicis-ocults/              301
 
