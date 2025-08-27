@@ -18,6 +18,8 @@
 /abogados/                                  /colaboracion-abogados/                   301
 /seguros/                                   /informes-periciales/reclamacion-seguros/ 301
 /seguros                                   /informes-periciales/reclamacion-seguros/ 301
+/construccion                            /informes-periciales/                   301
+/guia-peritajes                           /informes-periciales/                   301
 
 # Versiones en Catalán
 /ca/construccio/                            /ca/informes-pericials/                   301
@@ -26,6 +28,7 @@
 /ca/auditoria-tecnica-obra/                 /ca/auditories-d-obra/                    301
 /ca/estructures/                            /ca/assessorament-estructural/            301
 /ca/advocats/                               /ca/colaboracio-advocats/                 301
+/ca/peritatges-construccio/                 /ca/informes-pericials/            301
 
 # Versiones en Inglés
 /en/construction/                           /en/expert-witness-reports/               301
@@ -33,7 +36,8 @@
 /en/construction-technical-audit/           /en/construction-audits/                  301
 /en/structures/                             /en/structural-consulting/                301
 /en/lawyers/                                /en/lawyer-collaboration/                 301
-
+/en/contacto/                               /en/contact/                               301
+/en/structural-reinforcement/               /en/structural-consulting/             301
 
 # --- REDIRECCIONES DE PÁGINAS DE PROBLEMAS (CLÚSTERES) ---
 # Mapeamos URLs de problemas antiguas a su nueva ubicación bajo el pilar correcto.
