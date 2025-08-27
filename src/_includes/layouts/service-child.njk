@@ -89,8 +89,17 @@
                             <h2 class="text-xl font-bold text-slate-800 mb-4">{{ metadata.serviceChild[lang].sufresProblema }}</h2>
                             <p class="text-slate-600 mb-6">{{ metadata.serviceChild[lang].contacteAnalisis }}</p>
                             
+                            {% set contactPath = "" %}
+                            {% if lang == "es" %}
+                                {% set contactPath = "/contacto/" %}
+                            {% elif lang == "en" %}
+                                {% set contactPath = "/en/contact/" %}
+                            {% elif lang == "ca" %}
+                                {% set contactPath = "/ca/contacte/" %}
+                            {% endif %}
+                            
                             <div class="space-y-4">
-                                <a href="{{ metadata.serviceChild[lang].mailTo }}" class="block w-full text-center bg-cyan-500 text-white font-medium py-3 px-6 rounded-lg hover:bg-cyan-600 transition-colors shadow-sm hover:shadow">
+                                <a href="{{ contactPath }}?origen={{ title | slugify }}&analisis=true" class="block w-full text-center bg-cyan-500 text-white font-medium py-3 px-6 rounded-lg hover:bg-cyan-600 transition-colors shadow-sm hover:shadow">
                                     {{ metadata.serviceChild[lang].solicitarAnalisis }}
                                 </a>
                                 <a href="tel:{{metadata.contact.phoneNumber}}" class="block w-full text-center border border-cyan-500 text-cyan-600 font-medium py-3 px-6 rounded-lg hover:bg-cyan-50 transition-colors">
