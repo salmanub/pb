@@ -20,6 +20,7 @@
 /seguros                                   /informes-periciales/reclamacion-seguros/ 301
 /construccion                            /informes-periciales/                   301
 /guia-peritajes                           /informes-periciales/                   301
+/servicios/                               /informes-periciales/                   301
 
 # Versiones en Catalán
 /ca/construccio/                            /ca/informes-pericials/                   301
