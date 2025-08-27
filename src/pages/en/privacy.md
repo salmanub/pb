@@ -23,7 +23,7 @@ In compliance with Regulation (EU) 2016/679 of the European Parliament and of th
 ### 1. Data Controller
 
 * **Owner:** Albert Vilardell Serra
-* **Professional Address:** Calle Numancia nº 95, local 5, 08029 Barcelona
+* **Professional Address:** Carrer Numància, 95, Local 5, Distrito de Les Corts, 08029 Barcelona, Spain
 * **Email:** info@perito.barcelona
 * **Website:** https://perito.barcelona
 

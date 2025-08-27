@@ -24,7 +24,7 @@ In compliance with the duty of information stipulated in Article 10 of Law 34/20
 
 * **Owner:** Albert Vilardell Serra
 * **Professional Association:** Member No. 16448 of the Col·legi de l'Enginyeria Civil i de l'Enginyeria Tècnica d'Obres Públiques de Catalunya.
-* **Professional Address:** Calle Numancia nº 95, local 5, 08029 Barcelona
+* **Professional Address:** Carrer Numància, 95, Local 5, Distrito de Les Corts, 08029 Barcelona, Spain
 * **Email:** info@perito.barcelona
 * **Website:** https://perito.barcelona
 

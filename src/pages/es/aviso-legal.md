@@ -24,7 +24,7 @@ En cumplimiento del deber de información estipulado en el artículo 10 de la Le
 
 * **Titular:** Albert Vilardell Serra
 * **Colegiación:** Colegiado Nº 16448 del Col·legi de l'Enginyeria Civil i de l'Enginyeria Tècnica d'Obres Públiques de Catalunya.
-* **Domicilio Profesional:** Calle Numancia nº 95, local 5, 08029 Barcelona
+* **Domicilio Profesional:** Carrer Numància, 95, Local 5, Distrito de Les Corts, 08029 Barcelona, Spain
 * **Correo electrónico:** info@perito.barcelona
 * **Sitio Web:** https://perito.barcelona
 

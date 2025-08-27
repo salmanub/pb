@@ -23,7 +23,7 @@ En compliment del Reglament (UE) 2016/679 del Parlament Europeu i del Consell, d
 ### 1. Responsable del Tractament
 
 * **Titular:** Albert Vilardell Serra
-* **Domicili Professional:** Calle Numancia nº 95, local 5, 08029 Barcelona
+* **Domicili Professional:** Carrer Numància, 95, Local 5, Distrito de Les Corts, 08029 Barcelona, Spain
 * **Correu electrònic:** info@perito.barcelona
 * **Lloc Web:** https://perito.barcelona
 
