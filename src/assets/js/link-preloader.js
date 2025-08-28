@@ -10,6 +10,10 @@ export function linkPreloader(config) {
             excludePatterns: [
               /\\.pdf$/,
               /\\.zip$/,
+              /\\.jpg$/,
+              /\\.png$/,
+              /\\.gif$/,
+              /\\.webp$/,
               /^tel:/,
               /^mailto:/,
               /^#/,
@@ -18,24 +22,79 @@ export function linkPreloader(config) {
             // Prioridad de tipos de preload
             priorities: {
               samePage: 'high',
-              sameOrigin: 'low',
-              external: 'lowest'
-            }
+              sameOrigin: 'high',
+              mainContent: 'high',
+              external: 'low'
+            },
+            // Selector para el área principal de contenido
+            mainContentSelector: 'main, article, .content-area',
+            // Límite máximo de enlaces a precargar simultáneamente
+            maxPreloadLinks: 8,
+            // Dominio actual para comparar
+            currentDomain: window.location.hostname
           };
   
           // Función principal de precarga
           function initLinkPreloader() {
             // Crear observer para detectar cuando el usuario está inactivo
             let idleCallback = window.requestIdleCallback || 
-              function(cb) { return setTimeout(cb, 1); };
+              function(cb) { return setTimeout(cb, 50); };
   
-            // Obtener todos los enlaces de la página
-            const links = Array.from(document.links);
+            // Obtener todos los enlaces de la página y organizarlos por prioridad
+            const allLinks = Array.from(document.links);
+            
+            // Clasificar los enlaces por ubicación y tipo
+            const mainContentLinks = [];
+            const sameDomainLinks = [];
+            const externalLinks = [];
+            
+            // Obtener el área de contenido principal
+            const mainContentArea = document.querySelector(preloadConfig.mainContentSelector);
+            
+            allLinks.forEach(link => {
+              // Si el enlace está dentro del área principal
+              if (mainContentArea && mainContentArea.contains(link)) {
+                mainContentLinks.push(link);
+              }
+              // Si es del mismo dominio pero no está en el área principal
+              else if (link.hostname === preloadConfig.currentDomain) {
+                sameDomainLinks.push(link);
+              }
+              // Enlaces externos
+              else {
+                externalLinks.push(link);
+              }
+            });
   
+            // Procesar primero enlaces del área principal
             idleCallback(() => {
-              links
+              const validMainLinks = mainContentLinks
                 .filter(link => shouldPreloadLink(link))
-                .forEach(link => preloadLink(link));
+                .slice(0, preloadConfig.maxPreloadLinks);
+              
+              validMainLinks.forEach(link => preloadLink(link, 'high'));
+              
+              // Luego procesar enlaces del mismo dominio (después de un pequeño delay)
+              setTimeout(() => {
+                idleCallback(() => {
+                  const validSameDomainLinks = sameDomainLinks
+                    .filter(link => shouldPreloadLink(link))
+                    .slice(0, preloadConfig.maxPreloadLinks - validMainLinks.length);
+                  
+                  validSameDomainLinks.forEach(link => preloadLink(link, 'medium'));
+                  
+                  // Finalmente procesar enlaces externos
+                  setTimeout(() => {
+                    idleCallback(() => {
+                      const validExternalLinks = externalLinks
+                        .filter(link => shouldPreloadLink(link))
+                        .slice(0, Math.max(3, preloadConfig.maxPreloadLinks - validMainLinks.length - validSameDomainLinks.length));
+                      
+                      validExternalLinks.forEach(link => preloadDNS(link));
+                    });
+                  }, 500);
+                });
+              }, 200);
             });
           }
   
@@ -53,52 +112,165 @@ export function linkPreloader(config) {
             // No precargar si ya está en caché
             if (performance.getEntriesByName(href).length > 0) return false;
   
-            // No precargar si está fuera de viewport
+            // No precargar si ya existe un elemento de prefetch para este enlace
+            const existingPrefetch = document.querySelector(\`link[rel="prefetch"][href="\${href}"]\`);
+            if (existingPrefetch) return false;
+            
+            // Verificar visibilidad - priorizar enlaces visibles
             const rect = link.getBoundingClientRect();
             const isInViewport = (
-              rect.top >= 0 &&
+              rect.top >= -100 && // Permitir un poco por encima del viewport
               rect.left >= 0 &&
-              rect.bottom <= window.innerHeight &&
+              rect.bottom <= window.innerHeight + 200 && // Permitir un poco por debajo del viewport
               rect.right <= window.innerWidth
             );
             
-            if (!isInViewport) return false;
+            // Para enlaces en el área principal, no exigimos que estén en el viewport
+            const mainContentArea = document.querySelector(preloadConfig.mainContentSelector);
+            const isInMainContent = mainContentArea && mainContentArea.contains(link);
+            
+            if (!isInViewport && !isInMainContent) {
+              // Permitir enlaces importantes que no están en viewport pero tienen atributos de relevancia
+              const hasImportanceAttributes = 
+                link.hasAttribute('data-prefetch') || 
+                link.classList.contains('prefetch') ||
+                link.classList.contains('important-link') ||
+                link.getAttribute('importance') === 'high';
+              
+              if (!hasImportanceAttributes) return false;
+            }
   
             return true;
           }
   
           // Precargar un enlace específico
-          function preloadLink(link) {
+          function preloadLink(link, importancePriority = 'auto') {
             const href = link.href;
             
             // Determinar prioridad
-            let priority = 'auto';
-            if (link.host === window.location.host) {
-              if (link.pathname === window.location.pathname) {
-                priority = preloadConfig.priorities.samePage;
+            let priority = importancePriority;
+            if (priority === 'auto') {
+              if (link.host === window.location.host) {
+                // Detectar si es parte del contenido principal
+                const mainContentArea = document.querySelector(preloadConfig.mainContentSelector);
+                const isInMainContent = mainContentArea && mainContentArea.contains(link);
+                
+                if (isInMainContent) {
+                  priority = preloadConfig.priorities.mainContent;
+                } else if (link.pathname === window.location.pathname) {
+                  priority = preloadConfig.priorities.samePage;
+                } else {
+                  priority = preloadConfig.priorities.sameOrigin;
+                }
               } else {
-                priority = preloadConfig.priorities.sameOrigin;
+                priority = preloadConfig.priorities.external;
               }
-            } else {
-              priority = preloadConfig.priorities.external;
             }
   
             // Crear elemento de precarga
             const preloader = document.createElement('link');
-            preloader.rel = 'prefetch';
+            
+            // Usar 'prefetch' para documentos del mismo origen y 'dns-prefetch' para externos
+            if (link.host === window.location.host) {
+              preloader.rel = 'prefetch';
+              preloader.as = 'document';
+            } else {
+              preloader.rel = 'dns-prefetch';
+            }
+            
             preloader.href = href;
-            preloader.as = 'document';
             preloader.importance = priority;
+            
+            // Marcar el enlace como procesado para evitar duplicados
+            link.setAttribute('data-prefetched', 'true');
   
             // Agregar a head
             document.head.appendChild(preloader);
+          }
+          
+          // Específicamente para enlaces externos, usamos dns-prefetch
+          function preloadDNS(link) {
+            if (link.host === window.location.host) return;
+            
+            const href = link.href;
+            const url = new URL(href);
+            
+            // Verificar si ya existe un prefetch para este dominio
+            const existingDNSPrefetch = document.querySelector(\`link[rel="dns-prefetch"][href^="//\${url.hostname}"]\`);
+            if (existingDNSPrefetch) return;
+            
+            // Crear prefetch de DNS
+            const dnsPrefetch = document.createElement('link');
+            dnsPrefetch.rel = 'dns-prefetch';
+            dnsPrefetch.href = '//' + url.hostname;
+            
+            // Agregar a head
+            document.head.appendChild(dnsPrefetch);
+            
+            // Para dominios externos populares, agregar preconnect para establecer conexión temprana
+            const popularDomains = ['google.com', 'facebook.com', 'twitter.com', 'linkedin.com', 'youtube.com'];
+            if (popularDomains.some(domain => url.hostname.includes(domain))) {
+              const preconnect = document.createElement('link');
+              preconnect.rel = 'preconnect';
+              preconnect.href = url.origin;
+              preconnect.crossOrigin = 'anonymous';
+              document.head.appendChild(preconnect);
+            }
+          }
+          
+          // Escuchar eventos de movimiento del mouse para precarga inteligente
+          function setupIntentListeners() {
+            let timer;
+            document.addEventListener('mousemove', e => {
+              // Detectar si el mouse está sobre un enlace
+              const hoveredLink = e.target.closest('a');
+              if (hoveredLink && !hoveredLink.getAttribute('data-prefetched')) {
+                // Limpiar timer anterior si existe
+                if (timer) clearTimeout(timer);
+                
+                // Crear nuevo timer para precargar después de un breve hover
+                timer = setTimeout(() => {
+                  if (shouldPreloadLink(hoveredLink)) {
+                    preloadLink(hoveredLink, 'high');
+                  }
+                }, 100); // Precarga rápida después de 100ms de hover
+              }
+            });
+            
+            // Detectar scroll para actualizar enlaces visibles
+            let scrollTimer;
+            window.addEventListener('scroll', () => {
+              if (scrollTimer) clearTimeout(scrollTimer);
+              
+              scrollTimer = setTimeout(() => {
+                const visibleLinks = Array.from(document.links)
+                  .filter(link => !link.getAttribute('data-prefetched'))
+                  .filter(link => {
+                    const rect = link.getBoundingClientRect();
+                    return (
+                      rect.top >= -100 &&
+                      rect.bottom <= window.innerHeight + 100 &&
+                      rect.left >= 0 &&
+                      rect.right <= window.innerWidth
+                    );
+                  })
+                  .filter(link => shouldPreloadLink(link))
+                  .slice(0, 3); // Limitar a 3 enlaces por evento de scroll
+                
+                visibleLinks.forEach(link => preloadLink(link));
+              }, 200);
+            }, { passive: true });
           }
   
           // Inicializar cuando el documento esté listo
           if (document.readyState === 'complete') {
             initLinkPreloader();
+            setupIntentListeners();
           } else {
-            window.addEventListener('load', initLinkPreloader);
+            window.addEventListener('load', () => {
+              initLinkPreloader();
+              setupIntentListeners();
+            });
           }
   
           // Bonus: Integración con Partytown
