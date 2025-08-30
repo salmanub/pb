@@ -18,6 +18,10 @@ translations:
     permalink: /fr/audits-de-chantier/
     title: "Audits de Chantier à Barcelone | Contrôle des Coûts et de la Qualité"
     description: "Nous réalisons des audits de chantier pour résoudre les litiges sur les certifications, contrôler les dépassements de coûts et garantir la qualité. Obtenez un rapport d'expertise pour protéger votre investissement."
+  - lang: it
+    permalink: /it/audit-di-cantiere/
+    title: "Audit di Cantiere a Barcellona | Controllo Costi, Qualità e Certificazioni"
+    description: "Realizziamo audit di cantiere per risolvere controversie su certificazioni, controllare i costi extra e garantire la qualità. Ottieni una perizia tecnica per proteggere il tuo investimento a Barcellona."
 
 eleventyNavigation:
   key: "Auditories d'Obra"

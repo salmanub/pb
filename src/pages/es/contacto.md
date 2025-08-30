@@ -9,6 +9,10 @@ translations:
     permalink: "/ca/contacte/"
   - lang: "en"
     permalink: "/en/contact/"
+  - lang: fr
+    permalink: "/fr/contact/"
+  - lang: "it"
+    permalink: "/it/contatti/"
 eleventyNavigation:
   key: "Contacto"
   title: "Contacto"

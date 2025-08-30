@@ -20,6 +20,10 @@ translations:
     permalink: /en/structural-consulting/
     title: "Structural Consulting in Barcelona | Buildings & Civil Works"
     description: "Expert consulting for structural repair and reinforcement for buildings and infrastructures (bridges, walls). We diagnose pathologies and design technical solutions."
+  - lang: it
+    permalink: /it/consulenza-strutturale/
+    title: "Consulenza Strutturale Barcellona | Edilizia e Opere Civili"
+    description: "Consulenza esperta per la riparazione e il rinforzo di strutture per edilizia e infrastrutture (ponti, muri). Diagnostichiamo patologie e progettiamo soluzioni tecniche."
 
 eleventyNavigation:
   key: "Conseil en Structure"
