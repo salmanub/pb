@@ -1,21 +1,24 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     const currentLang = document.documentElement.lang || 'es';
-    const path = window.location.pathname;
     const availableLangs = ['es', 'en', 'ca', 'fr', 'it'];
     const defaultLang = 'es';
 
-    // Expresión regular para extraer el slug de la URL, ignorando el prefijo de idioma
-    const slugMatch = path.match(/(?:\/(?:en|ca|fr|it))?(\/.*)/);
-    if (!slugMatch) return;
+    // Nombres de idiomas para mostrar al usuario
+    const langNames = {
+        es: 'Español',
+        en: 'English',
+        ca: 'Català',
+        fr: 'Français',
+        it: 'Italiano'
+    };
 
-    const slug = slugMatch[1];
-
-    // No ejecutar en la página de inicio
-    if (slug === '/') return;
-
-    const otherLangs = availableLangs.filter(lang => lang !== currentLang);
-    const promises = [];
+    // Función para extraer el slug de una URL, ignorando el prefijo de idioma
+    function extractSlug(url) {
+        const path = new URL(url, window.location.origin).pathname;
+        const slugMatch = path.match(/(?:\/(?:en|ca|fr|it))?(\/.*)/);
+        return slugMatch ? slugMatch[1] : null;
+    }
 
     // Función para crear la URL de un idioma específico
     function getLangUrl(lang, slug) {
@@ -25,52 +28,128 @@ document.addEventListener('DOMContentLoaded', function () {
         return `/${lang}${slug}`;
     }
 
-    // Comprobar la existencia de la página en otros idiomas
-    otherLangs.forEach(lang => {
-        const url = getLangUrl(lang, slug);
-        promises.push(
-            fetch(url, { method: 'HEAD' })
-                .then(response => {
-                    if (response.ok) {
-                        return { lang, url };
-                    }
-                    return null;
-                })
-                .catch(() => null)
-        );
-    });
+    // Función para comprobar si una URL existe
+    function checkUrlExists(url) {
+        return fetch(url, { 
+            method: 'HEAD',
+            redirect: 'manual' // No seguir redirecciones para obtener el estado real
+        })
+        .then(response => response.ok)
+        .catch(() => false);
+    }
 
-    // Cuando todas las comprobaciones terminen
-    Promise.all(promises).then(results => {
-        const availableTranslations = results.filter(r => r !== null);
+    // Función para buscar alternativas en otros idiomas
+    async function findAlternatives(slug) {
+        const otherLangs = availableLangs.filter(lang => lang !== currentLang);
+        const alternatives = [];
 
-        if (availableTranslations.length > 0) {
-            const suggestionContainer = document.getElementById('language-suggestion');
-            if (suggestionContainer) {
-                const langNames = {
-                    es: 'Español',
-                    en: 'English',
-                    ca: 'Català',
-                    fr: 'Français',
-                    it: 'Italiano'
-                };
+        for (const lang of otherLangs) {
+            const url = getLangUrl(lang, slug);
+            const exists = await checkUrlExists(url);
+            if (exists) {
+                alternatives.push({ lang, url });
+            }
+        }
 
-                // Obtener textos desde el objeto global
-                const pageUnavailableText = window.error404Texts.pageUnavailable;
-                const pageAvailableInText = window.error404Texts.pageAvailableIn;
-                const viewPageInText = window.error404Texts.viewPageIn;
+        return alternatives;
+    }
 
-                let linksHTML = availableTranslations.map(t => 
-                    `<a href="${t.url}" class="underline text-cyan-600 hover:text-cyan-800 transition-colors">${viewPageInText} ${langNames[t.lang]}</a>`
-                ).join(', ');
+    // Función para mostrar el modal de alternativas
+    function showAlternativesModal(alternatives, originalUrl) {
+        // Obtener textos desde el objeto global (si existe)
+        let pageUnavailableText = "Esta página no está disponible en su idioma.";
+        let pageAvailableInText = "Sin embargo, la hemos encontrado en";
+        let viewPageInText = "Ver en";
 
-                suggestionContainer.innerHTML = `
-                    <div class="mt-8 p-6 bg-cyan-50 border border-cyan-200 rounded-lg max-w-2xl mx-auto text-center">
-                        <p class="text-lg text-slate-700">${pageUnavailableText}</p>
-                        <p class="mt-2 text-md text-slate-600">${pageAvailableInText}: ${linksHTML}.</p>
+        if (window.error404Texts) {
+            pageUnavailableText = window.error404Texts.pageUnavailable;
+            pageAvailableInText = window.error404Texts.pageAvailableIn;
+            viewPageInText = window.error404Texts.viewPageIn;
+        }
+
+        const linksHTML = alternatives.map(alt => 
+            `<a href="${alt.url}" class="inline-block px-4 py-2 mx-1 mb-2 bg-cyan-600 text-white rounded hover:bg-cyan-700 transition-colors">${viewPageInText} ${langNames[alt.lang]}</a>`
+        ).join('');
+
+        const modalHTML = `
+            <div id="language-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div class="bg-white rounded-lg p-6 max-w-md mx-4 text-center shadow-lg">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-3">${pageUnavailableText}</h3>
+                    <p class="text-slate-600 mb-4">${pageAvailableInText}:</p>
+                    <div class="mb-4">${linksHTML}</div>
+                    <div class="flex gap-2 justify-center">
+                        <button id="continue-anyway" class="px-4 py-2 bg-slate-300 text-slate-700 rounded hover:bg-slate-400 transition-colors">
+                            Ir de todas formas
+                        </button>
+                        <button id="close-modal" class="px-4 py-2 bg-slate-500 text-white rounded hover:bg-slate-600 transition-colors">
+                            Cancelar
+                        </button>
                     </div>
-                `;
-                suggestionContainer.classList.remove('hidden');
+                </div>
+            </div>
+        `;
+
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+        // Event listeners para los botones del modal
+        document.getElementById('continue-anyway').addEventListener('click', () => {
+            document.getElementById('language-modal').remove();
+            window.location.href = originalUrl;
+        });
+
+        document.getElementById('close-modal').addEventListener('click', () => {
+            document.getElementById('language-modal').remove();
+        });
+
+        // Cerrar modal al hacer clic fuera
+        document.getElementById('language-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'language-modal') {
+                document.getElementById('language-modal').remove();
+            }
+        });
+    }
+
+    // Interceptar clics en enlaces internos
+    document.addEventListener('click', async function(e) {
+        const link = e.target.closest('a');
+        
+        // Solo procesar enlaces internos que no sean externos, mailto, tel, etc.
+        if (!link || 
+            !link.href || 
+            link.href.startsWith('mailto:') || 
+            link.href.startsWith('tel:') || 
+            link.href.startsWith('#') ||
+            link.target === '_blank' ||
+            link.hostname !== window.location.hostname) {
+            return;
+        }
+
+        const targetUrl = link.href;
+        const slug = extractSlug(targetUrl);
+
+        // No procesar la página de inicio
+        if (!slug || slug === '/') {
+            return;
+        }
+
+        // Comprobar si la página de destino existe
+        e.preventDefault(); // Prevenir la navegación por defecto
+
+        const exists = await checkUrlExists(targetUrl);
+        
+        if (exists) {
+            // La página existe, navegar normalmente
+            window.location.href = targetUrl;
+        } else {
+            // La página no existe, buscar alternativas
+            const alternatives = await findAlternatives(slug);
+            
+            if (alternatives.length > 0) {
+                // Mostrar modal con alternativas
+                showAlternativesModal(alternatives, targetUrl);
+            } else {
+                // No hay alternativas, ir a la página 404
+                window.location.href = targetUrl;
             }
         }
     });

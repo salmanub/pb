@@ -64,6 +64,19 @@
     
     {% block scripts %}
     {% include "partials/head.njk" %}
+    
+    <!-- Configuración global para el script de manejo de enlaces 404 -->
+    <script>
+        window.error404Texts = {
+            pageUnavailable: "{{ metadata.error404Suggestion[lang].pageUnavailable | safe }}",
+            pageAvailableIn: "{{ metadata.error404Suggestion[lang].pageAvailableIn | safe }}",
+            viewPageIn: "{{ metadata.error404Suggestion[lang].viewPageIn | safe }}"
+        };
+    </script>
+    
+    <!-- Script para interceptar enlaces rotos -->
+    <script src="/assets/js/language-404-handler.js" defer></script>
+    
 {#     
         <!-- Service Worker Handler -->
         <script>
