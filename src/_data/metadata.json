@@ -1220,6 +1220,33 @@
       "contactPath": "contatti/"
     }
   },
+  "error404Suggestion": {
+    "es": {
+      "pageUnavailable": "Parece que esta página no está disponible en español.",
+      "pageAvailableIn": "Sin embargo, la hemos encontrado en",
+      "viewPageIn": "Ver la página en"
+    },
+    "en": {
+      "pageUnavailable": "It seems this page is not available in English.",
+      "pageAvailableIn": "However, we found it in",
+      "viewPageIn": "View page in"
+    },
+    "ca": {
+      "pageUnavailable": "Sembla que aquesta pàgina no està disponible en català.",
+      "pageAvailableIn": "No obstant això, l'hem trobada en",
+      "viewPageIn": "Veure la pàgina en"
+    },
+    "fr": {
+      "pageUnavailable": "Il semble que cette page ne soit pas disponible en français.",
+      "pageAvailableIn": "Cependant, nous l'avons trouvée en",
+      "viewPageIn": "Voir la page en"
+    },
+    "it": {
+      "pageUnavailable": "Sembra che questa pagina non sia disponibile in italiano.",
+      "pageAvailableIn": "Tuttavia, l'abbiamo trovata in",
+      "viewPageIn": "Vedi la pagina in"
+    }
+  },
   "ctaContact": {
     "es": {
       "form": {
