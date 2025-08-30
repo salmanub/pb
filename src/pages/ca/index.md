@@ -9,6 +9,8 @@ translations:
     permalink: /
   - lang: en
     permalink: /en/
+  - lang: fr
+    permalink: /fr/
 eleventyNavigation:
   key: "Inici"
   title: "Inici"

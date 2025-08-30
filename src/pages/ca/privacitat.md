@@ -10,7 +10,8 @@ translations:
     permalink: /privacidad/
   - lang: en
     permalink: /en/privacy/
-
+  - lang: "fr"
+    permalink: "/fr/confidentialite/"
 # --- Textos para el encabezado de la página ---
 hero:
   title: "Política de Privacitat"

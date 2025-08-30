@@ -1,0 +1,240 @@
+---
+layout: "layouts/index.njk"
+title: "Expert Barcelone | Cabinet d'Experts Ingénieurs Agréés"
+description: "Nous sommes un cabinet d'experts ingénieurs agréés à Barcelone, spécialisé dans la rédaction de rapports d'expertise technique, les audits de chantier et le conseil en structure."
+permalink: "/fr/"
+lang: "fr"
+translations:
+  - lang: "es"
+    permalink: "/"
+  - lang: "ca"
+    permalink: "/ca/"
+  - lang: "en"
+    permalink: "/en/"
+eleventyNavigation:
+  key: "Accueil"
+  title: "Accueil"
+  notshow: false
+  order: 1
+  icon: <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+
+# Hero Section
+hero:
+  tag: "Experts Ingénieurs Agréés à Barcelone"
+  title: "Rapports d'Expertise Technique"
+  strong: "pour Défendre Vos Intérêts"
+  subtitle: "Spécialistes en Expertises, Audits de Chantier et Conseil en Structure"
+  description: "Nous rédigeons des rapports techniques indépendants pour résoudre les litiges, auditer la qualité des projets et diagnostiquer la sécurité des structures avec la plus grande rigueur."
+  image:
+    path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
+    alt: "Ingénieur expert inspectant une structure en béton"
+    badge: "Ingénieur Expert"
+    caption: "Rapports techniques rigoureux et clairs"
+  rotatingTexts:
+    default: "avec rigueur technique"
+    items:
+      - "avec rigueur technique"
+      - "qui résolvent les litiges de construction"
+      - "à validité juridique garantie"
+      - "pour assurer la qualité de votre projet"
+      - "avec des diagnostics structurels précis"
+  cta:
+    primary: "Évaluer Votre Cas"
+    primaryUrl: "/fr/contact/"
+    secondary: "Appeler maintenant"
+    secondaryUrl: "tel:+34614194985"
+    descubreMas: "En Savoir Plus"
+  badges:
+    - value: "+15"
+      text: "Ans d'Expérience"
+      subtext: "Dans le secteur"
+    - value: "97%"
+      text: "Rapports Ratifiés"
+      subtext: "En procédure judiciaire"
+  logosText: "Nos rapports sont acceptés par les principaux tribunaux et compagnies d'assurance."
+
+# Servicios Destacados
+highlightedServices:
+  titulo: "Nos"
+  highlight: "Services Spécialisés"
+  descripcion: "Nous offrons des solutions techniques conçues pour apporter clarté, sécurité et résoudre les conflits à chaque étape d'un projet de construction."
+  cta: "En savoir plus"
+  items:
+    - titulo: "Rapports d'Expertise"
+      descripcion: "Nous rédigeons des rapports d'expertise (de partie et judiciaires) pour analyser les pathologies, vices cachés et tout type de malfaçons."
+      url: "/fr/rapports-expertise/"
+      icon: "scale"
+      cta: "Voir plus"
+    - titulo: "Audits de Chantier"
+      descripcion: "Nous effectuons le contrôle qualité, la supervision de l'exécution et la médiation technique dans les litiges sur les certifications et paiements."
+      url: "/fr/audits-de-chantier/"
+      icon: "clipboard-list"
+      cta: "Voir plus"
+    - titulo: "Conseil en Structure"
+      descripcion: "Nous émettons un diagnostic expert des pathologies structurelles et offrons des conseils sur les meilleures solutions de renforcement."
+      url: "/fr/conseil-structurel/"
+      icon: "tool"
+      cta: "Voir plus"
+
+# Sección "En qué podemos ayudarte" (CORREGIDA)
+ayuda:
+  encabezado:
+    title: "Comment Pouvons-Nous"
+    highlight: "Vous Aider"
+    subtitle: "Nous traitons les problèmes techniques les plus courants dans le bâtiment et les travaux publics pour vous offrir une solution claire et documentée."
+  introduccion:
+    title: "Quelques-uns des problèmes que nous résolvons le plus fréquemment :"
+  cta: "En savoir plus"
+  problemas:
+    - title: "Fissures & Pathologies Structurelles"
+      description: "Analyse et diagnostic de pathologies structurelles, détection de fissures et recommandations de réparation."
+      url: "/fr/rapports-expertise/pathologies-structurelles/"
+      icon: "alert-triangle"
+    - title: "Humidité & Infiltrations Persistantes"
+      description: "Détection de l'origine, rapports techniques et solutions pour les problèmes d'humidité dans les bâtiments."
+      url: "/fr/rapports-expertise/humidite-infiltrations/"
+      icon: "droplet"
+    - title: "Litiges de Certification & Paiement"
+      description: "Audit technique pour les conflits découlant des certifications, des métrés et du respect des contrats."
+      url: "/fr/audits-de-chantier/litiges-certification-paiement/"
+      icon: "file-text"
+    - title: "Vices Cachés (Achat-Vente / Post-chantier)"
+      description: "Identification et documentation des défauts non apparents après la livraison ou l'achat d'un bien immobilier."
+      url: "/fr/rapports-expertise/vices-caches/"
+      icon: "search"
+    - title: "Malfaçons"
+      description: "Évaluation par un expert des dommages causés par une exécution défectueuse et propositions de solutions."
+      url: "/fr/rapports-expertise/reclamations-malfacons/"
+      icon: "alert-circle"
+    - title: "Expertises pour Travaux Publics"
+      description: "Avis techniques spécialisés pour les projets d'infrastructure, le génie civil et les marchés publics."
+      url: "/fr/travaux-publics/"
+      icon: "building"
+
+# Sección Solución Técnica
+solucion:
+  imagen:
+    src: "/assets/images/professional-civil-engineer-examining-modern-build-480.avif"
+    alt: "Équipe d'ingénieurs analysant des problèmes structurels"
+    badge: "Rapport d'Expertise"
+    caption: "Rapports techniques rigoureux et clairs"
+  contenido:
+    titulo: "La"
+    highlight: "Solution Technique"
+    subtitulo: "qu'il Vous Faut"
+    descripcion: "Chez expert.barcelone, nous combinons l'expérience en génie civil avec la méthodologie de l'expertise pour fournir des rapports précis, impartiaux et techniquement fondés. Notre intervention fournit des arguments clairs pour prendre des décisions, réclamer pour des malfaçons ou définir des solutions de construction sûres."
+    caracteristicas:
+      - icono: "search"
+        titulo: "Nous Clarifions la Cause Racine"
+        descripcion: "Nous identifions avec précision l'origine des fissures, de l'humidité et des défauts de construction par une analyse documentée."
+      - icono: "clipboard-check"
+        titulo: "Nous Déterminons les Responsabilités"
+        descripcion: "Nous définissons objectivement la responsabilité pour chaque malfaçon ou non-conformité technique."
+      - icono: "calculator"
+        titulo: "Nous Évaluons avec Précision"
+        descripcion: "Nous quantifions les dommages et les coûts de réparation avec des critères techniques défendables."
+      - icono: "shield-check"
+        titulo: "Nous Prévenons les Conflits"
+        descripcion: "Nous documentons l'état réel pour éviter les litiges lors de locations, ventes ou réceptions de travaux."
+    cta:
+      texto: "Demander un Conseil Initial"
+      url: "/fr/contact/"
+
+# Sección Proceso
+proceso:
+  titulo: "Notre"
+  highlight: "Processus"
+  descripcion: "Un processus clair et transparent pour vous aider à résoudre votre cas avec le plus grand professionnalisme."
+  pasos:
+    - numero: "01"
+      titulo: "Prise de Contact"
+      descripcion: "Exposez-nous votre cas par téléphone ou par email. Nous réalisons une première analyse sans engagement."
+      icon: "message-circle"
+      tiempoLabel: "Temps estimé"
+      tiempo: "24h"
+    - numero: "02"
+      titulo: "Inspection et Analyse"
+      descripcion: "Nous visitons le site, recueillons les preuves et analysons la documentation technique nécessaire."
+      icon: "inspect-check"
+      tiempoLabel: "Durée"
+      tiempo: "2-3 jours"
+    - numero: "03"
+      titulo: "Rapport d'Expertise"
+      descripcion: "Rédaction de l'avis technique en appliquant la réglementation en vigueur avec rigueur scientifique et clarté."
+      icon: "report-tech"
+      tiempoLabel: "Livraison"
+      tiempo: "5-7 jours"
+    - numero: "04"
+      titulo: "Ratification et Défense"
+      descripcion: "Présentation, clarification et défense du rapport devant les parties ou au tribunal."
+      icon: "shield-court"
+      tiempoLabel: "Durée"
+      tiempo: "Selon la procédure"
+  cta:
+    texto: "Commencez - Évaluez votre cas"
+    url: "/fr/contact/"
+
+# Sección Testimonios
+testimonios:
+  tag: "Cas de Réussite"
+  titulo: "Nos Clients Satisfaits"
+  highlight: "Témoignent de Notre Expérience"
+  descripcion: "Découvrez comment nous avons aidé des propriétaires, des syndics et des entreprises à résoudre leurs cas techniques avec succès."
+  items:
+    - nombre: "Syndic de Copropriété Les Corts"
+      rol: "Président du Syndic"
+      tipo: "empresa"
+      cita: "Le rapport d'expertise a identifié l'origine des infiltrations en toiture et a facilité la prise en charge des réparations nécessaires par le responsable."
+      fecha: "il y a 2 mois"
+      servicioRelacionado: "Rapport d'Expertise de Pathologies"
+      tipoProyecto: "Pathologie de Toiture"
+    - nombre: "CONSTRUCCIONES TÉCNICAS BCN, S.L."
+      rol: "Directeur de Projets"
+      tipo: "empresa"
+      cita: "L'audit technique préventif a permis de corriger les malfaçons avant la livraison de 24 logements, évitant ainsi des réclamations et des surcoûts."
+      fecha: "il y a 1 mois"
+      servicioRelacionado: "Audit Technique de Chantier"
+      tipoProyecto: "Contrôle Qualité"
+    - nombre: "Ana S. García"
+      rol: "Propriétaire Affectée"
+      tipo: "persona"
+      cita: "L'expertise a prouvé l'existence de vices cachés dans le logement, servant de base à la réclamation judiciaire qui nous a permis de réparer les dommages."
+      fecha: "il y a 3 mois"
+      servicioRelacionado: "Expertise Judiciaire"
+      tipoProyecto: "Vices Cachés"
+
+# Sección CTA Contacto
+contactCTA:
+  titulo: "Prêt à Obtenir"
+  highlight: "Clarté et Solutions ?"
+  descripcion: "Contactez notre équipe dès aujourd'hui et obtenez une évaluation initiale de votre cas sans engagement."
+  contactInfo:
+    - titulo: "Appelez-nous"
+      valor: "+34 614 194 985"
+      url: "tel:+34614194985"
+      horario: "Lundi au Vendredi : 9h00 - 19h00"
+      icon: "phone"
+    - titulo: "Écrivez-nous"
+      valor: "info@perito.barcelona"
+      url: "mailto:info@perito.barcelona"
+      horario: "Réponse en moins de 24h"
+      icon: "mail"
+  form:
+    campos:
+      - id: "nombre"
+        label: "Nom complet"
+        tipo: "text"
+      - id: "email"
+        label: "Email"
+        tipo: "email"
+      - id: "telefono"
+        label: "Téléphone"
+        tipo: "tel"
+      - id: "mensaje"
+        label: "Décrivez-nous brièvement votre cas"
+        tipo: "textarea"
+    submitText: "Envoyer la Demande"
+    successMessage: "Données envoyées avec succès !"
+    errorMessage: "Une erreur s'est produite lors de l'envoi des données. Veuillez réessayer plus tard."
+    endpoint: "https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma"
+---

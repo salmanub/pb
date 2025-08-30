@@ -9,6 +9,8 @@ translations:
     permalink: /
   - lang: ca
     permalink: /ca/
+  - lang: fr
+    permalink: /fr/
 eleventyNavigation:
   key: "Home"
   title: "Home"

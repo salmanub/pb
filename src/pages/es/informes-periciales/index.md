@@ -6,7 +6,6 @@ title: "Informes Periciales en Barcelona | Peritos Judiciales Expertos"
 description: "Elaboramos informes periciales técnicos, de parte y judiciales en Barcelona. Nuestros dictámenes sobre patologías, vicios ocultos y disputas de obra son la prueba clave para su reclamación."
 permalink: "/informes-periciales/"
 lang: "es"
-
 translations:
   - lang: ca
     permalink: /ca/informes-pericials/
@@ -16,6 +15,10 @@ translations:
     permalink: /en/expert-witness-reports/
     title: "Expert Witness Reports in Barcelona | Expert Judicial Engineers"
     description: "We produce technical, party-appointed, and judicial expert reports in Barcelona. Our findings on pathologies, hidden defects, and construction disputes are the key evidence for your claim."
+  - lang: fr
+    permalink: /fr/rapports-expertise/
+    title: "Rapports d'Expertise à Barcelone | Experts Judiciaires"
+    description: "Nous rédigeons des rapports d'expertise technique, de partie et judiciaires à Barcelone. Nos conclusions sur les pathologies, les vices cachés et les litiges de construction sont la preuve clé pour votre réclamation."
 
 eleventyNavigation:
   key: "Informes Periciales"

@@ -9,6 +9,8 @@ translations:
     permalink: "/ca/"
   - lang: "en"
     permalink: "/en/"
+  - lang: "fr"
+    permalink: "/fr/"
 eleventyNavigation:
   key: "Inicio"
   title: "Inicio"

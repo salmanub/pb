@@ -10,6 +10,8 @@ translations:
     permalink: /ca/avis-legal/
   - lang: en
     permalink: /en/legal-notice/
+  - lang: fr
+    permalink: /fr/mentions-legales/
 
 # --- Textos para el encabezado de la página ---
 hero:
