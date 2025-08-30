@@ -14,6 +14,10 @@ translations:
     permalink: /en/construction-audits/
     title: "Construction Audits in Barcelona | Cost & Quality Control"
     description: "We perform construction audits to resolve certification disputes, control cost overruns, and ensure quality. Get an expert report to protect your investment."
+  - lang: fr
+    permalink: /fr/audits-de-chantier/
+    title: "Audits de Chantier à Barcelone | Contrôle des Coûts et de la Qualité"
+    description: "Nous réalisons des audits de chantier pour résoudre les litiges sur les certifications, contrôler les dépassements de coûts et garantir la qualité. Obtenez un rapport d'expertise pour protéger votre investissement."
 
 eleventyNavigation:
   key: "Auditories d'Obra"

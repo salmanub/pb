@@ -16,6 +16,10 @@ translations:
     permalink: /ca/assessorament-estructural/
     title: "Assessorament Estructural a Barcelona | Edificació i Obra Civil"
     description: "Assessorament expert en reparació i reforç d'estructures per a edificació i infraestructures (ponts, murs). Diagnostiquem patologies i projectem solucions tècniques."
+  - lang: fr
+    permalink: /fr/conseil-structurel/
+    title: "Conseil en Structure à Barcelone | Bâtiment et Génie Civil"
+    description: "Conseil expert en réparation et renforcement de structures pour le bâtiment et les infrastructures (ponts, murs). Nous diagnostiquons les pathologies et concevons des solutions techniques."
 
 eleventyNavigation:
   key: "Structural Consulting"
