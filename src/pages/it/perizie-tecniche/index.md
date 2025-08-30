@@ -38,7 +38,7 @@ hero:
   subtitle: "Pareri oggettivi su patologie, difetti di costruzione e controversie edili"
   description: "In qualità di periti ingegneri abilitati, elaboriamo perizie con il massimo rigore tecnico affinché disponiate di una prova solida, chiara e difendibile. Il nostro obiettivo è tradurre la complessità tecnica in argomenti inconfutabili per proteggere i vostri interessi."
   intro: "Una perizia ben motivata è lo strumento essenziale per negoziare con sicurezza, risolvere conflitti e, se necessario, ottenere una sentenza favorevole in un procedimento giudiziario."
-  image: "src/assets/images/informe-pericial-patologias-barcellona.jpg"
+  image: "src/assets/images/informe-pericial-patologias-barcelona.jpg"
 
 # Sección "Qué es un Informe Pericial"
 sections:
