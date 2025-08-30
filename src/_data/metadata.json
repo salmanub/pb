@@ -1420,5 +1420,47 @@
         "note": "* Visite solo su appuntamento"
       }
     }
+  },
+  "collaboration": {
+    "es": {
+      "ctaTitle": "¿Necesita soporte técnico para su caso?",
+      "ctaDescription": "Contacte con nosotros para una evaluación preliminar gratuita de la viabilidad técnica.",
+      "ctaButton1": "Solicitar Consulta",
+      "ctaButton2": "Agendar Llamada",
+      "ctaContactUrl": "/contacto/",
+      "ctaScheduleUrl": "/contacto/"
+    },
+    "en": {
+      "ctaTitle": "Need technical support for your case?",
+      "ctaDescription": "Contact us for a free preliminary assessment of technical feasibility.",
+      "ctaButton1": "Request Consultation",
+      "ctaButton2": "Schedule a Call",
+      "ctaContactUrl": "/en/contact/",
+      "ctaScheduleUrl": "/en/contact/"
+    },
+    "ca": {
+      "ctaTitle": "Necessita suport tècnic pel seu cas?",
+      "ctaDescription": "Contacti amb nosaltres per a una avaluació preliminar gratuïta de la viabilitat tècnica.",
+      "ctaButton1": "Sol·licitar Consulta",
+      "ctaButton2": "Programar Trucada",
+      "ctaContactUrl": "/ca/contacte/",
+      "ctaScheduleUrl": "/ca/contacte/"
+    },
+    "fr": {
+      "ctaTitle": "Besoin d'un support technique pour votre affaire ?",
+      "ctaDescription": "Contactez-nous pour une évaluation préliminaire gratuite de la faisabilité technique.",
+      "ctaButton1": "Demander une Consultation",
+      "ctaButton2": "Planifier un Appel",
+      "ctaContactUrl": "/fr/contact/",
+      "ctaScheduleUrl": "/fr/contact/"
+    },
+    "it": {
+      "ctaTitle": "Hai bisogno di supporto tecnico per il tuo caso?",
+      "ctaDescription": "Contattaci per una valutazione preliminare gratuita della fattibilità tecnica.",
+      "ctaButton1": "Richiedi Consulenza",
+      "ctaButton2": "Programma una Chiamata",
+      "ctaContactUrl": "/it/contatti/",
+      "ctaScheduleUrl": "/it/contatti/"
+    }
   }
 }
