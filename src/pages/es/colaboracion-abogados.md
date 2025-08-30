@@ -12,6 +12,8 @@ translations:
     permalink: "/en/lawyer-collaboration/"
   - lang: "fr"
     permalink: "/fr/collaboration-avocats/"
+  - lang: "it"
+    permalink: "/it/collaborazione-avvocati/"
 eleventyNavigation:
   key: "Colaboración con Abogados"
   title: "Área para Abogados"
