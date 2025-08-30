@@ -12,6 +12,8 @@ translations:
     permalink: /ca/avis-legal/
   - lang: fr
     permalink: /fr/mentions-legales/
+  - lang: it
+    permalink: /it/note-legali/
 
 # --- Textos para el encabezado de la página ---
 hero:

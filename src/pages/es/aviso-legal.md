@@ -12,6 +12,8 @@ translations:
     permalink: /en/legal-notice/
   - lang: fr
     permalink: /fr/mentions-legales/
+  - lang: it
+    permalink: /it/note-legali/
 
 # --- Textos para el encabezado de la página ---
 hero:

@@ -8,7 +8,7 @@
     "revisandoContenidos": false
   },
   "default_lang": "es",
-  "languages": ["es", "en", "ca", "fr"],
+  "languages": ["es", "en", "ca", "fr", "it"],
   "author": {
     "name": "Perito Barcelona",
     "email": "info@perito.barcelona"
@@ -37,6 +37,12 @@
       "linkAbogados": "/fr/collaboration-avocats/",
       "ctaPresupuesto": "Demander un Devis",
       "linkPresupuesto": "/fr/contact/"
+    },
+    "it": {
+      "ctaAbogados": "Area Avvocati",
+      "linkAbogados": "/it/collaborazione-avvocati/",
+      "ctaPresupuesto": "Richiedi Preventivo",
+      "linkPresupuesto": "/it/contatti/"
     }
   },
   "hero": {
@@ -63,6 +69,12 @@
         "QUI RÉSOLVENT LES CONFLITS",
         "QUI FONT LA DIFFÉRENCE",
         "QUI FONT GAGNER DES AFFAIRES"
+      ],
+      "it": [
+        "CON RIGORE TECNICO",
+        "CHE RISOLVONO CONTROVERSIE",
+        "CHE FANNO LA DIFFERENZA",
+        "CHE VINCONO LE CAUSE"
       ]
     }
   },
@@ -83,7 +95,8 @@
       "es": "Hablar con un perito",
       "en": "Talk to an expert",
       "ca": "Parlar amb un pèrit",
-      "fr": "Parler à un expert"
+      "fr": "Parler à un expert",
+      "it": "Parla con un perito"
     }
   },
   "serviceChild": {
@@ -142,6 +155,20 @@
       "listoSolucion": "Prêt à obtenir une solution technique ?",
       "noDejeProblema": "Ne laissez pas le problème s'aggraver. Contactez-nous pour une analyse professionnelle et protégez votre propriété.",
       "contactarAhora": "Contacter Maintenant"
+    },
+    "it": {
+      "sufresProblema": "Affronti questo problema?",
+      "contacteAnalisis": "Contattaci ora per un'analisi preliminare gratuita del tuo caso.",
+      "solicitarAnalisis": "Richiedi Analisi del Caso",
+      "mailTo": "/it/contatti/",
+      "llamarAhora": "Chiama ora",
+      "parteServicios": "Parte dei Nostri Servizi di",
+      "problemaEspecifico": "Questo è uno dei problemi specifici che risolviamo. Vedi tutti i nostri servizi correlati.",
+      "verTodos": "Vedi tutti i",
+      "casosExito": "Casi di successo correlati",
+      "listoSolucion": "Pronto a ottenere una soluzione tecnica?",
+      "noDejeProblema": "Non lasciare che il problema si aggravi. Contattaci per un'analisi professionale e per proteggere la tua proprietà.",
+      "contactarAhora": "Contatta Ora"
     }
   },
   "services": [
@@ -238,6 +265,16 @@
       "btn2": {
         "title": "DEMANDER UN DEVIS",
         "link": "/fr/contact/"
+      }
+    },
+    "it": {
+      "btn1": {
+        "title": "CHIAMA ORA",
+        "link": "tel:+34932123456"
+      },
+      "btn2": {
+        "title": "RICHIEDI PREVENTIVO",
+        "link": "/it/contatti/"
       }
     }
   },
@@ -533,6 +570,79 @@
           }
         ]
       }
+    },
+    "it": {
+      "brand": {
+        "description": "Studio di periti ingegneri abilitati a Barcellona, specializzati in relazioni tecniche, audit di cantiere e consulenza strutturale per edilizia e opere civili.",
+        "social": [
+          {
+            "url": "https://www.linkedin.com/company/peritobarcelona",
+            "label": "LinkedIn",
+            "icon": "linkedin"
+          }
+        ]
+      },
+      "services": {
+        "title": "I Nostri Servizi",
+        "items": [
+          {
+            "title": "Perizie Tecniche",
+            "url": "/it/perizie-tecniche/"
+          },
+          {
+            "title": "Consulenza Strutturale",
+            "url": "/it/consulenza-strutturale/"
+          },
+          {
+            "title": "Audit di Cantiere",
+            "url": "/it/audit-di-cantiere/"
+          },
+          {
+            "title": "Perizie per Opere Pubbliche",
+            "url": "/it/opere-pubbliche/"
+          }
+        ]
+      },
+      "contact": {
+        "title": "Contatti",
+        "items": [
+          {
+            "label": "Telefono",
+            "value": "+34 614 194 985",
+            "url": "tel:+34614194985",
+            "icon": "phone"
+          },
+          {
+            "label": "Email",
+            "value": "info@perito.barcelona",
+            "url": "mailto:info@perito.barcelona",
+            "icon": "mail"
+          }
+        ]
+      },
+      "location": {
+        "title": "Sede",
+        "offices": [
+          {
+            "city": "Barcellona",
+            "address": "Carrer Numància, 95, Locale 5, Distretto di Les Corts",
+            "transport": "Metro L5 Entença"
+          }
+        ]
+      },
+      "bottom": {
+        "copyright": "© 2025 Perito.Barcelona | Tutti i diritti riservati",
+        "links": [
+          {
+            "text": "Informativa sulla Privacy",
+            "url": "/it/privacy/"
+          },
+          {
+            "text": "Note Legali",
+            "url": "/it/note-legali/"
+          }
+        ]
+      }
     }
   },
   "notificaciones": {
@@ -552,6 +662,10 @@
       "fr": {
         "titulo": "🔄 Mise à jour des contenus",
         "mensaje": "Nous améliorons les informations de notre site web. Veuillez nous excuser pour la gêne occasionnée."
+      },
+      "it": {
+        "titulo": "🔄 Aggiornamento contenuti",
+        "mensaje": "Stiamo migliorando le informazioni del nostro sito web. Ci scusiamo per il disagio."
       }
     }
   },
@@ -686,6 +800,39 @@
         },
         { "name": "mensaje", "label": "Comment pouvons-nous vous aider ?", "helpText": "Donnez-nous les détails pertinents de votre situation.", "type": "textarea", "placeholder": "Décrivez brièvement votre cas ou votre demande", "required": true },
         { "name": "privacidad", "label": "Dernière étape", "helpText": "Pour traiter votre demande, nous avons besoin que vous acceptiez notre politique de confidentialité.", "type": "checkbox", "text": "J'ai lu et j'accepte la <a href='/fr/confidentialite/' class='text-cyan-600 hover:underline font-medium'>Politique de Confidentialité</a>.", "required": true }
+      ]
+    },
+    "it": {
+      "formTitle": "Consulenza Online Dettagliata",
+      "formSubtitle": "Compila i passaggi per darci maggiori informazioni sul tuo caso.",
+      "finalCtaTitle": "Preferisci parlare direttamente?",
+      "finalCtaSubtitle": "Chiamaci ora e ti assisteremo personalmente per risolvere i tuoi dubbi.",
+      "finalCtaButton": "Chiama il",
+      "buttons": { "start": "Inizia", "next": "Continua", "prev": "Indietro", "submit": "Invia Richiesta", "home": "Torna alla home", "retry": "Riprova" },
+      "messages": {
+        "loading": { "title": "Invio della tua richiesta...", "subtitle": "Per favore, attendi un momento." },
+        "success": { "title": "Richiesta ricevuta!", "subtitle": "Grazie, abbiamo ricevuto il tuo messaggio. Ti contatteremo in meno di 24 ore lavorative." },
+        "error": { "title": "Errore di invio", "subtitle": "Si è verificato un errore. Per favore, riprova o contattaci telefonicamente." }
+      },
+      "steps": [
+        { "name": "nombre", "label": "Qual è il tuo nome?", "helpText": "Ci aiuta a personalizzare la nostra comunicazione con te.", "type": "text", "placeholder": "Scrivi il tuo nome completo", "required": true },
+        { "name": "email", "label": "Qual è la tua email?", "helpText": "Ti contatteremo via email in meno di 24 ore lavorative.", "type": "email", "placeholder": "tua@email.com", "required": true },
+        { "name": "telefono", "label": "Il tuo numero di telefono?", "helpText": "Solo se preferisci che ti chiamiamo.", "type": "tel", "placeholder": "Il tuo telefono (opzionale)", "required": false },
+        {
+          "name": "area-interes",
+          "label": "Riguardo a quale area è la tua richiesta?",
+          "helpText": "Seleziona il servizio che meglio si adatta alle tue necessità.",
+          "type": "select",
+          "required": true,
+          "options": [
+            { "key": "informes_periciales", "label": "Perizie Tecniche (crepe, vizi occulti, ecc.)" },
+            { "key": "asesoramiento_estructural", "label": "Consulenza Strutturale (riparazione, rinforzo)" },
+            { "key": "auditorias_obra", "label": "Audit di Cantiere (certificazioni, qualità)" },
+            { "key": "otra_consulta", "label": "Altra richiesta" }
+          ]
+        },
+        { "name": "mensaje", "label": "Come possiamo aiutarti?", "helpText": "Raccontaci i dettagli rilevanti della tua situazione.", "type": "textarea", "placeholder": "Descrivi brevemente il tuo caso o la tua richiesta", "required": true },
+        { "name": "privacidad", "label": "Ultimo passo", "helpText": "Per poter elaborare la tua richiesta, abbiamo bisogno che tu accetti la nostra informativa sulla privacy.", "type": "checkbox", "text": "Ho letto e accetto l'<a href='/it/privacy/' class='text-cyan-600 hover:underline font-medium'>Informativa sulla Privacy</a>.", "required": true }
       ]
     }
   },
@@ -953,6 +1100,72 @@
           "subtitle": "Une erreur s'est produite. Veuillez réessayer ou nous appeler directement."
         }
       }
+    },
+    "it": {
+      "formTitle": "Contatto Rapido",
+      "formSubtitle": "Compila il modulo e ti contatteremo.",
+      "questions": {
+        "tipoContacto": {
+          "title": "Ci contatti come privato o azienda?",
+          "number": "Domanda 1 di 7",
+          "options": [
+            {"value": "particular", "label": "Come privato"},
+            {"value": "empresa", "label": "A nome di un'azienda"}
+          ]
+        },
+        "nombreEmpresa": {
+          "title": "Qual è il nome dell'azienda?",
+          "number": "Domanda 2 di 7"
+        },
+        "nombre": {
+          "title": "Qual è il tuo nome?",
+          "number": "Domanda 3 di 7"
+        },
+        "email": {
+          "title": "Qual è la tua email?",
+          "number": "Domanda 4 di 7"
+        },
+        "telefono": {
+          "title": "E il tuo numero di telefono?",
+          "number": "Domanda 5 di 7"
+        },
+        "areaInteres": {
+          "title": "Riguardo a quale area è la tua richiesta?",
+          "number": "Domanda 6 di 7",
+          "options": [
+            {"value": "informes_periciales", "label": "Perizie Tecniche (crepe, vizi occulti, ecc.)"},
+            {"value": "asesoramiento_estructural", "label": "Consulenza Strutturale (riparazione, rinforzo)"},
+            {"value": "auditorias_obra", "label": "Audit di Cantiere (certificazioni, qualità)"},
+            {"value": "otra_consulta", "label": "Altra richiesta"}
+          ]
+        },
+        "mensaje": {
+          "title": "Come possiamo aiutarti?",
+          "number": "Domanda 7 di 7"
+        }
+      },
+      "helpText": {
+        "nombre": "Ci aiuterà a rivolgerci a te correttamente",
+        "email": "Risponderemo in meno di 24 ore lavorative",
+        "telefono": "Solo se preferisci che ti chiamiamo",
+        "mensaje": "Dicci brevemente come possiamo aiutarti"
+      },
+      "privacyText": "Ho letto e accetto l'<a href='/it/privacy/' class='text-cyan-600 hover:underline font-medium'>Informativa sulla Privacy</a>.",
+      "privacyError": "Per favore, accetta la nostra informativa sulla privacy prima di continuare",
+      "messages": {
+        "loading": {
+          "title": "Invio del tuo messaggio...",
+          "subtitle": "Per favore, attendi un momento"
+        },
+        "success": {
+          "title": "Messaggio ricevuto!",
+          "subtitle": "Grazie per averci contattato. Risponderemo in meno di 24 ore lavorative."
+        },
+        "error": {
+          "title": "Errore di invio",
+          "subtitle": "Si è verificato un errore. Per favore, riprova o chiamaci direttamente."
+        }
+      }
     }
   },
   "error404": {
@@ -995,6 +1208,16 @@
       "contactButton": "Nous Contacter",
       "servicesPath": "rapports-expertise/",
       "contactPath": "contact/"
+    },
+    "it": {
+      "title": "Pagina non trovata",
+      "description": "Spiacenti, la pagina che stai cercando non esiste o è stata spostata. Il link potrebbe essere rotto o l'URL potrebbe essere stato digitato in modo errato.",
+      "suggestions": "Ti suggeriamo di tornare alla home page o di visitare una delle nostre sezioni principali:",
+      "homeButton": "Vai alla Home Page",
+      "servicesButton": "Vedi Perizie Tecniche",
+      "contactButton": "Contattaci",
+      "servicesPath": "perizie-tecniche/",
+      "contactPath": "contatti/"
     }
   },
   "ctaContact": {
@@ -1081,6 +1304,27 @@
           "horario": "Nous répondons en 24h ouvrables"
         }
       ]
+    },
+    "it": {
+      "form": {
+        "submitText": "Invia Richiesta"
+      },
+      "contactInfo": [
+        {
+          "titulo": "Telefono",
+          "valor": "+34 614 194 985",
+          "url": "tel:+34614194985",
+          "icon": "phone",
+          "horario": "Lunedì a Venerdì 9:00-18:00h"
+        },
+        {
+          "titulo": "Email",
+          "valor": "info@perito.barcelona",
+          "url": "mailto:info@perito.barcelona",
+          "icon": "mail",
+          "horario": "Rispondiamo in 24 ore lavorative"
+        }
+      ]
     }
   },
   "servicePillar": {
@@ -1119,6 +1363,15 @@
       "expertsTitle": "Experts en",
       "expertsStrong": "Expertises",
       "successCasesTitle": "Cas de Réussite Pertinents"
+    },
+    "it": {
+      "processTitle": "Il Nostro Processo",
+      "processStrong": "Processo",
+      "processDescription": "Un metodo chiaro e trasparente per risolvere il tuo caso",
+      "whyChooseUs": "Perché Sceglierci?",
+      "expertsTitle": "Esperti in",
+      "expertsStrong": "Perizie",
+      "successCasesTitle": "Casi di Successo Rilevanti"
     }
   },
   "contactLocation": {
@@ -1156,6 +1409,15 @@
         "title": "Horaires",
         "hours": "Lundi à Vendredi 9:00-18:00h",
         "note": "* Visites sur rendez-vous uniquement"
+      }
+    },
+    "it": {
+      "title": "Dove siamo",
+      "officeTitle": "Il nostro ufficio",
+      "schedule": {
+        "title": "Orari",
+        "hours": "Lunedì a Venerdì 9:00-18:00h",
+        "note": "* Visite solo su appuntamento"
       }
     }
   }

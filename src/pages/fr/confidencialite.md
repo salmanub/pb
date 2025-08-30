@@ -11,6 +11,8 @@ translations:
     permalink: "/ca/privacitat/"
   - lang: "en"
     permalink: "/en/privacy/"
+  - lang: "it"
+    permalink: "/it/privacy/"
 # --- INICIO DE LA MODIFICACIÓN ---
 # Esta clave le dirá a nuestra plantilla que no indexe esta página.
 seo: noindex

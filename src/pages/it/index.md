@@ -1,0 +1,242 @@
+---
+layout: "layouts/index.njk"
+title: "Perito Barcellona | Studio di Periti Ingegneri Abilitati"
+description: "Siamo uno studio di periti ingegneri abilitati a Barcellona, specializzati nell'elaborazione di perizie tecniche, audit di cantiere e consulenza strutturale."
+permalink: "/it/"
+lang: "it"
+translations:
+  - lang: "es"
+    permalink: "/"
+  - lang: "ca"
+    permalink: "/ca/"
+  - lang: "en"
+    permalink: "/en/"
+  - lang: "fr"
+    permalink: "/fr/"
+eleventyNavigation:
+  key: "Home"
+  title: "Home"
+  notshow: false
+  order: 1
+  icon: <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+
+# Hero Section
+hero:
+  tag: "Periti Ingegneri Abilitati a Barcellona"
+  title: "Perizie Tecniche"
+  strong: "per Difendere i Vostri Interessi"
+  subtitle: "Specialisti in Perizie, Audit di Cantiere e Consulenza Strutturale"
+  description: "Elaboriamo perizie tecniche indipendenti per risolvere controversie, verificare la qualità dei progetti e diagnosticare la sicurezza delle strutture con il massimo rigore."
+  image:
+    path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
+    alt: "Perito ingegnere che ispeziona una struttura in cemento armato"
+    badge: "Perito Ingegnere"
+    caption: "Perizie tecniche con rigore e chiarezza"
+  rotatingTexts:
+    default: "con rigore tecnico"
+    items:
+      - "con rigore tecnico"
+      - "che risolvono controversie edili"
+      - "con validità legale garantita"
+      - "per garantire la qualità del vostro progetto"
+      - "con diagnosi strutturali precise"
+  cta:
+    primary: "Valuta il Tuo Caso"
+    primaryUrl: "/it/contatti/"
+    secondary: "Chiama ora"
+    secondaryUrl: "tel:+34614194985"
+    descubreMas: "Scopri di Più"
+  badges:
+    - value: "+15"
+      text: "Anni di Esperienza"
+      subtext: "Nel settore"
+    - value: "97%"
+      text: "Perizie Asseverate"
+      subtext: "In procedimenti giudiziari"
+  logosText: "Le nostre perizie sono accettate dai principali tribunali ed enti assicurativi."
+
+# Servicios Destacados
+highlightedServices:
+  titulo: "I Nostri"
+  highlight: "Servizi Specializzati"
+  descripcion: "Offriamo soluzioni tecniche progettate per portare chiarezza, sicurezza e risolvere conflitti in qualsiasi fase di un progetto di costruzione."
+  cta: "Scopri di più"
+  items:
+    - titulo: "Perizie Tecniche"
+      descripcion: "Elaboriamo perizie (di parte e d'ufficio) per analizzare patologie, vizi occulti e ogni tipo di difetto di costruzione."
+      url: "/it/perizie-tecniche/"
+      icon: "scale"
+      cta: "Vedi di più"
+    - titulo: "Audit di Cantiere"
+      descripcion: "Eseguiamo controlli di qualità, supervisione dell'esecuzione e mediazione tecnica in controversie su certificazioni e pagamenti."
+      url: "/it/audit-di-cantiere/"
+      icon: "clipboard-list"
+      cta: "Vedi di più"
+    - titulo: "Consulenza Strutturale"
+      descripcion: "Emettiamo diagnosi esperte di patologie strutturali e offriamo consulenza sulle migliori soluzioni di rinforzo."
+      url: "/it/consulenza-strutturale/"
+      icon: "tool"
+      cta: "Vedi di più"
+
+# Sección "En qué podemos ayudarte" (CORREGIDA)
+ayuda:
+  encabezado:
+    title: "Come Possiamo"
+    highlight: "Aiutarti"
+    subtitle: "Affrontiamo i problemi tecnici più comuni nell'edilizia e nelle opere civili per offrirti una soluzione chiara e documentata."
+  introduccion:
+    title: "Alcuni dei problemi che risolviamo più frequentemente:"
+  cta: "Scopri di più"
+  problemas:
+    - title: "Crepe e Patologie Strutturali"
+      description: "Analisi e diagnosi di patologie strutturali, rilevamento di fessurazioni e raccomandazioni per la riparazione."
+      url: "/it/perizie-tecniche/patologie-strutturali/"
+      icon: "alert-triangle"
+    - title: "Umidità e Infiltrazioni Persistenti"
+      description: "Rilevamento dell'origine, relazioni tecniche e soluzioni per problemi di umidità negli edifici."
+      url: "/it/perizie-tecniche/umidita-infiltrazioni/"
+      icon: "droplet"
+    - title: "Controversie su Certificazioni e Pagamenti"
+      description: "Audit tecnico per conflitti derivanti da certificazioni, misurazioni e adempimento contrattuale."
+      url: "/it/audit-di-cantiere/controversie-certificazioni-pagamenti/"
+      icon: "file-text"
+    - title: "Vizi Occulti in Compravendite o Post-lavori"
+      description: "Identificazione e documentazione di difetti non visibili dopo la consegna o l'acquisto di un immobile."
+      url: "/it/perizie-tecniche/vizi-occulti/"
+      icon: "search"
+    - title: "Vizi e Difetti di Costruzione"
+      description: "Valutazione peritale dei danni causati da carenze esecutive e proposte di risanamento."
+      url: "/it/perizie-tecniche/vizi-difetti-costruzione/"
+      icon: "alert-circle"
+    - title: "Perizie per Opere Pubbliche"
+      description: "Pareri tecnici specializzati per progetti di infrastrutture, opere civili e appalti pubblici."
+      url: "/it/opere-pubbliche/"
+      icon: "building"
+
+# Sección Solución Técnica
+solucion:
+  imagen:
+    src: "/assets/images/professional-civil-engineer-examining-modern-build-480.avif"
+    alt: "Team di ingegneri che analizza problemi strutturali"
+    badge: "Perizia Tecnica"
+    caption: "Perizie tecniche con rigore e chiarezza"
+  contenido:
+    titulo: "La"
+    highlight: "Soluzione Tecnica"
+    subtitulo: "di cui Hai Bisogno"
+    descripcion: "In perito.barcelona combiniamo l'esperienza in ingegneria civile con la metodologia peritale per fornire relazioni precise, imparziali e tecnicamente solide. Il nostro intervento fornisce argomenti chiari per prendere decisioni, contestare difetti o definire soluzioni costruttive sicure."
+    caracteristicas:
+      - icono: "search"
+        titulo: "Chiaramo la Causa Radice"
+        descripcion: "Identifichiamo con precisione l'origine di crepe, umidità e difetti di costruzione attraverso analisi documentate."
+      - icono: "clipboard-check"
+        titulo: "Determiniamo le Responsabilità"
+        descripcion: "Definiamo con oggettività la responsabilità di ogni difetto o inadempienza tecnica."
+      - icono: "calculator"
+        titulo: "Valutiamo con Precisione"
+        descripcion: "Quantifichiamo i danni e i costi di riparazione con criteri tecnici difendibili."
+      - icono: "shield-check"
+        titulo: "Preveniamo i Conflitti"
+        descripcion: "Documentiamo lo stato reale per evitare controversie in affitti, compravendite o collaudi."
+    cta:
+      texto: "Richiedi una Consulenza Iniziale"
+      url: "/it/contatti/"
+
+# Sección Proceso
+proceso:
+  titulo: "Il Nostro"
+  highlight: "Processo"
+  descripcion: "Un processo chiaro e trasparente per aiutarti a risolvere il tuo caso con la massima professionalità."
+  pasos:
+    - numero: "01"
+      titulo: "Contatto Iniziale"
+      descripcion: "Raccontaci il tuo caso per telefono o email. Eseguiamo un'analisi preliminare senza impegno."
+      icon: "message-circle"
+      tiempoLabel: "Tempo stimato"
+      tiempo: "24h"
+    - numero: "02"
+      titulo: "Ispezione e Analisi"
+      descripcion: "Visitiamo il luogo, raccogliamo le prove e analizziamo la documentazione tecnica necessaria."
+      icon: "inspect-check"
+      tiempoLabel: "Durata"
+      tiempo: "2-3 giorni"
+    - numero: "03"
+      titulo: "Relazione Peritale"
+      descripcion: "Redazione del parere tecnico applicando la normativa vigente con rigore scientifico e chiarezza."
+      icon: "report-tech"
+      tiempoLabel: "Consegna"
+      tiempo: "5-7 giorni"
+    - numero: "04"
+      titulo: "Asseverazione e Difesa"
+      descripcion: "Presentazione, chiarimento e difesa della perizia di fronte alle parti o in sede giudiziaria."
+      icon: "shield-court"
+      tiempoLabel: "Durata"
+      tiempo: "Secondo la procedura"
+  cta:
+    texto: "Inizia Ora - Valuta il tuo caso"
+    url: "/it/contatti/"
+
+# Sección Testimonios
+testimonios:
+  tag: "Casi di Successo"
+  titulo: "Clienti Soddisfatti"
+  highlight: "Confermano la Nostra Esperienza"
+  descripcion: "Scopri come abbiamo aiutato proprietari, condomini e aziende a risolvere i loro casi tecnici con successo."
+  items:
+    - nombre: "Condominio Les Corts"
+      rol: "Amministratore di Condominio"
+      tipo: "empresa"
+      cita: "La perizia ha identificato l'origine delle infiltrazioni dal tetto e ha facilitato l'assunzione delle riparazioni necessarie da parte del responsabile."
+      fecha: "2 mesi fa"
+      servicioRelacionado: "Perizia di Patologie Edilizie"
+      tipoProyecto: "Patologia del Tetto"
+    - nombre: "COSTRUZIONI TECNICHE BCN, S.L."
+      rol: "Direttore dei Progetti"
+      tipo: "empresa"
+      cita: "L'audit tecnico preventivo ha permesso di correggere le carenze prima della consegna di 24 unità abitative, evitando reclami e costi aggiuntivi."
+      fecha: "1 mese fa"
+      servicioRelacionado: "Audit Tecnico di Cantiere"
+      tipoProyecto: "Controllo Qualità"
+    - nombre: "Ana S. García"
+      rol: "Proprietaria Danneggiata"
+      tipo: "persona"
+      cita: "La perizia ha accertato la presenza di vizi occulti nell'abitazione, costituendo la base per l'azione legale che ci ha permesso di riparare i danni."
+      fecha: "3 mesi fa"
+      servicioRelacionado: "Perizia Giudiziaria"
+      tipoProyecto: "Vizi Occulti"
+
+# Sección CTA Contacto
+contactCTA:
+  titulo: "Pronto a Ottenere"
+  highlight: "Chiarezza e Soluzioni"
+  descripcion: "Contatta il nostro team oggi stesso e ottieni una valutazione iniziale del tuo caso senza impegno."
+  contactInfo:
+    - titulo: "Chiamaci ora"
+      valor: "+34 614 194 985"
+      url: "tel:+34614194985"
+      horario: "Lunedì - Venerdì: 9:00 - 19:00"
+      icon: "phone"
+    - titulo: "Scrivici"
+      valor: "info@perito.barcelona"
+      url: "mailto:info@perito.barcelona"
+      horario: "Rispondiamo in meno di 24h"
+      icon: "mail"
+  form:
+    campos:
+      - id: "nombre"
+        label: "Nome completo"
+        tipo: "text"
+      - id: "email"
+        label: "Email"
+        tipo: "email"
+      - id: "telefono"
+        label: "Telefono"
+        tipo: "tel"
+      - id: "mensaje"
+        label: "Descrivici brevemente il tuo caso"
+        tipo: "textarea"
+    submitText: "Invia Richiesta"
+    successMessage: "Dati inviati correttamente!"
+    errorMessage: "Si è verificato un errore durante l'invio dei dati. Per favore, riprova più tardi."
+    endpoint: "https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma"
+---

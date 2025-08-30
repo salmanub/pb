@@ -12,6 +12,8 @@ translations:
     permalink: /ca/privacitat/
   - lang: "fr"
     permalink: "/fr/confidentialite/"
+  - lang: "it"
+    permalink: "/it/privacy/"
 
 # --- Textos para el encabezado de la página ---
 hero:
