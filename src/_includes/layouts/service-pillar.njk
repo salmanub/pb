@@ -2,6 +2,30 @@
 
 {% block content %}
 <main itemscope itemtype="https://schema.org/Article">
+    <!-- Schema mejorado para Article -->
+    <div hidden>
+        <meta itemprop="datePublished" content="{{ page.date | date('YYYY-MM-DD') }}">
+        <meta itemprop="dateModified" content="{{ page.inputPath | lastModifiedDate('YYYY-MM-DD') }}">
+        <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}{{ page.url }}">
+        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="{{ metadata.site.title }}">
+            <meta itemprop="url" content="{{ metadata.site.url }}">
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                <meta itemprop="url" content="{{ metadata.site.url }}/assets/images/logos/logo.png">
+                <meta itemprop="width" content="600">
+                <meta itemprop="height" content="60">
+            </div>
+        </div>
+        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <meta itemprop="name" content="{{ metadata.author.name }}">
+            <meta itemprop="url" content="{{ metadata.author.linkedin }}">
+        </div>
+        <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ metadata.site.url }}/assets/images/{{ hero.image }}">
+            <meta itemprop="width" content="1200">
+            <meta itemprop="height" content="630">
+        </div>
+    </div>
     <!-- Hero Section mejorado -->
     <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] min-h-[calc(100vh-70px)] sm:min-h-0 bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] text-white overflow-hidden isolate">
         <!-- Efectos decorativos modernos -->
@@ -32,6 +56,9 @@
                             <div class="text-lg text-white/80 tracking-wide" itemprop="articleBody">
                                 {{ hero.intro }}
                             </div>
+                        </div>
+                        <div hidden>
+                            <span itemprop="keywords">{{ hero.title }}, {{ hero.strong }}, {{ hero.subtitle }}</span>
                         </div>
                     </div>
                 </div>

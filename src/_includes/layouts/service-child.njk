@@ -2,6 +2,38 @@
 
 {% block content %}
 <main itemscope itemtype="https://schema.org/Article">
+    <!-- Schema mejorado para Article -->
+    <div hidden>
+        <meta itemprop="datePublished" content="{{ page.date | date('YYYY-MM-DD') }}">
+        <meta itemprop="dateModified" content="{{ page.inputPath | lastModifiedDate('YYYY-MM-DD') }}">
+        <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}{{ page.url }}">
+        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="{{ metadata.site.title }}">
+            <meta itemprop="url" content="{{ metadata.site.url }}">
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                <meta itemprop="url" content="{{ metadata.site.url }}/assets/images/logos/logo.png">
+                <meta itemprop="width" content="600">
+                <meta itemprop="height" content="60">
+            </div>
+        </div>
+        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <meta itemprop="name" content="{{ metadata.author.name }}">
+            <meta itemprop="url" content="{{ metadata.author.linkedin }}">
+        </div>
+        {% if hero and hero.image %}
+        <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ metadata.site.url }}/assets/images/{{ hero.image }}">
+            <meta itemprop="width" content="1200">
+            <meta itemprop="height" content="630">
+        </div>
+        {% endif %}
+        {% if parentService %}
+        <div itemprop="isPartOf" itemscope itemtype="https://schema.org/WebPage">
+            <meta itemprop="url" content="{{ metadata.site.url }}{{ parentService.url }}">
+            <meta itemprop="name" content="{{ parentService.title }}">
+        </div>
+        {% endif %}
+    </div>
     <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] min-h-[400px] bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] text-white overflow-hidden isolate">
         <!-- Efectos decorativos modernos -->
         <div class="absolute inset-0">
@@ -36,10 +68,16 @@
                                 <p class="text-lg text-cyan-300/80 mt-4 italic">{{ subtitle | safe }}</p>
                             {% endif %}
                         </div>
+                        <div hidden>
+                            <span itemprop="keywords">{{ hero.title }}, {{ parentService.title }}</span>
+                        </div>
                     {% else %}
                         <h1 class="text-[2.75rem] md:text-[3.5rem] xl:text-[4rem] font-light text-white leading-[1.1] tracking-tight" itemprop="headline">{{ title | safe }}</h1>
                         {% if subtitle %}
                             <p class="text-lg text-cyan-300/80 mt-4 italic">{{ subtitle | safe }}</p>
+                            <div hidden>
+                                <span itemprop="keywords">{{ title }}, {{ parentService.title }}</span>
+                            </div>
                         {% endif %}
                     {% endif %}
                 </div>
@@ -53,8 +91,15 @@
                 
                 <div class="lg:w-2/3">
                     {# Aquí se renderiza todo el contenido Markdown que escribimos #}
-                    <div class="prose prose-lg max-w-none mb-12">
+                    <div class="prose prose-lg max-w-none mb-12" itemprop="articleBody">
                         {{ content | safe }}
+                        
+                        <div hidden>
+                            <div itemprop="speakable" itemscope itemtype="https://schema.org/SpeakableSpecification">
+                                <meta itemprop="cssSelector" content=".prose h2:first-of-type, .prose p:first-of-type">
+                            </div>
+                            <meta itemprop="wordCount" content="{{ content | striptags | wordcount }}">
+                        </div>
                     </div>
                     
                     {% if testimonials and testimonials.length > 0 %}
