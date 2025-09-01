@@ -10,8 +10,11 @@
   "default_lang": "es",
   "languages": ["es", "en", "ca", "fr", "it"],
   "author": {
-    "name": "Perito Barcelona",
-    "email": "info@perito.barcelona"
+    "name": "Albert Vilardell",
+    "email": "info@perito.barcelona",
+    "linkedin": "https://www.linkedin.com/in/albert-vilardell/",
+    "jobTitle": "Perito Técnico Industrial",
+    "organization": "Perito Barcelona"
   },
   "navBar": {
     "es": {

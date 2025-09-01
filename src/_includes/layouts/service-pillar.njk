@@ -1,7 +1,33 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-<main itemscope itemtype="https://schema.org/Article">
+<main itemscope itemtype="https://schema.org/Service">
+    <!-- Schema mejorado para Service -->
+    <div hidden>
+        <meta itemprop="name" content="{{ hero.title }}">
+        <meta itemprop="description" content="{{ hero.description }}">
+        <meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}">
+        <meta itemprop="category" content="Technical Expert Services">
+        <meta itemprop="serviceType" content="{{ hero.title }}">
+        <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="{{ metadata.site.title }}">
+            <meta itemprop="url" content="{{ metadata.site.url }}">
+        </div>
+        <div itemprop="areaServed" itemscope itemtype="https://schema.org/Place">
+            <meta itemprop="name" content="Barcelona, España">
+        </div>
+        {% if process and process.steps %}
+        <div itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/OfferCatalog">
+            <meta itemprop="name" content="Proceso de {{ hero.title }}">
+            {% for step in process.steps %}
+            <div itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="name" content="{{ step.title }}">
+                <meta itemprop="description" content="{{ step.description }}">
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
     <!-- Hero Section mejorado -->
     <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] min-h-[calc(100vh-70px)] sm:min-h-0 bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] text-white overflow-hidden isolate">
         <!-- Efectos decorativos modernos -->
@@ -90,7 +116,20 @@
             <!-- Grid de servicios actualizado -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" itemprop="hasPart">
                 {% for service in serviceCluster.services %}
-                <a href="{{ service.url }}" class="group/card relative block h-full bg-gradient-to-br from-white to-slate-50/80 rounded-2xl p-6 pb-20 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden isolate">
+                <a href="{{ service.url }}" class="group/card relative block h-full bg-gradient-to-br from-white to-slate-50/80 rounded-2xl p-6 pb-20 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden isolate" itemscope itemtype="https://schema.org/Service">
+                    <!-- Schema mejorado para cada servicio -->
+                    <div hidden>
+                        <meta itemprop="name" content="{{ service.title }}">
+                        <meta itemprop="description" content="{{ service.description }}">
+                        <meta itemprop="url" content="{{ metadata.site.url }}{{ service.url }}">
+                        <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="{{ metadata.site.title }}">
+                        </div>
+                        {% for feature in service.features %}
+                        <meta itemprop="featureList" content="{{ feature }}">
+                        {% endfor %}
+                    </div>
+                    
                     <!-- Efecto hover background -->
                     <div class="absolute inset-0 bg-gradient-to-br from-cyan-50 to-white opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
                     
@@ -116,7 +155,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                     </svg>
                                 </span>
-                                <span class="text-slate-600 text-sm" itemprop="feature">{{ feature }}</span>
+                                <span class="text-slate-600 text-sm" itemprop="featureList">{{ feature }}</span>
                             </li>
                             {% endfor %}
                         </ul>
@@ -216,14 +255,18 @@
 
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 {% for item in benefits.items %}
-                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group border border-slate-100">
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group border border-slate-100" itemscope itemtype="https://schema.org/Thing">
+                    <div hidden>
+                        <meta itemprop="name" content="{{ item.title }}">
+                        <meta itemprop="description" content="{{ item.description }}">
+                    </div>
                     <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
                         <div class="w-8 h-8 text-cyan-500 group-hover:scale-110 transition-transform">
                             {% include "icons/" + item.icon + ".svg" %}
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">{{ item.title }}</h3>
-                    <p class="text-slate-600">{{ item.description }}</p>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3" itemprop="name">{{ item.title }}</h3>
+                    <p class="text-slate-600" itemprop="description">{{ item.description }}</p>
                 </div>
                 {% endfor %}
             </div>
@@ -245,18 +288,29 @@
             {# Adaptado de casos-home.njk para 2 columnas #}
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
                 {% for item in testimonials.items %}
-                <div class="bg-white p-8 lg:p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative border-l-4 border-cyan-400">
-                    <p class="text-slate-700 mb-6 text-lg relative pl-6">
-                        <span class="absolute top-[-1rem] left-[-0.5rem] text-[4rem] text-cyan-400/20 font-serif">"</span>
-                        {{ item.quote }}
-                    </p>
+                <div class="bg-white p-8 lg:p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative border-l-4 border-cyan-400" itemscope itemtype="https://schema.org/Review">
+                    <div itemprop="reviewBody">
+                        <p class="text-slate-700 mb-6 text-lg relative pl-6">
+                            <span class="absolute top-[-1rem] left-[-0.5rem] text-[4rem] text-cyan-400/20 font-serif">"</span>
+                            {{ item.quote }}
+                        </p>
+                    </div>
                     <div class="flex items-center mt-auto pt-4">
                         <span class="w-12 h-[2px] bg-cyan-400/30 mr-4"></span>
-                        <div>
-                            <p class="font-semibold text-cyan-500">{{ item.author }}</p>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <p class="font-semibold text-cyan-500" itemprop="name">{{ item.author }}</p>
                             {% if item.role %}
-                            <p class="text-sm text-slate-500">{{ item.role }}</p>
+                            <p class="text-sm text-slate-500" itemprop="jobTitle">{{ item.role }}</p>
                             {% endif %}
+                        </div>
+                    </div>
+                    <div hidden>
+                        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service">
+                            <meta itemprop="name" content="{{ hero.title }}">
+                        </div>
+                        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <meta itemprop="bestRating" content="5">
                         </div>
                     </div>
                 </div>

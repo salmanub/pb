@@ -1,7 +1,35 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-<main itemscope itemtype="https://schema.org/Article">
+<main itemscope itemtype="https://schema.org/Service">
+    <!-- Schema mejorado para Service específico -->
+    <div hidden>
+        <meta itemprop="name" content="{{ title }}">
+        <meta itemprop="description" content="{{ description or hero.description }}">
+        <meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}">
+        <meta itemprop="category" content="Technical Expert Services">
+        <meta itemprop="serviceType" content="{{ title }}">
+        <div itemprop="provider" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="{{ metadata.site.title }}">
+            <meta itemprop="url" content="{{ metadata.site.url }}">
+            <meta itemprop="telephone" content="{{ metadata.contact.phoneNumber }}">
+            <meta itemprop="email" content="{{ metadata.contact.email }}">
+        </div>
+        <div itemprop="areaServed" itemscope itemtype="https://schema.org/Place">
+            <meta itemprop="name" content="Barcelona, España">
+        </div>
+        {% if parentService %}
+        <div itemprop="isPartOf" itemscope itemtype="https://schema.org/Service">
+            <meta itemprop="name" content="{{ parentService.title }}">
+            <meta itemprop="url" content="{{ metadata.site.url }}{{ parentService.url }}">
+        </div>
+        {% endif %}
+        <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <meta itemprop="availability" content="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="EUR">
+            <meta itemprop="priceRange" content="€€">
+        </div>
+    </div>
     <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] min-h-[400px] bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] text-white overflow-hidden isolate">
         <!-- Efectos decorativos modernos -->
         <div class="absolute inset-0">
@@ -58,22 +86,33 @@
                     </div>
                     
                     {% if testimonials and testimonials.length > 0 %}
-                    <section class="mt-16 pt-12 border-t border-slate-200" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                    <section class="mt-16 pt-12 border-t border-slate-200">
                         <h2 class="text-2xl md:text-3xl font-light text-slate-800 mb-8">{{ metadata.serviceChild[lang].casosExito }}</h2>
                         <div class="space-y-8">
                             {% for testimonial in testimonials %}
-                            <div class="bg-gradient-to-br from-white to-slate-50 p-6 rounded-lg shadow-md border-l-4 border-cyan-400" itemprop="reviewBody">
-                                <p class="text-slate-700 mb-4 text-lg relative pl-6">
-                                    <span class="absolute top-[-1rem] left-[-0.5rem] text-[4rem] text-cyan-400/20 font-serif">"</span>
-                                    {{ testimonial.quote | safe }}
-                                </p>
+                            <div class="bg-gradient-to-br from-white to-slate-50 p-6 rounded-lg shadow-md border-l-4 border-cyan-400" itemscope itemtype="https://schema.org/Review">
+                                <div itemprop="reviewBody">
+                                    <p class="text-slate-700 mb-4 text-lg relative pl-6">
+                                        <span class="absolute top-[-1rem] left-[-0.5rem] text-[4rem] text-cyan-400/20 font-serif">"</span>
+                                        {{ testimonial.quote | safe }}
+                                    </p>
+                                </div>
                                 <div class="flex items-center mt-auto pt-4">
                                     <span class="w-10 h-[2px] bg-cyan-400/30 mr-4"></span>
-                                    <div>
-                                        <p class="font-semibold text-cyan-600" itemprop="author">{{ testimonial.author | safe }}</p>
+                                    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                        <p class="font-semibold text-cyan-600" itemprop="name">{{ testimonial.author | safe }}</p>
                                         {% if testimonial.role %}
-                                            <p class="text-sm text-slate-500">{{ testimonial.role | safe }}</p>
+                                            <p class="text-sm text-slate-500" itemprop="jobTitle">{{ testimonial.role | safe }}</p>
                                         {% endif %}
+                                    </div>
+                                </div>
+                                <div hidden>
+                                    <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service">
+                                        <meta itemprop="name" content="{{ title }}">
+                                    </div>
+                                    <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                                        <meta itemprop="ratingValue" content="5">
+                                        <meta itemprop="bestRating" content="5">
                                     </div>
                                 </div>
                             </div>
