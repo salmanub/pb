@@ -2,6 +2,30 @@
 
 {% block content %}
     <main itemscope itemtype="https://schema.org/Article" class="">
+        <!-- Schema mejorado para Article -->
+        <div hidden>
+            <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}{{ page.url }}">
+            <meta itemprop="headline" content="{{ metadata.site.title }} - {{ metadata.site.description }}">
+            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                <meta itemprop="name" content="{{ metadata.site.title }}">
+                <meta itemprop="url" content="{{ metadata.site.url }}">
+                <meta itemprop="sameAs" content="{{ metadata.company.linkedin }}">
+                <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                    <meta itemprop="url" content="{{ metadata.site.url }}/assets/images/logos/logo.png">
+                    <meta itemprop="width" content="600">
+                    <meta itemprop="height" content="60">
+                </div>
+            </div>
+            <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <meta itemprop="name" content="{{ metadata.author.name }}">
+                <meta itemprop="url" content="{{ metadata.author.linkedin }}">
+            </div>
+            <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <meta itemprop="url" content="{{ metadata.site.url }}/assets/images/hero-home.jpg">
+                <meta itemprop="width" content="1200">
+                <meta itemprop="height" content="630">
+            </div>
+        </div>
         {# Hero Section con ajuste preciso para navbar #}
         
             {% include "partials/heroWithImage.njk" %}

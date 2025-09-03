@@ -16,6 +16,12 @@
     "jobTitle": "Perito Técnico Industrial",
     "organization": "Perito Barcelona"
   },
+  "company": {
+    "name": "Perito Barcelona",
+    "email": "info@perito.barcelona",
+    "linkedin": "https://www.linkedin.com/company/perito-barcelona",
+    "url": "https://perito.barcelona"
+  },
   "navBar": {
     "es": {
       "ctaAbogados": "Área para Abogados",

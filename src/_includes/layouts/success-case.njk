@@ -2,6 +2,37 @@
 
 {% block content %}
 <main class="pt-[70px] lg:pt-[120px]" itemscope itemtype="https://schema.org/Article">
+    <!-- Schema mejorado para Article -->
+    <div hidden>
+        <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}{{ page.url }}">
+        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="{{ metadata.site.title }}">
+            <meta itemprop="url" content="{{ metadata.site.url }}">
+            <meta itemprop="sameAs" content="{{ metadata.company.linkedin }}">
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                <meta itemprop="url" content="{{ metadata.site.url }}/assets/images/logos/logo.png">
+                <meta itemprop="width" content="600">
+                <meta itemprop="height" content="60">
+            </div>
+        </div>
+        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <meta itemprop="name" content="{{ metadata.author.name }}">
+            <meta itemprop="url" content="{{ metadata.author.linkedin }}">
+        </div>
+        {% if image %}
+        <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ image.url }}">
+            <meta itemprop="width" content="1200">
+            <meta itemprop="height" content="675">
+        </div>
+        {% elif images and images[0] %}
+        <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ images[0].url }}">
+            <meta itemprop="width" content="600">
+            <meta itemprop="height" content="450">
+        </div>
+        {% endif %}
+    </div>
     <!-- Hero Section -->
     <header class="bg-gradient-to-br from-slate-50 to-white py-12 px-4 md:px-[5%]">
         <div class="max-w-[1000px] mx-auto">
