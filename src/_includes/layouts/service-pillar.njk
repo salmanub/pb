@@ -4,8 +4,8 @@
 <main itemscope itemtype="https://schema.org/Article">
     <!-- Schema mejorado para Article -->
     <div hidden>
-        <meta itemprop="datePublished" content="{{ page.date | date('YYYY-MM-DD') }}">
-        <meta itemprop="dateModified" content="{{ page.inputPath | lastModifiedDate('YYYY-MM-DD') }}">
+        {# <meta itemprop="datePublished" content="{{ page.date | date('YYYY-MM-DD') }}">
+        <meta itemprop="dateModified" content="{{ page.inputPath | lastModifiedDate('YYYY-MM-DD') }}"> #}
         <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}{{ page.url }}">
         <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
             <meta itemprop="name" content="{{ metadata.site.title }}">
