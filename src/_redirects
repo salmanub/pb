@@ -23,8 +23,16 @@
 /construccion                            /informes-periciales/                   301
 /guia-peritajes                           /informes-periciales/                   301
 /servicios/                               /informes-periciales/                   301
+/servicios/                               /informes-periciales/                   301
+/servicios/peritajes-seguros              /informes-periciales/reclamacion-seguros/   301
 /construccion                            /informes-periciales/                   301
 /informes-periciales/contrainforme-pericial/ /informes-periciales/ 301
+/informe-pericial-pavimentos/  /informes-periciales/ 301
+/comunidades-propietarios/ /informes-periciales/comunidades-propietarios/ 301
+/seguros/polizas/ /informes-periciales/reclamacion-seguros/ 301
+/seguros/reclamaciones/ /informes-periciales/reclamacion-seguros/ 301
+/seguros/reclamaciones /informes-periciales/reclamacion-seguros/ 301
+/es/colaboracion-abogados/ /colaboracion-abogados/ 301
 
 # Versiones en Catalán
 /ca/construccio/                            /ca/informes-pericials/                   301
@@ -46,6 +54,11 @@
 /en/structural-reinforcement/               /en/structural-consulting/             301
 /en/property-owners/    /en/expert-witness-reports/owners-association/ 301
 /en/expert-witness-reports/judicial-expert/   /en/expert-witness-reports/ 301
+/en/services/   /en/expert-witness-reports/ 301
+/en/specialized-technical-inspections/   /en/expert-witness-reports/ 301
+/en/industrial-premises/   /en/expert-witness-reports/ 301
+/en/construction-audits/pre-handover-reception/ /en/expert-witness-reports/ 301
+/en/expert-witness-reports/owners-associations/ /en/expert-witness-reports/owners-associations/ 301
 
 # --- REDIRECCIONES DE PÁGINAS DE PROBLEMAS (CLÚSTERES) ---
 # Mapeamos URLs de problemas antiguas a su nueva ubicación bajo el pilar correcto.
