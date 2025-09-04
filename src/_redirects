@@ -33,6 +33,8 @@
 /seguros/reclamaciones/ /informes-periciales/reclamacion-seguros/ 301
 /seguros/reclamaciones /informes-periciales/reclamacion-seguros/ 301
 /es/colaboracion-abogados/ /colaboracion-abogados/ 301
+/peritajes-ejecucion-obra/ /informes-periciales/reclamacion-mala-ejecucion/ 301
+/reparacion-hormigon-armado/ /asesoramiento-estructural/reparacion-hormigon/ 301
 
 # Versiones en Catalán
 /ca/construccio/                            /ca/informes-pericials/                   301
