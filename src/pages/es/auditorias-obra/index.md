@@ -1,10 +1,8 @@
 ---
 layout: "layouts/service-pillar.njk"
-# SEO: Título más directo y enfocado en el beneficio principal (control de costes, calidad).
 title: "Auditoría de Obras en Barcelona | Control de Costes, Calidad y Certificaciones"
-# SEO: Meta Description activa que aborda los problemas clave del cliente.
 description: "Realizamos auditorías de obra para resolver disputas en certificaciones, controlar sobrecostes y asegurar la calidad. Obtenga un informe pericial para proteger su inversión en Barcelona."
-permalink: "/auditorias-obra/" # URL: Más limpia y directa.
+permalink: "/auditorias-obra/"
 lang: "es"
 
 translations:
@@ -16,28 +14,18 @@ translations:
     permalink: /en/construction-audits/
     title: "Construction Audits in Barcelona | Cost & Quality Control"
     description: "We perform construction audits to resolve certification disputes, control cost overruns, and ensure quality. Get an expert report to protect your investment."
-  - lang: fr
-    permalink: /fr/audits-de-chantier/
-    title: "Audits de Chantier à Barcelone | Contrôle des Coûts et de la Qualité"
-    description: "Nous réalisons des audits de chantier pour résoudre les litiges sur les certifications, contrôler les dépassements de coûts et garantir la qualité. Obtenez un rapport d'expertise pour protéger votre investissement."
-  - lang: it
-    permalink: /it/audit-di-cantiere/
-    title: "Audit di Cantiere a Barcellona | Controllo Costi, Qualità e Certificazioni"
-    description: "Realizziamo audit di cantiere per risolvere controversie su certificazioni, controllare i costi extra e garantire la qualità. Ottieni una perizia tecnica per proteggere il tuo investimento a Barcellona."
 
 eleventyNavigation:
   key: "Auditorías de Obra"
-  # ESTRUCTURA: Eliminado "parent" para que sea un elemento principal del menú.
   title: "Auditorías de Obra"
   notshow: false
-  order: 3 # Orden 3 para que aparezca después de Peritajes y Asesoramiento.
+  order: 2
 
 # Hero Section
 hero:
   title: "Auditorías Técnicas de Obra"
   strong: "Proteja su Inversión y Evite Conflictos"
   subtitle: "Control experto de calidad, costes y plazos en proyectos de construcción"
-  # MENSAJE: Más directo, enfocado en el valor que se aporta.
   description: "Como peritos ingenieros independientes, nuestro servicio de auditoría de obra le proporciona una visión técnica y objetiva del estado real de su proyecto. Detectamos desviaciones, verificamos certificaciones y documentamos la calidad para que tome decisiones informadas y evite litigios costosos."
   intro: "Aplicamos una metodología rigurosa para contrastar la ejecución en obra con la documentación del proyecto, los contratos y la normativa vigente, entregando informes periciales claros y defendibles."
   image: "src/assets/images/auditoria-de-obra-control-costes-barcelona.jpg"
@@ -49,7 +37,7 @@ serviceCluster:
   services:
     - title: "Disputas de Certificaciones y Mediciones"
       description: "Revisión imparcial de partidas, mediciones y precios para resolver conflictos de pago y detectar sobrecostes."
-      url: "/auditorias-obra/disputas-certificaciones-pago/"
+      url: "/auditorias-de-obra/disputas-certificaciones-obra/"
       icon: "clipboard-list"
       features:
         - "Análisis de disputas de pago"
@@ -57,7 +45,7 @@ serviceCluster:
         - "Detección de sobrecostes"
     - title: "Auditoría de Ejecución y Control de Calidad"
       description: "Verificación en obra de que los materiales, soluciones constructivas y acabados cumplen con el proyecto y la normativa."
-      url: "/auditorias-obra/control-calidad-ejecucion/"
+      url: "/auditorias-de-obra/control-de-calidad/"
       icon: "check-square"
       features:
         - "Conformidad de materiales"
@@ -65,29 +53,28 @@ serviceCluster:
         - "Documentación de defectos"
     - title: "Auditoría de Pre-entrega y Recepción de Obra"
       description: "Inspección final exhaustiva para elaborar una lista de repasos ('snag list') y asegurar una entrega sin sorpresas."
-      url: "/auditorias-obra/auditoria-preentrega-recepcion/"
+      url: "/auditorias-de-obra/auditoria-pre-entrega/"
       icon: "file-check"
       features:
         - "Listas de repasos técnicos"
         - "Pruebas de servicio finales"
         - "Asesoramiento en actas"
-    - title: "Revisión Documental y de Cumplimiento Normativo"
-      description: "Comprobamos que el proyecto y su ejecución se ajustan al CTE, los pliegos y la normativa urbanística aplicable."
-      url: "/auditorias-obra/revision-documental-normativa/"
+    - title: "Auditoría de Cumplimiento Normativo y de Proyecto" # <-- CONTENIDO ACTUALIZADO
+      description: "Verificamos que la ejecución, los materiales y las soluciones se ajustan al proyecto aprobado y al Código Técnico (CTE)."
+      url: "/auditorias-de-obra/auditoria-cumplimiento-normativo-proyecto/"
       icon: "file-text"
       features:
         - "Cumplimiento del CTE"
-        - "Contraste con pliegos"
-        - "Trazabilidad de cambios"
+        - "Contraste con proyecto"
+        - "Seguridad jurídica"
     - title: "Inspecciones Técnicas con Instrumentación"
       description: "Apoyamos nuestras auditorías con ensayos y equipos de medición para obtener datos objetivos sobre el estado de la obra."
-      url: "/auditorias-obra/inspecciones-tecnicas-especializadas/"
+      url: "/contacto/" # Enlaza a contacto al no ser un servicio clúster per se
       icon: "search-check"
       features:
         - "Termografía y humedades"
         - "Fisurómetros y esclerómetro"
         - "Ensayos no destructivos"
-    # ESTRUCTURA: Eliminado "Asesoramiento Estructural". No pertenece a esta página.
 
 # Sección “Qué es”
 sections:
@@ -159,12 +146,16 @@ Debería considerar una auditoría si se encuentra en alguna de estas situacione
 * **Antes de la recepción de la obra:** Es el momento crítico para identificar y documentar todos los repasos y defectos pendientes antes de dar la conformidad final y liberar las retenciones.
 * **Cuando surgen conflictos:** Si existe una disputa con la constructora sobre mediciones, pagos o calidades, un informe de auditoría es la prueba técnica que puede resolver el conflicto sin llegar a un litigio.
 
+---
+
 ## Nuestra Visión: La Auditoría como Herramienta de Prevención y Solución
 
 En nuestro despacho, no vemos la auditoría como un mero informe de "problemas", sino como una herramienta estratégica.
 
 * **Como prevención:** Una auditoría a tiempo permite detectar y corregir desviaciones antes de que se conviertan en problemas graves y costosos. Es la forma más eficaz de garantizar la calidad final y evitar sobrecostes inesperados.
 * **Como solución:** Ante un conflicto, nuestro informe pericial de auditoría se convierte en una hoja de ruta clara y objetiva. Documenta cada hallazgo, lo fundamenta en el contrato o la normativa, y propone acciones correctoras, sirviendo como una base sólida para la negociación o, si fuera necesario, para una reclamación judicial.
+
+---
 
 ## Ámbitos Clave de Nuestra Auditoría
 
@@ -174,6 +165,8 @@ Aunque podemos adaptar el alcance a sus necesidades, nuestras auditorías suelen
 * **Control de Calidad (Ejecución y Materiales):** Inspeccionamos in situ la ejecución de las partidas más importantes (estructura, impermeabilización, instalaciones, acabados) para asegurar que se ajustan a lo especificado en el proyecto y cumplen con la *lex artis* de la construcción. Documentamos cualquier no conformidad para su subsanación.
 * **Control de Riesgos (Recepción de Obra):** La fase final es la más delicada. Realizamos una inspección exhaustiva para elaborar una "snag list" (lista de repasos) técnica y completa, asegurando que el proyecto se entrega en las condiciones pactadas y sin vicios ocultos que puedan aparecer en el futuro.
 
+---
+
 ## ¿Para Quién es Esencial Nuestro Servicio de Auditoría?
 
 Trabajamos principalmente con:
@@ -181,4 +174,3 @@ Trabajamos principalmente con:
 * **Comunidades de Propietarios:** Ante la recepción de obras de rehabilitación o en elementos comunes, para garantizar que la ejecución es correcta.
 * **Empresas Constructoras:** Que desean una auditoría de calidad externa para validar sus procesos o para mediar en conflictos con subcontratas.
 * **Administraciones Públicas:** Para el control y supervisión de obras licitadas.
-

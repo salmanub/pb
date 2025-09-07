@@ -35,6 +35,7 @@
 /es/colaboracion-abogados/ /colaboracion-abogados/ 301
 /peritajes-ejecucion-obra/ /informes-periciales/reclamacion-mala-ejecucion/ 301
 /reparacion-hormigon-armado/ /asesoramiento-estructural/reparacion-hormigon/ 301
+/informes-periciales/reclamacion-seguros/ /informes-periciales/reclamacion-seguros-construccion/ 301
 
 # Versiones en Catalán
 /ca/construccio/                            /ca/informes-pericials/                   301
@@ -44,6 +45,7 @@
 /ca/estructures/                            /ca/assessorament-estructural/            301
 /ca/advocats/                               /ca/colaboracio-advocats/                 301
 /ca/peritatges-construccio/                 /ca/informes-pericials/            301
+/ca/informes-pericials/reclamacio-assegurances/ /ca/informes-pericials/reclamacio-assegurances-construccio/ 301
 
 # Versiones en Inglés
 /en/construction/                           /en/expert-witness-reports/               301

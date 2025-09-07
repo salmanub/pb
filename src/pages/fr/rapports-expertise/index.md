@@ -107,14 +107,14 @@ serviceCluster:
         - "Examen de rapports antérieurs"
         - "Détection d'erreurs"
         - "Nouvelles lignes de défense"
-    - title: "Réclamations auprès des Assurances"
-      description: "Rapports d'expertise indépendants pour contester l'évaluation de l'assureur et obtenir l'indemnisation qui vous est due."
-      url: "/fr/rapports-expertise/reclamation-assurance/"
+    - title: "Réclamations en Assurance Construction"
+      description: "Rapports pour sinistres majeurs sur polices Tous Risques Chantier (TRC), Décennale et Responsabilité Civile, en défense du constructeur."
+      url: "/fr/rapports-expertise/reclamation-assurance-construction/"
       icon: "shield-check"
       features:
-        - "Évaluation des dommages incendie"
-        - "Analyse des couvertures"
-        - "Défense de l'assuré"
+        - "Polices Tous Risques (TRC)"
+        - "Sinistres majeurs sur chantier"
+        - "Défense du constructeur"
 
 # Proceso de Trabajo
 process:

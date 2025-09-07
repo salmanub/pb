@@ -107,14 +107,14 @@ serviceCluster:
         - "Revisione di perizie precedenti"
         - "Rilevamento di errori"
         - "Nuove linee di difesa"
-    - title: "Richieste di Risarcimento Assicurativo"
-      description: "Perizie indipendenti per contestare la valutazione dell'assicurazione e ottenere l'indennizzo che vi spetta."
-      url: "/it/perizie-tecniche/risarcimento-assicurativo/"
+    - title: "Reclami su Assicurazioni Edili"
+      description: "Perizie per grandi sinistri su Polizze CAR (Contractor's All Risks), Decennale Postuma e RC, in difesa dell'impresa costruttrice."
+      url: "/it/perizie-tecniche/risarcimento-assicurativo-edile/"
       icon: "shield-check"
       features:
-        - "Valutazione danni da incendio"
-        - "Analisi delle coperture"
-        - "Difesa dell'assicurato"
+        - "Polizze CAR (All Risks)"
+        - "Grandi sinistri in cantiere"
+        - "Difesa dell'impresa costruttrice"
 
 # Proceso de Trabajo
 process:

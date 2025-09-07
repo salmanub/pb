@@ -1,8 +1,6 @@
 ---
 layout: "layouts/service-pillar.njk"
-# SEO: Título ampliado para incluir Obra Civil e Infraestructuras.
 title: "Asesoramiento Estructural Barcelona | Edificación y Obra Civil"
-# SEO: Descripción que menciona ambos sectores y problemas específicos.
 description: "Asesoramiento experto en reparación y refuerzo de estructuras para edificación e infraestructuras (puentes, muros). Diagnosticamos patologías y proyectamos soluciones técnicas."
 permalink: "/asesoramiento-estructural/"
 lang: "es"
@@ -16,32 +14,23 @@ translations:
     permalink: /en/structural-consulting/
     title: "Structural Consulting in Barcelona | Buildings & Civil Works"
     description: "Expert consulting for structural repair and reinforcement for buildings and infrastructures (bridges, walls). We diagnose pathologies and design technical solutions."
-  - lang: fr
-    permalink: /fr/conseil-structurel/
-    title: "Conseil en Structure à Barcelone | Bâtiment et Génie Civil"
-    description: "Conseil expert en réparation et renforcement de structures pour le bâtiment et les infrastructures (ponts, murs). Nous diagnostiquons les pathologies et concevons des solutions techniques."
-  - lang: it
-    permalink: /it/consulenza-strutturale/
-    title: "Consulenza Strutturale Barcellona | Edilizia e Opere Civili"
-    description: "Consulenza esperta per la riparazione e il rinforzo di strutture per edilizia e infrastrutture (ponti, muri). Diagnostichiamo patologie e progettiamo soluzioni tecniche."
 
 eleventyNavigation:
   key: "Asesoramiento Estructural"
   title: "Asesoramiento Estructural"
   notshow: false
-  order: 2
+  order: 3
 
 # Hero Section
 hero:
   title: "Asesoramiento Experto en Estructuras"
   strong: "Edificación e Ingeniería Civil"
-  # MENSAJE: Subtítulo que abarca ambos mundos de forma clara.
   subtitle: "Diagnóstico, reparación y refuerzo de estructuras en edificios e infraestructuras"
   description: "Como ingenieros civiles expertos, ofrecemos un diagnóstico técnico independiente para cualquier tipo de estructura, desde forjados de viviendas hasta puentes o muros de contención. Analizamos la causa del problema y proyectamos la solución de refuerzo más segura, duradera y eficiente."
   intro: "Nuestra labor es proporcionarle la certeza técnica que necesita para tomar la mejor decisión, optimizando costes y asegurando la máxima calidad en la intervención."
   image: "src/assets/images/asesoramiento-refuerzo-estructural-barcelona.jpg"
 
-# Sección "¿Por qué un diagnóstico independiente?" (Este mensaje es universal y muy potente para ambos sectores)
+# Sección "¿Por qué un diagnóstico independiente?"
 sections:
   title: "¿Por Qué un Asesoramiento Estructural Independiente?"
   what_is:
@@ -61,31 +50,39 @@ serviceCluster:
   intro: "Analizamos y proyectamos soluciones para los problemas estructurales más complejos en edificación y obra civil:"
   services:
     - title: "Diagnóstico de Patologías (Hormigón, Acero)"
-      description: "Análisis de fisuración, corrosión de armaduras, deformaciones, fatiga y otros daños para determinar su causa, alcance y nivel de riesgo."
-      url: "/asesoramiento-estructural/diagnostico-patologias/"
+      description: "Análisis de fisuración, corrosión de armaduras, deformaciones y otros daños para determinar su causa, alcance y nivel de riesgo."
+      url: "/asesoramiento-estructural/diagnostico-de-patologias/"
       icon: "search-check"
       features:
         - "Corrosión y carbonatación"
         - "Evaluación de fisuras"
-        - "Análisis de fatiga"
+        - "Análisis de riesgo"
+    - title: "Evaluación de Seguridad Estructural (Post-ITE/IEE)" # <-- CONTENIDO AÑADIDO
+      description: "Análisis técnico de las deficiencias graves detectadas en la ITE o IEE para diagnosticar la causa real y planificar su reparación."
+      url: "/asesoramiento-estructural/evaluacion-seguridad-estructural-ite-iee/"
+      icon: "clipboard-check"
+      features:
+        - "Diagnóstico post-ITE/IEE"
+        - "Plan de actuación"
+        - "Seguridad para la comunidad"
     - title: "Inspección y Patología de Puentes y Pasarelas"
       description: "Inspecciones principales y especiales de puentes, viaductos y pasarelas para evaluar su estado, detectar patologías y planificar actuaciones."
-      url: "/asesoramiento-estructural/inspeccion-puentes/"
+      url: "/asesoramiento-estructural/inspeccion-de-puentes/"
       icon: "blueprint"
       features:
         - "Inspecciones principales"
         - "Patología de tableros y pilas"
         - "Planes de mantenimiento"
     - title: "Proyectos de Refuerzo con Fibra de Carbono"
-      description: "Diseño y cálculo de refuerzos con composites (CFRP) para vigas, pilares, forjados y estructuras de obra civil que requieran aumento de capacidad."
-      url: "/asesoramiento-estructural/refuerzo-fibra-carbono/"
+      description: "Diseño y cálculo de refuerzos con composites (CFRP) para vigas, pilares, y forjados que requieran un aumento de su capacidad."
+      url: "/asesoramiento-estructural/refuerzo-fibra-de-carbono/"
       icon: "tool"
       features:
-        - "Aplicaciones en puentes y vigas"
+        - "Aplicaciones en edificación y obra civil"
         - "Cálculo y dimensionamiento"
         - "Sistemas SIKA®"
     - title: "Análisis de Muros de Contención y Taludes"
-      description: "Evaluación de la estabilidad de muros (pantalla, escollera), análisis de empujes del terreno, y proyectos de anclaje o reparación."
+      description: "Evaluación de la estabilidad de muros, análisis de empujes del terreno, y proyectos de anclaje o reparación."
       url: "/asesoramiento-estructural/muros-contencion-taludes/"
       icon: "mountain"
       features:
@@ -102,7 +99,7 @@ serviceCluster:
         - "Estabilización del terreno"
     - title: "Proyectos de Reparación de Hormigón"
       description: "Definimos protocolos técnicos para la correcta reparación de hormigón dañado según normativa, tanto en edificación como en obra civil."
-      url: "/asesoramiento-estructural/reparacion-hormigon/"
+      url: "/asesoramiento-estructural/reparacion-de-hormigon/"
       icon: "construction"
       features:
         - "Protocolos de saneado"
@@ -133,7 +130,7 @@ process:
     - title: "Supervisión (Opcional)"
       description: "Si lo desea, podemos supervisar la correcta ejecución de las obras por parte de la constructora."
 
-# Testimonios (incluyendo uno de Obra Civil)
+# Testimonios
 testimonials:
   title: "La Opinión de Nuestros Clientes"
   items:
@@ -159,6 +156,8 @@ Cuando una estructura presenta síntomas preocupantes —una grieta que crece, u
 
 Nuestro servicio de **asesoramiento estructural** se basa en un principio fundamental: **primero, el diagnóstico experto e imparcial; después, la solución.** Como ingenieros civiles independientes, nuestro único compromiso es con la seguridad, la durabilidad y la eficiencia económica. Analizamos su estructura, determinamos el origen exacto de la patología y proyectamos la solución técnica óptima para su caso concreto.
 
+---
+
 ## Nuestro Campo de Actuación: De Edificios a Grandes Infraestructuras
 
 Nuestra experiencia como Ingenieros Civiles nos permite abordar un amplio espectro de estructuras, aplicando los mismos principios de rigor técnico en cada una de ellas:
@@ -166,15 +165,13 @@ Nuestra experiencia como Ingenieros Civiles nos permite abordar un amplio espect
 * **En Edificación:** Analizamos y proyectamos soluciones para todo tipo de inmuebles: edificios residenciales, naves industriales, aparcamientos, viviendas unifamiliares, etc. Nos centramos en problemas comunes como el refuerzo de forjados, la reparación de vigas y pilares, o el recalce de cimentaciones.
 * **En Obra Civil:** Ofrecemos consultoría experta para infraestructuras. Realizamos inspecciones de puentes y pasarelas, analizamos la estabilidad de muros de contención y taludes, y proyectamos reparaciones para estructuras de hormigón de gran envergadura sometidas a condiciones exigentes.
 
+---
+
 ## Soluciones Avanzadas: Más Allá de la Reparación Tradicional
 
 La ingeniería de estructuras avanza constantemente. No nos limitamos a las soluciones convencionales; estamos especializados en el cálculo y la proyección de técnicas avanzadas que ofrecen mejores prestaciones con una menor intervención. Destacamos especialmente en el diseño de **refuerzos con composites como la fibra de carbono (CFRP)**, utilizando sistemas de empresas líderes como SIKA®, para aumentar la capacidad portante de vigas y pilares de forma eficaz y duradera.
 
-## El Puente hacia la Ejecución: El Rol de Urbenis.com
-
-Creemos en la especialización. Nuestra excelencia reside en el diagnóstico y la ingeniería: el "qué" y el "cómo" se debe hacer. Para la fase de ejecución, el "quién" lo hace, es fundamental contar con aplicadores expertos.
-
-Por ello, una vez definido el proyecto de reparación o refuerzo desde **perito.barcelona**, facilitamos el contacto con **urbenis.com**, nuestra empresa colaboradora especializada en la ejecución de estos trabajos. Esta sinergia garantiza un proceso sin fisuras: el mejor proyecto de ingeniería, ejecutado por los mejores especialistas.
+---
 
 ## ¿Cuándo Necesita Asesoramiento Estructural Urgente?
 
@@ -182,7 +179,7 @@ No ignore las señales que le da su edificio o estructura. Contacte con nosotros
 * Aparición o crecimiento de grietas en muros, vigas o forjados.
 * Desprendimiento de trozos de hormigón que dejan a la vista las armaduras oxidadas.
 * Deformaciones o "flechas" visibles en vigas o balcones.
-* Una ITE (Inspección Técnica de Edificios) con resultado desfavorable en el apartado de estructura.
+* **Una ITE (Inspección Técnica de Edificios) con resultado desfavorable en el apartado de estructura.**
 * La necesidad de aumentar la capacidad de carga de un forjado para un nuevo uso.
 
 Un diagnóstico a tiempo es la mejor garantía de seguridad y puede ahorrarle costes significativamente mayores en el futuro.

@@ -102,14 +102,14 @@ serviceCluster:
         - "Revisió d'informes"
         - "Detecció d'errors"
         - "Noves línies de defensa"
-    - title: "Reclamacions a Assegurances"
-      description: "Informes pericials independents per rebatre la valoració de l'asseguradora i aconseguir la indemnització que li correspon."
-      url: "/ca/informes-pericials/reclamacio-assegurances/"
+    - title: "Reclamacions en Assegurances de Construcció"
+      description: "Dictàmens per a grans sinistres en Pòlisses Tot Risc Construcció (TRC), Decennal i RC, defensant la constructora."
+      url: "/ca/informes-pericials/reclamacio-assegurances-construccio/"
       icon: "shield-check"
       features:
-        - "Valoració de danys per incendi"
-        - "Anàlisi de cobertures"
-        - "Defensa de l'assegurat"
+        - "Pòlisses Tot Risc (TRC)"
+        - "Grans sinistres en obra"
+        - "Defensa de la constructora"
 
 process:
   title: "La Nostra Metodologia d'Actuació"

@@ -102,14 +102,14 @@ serviceCluster:
         - "Report review"
         - "Error detection"
         - "New defense lines"
-    - title: "Insurance Claims"
-      description: "Independent expert reports to challenge the insurer's valuation and secure the settlement you are entitled to."
-      url: "/en/expert-witness-reports/insurance-claims/"
+    - title: "Construction Insurance Claim"
+      description: "Reports for major incidents under All-Risk Construction (CAR), Decennial, and Public Liability policies, defending the construction company."
+      url: "/en/expert-witness-reports/constructioninsurance-claims/"
       icon: "shield-check"
       features:
-        - "Fire damage assessment"
-        - "Policy coverage analysis"
-        - "Policyholder advocacy"
+        - "All-Risk Policies (CAR)"
+        - "Major on-site incidents"
+        - "Defense for the contractor"
 
 process:
   title: "Our Working Methodology"

@@ -1,8 +1,6 @@
 ---
 layout: "layouts/service-pillar.njk"
-# SEO: Título potente con las keywords principales y geolocalización.
 title: "Informes Periciales en Barcelona | Peritos Judiciales Expertos"
-# SEO: Descripción activa que resume el valor y los casos de uso.
 description: "Elaboramos informes periciales técnicos, de parte y judiciales en Barcelona. Nuestros dictámenes sobre patologías, vicios ocultos y disputas de obra son la prueba clave para su reclamación."
 permalink: "/informes-periciales/"
 lang: "es"
@@ -15,20 +13,12 @@ translations:
     permalink: /en/expert-witness-reports/
     title: "Expert Witness Reports in Barcelona | Expert Judicial Engineers"
     description: "We produce technical, party-appointed, and judicial expert reports in Barcelona. Our findings on pathologies, hidden defects, and construction disputes are the key evidence for your claim."
-  - lang: fr
-    permalink: /fr/rapports-expertise/
-    title: "Rapports d'Expertise à Barcelone | Experts Judiciaires"
-    description: "Nous rédigeons des rapports d'expertise technique, de partie et judiciaires à Barcelone. Nos conclusions sur les pathologies, les vices cachés et les litiges de construction sont la preuve clé pour votre réclamation."
-  - lang: it
-    permalink: /it/perizie-tecniche/
-    title: "Perizie Tecniche a Barcellona | Ingegneri Giudiziari Esperti"
-    description: "Redigiamo perizie tecniche, di parte e giudiziarie a Barcellona. Le nostre relazioni su patologie, vizi occulti e controversie edilizie sono la prova chiave per la tua richiesta."
 
 eleventyNavigation:
   key: "Informes Periciales"
   title: "Informes Periciales"
   notshow: false
-  order: 1 # El servicio más importante, va primero en el menú.
+  order: 1
 
 # Hero Section
 hero:
@@ -51,7 +41,7 @@ sections:
       - "Cuantifica económicamente los daños y el coste de la reparación"
       - "Documenta vicios ocultos para poder reclamar legalmente"
       - "Actúa como prueba fundamental en procedimientos judiciales"
-      - "Aporta solidez técnica en negociaciones con aseguradoras y constructoras"
+      - "Aporta solidez en disputas con aseguradoras y constructoras"
 
 # Service Cluster: Los diferentes tipos de informes que se ofrecen
 serviceCluster:
@@ -98,6 +88,14 @@ serviceCluster:
         - "Análisis de elementos comunes"
         - "Reclamaciones a constructora"
         - "ITE desfavorable"
+    - title: "Reclamaciones en Seguros de Construcción" # <-- CONTENIDO ACTUALIZADO
+      description: "Dictámenes para grandes siniestros en Pólizas Todo Riesgo Construcción (TRC), Decenal y RC, defendiendo a la constructora."
+      url: "/informes-periciales/reclamacion-seguros-construccion/" # <-- URL ACTUALIZADA
+      icon: "shield-check"
+      features:
+        - "Pólizas Todo Riesgo (TRC)"
+        - "Grandes siniestros en obra"
+        - "Defensa de la constructora"
     - title: "Contrainformes o Informes Contradictorios"
       description: "Análisis crítico y técnico de un informe pericial presentado por la parte contraria, detectando errores o carencias."
       url: "/informes-periciales/contrainforme-pericial/"
@@ -106,14 +104,6 @@ serviceCluster:
         - "Revisión de informes previos"
         - "Detección de errores"
         - "Nuevas líneas de defensa"
-    - title: "Reclamaciones a Seguros"
-      description: "Informes periciales independientes para rebatir la valoración de la aseguradora y conseguir la indemnización que le corresponde."
-      url: "/informes-periciales/reclamacion-seguros/"
-      icon: "shield-check" # Un icono que transmita protección
-      features:
-        - "Valoración de daños por incendio"
-        - "Análisis de coberturas"
-        - "Defensa del asegurado"
 
 # Proceso de Trabajo
 process:
@@ -170,6 +160,8 @@ En el sector de la construcción, las opiniones son muchas, pero los hechos téc
 
 Este documento se convierte en la **piedra angular de cualquier reclamación**, negociación o defensa. Sin él, su palabra vale lo mismo que la de la parte contraria. Con él, sus argumentos se sostienen sobre una base de evidencia técnica sólida y defendible.
 
+---
+
 ## La Diferencia Clave: Informe de Parte vs. Dictamen Judicial
 
 Aunque ambos buscan esclarecer hechos técnicos, su origen y contexto son distintos, y es fundamental entender cuál necesita:
@@ -178,6 +170,8 @@ Aunque ambos buscan esclarecer hechos técnicos, su origen y contexto son distin
 * **Dictamen Pericial Judicial:** En este caso, somos **designados directamente por el juzgado**. Actuamos como auxiliares de la justicia, y nuestro único deber es para con el juez, aportando una visión técnica imparcial que le ayude a tomar una decisión informada.
 
 En ambos escenarios, nuestra metodología y rigor son idénticos, garantizando la calidad y objetividad del dictamen final.
+
+---
 
 ## ¿En Qué Situaciones es Imprescindible un Informe Pericial?
 
@@ -189,6 +183,8 @@ Si se encuentra en alguna de las siguientes situaciones, un informe pericial no 
 * **Reclamaciones a Seguros:** Para rebatir la valoración de daños de la aseguradora y obtener la indemnización que realmente corresponde.
 * **Procesos Judiciales:** Como prueba fundamental para demostrar hechos técnicos ante un tribunal.
 
+---
+
 ## Nuestro Proceso: Del Análisis a la Ratificación en Juicio
 
 Nuestro trabajo va más allá de una simple visita. Seguimos un proceso metódico para garantizar que cada conclusión sea sólida y defendible:
@@ -198,8 +194,8 @@ Nuestro trabajo va más allá de una simple visita. Seguimos un proceso metódic
 3.  **Análisis y Redacción:** Cruzamos los datos de la inspección con la normativa aplicable, la documentación del proyecto y nuestra experiencia para redactar un informe claro, bien estructurado y con conclusiones fundamentadas.
 4.  **Entrega y Defensa:** Le entregamos el informe y se lo explicamos en detalle. Si el caso llega a juicio, acudimos a la sede judicial para **ratificar y defender nuestras conclusiones** ante el juez y las partes.
 
+---
+
 ## La Ventaja de un Perito Ingeniero Civil
 
 Elegir un perito con formación superior en Ingeniería Civil aporta una visión más profunda. Nuestro conocimiento de cálculo de estructuras, ciencia de materiales, geotecnia y normativa de grandes infraestructuras nos permite analizar problemas complejos desde una perspectiva integral, garantizando la máxima solvencia técnica de nuestras conclusiones.
-
----
