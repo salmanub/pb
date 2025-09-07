@@ -104,7 +104,7 @@ serviceCluster:
         - "New defense lines"
     - title: "Construction Insurance Claim"
       description: "Reports for major incidents under All-Risk Construction (CAR), Decennial, and Public Liability policies, defending the construction company."
-      url: "/en/expert-witness-reports/constructioninsurance-claims/"
+      url: "/en/expert-witness-reports/construction-insurance-claims/"
       icon: "shield-check"
       features:
         - "All-Risk Policies (CAR)"
