@@ -1,8 +1,6 @@
 ---
 layout: "layouts/service-pillar.njk"
-# SEO: Título ampliado para incluir Obra Civil e Infraestructuras.
 title: "Consulenza Strutturale Barcellona | Edilizia e Opere Civili"
-# SEO: Descripción que menciona ambos sectores y problemas específicos.
 description: "Consulenza esperta per la riparazione e il rinforzo di strutture per edilizia e infrastrutture (ponti, muri). Diagnostichiamo patologie e progettiamo soluzioni tecniche."
 permalink: "/it/consulenza-strutturale/"
 lang: "it"
@@ -35,13 +33,12 @@ eleventyNavigation:
 hero:
   title: "Consulenza Esperta su Strutture"
   strong: "Edilizia e Ingegneria Civile"
-  # MENSAJE: Subtítulo que abarca ambos mundos de forma clara.
   subtitle: "Diagnosi, riparazione e rinforzo di strutture in edifici e infrastrutture"
   description: "In qualità di ingegneri civili esperti, offriamo una diagnosi tecnica indipendente per qualsiasi tipo di struttura, dai solai di abitazioni ai ponti o muri di sostegno. Analizziamo la causa del problema e progettiamo la soluzione di rinforzo più sicura, duratura ed efficiente."
   intro: "Il nostro compito è fornirvi la certezza tecnica di cui avete bisogno per prendere la decisione migliore, ottimizzando i costi e garantendo la massima qualità dell'intervento."
   image: "src/assets/images/asesoramiento-refuerzo-estructural-barcelona.jpg"
 
-# Sección "¿Por qué un diagnóstico independiente?" (Este mensaje es universal y muy potente para ambos sectores)
+# Section "Perché una consulenza indipendente?"
 sections:
   title: "Perché una Consulenza Strutturale Indipendente?"
   what_is:
@@ -55,7 +52,7 @@ sections:
       - "Agisce come una supervisione esperta che difende i vostri interessi"
       - "Assicura il rispetto della normativa specifica (NTC, Eurocodici, ecc.)"
 
-# Service Cluster: Ahora incluye servicios de Edificación Y Obra Civil
+# Service Cluster
 serviceCluster:
   title: "I Nostri Servizi di Consulenza Strutturale"
   intro: "Analizziamo e progettiamo soluzioni per i problemi strutturali più complessi in edilizia e opere civili:"
@@ -68,6 +65,14 @@ serviceCluster:
         - "Corrosione e carbonatazione"
         - "Valutazione delle fessure"
         - "Analisi a fatica"
+    - title: "Valutazione di Sicurezza Strutturale (Post-CIS)" # <-- CONTENUTO AGGIORNATO
+      description: "Analisi tecnica delle carenze gravi rilevate nel Certificato di Idoneità Statica per diagnosticarne la causa e pianificare le riparazioni."
+      url: "/it/consulenza-strutturale/valutazione-sicurezza-strutturale-cis/"
+      icon: "clipboard-check"
+      features:
+        - "Diagnosi post-CIS"
+        - "Piano di intervento"
+        - "Sicurezza del condominio"
     - title: "Ispezione e Patologia di Ponti e Passerelle"
       description: "Ispezioni principali e speciali di ponti, viadotti e passerelle per valutarne lo stato, rilevare patologie e pianificare interventi."
       url: "/it/consulenza-strutturale/ispezione-ponti/"
@@ -109,7 +114,7 @@ serviceCluster:
         - "Specifiche delle malte"
         - "Sistemi di protezione"
 
-# Puente hacia Urbenis.com
+# Ponte verso Urbenis.com
 urbenisBridge:
   title: "Dalla Diagnosi all'Esecuzione: Collaborazione con Urbenis"
   text: >
@@ -120,7 +125,7 @@ urbenisBridge:
     url: "https://urbenis.com"
     icon: "arrow-right"
 
-# Proceso de Trabajo
+# Processo di Lavoro
 process:
   title: "La Nostra Metodologia di Consulenza"
   steps:
@@ -133,7 +138,7 @@ process:
     - title: "Supervisione (Opzionale)"
       description: "Se lo desiderate, possiamo supervisionare la corretta esecuzione dei lavori da parte dell'impresa costruttrice."
 
-# Testimonios (incluyendo uno de Obra Civil)
+# Testimonianze
 testimonials:
   title: "L'Opinione dei Nostri Clienti"
   items:
@@ -144,7 +149,7 @@ testimonials:
       author: "Capocantiere, Impresa di Infrastrutture"
       role: "Caso: Rinforzo di trave in opera civile"
 
-# CTA final
+# CTA finale
 cta:
   title: "Avete dubbi sulla sicurezza di una struttura?"
   description: "Non aspettate che il problema si aggravi. Contattate il nostro team e ottenete una diagnosi tecnica professionale, sia per l'edilizia che per le opere civili."
@@ -159,6 +164,8 @@ Quando una struttura presenta sintomi preoccupanti — una crepa che si allarga,
 
 Il nostro servizio di **consulenza strutturale** si basa su un principio fondamentale: **prima la diagnosi esperta e imparziale, poi la soluzione.** Come ingegneri civili indipendenti, il nostro unico impegno è verso la sicurezza, la durabilità e l'efficienza economica. Analizziamo la vostra struttura, determiniamo l'origine esatta della patologia e progettiamo la soluzione tecnica ottimale per il vostro caso specifico.
 
+---
+
 ## Il Nostro Campo d'Azione: Dagli Edifici alle Grandi Infrastrutture
 
 La nostra esperienza come Ingegneri Civili ci permette di affrontare un ampio spettro di strutture, applicando gli stessi principi di rigore tecnico a ciascuna di esse:
@@ -166,15 +173,13 @@ La nostra esperienza come Ingegneri Civili ci permette di affrontare un ampio sp
 * **In Edilizia:** Analizziamo e progettiamo soluzioni per ogni tipo di immobile: edifici residenziali, capannoni industriali, parcheggi, ville unifamiliari, ecc. Ci concentriamo su problemi comuni come il rinforzo di solai, la riparazione di travi e pilastri, o il consolidamento delle fondazioni.
 * **In Opere Civili:** Offriamo consulenza esperta per infrastrutture. Eseguiamo ispezioni di ponti e passerelle, analizziamo la stabilità di muri di sostegno e scarpate, e progettiamo riparazioni per strutture in calcestruzzo di grandi dimensioni soggette a condizioni esigenti.
 
+---
+
 ## Soluzioni Avanzate: Oltre la Riparazione Tradizionale
 
 L'ingegneria strutturale è in costante evoluzione. Non ci limitiamo alle soluzioni convenzionali; siamo specializzati nel calcolo e nella progettazione di tecniche avanzate che offrono prestazioni migliori con un intervento meno invasivo. Eccelliamo in particolare nella progettazione di **rinforzi con materiali compositi come la fibra di carbonio (CFRP)**, utilizzando sistemi di aziende leader come SIKA®, per aumentare la capacità portante di travi e pilastri in modo efficace e duraturo.
 
-## Il Ponte verso l'Esecuzione: Il Ruolo di Urbenis.com
-
-Crediamo nella specializzazione. La nostra eccellenza risiede nella diagnosi e nell'ingegneria: il "cosa" e il "come" si deve fare. Per la fase di esecuzione, il "chi" lo fa, è fondamentale affidarsi ad applicatori esperti.
-
-Per questo, una volta definito il progetto di riparazione o rinforzo da **perito.barcelona**, facilitiamo il contatto con **urbenis.com**, la nostra azienda partner specializzata nell'esecuzione di questi lavori. Questa sinergia garantisce un processo senza interruzioni: il miglior progetto di ingegneria, eseguito dai migliori specialisti.
+---
 
 ## Quando Avete Bisogno di una Consulenza Strutturale Urgente?
 
@@ -182,7 +187,7 @@ Non ignorate i segnali che il vostro edificio o la vostra struttura vi inviano. 
 * Apparizione o crescita di crepe in muri, travi o solai.
 * Distacco di pezzi di calcestruzzo che lasciano a vista le armature ossidate.
 * Deformazioni o "frecce" visibili in travi o balconi.
-* Un Certificato di Idoneità Statica (o simile controllo tecnico) con esito sfavorevole per la parte strutturale.
+* **Un Certificato di Idoneità Statica (o simile controllo tecnico) con esito sfavorevole** per la parte strutturale.
 * La necessità di aumentare la capacità di carico di un solaio per un nuovo utilizzo.
 
 Una diagnosi tempestiva è la migliore garanzia di sicurezza e può farvi risparmiare costi significativamente maggiori in futuro.

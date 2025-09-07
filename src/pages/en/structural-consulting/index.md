@@ -1,8 +1,6 @@
 ---
 layout: "layouts/service-pillar.njk"
-# SEO: Title expanded to include Civil Works and Infrastructure.
 title: "Structural Consulting in Barcelona | Buildings & Civil Works"
-# SEO: Description mentioning both sectors and specific problems.
 description: "Expert consulting for structural repair and reinforcement for buildings and infrastructures (bridges, walls). We diagnose pathologies and design technical solutions."
 permalink: "/en/structural-consulting/"
 lang: "en"
@@ -35,13 +33,12 @@ eleventyNavigation:
 hero:
   title: "Expert Structural Consulting"
   strong: "Buildings and Civil Engineering"
-  # MESSAGE: Subtitle that clearly encompasses both worlds.
   subtitle: "Diagnosis, repair, and reinforcement of structures in buildings and infrastructures"
   description: "As expert civil engineers, we provide independent technical diagnosis for any type of structure, from residential floor slabs to bridges or retaining walls. We analyze the cause of the problem and design the safest, most durable, and efficient reinforcement solution."
   intro: "Our mission is to provide you with the technical certainty you need to make the best decision, optimizing costs while ensuring maximum quality in the intervention."
   image: "src/assets/images/asesoramiento-refuerzo-estructural-barcelona.jpg"
 
-# Section "Why Independent Diagnosis?" (This message is universal and very powerful for both sectors)
+# Section "Why Independent Diagnosis?"
 sections:
   title: "Why Choose Independent Structural Consulting?"
   what_is:
@@ -68,6 +65,14 @@ serviceCluster:
         - "Corrosion and carbonation"
         - "Crack assessment"
         - "Fatigue analysis"
+    - title: "Structural Safety Assessment (Post-Building Inspection)" # <-- UPDATED CONTENT
+      description: "Technical analysis of serious defects found in building inspection reports to diagnose the root cause and plan for repairs."
+      url: "/en/structural-consulting/structural-safety-assessment-building-inspection/"
+      icon: "clipboard-check"
+      features:
+        - "Post-inspection diagnosis"
+        - "Clear action plan"
+        - "Community safety"
     - title: "Bridge and Footbridge Inspection and Pathology"
       description: "Principal and special inspections of bridges, viaducts, and footbridges to assess their condition, detect pathologies, and plan interventions."
       url: "/en/structural-consulting/bridge-inspection/"
@@ -163,7 +168,7 @@ Our **structural consulting** service is based on a fundamental principle: **fir
 
 Our experience as Civil Engineers allows us to address a wide spectrum of structures, applying the same principles of technical rigor to each:
 
-* **In Building:** We analyze and design solutions for all types of properties: residential buildings, industrial warehouses, parking structures, single-family homes, etc. We focus on common problems such as floor slab reinforcement, beam and column repair, or foundation underpinning.
+* **In Buildings:** We analyze and design solutions for all types of properties: residential buildings, industrial warehouses, parking structures, single-family homes, etc. We focus on common problems such as floor slab reinforcement, beam and column repair, or foundation underpinning.
 * **In Civil Works:** We offer expert consulting for infrastructure. We perform bridge and footbridge inspections, analyze retaining wall and slope stability, and design repairs for large-scale concrete structures subject to demanding conditions.
 
 ## Advanced Solutions: Beyond Traditional Repair
@@ -183,7 +188,5 @@ Don't ignore the signs your building or structure is giving you. Contact us if y
 * Appearance or growth of cracks in walls, beams, or slabs.
 * Concrete spalling exposing rusted reinforcement.
 * Visible deformations or "deflections" in beams or balconies.
-* An ITE (Technical Building Inspection) with unfavorable results in the structural section.
+* An unfavorable Technical Building Inspection (ITE) report regarding the structure.
 * The need to increase the load capacity of a floor slab for a new use.
-
-A timely diagnosis is the best guarantee of safety and can save you significantly higher costs in the future.

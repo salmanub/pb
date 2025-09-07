@@ -27,7 +27,7 @@ eleventyNavigation:
   key: "Construction Audits"
   title: "Construction Audits"
   notshow: false
-  order: 3
+  order: 2
 
 hero:
   title: "Technical Construction Audits"
@@ -65,14 +65,14 @@ serviceCluster:
         - "Technical snag lists"
         - "Final service tests"
         - "Record consultation"
-    - title: "Documentary and Regulatory Compliance Review"
-      description: "We verify that the project and its execution comply with the CTE, specifications, and applicable urban planning regulations."
-      url: "/en/construction-audits/documentary-regulatory-review/"
+    - title: "Project and Regulatory Compliance Audit" # <-- UPDATED CONTENT
+      description: "We verify that execution, materials, and solutions align with the approved project and the Technical Building Code (CTE)."
+      url: "/en/construction-audits/project-regulatory-compliance-audit/" # <-- UPDATED URL
       icon: "file-text"
       features:
-        - "CTE compliance"
-        - "Specification comparison"
-        - "Change traceability"
+        - "Technical Code compliance"
+        - "Project alignment verification"
+        - "Legal certainty"
     - title: "Technical Inspections with Instrumentation"
       description: "We support our audits with tests and measurement equipment to obtain objective data on the construction status."
       url: "/en/construction-audits/specialized-technical-inspections/"
@@ -140,7 +140,7 @@ cta:
 
 ## What is a Technical Construction Audit and When Should You Consider One?
 
-A technical construction audit is a comprehensive and independent examination of an ongoing or recently completed construction project. Think of it as a high-precision "MOT" for your investment. It's not based on opinions, but on the **objective verification** of three fundamental pillars: that the **quality** matches what was agreed upon, that the **costs** align with the actual work executed, and that the entire process complies with **current regulations**.
+A technical construction audit is a comprehensive and independent examination of an ongoing or recently completed construction project. Think of it as a high-precision inspection for your investment. It's not based on opinions, but on the **objective verification** of three fundamental pillars: that the **quality** matches what was agreed upon, that the **costs** align with the actual work executed, and that the entire process complies with **current regulations**.
 
 You should consider an audit if you find yourself in any of these situations:
 
@@ -148,12 +148,16 @@ You should consider an audit if you find yourself in any of these situations:
 * **Before work reception:** This is the critical moment to identify and document all pending fixes and defects before giving final approval and releasing retentions.
 * **When conflicts arise:** If there's a dispute with the construction company about measurements, payments, or qualities, an audit report is the technical evidence that can resolve the conflict without going to litigation.
 
+---
+
 ## Our Vision: Auditing as a Prevention and Solution Tool
 
 In our practice, we don't see auditing as merely a report of "problems," but as a strategic tool.
 
-* **As prevention:** A timely audit allows detecting and correcting deviations before they become serious and costly problems. It's the most effective way to ensure final quality and avoid unexpected cost overruns.
+* **As prevention:** A timely audit allows for detecting and correcting deviations before they become serious and costly problems. It's the most effective way to ensure final quality and avoid unexpected cost overruns.
 * **As a solution:** When facing a conflict, our expert audit report becomes a clear and objective roadmap. It documents each finding, bases it on the contract or regulations, and proposes corrective actions, serving as a solid foundation for negotiation or, if necessary, for legal claims.
+
+---
 
 ## Key Areas of Our Audit
 
@@ -162,6 +166,8 @@ While we can adapt the scope to your needs, our audits typically focus on the mo
 * **Cost Control (Certifications and Measurements):** We verify that every euro you pay corresponds to real and properly executed work. We compare certification measurements with the reality on site, review disputed prices, and detect possible duplications or errors that directly impact your budget.
 * **Quality Control (Execution and Materials):** We inspect on-site execution of the most important items (structure, waterproofing, installations, finishes) to ensure they conform to project specifications and comply with construction best practices. We document any non-conformities for correction.
 * **Risk Control (Work Reception):** The final phase is the most delicate. We perform a comprehensive inspection to create a technical and complete snag list, ensuring the project is delivered under the agreed conditions and without hidden defects that might appear in the future.
+
+---
 
 ## Who Is Our Audit Service Essential For?
 

@@ -1,8 +1,6 @@
 ---
 layout: "layouts/service-pillar.njk"
-# SEO: Títol ampliat per incloure Obra Civil i Infraestructures.
 title: "Assessorament Estructural Barcelona | Edificació i Obra Civil"
-# SEO: Descripció que esmenta ambdós sectors i problemes específics.
 description: "Assessorament expert en reparació i reforç d'estructures per a edificació i infraestructures (ponts, murs). Diagnostiquem patologies i projectem solucions tècniques."
 permalink: "/ca/assessorament-estructural/"
 lang: "ca"
@@ -11,7 +9,7 @@ translations:
   - lang: es
     permalink: /asesoramiento-estructural/
     title: "Asesoramiento Estructural Barcelona | Edificación y Obra Civil"
-    description: "Asesoramiento experto en reparación y refuerzo de estructuras para edificación e infraestructuras (puentes, muros). Diagnosticamos patologías y proyectamos soluciones técnicas."
+    description: "Asesoramiento experto en reparación y refuerzo de estructuras para edificación e infraesturas (puentes, muros). Diagnosticamos patologías y proyectamos soluciones técnicas."
   - lang: en
     permalink: /en/structural-consulting/
     title: "Structural Consulting in Barcelona | Buildings & Civil Works"
@@ -35,13 +33,12 @@ eleventyNavigation:
 hero:
   title: "Assessorament Expert en Estructures"
   strong: "Edificació i Enginyeria Civil"
-  # MISSATGE: Subtítol que abasta ambdós mons de forma clara.
   subtitle: "Diagnòstic, reparació i reforç d'estructures en edificis i infraestructures"
   description: "Com a enginyers civils experts, oferim un diagnòstic tècnic independent per a qualsevol tipus d'estructura, des de forjats d'habitatges fins a ponts o murs de contenció. Analitzem la causa del problema i projectem la solució de reforç més segura, duradora i eficient."
   intro: "La nostra tasca és proporcionar-vos la certesa tècnica que necessiteu per prendre la millor decisió, optimitzant costos i assegurant la màxima qualitat en la intervenció."
   image: "src/assets/images/asesoramiento-refuerzo-estructural-barcelona.jpg"
 
-# Secció "Per què un diagnòstic independent?" (Aquest missatge és universal i molt potent per a ambdós sectors)
+# Secció "Per què un diagnòstic independent?"
 sections:
   title: "Per Què un Assessorament Estructural Independent?"
   what_is:
@@ -67,7 +64,15 @@ serviceCluster:
       features:
         - "Corrosió i carbonatació"
         - "Avaluació de fissures"
-        - "Anàlisi de fatiga"
+        - "Anàlisi de risc"
+    - title: "Avaluació de Seguretat Estructural (Post-ITE/IEE)" # <-- CONTINGUT ACTUALITZAT
+      description: "Anàlisi tècnica de les deficiències greus detectades a la ITE o IEE per diagnosticar-ne la causa real i planificar-ne la reparació."
+      url: "/ca/assessorament-estructural/avaluacio-seguretat-estructural-ite-iee/"
+      icon: "clipboard-check"
+      features:
+        - "Diagnòstic post-ITE/IEE"
+        - "Pla d'actuació"
+        - "Seguretat per a la comunitat"
     - title: "Inspecció i Patologia de Ponts i Passarel·les"
       description: "Inspeccions principals i especials de ponts, viaductes i passarel·les per avaluar el seu estat, detectar patologies i planificar actuacions."
       url: "/ca/assessorament-estructural/inspeccio-ponts/"
@@ -133,7 +138,7 @@ process:
     - title: "Supervisió (Opcional)"
       description: "Si ho desitgeu, podem supervisar la correcta execució de les obres per part de la constructora."
 
-# Testimonis (incloent-ne un d'Obra Civil)
+# Testimonis
 testimonials:
   title: "L'Opinió dels Nostres Clients"
   items:
@@ -159,22 +164,22 @@ Quan una estructura presenta símptomes preocupants —una esquerda que creix, u
 
 El nostre servei d'**assessorament estructural** es basa en un principi fonamental: **primer, el diagnòstic expert i imparcial; després, la solució.** Com a enginyers civils independents, el nostre únic compromís és amb la seguretat, la durabilitat i l'eficiència econòmica. Analitzem la vostra estructura, determinem l'origen exacte de la patologia i projectem la solució tècnica òptima per al vostre cas concret.
 
+---
+
 ## El Nostre Camp d'Actuació: D'Edificis a Grans Infraestructures
 
 La nostra experiència com a Enginyers Civils ens permet abordar un ampli espectre d'estructures, aplicant els mateixos principis de rigor tècnic en cadascuna d'elles:
 
-* **En Edificació:** Analitzem i projectem solucions per a tot tipus d'immobles: edificis residencials, naus industrials, aparcaments, habitatges unifamiliars, etc. Ens centrem en problemes comuns com el reforç de forjats, la reparació de bigues i pilars, o el recalçament de fonaments.
+* **En Edificació:** Analitzem i projectem solucions per a tot tipus d'immobles: edificis residencials, naus industrials, aparcaments, habitatges unifamilars, etc. Ens centrem en problemes comuns com el reforç de forjats, la reparació de bigues i pilars, o el recalçament de fonaments.
 * **En Obra Civil:** Oferim consultoria experta per a infraestructures. Realitzem inspeccions de ponts i passarel·les, analitzem l'estabilitat de murs de contenció i talussos, i projectem reparacions per a estructures de formigó de gran envergadura sotmeses a condicions exigents.
+
+---
 
 ## Solucions Avançades: Més Enllà de la Reparació Tradicional
 
 L'enginyeria d'estructures avança constantment. No ens limitem a les solucions convencionals; estem especialitzats en el càlcul i la projecció de tècniques avançades que ofereixen millors prestacions amb una menor intervenció. Destaquem especialment en el disseny de **reforços amb composites com la fibra de carboni (CFRP)**, utilitzant sistemes d'empreses líders com SIKA®, per augmentar la capacitat portant de bigues i pilars de forma eficaç i duradora.
 
-## El Pont cap a l'Execució: El Rol d'Urbenis.com
-
-Creiem en l'especialització. La nostra excel·lència resideix en el diagnòstic i l'enginyeria: el "què" i el "com" s'ha de fer. Per a la fase d'execució, el "qui" ho fa, és fonamental comptar amb aplicadors experts.
-
-Per això, un cop definit el projecte de reparació o reforç des de **perito.barcelona**, facilitem el contacte amb **urbenis.com**, la nostra empresa col·laboradora especialitzada en l'execució d'aquests treballs. Aquesta sinergia garanteix un procés sense fissures: el millor projecte d'enginyeria, executat pels millors especialistes.
+---
 
 ## Quan Necessiteu Assessorament Estructural Urgent?
 
@@ -182,7 +187,7 @@ No ignoreu els senyals que us dóna el vostre edifici o estructura. Contacteu am
 * Aparició o creixement d'esquerdes en murs, bigues o forjats.
 * Despreniment de trossos de formigó que deixen a la vista les armadures oxidades.
 * Deformacions o "fletxes" visibles en bigues o balcons.
-* Una ITE (Inspecció Tècnica d'Edificis) amb resultat desfavorable en l'apartat d'estructura.
+* **Una ITE (Inspecció Tècnica d'Edificis) amb resultat desfavorable en l'apartat d'estructura.**
 * La necessitat d'augmentar la capacitat de càrrega d'un forjat per a un nou ús.
 
 Un diagnòstic a temps és la millor garantia de seguretat i us pot estalviar costos significativament més grans en el futur.

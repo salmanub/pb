@@ -27,7 +27,7 @@ eleventyNavigation:
   key: "Auditories d'Obra"
   title: "Auditories d'Obra"
   notshow: false
-  order: 3
+  order: 2
 
 hero:
   title: "Auditories Tècniques d'Obra"
@@ -43,7 +43,7 @@ serviceCluster:
   services:
     - title: "Disputes de Certificacions i Amidaments"
       description: "Revisió imparcial de partides, amidaments i preus per resoldre conflictes de pagament i detectar sobrecostos."
-      url: "/ca/auditories-d-obra/disputes-certificacions-pagament/"
+      url: "/ca/auditories-obra/disputes-certificacions-obra/"
       icon: "clipboard-list"
       features:
         - "Anàlisi de disputes de pagament"
@@ -51,7 +51,7 @@ serviceCluster:
         - "Detecció de sobrecostos"
     - title: "Auditoria d'Execució i Control de Qualitat"
       description: "Verificació en obra que els materials, solucions constructives i acabats compleixen amb el projecte i la normativa."
-      url: "/ca/auditories-d-obra/control-qualitat-execucio/"
+      url: "/ca/auditories-obra/control-de-qualitat/"
       icon: "check-square"
       features:
         - "Conformitat de materials"
@@ -59,23 +59,23 @@ serviceCluster:
         - "Documentació de defectes"
     - title: "Auditoria de Pre-lliurament i Recepció d'Obra"
       description: "Inspecció final exhaustiva per elaborar una llista de repassos i assegurar un lliurament sense sorpreses."
-      url: "/ca/auditories-d-obra/auditoria-prelliurament-recepcio/"
+      url: "/ca/auditories-obra/auditoria-pre-entrega/"
       icon: "file-check"
       features:
         - "Llistes de repassos tècnics"
         - "Proves de servei finals"
         - "Assessorament en actes"
-    - title: "Revisió Documental i de Compliment Normatiu"
-      description: "Comprovem que el projecte i la seva execució s'ajusten al CTE, els plecs i la normativa urbanística aplicable."
-      url: "/ca/auditories-d-obra/revisio-documental-normativa/"
+    - title: "Auditoria de Compliment Normatiu i de Projecte" # <-- CONTINGUT ACTUALITZAT
+      description: "Verifiquem que l'execució, els materials i les solucions s'ajusten al projecte aprovat i al Codi Tècnic (CTE)."
+      url: "/ca/auditories-obra/auditoria-compliment-normatiu-projecte/" # <-- URL ACTUALITZADA
       icon: "file-text"
       features:
         - "Compliment del CTE"
-        - "Contrast amb plecs"
-        - "Traçabilitat de canvis"
+        - "Contrast amb el projecte"
+        - "Seguretat jurídica"
     - title: "Inspeccions Tècniques amb Instrumentació"
       description: "Recolzem les nostres auditories amb assajos i equips de mesura per obtenir dades objectives sobre l'estat de l'obra."
-      url: "/ca/auditories-d-obra/inspeccions-tecniques-especialitzades/"
+      url: "/ca/auditories-obra/inspeccions-tecniques-especialitzades/"
       icon: "search-check"
       features:
         - "Termografia i humitats"
@@ -147,12 +147,16 @@ Hauria de considerar una auditoria si es troba en alguna d'aquestes situacions:
 * **Abans de la recepció de l'obra:** És el moment crític per identificar i documentar tots els repassos i defectes pendents abans de donar la conformitat final i alliberar les retencions.
 * **Quan sorgeixen conflictes:** Si existeix una disputa amb la constructora sobre amidaments, pagaments o qualitats, un informe d'auditoria és la prova tècnica que pot resoldre el conflicte sense arribar a un litigi.
 
+---
+
 ## La Nostra Visió: L'Auditoria com a Eina de Prevenció i Solució
 
 Al nostre despatx, no veiem l'auditoria com un mer informe de "problemes", sinó com una eina estratègica.
 
 * **Com a prevenció:** Una auditoria a temps permet detectar i corregir desviacions abans que es converteixin en problemes greus i costosos. És la forma més eficaç de garantir la qualitat final i evitar sobrecostos inesperats.
 * **Com a solució:** Davant d'un conflicte, el nostre informe pericial d'auditoria es converteix en un full de ruta clar i objectiu. Documenta cada troballa, la fonamenta en el contracte o la normativa, i proposa accions correctores, servint com una base sòlida per a la negociació o, si fos necessari, per a una reclamació judicial.
+
+---
 
 ## Àmbits Clau de la Nostra Auditoria
 
@@ -161,6 +165,8 @@ Tot i que podem adaptar l'abast a les seves necessitats, les nostres auditories 
 * **Control de Costos (Certificacions i Amidaments):** Verifiquem que cada euro que paga es correspon amb una obra real i correctament executada. Contrastem els amidaments de les certificacions amb la realitat de l'obra, revisem els preus contradictoris i detectem possibles duplicitats o errors que impacten directament en el seu pressupost.
 * **Control de Qualitat (Execució i Materials):** Inspeccionem in situ l'execució de les partides més importants (estructura, impermeabilització, instal·lacions, acabats) per assegurar que s'ajusten a l'especificat en el projecte i compleixen amb la *lex artis* de la construcció. Documentem qualsevol no conformitat per a la seva esmena.
 * **Control de Riscos (Recepció d'Obra):** La fase final és la més delicada. Realitzem una inspecció exhaustiva per elaborar una llista de repassos tècnica i completa, assegurant que el projecte es lliura en les condicions pactades i sense vicis ocults que puguin aparèixer en el futur.
+
+---
 
 ## Per a Qui és Essencial el Nostre Servei d'Auditoria?
 

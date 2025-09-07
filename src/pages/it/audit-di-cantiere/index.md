@@ -1,16 +1,14 @@
 ---
 layout: "layouts/service-pillar.njk"
-# SEO: Título más directo y enfocado en el beneficio principal (control de costes, calidad).
 title: "Audit di Cantiere a Barcellona | Controllo Costi, Qualità e Certificazioni"
-# SEO: Meta Description activa que aborda los problemas clave del cliente.
 description: "Realizziamo audit di cantiere per risolvere controversie su certificazioni, controllare i costi extra e garantire la qualità. Ottieni una perizia tecnica per proteggere il tuo investimento a Barcellona."
-permalink: "/it/audit-di-cantiere/" # URL: Más limpia y directa.
+permalink: "/it/audit-di-cantiere/"
 lang: "it"
 
 translations:
   - lang: es
     permalink: /auditorias-obra/
-    title: "Auditoría de Obras en Barcelona | Control de Costes, Calidad y Certificazioni"
+    title: "Auditoría de Obras en Barcelona | Control de Costes, Calidad y Certificaciones"
     description: "Realizamos auditorías de obra para resolver disputas en certificaciones, controlar sobrecostes y asegurar la calidad. Obtenga un informe pericial para proteger su inversión en Barcelona."
   - lang: ca
     permalink: /ca/auditories-obra/
@@ -27,17 +25,15 @@ translations:
 
 eleventyNavigation:
   key: "Audit di Cantiere"
-  # ESTRUCTURA: Eliminado "parent" para que sea un elemento principal del menú.
   title: "Audit di Cantiere"
   notshow: false
-  order: 3 # Orden 3 para que aparezca después de Peritajes y Asesoramiento.
+  order: 2
 
 # Hero Section
 hero:
   title: "Audit Tecnici di Cantiere"
   strong: "Proteggi il Tuo Investimento ed Evita Conflitti"
   subtitle: "Controllo esperto di qualità, costi e tempi nei progetti di costruzione"
-  # MENSAJE: Más directo, enfocado en el valor que se aporta.
   description: "In qualità di periti ingegneri indipendenti, il nostro servizio di audit di cantiere vi fornisce una visione tecnica e oggettiva dello stato reale del vostro progetto. Rileviamo scostamenti, verifichiamo certificazioni e documentiamo la qualità affinché possiate prendere decisioni informate ed evitare costose controversie."
   intro: "Applichiamo una metodologia rigorosa per confrontare l'esecuzione in cantiere con la documentazione di progetto, i contratti e la normativa vigente, fornendo perizie chiare e difendibili."
   image: "src/assets/images/auditoria-de-obra-control-costes-barcelona.jpg"
@@ -71,14 +67,14 @@ serviceCluster:
         - "Liste di riserve tecniche"
         - "Prove di funzionamento finali"
         - "Consulenza sui verbali"
-    - title: "Revisione Documentale e di Conformità Normativa"
-      description: "Verifichiamo che il progetto e la sua esecuzione siano conformi alle normative tecniche, ai capitolati e alle leggi urbanistiche applicabili."
-      url: "/it/audit-di-cantiere/revisione-documentale-normativa/"
+    - title: "Audit di Conformità Normativa e di Progetto" # <-- CONTENUTO AGGIORNATO
+      description: "Verifichiamo che l'esecuzione, i materiali e le soluzioni siano conformi al progetto approvato e alle Norme Tecniche per le Costruzioni (NTC)."
+      url: "/it/audit-di-cantiere/audit-conformita-normativa-progetto/" # <-- URL AGGIORNATO
       icon: "file-text"
       features:
-        - "Conformità normativa"
-        - "Confronto con i capitolati"
-        - "Tracciabilità delle modifiche"
+        - "Conformità alle NTC"
+        - "Allineamento al progetto"
+        - "Certezza giuridica"
     - title: "Ispezioni Tecniche con Strumentazione"
       description: "Supportiamo i nostri audit con prove e apparecchiature di misurazione per ottenere dati oggettivi sullo stato dell'opera."
       url: "/it/audit-di-cantiere/ispezioni-tecniche-strumentali/"
@@ -87,7 +83,6 @@ serviceCluster:
         - "Termografia e umidità"
         - "Fessurimetri e sclerometro"
         - "Prove non distruttive"
-    # ESTRUCTURA: Eliminado "Asesoramiento Estructural". No pertenece a esta página.
 
 # Sección “Qué es”
 sections:
@@ -159,12 +154,16 @@ Dovreste considerare un audit se vi trovate in una di queste situazioni:
 * **Prima del collaudo dell'opera:** È il momento critico per identificare e documentare tutte le riserve e i difetti in sospeso prima di dare la conformità finale e svincolare le ritenute a garanzia.
 * **Quando sorgono conflitti:** Se esiste una controversia con l'impresa costruttrice su misurazioni, pagamenti o qualità, una relazione di audit è la prova tecnica che può risolvere il conflitto senza arrivare a un contenzioso.
 
+---
+
 ## La Nostra Visione: L'Audit come Strumento di Prevenzione e Soluzione
 
 Nel nostro studio, non vediamo l'audit come una mera relazione di "problemi", ma come uno strumento strategico.
 
 * **Come prevenzione:** Un audit tempestivo permette di rilevare e correggere gli scostamenti prima che diventino problemi gravi e costosi. È il modo più efficace per garantire la qualità finale ed evitare costi extra inaspettati.
 * **Come soluzione:** Di fronte a un conflitto, la nostra perizia di audit diventa una roadmap chiara e oggettiva. Documenta ogni riscontro, lo fonda sul contratto o sulla normativa, e propone azioni correttive, servendo come base solida per la negoziazione o, se necessario, per un'azione legale.
+
+---
 
 ## Ambiti Chiave del Nostro Audit
 
@@ -173,6 +172,8 @@ Sebbene possiamo adattare l'ambito alle vostre esigenze, i nostri audit si conce
 * **Controllo dei Costi (Certificazioni e Misurazioni):** Verifichiamo che ogni euro pagato corrisponda a un'opera reale e correttamente eseguita. Confrontiamo le misurazioni delle certificazioni con la realtà del cantiere, esaminiamo i nuovi prezzi e rileviamo possibili duplicazioni o errori che impattano direttamente sul vostro budget.
 * **Controllo della Qualità (Esecuzione e Materiali):** Ispezioniamo in situ l'esecuzione delle lavorazioni più importanti (struttura, impermeabilizzazione, impianti, finiture) per assicurare che siano conformi a quanto specificato nel progetto e rispettino la *regola dell'arte* della costruzione. Documentiamo qualsiasi non conformità per la sua correzione.
 * **Controllo dei Rischi (Collaudo dell'Opera):** La fase finale è la più delicata. Realizziamo un'ispezione approfondita per elaborare una "lista delle riserve" tecnica e completa, assicurando che il progetto venga consegnato nelle condizioni pattuite e senza vizi occulti che possano manifestarsi in futuro.
+
+---
 
 ## Per Chi è Essenziale il Nostro Servizio di Audit?
 

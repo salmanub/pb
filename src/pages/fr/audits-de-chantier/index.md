@@ -1,6 +1,6 @@
 ---
 layout: "layouts/service-pillar.njk"
-title: "Audit de Chantier à Barcelone | Contrôle Coûts et Qualité"
+title: "Audits de Chantier à Barcelone | Contrôle Coûts et Qualité"
 description: "Nous réalisons des audits de chantier pour résoudre les litiges de certification, contrôler les surcoûts et garantir la qualité. Obtenez un rapport d'expertise pour protéger votre investissement."
 permalink: "/fr/audits-de-chantier/"
 lang: "fr"
@@ -18,12 +18,16 @@ translations:
     permalink: /en/construction-audits/
     title: "Construction Audits in Barcelona | Cost & Quality Control"
     description: "We perform construction audits to resolve certification disputes, control cost overruns, and ensure quality. Get an expert report to protect your investment."
+  - lang: it
+    permalink: /it/audit-di-cantiere/
+    title: "Audit di Cantiere a Barcellona | Controllo Costi, Qualità e Certificazioni"
+    description: "Realizziamo audit di cantiere per risolvere controversie su certificazioni, controllare i costi extra e garantire la qualità. Ottieni una perizia tecnica per proteggere il tuo investimento a Barcellona."
 
 eleventyNavigation:
   key: "Audits de Chantier"
   title: "Audits de Chantier"
   notshow: false
-  order: 3
+  order: 2
 
 hero:
   title: "Audits Techniques de Chantier"
@@ -61,14 +65,14 @@ serviceCluster:
         - "Listes de réserves techniques"
         - "Essais de service finaux"
         - "Conseil lors des réceptions"
-    - title: "Examen Documentaire et de Conformité Réglementaire"
-      description: "Nous vérifions que le projet et son exécution sont conformes au CTE, aux cahiers des charges et à la réglementation urbanistique applicable."
-      url: "/fr/audits-de-chantier/examen-documentaire-reglementaire/"
+    - title: "Audit de Conformité Réglementaire et de Projet" # <-- CONTENU MIS À JOUR
+      description: "Nous vérifions que l'exécution, les matériaux et les solutions sont conformes au projet approuvé et aux normes techniques (DTU, Eurocodes)."
+      url: "/fr/audits-de-chantier/audit-conformite-reglementaire-projet/" # <-- URL MISE À JOUR
       icon: "file-text"
       features:
-        - "Conformité réglementaire"
-        - "Confrontation aux cahiers des charges"
-        - "Traçabilité des modifications"
+        - "Conformité aux normes (DTU)"
+        - "Alignement avec le projet"
+        - "Sécurité juridique"
     - title: "Inspections Techniques avec Instrumentation"
       description: "Nous appuyons nos audits avec des essais et des équipements de mesure pour obtenir des données objectives sur l'état du chantier."
       url: "/fr/audits-de-chantier/inspections-techniques-specialisees/"
@@ -143,12 +147,16 @@ Vous devriez envisager un audit si vous vous trouvez dans l'une de ces situation
 * **Avant la réception du chantier :** C'est le moment critique pour identifier et documenter toutes les réserves et les défauts en suspens avant de donner votre accord final et de libérer les retenues de garantie.
 * **Lorsque des conflits apparaissent :** S'il existe un litige avec le constructeur sur les métrés, les paiements ou les qualités, un rapport d'audit est la preuve technique qui peut résoudre le conflit sans avoir à aller jusqu'au litige.
 
+---
+
 ## Notre Vision : L'Audit comme Outil de Prévention et de Solution
 
 Dans notre cabinet, nous ne voyons pas l'audit comme un simple rapport de "problèmes", mais comme un outil stratégique.
 
 * **En tant que prévention :** Un audit réalisé à temps permet de détecter et de corriger les écarts avant qu'ils ne deviennent des problèmes graves et coûteux. C'est le moyen le plus efficace de garantir la qualité finale et d'éviter les surcoûts inattendus.
 * **En tant que solution :** Face à un conflit, notre rapport d'expertise d'audit devient une feuille de route claire et objective. Il documente chaque constatation, la fonde sur le contrat ou la réglementation, et propose des actions correctives, servant de base solide pour la négociation ou, si nécessaire, pour une réclamation judiciaire.
+
+---
 
 ## Domaines Clés de Notre Audit
 
@@ -157,6 +165,8 @@ Bien que nous puissions adapter le périmètre à vos besoins, nos audits se con
 * **Contrôle des Coûts (Certifications et Métrés) :** Nous vérifions que chaque euro que vous payez correspond à des travaux réels et correctement exécutés. Nous confrontons les métrés des certifications avec la réalité du chantier, examinons les prix nouveaux et détectons les éventuels doublons ou erreurs qui impactent directement votre budget.
 * **Contrôle de la Qualité (Exécution et Matériaux) :** Nous inspectons sur site l'exécution des postes les plus importants (structure, étanchéité, installations, finitions) pour nous assurer qu'ils sont conformes à ce qui est spécifié dans le projet et respectent les *règles de l'art* de la construction. Nous documentons toute non-conformité pour sa correction.
 * **Contrôle des Risques (Réception de Chantier) :** La phase finale est la plus délicate. Nous réalisons une inspection exhaustive pour établir une liste de réserves technique et complète, garantissant que le projet est livré dans les conditions convenues et sans vices cachés qui pourraient apparaître à l'avenir.
+
+---
 
 ## Pour Qui Notre Service d'Audit est-il Essentiel ?
 

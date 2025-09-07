@@ -1,8 +1,6 @@
 ---
 layout: "layouts/service-pillar.njk"
-# SEO: Título ampliado para incluir Obra Civil e Infraestructuras.
 title: "Conseil en Structure à Barcelone | Bâtiment et Génie Civil"
-# SEO: Descripción que menciona ambos sectores y problemas específicos.
 description: "Conseil expert en réparation et renforcement de structures pour le bâtiment et les infrastructures (ponts, murs). Nous diagnostiquons les pathologies et concevons des solutions techniques."
 permalink: "/fr/conseil-structurel/"
 lang: "fr"
@@ -11,7 +9,7 @@ translations:
   - lang: es
     permalink: /asesoramiento-estructural/
     title: "Asesoramiento Estructural Barcelona | Edificación y Obra Civil"
-    description: "Asesoramiento experto en reparación y refuerzo de estructuras para edificación e infraestructuras (puentes, muros). Diagnosticamos patologías y proyectamos soluciones técnicas."
+    description: "Asesoramiento experto en reparación y refuerzo de estructuras para edificación e infraestructuras (puentes, murs). Diagnosticamos patologías y proyectamos soluciones técnicas."
   - lang: ca
     permalink: /ca/assessorament-estructural/
     title: "Assessorament Estructural a Barcelona | Edificació i Obra Civil"
@@ -35,13 +33,12 @@ eleventyNavigation:
 hero:
   title: "Conseil Expert en Structures"
   strong: "Bâtiment et Génie Civil"
-  # MENSAJE: Subtítulo que abarca ambos mundos de forma clara.
   subtitle: "Diagnostic, réparation et renforcement de structures pour bâtiments et infrastructures"
   description: "En tant qu'ingénieurs civils experts, nous offrons un diagnostic technique indépendant pour tout type de structure, des planchers de logements aux ponts ou murs de soutènement. Nous analysons la cause du problème et concevons la solution de renforcement la plus sûre, durable et efficace."
   intro: "Notre travail est de vous fournir la certitude technique dont vous avez besoin pour prendre la meilleure décision, en optimisant les coûts et en assurant la plus haute qualité de l'intervention."
   image: "src/assets/images/asesoramiento-refuerzo-estructural-barcelona.jpg"
 
-# Sección "¿Por qué un diagnóstico independiente?" (Este mensaje es universal y muy potente para ambos sectores)
+# Section "Pourquoi un conseil indépendant ?"
 sections:
   title: "Pourquoi un Conseil en Structure Indépendant ?"
   what_is:
@@ -55,7 +52,7 @@ sections:
       - "Agit comme une supervision experte qui défend vos intérêts"
       - "Assure la conformité à la réglementation spécifique (Eurocodes, etc.)"
 
-# Service Cluster: Ahora incluye servicios de Edificación Y Obra Civil
+# Service Cluster:
 serviceCluster:
   title: "Nos Services de Conseil en Structure"
   intro: "Nous analysons et concevons des solutions pour les problèmes structurels les plus complexes dans le bâtiment et le génie civil :"
@@ -68,6 +65,14 @@ serviceCluster:
         - "Corrosion et carbonatation"
         - "Évaluation des fissures"
         - "Analyse de la fatigue"
+    - title: "Évaluation de la Sécurité Structurelle (Post-Contrôle Technique)" # <-- CONTENU MIS À JOUR
+      description: "Analyse technique des défauts graves détectés lors du contrôle technique pour diagnostiquer la cause réelle et planifier les réparations."
+      url: "/fr/conseil-structurel/evaluation-securite-structurelle-controle-technique/"
+      icon: "clipboard-check"
+      features:
+        - "Diagnostic post-contrôle"
+        - "Plan d'action clair"
+        - "Sécurité de l'immeuble"
     - title: "Inspection et Pathologie des Ponts et Passerelles"
       description: "Inspections principales et spéciales de ponts, viaducs et passerelles pour évaluer leur état, détecter les pathologies et planifier les interventions."
       url: "/fr/conseil-structurel/inspection-ponts/"
@@ -109,18 +114,18 @@ serviceCluster:
         - "Spécification des mortiers"
         - "Systèmes de protection"
 
-# Puente hacia Urbenis.com
+# Pont vers Urbenis.com
 urbenisBridge:
   title: "Du Diagnostic à l'Exécution : Collaboration avec Urbenis"
   text: >
-    Notre mission chez **expert.barcelone** est de vous offrir le diagnostic impartial et le meilleur projet technique pour votre tranquillité et votre sécurité.
+    Notre mission chez **perito.barcelona** est de vous offrir le diagnostic impartial et le meilleur projet technique pour votre tranquillité et votre sécurité.
     Pour une **exécution spécialisée** avec les meilleures garanties, nous collaborons étroitement avec **urbenis.com**, experts dans l'application de systèmes avancés de renforcement et de réparation structurelle.
   cta:
     text: "Découvrir les Services d'Exécution d'Urbenis"
     url: "https://urbenis.com"
     icon: "arrow-right"
 
-# Proceso de Trabajo
+# Processus de Travail
 process:
   title: "Notre Méthodologie de Conseil"
   steps:
@@ -133,7 +138,7 @@ process:
     - title: "Supervision (Optionnel)"
       description: "Si vous le souhaitez, nous pouvons superviser la bonne exécution des travaux par l'entreprise de construction."
 
-# Testimonios (incluyendo uno de Obra Civil)
+# Témoignages
 testimonials:
   title: "L'Avis de Nos Clients"
   items:
@@ -159,6 +164,8 @@ Lorsqu'une structure présente des symptômes préoccupants — une fissure qui 
 
 Notre service de **conseil en structure** repose sur un principe fondamental : **d'abord, le diagnostic expert et impartial ; ensuite, la solution.** En tant qu'ingénieurs civils indépendants, notre seul engagement est envers la sécurité, la durabilité et l'efficacité économique. Nous analysons votre structure, déterminons l'origine exacte de la pathologie et concevons la solution technique optimale pour votre cas particulier.
 
+---
+
 ## Notre Champ d'Action : Des Bâtiments aux Grandes Infrastructures
 
 Notre expérience en tant qu'Ingénieurs Civils nous permet d'aborder un large éventail de structures, en appliquant les mêmes principes de rigueur technique à chacune d'elles :
@@ -166,15 +173,13 @@ Notre expérience en tant qu'Ingénieurs Civils nous permet d'aborder un large �
 * **Dans le Bâtiment :** Nous analysons et concevons des solutions pour tous types de biens immobiliers : immeubles résidentiels, entrepôts industriels, parkings, maisons individuelles, etc. Nous nous concentrons sur les problèmes courants tels que le renforcement des planchers, la réparation de poutres et poteaux, ou la reprise en sous-œuvre des fondations.
 * **En Génie Civil :** Nous offrons un conseil expert pour les infrastructures. Nous réalisons des inspections de ponts et passerelles, analysons la stabilité des murs de soutènement et des talus, et concevons des réparations pour des structures en béton de grande envergure soumises à des conditions exigeantes.
 
+---
+
 ## Solutions Avancées : Au-delà de la Réparation Traditionnelle
 
 L'ingénierie des structures évolue constamment. Nous ne nous limitons pas aux solutions conventionnelles ; nous sommes spécialisés dans le calcul et la conception de techniques avancées qui offrent de meilleures performances avec une intervention moindre. Nous excellons notamment dans la conception de **renforts en composites comme la fibre de carbone (CFRP)**, en utilisant des systèmes d'entreprises leaders comme SIKA®, pour augmenter la capacité portante des poutres et des poteaux de manière efficace et durable.
 
-## Le Pont vers l'Exécution : Le Rôle d'Urbenis.com
-
-Nous croyons en la spécialisation. Notre excellence réside dans le diagnostic et l'ingénierie : le "quoi" et le "comment" faire. Pour la phase d'exécution, le "qui" le fait, il est fondamental de faire appel à des applicateurs experts.
-
-C'est pourquoi, une fois le projet de réparation ou de renforcement défini par **expert.barcelone**, nous facilitons le contact avec **urbenis.com**, notre entreprise partenaire spécialisée dans l'exécution de ces travaux. Cette synergie garantit un processus sans faille : le meilleur projet d'ingénierie, exécuté par les meilleurs spécialistes.
+---
 
 ## Quand Avez-vous Besoin d'un Conseil en Structure Urgent ?
 
@@ -182,7 +187,7 @@ N'ignorez pas les signaux que vous envoie votre bâtiment ou votre structure. Co
 * Apparition ou croissance de fissures dans les murs, les poutres ou les planchers.
 * Chute de morceaux de béton laissant apparaître les armatures oxydées.
 * Déformations ou "flèches" visibles sur les poutres ou les balcons.
-* Un contrôle technique de bâtiment (équivalent de l'ITE espagnole) avec un résultat défavorable dans la section structure.
+* **Un contrôle technique de bâtiment (équivalent de l'ITE espagnole) avec un résultat défavorable** dans la section structure.
 * Le besoin d'augmenter la capacité de charge d'un plancher pour un nouvel usage.
 
 Un diagnostic à temps est la meilleure garantie de sécurité et peut vous faire économiser des coûts significativement plus élevés à l'avenir.
