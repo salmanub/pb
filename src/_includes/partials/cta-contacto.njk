@@ -166,7 +166,6 @@
                     const webhookUrl = 'https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma';
                     let currentStep = 0;
                     
-                    // MODIFICACIÓN: Filtrar solo los pasos que son preguntas reales
                     const questionSteps = steps.filter(step => step.dataset.step && !['loading', 'success', 'error'].includes(step.dataset.step));
                     const totalQuestionSteps = questionSteps.length;
                     
@@ -179,18 +178,15 @@
                             step.classList.toggle('hidden', index !== stepIndex);
                         });
 
-                        // MODIFICACIÓN: Lógica para actualizar el contador de pasos
                         const questionStepIndex = questionSteps.indexOf(currentStepEl);
                         if (progress) {
                             const progressPercentage = questionStepIndex >= 0 ? ((questionStepIndex + 1) / totalQuestionSteps) * 100 : (currentStepEl.id.includes('success') || currentStepEl.id.includes('error') ? 100 : 0);
                             progress.style.width = `${progressPercentage}%`;
                         }
 
-                        // Actualizar el texto del contador si es un paso de pregunta
                         if (questionStepIndex !== -1) {
                             const stepCounter = currentStepEl.querySelector('.step-counter');
                             if (stepCounter) {
-                                // Asumiendo que tienes una variable `lang` disponible con el idioma actual
                                 const lang = '{{ lang | default('es') }}';
                                 const questionText = lang === 'es' ? 'Pregunta' : 'Question';
                                 stepCounter.textContent = `${questionText} ${questionStepIndex + 1} de ${totalQuestionSteps}`;
