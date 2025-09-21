@@ -1,0 +1,334 @@
+{# Componente de formulario de contacto reutilizable #}
+<div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border border-slate-100">
+    <div id="typeform-wrapper" class="flex flex-col h-full">
+        <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-slate-800 mb-2">{{ metadata.ctaForm[lang].formTitle }}</h3>
+            <p class="text-slate-600">{{ metadata.ctaForm[lang].formSubtitle }}</p>
+        </div>
+        <div id="typeform-container" class="flex-grow flex flex-col justify-between relative min-h-[350px]">
+            <div id="typeform-steps-container">
+                <div class="typeform-step active space-y-8" data-step="area-interes">
+                    <div class="space-y-3 mb-6">
+                        <p class="text-base text-cyan-600 font-medium">{{ metadata.ctaForm[lang].questions.areaInteres.number }}</p>
+                        <h3 class="text-3xl font-light text-slate-800">{{ metadata.ctaForm[lang].questions.areaInteres.title }}</h3>
+                    </div>
+                    <div class="space-y-4">
+                        {% for option in metadata.ctaForm[lang].questions.areaInteres.options %}
+                        <button type="button" data-value="{{ option.value }}" class="area-interes-option w-full px-6 py-4 text-left bg-slate-50 hover:bg-slate-100 border-2 border-slate-200 rounded-xl transition-all duration-200 group focus:outline-none focus:ring-2 focus:ring-cyan-500/50">
+                            <span class="text-lg text-slate-800">{{ option.label }}</span>
+                        </button>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="progress-bar-container" class="mt-8 w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+            <div id="typeform-progress" class="bg-gradient-to-r from-cyan-400 to-cyan-600 h-full w-0 transition-all duration-300"></div>
+        </div>
+    </div>
+</div>
+
+{# Script del formulario - Se incluirá solo en los layouts donde el formulario sea necesario #}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const formWrapper = document.getElementById('typeform-wrapper');
+    const steps = Array.from(formWrapper.querySelectorAll('.typeform-step'));
+    const progress = document.getElementById('typeform-progress');
+    const webhookUrl = 'https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma';
+    let currentStep = 0;
+    const questionSteps = steps.filter(step => !step.id.includes('-state') && !step.id.includes('-message'));
+    const totalQuestionSteps = questionSteps.length;
+    
+    let formData = { areaInteres: '' };
+
+    function showStep(stepIndex) {
+        steps.forEach((step, index) => {
+            step.classList.toggle('active', index === stepIndex);
+            step.classList.toggle('hidden', index !== stepIndex);
+        });
+        if (progress) {
+            const currentQuestionStepIndex = questionSteps.indexOf(steps[stepIndex]);
+            const progressPercentage = currentQuestionStepIndex >= 0 ? ((currentQuestionStepIndex + 1) / totalQuestionSteps) * 100 : 0;
+            progress.style.width = `${progressPercentage}%`;
+        }
+        const newStepEl = steps[stepIndex];
+        const input = newStepEl.querySelector('input, textarea');
+        if (input) setTimeout(() => input.focus(), 300);
+    }
+
+    function validateCurrentStep() {
+        const currentStepEl = steps[currentStep];
+        const input = currentStepEl.querySelector('input[required], textarea[required]');
+        if (input && !input.value.trim()) {
+            input.classList.add('border-red-400');
+            input.focus();
+            input.addEventListener('input', () => input.classList.remove('border-red-400'), { once: true });
+            return false;
+        }
+        // Validación de email
+        if (input && input.type === 'email' && !/^\S+@\S+\.\S+$/.test(input.value)) {
+             input.classList.add('border-red-400');
+             input.focus();
+             return false;
+        }
+        return true;
+    }
+
+    function updateSubmitButton() {
+        const privacidadCheckbox = document.getElementById('privacidad');
+        const submitButton = document.getElementById('submit-form-btn');
+        const privacyError = document.getElementById('privacy-error');
+        if (privacidadCheckbox && privacidadCheckbox.checked) {
+            submitButton.removeAttribute('disabled');
+            privacyError.classList.add('hidden');
+        } else if (privacidadCheckbox) {
+            submitButton.setAttribute('disabled', '');
+            if (privacidadCheckbox.dataset.touched === 'true') {
+                privacyError.classList.remove('hidden');
+            }
+        }
+    }
+
+    const privacidadCheckbox = document.getElementById('privacidad');
+    if (privacidadCheckbox) {
+        privacidadCheckbox.addEventListener('change', updateSubmitButton);
+        privacidadCheckbox.addEventListener('blur', () => {
+            privacidadCheckbox.dataset.touched = 'true';
+            updateSubmitButton();
+        });
+    }
+
+    async function submitForm() {
+        if (privacidadCheckbox && !privacidadCheckbox.checked) {
+            privacidadCheckbox.dataset.touched = 'true';
+            privacidadCheckbox.focus();
+            document.getElementById('privacy-error').classList.remove('hidden');
+            return;
+        }
+
+        showStep(steps.findIndex(s => s.id === 'loading-state'));
+        
+        const formDataToSend = {
+            areaInteres: formData.areaInteres,
+            mensaje: document.getElementById('mensaje') ? document.getElementById('mensaje').value : '',
+            nombre: document.getElementById('nombre') ? document.getElementById('nombre').value : '',
+            email: document.getElementById('email') ? document.getElementById('email').value : '',
+            telefono: document.getElementById('telefono') ? document.getElementById('telefono').value : '',
+            privacidad: 'Aceptada',
+            origen: 'Formulario perito.barcelona',
+            fecha: new Date().toISOString()
+        };
+
+        try {
+            const response = await fetch(webhookUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formDataToSend)
+            });
+            if (!response.ok) throw new Error('Network response was not ok');
+            showStep(steps.findIndex(s => s.id === 'success-message'));
+        } catch (error) {
+            console.error('Error:', error);
+            showStep(steps.findIndex(s => s.id === 'error-message'));
+        }
+    }
+
+    formWrapper.addEventListener('click', (e) => {
+        const target = e.target;
+        const areaInteresOption = target.closest('.area-interes-option');
+        const nextButton = target.closest('.typeform-next');
+        const prevButton = target.closest('.typeform-prev');
+        const submitButton = target.closest('#submit-form-btn');
+        const retryButton = target.closest('#retry-button');
+
+        if (areaInteresOption) {
+            formData.areaInteres = areaInteresOption.dataset.value;
+            currentStep++;
+            showStep(currentStep);
+        } else if (nextButton) {
+            if (validateCurrentStep()) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        } else if (prevButton) {
+            if (currentStep > 0) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        } else if (submitButton) {
+            if (validateCurrentStep()) submitForm();
+        } else if (retryButton) {
+            currentStep = 0;
+            formData = { areaInteres: '' };
+            // Resetear campos del formulario
+            if (document.getElementById('mensaje')) document.getElementById('mensaje').value = '';
+            if (document.getElementById('nombre')) document.getElementById('nombre').value = '';
+            if (document.getElementById('email')) document.getElementById('email').value = '';
+            if (document.getElementById('telefono')) document.getElementById('telefono').value = '';
+            if (privacidadCheckbox) privacidadCheckbox.checked = false;
+            updateSubmitButton();
+            showStep(currentStep);
+        }
+    });
+
+    formWrapper.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            const currentStepEl = steps[currentStep];
+            if (currentStepEl.querySelector('#submit-form-btn')) {
+                if (validateCurrentStep()) submitForm();
+            } else if(currentStepEl.querySelector('.area-interes-option')) {
+                // No hacer nada al pulsar Enter en el paso de opciones
+                return;
+            } else if (validateCurrentStep()) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        }
+    });
+
+    // Crear dinámicamente los pasos adicionales del formulario
+    const stepsContainer = document.getElementById('typeform-steps-container');
+    
+    // Paso de mensaje
+    const mensajeStep = document.createElement('div');
+    mensajeStep.className = 'typeform-step hidden space-y-8';
+    mensajeStep.setAttribute('data-step', 'mensaje');
+    mensajeStep.innerHTML = `
+        <div class="space-y-3 mb-6">
+            <p class="text-base text-cyan-600 font-medium">${metadata.ctaForm[lang].questions.mensaje.number}</p>
+            <h3 class="text-3xl font-light text-slate-800">${metadata.ctaForm[lang].questions.mensaje.title}</h3>
+        </div>
+        <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200 resize-none" required></textarea>
+        <p class="text-sm text-slate-500 mt-2">${metadata.ctaForm[lang].helpText.mensaje}</p>
+        <div class="flex justify-between">
+            <button type="button" class="typeform-prev group px-6 py-3 text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 text-sm rounded-lg hover:bg-slate-50">
+                <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                ${metadata.contactForm[lang].buttons.prev}
+            </button>
+            <button type="button" class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-200 group flex items-center gap-2 text-sm">
+                ${metadata.contactForm[lang].buttons.next}
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    `;
+    stepsContainer.appendChild(mensajeStep);
+    
+    // Añadir otros pasos similares: nombre, email, teléfono
+    const nombreStep = document.createElement('div');
+    nombreStep.className = 'typeform-step hidden space-y-8';
+    nombreStep.setAttribute('data-step', 'nombre');
+    nombreStep.innerHTML = `
+        <div class="space-y-3 mb-6">
+            <p class="text-base text-cyan-600 font-medium">${metadata.ctaForm[lang].questions.nombre.number}</p>
+            <h3 class="text-3xl font-light text-slate-800">${metadata.ctaForm[lang].questions.nombre.title}</h3>
+        </div>
+        <input type="text" id="nombre" name="nombre" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200" required>
+        <p class="text-sm text-slate-500 mt-2">${metadata.ctaForm[lang].helpText.nombre}</p>
+        <div class="flex justify-between items-center">
+             <button type="button" class="typeform-prev group px-6 py-3 text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 text-sm rounded-lg hover:bg-slate-50">
+                <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                ${metadata.contactForm[lang].buttons.prev}
+            </button>
+            <button type="button" class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-200 group flex items-center gap-2 text-sm">
+                ${metadata.contactForm[lang].buttons.next}
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    `;
+    stepsContainer.appendChild(nombreStep);
+    
+    // Email
+    const emailStep = document.createElement('div');
+    emailStep.className = 'typeform-step hidden space-y-8';
+    emailStep.setAttribute('data-step', 'email');
+    emailStep.innerHTML = `
+        <div class="space-y-3 mb-6">
+            <p class="text-base text-cyan-600 font-medium">${metadata.ctaForm[lang].questions.email.number}</p>
+            <h3 class="text-3xl font-light text-slate-800">${metadata.ctaForm[lang].questions.email.title}</h3>
+        </div>
+        <input type="email" id="email" name="email" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200" required>
+        <p class="text-sm text-slate-500 mt-2">${metadata.ctaForm[lang].helpText.email}</p>
+        <div class="flex justify-between">
+            <button type="button" class="typeform-prev group px-6 py-3 text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 text-sm rounded-lg hover:bg-slate-50">
+                <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                ${metadata.contactForm[lang].buttons.prev}
+            </button>
+            <button type="button" class="typeform-next px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-200 group flex items-center gap-2 text-sm">
+                ${metadata.contactForm[lang].buttons.next}
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    `;
+    stepsContainer.appendChild(emailStep);
+    
+    // Teléfono y privacidad
+    const telefonoStep = document.createElement('div');
+    telefonoStep.className = 'typeform-step hidden space-y-8';
+    telefonoStep.setAttribute('data-step', 'telefono');
+    telefonoStep.innerHTML = `
+        <div class="space-y-3 mb-6">
+            <p class="text-base text-cyan-600 font-medium">${metadata.ctaForm[lang].questions.telefono.number}</p>
+            <h3 class="text-3xl font-light text-slate-800">${metadata.ctaForm[lang].questions.telefono.title}</h3>
+        </div>
+        <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-3 text-lg bg-slate-50 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 focus:bg-white outline-none transition-all duration-200">
+        <p class="text-sm text-slate-500 mt-2">${metadata.ctaForm[lang].helpText.telefono}</p>
+        <div class="space-y-6">
+            <div class="flex items-start gap-3 py-4">
+                <input type="checkbox" id="privacidad" name="privacidad" class="mt-1 w-5 h-5 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500 cursor-pointer" required>
+                <label for="privacidad" class="text-slate-600 cursor-pointer text-base">${metadata.ctaForm[lang].privacyText}</label>
+            </div>
+            <p id="privacy-error" class="text-red-500 text-sm hidden ml-4">${metadata.ctaForm[lang].privacyError}</p>
+            <div class="flex justify-between">
+                <button type="button" class="typeform-prev group px-6 py-3 text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 text-sm rounded-lg hover:bg-slate-50">
+                    <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    ${metadata.contactForm[lang].buttons.prev}
+                </button>
+                <button type="button" id="submit-form-btn" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-lg transition-all duration-200 group flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-lg enabled:hover:shadow-xl enabled:hover:shadow-cyan-500/25" disabled>
+                    ${metadata.ctaContact[lang].form.submitText}
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+    `;
+    stepsContainer.appendChild(telefonoStep);
+    
+    // Estados: loading, success, error
+    const loadingState = document.createElement('div');
+    loadingState.id = 'loading-state';
+    loadingState.className = 'typeform-step hidden space-y-6 text-center';
+    loadingState.setAttribute('data-step', 'loading');
+    loadingState.innerHTML = `
+        <div class="w-16 h-16 mx-auto mb-6 border-4 border-cyan-200 border-t-cyan-500 rounded-full animate-spin"></div>
+        <h3 class="text-2xl font-light text-slate-800">${metadata.ctaForm[lang].messages.loading.title}</h3>
+        <p class="text-lg text-slate-600">${metadata.ctaForm[lang].messages.loading.subtitle}</p>
+    `;
+    stepsContainer.appendChild(loadingState);
+    
+    const successState = document.createElement('div');
+    successState.id = 'success-message';
+    successState.className = 'typeform-step hidden space-y-8 text-center';
+    successState.setAttribute('data-step', 'success');
+    successState.innerHTML = `
+        <div class="relative"><div class="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-green-50 to-green-100 rounded-full p-5"><div class="w-full h-full bg-green-500 rounded-full flex items-center justify-center"><svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div></div></div>
+        <h3 class="text-3xl font-bold bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">${metadata.ctaForm[lang].messages.success.title}</h3>
+        <p class="text-lg text-slate-500 font-light max-w-md mx-auto">${metadata.ctaForm[lang].messages.success.subtitle}</p>
+        <a href="${lang !== 'es' ? '/' + lang + '/' : '/'}" class="inline-flex items-center justify-center mt-6 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-200">${metadata.contactForm[lang].buttons.home}</a>
+    `;
+    stepsContainer.appendChild(successState);
+    
+    const errorState = document.createElement('div');
+    errorState.id = 'error-message';
+    errorState.className = 'typeform-step hidden space-y-8 text-center';
+    errorState.setAttribute('data-step', 'error');
+    errorState.innerHTML = `
+        <div class="relative"><div class="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-red-50 to-red-100 rounded-full p-5"><div class="w-full h-full bg-red-500 rounded-full flex items-center justify-center"><svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg></div></div></div>
+        <h3 class="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">${metadata.ctaForm[lang].messages.error.title}</h3>
+        <p class="text-lg text-slate-500 font-light max-w-md mx-auto">${metadata.ctaForm[lang].messages.error.subtitle}</p>
+        <button id="retry-button" type="button" class="inline-flex items-center justify-center mt-6 px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-red-500/25 transform hover:scale-105 transition-all duration-200">${metadata.contactForm[lang].buttons.retry}</button>
+    `;
+    stepsContainer.appendChild(errorState);
+
+    showStep(0);
+});
+</script>
