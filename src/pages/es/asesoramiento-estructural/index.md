@@ -51,7 +51,7 @@ serviceCluster:
   services:
     - title: "Diagnóstico de Patologías (Hormigón, Acero)"
       description: "Análisis de fisuración, corrosión de armaduras, deformaciones y otros daños para determinar su causa, alcance y nivel de riesgo."
-      url: "/asesoramiento-estructural/diagnostico-de-patologias/"
+      url: "/asesoramiento-estructural/diagnostico-patologias/"
       icon: "search-check"
       features:
         - "Corrosión y carbonatación"
@@ -75,7 +75,7 @@ serviceCluster:
         - "Planes de mantenimiento"
     - title: "Proyectos de Refuerzo con Fibra de Carbono"
       description: "Diseño y cálculo de refuerzos con composites (CFRP) para vigas, pilares, y forjados que requieran un aumento de su capacidad."
-      url: "/asesoramiento-estructural/refuerzo-fibra-de-carbono/"
+      url: "/asesoramiento-estructural/refuerzo-fibra-carbono/"
       icon: "tool"
       features:
         - "Aplicaciones en edificación y obra civil"
@@ -99,7 +99,7 @@ serviceCluster:
         - "Estabilización del terreno"
     - title: "Proyectos de Reparación de Hormigón"
       description: "Definimos protocolos técnicos para la correcta reparación de hormigón dañado según normativa, tanto en edificación como en obra civil."
-      url: "/asesoramiento-estructural/reparacion-de-hormigon/"
+      url: "/asesoramiento-estructural/reparacion-hormigon/"
       icon: "construction"
       features:
         - "Protocolos de saneado"
