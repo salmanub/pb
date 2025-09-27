@@ -11,14 +11,36 @@
             "@type": "WebPage",
             "@id": "{{ metadata.site.url }}{{ page.url }}"
         },
-        "headline": "{{ title }}",
+        "headline": "{{ title | truncate(110) }}",
         "description": "{{ description }}",
-        "image": {% if image %}[
-            "{{ metadata.site.url }}{{ image.url }}"
-        ]{% elif images and images[0] %}[
-            "{{ metadata.site.url }}{{ images[0].url }}"{% for image in images %}{% if loop.index > 1 %},
-            "{{ metadata.site.url }}{{ image.url }}"{% endif %}{% endfor %}
-        ]{% else %}[]{% endif %},
+        "image": {% if caso.image %}[{
+            "@type": "ImageObject",
+            "url": "{{ metadata.site.url }}{{ caso.image.url }}",
+            "width": 1200,
+            "height": 675,
+            "caption": "{{ caso.image.caption | default('Imagen de caso de éxito de ' + metadata.site.title) }}"
+        }]{% elif caso.images and caso.images[0] %}[{
+            "@type": "ImageObject",
+            "url": "{{ metadata.site.url }}{{ caso.images[0].url }}",
+            "width": 600,
+            "height": 450,
+            "caption": "{{ caso.images[0].caption | default('Imagen de caso de éxito de ' + metadata.site.title) }}"
+        }{% for image in caso.images %}{% if loop.index > 1 %}, {
+            "@type": "ImageObject",
+            "url": "{{ metadata.site.url }}{{ image.url }}",
+            "width": 600,
+            "height": 450,
+            "caption": "{{ image.caption | default('Imagen ' + loop.index + ' de caso de éxito') }}"
+        }{% endif %}{% endfor %}]
+        {% else %}[{
+            "@type": "ImageObject",
+            "url": "{{ metadata.site.url }}/assets/images/logos/logo.png",
+            "width": 600,
+            "height": 60,
+            "caption": "Logo de {{ metadata.site.title }}"
+        }]{% endif %},
+        "thumbnailUrl": {% if caso.image %}"{{ metadata.site.url }}{{ caso.image.url }}"{% elif caso.images and caso.images[0] %}"{{ metadata.site.url }}{{ caso.images[0].url }}"{% else %}"{{ metadata.site.url }}/assets/images/logos/logo.png"{% endif %},
+        
         "datePublished": "{{ datePublished }}",
         "dateModified": "{{ dateModified }}",
         {% if caso.tags and caso.tags.length > 0 %}"keywords": "{{ caso.tags | join(', ') }}",{% endif %}
@@ -29,12 +51,21 @@
             "name": "{{ metadata.author.name }}",
             "url": "{{ metadata.author.linkedin }}",
             "jobTitle": "{{ metadata.author.jobTitle }}",
+            "sameAs": [
+                "{{ metadata.author.linkedin }}"
+            ],
             "worksFor": {
                 "@type": "Organization",
                 "name": "{{ metadata.company.name }}",
-                "url": "{{ metadata.site.url }}"
+                "url": "{{ metadata.site.url }}",
+                "sameAs": [
+                    "{{ metadata.company.linkedin }}"
+                ]
             }
         },
+        "creator": "{{ metadata.author.name }}",
+        "editor": "{{ metadata.author.name }}",
+        
         "publisher": {
             "@type": "Organization",
             "name": "{{ metadata.site.title }}",
@@ -114,28 +145,60 @@
     
     <!-- Mantenemos los atributos itemscope/itemtype para compatibilidad con herramientas antiguas -->
     <div itemscope itemtype="https://schema.org/TechnicalArticle">
-        <meta itemprop="headline" content="{{ title }}">
+        <meta itemprop="headline" content="{{ title | truncate(110) }}">
         <meta itemprop="description" content="{{ description }}">
         <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}{{ page.url }}">
         <meta itemprop="datePublished" content="{{ datePublished }}">
         <meta itemprop="dateModified" content="{{ dateModified }}">
         {% if caso.tags and caso.tags.length > 0 %}<meta itemprop="keywords" content="{{ caso.tags | join(', ') }}">{% endif %}
+        
+        <!-- Author -->
         <div itemprop="author" itemscope itemtype="https://schema.org/Person">
             <meta itemprop="name" content="{{ metadata.author.name }}">
             <meta itemprop="jobTitle" content="{{ metadata.author.jobTitle }}">
+            <meta itemprop="url" content="{{ metadata.author.linkedin }}">
+            <div itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+                <meta itemprop="name" content="{{ metadata.company.name }}">
+                <meta itemprop="url" content="{{ metadata.site.url }}">
+            </div>
         </div>
+        
+        <!-- Publisher -->
         <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
             <meta itemprop="name" content="{{ metadata.company.name }}">
             <meta itemprop="url" content="{{ metadata.site.url }}">
+            <meta itemprop="sameAs" content="{{ metadata.company.linkedin }}">
             <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
                 <meta itemprop="url" content="{{ metadata.site.url }}/assets/images/logos/logo.png">
+                <meta itemprop="width" content="600">
+                <meta itemprop="height" content="60">
             </div>
         </div>
-        {% if image %}
+        
+        <!-- Images -->
+        {% if caso.image %}
         <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-            <meta itemprop="url" content="{{ metadata.site.url }}{{ image.url }}">
-            <meta itemprop="contentUrl" content="{{ metadata.site.url }}{{ image.url }}">
-            <meta itemprop="caption" content="{{ image.caption }}">
+            <meta itemprop="url" content="{{ metadata.site.url }}{{ caso.image.url }}">
+            <meta itemprop="contentUrl" content="{{ metadata.site.url }}{{ caso.image.url }}">
+            <meta itemprop="caption" content="{{ caso.image.caption | default('Imagen de caso de éxito de ' + metadata.site.title) }}">
+            <meta itemprop="width" content="1200">
+            <meta itemprop="height" content="675">
+        </div>
+        {% elif caso.images and caso.images[0] %}
+        <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ metadata.site.url }}{{ caso.images[0].url }}">
+            <meta itemprop="contentUrl" content="{{ metadata.site.url }}{{ caso.images[0].url }}">
+            <meta itemprop="caption" content="{{ caso.images[0].caption | default('Imagen de caso de éxito de ' + metadata.site.title) }}">
+            <meta itemprop="width" content="600">
+            <meta itemprop="height" content="450">
+        </div>
+        {% else %}
+        <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ metadata.site.url }}/assets/images/logos/logo.png">
+            <meta itemprop="contentUrl" content="{{ metadata.site.url }}/assets/images/logos/logo.png">
+            <meta itemprop="caption" content="Logo de {{ metadata.site.title }}">
+            <meta itemprop="width" content="600">
+            <meta itemprop="height" content="60">
         </div>
         {% endif %}
     </div>
@@ -159,7 +222,7 @@
             
             <!-- Title and Tags -->
             <div>
-                <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6 leading-tight" itemprop="headline">
+                <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6 leading-tight" itemprop="headline name">
                     {{ title }}
                 </h1>
                 <div class="flex flex-wrap gap-2 mb-8">
@@ -198,16 +261,19 @@
                 <!-- Single Image or Gallery -->
                 {% if caso.image %}
                 <div class="mt-8">
-                    <figure class="relative group overflow-hidden rounded-xl shadow-lg bg-slate-900">
+                    <figure class="relative group overflow-hidden rounded-xl shadow-lg bg-slate-900" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="width" content="1200">
+                        <meta itemprop="height" content="675">
                         <img 
                             src="{{ caso.image.url }}" 
+                            itemprop="url contentUrl"
                             alt="{{ caso.image.alt }}" 
                             class="w-full aspect-[16/9] object-cover group-hover:scale-105 group-hover:opacity-90 transition-all duration-500"
                             loading="lazy"
                             width="1200"
                             height="675">
                         {% if caso.image.caption %}
-                        <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 to-transparent p-4">
+                        <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 to-transparent p-4" itemprop="caption">
                             <p class="text-white text-sm">{{ caso.image.caption }}</p>
                         </figcaption>
                         {% endif %}
@@ -243,6 +309,25 @@
     <!-- Main Content -->
     <article class="py-16 bg-white" itemprop="articleBody">
         <div class="max-w-[900px] mx-auto px-4 sm:px-8 md:px-12">
+            <!-- Metadatos del autor y fechas de publicación visibles para SEO -->
+            <div class="mb-8 text-sm text-slate-500 flex justify-between items-center">
+                <div class="flex items-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <span class="font-medium text-cyan-700" itemprop="name">{{ metadata.author.name }}</span>
+                    <span class="ml-1 text-slate-400">|</span>
+                    <span class="ml-1" itemprop="jobTitle">{{ metadata.author.jobTitle }}</span>
+                </div>
+                <div>
+                    <time datetime="{{ datePublished }}" itemprop="datePublished" class="inline-block mr-3">
+                        Publicado: {{ datePublished }}
+                    </time>
+                    {% if dateModified and dateModified != datePublished %}
+                    <time datetime="{{ dateModified }}" itemprop="dateModified" class="inline-block">
+                        Actualizado: {{ dateModified }}
+                    </time>
+                    {% endif %}
+                </div>
+            </div>
+            
             <div class="prose prose-lg max-w-none" itemprop="text">
                 {% if content %}
                     {{ content | safe }}
