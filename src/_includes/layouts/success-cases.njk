@@ -1,6 +1,20 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
+{# Debug info - solo visible en modo desarrollo #}
+{% set showDebug = true %}
+{% if showDebug %}
+<div class="fixed top-0 right-0 z-50 p-4 bg-yellow-100 text-yellow-800 shadow-lg rounded-bl-lg max-w-sm" style="font-family: monospace; font-size: 12px;">
+    <h4 class="font-bold mb-2">Debug Info:</h4>
+    <p>Información de depuración</p>
+    {% if casosExito %}
+    <p>Número de casos: {{ casosExito | length }}</p>
+    {% else %}
+    <p>No se encontraron datos de casosExito</p>
+    {% endif %}
+</div>
+{% endif %}
+
 <main itemscope itemtype="https://schema.org/CollectionPage">
     {# Hero Section #}
     <header class="relative mt-[70px] lg:mt-[120px] bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] overflow-hidden isolate" itemprop="mainContentOfPage">
@@ -51,37 +65,55 @@
         <div class="relative z-10 max-w-[1400px] mx-auto">
             {# Filtros mantenidos y actualizados #}
             <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-12">
-                <button class="px-4 py-2 rounded-full bg-cyan-500 text-white font-medium hover:bg-cyan-600 transition-colors" data-filter="all">
+                <button class="px-4 py-2 rounded-full bg-cyan-500 text-white font-medium hover:bg-cyan-600 transition-colors active cursor-pointer" data-filter="all">
                     Todos los casos
                 </button>
-                <button class="px-4 py-2 rounded-full bg-white text-slate-700 font-medium hover:bg-slate-50 border border-slate-200 transition-colors" data-filter="construccion">
+                <button class="px-4 py-2 rounded-full bg-white text-slate-700 font-medium hover:bg-slate-50 border border-slate-200 transition-colors cursor-pointer" data-filter="construcción">
                     Construcción
                 </button>
-                <button class="px-4 py-2 rounded-full bg-white text-slate-700 font-medium hover:bg-slate-50 border border-slate-200 transition-colors" data-filter="seguros">
-                    Seguros
+                <button class="px-4 py-2 rounded-full bg-white text-slate-700 font-medium hover:bg-slate-50 border border-slate-200 transition-colors cursor-pointer" data-filter="patologías">
+                    Patologías
                 </button>
-                <select class="px-4 py-2 rounded-full bg-white text-slate-700 font-medium border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500" id="filtro-problema">
+                <select class="px-4 py-2 rounded-full bg-white text-slate-700 font-medium border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 cursor-pointer" id="filtro-problema">
                     <option value="all">Tipo de Problema...</option>
                     <option value="humedades">Humedades y Filtraciones</option>
-                    <option value="estructurales">Grietas y Estructurales</option>
-                    <option value="pavimentos">Defectos en Pavimentos</option>
-                    <option value="alquileres">Recepción de Alquileres</option>
-                    <option value="contraperitajes">Contraperitajes de Seguros</option>
+                    <option value="estructural">Problemas Estructurales</option>
+                    <option value="comunidades">Comunidades de Propietarios</option>
                 </select>
             </div>
 
             {# Grid de Casos con mejor contraste #}
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="grid-casos-exito">
-                {% for caso in casos.casos %}
-                <div class="group/card relative block h-full bg-gradient-to-br from-white to-slate-50/80 rounded-2xl p-6 pb-20 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden isolate"
-                     data-category="{{ caso.categories | join(' ') }}">
+                {% for caso in casosExito %}
+                {# Debug info si no hay casos #}
+                {% if loop.first and loop.last and not caso.title %}
+                <div class="col-span-3 bg-yellow-100 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold text-yellow-800">No se encontraron casos.</h3>
+                    <p>Verifica que los datos de casos-exito.json estén cargados correctamente.</p>
+                </div>
+                {% endif %}
+                <a href="/casos-exito/{{ caso.slug }}/" class="group/card relative block h-full bg-gradient-to-br from-white to-slate-50/80 rounded-2xl p-6 pb-20 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden isolate no-underline"
+                     data-category="{{ caso.tags | join(' ') | lower | replace(' ', '-') }}">
                     <!-- Efecto hover background -->
                     <div class="absolute inset-0 bg-gradient-to-br from-cyan-50 to-white opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
                     
                     <!-- Contenido principal -->
                     <div class="relative z-10">
                         <h2 class="text-xl font-bold text-slate-800 mb-3" itemprop="headline">{{ caso.title }}</h2>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow" itemprop="description">{{ caso.excerpt }}</p>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow" itemprop="description">{{ caso.description | truncate(120) }}</p>
+                        
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            {% for tag in caso.tags | slice(0, 3) %}
+                            <span class="text-xs font-semibold px-2 py-1 rounded-full 
+                                {% if tag == 'Construcción' or tag == 'Estructural' %}bg-cyan-100 text-cyan-700
+                                {% elif tag == 'Humedades' %}bg-blue-100 text-blue-700
+                                {% elif tag == 'Patologías' %}bg-purple-100 text-purple-700
+                                {% else %}bg-slate-100 text-slate-700{% endif %}">
+                                {{ tag }}
+                            </span>
+                            {% endfor %}
+                        </div>
                     </div>
 
                     <!-- CTA con texto localizado -->
@@ -93,7 +125,7 @@
                             </svg>
                         </div>
                     </div>
-                </div>
+                </a>
                 {% endfor %}
             </div>
         </div>
@@ -136,18 +168,20 @@
     document.addEventListener('DOMContentLoaded', function() {
         const filterButtons = document.querySelectorAll('[data-filter]');
         const filterSelect = document.getElementById('filtro-problema');
-        const cases = document.querySelectorAll('.caso-snippet');
+        const cases = document.querySelectorAll('#grid-casos-exito > a');
 
         function updateFilters() {
             const activeFilter = document.querySelector('[data-filter].active')?.dataset.filter || 'all';
             const selectFilter = filterSelect.value;
 
             cases.forEach(caso => {
-                const categories = caso.dataset.category.split(' ');
-                const showForButton = activeFilter === 'all' || categories.includes(activeFilter);
-                const showForSelect = selectFilter === 'all' || categories.includes(selectFilter);
+                const categories = caso.dataset.category ? caso.dataset.category.toLowerCase().split(' ') : [];
+                const showForButton = activeFilter === 'all' || 
+                                     categories.some(cat => cat.includes(activeFilter.toLowerCase()));
+                const showForSelect = selectFilter === 'all' || 
+                                     categories.some(cat => cat.includes(selectFilter.toLowerCase()));
                 
-                caso.style.display = (showForButton && showForSelect) ? 'flex' : 'none';
+                caso.style.display = (showForButton && showForSelect) ? 'block' : 'none';
             });
         }
 
@@ -155,10 +189,10 @@
             button.addEventListener('click', () => {
                 filterButtons.forEach(btn => {
                     btn.classList.remove('active', 'bg-cyan-500', 'text-white');
-                    btn.classList.add('bg-white', 'text-slate-600');
+                    btn.classList.add('bg-white', 'text-slate-700');
                 });
                 button.classList.add('active', 'bg-cyan-500', 'text-white');
-                button.classList.remove('bg-white', 'text-slate-600');
+                button.classList.remove('bg-white', 'text-slate-700');
                 updateFilters();
             });
         });
@@ -173,5 +207,16 @@
 
 <style>
     {{ indexCSS | safe }}
+    
+    /* Estilos adicionales para las tarjetas como enlaces */
+    #grid-casos-exito a.group\/card {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+    
+    #grid-casos-exito a.group\/card:hover {
+        text-decoration: none;
+    }
 </style>
 {% endblock pageStyles %}

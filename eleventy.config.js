@@ -35,6 +35,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter('renderMarkdown', function(content) {
         return md.render(content);
     });
+  // No necesitamos filtros personalizados para acceder a los datos
+
   eleventyConfig.addCollection("langCollections", function (collectionApi) {
     const collectionsByLang = {};
 
@@ -141,7 +143,26 @@ export default function (eleventyConfig) {
 
   // Añadir filtro markdown
   eleventyConfig.addFilter("markdown", function(content) {
-    return md.render(content);
+    if (!content) {
+      console.warn("Se intentó renderizar contenido Markdown nulo o vacío");
+      return "";
+    }
+    try {
+      return md.render(content);
+    } catch (error) {
+      console.error("Error al renderizar Markdown:", error);
+      return `<p class="text-red-600">Error al procesar contenido: ${error.message}</p>`;
+    }
+  });
+
+  // Añadir filtro para comprobar si un valor es un array
+  eleventyConfig.addFilter("isArray", function(value) {
+    return Array.isArray(value);
+  });
+  
+  // Añadir filtro default para valores nulos o undefined
+  eleventyConfig.addFilter("default", function(value, defaultValue) {
+    return (value !== null && value !== undefined) ? value : defaultValue;
   });
 
   //compile tailwind before eleventy processes the files

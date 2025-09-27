@@ -1,0 +1,51 @@
+---
+pagination:
+  data: casosExito
+  size: 1
+  alias: caso
+  addAllPagesToCollections: true
+permalink: "/casos-exito/{{ caso.slug }}/"
+layout: "layouts/success-case.njk"
+lang: es
+eleventyComputed:
+  title: "{{ caso.title }}"
+  description: "{{ caso.description }}"
+  datePublished: "{{ caso.datePublished }}"
+  dateModified: "{{ caso.dateModified }}"
+---
+{# 
+Variables importantes para que el caso se muestre correctamente.
+Aquí conservamos el tipo de datos original para que las propiedades como tags y summary
+se mantengan como arrays y no se conviertan a cadenas de texto.
+#}
+{% set title = caso.title %}
+{% set description = caso.description %}
+{% set datePublished = caso.datePublished %}
+{% set dateModified = caso.dateModified %}
+{% set tags = caso.tags %}
+{% set summary = caso.summary %}
+{% set image = caso.image %}
+{% set images = caso.images %}
+{% set relatedService = caso.relatedService %}
+
+{# 
+En Eleventy, el contenido que sigue después de los datos frontmatter se considera el contenido de la página
+y se pasa a la plantilla como la variable content. Esto es lo que necesitamos para que funcione.
+
+Además, para asegurarnos que las variables llegan correctamente, mostramos algunos valores para debug.
+#}
+
+{# Información para verificar que estemos usando las variables correctas #}
+
+{% set showDebug = false %}
+{% if showDebug %}
+  <div class="bg-yellow-100 p-4 mb-8 rounded-lg">
+    <h3 class="font-bold text-yellow-800">Debug Info:</h3>
+    <p>Title: {{ title }}</p>
+    <p>Tags: {{ tags }}</p>
+    <p>Tags es array: {{ tags | isArray }}</p>
+    <p>Summary es array: {{ summary | isArray }}</p>
+  </div>
+{% endif %}
+
+{{ caso.content | markdown | safe }}
