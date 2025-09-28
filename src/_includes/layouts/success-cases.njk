@@ -2,7 +2,7 @@
 
 {% block content %}
 {# Debug info - solo visible en modo desarrollo #}
-{% set showDebug = true %}
+{% set showDebug = false %}
 {% if showDebug %}
 <div class="fixed top-0 right-0 z-50 p-4 bg-yellow-100 text-yellow-800 shadow-lg rounded-bl-lg max-w-sm" style="font-family: monospace; font-size: 12px;">
     <h4 class="font-bold mb-2">Debug Info:</h4>
@@ -99,22 +99,33 @@
         </div>
 
         <div class="relative z-10 max-w-[1400px] mx-auto">
-            {# Filtros mantenidos y actualizados #}
+            {# Filtros actualizados según casosExito.json #}
             <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-12">
                 <button class="px-4 py-2 rounded-full bg-cyan-500 text-white font-medium hover:bg-cyan-600 hover:text-white transition-colors active cursor-pointer" data-filter="all">
                     Todos los casos
                 </button>
-                <button class="px-4 py-2 rounded-full bg-white text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-800 border border-slate-200 transition-all cursor-pointer" data-filter="construcción">
-                    Construcción
-                </button>
                 <button class="px-4 py-2 rounded-full bg-white text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-800 border border-slate-200 transition-all cursor-pointer" data-filter="patologías">
                     Patologías
                 </button>
+                <button class="px-4 py-2 rounded-full bg-white text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-800 border border-slate-200 transition-all cursor-pointer" data-filter="estructural">
+                    Estructural
+                </button>
+                <button class="px-4 py-2 rounded-full bg-white text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-800 border border-slate-200 transition-all cursor-pointer" data-filter="reformas">
+                    Reformas
+                </button>
                 <select class="px-4 py-2 rounded-full bg-white text-slate-700 font-medium border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 hover:bg-slate-100 hover:text-slate-800 transition-all cursor-pointer" id="filtro-problema">
-                    <option value="all">Tipo de Problema...</option>
-                    <option value="humedades">Humedades y Filtraciones</option>
-                    <option value="estructural">Problemas Estructurales</option>
-                    <option value="comunidades">Comunidades de Propietarios</option>
+                    <option value="all" selected>Todos los problemas</option>
+                    <option value="humedades">Humedades</option>
+                    <option value="vicios-ocultos">Vicios Ocultos</option>
+                    <option value="reclamaciones">Reclamaciones</option>
+                    <option value="comunidades">Comunidades</option>
+                    <option value="seguros">Seguros</option>
+                </select>
+                <select class="px-4 py-2 rounded-full bg-white text-slate-700 font-medium border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 hover:bg-slate-100 hover:text-slate-800 transition-all cursor-pointer" id="filtro-inmueble">
+                    <option value="all" selected>Todos los inmuebles</option>
+                    <option value="vivienda-unifamiliar">Vivienda Unifamiliar</option>
+                    <option value="naves-industriales">Naves Industriales</option>
+                    <option value="obra-nueva">Obra Nueva</option>
                 </select>
             </div>
 
@@ -218,25 +229,35 @@
 </main>
 
 <script>
-    // Funcionalidad de filtros
+    // Funcionalidad de filtros actualizada
     document.addEventListener('DOMContentLoaded', function() {
         const filterButtons = document.querySelectorAll('[data-filter]');
-        const filterSelect = document.getElementById('filtro-problema');
+        const filterProblema = document.getElementById('filtro-problema');
+        const filterInmueble = document.getElementById('filtro-inmueble');
         const cases = document.querySelectorAll('#grid-casos-exito > a');
+
+        // Asegurar que los selectores empiecen con 'all' seleccionado
+        filterProblema.value = 'all';
+        filterInmueble.value = 'all';
 
         function updateFilters() {
             const activeFilter = document.querySelector('[data-filter].active')?.dataset.filter || 'all';
-            const selectFilter = filterSelect.value;
+            const selectProblema = filterProblema.value;
+            const selectInmueble = filterInmueble.value;
 
             cases.forEach(caso => {
                 const categories = caso.dataset.category ? caso.dataset.category.toLowerCase().split(' ') : [];
+                
                 const showForButton = activeFilter === 'all' || 
                                      categories.some(cat => cat.includes(activeFilter.toLowerCase()));
-                const showForSelect = selectFilter === 'all' || 
-                                     categories.some(cat => cat.includes(selectFilter.toLowerCase()));
-                const isPublished = !caso.querySelector('.en-preparación');
+                                     
+                const showForProblema = selectProblema === 'all' || 
+                                     categories.some(cat => cat.includes(selectProblema.toLowerCase()));
+                                     
+                const showForInmueble = selectInmueble === 'all' || 
+                                     categories.some(cat => cat.includes(selectInmueble.toLowerCase()));
                 
-                caso.style.display = (showForButton && showForSelect) ? 'block' : 'none';
+                caso.style.display = (showForButton && showForProblema && showForInmueble) ? 'block' : 'none';
             });
         }
 
@@ -252,7 +273,11 @@
             });
         });
 
-        filterSelect.addEventListener('change', updateFilters);
+        filterProblema.addEventListener('change', updateFilters);
+        filterInmueble.addEventListener('change', updateFilters);
+        
+        // Inicializar con el primer botón activo
+        document.querySelector('[data-filter="all"]').classList.add('active');
     });
 </script>
 {% endblock %}
@@ -295,8 +320,8 @@
         font-weight: 600;
     }
     
-    /* Estilos para el select de filtro */
-    #filtro-problema {
+    /* Estilos para los selects de filtro */
+    #filtro-problema, #filtro-inmueble {
         appearance: none;
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
         background-position: right 0.75rem center;
@@ -306,7 +331,7 @@
         transition: all 0.3s ease;
     }
     
-    #filtro-problema:hover {
+    #filtro-problema:hover, #filtro-inmueble:hover {
         box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         transform: translateY(-1px);
     }
