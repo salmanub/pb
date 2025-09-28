@@ -8,7 +8,7 @@ lang: 'es'
 eleventyNavigation:
   key: "Refuerzo Fibra de Carbono"
   parent: "Asesoramiento Estructural"
-  title: "Fibra de Carbono"
+  title: "Refuerzo de Estructuras con Fibra de Carbono"
   notshow: true
   order: 2
 serviceTitle: 'refuerzo con fibra de carbono'
