@@ -8,16 +8,7 @@
     <h4 class="font-bold mb-2">Debug Info:</h4>
     <p>Información de depuración</p>
     {% if casosExito %}
-    {% set casosTotales = casosExito | length %}
-    {% set casosPublicados = 0 %}
-    {% for caso in casosExito %}
-        {% if not caso.estado or caso.estado == "publicado" %}
-            {% set casosPublicados = casosPublicados + 1 %}
-        {% endif %}
-    {% endfor %}
-    <p>Número total de casos: {{ casosTotales }}</p>
-    <p>Casos publicados: {{ casosPublicados }}</p>
-    <p>Casos en preparación: {{ casosTotales - casosPublicados }}</p>
+    <p>Número de casos: {{ casosExito | length }}</p>
     {% else %}
     <p>No se encontraron datos de casosExito</p>
     {% endif %}
@@ -130,7 +121,7 @@
             {# Grid de Casos con mejor contraste #}
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="grid-casos-exito" itemprop="hasPart" itemscope itemtype="https://schema.org/ItemList">
                 {% for caso in casosExito %}
-                {% if not caso.estado or caso.estado == "publicado" %}
+                
                 {# Debug info si no hay casos #}
                 {% if loop.first and loop.last and not caso.title %}
                 <div class="col-span-3 bg-yellow-100 p-6 rounded-xl">
@@ -188,7 +179,7 @@
                         </div>
                     </div>
                 </a>
-                {% endif %}
+               
                 {% endfor %}
             </div>
         </div>
