@@ -13,6 +13,56 @@
                 {{ testimonios.titulo }} <strong class="text-cyan-500 font-bold">{{ testimonios.highlight }}</strong>
             </h2>
             <p class="text-lg text-slate-600 max-w-3xl mx-auto">{{ testimonios.descripcion }}</p>
+            
+            {# Enlaces a casos de éxito en diferentes idiomas #}
+            {% set currentLang = metadata.default_lang %}
+            {% if page.url %}
+              {% for lang in metadata.languages %}
+                {% if page.url.startsWith('/' + lang + '/') %}
+                  {% set currentLang = lang %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+            {% set successCases = {
+                "es": {
+                    "url": "/casos-exito/",
+                    "label": "Ver todos nuestros casos de éxito",
+                    "exists": true
+                },
+                "en": {
+                    "url": "/en/casos-de-exito/",
+                    "label": "See all our success cases",
+                    "exists": true
+                },
+                "ca": {
+                    "url": "/ca/casos-de-exito/",
+                    "label": "Veure tots els nostres casos d'èxit",
+                    "exists": true
+                },
+                "fr": {
+                    "url": "/fr/cas-de-succes/",
+                    "label": "Voir tous nos cas de réussite",
+                    "exists": false
+                },
+                "it": {
+                    "url": "/it/casi-di-successo/",
+                    "label": "Visualizza tutti i nostri casi di successo",
+                    "exists": false
+                }
+            } %}
+            
+            {% set currentCase = successCases[currentLang] %}
+            
+            {% if currentCase and currentCase.exists %}
+            <div class="mt-10 flex justify-center">
+                <a href="{{ currentCase.url }}" class="inline-flex items-center justify-center px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 shadow-md hover:shadow-lg transition-all">
+                    {{ currentCase.label }}
+                    <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+            </div>
+            {% endif %}
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
