@@ -48,125 +48,339 @@
     "content": "## 1. Antecedentes del Problema\n\nLa comunidad de propietarios de un edificio emblemático en el distrito del Eixample nos contactó debido a la aparición recurrente de manchas de humedad, desconchones en la pintura y un persistente olor a humedad en las viviendas de la planta baja y en las zonas comunes. A pesar de haber realizado varias reparaciones superficiales, el problema reaparecía constantemente, afectando la habitabilidad y devaluando la propiedad.\n\n### 2. Proceso de Diagnóstico\n\nNuestro equipo técnico se desplazó al inmueble para realizar una inspección exhaustiva. El proceso de diagnóstico incluyó:\n\n* **Inspección Visual Detallada:** Se identificó el patrón ascendente de las humedades, característico de la capilaridad.\n* **Mediciones con Higrómetro:** Se utilizaron higrómetros de superficie y de profundidad para mapear la extensión y la intensidad de la humedad en los muros afectados.\n* **Análisis del Entorno:** Se estudió la proximidad del nivel freático y las condiciones de la cimentación del edificio, construida con materiales porosos típicos de la época.\n\n## 3. Conclusión del Dictamen Técnico\n\nNuestro informe pericial concluyó de manera irrefutable que las humedades eran causadas por **capilaridad**, un fenómeno por el cual el agua del subsuelo asciende a través de los poros de los materiales de construcción. El dictamen detalló el origen del problema y desestimó otras posibles causas como filtraciones o condensación.\n\nGracias a la solidez de nuestro informe, la comunidad de propietarios pudo reclamar al seguro de la comunidad (en base a una póliza que cubría daños extensivos por agua) y obtener la financiación necesaria para implementar una solución definitiva, como la instalación de barreras de inyecciones químicas o sistemas de electroósmosis."
   },
   {
-    "title": "Informe de Evaluación de Edificio (IEE) Favorable en Gràcia",
-    "slug": "informe-evaluacion-edificio-gracia-barcelona",
-    "description": "Caso de éxito en la obtención de un Informe de Evaluación de Edificio (IEE) favorable para una finca en el barrio de Gràcia, Barcelona, destacando la gestión de deficiencias menores.",
-    "datePublished": "2025-08-15",
-    "dateModified": "2025-08-15",
-    "tags": ["Vicios Ocultos", "Construcción"],
+    "title": "Desprendimiento de Voladizo Ilegal sobre Terraza en Tordera",
+    "slug": "desprendimiento-voladizo-terraza-tordera",
+    "description": "Caso de éxito de un informe pericial que demuestra cómo el desprendimiento de un voladizo de cubierta en Tordera se debió a una ampliación ilegal y construcción deficiente.",
+    "datePublished": "2025-09-04",
+    "dateModified": "2025-09-04",
+    "tags": ["Estructural", "Vicios Ocultos", "Vivienda Unifamiliar"],
     "summary": [
       {
         "label": "Ubicación",
-        "value": "Barrio de Gràcia, Barcelona"
+        "value": "Tordera, Barcelona"
       },
       {
         "label": "Tipo de Inmueble",
-        "value": "Edificio residencial de 1915"
-      },
-      {
-        "label": "Problemática",
-        "value": "Necesidad de IEE favorable con deficiencias detectadas"
-      },
-      {
-        "label": "Resultado",
-        "value": "Calificación favorable y plan de subsanación viable"
-      }
-    ],
-    "image": {
-      "url": "/assets/images/casos/iee-gracia-featured.jpg",
-      "alt": "Fachada del edificio histórico en el barrio de Gràcia",
-      "caption": "Fachada modernista del edificio objeto del Informe de Evaluación."
-    },
-    "images": [],
-    "relatedService": {
-      "title": "Informes de Evaluación de Edificios (IEE)",
-      "url": "/servicios/informes-evaluacion-edificios/"
-    },
-    "content": "## 1. Contexto y Desafío\n\nEste caso ejemplifica nuestra capacidad para gestionar informes técnicos obligatorios de manera favorable incluso cuando existen deficiencias que subsanar. La propiedad de un edificio centenario en el corazón de Gràcia nos contactó preocupada tras recibir un requerimiento municipal para presentar el IEE (Informe de Evaluación del Edificio).\n\n### 2. Nuestra Intervención\n\nRealizamos una inspección exhaustiva que permitió clasificar las deficiencias de manera precisa, distinguiendo las urgentes de las que podían abordarse a medio plazo. El proceso incluyó:\n\n* **Evaluación estructural completa** del edificio modernista\n* **Análisis de las instalaciones comunes** (electricidad, agua, saneamiento)\n* **Estudio de accesibilidad** y propuestas de mejora adaptadas al carácter histórico del edificio\n* **Evaluación energética** con recomendaciones de mejora viables\n\n## 3. Resultados\n\nConseguimos un dictamen favorable al proponer un plan de subsanación gradual económicamente viable que la propiedad pudo implementar sin problemas. Las intervenciones se organizaron en fases según su urgencia y coste, permitiendo a la comunidad de vecinos distribuir la inversión en un periodo de tres años.\n\nAdemás, identificamos posibles ayudas y subvenciones municipales que redujeron significativamente el coste final para los propietarios."
-  },
-  {
-    "title": "Reparación de Grietas en Comunidad de Propietarios del Eixample",
-    "slug": "reparacion-grietas-comunidad-eixample",
-    "description": "Caso de éxito sobre un informe pericial que permitió a una comunidad de propietarios del Eixample de Barcelona recibir una indemnización de 120.000€ para reparar grietas estructurales.",
-    "datePublished": "2025-07-20",
-    "dateModified": "2025-07-25",
-    "tags": ["Patologías", "Estructural", "Comunidades"],
-    "summary": [
-      {
-        "label": "Ubicación",
-        "value": "Eixample Derecho, Barcelona"
-      },
-      {
-        "label": "Tipo de Inmueble",
-        "value": "Edificio residencial de 1925"
+        "value": "Vivienda unifamiliar"
       },
       {
         "label": "Problema Detectado",
-        "value": "Grietas estructurales en fachada y elementos portantes"
+        "value": "Desprendimiento de voladizo de cubierta sobre la terraza inferior"
       },
       {
         "label": "Resultado",
-        "value": "Indemnización de 120.000€ para reparaciones"
+        "value": "Informe pericial que demuestra la causa y cuantifica los daños en 25.168 €"
       }
     ],
     "image": {
-      "url": "/assets/images/casos/grietas-fachada-1.jpg",
-      "alt": "Grietas severas en la fachada del edificio del Eixample",
-      "caption": "Grietas de considerable amplitud en la fachada principal del edificio."
+      "url": "/assets/images/casos/tordera-colapso-01.jpg",
+      "alt": "Terraza dañada por el impacto del voladizo desprendido en Tordera",
+      "caption": "Estado de la terraza posterior tras el impacto del voladizo de cubierta."
     },
     "images": [
       {
-        "url": "/assets/images/casos/grietas-detalle-1.jpg",
-        "alt": "Detalle de la medición de grietas con fisurómetro",
-        "caption": "Uso de fisurómetro digital para la medición precisa de las grietas."
+        "url": "/assets/images/casos/tordera-deficiencia-01.jpg",
+        "alt": "Detalle de la deficiente construcción del voladizo que se desprendió",
+        "caption": "Se evidencia un simple apoyo por gravedad, sin anclaje estructural a la vivienda."
       },
       {
-        "url": "/assets/images/casos/grietas-reparacion-1.jpg",
-        "alt": "Proceso de reparación de las grietas estructurales",
-        "caption": "Trabajos de reparación realizados tras la aprobación de la indemnización."
+        "url": "/assets/images/casos/tordera-danos-interiores-01.jpg",
+        "alt": "Daños por agua en el interior de la vivienda tras el desprendimiento",
+        "caption": "Filtraciones y humedades en el salón-comedor como consecuencia directa del siniestro."
       }
     ],
     "relatedService": {
-      "title": "Informes Periciales para Comunidades",
-      "url": "/servicios/informes-periciales-comunidades/"
+      "title": "Informes de Deficiencias Estructurales",
+      "url": "/servicios/informes-estructurales/"
     },
-    "content": "## 1. Situación Inicial\n\nLa comunidad de propietarios de un edificio histórico del Eixample Derecho de Barcelona observó con preocupación la aparición progresiva de grietas en la fachada principal y en varios elementos estructurales interiores. Tras consultar a varios profesionales y recibir opiniones divergentes, decidieron contar con nuestros servicios para obtener un dictamen técnico definitivo.\n\n### 2. Proceso de Diagnóstico\n\nNuestro equipo de peritos especializados en patologías estructurales realizó un estudio exhaustivo que incluyó:\n\n* **Inspección visual detallada** de todas las áreas afectadas\n* **Instalación de testigos y fisurómetros** para monitorizar la evolución de las grietas durante tres meses\n* **Estudio geotécnico del terreno** para evaluar posibles asentamientos diferenciales\n* **Análisis histórico de intervenciones** previas en el edificio y construcciones colindantes\n\nEl estudio determinó que las grietas tenían su origen en las obras de construcción de un aparcamiento subterráneo en un solar adyacente, que habían afectado a la cimentación del edificio.\n\n## 3. Resultado del Proceso\n\nBasándose en nuestro informe pericial, que incluía un detallado estudio de causalidad y una valoración económica de los daños, la comunidad inició un proceso de reclamación contra la empresa constructora y su aseguradora.\n\nTras presentar nuestro dictamen técnico, que resultó concluyente e irrefutable en cuanto al origen de los daños y su valoración, la aseguradora de la constructora aceptó la reclamación y aprobó una indemnización de **120.000€** para la reparación integral de todos los elementos estructurales afectados.\n\nLas reparaciones incluyeron el refuerzo de la cimentación, la reparación de grietas mediante técnicas de cosido estructural, y la restauración de la fachada catalogada, preservando sus elementos ornamentales modernistas originales."
+    "content": "## 1. El Siniestro: Un Desprendimiento Anunciado\n\nEl propietario de una vivienda unifamiliar en Tordera nos contactó alarmado después de que el voladizo de la cubierta posterior se desprendiera por completo, colapsando sobre la terraza de la planta baja y causando graves desperfectos. El objetivo era claro: determinar por qué una estructura aparentemente sólida había fallado y valorar los daños para la reclamación.\n\n### 2. Proceso de Investigación: Discrepancias entre Proyecto y Realidad\n\nNuestra labor pericial se centró en una doble vía: el análisis documental y la inspección física de los restos. Los hallazgos fueron reveladores:\n\n* **Análisis Documental:** Al cotejar la obra con los planos originales del proyecto de ejecución, descubrimos una discrepancia insalvable: **el voladizo que se desprendió no debería existir**. El proyecto original contemplaba un simple alero decorativo, no una losa de hormigón estructural que pudiera soportar peso.\n* **Inspección Física:** El análisis de los escombros demostró que esta ampliación ilegal se construyó de forma temeraria. El voladizo se apoyaba precariamente sobre el borde del forjado existente, sin ningún tipo de anclaje o armadura de acero que lo conectara a la estructura principal. Era una palanca inestable cuyo colapso era cuestión de tiempo.\n\n## 3. Conclusión y Valoración\n\nEl informe pericial concluyó que el desprendimiento se debió a una **ampliación ilegal y ejecutada con una deficiencia estructural muy grave**. Además, se documentaron todos los daños consecuentes (daños por agua en 38 m² de interiores, rotura de pavimentos en la terraza, impactos en la rampa del garaje, etc.) y otros vicios ocultos no relacionados.\n\nNuestro dictamen cuantificó el coste total de reparación en **25.168 € (IVA incluido)**, proporcionando al propietario una prueba técnica sólida y detallada para fundamentar su reclamación."
   },
   {
-    "title": "Humedades y Fisuras en Vivienda Unifamiliar en La Pobla de Claramunt",
-    "slug": "humedades-fisuras-la-pobla-claramunt",
-    "description": "Caso de éxito sobre la detección del origen de humedades y fisuras en una vivienda unifamiliar en La Pobla de Claramunt, que permitió una solución definitiva al problema.",
-    "datePublished": "2025-06-10",
-    "dateModified": "2025-06-15",
-    "tags": ["Patologías", "Humedades", "Vivienda Unifamiliar"],
+    "title": "Deficiencias Graves en Reforma Integral en Sant Cugat del Vallès",
+    "slug": "reforma-defectuosa-sant-cugat-valles",
+    "description": "Informe pericial sobre una reforma integral en Sant Cugat del Vallès con múltiples deficiencias. Cuantificación del perjuicio económico en 19.066 € más IVA.",
+    "datePublished": "2025-08-04",
+    "dateModified": "2025-08-04",
+    "tags": ["Vicios Ocultos", "Reformas", "Reclamaciones"],
     "summary": [
       {
         "label": "Ubicación",
-        "value": "La Pobla de Claramunt, Barcelona"
+        "value": "Sant Cugat del Vallès, Barcelona"
       },
       {
-        "label": "Tipo de Inmueble",
-        "value": "Vivienda unifamiliar adosada"
+        "label": "Tipo de Obra",
+        "value": "Reforma integral de vivienda"
       },
       {
         "label": "Problema Detectado",
-        "value": "Humedades recurrentes y fisuras en muros"
+        "value": "Ejecución generalizada de trabajos de forma deficiente"
       },
       {
         "label": "Resultado",
-        "value": "Diagnóstico preciso y solución definitiva"
+        "value": "Cuantificación del perjuicio económico en 19.066,33 € + IVA"
       }
     ],
     "image": {
-      "url": "/assets/images/casos/humedades-claramunt-1.jpg",
-      "alt": "Humedades en el interior de la vivienda",
-      "caption": "Manchas de humedad y deterioro en paredes interiores de la vivienda."
+      "url": "/assets/images/casos/sant-cugat-alicatado-01.jpg",
+      "alt": "Alicatado con baldosas desniveladas en un baño de la reforma en Sant Cugat",
+      "caption": "Detalle de los 'uñeros' o desniveles entre baldosas, una de las múltiples deficiencias."
     },
-    "images": [],
+    "images": [
+       {
+        "url": "/assets/images/casos/sant-cugat-mortero-01.jpg",
+        "alt": "Aplicación incorrecta de mortero cola en las baldosas",
+        "caption": "El mortero no se aplicó con llana dentada, creando huecos y falta de adherencia."
+      },
+      {
+        "url": "/assets/images/casos/sant-cugat-instalaciones-01.jpg",
+        "alt": "Instalaciones de fontanería ejecutadas sin seguir la normativa",
+        "caption": "Trazados en diagonal y sin protección, una clara muestra de mala praxis."
+      }
+    ],
     "relatedService": {
-      "title": "Informes de Humedades",
-      "url": "/servicios/informes-humedades/"
+      "title": "Auditorías de Obra y Control de Calidad",
+      "url": "/servicios/auditorias-obra/"
     },
-    "content": "## 1. Antecedentes del Caso\n\nEste caso ilustra la importancia de un diagnóstico técnico riguroso para resolver problemas persistentes. Los propietarios de una vivienda unifamiliar en La Pobla de Claramunt habían intentado solucionar problemas de humedades durante años sin éxito, gastando considerables sumas en soluciones que solo trataban los síntomas.\n\n### 2. Nuestra Investigación\n\nNuestro equipo realizó una inspección integral que incluyó:\n\n* **Análisis higrométrico** de las zonas afectadas\n* **Termografía infrarroja** para detectar puntos de filtración no visibles\n* **Pruebas de estanqueidad** en cubiertas y conducciones\n* **Estudio del terreno y sistemas de drenaje** perimetrales\n\nNuestro estudio reveló que el problema tenía un origen doble: filtraciones desde una conducción de agua comunitaria deteriorada y un defecto en el drenaje perimetral de la vivienda.\n\n## 3. Resolución y Resultados\n\nEl informe pericial permitió reclamar a la comunidad y a la constructora, logrando una solución definitiva que eliminó completamente las humedades y permitió la reparación de los daños consecuenciales.\n\nLa intervención incluyó la sustitución de la conducción dañada y la implementación de un nuevo sistema de drenaje perimetral con bombas de achique, eliminando definitivamente un problema que llevaba más de 5 años afectando a la vivienda."
+    "content": "## 1. El Problema: Una Reforma que se Convierte en Pesadilla\n\nUn propietario en Sant Cugat del Vallès nos contactó desesperado. A pesar de haber pagado la totalidad de una reforma integral (más numerosos extras), el resultado estaba plagado de defectos graves que la empresa constructora se negaba a subsanar de forma satisfactoria.\n\n### 2. Análisis Pericial: Un Cúmulo de Deficiencias\n\nLa inspección física y el análisis documental revelaron una gestión de obra negligente y una ejecución que no cumplía los mínimos estándares de calidad (*lex artis*):\n\n* **Revestimientos y Pavimentos:** Se constataron alicatados sin nivelación ('uñeros'), aplicación de mortero sin llana dentada (creando huecos), juntas irregulares y baldosas rotas.\n* **Instalaciones:** Trazados de fontanería y electricidad no reglamentarios (en diagonal), una balconera instalada con el cristal y color incorrectos, y una puerta de inferior calidad a la presupuestada.\n* **Análisis Económico:** Se detectó que se habían facturado y cobrado servicios por valor de **4.768,69 € que nunca se llegaron a ejecutar** o cuyos materiales no fueron entregados.\n\n## 3. Conclusión: Cuantificación del Perjuicio\n\nNuestro informe pericial documentó cada una de las deficiencias y cuantificó el perjuicio económico total sufrido por el propietario. Para ello, se sumaron tres conceptos clave: el coste de demoler lo mal hecho y finalizar la obra (según presupuesto de un tercer industrial), el valor de lo pagado y no ejecutado, y el perjuicio por materiales incorrectos o dañados.\n\nEl dictamen concluyó con una reclamación económica total de **19.066,33 € + IVA**, proporcionando al cliente una herramienta técnica y legal fundamental para defender sus derechos."
+  },
+  {
+    "title": "Deficiencias Estructurales en la Ampliación de una Bodega en el Penedès",
+    "slug": "deficiencias-estructurales-bodega-penedes",
+    "description": "Informe pericial sobre defectos graves en pavimentos y en la estructura metálica de la ampliación de una bodega en Subirats (Alt Penedès), comprometiendo su seguridad.",
+    "datePublished": "2025-05-04",
+    "dateModified": "2025-05-04",
+    "tags": ["Estructural", "Patologías", "Naves Industriales"],
+    "summary": [
+      {
+        "label": "Ubicación",
+        "value": "Subirats, Alt Penedès (Barcelona)"
+      },
+      {
+        "label": "Tipo de Inmueble",
+        "value": "Bodega (Celler)"
+      },
+      {
+        "label": "Problema Detectado",
+        "value": "Ejecución deficiente de pavimentos y anclajes estructurales"
+      },
+      {
+        "label": "Resultado",
+        "value": "Orden de corrección inmediata para garantizar la seguridad del edificio"
+      }
+    ],
+    "image": {
+      "url": "/assets/images/casos/penedes-estructura-01.jpg",
+      "alt": "Detalle del anclaje defectuoso de la viga HEA320 en la bodega del Penedès",
+      "caption": "Perno de fijación extraído sin restos de mortero o resina, demostrando la ausencia de anclaje."
+    },
+    "images": [
+       {
+        "url": "/assets/images/casos/penedes-terraza-01.jpg",
+        "alt": "Pavimento de mortero de la terraza completamente fisurado",
+        "caption": "La ausencia de juntas y un curado deficiente provocaron la fisuración generalizada del soporte."
+      },
+      {
+        "url": "/assets/images/casos/penedes-calculo-01.jpg",
+        "alt": "Cálculos estructurales que justifican la necesidad de los apoyos correctos",
+        "caption": "El análisis técnico demostró que la solución proyectada era correcta, pero no la ejecutada."
+      }
+    ],
+    "relatedService": {
+      "title": "Informes de Deficiencias Estructurales",
+      "url": "/servicios/informes-estructurales/"
+    },
+    "content": "## 1. El Problema: Defectos Críticos tras una Ampliación\n\nEl propietario de una importante bodega en el corazón del Penedès nos encargó un informe tras detectar graves anomalías en la obra de ampliación de sus instalaciones. Los defectos comprometían la funcionalidad de los nuevos pavimentos y, lo que es más preocupante, la seguridad estructural del nuevo forjado.\n\n### 2. Diagnóstico Técnico: Tres Focos de Deficiencias Graves\n\nNuestra inspección y el posterior análisis técnico, cotejado con el proyecto de ejecución original, revelaron tres problemas críticos que requerían una intervención inmediata:\n\n1.  **Pavimento de Terraza Inservible:** El mortero de la nueva terraza presentaba fisuras de más de 1mm y disgregación superficial por una ejecución deficiente y la ausencia total de juntas de dilatación. Era un soporte inútil para el acabado cerámico previsto.\n2.  **Pavimento de Planta Baja Contaminado:** El hormigón de la planta inferior estaba cubierto de restos de lechada, generando un polvo constante que impedía su uso como soporte para un pavimento de rodadura industrial.\n3.  **Deficiencia Estructural Crítica:** Este fue el hallazgo más grave. La viga metálica principal (un perfil HEA320) que soportaba el nuevo forjado no estaba anclada correctamente a los pilares según el proyecto. Los apoyos intermedios, esenciales para el cálculo estructural, estaban sujetos de forma precaria, comprometiendo la estabilidad y seguridad de toda la planta superior.\n\n## 3. Solución y Conclusión\n\nNuestro informe pericial fue concluyente. Se demostró mediante cálculos que la solución ejecutada en la estructura metálica no garantizaba la estabilidad prevista en el proyecto original. Se ordenó la **corrección inmediata del sistema de anclaje** para asegurar la integridad del edificio.\n\nAsimismo, se recomendó la demolición y reconstrucción completa del pavimento de la terraza y el fresado mecánico del pavimento de la planta baja. El informe proporcionó al propietario las directrices técnicas necesarias para exigir una correcta subsanación de todas las deficiencias."
+  },
+  {
+    "title": "Reclamación Exitosa por Instalación Defectuosa de Parqué en Barcelona",
+    "slug": "instalacion-defectuosa-parque-barcelona",
+    "description": "Informe pericial sobre un parqué de alta gama (AC5) mal instalado en una vivienda de Barcelona (Sants), identificando la ausencia de juntas y un soporte no nivelado como causa.",
+    "datePublished": "2025-09-03",
+    "dateModified": "2025-09-03",
+    "tags": ["Vicios Ocultos", "Reformas", "Reclamaciones"],
+    "summary": [
+      {
+        "label": "Ubicación",
+        "value": "Barrio de Sants, Barcelona"
+      },
+      {
+        "label": "Tipo de Obra",
+        "value": "Instalación de pavimento laminado"
+      },
+      {
+        "label": "Problema Detectado",
+        "value": "Abombamiento, movimiento y crujidos en parqué nuevo"
+      },
+      {
+        "label": "Resultado",
+        "value": "Dictamen que responsabiliza a la instaladora del coste íntegro de la reparación."
+      }
+    ],
+    "image": {
+      "url": "/assets/images/casos/parque-sants-01.jpg",
+      "alt": "Pasillo con el parqué levantado y abombado por la falta de juntas de dilatación",
+      "caption": "El movimiento vertical del parqué al caminar era evidente en toda la vivienda."
+    },
+    "images": [
+       {
+        "url": "/assets/images/casos/parque-sants-02.jpg",
+        "alt": "Detalle del desnivel entre el parqué y el rodapié",
+        "caption": "La falta de nivelación del soporte provocaba ondulaciones visibles."
+      },
+      {
+        "url": "/assets/images/casos/parque-sants-03.jpg",
+        "alt": "Lamas de parqué con el sistema de anclaje clic roto",
+        "caption": "La mala ejecución provocó incluso la rotura de las uniones entre lamas."
+      }
+    ],
+    "relatedService": {
+      "title": "Informes Periciales por Vicios Ocultos",
+      "url": "/servicios/informes-vicios-ocultos/"
+    },
+    "content": "## 1. El Problema: Un Suelo Nuevo que Parece Viejo\n\nUna propietaria en el barrio de Sants nos contactó frustrada. Tras una reforma integral, el pavimento de parqué laminado de alta gama (calidad AC5) recién instalado presentaba graves problemas: se levantaba en varias zonas, 'crujía' al caminar y presentaba ondulaciones visibles. La empresa instaladora atribuía los problemas a la calidad del material, una afirmación que nuestro peritaje desmintió.\n\n### 2. La Causa Real: Errores de Instalación\n\nLa inspección técnica reveló que el material era de excelente calidad, pero su instalación fue completamente deficiente. Los errores contravenían las normas más básicas de la buena construcción (*lex artis*):\n\n* **Ausencia de Juntas de Dilatación:** El instalador colocó el parqué de forma continua por toda la planta, sin dejar las juntas perimetrales y de transición obligatorias. Al no tener espacio para expandirse, el parqué se abombaba y se levantaba.\n* **Soporte sin Nivelar:** La base sobre la que se instaló el pavimento no fue correctamente nivelada, lo que provocaba las ondulaciones y el movimiento vertical de las lamas.\n* **Mala Praxis General:** Se detectaron además lamas con el sistema de anclaje 'clic' roto y una colocación sin la trabazón adecuada, generando un patrón estético anómalo (efecto 'escalera').\n\n## 3. Conclusión Pericial\n\nNuestro informe concluyó de forma inequívoca que todos los defectos eran atribuibles a una **incorrecta ejecución de la instalación**, y no a un defecto del material. Se determinó que la única solución viable era el desmontaje completo del pavimento, la correcta nivelación del soporte y la reinstalación del material desde cero.\n\nEl dictamen estableció que la empresa instaladora debía **asumir el 100% de los costes de la subsanación**, liberando a la propietaria de cualquier gasto adicional y proporcionándole la herramienta legal necesaria para exigir una solución definitiva."
+  },
+  {
+    "title": "Dictamen por Incumplimiento de Contrato en Reforma Post-Incendio",
+    "slug": "incumplimiento-contrato-reforma-barcelona",
+    "description": "Peritaje técnico sobre una reforma post-incendio en Barcelona donde el contratista recibió un adelanto de 30.976€ y no inició los trabajos, realizando solo actuaciones deficientes.",
+    "datePublished": "2025-08-20",
+    "dateModified": "2025-08-20",
+    "tags": ["Reclamaciones", "Reformas", "Seguros"],
+    "summary": [
+      {
+        "label": "Ubicación",
+        "value": "Barcelona"
+      },
+      {
+        "label": "Tipo de Obra",
+        "value": "Reforma de vivienda tras un incendio"
+      },
+      {
+        "label": "Problema Detectado",
+        "value": "Pago de adelanto sin inicio real de los trabajos"
+      },
+      {
+        "label": "Resultado",
+        "value": "Informe técnico que justifica la no contraprestación del pago de 30.976 €"
+      }
+    ],
+    "image": {
+      "url": "/assets/images/casos/incendio-barcelona-01.jpg",
+      "alt": "Vista del salón de la vivienda afectada por el incendio y sin reformar",
+      "caption": "Estado de la vivienda durante la inspección: sin inicio de obra y con daños por hollín."
+    },
+    "images": [
+      {
+        "url": "/assets/images/casos/incendio-barcelona-02.jpg",
+        "alt": "Pintura deficiente sobre el hollín del incendio",
+        "caption": "La pintura plástica aplicada no cubre el hollín, un tratamiento totalmente inadecuado."
+      },
+      {
+        "url": "/assets/images/casos/incendio-barcelona-03.jpg",
+        "alt": "Instalación eléctrica peligrosa sobre cableado quemado",
+        "caption": "Se conectó cableado nuevo directamente sobre la instalación antigua afectada por el fuego."
+      }
+    ],
+    "relatedService": {
+      "title": "Auditorías de Obra y Control de Calidad",
+      "url": "/servicios/auditorias-obra/"
+    },
+    "content": "## 1. El Conflicto: Un Adelanto Sin Contraprestación\n\nUna propietaria en Barcelona se encontró en una situación de extrema vulnerabilidad: tras sufrir un incendio que dejó su vivienda inhabitable, pagó un adelanto del 40% (30.976 €) a un contratista para iniciar la reforma con urgencia. Sin embargo, tras el pago, los trabajos no solo no comenzaron, sino que el contratista realizó solicitudes económicas inusuales que generaron una total pérdida de confianza.\n\n### 2. Verificación Técnica de los Hechos\n\nNuestra labor pericial consistió en verificar si el adelanto pagado, condicionado al 'inicio de los trabajos', tenía una contraprestación real en la vivienda. La inspección fue determinante:\n\n* **No Inicio de la Obra:** No se encontraron evidencias físicas del inicio de la reforma. No había acopio de materiales (salvo unos pocos sacos), ni herramientas, ni se habían comenzado las labores de demolición o reconstrucción.\n* **Actuaciones Deficientes:** Las únicas 'actuaciones' realizadas eran parciales y técnicamente inaceptables. Se había aplicado una capa de pintura plástica directamente sobre el hollín (un tratamiento inútil) y se habían conectado cables nuevos sobre la instalación eléctrica original quemada, una práctica peligrosa y fuera de toda normativa.\n* **Discrepancias Documentales:** Se constató que el contratista se presentó como un autorizado directo de la aseguradora, cuando en realidad era un subcontratado de otra empresa colaboradora.\n\n## 3. Conclusión Pericial\n\nEl informe concluyó que **no existía ninguna evidencia física ni técnica que justificara el pago del adelanto de 30.976 €**. Las escasas labores realizadas eran deficientes y no constituían un inicio de obra. El dictamen pericial se convirtió en la prueba clave para que la propietaria pudiera reclamar la devolución íntegra del importe abonado por un claro incumplimiento de contrato."
+  },
+  {
+    "title": "Daños en Nave Industrial por Uso Indebido del Arrendatario en Sant Joan Despí",
+    "slug": "danos-nave-industrial-sant-joan-despi",
+    "description": "Informe pericial para la reclamación de daños en una nave industrial en Sant Joan Despí, valorando la reparación de pavimentos, altillos y protección contra incendios.",
+    "datePublished": "2025-06-18",
+    "dateModified": "2025-06-18",
+    "tags": ["Naves Industriales", "Patologías", "Reclamaciones"],
+    "summary": [
+      {
+        "label": "Ubicación",
+        "value": "Sant Joan Despí, Barcelona"
+      },
+      {
+        "label": "Tipo de Inmueble",
+        "value": "Nave industrial"
+      },
+      {
+        "label": "Problema Detectado",
+        "value": "Daños severos tras la finalización de un contrato de alquiler"
+      },
+      {
+        "label": "Resultado",
+        "value": "Valoración económica de daños entre 336.950 € y 342.950 €"
+      }
+    ],
+    "image": {
+      "url": "/assets/images/casos/nave-industrial-pavimento-01.jpg",
+      "alt": "Pavimento industrial completamente roto y fisurado en la nave de Sant Joan Despí",
+      "caption": "Más del 60% de las losetas del pavimento se encontraban rotas, requiriendo su sustitución completa."
+    },
+    "images": [
+       {
+        "url": "/assets/images/casos/nave-industrial-ignifugo-01.jpg",
+        "alt": "Desprendimiento del mortero de protección ignífuga de la estructura metálica",
+        "caption": "La falta de protección pasiva comprometía gravemente la seguridad contra incendios de la nave."
+      },
+      {
+        "url": "/assets/images/casos/nave-industrial-anclajes-01.jpg",
+        "alt": "Marcas de anclajes de los altillos desmontados por el inquilino",
+        "caption": "Evidencias del desmontaje de dos grandes altillos que no constaban en proyecto."
+      }
+    ],
+    "relatedService": {
+      "title": "Informes Periciales para Naves Industriales",
+      "url": "/servicios/informes-naves-industriales/"
+    },
+    "content": "## 1. El Origen: Finalización de un Contrato de Alquiler\n\nLa empresa propietaria de una nave industrial en Sant Joan Despí nos contactó tras la marcha de su anterior inquilino. Se encontraron con un inmueble con múltiples daños que excedían claramente el desgaste por un uso ordinario, y necesitaban un informe técnico para documentarlos y valorar su reparación de cara a una reclamación.\n\n### 2. Alcance de los Daños Detectados\n\nLa inspección pericial reveló un estado de deterioro generalizado que afectaba a la seguridad, la legalidad y la funcionalidad de la nave:\n\n* **Pavimentos Industriales Destruidos:** Más del 60% del pavimento de las plantas baja y tercera estaba completamente roto, probablemente por un uso que excedió la capacidad de carga para la que fue diseñado.\n* **Protección Contra Incendios Comprometida:** El mortero ignífugo que recubría la estructura metálica principal se había desprendido en varias zonas, dejando los perfiles expuestos y reduciendo drásticamente la estabilidad del edificio en caso de incendio (incumplimiento del RSCIEI).\n* **Altillos Ilegales Desmontados:** Se encontraron evidencias claras (marcas de anclajes) del montaje y posterior desmontaje de dos altillos de gran superficie (191 m² y 172 m²). Una consulta en el archivo municipal confirmó que no existía licencia para dichas estructuras.\n* **Instalación Eléctrica Inoperativa:** El anterior inquilino retiró los contadores, siendo necesario redactar un nuevo proyecto de Baja Tensión para poder legalizar y dar de alta el suministro.\n\n## 3. Conclusión y Valoración Económica\n\nEl informe pericial concluyó que el conjunto de intervenciones era indispensable para la restitución funcional y legal del edificio. Se realizó una valoración económica detallada basada en presupuestos de empresas especialistas para cada partida (pavimentos, restitución de altillos, zonas de aseos y protección ignífuga).\n\nEl coste total estimado para la reparación de todos los daños se valoró en un rango de **entre 336.950 € y 342.950 € (sin IVA)**, proporcionando a la propiedad una base sólida para su reclamación por los perjuicios causados."
+  },
+  {
+    "title": "Informe Pericial para Constructora por Defectos en Parqué de Obra Nueva en Viladecans",
+    "slug": "defectos-parque-obra-nueva-viladecans",
+    "description": "Caso de éxito de un informe pericial para una gran constructora sobre defectos de instalación de parqué en 39 viviendas de una promoción de obra nueva en Viladecans (Barcelona).",
+    "datePublished": "2025-02-18",
+    "dateModified": "2025-02-18",
+    "tags": ["Constructoras", "Patologías", "Obra Nueva", "Reclamaciones"],
+    "summary": [
+      {
+        "label": "Ubicación",
+        "value": "Viladecans, Barcelona"
+      },
+      {
+        "label": "Tipo de Actuación",
+        "value": "Informe pericial para gran constructora nacional"
+      },
+      {
+        "label": "Problema Detectado",
+        "value": "Defectos generalizados en la instalación de parqué de 39 viviendas"
+      },
+      {
+        "label": "Resultado",
+        "value": "Dictamen que atribuye la responsabilidad a la empresa instaladora y exonera al material"
+      }
+    ],
+    "image": {
+      "url": "/assets/images/casos/viladecans-parque-clip-roto.jpg",
+      "alt": "Canto de una lama de parqué levantado por la rotura del clip de unión",
+      "caption": "El movimiento vertical de las lamas evidenciaba una instalación deficiente."
+    },
+    "images": [
+      {
+        "url": "/assets/images/casos/viladecans-parque-escalera.jpg",
+        "alt": "Efecto escalera en la colocación del parqué, incumpliendo la normativa UNE",
+        "caption": "La mala disposición de las lamas generaba un patrón visual anómalo."
+      },
+      {
+        "url": "/assets/images/casos/viladecans-parque-rodapie.jpg",
+        "alt": "Ondulación y mala terminación del parqué junto al rodapié de la cocina",
+        "caption": "La falta de nivelación del soporte provocaba ondulaciones y malos ajustes."
+      }
+    ],
+    "relatedService": {
+      "title": "Auditorías de Obra para Constructoras",
+      "url": "/servicios/auditorias-obra-constructoras/"
+    },
+    "content": "## 1. El Desafío: 39 Viviendas con Reclamaciones\n\nUna de las mayores constructoras nacionales se enfrentó a un problema complejo en una promoción de obra nueva en Viladecans: 39 propietarios reclamaban por defectos generalizados en el parqué de sus viviendas. La duda era crucial: ¿se trataba de un defecto del material de alta gama instalado (Swiss Krono) o de un fallo en la ejecución por parte de la empresa instaladora subcontratada? Necesitaban un dictamen técnico independiente para determinar el origen de la responsabilidad.\n\n### 2. Investigación Pericial: Análisis de la Ejecución\n\nNuestra labor consistió en realizar una inspección visual de una muestra representativa del 20% de las viviendas afectadas. Acompañados por un experto parquetista y el departamento de postventa de la constructora, identificamos un patrón de defectos que se repetía en todos los casos:\n\n* **Rotura de Clips de Unión:** Numerosas lamas se movían verticalmente al pisarlas por tener el sistema de anclaje roto, un defecto típico de una mala praxis durante la colocación.\n* **'Efecto Escalera':** La disposición de las lamas no respetaba el decalaje mínimo de 30 cm que exige la normativa UNE 56810, generando un patrón estético incorrecto.\n* **Malos Ajustes y Ondulaciones:** Se observaban separaciones y un efecto ondulado en los encuentros con los rodapiés de las cocinas, indicativo de una deficiente preparación de la base.\n* **Defectos Estéticos:** Se encontraron lamas instaladas con defectos de tinte que deberían haber sido descartadas por el instalador.\n\n## 3. Conclusión: Responsabilidad en la Instalación\n\nNuestro informe pericial fue concluyente: el material de la marca Swiss Krono era de alta calidad y no presentaba defectos de fabricación. Todos los problemas detectados eran inequívocamente atribuibles a una **incorrecta ejecución del pavimento**. El dictamen descartó otras posibles causas como la humedad o la falta de juntas de dilatación.\n\nGracias a este informe, la constructora pudo determinar con certeza la responsabilidad de la empresa instaladora, disponiendo de una prueba técnica objetiva para gestionar la subsanación de las 39 reclamaciones de manera eficaz."
   }
 ]
