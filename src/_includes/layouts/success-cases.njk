@@ -8,7 +8,16 @@
     <h4 class="font-bold mb-2">Debug Info:</h4>
     <p>Información de depuración</p>
     {% if casosExito %}
-    <p>Número de casos: {{ casosExito | length }}</p>
+    {% set casosTotales = casosExito | length %}
+    {% set casosPublicados = 0 %}
+    {% for caso in casosExito %}
+        {% if not caso.estado or caso.estado == "publicado" %}
+            {% set casosPublicados = casosPublicados + 1 %}
+        {% endif %}
+    {% endfor %}
+    <p>Número total de casos: {{ casosTotales }}</p>
+    <p>Casos publicados: {{ casosPublicados }}</p>
+    <p>Casos en preparación: {{ casosTotales - casosPublicados }}</p>
     {% else %}
     <p>No se encontraron datos de casosExito</p>
     {% endif %}
@@ -16,6 +25,42 @@
 {% endif %}
 
 <main itemscope itemtype="https://schema.org/CollectionPage">
+    <!-- Script JSON-LD para CollectionPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ metadata.site.url }}/casos-exito/"
+        },
+        "headline": "Casos de Éxito: Ejemplos Reales de Nuestros Informes Periciales",
+        "description": "Descubra ejemplos concretos de cómo nuestros informes periciales técnicos y de seguros han resuelto conflictos, fundamentado reclamaciones y proporcionado claridad en situaciones complejas en Barcelona y provincia.",
+        "url": "{{ metadata.site.url }}/casos-exito/",
+        "inLanguage": "{{ metadata.default_lang }}",
+        "publisher": {
+            "@type": "Organization",
+            "name": "{{ metadata.site.title }}",
+            "url": "{{ metadata.site.url }}",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ metadata.site.url }}/assets/images/logos/logo.png",
+                "width": "600",
+                "height": "60"
+            }
+        },
+        "isPartOf": {
+            "@type": "WebSite",
+            "url": "{{ metadata.site.url }}",
+            "name": "{{ metadata.site.title }}"
+        },
+        "about": {
+            "@type": "Thing",
+            "name": "Informes Periciales",
+            "description": "Colección de casos de éxito de informes periciales técnicos y de seguros"
+        }
+    }
+    </script>
     {# Hero Section #}
     <header class="relative mt-[70px] lg:mt-[120px] bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] overflow-hidden isolate" itemprop="mainContentOfPage">
         <!-- Efectos decorativos -->
@@ -83,8 +128,9 @@
             </div>
 
             {# Grid de Casos con mejor contraste #}
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="grid-casos-exito">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="grid-casos-exito" itemprop="hasPart" itemscope itemtype="https://schema.org/ItemList">
                 {% for caso in casosExito %}
+                {% if not caso.estado or caso.estado == "publicado" %}
                 {# Debug info si no hay casos #}
                 {% if loop.first and loop.last and not caso.title %}
                 <div class="col-span-3 bg-yellow-100 p-6 rounded-xl">
@@ -93,14 +139,30 @@
                 </div>
                 {% endif %}
                 <a href="/casos-exito/{{ caso.slug }}/" class="group/card relative block h-full bg-gradient-to-br from-white to-slate-50/80 rounded-2xl p-6 pb-20 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden isolate no-underline"
-                     data-category="{{ caso.tags | join(' ') | lower | replace(' ', '-') }}">
+                     data-category="{{ caso.tags | join(' ') | lower | replace(' ', '-') }}"
+                     itemprop="itemListElement" itemscope itemtype="https://schema.org/TechnicalArticle">
                     <!-- Efecto hover background -->
                     <div class="absolute inset-0 bg-gradient-to-br from-cyan-50 to-white opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
                     
+                    <!-- Etiqueta de estado de publicación -->
+                    {% if caso.estado and caso.estado == "no publicado" %}
+                    <div class="absolute top-2 right-2 z-20 px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full flex items-center">
+                        <svg class="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                        En preparación
+                    </div>
+                    {% endif %}
+                    
                     <!-- Contenido principal -->
                     <div class="relative z-10">
-                        <h2 class="text-xl font-bold text-slate-800 mb-3" itemprop="headline">{{ caso.title }}</h2>
+                        <h2 class="text-xl font-bold text-slate-800 mb-3" itemprop="headline name">{{ caso.title }}</h2>
                         <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow" itemprop="description">{{ caso.description | truncate(120) }}</p>
+                        <meta itemprop="datePublished" content="{{ caso.datePublished }}">
+                        {% if caso.image %}
+                        <meta itemprop="image" content="{{ metadata.site.url }}{{ caso.image.url }}">
+                        {% endif %}
+                        <meta itemprop="url" content="{{ metadata.site.url }}/casos-exito/{{ caso.slug }}/">
                         
                         <!-- Tags -->
                         <div class="flex flex-wrap gap-2 mt-4">
@@ -126,6 +188,7 @@
                         </div>
                     </div>
                 </a>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
@@ -180,6 +243,7 @@
                                      categories.some(cat => cat.includes(activeFilter.toLowerCase()));
                 const showForSelect = selectFilter === 'all' || 
                                      categories.some(cat => cat.includes(selectFilter.toLowerCase()));
+                const isPublished = !caso.querySelector('.en-preparación');
                 
                 caso.style.display = (showForButton && showForSelect) ? 'block' : 'none';
             });
