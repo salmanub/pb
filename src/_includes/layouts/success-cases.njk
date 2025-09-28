@@ -240,10 +240,27 @@
         filterProblema.value = 'all';
         filterInmueble.value = 'all';
 
+        // Mapeo de relaciones entre filtros de botones y filtros de problemas
+        const filterRelations = {
+            'patologías': ['humedades', 'patologías'],
+            'estructural': ['estructural'],
+            'reformas': ['vicios-ocultos', 'reformas'],
+            'all': [] // todos los botones
+        };
+
         function updateFilters() {
             const activeFilter = document.querySelector('[data-filter].active')?.dataset.filter || 'all';
             const selectProblema = filterProblema.value;
             const selectInmueble = filterInmueble.value;
+
+            // Si se selecciona un botón de filtro específico, desactivar opciones relacionadas
+            // en el desplegable de problema y seleccionar "Todos los problemas"
+            if (activeFilter !== 'all') {
+                const relatedOptions = filterRelations[activeFilter] || [];
+                if (relatedOptions.includes(selectProblema)) {
+                    filterProblema.value = 'all';
+                }
+            }
 
             cases.forEach(caso => {
                 const categories = caso.dataset.category ? caso.dataset.category.toLowerCase().split(' ') : [];
@@ -251,11 +268,11 @@
                 const showForButton = activeFilter === 'all' || 
                                      categories.some(cat => cat.includes(activeFilter.toLowerCase()));
                                      
-                const showForProblema = selectProblema === 'all' || 
-                                     categories.some(cat => cat.includes(selectProblema.toLowerCase()));
+                const showForProblema = filterProblema.value === 'all' || 
+                                     categories.some(cat => cat.includes(filterProblema.value.toLowerCase()));
                                      
-                const showForInmueble = selectInmueble === 'all' || 
-                                     categories.some(cat => cat.includes(selectInmueble.toLowerCase()));
+                const showForInmueble = filterInmueble.value === 'all' || 
+                                     categories.some(cat => cat.includes(filterInmueble.value.toLowerCase()));
                 
                 caso.style.display = (showForButton && showForProblema && showForInmueble) ? 'block' : 'none';
             });
@@ -263,17 +280,49 @@
 
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
+                // Actualizar la apariencia visual de los botones
                 filterButtons.forEach(btn => {
                     btn.classList.remove('active', 'bg-cyan-500', 'text-white', 'hover:bg-cyan-600', 'hover:text-white');
                     btn.classList.add('bg-white', 'text-slate-700', 'hover:bg-slate-100', 'hover:text-slate-800');
                 });
                 button.classList.add('active', 'bg-cyan-500', 'text-white', 'hover:bg-cyan-600', 'hover:text-white');
                 button.classList.remove('bg-white', 'text-slate-700', 'hover:bg-slate-100', 'hover:text-slate-800');
+                
+                // Resetear el filtro de problemas si se selecciona un botón con categoría relacionada
+                const buttonFilter = button.dataset.filter;
+                const relatedOptions = filterRelations[buttonFilter] || [];
+                
+                if (buttonFilter !== 'all' && relatedOptions.includes(filterProblema.value)) {
+                    filterProblema.value = 'all';
+                }
+                
                 updateFilters();
             });
         });
 
-        filterProblema.addEventListener('change', updateFilters);
+        filterProblema.addEventListener('change', (e) => {
+            // Si se selecciona una opción en el desplegable de problemas,
+            // y hay un botón activo que está relacionado con esa opción,
+            // resetear a "Todos los casos"
+            const activeFilter = document.querySelector('[data-filter].active')?.dataset.filter || 'all';
+            const selectedProblema = e.target.value;
+            
+            if (activeFilter !== 'all') {
+                const relatedOptions = filterRelations[activeFilter] || [];
+                if (relatedOptions.includes(selectedProblema)) {
+                    // Resetear los botones al de "Todos los casos"
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-cyan-500', 'text-white', 'hover:bg-cyan-600', 'hover:text-white');
+                        btn.classList.add('bg-white', 'text-slate-700', 'hover:bg-slate-100', 'hover:text-slate-800');
+                    });
+                    document.querySelector('[data-filter="all"]').classList.add('active', 'bg-cyan-500', 'text-white', 'hover:bg-cyan-600', 'hover:text-white');
+                    document.querySelector('[data-filter="all"]').classList.remove('bg-white', 'text-slate-700', 'hover:bg-slate-100', 'hover:text-slate-800');
+                }
+            }
+            
+            updateFilters();
+        });
+        
         filterInmueble.addEventListener('change', updateFilters);
         
         // Inicializar con el primer botón activo
