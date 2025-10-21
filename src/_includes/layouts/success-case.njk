@@ -3,12 +3,16 @@
 {% block content %}
 {% if not caso.estado or caso.estado == "publicado" %}
 <main class="pt-[70px] lg:pt-[120px]" itemscope itemtype="https://schema.org/TechnicalArticle">
+    <!-- Schema microdata oculto -->
+    <div hidden>
         <meta itemprop="headline" content="{{ title | truncate(110) }}">
         <meta itemprop="description" content="{{ description }}">
         <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}{{ page.url }}">
         <meta itemprop="datePublished" content="{{ datePublished }}">
         <meta itemprop="dateModified" content="{{ dateModified }}">
         {% if caso.tags and caso.tags.length > 0 %}<meta itemprop="keywords" content="{{ caso.tags | join(', ') }}">{% endif %}
+        <meta itemprop="inLanguage" content="{{ metadata.default_lang }}">
+        <meta itemprop="isAccessibleForFree" content="True">
         
         <!-- Author -->
         <div itemprop="author" itemscope itemtype="https://schema.org/Person">
@@ -60,6 +64,7 @@
         </div>
         {% endif %}
     </div>
+    
     <!-- Hero Section -->
     <header class="bg-gradient-to-br from-slate-50 to-white py-12 px-4 md:px-[5%] shadow-sm">
         <div class="max-w-[1000px] mx-auto">
@@ -289,21 +294,28 @@
 <style>
     {{ indexCSS | safe }}
 
-/* Estilos para el breadcrumb en fondo claro */
+/* Estilos para el breadcrumb en fondo claro - específico para success-case.njk */
 header nav[aria-label="Breadcrumb"] ol {
-    @apply text-cyan-600/80;
+    color: #0e7490 !important;
 }
 
 header nav[aria-label="Breadcrumb"] a {
-    @apply hover:text-cyan-700;
+    color: #0e7490 !important;
+    font-weight: 500;
+}
+
+header nav[aria-label="Breadcrumb"] a:hover {
+    color: #164e63 !important;
+    text-decoration: underline;
 }
 
 header nav[aria-label="Breadcrumb"] svg {
-    @apply text-cyan-600/60;
+    color: #0e7490 !important;
 }
 
 header nav[aria-label="Breadcrumb"] span[aria-current="page"] {
-    @apply text-slate-800 font-medium;
+    color: #0f172a !important;
+    font-weight: 600;
 }
 
 /* Estilos mejorados para la página de caso individual */
