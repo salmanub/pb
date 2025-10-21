@@ -68,11 +68,10 @@
 
                 <div class="max-w-[1000px] mx-auto text-center">
                     <h1 class="text-[2.5rem] md:text-[3.5rem] font-light leading-[1.1] mb-8 text-white" itemprop="headline">
-                        Resultados Reales:
-                        <span class="block text-cyan-400 mt-4">Vea Cómo Ayudamos a Nuestros Clientes</span>
+                        {{ eleventyNavigation.title or title }}
                     </h1>
                     <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto" itemprop="description">
-                        Descubra ejemplos concretos de cómo nuestros informes periciales técnicos y de seguros han resuelto conflictos, fundamentado reclamaciones y proporcionado claridad en situaciones complejas en Barcelona y provincia.
+                        {{ description }}
                     </p>
                 </div>
             </div>
