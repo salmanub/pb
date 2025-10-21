@@ -26,7 +26,7 @@
       }
     ],
     "image": {
-      "url": "/assets/images/casos/humedades-eixample-featured.jpg",
+      "url": "/assets/images/placeholder-default.png",
       "alt": "Detalle de las humedades por capilaridad en una pared del Eixample",
       "caption": "Inspección detallada de las paredes afectadas por la humedad ascendente."
     },
@@ -74,7 +74,7 @@
       }
     ],
     "image": {
-      "url": "/assets/images/casos/tordera-colapso-01.jpg",
+      "url": "/assets/images/placeholder-default.png",
       "alt": "Terraza dañada por el impacto del voladizo desprendido en Tordera",
       "caption": "Estado de la terraza posterior tras el impacto del voladizo de cubierta."
     },
@@ -123,7 +123,7 @@
       }
     ],
     "image": {
-      "url": "/assets/images/casos/sant-cugat-alicatado-01.jpg",
+      "url": "/assets/images/placeholder-default.png",
       "alt": "Alicatado con baldosas desniveladas en un baño de la reforma en Sant Cugat",
       "caption": "Detalle de los 'uñeros' o desniveles entre baldosas, una de las múltiples deficiencias."
     },
@@ -171,7 +171,7 @@
       }
     ],
     "image": {
-      "url": "/assets/images/casos/penedes-estructura-01.jpg",
+      "url": "/assets/images/placeholder-default.png",
       "alt": "Detalle del anclaje defectuoso de la viga HEA320 en la bodega del Penedès",
       "caption": "Perno de fijación extraído sin restos de mortero o resina, demostrando la ausencia de anclaje."
     },
@@ -194,9 +194,9 @@
     "content": "## 1. El Problema: Defectos Críticos tras una Ampliación\n\nEl propietario de una importante bodega en el corazón del Penedès nos encargó un informe tras detectar graves anomalías en la obra de ampliación de sus instalaciones. Los defectos comprometían la funcionalidad de los nuevos pavimentos y, lo que es más preocupante, la seguridad estructural del nuevo forjado.\n\n### 2. Diagnóstico Técnico: Tres Focos de Deficiencias Graves\n\nNuestra inspección y el posterior análisis técnico, cotejado con el proyecto de ejecución original, revelaron tres problemas críticos que requerían una intervención inmediata:\n\n1.  **Pavimento de Terraza Inservible:** El mortero de la nueva terraza presentaba fisuras de más de 1mm y disgregación superficial por una ejecución deficiente y la ausencia total de juntas de dilatación. Era un soporte inútil para el acabado cerámico previsto.\n2.  **Pavimento de Planta Baja Contaminado:** El hormigón de la planta inferior estaba cubierto de restos de lechada, generando un polvo constante que impedía su uso como soporte para un pavimento de rodadura industrial.\n3.  **Deficiencia Estructural Crítica:** Este fue el hallazgo más grave. La viga metálica principal (un perfil HEA320) que soportaba el nuevo forjado no estaba anclada correctamente a los pilares según el proyecto. Los apoyos intermedios, esenciales para el cálculo estructural, estaban sujetos de forma precaria, comprometiendo la estabilidad y seguridad de toda la planta superior.\n\n## 3. Solución y Conclusión\n\nNuestro informe pericial fue concluyente. Se demostró mediante cálculos que la solución ejecutada en la estructura metálica no garantizaba la estabilidad prevista en el proyecto original. Se ordenó la **corrección inmediata del sistema de anclaje** para asegurar la integridad del edificio.\n\nAsimismo, se recomendó la demolición y reconstrucción completa del pavimento de la terraza y el fresado mecánico del pavimento de la planta baja. El informe proporcionó al propietario las directrices técnicas necesarias para exigir una correcta subsanación de todas las deficiencias."
   },
   {
-    "title": "Reclamación Exitosa por Instalación Defectuosa de Parqué en Barcelona",
+    "title": "Reclamación Exitosa por Instalación Defectuosa de Parquet en Barcelona",
     "slug": "instalacion-defectuosa-parque-barcelona",
-    "description": "Informe pericial sobre un parqué de alta gama (AC5) mal instalado en una vivienda de Barcelona (Sants), identificando la ausencia de juntas y un soporte no nivelado como causa.",
+    "description": "Informe pericial sobre un parquet de alta gama (AC5) mal instalado en una vivienda de Barcelona (Sants), identificando la ausencia de juntas y un soporte no nivelado como causa.",
     "estado": "no publicado",
     "datePublished": "2025-09-03",
     "dateModified": "2025-09-03",
@@ -212,7 +212,7 @@
       },
       {
         "label": "Problema Detectado",
-        "value": "Abombamiento, movimiento y crujidos en parqué nuevo"
+        "value": "Abombamiento, movimiento y crujidos en parquet nuevo"
       },
       {
         "label": "Resultado",
@@ -220,19 +220,19 @@
       }
     ],
     "image": {
-      "url": "/assets/images/casos/parque-sants-01.jpg",
-      "alt": "Pasillo con el parqué levantado y abombado por la falta de juntas de dilatación",
-      "caption": "El movimiento vertical del parqué al caminar era evidente en toda la vivienda."
+      "url": "/assets/images/placeholder-default.png",
+      "alt": "Pasillo con el parquet levantado y abombado por la falta de juntas de dilatación",
+      "caption": "El movimiento vertical del parquet al caminar era evidente en toda la vivienda."
     },
     "images": [
        {
         "url": "/assets/images/casos/parque-sants-02.jpg",
-        "alt": "Detalle del desnivel entre el parqué y el rodapié",
+        "alt": "Detalle del desnivel entre el parquet y el rodapié",
         "caption": "La falta de nivelación del soporte provocaba ondulaciones visibles."
       },
       {
         "url": "/assets/images/casos/parque-sants-03.jpg",
-        "alt": "Lamas de parqué con el sistema de anclaje clic roto",
+        "alt": "Lamas de parquet con el sistema de anclaje clic roto",
         "caption": "La mala ejecución provocó incluso la rotura de las uniones entre lamas."
       }
     ],
@@ -240,7 +240,7 @@
       "title": "Informes Periciales por Vicios Ocultos",
       "url": "/servicios/informes-vicios-ocultos/"
     },
-    "content": "## 1. El Problema: Un Suelo Nuevo que Parece Viejo\n\nUna propietaria en el barrio de Sants nos contactó frustrada. Tras una reforma integral, el pavimento de parqué laminado de alta gama (calidad AC5) recién instalado presentaba graves problemas: se levantaba en varias zonas, 'crujía' al caminar y presentaba ondulaciones visibles. La empresa instaladora atribuía los problemas a la calidad del material, una afirmación que nuestro peritaje desmintió.\n\n### 2. La Causa Real: Errores de Instalación\n\nLa inspección técnica reveló que el material era de excelente calidad, pero su instalación fue completamente deficiente. Los errores contravenían las normas más básicas de la buena construcción (*lex artis*):\n\n* **Ausencia de Juntas de Dilatación:** El instalador colocó el parqué de forma continua por toda la planta, sin dejar las juntas perimetrales y de transición obligatorias. Al no tener espacio para expandirse, el parqué se abombaba y se levantaba.\n* **Soporte sin Nivelar:** La base sobre la que se instaló el pavimento no fue correctamente nivelada, lo que provocaba las ondulaciones y el movimiento vertical de las lamas.\n* **Mala Praxis General:** Se detectaron además lamas con el sistema de anclaje 'clic' roto y una colocación sin la trabazón adecuada, generando un patrón estético anómalo (efecto 'escalera').\n\n## 3. Conclusión Pericial\n\nNuestro informe concluyó de forma inequívoca que todos los defectos eran atribuibles a una **incorrecta ejecución de la instalación**, y no a un defecto del material. Se determinó que la única solución viable era el desmontaje completo del pavimento, la correcta nivelación del soporte y la reinstalación del material desde cero.\n\nEl dictamen estableció que la empresa instaladora debía **asumir el 100% de los costes de la subsanación**, liberando a la propietaria de cualquier gasto adicional y proporcionándole la herramienta legal necesaria para exigir una solución definitiva."
+    "content": "## 1. El Problema: Un Suelo Nuevo que Parece Viejo\n\nUna propietaria en el barrio de Sants nos contactó frustrada. Tras una reforma integral, el pavimento de parquet laminado de alta gama (calidad AC5) recién instalado presentaba graves problemas: se levantaba en varias zonas, 'crujía' al caminar y presentaba ondulaciones visibles. La empresa instaladora atribuía los problemas a la calidad del material, una afirmación que nuestro peritaje desmintió.\n\n### 2. La Causa Real: Errores de Instalación\n\nLa inspección técnica reveló que el material era de excelente calidad, pero su instalación fue completamente deficiente. Los errores contravenían las normas más básicas de la buena construcción (*lex artis*):\n\n* **Ausencia de Juntas de Dilatación:** El instalador colocó el parquet de forma continua por toda la planta, sin dejar las juntas perimetrales y de transición obligatorias. Al no tener espacio para expandirse, el parquet se abombaba y se levantaba.\n* **Soporte sin Nivelar:** La base sobre la que se instaló el pavimento no fue correctamente nivelada, lo que provocaba las ondulaciones y el movimiento vertical de las lamas.\n* **Mala Praxis General:** Se detectaron además lamas con el sistema de anclaje 'clic' roto y una colocación sin la trabazón adecuada, generando un patrón estético anómalo (efecto 'escalera').\n\n## 3. Conclusión Pericial\n\nNuestro informe concluyó de forma inequívoca que todos los defectos eran atribuibles a una **incorrecta ejecución de la instalación**, y no a un defecto del material. Se determinó que la única solución viable era el desmontaje completo del pavimento, la correcta nivelación del soporte y la reinstalación del material desde cero.\n\nEl dictamen estableció que la empresa instaladora debía **asumir el 100% de los costes de la subsanación**, liberando a la propietaria de cualquier gasto adicional y proporcionándole la herramienta legal necesaria para exigir una solución definitiva."
   },
   {
     "title": "Dictamen por Incumplimiento de Contrato en Reforma Post-Incendio",
@@ -268,7 +268,7 @@
       }
     ],
     "image": {
-      "url": "/assets/images/casos/incendio-barcelona-01.jpg",
+      "url": "/assets/images/placeholder-default.png",
       "alt": "Vista del salón de la vivienda afectada por el incendio y sin reformar",
       "caption": "Estado de la vivienda durante la inspección: sin inicio de obra y con daños por hollín."
     },
@@ -317,7 +317,7 @@
       }
     ],
     "image": {
-      "url": "/assets/images/casos/nave-industrial-pavimento-01.jpg",
+      "url": "/assets/images/placeholder-default.png",
       "alt": "Pavimento industrial completamente roto y fisurado en la nave de Sant Joan Despí",
       "caption": "Más del 60% de las losetas del pavimento se encontraban rotas, requiriendo su sustitución completa."
     },
@@ -340,9 +340,9 @@
     "content": "## 1. El Origen: Finalización de un Contrato de Alquiler\n\nLa empresa propietaria de una nave industrial en Sant Joan Despí nos contactó tras la marcha de su anterior inquilino. Se encontraron con un inmueble con múltiples daños que excedían claramente el desgaste por un uso ordinario, y necesitaban un informe técnico para documentarlos y valorar su reparación de cara a una reclamación.\n\n### 2. Alcance de los Daños Detectados\n\nLa inspección pericial reveló un estado de deterioro generalizado que afectaba a la seguridad, la legalidad y la funcionalidad de la nave:\n\n* **Pavimentos Industriales Destruidos:** Más del 60% del pavimento de las plantas baja y tercera estaba completamente roto, probablemente por un uso que excedió la capacidad de carga para la que fue diseñado.\n* **Protección Contra Incendios Comprometida:** El mortero ignífugo que recubría la estructura metálica principal se había desprendido en varias zonas, dejando los perfiles expuestos y reduciendo drásticamente la estabilidad del edificio en caso de incendio (incumplimiento del RSCIEI).\n* **Altillos Desmontados:** Se encontraron evidencias claras (marcas de anclajes) del montaje y posterior desmontaje de dos altillos de gran superficie (191 m² y 172 m²). Una consulta en el archivo municipal confirmó que no existía licencia para dichas estructuras.\n* **Instalación Eléctrica Inoperativa:** El anterior inquilino retiró los contadores, siendo necesario redactar un nuevo proyecto de Baja Tensión para poder legalizar y dar de alta el suministro.\n\n## 3. Conclusión y Valoración Económica\n\nEl informe pericial concluyó que el conjunto de intervenciones era indispensable para la restitución funcional y legal del edificio. Se realizó una valoración económica detallada basada en presupuestos de empresas especialistas para cada partida (pavimentos, restitución de altillos, zonas de aseos y protección ignífuga).\n\nEl coste total estimado para la reparación de todos los daños se valoró en un rango de **entre 336.950 € y 342.950 € (sin IVA)**, proporcionando a la propiedad una base sólida para su reclamación por los perjuicios causados."
   },
   {
-    "title": "Informe Pericial para Constructora por Defectos en Parqué de Obra Nueva en Viladecans",
+    "title": "Informe Pericial para Constructora por Defectos en Parquet de Obra Nueva en Viladecans",
     "slug": "defectos-parque-obra-nueva-viladecans",
-    "description": "Caso de éxito de un informe pericial para una gran constructora sobre defectos de instalación de parqué en 39 viviendas de una promoción de obra nueva en Viladecans (Barcelona).",
+    "description": "Caso de éxito de un informe pericial para una gran constructora sobre defectos de instalación de parquet en 39 viviendas de una promoción de obra nueva en Viladecans (Barcelona).",
     "datePublished": "2025-02-18",
     "dateModified": "2025-02-18",
     "tags": ["Constructoras", "Patologías", "Obra Nueva", "Reclamaciones"],
@@ -357,7 +357,7 @@
       },
       {
         "label": "Problema Detectado",
-        "value": "Defectos generalizados en la instalación de parqué de 39 viviendas"
+        "value": "Defectos generalizados en la instalación de parquet de 39 viviendas"
       },
       {
         "label": "Resultado",
@@ -365,19 +365,19 @@
       }
     ],
     "image": {
-      "url": "/assets/images/casos/viladecans-parque-clip-roto.jpg",
-      "alt": "Canto de una lama de parqué levantado por la rotura del clip de unión",
+      "url": "/assets/images/placeholder-default.png",
+      "alt": "Canto de una lama de parquet levantado por la rotura del clip de unión",
       "caption": "El movimiento vertical de las lamas evidenciaba una instalación deficiente."
     },
     "images": [
       {
         "url": "/assets/images/casos/viladecans-parque-escalera.jpg",
-        "alt": "Efecto escalera en la colocación del parqué, incumpliendo la normativa UNE",
+        "alt": "Efecto escalera en la colocación del parquet, incumpliendo la normativa UNE",
         "caption": "La mala disposición de las lamas generaba un patrón visual anómalo."
       },
       {
         "url": "/assets/images/casos/viladecans-parque-rodapie.jpg",
-        "alt": "Ondulación y mala terminación del parqué junto al rodapié de la cocina",
+        "alt": "Ondulación y mala terminación del parquet junto al rodapié de la cocina",
         "caption": "La falta de nivelación del soporte provocaba ondulaciones y malos ajustes."
       }
     ],
@@ -385,7 +385,7 @@
       "title": "Auditorías de Obra para Constructoras",
       "url": "/servicios/auditorias-obra-constructoras/"
     },
-    "content": "## 1. El Desafío: 39 Viviendas con Reclamaciones\n\nUna de las mayores constructoras nacionales se enfrentó a un problema complejo en una promoción de obra nueva en Viladecans: 39 propietarios reclamaban por defectos generalizados en el parqué de sus viviendas. La duda era crucial: ¿se trataba de un defecto del material de alta gama instalado (Swiss Krono) o de un fallo en la ejecución por parte de la empresa instaladora subcontratada? Necesitaban un dictamen técnico independiente para determinar el origen de la responsabilidad.\n\n### 2. Investigación Pericial: Análisis de la Ejecución\n\nNuestra labor consistió en realizar una inspección visual de una muestra representativa del 20% de las viviendas afectadas. Acompañados por un experto parquetista y el departamento de postventa de la constructora, identificamos un patrón de defectos que se repetía en todos los casos:\n\n* **Rotura de Clips de Unión:** Numerosas lamas se movían verticalmente al pisarlas por tener el sistema de anclaje roto, un defecto típico de una mala praxis durante la colocación.\n* **'Efecto Escalera':** La disposición de las lamas no respetaba el decalaje mínimo de 30 cm que exige la normativa UNE 56810, generando un patrón estético incorrecto.\n* **Malos Ajustes y Ondulaciones:** Se observaban separaciones y un efecto ondulado en los encuentros con los rodapiés de las cocinas, indicativo de una deficiente preparación de la base.\n* **Defectos Estéticos:** Se encontraron lamas instaladas con defectos de tinte que deberían haber sido descartadas por el instalador.\n\n## 3. Conclusión: Responsabilidad en la Instalación\n\nNuestro informe pericial fue concluyente: el material de la marca Swiss Krono era de alta calidad y no presentaba defectos de fabricación. Todos los problemas detectados eran inequívocamente atribuibles a una **incorrecta ejecución del pavimento**. El dictamen descartó otras posibles causas como la humedad o la falta de juntas de dilatación.\n\nGracias a este informe, la constructora pudo determinar con certeza la responsabilidad de la empresa instaladora, disponiendo de una prueba técnica objetiva para gestionar la subsanación de las 39 reclamaciones de manera eficaz."
+    "content": "## 1. El Desafío: 39 Viviendas con Reclamaciones\n\nUna de las mayores constructoras nacionales se enfrentó a un problema complejo en una promoción de obra nueva en Viladecans: 39 propietarios reclamaban por defectos generalizados en el parquet de sus viviendas. La duda era crucial: ¿se trataba de un defecto del material de alta gama instalado (Swiss Krono) o de un fallo en la ejecución por parte de la empresa instaladora subcontratada? Necesitaban un dictamen técnico independiente para determinar el origen de la responsabilidad.\n\n### 2. Investigación Pericial: Análisis de la Ejecución\n\nNuestra labor consistió en realizar una inspección visual de una muestra representativa del 20% de las viviendas afectadas. Acompañados por un experto parquetista y el departamento de postventa de la constructora, identificamos un patrón de defectos que se repetía en todos los casos:\n\n* **Rotura de Clips de Unión:** Numerosas lamas se movían verticalmente al pisarlas por tener el sistema de anclaje roto, un defecto típico de una mala praxis durante la colocación.\n* **'Efecto Escalera':** La disposición de las lamas no respetaba el decalaje mínimo de 30 cm que exige la normativa UNE 56810, generando un patrón estético incorrecto.\n* **Malos Ajustes y Ondulaciones:** Se observaban separaciones y un efecto ondulado en los encuentros con los rodapiés de las cocinas, indicativo de una deficiente preparación de la base.\n* **Defectos Estéticos:** Se encontraron lamas instaladas con defectos de tinte que deberían haber sido descartadas por el instalador.\n\n## 3. Conclusión: Responsabilidad en la Instalación\n\nNuestro informe pericial fue concluyente: el material de la marca Swiss Krono era de alta calidad y no presentaba defectos de fabricación. Todos los problemas detectados eran inequívocamente atribuibles a una **incorrecta ejecución del pavimento**. El dictamen descartó otras posibles causas como la humedad o la falta de juntas de dilatación.\n\nGracias a este informe, la constructora pudo determinar con certeza la responsabilidad de la empresa instaladora, disponiendo de una prueba técnica objetiva para gestionar la subsanación de las 39 reclamaciones de manera eficaz."
   },
   {
     "title": "Diagnóstico de Humedades por Capilaridad y Fisuras en Vivienda de La Pobla de Claramunt",
@@ -413,7 +413,7 @@
       }
     ],
     "image": {
-      "url": "/assets/images/casos/claramunt-humedad-tabique-01.jpg", 
+      "url": "/assets/images/placeholder-default.png", 
       "alt": "Humedad por capilaridad visible en la parte inferior de un tabique interior",
       "caption": "La humedad ascendía desde el terreno por falta de barrera impermeable."
     },
@@ -456,7 +456,7 @@
 { "label": "Resultado", "value": "Dictamen favorable: certificaciones validadas y contrainforme rebatido" }
 ],
 "image": {
-"url": "/assets/images/casos/hotel-urbano-lujo-featured.jpg",
+"url": "/assets/images/placeholder-default.png",
 "alt": "Suite de hotel urbano de alta gama tras la reforma",
 "caption": "Intervención en plantas altas de un hotel de lujo con el edificio en uso."
 },
