@@ -122,6 +122,14 @@ serviceCluster:
         - "Valoración de daños por incendio"
         - "Análisis de coberturas"
         - "Defensa del asegurado"
+    - title: "Informes Periciales para Naves Industriales"
+      description: "Dictámenes técnicos especializados en pavimentos, estructuras, daños post-alquiler y cumplimiento normativo (RSCIEI) en naves industriales."
+      url: "/informes-periciales/naves-industriales/"
+      icon: "building"
+      features:
+        - "Análisis de daños post-alquiler"
+        - "Evaluación de pavimentos y estructuras"
+        - "Verificación normativa (RSCIEI)"
 
 # Proceso de Trabajo
 process:
