@@ -2,17 +2,15 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import Image from "@11ty/eleventy-img";
-import * as globModule from 'glob';
-import { promisify } from 'util';
+import { glob } from 'glob';
 
-const globPromise = promisify(globModule.glob);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
 // Configuración de dimensiones y formatos (coincidentes con el shortcode de imagen en eleventy.config.js)
 const widths = [320, 480, 640, 768, 1024, 1280, 1536, 1920, 2048];
-const formats = ["avif", "webp", "jpg"];
+const formats = ["avif", "webp", "jpg"]; // Para imágenes con transparencia PNG se añadirá dinámicamente
 const outputDir = "./assets/images/optimized/"; // Cambiado para guardar en assets en lugar de dist
 const urlPath = "/assets/images/optimized/";
 
@@ -24,15 +22,18 @@ const formatOptions = {
   },
   webp: {
     quality: 80,
-    effort: 6
+    effort: 6,
+    lossless: false // Se puede cambiar a true para PNG con transparencia si es necesario
   },
   jpg: {
     quality: 85,
     progressive: true
   },
   png: {
-    quality: 80,
-    compressionLevel: 8
+    quality: 90,
+    compressionLevel: 9,
+    palette: true, // Optimizar usando paleta cuando sea posible
+    effort: 10 // Máximo esfuerzo de compresión (más lento pero mejor resultado)
   }
 };
 
@@ -66,6 +67,8 @@ async function processImage(imagePath) {
     const imageExt = path.extname(imagePath).toLowerCase();
     
     // Configurar opciones específicas para cada tipo de imagen
+    // Usar siempre los mismos formatos de salida (AVIF, WebP, JPG)
+    // independientemente del formato de entrada
     let options = {
       widths: widths,
       formats: formats,
@@ -80,9 +83,12 @@ async function processImage(imagePath) {
       sharpPngOptions: formatOptions.png
     };
     
-    // Si es un GIF, no procesar en múltiples tamaños
-    if (imageExt === '.gif') {
-      options.widths = [null]; // Solo tamaño original
+    // Mensajes informativos según el tipo de imagen
+    if (imageExt === '.png') {
+      console.log(`   ℹ️ PNG detectado - se convertirá a AVIF/WebP/JPG`);
+    } else if (imageExt === '.gif') {
+      options.widths = [null]; // Solo tamaño original para GIF
+      console.log(`   ℹ️ GIF detectado - se mantendrá tamaño original`);
     }
     
     // Generar versiones optimizadas
@@ -185,28 +191,41 @@ async function processAllImages() {
     
     try {
       // Buscar imágenes JPG/JPEG
-      const jpgPattern = path.join(rootDir, 'assets/images/**/*.{jpg,jpeg}');
-      console.log(`Buscando: ${jpgPattern}`);
-      jpgImages = await globPromise(jpgPattern);
+      const jpgPattern = 'assets/images/**/*.{jpg,jpeg,JPG,JPEG}';
+      console.log(`Buscando JPG/JPEG: ${jpgPattern}`);
+      jpgImages = await glob(jpgPattern, { cwd: rootDir, windowsPathsNoEscape: true });
       console.log(`✓ Encontradas ${jpgImages.length} imágenes JPG/JPEG`);
       
-      // Buscar imágenes PNG
-      const pngPattern = path.join(rootDir, 'assets/images/**/*.png');
-      console.log(`Buscando: ${pngPattern}`);
-      pngImages = await globPromise(pngPattern);
+      // Buscar imágenes PNG (incluyendo mayúsculas)
+      const pngPattern = 'assets/images/**/*.{png,PNG}';
+      console.log(`Buscando PNG: ${pngPattern}`);
+      pngImages = await glob(pngPattern, { cwd: rootDir, windowsPathsNoEscape: true });
       console.log(`✓ Encontradas ${pngImages.length} imágenes PNG`);
       
       // Buscar imágenes GIF
-      const gifPattern = path.join(rootDir, 'assets/images/**/*.gif');
-      console.log(`Buscando: ${gifPattern}`);
-      gifImages = await globPromise(gifPattern);
+      const gifPattern = 'assets/images/**/*.{gif,GIF}';
+      console.log(`Buscando GIF: ${gifPattern}`);
+      gifImages = await glob(gifPattern, { cwd: rootDir, windowsPathsNoEscape: true });
       console.log(`✓ Encontradas ${gifImages.length} imágenes GIF`);
+      
+      // Convertir rutas relativas a absolutas
+      jpgImages = jpgImages.map(img => path.join(rootDir, img));
+      pngImages = pngImages.map(img => path.join(rootDir, img));
+      gifImages = gifImages.map(img => path.join(rootDir, img));
     } catch (err) {
       console.error(`Error durante la búsqueda de archivos:`, err);
     }
     
     // Combinar todos los resultados
     let allImages = [...jpgImages, ...pngImages, ...gifImages];
+    
+    // Mostrar desglose por tipo
+    if (allImages.length > 0) {
+      console.log("\n📊 DESGLOSE POR TIPO:");
+      console.log(`   📸 JPG/JPEG: ${jpgImages.length}`);
+      console.log(`   🖼️  PNG: ${pngImages.length}`);
+      console.log(`   🎞️  GIF: ${gifImages.length}`);
+    }
   
     console.log(`Total: Encontradas ${allImages.length} imágenes para procesar`);
     

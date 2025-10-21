@@ -107,16 +107,33 @@
             <!-- Featured Image -->
             <div class="mt-8">
                 <figure class="relative group overflow-hidden rounded-xl shadow-lg bg-slate-900">
-                    <img 
-                        src="{{ image.url if image else metadata.site.placeholderImage }}" 
-                        alt="{{ image.alt if image else 'Imagen del artículo' }}" 
-                        class="w-full aspect-[16/9] object-cover"
-                        width="1200"
-                        height="675"
-                        loading="eager"
-                        fetchpriority="high"
-                        decoding="async"
-                        itemprop="url contentUrl">
+                    {% set imgSrc = image.url if image else metadata.site.placeholderImage %}
+                    {% set imgBasePath = imgSrc | replace("/assets/images/", "/assets/images/optimized/") | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") %}
+                    
+                    <picture>
+                        <source 
+                            srcset="{{ imgBasePath }}-320w.avif 320w, {{ imgBasePath }}-640w.avif 640w, {{ imgBasePath }}-1280w.avif 1280w, {{ imgBasePath }}-1920w.avif 1920w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                            type="image/avif">
+                        <source 
+                            srcset="{{ imgBasePath }}-320w.webp 320w, {{ imgBasePath }}-640w.webp 640w, {{ imgBasePath }}-1280w.webp 1280w, {{ imgBasePath }}-1920w.webp 1920w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                            type="image/webp">
+                        <source 
+                            srcset="{{ imgBasePath }}-320w.jpg 320w, {{ imgBasePath }}-640w.jpg 640w, {{ imgBasePath }}-1280w.jpg 1280w, {{ imgBasePath }}-1920w.jpg 1920w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                            type="image/jpeg">
+                        <img 
+                            src="{{ imgBasePath }}-1280w.jpg" 
+                            alt="{{ image.alt if image else 'Imagen del artículo' }}" 
+                            class="w-full aspect-[16/9] object-cover"
+                            width="1200"
+                            height="675"
+                            loading="eager"
+                            fetchpriority="high"
+                            decoding="async"
+                            itemprop="url contentUrl">
+                    </picture>
                     {% if image and image.caption %}
                     <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 to-transparent p-4" itemprop="caption">
                         <p class="text-white text-sm">{{ image.caption }}</p>

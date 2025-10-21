@@ -158,15 +158,32 @@
                 <div class="mt-8">
                     {% if caso.image or (not caso.images or caso.images.length == 0) %}
                     <figure class="relative group overflow-hidden rounded-xl shadow-lg bg-slate-900">
-                        <img 
-                            src="{{ caso.image.url if caso.image else metadata.site.placeholderImage }}" 
-                            alt="{{ caso.image.alt if caso.image else 'Imagen del caso de éxito' }}" 
-                            class="w-full aspect-[16/9] object-cover group-hover:scale-105 group-hover:opacity-90 transition-all duration-500"
-                            width="1200"
-                            height="675"
-                            loading="eager"
-                            fetchpriority="high"
-                            decoding="async">
+                        {% set imgSrc = caso.image.url if caso.image else metadata.site.placeholderImage %}
+                        {% set imgBasePath = imgSrc | replace("/assets/images/", "/assets/images/optimized/") | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") %}
+                        
+                        <picture>
+                            <source 
+                                srcset="{{ imgBasePath }}-320w.avif 320w, {{ imgBasePath }}-640w.avif 640w, {{ imgBasePath }}-1280w.avif 1280w, {{ imgBasePath }}-1920w.avif 1920w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                                type="image/avif">
+                            <source 
+                                srcset="{{ imgBasePath }}-320w.webp 320w, {{ imgBasePath }}-640w.webp 640w, {{ imgBasePath }}-1280w.webp 1280w, {{ imgBasePath }}-1920w.webp 1920w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                                type="image/webp">
+                            <source 
+                                srcset="{{ imgBasePath }}-320w.jpg 320w, {{ imgBasePath }}-640w.jpg 640w, {{ imgBasePath }}-1280w.jpg 1280w, {{ imgBasePath }}-1920w.jpg 1920w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                                type="image/jpeg">
+                            <img 
+                                src="{{ imgBasePath }}-1280w.jpg" 
+                                alt="{{ caso.image.alt if caso.image else 'Imagen del caso de éxito' }}" 
+                                class="w-full aspect-[16/9] object-cover group-hover:scale-105 group-hover:opacity-90 transition-all duration-500"
+                                width="1200"
+                                height="675"
+                                loading="eager"
+                                fetchpriority="high"
+                                decoding="async">
+                        </picture>
                         {% if caso.image and caso.image.caption %}
                         <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 to-transparent p-4">
                             <p class="text-white text-sm">{{ caso.image.caption }}</p>

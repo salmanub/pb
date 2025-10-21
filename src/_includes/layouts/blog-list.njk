@@ -32,14 +32,32 @@
                     
                     <!-- Featured Image -->
                     <div class="relative overflow-hidden aspect-[16/9]">
-                        <img src="{{ post.image.url if post.image else metadata.site.placeholderImage }}" 
-                             alt="{{ post.image.alt if post.image else 'Imagen del artículo' }}" 
-                             class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
-                             width="600"
-                             height="338"
-                             loading="lazy"
-                             decoding="async"
-                             itemprop="image">
+                        {% set imgSrc = post.image.url if post.image else metadata.site.placeholderImage %}
+                        {% set imgBasePath = imgSrc | replace("/assets/images/", "/assets/images/optimized/") | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") %}
+                        
+                        <picture>
+                            <source 
+                                srcset="{{ imgBasePath }}-320w.avif 320w, {{ imgBasePath }}-640w.avif 640w"
+                                sizes="(max-width: 768px) 100vw, 600px"
+                                type="image/avif">
+                            <source 
+                                srcset="{{ imgBasePath }}-320w.webp 320w, {{ imgBasePath }}-640w.webp 640w"
+                                sizes="(max-width: 768px) 100vw, 600px"
+                                type="image/webp">
+                            <source 
+                                srcset="{{ imgBasePath }}-320w.jpg 320w, {{ imgBasePath }}-640w.jpg 640w"
+                                sizes="(max-width: 768px) 100vw, 600px"
+                                type="image/jpeg">
+                            <img 
+                                src="{{ imgBasePath }}-640w.jpg" 
+                                alt="{{ post.image.alt if post.image else 'Imagen del artículo' }}" 
+                                class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                                width="600"
+                                height="338"
+                                loading="lazy"
+                                decoding="async"
+                                itemprop="image">
+                        </picture>
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
                         
                         <!-- Category Badge -->

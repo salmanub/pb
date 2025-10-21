@@ -28,13 +28,31 @@
                 {% for post in sortedPosts %}
                     {% if loop.index0 < 2 and (not post.estado or post.estado == "publicado") %}
                     <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col group hover:-translate-y-1" itemscope itemtype="https://schema.org/BlogPosting">
-                        <img src="{{ post.image.url if post.image else metadata.site.placeholderImage }}" 
-                             alt="{{ post.image.alt if post.image else 'Imagen del artículo' }}" 
-                             class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-                             loading="lazy"
-                             width="400"
-                             height="192"
-                             itemprop="image">
+                        {% set imgSrc = post.image.url if post.image else metadata.site.placeholderImage %}
+                        {% set imgBasePath = imgSrc | replace("/assets/images/", "/assets/images/optimized/") | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") %}
+                        
+                        <picture>
+                            <source 
+                                srcset="{{ imgBasePath }}-320w.avif 320w, {{ imgBasePath }}-480w.avif 480w"
+                                sizes="(max-width: 640px) 100vw, 400px"
+                                type="image/avif">
+                            <source 
+                                srcset="{{ imgBasePath }}-320w.webp 320w, {{ imgBasePath }}-480w.webp 480w"
+                                sizes="(max-width: 640px) 100vw, 400px"
+                                type="image/webp">
+                            <source 
+                                srcset="{{ imgBasePath }}-320w.jpg 320w, {{ imgBasePath }}-480w.jpg 480w"
+                                sizes="(max-width: 640px) 100vw, 400px"
+                                type="image/jpeg">
+                            <img 
+                                src="{{ imgBasePath }}-480w.jpg" 
+                                alt="{{ post.image.alt if post.image else 'Imagen del artículo' }}" 
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy"
+                                width="400"
+                                height="192"
+                                itemprop="image">
+                        </picture>
                         <div class="p-6 flex flex-col flex-grow">
                             <div class="mb-4 flex items-center justify-between">
                                 <span class="text-xs font-semibold px-3 py-1 rounded-full bg-cyan-100 text-cyan-700" itemprop="articleSection">
