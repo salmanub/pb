@@ -162,9 +162,11 @@
                             src="{{ caso.image.url }}" 
                             alt="{{ caso.image.alt }}" 
                             class="w-full aspect-[16/9] object-cover group-hover:scale-105 group-hover:opacity-90 transition-all duration-500"
-                            loading="lazy"
                             width="1200"
-                            height="675">
+                            height="675"
+                            loading="eager"
+                            fetchpriority="high"
+                            decoding="async">
                         {% if caso.image.caption %}
                         <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 to-transparent p-4">
                             <p class="text-white text-sm">{{ caso.image.caption }}</p>
@@ -181,9 +183,10 @@
                                 src="{{ image.url }}" 
                                 alt="{{ image.alt | default('Imagen del caso de éxito') }}" 
                                 class="w-full aspect-[4/3] object-cover group-hover:scale-105 group-hover:opacity-90 transition-all duration-500"
-                                loading="lazy"
                                 width="600"
-                                height="450">
+                                height="450"
+                                loading="lazy"
+                                decoding="async">
                             {% if image.caption %}
                             <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 to-transparent p-4">
                                 <p class="text-white text-sm">{{ image.caption }}</p>

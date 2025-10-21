@@ -134,7 +134,11 @@
                         src="{{ image.url }}" 
                         alt="{{ image.alt }}" 
                         class="w-full aspect-[16/9] object-cover"
-                        loading="lazy"
+                        width="1200"
+                        height="675"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
                         itemprop="url contentUrl">
                     {% if image.caption %}
                     <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 to-transparent p-4" itemprop="caption">
