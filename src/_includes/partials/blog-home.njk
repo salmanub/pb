@@ -29,7 +29,11 @@
                     {% if loop.index0 < 2 and (not post.estado or post.estado == "publicado") %}
                     <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col group hover:-translate-y-1" itemscope itemtype="https://schema.org/BlogPosting">
                         {% set imgSrc = post.image.url if post.image else metadata.site.placeholderImage %}
-                        {% set imgBasePath = imgSrc | replace("/assets/images/", "/assets/images/optimized/") | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") %}
+                        {# Extraer el path completo y nombre sin extensión #}
+                        {% set imgPath = imgSrc | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") | replace(".JPG", "") | replace(".JPEG", "") | replace(".PNG", "") %}
+                        {# Obtener solo la parte después de /assets/images/ #}
+                        {% set imgRelativePath = imgPath.split("/assets/images/")[1] if "/assets/images/" in imgPath else imgPath %}
+                        {% set imgBasePath = "/assets/images/optimized/" + imgRelativePath %}
                         
                         <picture>
                             <source 

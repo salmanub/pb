@@ -159,7 +159,17 @@
                     {% if caso.image or (not caso.images or caso.images.length == 0) %}
                     <figure class="relative group overflow-hidden rounded-xl shadow-lg bg-slate-900">
                         {% set imgSrc = caso.image.url if caso.image else metadata.site.placeholderImage %}
-                        {% set imgBasePath = imgSrc | replace("/assets/images/", "/assets/images/optimized/") | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") %}
+                        {# Extraer el path completo y nombre sin extensión #}
+                        {% set imgPath = imgSrc | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") | replace(".JPG", "") | replace(".JPEG", "") | replace(".PNG", "") %}
+                        {# Manejar rutas que empiezan con src/ o con / #}
+                        {% if "src/assets/images/" in imgPath %}
+                            {% set imgRelativePath = imgPath.split("src/assets/images/")[1] %}
+                        {% elif "/assets/images/" in imgPath %}
+                            {% set imgRelativePath = imgPath.split("/assets/images/")[1] %}
+                        {% else %}
+                            {% set imgRelativePath = imgPath %}
+                        {% endif %}
+                        {% set imgBasePath = "/assets/images/optimized/" + imgRelativePath %}
                         
                         <picture>
                             <source 
