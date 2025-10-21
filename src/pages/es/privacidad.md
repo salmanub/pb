@@ -17,7 +17,8 @@ translations:
 # Esta clave le dirá a nuestra plantilla que no indexe esta página.
 seo: noindex
 # --- FIN DE LA MODIFICACIÓN ---
-
+eleventyNavigation:
+    notshow: true
 # --- Textos para el encabezado de la página ---
 hero:
   title: "Política de Privacidad"

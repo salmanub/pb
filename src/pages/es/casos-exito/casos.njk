@@ -7,6 +7,8 @@ pagination:
 permalink: "/casos-exito/{{ caso.slug }}/"
 layout: "layouts/success-case.njk"
 lang: es
+eleventyNavigation:
+  notshow: true
 eleventyComputed:
   title: "{{ caso.title }}"
   description: "{{ caso.description }}"

@@ -14,7 +14,8 @@ translations:
     permalink: /fr/mentions-legales/
   - lang: it
     permalink: /it/note-legali/
-
+eleventyNavigation:
+    notshow: true
 # --- Textos para el encabezado de la página ---
 hero:
   title: "Aviso Legal y Términos de Uso"
