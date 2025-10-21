@@ -1,7 +1,44 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-<main class="pt-[70px] lg:pt-[120px]" itemscope itemtype="https://schema.org/BlogPosting">
+<article class="pt-[70px] lg:pt-[120px]" itemscope itemtype="https://schema.org/Article">
+    
+    <!-- Schema microdata oculto -->
+    <div hidden>
+        <meta itemprop="headline" content="{{ title | truncate(110) }}">
+        <meta itemprop="description" content="{{ description }}">
+        <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}{{ page.url }}">
+        <meta itemprop="datePublished" content="{{ datePublished }}T00:00:00+01:00">
+        <meta itemprop="dateModified" content="{{ dateModified }}T00:00:00+01:00">
+        {% if tags and tags.length > 0 %}<meta itemprop="keywords" content="{{ tags | join(', ') }}">{% endif %}
+        <meta itemprop="inLanguage" content="{{ lang }}">
+        <meta itemprop="isAccessibleForFree" content="True">
+        
+        <!-- Author -->
+        <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <meta itemprop="name" content="{{ author }}">
+            <meta itemprop="url" content="{{ metadata.author.linkedin }}">
+        </span>
+        
+        <!-- Image -->
+        {% if image %}
+        <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ metadata.site.url }}{{ image.url }}">
+            <meta itemprop="contentUrl" content="{{ metadata.site.url }}{{ image.url }}">
+            <meta itemprop="caption" content="{{ image.caption | default('Imagen del artículo: ' + title) }}">
+            <meta itemprop="width" content="1200">
+            <meta itemprop="height" content="675">
+        </span>
+        {% else %}
+        <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="{{ metadata.site.url }}/assets/images/logos/logo.png">
+            <meta itemprop="contentUrl" content="{{ metadata.site.url }}/assets/images/logos/logo.png">
+            <meta itemprop="caption" content="Logo de {{ metadata.site.title }}">
+            <meta itemprop="width" content="600">
+            <meta itemprop="height" content="60">
+        </span>
+        {% endif %}
+    </div>
     
     <!-- Hero Section -->
     <header class="bg-gradient-to-br from-slate-50 to-white py-12 px-4 md:px-[5%] shadow-sm">
@@ -58,7 +95,7 @@
                     <svg class="w-5 h-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                     </svg>
-                    <time datetime="{{ datePublished }}" itemprop="datePublished">
+                    <time datetime="{{ datePublished }}T00:00:00+01:00">
                         {{ datePublished }}
                     </time>
                 </div>
@@ -68,7 +105,7 @@
                     <svg class="w-5 h-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
                     </svg>
-                    <time datetime="{{ dateModified }}" itemprop="dateModified">
+                    <time datetime="{{ dateModified }}T00:00:00+01:00">
                         Actualizado: {{ dateModified }}
                     </time>
                 </div>
@@ -78,15 +115,13 @@
                     <svg class="w-5 h-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                     </svg>
-                    <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <span itemprop="name">{{ author }}</span>
-                    </span>
+                    <span>{{ author }}</span>
                 </div>
             </div>
 
             <!-- Excerpt -->
             {% if excerpt %}
-            <p class="text-lg text-slate-600 italic border-l-4 border-cyan-500 pl-4" itemprop="description">
+            <p class="text-lg text-slate-600 italic border-l-4 border-cyan-500 pl-4">
                 {{ excerpt }}
             </p>
             {% endif %}
@@ -94,7 +129,7 @@
             <!-- Featured Image -->
             {% if image %}
             <div class="mt-8">
-                <figure class="relative group overflow-hidden rounded-xl shadow-lg bg-slate-900" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <figure class="relative group overflow-hidden rounded-xl shadow-lg bg-slate-900">
                     <img 
                         src="{{ image.url }}" 
                         alt="{{ image.alt }}" 
@@ -181,22 +216,7 @@
             </div>
         </div>
     </article>
-
-    <!-- Hidden Schema Data -->
-    <div hidden>
-        <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}/blog/{{ page.fileSlug }}/">
-        <meta itemprop="inLanguage" content="{{ lang }}">
-        
-        <!-- Publisher -->
-        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-            <meta itemprop="name" content="{{ metadata.company.name }}">
-            <meta itemprop="url" content="{{ metadata.site.url }}">
-            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-                <meta itemprop="url" content="{{ metadata.site.url }}/assets/images/logos/logo.png">
-            </div>
-        </div>
-    </div>
-</main>
+</article>
 {% endblock %}
 
 {% block pageStyles %}

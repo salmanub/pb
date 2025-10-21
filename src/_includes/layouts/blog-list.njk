@@ -56,7 +56,7 @@
                     <div class="p-6">
                         <!-- Meta Info -->
                         <div class="flex items-center gap-4 text-sm text-slate-500 mb-3">
-                            <time datetime="{{ post.datePublished }}" itemprop="datePublished">
+                            <time datetime="{{ post.datePublished }}T00:00:00+01:00" itemprop="datePublished">
                                 {{ post.datePublished }}
                             </time>
                             <span>•</span>
@@ -99,12 +99,8 @@
                     </div>
 
                     <!-- Hidden schema data -->
-                    <meta itemprop="dateModified" content="{{ post.dateModified }}">
                     <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}/blog/{{ post.slug }}/">
-                    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" hidden>
-                        <meta itemprop="name" content="{{ metadata.company.name }}">
-                        <meta itemprop="url" content="{{ metadata.site.url }}">
-                    </div>
+                    <meta itemprop="dateModified" content="{{ post.dateModified }}T00:00:00+01:00">
                 </article>
                 {% endif %}
                 {% endfor %}
