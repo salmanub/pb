@@ -1,0 +1,32 @@
+---
+pagination:
+  data: posts
+  size: 1
+  alias: post
+  addAllPagesToCollections: true
+permalink: "/blog/{{ post.slug }}/"
+layout: "layouts/blog-post.njk"
+lang: es
+eleventyNavigation:
+  notshow: true
+eleventyComputed:
+  title: "{{ post.title }}"
+  description: "{{ post.description }}"
+  datePublished: "{{ post.datePublished }}"
+  dateModified: "{{ post.dateModified }}"
+---
+{# 
+Variables importantes para que el post se muestre correctamente.
+#}
+{% set title = post.title %}
+{% set description = post.description %}
+{% set excerpt = post.excerpt %}
+{% set datePublished = post.datePublished %}
+{% set dateModified = post.dateModified %}
+{% set author = post.author %}
+{% set category = post.category %}
+{% set tags = post.tags %}
+{% set image = post.image %}
+{% set relatedServices = post.relatedServices %}
+
+{{ post.content | markdown | safe }}
