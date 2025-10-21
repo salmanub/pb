@@ -429,10 +429,16 @@
         "caption": "Deterioro del revestimiento causado por la humedad capilar."
       }
     ],
-    "relatedService": {
-      "title": "Informes de Patologías de la Edificación",
-      "url": "/informes-periciales/patologias-estructurales/" 
-    },
+    "relatedServices": [
+      {
+        "title": "Humedades y Filtraciones Persistentes",
+        "url": "/informes-periciales/humedades-filtraciones/"
+      },
+      {
+        "title": "Informe de Patologías Estructurales",
+        "url": "/informes-periciales/patologias-estructurales/"
+      }
+    ],
     "content": "## 1. El Problema: Humedades Persistentes y Fisuras Alarmantes\n\nLa propietaria de una vivienda unifamiliar construida en 1975 en La Pobla de Claramunt nos contactó preocupada por la aparición de **humedades severas** en las paredes en contacto con el terreno y la presencia de **fisuras** tanto en tabiques interiores como en el pavimento exterior. Su principal inquietud era determinar si estos problemas afectaban a la seguridad estructural de la casa.\n\n### 2. Inspección Técnica y Diagnóstico\n\nRealizamos una inspección visual detallada de la vivienda, sin necesidad de catas destructivas. Los hallazgos clave fueron:\n\n* **Fisuras No Estructurales:** Se identificó una fisura horizontal en un tabique interior, causada por la flecha (deformación normal) de la viga sobre la que apoyaba. También se observó una fisura en el pavimento exterior, originada en un pilar, compatible con un asentamiento normal del terreno. Ambas fisuras estaban **dentro de los límites tolerables** por la normativa (EHE-08) y no comprometían la estabilidad.\n* **Humedad por Capilaridad:** Se confirmó la presencia de humedad ascendente en los tabiques perimetrales en contacto con el terreno. La causa era la **ausencia de una barrera impermeable eficaz** en el trasdós (la cara exterior) de dichos muros.\n\n## 3. Conclusión y Solución Propuesta\n\nNuestro informe pericial concluyó que la **estructura de la vivienda se encontraba en buen estado general** y no requería refuerzos. Las fisuras eran superficiales y no representaban un riesgo.\n\nPara el problema de la humedad, la solución recomendada fue clara: realizar una **impermeabilización por inyección** de resinas impermeabilizantes en el trasdós de los tabiques afectados, hasta una altura del doble de la mancha actual. Este tratamiento crearía la barrera inexistente y detendría el ascenso capilar, mejorando la salubridad y el confort de la vivienda.\n\nEl dictamen proporcionó a la propietaria la tranquilidad sobre la seguridad estructural y una hoja de ruta técnica precisa para solucionar definitivamente el problema de las humedades."
   }
 ]
