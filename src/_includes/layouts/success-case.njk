@@ -155,26 +155,25 @@
                 </div>
 
                 <!-- Single Image or Gallery -->
-                {% if caso.image %}
                 <div class="mt-8">
+                    {% if caso.image or (not caso.images or caso.images.length == 0) %}
                     <figure class="relative group overflow-hidden rounded-xl shadow-lg bg-slate-900">
                         <img 
-                            src="{{ caso.image.url }}" 
-                            alt="{{ caso.image.alt }}" 
+                            src="{{ caso.image.url if caso.image else metadata.site.placeholderImage }}" 
+                            alt="{{ caso.image.alt if caso.image else 'Imagen del caso de éxito' }}" 
                             class="w-full aspect-[16/9] object-cover group-hover:scale-105 group-hover:opacity-90 transition-all duration-500"
                             width="1200"
                             height="675"
                             loading="eager"
                             fetchpriority="high"
                             decoding="async">
-                        {% if caso.image.caption %}
+                        {% if caso.image and caso.image.caption %}
                         <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 to-transparent p-4">
                             <p class="text-white text-sm">{{ caso.image.caption }}</p>
                         </figcaption>
                         {% endif %}
                     </figure>
-                </div>
-                {% elif caso.images and caso.images.length > 0 %}
+                    {% elif caso.images and caso.images.length > 0 %}
                 <div class="mt-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {% for image in caso.images %}

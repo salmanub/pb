@@ -28,7 +28,7 @@ eleventyNavigation:
   key: "Informes Periciales"
   title: "Informes Periciales"
   notshow: false
-  order: 1 # El servicio más importante, va primero en el menú.
+  order: 2 # El servicio más importante, va primero en el menú.
 
 # Hero Section
 hero:

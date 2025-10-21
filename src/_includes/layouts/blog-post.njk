@@ -105,12 +105,11 @@
             {% endif %}
 
             <!-- Featured Image -->
-            {% if image %}
             <div class="mt-8">
                 <figure class="relative group overflow-hidden rounded-xl shadow-lg bg-slate-900">
                     <img 
-                        src="{{ image.url }}" 
-                        alt="{{ image.alt }}" 
+                        src="{{ image.url if image else metadata.site.placeholderImage }}" 
+                        alt="{{ image.alt if image else 'Imagen del artículo' }}" 
                         class="w-full aspect-[16/9] object-cover"
                         width="1200"
                         height="675"
@@ -118,14 +117,13 @@
                         fetchpriority="high"
                         decoding="async"
                         itemprop="url contentUrl">
-                    {% if image.caption %}
+                    {% if image and image.caption %}
                     <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-900/90 to-transparent p-4" itemprop="caption">
                         <p class="text-white text-sm">{{ image.caption }}</p>
                     </figcaption>
                     {% endif %}
                 </figure>
             </div>
-            {% endif %}
 
             <!-- Tags -->
             {% if tags and tags.length > 0 %}

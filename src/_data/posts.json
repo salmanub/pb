@@ -11,7 +11,7 @@
     "category": "Patologías Estructurales",
     "tags": ["Grietas", "Estructuras", "Diagnóstico", "Seguridad"],
     "image": {
-      "url": "/assets/images/blog/grietas-estructurales.jpg",
+      "url": "/assets/images/placeholder-default.png",
       "alt": "Grieta estructural en muro de carga",
       "caption": "Las grietas diagonales en muros de carga pueden indicar problemas graves de cimentación."
     },
@@ -35,7 +35,7 @@
     "category": "Patologías",
     "tags": ["Humedades", "Capilaridad", "Diagnóstico", "Reparación"],
     "image": {
-      "url": "/assets/images/blog/humedades-capilaridad.jpg",
+      "url": "/assets/images/placeholder-default.png",
       "alt": "Humedad por capilaridad en muro",
       "caption": "La humedad ascendente deja una marca característica en la parte baja de los muros."
     },
@@ -59,7 +59,7 @@
     "category": "Legal",
     "tags": ["Vicios Ocultos", "Compraventa", "Reclamación", "Derechos"],
     "image": {
-      "url": "/assets/images/blog/vicios-ocultos.jpg",
+      "url": "/assets/images/placeholder-default.png",
       "alt": "Documento de compraventa con lupa",
       "caption": "Los vicios ocultos deben ser reclamados dentro de los plazos legales establecidos."
     },

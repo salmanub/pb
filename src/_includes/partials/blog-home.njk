@@ -28,15 +28,13 @@
                 {% for post in sortedPosts %}
                     {% if loop.index0 < 2 and (not post.estado or post.estado == "publicado") %}
                     <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col group hover:-translate-y-1" itemscope itemtype="https://schema.org/BlogPosting">
-                        {% if post.image %}
-                        <img src="{{ post.image.url }}" 
-                             alt="{{ post.image.alt }}" 
+                        <img src="{{ post.image.url if post.image else metadata.site.placeholderImage }}" 
+                             alt="{{ post.image.alt if post.image else 'Imagen del artículo' }}" 
                              class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                              loading="lazy"
                              width="400"
                              height="192"
                              itemprop="image">
-                        {% endif %}
                         <div class="p-6 flex flex-col flex-grow">
                             <div class="mb-4 flex items-center justify-between">
                                 <span class="text-xs font-semibold px-3 py-1 rounded-full bg-cyan-100 text-cyan-700" itemprop="articleSection">

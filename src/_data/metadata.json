@@ -5,7 +5,8 @@
     "url": "https://perito.barcelona",
     "themeColor": "#2048e6",
     "faviconDataUriPath": "/images/logos/favicon.txt",
-    "revisandoContenidos": false
+    "revisandoContenidos": false,
+    "placeholderImage": "/assets/images/placeholder-default.png"
   },
   "default_lang": "es",
   "languages": ["es", "en", "ca", "fr", "it"],
