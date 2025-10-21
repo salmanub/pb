@@ -1,0 +1,94 @@
+<section class="py-20 px-4 md:px-[5%] bg-white relative" itemprop="mentions" itemscope itemtype="https://schema.org/Blog">
+    {# Contenido Principal #}
+    <div class="relative z-10 max-w-[1400px] mx-auto">
+        {# Header de la sección #}
+        <div class="text-center mb-16">
+            <div class="inline-flex flex-col items-center">
+                <span class="inline-flex justify-center items-center text-sm md:text-base font-semibold tracking-[2px] uppercase text-cyan-600 mb-6">
+                    <span class="w-8 h-0.5 bg-cyan-500/50 mr-3"></span>
+                    BLOG TÉCNICO
+                    <span class="w-8 h-0.5 bg-cyan-500/50 ml-3"></span>
+                </span>
+                <h2 class="text-[2.5rem] md:text-[3.5rem] font-light leading-[1.1] tracking-tight" itemprop="headline">
+                    <span class="text-slate-800">Artículos y Guías</span>
+                    <span class="block mt-4 bg-gradient-to-r from-cyan-600 to-cyan-500 bg-clip-text text-transparent">
+                        <strong>Sobre Peritajes</strong>
+                    </span>
+                </h2>
+                <p class="mt-6 text-xl text-slate-600 max-w-3xl">
+                    Información técnica y legal para resolver sus dudas sobre informes periciales
+                </p>
+            </div>
+        </div>
+
+        {# Grid de Posts del Blog #}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {% if posts and posts.length > 0 %}
+                {% set sortedPosts = posts | sort(attribute='datePublished') | reverse %}
+                {% for post in sortedPosts %}
+                    {% if loop.index0 < 2 and (not post.estado or post.estado == "publicado") %}
+                    <article class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col group hover:-translate-y-1" itemscope itemtype="https://schema.org/BlogPosting">
+                        {% if post.image %}
+                        <img src="{{ post.image.url }}" 
+                             alt="{{ post.image.alt }}" 
+                             class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                             loading="lazy"
+                             width="400"
+                             height="192"
+                             itemprop="image">
+                        {% endif %}
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="mb-4 flex items-center justify-between">
+                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-cyan-100 text-cyan-700" itemprop="articleSection">
+                                    {{ post.category }}
+                                </span>
+                                <time datetime="{{ post.datePublished }}T00:00:00+01:00" class="text-xs text-slate-500" itemprop="datePublished">
+                                    {{ post.datePublished }}
+                                </time>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-3 line-clamp-2" itemprop="headline">{{ post.title }}</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow line-clamp-3" itemprop="description">{{ post.excerpt }}</p>
+                            <a href="/blog/{{ post.slug }}/" 
+                               class="mt-auto inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold group"
+                               itemprop="url">
+                                Leer artículo completo
+                                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                            <meta itemprop="author" content="{{ post.author }}">
+                        </div>
+                    </article>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+
+            {# Card de "Ver más blog" #}
+            <div class="bg-gradient-to-br from-[#0B1030] to-[#1a2452] rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col items-center justify-center p-8 text-center group hover:-translate-y-1">
+                <div class="w-16 h-16 rounded-full bg-cyan-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <svg class="w-8 h-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-light text-white mb-4">Ver Más Artículos</h3>
+                <p class="text-cyan-100/80 text-lg mb-8">Descubre más guías técnicas y consejos sobre informes periciales y patologías constructivas.</p>
+                <a href="/blog/" class="inline-flex items-center px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all group">
+                    Explorar el blog
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        {# CTA Adicional #}
+        <div class="flex justify-center mt-8">
+            <a href="/blog/" class="inline-flex items-center text-slate-600 hover:text-cyan-600 font-medium transition-colors group">
+                Ver todos los artículos del blog
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>

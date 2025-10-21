@@ -1,12 +1,12 @@
 {# Usamos una lógica más simple y directa en lugar del plugin de navegación #}
 <nav aria-label="Breadcrumb" class="mb-8" itemscope itemtype="https://schema.org/BreadcrumbList">
     <meta itemprop="name" content="{{ title or page.title }} - {{ metadata.site.title}}" />
-    <ol class="flex flex-wrap gap-y-2 items-center text-sm md:text-base text-cyan-300/80">
+    <ol class="flex flex-wrap gap-y-2 items-center text-sm md:text-base text-slate-600">
         
         {# 1. Enlace a la página de Inicio (se mantiene igual) #}
         {% set homeUrl = "/" + (lang if lang != "es" else "") %}
         <li class="inline-flex items-center shrink-0" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a href="{{ homeUrl }}" class="hover:text-cyan-300 transition-colors" itemprop="item">
+            <a href="{{ homeUrl }}" class="hover:text-cyan-600 transition-colors" itemprop="item">
                 <span itemprop="name">
                     {% if lang == "es" %}Inicio
                     {% elif lang == "en" %}Home
@@ -25,7 +25,7 @@
         {# Comprobamos si existe el objeto `parentService` en el frontmatter #}
         {% if parentService and parentService.url and parentService.title %}
             <li class="inline-flex items-center shrink-0" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a href="{{ parentService.url }}" class="hover:text-cyan-300 transition-colors leading-tight" itemprop="item">
+                <a href="{{ parentService.url }}" class="hover:text-cyan-600 transition-colors leading-tight" itemprop="item">
                     <span itemprop="name">{{ parentService.title }}</span>
                 </a>
                 <meta itemprop="position" content="2">
@@ -38,7 +38,7 @@
         {# 3. Texto de la Página Actual (no es un enlace) #}
         <li class="inline-flex items-center" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             {# Usamos 'eleventyNavigation.title' si existe, si no, el 'title' principal de la página #}
-            <span class="text-white font-medium leading-tight" aria-current="page" itemprop="name">
+            <span class="text-slate-600 font-normal leading-tight" aria-current="page" itemprop="name">
                 {{ eleventyNavigation.title or title }}
             </span>
             <meta itemprop="position" content="{% if parentService %}3{% else %}2{% endif %}">

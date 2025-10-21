@@ -44,36 +44,11 @@
     <header class="bg-gradient-to-br from-slate-50 to-white py-12 px-4 md:px-[5%] shadow-sm">
         <div class="max-w-[900px] mx-auto">
             <!-- Breadcrumbs -->
-            <nav aria-label="Breadcrumb" class="mb-6">
-                <ol class="flex items-center gap-2 text-sm text-slate-600" itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a href="/" class="hover:text-cyan-600 transition-colors" itemprop="item">
-                            <span itemprop="name">Inicio</span>
-                        </a>
-                        <meta itemprop="position" content="1">
-                    </li>
-                    <li>
-                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </li>
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a href="/blog/" class="hover:text-cyan-600 transition-colors" itemprop="item">
-                            <span itemprop="name">Blog</span>
-                        </a>
-                        <meta itemprop="position" content="2">
-                    </li>
-                    <li>
-                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </li>
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <span class="text-slate-800 font-medium" itemprop="name">{{ title }}</span>
-                        <meta itemprop="position" content="3">
-                    </li>
-                </ol>
-            </nav>
+            {% set parentService = {
+                "title": "Blog",
+                "url": "/blog/"
+            } %}
+            {% include "partials/breadcrumb.njk" %}
 
             <!-- Category Badge -->
             {% if category %}
