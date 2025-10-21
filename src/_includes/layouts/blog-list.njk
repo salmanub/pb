@@ -1,7 +1,7 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-<main class="pt-[70px] lg:pt-[120px]" itemscope itemtype="https://schema.org/Blog">
+<main class="pt-[70px] lg:pt-[120px]" itemscope itemtype="https://schema.org/CollectionPage">
     
     <!-- Hero Section -->
     <header class="bg-gradient-to-br from-slate-50 to-white py-16 px-4 md:px-[5%] shadow-sm">
@@ -21,17 +21,14 @@
     <section class="py-16 bg-white">
         <div class="max-w-[1200px] mx-auto px-4 md:px-[5%]">
             
-            <!-- Content Description -->
-            <div class="prose prose-lg max-w-none mb-12">
-                {{ content | safe }}
-            </div>
-
-            <!-- Posts Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" itemprop="blogPost">
-                {% for post in posts %}
+            <!-- Posts Grid - Primero los artículos ordenados por fecha -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" itemprop="mainEntity" itemscope itemtype="https://schema.org/ItemList">
+                <meta itemprop="itemListOrder" content="https://schema.org/ItemListOrderDescending">
+                {% set sortedPosts = posts | sort(attribute='datePublished') | reverse %}
+                {% for post in sortedPosts %}
                 {% if not post.estado or post.estado == "publicado" %}
                 <article class="group/card relative block h-full bg-gradient-to-br from-white to-slate-50/80 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500"
-                         itemscope itemtype="https://schema.org/BlogPosting">
+                         itemprop="itemListElement" itemscope itemtype="https://schema.org/BlogPosting">
                     
                     <!-- Featured Image -->
                     {% if post.image %}
@@ -101,6 +98,7 @@
                     <!-- Hidden schema data -->
                     <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}/blog/{{ post.slug }}/">
                     <meta itemprop="dateModified" content="{{ post.dateModified }}T00:00:00+01:00">
+                    <meta itemprop="position" content="{{ loop.index }}">
                 </article>
                 {% endif %}
                 {% endfor %}
@@ -112,6 +110,11 @@
                 <p class="text-lg text-slate-600">Próximamente publicaremos nuevos artículos técnicos.</p>
             </div>
             {% endif %}
+
+            <!-- Content Description - Después de los artículos -->
+            <div class="prose prose-lg max-w-none mt-12 pt-12 border-t border-slate-200">
+                {{ content | safe }}
+            </div>
 
         </div>
     </section>
