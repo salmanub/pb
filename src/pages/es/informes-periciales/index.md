@@ -68,7 +68,7 @@ serviceCluster:
         - "Base para negociación"
     - title: "Dictamen Pericial Judicial"
       description: "Realizado por designación directa de un juzgado, actuando como auxiliares de la justicia con total imparcialidad."
-      url: "/informes-periciales/dictamen-judicial/"
+      url: "/informes-periciales/judicial/"
       icon: "scale"
       features:
         - "Designación judicial"
