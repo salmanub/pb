@@ -1,114 +1,113 @@
 # -------------------------------------------------------------------
 # ARCHIVO DE REDIRECCIONES DEFINITIVO PARA PERITO.BARCELONA
 # Estrategia: Usar 301 para todas las URLs antiguas para transferir la autoridad SEO.
-# Última actualización: Agosto 2025
+# Última actualización: Septiembre 2025 (Optimización Perito Judicial)
 # -------------------------------------------------------------------
 
 # --- REDIRECCIONES DE PÁGINAS PRINCIPALES Y PILARES ---
 # Mapeamos las antiguas URLs de servicios a las nuevas páginas pilar.
 
-/construccion/                              /informes-periciales/                   301
-/peritajes/                                 /informes-periciales/                   301
-/judicial/                                  /informes-periciales/dictamen-judicial/   301
-/perito-judicial/                           /informes-periciales/dictamen-judicial/   301
-/auditoria-tecnica-obra/                      /auditorias-de-obra/                      301
-/auditoria/                                 /auditorias-de-obra/                      301
-/estructuras/                               /asesoramiento-estructural/               301
-/peritaje-estructuras/                      /asesoramiento-estructural/               301
-/abogados/                                  /colaboracion-abogados/                   301
-/seguros/                                   /informes-periciales/reclamacion-seguros/ 301
-/seguros                                   /informes-periciales/reclamacion-seguros/ 301
-/seguros/contraperitajes/                   /informes-periciales/reclamacion-seguros/ 301
-/seguros/reclamaciones-aseguradoras/       /informes-periciales/reclamacion-seguros/ 301
-/construccion                            /informes-periciales/                   301
+/construccion/                            /informes-periciales/                   301
+/peritajes/                               /informes-periciales/                   301
+
+# --- ACTUALIZACIÓN PERITO JUDICIAL (ES) ---
+# Redirigimos la URL antigua "dictamen-judicial" a la nueva limpia "judicial"
+/informes-periciales/dictamen-judicial/   /informes-periciales/judicial/          301
+# Redirigimos variaciones antiguas a la nueva
+/judicial/                                /informes-periciales/judicial/          301
+/perito-judicial/                         /informes-periciales/judicial/          301
+/informes-periciales/perito-judicial-barcelona/ /informes-periciales/judicial/    301
+
+/auditoria-tecnica-obra/                  /auditorias-de-obra/                    301
+/auditoria/                               /auditorias-de-obra/                    301
+/estructuras/                             /asesoramiento-estructural/             301
+/peritaje-estructuras/                    /asesoramiento-estructural/             301
+/abogados/                                /colaboracion-abogados/                 301
+/seguros/                                 /informes-periciales/reclamacion-seguros/ 301
+/seguros/contraperitajes/                 /informes-periciales/reclamacion-seguros/ 301
+/seguros/reclamaciones-aseguradoras/      /informes-periciales/reclamacion-seguros/ 301
 /guia-peritajes                           /informes-periciales/                   301
 /servicios/                               /informes-periciales/                   301
-/servicios/                               /informes-periciales/                   301
-/servicios/peritajes-seguros              /informes-periciales/reclamacion-seguros/   301
-/construccion                            /informes-periciales/                   301
-/informes-periciales/contrainforme-pericial/ /informes-periciales/ 301
-/informe-pericial-pavimentos/  /informes-periciales/ 301
-/comunidades-propietarios/ /informes-periciales/comunidades-propietarios/ 301
-/seguros/polizas/ /informes-periciales/reclamacion-seguros/ 301
-/seguros/reclamaciones/ /informes-periciales/reclamacion-seguros/ 301
-/seguros/reclamaciones /informes-periciales/reclamacion-seguros/ 301
-/es/colaboracion-abogados/ /colaboracion-abogados/ 301
-/peritajes-ejecucion-obra/ /informes-periciales/reclamacion-mala-ejecucion/ 301
-/reparacion-hormigon-armado/ /asesoramiento-estructural/reparacion-hormigon/ 301
+/servicios/peritajes-seguros              /informes-periciales/reclamacion-seguros/ 301
+/informes-periciales/contrainforme-pericial/ /informes-periciales/                301
+/informe-pericial-pavimentos/             /informes-periciales/                   301
+/comunidades-propietarios/                /informes-periciales/comunidades-propietarios/ 301
+/seguros/polizas/                         /informes-periciales/reclamacion-seguros/ 301
+/seguros/reclamaciones/                   /informes-periciales/reclamacion-seguros/ 301
+/es/colaboracion-abogados/                /colaboracion-abogados/                 301
+/peritajes-ejecucion-obra/                /informes-periciales/reclamacion-mala-ejecucion/ 301
+/reparacion-hormigon-armado/              /asesoramiento-estructural/reparacion-hormigon/ 301
 /informes-periciales/reclamacion-seguros/ /informes-periciales/reclamacion-seguros-construccion/ 301
 
 # Versiones en Catalán
-/ca/construccio/                            /ca/informes-pericials/                   301
-/ca/serveis-pericials/                      /ca/informes-pericials/                   301
-/ca/peritatge-judicial/                     /ca/informes-pericials/dictamen-judicial/   301
-/ca/auditoria-tecnica-obra/                 /ca/auditories-obra/                    301
-/ca/estructures/                            /ca/assessorament-estructural/            301
-/ca/advocats/                               /ca/colaboracio-advocats/                 301
-/ca/peritatges-construccio/                 /ca/informes-pericials/            301
+/ca/construccio/                          /ca/informes-pericials/                 301
+/ca/serveis-pericials/                    /ca/informes-pericials/                 301
+
+# --- ACTUALIZACIÓN PERITO JUDICIAL (CA) ---
+/ca/informes-pericials/dictamen-judicial/ /ca/informes-pericials/judicial/        301
+/ca/peritatge-judicial/                   /ca/informes-pericials/judicial/        301
+
+/ca/auditoria-tecnica-obra/               /ca/auditories-obra/                    301
+/ca/estructures/                          /ca/assessorament-estructural/          301
+/ca/advocats/                             /ca/colaboracio-advocats/               301
+/ca/peritatges-construccio/               /ca/informes-pericials/                 301
 /ca/informes-pericials/reclamacio-assegurances/ /ca/informes-pericials/reclamacio-assegurances-construccio/ 301
 
 # Versiones en Inglés
-/en/construction/                           /en/expert-witness-reports/               301
-/en/construction-expert-reports/           /en/expert-witness-reports/ 301
-/en/legal-expert/                           /en/expert-witness-reports/judicial-expert/ 301
-/en/construction-technical-audit/           /en/construction-audits/                  301
-/en/structures/                             /en/structural-consulting/                301
-/en/lawyers/                                /en/lawyer-collaboration/                 301
-/en/contacto/                               /en/contact/                               301
-/en/structural-reinforcement/               /en/structural-consulting/             301
-/en/property-owners/    /en/expert-witness-reports/owners-association/ 301
-/en/expert-witness-reports/judicial-expert/   /en/expert-witness-reports/ 301
-/en/services/   /en/expert-witness-reports/ 301
-/en/specialized-technical-inspections/   /en/expert-witness-reports/ 301
-/en/industrial-premises/   /en/expert-witness-reports/ 301
-/en/construction-audits/pre-handover-reception/ /en/expert-witness-reports/ 301
+/en/construction/                         /en/expert-witness-reports/             301
+/en/construction-expert-reports/          /en/expert-witness-reports/             301
+
+# --- ACTUALIZACIÓN PERITO JUDICIAL (EN) ---
+/en/expert-witness-reports/court-appointed-report/ /en/expert-witness-reports/court-expert/ 301
+/en/legal-expert/                         /en/expert-witness-reports/court-expert/ 301
+/en/expert-witness-reports/judicial-expert/ /en/expert-witness-reports/court-expert/ 301
+
+/en/construction-technical-audit/         /en/construction-audits/                301
+/en/structures/                           /en/structural-consulting/              301
+/en/lawyers/                              /en/lawyer-collaboration/               301
+/en/contacto/                             /en/contact/                            301
+/en/structural-reinforcement/             /en/structural-consulting/              301
+/en/property-owners/                      /en/expert-witness-reports/owners-association/ 301
+/en/services/                             /en/expert-witness-reports/             301
+/en/specialized-technical-inspections/    /en/expert-witness-reports/             301
+/en/industrial-premises/                  /en/expert-witness-reports/             301
+/en/construction-audits/pre-handover-reception/ /en/expert-witness-reports/       301
 /en/expert-witness-reports/owners-associations/ /en/expert-witness-reports/owners-associations/ 301
 
 # --- REDIRECCIONES DE PÁGINAS DE PROBLEMAS (CLÚSTERES) ---
-# Mapeamos URLs de problemas antiguas a su nueva ubicación bajo el pilar correcto.
-
-/grietas-estructurales/                       /informes-periciales/patologias-estructurales/    301
-/humedades-filtraciones/                      /informes-periciales/humedades-filtraciones/      301
-/vicios-ocultos/                              /informes-periciales/vicios-ocultos/              301
-/mala-ejecucion/                              /informes-periciales/reclamacion-mala-ejecucion/  301
-/certificaciones/                             /auditorias-obra/disputas-certificaciones-pago/   301
-/inspecciones-tecnicas-especializadas/        /auditorias-obra/inspecciones-tecnicas-especializadas/ 301
-/seguros/ /informes-periciales/reclamacion-seguros/         301
-/ca/assegurances/ /ca/informes-pericials/reclamacio-assegurances/ 301
-/en/insurance/ /en/expert-witness-reports/insurance-claims/ 301
-/ca/auditories-d-obra/ /ca/auditories-obra/ 301
-/es/ / 301
-/ca/contacto/ /ca/contacte/ 301
-/desprendimientos-danos-ejecucion/ /informes-periciales/reclamacion-mala-ejecucion/ 301
+/grietas-estructurales/                   /informes-periciales/patologias-estructurales/    301
+/humedades-filtraciones/                  /informes-periciales/humedades-filtraciones/      301
+/vicios-ocultos/                          /informes-periciales/vicios-ocultos/              301
+/mala-ejecucion/                          /informes-periciales/reclamacion-mala-ejecucion/  301
+/certificaciones/                         /auditorias-obra/disputas-certificaciones-pago/   301
+/inspecciones-tecnicas-especializadas/    /auditorias-obra/inspecciones-tecnicas-especializadas/ 301
+/seguros/                                 /informes-periciales/reclamacion-seguros/         301
+/ca/assegurances/                         /ca/informes-pericials/reclamacio-assegurances/   301
+/en/insurance/                            /en/expert-witness-reports/insurance-claims/      301
+/ca/auditories-d-obra/                    /ca/auditories-obra/                    301
+/es/                                      /                                       301
+/ca/contacto/                             /ca/contacte/                           301
+/desprendimientos-danos-ejecucion/        /informes-periciales/reclamacion-mala-ejecucion/  301
 
 # Versiones en Catalán
-/ca/vicis-ocults/                             /ca/informes-pericials/vicis-ocults/              301
-
+/ca/vicis-ocults/                         /ca/informes-pericials/vicis-ocults/              301
 
 # --- REDIRECCIONES DE CONTENIDO ANTIGUO O ELIMINADO ---
-# Redirigimos contenido antiguo o servicios ya no ofrecidos a la página más relevante.
-
 /tasaciones-inmobiliarias/* /                                       301
 /home-inspector/* /                                       301
-/casos-de-exito/* /proyectos/                               301 # Asumiendo que /proyectos/ es la nueva URL
-/es/sobre-nosotros/                         /quienes-somos/                           301 # Asumiendo que /quienes-somos/ es la nueva URL
+/casos-de-exito/* /proyectos/                             301
+/es/sobre-nosotros/                       /quienes-somos/                         301
 
 # --- REDIRECCIONES CON WILDCARD PARA SECCIONES ANTIGUAS ---
 # Capturamos todas las subpáginas de secciones antiguas para no perder tráfico.
 
-/construccion/* /informes-periciales/                     301
-/peritajes/* /informes-periciales/                     301
-/judicial/* /informes-periciales/dictamen-judicial/   301
-/perito-judicial/* /informes-periciales/dictamen-judicial/   301
-/auditoria/* /auditorias-de-obra/                      301
-/estructuras/* /asesoramiento-estructural/               301
-/abogados/* /colaboracion-abogados/                   301
-/ca/construccio/* /ca/informes-pericials/                   301
-/en/construction/* /en/expert-witness-reports/               301
-
-# --- REGLA FINAL PARA MANEJO DE 404 ---
-# Cloudflare Pages sirve automáticamente tu archivo 404.html si existe.
-# La siguiente regla es una buena práctica como "fallback", pero la mayoría de las veces no es necesaria.
-# Si tienes una Single Page Application (SPA), la regla /* /index.html 200 es la correcta, pero este no es tu caso.
-# Para un sitio estático, es mejor dejar que Cloudflare maneje el 404.
-# Por lo tanto, eliminamos las reglas /* /:splat 200 y /* /404.html 404 para evitar conflictos.
+/construccion/* /informes-periciales/                   301
+/peritajes/* /informes-periciales/                   301
+# Actualizado para apuntar a la nueva URL judicial
+/judicial/* /informes-periciales/judicial/          301
+/perito-judicial/* /informes-periciales/judicial/          301
+/auditoria/* /auditorias-de-obra/                    301
+/estructuras/* /asesoramiento-estructural/             301
+/abogados/* /colaboracion-abogados/                 301
+/ca/construccio/* /ca/informes-pericials/                 301
+/en/construction/* /en/expert-witness-reports/             301
