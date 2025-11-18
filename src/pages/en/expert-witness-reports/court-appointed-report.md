@@ -1,91 +1,97 @@
 ---
 layout: layouts/service-child.njk
-title: "Court-Appointed Expert Report in Barcelona | Court-Designated Expert"
-subtitle: "We act as court-appointed experts by official designation in Barcelona courts"
-description: "We produce court-appointed expert reports by court designation in Barcelona. As engineering experts, we provide a technical, objective, and impartial view to clarify facts in legal proceedings."
-permalink: "/en/expert-witness-reports/court-appointed-report/"
+title: "Court Expert Witness in Barcelona | Expert Engineer for Litigation"
+subtitle: "Robust expert reports, ratification, and technical defense in court"
+description: "Court Expert Witness service in Barcelona. Civil Engineer expert in construction defects. We provide solid technical evidence, impartiality, and competent oral defense in court."
+permalink: "/en/expert-witness-reports/court-expert/"
 lang: "en"
 translations:
   - lang: "es"
-    permalink: "/informes-periciales/dictamen-judicial/"
+    permalink: "/informes-periciales/judicial/"
   - lang: "ca"
-    permalink: "/ca/informes-pericials/dictamen-judicial/"
+    permalink: "/ca/informes-pericials/judicial/"
 eleventyNavigation:
-  key: "Court-Appointed Expert Report"
+  key: "Court Expert Witness"
   parent: "Expert Reports"
-  title: "Court-Appointed Report"
+  title: "Court Expert Witness"
   notshow: true
   order: 2
-serviceTitle: "court-appointed expert report"
+serviceTitle: "court expert witness"
 
+# Parent Service
 parentService:
   title: "Expert Reports"
   url: "/en/expert-witness-reports/"
 
+# Key features in the hero section
 keyFeatures:
-  - "Acting as experts by court appointment from official lists"
-  - "Maximum objectivity and impartiality in service of the Justice Administration"
-  - "Rigorous technical reports based on applicable regulations"
-  - "Clear and competent report ratification and defense in court"
+  - "Chartered Engineer for judicial proceedings (court-appointed or party-appointed)"
+  - "Proven experience in ratification and oral defense of the report"
+  - "Rigorous technical reports designed to be definitive evidence"
+  - "Clarity of exposition to translate technical terms into legal certainty"
 
+# Service Process (for sidebar)
 serviceProcess:
-  - title: "Appointment Acceptance"
-    description: "Once appointed by the court, we formally accept the expert assignment"
-  - title: "Analysis and Cost Provision"
-    description: "We study the case and submit the cost provision request to the court"
-  - title: "Technical Inspection and Study"
-    description: "We conduct all necessary investigations to clarify litigation points"
-  - title: "Report Submission and Ratification"
-    description: "We deliver the report to the court and attend trial for its defense and clarification"
+  - title: "Feasibility Study"
+    description: "We analyze the documentation to confirm the technical solidity of the case"
+  - title: "Inspection & Report"
+    description: "We conduct the forensic examination and draft a technically bulletproof report"
+  - title: "Court Ratification"
+    description: "We attend trial to defend our conclusions before the tribunal"
+  - title: "Attorney Support"
+    description: "We assist the lawyer in preparing the technical cross-examination"
 
+# Service Benefits (for sidebar)
 serviceBenefits:
-  - "Provide the judge with high-quality, objective technical evidence"
-  - "Count on an engineering expert with experience in legal proceedings"
-  - "Ensure an impartial report, focused solely on technical truth"
-  - "Obtain a clear, understandable, and useful report for case resolution"
+  - "Count on an expert who understands procedural dynamics and deadlines"
+  - "Reinforce your legal strategy with irrefutable technical arguments"
+  - "Convey security and credibility to the judge during the oral hearing"
+  - "Dismantle the opposing party's arguments with technical solvency"
 
+# Related Problems
 relatedProblems:
-  - title: "Party-Appointed Expert Report"
-    description: "Even in legal proceedings, a party-appointed report can be key."
-    url: "/en/expert-witness-reports/party-appointed-report/"
-  - title: "Expert Counter-Reports"
-    description: "We analyze opposing expert reports to find weak points."
-    url: "/en/expert-witness-reports/expert-counter-report/"
+  - title: "Hidden Defects"
+    description: "Claims for non-visible defects in property purchases."
+    url: "/en/services/hidden-defects-reports/"
+  - title: "Breach of Contract"
+    description: "Expert reports to prove malpractice or construction abandonment."
+    url: "/en/services/construction-audits-claims/"
 
+# Client Testimonials
 testimonials:
-  - quote: "Their appointment as court expert was key. The report was incredibly detailed, objective, and easy to understand, which undoubtedly helped Your Honor comprehend the technical complexity of the case."
-    author: "Court Clerk"
-    role: "Barcelona Court of First Instance"
-  - quote: "We needed an expert from the official list for a complex structural defects case. Their work was impeccable, from cost provision to very solid court testimony. Highly recommended."
-    author: "Law Firm"
-    role: "Client in Legal Proceedings"
+  - quote: "His competence on the stand made the difference. He explained complex technical concepts in a way that His Honor understood perfectly. A great asset for litigation."
+    author: "Litigation Attorney"
+    role: "Case: Structural Damages Claim"
+  - quote: "The report was so compelling that the opposing party sought a settlement before going to trial. Technical rigor and absolute clarity."
+    author: "Managing Partner"
+    role: "Law Firm in Barcelona"
 
-ctaTitle: "Has a court expert been appointed in your case?"
-ctaDescription: "Whether we've been appointed for your proceedings or you need a party-appointed report, contact us."
+# CTA Section
+ctaTitle: "Do you need a Court Expert Witness for your litigation?"
+ctaDescription: "Add evidentiary value to your case. Let's discuss the most appropriate technical strategy."
 
+# Introduction (shown in hero section)
 intro: |
-  <p>When legal proceedings require technical knowledge that the judge doesn't possess, the court turns to a court-appointed expert. This expert, designated by the court itself, acts as an auxiliary to justice, providing an objective and impartial view of the facts.</p>
+  <p>In legal proceedings, technical truth is just as important as legal truth. As a <strong>Court Expert Witness</strong> in Barcelona, my role is to provide the court and the legal team with robust, objective, and decisive expert evidence.</p>
   
-  <p>As engineering experts registered in official lists, within our <a href="/en/expert-witness-reports/">expert report services</a>, we produce court reports with maximum rigor, commitment, and respect for the function entrusted to us.</p>
+  <p>At <strong>Perito Barcelona</strong>, we do not just deliver a report; we integrate into your defense strategy, bringing the solvency of a Civil Engineer expert in both construction pathology and court ratification.</p>
 ---
 
-## The Role of the Court Expert: An Auxiliary to Justice
+## The Difference Between Being Right and Proving It in Court
 
-Unlike a party-appointed expert, who is hired by one of the litigants, the **court expert** is an independent third party appointed by the judge. Our function is not to side with one party or another, but to **provide the court with the necessary technical knowledge** to make a fair and informed decision.
+The success of real estate or construction litigation depends, to a large extent, on the quality of the expert evidence. A judicial report must not only be technically perfect; it must be **persuasive, clear, and defensible** under the pressure of cross-examination.
 
-We act under oath or promise to tell the truth, with an obligation of **absolute objectivity and impartiality**. Therefore, a well-founded court expert report usually carries decisive weight in dispute resolution.
+### Our Contribution to the Judicial Process
 
-### The Appointment and Action Process
+We regularly work with law firms in Barcelona, acting both as party-appointed experts and by court designation, covering all critical phases:
 
-The appointment of a court expert follows the procedures established in the Civil Procedure Law (LEC). The general process is as follows:
+1.  **Pre-Litigation:** We analyze the technical viability of the claim before filing the lawsuit, saving unnecessary costs and risks.
+2.  **Evidentiary Phase:** We produce exhaustive reports, complying with all formal requirements of the Civil Procedure Law (LEC), designed to withstand the scrutiny of the opposing party.
+3.  **Oral Hearing:** Our courtroom experience is our greatest asset. We defend the report with poise, answer clarifications, and technically dismantle opposing expert opinions.
 
-1. **Court Appointment:** The court appoints us from official lists in which we are registered, provided by professional associations.
-2. **Position Acceptance:** Once notified of the appointment, we formally accept the position and swear to perform it with maximum diligence and impartiality.
-3. **Cost Provision:** We study the expert assessment's scope and submit our fee estimate to the court for parties to make the cost provision.
-4. **Technical Investigation:** We carry out all necessary actions to resolve the expert assessment points: we study the court file, conduct inspections, take measurements, and perform relevant technical analyses.
-5. **Report Submission:** We write the expert report responding clearly and argumentatively to the questions raised by the court and deliver it within the established timeframe.
-6. **Court Ratification:** We attend the oral trial or hearing to present, clarify, and defend our conclusions in response to questions from the judge and parties' lawyers.
+### Forensic Specialties
 
-### Why is an Engineering Expert Key in a Court Report?
-
-In complex construction cases, having an expert who is also a Civil Engineer provides superior technical competence. Our deep training in structures, materials, and regulations allows us to analyze problem roots with greater precision and defend our conclusions with the strongest technical arguments, which is especially valuable in court questioning.
+* **Construction Defects and Ruin:** Reports for lawsuits under the Building Planning Law (LOE).
+* **Pathologies and Claims:** Determination of cause-origin in dampness, cracks, and collapses.
+* **Contractual Disputes:** Valuation of unexecuted items, malpractice, and budget deviations.
+* **Loss of Profit:** Technical valuation of construction stoppages or inability to use the property.

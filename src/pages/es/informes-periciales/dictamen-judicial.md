@@ -1,97 +1,97 @@
 ---
 layout: 'layouts/service-child.njk'
-title: "Dictamen Pericial Judicial en Barcelona | Perito Designado por el Juzgado"
-subtitle: 'Actuamos como peritos judiciales por designación oficial en los juzgados de Barcelona'
-description: "Elaboramos dictámenes periciales judiciales por designación del juzgado en Barcelona. Como peritos ingenieros, aportamos una visión técnica, objetiva e imparcial para esclarecer los hechos en un procedimiento judicial."
-permalink: "/informes-periciales/dictamen-judicial/"
+title: "Perito Judicial en Barcelona | Ingeniero Experto en Tribunales"
+subtitle: 'Dictámenes periciales, ratificación y defensa técnica en sede judicial'
+description: "Servicio de Perito Judicial en Barcelona. Ingeniero experto para litigios de construcción. Aportamos prueba pericial sólida, imparcialidad y solvencia en la ratificación ante el juez."
+permalink: "/informes-periciales/judicial/"
 lang: 'es'
 translations:
   - lang: 'ca'
-    permalink: '/ca/informes-pericials/dictamen-judicial/'
+    permalink: '/ca/informes-pericials/judicial/'
   - lang: 'en'
-    permalink: '/en/expert-witness-reports/court-appointed-report/'
+    permalink: '/en/expert-witness-reports/court-expert/'
 eleventyNavigation:
-  key: "Dictamen Pericial Judicial"
+  key: "Perito Judicial"
   parent: "Informes Periciales"
-  title: "Dictamen Judicial"
+  title: "Perito Judicial"
   notshow: true
   order: 2
+serviceTitle: 'perito judicial'
+
+# Parent Service
 parentService:
   title: 'Informes Periciales'
   url: '/informes-periciales/'
 
-
 # Key features in the hero section
 keyFeatures:
-  - 'Actuación como peritos por designación judicial en listas oficiales'
-  - 'Máxima objetividad e imparcialidad al servicio de la Administración de Justicia'
-  - 'Dictámenes técnicos rigurosos y fundamentados en la normativa aplicable'
-  - 'Ratificación y defensa del dictamen en sede judicial con claridad y solvencia'
+  - 'Perito Ingeniero colegiado para actuación en juzgados (designación o parte)'
+  - 'Experiencia demostrada en la ratificación y defensa oral del dictamen'
+  - 'Informes rigurosos diseñados para ser la prueba de cargo definitiva'
+  - 'Claridad expositiva para traducir la técnica al lenguaje jurídico'
 
 # Service Process (for sidebar)
 serviceProcess:
-  - title: 'Aceptación del cargo'
-    description: 'Una vez designados por el juzgado, aceptamos formalmente el encargo pericial'
-  - title: 'Análisis y provisión de fondos'
-    description: 'Estudiamos el caso y presentamos la solicitud de provisión de fondos al juzgado'
-  - title: 'Inspección y estudio técnico'
-    description: 'Realizamos todas las investigaciones necesarias para esclarecer los puntos del litigio'
-  - title: 'Emisión y ratificación'
-    description: 'Entregamos el dictamen al juzgado y acudimos a juicio para su defensa y aclaración'
+  - title: 'Estudio de viabilidad'
+    description: 'Analizamos la documentación para confirmar la solidez técnica del caso'
+  - title: 'Inspección y Dictamen'
+    description: 'Realizamos la pericia y redactamos un informe blindado técnicamente'
+  - title: 'Ratificación Judicial'
+    description: 'Asistimos a juicio para defender las conclusiones ante el tribunal'
+  - title: 'Asesoramiento al Letrado'
+    description: 'Apoyamos al abogado en la preparación del interrogatorio técnico'
 
 # Service Benefits (for sidebar)
 serviceBenefits:
-  - 'Aporte al juez una prueba técnica objetiva y de máxima calidad'
-  - 'Cuente con un perito ingeniero con experiencia en procedimientos judiciales'
-  - 'Asegure un dictamen imparcial, centrado únicamente en la verdad técnica'
-  - 'Obtenga un informe claro, comprensible y útil para la resolución del caso'
+  - 'Cuente con un perito que entiende la dinámica procesal y los plazos'
+  - 'Refuerce su estrategia legal con argumentos técnicos irrefutables'
+  - 'Transmita seguridad y credibilidad al juez durante la vista oral'
+  - 'Desmonte los argumentos de la parte contraria con solvencia técnica'
 
-# Related Problems (optional)
+# Related Problems
 relatedProblems:
-  - title: 'Informe Pericial de Parte'
-    description: 'Incluso en un proceso judicial, un informe de parte puede ser clave.'
-    url: '/informes-periciales/informe-de-parte/'
-  - title: 'Contrainformes Periciales'
-    description: 'Analizamos el dictamen del perito contrario para encontrar puntos débiles.'
-    url: '/informes-periciales/contrainforme-pericial/'
+  - title: 'Vicios Ocultos'
+    description: 'Reclamaciones por defectos no visibles en compraventas.'
+    url: '/servicios/informes-vicios-ocultos/'
+  - title: 'Incumplimientos de Contrato'
+    description: 'Peritajes para demostrar mala praxis o abandono de obra.'
+    url: '/servicios/auditorias-obra-reclamaciones/'
 
 # Client Testimonials
 testimonials:
-  - quote: 'Su designación como perito judicial fue clave. El dictamen fue increíblemente detallado, objetivo y fácil de entender, lo que sin duda ayudó a que Su Señoría comprendiera la complejidad técnica del caso.'
-    author: 'Letrado de la Administración de Justicia'
-    role: 'Juzgado de Primera Instancia de Barcelona'
-  - quote: 'Necesitábamos un perito de la lista oficial para un caso complejo de defectos estructurales. Su trabajo fue impecable, desde la provisión de fondos hasta una ratificación en juicio muy sólida. Muy recomendables.'
-    author: 'Despacho de Abogados'
-    role: 'Cliente en Proceso Judicial'
+  - quote: 'Su solvencia en el estrado marcó la diferencia. Explicó conceptos técnicos complejos de forma que Su Señoría lo entendió perfectamente. Un gran activo para el litigio.'
+    author: 'Abogado Procesalista'
+    role: 'Caso: Demanda por Daños Estructurales'
+  - quote: 'El informe era tan contundente que la parte contraria buscó un acuerdo antes de entrar a juicio. Rigor técnico y claridad absoluta.'
+    author: 'Socio Director'
+    role: 'Despacho de Abogados en Barcelona'
 
 # CTA Section
-ctaTitle: '¿Ha sido designado un perito judicial en su caso?'
-ctaDescription: 'Tanto si hemos sido designados para su procedimiento como si necesita un informe de parte, contacte con nosotros.'
+ctaTitle: '¿Necesita un Perito Judicial para su litigio?'
+ctaDescription: 'Aporte valor probatorio a su caso. Hablemos sobre la estrategia técnica más adecuada.'
 
 # Introduction (shown in hero section)
 intro: |
-  <p>Cuando un procedimiento judicial requiere de conocimientos técnicos que el juez no posee, se recurre a la figura del perito judicial. Este experto, designado por el propio juzgado, actúa como un auxiliar de la justicia, aportando una visión objetiva e imparcial sobre los hechos.</p>
+  <p>En un procedimiento judicial, la verdad técnica es tan importante como la verdad jurídica. Como <strong>Perito Judicial</strong> en Barcelona, mi labor es proporcionar al tribunal y a la dirección letrada una prueba pericial robusta, objetiva y decisiva.</p>
   
-  <p>Como peritos ingenieros inscritos en las listas oficiales, dentro de nuestros <a href="/informes-periciales/">servicios de informes periciales</a>, realizamos dictámenes judiciales con el máximo rigor, compromiso y respeto por la función que se nos encomienda.</p>
+  <p>Desde <strong>Perito Barcelona</strong>, no solo entregamos un informe; nos integramos en su estrategia de defensa, aportando la solvencia de un Ingeniero Civil experto tanto en la patología de la construcción como en la ratificación ante el juez.</p>
 ---
 
-## El Rol del Perito Judicial: Un Auxiliar de la Justicia
+## La Diferencia entre Tener Razón y Demostrarlo en Juicio
 
-A diferencia de un perito de parte, que es contratado por uno de los litigantes, el **perito judicial** es un tercero independiente designado por el propio juez. Nuestra función no es dar la razón a una parte u otra, sino **proporcionar al tribunal los conocimientos técnicos necesarios** para que pueda tomar una decisión justa e informada.
+El éxito de un litigio inmobiliario o constructivo depende, en gran medida, de la calidad de la prueba pericial. Un dictamen judicial no debe ser solo técnicamente perfecto; debe ser **persuasivo, claro y defendible** bajo la presión de un interrogatorio.
 
-Actuamos bajo juramento o promesa de decir verdad, con una obligación de **objetividad e imparcialidad absolutas**. Por ello, un dictamen pericial judicial bien fundamentado suele tener un peso determinante en la resolución de un litigio.
+### Nuestra Aportación al Proceso Judicial
 
-### El Proceso de Designación y Actuación
+Trabajamos habitualmente con despachos de abogados en Barcelona, actuando tanto como peritos de parte como por designación judicial, cubriendo todas las fases críticas:
 
-El nombramiento de un perito judicial sigue los cauces establecidos en la Ley de Enjuiciamiento Civil (LEC). El proceso general es el siguiente:
+1.  **Pre-Litigio:** Analizamos la viabilidad técnica de la reclamación antes de interponer la demanda, ahorrando costes y riesgos.
+2.  **Fase Probatoria:** Elaboramos dictámenes exhaustivos que cumplen con todos los requisitos formales de la LEC, diseñados para resistir el escrutinio de la parte contraria.
+3.  **Vista Oral:** Nuestra experiencia en sala es nuestro mayor valor. Defendemos el informe con aplomo, respondemos a las aclaraciones y desmontamos técnicamente las periciales contrarias.
 
-1.  **Designación Judicial:** El juzgado nos nombra a partir de las listas oficiales en las que estamos inscritos, provistas por los colegios profesionales.
-2.  **Aceptación del Cargo:** Una vez notificada la designación, aceptamos formalmente el cargo y juramos desempeñarlo con la máxima diligencia e imparcialidad.
-3.  **Provisión de Fondos:** Estudiamos el objeto de la pericia y presentamos al juzgado una estimación de nuestros honorarios para que las partes realicen la provisión de fondos.
-4.  **Investigación Técnica:** Llevamos a cabo todas las actuaciones necesarias para resolver los puntos de la pericia: estudiamos el expediente judicial, realizamos inspecciones, tomamos mediciones y efectuamos los análisis técnicos pertinentes.
-5.  **Emisión del Dictamen:** Redactamos el informe pericial respondiendo de forma clara y argumentada a las cuestiones planteadas por el tribunal y lo entregamos en el juzgado en el plazo establecido.
-6.  **Ratificación en Juicio:** Acudimos al acto del juicio oral o vista para exponer, aclarar y defender nuestras conclusiones a preguntas del juez y de los abogados de las partes.
+### Especialidades Forenses
 
-### ¿Por Qué es Clave un Perito Ingeniero en un Dictamen Judicial?
-
-En casos complejos de construcción, contar con un perito que además es Ingeniero Civil aporta una solvencia técnica superior. Nuestra profunda formación en estructuras, materiales y normativa nos permite analizar la raíz de los problemas con mayor precisión y defender nuestras conclusiones con los argumentos técnicos más sólidos, lo cual es especialmente valioso en un interrogatorio judicial.
+* **Vicios Constructivos y Ruina:** Informes para demandas por Ley de Ordenación de la Edificación (LOE).
+* **Patologías y Siniestros:** Determinación de causa-origen en humedades, grietas y colapsos.
+* **Disputas Contractuales:** Valoración de partidas no ejecutadas, mala praxis y desviaciones de presupuesto.
+* **Lucro Cesante:** Valoración técnica de paralizaciones de obra o imposibilidad de uso del inmueble.

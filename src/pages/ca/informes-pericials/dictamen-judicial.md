@@ -1,89 +1,97 @@
 ---
 layout: layouts/service-child.njk
-title: "Dictamen Pericial Judicial a Barcelona | Pèrit Designat pel Jutjat"
-subtitle: "Actuem com a pèrits judicials per designació oficial als jutjats de Barcelona"
-description: "Elaborem dictàmens pericials judicials per designació del jutjat a Barcelona. Com a pèrits enginyers, aportem una visió tècnica, objectiva i imparcial per esclarir els fets en un procediment judicial."
-permalink: "/ca/informes-pericials/dictamen-judicial/"
+title: "Pèrit Judicial a Barcelona | Enginyer Expert per a Judicis i Litigis"
+subtitle: "Dictàmens pericials robustos i ratificació experta davant dels tribunals"
+description: "Servei de Pèrit Judicial a Barcelona. Enginyer Civil expert en patologies i construcció. Oferim dictàmens tècnics sòlids, imparcialitat i una defensa oral solvent en judici."
+permalink: "/ca/informes-pericials/judicial/"
 lang: "ca"
 translations:
   - lang: "es"
-    permalink: "/informes-periciales/dictamen-judicial/"
+    permalink: "/informes-periciales/judicial/"
   - lang: "en"
-    permalink: "/en/expert-witness-reports/court-appointed-report/"
+    permalink: "/en/expert-witness-reports/court-expert/"
 eleventyNavigation:
-  key: "Dictamen Pericial Judicial"
+  key: "Perit Judicial"
   parent: "Informes Pericials"
-  title: "Dictamen Judicial"
+  title: "Pèrit Judicial"
   notshow: true
   order: 2
+serviceTitle: 'pèrit judicial'
+
+# Parent Service
 parentService:
   title: 'Informes Pericials'
   url: '/ca/informes-pericials/'
 
+# Key features in the hero section
 keyFeatures:
-  - "Actuació com a pèrits per designació judicial en llistes oficials"
-  - "Màxima objectivitat i imparcialitat al servei de l'Administració de Justícia"
-  - "Dictàmens tècnics rigorosos i fonamentats en la normativa aplicable"
-  - "Ratificació i defensa del dictamen en seu judicial amb claredat i solvència"
+  - "Pèrit Enginyer col·legiat per a actuació en jutjats (designació o part)"
+  - "Experiència demostrada en la ratificació i defensa oral del dictamen"
+  - "Informes tècnics rigorosos, clars i fonamentats normativament"
+  - "Objectivitat i solvència tècnica per guanyar credibilitat en el procés"
 
+# Service Process (for sidebar)
 serviceProcess:
-  - title: "Acceptació del càrrec"
-    description: "Un cop designats pel jutjat, acceptem formalment l'encàrrec pericial"
-  - title: "Anàlisi i provisió de fons"
-    description: "Estudiem el cas i presentem la sol·licitud de provisió de fons al jutjat"
-  - title: "Inspecció i estudi tècnic"
-    description: "Realitzem totes les investigacions necessàries per esclarir els punts del litigi"
-  - title: "Emissió i ratificació"
-    description: "Lliurem el dictamen al jutjat i acudim a judici per a la seva defensa i aclariment"
+  - title: "Estudi de viabilitat"
+    description: "Analitzem el cas preliminarment per confirmar la base tècnica"
+  - title: "Inspecció pericial"
+    description: "Visitem l'immoble per a la presa de dades, mesuraments i proves"
+  - title: "Redacció del dictamen"
+    description: "Elaborem un informe complet, amb conclusions clares i justificades"
+  - title: "Ratificació en judici"
+    description: "Assistim a la vista oral per defensar l'informe i respondre al tribunal"
 
+# Service Benefits (for sidebar)
 serviceBenefits:
-  - "Aporti al jutge una prova tècnica objectiva i de màxima qualitat"
-  - "Compti amb un pèrit enginyer amb experiència en procediments judicials"
-  - "Asseguri un dictamen imparcial, centrat únicament en la veritat tècnica"
-  - "Obtingui un informe clar, comprensible i útil per a la resolució del cas"
+  - "Compti amb una prova de càrrec sòlida que fonamenti la seva demanda o defensa"
+  - "Treballi amb un pèrit acostumat a la dinàmica i llenguatge judicial"
+  - "Transmeti seguretat al jutge amb explicacions tècniques clares i objectives"
+  - "Disposi d'arguments tècnics irrefutables davant del pèrit contrari"
 
+# Related Problems
 relatedProblems:
-  - title: "Informe Pericial de Part"
-    description: "Fins i tot en un procés judicial, un informe de part pot ser clau."
-    url: "/ca/informes-pericials/informe-de-part/"
-  - title: "Contrainformes Pericials"
-    description: "Analitzem el dictamen del pèrit contrari per trobar punts febles."
-    url: "/ca/informes-pericials/contrainforme-pericial/"
+  - title: "Patologies Constructives"
+    description: "Humitats, esquerdes i defectes són la base de la majoria de litigis."
+    url: "/ca/serveis/informes-patologies-edificacio/"
+  - title: "Reclamacions a Constructores"
+    description: "Informes per exigir responsabilitats per mala execució o incompliment."
+    url: "/ca/serveis/auditories-obra-reclamacions/"
 
+# Client Testimonials
 testimonials:
-  - quote: "La seva designació com a pèrit judicial va ser clau. El dictamen va ser increïblement detallat, objectiu i fàcil d'entendre, el que sens dubte va ajudar a què Sa Senyoria comprengués la complexitat tècnica del cas."
-    author: "Lletrat de l'Administració de Justícia"
-    role: "Jutjat de Primera Instància de Barcelona"
-  - quote: "Necessitàvem un pèrit de la llista oficial per a un cas complex de defectes estructurals. El seu treball va ser impecable, des de la provisió de fons fins a una ratificació en judici molt sòlida. Molt recomanables."
-    author: "Despatx d'Advocats"
-    role: "Client en Procés Judicial"
+  - quote: "La seva intervenció en el judici va ser determinant. Va explicar les causes tècniques del col·lapse amb una claredat que el jutge va agrair i que va desmuntar els arguments de la contrapart."
+    author: "Advocat Processalista"
+    role: "Cas: Reclamació per Vicis Ruïnosos"
+  - quote: "Un informe impecable i una ratificació molt segura. Es nota l'experiència en seu judicial. Sens dubte tornarem a comptar amb ell per a futurs litigis de construcció."
+    author: "Soci Director"
+    role: "Despatx d'Advocats a Barcelona"
 
-ctaTitle: "Ha estat designat un pèrit judicial en el seu cas?"
-ctaDescription: "Tant si hem estat designats per al seu procediment com si necessita un informe de part, contacti amb nosaltres."
+# CTA Section
+ctaTitle: "Necessita un Pèrit Judicial per al seu litigi?"
+ctaDescription: "Aporti valor probatori al seu cas. Parlem sobre l'estratègia tècnica més adequada."
 
+# Introduction (shown in hero section)
 intro: |
-  <p>Quan un procediment judicial requereix de coneixements tècnics que el jutge no posseeix, es recorre a la figura del pèrit judicial. Aquest expert, designat pel propi jutjat, actua com un auxiliar de la justícia, aportant una visió objectiva i imparcial sobre els fets.</p>
+  <p>En un procediment judicial, la veritat tècnica és tan important com la veritat jurídica. Com a <strong>Pèrit Judicial</strong> a Barcelona, la meva tasca és proporcionar al tribunal i a la direcció lletrada una prova pericial robusta, objectiva i decisiva.</p>
   
-  <p>Com a pèrits enginyers inscrits en les llistes oficials, dins dels nostres <a href="/ca/informes-pericials/">serveis d'informes pericials</a>, realitzem dictàmens judicials amb el màxim rigor, compromís i respecte per la funció que se'ns encomana.</p>
+  <p>Des de <strong>Perito Barcelona</strong>, no només lliurem un informe; ens integrem en la seva estratègia de defensa, aportant la solvència d'un Enginyer Civil expert tant en la patologia de la construcció com en la ratificació davant del jutge.</p>
 ---
 
-## El Rol del Pèrit Judicial: Un Auxiliar de la Justícia
+## La Diferència entre Tenir Raó i Demostrar-ho en Judici
 
-A diferència d'un pèrit de part, que és contractat per un dels litigants, el **pèrit judicial** és un tercer independent designat pel propi jutge. La nostra funció no és donar la raó a una part o altra, sinó **proporcionar al tribunal els coneixements tècnics necessaris** perquè pugui prendre una decisió justa i informada.
+L'èxit d'un litigi immobiliari o constructiu depèn, en gran mesura, de la qualitat de la prova pericial. Un dictamen judicial no ha de ser només tècnicament perfecte; ha de ser **persuasiu, clar i defensable** sota la pressió d'un interrogatori.
 
-Actuem sota jurament o promesa de dir veritat, amb una obligació d'**objectivitat i imparcialitat absolutes**. Per això, un dictamen pericial judicial ben fonamentat sol tenir un pes determinant en la resolució d'un litigi.
+### La Nostra Aportació al Procés Judicial
 
-### El Procés de Designació i Actuació
+Treballem habitualment amb despatxos d'advocats a Barcelona, actuant tant com a pèrits de part com per designació judicial, cobrint totes les fases crítiques:
 
-El nomenament d'un pèrit judicial segueix les vies establertes en la Llei d'Enjudiciament Civil (LEC). El procés general és el següent:
+1.  **Pre-Litigi:** Analitzem la viabilitat tècnica de la reclamació abans d'interposar la demanda, estalviant costos i riscos innecessaris.
+2.  **Fase Probatoría:** Elaborem dictàmens exhaustius que compleixen amb tots els requisits formals de la LEC, dissenyats per resistir l'escrutini de la part contrària.
+3.  **Vista Oral:** La nostra experiència en sala és el nostre major valor. Defensem l'informe amb aplom, responem als aclariments i desmuntem tècnicament les pericials contràries.
 
-1. **Designació Judicial:** El jutjat ens nomena a partir de les llistes oficials en les quals estem inscrits, proveïdes pels col·legis professionals.
-2. **Acceptació del Càrrec:** Un cop notificada la designació, acceptem formalment el càrrec i jurem exercir-lo amb la màxima diligència i imparcialitat.
-3. **Provisió de Fons:** Estudiem l'objecte de la perícia i presentem al jutjat una estimació dels nostres honoraris perquè les parts realitzin la provisió de fons.
-4. **Investigació Tècnica:** Duem a terme totes les actuacions necessàries per resoldre els punts de la perícia: estudiem l'expedient judicial, realitzem inspeccions, prenem mesuraments i efectuem les anàlisis tècniques pertinents.
-5. **Emissió del Dictamen:** Redactem l'informe pericial responent de forma clara i argumentada a les qüestions plantejades pel tribunal i el lliurem al jutjat en el termini establert.
-6. **Ratificació en Judici:** Acudim a l'acte del judici oral o vista per exposar, aclarir i defensar les nostres conclusions a preguntes del jutge i dels advocats de les parts.
+### Especialitats Forenses
 
-### Per Què és Clau un Pèrit Enginyer en un Dictamen Judicial?
-
-En casos complexos de construcció, comptar amb un pèrit que a més és Enginyer Civil aporta una solvència tècnica superior. La nostra profunda formació en estructures, materials i normativa ens permet analitzar l'arrel dels problemes amb major precisió i defensar les nostres conclusions amb els arguments tècnics més sòlids, la qual cosa és especialment valuosa en un interrogatori judicial.
+* **Vicis Constructius i Ruïna:** Informes per a demandes per Llei d'Ordenació de l'Edificació (LOE).
+* **Patologies i Sinistres:** Determinació de causa-origen en humitats, esquerdes i col·lapses.
+* **Disputes Contractuals:** Valoració de partides no executades, mala praxis i desviacions de pressupost.
+* **Lucre Cessant:** Valoració tècnica de paralitzacions d'obra o impossibilitat d'ús de l'immoble.
