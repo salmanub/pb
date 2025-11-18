@@ -64,7 +64,7 @@ serviceCluster:
         - "Base per negociació"
     - title: "Dictamen Pericial Judicial"
       description: "Realitzat per designació directa d'un jutjat, actuant com a auxiliars de la justícia amb total imparcialitat."
-      url: "/ca/informes-pericials/dictamen-judicial/"
+      url: "/ca/informes-pericials/judicial/"
       icon: "scale"
       features:
         - "Designació judicial"
