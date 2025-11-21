@@ -1,11 +1,10 @@
-
+[
     {
       "title": "Desprendimiento de Voladizo sobre Terraza en Tordera",
       "slug": "desprendimiento-voladizo-terraza-tordera",
       "description": "Caso de éxito de un informe pericial que demuestra cómo el desprendimiento de un voladizo de cubierta en Tordera se debió a una ampliación y construcción deficiente.",
       "datePublished": "2025-09-04",
       "dateModified": "2025-09-04",
-      
       "tags": ["Estructural", "Vicios Ocultos", "Vivienda Unifamiliar"],
       "summary": [
         {
@@ -80,21 +79,21 @@
         "caption": "Detalle de los 'uñeros' o desniveles entre baldosas, una de las múltiples deficiencias."
       },
       "images": [
-         {
-          "url": "/assets/images/casos/sant-cugat
-        "caption": "El mortero no se aplicó con llana dentada, creando huecos y falta de adherencia."
-      },
-      {
-        "url": "/assets/images/casos/sant-cugat-instalaciones-01.jpg",
-        "alt": "Instalaciones de fontanería ejecutadas sin seguir la normativa",
-        "caption": "Trazados en diagonal y sin protección, una clara muestra de mala praxis."
-      }
-    ],
-    "relatedService": {
-      "title": "Auditorías de Obra y Control de Calidad",
-      "url": "/auditorias-obra/" de Calidad",
+        {
+          "url": "/assets/images/casos/sant-cugat-alicatado-01.jpg",
+          "alt": "Mortero mal aplicado en alicatado",
+          "caption": "El mortero no se aplicó con llana dentada, creando huecos y falta de adherencia."
+        },
+        {
+          "url": "/assets/images/casos/sant-cugat-instalaciones-01.jpg",
+          "alt": "Instalaciones de fontanería ejecutadas sin seguir la normativa",
+          "caption": "Trazados en diagonal y sin protección, una clara muestra de mala praxis."
+        }
+      ],
+      "relatedService": {
+        "title": "Auditorías de Obra y Control de Calidad",
         "url": "/auditorias-obra/"
       },
       "content": "## 1. El Problema: Una Reforma que se Convierte en Pesadilla\n\nUn propietario en Sant Cugat del Vallès nos contactó desesperado. A pesar de haber pagado la totalidad de una reforma integral (más numerosos extras), el resultado estaba plagado de defectos graves que la empresa constructora se negaba a subsanar de forma satisfactoria.\n\n### 2. Análisis Pericial: Un Cúmulo de Deficiencias\n\nLa inspección física y el análisis documental revelaron una gestión de obra negligente y una ejecución que no cumplía los mínimos estándares de calidad (*lex artis*):\n\n* **Revestimientos y Pavimentos:** Se constataron alicatados sin nivelación ('uñeros'), aplicación de mortero sin llana dentada (creando huecos), juntas irregulares y baldosas rotas.\n* **Instalaciones:** Trazados de fontanería y electricidad no reglamentarios (en diagonal), una balconera instalada con el cristal y color incorrectos, y una puerta de inferior calidad a la presupuestada.\n* **Análisis Económico:** Se detectó que se habían facturado y cobrado servicios por valor de **4.768,69 € que nunca se llegaron a ejecutar** o cuyos materiales no fueron entregados.\n\n## 3. Conclusión: Cuantificación del Perjuicio\n\nNuestro informe pericial documentó cada una de las deficiencias y cuantificó el perjuicio económico total sufrido por el propietario. Para ello, se sumaron tres conceptos clave: el coste de demoler lo mal hecho y finalizar la obra (según presupuesto de un tercer industrial), el valor de lo pagado y no ejecutado, y el perjuicio por materiales incorrectos o dañados.\n\nEl dictamen concluyó con una reclamación económica total de **19.066,33 € + IVA**, proporcionando al cliente una herramienta técnica y legal fundamental para defender sus derechos."
-    },
-  
+    }
+]
