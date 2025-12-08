@@ -35,7 +35,7 @@
     "category": "Naves Industriales",
     "tags": ["Pavimentos", "Naves Industriales", "Grietas", "Logística"],
     "image": {
-      "url": "/assets/images/blog/pavimento-industrial-grieta.jpg",
+      "url": "src/assets/images/blog/pavimento-industrial-grieta.jpg",
       "alt": "Grieta severa en pavimento de hormigón industrial",
       "caption": "Las grietas en pavimentos industriales afectan la seguridad de las carretillas y la operatividad."
     },
@@ -59,7 +59,7 @@
     "category": "Patologías Estructurales",
     "tags": ["Estructuras", "Carbonatación", "Parking", "Comunidades"],
     "image": {
-      "url": "/assets/images/blog/pilar-parking-corrosion.jpg",
+      "url": "src/assets/images/blog/pilar-parking-corrosion.jpg",
       "alt": "Pilar de hormigón con armadura oxidada expuesta",
       "caption": "El desconchón del hormigón (spalling) revela la corrosión avanzada de la armadura interior."
     },
@@ -83,7 +83,7 @@
     "category": "Patologías",
     "tags": ["Humedades", "Capilaridad", "Diagnóstico", "Reparación"],
     "image": {
-      "url": "/assets/images/placeholder-default.jpg",
+      "url": "src/assets/images/placeholder-default.jpg",
       "alt": "Humedad por capilaridad en muro",
       "caption": "La humedad ascendente deja una marca característica en la parte baja de los muros."
     },
@@ -107,7 +107,7 @@
     "category": "Legal",
     "tags": ["Vicios Ocultos", "Compraventa", "Reclamación", "Perito Judicial"],
     "image": {
-      "url": "/assets/images/blog/vicios-ocultos-pared.jpg",
+      "url": "src/assets/images/blog/vicios-ocultos-pared.jpg",
       "alt": "Moho oculto tras el papel pintado de una vivienda recién comprada",
       "caption": "Muchos vendedores ocultan defectos estéticamente que reaparecen tras la venta."
     },
@@ -131,7 +131,7 @@
     "category": "Rehabilitación",
     "tags": ["Reformas", "Estructuras", "Muro de Carga", "Seguridad"],
     "image": {
-      "url": "/assets/images/blog/refuerzo-viga-metalica.jpg",
+      "url": "src/assets/images/blog/refuerzo-viga-metalica.jpg",
       "alt": "Instalación de viga metálica de refuerzo en obra de rehabilitación",
       "caption": "Sustitución de un muro de carga por un pórtico metálico para unir espacios."
     },
@@ -155,7 +155,7 @@
     "category": "Legal",
     "tags": ["Vicios Ocultos", "Compraventa", "Reclamación", "Derechos"],
     "image": {
-      "url": "/assets/images/placeholder-default.jpg",
+      "url": "src/assets/images/placeholder-default.jpg",
       "alt": "Documento de compraventa con lupa",
       "caption": "Los vicios ocultos deben ser reclamados dentro de los plazos legales establecidos."
     },
