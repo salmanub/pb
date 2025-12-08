@@ -21,7 +21,55 @@
         "url": "/informes-periciales/patologias-estructurales/"
       }
     ],
-    "content": "## Introducción\n\nLa aparición de grietas en una vivienda es uno de los problemas que más preocupación genera entre los propietarios, y con razón. Sin embargo, es fundamental comprender que **no todas las grietas son iguales** ni todas representan un peligro estructural.\n\n## Tipos de Grietas: Fisuras vs. Grietas Estructurales\n\n### Fisuras Superficiales\n\nLas fisuras son roturas en el revestimiento (pintura, enlucido, yeso) con una abertura menor a 1mm. Generalmente son causadas por:\n\n* Cambios de temperatura y humedad\n* Movimientos normales del edificio\n* Defectos en la aplicación del acabado\n* Retracción de materiales durante el secado\n\nEstas fisuras, aunque antiestéticas, **no comprometen la seguridad estructural** del inmueble.\n\n### Grietas Estructurales\n\nLas grietas estructurales son aberturas de más de 1mm que atraviesan todo el espesor del elemento constructivo (muro, forjado, viga). Son mucho más preocupantes porque pueden indicar:\n\n* Problemas de cimentación (asientos diferenciales)\n* Sobrecargas no previstas en el cálculo original\n* Defectos graves en la ejecución de la estructura\n* Degradación de materiales por corrosión o deterioro\n\n## Señales de Alarma: Cuándo Preocuparse\n\nDebe solicitar un informe pericial urgente si observa:\n\n1. **Grietas diagonales** en las esquinas de muros o en forma de escalera siguiendo las juntas de ladrillo\n2. **Grietas horizontales** en la base de los muros (pueden indicar empuje del terreno)\n3. **Grietas que aumentan de tamaño** con el tiempo (grietas activas)\n4. **Grietas que atraviesan todo el espesor** del muro (visibles en ambas caras)\n5. **Grietas acompañadas de otros síntomas** como puertas que no cierran, desniveles en el suelo o desprendimientos\n\n## La Importancia de un Diagnóstico Profesional\n\nUn perito estructural puede:\n\n* Determinar si la grieta es superficial o estructural\n* Identificar la causa raíz del problema (cimentación, sobrecargas, vicios constructivos)\n* Evaluar si existe riesgo para la seguridad de los ocupantes\n* Proponer soluciones técnicas adecuadas (refuerzos, micropilotes, inyecciones)\n* Cuantificar el coste de la reparación para una reclamación\n\n## Conclusión\n\nAnte la duda, siempre es mejor prevenir que lamentar. Un informe pericial temprano puede evitar que un problema menor se convierta en un peligro estructural grave o en una costosa reparación.\n\n**¿Tiene grietas en su vivienda y no sabe si son preocupantes?** Contacte con nuestro equipo para una primera valoración sin compromiso."
+    "content": "## Introducción\n\nLa aparición de grietas en una vivienda es uno de los problemas que más preocupación genera entre los propietarios, y con razón. Sin embargo, es fundamental comprender que **no todas las grietas son iguales** ni todas representan un peligro estructural.\n\n## Tipos de Grietas: Fisuras vs. Grietas Estructurales\n\n### Fisuras Superficiales\n\nLas fisuras son roturas en el revestimiento (pintura, enlucido, yeso) con una abertura menor a 1mm. Generalmente son causadas por:\n\n* Cambios de temperatura y humedad\n* Movimientos normales del edificio\n* Defectos en la aplicación del acabado\n* Retracción de materiales durante el secado\n\nEstas fisuras, aunque antiestéticas, **no comprometen la seguridad estructural** del inmueble.\n\n### Grietas Estructurales\n\nLas grietas estructurales son aberturas de más de 1mm que atraviesan todo el espesor del elemento constructivo (muro, forjado, viga). Son mucho más preocupantes porque pueden indicar:\n\n* Problemas de cimentación (asientos diferenciales)\n* Sobrecargas no previstas en el cálculo original\n* Defectos graves en la ejecución de la estructura\n* Degradación de materiales por corrosión o deterioro\n\n## Señales de Alarma: Cuándo Preocuparse\n\nDebe solicitar un informe pericial urgente si observa:\n\n1. **Grietas diagonales** en las esquinas de muros o en forma de escalera siguiendo las juntas de ladrillo\n2. **Grietas horizontales** en la base de los muros (pueden indicar empuje del terreno)\n3. **Grietas que aumentan de tamaño** con el tiempo (grietas activas)\n4. **Grietas que atraviesan todo el espesor** del muro (visibles en ambas caras)\n5. **Grietas acompañadas de otros síntomas** como puertas que no cierran, desniveles en el suelo o desprendimientos\n\n## La Importancia de un Diagnóstico Profesional\n\nUn perito estructural puede:\n\n* Determinar si la grieta es superficial o estructural\n* Identificar la causa raíz del problema (cimentación, sobrecargas, vicios constructivos)\n* Evaluar si existe riesgo para la seguridad de los ocupantes\n* Proponer soluciones técnicas adecuadas (refuerzos, micropilotes, inyecciones)\n* Cuantificar el coste de la reparación para una reclamación\n\n## Conclusión\n\nAnte la duda, siempre es mejor prevenir que lamentar. Un informe pericial temprano puede evitar que un problema menor se convierta en un peligro estructural grave o en una costosa reparación.\n\n**¿Tiene grietas en su vivienda y no sabe si son preocupantes?** Contacte con nosotros de inmediato para valorar su caso."
+  },
+  {
+    "title": "Pavimentos Industriales Agrietados: ¿Fallo del Terreno, Mala Ejecución o Sobrecarga?",
+    "slug": "patologias-pavimentos-naves-industriales",
+    "description": "Análisis de las causas más frecuentes de grietas en suelos industriales y soluciones para evitar la paralización de la actividad.",
+    "excerpt": "Un suelo roto paraliza la logística. Descubra si sus grietas se deben a un fallo de diseño, una mala ejecución o un uso indebido, y quién debe pagar la reparación.",
+    "estado": "publicado",
+    "datePublished": "2025-10-05",
+    "dateModified": "2025-10-05",
+    "author": "Albert Vilardell",
+    "category": "Naves Industriales",
+    "tags": ["Pavimentos", "Naves Industriales", "Grietas", "Logística"],
+    "image": {
+      "url": "/assets/images/blog/pavimento-industrial-grieta.jpg",
+      "alt": "Grieta severa en pavimento de hormigón industrial",
+      "caption": "Las grietas en pavimentos industriales afectan la seguridad de las carretillas y la operatividad."
+    },
+    "relatedServices": [
+      {
+        "title": "Informes para Naves Industriales",
+        "url": "/informes-periciales/naves-industriales/"
+      }
+    ],
+    "content": "## El Pavimento: El Corazón de la Nave Industrial\n\nEn una nave logística o productiva, el suelo no es solo una superficie; es una herramienta de trabajo. Grietas, desniveles o hundimientos no solo son antiestéticos, sino que **dañan las carretillas, reducen la velocidad de operación y pueden provocar accidentes laborales**.\n\n## Causas Comunes de Patologías en Soleras\n\n### 1. Fallo del Terreno (Asientos)\nSi la base sobre la que se vertió el hormigón no estaba bien compactada, el suelo se asienta con el tiempo, dejando huecos bajo la losa. Al pasar una carga, el hormigón se rompe porque no tiene apoyo.\n\n### 2. Retracción y Falta de Juntas\nEl hormigón encoge al secar. Si no se diseñaron o ejecutaron correctamente las juntas de dilatación y retracción, el material buscará su propio camino para romperse, creando grietas incontroladas.\n\n### 3. Sobrecarga de Uso\nEs común ver naves diseñadas para una carga específica que luego son utilizadas para estanterías más pesadas o maquinaria para la que el suelo no fue calculado.\n\n## El Diagnóstico Pericial: Clave para la Responsabilidad\n\nDeterminar la causa exacta es vital, especialmente en naves alquiladas o recién construidas:\n\n* **Si es mala ejecución:** La responsabilidad puede ser de la constructora (vicios ocultos).\n* **Si es mal uso:** La responsabilidad recae sobre el inquilino (daños post-alquiler).\n* **Si es fallo de diseño:** La responsabilidad podría ser de la ingeniería o arquitectura.\n\n## Soluciones Técnicas\n\nDependiendo del diagnóstico, las soluciones varían desde:\n* **Inyecciones de resina expansiva** para reconsolidar el terreno sin parar la actividad.\n* **Cosido de grietas** con grapas metálicas y resina epoxi.\n* **Demolición y reconstrucción** de las losas afectadas (en casos graves).\n\n## Conclusión\n\nNo ignore las grietas en su nave. Un diagnóstico temprano ahorra dinero y evita paradas operativas costosas."
+  },
+  {
+    "title": "Pilares de Parking con Hierro a la Vista: Diagnóstico de Aluminosis y Carbonatación",
+    "slug": "reparacion-refuerzo-pilares-parking-barcelona",
+    "description": "Explicación técnica sobre por qué se deterioran los pilares en garajes y cómo la carbonatación pone en riesgo la estructura.",
+    "excerpt": "¿Ha visto hormigón caído y hierros oxidados en las columnas de su parking? Es un síntoma grave de carbonatación que requiere intervención urgente.",
+    "estado": "publicado",
+    "datePublished": "2025-09-28",
+    "dateModified": "2025-09-28",
+    "author": "Albert Vilardell",
+    "category": "Patologías Estructurales",
+    "tags": ["Estructuras", "Carbonatación", "Parking", "Comunidades"],
+    "image": {
+      "url": "/assets/images/blog/pilar-parking-corrosion.jpg",
+      "alt": "Pilar de hormigón con armadura oxidada expuesta",
+      "caption": "El desconchón del hormigón (spalling) revela la corrosión avanzada de la armadura interior."
+    },
+    "relatedServices": [
+      {
+        "title": "Asesoramiento Estructural",
+        "url": "/asesoramiento-estructural/"
+      }
+    ],
+    "content": "## La Alarma: Hormigón que 'Explota'\n\nEs una imagen habitual en muchos garajes de Barcelona construidos hace décadas: trozos de hormigón en el suelo y, en el pilar, las barras de acero expuestas y oxidadas. Muchos vecinos lo llaman erróneamente 'aluminosis', pero en la mayoría de casos se trata de **carbonatación**.\n\n## ¿Qué es la Carbonatación?\n\nEl hormigón sano tiene un pH alto (alcalino) que protege el acero de la oxidación. Con el tiempo y el CO2 de los coches, el hormigón pierde ese pH (se carbonata). Cuando la humedad llega al acero desprotegido, este se oxida.\n\n**El problema:** El óxido ocupa más volumen que el acero sano, ejerciendo una presión interna brutal que rompe el hormigón desde dentro.\n\n## ¿Es Peligroso?\n\n**Sí.** Si no se trata, la corrosión reduce la sección útil de acero del pilar. Menos acero significa menos capacidad para soportar el peso del edificio. En estadios avanzados, puede comprometer la estabilidad global.\n\n## Soluciones: Reparación vs. Refuerzo\n\nUn informe pericial determinará la gravedad:\n\n1.  **Reparación Cosmética (Daño Leve):** Limpieza del óxido, pasivación del acero y reconstrucción con mortero estructural.\n2.  **Refuerzo Estructural (Daño Grave):** Si el pilar ha perdido mucha capacidad, necesita ayuda. Se suelen aplicar:\n    * **Encamisado metálico:** Rodear el pilar con una jaula de acero.\n    * **Fibra de Carbono:** Láminas de alta resistencia adheridas al pilar.\n\n## Recomendación para Comunidades\n\nNo intente tapar las grietas con cemento normal. Eso solo esconde el problema mientras la corrosión avanza. Solicite un diagnóstico técnico para calcular el refuerzo necesario."
   },
   {
     "title": "Guía Completa sobre Humedades por Capilaridad",
@@ -46,6 +94,54 @@
       }
     ],
     "content": "## ¿Qué es la Humedad por Capilaridad?\n\nLa humedad por capilaridad es el fenómeno por el cual el agua del subsuelo asciende a través de los poros de los materiales de construcción, impregnando muros y tabiques desde su base.\n\n## Cómo Reconocerla\n\nLas señales típicas incluyen:\n\n* Manchas de humedad en la parte baja de las paredes (hasta 1-1.5m de altura)\n* Desconchones y desprendimiento de pintura y enlucido\n* Eflorescencias salinas (manchas blancas cristalizadas)\n* Olor a humedad persistente\n* Deterioro de rodapiés y carpintería baja\n\n## Causas Principales\n\n1. **Ausencia de barrera impermeable** en la cimentación (común en edificios antiguos)\n2. **Nivel freático elevado** en el terreno\n3. **Roturas en la red de saneamiento** que humedecen el terreno perimetral\n4. **Materiales muy porosos** (ladrillos cerámicos antiguos, morteros de cal)\n\n## Diagnóstico Pericial\n\nUn perito debe:\n\n* Realizar mediciones con higrómetro para cuantificar el nivel de humedad\n* Descartar otras causas (filtraciones, condensación)\n* Identificar el origen del agua (freático, fugas, lluvia)\n* Proponer la solución técnica más adecuada\n\n## Soluciones Efectivas\n\n### Inyección de Resinas Impermeabilizantes\n\nSe perforan agujeros en la base del muro y se inyecta una resina que crea una barrera química impermeable.\n\n### Electroósmosis\n\nSe instala un sistema eléctrico que invierte el flujo capilar, empujando el agua de vuelta al terreno.\n\n### Drenaje Perimetral\n\nSe excava alrededor del edificio y se instala un sistema de drenaje que reduce el nivel freático.\n\n## Conclusión\n\nLa humedad por capilaridad requiere una solución definitiva, no parches. Un informe pericial es esencial para elegir el tratamiento correcto y evitar gastar dinero en soluciones ineficaces."
+  },
+  {
+    "title": "Acabo de comprar un piso y tiene defectos graves: ¿Qué se considera 'Vicio Oculto'?",
+    "slug": "reclama-vicios-ocultos-compraventa-vivienda",
+    "description": "Guía legal y técnica para compradores: plazos, requisitos y proceso para reclamar defectos no visibles tras la compra.",
+    "excerpt": "Si tras la compra aparecen humedades, termitas o grietas que no vio, puede tener derecho a reclamar. Conozca la diferencia entre vicio oculto y desgaste.",
+    "estado": "publicado",
+    "datePublished": "2025-09-12",
+    "dateModified": "2025-09-12",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": ["Vicios Ocultos", "Compraventa", "Reclamación", "Perito Judicial"],
+    "image": {
+      "url": "/assets/images/blog/vicios-ocultos-pared.jpg",
+      "alt": "Moho oculto tras el papel pintado de una vivienda recién comprada",
+      "caption": "Muchos vendedores ocultan defectos estéticamente que reaparecen tras la venta."
+    },
+    "relatedServices": [
+      {
+        "title": "Informe Pericial Judicial",
+        "url": "/informes-periciales/judicial/"
+      }
+    ],
+    "content": "## El Plazo de Oro: 6 Meses\n\nMuchos compradores desconocen que el Código Civil establece un plazo muy estricto: tiene **6 meses** desde la entrega de llaves para reclamar por vicios ocultos. Pasado este tiempo, la acción caduca y pierde el derecho.\n\n## Los 3 Requisitos del Vicio Oculto\n\nNo todo defecto es reclamable. Para que un juez lo considere 'vicio oculto', debe cumplir tres condiciones:\n\n1.  **Oculto:** No debía estar a la vista durante la visita. Si era evidente (una grieta enorme), se asume que compró conociéndolo. *Nota: Si usted es experto (arquitecto, constructor), el criterio es más estricto.*\n2.  **Grave:** Debe hacer la vivienda impropia para su uso o disminuir tanto su valor que, de haberlo sabido, no la habría comprado o habría pagado mucho menos.\n3.  **Preexistente:** El defecto debía existir **antes** de la compra, aunque se haya manifestado después. Aquí es donde el informe pericial es vital para demostrar la antigüedad del daño.\n\n## Acciones Legales Posibles\n\nSi se confirman los requisitos, puede optar por:\n* **Acción Redhibitoria:** Deshacer la compra (devolver el piso y recuperar el dinero + gastos).\n* **Acción Quanti Minoris:** Mantener la propiedad pero exigir una rebaja del precio proporcional al coste de reparación.\n\n## Conclusión\n\nSi descubre un defecto grave, no espere. Documente todo, no repare nada todavía y llame a un perito judicial inmediatamente para certificar la preexistencia antes de que se agote el plazo."
+  },
+  {
+    "title": "Refuerzos Estructurales en Rehabilitación: ¿Cuándo es necesario apuntalar?",
+    "slug": "refuerzo-estructural-rehabilitacion-edificios",
+    "description": "Información clave para reformas integrales: cómo identificar muros de carga y cuándo es obligatorio un proyecto de refuerzo.",
+    "excerpt": "El deseo de 'espacios abiertos' choca a menudo con la realidad estructural. Aprenda los riesgos de derribar tabiques sin supervisión técnica.",
+    "estado": "publicado",
+    "datePublished": "2025-08-25",
+    "dateModified": "2025-08-25",
+    "author": "Albert Vilardell",
+    "category": "Rehabilitación",
+    "tags": ["Reformas", "Estructuras", "Muro de Carga", "Seguridad"],
+    "image": {
+      "url": "/assets/images/blog/refuerzo-viga-metalica.jpg",
+      "alt": "Instalación de viga metálica de refuerzo en obra de rehabilitación",
+      "caption": "Sustitución de un muro de carga por un pórtico metálico para unir espacios."
+    },
+    "relatedServices": [
+      {
+        "title": "Asesoramiento Estructural",
+        "url": "/asesoramiento-estructural/"
+      }
+    ],
+    "content": "## El Peligro del 'Open Concept'\n\nLa tendencia actual de unir cocina y salón implica tirar tabiques. El problema surge cuando no se distingue entre un simple tabique divisorio y un **muro de carga**. Eliminar un apoyo estructural sin el refuerzo adecuado puede provocar fisuras en el piso del vecino superior o, en el peor caso, un colapso parcial.\n\n## Patologías Comunes en Edificios Antiguos\n\nAl rehabilitar edificios antiguos en Barcelona (Eixample, Ciutat Vella), a menudo nos encontramos sorpresas:\n* **Vigas de madera con carcoma:** Han perdido sección y resistencia.\n* **Viguetas cerámicas con aluminosis:** Han perdido capacidad portante.\n* **Muros deformados:** Paredes que han pandeado con los años.\n\n## La Solución Técnica: Apeos y Refuerzos\n\nCualquier intervención en la estructura requiere:\n1.  **Cálculo de Cargas:** Un ingeniero debe calcular cuánto peso soportaba el muro eliminado.\n2.  **Proyecto de Refuerzo:** Diseñar la viga (normalmente perfiles de acero HEB o IPE) que sustituirá al muro.\n3.  **Apuntalamiento (Apeo):** Sostener la estructura provisionalmente mientras se ejecuta la obra. Esta es la fase más crítica.\n\n## Conclusión\n\nNunca tire una pared 'para ver qué pasa'. Un estudio estructural previo es mucho más barato que reparar los daños causados por una demolición imprudente."
   },
   {
     "title": "Vicios Ocultos en Compraventa: Derechos y Plazos de Reclamación",
