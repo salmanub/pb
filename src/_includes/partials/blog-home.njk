@@ -1,4 +1,12 @@
 <section class="py-20 px-4 md:px-[5%] bg-white relative" itemprop="mentions" itemscope itemtype="https://schema.org/Blog">
+    {# Calcular la fecha del artículo más reciente #}
+    {% if posts and posts.length > 0 %}
+        {% set sortedPosts = posts | sort(attribute='datePublished') | reverse %}
+        {% set latestPost = sortedPosts[0] %}
+        <meta itemprop="dateModified" content="{{ latestPost.datePublished }}T00:00:00+01:00">
+        <meta itemprop="datePublished" content="{{ latestPost.datePublished }}T00:00:00+01:00">
+    {% endif %}
+    
     {# Contenido Principal #}
     <div class="relative z-10 max-w-[1400px] mx-auto">
         {# Header de la sección #}
