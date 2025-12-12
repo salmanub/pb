@@ -1,11 +1,31 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
+    {# Calcular la fecha del artículo más reciente que aparece en blog-home (solo los 2 primeros publicados) #}
+    {% if posts and posts.length > 0 %}
+        {% set sortedPosts = posts | sort(attribute='datePublished') | reverse %}
+        {% set visiblePosts = [] %}
+        {% for post in sortedPosts %}
+            {% if visiblePosts.length < 2 and (not post.estado or post.estado == "publicado") %}
+                {% set visiblePosts = (visiblePosts.push(post), visiblePosts) %}
+            {% endif %}
+        {% endfor %}
+        {% if visiblePosts.length > 0 %}
+            {% set lastUpdateDate = visiblePosts[0].datePublished %}
+        {% else %}
+            {% set lastUpdateDate = "2024-01-01" %}
+        {% endif %}
+    {% else %}
+        {% set lastUpdateDate = "2024-01-01" %}
+    {% endif %}
+    
     <main itemscope itemtype="https://schema.org/Article" class="">
         <!-- Schema mejorado para Article -->
         <div hidden>
             <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}{{ page.url }}">
             <meta itemprop="headline" content="{{ metadata.site.title }} - {{ metadata.site.description }}">
+            <meta itemprop="dateModified" content="{{ lastUpdateDate }}T00:00:00+01:00">
+            <meta itemprop="datePublished" content="2023-01-01T00:00:00+01:00">
             <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
                 <meta itemprop="name" content="{{ metadata.site.title }}">
                 <meta itemprop="url" content="{{ metadata.site.url }}">
