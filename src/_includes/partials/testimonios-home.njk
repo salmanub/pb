@@ -1,65 +1,23 @@
-<section class="py-24 px-4 md:px-[5%] bg-gradient-to-br from-slate-100 via-white to-slate-50 relative overflow-hidden isolate">
-    <!-- Efectos decorativos -->
-    <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(203,213,225,0.1)_1px,transparent_1px)] [background-size:48px_48px]"></div>
-        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-50/40 via-transparent to-slate-100/30"></div>
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-200/20 blur-[100px] rounded-full"></div>
-    </div>
-
-    <div class="max-w-[1400px] mx-auto relative z-10">
-        <div class="max-w-4xl mx-auto text-center mb-16">
-            <span class="text-cyan-500 font-semibold tracking-wider uppercase mb-4 block">{{ testimonios.tag }}</span>
-            <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 mb-6 leading-none">
-                {{ testimonios.titulo }} <strong class="text-cyan-500 font-bold">{{ testimonios.highlight }}</strong>
+<section class="py-24 md:py-32 px-6 md:px-12 lg:px-16 bg-white overflow-hidden isolate relative">
+    <div class="w-full relative z-10">
+        <div class="max-w-4xl mb-20 text-center mx-auto">
+            <span class="badge badge-primary mb-6">{{ testimonios.tag | default("Confianza") }}</span>
+            <h2 class="section-title mb-6">
+                {{ testimonios.titulo }} <span class="block text-slate-300">{{ testimonios.highlight }}</span>
             </h2>
-            <p class="text-lg text-slate-600 max-w-3xl mx-auto">{{ testimonios.descripcion }}</p>
+            <p class="section-subtitle">{{ testimonios.descripcion }}</p>
             
-            {# Enlaces a casos de éxito en diferentes idiomas #}
+            {# Enlaces a casos de éxito - Refined Button #}
             {% set currentLang = metadata.default_lang %}
-            {% if page.url %}
-              {% for lang in metadata.languages %}
-                {% if page.url.startsWith('/' + lang + '/') %}
-                  {% set currentLang = lang %}
-                {% endif %}
-              {% endfor %}
-            {% endif %}
-            {% set successCases = {
-                "es": {
-                    "url": "/casos-exito/",
-                    "label": "Ver todos nuestros casos de éxito",
-                    "exists": true
-                },
-                "en": {
-                    "url": "/en/casos-de-exito/",
-                    "label": "See all our success cases",
-                    "exists": true
-                },
-                "ca": {
-                    "url": "/ca/casos-de-exito/",
-                    "label": "Veure tots els nostres casos d'èxit",
-                    "exists": true
-                },
-                "fr": {
-                    "url": "/fr/cas-de-succes/",
-                    "label": "Voir tous nos cas de réussite",
-                    "exists": false
-                },
-                "it": {
-                    "url": "/it/casi-di-successo/",
-                    "label": "Visualizza tutti i nostri casi di successo",
-                    "exists": false
-                }
-            } %}
-            
+            {% if page.url %}{% for lang in metadata.languages %}{% if page.url.startsWith('/' + lang + '/') %}{% set currentLang = lang %}{% endif %}{% endfor %}{% endif %}
+            {% set successCases = { "es": { "url": "/casos-exito/", "label": "Ver todos nuestros casos de éxito", "exists": true }, "en": { "url": "/en/casos-de-exito/", "label": "See all our success cases", "exists": true }, "ca": { "url": "/ca/casos-de-exito/", "label": "Veure tots els nostres casos d'èxit", "exists": true } } %}
             {% set currentCase = successCases[currentLang] %}
             
             {% if currentCase and currentCase.exists %}
-            <div class="mt-10 flex justify-center">
-                <a href="{{ currentCase.url }}" class="inline-flex items-center justify-center px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 shadow-md hover:shadow-lg transition-all">
+            <div class="mt-10">
+                <a href="{{ currentCase.url }}" class="inline-flex items-center gap-3 text-slate-900 border-b-2 border-slate-900 pb-1 font-bold hover:text-cyan-600 hover:border-cyan-600 transition-colors">
                     {{ currentCase.label }}
-                    <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                    </svg>
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
             </div>
             {% endif %}
@@ -67,38 +25,31 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {% for testimonio in testimonios.items %}
-            <div class="bg-gradient-to-br from-white to-slate-50/80 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group/card hover:bg-gradient-to-br hover:from-cyan-50/50 hover:to-white">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-16 h-16 rounded-full bg-cyan-50 overflow-hidden flex items-center justify-center p-3 group-hover/card:scale-110 group-hover/card:bg-cyan-100 transition-all duration-500">
+            <div class="group relative p-8 md:p-10 bg-slate-50 rounded-[2rem] hover:bg-slate-900 transition-colors duration-500 shadow-soft hover:shadow-hard">
+                <div class="flex items-start gap-6 mb-8">
+                    <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center flex-shrink-0 shadow-sm group-hover:bg-slate-800 transition-colors">
                         {% if testimonio.imagen %}
-                            <img src="{{ testimonio.imagen }}" 
-                                 alt="Foto de {{ testimonio.nombre }}" 
-                                 class="w-full h-full object-cover" 
-                                 loading="lazy">
+                            <img src="{{ testimonio.imagen }}" alt="Foto de {{ testimonio.nombre }}" class="w-full h-full object-cover rounded-2xl" loading="lazy">
                         {% else %}
-                            {% if testimonio.tipo == 'empresa' %}
-                                {% include "icons/avatar-company.svg" %}
-                            {% else %}
-                                {% include "icons/avatar-person.svg" %}
-                            {% endif %}
+                             <div class="text-slate-400 group-hover:text-cyan-400 transition-colors">
+                                {% if testimonio.tipo == 'empresa' %}{% include "icons/avatar-company.svg" %}{% else %}{% include "icons/avatar-person.svg" %}{% endif %}
+                             </div>
                         {% endif %}
                     </div>
                     <div>
-                        <h3 class="font-bold text-slate-800 group-hover/card:text-cyan-600 transition-colors">{{ testimonio.nombre }}</h3>
-                        <p class="text-slate-500 text-sm">{{ testimonio.rol }}</p>
+                        <h3 class="font-bold text-lg text-slate-900 group-hover:text-white transition-colors">{{ testimonio.nombre }}</h3>
+                        <p class="text-slate-500 group-hover:text-slate-400 transition-colors text-sm font-medium">{{ testimonio.rol }}</p>
                     </div>
                 </div>
-                <div class="relative mb-6">
-                    <svg class="absolute -top-2 -left-1 w-8 h-8 text-cyan-100" fill="currentColor" viewBox="0 0 32 32">
-                        <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4z"/>
-                    </svg>
-                    <blockquote class="text-slate-600 leading-relaxed pl-7">
-                        "{{ testimonio.cita }}"
-                    </blockquote>
-                </div>
-                <div class="flex items-center gap-2">
-                    <div class="text-cyan-400">★★★★★</div>
-                    <span class="text-slate-400 text-sm">{{ testimonio.fecha }}</span>
+                
+                <blockquote class="text-slate-600 group-hover:text-slate-300 transition-colors leading-relaxed text-lg mb-8 relative">
+                    <span class="absolute -top-4 -left-2 text-4xl text-cyan-500/20 group-hover:text-cyan-500/40 font-serif">"</span>
+                    {{ testimonio.cita }}
+                </blockquote>
+                
+                <div class="flex items-center gap-2 group-hover:opacity-80 transition-opacity">
+                    <div class="flex text-cyan-400 text-sm">★★★★★</div>
+                    <span class="text-slate-400 text-xs font-semibold uppercase tracking-wider">{{ testimonio.fecha }}</span>
                 </div>
             </div>
             {% endfor %}

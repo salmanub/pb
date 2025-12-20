@@ -9,7 +9,12 @@
     "dateModified": "2025-08-10",
     "author": "Albert Vilardell",
     "category": "Legal",
-    "tags": ["Vicios Ocultos", "Compraventa", "Reclamación", "Derechos"],
+    "tags": [
+      "Vicios Ocultos",
+      "Compraventa",
+      "Reclamación",
+      "Derechos"
+    ],
     "image": {
       "url": "/assets/images/placeholder-default.jpg",
       "alt": "Documento de compraventa con lupa",
@@ -33,7 +38,12 @@
     "dateModified": "2025-09-10",
     "author": "Albert Vilardell",
     "category": "Rehabilitación",
-    "tags": ["Reformas", "Estructuras", "Muro de Carga", "Seguridad"],
+    "tags": [
+      "Reformas",
+      "Estructuras",
+      "Muro de Carga",
+      "Seguridad"
+    ],
     "image": {
       "url": "/assets/images/blog/refuerzo-viga-metalica.jpg",
       "alt": "Instalación de viga metálica de refuerzo en obra de rehabilitación",
@@ -57,7 +67,12 @@
     "dateModified": "2025-09-20",
     "author": "Albert Vilardell",
     "category": "Patologías",
-    "tags": ["Humedades", "Capilaridad", "Diagnóstico", "Reparación"],
+    "tags": [
+      "Humedades",
+      "Capilaridad",
+      "Diagnóstico",
+      "Reparación"
+    ],
     "image": {
       "url": "/assets/images/placeholder-default.jpg",
       "alt": "Humedad por capilaridad en muro",
@@ -81,7 +96,12 @@
     "dateModified": "2025-10-15",
     "author": "Albert Vilardell",
     "category": "Patologías Estructurales",
-    "tags": ["Grietas", "Estructuras", "Diagnóstico", "Seguridad"],
+    "tags": [
+      "Grietas",
+      "Estructuras",
+      "Diagnóstico",
+      "Seguridad"
+    ],
     "image": {
       "url": "src/assets/images/placeholder-default.jpg",
       "alt": "Grieta estructural en muro de carga",
@@ -105,7 +125,12 @@
     "dateModified": "2025-10-25",
     "author": "Albert Vilardell",
     "category": "Naves Industriales",
-    "tags": ["Pavimentos", "Naves Industriales", "Grietas", "Logística"],
+    "tags": [
+      "Pavimentos",
+      "Naves Industriales",
+      "Grietas",
+      "Logística"
+    ],
     "image": {
       "url": "/assets/images/blog/pavimento-industrial-grieta.jpg",
       "alt": "Grieta severa en pavimento de hormigón industrial",
@@ -129,7 +154,12 @@
     "dateModified": "2025-11-10",
     "author": "Albert Vilardell",
     "category": "Patologías Estructurales",
-    "tags": ["Estructuras", "Carbonatación", "Parking", "Comunidades"],
+    "tags": [
+      "Estructuras",
+      "Carbonatación",
+      "Parking",
+      "Comunidades"
+    ],
     "image": {
       "url": "/assets/images/blog/pilar-parking-corrosion.jpg",
       "alt": "Pilar de hormigón con armadura oxidada expuesta",
@@ -144,7 +174,7 @@
     "content": "## La Alarma: Hormigón que 'Explota'\n\nEs una imagen habitual en muchos garajes de Barcelona construidos hace décadas: trozos de hormigón en el suelo y, en el pilar, las barras de acero expuestas y oxidadas. Muchos vecinos lo llaman erróneamente 'aluminosis', pero en la mayoría de casos se trata de **carbonatación**.\n\n## ¿Qué es la Carbonatación?\n\nEl hormigón sano tiene un pH alto (alcalino) que protege el acero de la oxidación. Con el tiempo y el CO2 de los coches, el hormigón pierde ese pH (se carbonata). Cuando la humedad llega al acero desprotegido, este se oxida.\n\n**El problema:** El óxido ocupa más volumen que el acero sano, ejerciendo una presión interna brutal que rompe el hormigón desde dentro.\n\n## ¿Es Peligroso?\n\n**Sí.** Si no se trata, la corrosión reduce la sección útil de acero del pilar. Menos acero significa menos capacidad para soportar el peso del edificio. En estadios avanzados, puede comprometer la estabilidad global.\n\n## Soluciones: Reparación vs. Refuerzo\n\nUn informe pericial determinará la gravedad:\n\n1.  **Reparación Cosmética (Daño Leve):** Limpieza del óxido, pasivación del acero y reconstrucción con mortero estructural.\n2.  **Refuerzo Estructural (Daño Grave):** Si el pilar ha perdido mucha capacidad, necesita ayuda. Se suelen aplicar:\n    * **Encamisado metálico:** Rodear el pilar con una jaula de acero.\n    * **Fibra de Carbono:** Láminas de alta resistencia adheridas al pilar.\n\n## Recomendación para Comunidades\n\nNo intente tapar las grietas con cemento normal. Eso solo esconde el problema mientras la corrosión avanza. Solicite un diagnóstico técnico para calcular el refuerzo necesario."
   },
   {
-    "title": "Acabo de comprar un piso y tiene defectos graves: ¿Qué se considera 'Vicio Oculto'?",
+    "title": "Acabo de comprar un piso y tiene defectos graves: ¿Qué se considera “Vicio Oculto”?",
     "slug": "reclama-vicios-ocultos-compraventa-vivienda",
     "description": "Guía legal y técnica para compradores: plazos, requisitos y proceso para reclamar defectos no visibles tras la compra.",
     "excerpt": "Si tras la compra aparecen humedades, termitas o grietas que no vio, puede tener derecho a reclamar. Conozca la diferencia entre vicio oculto y desgaste.",
@@ -153,7 +183,12 @@
     "dateModified": "2025-11-25",
     "author": "Albert Vilardell",
     "category": "Legal",
-    "tags": ["Vicios Ocultos", "Compraventa", "Reclamación", "Perito Judicial"],
+    "tags": [
+      "Vicios Ocultos",
+      "Compraventa",
+      "Reclamación",
+      "Perito Judicial"
+    ],
     "image": {
       "url": "/assets/images/blog/vicios-ocultos-pared.jpg",
       "alt": "Moho oculto tras el papel pintado de una vivienda recién comprada",

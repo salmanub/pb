@@ -1,2 +1,179 @@
 @import 'tailwindcss';
+@config "../../../tailwind.config.js";
 @plugin "@tailwindcss/typography";
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+        /* ... keeping variables ... */
+    }
+}
+
+@theme {
+    --font-display: 'Outfit', 'system-ui', 'sans-serif';
+    --font-sans: 'Inter', 'system-ui', 'sans-serif';
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 84% 4.9%;
+
+        --primary: 189 94% 43%;
+        /* Cyan 500 equivalent */
+        --primary-foreground: 210 40% 98%;
+
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+
+        --accent: 189 94% 94%;
+        /* Light cyan accent */
+        --accent-foreground: 222.2 47.4% 11.2%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 189 94% 43%;
+
+        --radius: 0.75rem;
+    }
+
+    .dark {
+        --background: 222.2 84% 4.9%;
+        --foreground: 210 40% 98%;
+
+        --card: 222.2 84% 4.9%;
+        --card-foreground: 210 40% 98%;
+
+        --popover: 222.2 84% 4.9%;
+        --popover-foreground: 210 40% 98%;
+
+        --primary: 189 94% 43%;
+        --primary-foreground: 222.2 47.4% 11.2%;
+
+        --secondary: 217.2 32.6% 17.5%;
+        --secondary-foreground: 210 40% 98%;
+
+        --muted: 217.2 32.6% 17.5%;
+        --muted-foreground: 215 20.2% 65.1%;
+
+        --accent: 217.2 32.6% 17.5%;
+        --accent-foreground: 210 40% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 217.2 32.6% 17.5%;
+        --input: 217.2 32.6% 17.5%;
+        --ring: 212.7 26.8% 83.9%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-slate-200;
+    }
+
+    body {
+        @apply bg-white text-slate-900 antialiased;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-display tracking-tight text-slate-900;
+    }
+}
+
+@layer components {
+    /* Abstract Components for Centralized Styling */
+
+    .btn {
+        @apply inline-flex items-center justify-center px-8 py-4 font-bold uppercase tracking-wider text-sm rounded-xl transition-colors duration-300;
+        /* Removed all transforms */
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center px-8 py-4 font-bold uppercase tracking-wider text-sm rounded-xl transition-colors duration-300 bg-slate-900 text-white shadow-lg shadow-slate-900/10 hover:bg-black hover:shadow-xl hover:shadow-slate-900/20;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center px-8 py-4 font-bold uppercase tracking-wider text-sm rounded-xl transition-colors duration-300 bg-white border-2 border-slate-200 text-slate-700 hover:border-cyan-500 hover:text-cyan-600 hover:shadow-md hover:shadow-cyan-100/50;
+    }
+
+    .btn-ghost {
+        @apply inline-flex items-center justify-center px-6 py-3 font-bold uppercase tracking-wider text-sm rounded-xl transition-colors duration-300 bg-transparent text-slate-500 hover:text-cyan-600 hover:bg-slate-50 border-transparent shadow-none;
+    }
+
+    .card-avant {
+        @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col h-full border-none;
+        /* Matches 'En Qué Podemos Ayudarle' section */
+    }
+
+    .card-glass {
+        @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-glass;
+    }
+
+    .badge {
+        @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest;
+    }
+
+    .badge-primary {
+        @apply bg-cyan-50 text-cyan-700 border border-cyan-100;
+    }
+
+    .section-title {
+        @apply font-display text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight leading-[1.1];
+    }
+
+    .section-subtitle {
+        @apply text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed;
+    }
+
+    /* Lucide Icon Defaults */
+    .lucide {
+        @apply w-full h-full stroke-2;
+    }
+
+    /* Standard Prose Override */
+    .prose {
+        @apply max-w-none text-slate-600;
+
+        /* Headings */
+        @apply prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-slate-900;
+
+        /* Links */
+        @apply prose-a:text-cyan-600 prose-a:no-underline prose-a:font-medium transition-colors hover:prose-a:text-cyan-700;
+
+        /* Strong */
+        @apply prose-strong:font-bold prose-strong:text-slate-900;
+
+        /* Blockquotes */
+        @apply prose-blockquote:border-l-cyan-500 prose-blockquote:bg-slate-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-blockquote:not-italic;
+
+        /* Code */
+        @apply prose-code:bg-slate-100 prose-code:rounded prose-code:px-1 prose-code:py-0.5 prose-code:text-slate-800 before:prose-code:content-none after:prose-code:content-none;
+
+        /* Lists */
+        @apply prose-li:marker:text-cyan-500;
+
+        /* Images */
+        @apply prose-img:rounded-2xl prose-img:shadow-lg;
+    }
+}

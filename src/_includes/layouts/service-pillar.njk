@@ -28,33 +28,28 @@
         </div>
     </div>
     <!-- Hero Section mejorado -->
-    <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] min-h-[calc(100vh-70px)] sm:min-h-0 bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] text-white overflow-hidden isolate">
+    <!-- Hero Section mejorado -->
+    <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] min-h-[calc(100vh-70px)] sm:min-h-0 bg-white text-slate-900 overflow-hidden isolate border-b border-slate-100">
         <!-- Efectos decorativos modernos -->
         <div class="absolute inset-0">
-            <!-- Patrón de puntos con mejor contraste -->
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:48px_48px] opacity-25"></div>
-            <!-- Gradientes suaves -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-cyan-400/5"></div>
-            <!-- Efecto de luz moderna -->
-            <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-cyan-400/20 blur-[100px] rounded-full"></div>
-            <!-- Velo sutil para mejorar legibilidad -->
-            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/10 to-slate-900/30 mix-blend-overlay"></div>
+            <div class="absolute top-0 right-0 w-2/3 h-full bg-slate-50 skew-x-[-12deg] translate-x-1/4 origin-top opacity-50"></div>
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
         </div>
 
-        <div class="relative z-10 container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
+        <div class="relative z-10 w-full px-6 md:px-12 lg:px-16">
             <div class="grid lg:grid-cols-12 gap-8 lg:gap-16 min-h-[calc(100vh-90px)] lg:min-h-[600px] items-center py-12 lg:py-16">
                 <!-- Columna izquierda - Contenido -->
                 <div class="lg:col-span-7">
                     {% include "partials/breadcrumb.njk" %}
                     <div class="space-y-6">
-                        <h1 class="text-[2.75rem] md:text-[3.5rem] xl:text-[4rem] font-light text-white leading-[1.1] tracking-tight" itemprop="headline">
-                            <span class="text-white font-light">{{ hero.title }}</span>
-                            <strong class="text-cyan-400 font-bold block mt-2">{{ hero.strong }}</strong>
-                            <span class="block text-[0.85em] text-cyan-400 font-normal mt-6">{{ hero.subtitle }}</span>
+                        <h1 class="text-[2.75rem] md:text-[3.5rem] xl:text-[4rem] font-light text-slate-900 leading-[1.1] tracking-tight" itemprop="headline">
+                            <span class="text-slate-900 font-light">{{ hero.title }}</span>
+                            <strong class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 font-bold block mt-2">{{ hero.strong }}</strong>
+                            <span class="block text-[0.85em] text-slate-500 font-normal mt-6 uppercase tracking-wider">{{ hero.subtitle }}</span>
                         </h1>
-                        <p class="text-xl text-white/90 mt-8" itemprop="description">{{ hero.description }}</p>
-                        <div class="prose prose-lg prose-invert mt-8">
-                            <div class="text-lg text-white/80 tracking-wide" itemprop="articleBody">
+                        <p class="text-xl text-slate-600 mt-8 font-light" itemprop="description">{{ hero.description }}</p>
+                        <div class="prose prose-lg prose-slate mt-8">
+                            <div class="text-lg text-slate-600 tracking-wide font-light" itemprop="articleBody">
                                 {{ hero.intro }}
                             </div>
                         </div>
@@ -66,11 +61,9 @@
 
                 <!-- Columna derecha - Imagen con efectos mejorados -->
                 <div class="lg:col-span-5">
-                    <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl relative">
-                        <!-- Overlay gradiente mejorado -->
-                        <div class="absolute inset-0 bg-gradient-to-tr from-slate-900/50 via-slate-900/30 to-transparent mix-blend-overlay z-10"></div>
+                    <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-slate-200/50 relative border border-slate-100">
                         <!-- Imagen con clip-path y hover suave -->
-                        <div class="service-pillar-image-wrapper w-full h-full">
+                        <div class="service-pillar-image-wrapper w-full h-full bg-white">
                             {% image hero.image, 
                                     hero.title, 
                                     "(min-width: 1200px) 40vw, (min-width: 768px) 50vw, 100vw", 
@@ -91,8 +84,6 @@
                                 }
                             </style>
                         </div>
-                        <!-- Efecto de brillo en hover -->
-                        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-400/0 to-cyan-400/0 opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20"></div>
                     </div>
                 </div>
             </div>
@@ -107,7 +98,7 @@
             <div class="absolute inset-0 bg-gradient-to-tr from-cyan-50/40 via-transparent to-slate-100/30"></div>
         </div>
 
-        <div class="relative z-10 max-w-[1400px] mx-auto">
+        <div class="relative z-10 w-full px-6 md:px-12 lg:px-16">
             <div class="max-w-3xl mx-auto text-center mb-16">
                 <span class="text-cyan-500 font-medium uppercase tracking-wider mb-4 block">{{ serviceCluster.title }}</span>
                 <h2 class="text-3xl md:text-4xl font-light text-slate-800" itemprop="name">
@@ -118,14 +109,9 @@
             <!-- Grid de servicios actualizado -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" itemprop="hasPart">
                 {% for service in serviceCluster.services %}
-                <a href="{{ service.url }}" class="group/card relative block h-full bg-gradient-to-br from-white to-slate-50/80 rounded-2xl p-6 pb-20 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden isolate">
-                    
-                    <!-- Efecto hover background -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-50 to-white opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
-                    
-                    <!-- Contenido principal -->
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 group-hover/card:scale-110 group-hover/card:bg-cyan-500/20 transition-all duration-500">
+                <a href="{{ service.url }}" class="group block h-full card-avant animate-in fade-in slide-in-from-bottom-4" style="animation-delay: {{ loop.index0 * 100 }}ms">
+                    <div class="p-6 lg:p-8 flex flex-col h-full">
+                        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
                             <div class="w-8 h-8 text-cyan-500">
                                 {% set iconPath = "icons/" + service.icon + ".svg" %}
                                 {% if service.icon %}
@@ -135,29 +121,26 @@
                                 {% endif %}
                             </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-4 group-hover/card:text-cyan-600 transition-colors" itemprop="name">{{ service.title }}</h3>
-                        <p class="text-slate-600 mb-6 flex-grow" itemprop="description">{{ service.description }}</p>
-                        <ul class="space-y-3 mb-6">
-                            {% for feature in service.features %}
-                            <li class="flex items-start gap-2">
-                                <span class="p-1 rounded bg-cyan-50 flex-shrink-0 mt-0.5">
-                                    <svg class="w-4 h-4 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                <span class="text-slate-600 text-sm" itemprop="feature">{{ feature }}</span>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
 
-                    <!-- CTA posicionado abajo a la derecha -->
-                    <div class="absolute bottom-6 right-6 flex items-center gap-2 text-cyan-400 group-hover/card:text-cyan-500 transition-colors">
-                        <div class="w-8 h-8 rounded-full bg-cyan-50 flex items-center justify-center group-hover/card:bg-cyan-100 transition-all duration-300">
-                            <svg class="w-4 h-4 group-hover/card:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">{{ service.title }}</h3>
+                        <p class="text-slate-600 mb-6 flex-grow">{{ service.description }}</p>
+                        
+                        <div class="pt-6 border-t border-slate-100 group-hover:border-cyan-100/50 transition-colors">
+                            <ul class="space-y-2">
+                                {% for feature in service.features | slice(0, 3) %}
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 flex-shrink-0 mt-2"></span>
+                                    <span class="text-slate-600 text-sm font-medium" itemprop="feature">{{ feature }}</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
                         </div>
+                        <span class="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold group mt-auto pt-6">
+                            Saber más
+                            <svg class="w-5 h-5 ml-2 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </span>
                     </div>
                 </a>
                 {% endfor %}
@@ -167,7 +150,7 @@
 
     <!-- What Is Section -->
     <section class="py-24 bg-gradient-to-b from-slate-50 to-white">
-        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+        <div class="w-full px-6 md:px-12 lg:px-16">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                 <!-- Left Column - Title -->
                 <div>
@@ -197,27 +180,25 @@
     </section>
 
     <!-- Process Section actualizado -->
-    <section class="relative py-24 md:py-32 bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] overflow-hidden isolate">
+    <section class="relative py-24 md:py-32 bg-slate-50 overflow-hidden isolate">
         <!-- Efectos decorativos -->
         <div class="absolute inset-0">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:48px_48px] opacity-25"></div>
-            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-cyan-400/5"></div>
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-400/20 blur-[100px] rounded-full"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(203,213,225,0.4)_1px,transparent_1px)] [background-size:48px_48px]"></div>
         </div>
 
-        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+        <div class="w-full px-6 md:px-12 lg:px-16">
             <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-white mb-6">
-                    {{ metadata.servicePillar[lang].processTitle | replace(metadata.servicePillar[lang].processStrong, '<strong class="text-cyan-400 font-bold">' + metadata.servicePillar[lang].processStrong + '</strong>') | safe }}
+                <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-900 mb-6">
+                    {{ metadata.servicePillar[lang].processTitle | replace(metadata.servicePillar[lang].processStrong, '<strong class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 font-bold">' + metadata.servicePillar[lang].processStrong + '</strong>') | safe }}
                 </h2>
-                <p class="text-xl text-white/80">{{ metadata.servicePillar[lang].processDescription }}</p>
+                <p class="text-xl text-slate-600">{{ metadata.servicePillar[lang].processDescription }}</p>
             </div>
 
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 {% for step in process.steps %}
-                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-xl relative group hover:bg-white/10 transition-all duration-300">
+                <div class="bg-white p-8 rounded-xl relative group hover:shadow-xl transition-all duration-300 border border-slate-100">
                     <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-cyan-400/20 text-cyan-400 group-hover:scale-110 transition-transform">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-cyan-50 text-cyan-600 transition-colors">
                             {% if step.icon %}
                                 {% include "icons/" + step.icon + ".svg" ignore missing %}
                             {% else %}
@@ -225,8 +206,8 @@
                             {% endif %}
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-cyan-400 mb-4">{{ step.title }}</h3>
-                    <p class="text-white/80">{{ step.description }}</p>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">{{ step.title }}</h3>
+                    <p class="text-slate-600">{{ step.description }}</p>
                 </div>
                 {% endfor %}
             </div>
@@ -235,7 +216,7 @@
 
     <!-- Benefits Section -->
     <section class="relative py-24 md:py-32 bg-gradient-to-b from-slate-50 to-white">
-        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+        <div class="w-full px-6 md:px-12 lg:px-16">
             <div class="max-w-3xl mx-auto text-center mb-16">
                 <span class="text-cyan-500 font-semibold tracking-wider uppercase mb-4 block">{{ metadata.servicePillar[lang].whyChooseUs }}</span>
                 <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 mb-6">
@@ -245,14 +226,16 @@
 
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 {% for item in benefits.items %}
-                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group border border-slate-100">
-                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
-                        <div class="w-8 h-8 text-cyan-500 group-hover:scale-110 transition-transform">
-                            {% include "icons/" + item.icon + ".svg" %}
+                <div class="card-avant group h-full">
+                    <div class="p-6 lg:p-8 flex flex-col h-full">
+                        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
+                            <div class="w-8 h-8 text-cyan-500">
+                                {% include "icons/" + item.icon + ".svg" %}
+                            </div>
                         </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">{{ item.title }}</h3>
+                        <p class="text-slate-600 flex-grow">{{ item.description }}</p>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">{{ item.title }}</h3>
-                    <p class="text-slate-600">{{ item.description }}</p>
                 </div>
                 {% endfor %}
             </div>
@@ -262,7 +245,7 @@
     {# New Testimonials Section - Conditionally Rendered #}
     {% if testimonials and testimonials.items %}
     <section class="py-24 px-4 md:px-[5%] bg-white">
-        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+        <div class="w-full px-6 md:px-12 lg:px-16">
             <!-- Título de sección -->
             <div class="max-w-3xl mx-auto text-center mb-16">
                  <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 mb-6">
@@ -297,7 +280,7 @@
 
     <!-- Content Section -->
     <section class="py-24 px-4 md:px-[5%] bg-white">
-        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+        <div class="w-full px-6 md:px-12 lg:px-16">
             <div class="prose prose-lg prose-slate max-w-4xl mx-auto">
                 <!-- Renderiza el contenido markdown -->
                 {{ content | safe }}
@@ -306,22 +289,20 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="relative py-24 md:py-32 bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] overflow-hidden isolate">
+    <section class="relative py-24 md:py-32 bg-slate-900 overflow-hidden isolate">
         <!-- Efectos decorativos -->
         <div class="absolute inset-0">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:48px_48px] opacity-25"></div>
-            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-cyan-400/5"></div>
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-400/20 blur-[100px] rounded-full"></div>
+             <div class="absolute top-0 right-0 w-2/3 h-full bg-slate-800 skew-x-[-12deg] translate-x-1/4 origin-top opacity-30"></div>
         </div>
 
-        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16 relative z-10">
+        <div class="w-full px-6 md:px-12 lg:px-16 relative z-10">
             <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-white mb-6">
+                <h2 class="text-[2.5rem] md:text-[3.5rem] font-black text-white mb-6 uppercase tracking-tight">
                     {{ cta.title }}
                 </h2>
-                <p class="text-xl text-white/80 mb-12">{{ cta.description }}</p>
+                <p class="text-xl text-slate-300 mb-12 font-light">{{ cta.description }}</p>
                 <!-- Actualización de botones CTA sin flechas -->
-                <a href="{{ cta.button.url }}" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-cyan-200/20 hover:-translate-y-0.5 transition-all">
+                <a href="{{ cta.button.url }}" class="btn-primary bg-white text-slate-900 hover:bg-cyan-50 hover:text-cyan-600 border-none shadow-xl">
                     {{ cta.button.text }}
                 </a>
             </div>

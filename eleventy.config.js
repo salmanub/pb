@@ -225,12 +225,9 @@ export default function (eleventyConfig) {
 
   const processor = postcss([
     //compile tailwind
+    //compile tailwind
     tailwindcss({
-      content: ['./src/**/*.{njk,md,js}'],
-      theme: {
-        extend: {}
-      },
-      safelist: ['group', 'group-hover:text-emerald-600']
+      config: './tailwind.config.js'
     }),
     //minify tailwind css
     cssnano({

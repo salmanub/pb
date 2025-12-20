@@ -23,13 +23,13 @@ eleventyNavigation:
 # Hero Section
 hero:
   tag: "Peritos Ingenieros Colegiados en Barcelona"
-  title: "Informes Periciales Técnicos"
+  title: "Informes Periciales"
   strong: "para Defender sus Intereses"
   subtitle: "Especialistas en Peritajes, Auditorías de Obra y Asesoramiento Estructural"
   description: "Elaboramos informes técnicos independientes para resolver litigios, auditar la calidad de proyectos y diagnosticar la seguridad de estructuras con el máximo rigor."
   image:
-    path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
-    alt: "Perito ingeniero inspeccionando una estructura de hormigón"
+    path: "src/assets/images/peritaje-construccion-ingenieros-obra.avif"
+    alt: "Ingeniero perito supervisando obra en construcción"
     badge: "Perito Ingeniero"
     caption: "Informes técnicos con rigor y claridad"
   rotatingTexts:

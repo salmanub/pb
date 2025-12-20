@@ -1,221 +1,105 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import markdownIt from 'markdown-it';
-import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
-import htmlminifier from 'html-minifier-terser';
-
-import cssnano from 'cssnano';
-import postcss from 'postcss';
-import tailwindcss from '@tailwindcss/postcss';
-
-
-// Definir __dirname para módulos ES
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-export default function (eleventyConfig) {
-  
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPassthroughCopy("src/assets/images");
-  eleventyConfig.addPassthroughCopy("src/assets/scripts");
-  eleventyConfig.addPassthroughCopy("src/assets/fonts");
-  eleventyConfig.addPassthroughCopy("src/assets/icons");
-  eleventyConfig.addPassthroughCopy("src/site.webmanifest");
-  eleventyConfig.addPassthroughCopy("src/favicon.ico");
-  eleventyConfig.addPassthroughCopy("src/_redirects");
-  eleventyConfig.addPassthroughCopy("src/_headers");
-  
-  eleventyConfig.addFilter('renderMarkdown', function(content) {
-        return md.render(content);
-    });
-  eleventyConfig.addCollection("langCollections", function (collectionApi) {
-    const collectionsByLang = {};
-
-    // Obtener todos los items de la colección
-    const allItems = collectionApi.getAll();
-
-    // Iterar sobre los items y clasificarlos por 'lang'
-    allItems.forEach((item) => {
-      const lang = item.data.lang;
-
-      // Asegúrate de que el item tenga un 'lang' definido
-      if (lang) {
-        // Si la colección para ese idioma no existe, crearla
-        if (!collectionsByLang[lang]) {
-          collectionsByLang[lang] = [];
-        }
-
-        // Añadir el item a la colección correspondiente
-        collectionsByLang[lang].push(item);
-      }
-    });
-
-    return collectionsByLang;
-  });
-
-  // Leer el contenido del favicon SVG como Data URI (opcional)
-  const faviconPath = path.join(__dirname, "src", "assets", "images", "logos", "favicon.txt");
-  const faviconSVGDataURI = fs.existsSync(faviconPath) 
-    ? fs.readFileSync(faviconPath, "utf8").trim()
-    : null;
-
-  // Shortcode para favicons - nombre cambiado a "favicon" para coincidir con {% favicon %}
-  eleventyConfig.addShortcode("favicons", function () {
-    return `
-      <!-- Favicons básicos -->
-      ${faviconSVGDataURI ? `<link rel="icon" type="image/svg+xml" href="${faviconSVGDataURI}">` : ''}
-      <link rel="icon" type="image/png" sizes="96x96" href="https://perito.barcelona/assets/icons/favicon-96x96.png">
-      <link rel="icon" type="image/png" sizes="48x48" href="https://perito.barcelona/assets/icons/favicon-48x48.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="https://perito.barcelona/assets/icons/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="https://perito.barcelona/assets/icons/favicon-16x16.png">
-      
-      <!-- PWA/Mobile icons -->
-      <link rel="apple-touch-icon" sizes="180x180" href="https://perito.barcelona/assets/icons/apple-touch-icon.png">
-      <link rel="mask-icon" href="https://perito.barcelona/assets/icons/safari-pinned-tab.svg" color="#06b6d4">
-      
-      <!-- Manifest y configuración del navegador -->
-      <link rel="manifest" href="https://perito.barcelona/site.webmanifest">
-      <meta name="msapplication-TileColor" content="#06b6d4">
-      <meta name="theme-color" content="#06b6d4">
-    `;
-  });
-    
-  // Configurar markdown-it
-  const md = markdownIt({
-    html: true,
-    breaks: true,
-    linkify: true
-  });
-
-  // Añadir filtro markdown
-  eleventyConfig.addFilter("markdown", function(content) {
-    return md.render(content);
-  });
-
-  //compile tailwind before eleventy processes the files
-  eleventyConfig.on('eleventy.before', async () => {
-    // Procesar global.css
-    const globalInputPath = path.resolve('./src/assets/styles/global.css');
-    const globalOutputPath = './dist/assets/styles/global.css';
-    
-    const globalContent = fs.readFileSync(globalInputPath, 'utf8');
-    
-    // Asegurar que existe el directorio de salida
-    const outputDir = path.dirname(globalOutputPath);
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
-    }
-
-    // Procesar global.css
-    const globalResult = await postcss([
-      cssnano({
-        preset: ['default', {
-          discardComments: {
-            removeAll: true,
-          },
-          normalizeWhitespace: true,
-          minifyFontValues: true,
-          minifyGradients: true
-        }]
-      })
-    ]).process(globalContent, {
-      from: globalInputPath,
-      to: globalOutputPath
-    });
-
-    fs.writeFileSync(globalOutputPath, globalResult.css);
-
-    // Procesar tailwind
-    const tailwindInputPath = path.resolve('./src/assets/styles/index.css');
-    const tailwindOutputPath = './dist/assets/styles/index.css';
-    
-    const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
-    
-    const result = await processor.process(cssContent, {
-      from: tailwindInputPath,
-      to: tailwindOutputPath,
-    });
-
-    fs.writeFileSync(tailwindOutputPath, result.css);
-  });
-
-  const processor = postcss([
-    //compile tailwind
-    tailwindcss({
-      content: ['./src/**/*.{njk,md,js}'],
-      theme: {
-        extend: {
-          rotate: {
-            'y-8': '8deg',
-          },
-          perspective: {
-            '1000': '1000px',
-          },
-          transformStyle: {
-            'preserve-3d': 'preserve-3d',
-          },
-          animation: {
-            'wiggle': 'wiggle 0.3s ease-in-out',
-          },
-          keyframes: {
-            wiggle: {
-              '0%, 100%': { transform: 'rotate(-3deg)' },
-              '50%': { transform: 'rotate(3deg)' },
-            }
-          }
-        }
+export default {
+  content: ['./src/**/*.{njk,md,js,html}'],
+  theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
       },
-      safelist: ['group', 'group-hover:text-emerald-600']
-    }),
-    //minify tailwind css
-    cssnano({
-      preset: ['default', {
-        discardComments: {
-          removeAll: true,
+      screens: {
+        '2xl': '1400px',
+      },
+    },
+    extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
-        normalizeWhitespace: true,
-        minifyFontValues: true,
-        minifyGradients: true
-      }]
-    }),
-  ]);
-  // Minify HTML output
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    if (outputPath && outputPath.endsWith(".html")) {
-      return htmlminifier.minify(content, {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeRedundantAttributes: true,
-        useShortDoctype: true,
-        removeEmptyAttributes: true,
-        minifyJS: true,
-      });
-    }
-    return content;
-  });
-
-  // Configuración para páginas 404
-  eleventyConfig.setUseGitIgnore(false);
-  eleventyConfig.setBrowserSyncConfig({
-    callbacks: {
-      ready: function(err, bs) {
-        bs.addMiddleware("*", (req, res) => {
-          const content_404 = fs.readFileSync('dist/404.html');
-          // Añadir headers para una respuesta 404 correcta
-          res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
-          res.write(content_404);
-          res.end();
-        });
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Outfit', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        'soft': '0 2px 10px rgba(0, 0, 0, 0.03)',
+        'medium': '0 5px 20px rgba(0, 0, 0, 0.04)',
+        'hard': '0 10px 40px rgba(0, 0, 0, 0.05)',
+        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+        'glow': '0 0 20px rgba(6, 182, 212, 0.15)',
+      },
+      backgroundImage: {
+        'grid-pattern': "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(241 245 249 / 0.1)'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E\")",
+        'radial-fade': 'radial-gradient(circle, rgba(6,182,212,0.1) 0%, rgba(255,255,255,0) 70%)',
+      },
+      rotate: {
+        'y-8': '8deg',
+      },
+      perspective: {
+        '1000': '1000px',
+      },
+      transformStyle: {
+        'preserve-3d': 'preserve-3d',
+      },
+      animation: {
+        'wiggle': 'wiggle 0.3s ease-in-out',
+        'float': 'float 6s ease-in-out infinite',
+        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        }
       }
     }
-  });
-
-  return {
-    dir: { 
-      input: 'src', 
-      output: 'dist',
-      includes: '_includes' 
-    }
-  };
+  },
+  safelist: ['group', 'group-hover:text-emerald-600']
 }

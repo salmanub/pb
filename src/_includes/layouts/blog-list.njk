@@ -4,34 +4,40 @@
 <main class="pt-[70px] lg:pt-[120px]" itemscope itemtype="https://schema.org/CollectionPage">
     
     <!-- Hero Section -->
-    <header class="bg-gradient-to-br from-slate-50 to-white py-16 px-4 md:px-[5%] shadow-sm">
-        <div class="max-w-[1200px] mx-auto">
-            <div class="text-center mb-8">
-                <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4" itemprop="name">
+    <header class="relative bg-gradient-to-br from-slate-50 to-white py-24 px-6 md:px-12 lg:px-16 overflow-hidden">
+        <!-- Decorative background -->
+        <div class="absolute inset-0">
+             <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,slate-200_1px,transparent_1px)] [background-size:48px_48px] opacity-[0.2]"></div>
+             <div class="absolute inset-0 bg-gradient-to-tr from-cyan-50/40 via-transparent to-slate-100/30"></div>
+        </div>
+        
+        <div class="w-full relative z-10">
+            <div class="max-w-4xl mx-auto text-center mb-8">
+                <span class="inline-block py-1 px-3 border border-cyan-500 rounded-full text-cyan-600 font-bold tracking-widest uppercase text-xs mb-6 bg-cyan-50/50 backdrop-blur-sm">Blog & Recursos</span>
+                <h1 class="text-5xl md:text-7xl font-black text-slate-900 mb-6 tracking-tighter" itemprop="name">
                     {{ hero.title }}
-                    <span class="block text-cyan-500 mt-2">{{ hero.strong }}</span>
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">{{ hero.strong }}</span>
                 </h1>
-                <p class="text-xl text-slate-600 mb-4" itemprop="description">{{ hero.subtitle }}</p>
-                <p class="text-lg text-slate-500 max-w-[800px] mx-auto">{{ hero.description }}</p>
+                <p class="text-xl md:text-2xl text-slate-500 max-w-2xl mx-auto font-light leading-relaxed" itemprop="description">{{ hero.subtitle }}</p>
             </div>
         </div>
     </header>
 
     <!-- Blog Posts Grid -->
-    <section class="py-16 bg-white">
-        <div class="max-w-[1200px] mx-auto px-4 md:px-[5%]">
+    <section class="py-24 bg-white px-6 md:px-12 lg:px-16">
+        <div class="w-full">
             
             <!-- Posts Grid - Primero los artículos ordenados por fecha -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" itemprop="mainEntity" itemscope itemtype="https://schema.org/ItemList">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20" itemprop="mainEntity" itemscope itemtype="https://schema.org/ItemList">
                 <meta itemprop="itemListOrder" content="https://schema.org/ItemListOrderDescending">
                 {% set sortedPosts = posts | sort(attribute='datePublished') | reverse %}
                 {% for post in sortedPosts %}
                 {% if not post.estado or post.estado == "publicado" %}
-                <article class="group/card relative block h-full bg-gradient-to-br from-white to-slate-50/80 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500"
+                <article class="group/card relative flex flex-col h-full bg-white rounded-[2rem] overflow-hidden shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-cyan-900/10 transition-all duration-500 border border-slate-100 hover:border-cyan-200 hover:-translate-y-2 isolate"
                          itemprop="itemListElement" itemscope itemtype="https://schema.org/BlogPosting">
                     
                     <!-- Featured Image -->
-                    <div class="relative overflow-hidden aspect-[16/9]">
+                    <div class="relative overflow-hidden aspect-[16/10]">
                         {% set imgSrc = post.image.url if post.image else metadata.site.placeholderImage %}
                         {# Extraer el path completo y nombre sin extensión #}
                         {% set imgPath = imgSrc | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") | replace(".JPG", "") | replace(".JPEG", "") | replace(".PNG", "") %}
@@ -55,31 +61,31 @@
                             <img 
                                 src="{{ imgBasePath }}-640w.jpg" 
                                 alt="{{ post.image.alt if post.image else 'Imagen del artículo' }}" 
-                                class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                                class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700"
                                 width="600"
                                 height="338"
                                 loading="lazy"
                                 decoding="async"
                                 itemprop="image">
                         </picture>
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-60"></div>
                         
                         <!-- Category Badge -->
-                        <div class="absolute top-4 left-4">
-                            <span class="px-3 py-1 bg-cyan-500 text-white text-xs font-semibold rounded-full">
+                        <div class="absolute top-6 left-6">
+                            <span class="px-4 py-1 bg-white/90 backdrop-blur-md text-cyan-700 text-xs font-bold uppercase tracking-wider rounded-full shadow-sm">
                                 {{ post.category }}
                             </span>
                         </div>
                     </div>
 
                     <!-- Content -->
-                    <div class="p-6">
+                    <div class="p-8 flex flex-col flex-grow relative z-10 bg-white">
                         <!-- Meta Info -->
-                        <div class="flex items-center gap-4 text-sm text-slate-500 mb-3">
+                        <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
                             <time datetime="{{ post.datePublished }}T00:00:00+01:00" itemprop="datePublished">
                                 {{ post.datePublished }}
                             </time>
-                            <span>•</span>
+                            <span class="w-1 h-1 rounded-full bg-slate-300"></span>
                             <span itemprop="author" itemscope itemtype="https://schema.org/Person">
                                 <span itemprop="name">{{ post.author }}</span>
                                 <meta itemprop="url" content="{{ metadata.author.linkedin }}">
@@ -87,36 +93,34 @@
                         </div>
 
                         <!-- Title -->
-                        <h2 class="text-xl font-bold text-slate-800 mb-3 group-hover/card:text-cyan-600 transition-colors" itemprop="headline">
-                            <a href="/blog/{{ post.slug }}/" class="no-underline" itemprop="url">
+                        <h2 class="text-2xl font-bold text-slate-900 mb-4 group-hover/card:text-cyan-600 transition-colors leading-tight tracking-tight" itemprop="headline">
+                            <a href="/blog/{{ post.slug }}/" class="no-underline focus:outline-none" itemprop="url">
+                                <span class="absolute inset-0" aria-hidden="true"></span>
                                 {{ post.title }}
                             </a>
                         </h2>
 
                         <!-- Excerpt -->
-                        <p class="text-slate-600 mb-4 line-clamp-3" itemprop="description">
+                        <p class="text-slate-500 mb-6 line-clamp-3 leading-relaxed font-light text-lg flex-grow" itemprop="description">
                             {{ post.excerpt }}
                         </p>
 
-                        <!-- Tags -->
-                        {% if post.tags and post.tags.length > 0 %}
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            {% for tag in post.tags %}
-                            <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded" itemprop="keywords">
-                                {{ tag }}
-                            </span>
-                            {% endfor %}
-                        </div>
-                        {% endif %}
+                        <!-- Tags & Link -->
+                        <div class="flex items-center justify-between mt-auto pt-6 border-t border-slate-100">
+                             {% if post.tags and post.tags.length > 0 %}
+                            <div class="flex flex-wrap gap-2">
+                                {% for tag in post.tags | slice(0, 2) %}
+                                <span class="text-[10px] px-2 py-1 bg-slate-50 text-slate-500 font-medium uppercase tracking-wide rounded" itemprop="keywords">
+                                    {{ tag }}
+                                </span>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
 
-                        <!-- Read More Link -->
-                        <a href="/blog/{{ post.slug }}/" 
-                           class="inline-flex items-center text-cyan-600 font-semibold hover:text-cyan-700 transition-colors group/link">
-                            Leer artículo completo
-                            <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </a>
+                            <span class="text-cyan-600 font-bold text-sm uppercase tracking-wider group-hover/card:translate-x-1 transition-transform flex items-center gap-1">
+                                Leer artículo <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </span>
+                        </div>
                     </div>
 
                     <!-- Hidden schema data -->
@@ -130,13 +134,13 @@
 
             <!-- No posts message -->
             {% if not posts or posts.length == 0 %}
-            <div class="text-center py-12">
-                <p class="text-lg text-slate-600">Próximamente publicaremos nuevos artículos técnicos.</p>
+            <div class="text-center py-24 bg-slate-50 rounded-[2rem] border border-slate-200 border-dashed">
+                <p class="text-xl text-slate-400 font-light">Próximamente publicaremos nuevos artículos técnicos.</p>
             </div>
             {% endif %}
 
             <!-- Content Description - Después de los artículos -->
-            <div class="prose prose-lg max-w-none mt-12 pt-12 border-t border-slate-200">
+            <div class="prose prose-lg prose-slate mx-auto mt-20 pt-12 border-t border-slate-100 text-center max-w-4xl">
                 {{ content | safe }}
             </div>
 
@@ -151,7 +155,7 @@
             <a href="{{ cta.button.url }}" 
                class="inline-flex items-center px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 shadow-md hover:shadow-lg transition-all group">
                 {{ cta.button.text }}
-                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-5 h-5 ml-2 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
             </a>

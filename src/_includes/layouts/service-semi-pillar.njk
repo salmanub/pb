@@ -3,151 +3,129 @@
 {% block content %}
 <main>
         <!-- Hero Section -->
-        <section class="bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white mt-[70px]">
-            <div class="relative max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 lg:px-0 lg:ml-[5%] py-12 md:py-16">
-                <nav class="text-sm text-slate-300 mb-6">
-                    <a href="/" class="hover:text-cyan-400 transition-colors">Inicio</a> >
-                    <span class="font-semibold">{{ eleventyNavigation.title }}</span>
-                </nav>
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight max-w-4xl">{{ title }}</h1>
-                <p class="text-xl md:text-2xl text-slate-300 max-w-3xl mb-8">
-                    {{ subTitle }}
-                </p>
-                <a href="{{ ctaUrl | default('/contacto/') }}" 
-                   class="inline-flex items-center justify-center px-8 py-4 bg-cyan-400 text-white font-semibold uppercase tracking-wider rounded-lg shadow-lg hover:bg-cyan-500 transition-all duration-300">
-                    {{ ctaText | default('Solicitar Inspección') }}
-                </a>
+        <header class="relative mt-[70px] bg-white overflow-hidden border-b border-slate-100 pb-12">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute top-0 right-0 w-2/3 h-full bg-slate-50 skew-x-[-12deg] translate-x-1/4 origin-top opacity-50"></div>
             </div>
-        </section>
+            
+            <div class="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 lg:px-0 lg:ml-[5%] pt-12 md:pt-16">
+                <nav class="text-sm text-slate-500 mb-6 flex items-center gap-2">
+                    <a href="/" class="hover:text-cyan-600 transition-colors font-medium">Inicio</a> 
+                    <span class="text-slate-300">/</span>
+                    <span class="font-semibold text-slate-800">{{ eleventyNavigation.title }}</span>
+                </nav>
+                <div class="max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-700">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-[1.1] tracking-tight text-slate-900">
+                        {{ title }}
+                    </h1>
+                    <p class="text-xl md:text-2xl text-slate-600 max-w-3xl mb-10 font-light leading-relaxed">
+                        {{ subTitle }}
+                    </p>
+                    <a href="{{ ctaUrl | default('/contacto/') }}" 
+                       class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white font-bold uppercase tracking-widest text-sm rounded-lg shadow-lg hover:bg-black transition-all duration-300 transform hover:-translate-y-1">
+                        {{ ctaText | default('Solicitar Inspección') }}
+                    </a>
+                </div>
+            </div>
+        </header>
 
         <!-- Content Sections -->
         <div class="space-y-16 md:space-y-24">
             <!-- What Is Section -->
-            <section class="py-16 md:py-24 bg-gradient-to-b from-slate-50/50">
-                <div class="max-w-[1000px] mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <section class="py-16 md:py-24 bg-white relative">
+                <div class="max-w-[1000px] mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
                     <div>
-                        <h2 class="text-3xl font-bold text-slate-800 mb-6">¿Qué es un Home Inspector y Por Qué Necesita Uno en Barcelona?</h2>
-                        <p class="text-lg text-slate-700 leading-relaxed mb-4">
-                            Un <strong>Home Inspector</strong> realiza una evaluación técnica visual y no invasiva del estado de conservación de una vivienda. El objetivo es identificar <strong>defectos existentes, problemas potenciales y vicios ocultos</strong> que podrían suponer costes inesperados o afectar a su seguridad y confort.
+                        <h2 class="text-3xl font-bold text-slate-900 mb-6">¿Qué es un 
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">Home Inspector</span> 
+                            y Por Qué Necesita Uno?
+                        </h2>
+                        <p class="text-lg text-slate-600 leading-relaxed mb-6 font-light">
+                            Un <strong>Home Inspector</strong> realiza una evaluación técnica visual y no invasiva del estado de conservación de una vivienda. El objetivo es identificar <strong>defectos existentes, problemas potenciales y vicios ocultos</strong> que podrían suponer costes inesperados.
                         </p>
-                        <p class="text-lg text-slate-700 leading-relaxed">
-                            Contratar este servicio en Barcelona antes de una transacción inmobiliaria es crucial para:
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 text-slate-600 pl-4 mt-4">
-                            <li>Conocer el estado real de la propiedad.</li>
-                            <li>Identificar reparaciones necesarias y estimar costes.</li>
-                            <li>Disponer de argumentos sólidos para negociar el precio de compra/venta.</li>
-                            <li>Evitar sorpresas desagradables y costosas tras la firma.</li>
-                            <li>Tomar una decisión de compra o venta mucho más informada y segura.</li>
+                        <ul class="space-y-3 text-slate-700 mt-6">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-cyan-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span>Conocer el estado real de la propiedad.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-cyan-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span>Identificar reparaciones necesarias y estimar costes.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-cyan-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span>Argumentos sólidos para negociar el precio.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-cyan-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span>Evitar sorpresas desagradables post-compra.</span>
+                            </li>
                         </ul>
                     </div>
-                    <div>
-                        <img src="/images/home-inspector-trabajando.jpg" alt="Home inspector revisando una vivienda en Barcelona" class="rounded-lg shadow-xl w-full object-cover aspect-square">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 to-transparent rounded-2xl transform rotate-3"></div>
+                        <img src="/images/home-inspector-trabajando.jpg" alt="Home inspector revisando una vivienda en Barcelona" class="rounded-2xl shadow-2xl shadow-slate-200/50 w-full object-cover aspect-square relative z-10 border border-slate-100">
                     </div>
                 </div>
             </section>
 
             <!-- Services Grid Section -->
-            <section class="py-16 md:py-24 bg-white relative overflow-hidden">
-                <div class="max-w-[1200px] mx-auto px-4 md:px-[5%]">
-                    <div class="text-center mb-12">
-                        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600">
-                            ¿Qué Revisamos en una Inspección de Vivienda?
+            <section class="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
+                <div class="max-w-[1200px] mx-auto px-4 md:px-[5%] relative z-10">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
+                            ¿Qué Revisamos en una Inspección?
                         </h2>
-                        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                        <p class="text-xl text-slate-600 max-w-3xl mx-auto font-light">
                             Nuestra inspección técnica abarca todos los elementos fundamentales de la vivienda para ofrecerle una visión completa de su estado:
                         </p>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Item Inspección -->
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoEstructura/></div>
-                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Estructura y Cimentación</h3>
-                            <p class="text-sm text-slate-600">Signos de asientos, grietas visibles en muros, forjados y elementos portantes.</p>
+                        <!-- Items Inspección Refactored -->
+                        {% for item in [{title: "Estructura y Cimentación", desc: "Signos de asientos, grietas visibles en muros, forjados y elementos portantes.", icon: "home"}, 
+                                      {title: "Cubiertas y Tejados", desc: "Estado de tejas/impermeabilización, canalones, posibles filtraciones.", icon: "arrow-up"},
+                                      {title: "Fachadas", desc: "Fisuras, humedades, desprendimientos, estado de juntas y carpinterías.", icon: "office-building"},
+                                      {title: "Fontanería", desc: "Estado de tuberías visibles, grifería, sanitarios, posibles fugas.", icon: "check"},
+                                      {title: "Electricidad", desc: "Cuadro general, cableado visible, interruptores, enchufes, seguridad.", icon: "lightning-bolt"},
+                                      {title: "Climatización", desc: "Funcionamiento básico, estado de conservación de equipos, distribución.", icon: "sun"},
+                                      {title: "Humedades", desc: "Búsqueda de manchas, moho, condensaciones interiore.", icon: "cloud"},
+                                      {title: "Acabados", desc: "Estado de suelos, paredes, techos, puertas, ventanas.", icon: "eye"},
+                                      {title: "Vicios Ocultos", desc: "Búsqueda de indicios de problemas no evidentes a primera vista.", icon: "search"}] %}
+                        <div class="bg-white p-8 rounded-xl shadow-lg shadow-slate-200/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100">
+                            <div class="w-12 h-12 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-6">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">{{ item.title }}</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">{{ item.desc }}</p>
                         </div>
-                        <!-- Item Inspección -->
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoTejado/></div>
-                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Cubiertas y Tejados</h3>
-                            <p class="text-sm text-slate-600">Estado de tejas/impermeabilización, canalones, posibles filtraciones desde cubierta.</p>
-                        </div>
-                        <!-- Item Inspección -->
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoFachada/></div>
-                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Fachadas y Revestimientos Exteriores</h3>
-                            <p class="text-sm text-slate-600">Fisuras, humedades, desprendimientos, estado de juntas y carpinterías exteriores.</p>
-                        </div>
-                        <!-- Item Inspección -->
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoFontaneria/></div>
-                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Instalaciones de Fontanería y Saneamiento</h3>
-                            <p class="text-sm text-slate-600">Estado de tuberías visibles, grifería, sanitarios, posibles fugas, evacuación de aguas.</p>
-                        </div>
-                        <!-- Item Inspección -->
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                             <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoElectricidad/></div>
-                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Instalación Eléctrica</h3>
-                            <p class="text-sm text-slate-600">Cuadro general, estado de cableado visible, interruptores, enchufes, seguridad.</p>
-                        </div>
-                        <!-- Item Inspección -->
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoClima/></div>
-                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Sistemas de Climatización (Calefacción/AACC)</h3>
-                            <p class="text-sm text-slate-600">Funcionamiento básico, estado de conservación de equipos visibles, distribución.</p>
-                        </div>
-                        <!-- Item Inspección -->
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoHumedad/></div>
-                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Detección de Humedades y Ventilación</h3>
-                            <p class="text-sm text-slate-600">Búsqueda de manchas, moho, condensaciones, evaluación de la ventilación general.</p>
-                        </div>
-                         <!-- Item Inspección -->
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoAcabados/></div>
-                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Acabados Interiores y Carpinterías</h3>
-                            <p class="text-sm text-slate-600">Estado de suelos, paredes, techos, puertas, ventanas, posibles defectos.</p>
-                        </div>
-                         <!-- Item Inspección -->
-                        <div class="bg-white p-6 rounded-lg shadow-md">
-                            <div class="w-10 h-10 rounded-full bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-3"><IconoBusqueda/></div>
-                            <h3 class="text-lg font-semibold text-slate-800 mb-2">Identificación de Posibles Vicios Ocultos</h3>
-                            <p class="text-sm text-slate-600">Búsqueda de indicios de problemas no evidentes a primera vista.</p>
-                        </div>
+                        {% endfor %}
                     </div>
-                    <p class="text-center mt-8 text-slate-600">
-                        Si durante la inspección se detectan problemas que requieren un análisis más profundo, le asesoraremos sobre la necesidad de <a href="/construccion/" class="text-indigo-600 hover:underline font-medium">informes periciales de construcción</a> específicos.
-                    </p>
                 </div>
-                
-                <!-- Background Pattern -->
-                <div class="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,transparent,black,transparent)]"></div>
             </section>
 
             <!-- Process Section -->
-            <section class="py-16 md:py-24 bg-gradient-to-br from-slate-50/50 to-white">
-                <div class="max-w-[1000px] mx-auto grid md:grid-cols-2 gap-10 items-start">
+            <section class="py-16 md:py-24 bg-white">
+                <div class="max-w-[1000px] mx-auto grid md:grid-cols-2 gap-16 items-start px-6">
                     <div>
-                        <h2 class="text-2xl font-semibold text-slate-800 mb-4">Nuestro Proceso de Inspección</h2>
-                        <ol class="list-decimal list-inside space-y-3 text-slate-700">
-                            <li><strong>Contacto Inicial y Presupuesto:</strong> Nos cuenta sus necesidades y le proporcionamos un presupuesto detallado.</li>
-                            <li><strong>Coordinación de la Visita:</strong> Agendamos la inspección en el momento más conveniente.</li>
-                            <li><strong>Inspección Exhaustiva:</strong> Realizamos una revisión visual minuciosa de todos los elementos acordados, tomando notas y fotografías. Utilizamos herramientas como medidores de humedad y cámaras térmicas cuando es necesario.</li>
-                            <li><strong>Análisis de la Información:</strong> Procesamos todos los datos recopilados.</li>
-                            <li><strong>Redacción del Informe Técnico:</strong> Elaboramos un informe claro, detallado y fácil de entender.</li>
-                            <li><strong>Entrega y Aclaraciones:</strong> Le entregamos el informe y resolvemos cualquier duda que pueda tener.</li>
+                        <h2 class="text-3xl font-bold text-slate-900 mb-8">Nuestro Proceso</h2>
+                        <ol class="space-y-6">
+                            {% for step in ["Contacto Inicial y Presupuesto", "Coordinación de la Visita", "Inspección Exhaustiva", "Análisis de la Información", "Redacción del Informe", "Entrega y Aclaraciones"] %}
+                            <li class="flex gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-sm">{{ loop.index }}</span>
+                                <p class="text-slate-700 pt-1 font-medium">{{ step }}</p>
+                            </li>
+                            {% endfor %}
                         </ol>
                     </div>
                     <div>
-                        <h2 class="text-2xl font-semibold text-slate-800 mb-4">¿Qué Incluye el Informe de Home Inspection?</h2>
-                        <div class="bg-white p-6 rounded-lg shadow">
-                            <p class="text-slate-700 mb-3">Recibirá un documento completo que típicamente incluye:</p>
-                            <ul class="list-disc list-inside space-y-2 text-slate-600">
-                                <li>Descripción detallada de cada sistema y componente inspeccionado.</li>
-                                <li>Identificación de cualquier defecto o problema encontrado.</li>
-                                <li>Fotografías ilustrativas de los hallazgos.</li>
-                                <li>Grado de importancia o urgencia de las reparaciones.</li>
-                                <li>Recomendaciones sobre posibles acciones o reparaciones (sin ser un presupuesto de obra).</li>
-                                <li>Conclusiones generales sobre el estado de la vivienda.</li>
+                        <h2 class="text-3xl font-bold text-slate-900 mb-8">El Informe Incluye:</h2>
+                        <div class="bg-cyan-50/50 p-8 rounded-2xl border border-cyan-100">
+                            <ul class="space-y-4">
+                                {% for item in ["Descripción de sistemas", "Identificación de defectos", "Fotografías ilustrativas", "Grado de urgencia", "Recomendaciones", "Conclusiones generales"] %}
+                                <li class="flex items-center gap-3">
+                                    <svg class="w-5 h-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-slate-700">{{ item }}</span>
+                                </li>
+                                {% endfor %}
                             </ul>
                         </div>
                     </div>
@@ -155,24 +133,22 @@
             </section>
 
             <!-- Why Choose Us -->
-            <section class="py-16 md:py-24 bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white relative overflow-hidden">
-                <div class="max-w-[1000px] mx-auto text-center">
-                    <h2 class="text-3xl font-bold mb-8">¿Por Qué Elegirnos como su Home Inspector en Barcelona?</h2>
+            <section class="py-16 md:py-24 bg-slate-900 text-white relative overflow-hidden isolate">
+                 <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                <div class="max-w-[1000px] mx-auto text-center px-6 relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12">¿Por Qué Elegirnos?</h2>
                     <div class="grid md:grid-cols-3 gap-8">
-                        <div>
-                            <div class="w-12 h-12 rounded-full bg-white/20 text-white flex items-center justify-center mb-3 mx-auto"><IconoIngeniero/></div>
-                            <h3 class="text-xl font-semibold mb-2">Experiencia como Ingeniero</h3>
-                            <p class="text-indigo-100 text-sm">Mi formación y experiencia en ingeniería de obras públicas aportan una visión técnica profunda para detectar problemas estructurales y constructivos.</p>
+                        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                            <h3 class="text-xl font-bold mb-3 text-cyan-400">Ingeniería</h3>
+                            <p class="text-slate-300 text-sm">Visión técnica profunda para detectar problemas estructurales.</p>
                         </div>
-                        <div>
-                            <div class="w-12 h-12 rounded-full bg-white/20 text-white flex items-center justify-center mb-3 mx-auto"><IconoObjetividad/></div>
-                            <h3 class="text-xl font-semibold mb-2">Objetividad e Independencia</h3>
-                            <p class="text-indigo-100 text-sm">No estamos vinculados a agencias inmobiliarias ni empresas de reformas. Nuestro único interés es proporcionarle información veraz.</p>
+                        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                            <h3 class="text-xl font-bold mb-3 text-cyan-400">Objetividad</h3>
+                            <p class="text-slate-300 text-sm">Independencia total de inmobiliarias.</p>
                         </div>
-                        <div>
-                            <div class="w-12 h-12 rounded-full bg-white/20 text-white flex items-center justify-center mb-3 mx-auto"><IconoInformeClaro/></div>
-                            <h3 class="text-xl font-semibold mb-2">Informes Claros y Detallados</h3>
-                            <p class="text-indigo-100 text-sm">Le entregamos un informe fácil de entender, con fotografías y explicaciones precisas, para que tome la mejor decisión.</p>
+                        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                            <h3 class="text-xl font-bold mb-3 text-cyan-400">Claridad</h3>
+                            <p class="text-slate-300 text-sm">Informes explicados con lenguaje claro y preciso.</p>
                         </div>
                     </div>
                 </div>

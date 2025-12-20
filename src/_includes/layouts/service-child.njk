@@ -35,17 +35,11 @@
         </div>
         {% endif %}
     </div>
-    <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] min-h-[400px] bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] text-white overflow-hidden isolate">
-        <!-- Efectos decorativos modernos -->
+    <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] min-h-[400px] bg-white text-slate-900 overflow-hidden isolate border-b border-slate-100">
+        <!-- Efectos decorativos modernos (Light Theme) -->
         <div class="absolute inset-0">
-            <!-- Patrón de puntos con mejor contraste -->
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:48px_48px] opacity-25"></div>
-            <!-- Gradientes suaves -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-cyan-400/5"></div>
-            <!-- Efecto de luz moderna -->
-            <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-cyan-400/20 blur-[100px] rounded-full"></div>
-            <!-- Velo sutil para mejorar legibilidad -->
-            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/10 to-slate-900/30 mix-blend-overlay"></div>
+            <div class="absolute top-0 right-0 w-2/3 h-full bg-slate-50 skew-x-[-12deg] translate-x-1/4 origin-top opacity-50"></div>
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
         </div>
 
         <div class="relative z-10 container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
@@ -55,27 +49,27 @@
                 
                 <div class="max-w-4xl mt-8">
                     {% if hero %}
-                        <h1 class="text-[2.75rem] md:text-[3.5rem] xl:text-[4rem] font-light text-white leading-[1.1] tracking-tight mb-8" itemprop="headline">
+                        <h1 class="text-[2.75rem] md:text-[3.5rem] xl:text-[4rem] font-light text-slate-900 leading-[1.1] tracking-tight mb-8" itemprop="headline">
                             {{ hero.title | safe }}
                             {% if hero.strong %}
-                                <span class="block text-[0.85em] text-cyan-400 font-normal mt-6">{{ hero.strong | safe }}</span>
+                                <strong class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 font-bold block mt-2 text-[0.85em]">{{ hero.strong | safe }}</strong>
                             {% endif %}
                         </h1>
-                        <div class="prose prose-xl prose-invert">
-                            <p class="text-xl text-white/90 leading-relaxed" itemprop="description">
+                        <div class="prose prose-xl prose-slate">
+                            <p class="text-xl text-slate-600 leading-relaxed font-light" itemprop="description">
                                 {{ hero.description | safe }}
                             </p>
                             {% if subtitle %}
-                                <p class="text-lg text-cyan-300/80 mt-4 italic">{{ subtitle | safe }}</p>
+                                <p class="text-lg text-cyan-600/80 mt-4 italic">{{ subtitle | safe }}</p>
                             {% endif %}
                         </div>
                         <div hidden>
                             <span itemprop="keywords">{{ hero.title }}, {{ parentService.title }}</span>
                         </div>
                     {% else %}
-                        <h1 class="text-[2.75rem] md:text-[3.5rem] xl:text-[4rem] font-light text-white leading-[1.1] tracking-tight" itemprop="headline">{{ title | safe }}</h1>
+                        <h1 class="text-[2.75rem] md:text-[3.5rem] xl:text-[4rem] font-light text-slate-900 leading-[1.1] tracking-tight" itemprop="headline">{{ title | safe }}</h1>
                         {% if subtitle %}
-                            <p class="text-lg text-cyan-300/80 mt-4 italic">{{ subtitle | safe }}</p>
+                            <p class="text-lg text-cyan-600/80 mt-4 italic">{{ subtitle | safe }}</p>
                             <div hidden>
                                 <span itemprop="keywords">{{ title }}, {{ parentService.title }}</span>
                             </div>
@@ -131,7 +125,7 @@
                 
                 <aside class="lg:w-1/3">
                     <div class="sticky top-24 space-y-10">
-                        <div class="bg-gradient-to-br from-cyan-50 to-white rounded-2xl shadow-lg border border-cyan-100 p-6 lg:p-8">
+                        <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-6 lg:p-8">
                             <h2 class="text-xl font-bold text-slate-800 mb-4">{{ metadata.serviceChild[lang].sufresProblema }}</h2>
                             <p class="text-slate-600 mb-6">{{ metadata.serviceChild[lang].contacteAnalisis }}</p>
                             
@@ -160,12 +154,12 @@
                         {# NUEVO BLOQUE: Enlace de vuelta a la página pilar. Crucial para SEO y UX. #}
                         {# Utiliza la variable `parentService` que definimos en el frontmatter. #}
                         {% if parentService %}
-                        <div class="bg-gradient-to-br from-slate-50 to-white rounded-2xl shadow-lg border border-slate-100 p-6 lg:p-8">
+                        <div class="bg-white rounded-xl shadow-lg border border-slate-100 p-6 lg:p-8">
                              <h3 class="font-bold text-slate-800 mb-4">{{ metadata.serviceChild[lang].parteServicios }}<br><span class="text-cyan-600">{{ parentService.title }}</span></h3>
                              <p class="text-slate-600 mb-6">{{ metadata.serviceChild[lang].problemaEspecifico }}</p>
                              <a href="{{ parentService.url }}" class="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold group">
                                  {{ metadata.serviceChild[lang].verTodos }} {{ parentService.title | lower }}
-                                 <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                 <svg class="w-5 h-5 ml-2 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                              </a>
                         </div>
                         {% endif %}
@@ -180,165 +174,38 @@
         </div>
     </article>
 
-    <section class="py-16 lg:py-24 bg-gradient-to-br from-[#0B1030] to-[#1a2452] text-white">
-      <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-[2.5rem] md:text-[3rem] font-light mb-6">
-                {{ metadata.serviceChild[lang].listoSolucion }}
-            </h2>
-            <p class="text-xl text-white/80 mb-10">{{ metadata.serviceChild[lang].noDejeProblema }}</p>
-            {% set contactPath = "" %}
-            {% if lang == "es" %}
-                {% set contactPath = "/contacto/" %}
-            {% elif lang == "en" %}
-                {% set contactPath = "/en/contact/" %}
-            {% elif lang == "ca" %}
-                {% set contactPath = "/ca/contacte/" %}
-            {% endif %}
-            <a href="{{ contactPath }}?origen={{ title | slugify }}" class="inline-flex items-center justify-center px-8 py-4 bg-cyan-400 text-white font-semibold rounded-lg hover:bg-cyan-500 transition-all group shadow-lg shadow-cyan-500/20">
-                {{ metadata.serviceChild[lang].contactarAhora }}
-                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
+    <section class="relative py-24 md:py-32 bg-slate-900 overflow-hidden isolate">
+        <!-- Efectos decorativos -->
+        <div class="absolute inset-0">
+             <div class="absolute top-0 right-0 w-2/3 h-full bg-slate-800 skew-x-[-12deg] translate-x-1/4 origin-top opacity-30"></div>
         </div>
-      </div>
+
+        <div class="w-full px-6 md:px-12 lg:px-16 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-[2.5rem] md:text-[3.5rem] font-black text-white mb-6 uppercase tracking-tight">
+                    {{ metadata.serviceChild[lang].listoSolucion }}
+                </h2>
+                <p class="text-xl text-slate-300 mb-12 font-light">{{ metadata.serviceChild[lang].noDejeProblema }}</p>
+                {% set contactPath = "" %}
+                {% if lang == "es" %}
+                    {% set contactPath = "/contacto/" %}
+                {% elif lang == "en" %}
+                    {% set contactPath = "/en/contact/" %}
+                {% elif lang == "ca" %}
+                    {% set contactPath = "/ca/contacte/" %}
+                {% endif %}
+                <a href="{{ contactPath }}?origen={{ title | slugify }}" class="btn-primary bg-white text-slate-900 hover:bg-cyan-50 hover:text-cyan-600 border-none shadow-xl inline-flex items-center justify-center">
+                    {{ metadata.serviceChild[lang].contactarAhora }}
+                </a>
+            </div>
+        </div>
     </section>
 </main>
 {% endblock %}
 
 {% block pageStyles %}
  {% set childPageCSS %} {% include "dist/assets/styles/index.css" %} {% endset %}
-<style>
-/* Nuevo estilo base para el contenido */
-.prose {
-    @apply text-slate-600 max-w-none text-lg leading-relaxed;
-}
 
-/* Estilos de encabezados modernos */
-.prose h2 {
-    @apply text-3xl md:text-4xl font-light text-slate-800 mt-16 mb-10;
-    background: linear-gradient(to right, #0891b2, #0e7490);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.prose h3 {
-    @apply text-2xl font-semibold text-slate-700 mt-12 mb-6;
-    border-bottom: 2px solid #06b6d4;
-    display: inline-block;
-}
-
-.prose h4 {
-    @apply text-xl font-bold text-cyan-700 mt-8 mb-4;
-}
-
-/* Párrafos y texto con énfasis */
-.prose p {
-    @apply mb-6 text-slate-600;
-}
-
-.prose strong {
-    @apply font-semibold text-cyan-700 bg-cyan-50 px-1 rounded;
-}
-
-.prose em {
-    @apply text-slate-700 italic;
-}
-
-/* Citas modernas */
-.prose blockquote {
-    @apply my-8 pl-8 py-6 bg-gradient-to-r from-cyan-50 to-transparent rounded-r-lg border-l-4 border-cyan-400;
-}
-
-/* Listas estilizadas */
-.prose ul, .prose ol {
-    @apply my-8 space-y-4 list-none;
-}
-
-.prose li {
-    @apply relative py-3 pl-6 pr-4 rounded-lg;
-    background: linear-gradient(to right, rgba(8, 145, 178, 0.05) 0%, transparent 100%);
-}
-
-.prose li > * {
-    @apply my-0;
-    display: inline;
-}
-
-.prose li > strong {
-    @apply mr-1;
-}
-
-.prose li:hover {
-    @apply translate-x-2;
-    background: linear-gradient(to right, rgba(8, 145, 178, 0.1) 0%, transparent 100%);
-}
-
-.prose li p {
-    @apply mt-0;
-}
-
-/* Ajustes específicos para párrafos dentro de listas */
-.prose li p {
-    display: inline;
-    margin: 0;
-}
-
-/* Marcador para listas ordenadas */
-.prose ol {
-    list-style: none;
-}
-
-.prose ol > li {
-    counter-increment: list;
-}
-
-.prose ol > li::before {
-    content: attr(value) ". ";
-    @apply absolute left-2 top-2 flex items-center justify-center w-6 h-6 rounded-full bg-cyan-100 text-cyan-600 font-bold text-sm;
-    content: attr(start);
-}
-
-/* Preservar la numeración original del markdown */
-.prose ol[start] {
-    counter-reset: list-counter attr(start);
-}
-
-.prose ol > li[value] {
-    counter-reset: list attr(value);
-}
-
-/* Definiciones con estilo moderno */
-.prose dl {
-    @apply space-y-6 my-8;
-}
-
-.prose dt {
-    @apply text-xl text-slate-700 mb-2;
-    background: linear-gradient(to right, #0891b2, #0e7490);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-}
-
-.prose dd {
-    @apply pl-6 border-l-2 border-cyan-200 ml-2 mb-8;
-}
-
-/* Enlaces con efecto hover */
-.prose a {
-    @apply text-cyan-600 font-medium relative inline-block;
-    background-image: linear-gradient(transparent 70%, rgba(8, 145, 178, 0.2) 70%);
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size .4s ease;
-}
-
-.prose a:hover {
-    background-size: 100% 100%;
-}
-
-{{ childPageCSS | safe }}
-</style>
 {% endblock %}
 
 {% block scripts %}

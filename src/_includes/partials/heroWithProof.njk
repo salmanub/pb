@@ -1,32 +1,34 @@
-<header class="hero-conversion">
-    <div class="hero-content">
-        <div class="hero-text">
-            <span class="hero-badge">N°1 EN PERITAJES CONSTRUCCIÓN</span>
-            <h1 class="hero-title">
+<header class="min-h-[100vh] lg:min-h-[auto] bg-white text-slate-900 py-20 lg:py-32 flex items-center overflow-hidden border-b border-slate-100 mt-[70px]">
+    <div class="max-w-[1400px] mx-auto px-4 md:px-[5%] grid lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-16 items-center w-full">
+        <div class="flex flex-col gap-8 max-w-[650px] lg:max-w-none mx-auto lg:mx-0 text-center lg:text-left">
+            <span class="inline-flex py-3 px-5 bg-cyan-50 border border-cyan-100 rounded-full text-sm font-bold text-cyan-700 w-fit mx-auto lg:mx-0">
+                N°1 EN PERITAJES CONSTRUCCIÓN
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-slate-900">
                 Informes Periciales
-                <strong>Que Ganan Casos</strong>
+                <strong class="block text-cyan-600 mt-2">Que Ganan Casos</strong>
             </h1>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <strong>97%</strong> Casos Ganados
+            <div class="flex justify-center lg:justify-start gap-8 my-2">
+                <div class="text-lg text-slate-600">
+                    <strong class="block text-3xl font-extrabold text-cyan-600 leading-none mb-1">97%</strong> Casos Ganados
                 </div>
-                <div class="stat-item">
-                    <strong>24h</strong> Respuesta
+                <div class="text-lg text-slate-600">
+                    <strong class="block text-3xl font-extrabold text-cyan-600 leading-none mb-1">24h</strong> Respuesta
                 </div>
             </div>
-            <p class="hero-description">
+            <p class="text-xl leading-relaxed text-slate-600">
                 Soluciones técnicas garantizadas para litigios complejos en construcción y seguros. Máxima efectividad.
             </p>
-            <div class="cta-group">
-                <a href="#contacto" class="cta-primary">
+            <div class="flex flex-col gap-4 items-center lg:items-start">
+                <a href="#contacto" class="inline-flex items-center gap-3 px-8 py-5 bg-slate-900 text-white font-bold rounded-xl hover:bg-black hover:-translate-y-0.5 transition-all shadow-xl shadow-slate-200/50">
                     SOLICITAR INFORME AHORA
-                    <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <span class="cta-guarantee">✓ Primera consulta gratuita</span>
+                <span class="text-sm font-medium text-cyan-600">✓ Primera consulta gratuita</span>
             </div>
         </div>
 
-        <picture class="hero-visual">
+        <picture class="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 lg:h-full block w-full max-w-[600px] mx-auto lg:max-w-none">
             <source 
                 media="(min-width: 992px)"
                 srcset="/assets/images/perito-construccion-obra-edificacion-1280.avif"
@@ -40,180 +42,8 @@
                 alt="Perito experto realizando inspección técnica"
                 loading="eager"
                 decoding="async"
+                class="w-full h-auto lg:h-full object-cover"
             >
         </picture>
     </div>
 </header>
-
-{% css %}
-<style>
-.hero-conversion {
-    min-height: 100vh;
-    background: linear-gradient(135deg, var(--color-dark) 0%, #1a2452 100%);
-    color: white;
-    padding: clamp(5rem, 10vh, 8rem) 1rem;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.hero-content {
-    width: min(1400px, 100%);
-    margin: 0 auto;
-    display: grid;
-    gap: 3rem;
-    align-items: center;
-    padding: 0 max(5%, 1rem);
-}
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 650px;
-}
-
-.hero-badge {
-    display: inline-flex;
-    padding: 0.75rem 1.25rem;
-    background: rgba(0, 184, 212, 0.1);
-    border: 1px solid rgba(0, 184, 212, 0.2);
-    border-radius: 100px;
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    margin-bottom: 1rem;
-}
-
-.hero-title {
-    font-size: clamp(2.5rem, 5vw + 1rem, 4rem);
-    line-height: 1.1;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
-
-.hero-title strong {
-    display: block;
-    color: var(--color-accent);
-    font-size: 1.1em;
-    margin-top: 0.2em;
-}
-
-.hero-stats {
-    display: flex;
-    gap: 2rem;
-    margin: 0.5rem 0;
-}
-
-.stat-item {
-    font-size: 1.125rem;
-    color: rgba(255,255,255,0.9);
-}
-
-.stat-item strong {
-    display: block;
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--color-accent);
-    line-height: 1;
-    margin-bottom: 0.25rem;
-}
-
-.hero-description {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: rgba(255,255,255,0.9);
-    margin: 0.5rem 0 1.5rem;
-}
-
-.cta-group {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.cta-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1.25rem 2rem;
-    background: linear-gradient(45deg, var(--color-accent), #00d4ff);
-    border-radius: 8px;
-    color: white;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    width: fit-content;
-}
-
-.cta-primary svg {
-    width: 20px;
-    height: 20px;
-    stroke: currentColor;
-    stroke-width: 2;
-    fill: none;
-}
-
-.cta-guarantee {
-    font-size: 0.875rem;
-    color: var(--color-accent);
-}
-
-.hero-visual {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-}
-
-.hero-visual img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-@media (min-width: 992px) {
-    .hero-content {
-        grid-template-columns: 1.2fr 0.8fr;
-    }
-
-    .hero-visual {
-        height: 100%;
-    }
-
-    .hero-visual img {
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-conversion {
-        padding: 6rem 0 3rem;
-        min-height: auto;
-    }
-
-    .hero-text {
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .hero-badge {
-        margin: 0 auto;
-    }
-
-    .hero-stats {
-        justify-content: center;
-    }
-
-    .cta-group {
-        align-items: center;
-    }
-
-    .hero-visual {
-        margin: 0 -1rem;
-        border-radius: 0;
-    }
-}
-</style>
-{% endcss %}
