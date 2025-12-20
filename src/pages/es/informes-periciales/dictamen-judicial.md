@@ -21,7 +21,7 @@ serviceTitle: 'perito judicial'
 # Parent Service
 parentService:
   title: 'Informes Periciales'
-  url: '/informes-periciales/'
+  url: '/informes-periciales/'  
 
 # Key features in the hero section
 keyFeatures:

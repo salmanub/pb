@@ -237,18 +237,6 @@
                     talkToExpert.classList.remove('flex');
                 }
             });
-
-            // Mostrar/ocultar botón flotante al hacer scroll
-            window.addEventListener('scroll', function() {
-                if (!mobileMenu.classList.contains('translate-x-full')) return; // No mostrar si el menú está abierto
-                if (window.scrollY > 300) {
-                    talkToExpert.classList.remove('hidden');
-                    talkToExpert.classList.add('flex');
-                } else {
-                    talkToExpert.classList.add('hidden');
-                    talkToExpert.classList.remove('flex');
-                }
-            });
         </script>
         <!-- Preloader para enlaces -->
         <script>
