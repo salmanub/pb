@@ -158,6 +158,7 @@
                         <div id="typeform-progress" class="bg-gradient-to-r from-cyan-400 to-cyan-600 h-full w-0 transition-all duration-300"></div>
                     </div>
                 </div>
+                {% js %}
                 <script>
                 document.addEventListener('DOMContentLoaded', () => {
                     const formWrapper = document.getElementById('typeform-wrapper');
@@ -214,23 +215,23 @@
                         return true;
                     }
 
-                    function updateSubmitButton() {
-                        const privacidadCheckbox = document.getElementById('privacidad');
-                        const submitButton = document.getElementById('submit-form-btn');
-                        const privacyError = document.getElementById('privacy-error');
-                        if (privacidadCheckbox.checked) {
-                            submitButton.removeAttribute('disabled');
-                            privacyError.classList.add('hidden');
-                        } else {
-                            submitButton.setAttribute('disabled', '');
-                            if (privacidadCheckbox.dataset.touched === 'true') {
-                                privacyError.classList.remove('hidden');
-                            }
-                        }
-                    }
+        const privacidadCheckbox = document.getElementById('privacidad');
+        const privacyError = document.getElementById('privacy-error');
 
-                    const privacidadCheckbox = document.getElementById('privacidad');
-                    privacidadCheckbox.addEventListener('change', updateSubmitButton);
+        function updateSubmitButton() {
+            const submitButton = document.getElementById('submit-form-btn');
+            if (privacidadCheckbox.checked) {
+                submitButton.removeAttribute('disabled');
+                privacyError.classList.add('hidden');
+            } else {
+                submitButton.setAttribute('disabled', '');
+                if (privacidadCheckbox.dataset.touched === 'true') {
+                    privacyError.classList.remove('hidden');
+                }
+            }
+        }
+
+        privacidadCheckbox.addEventListener('change', updateSubmitButton);
                     privacidadCheckbox.addEventListener('blur', () => {
                         privacidadCheckbox.dataset.touched = 'true';
                         updateSubmitButton();
@@ -326,6 +327,7 @@
                     showStep(0);
                 });
                 </script>
+                {% endjs %}
             </div>
         </div>
     </div>

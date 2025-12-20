@@ -69,15 +69,13 @@
 {% endblock content %}
   
 {% block pageStyles %}
-  {% set indexCSS %} {% include "dist/assets/styles/index.css" %} {% endset %}
-  <style>
-    {{ indexCSS | safe }}
+  {% css %}
     .article-body {
         margin-top: 0;
         position: relative;
         z-index: 10;
     }
-  </style>
+  {% endcss %}
 {% endblock pageStyles %}
 
 

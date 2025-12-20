@@ -17,11 +17,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default function (eleventyConfig) {
-  
+
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   // Agregar el plugin de linkPreloader
   linkPreloader(eleventyConfig);
-  
+
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/scripts");
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
@@ -31,10 +31,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
   eleventyConfig.addPassthroughCopy("src/_redirects");
   eleventyConfig.addPassthroughCopy("src/_headers");
-  
-  eleventyConfig.addFilter('renderMarkdown', function(content) {
-        return md.render(content);
-    });
+
+  eleventyConfig.addFilter('renderMarkdown', function (content) {
+    return md.render(content);
+  });
   // No necesitamos filtros personalizados para acceder a los datos
 
   eleventyConfig.addCollection("langCollections", function (collectionApi) {
@@ -63,7 +63,7 @@ export default function (eleventyConfig) {
   });
 
   // El shortcode de imagen asíncrono (la lógica interna no cambia)
-  eleventyConfig.addAsyncShortcode("image", async function(src, alt, sizes = "100vw", loading = "lazy", fetchpriority = "auto", additionalClasses = "") {
+  eleventyConfig.addAsyncShortcode("image", async function (src, alt, sizes = "100vw", loading = "lazy", fetchpriority = "auto", additionalClasses = "") {
     if (alt === undefined) {
       throw new Error(`Missing \`alt\` on image from: ${src}`);
     }
@@ -86,7 +86,7 @@ export default function (eleventyConfig) {
     let metadata = await Image(src, {
       widths: [320, 640, 960, 1280, 1920],
       formats: ["avif", "webp", "jpeg"],
-      outputDir: "./src/assets/images/optimized/", 
+      outputDir: "./src/assets/images/optimized/",
       urlPath: "/assets/images/optimized/",
       filenameFormat: function (id, src, width, format) {
         const extension = path.extname(src);
@@ -109,7 +109,7 @@ export default function (eleventyConfig) {
 
   // Leer el contenido del favicon SVG como Data URI (opcional)
   const faviconPath = path.join(__dirname, "src", "assets", "images", "logos", "favicon.txt");
-  const faviconSVGDataURI = fs.existsSync(faviconPath) 
+  const faviconSVGDataURI = fs.existsSync(faviconPath)
     ? fs.readFileSync(faviconPath, "utf8").trim()
     : null;
 
@@ -133,7 +133,7 @@ export default function (eleventyConfig) {
       <meta name="theme-color" content="#06b6d4">
     `;
   });
-    
+
   // Configurar markdown-it
   const md = markdownIt({
     html: true,
@@ -142,7 +142,7 @@ export default function (eleventyConfig) {
   });
 
   // Añadir filtro markdown
-  eleventyConfig.addFilter("markdown", function(content) {
+  eleventyConfig.addFilter("markdown", function (content) {
     if (!content) {
       console.warn("Se intentó renderizar contenido Markdown nulo o vacío");
       return "";
@@ -156,13 +156,24 @@ export default function (eleventyConfig) {
   });
 
   // Añadir filtro para comprobar si un valor es un array
-  eleventyConfig.addFilter("isArray", function(value) {
+  eleventyConfig.addFilter("isArray", function (value) {
     return Array.isArray(value);
   });
-  
+
   // Añadir filtro default para valores nulos o undefined
-  eleventyConfig.addFilter("default", function(value, defaultValue) {
+  eleventyConfig.addFilter("default", function (value, defaultValue) {
     return (value !== null && value !== undefined) ? value : defaultValue;
+  });
+
+  // Shortcodes para capturar CSS y JS de componentes anidados
+  eleventyConfig.addPairedShortcode("css", function (content) {
+    this.page.css = (this.page.css || "") + content;
+    return "";
+  });
+
+  eleventyConfig.addPairedShortcode("js", function (content) {
+    this.page.js = (this.page.js || "") + content;
+    return "";
   });
 
   //compile tailwind before eleventy processes the files
@@ -170,9 +181,9 @@ export default function (eleventyConfig) {
     // Procesar global.css
     const globalInputPath = path.resolve('./src/assets/styles/global.css');
     const globalOutputPath = './dist/assets/styles/global.css';
-    
+
     const globalContent = fs.readFileSync(globalInputPath, 'utf8');
-    
+
     // Asegurar que existe el directorio de salida
     const outputDir = path.dirname(globalOutputPath);
     if (!fs.existsSync(outputDir)) {
@@ -201,9 +212,9 @@ export default function (eleventyConfig) {
     // Procesar tailwind
     const tailwindInputPath = path.resolve('./src/assets/styles/index.css');
     const tailwindOutputPath = './dist/assets/styles/index.css';
-    
+
     const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
-    
+
     const result = await processor.process(cssContent, {
       from: tailwindInputPath,
       to: tailwindOutputPath,
@@ -252,7 +263,7 @@ export default function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
-      ready: function(err, bs) {
+      ready: function (err, bs) {
         bs.addMiddleware("*", (req, res) => {
           const content_404 = fs.readFileSync('dist/404.html');
           // Añadir headers para una respuesta 404 correcta
@@ -265,10 +276,10 @@ export default function (eleventyConfig) {
   });
 
   return {
-    dir: { 
-      input: 'src', 
+    dir: {
+      input: 'src',
       output: 'dist',
-      includes: '_includes' 
+      includes: '_includes'
     }
   };
 }

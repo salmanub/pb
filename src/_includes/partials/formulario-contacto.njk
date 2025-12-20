@@ -29,6 +29,7 @@
 </div>
 
 {# Script del formulario - Se incluirá solo en los layouts donde el formulario sea necesario #}
+{% js %}
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const formWrapper = document.getElementById('typeform-wrapper');
@@ -332,3 +333,4 @@ document.addEventListener('DOMContentLoaded', () => {
     showStep(0);
 });
 </script>
+{% endjs %}

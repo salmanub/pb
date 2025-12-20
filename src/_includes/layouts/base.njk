@@ -6,7 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title itemprop="name">{{title}}</title>
     {% include "components/seo.njk" %}
-    {% block pageStyles %}{% endblock pageStyles %}
+    {# Critical CSS & Page Specific CSS #}
+    {% set indexCSS %} {% include "dist/assets/styles/index.css" %} {% endset %}
+    <style>
+        {{ indexCSS | safe }}
+        {{ page.css | safe }}
+    </style>{% block pageStyles %}{% endblock pageStyles %}
     
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
@@ -264,6 +269,9 @@
                 clients.forEach(client => client.navigate(client.url));
                 });
             });
+        </script>
+        <script>
+            {{ page.js | safe }}
         </script>
     {% endblock scripts %}
 </body>
