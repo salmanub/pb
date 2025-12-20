@@ -110,30 +110,26 @@
              {# Extraer el path completo y nombre sin extensión #}
              {% set imgPath = imgSrc | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") | replace(".JPG", "") | replace(".JPEG", "") | replace(".PNG", "") %}
              {# Manejar rutas que empiezan con src/ o con / #}
-             {% if "src/assets/images/" in imgPath %}
-                 {% set imgRelativePath = imgPath.split("src/assets/images/")[1] %}
-             {% elif "/assets/images/" in imgPath %}
-                 {% set imgRelativePath = imgPath.split("/assets/images/")[1] %}
-             {% else %}
-                 {% set imgRelativePath = imgPath %}
-             {% endif %}
+             {# Manejar rutas que empiezan con src/ o con / #}
+             {% set imgRelativePath = imgPath.split("/assets/images/")[1] if "/assets/images/" in imgPath else imgPath %}
              {% set imgBasePath = "/assets/images/optimized/" + imgRelativePath %}
              
              <picture>
+                 {% if "placeholder" in imgRelativePath %}
                  <source 
-                     srcset="{{ imgBasePath }}-320w.avif 320w, {{ imgBasePath }}-640w.avif 640w, {{ imgBasePath }}-1280w.avif 1280w, {{ imgBasePath }}-1920w.avif 1920w"
+                     srcset="{{ imgBasePath }}-320w.avif 320w, {{ imgBasePath }}-640w.avif 640w, {{ imgBasePath }}-1024w.avif 1024w"
                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1400px"
                      type="image/avif">
                  <source 
-                     srcset="{{ imgBasePath }}-320w.webp 320w, {{ imgBasePath }}-640w.webp 640w, {{ imgBasePath }}-1280w.webp 1280w, {{ imgBasePath }}-1920w.webp 1920w"
+                     srcset="{{ imgBasePath }}-320w.webp 320w, {{ imgBasePath }}-640w.webp 640w, {{ imgBasePath }}-1024w.webp 1024w"
                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1400px"
                      type="image/webp">
                  <source 
-                     srcset="{{ imgBasePath }}-320w.jpg 320w, {{ imgBasePath }}-640w.jpg 640w, {{ imgBasePath }}-1280w.jpg 1280w, {{ imgBasePath }}-1920w.jpg 1920w"
+                     srcset="{{ imgBasePath }}-320w.jpeg 320w, {{ imgBasePath }}-640w.jpeg 640w, {{ imgBasePath }}-1024w.jpeg 1024w"
                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1400px"
                      type="image/jpeg">
                  <img 
-                     src="{{ imgBasePath }}-1280w.jpg" 
+                     src="{{ imgBasePath }}-1024w.jpeg" 
                      alt="{{ image.alt if image else 'Imagen del artículo' }}" 
                      class="w-full h-full object-cover"
                      width="1200"
@@ -142,6 +138,30 @@
                      fetchpriority="high"
                      decoding="async"
                      itemprop="url contentUrl">
+                 {% else %}
+                 <source 
+                     srcset="{{ imgBasePath }}-320w.avif 320w, {{ imgBasePath }}-640w.avif 640w, {{ imgBasePath }}-1024w.avif 1024w, {{ imgBasePath }}-1280w.avif 1280w, {{ imgBasePath }}-1920w.avif 1920w"
+                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1400px"
+                     type="image/avif">
+                 <source 
+                     srcset="{{ imgBasePath }}-320w.webp 320w, {{ imgBasePath }}-640w.webp 640w, {{ imgBasePath }}-1024w.webp 1024w, {{ imgBasePath }}-1280w.webp 1280w, {{ imgBasePath }}-1920w.webp 1920w"
+                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1400px"
+                     type="image/webp">
+                 <source 
+                     srcset="{{ imgBasePath }}-320w.jpeg 320w, {{ imgBasePath }}-640w.jpeg 640w, {{ imgBasePath }}-1024w.jpeg 1024w, {{ imgBasePath }}-1280w.jpeg 1280w, {{ imgBasePath }}-1920w.jpeg 1920w"
+                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1400px"
+                     type="image/jpeg">
+                 <img 
+                     src="{{ imgBasePath }}-1024w.jpeg" 
+                     alt="{{ image.alt if image else 'Imagen del artículo' }}" 
+                     class="w-full h-full object-cover"
+                     width="1200"
+                     height="675"
+                     loading="eager"
+                     fetchpriority="high"
+                     decoding="async"
+                     itemprop="url contentUrl">
+                 {% endif %}
              </picture>
              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
              {% if image and image.caption %}
