@@ -1,0 +1,226 @@
+[
+    {
+        "title": "Dictamen Pericial per Humitats de Capil·laritat a l'Eixample",
+        "slug": "humitats-capillaritat-eixample-barcelona",
+        "translations": [
+            {
+                "lang": "es",
+                "permalink": "/casos-exito/humedades-capilaridad-eixample-barcelona/"
+            },
+            {
+                "lang": "en",
+                "permalink": "/en/success-cases/rising-damp-capillarity-eixample-barcelona/"
+            },
+            {
+                "lang": "ca",
+                "permalink": "/ca/casos-d-exit/humitats-capillaritat-eixample-barcelona/"
+            },
+            {
+                "lang": "fr",
+                "permalink": "/fr/succes/humidite-capillarite-eixample-barcelone/"
+            },
+            {
+                "lang": "it",
+                "permalink": "/it/casi-di-successo/umidita-risalita-capillarita-eixample-barcellona/"
+            }
+        ],
+        "description": "Anàlisi d'un cas d'èxit sobre un dictamen pericial per humitats de capil·laritat en un edifici residencial de l'Eixample, Barcelona.",
+        "estado": "publicado",
+        "datePublished": "2025-09-27",
+        "dateModified": "2025-09-27",
+        "tags": [
+            "Patologies",
+            "Humitats",
+            "Comunitats"
+        ],
+        "summary": [
+            {
+                "label": "Ubicació",
+                "value": "Eixample, Barcelona"
+            },
+            {
+                "label": "Tipus d'Immoble",
+                "value": "Edifici residencial plurifamiliar"
+            },
+            {
+                "label": "Problema Detectat",
+                "value": "Humitats persistents per capil·laritat en planta baixa"
+            },
+            {
+                "label": "Resultat",
+                "value": "Dictamen favorable per a la comunitat de propietaris"
+            }
+        ],
+        "image": {
+            "url": "/assets/images/placeholder-default.png",
+            "alt": "Detall de les humitats per capil·laritat en una paret de l'Eixample",
+            "caption": "Inspecció detallada de les parets afectades per la humitat ascendent."
+        },
+        "images": [
+            {
+                "url": "/assets/images/casos/humedades-eixample-01.jpg",
+                "alt": "Tècnic mesurant la humitat",
+                "caption": "Es van utilitzar higròmetres de contacte per quantificar el nivell d'humitat."
+            },
+            {
+                "url": "/assets/images/casos/humedades-eixample-02.jpg",
+                "alt": "Vista general del soterrani afectat",
+                "caption": "El problema afectava els murs de càrrega de tota la planta baixa de l'edifici."
+            }
+        ],
+        "relatedService": {
+            "title": "Informes de Patologies de l'Edificació",
+            "url": "/ca/informes-pericials/patologies-edificacio/"
+        },
+        "content": "## 1. Antecedents del Problema\n\nLa comunitat de propietaris d'un edifici emblemàtic al districte de l'Eixample ens va contactar a causa de l'aparició recurrent de taques d'humitat i desconxats. Malgrat haver realitzat diverses reparacions superficials, el problema reapareixia constantment.\n\n### 2. Procés de Diagnòstic\n\nEl nostre equip tècnic va realitzar una inspecció exhaustiva:\n* **Inspecció Visual:** Es va identificar el patró ascendent característic de la capil·laritat.\n* **Mesures amb Higròmetre:** Es va mapar l'extensió i la intensitat de la humitat.\n* **Anàlisi de l'Entorn:** Es va estudiar la proximitat del nivell freàtic i les condicions de la fonamentació.\n\n## 3. Conclusió del Dictamen Tècnic\n\nEl nostre informe pericial va concloure de manera irrefutable que les humitats eren causades per **capil·laritat**. El dictamen va detallar l'origen del problema i va desestimar altres causes com filtracions. Gràcies al nostre informe, la comunitat va poder reclamar a l'assegurança i obtenir el finançament per a una solució definitiva."
+    },
+    {
+        "title": "Deficiències Estructurals en l'Ampliació d'un Celler al Penedès",
+        "slug": "deficiencies-estructurals-celler-penedes",
+        "translations": [
+            {
+                "lang": "es",
+                "permalink": "/casos-exito/deficiencias-estructurales-bodega-penedes/"
+            },
+            {
+                "lang": "en",
+                "permalink": "/en/success-cases/structural-deficiencies-winery-penedes/"
+            },
+            {
+                "lang": "ca",
+                "permalink": "/ca/casos-d-exit/deficiencies-estructurals-celler-penedes/"
+            },
+            {
+                "lang": "fr",
+                "permalink": "/fr/succes/deficiences-structurelles-cave-penedes/"
+            },
+            {
+                "lang": "it",
+                "permalink": "/it/casi-di-successo/carenze-strutturali-cantina-penedes/"
+            }
+        ],
+        "description": "Informe pericial sobre defectes greus en paviments i en l'estructura metàl·lica de l'ampliació d'un celler a Subirats (Alt Penedès).",
+        "datePublished": "2025-05-04",
+        "dateModified": "2025-05-04",
+        "tags": [
+            "Estructural",
+            "Patologies",
+            "Indústries"
+        ],
+        "summary": [
+            {
+                "label": "Ubicació",
+                "value": "Subirats, Alt Penedès"
+            },
+            {
+                "label": "Tipus d'Immoble",
+                "value": "Celler"
+            },
+            {
+                "label": "Problema Detectat",
+                "value": "Execució deficient de paviments i ancoratges estructurals"
+            },
+            {
+                "label": "Resultat",
+                "value": "Ordre de correcció immediata per garantir la seguretat"
+            }
+        ],
+        "image": {
+            "url": "/assets/images/placeholder-default.png",
+            "alt": "Detall de l'ancoratge defectuós",
+            "caption": "Pern de fixació extret sense restes de morter, demostrant l'absència d'ancoratge."
+        },
+        "images": [
+            {
+                "url": "/assets/images/casos/penedes-terraza-01.jpg",
+                "alt": "Paviment de terrassa fissurat",
+                "caption": "L'absència de juntes va provocar la fissuració generalitzada del suport."
+            },
+            {
+                "url": "/assets/images/casos/penedes-calculo-01.jpg",
+                "alt": "Càlculs estructurals",
+                "caption": "L'anàlisi tècnica va demostrar que la solució projectada era correcta, però no l'executada."
+            }
+        ],
+        "relatedService": {
+            "title": "Informes de Deficiències Estructurales",
+            "url": "/ca/assessorament-estructural/"
+        },
+        "content": "## 1. El Problema: Defectes Crítics rere una Ampliació\n\nEl propietari d'un celler al Penedès ens va encarregar un informe després de detectar anomalies en l'obra d'ampliació. Els defectes comprometien la funcionalitat i la seguretat estructural.\n\n### 2. Diagnòstic Tècnic\n\nNuestra inspecció va revelar tres problemes crítics:\n1.  **Paviment de Terrassa Inservible:** Fissures de més d'1mm i disgregació superficial per execució deficient.\n2.  **Paviment de Planta Baixa Contaminat:** Formigó cobert de restes de beurada.\n3.  **Deficiència Estructural Crítica:** La biga metàl·lica principal (HEA320) no estava ancorada correctament als pilars.\n\n## 3. Solució i Conclusió\n\nEl nostre informe va demostrar que la solució executada no garantia l'estabilitat. Es va ordenar la **correcció immediata del sistema d'ancoratge**."
+    },
+    {
+        "title": "Reclamació Exitosa per Instal·lació Defectuosa de Parquet a Barcelona",
+        "slug": "instal-lacio-defectuosa-parquet-barcelona",
+        "translations": [
+            {
+                "lang": "es",
+                "permalink": "/casos-exito/instalacion-defectuosa-parque-barcelona/"
+            },
+            {
+                "lang": "en",
+                "permalink": "/en/success-cases/defective-parquet-installation-barcelona/"
+            },
+            {
+                "lang": "ca",
+                "permalink": "/ca/casos-d-exit/instal-lacio-defectuosa-parquet-barcelona/"
+            },
+            {
+                "lang": "fr",
+                "permalink": "/fr/succes/installation-defectueuse-parquet-barcelone/"
+            },
+            {
+                "lang": "it",
+                "permalink": "/it/casi-di-successo/installazione-difettosa-parquet-barcellona/"
+            }
+        ],
+        "description": "Informe pericial sobre un parquet de gamma alta (AC5) mal instal·lat a Barcelona, identificant l'absència de juntes i un suport no anivellat.",
+        "estado": "no publicado",
+        "datePublished": "2025-09-03",
+        "dateModified": "2025-09-03",
+        "tags": [
+            "Vicis Ocults",
+            "Reformes",
+            "Reclamacions"
+        ],
+        "summary": [
+            {
+                "label": "Ubicació",
+                "value": "Sants, Barcelona"
+            },
+            {
+                "label": "Tipus d'Obra",
+                "value": "Instal·lació de paviment laminat"
+            },
+            {
+                "label": "Problema Detectat",
+                "value": "Bombament i moviment en parquet nou"
+            },
+            {
+                "label": "Resultat",
+                "value": "Dictamen que responsabilitza la instal·ladora del cost íntegre"
+            }
+        ],
+        "image": {
+            "url": "/assets/images/placeholder-default.png",
+            "alt": "Passadís amb el parquet aixecat",
+            "caption": "El moviment vertical del parquet era evident a tot l'habitatge."
+        },
+        "images": [
+            {
+                "url": "/assets/images/casos/parque-sants-02.jpg",
+                "alt": "Detall del desnivell",
+                "caption": "La falta d'anivellament provocava ondulacions visibles."
+            },
+            {
+                "url": "/assets/images/casos/parque-sants-03.jpg",
+                "alt": "Lames amb el sistema clic trencat",
+                "caption": "La mala execució va provocar la rotura de les unions entre lames."
+            }
+        ],
+        "relatedService": {
+            "title": "Informes per Vicis Ocults",
+            "url": "/ca/informes-pericials/vicis-ocults/"
+        },
+        "content": "## 1. El Problema: Un Sòl Nou que Sembla Vell\n\nUna propietària a Sants ens va contactar frustrada. El seu parquet laminat nou s'aixecava i cruixia. La instal·ladora culpava el material.\n\n### 2. La Causa Real: Errors d'Instal·lació\n\nLa inspecció va revelar un material excel·lent però una instal·lació deficient:\n* **Absència de Juntes de Dilatació:** Es va col·locar el parquet de forma contínua sense juntes perimetrals.\n* **Suport sense Anivellar:** La base no estava anivellada, provocant moviment.\n* **Mala Praxi General:** Sistema 'clic' trencat i patró estètic incorrecte.\n\n## 3. Conclusió Pericial\n\nEl nostre informe va concloure que els defectes eren atribuïbles a una **incorrecta execució**. Es va determinar que l'empresa instal·ladora havia d'**assumir el 100% dels costos de l'esmena**."
+    }
+]

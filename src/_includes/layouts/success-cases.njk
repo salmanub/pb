@@ -3,14 +3,26 @@
 {% block content %}
 {# Debug info - solo visible en modo desarrollo #}
 {% set showDebug = false %}
+{% set currentCasos = casosExito %}
+{% if lang == 'en' %}{% set currentCasos = casosExito_en %}{% endif %}
+{% if lang == 'ca' %}{% set currentCasos = casosExito_ca %}{% endif %}
+{% if lang == 'fr' %}{% set currentCasos = casosExito_fr %}{% endif %}
+{% if lang == 'it' %}{% set currentCasos = casosExito_it %}{% endif %}
+
+{% set caseBaseUrl = "/casos-exito/" %}
+{% if lang == 'en' %}{% set caseBaseUrl = "/en/success-cases/" %}{% endif %}
+{% if lang == 'ca' %}{% set caseBaseUrl = "/ca/casos-d-exit/" %}{% endif %}
+{% if lang == 'fr' %}{% set caseBaseUrl = "/fr/succes/" %}{% endif %}
+{% if lang == 'it' %}{% set caseBaseUrl = "/it/casi-di-successo/" %}{% endif %}
+
 {% if showDebug %}
 <div class="fixed top-0 right-0 z-50 p-4 bg-yellow-100 text-yellow-800 shadow-lg rounded-bl-lg max-w-sm" style="font-family: monospace; font-size: 12px;">
     <h4 class="font-bold mb-2">Debug Info:</h4>
     <p>Información de depuración</p>
-    {% if casosExito %}
-    <p>Número de casos: {{ casosExito | length }}</p>
+    {% if currentCasos %}
+    <p>Número de casos: {{ currentCasos | length }}</p>
     {% else %}
-    <p>No se encontraron datos de casosExito</p>
+    <p>No se encontraron datos de casosExito para {{ lang }}</p>
     {% endif %}
 </div>
 {% endif %}
@@ -114,7 +126,7 @@
 
             {# Grid de Casos con mejor contraste #}
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="grid-casos-exito" itemprop="hasPart" itemscope itemtype="https://schema.org/ItemList">
-                {% for caso in casosExito %}
+                {% for caso in currentCasos %}
                 
                 {# Debug info si no hay casos #}
                 {% if loop.first and loop.last and not caso.title %}
@@ -123,7 +135,7 @@
                     <p class="text-yellow-700">Verifica que los datos de casos-exito.json estén cargados correctamente.</p>
                 </div>
                 {% endif %}
-                <a href="/casos-exito/{{ caso.slug }}/" class="group/card relative block h-full card-avant p-8 pb-20 no-underline"
+                <a href="{{ caseBaseUrl }}{{ caso.slug }}/" class="group/card relative block h-full card-avant p-8 pb-20 no-underline"
                      data-category="{{ caso.tags | join(' ') | lower | replace(' ', '-') }}"
                      itemprop="itemListElement" itemscope itemtype="https://schema.org/TechnicalArticle">
                     <!-- Efecto hover background -->
@@ -156,7 +168,7 @@
                         {% if caso.image %}
                         <meta itemprop="image" content="{{ metadata.site.url }}{{ caso.image.url }}">
                         {% endif %}
-                        <meta itemprop="url" content="{{ metadata.site.url }}/casos-exito/{{ caso.slug }}/">
+                        <meta itemprop="url" content="{{ metadata.site.url }}{{ caseBaseUrl }}{{ caso.slug }}/">
                     </div>
 
                     <!-- CTA con texto localizado -->

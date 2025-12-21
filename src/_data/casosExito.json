@@ -2,11 +2,37 @@
   {
     "title": "Dictamen Pericial por Humedades de Capilaridad en el Eixample",
     "slug": "humedades-capilaridad-eixample-barcelona",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/casos-exito/humedades-capilaridad-eixample-barcelona/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/success-cases/rising-damp-capillarity-eixample-barcelona/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/casos-d-exit/humitats-capillaritat-eixample-barcelona/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/succes/humidite-capillarite-eixample-barcelone/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/casi-di-successo/umidita-risalita-capillarita-eixample-barcellona/"
+      }
+    ],
     "description": "Análisis de un caso de éxito sobre un dictamen pericial por humedades de capilaridad en un edificio residencial del Eixample, Barcelona, que resultó favorable para la comunidad de propietarios.",
     "estado": "publicado",
     "datePublished": "2025-09-27",
     "dateModified": "2025-09-27",
-    "tags": ["Patologías", "Humedades", "Comunidades"],
+    "tags": [
+      "Patologías",
+      "Humedades",
+      "Comunidades"
+    ],
     "summary": [
       {
         "label": "Ubicación",
@@ -31,7 +57,7 @@
       "caption": "Inspección detallada de las paredes afectadas por la humedad ascendente."
     },
     "images": [
-       {
+      {
         "url": "/assets/images/casos/humedades-eixample-01.jpg",
         "alt": "Técnico midiendo la humedad en la pared con un higrómetro",
         "caption": "Se utilizaron higrómetros de contacto para cuantificar el nivel de humedad."
@@ -51,10 +77,36 @@
   {
     "title": "Deficiencias Estructurales en la Ampliación de una Bodega en el Penedès",
     "slug": "deficiencias-estructurales-bodega-penedes",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/casos-exito/deficiencias-estructurales-bodega-penedes/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/success-cases/structural-deficiencies-winery-penedes/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/casos-d-exit/deficiencies-estructurals-celler-penedes/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/succes/deficiences-structurelles-cave-penedes/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/casi-di-successo/carenze-strutturali-cantina-penedes/"
+      }
+    ],
     "description": "Informe pericial sobre defectos graves en pavimentos y en la estructura metálica de la ampliación de una bodega en Subirats (Alt Penedès), comprometiendo su seguridad.",
     "datePublished": "2025-05-04",
     "dateModified": "2025-05-04",
-    "tags": ["Estructural", "Patologías", "Naves Industriales"],
+    "tags": [
+      "Estructural",
+      "Patologías",
+      "Naves Industriales"
+    ],
     "summary": [
       {
         "label": "Ubicación",
@@ -79,7 +131,7 @@
       "caption": "Perno de fijación extraído sin restos de mortero o resina, demostrando la ausencia de anclaje."
     },
     "images": [
-       {
+      {
         "url": "/assets/images/casos/penedes-terraza-01.jpg",
         "alt": "Pavimento de mortero de la terraza completamente fisurado",
         "caption": "La ausencia de juntas y un curado deficiente provocaron la fisuración generalizada del soporte."
@@ -99,11 +151,37 @@
   {
     "title": "Reclamación Exitosa por Instalación Defectuosa de Parquet en Barcelona",
     "slug": "instalacion-defectuosa-parque-barcelona",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/casos-exito/instalacion-defectuosa-parque-barcelona/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/success-cases/defective-parquet-installation-barcelona/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/casos-d-exit/instal-lacio-defectuosa-parquet-barcelona/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/succes/installation-defectueuse-parquet-barcelone/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/casi-di-successo/installazione-difettosa-parquet-barcellona/"
+      }
+    ],
     "description": "Informe pericial sobre un parquet de alta gama (AC5) mal instalado en una vivienda de Barcelona (Sants), identificando la ausencia de juntas y un soporte no nivelado como causa.",
     "estado": "no publicado",
     "datePublished": "2025-09-03",
     "dateModified": "2025-09-03",
-    "tags": ["Vicios Ocultos", "Reformas", "Reclamaciones"],
+    "tags": [
+      "Vicios Ocultos",
+      "Reformas",
+      "Reclamaciones"
+    ],
     "summary": [
       {
         "label": "Ubicación",
@@ -128,7 +206,7 @@
       "caption": "El movimiento vertical del parquet al caminar era evidente en toda la vivienda."
     },
     "images": [
-       {
+      {
         "url": "/assets/images/casos/parque-sants-02.jpg",
         "alt": "Detalle del desnivel entre el parquet y el rodapié",
         "caption": "La falta de nivelación del soporte provocaba ondulaciones visibles."
@@ -148,10 +226,24 @@
   {
     "title": "Dictamen por Incumplimiento de Contrato en Reforma Post-Incendio",
     "slug": "incumplimiento-contrato-reforma-barcelona",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/casos-exito/incumplimiento-contrato-reforma-barcelona/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/success-cases/breach-contract-post-fire-renovation/"
+      }
+    ],
     "description": "Peritaje técnico sobre una reforma post-incendio en Barcelona donde el contratista recibió un adelanto de 30.976€ y no inició los trabajos, realizando solo actuaciones deficientes.",
     "datePublished": "2025-08-20",
     "dateModified": "2025-08-20",
-    "tags": ["Reclamaciones", "Reformas", "Seguros"],
+    "tags": [
+      "Reclamaciones",
+      "Reformas",
+      "Seguros"
+    ],
     "summary": [
       {
         "label": "Ubicación",
@@ -196,11 +288,25 @@
   {
     "title": "Daños en Nave Industrial por Uso Indebido del Arrendatario en Sant Joan Despí",
     "slug": "danos-nave-industrial-sant-joan-despi",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/casos-exito/danos-nave-industrial-sant-joan-despi/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/success-cases/danos-nave-industrial-sant-joan-despi/"
+      }
+    ],
     "description": "Informe pericial para la reclamación de daños en una nave industrial en Sant Joan Despí, valorando la reparación de pavimentos, altillos y protección contra incendios.",
     "estado": "no publicado",
     "datePublished": "2025-06-18",
     "dateModified": "2025-06-18",
-    "tags": ["Naves Industriales", "Patologías", "Reclamaciones"],
+    "tags": [
+      "Naves Industriales",
+      "Patologías",
+      "Reclamaciones"
+    ],
     "summary": [
       {
         "label": "Ubicación",
@@ -225,7 +331,7 @@
       "caption": "Más del 60% de las losetas del pavimento se encontraban rotas, requiriendo su sustitución completa."
     },
     "images": [
-       {
+      {
         "url": "/assets/images/casos/nave-industrial-ignifugo-01.jpg",
         "alt": "Desprendimiento del mortero de protección ignífuga de la estructura metálica",
         "caption": "La falta de protección pasiva comprometía gravemente la seguridad contra incendios de la nave."
@@ -248,7 +354,12 @@
     "description": "Caso de éxito de un informe pericial para una gran constructora sobre defectos de instalación de parquet en 39 viviendas de una promoción de obra nueva en Viladecans (Barcelona).",
     "datePublished": "2025-02-18",
     "dateModified": "2025-02-18",
-    "tags": ["Constructoras", "Patologías", "Obra Nueva", "Reclamaciones"],
+    "tags": [
+      "Constructoras",
+      "Patologías",
+      "Obra Nueva",
+      "Reclamaciones"
+    ],
     "summary": [
       {
         "label": "Ubicación",
@@ -296,7 +407,12 @@
     "description": "Caso de éxito: Informe pericial en La Pobla de Claramunt que diagnosticó humedades por capilaridad y fisuras no estructurales, proponiendo una solución de impermeabilización.",
     "datePublished": "2025-02-18",
     "dateModified": "2025-02-18",
-    "tags": ["Patologías", "Humedades", "Fisuras", "Vivienda Unifamiliar"],
+    "tags": [
+      "Patologías",
+      "Humedades",
+      "Fisuras",
+      "Vivienda Unifamiliar"
+    ],
     "summary": [
       {
         "label": "Ubicación",
@@ -316,7 +432,7 @@
       }
     ],
     "image": {
-      "url": "/assets/images/placeholder-default.png", 
+      "url": "/assets/images/placeholder-default.png",
       "alt": "Humedad por capilaridad visible en la parte inferior de un tabique interior",
       "caption": "La humedad ascendía desde el terreno por falta de barrera impermeable."
     },
@@ -327,7 +443,7 @@
         "caption": "Fisura no estructural, atribuida a movimientos de asentamiento normales."
       },
       {
-        "url": "/assets/images/casos/claramunt-humedad-detalle-01.jpg", 
+        "url": "/assets/images/casos/claramunt-humedad-detalle-01.jpg",
         "alt": "Detalle de los daños causados por la humedad en un tabique interior",
         "caption": "Deterioro del revestimiento causado por la humedad capilar."
       }
@@ -345,40 +461,58 @@
     "content": "## 1. El Problema: Humedades Persistentes y Fisuras Alarmantes\n\nLa propietaria de una vivienda unifamiliar construida en 1975 en La Pobla de Claramunt nos contactó preocupada por la aparición de **humedades severas** en las paredes en contacto con el terreno y la presencia de **fisuras** tanto en tabiques interiores como en el pavimento exterior. Su principal inquietud era determinar si estos problemas afectaban a la seguridad estructural de la casa.\n\n### 2. Inspección Técnica y Diagnóstico\n\nRealizamos una inspección visual detallada de la vivienda, sin necesidad de catas destructivas. Los hallazgos clave fueron:\n\n* **Fisuras No Estructurales:** Se identificó una fisura horizontal en un tabique interior, causada por la flecha (deformación normal) de la viga sobre la que apoyaba. También se observó una fisura en el pavimento exterior, originada en un pilar, compatible con un asentamiento normal del terreno. Ambas fisuras estaban **dentro de los límites tolerables** por la normativa (EHE-08) y no comprometían la estabilidad.\n* **Humedad por Capilaridad:** Se confirmó la presencia de humedad ascendente en los tabiques perimetrales en contacto con el terreno. La causa era la **ausencia de una barrera impermeable eficaz** en el trasdós (la cara exterior) de dichos muros.\n\n## 3. Conclusión y Solución Propuesta\n\nNuestro informe pericial concluyó que la **estructura de la vivienda se encontraba en buen estado general** y no requería refuerzos. Las fisuras eran superficiales y no representaban un riesgo.\n\nPara el problema de la humedad, la solución recomendada fue clara: realizar una **impermeabilización por inyección** de resinas impermeabilizantes en el trasdós de los tabiques afectados, hasta una altura del doble de la mancha actual. Este tratamiento crearía la barrera inexistente y detendría el ascenso capilar, mejorando la salubridad y el confort de la vivienda.\n\nEl dictamen proporcionó a la propietaria la tranquilidad sobre la seguridad estructural y una hoja de ruta técnica precisa para solucionar definitivamente el problema de las humedades."
   },
   {
-"title": "Auditoría Pericial de Certificaciones en Hotel Urbano de Lujo (Caso “Atlántida”)",
-"slug": "auditoria-pericial-certificaciones-hotel-lujo-barcelona",
-"description": "Caso de éxito sobre un informe pericial técnico-económico en un hotel urbano de alta gama en Barcelona que justificó desviaciones, validó certificaciones y rebatió un informe contrario.",
-"estado": "publicado",
-"datePublished": "2025-10-21",
-"dateModified": "2025-10-21",
-"tags": ["Hoteles", "Certificaciones", "Obra", "Contrapericial", "Económico"],
-"summary": [
-{ "label": "Ubicación", "value": "Zona alta de Barcelona" },
-{ "label": "Tipo de Actuación", "value": "Informe pericial técnico-económico de obra hotelera" },
-{ "label": "Problema Detectado", "value": "Desacuerdo en certificaciones y presunto sobrecoste" },
-{ "label": "Resultado", "value": "Dictamen favorable: certificaciones validadas y contrainforme rebatido" }
-],
-"image": {
-"url": "/assets/images/placeholder-default.png",
-"alt": "Suite de hotel urbano de alta gama tras la reforma",
-"caption": "Intervención en plantas altas de un hotel de lujo con el edificio en uso."
-},
-"images": [
-{
-"url": "/assets/images/casos/hotel-urbano-lujo-01.jpg",
-"alt": "Plano de mediciones y cuadro de certificaciones revisadas",
-"caption": "Auditoría cruzada entre presupuestos, certificaciones y correos de aprobación."
-},
-{
-"url": "/assets/images/casos/hotel-urbano-lujo-02.jpg",
-"alt": "Detalle de acabados premium en habitación de hotel",
-"caption": "Acabados y equipamientos de alta gama que condicionan el precio €/m²."
-}
-],
-"relatedService": {
-"title": "Informes de Certificaciones y Auditoría de Obra",
-"url": "/auditorias-obra/"
-},
-"content": "\nEl informe pericial de obra hotelera fue solicitado por la propiedad explotadora del Hotel “Atlántida” (seudónimo) ante un desacuerdo con las certificaciones finales de reforma integral en dos plantas de habitaciones. La parte contraria aportó una contrapericial que alegaba sobrecoste respecto a un supuesto precio de mercado. Nuestro dictamen, minucioso y documentado, acreditó la coherencia técnica y económica de la obra certificada.\n\n## 1) Antecedentes\n\n- Reforma integral de dos plantas superiores, con hotel en pleno funcionamiento.\n- Presupuestos competitivos en la licitación inicial y modificaciones aprobadas durante la ejecución.\n- Aparición de una contrapericial que equiparaba costes a modelos genéricos, obviando condicionantes reales (altura, logística, acabados, edificio ocupado).\n\n## 2) Estrategia pericial\n\nPlanteamos una defensa basada en auditoría documental exhaustiva, reconstrucción de cronología de decisiones, verificación de márgenes y contrastación de precios de mercado con fuentes profesionales. Se evitó cualquier dato identificativo y se trabajó bajo estricta cadena de custodia documental.\n\n## 3) Metodología aplicada\n\n- Auditoría cruzada: presupuestos (inicial y modificados), certificaciones, órdenes de cambio y correos de aprobación.\n- Análisis de mercado €/m² por tipología hotelera premium y obra en altura, apoyado en bancos de datos técnicos de pago y privados (p. ej., catálogos profesionales tipo BEDEC/CYPE, bases sectoriales y casos análogos), aplicando coeficientes por edificio en uso, planta alta, logística restringida y acabados de alta gama.\n- Revisión del beneficio industrial: cotejo entre margen ofertado y margen certificado, con trazabilidad de subcontratas.\n- Crítica técnica a la contrapericial: identificación de comparativas no homogéneas (obra civil vs. obra completa), exclusión de partidas esenciales y uso de precios de referencia ajenos a la casuística real.\n\n## 4) Hallazgos clave\n\n- Proyecto no cerrado al inicio: se acreditaron modificaciones aprobadas por la dirección del cliente durante la obra (nuevas partidas y ajustes de calidad).\n- Condicionantes de ejecución: plantas altas, accesos limitados, compatibilidad con huéspedes y eventos, que incrementan productividad y coste unitario.\n- Precio de mercado: el rango justificado €/m² para hotel urbano de lujo, con condicionantes y alcance ejecutado, incluía el coste certificado; la contrapericial omitía mobiliario técnico y partidas inseparables del funcionamiento del conjunto.\n- Márgenes: el beneficio industrial se mantuvo en la horquilla pactada; las variaciones se vinculan a alcance real y riesgo operativo, no a sobreprecio injustificado.\n\n## 5) Resultado y valor para el cliente\n\n- Validación técnica de las certificaciones y desmontaje de la contrapericial por falta de homogeneidad comparativa y subestimación de condicionantes de obra.\n- Hoja de ruta para futuras contrataciones: matriz de riesgos, check-list de aprobaciones y protocolo documental de cambios.\n- Informe pericial robusto, apto para sede administrativa o judicial, que protege el interés económico del cliente y preserva su reputación operacional.\n\n## 6) Entregables\n\n- Dictamen pericial completo en PDF firmado por técnico colegiado.\n- Anexos de auditoría (cuadros de certificación vs. órdenes de cambio, cronología y evidencias).\n- Nota técnica de precios de mercado €/m² con fuentes profesionales y coeficientes aplicados.\n\n---\n"
-}
+    "title": "Auditoría Pericial de Certificaciones en Hotel Urbano de Lujo (Caso “Atlántida”)",
+    "slug": "auditoria-pericial-certificaciones-hotel-lujo-barcelona",
+    "description": "Caso de éxito sobre un informe pericial técnico-económico en un hotel urbano de alta gama en Barcelona que justificó desviaciones, validó certificaciones y rebatió un informe contrario.",
+    "estado": "publicado",
+    "datePublished": "2025-10-21",
+    "dateModified": "2025-10-21",
+    "tags": [
+      "Hoteles",
+      "Certificaciones",
+      "Obra",
+      "Contrapericial",
+      "Económico"
+    ],
+    "summary": [
+      {
+        "label": "Ubicación",
+        "value": "Zona alta de Barcelona"
+      },
+      {
+        "label": "Tipo de Actuación",
+        "value": "Informe pericial técnico-económico de obra hotelera"
+      },
+      {
+        "label": "Problema Detectado",
+        "value": "Desacuerdo en certificaciones y presunto sobrecoste"
+      },
+      {
+        "label": "Resultado",
+        "value": "Dictamen favorable: certificaciones validadas y contrainforme rebatido"
+      }
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.png",
+      "alt": "Suite de hotel urbano de alta gama tras la reforma",
+      "caption": "Intervención en plantas altas de un hotel de lujo con el edificio en uso."
+    },
+    "images": [
+      {
+        "url": "/assets/images/casos/hotel-urbano-lujo-01.jpg",
+        "alt": "Plano de mediciones y cuadro de certificaciones revisadas",
+        "caption": "Auditoría cruzada entre presupuestos, certificaciones y correos de aprobación."
+      },
+      {
+        "url": "/assets/images/casos/hotel-urbano-lujo-02.jpg",
+        "alt": "Detalle de acabados premium en habitación de hotel",
+        "caption": "Acabados y equipamientos de alta gama que condicionan el precio €/m²."
+      }
+    ],
+    "relatedService": {
+      "title": "Informes de Certificaciones y Auditoría de Obra",
+      "url": "/auditorias-obra/"
+    },
+    "content": "\nEl informe pericial de obra hotelera fue solicitado por la propiedad explotadora del Hotel “Atlántida” (seudónimo) ante un desacuerdo con las certificaciones finales de reforma integral en dos plantas de habitaciones. La parte contraria aportó una contrapericial que alegaba sobrecoste respecto a un supuesto precio de mercado. Nuestro dictamen, minucioso y documentado, acreditó la coherencia técnica y económica de la obra certificada.\n\n## 1) Antecedentes\n\n- Reforma integral de dos plantas superiores, con hotel en pleno funcionamiento.\n- Presupuestos competitivos en la licitación inicial y modificaciones aprobadas durante la ejecución.\n- Aparición de una contrapericial que equiparaba costes a modelos genéricos, obviando condicionantes reales (altura, logística, acabados, edificio ocupado).\n\n## 2) Estrategia pericial\n\nPlanteamos una defensa basada en auditoría documental exhaustiva, reconstrucción de cronología de decisiones, verificación de márgenes y contrastación de precios de mercado con fuentes profesionales. Se evitó cualquier dato identificativo y se trabajó bajo estricta cadena de custodia documental.\n\n## 3) Metodología aplicada\n\n- Auditoría cruzada: presupuestos (inicial y modificados), certificaciones, órdenes de cambio y correos de aprobación.\n- Análisis de mercado €/m² por tipología hotelera premium y obra en altura, apoyado en bancos de datos técnicos de pago y privados (p. ej., catálogos profesionales tipo BEDEC/CYPE, bases sectoriales y casos análogos), aplicando coeficientes por edificio en uso, planta alta, logística restringida y acabados de alta gama.\n- Revisión del beneficio industrial: cotejo entre margen ofertado y margen certificado, con trazabilidad de subcontratas.\n- Crítica técnica a la contrapericial: identificación de comparativas no homogéneas (obra civil vs. obra completa), exclusión de partidas esenciales y uso de precios de referencia ajenos a la casuística real.\n\n## 4) Hallazgos clave\n\n- Proyecto no cerrado al inicio: se acreditaron modificaciones aprobadas por la dirección del cliente durante la obra (nuevas partidas y ajustes de calidad).\n- Condicionantes de ejecución: plantas altas, accesos limitados, compatibilidad con huéspedes y eventos, que incrementan productividad y coste unitario.\n- Precio de mercado: el rango justificado €/m² para hotel urbano de lujo, con condicionantes y alcance ejecutado, incluía el coste certificado; la contrapericial omitía mobiliario técnico y partidas inseparables del funcionamiento del conjunto.\n- Márgenes: el beneficio industrial se mantuvo en la horquilla pactada; las variaciones se vinculan a alcance real y riesgo operativo, no a sobreprecio injustificado.\n\n## 5) Resultado y valor para el cliente\n\n- Validación técnica de las certificaciones y desmontaje de la contrapericial por falta de homogeneidad comparativa y subestimación de condicionantes de obra.\n- Hoja de ruta para futuras contrataciones: matriz de riesgos, check-list de aprobaciones y protocolo documental de cambios.\n- Informe pericial robusto, apto para sede administrativa o judicial, que protege el interés económico del cliente y preserva su reputación operacional.\n\n## 6) Entregables\n\n- Dictamen pericial completo en PDF firmado por técnico colegiado.\n- Anexos de auditoría (cuadros de certificación vs. órdenes de cambio, cronología y evidencias).\n- Nota técnica de precios de mercado €/m² con fuentes profesionales y coeficientes aplicados.\n\n---\n"
+  }
 ]

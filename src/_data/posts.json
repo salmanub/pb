@@ -2,6 +2,28 @@
   {
     "title": "Vicios Ocultos en Compraventa: Derechos y Plazos de Reclamación",
     "slug": "vicios-ocultos-compraventa-derechos-plazos",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/vicios-ocultos-compraventa-derechos-plazos/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/hidden-defects-purchase-rights-deadlines/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/vicis-ocults-compravenda-drets-terminis/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/vices-caches-achat-droits-delais/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/vizi-occulti-acquisto-diritti-termini/"
+      }
+    ],
     "description": "Información legal y técnica sobre cómo reclamar por vicios ocultos tras la compra de una vivienda.",
     "excerpt": "Compró una vivienda y descubrió problemas graves que el vendedor ocultó. Conozca sus derechos legales y los plazos para reclamar con éxito.",
     "estado": "publicado",
@@ -31,6 +53,28 @@
   {
     "title": "Refuerzos Estructurales en Rehabilitación: ¿Cuándo es necesario apuntalar?",
     "slug": "refuerzo-estructural-rehabilitacion-edificios",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/refuerzo-estructural-rehabilitacion-edificios/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/structural-reinforcement-building-rehabilitation/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/reforc-estructural-rehabilitacio-edificis/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/renforcement-structurel-rehabilitation/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/rinforzo-strutturale-riabilitazione/"
+      }
+    ],
     "description": "Información clave para reformas integrales: cómo identificar muros de carga y cuándo es obligatorio un proyecto de refuerzo.",
     "excerpt": "El deseo de 'espacios abiertos' choca a menudo con la realidad estructural. Aprenda los riesgos de derribar tabiques sin supervisión técnica.",
     "estado": "publicado",
@@ -60,6 +104,28 @@
   {
     "title": "Guía Completa sobre Humedades por Capilaridad",
     "slug": "guia-humedades-capilaridad",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/guia-humedades-capilaridad/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/guide-rising-damp-capillarity/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/guia-humitats-capillaritat/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/guide-humidite-capillarite/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/guida-umidita-risalita-capillarita/"
+      }
+    ],
     "description": "Todo lo que necesita saber sobre las humedades por capilaridad: causas, diagnóstico y soluciones definitivas.",
     "excerpt": "Las humedades ascendentes son uno de los problemas más comunes en edificios antiguos. Descubra cómo identificarlas y qué tratamientos realmente funcionan.",
     "estado": "publicado",
@@ -89,6 +155,28 @@
   {
     "title": "Cómo Identificar Grietas Estructurales en su Vivienda",
     "slug": "identificar-grietas-estructurales-vivienda",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/identificar-grietas-estructurales-vivienda/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/identify-structural-cracks-home/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/identificar-esquerdes-estructurals-habitatge/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/identifier-fissures-structurelles-logement/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/identificare-crepe-strutturali-casa/"
+      }
+    ],
     "description": "Guía práctica para distinguir entre grietas superficiales y grietas estructurales que comprometen la seguridad de su inmueble.",
     "excerpt": "No todas las grietas son iguales. Aprenda a reconocer los signos de alarma que indican un problema estructural grave y cuándo es imprescindible solicitar un informe pericial.",
     "estado": "publicado",
@@ -118,6 +206,28 @@
   {
     "title": "Pavimentos Industriales Agrietados: ¿Fallo del Terreno, Mala Ejecución o Sobrecarga?",
     "slug": "patologias-pavimentos-naves-industriales",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/patologias-pavimentos-naves-industriales/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/industrial-pavement-pathologies-cracks/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/patologies-paviments-naus-industrials/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/pathologies-sols-industriels-fissures/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/patologie-pavimenti-industriali-crepe/"
+      }
+    ],
     "description": "Análisis de las causas más frecuentes de grietas en suelos industriales y soluciones para evitar la paralización de la actividad.",
     "excerpt": "Un suelo roto paraliza la logística. Descubra si sus grietas se deben a un fallo de diseño, una mala ejecución o un uso indebido, y quién debe pagar la reparación.",
     "estado": "publicado",
@@ -147,6 +257,28 @@
   {
     "title": "Pilares de Parking con Hierro a la Vista: Diagnóstico de Aluminosis y Carbonatación",
     "slug": "reparacion-refuerzo-pilares-parking-barcelona",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/reparacion-refuerzo-pilares-parking-barcelona/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/repair-reinforcement-parking-pillars-barcelona/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/reparacio-reforc-pilars-parking-barcelona/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/reparation-renfort-piliers-parking-barcelone/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/riparazione-rinforzo-pilastri-parcheggio-barcellona/"
+      }
+    ],
     "description": "Explicación técnica sobre por qué se deterioran los pilares en garajes y cómo la carbonatación pone en riesgo la estructura.",
     "excerpt": "¿Ha visto hormigón caído y hierros oxidados en las columnas de su parking? Es un síntoma grave de carbonatación que requiere intervención urgente.",
     "estado": "publicado",
@@ -176,6 +308,28 @@
   {
     "title": "Acabo de comprar un piso y tiene defectos graves: ¿Qué se considera “Vicio Oculto”?",
     "slug": "reclama-vicios-ocultos-compraventa-vivienda",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/reclama-vicios-ocultos-compraventa-vivienda/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/claim-hidden-defects-home-purchase/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/reclamacio-vicis-ocults-compra-habitatge/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/reclamation-vices-caches-achat-maison/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/reclamo-vizi-occulti-acquisto-casa/"
+      }
+    ],
     "description": "Guía legal y técnica para compradores: plazos, requisitos y proceso para reclamar defectos no visibles tras la compra.",
     "excerpt": "Si tras la compra aparecen humedades, termitas o grietas que no vio, puede tener derecho a reclamar. Conozca la diferencia entre vicio oculto y desgaste.",
     "estado": "publicado",

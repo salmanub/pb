@@ -1,0 +1,226 @@
+[
+    {
+        "title": "Avis d'Expert sur l'Humidité par Capillarité dans l'Eixample",
+        "slug": "humidite-capillarite-eixample-barcelone",
+        "translations": [
+            {
+                "lang": "es",
+                "permalink": "/casos-exito/humedades-capilaridad-eixample-barcelona/"
+            },
+            {
+                "lang": "en",
+                "permalink": "/en/success-cases/rising-damp-capillarity-eixample-barcelona/"
+            },
+            {
+                "lang": "ca",
+                "permalink": "/ca/casos-d-exit/humitats-capillaritat-eixample-barcelona/"
+            },
+            {
+                "lang": "fr",
+                "permalink": "/fr/succes/humidite-capillarite-eixample-barcelone/"
+            },
+            {
+                "lang": "it",
+                "permalink": "/it/casi-di-successo/umidita-risalita-capillarita-eixample-barcellona/"
+            }
+        ],
+        "description": "Analyse d'un cas de succès sur un avis d'expert concernant l'humidité par capillarité dans un immeuble résidentiel de l'Eixample, Barcelone.",
+        "estado": "publicado",
+        "datePublished": "2025-09-27",
+        "dateModified": "2025-09-27",
+        "tags": [
+            "Pathologies",
+            "Humidité",
+            "Copropriétés"
+        ],
+        "summary": [
+            {
+                "label": "Lieu",
+                "value": "Eixample, Barcelone"
+            },
+            {
+                "label": "Type de Propriété",
+                "value": "Immeuble résidentiel multifamilial"
+            },
+            {
+                "label": "Problème Détecté",
+                "value": "Humidité persistante par capillarité au rez-de-chaussée"
+            },
+            {
+                "label": "Résultat",
+                "value": "Avis favorable pour la communauté des propriétaires"
+            }
+        ],
+        "image": {
+            "url": "/assets/images/placeholder-default.png",
+            "alt": "Détail de l'humidité par capillarité sur un mur de l'Eixample",
+            "caption": "Inspection détaillée des murs affectés par l'humidité ascendante."
+        },
+        "images": [
+            {
+                "url": "/assets/images/casos/humedades-eixample-01.jpg",
+                "alt": "Technicien mesurant l'humidité",
+                "caption": "Des hygromètres de contact ont été utilisés pour quantifier le niveau d'humidité."
+            },
+            {
+                "url": "/assets/images/casos/humedades-eixample-02.jpg",
+                "alt": "Vue générale du sous-sol affecté",
+                "caption": "Le problème affectait les murs porteurs de tout le rez-de-chaussée."
+            }
+        ],
+        "relatedService": {
+            "title": "Rapports de Pathologies du Bâtiment",
+            "url": "/fr/rapports-expertise/pathologies-batiment/"
+        },
+        "content": "## 1. Antécédents du Problème\n\nLa communauté des propriétaires d'un immeuble emblématique de l'Eixample nous a contactés en raison de l'apparition récurrente de taches d'humidité. Malgré des réparations superficielles, le problème persistait.\n\n### 2. Processus de Diagnostic\n\nNotre équipe technique a réalisé une inspection exhaustive :\n* **Inspection Visuelle :** Identification du modèle ascendant caractéristique de la capillarité.\n* **Mesures Hygrométriques :** Cartographie de l'étendue et de l'intensité de l'humidité.\n* **Analyse de l'Environnement :** Étude de la proximité de la nappe phréatique.\n\n## 3. Conclusion de l'Avis Technique\n\nNotre rapport a conclu de manière irréfutable que l'humidité était causée par **capillarité**. L'avis a détaillé l'origine et écarté d'autres causes comme les fuites."
+    },
+    {
+        "title": "Déficiences Structurelles dans l'Extension d'une Cave dans le Penedès",
+        "slug": "deficiences-structurelles-cave-penedes",
+        "translations": [
+            {
+                "lang": "es",
+                "permalink": "/casos-exito/deficiencias-estructurales-bodega-penedes/"
+            },
+            {
+                "lang": "en",
+                "permalink": "/en/success-cases/structural-deficiencies-winery-penedes/"
+            },
+            {
+                "lang": "ca",
+                "permalink": "/ca/casos-d-exit/deficiencies-estructurals-celler-penedes/"
+            },
+            {
+                "lang": "fr",
+                "permalink": "/fr/succes/deficiences-structurelles-cave-penedes/"
+            },
+            {
+                "lang": "it",
+                "permalink": "/it/casi-di-successo/carenze-strutturali-cantina-penedes/"
+            }
+        ],
+        "description": "Rapport d'expert sur de graves défauts dans les sols et la structure métallique de l'extension d'une cave à Subirats.",
+        "datePublished": "2025-05-04",
+        "dateModified": "2025-05-04",
+        "tags": [
+            "Structurel",
+            "Pathologies",
+            "Industriel"
+        ],
+        "summary": [
+            {
+                "label": "Lieu",
+                "value": "Subirats, Alt Penedès"
+            },
+            {
+                "label": "Type de Propriété",
+                "value": "Cave (Celler)"
+            },
+            {
+                "label": "Problème Détecté",
+                "value": "Exécution déficiente des sols et ancrages structurels"
+            },
+            {
+                "label": "Résultat",
+                "value": "Ordre de correction immédiate pour garantir la sécurité"
+            }
+        ],
+        "image": {
+            "url": "/assets/images/placeholder-default.png",
+            "alt": "Détail de l'ancrage défectueux",
+            "caption": "Boulon de fixation extrait sans résidus de mortier."
+        },
+        "images": [
+            {
+                "url": "/assets/images/casos/penedes-terraza-01.jpg",
+                "alt": "Sol de terrasse fissuré",
+                "caption": "L'absence de joints a causé la fissuration généralisée."
+            },
+            {
+                "url": "/assets/images/casos/penedes-calculo-01.jpg",
+                "alt": "Calculs structurels",
+                "caption": "L'analyse technique a montré que la solution projetée était correcte, mais pas celle exécutée."
+            }
+        ],
+        "relatedService": {
+            "title": "Rapports de Déficiences Structurelles",
+            "url": "/fr/conseil-structurel/"
+        },
+        "content": "## 1. Le Problème : Défauts Critiques après Extension\n\nLe propriétaire d'une cave dans le Penedès nous a contactés après avoir détecté des anomalies. Les défauts compromettaient la fonctionnalité et la sécurité structurelle.\n\n### 2. Diagnostic Technique\n\nNotre inspection a révélé trois problèmes critiques :\n1.  **Sol de Terrasse Inutilisable :** Fissures de plus d'1mm dues à une exécution déficiente.\n2.  **Sol de Rez-de-chaussée Contaminé :** Béton couvert de résidus.\n3.  **Déficience Structurelle Critique :** La poutre métallique principale (HEA320) n'était pas correctement ancrée.\n\n## 3. Solution et Conclusion\n\nNotre rapport a démontré que la solution exécutée ne garantissait pas la stabilité. La **correction immédiate du système d'ancrage** a été ordonnée."
+    },
+    {
+        "title": "Réclamation Réussie pour Installation Défectueuse de Parquet à Barcelone",
+        "slug": "installation-defectueuse-parquet-barcelone",
+        "translations": [
+            {
+                "lang": "es",
+                "permalink": "/casos-exito/instalacion-defectuosa-parque-barcelona/"
+            },
+            {
+                "lang": "en",
+                "permalink": "/en/success-cases/defective-parquet-installation-barcelona/"
+            },
+            {
+                "lang": "ca",
+                "permalink": "/ca/casos-d-exit/instal-lacio-defectuosa-parquet-barcelona/"
+            },
+            {
+                "lang": "fr",
+                "permalink": "/fr/succes/installation-defectueuse-parquet-barcelone/"
+            },
+            {
+                "lang": "it",
+                "permalink": "/it/casi-di-successo/installazione-difettosa-parquet-barcellona/"
+            }
+        ],
+        "description": "Rapport d'expert sur un parquet haut de gamme (AC5) mal installé à Barcelone, identifiant l'absence de joints et un support non nivelé.",
+        "estado": "no publicado",
+        "datePublished": "2025-09-03",
+        "dateModified": "2025-09-03",
+        "tags": [
+            "Vices Cachés",
+            "Rénovations",
+            "Réclamations"
+        ],
+        "summary": [
+            {
+                "label": "Lieu",
+                "value": "Sants, Barcelone"
+            },
+            {
+                "label": "Type de Travaux",
+                "value": "Installation de sol stratifié"
+            },
+            {
+                "label": "Problème Détecté",
+                "value": "Gonflement et mouvement du nouveau parquet"
+            },
+            {
+                "label": "Résultat",
+                "value": "Avis tenant l'installateur responsable du coût total"
+            }
+        ],
+        "image": {
+            "url": "/assets/images/placeholder-default.png",
+            "alt": "Couloir avec parquet soulevé",
+            "caption": "Le mouvement vertical du parquet était évident."
+        },
+        "images": [
+            {
+                "url": "/assets/images/casos/parque-sants-02.jpg",
+                "alt": "Détail du dénivellement",
+                "caption": "Le manque de nivellement causait des ondulations visibles."
+            },
+            {
+                "url": "/assets/images/casos/parque-sants-03.jpg",
+                "alt": "Système clic cassé",
+                "caption": "La mauvaise exécution a causé la rupture des joints."
+            }
+        ],
+        "relatedService": {
+            "title": "Rapports de Vices Cachés",
+            "url": "/fr/rapports-expertise/vices-caches/"
+        },
+        "content": "## 1. Le Problème : Un Nouveau Sol qui semble Vieux\n\nUne propriétaire à Sants nous a contactés frustrée. Son nouveau parquet se soulevait et craquait. L'installateur blâmait le matériau.\n\n### 2. La Vraie Cause : Erreurs d'Installation\n\nL'inspection a révélé un matériau excellent mais une installation médiocre :\n* **Absence de Joints de Dilatation :** Pas d'écarts périmétriques.\n* **Support Non Nivelé :** La base n'était pas nivelée.\n* **Mauvaise Pratique Générale :** Système 'clic' cassé.\n\n## 3. Conclusion d'Expert\n\nNotre rapport a conclu que les défauts étaient dus à une **exécution incorrecte**. L'installateur a dû **assumer 100% des coûts de rectification**."
+    }
+]

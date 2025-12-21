@@ -95,8 +95,18 @@
             <div class="flex items-center gap-4 px-4 border-l border-slate-50">
                 {% for language in metadata.languages %}
                     {% set translatedUrl = '/' %}
-                    {% if translations and translations.length %}
-                        {% for translation in translations %}
+                    
+                    {# Logic to find translations if not directly available #}
+                    {% set pageTranslations = translations %}
+                    {% if not pageTranslations and post and post.translations %}
+                        {% set pageTranslations = post.translations %}
+                    {% endif %}
+                    {% if not pageTranslations and caso and caso.translations %}
+                        {% set pageTranslations = caso.translations %}
+                    {% endif %}
+
+                    {% if pageTranslations and pageTranslations.length %}
+                        {% for translation in pageTranslations %}
                             {% if translation.lang == language %}
                                 {% set translatedUrl = translation.permalink %}
                             {% endif %}
@@ -293,8 +303,18 @@
         <div class="flex justify-center gap-4 px-4">
             {% for language in metadata.languages %}
                 {% set translatedUrl = '/' %}
-                {% if translations and translations.length %}
-                    {% for translation in translations %}
+                
+                {# Logic to find translations if not directly available #}
+                {% set pageTranslations = translations %}
+                {% if not pageTranslations and post and post.translations %}
+                    {% set pageTranslations = post.translations %}
+                {% endif %}
+                {% if not pageTranslations and caso and caso.translations %}
+                    {% set pageTranslations = caso.translations %}
+                {% endif %}
+
+                {% if pageTranslations and pageTranslations.length %}
+                    {% for translation in pageTranslations %}
                         {% if translation.lang == language %}
                             {% set translatedUrl = translation.permalink %}
                         {% endif %}

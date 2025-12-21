@@ -4,7 +4,19 @@
 <main class="pt-[70px] lg:pt-[120px]" itemscope itemtype="https://schema.org/CollectionPage">
     
     <!-- Hero Section -->
-    <header class="relative bg-white pt-24 pb-16 px-6 md:px-12 lg:px-16 overflow-hidden">
+    {% set currentPosts = posts %}
+    {% if lang == 'en' %}{% set currentPosts = posts_en %}{% endif %}
+    {% if lang == 'ca' %}{% set currentPosts = posts_ca %}{% endif %}
+    {% if lang == 'fr' %}{% set currentPosts = posts_fr %}{% endif %}
+    {% if lang == 'it' %}{% set currentPosts = posts_it %}{% endif %}
+
+    {% set blogBaseUrl = "/blog/" %}
+    {% if lang == 'en' %}{% set blogBaseUrl = "/en/blog/" %}{% endif %}
+    {% if lang == 'ca' %}{% set blogBaseUrl = "/ca/blog/" %}{% endif %}
+    {% if lang == 'fr' %}{% set blogBaseUrl = "/fr/blog/" %}{% endif %}
+    {% if lang == 'it' %}{% set blogBaseUrl = "/it/blog/" %}{% endif %}
+
+    <header class="relative bg-white pt-10 pb-10 px-6 md:px-12 lg:px-16 overflow-hidden">
         <!-- Background Elements matching Home -->
         <div class="absolute inset-0 z-0">
             <div class="absolute top-0 right-0 w-2/3 h-full bg-slate-100 skew-x-[-12deg] translate-x-1/4 origin-top"></div>
@@ -12,9 +24,9 @@
         </div>
         
         <div class="w-full relative z-10">
-            <div class="max-w-4xl mx-auto text-center mb-8">
-                <span class="inline-block py-1 px-3 border border-cyan-500 rounded-full text-cyan-600 font-bold tracking-[0.2em] uppercase text-sm md:text-base mb-6 bg-cyan-50/50 backdrop-blur-sm">Blog & Recursos</span>
-                <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[0.95] text-slate-900 mb-6 tracking-tight" itemprop="name">
+            <div class="max-w-4xl mx-auto text-center mb-6">
+                <span class="inline-block py-1 px-3 border border-cyan-500 rounded-full text-cyan-600 font-bold tracking-[0.2em] uppercase text-sm md:text-base mb-4 bg-cyan-50/50 backdrop-blur-sm">Blog & Recursos</span>
+                <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[0.95] text-slate-900 mb-4 tracking-tight" itemprop="name">
                     {{ hero.title }}
                     <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600 font-bold">{{ hero.strong }}</span>
                 </h1>
@@ -24,13 +36,14 @@
     </header>
 
     <!-- Blog Posts Grid -->
-    <section class="py-24 bg-white px-6 md:px-12 lg:px-16">
+    <section class="pt-8 pb-24 bg-white px-6 md:px-12 lg:px-16">
         <div class="w-full">
             
             <!-- Posts Grid - Primero los artículos ordenados por fecha -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20" itemprop="mainEntity" itemscope itemtype="https://schema.org/ItemList">
                 <meta itemprop="itemListOrder" content="https://schema.org/ItemListOrderDescending">
-                {% set sortedPosts = posts | sort(attribute='datePublished') | reverse %}
+                
+                {% set sortedPosts = currentPosts | sort(attribute='datePublished') | reverse %}
                 {% for post in sortedPosts %}
                 {% if not post.estado or post.estado == "publicado" %}
                 <article class="group/card relative flex flex-col h-full bg-white rounded-[2rem] overflow-hidden shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-cyan-900/10 transition-all duration-500 border border-slate-100 hover:border-cyan-200 hover:-translate-y-2 isolate"
@@ -94,7 +107,7 @@
 
                         <!-- Title -->
                         <h2 class="text-2xl font-bold text-slate-900 mb-4 group-hover/card:text-cyan-600 transition-colors leading-tight tracking-tight" itemprop="headline">
-                            <a href="/blog/{{ post.slug }}/" class="no-underline focus:outline-none" itemprop="url">
+                            <a href="{{ blogBaseUrl }}{{ post.slug }}/" class="no-underline focus:outline-none" itemprop="url">
                                 <span class="absolute inset-0" aria-hidden="true"></span>
                                 {{ post.title }}
                             </a>
@@ -124,7 +137,7 @@
                     </div>
 
                     <!-- Hidden schema data -->
-                    <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}/blog/{{ post.slug }}/">
+                    <meta itemprop="mainEntityOfPage" content="{{ metadata.site.url }}{{ blogBaseUrl }}{{ post.slug }}/">
                     <meta itemprop="dateModified" content="{{ post.dateModified }}T00:00:00+01:00">
                     <meta itemprop="position" content="{{ loop.index }}">
                 </article>
@@ -133,7 +146,7 @@
             </div>
 
             <!-- No posts message -->
-            {% if not posts or posts.length == 0 %}
+            {% if not currentPosts or currentPosts.length == 0 %}
             <div class="text-center py-24 bg-slate-50 rounded-[2rem] border border-slate-200 border-dashed">
                 <p class="text-xl text-slate-400 font-light">Próximamente publicaremos nuevos artículos técnicos.</p>
             </div>

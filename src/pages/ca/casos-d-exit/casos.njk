@@ -1,0 +1,32 @@
+---
+pagination:
+  data: casosExito_ca
+  size: 1
+  alias: caso
+  addAllPagesToCollections: true
+permalink: "/ca/casos-d-exit/{{ caso.slug }}/"
+layout: "layouts/success-case.njk"
+lang: ca
+eleventyNavigation:
+  notshow: true
+eleventyComputed:
+  title: "{{ caso.title }}"
+  description: "{{ caso.description }}"
+  datePublished: "{{ caso.datePublished }}"
+  dateModified: "{{ caso.dateModified }}"
+---
+{# 
+Variables
+#}
+{% set title = caso.title %}
+{% set translations = caso.translations %}
+{% set description = caso.description %}
+{% set datePublished = caso.datePublished %}
+{% set dateModified = caso.dateModified %}
+{% set tags = caso.tags %}
+{% set summary = caso.summary %}
+{% set image = caso.image %}
+{% set images = caso.images %}
+{% set relatedService = caso.relatedService %}
+
+{{ caso.content | markdown | safe }}
