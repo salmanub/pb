@@ -10,7 +10,7 @@ lang: it
 eleventyNavigation:
   notshow: true
 eleventyComputed:
-  title: "{{ caso.title }}"
+  title: "{{ caso.title | safe }}"
   description: "{{ caso.description }}"
   datePublished: "{{ caso.datePublished }}"
   dateModified: "{{ caso.dateModified }}"

@@ -17,7 +17,7 @@
         <!-- Author -->
         <span itemprop="author" itemscope itemtype="https://schema.org/Person">
             <meta itemprop="name" content="{{ metadata.author.name }}">
-            <meta itemprop="jobTitle" content="{{ metadata.author.jobTitle }}">
+            <meta itemprop="jobTitle" content="{{ metadata.author.jobTitle[lang] }}">
             <meta itemprop="url" content="{{ metadata.author.linkedin }}">
         </span>
         
@@ -78,7 +78,7 @@
                             <svg class="w-5 h-5 text-cyan-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
-                            Resumen del Caso
+                            {{ metadata.caseLabels[lang].summary }}
                         </h2>
                         <dl class="grid sm:grid-cols-2 gap-4">
                             {% for item in caso.summary %}
@@ -95,7 +95,7 @@
                     {% if caso.tags and caso.tags.length > 0 %}
                     <div class="mt-6 pt-6 border-t border-slate-100">
                         <div class="flex items-center gap-3">
-                            <span class="font-bold text-slate-900 text-sm uppercase tracking-wide">Categorías:</span>
+                            <span class="font-bold text-slate-900 text-sm uppercase tracking-wide">{{ metadata.caseLabels[lang].categories }}:</span>
                             <div class="flex flex-wrap gap-2">
                                 {% for tag in caso.tags %}
                                 <span class="badge badge-primary bg-slate-100 text-slate-600 border-slate-200">
@@ -117,7 +117,7 @@
                         </svg>
                         <span class="font-bold text-slate-900">{{ metadata.author.name }}</span>
                         <span class="mx-2">|</span>
-                        <span>{{ metadata.author.jobTitle }}</span>
+                        <span>{{ metadata.author.jobTitle[lang] }}</span>
                     </div>
                     
                     <!-- Fechas -->
@@ -230,9 +230,9 @@
             <div class="mt-20 p-10 bg-slate-50 rounded-3xl border border-slate-100 shadow-soft text-center relative overflow-hidden">
                 <div class="absolute inset-0 bg-grid-pattern opacity-[0.4]"></div>
                 <div class="relative z-10">
-                    <h3 class="text-2xl font-black text-slate-900 mb-4">¿Tiene un caso similar?</h3>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4">{{ metadata.caseCTA[lang].title }}</h3>
                     <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-                        Este caso es un ejemplo de nuestra experiencia en:
+                        {{ metadata.caseCTA[lang].intro }}:
                     </p>
                     <div class="flex flex-wrap gap-3 justify-center mb-10">
                         {% for service in caso.relatedServices %}
@@ -245,11 +245,11 @@
                         {% endfor %}
                     </div>
                     <p class="text-slate-500 mb-8 font-medium">
-                        Si necesita un diagnóstico técnico en Barcelona, podemos ayudarle.
+                        {{ metadata.caseCTA[lang].help }}
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="/contacto/" class="btn-primary">
-                            Solicitar Presupuesto
+                        <a href="{{ metadata.navBar[lang].linkPresupuesto }}" class="btn-primary">
+                            {{ metadata.navBar[lang].ctaPresupuesto }}
                             <svg class="w-5 h-5 ml-2 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                             </svg>
@@ -258,7 +258,7 @@
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                             </svg>
-                            Llamar Ahora
+                            {{ metadata.serviceChild[lang].llamarAhora }}
                         </a>
                     </div>
                 </div>
@@ -267,17 +267,17 @@
              <div class="mt-20 p-10 bg-slate-50 rounded-3xl border border-slate-100 shadow-soft text-center relative overflow-hidden">
                 <div class="absolute inset-0 bg-grid-pattern opacity-[0.4]"></div>
                 <div class="relative z-10">
-                    <h3 class="text-2xl font-black text-slate-900 mb-4">¿Tiene un caso similar?</h3>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4">{{ metadata.caseCTA[lang].title }}</h3>
                     <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-                        Este caso es un ejemplo de nuestra experiencia en 
+                        {{ metadata.caseCTA[lang].intro }} 
                         <a href="{{ caso.relatedService.url }}" class="text-cyan-600 font-bold hover:text-cyan-700 decoration-2 underline decoration-cyan-200 underline-offset-4">
                             {{ caso.relatedService.title }}
                         </a>. 
-                        Si necesita un diagnóstico técnico en Barcelona, podemos ayudarle.
+                        {{ metadata.caseCTA[lang].help }}
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="/contacto/" class="btn-primary">
-                            Solicitar Presupuesto
+                        <a href="{{ metadata.navBar[lang].linkPresupuesto }}" class="btn-primary">
+                            {{ metadata.navBar[lang].ctaPresupuesto }}
                             <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                             </svg>
@@ -286,7 +286,7 @@
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                             </svg>
-                            Llamar Ahora
+                            {{ metadata.serviceChild[lang].llamarAhora }}
                         </a>
                     </div>
                 </div>

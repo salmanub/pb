@@ -9,12 +9,24 @@
     "placeholderImage": "/assets/images/placeholder-default.png"
   },
   "default_lang": "es",
-  "languages": ["es", "en", "ca", "fr", "it"],
+  "languages": [
+    "es",
+    "en",
+    "ca",
+    "fr",
+    "it"
+  ],
   "author": {
     "name": "Albert Vilardell",
     "email": "info@perito.barcelona",
     "linkedin": "https://www.linkedin.com/in/albert-vilardell/",
-    "jobTitle": "Perito e Ingeniero Civil",
+    "jobTitle": {
+      "es": "Perito e Ingeniero Civil",
+      "en": "Civil Engineer & Expert Witness",
+      "ca": "Pèrit i Enginyer Civil",
+      "fr": "Expert et Ingénieur Civil",
+      "it": "Perito e Ingegnere Civile"
+    },
     "organization": "Perito Barcelona"
   },
   "company": {
@@ -686,16 +698,53 @@
       "finalCtaTitle": "¿Prefieres hablar directamente?",
       "finalCtaSubtitle": "Llámanos ahora y te atenderemos personalmente para resolver tus dudas.",
       "finalCtaButton": "Llamar al",
-      "buttons": { "start": "Comenzar", "next": "Continuar", "prev": "Anterior", "submit": "Enviar Consulta", "home": "Volver al inicio", "retry": "Intentar de nuevo" },
+      "buttons": {
+        "start": "Comenzar",
+        "next": "Continuar",
+        "prev": "Anterior",
+        "submit": "Enviar Consulta",
+        "home": "Volver al inicio",
+        "retry": "Intentar de nuevo"
+      },
       "messages": {
-        "loading": { "title": "Enviando tu consulta...", "subtitle": "Por favor, espera un momento." },
-        "success": { "title": "¡Consulta recibida!", "subtitle": "Gracias, hemos recibido tu mensaje. Te contactaremos en menos de 24h laborables." },
-        "error": { "title": "Error al enviar", "subtitle": "Ha ocurrido un error. Por favor, inténtalo de nuevo o contacta por teléfono." }
+        "loading": {
+          "title": "Enviando tu consulta...",
+          "subtitle": "Por favor, espera un momento."
+        },
+        "success": {
+          "title": "¡Consulta recibida!",
+          "subtitle": "Gracias, hemos recibido tu mensaje. Te contactaremos en menos de 24h laborables."
+        },
+        "error": {
+          "title": "Error al enviar",
+          "subtitle": "Ha ocurrido un error. Por favor, inténtalo de nuevo o contacta por teléfono."
+        }
       },
       "steps": [
-        { "name": "nombre", "label": "¿Cuál es tu nombre?", "helpText": "Nos ayuda a personalizar nuestra comunicación contigo.", "type": "text", "placeholder": "Escribe tu nombre completo", "required": true },
-        { "name": "email", "label": "¿Cuál es tu email?", "helpText": "Te contactaremos por email en menos de 24h laborables.", "type": "email", "placeholder": "tu@email.com", "required": true },
-        { "name": "telefono", "label": "¿Tu número de teléfono?", "helpText": "Solo si prefieres que te llamemos.", "type": "tel", "placeholder": "Tu teléfono (opcional)", "required": false },
+        {
+          "name": "nombre",
+          "label": "¿Cuál es tu nombre?",
+          "helpText": "Nos ayuda a personalizar nuestra comunicación contigo.",
+          "type": "text",
+          "placeholder": "Escribe tu nombre completo",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "¿Cuál es tu email?",
+          "helpText": "Te contactaremos por email en menos de 24h laborables.",
+          "type": "email",
+          "placeholder": "tu@email.com",
+          "required": true
+        },
+        {
+          "name": "telefono",
+          "label": "¿Tu número de teléfono?",
+          "helpText": "Solo si prefieres que te llamemos.",
+          "type": "tel",
+          "placeholder": "Tu teléfono (opcional)",
+          "required": false
+        },
         {
           "name": "area-interes",
           "label": "¿Sobre qué área es tu consulta?",
@@ -703,14 +752,40 @@
           "type": "select",
           "required": true,
           "options": [
-            { "key": "informes_periciales", "label": "Informes Periciales (grietas, vicios ocultos, etc.)" },
-            { "key": "asesoramiento_estructural", "label": "Asesoramiento Estructural (reparación, refuerzo)" },
-            { "key": "auditorias_obra", "label": "Auditorías de Obra (certificaciones, calidad)" },
-            { "key": "otra_consulta", "label": "Otra consulta" }
+            {
+              "key": "informes_periciales",
+              "label": "Informes Periciales (grietas, vicios ocultos, etc.)"
+            },
+            {
+              "key": "asesoramiento_estructural",
+              "label": "Asesoramiento Estructural (reparación, refuerzo)"
+            },
+            {
+              "key": "auditorias_obra",
+              "label": "Auditorías de Obra (certificaciones, calidad)"
+            },
+            {
+              "key": "otra_consulta",
+              "label": "Otra consulta"
+            }
           ]
         },
-        { "name": "mensaje", "label": "¿En qué podemos ayudarte?", "helpText": "Cuéntanos los detalles relevantes de tu situación.", "type": "textarea", "placeholder": "Describe brevemente tu caso o consulta", "required": true },
-        { "name": "privacidad", "label": "Último paso", "helpText": "Para poder procesar tu consulta, necesitamos que aceptes nuestra política de privacidad.", "type": "checkbox", "text": "He leído y acepto la <a href='/privacidad/' class='text-cyan-600 hover:underline font-medium'>Política de Privacidad</a>.", "required": true }
+        {
+          "name": "mensaje",
+          "label": "¿En qué podemos ayudarte?",
+          "helpText": "Cuéntanos los detalles relevantes de tu situación.",
+          "type": "textarea",
+          "placeholder": "Describe brevemente tu caso o consulta",
+          "required": true
+        },
+        {
+          "name": "privacidad",
+          "label": "Último paso",
+          "helpText": "Para poder procesar tu consulta, necesitamos que aceptes nuestra política de privacidad.",
+          "type": "checkbox",
+          "text": "He leído y acepto la <a href='/privacidad/' class='text-cyan-600 hover:underline font-medium'>Política de Privacidad</a>.",
+          "required": true
+        }
       ]
     },
     "ca": {
@@ -719,16 +794,53 @@
       "finalCtaTitle": "Prefereixes parlar directament?",
       "finalCtaSubtitle": "Truca'ns ara i t'atendrem personalment per resoldre els teus dubtes.",
       "finalCtaButton": "Trucar al",
-      "buttons": { "start": "Començar", "next": "Continuar", "prev": "Anterior", "submit": "Enviar Consulta", "home": "Tornar a l'inici", "retry": "Tornar a provar" },
+      "buttons": {
+        "start": "Començar",
+        "next": "Continuar",
+        "prev": "Anterior",
+        "submit": "Enviar Consulta",
+        "home": "Tornar a l'inici",
+        "retry": "Tornar a provar"
+      },
       "messages": {
-        "loading": { "title": "Enviant la teva consulta...", "subtitle": "Si us plau, espera un moment." },
-        "success": { "title": "Consulta rebuda!", "subtitle": "Gràcies, hem rebut el teu missatge. Et contactarem en menys de 24h laborables." },
-        "error": { "title": "Error en l'enviament", "subtitle": "Hi ha hagut un error. Si us plau, torna-ho a provar o contacta per telèfon." }
+        "loading": {
+          "title": "Enviant la teva consulta...",
+          "subtitle": "Si us plau, espera un moment."
+        },
+        "success": {
+          "title": "Consulta rebuda!",
+          "subtitle": "Gràcies, hem rebut el teu missatge. Et contactarem en menys de 24h laborables."
+        },
+        "error": {
+          "title": "Error en l'enviament",
+          "subtitle": "Hi ha hagut un error. Si us plau, torna-ho a provar o contacta per telèfon."
+        }
       },
       "steps": [
-        { "name": "nombre", "label": "Quin és el teu nom?", "helpText": "Ens ajuda a personalitzar la nostra comunicació amb tu.", "type": "text", "placeholder": "Escriu el teu nom complet", "required": true },
-        { "name": "email", "label": "Quin és el teu email?", "helpText": "Et contactarem per email en menys de 24h laborables.", "type": "email", "placeholder": "el.teu@email.com", "required": true },
-        { "name": "telefono", "label": "El teu número de telèfon?", "helpText": "Només si prefereixes que et truquem.", "type": "tel", "placeholder": "El teu telèfon (opcional)", "required": false },
+        {
+          "name": "nombre",
+          "label": "Quin és el teu nom?",
+          "helpText": "Ens ajuda a personalitzar la nostra comunicació amb tu.",
+          "type": "text",
+          "placeholder": "Escriu el teu nom complet",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "Quin és el teu email?",
+          "helpText": "Et contactarem per email en menys de 24h laborables.",
+          "type": "email",
+          "placeholder": "el.teu@email.com",
+          "required": true
+        },
+        {
+          "name": "telefono",
+          "label": "El teu número de telèfon?",
+          "helpText": "Només si prefereixes que et truquem.",
+          "type": "tel",
+          "placeholder": "El teu telèfon (opcional)",
+          "required": false
+        },
         {
           "name": "area-interes",
           "label": "Sobre quina àrea és la teva consulta?",
@@ -736,14 +848,40 @@
           "type": "select",
           "required": true,
           "options": [
-            { "key": "informes_periciales", "label": "Informes Pericials (esquerdes, vicis ocults, etc.)" },
-            { "key": "asesoramiento_estructural", "label": "Assessorament Estructural (reparació, reforç)" },
-            { "key": "auditorias_obra", "label": "Auditories d'Obra (certificacions, qualitat)" },
-            { "key": "otra_consulta", "label": "Altra consulta" }
+            {
+              "key": "informes_periciales",
+              "label": "Informes Pericials (esquerdes, vicis ocults, etc.)"
+            },
+            {
+              "key": "asesoramiento_estructural",
+              "label": "Assessorament Estructural (reparació, reforç)"
+            },
+            {
+              "key": "auditorias_obra",
+              "label": "Auditories d'Obra (certificacions, qualitat)"
+            },
+            {
+              "key": "otra_consulta",
+              "label": "Altra consulta"
+            }
           ]
         },
-        { "name": "mensaje", "label": "En què podem ajudar-te?", "helpText": "Explica'ns els detalls rellevants de la teva situació.", "type": "textarea", "placeholder": "Descriu breument el teu cas o consulta", "required": true },
-        { "name": "privacidad", "label": "Últim pas", "helpText": "Per poder processar la teva consulta, necessitem que acceptis la nostra política de privacitat.", "type": "checkbox", "text": "He llegit i accepto la <a href='/ca/privacitat/' class='text-cyan-600 hover:underline font-medium'>Política de Privacitat</a>.", "required": true }
+        {
+          "name": "mensaje",
+          "label": "En què podem ajudar-te?",
+          "helpText": "Explica'ns els detalls rellevants de la teva situació.",
+          "type": "textarea",
+          "placeholder": "Descriu breument el teu cas o consulta",
+          "required": true
+        },
+        {
+          "name": "privacidad",
+          "label": "Últim pas",
+          "helpText": "Per poder processar la teva consulta, necessitem que acceptis la nostra política de privacitat.",
+          "type": "checkbox",
+          "text": "He llegit i accepto la <a href='/ca/privacitat/' class='text-cyan-600 hover:underline font-medium'>Política de Privacitat</a>.",
+          "required": true
+        }
       ]
     },
     "en": {
@@ -752,16 +890,53 @@
       "finalCtaTitle": "Prefer to talk directly?",
       "finalCtaSubtitle": "Call us now and we will personally assist you to resolve your doubts.",
       "finalCtaButton": "Call",
-      "buttons": { "start": "Start", "next": "Continue", "prev": "Previous", "submit": "Send Inquiry", "home": "Back to home", "retry": "Try again" },
+      "buttons": {
+        "start": "Start",
+        "next": "Continue",
+        "prev": "Previous",
+        "submit": "Send Inquiry",
+        "home": "Back to home",
+        "retry": "Try again"
+      },
       "messages": {
-        "loading": { "title": "Sending your inquiry...", "subtitle": "Please wait a moment." },
-        "success": { "title": "Inquiry received!", "subtitle": "Thank you, we have received your message. We will contact you within 24 business hours." },
-        "error": { "title": "Sending error", "subtitle": "An error occurred. Please try again or contact us by phone." }
+        "loading": {
+          "title": "Sending your inquiry...",
+          "subtitle": "Please wait a moment."
+        },
+        "success": {
+          "title": "Inquiry received!",
+          "subtitle": "Thank you, we have received your message. We will contact you within 24 business hours."
+        },
+        "error": {
+          "title": "Sending error",
+          "subtitle": "An error occurred. Please try again or contact us by phone."
+        }
       },
       "steps": [
-        { "name": "nombre", "label": "What's your name?", "helpText": "It helps us to personalize our communication with you.", "type": "text", "placeholder": "Enter your full name", "required": true },
-        { "name": "email", "label": "What's your email?", "helpText": "We will contact you by email within 24 business hours.", "type": "email", "placeholder": "your@email.com", "required": true },
-        { "name": "telefono", "label": "Your phone number?", "helpText": "Only if you prefer us to call you.", "type": "tel", "placeholder": "Your phone (optional)", "required": false },
+        {
+          "name": "nombre",
+          "label": "What's your name?",
+          "helpText": "It helps us to personalize our communication with you.",
+          "type": "text",
+          "placeholder": "Enter your full name",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "What's your email?",
+          "helpText": "We will contact you by email within 24 business hours.",
+          "type": "email",
+          "placeholder": "your@email.com",
+          "required": true
+        },
+        {
+          "name": "telefono",
+          "label": "Your phone number?",
+          "helpText": "Only if you prefer us to call you.",
+          "type": "tel",
+          "placeholder": "Your phone (optional)",
+          "required": false
+        },
         {
           "name": "area-interes",
           "label": "What area is your inquiry about?",
@@ -769,14 +944,40 @@
           "type": "select",
           "required": true,
           "options": [
-            { "key": "informes_periciales", "label": "Expert Reports (cracks, hidden defects, etc.)" },
-            { "key": "asesoramiento_estructural", "label": "Structural Consulting (repair, reinforcement)" },
-            { "key": "auditorias_obra", "label": "Construction Audits (certifications, quality)" },
-            { "key": "otra_consulta", "label": "Other inquiry" }
+            {
+              "key": "informes_periciales",
+              "label": "Expert Reports (cracks, hidden defects, etc.)"
+            },
+            {
+              "key": "asesoramiento_estructural",
+              "label": "Structural Consulting (repair, reinforcement)"
+            },
+            {
+              "key": "auditorias_obra",
+              "label": "Construction Audits (certifications, quality)"
+            },
+            {
+              "key": "otra_consulta",
+              "label": "Other inquiry"
+            }
           ]
         },
-        { "name": "mensaje", "label": "How can we help you?", "helpText": "Tell us the relevant details of your situation.", "type": "textarea", "placeholder": "Briefly describe your case or inquiry", "required": true },
-        { "name": "privacidad", "label": "Last step", "helpText": "To process your inquiry, we need you to accept our privacy policy.", "type": "checkbox", "text": "I have read and accept the <a href='/en/privacy/' class='text-cyan-600 hover:underline font-medium'>Privacy Policy</a>.", "required": true }
+        {
+          "name": "mensaje",
+          "label": "How can we help you?",
+          "helpText": "Tell us the relevant details of your situation.",
+          "type": "textarea",
+          "placeholder": "Briefly describe your case or inquiry",
+          "required": true
+        },
+        {
+          "name": "privacidad",
+          "label": "Last step",
+          "helpText": "To process your inquiry, we need you to accept our privacy policy.",
+          "type": "checkbox",
+          "text": "I have read and accept the <a href='/en/privacy/' class='text-cyan-600 hover:underline font-medium'>Privacy Policy</a>.",
+          "required": true
+        }
       ]
     },
     "fr": {
@@ -785,16 +986,53 @@
       "finalCtaTitle": "Vous préférez parler directement ?",
       "finalCtaSubtitle": "Appelez-nous maintenant et nous vous assisterons personnellement pour répondre à vos doutes.",
       "finalCtaButton": "Appeler le",
-      "buttons": { "start": "Commencer", "next": "Continuer", "prev": "Précédent", "submit": "Envoyer la Demande", "home": "Retour à l'accueil", "retry": "Réessayer" },
+      "buttons": {
+        "start": "Commencer",
+        "next": "Continuer",
+        "prev": "Précédent",
+        "submit": "Envoyer la Demande",
+        "home": "Retour à l'accueil",
+        "retry": "Réessayer"
+      },
       "messages": {
-        "loading": { "title": "Envoi de votre demande...", "subtitle": "Veuillez patienter un instant." },
-        "success": { "title": "Demande reçue !", "subtitle": "Merci, nous avons bien reçu votre message. Nous vous contacterons dans les 24h ouvrables." },
-        "error": { "title": "Erreur d'envoi", "subtitle": "Une erreur s'est produite. Veuillez réessayer ou nous contacter par téléphone." }
+        "loading": {
+          "title": "Envoi de votre demande...",
+          "subtitle": "Veuillez patienter un instant."
+        },
+        "success": {
+          "title": "Demande reçue !",
+          "subtitle": "Merci, nous avons bien reçu votre message. Nous vous contacterons dans les 24h ouvrables."
+        },
+        "error": {
+          "title": "Erreur d'envoi",
+          "subtitle": "Une erreur s'est produite. Veuillez réessayer ou nous contacter par téléphone."
+        }
       },
       "steps": [
-        { "name": "nombre", "label": "Quel est votre nom ?", "helpText": "Cela nous aide à personnaliser notre communication avec vous.", "type": "text", "placeholder": "Entrez votre nom complet", "required": true },
-        { "name": "email", "label": "Quel est votre email ?", "helpText": "Nous vous contacterons par email dans les 24h ouvrables.", "type": "email", "placeholder": "votre@email.com", "required": true },
-        { "name": "telefono", "label": "Votre numéro de téléphone ?", "helpText": "Seulement si vous préférez que nous vous appelions.", "type": "tel", "placeholder": "Votre téléphone (optionnel)", "required": false },
+        {
+          "name": "nombre",
+          "label": "Quel est votre nom ?",
+          "helpText": "Cela nous aide à personnaliser notre communication avec vous.",
+          "type": "text",
+          "placeholder": "Entrez votre nom complet",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "Quel est votre email ?",
+          "helpText": "Nous vous contacterons par email dans les 24h ouvrables.",
+          "type": "email",
+          "placeholder": "votre@email.com",
+          "required": true
+        },
+        {
+          "name": "telefono",
+          "label": "Votre numéro de téléphone ?",
+          "helpText": "Seulement si vous préférez que nous vous appelions.",
+          "type": "tel",
+          "placeholder": "Votre téléphone (optionnel)",
+          "required": false
+        },
         {
           "name": "area-interes",
           "label": "Sur quel domaine porte votre demande ?",
@@ -802,14 +1040,40 @@
           "type": "select",
           "required": true,
           "options": [
-            { "key": "informes_periciales", "label": "Rapports d'Expertise (fissures, vices cachés, etc.)" },
-            { "key": "asesoramiento_estructural", "label": "Conseil Structurel (réparation, renforcement)" },
-            { "key": "auditorias_obra", "label": "Audits de Chantier (certifications, qualité)" },
-            { "key": "otra_consulta", "label": "Autre demande" }
+            {
+              "key": "informes_periciales",
+              "label": "Rapports d'Expertise (fissures, vices cachés, etc.)"
+            },
+            {
+              "key": "asesoramiento_estructural",
+              "label": "Conseil Structurel (réparation, renforcement)"
+            },
+            {
+              "key": "auditorias_obra",
+              "label": "Audits de Chantier (certifications, qualité)"
+            },
+            {
+              "key": "otra_consulta",
+              "label": "Autre demande"
+            }
           ]
         },
-        { "name": "mensaje", "label": "Comment pouvons-nous vous aider ?", "helpText": "Donnez-nous les détails pertinents de votre situation.", "type": "textarea", "placeholder": "Décrivez brièvement votre cas ou votre demande", "required": true },
-        { "name": "privacidad", "label": "Dernière étape", "helpText": "Pour traiter votre demande, nous avons besoin que vous acceptiez notre politique de confidentialité.", "type": "checkbox", "text": "J'ai lu et j'accepte la <a href='/fr/confidentialite/' class='text-cyan-600 hover:underline font-medium'>Politique de Confidentialité</a>.", "required": true }
+        {
+          "name": "mensaje",
+          "label": "Comment pouvons-nous vous aider ?",
+          "helpText": "Donnez-nous les détails pertinents de votre situation.",
+          "type": "textarea",
+          "placeholder": "Décrivez brièvement votre cas ou votre demande",
+          "required": true
+        },
+        {
+          "name": "privacidad",
+          "label": "Dernière étape",
+          "helpText": "Pour traiter votre demande, nous avons besoin que vous acceptiez notre politique de confidentialité.",
+          "type": "checkbox",
+          "text": "J'ai lu et j'accepte la <a href='/fr/confidentialite/' class='text-cyan-600 hover:underline font-medium'>Politique de Confidentialité</a>.",
+          "required": true
+        }
       ]
     },
     "it": {
@@ -818,16 +1082,53 @@
       "finalCtaTitle": "Preferisci parlare direttamente?",
       "finalCtaSubtitle": "Chiamaci ora e ti assisteremo personalmente per risolvere i tuoi dubbi.",
       "finalCtaButton": "Chiama il",
-      "buttons": { "start": "Inizia", "next": "Continua", "prev": "Indietro", "submit": "Invia Richiesta", "home": "Torna alla home", "retry": "Riprova" },
+      "buttons": {
+        "start": "Inizia",
+        "next": "Continua",
+        "prev": "Indietro",
+        "submit": "Invia Richiesta",
+        "home": "Torna alla home",
+        "retry": "Riprova"
+      },
       "messages": {
-        "loading": { "title": "Invio della tua richiesta...", "subtitle": "Per favore, attendi un momento." },
-        "success": { "title": "Richiesta ricevuta!", "subtitle": "Grazie, abbiamo ricevuto il tuo messaggio. Ti contatteremo in meno di 24 ore lavorative." },
-        "error": { "title": "Errore di invio", "subtitle": "Si è verificato un errore. Per favore, riprova o contattaci telefonicamente." }
+        "loading": {
+          "title": "Invio della tua richiesta...",
+          "subtitle": "Per favore, attendi un momento."
+        },
+        "success": {
+          "title": "Richiesta ricevuta!",
+          "subtitle": "Grazie, abbiamo ricevuto il tuo messaggio. Ti contatteremo in meno di 24 ore lavorative."
+        },
+        "error": {
+          "title": "Errore di invio",
+          "subtitle": "Si è verificato un errore. Per favore, riprova o contattaci telefonicamente."
+        }
       },
       "steps": [
-        { "name": "nombre", "label": "Qual è il tuo nome?", "helpText": "Ci aiuta a personalizzare la nostra comunicazione con te.", "type": "text", "placeholder": "Scrivi il tuo nome completo", "required": true },
-        { "name": "email", "label": "Qual è la tua email?", "helpText": "Ti contatteremo via email in meno di 24 ore lavorative.", "type": "email", "placeholder": "tua@email.com", "required": true },
-        { "name": "telefono", "label": "Il tuo numero di telefono?", "helpText": "Solo se preferisci che ti chiamiamo.", "type": "tel", "placeholder": "Il tuo telefono (opzionale)", "required": false },
+        {
+          "name": "nombre",
+          "label": "Qual è il tuo nome?",
+          "helpText": "Ci aiuta a personalizzare la nostra comunicazione con te.",
+          "type": "text",
+          "placeholder": "Scrivi il tuo nome completo",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "Qual è la tua email?",
+          "helpText": "Ti contatteremo via email in meno di 24 ore lavorative.",
+          "type": "email",
+          "placeholder": "tua@email.com",
+          "required": true
+        },
+        {
+          "name": "telefono",
+          "label": "Il tuo numero di telefono?",
+          "helpText": "Solo se preferisci che ti chiamiamo.",
+          "type": "tel",
+          "placeholder": "Il tuo telefono (opzionale)",
+          "required": false
+        },
         {
           "name": "area-interes",
           "label": "Riguardo a quale area è la tua richiesta?",
@@ -835,14 +1136,40 @@
           "type": "select",
           "required": true,
           "options": [
-            { "key": "informes_periciales", "label": "Perizie Tecniche (crepe, vizi occulti, ecc.)" },
-            { "key": "asesoramiento_estructural", "label": "Consulenza Strutturale (riparazione, rinforzo)" },
-            { "key": "auditorias_obra", "label": "Audit di Cantiere (certificazioni, qualità)" },
-            { "key": "otra_consulta", "label": "Altra richiesta" }
+            {
+              "key": "informes_periciales",
+              "label": "Perizie Tecniche (crepe, vizi occulti, ecc.)"
+            },
+            {
+              "key": "asesoramiento_estructural",
+              "label": "Consulenza Strutturale (riparazione, rinforzo)"
+            },
+            {
+              "key": "auditorias_obra",
+              "label": "Audit di Cantiere (certificazioni, qualità)"
+            },
+            {
+              "key": "otra_consulta",
+              "label": "Altra richiesta"
+            }
           ]
         },
-        { "name": "mensaje", "label": "Come possiamo aiutarti?", "helpText": "Raccontaci i dettagli rilevanti della tua situazione.", "type": "textarea", "placeholder": "Descrivi brevemente il tuo caso o la tua richiesta", "required": true },
-        { "name": "privacidad", "label": "Ultimo passo", "helpText": "Per poter elaborare la tua richiesta, abbiamo bisogno che tu accetti la nostra informativa sulla privacy.", "type": "checkbox", "text": "Ho letto e accetto l'<a href='/it/privacy/' class='text-cyan-600 hover:underline font-medium'>Informativa sulla Privacy</a>.", "required": true }
+        {
+          "name": "mensaje",
+          "label": "Come possiamo aiutarti?",
+          "helpText": "Raccontaci i dettagli rilevanti della tua situazione.",
+          "type": "textarea",
+          "placeholder": "Descrivi brevemente il tuo caso o la tua richiesta",
+          "required": true
+        },
+        {
+          "name": "privacidad",
+          "label": "Ultimo passo",
+          "helpText": "Per poter elaborare la tua richiesta, abbiamo bisogno che tu accetti la nostra informativa sulla privacy.",
+          "type": "checkbox",
+          "text": "Ho letto e accetto l'<a href='/it/privacy/' class='text-cyan-600 hover:underline font-medium'>Informativa sulla Privacy</a>.",
+          "required": true
+        }
       ]
     }
   },
@@ -855,8 +1182,14 @@
           "title": "¿Nos contactas como particular o empresa?",
           "number": "Pregunta 1 de 7",
           "options": [
-            {"value": "particular", "label": "Como particular"},
-            {"value": "empresa", "label": "En nombre de una empresa"}
+            {
+              "value": "particular",
+              "label": "Como particular"
+            },
+            {
+              "value": "empresa",
+              "label": "En nombre de una empresa"
+            }
           ]
         },
         "nombreEmpresa": {
@@ -879,10 +1212,22 @@
           "title": "¿Sobre qué área es tu consulta?",
           "number": "Pregunta 6 de 7",
           "options": [
-            {"value": "informes_periciales", "label": "Informes Periciales (grietas, vicios ocultos, etc.)"},
-            {"value": "asesoramiento_estructural", "label": "Asesoramiento Estructural (reparación, refuerzo)"},
-            {"value": "auditorias_obra", "label": "Auditorías de Obra (certificaciones, calidad)"},
-            {"value": "otra_consulta", "label": "Otra consulta"}
+            {
+              "value": "informes_periciales",
+              "label": "Informes Periciales (grietas, vicios ocultos, etc.)"
+            },
+            {
+              "value": "asesoramiento_estructural",
+              "label": "Asesoramiento Estructural (reparación, refuerzo)"
+            },
+            {
+              "value": "auditorias_obra",
+              "label": "Auditorías de Obra (certificaciones, calidad)"
+            },
+            {
+              "value": "otra_consulta",
+              "label": "Otra consulta"
+            }
           ]
         },
         "mensaje": {
@@ -921,8 +1266,14 @@
           "title": "Ens contactes com a particular o empresa?",
           "number": "Pregunta 1 de 7",
           "options": [
-            {"value": "particular", "label": "Com a particular"},
-            {"value": "empresa", "label": "En nom d'una empresa"}
+            {
+              "value": "particular",
+              "label": "Com a particular"
+            },
+            {
+              "value": "empresa",
+              "label": "En nom d'una empresa"
+            }
           ]
         },
         "nombreEmpresa": {
@@ -945,10 +1296,22 @@
           "title": "Sobre quina àrea és la teva consulta?",
           "number": "Pregunta 6 de 7",
           "options": [
-            {"value": "informes_periciales", "label": "Informes Pericials (esquerdes, vicis ocults, etc.)"},
-            {"value": "asesoramiento_estructural", "label": "Assessorament Estructural (reparació, reforç)"},
-            {"value": "auditorias_obra", "label": "Auditories d'Obra (certificacions, qualitat)"},
-            {"value": "otra_consulta", "label": "Altra consulta"}
+            {
+              "value": "informes_periciales",
+              "label": "Informes Pericials (esquerdes, vicis ocults, etc.)"
+            },
+            {
+              "value": "asesoramiento_estructural",
+              "label": "Assessorament Estructural (reparació, reforç)"
+            },
+            {
+              "value": "auditorias_obra",
+              "label": "Auditories d'Obra (certificacions, qualitat)"
+            },
+            {
+              "value": "otra_consulta",
+              "label": "Altra consulta"
+            }
           ]
         },
         "mensaje": {
@@ -987,8 +1350,14 @@
           "title": "Are you contacting us as an individual or on behalf of a company?",
           "number": "Question 1 of 7",
           "options": [
-            {"value": "particular", "label": "As an individual"},
-            {"value": "empresa", "label": "On behalf of a company"}
+            {
+              "value": "particular",
+              "label": "As an individual"
+            },
+            {
+              "value": "empresa",
+              "label": "On behalf of a company"
+            }
           ]
         },
         "nombreEmpresa": {
@@ -1011,10 +1380,22 @@
           "title": "What area is your inquiry about?",
           "number": "Question 6 of 7",
           "options": [
-            {"value": "informes_periciales", "label": "Expert Reports (cracks, hidden defects, etc.)"},
-            {"value": "asesoramiento_estructural", "label": "Structural Consulting (repair, reinforcement)"},
-            {"value": "auditorias_obra", "label": "Construction Audits (certifications, quality)"},
-            {"value": "otra_consulta", "label": "Other inquiry"}
+            {
+              "value": "informes_periciales",
+              "label": "Expert Reports (cracks, hidden defects, etc.)"
+            },
+            {
+              "value": "asesoramiento_estructural",
+              "label": "Structural Consulting (repair, reinforcement)"
+            },
+            {
+              "value": "auditorias_obra",
+              "label": "Construction Audits (certifications, quality)"
+            },
+            {
+              "value": "otra_consulta",
+              "label": "Other inquiry"
+            }
           ]
         },
         "mensaje": {
@@ -1053,8 +1434,14 @@
           "title": "Vous nous contactez en tant que particulier ou entreprise ?",
           "number": "Question 1 sur 7",
           "options": [
-            {"value": "particular", "label": "En tant que particulier"},
-            {"value": "empresa", "label": "Au nom d'une entreprise"}
+            {
+              "value": "particular",
+              "label": "En tant que particulier"
+            },
+            {
+              "value": "empresa",
+              "label": "Au nom d'une entreprise"
+            }
           ]
         },
         "nombreEmpresa": {
@@ -1077,10 +1464,22 @@
           "title": "Sur quel domaine porte votre demande ?",
           "number": "Question 6 sur 7",
           "options": [
-            {"value": "informes_periciales", "label": "Rapports d'Expertise (fissures, vices cachés, etc.)"},
-            {"value": "asesoramiento_estructural", "label": "Conseil Structurel (réparation, renforcement)"},
-            {"value": "auditorias_obra", "label": "Audits de Chantier (certifications, qualité)"},
-            {"value": "otra_consulta", "label": "Autre demande"}
+            {
+              "value": "informes_periciales",
+              "label": "Rapports d'Expertise (fissures, vices cachés, etc.)"
+            },
+            {
+              "value": "asesoramiento_estructural",
+              "label": "Conseil Structurel (réparation, renforcement)"
+            },
+            {
+              "value": "auditorias_obra",
+              "label": "Audits de Chantier (certifications, qualité)"
+            },
+            {
+              "value": "otra_consulta",
+              "label": "Autre demande"
+            }
           ]
         },
         "mensaje": {
@@ -1119,8 +1518,14 @@
           "title": "Ci contatti come privato o azienda?",
           "number": "Domanda 1 di 7",
           "options": [
-            {"value": "particular", "label": "Come privato"},
-            {"value": "empresa", "label": "A nome di un'azienda"}
+            {
+              "value": "particular",
+              "label": "Come privato"
+            },
+            {
+              "value": "empresa",
+              "label": "A nome di un'azienda"
+            }
           ]
         },
         "nombreEmpresa": {
@@ -1143,10 +1548,22 @@
           "title": "Riguardo a quale area è la tua richiesta?",
           "number": "Domanda 6 di 7",
           "options": [
-            {"value": "informes_periciales", "label": "Perizie Tecniche (crepe, vizi occulti, ecc.)"},
-            {"value": "asesoramiento_estructural", "label": "Consulenza Strutturale (riparazione, rinforzo)"},
-            {"value": "auditorias_obra", "label": "Audit di Cantiere (certificazioni, qualità)"},
-            {"value": "otra_consulta", "label": "Altra richiesta"}
+            {
+              "value": "informes_periciales",
+              "label": "Perizie Tecniche (crepe, vizi occulti, ecc.)"
+            },
+            {
+              "value": "asesoramiento_estructural",
+              "label": "Consulenza Strutturale (riparazione, rinforzo)"
+            },
+            {
+              "value": "auditorias_obra",
+              "label": "Audit di Cantiere (certificazioni, qualità)"
+            },
+            {
+              "value": "otra_consulta",
+              "label": "Altra richiesta"
+            }
           ]
         },
         "mensaje": {
@@ -1498,6 +1915,55 @@
       "ctaButton2": "Programma una Chiamata",
       "ctaContactUrl": "/it/contatti/",
       "ctaScheduleUrl": "/it/contatti/"
+    }
+  },
+  "caseLabels": {
+    "es": {
+      "summary": "Resumen del Caso",
+      "categories": "Categorías"
+    },
+    "en": {
+      "summary": "Case Summary",
+      "categories": "Categories"
+    },
+    "ca": {
+      "summary": "Resum del Cas",
+      "categories": "Categories"
+    },
+    "fr": {
+      "summary": "Résumé du Cas",
+      "categories": "Catégories"
+    },
+    "it": {
+      "summary": "Riepilogo del Caso",
+      "categories": "Categorie"
+    }
+  },
+  "caseCTA": {
+    "es": {
+      "title": "¿Tiene un caso similar?",
+      "intro": "Este caso es un ejemplo de nuestra experiencia en",
+      "help": "Si necesita un diagnóstico técnico en Barcelona, podemos ayudarle."
+    },
+    "en": {
+      "title": "Do you have a similar case?",
+      "intro": "This case is an example of our experience in",
+      "help": "If you need a technical diagnosis in Barcelona, we can help you."
+    },
+    "ca": {
+      "title": "Té un cas similar?",
+      "intro": "Aquest cas és un exemple de la nostra experiència en",
+      "help": "Si necessita un diagnòstic tècnic a Barcelona, podem ajudar-lo."
+    },
+    "fr": {
+      "title": "Avez-vous un cas similaire ?",
+      "intro": "Ce cas est un exemple de notre expérience en",
+      "help": "Si vous avez besoin d'un diagnostic technique à Barcelone, nous pouvons vous aider."
+    },
+    "it": {
+      "title": "Hai un caso simile?",
+      "intro": "Questo caso è un esempio della nostra esperienza in",
+      "help": "Se hai bisogno di una diagnosi tecnica a Barcellona, possiamo aiutarti."
     }
   }
 }

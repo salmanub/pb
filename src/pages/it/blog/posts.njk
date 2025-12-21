@@ -10,7 +10,7 @@ lang: it
 eleventyNavigation:
   notshow: true
 eleventyComputed:
-  title: "{{ post.title }}"
+  title: "{{ post.title | safe }}"
   description: "{{ post.description }}"
   author: "{{ post.author }}"
   datePublished: "{{ post.datePublished }}"
