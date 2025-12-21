@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Perito Barcelona",
-    "description": "Informes periciales técnicos y de seguros en Barcelona",
+    "description": "Peritos judiciales e ingenieros en Barcelona. Informes periciales técnicos y de seguros",
     "url": "https://perito.barcelona",
     "themeColor": "#2048e6",
     "faviconDataUriPath": "/images/logos/favicon.txt",
@@ -303,7 +303,7 @@
   "footer": {
     "es": {
       "brand": {
-        "description": "Despacho de peritos ingenieros colegiados en Barcelona, especializados en informes técnicos, auditorías de obra y asesoramiento estructural para edificación y obra civil.",
+        "description": "Peritos judiciales e ingenieros colegiados en Barcelona. Especializados en informes periciales técnicos, auditorías de obra y asesoramiento estructural para edificación y obra civil.",
         "social": [
           {
             "url": "https://www.linkedin.com/company/peritobarcelona",
@@ -1964,6 +1964,33 @@
       "title": "Hai un caso simile?",
       "intro": "Questo caso è un esempio della nostra esperienza in",
       "help": "Se hai bisogno di una diagnosi tecnica a Barcellona, possiamo aiutarti."
+    }
+  },
+  "blog": {
+    "es": {
+      "title": "Blog",
+      "url": "/blog/",
+      "backText": "Volver al Blog"
+    },
+    "en": {
+      "title": "Blog",
+      "url": "/en/blog/",
+      "backText": "Back to Blog"
+    },
+    "ca": {
+      "title": "Blog",
+      "url": "/ca/blog/",
+      "backText": "Tornar al Blog"
+    },
+    "fr": {
+      "title": "Blog",
+      "url": "/fr/blog/",
+      "backText": "Retour au Blog"
+    },
+    "it": {
+      "title": "Blog",
+      "url": "/it/blog/",
+      "backText": "Torna al Blog"
     }
   }
 }
