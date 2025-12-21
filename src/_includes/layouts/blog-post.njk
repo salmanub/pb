@@ -52,8 +52,8 @@
             <!-- Breadcrumbs -->
             <div class="flex justify-center md:justify-start mb-8">
             {% set parentService = {
-                "title": "Blog",
-                "url": "/blog/"
+                "title": metadata.blog[lang].title,
+                "url": metadata.blog[lang].url
             } %}
             {% include "partials/breadcrumb.njk" %}
             </div>
