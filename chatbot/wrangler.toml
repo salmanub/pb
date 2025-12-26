@@ -1,0 +1,22 @@
+name = "perito-barcelona-chatbot"
+main = "worker.js"
+compatibility_date = "2025-12-26"
+
+# Variables de entorno se cargan automáticamente desde .dev.vars en desarrollo
+# Para producción, configurar estos valores como secrets en Cloudflare Dashboard:
+# - SPREADSHEET_ID
+# - GOOGLE_SERVICE_ACCOUNT_EMAIL
+# - GOOGLE_PRIVATE_KEY
+# - SHEETS_API_KEY
+# - OPENAI_API_KEY
+# - EMAIL_DESTINO
+
+# KV Namespaces para sesiones persistentes (opcional, mejorar performance)
+# [[kv_namespaces]]
+# binding = "SESSIONS"
+# id = "tu-kv-namespace-id"
+
+# Routes para custom domain
+# routes = [
+#   { pattern = "perito.barcelona/api/*", zone_name = "perito.barcelona" }
+# ]

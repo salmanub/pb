@@ -28,6 +28,11 @@
 
     {% include "partials/footer.njk" %}
     {% include "partials/floating-notice.njk" %}
+    
+    {# Chatbot - Asistente técnico #}
+    {% if chatbot.enabled %}
+      {% include "components/chatbot.njk" %}
+    {% endif %}
 
     <!-- Schema for LocalBusiness -->
     <div itemscope itemtype="https://schema.org/LocalBusiness" hidden>

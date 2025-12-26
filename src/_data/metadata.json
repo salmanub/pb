@@ -1992,5 +1992,27 @@
       "url": "/it/blog/",
       "backText": "Torna al Blog"
     }
+  },
+  "blogRelatedCTA": {
+    "es": {
+      "title": "¿Necesita ayuda profesional con este tema?",
+      "description": "Ofrecemos servicios especializados y asesoría técnica personalizada."
+    },
+    "en": {
+      "title": "Need professional help with this topic?",
+      "description": "We offer specialized services and personalized technical advice."
+    },
+    "ca": {
+      "title": "Necessita ajuda professional amb aquest tema?",
+      "description": "Oferim serveis especialitzats i assessoria tècnica personalitzada."
+    },
+    "fr": {
+      "title": "Besoin d'une aide professionnelle sur ce sujet ?",
+      "description": "Nous offrons des services spécialisés et des conseils techniques personnalisés."
+    },
+    "it": {
+      "title": "Hai bisogno di aiuto professionale su questo argomento?",
+      "description": "Offriamo servizi specializzati e consulenza tecnica personalizzata."
+    }
   }
 }

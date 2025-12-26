@@ -1,0 +1,19 @@
+# Cloudflare Workers
+.dev.vars
+.wrangler/
+wrangler.toml.backup
+
+# Variables de entorno sensibles
+*.env
+*.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node modules (si se usan dependencias)
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db

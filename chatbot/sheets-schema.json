@@ -1,0 +1,363 @@
+{
+  "spreadsheetId": "TU_SPREADSHEET_ID_AQUI",
+  "sheets": {
+    "Servicios_Periciales": {
+      "description": "Árbol de decisión para el triaje técnico del chatbot",
+      "columns": [
+        {
+          "name": "slug",
+          "type": "string",
+          "description": "ID único del servicio (ej: patologia-grietas, disputa-pagos)",
+          "required": true,
+          "example": "patologia-grietas"
+        },
+        {
+          "name": "categoria",
+          "type": "string",
+          "description": "Grupo al que pertenece (Estructural, Económico, Humedades, etc.)",
+          "required": true,
+          "example": "Estructural"
+        },
+        {
+          "name": "nombre_servicio",
+          "type": "string",
+          "description": "Nombre descriptivo que se muestra al usuario",
+          "required": true,
+          "example": "Grietas y Patología Estructural"
+        },
+        {
+          "name": "icono",
+          "type": "string",
+          "description": "Emoji o código de icono",
+          "required": false,
+          "example": "🏗️"
+        },
+        {
+          "name": "nivel",
+          "type": "number",
+          "description": "Nivel en el árbol (1=raíz, 2=hijo, etc.)",
+          "required": true,
+          "example": 1
+        },
+        {
+          "name": "padre_slug",
+          "type": "string",
+          "description": "Slug del servicio padre (vacío si es nivel 1)",
+          "required": false,
+          "example": ""
+        },
+        {
+          "name": "pregunta_filtro",
+          "type": "string",
+          "description": "Pregunta técnica que hace el bot al seleccionar este servicio",
+          "required": true,
+          "example": "¿Las grietas afectan a elementos de carga (pilares/vigas) o solo tabiquería?"
+        },
+        {
+          "name": "contexto_venta",
+          "type": "string",
+          "description": "Prompt para la IA sobre cómo vender este servicio",
+          "required": true,
+          "example": "Vende el informe pericial judicial para reclamar al constructor. Enfatiza el plazo de garantía decenal y la importancia de actuar antes de que prescriba."
+        },
+        {
+          "name": "orden",
+          "type": "number",
+          "description": "Orden de aparición en el nivel",
+          "required": true,
+          "example": 1
+        },
+        {
+          "name": "activo",
+          "type": "boolean",
+          "description": "Si el servicio está activo o no",
+          "required": true,
+          "example": true
+        }
+      ],
+      "example_data": [
+        {
+          "slug": "grietas-estructura",
+          "categoria": "Estructural",
+          "nombre_servicio": "Grietas/Estructura",
+          "icono": "🏗️",
+          "nivel": 1,
+          "padre_slug": "",
+          "pregunta_filtro": "¿Cuál es la naturaleza del problema?",
+          "contexto_venta": "Servicio de nivel 1 - solo para navegación",
+          "orden": 1,
+          "activo": true
+        },
+        {
+          "slug": "grietas-elementos-carga",
+          "categoria": "Estructural",
+          "nombre_servicio": "Grietas en elementos de carga",
+          "icono": "⚠️",
+          "nivel": 2,
+          "padre_slug": "grietas-estructura",
+          "pregunta_filtro": "¿Las grietas son verticales, horizontales o diagonales?",
+          "contexto_venta": "Vende el análisis estructural urgente. Enfatiza riesgo de colapso y responsabilidad del constructor. Menciona que necesitamos fotos detalladas y año de construcción.",
+          "orden": 1,
+          "activo": true
+        },
+        {
+          "slug": "grietas-tabiqueria",
+          "categoria": "Estructural",
+          "nombre_servicio": "Grietas en tabiquería",
+          "icono": "🧱",
+          "nivel": 2,
+          "padre_slug": "grietas-estructura",
+          "pregunta_filtro": "¿Las grietas han aparecido recientemente o llevan años?",
+          "contexto_venta": "Aunque sea tabiquería, puede indicar movimientos del edificio. Vende el diagnóstico para determinar si es estético o estructural. Menciona que es clave para reclamaciones al promotor.",
+          "orden": 2,
+          "activo": true
+        },
+        {
+          "slug": "humedades-filtraciones",
+          "categoria": "Humedades",
+          "nombre_servicio": "Humedades/Filtraciones",
+          "icono": "💧",
+          "nivel": 1,
+          "padre_slug": "",
+          "pregunta_filtro": "¿Cuál es la naturaleza del problema?",
+          "contexto_venta": "Servicio de nivel 1 - solo para navegación",
+          "orden": 2,
+          "activo": true
+        },
+        {
+          "slug": "filtracion-cubierta",
+          "categoria": "Humedades",
+          "nombre_servicio": "Filtración desde cubierta",
+          "icono": "🏠",
+          "nivel": 2,
+          "padre_slug": "humedades-filtraciones",
+          "pregunta_filtro": "¿La filtración es puntual o afecta a varias zonas?",
+          "contexto_venta": "Vende el informe de localización de filtraciones con termografía. Menciona que es fundamental para reclamar a la comunidad o al constructor dentro del plazo de garantía.",
+          "orden": 1,
+          "activo": true
+        },
+        {
+          "slug": "humedad-capilar",
+          "categoria": "Humedades",
+          "nombre_servicio": "Humedad por capilaridad",
+          "icono": "⬆️",
+          "nivel": 2,
+          "padre_slug": "humedades-filtraciones",
+          "pregunta_filtro": "¿La humedad afecta a la planta baja o sótano?",
+          "contexto_venta": "Vende el diagnóstico de humedades con medición de humedad relativa. Enfatiza que es clave para determinar responsabilidades en vicios ocultos.",
+          "orden": 2,
+          "activo": true
+        },
+        {
+          "slug": "disputa-economica",
+          "categoria": "Económico",
+          "nombre_servicio": "Disputa Económica/Pagos",
+          "icono": "⚖️",
+          "nivel": 1,
+          "padre_slug": "",
+          "pregunta_filtro": "¿Cuál es la naturaleza del problema?",
+          "contexto_venta": "Servicio de nivel 1 - solo para navegación",
+          "orden": 3,
+          "activo": true
+        },
+        {
+          "slug": "certificacion-obra",
+          "categoria": "Económico",
+          "nombre_servicio": "Certificación de obra ejecutada",
+          "icono": "📊",
+          "nivel": 2,
+          "padre_slug": "disputa-economica",
+          "pregunta_filtro": "¿Necesita certificar obra ejecutada para reclamar pagos o para defenderse de sobrecostes?",
+          "contexto_venta": "Vende la medición pericial contradictoria. Menciona que es clave para juicios por pagos de obra y que nuestros informes son admitidos en juzgados.",
+          "orden": 1,
+          "activo": true
+        },
+        {
+          "slug": "valoracion-danos",
+          "categoria": "Económico",
+          "nombre_servicio": "Valoración de daños",
+          "icono": "💰",
+          "nivel": 2,
+          "padre_slug": "disputa-economica",
+          "pregunta_filtro": "¿Los daños son por defectos constructivos, siniestro o accidente?",
+          "contexto_venta": "Vende la tasación pericial de daños para reclamaciones judiciales o a seguros. Enfatiza precisión técnica y experiencia en tribunales.",
+          "orden": 2,
+          "activo": true
+        },
+        {
+          "slug": "vicios-ocultos",
+          "categoria": "Vicios Ocultos",
+          "nombre_servicio": "Vicios Ocultos",
+          "icono": "🔍",
+          "nivel": 1,
+          "padre_slug": "",
+          "pregunta_filtro": "¿Cuál es la naturaleza del problema?",
+          "contexto_venta": "Servicio de nivel 1 - solo para navegación",
+          "orden": 4,
+          "activo": true
+        },
+        {
+          "slug": "vicio-oculto-compra",
+          "categoria": "Vicios Ocultos",
+          "nombre_servicio": "Vicio oculto en compra de vivienda",
+          "icono": "🏡",
+          "nivel": 2,
+          "padre_slug": "vicios-ocultos",
+          "pregunta_filtro": "¿Cuánto tiempo hace que compró la vivienda?",
+          "contexto_venta": "Vende el informe de vicios ocultos para reclamar al vendedor. CRÍTICO: menciona que el plazo es de 6 meses desde el descubrimiento. Urgencia temporal.",
+          "orden": 1,
+          "activo": true
+        }
+      ]
+    },
+    "Configuracion": {
+      "description": "Parámetros de configuración del chatbot",
+      "columns": [
+        {
+          "name": "clave",
+          "type": "string",
+          "description": "Nombre del parámetro",
+          "required": true
+        },
+        {
+          "name": "valor",
+          "type": "string",
+          "description": "Valor del parámetro",
+          "required": true
+        },
+        {
+          "name": "descripcion",
+          "type": "string",
+          "description": "Descripción del parámetro",
+          "required": false
+        }
+      ],
+      "example_data": [
+        {
+          "clave": "system_prompt",
+          "valor": "Eres el asistente técnico de Perito.barcelona, un despacho de ingeniería forense...",
+          "descripcion": "Prompt del sistema para la IA"
+        },
+        {
+          "clave": "email_destino",
+          "valor": "info@perito.barcelona",
+          "descripcion": "Email donde se envían los leads"
+        },
+        {
+          "clave": "zona_cobertura",
+          "valor": "Barcelona,Girona,Tarragona,Lleida",
+          "descripcion": "Zonas donde damos servicio (separadas por comas)"
+        }
+      ]
+    },
+    "Leads": {
+      "description": "Almacenamiento de leads capturados por el chatbot",
+      "columns": [
+        {
+          "name": "Fecha",
+          "type": "datetime",
+          "description": "Fecha y hora de captura del lead (ISO 8601)",
+          "required": true,
+          "example": "2025-12-26T14:30:00.000Z"
+        },
+        {
+          "name": "Nombre",
+          "type": "string",
+          "description": "Nombre completo del contacto",
+          "required": true,
+          "example": "Juan Pérez García"
+        },
+        {
+          "name": "Teléfono",
+          "type": "string",
+          "description": "Teléfono de contacto",
+          "required": true,
+          "example": "+34 600 123 456"
+        },
+        {
+          "name": "Ubicación",
+          "type": "string",
+          "description": "Ciudad o ubicación del caso",
+          "required": true,
+          "example": "Barcelona"
+        },
+        {
+          "name": "Servicio",
+          "type": "string",
+          "description": "Nombre del servicio seleccionado",
+          "required": true,
+          "example": "Grietas y Patología Estructural"
+        },
+        {
+          "name": "Categoría",
+          "type": "string",
+          "description": "Categoría del servicio",
+          "required": true,
+          "example": "Estructural"
+        },
+        {
+          "name": "Tipo Legal",
+          "type": "string",
+          "description": "Contexto jurídico (Demanda judicial, Reclamación extrajudicial, Asesoramiento preventivo)",
+          "required": true,
+          "example": "Demanda judicial"
+        },
+        {
+          "name": "Urgencia",
+          "type": "string",
+          "description": "Nivel de urgencia del caso",
+          "required": false,
+          "example": "Alta"
+        },
+        {
+          "name": "Session ID",
+          "type": "string",
+          "description": "Identificador único de la sesión del chatbot",
+          "required": true,
+          "example": "sess_abc123def456"
+        },
+        {
+          "name": "Estado",
+          "type": "string",
+          "description": "Estado del lead (PENDIENTE, CONTACTADO, PRESUPUESTADO, CERRADO)",
+          "required": true,
+          "example": "PENDIENTE"
+        },
+        {
+          "name": "Notas",
+          "type": "string",
+          "description": "Notas internas del equipo comercial",
+          "required": false,
+          "example": ""
+        }
+      ],
+      "example_data": [
+        {
+          "Fecha": "2025-12-26T14:30:00.000Z",
+          "Nombre": "María González López",
+          "Teléfono": "+34 612 345 678",
+          "Ubicación": "Barcelona",
+          "Servicio": "Grietas y Patología Estructural",
+          "Categoría": "Estructural",
+          "Tipo Legal": "Demanda judicial",
+          "Urgencia": "Alta",
+          "Session ID": "sess_abc123def456",
+          "Estado": "PENDIENTE",
+          "Notas": ""
+        },
+        {
+          "Fecha": "2025-12-26T10:15:00.000Z",
+          "Nombre": "Carlos Fernández",
+          "Teléfono": "+34 655 987 321",
+          "Ubicación": "Girona",
+          "Servicio": "Valoración de Daños por Incendio",
+          "Categoría": "Seguros",
+          "Tipo Legal": "Reclamación extrajudicial",
+          "Urgencia": "Normal",
+          "Session ID": "sess_xyz789ghi012",
+          "Estado": "CONTACTADO",
+          "Notas": "Cliente muy interesado, llamar mañana"
+        }
+      ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "apiUrl": "http://127.0.0.1:8787/api/chat",
+  "autoOpen": false,
+  "theme": "dark",
+  "enabled": true,
+  "showOnPages": ["*"],
+  "excludePages": ["/admin", "/legal/privacidad"],
+  "strings": {
+    "es": {
+      "header_title": "Perito.barcelona",
+      "header_subtitle": "Asistente técnico",
+      "input_placeholder": "Escribe tu mensaje...",
+      "send_aria": "Enviar mensaje",
+      "open_aria": "Abrir chat de asistencia técnica",
+      "close_aria": "Cerrar chat",
+      "error_connection": "Error de conexión. Por favor, intenta de nuevo o contacta directamente.",
+      "typing": "Escribiendo..."
+    },
+    "ca": {
+      "header_title": "Perito.barcelona",
+      "header_subtitle": "Assistent tècnic",
+      "input_placeholder": "Escriu el teu missatge...",
+      "send_aria": "Enviar missatge",
+      "open_aria": "Obrir xat d'assistència tècnica",
+      "close_aria": "Tancar xat",
+      "error_connection": "Error de connexió. Si us plau, torna-ho a intentar o contacta directament.",
+      "typing": "Escrivint..."
+    },
+    "en": {
+      "header_title": "Perito.barcelona",
+      "header_subtitle": "Technical assistant",
+      "input_placeholder": "Type your message...",
+      "send_aria": "Send message",
+      "open_aria": "Open technical support chat",
+      "close_aria": "Close chat",
+      "error_connection": "Connection error. Please try again or contact us directly.",
+      "typing": "Typing..."
+    }
+  }
+}
