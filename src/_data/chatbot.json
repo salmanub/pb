@@ -1,5 +1,5 @@
 {
-  "apiUrl": "http://127.0.0.1:8787/api/chat",
+  "apiUrl": "https://perito-barcelona-chatbot.prueba2.workers.dev/api/chat",
   "autoOpen": false,
   "theme": "dark",
   "enabled": true,

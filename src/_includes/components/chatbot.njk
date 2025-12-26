@@ -207,11 +207,19 @@
 
 {# Script del chatbot #}
 <script>
-  // Configuración del chatbot
+  // Configuración global del chatbot
   window.PERITO_CHATBOT_CONFIG = window.PERITO_CHATBOT_CONFIG || {
-    apiUrl: '{{ chatbot.apiUrl | default("https://perito-chatbot.workers.dev/api/chat") }}',
+    apiUrl: '{{ chatbot.apiUrl | default("https://perito-barcelona-chatbot.prueba2.workers.dev/api/chat") }}',
     autoOpen: {{ chatbot.autoOpen | default("false") }},
     theme: '{{ chatbot.theme | default("dark") }}'
+  };
+  
+  // Metadata global (para usar el teléfono en mensajes de error)
+  window.PERITO_METADATA = window.PERITO_METADATA || {
+    contact: {
+      phoneNumber: '{{ metadata.contact.phoneNumber }}',
+      email: '{{ metadata.contact.email }}'
+    }
   };
 </script>
 <script src="/assets/js/chatbot.js" defer></script>

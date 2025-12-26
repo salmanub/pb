@@ -175,8 +175,11 @@ class PeritoChatbot {
       console.error('[Chatbot] Error:', error);
       this.removeTypingIndicator(typingId);
       
+      // Obtener el teléfono de metadata si está disponible
+      const telefono = window.PERITO_METADATA?.contact?.phoneNumber || '+34 614 194 985';
+      
       this.addMessage(
-        'Error de conexión. Por favor, intenta de nuevo o contacta directamente al 93 000 00 00.',
+        `Error de conexión. Por favor, intenta de nuevo o contacta directamente al ${telefono}.`,
         'bot'
       );
 
