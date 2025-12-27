@@ -37,6 +37,7 @@
       <div class="flex items-center gap-2">
         <button 
           id="download-chat" 
+          type="button"
           aria-label="Guardar conversación"
           title="Guardar conversación"
           class="bg-transparent border-0 text-white cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-all duration-300 ease-out hover:bg-white/20 hover:scale-110"
@@ -260,7 +261,7 @@
   // Cargar el script del chatbot después de que la página haya cargado completamente
   window.addEventListener('load', function() {
     const script = document.createElement('script');
-    script.src = '/assets/js/chatbot.js?v=2';
+    script.src = '/assets/js/chatbot.js?v=3';
     script.defer = true;
     document.body.appendChild(script);
   });

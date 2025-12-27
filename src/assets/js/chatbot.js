@@ -67,7 +67,14 @@ class PeritoChatbot {
     this.elements.button.addEventListener('click', () => this.toggleChat());
     this.elements.closeButton.addEventListener('click', () => this.toggleChat());
     if (this.elements.downloadButton) {
-      this.elements.downloadButton.addEventListener('click', () => this.downloadHistory());
+      this.elements.downloadButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('[Chatbot] Click en descargar historial');
+        this.downloadHistory();
+      });
+    } else {
+      console.warn('[Chatbot] Botón de descarga no encontrado en el DOM');
     }
     this.elements.sendButton.addEventListener('click', () => this.sendMessage());
     
@@ -481,44 +488,69 @@ class PeritoChatbot {
    * Descarga el historial de chat
    */
   downloadHistory() {
+    console.log('[Chatbot] Iniciando descarga de historial...');
     const messages = Array.from(this.elements.messages.children);
+    
     if (messages.length === 0) {
+        console.warn('[Chatbot] No hay mensajes para descargar');
         alert("No hay mensajes para descargar.");
         return;
     }
 
     let text = "HISTORIAL DE CHAT - PERITO.BARCELONA\n";
     text += "====================================\n\n";
+    text += `Fecha: ${new Date().toLocaleString()}\n`;
+    text += `ID Sesión: ${this.config.sessionId}\n\n`;
     
+    let count = 0;
     messages.forEach(msg => {
       // Ignorar indicadores de escritura
-      if (msg.classList.contains('typing-indicator')) return;
+      if (msg.classList.contains('typing-indicator') || msg.id.startsWith('typing-')) return;
       
-      // Detectar rol basado en la clase de alineación o estilo
-      // En addMessage: user -> text-right, bot -> text-left
+      // Detectar rol basado en la clase de alineación
       const isUser = msg.classList.contains('text-right');
-      const bubble = msg.querySelector('div'); // El primer div hijo es la burbuja
+      
+      // Buscar la burbuja de texto (primer div hijo)
+      const bubble = msg.querySelector('div'); 
       
       if (bubble) {
-        // Limpiar HTML tags para obtener solo texto limpio
+        // Clonar para limpiar HTML tags y obtener solo texto
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = bubble.innerHTML;
-        const content = tempDiv.innerText || tempDiv.textContent;
         
-        const role = isUser ? "Usuario" : "Asistente";
-        text += `[${role}]: ${content}\n\n`;
+        // Limpiar botones si los hubiera (están en otro div hermano, pero por si acaso)
+        const buttons = tempDiv.querySelectorAll('button, a');
+        buttons.forEach(b => b.remove());
+
+        const content = (tempDiv.innerText || tempDiv.textContent).trim();
+        
+        if (content) {
+            const role = isUser ? "Usuario" : "Asistente";
+            text += `[${role}]: ${content}\n\n`;
+            count++;
+        }
       }
     });
+
+    console.log(`[Chatbot] Procesados ${count} mensajes`);
     
-    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `perito-barcelona-chat-${new Date().toISOString().slice(0,10)}.txt`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
+    try {
+        const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `perito-barcelona-chat-${new Date().toISOString().slice(0,10)}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(() => {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            console.log('[Chatbot] Descarga completada');
+        }, 100);
+    } catch (e) {
+        console.error('[Chatbot] Error generando descarga:', e);
+        alert('Error al generar el archivo de descarga.');
+    }
   }
 }
 
