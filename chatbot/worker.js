@@ -14,8 +14,8 @@
 
 const CONFIG = {
   // Google Sheets API (lectura)
-  SHEETS_API_KEY: 'TU_API_KEY_AQUI',
-  SPREADSHEET_ID: 'TU_SPREADSHEET_ID_AQUI',
+  SHEETS_API_KEY: '',
+  SPREADSHEET_ID: '',
   
   // Google Service Account (escritura de leads)
   GOOGLE_SERVICE_ACCOUNT_EMAIL: '',
@@ -26,7 +26,7 @@ const CONFIG = {
   EMAIL_DESTINO: 'info@perito.barcelona',
   
   // OpenAI API (o alternativa)
-  OPENAI_API_KEY: 'TU_OPENAI_KEY_AQUI',
+  OPENAI_API_KEY: '',
   OPENAI_MODEL: 'gpt-4-turbo-preview',
   
   // Límites
