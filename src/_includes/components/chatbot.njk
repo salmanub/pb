@@ -221,5 +221,12 @@
       email: '{{ metadata.contact.email }}'
     }
   };
+
+  // Cargar el script del chatbot después de que la página haya cargado completamente
+  window.addEventListener('load', function() {
+    const script = document.createElement('script');
+    script.src = '/assets/js/chatbot.js?v=2';
+    script.defer = true;
+    document.body.appendChild(script);
+  });
 </script>
-<script src="/assets/js/chatbot.js" defer></script>

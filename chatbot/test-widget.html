@@ -320,7 +320,7 @@
 
       const bubble = document.createElement('div');
       bubble.className = 'message-bubble';
-      bubble.textContent = texto;
+      bubble.innerHTML = texto;
       messageDiv.appendChild(bubble);
 
       // Botones (si los hay)
@@ -330,7 +330,7 @@
 
         botones.forEach(btn => {
           const button = document.createElement('button');
-          button.textContent = btn.text;
+          button.innerHTML = btn.text;
           button.onclick = () => handleButtonClick(btn.value);
           buttonsDiv.appendChild(button);
         });
@@ -353,7 +353,7 @@
       allButtons.forEach(btn => btn.disabled = true);
 
       // Mostrar como mensaje del usuario (solo el valor, no el emoji)
-      const buttonText = event.target.textContent;
+      const buttonText = event.target.innerHTML;
       addMessage(buttonText, 'user');
 
       // Enviar al bot

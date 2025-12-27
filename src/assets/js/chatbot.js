@@ -25,6 +25,7 @@ class PeritoChatbot {
     
     // Inicializar
     this.init();
+    console.log('[Chatbot] v2 loaded - SVG support enabled');
   }
 
   /**
@@ -207,7 +208,7 @@ class PeritoChatbot {
     } else {
       bubble.className = 'inline-block py-3 px-4 rounded-2xl rounded-br-sm max-w-[85%] bg-cyan-600 text-white text-sm leading-relaxed';
     }
-    bubble.textContent = texto;
+    bubble.innerHTML = texto;
     messageDiv.appendChild(bubble);
 
     // Botones (si los hay)
@@ -217,7 +218,7 @@ class PeritoChatbot {
 
       botones.forEach(btn => {
         const button = document.createElement('button');
-        button.textContent = btn.text;
+        button.innerHTML = btn.text;
         button.dataset.value = btn.value;
         button.className = 'bg-white border-2 border-cyan-600 text-cyan-700 py-3 px-4 rounded-lg cursor-pointer text-sm font-medium transition-all duration-300 ease-out text-left flex items-center gap-2 hover:bg-cyan-600 hover:text-white hover:translate-x-1 hover:shadow-md active:translate-x-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0';
         button.addEventListener('click', (e) => this.handleButtonClick(e, btn.value, btn.text));

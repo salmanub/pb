@@ -529,9 +529,38 @@ class SheetsWriteService {
       }),
     });
     
-    return response.ok;
+    if (!response.ok) {
+      const errorBody = await response.text();
+      console.error(`Error escribiendo en Google Sheets (${response.status}):`, errorBody);
+      throw new Error(`Google Sheets API Error: ${response.status} - ${errorBody}`);
+    }
+    
+    return true;
   }
 }
+
+// ============================================================================
+// ICONOS LUCIDE (INLINED SVG)
+// ============================================================================
+
+const ICONS = {
+  building: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building inline-block mr-2"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M16 18h.01"/></svg>',
+  hardHat: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-hat inline-block mr-2"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15v-3a6 6 0 0 1 6-6h0"/><path d="M14 6h0a6 6 0 0 1 6 6v3"/></svg>',
+  flame: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame inline-block mr-2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.1.243-2.143.5-3.5a6 6 0 0 1 3 3.5z"/></svg>',
+  car: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-car-front inline-block mr-2"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"/><path d="M7 14h.01"/><path d="M17 14h.01"/><rect width="18" height="8" x="3" y="10" rx="2"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>',
+  scale: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scale inline-block mr-2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>',
+  landmark: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-landmark inline-block mr-2"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>',
+  briefcase: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase inline-block mr-2"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>',
+  user: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user inline-block mr-2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
+  key: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-key inline-block mr-2"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg>',
+  shoppingCart: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart inline-block mr-2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>',
+  home: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home inline-block mr-2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+  frown: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-frown inline-block mr-2"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>',
+  alertTriangle: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alert-triangle inline-block mr-2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>',
+  scroll: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll inline-block mr-2"><path d="M8 17h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4"/><path d="M8 21h12a2 2 0 0 0 2-2v-2H8v4Z"/></svg>',
+  shield: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield inline-block mr-2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>',
+  clipboard: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard inline-block mr-2"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>',
+};
 
 // ============================================================================
 // MANEJADOR PRINCIPAL DEL CHATBOT
@@ -589,6 +618,7 @@ class ChatbotHandler {
     
     // DETECCIÓN VIP GLOBAL (Intercepta en cualquier momento si menciona nombre clave)
     const mensajeLower = mensaje.toLowerCase();
+    // Strict Name Matching: Busca coincidencias exactas o frases clave, no solo "includes" parciales peligrosos
     const esVip = CONFIG.VIP_NAMES.some(vip => mensajeLower.includes(vip));
     
     if (esVip && session.estado !== ESTADOS.FINALIZADO) {
@@ -604,8 +634,13 @@ class ChatbotHandler {
             };
         }
         session.estado = ESTADOS.CAPTURA_DESCRIPCION_CASO;
+        
+        // Extraer nombre si es posible (simple capitalización)
+        const nombreDetectado = mensaje.split(' ').find(w => CONFIG.VIP_NAMES.some(v => v.includes(w.toLowerCase()))) || 'Colaborador';
+        const nombreCapitalizado = nombreDetectado.charAt(0).toUpperCase() + nombreDetectado.slice(1);
+
         respuesta = {
-            texto: `¡Hola! He detectado que eres colaborador habitual. ¿Qué caso tenemos hoy? Descríbeme el tema y aviso urgente al equipo.`,
+            texto: `¡Hombre ${nombreCapitalizado}! Buenas. ¿Qué necesitas mover hoy? Descríbeme el tema y aviso urgente al equipo.`,
             botones: []
         };
     } else {
@@ -686,15 +721,22 @@ class ChatbotHandler {
     
     if (!botones || botones.length === 0) {
       botones = [
-        { type: 'button', text: '🏢 Daños en Alquiler/Arrendamiento', value: 'danos-alquiler' },
-        { type: 'button', text: '🏗️ Vicios Ocultos / Defectos Construcción', value: 'vicios-ocultos' },
-        { type: 'button', text: '🔥 Siniestros y Seguros', value: 'siniestros-seguros' },
-        { type: 'button', text: '🚗 Reconstrucción de Accidentes', value: 'accidentes' },
-        { type: 'button', text: '⚖️ Valoración Económica / Disputas', value: 'valoracion-economica' },
-        { type: 'button', text: '🏛️ Patologías Estructurales', value: 'patologia-estructural' },
+        { type: 'button', text: `${ICONS.building} Daños en Alquiler/Arrendamiento`, value: 'danos-alquiler' },
+        { type: 'button', text: `${ICONS.hardHat} Vicios Ocultos / Defectos Construcción`, value: 'vicios-ocultos' },
+        { type: 'button', text: `${ICONS.flame} Siniestros y Seguros`, value: 'siniestros-seguros' },
+        { type: 'button', text: `${ICONS.car} Reconstrucción de Accidentes`, value: 'accidentes' },
+        { type: 'button', text: `${ICONS.scale} Valoración Económica / Disputas`, value: 'valoracion-economica' },
+        { type: 'button', text: `${ICONS.landmark} Patologías Estructurales`, value: 'patologia-estructural' },
       ];
     }
     
+    // Añadir opción B2B para profesionales
+    botones.push({
+        type: 'button',
+        text: `${ICONS.briefcase} Soy Abogado / Profesional`,
+        value: 'soy_abogado'
+    });
+
     session.estado = ESTADOS.TRIAJE_NIVEL_1;
     
     return {
@@ -717,13 +759,32 @@ class ChatbotHandler {
    * FASE 1.1: TRIAJE NIVEL 1 - Usuario selecciona categoría principal
    */
   async handleTriajeNivel1(session, mensaje) {
+    const mensajeLower = mensaje.toLowerCase();
+
+    // DETECCIÓN DE PROFESIONALES (B2B)
+    const keywordsB2B = ['abogado', 'letrado', 'bufete', 'despacho', 'administrador', 'colegiado', 'soy_abogado'];
+    if (mensaje === 'soy_abogado' || keywordsB2B.some(kw => mensajeLower.includes(kw))) {
+        session.datos.tipo_cliente = 'Abogado';
+        session.datos.servicio_final = { 
+            nombre_servicio: 'Consulta Profesional', 
+            categoria: 'Legal', 
+            slug: 'legal-b2b' 
+        };
+        
+        // Saltamos directamente a la descripción del caso
+        session.estado = ESTADOS.CAPTURA_DESCRIPCION_CASO;
+        
+        return {
+            texto: 'Entendido, compañero. Para valorar la colaboración, indícame: ¿De qué especialidad es el asunto (Vicios, Estructuras, Económico) y en qué fase procesal estamos?',
+            botones: []
+        };
+    }
+
     // Buscar el servicio seleccionado
     let servicio = await this.sheets.getServicioBySlug(mensaje);
     
     // Si no encuentra por slug, intentar mapear por contenido del mensaje
     if (!servicio) {
-      const mensajeLower = mensaje.toLowerCase();
-      
       // Mapeo inteligente basado en palabras clave
       if (mensajeLower.includes('alquiler') || mensajeLower.includes('inquilino') || mensajeLower.includes('arrendamiento') || mensajeLower.includes('nave')) {
         servicio = { slug: 'danos-alquiler', categoria: 'Daños Alquiler', nombre_servicio: 'Daños en Alquiler/Arrendamiento', nivel: 1 };
@@ -743,14 +804,23 @@ class ChatbotHandler {
     if (!servicio) {
       // Si realmente no puede clasificarlo, mostrar los botones de nuevo
       const botones = await this.generarBotonesTriaje(1);
-      const botonesDefault = botones.length > 0 ? botones : [
-        { type: 'button', text: '🏢 Daños en Alquiler/Arrendamiento', value: 'danos-alquiler' },
-        { type: 'button', text: '🏗️ Vicios Ocultos / Defectos Construcción', value: 'vicios-ocultos' },
-        { type: 'button', text: '🔥 Siniestros y Seguros', value: 'siniestros-seguros' },
-        { type: 'button', text: '🚗 Reconstrucción de Accidentes', value: 'accidentes' },
-        { type: 'button', text: '⚖️ Valoración Económica / Disputas', value: 'valoracion-economica' },
-        { type: 'button', text: '🏛️ Patologías Estructurales', value: 'patologia-estructural' },
+      let botonesDefault = botones.length > 0 ? botones : [
+        { type: 'button', text: `${ICONS.building} Daños en Alquiler/Arrendamiento`, value: 'danos-alquiler' },
+        { type: 'button', text: `${ICONS.hardHat} Vicios Ocultos / Defectos Construcción`, value: 'vicios-ocultos' },
+        { type: 'button', text: `${ICONS.flame} Siniestros y Seguros`, value: 'siniestros-seguros' },
+        { type: 'button', text: `${ICONS.car} Reconstrucción de Accidentes`, value: 'accidentes' },
+        { type: 'button', text: `${ICONS.scale} Valoración Económica / Disputas`, value: 'valoracion-economica' },
+        { type: 'button', text: `${ICONS.landmark} Patologías Estructurales`, value: 'patologia-estructural' },
       ];
+
+      // Asegurar que el botón de abogado también aparece en el fallback
+      if (!botonesDefault.some(b => b.value === 'soy_abogado')) {
+          botonesDefault.push({
+            type: 'button',
+            text: `${ICONS.briefcase} Soy Abogado / Profesional`,
+            value: 'soy_abogado'
+        });
+      }
       
       return {
         texto: 'No he entendido. ¿Podrías seleccionar la opción que mejor describa tu caso?',
@@ -834,28 +904,28 @@ class ChatbotHandler {
       if (categoria.includes('alquiler') || categoria.includes('arrendamiento')) {
         pregunta = '¿Eres el propietario que reclama o el inquilino?';
         botones = [
-          { type: 'button', text: '🏢 Propietario', value: 'propietario' },
-          { type: 'button', text: '🔑 Inquilino', value: 'inquilino' },
+          { type: 'button', text: `${ICONS.building} Propietario`, value: 'propietario' },
+          { type: 'button', text: `${ICONS.key} Inquilino`, value: 'inquilino' },
         ];
       } else if (categoria.includes('vicio') || categoria.includes('compraventa')) {
         pregunta = '¿Eres el comprador afectado o el vendedor?';
         botones = [
-          { type: 'button', text: '🛒 Comprador afectado', value: 'comprador' },
-          { type: 'button', text: '🏠 Vendedor', value: 'vendedor' },
+          { type: 'button', text: `${ICONS.shoppingCart} Comprador afectado`, value: 'comprador' },
+          { type: 'button', text: `${ICONS.home} Vendedor`, value: 'vendedor' },
         ];
       } else if (categoria.includes('accidente')) {
         pregunta = '¿Eres la parte afectada o el causante?';
         botones = [
-          { type: 'button', text: '😟 Parte afectada', value: 'afectado' },
-          { type: 'button', text: '⚠️ Causante', value: 'causante' },
+          { type: 'button', text: `${ICONS.frown} Parte afectada`, value: 'afectado' },
+          { type: 'button', text: `${ICONS.alertTriangle} Causante`, value: 'causante' },
         ];
       } else {
         // Caso genérico para estructuras, construcción, etc.
         pregunta = '¿Cuál es tu situación?';
         botones = [
-          { type: 'button', text: '🏠 Soy el propietario', value: 'propietario' },
-          { type: 'button', text: '👷 Soy el constructor/promotor', value: 'constructor' },
-          { type: 'button', text: '👤 Otra situación', value: 'otro' },
+          { type: 'button', text: `${ICONS.home} Soy el propietario`, value: 'propietario' },
+          { type: 'button', text: `${ICONS.hardHat} Soy el constructor/promotor`, value: 'constructor' },
+          { type: 'button', text: `${ICONS.user} Otra situación`, value: 'otro' },
         ];
       }
       
@@ -913,9 +983,9 @@ class ChatbotHandler {
       return {
         texto: '¿Cuál es el estado legal del caso?',
         botones: [
-          { type: 'button', text: '📜 Ya hay demanda judicial', value: 'demanda' },
-          { type: 'button', text: '🛡️ Hay reclamación previa/Extrajudicial', value: 'reclamacion' },
-          { type: 'button', text: '📋 Aún no hay demanda ni reclamación', value: 'sin_demanda' },
+          { type: 'button', text: `${ICONS.scroll} Ya hay demanda judicial`, value: 'demanda' },
+          { type: 'button', text: `${ICONS.shield} Hay reclamación previa/Extrajudicial`, value: 'reclamacion' },
+          { type: 'button', text: `${ICONS.clipboard} Aún no hay demanda ni reclamación`, value: 'sin_demanda' },
         ],
       };
     }
@@ -934,9 +1004,9 @@ class ChatbotHandler {
       return {
         texto: 'Por favor, selecciona una de las opciones:',
         botones: [
-          { type: 'button', text: '📜 Ya hay demanda judicial', value: 'demanda' },
-          { type: 'button', text: '🛡️ Hay reclamación previa/Extrajudicial', value: 'reclamacion' },
-          { type: 'button', text: '📋 Aún no hay demanda ni reclamación', value: 'sin_demanda' },
+          { type: 'button', text: `${ICONS.scroll} Ya hay demanda judicial`, value: 'demanda' },
+          { type: 'button', text: `${ICONS.shield} Hay reclamación previa/Extrajudicial`, value: 'reclamacion' },
+          { type: 'button', text: `${ICONS.clipboard} Aún no hay demanda ni reclamación`, value: 'sin_demanda' },
         ],
       };
     }
