@@ -690,17 +690,22 @@ class ChatbotHandler {
     });
     
     let respuesta;
-    
-    // DETECCIÓN VIP GLOBAL (Intercepta en cualquier momento si menciona nombre clave)
     const mensajeLower = mensaje.toLowerCase();
-    // Strict Name Matching: Busca coincidencias exactas o frases clave, no solo "includes" parciales peligrosos
+
+    // 0. RETOMAR FLUJO (Si el usuario viene de ver un recurso)
+    if (mensaje === 'retomar_flujo') {
+        // Ignoramos el mensaje y dejamos que el switch re-ejecute el estado actual
+        // Al pasar mensaje=null, los handlers entenderán que deben repetir la pregunta
+        mensaje = null; 
+    }
+
+    // 1. DETECCIÓN VIP GLOBAL (Prioridad 1)
     const esVip = CONFIG.VIP_NAMES.some(vip => mensajeLower.includes(vip));
     
     if (esVip && session.estado !== ESTADOS.FINALIZADO) {
         session.datos.tipo_cliente = 'VIP';
         session.datos.vip = true;
-        // Si detectamos VIP, saltamos directamente a pedir descripción
-        // Pero necesitamos un servicio dummy o genérico si no lo tenemos
+        
         if (!session.datos.servicio_final) {
             session.datos.servicio_final = { 
                 nombre_servicio: 'Consulta VIP', 
@@ -710,7 +715,6 @@ class ChatbotHandler {
         }
         session.estado = ESTADOS.CAPTURA_DESCRIPCION_CASO;
         
-        // Extraer nombre si es posible (simple capitalización)
         const nombreDetectado = mensaje.split(' ').find(w => CONFIG.VIP_NAMES.some(v => v.includes(w.toLowerCase()))) || 'Colaborador';
         const nombreCapitalizado = nombreDetectado.charAt(0).toUpperCase() + nombreDetectado.slice(1);
 
@@ -718,62 +722,98 @@ class ChatbotHandler {
             texto: `¡Hombre ${nombreCapitalizado}! Buenas. ¿Qué necesitas mover hoy? Descríbeme el tema y aviso urgente al equipo.`,
             botones: []
         };
-    } else {
-        // Flujo normal
-        switch (session.estado) {
-        case ESTADOS.INICIO:
-            respuesta = await this.handleInicio(session);
-            break;
-            
-        case ESTADOS.SELECCION_PERFIL:
-            respuesta = await this.handleSeleccionPerfil(session, mensaje);
-            break;
+        
+        return this.guardarYResponder(session, respuesta);
+    }
 
-        case ESTADOS.TRIAJE_NIVEL_1:
-            respuesta = await this.handleTriajeNivel1(session, mensaje);
-            break;
-            
-        case ESTADOS.TRIAJE_NIVEL_2:
-            respuesta = await this.handleTriajeNivel2(session, mensaje);
-            break;
-            
-        case ESTADOS.CAPTURA_ROL_CLIENTE:
-            respuesta = await this.handleCapturaRolCliente(session, mensaje);
-            break;
-            
-        case ESTADOS.CAPTURA_DESCRIPCION_CASO:
-            respuesta = await this.handleCapturaDescripcionCaso(session, mensaje);
-            break;
-            
-        case ESTADOS.CUALIFICACION_JURIDICA:
-            respuesta = await this.handleCualificacionJuridica(session, mensaje);
-            break;
-            
-        case ESTADOS.CAPTURA_UBICACION:
-            respuesta = await this.handleCapturaUbicacion(session, mensaje);
-            break;
-            
-        case ESTADOS.CAPTURA_NOMBRE:
-            respuesta = await this.handleCapturaNombre(session, mensaje);
-            break;
-            
-        case ESTADOS.CAPTURA_EMAIL:
-            respuesta = await this.handleCapturaEmail(session, mensaje);
-            break;
-            
-        case ESTADOS.CAPTURA_TELEFONO:
-            respuesta = await this.handleCapturaTelefono(session, mensaje);
-            break;
-            
-        default:
-            respuesta = {
-            texto: 'Error en el sistema. Por favor, reinicia la conversación.',
-            botones: [],
-            };
-        }
+    // 2. CONSERJE DIGITAL (Prioridad 2 - Intercepción Global)
+    // Evitamos interceptar si estamos capturando datos sensibles (email/teléfono) o si es VIP
+    const estadosProhibidos = [ESTADOS.CAPTURA_EMAIL, ESTADOS.CAPTURA_TELEFONO];
+    const intentInfo = ['blog', 'articulo', 'ejemplo', 'caso', 'informacion', 'leer', 'ver', 'guia', 'manual'];
+    
+    if (mensaje && !session.datos.vip && !estadosProhibidos.includes(session.estado)) {
+         if (intentInfo.some(i => mensajeLower.includes(i))) {
+             const recursos = await this.buscarRecursos(mensaje, session.datos.lang);
+             if (recursos.length > 0) {
+                 const botones = recursos.map(r => ({
+                    type: 'link',
+                    text: `📄 ${r.titulo}`,
+                    value: r.url
+                 }));
+                 
+                 // Botón para volver al flujo actual
+                 botones.push({ type: 'button', text: '↩️ Continuar con el presupuesto', value: 'retomar_flujo' });
+                 
+                 respuesta = {
+                    texto: 'He encontrado estos recursos en nuestra base de conocimiento que te pueden interesar:',
+                    botones: botones
+                 };
+                 
+                 return this.guardarYResponder(session, respuesta);
+             }
+         }
+    }
+
+    // 3. FLUJO NORMAL (Máquina de Estados)
+    switch (session.estado) {
+    case ESTADOS.INICIO:
+        respuesta = await this.handleInicio(session);
+        break;
+        
+    case ESTADOS.SELECCION_PERFIL:
+        respuesta = await this.handleSeleccionPerfil(session, mensaje);
+        break;
+
+    case ESTADOS.TRIAJE_NIVEL_1:
+        respuesta = await this.handleTriajeNivel1(session, mensaje);
+        break;
+        
+    case ESTADOS.TRIAJE_NIVEL_2:
+        respuesta = await this.handleTriajeNivel2(session, mensaje);
+        break;
+        
+    case ESTADOS.CAPTURA_ROL_CLIENTE:
+        respuesta = await this.handleCapturaRolCliente(session, mensaje);
+        break;
+        
+    case ESTADOS.CAPTURA_DESCRIPCION_CASO:
+        respuesta = await this.handleCapturaDescripcionCaso(session, mensaje);
+        break;
+        
+    case ESTADOS.CUALIFICACION_JURIDICA:
+        respuesta = await this.handleCualificacionJuridica(session, mensaje);
+        break;
+        
+    case ESTADOS.CAPTURA_UBICACION:
+        respuesta = await this.handleCapturaUbicacion(session, mensaje);
+        break;
+        
+    case ESTADOS.CAPTURA_NOMBRE:
+        respuesta = await this.handleCapturaNombre(session, mensaje);
+        break;
+        
+    case ESTADOS.CAPTURA_EMAIL:
+        respuesta = await this.handleCapturaEmail(session, mensaje);
+        break;
+        
+    case ESTADOS.CAPTURA_TELEFONO:
+        respuesta = await this.handleCapturaTelefono(session, mensaje);
+        break;
+        
+    default:
+        respuesta = {
+        texto: 'Error en el sistema. Por favor, reinicia la conversación.',
+        botones: [],
+        };
     }
     
-    // Añadir respuesta al historial
+    return this.guardarYResponder(session, respuesta);
+  }
+
+  /**
+   * Helper para guardar sesión y devolver respuesta
+   */
+  guardarYResponder(session, respuesta) {
     session.historial.push({
       role: 'assistant',
       content: respuesta.texto,
@@ -781,9 +821,7 @@ class ChatbotHandler {
       botones: respuesta.botones,
     });
     
-    // Guardar sesión actualizada
-    sessionStore.set(sessionId, session);
-    
+    sessionStore.set(session.sessionId, session);
     return respuesta;
   }
   
@@ -834,6 +872,27 @@ class ChatbotHandler {
    * FASE 1.1: TRIAJE NIVEL 1 - Usuario selecciona categoría principal
    */
   async handleTriajeNivel1(session, mensaje) {
+    // Si mensaje es null (retomar_flujo), saltamos validaciones y mostramos opciones de nuevo
+    if (!mensaje) {
+        const botones = await this.generarBotonesTriaje(1);
+        // ... fallback logic ...
+        let botonesDefault = botones.length > 0 ? botones : [
+            { type: 'button', text: `${ICONS.building} Daños en Alquiler/Arrendamiento`, value: 'danos-alquiler' },
+            { type: 'button', text: `${ICONS.hardHat} Vicios Ocultos / Defectos Construcción`, value: 'vicios-ocultos' },
+            { type: 'button', text: `${ICONS.flame} Siniestros y Seguros`, value: 'siniestros-seguros' },
+            { type: 'button', text: `${ICONS.car} Reconstrucción de Accidentes`, value: 'accidentes' },
+            { type: 'button', text: `${ICONS.scale} Valoración Económica / Disputas`, value: 'valoracion-economica' },
+            { type: 'button', text: `${ICONS.landmark} Patologías Estructurales`, value: 'patologia-estructural' },
+        ];
+        if (!botonesDefault.some(b => b.value === 'soy_abogado')) {
+            botonesDefault.push({ type: 'button', text: `${ICONS.briefcase} Soy Abogado / Profesional`, value: 'soy_abogado' });
+        }
+        return {
+            texto: '¿En qué tipo de caso puedo ayudarte?',
+            botones: botonesDefault,
+        };
+    }
+
     const mensajeLower = mensaje.toLowerCase();
 
     // DETECCIÓN DE PROFESIONALES (B2B)
@@ -855,26 +914,7 @@ class ChatbotHandler {
         };
     }
 
-    // DETECCIÓN DE INTENCIÓN INFORMATIVA (Conserje Digital)
-    const intentInfo = ['blog', 'articulo', 'ejemplo', 'caso', 'informacion', 'leer', 'ver', 'guia', 'manual'];
-    if (intentInfo.some(i => mensajeLower.includes(i))) {
-        const recursos = await this.buscarRecursos(mensaje, session.datos.lang);
-        if (recursos.length > 0) {
-            const botones = recursos.map(r => ({
-                type: 'link', // Frontend debe soportar esto o tratarlo como botón especial
-                text: `📄 ${r.titulo}`,
-                value: r.url // El valor es la URL
-            }));
-            
-            // Añadir botón de volver al inicio
-            botones.push({ type: 'button', text: '↩️ Volver al inicio', value: 'inicio' });
-
-            return {
-                texto: 'He encontrado estos recursos en nuestra base de conocimiento que te pueden interesar:',
-                botones: botones
-            };
-        }
-    }
+    // NOTA: La detección de "Conserje Digital" se ha movido a handleMessage (Intercepción Global)
 
     // Buscar el servicio seleccionado
     let servicio = await this.sheets.getServicioBySlug(mensaje);
