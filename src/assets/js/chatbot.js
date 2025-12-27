@@ -134,12 +134,25 @@ class PeritoChatbot {
   }
 
   /**
-   * Genera un ID de sesión único
+   * Genera un UUID simple
+   */
+  generateUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  }
+
+  /**
+   * Obtiene o crea el ID de sesión persistente
    */
   generateSessionId() {
-    const timestamp = Date.now();
-    const random = Math.random().toString(36).substring(2, 11);
-    return `session_${timestamp}_${random}`;
+    let sessionId = localStorage.getItem('chat_session_id');
+    if (!sessionId) {
+      sessionId = this.generateUUID();
+      localStorage.setItem('chat_session_id', sessionId);
+    }
+    return sessionId;
   }
 
   /**

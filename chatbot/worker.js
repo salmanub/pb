@@ -14,8 +14,8 @@
 
 const CONFIG = {
   // Google Sheets API (lectura)
-  SHEETS_API_KEY: '',
-  SPREADSHEET_ID: '',
+  SHEETS_API_KEY: 'TU_API_KEY_AQUI',
+  SPREADSHEET_ID: 'TU_SPREADSHEET_ID_AQUI',
   
   // Google Service Account (escritura de leads)
   GOOGLE_SERVICE_ACCOUNT_EMAIL: '',
@@ -26,7 +26,7 @@ const CONFIG = {
   EMAIL_DESTINO: 'info@perito.barcelona',
   
   // OpenAI API (o alternativa)
-  OPENAI_API_KEY: '',
+  OPENAI_API_KEY: 'TU_OPENAI_KEY_AQUI',
   OPENAI_MODEL: 'gpt-4-turbo-preview',
   
   // Límites
@@ -125,26 +125,37 @@ const ESTADOS = {
 // ALMACENAMIENTO DE SESIONES (KV o in-memory para desarrollo)
 // ============================================================================
 
-// Store usando Cloudflare KV
 class SessionStore {
-  constructor(env) { this.env = env; }
-  
-  async get(id) { 
-    if (!this.env.PERITO_SESSIONS) return null; // Fallback si no hay KV configurado
-    return await this.env.PERITO_SESSIONS.get(id, { type: 'json' });
+  constructor() {
+    this.sessions = new Map();
   }
   
-  async set(id, data) { 
-    if (!this.env.PERITO_SESSIONS) return;
-    // TTL de 30 minutos (1800 segundos)
-    await this.env.PERITO_SESSIONS.put(id, JSON.stringify(data), { expirationTtl: 1800 }); 
+  get(sessionId) {
+    const session = this.sessions.get(sessionId);
+    if (!session) return null;
+    
+    // Verificar timeout
+    if (Date.now() - session.lastActivity > CONFIG.SESSION_TIMEOUT) {
+      this.sessions.delete(sessionId);
+      return null;
+    }
+    
+    return session;
   }
   
-  async delete(id) { 
-    if (!this.env.PERITO_SESSIONS) return;
-    await this.env.PERITO_SESSIONS.delete(id); 
+  set(sessionId, data) {
+    this.sessions.set(sessionId, {
+      ...data,
+      lastActivity: Date.now(),
+    });
+  }
+  
+  delete(sessionId) {
+    this.sessions.delete(sessionId);
   }
 }
+
+const sessionStore = new SessionStore();
 
 // ============================================================================
 // GOOGLE SHEETS - LECTURA DE SERVICIOS
@@ -603,13 +614,12 @@ const ICONS = {
 // ============================================================================
 
 class ChatbotHandler {
-  constructor(env) {
+  constructor() {
     this.sheets = new SheetsService(CONFIG.SHEETS_API_KEY, CONFIG.SPREADSHEET_ID);
     this.sheetsWrite = new SheetsWriteService();
     this.sheets.setWriteService(this.sheetsWrite); // Inyectar servicio de escritura para lectura también
     this.ia = new IAService(CONFIG.OPENAI_API_KEY, CONFIG.OPENAI_MODEL);
     this.email = new EmailService();
-    this.sessionStore = new SessionStore(env);
   }
   
   /**
@@ -656,7 +666,7 @@ class ChatbotHandler {
    * Procesa un mensaje del usuario
    */
   async handleMessage(sessionId, mensaje, userAgent = '', userLang = 'es') {
-    let session = await this.sessionStore.get(sessionId);
+    let session = sessionStore.get(sessionId);
     
     // Nueva sesión
     if (!session) {
@@ -680,7 +690,7 @@ class ChatbotHandler {
     });
     
     let respuesta;
-    const mensajeLower = mensaje ? mensaje.toLowerCase() : '';
+    const mensajeLower = mensaje.toLowerCase();
 
     // 0. RETOMAR FLUJO (Si el usuario viene de ver un recurso)
     if (mensaje === 'retomar_flujo') {
@@ -713,7 +723,7 @@ class ChatbotHandler {
             botones: []
         };
         
-        return this.guardarYResponder(sessionId, session, respuesta);
+        return this.guardarYResponder(session, respuesta);
     }
 
     // 2. CONSERJE DIGITAL (Prioridad 2 - Intercepción Global)
@@ -739,7 +749,7 @@ class ChatbotHandler {
                     botones: botones
                  };
                  
-                 return this.guardarYResponder(sessionId, session, respuesta);
+                 return this.guardarYResponder(session, respuesta);
              }
          }
     }
@@ -1234,7 +1244,7 @@ class ChatbotHandler {
     }
     
     // Limpiar sesión
-    await this.sessionStore.delete(session.sessionId);
+    sessionStore.delete(session.sessionId);
     
     return {
       texto: `Gracias, ${session.datos.nombre}. Hemos recibido tu caso. Un perito te contactará en menos de 24h para valorar el expediente y enviarte un presupuesto detallado.`,
@@ -1267,7 +1277,7 @@ export default {
     if (env.EMAIL_DESTINO) CONFIG.EMAIL_DESTINO = env.EMAIL_DESTINO;
     
     // Instanciar el chatbot DESPUÉS de configurar las variables de entorno
-    const chatbot = new ChatbotHandler(env);
+    const chatbot = new ChatbotHandler();
     
     const url = new URL(request.url);
     

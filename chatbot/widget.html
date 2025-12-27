@@ -376,10 +376,32 @@
 
 <script>
   (function() {
+    /**
+     * Genera un UUID simple
+     */
+    function generateUUID() {
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
+    }
+
+    /**
+     * Gestiona la sesión del usuario (persistencia)
+     */
+    function getSessionId() {
+      let sessionId = localStorage.getItem('chat_session_id');
+      if (!sessionId) {
+        sessionId = generateUUID();
+        localStorage.setItem('chat_session_id', sessionId);
+      }
+      return sessionId;
+    }
+
     // CONFIGURACIÓN
     const CONFIG = {
       API_URL: 'https://perito-barcelona-chatbot.prueba2.workers.dev/api/chat',
-      SESSION_ID: generateSessionId(),
+      SESSION_ID: getSessionId(),
     };
 
     // Elementos DOM
@@ -555,12 +577,6 @@
       window.URL.revokeObjectURL(url);
     }
 
-    /**
-     * Genera un ID de sesión único
-     */
-    function generateSessionId() {
-      return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    }
 
     /**
      * Toggle del chat
