@@ -34,13 +34,23 @@
         <h3 class="m-0 text-base font-semibold leading-tight">Perito Barcelona</h3>
         <p class="m-0 mt-1 text-xs opacity-85 leading-tight">Asistente técnico</p>
       </div>
-      <button 
-        id="close-chat" 
-        aria-label="Cerrar chat"
-        class="bg-transparent border-0 text-white text-3xl cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-all duration-300 ease-out hover:bg-white/20 hover:rotate-90"
-      >
-        &times;
-      </button>
+      <div class="flex items-center gap-2">
+        <button 
+          id="download-chat" 
+          aria-label="Guardar conversación"
+          title="Guardar conversación"
+          class="bg-transparent border-0 text-white text-lg cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-all duration-300 ease-out hover:bg-white/20 hover:scale-110"
+        >
+          ⬇️
+        </button>
+        <button 
+          id="close-chat" 
+          aria-label="Cerrar chat"
+          class="bg-transparent border-0 text-white text-3xl cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-all duration-300 ease-out hover:bg-white/20 hover:rotate-90"
+        >
+          &times;
+        </button>
+      </div>
     </div>
 
     {# Área de mensajes #}

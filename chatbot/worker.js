@@ -122,40 +122,60 @@ const ESTADOS = {
 };
 
 // ============================================================================
-// ALMACENAMIENTO DE SESIONES (KV o in-memory para desarrollo)
+// ALMACENAMIENTO DE SESIONES (KV)
 // ============================================================================
 
 class SessionStore {
-  constructor() {
-    this.sessions = new Map();
+  constructor(env) {
+    this.env = env;
   }
   
-  get(sessionId) {
-    const session = this.sessions.get(sessionId);
-    if (!session) return null;
-    
-    // Verificar timeout
-    if (Date.now() - session.lastActivity > CONFIG.SESSION_TIMEOUT) {
-      this.sessions.delete(sessionId);
+  async get(sessionId) {
+    if (!this.env.PERITO_SESSIONS) {
+      console.warn('KV PERITO_SESSIONS no configurado. Usando memoria volátil.');
+      return this.memoryStore ? this.memoryStore.get(sessionId) : null;
+    }
+
+    try {
+      const session = await this.env.PERITO_SESSIONS.get(sessionId, { type: 'json' });
+      return session;
+    } catch (e) {
+      console.error('Error leyendo KV:', e);
       return null;
     }
-    
-    return session;
   }
   
-  set(sessionId, data) {
-    this.sessions.set(sessionId, {
+  async set(sessionId, data) {
+    const sessionData = {
       ...data,
       lastActivity: Date.now(),
-    });
+    };
+
+    if (!this.env.PERITO_SESSIONS) {
+      if (!this.memoryStore) this.memoryStore = new Map();
+      this.memoryStore.set(sessionId, sessionData);
+      return;
+    }
+
+    try {
+      // TTL en segundos (30 min = 1800s)
+      await this.env.PERITO_SESSIONS.put(sessionId, JSON.stringify(sessionData), { 
+        expirationTtl: 1800 
+      });
+    } catch (e) {
+      console.error('Error escribiendo KV:', e);
+    }
   }
   
-  delete(sessionId) {
-    this.sessions.delete(sessionId);
+  async delete(sessionId) {
+    if (!this.env.PERITO_SESSIONS) {
+      if (this.memoryStore) this.memoryStore.delete(sessionId);
+      return;
+    }
+    await this.env.PERITO_SESSIONS.delete(sessionId);
   }
 }
 
-const sessionStore = new SessionStore();
 
 // ============================================================================
 // GOOGLE SHEETS - LECTURA DE SERVICIOS
@@ -614,7 +634,9 @@ const ICONS = {
 // ============================================================================
 
 class ChatbotHandler {
-  constructor() {
+  constructor(env) {
+    this.env = env;
+    this.sessionStore = new SessionStore(env);
     this.sheets = new SheetsService(CONFIG.SHEETS_API_KEY, CONFIG.SPREADSHEET_ID);
     this.sheetsWrite = new SheetsWriteService();
     this.sheets.setWriteService(this.sheetsWrite); // Inyectar servicio de escritura para lectura también
@@ -666,7 +688,7 @@ class ChatbotHandler {
    * Procesa un mensaje del usuario
    */
   async handleMessage(sessionId, mensaje, userAgent = '', userLang = 'es') {
-    let session = sessionStore.get(sessionId);
+    let session = await this.sessionStore.get(sessionId);
     
     // Nueva sesión
     if (!session) {
@@ -813,7 +835,7 @@ class ChatbotHandler {
   /**
    * Helper para guardar sesión y devolver respuesta
    */
-  guardarYResponder(session, respuesta) {
+  async guardarYResponder(session, respuesta) {
     session.historial.push({
       role: 'assistant',
       content: respuesta.texto,
@@ -821,7 +843,7 @@ class ChatbotHandler {
       botones: respuesta.botones,
     });
     
-    sessionStore.set(session.sessionId, session);
+    await this.sessionStore.set(session.sessionId, session);
     return respuesta;
   }
   
@@ -1244,7 +1266,7 @@ class ChatbotHandler {
     }
     
     // Limpiar sesión
-    sessionStore.delete(session.sessionId);
+    await this.sessionStore.delete(session.sessionId);
     
     return {
       texto: `Gracias, ${session.datos.nombre}. Hemos recibido tu caso. Un perito te contactará en menos de 24h para valorar el expediente y enviarte un presupuesto detallado.`,
@@ -1277,7 +1299,7 @@ export default {
     if (env.EMAIL_DESTINO) CONFIG.EMAIL_DESTINO = env.EMAIL_DESTINO;
     
     // Instanciar el chatbot DESPUÉS de configurar las variables de entorno
-    const chatbot = new ChatbotHandler();
+    const chatbot = new ChatbotHandler(env);
     
     const url = new URL(request.url);
     
