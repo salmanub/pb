@@ -53,6 +53,7 @@ class PeritoChatbot {
       messages: document.getElementById('chat-messages'),
       input: document.getElementById('chat-input'),
       sendButton: document.getElementById('send-button'),
+      resizeHandle: document.getElementById('chat-resize-handle'),
     };
 
     // Verificar que existen los elementos
@@ -72,12 +73,60 @@ class PeritoChatbot {
       }
     });
 
+    // Inicializar resize móvil
+    if (this.elements.resizeHandle) {
+      this.initMobileResize();
+    }
+
     // Auto-abrir si está configurado
     if (this.config.autoOpen) {
       setTimeout(() => this.toggleChat(true), 1000);
     }
 
     console.log('[Chatbot] Inicializado correctamente');
+  }
+
+  /**
+   * Inicializa la lógica de redimensionado para móvil
+   */
+  initMobileResize() {
+    let startY, startHeight;
+    const windowEl = this.elements.window;
+
+    const onTouchStart = (e) => {
+      startY = e.touches[0].clientY;
+      startHeight = windowEl.offsetHeight;
+      windowEl.classList.add('resizing');
+    };
+
+    const onTouchMove = (e) => {
+      if (!startY) return;
+      const currentY = e.touches[0].clientY;
+      const deltaY = startY - currentY; // Arrastrar hacia arriba aumenta la altura
+      const newHeight = startHeight + deltaY;
+      
+      // Límites (20vh a 90vh)
+      const vh = window.innerHeight;
+      if (newHeight > vh * 0.2 && newHeight < vh * 0.9) {
+        windowEl.style.height = `${newHeight}px`;
+      }
+      
+      // Prevenir scroll de la página mientras se redimensiona
+      e.preventDefault();
+    };
+
+    const onTouchEnd = () => {
+      startY = null;
+      windowEl.classList.remove('resizing');
+    };
+
+    this.elements.resizeHandle.addEventListener('touchstart', onTouchStart, { passive: false });
+    document.addEventListener('touchmove', (e) => {
+      if (windowEl.classList.contains('resizing')) {
+        onTouchMove(e);
+      }
+    }, { passive: false });
+    document.addEventListener('touchend', onTouchEnd);
   }
 
   /**
@@ -96,6 +145,7 @@ class PeritoChatbot {
     this.isOpen = forceOpen !== null ? forceOpen : !this.isOpen;
     
     this.elements.window.classList.toggle('open', this.isOpen);
+    document.body.classList.toggle('chat-open', this.isOpen);
     
     if (this.isOpen) {
       this.elements.input.focus();
@@ -221,12 +271,22 @@ class PeritoChatbot {
       buttonsDiv.className = 'mt-2 flex flex-col gap-2 text-left';
 
       botones.forEach(btn => {
-        const button = document.createElement('button');
-        button.innerHTML = btn.text;
-        button.dataset.value = btn.value;
-        button.className = 'bg-white border-2 border-cyan-600 text-cyan-700 py-3 px-4 rounded-lg cursor-pointer text-sm font-medium transition-all duration-300 ease-out text-left flex items-center gap-2 hover:bg-cyan-600 hover:text-white hover:translate-x-1 hover:shadow-md active:translate-x-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0';
-        button.addEventListener('click', (e) => this.handleButtonClick(e, btn.value, btn.text));
-        buttonsDiv.appendChild(button);
+        if (btn.type === 'link') {
+          const link = document.createElement('a');
+          link.href = btn.value;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.innerHTML = btn.text;
+          link.className = 'bg-white border-2 border-cyan-600 text-cyan-700 py-3 px-4 rounded-lg cursor-pointer text-sm font-medium transition-all duration-300 ease-out text-left flex items-center gap-2 hover:bg-cyan-600 hover:text-white hover:translate-x-1 hover:shadow-md active:translate-x-0.5 no-underline block w-full';
+          buttonsDiv.appendChild(link);
+        } else {
+          const button = document.createElement('button');
+          button.innerHTML = btn.text;
+          button.dataset.value = btn.value;
+          button.className = 'bg-white border-2 border-cyan-600 text-cyan-700 py-3 px-4 rounded-lg cursor-pointer text-sm font-medium transition-all duration-300 ease-out text-left flex items-center gap-2 hover:bg-cyan-600 hover:text-white hover:translate-x-1 hover:shadow-md active:translate-x-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0';
+          button.addEventListener('click', (e) => this.handleButtonClick(e, btn.value, btn.text));
+          buttonsDiv.appendChild(button);
+        }
       });
 
       messageDiv.appendChild(buttonsDiv);

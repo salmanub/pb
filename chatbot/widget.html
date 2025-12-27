@@ -38,23 +38,74 @@
       fill: white;
     }
 
-    #chat-window {
-      display: none;
-      position: fixed;
-      bottom: 100px;
-      right: 20px;
-      width: 380px;
-      height: 600px;
-      max-height: 80vh;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-      flex-direction: column;
-      overflow: hidden;
+    /* DESKTOP: SIDEBAR */
+    @media (min-width: 769px) {
+      #chat-window {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -450px; /* Oculto */
+        bottom: 0;
+        width: 450px;
+        height: 100vh;
+        max-height: none;
+        background: white;
+        box-shadow: -5px 0 25px rgba(0,0,0,0.15);
+        flex-direction: column;
+        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999;
+      }
+
+      #chat-window.open {
+        right: 0;
+      }
+
+      body {
+        transition: margin-right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      body.chat-open {
+        margin-right: 450px;
+        overflow-x: hidden;
+      }
     }
 
-    #chat-window.open {
-      display: flex;
+    /* MOBILE: BOTTOM SHEET */
+    @media (max-width: 768px) {
+      #chat-window {
+        display: flex;
+        position: fixed;
+        top: auto;
+        bottom: -100%; /* Oculto */
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 50vh;
+        max-height: 90vh;
+        min-height: 20vh;
+        background: white;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 -5px 25px rgba(0,0,0,0.15);
+        flex-direction: column;
+        transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 10000;
+      }
+
+      #chat-window.open {
+        bottom: 0;
+      }
+
+      #chat-window.resizing {
+        transition: none !important;
+      }
+
+      #chat-resize-handle {
+        display: flex !important;
+      }
+
+      body.chat-open #chat-button {
+        display: none;
+      }
     }
 
     #chat-header {
@@ -145,7 +196,9 @@
       max-width: 85%;
     }
 
-    .message-buttons button {
+    .message-buttons button,
+    .message-buttons a {
+      display: block;
       background: white;
       border: 2px solid #1a2332;
       color: #1a2332;
@@ -159,9 +212,12 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       position: relative;
       overflow: hidden;
+      text-decoration: none;
+      box-sizing: border-box;
     }
 
-    .message-buttons button::before {
+    .message-buttons button::before,
+    .message-buttons a::before {
       content: '';
       position: absolute;
       top: 0;
@@ -173,11 +229,13 @@
       z-index: -1;
     }
 
-    .message-buttons button:hover::before {
+    .message-buttons button:hover::before,
+    .message-buttons a:hover::before {
       width: 100%;
     }
 
-    .message-buttons button:hover {
+    .message-buttons button:hover,
+    .message-buttons a:hover {
       color: white;
       transform: translateX(4px);
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -268,11 +326,11 @@
     @media (max-width: 480px) {
       #chat-window {
         width: 100%;
-        height: 100%;
-        max-height: 100vh;
-        bottom: 0;
+        height: 50vh; /* Reset para mobile */
+        max-height: 90vh;
+        bottom: -100%;
         right: 0;
-        border-radius: 0;
+        border-radius: 20px 20px 0 0;
       }
     }
   </style>
@@ -289,6 +347,9 @@
 
   <!-- Ventana de chat -->
   <div id="chat-window">
+    <div id="chat-resize-handle" style="display:none; width:100%; height:24px; background:#f8f9fa; cursor:ns-resize; justify-content:center; align-items:center; border-bottom:1px solid #eee;">
+      <div style="width:40px; height:4px; background:#cbd5e1; border-radius:2px;"></div>
+    </div>
     <div id="chat-header">
       <div>
         <h3>Perito.barcelona</h3>
@@ -325,6 +386,7 @@
     const messagesContainer = document.getElementById('chat-messages');
     const inputField = document.getElementById('chat-input');
     const sendButton = document.getElementById('send-button');
+    const resizeHandle = document.getElementById('chat-resize-handle');
 
     // Estado
     let isOpen = false;
@@ -340,8 +402,52 @@
       }
     });
 
+    // Inicializar resize móvil
+    if (resizeHandle) {
+      initMobileResize();
+    }
+
     // Iniciar conversación automáticamente
     initChat();
+
+    /**
+     * Inicializa la lógica de redimensionado para móvil
+     */
+    function initMobileResize() {
+      let startY, startHeight;
+
+      const onTouchStart = (e) => {
+        startY = e.touches[0].clientY;
+        startHeight = chatWindow.offsetHeight;
+        chatWindow.classList.add('resizing');
+      };
+
+      const onTouchMove = (e) => {
+        if (!startY) return;
+        const currentY = e.touches[0].clientY;
+        const deltaY = startY - currentY;
+        const newHeight = startHeight + deltaY;
+        
+        const vh = window.innerHeight;
+        if (newHeight > vh * 0.2 && newHeight < vh * 0.9) {
+          chatWindow.style.height = `${newHeight}px`;
+        }
+        e.preventDefault();
+      };
+
+      const onTouchEnd = () => {
+        startY = null;
+        chatWindow.classList.remove('resizing');
+      };
+
+      resizeHandle.addEventListener('touchstart', onTouchStart, { passive: false });
+      document.addEventListener('touchmove', (e) => {
+        if (chatWindow.classList.contains('resizing')) {
+          onTouchMove(e);
+        }
+      }, { passive: false });
+      document.addEventListener('touchend', onTouchEnd);
+    }
 
     /**
      * Genera un ID de sesión único
@@ -356,6 +462,7 @@
     function toggleChat() {
       isOpen = !isOpen;
       chatWindow.classList.toggle('open', isOpen);
+      document.body.classList.toggle('chat-open', isOpen);
       if (isOpen) {
         inputField.focus();
       }
@@ -446,10 +553,19 @@
         buttonsDiv.className = 'message-buttons';
 
         botones.forEach(btn => {
-          const button = document.createElement('button');
-          button.innerHTML = btn.text;
-          button.onclick = () => handleButtonClick(btn.value);
-          buttonsDiv.appendChild(button);
+          if (btn.type === 'link') {
+            const link = document.createElement('a');
+            link.href = btn.value;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.innerHTML = btn.text;
+            buttonsDiv.appendChild(link);
+          } else {
+            const button = document.createElement('button');
+            button.innerHTML = btn.text;
+            button.onclick = () => handleButtonClick(btn.value);
+            buttonsDiv.appendChild(button);
+          }
         });
 
         messageDiv.appendChild(buttonsDiv);

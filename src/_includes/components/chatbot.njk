@@ -26,6 +26,9 @@
     class="hidden fixed bottom-[180px] right-5 w-[380px] h-[550px] max-h-[calc(100vh-200px)] bg-white rounded-xl shadow-2xl flex-col overflow-hidden opacity-0 translate-y-5 scale-95 transition-all duration-300"
   >
     {# Header del chat #}
+    <div id="chat-resize-handle" class="hidden md:hidden w-full h-6 bg-gray-50 cursor-ns-resize flex items-center justify-center border-b border-gray-200 touch-none">
+      <div class="w-10 h-1 bg-gray-300 rounded-full"></div>
+    </div>
     <div class="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white px-5 py-4 flex justify-between items-center flex-shrink-0">
       <div>
         <h3 class="m-0 text-base font-semibold leading-tight">Perito Barcelona</h3>
@@ -73,23 +76,98 @@
 
 {# Estilos adicionales para animaciones y clases especiales #}
 <style>
-  /* Animaciones y estados del chatbot */
-  #chat-window.open {
-    display: flex !important;
-    opacity: 1;
-    transform: translateY(0) scale(1);
+  /* ==========================================
+     DESKTOP: SIDEBAR (DRAWER)
+     ========================================== */
+  @media (min-width: 769px) {
+    #chat-window {
+      position: fixed;
+      top: 0;
+      right: -450px; /* Oculto inicialmente */
+      bottom: 0;
+      width: 450px;
+      height: 100vh;
+      max-height: none;
+      border-radius: 0;
+      transform: none !important; /* Anular transformaciones previas */
+      transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: -5px 0 25px rgba(0,0,0,0.15);
+      z-index: 9999;
+      display: flex !important; /* Siempre flex, controlado por posición */
+      opacity: 1 !important;
+    }
+
+    #chat-window.open {
+      right: 0;
+    }
+
+    /* Empujar el contenido de la web */
+    body {
+      transition: margin-right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    body.chat-open {
+      margin-right: 450px;
+      overflow-x: hidden; /* Evitar scroll horizontal durante la transición */
+    }
   }
 
-  /* Animación del pulso en el botón - completamente circular */
+  /* ==========================================
+     MOBILE: BOTTOM SHEET (RESIZABLE)
+     ========================================== */
+  @media (max-width: 768px) {
+    #chat-window {
+      position: fixed;
+      top: auto;
+      bottom: -100%; /* Oculto inicialmente */
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 50vh; /* Altura inicial */
+      max-height: 90vh;
+      min-height: 20vh;
+      border-radius: 20px 20px 0 0;
+      transform: none !important;
+      transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 10000;
+      display: flex !important;
+      opacity: 1 !important;
+      box-shadow: 0 -5px 25px rgba(0,0,0,0.15);
+    }
+
+    #chat-window.open {
+      bottom: 0;
+    }
+
+    #chat-window.resizing {
+      transition: none !important; /* Sin transición durante el drag */
+    }
+
+    /* Mostrar el handle solo en móvil */
+    #chat-resize-handle {
+      display: flex !important;
+    }
+
+    /* Ajustar botón flotante en móvil */
+    #perito-chat-widget {
+      bottom: 20px;
+      right: 20px;
+    }
+    
+    /* Ocultar botón cuando el chat está abierto en móvil */
+    body.chat-open #chat-button {
+      display: none;
+    }
+  }
+
+  /* ==========================================
+     ANIMACIONES GENERALES
+     ========================================== */
+  
+  /* Animación del pulso en el botón */
   @keyframes pulse-chat {
-    0%, 100% { 
-      opacity: 0.5; 
-      transform: scale(1); 
-    }
-    50% { 
-      opacity: 1; 
-      transform: scale(1.3); 
-    }
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.3); }
   }
 
   #chat-button::before {
@@ -117,17 +195,11 @@
   }
 
   @keyframes slideIn {
-    from { 
-      opacity: 0; 
-      transform: translateY(15px); 
-    }
-    to { 
-      opacity: 1; 
-      transform: translateY(0); 
-    }
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
-  /* Animación de typing indicator */
+  /* Typing indicator */
   @keyframes bounce-dot {
     0%, 60%, 100% { transform: translateY(0); }
     30% { transform: translateY(-8px); }
@@ -136,72 +208,21 @@
   .typing-indicator span {
     animation: bounce-dot 1.4s infinite ease-in-out;
   }
-
   .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
   .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
 
-  /* Animación de loading en botón send */
+  /* Loading spinner */
   #send-button.loading svg {
     animation: rotate 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   }
-
   @keyframes rotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
   }
 
-  /* Responsive - Móvil */
-  @media (max-width: 768px) {
-    /* En móvil, botón chatbot más pequeño y más arriba */
-    #perito-chat-widget {
-      bottom: 90px;
-      right: 1rem;
-    }
-    
-    #chat-button {
-      width: 52px;
-      height: 52px;
-    }
-    
-    #chat-window {
-      width: calc(100vw - 2rem);
-      height: calc(100vh - 200px);
-      max-height: calc(100vh - 200px);
-      bottom: 150px;
-      right: 1rem;
-      left: 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    #perito-chat-widget {
-      bottom: 85px;
-      right: 0.75rem;
-    }
-    
-    #chat-window {
-      width: calc(100vw - 1.5rem);
-      height: calc(100vh - 180px);
-      max-height: calc(100vh - 180px);
-      bottom: 145px;
-      left: 0.75rem;
-      right: 0.75rem;
-    }
-  }
-
-  /* Reducir animaciones si el usuario lo prefiere */
-  @media (prefers-reduced-motion: reduce) {
-    #chat-button, #chat-window, .message {
-      transition: none !important;
-      animation: none !important;
-    }
-  }
-
-  /* Print - ocultar chatbot */
   @media print {
-    #perito-chat-widget {
-      display: none !important;
-    }
+    #perito-chat-widget { display: none !important; }
+    body.chat-open { margin-right: 0 !important; }
   }
 </style>
 
