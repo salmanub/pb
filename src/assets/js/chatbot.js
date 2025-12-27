@@ -179,6 +179,37 @@ class PeritoChatbot {
    * Inicializa el chat con el primer mensaje del bot
    */
   async initChat() {
+    // Comprobar si hay sesión previa para recuperar historial
+    const existingSession = localStorage.getItem('chat_session_id');
+    if (existingSession) {
+      try {
+        const response = await fetch(this.config.apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            sessionId: this.config.sessionId,
+            action: 'recover_history'
+          }),
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          if (data.historial && data.historial.length > 0) {
+            // Renderizar historial
+            data.historial.forEach(msg => {
+              // Mapear 'assistant' a 'bot' para el frontend
+              const tipo = msg.role === 'assistant' ? 'bot' : 'user';
+              this.addMessage(msg.content, tipo, msg.botones);
+            });
+            return; // Salir, ya hemos cargado el estado
+          }
+        }
+      } catch (e) {
+        console.warn('[Chatbot] No se pudo recuperar historial:', e);
+      }
+    }
+
+    // Si no hay historial o falló, iniciar normal
     await this.sendToBot('inicio');
   }
 
@@ -451,6 +482,11 @@ class PeritoChatbot {
    */
   downloadHistory() {
     const messages = Array.from(this.elements.messages.children);
+    if (messages.length === 0) {
+        alert("No hay mensajes para descargar.");
+        return;
+    }
+
     let text = "HISTORIAL DE CHAT - PERITO.BARCELONA\n";
     text += "====================================\n\n";
     
@@ -458,17 +494,23 @@ class PeritoChatbot {
       // Ignorar indicadores de escritura
       if (msg.classList.contains('typing-indicator')) return;
       
-      const isBot = msg.classList.contains('bot');
-      const bubble = msg.querySelector('.message-bubble');
+      // Detectar rol basado en la clase de alineación o estilo
+      // En addMessage: user -> text-right, bot -> text-left
+      const isUser = msg.classList.contains('text-right');
+      const bubble = msg.querySelector('div'); // El primer div hijo es la burbuja
       
       if (bubble) {
-        const content = bubble.innerText;
-        const role = isBot ? "Asistente" : "Usuario";
+        // Limpiar HTML tags para obtener solo texto limpio
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = bubble.innerHTML;
+        const content = tempDiv.innerText || tempDiv.textContent;
+        
+        const role = isUser ? "Usuario" : "Asistente";
         text += `[${role}]: ${content}\n\n`;
       }
     });
     
-    const blob = new Blob([text], { type: 'text/plain' });
+    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;

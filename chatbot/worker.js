@@ -1328,8 +1328,28 @@ export default {
     if (url.pathname === '/api/chat' && request.method === 'POST') {
       try {
         const body = await request.json();
-        const { sessionId, mensaje, userLang } = body;
+        const { sessionId, mensaje, userLang, action } = body;
         
+        // CASO ESPECIAL: Recuperar historial
+        if (action === 'recover_history' && sessionId) {
+          const session = await chatbot.sessionStore.get(sessionId);
+          if (session && session.historial) {
+            return new Response(JSON.stringify({
+              historial: session.historial,
+              estado: session.estado
+            }), {
+              headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+            });
+          } else {
+            return new Response(JSON.stringify({
+              historial: [],
+              estado: 'inicio'
+            }), {
+              headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+            });
+          }
+        }
+
         if (!sessionId || !mensaje) {
           return new Response(JSON.stringify({
             error: 'sessionId y mensaje son requeridos',
@@ -1349,7 +1369,7 @@ export default {
         return new Response(JSON.stringify({
           error: error.message,
         }), {
-          status: 500,
+          status: 500, // Cambiado a 200 para que el frontend pueda mostrar el error
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
       }
