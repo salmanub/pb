@@ -414,7 +414,9 @@
 
     // Iniciar conversación automáticamente
     initChat();
-Descarga el historial de chat
+
+    /**
+     * Descarga el historial de chat
      */
     function downloadHistory() {
       const messages = Array.from(messagesContainer.children);
@@ -448,6 +450,39 @@ Descarga el historial de chat
 
     /**
      * 
+    /**
+     * Descarga el historial de chat
+     */
+    function downloadHistory() {
+      const messages = Array.from(messagesContainer.children);
+      let text = "HISTORIAL DE CHAT - PERITO.BARCELONA\n";
+      text += "====================================\n\n";
+      
+      messages.forEach(msg => {
+        // Ignorar indicadores de escritura
+        if (msg.classList.contains('typing-indicator')) return;
+        
+        const isBot = msg.classList.contains('bot');
+        const bubble = msg.querySelector('.message-bubble');
+        
+        if (bubble) {
+          const content = bubble.innerText;
+          const role = isBot ? "Asistente" : "Usuario";
+          text += `[${role}]: ${content}\n\n`;
+        }
+      });
+      
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `perito-barcelona-chat-${new Date().toISOString().slice(0,10)}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
+    }
+
     /**
      * Inicializa la lógica de redimensionado para móvil
      */
@@ -485,6 +520,39 @@ Descarga el historial de chat
         }
       }, { passive: false });
       document.addEventListener('touchend', onTouchEnd);
+    }
+
+    /**
+     * Descarga el historial de chat
+     */
+    function downloadHistory() {
+      const messages = Array.from(messagesContainer.children);
+      let text = "HISTORIAL DE CHAT - PERITO.BARCELONA\n";
+      text += "====================================\n\n";
+      
+      messages.forEach(msg => {
+        // Ignorar indicadores de escritura
+        if (msg.classList.contains('typing-indicator')) return;
+        
+        const isBot = msg.classList.contains('bot');
+        const bubble = msg.querySelector('.message-bubble');
+        
+        if (bubble) {
+          const content = bubble.innerText;
+          const role = isBot ? "Asistente" : "Usuario";
+          text += `[${role}]: ${content}\n\n`;
+        }
+      });
+      
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `perito-barcelona-chat-${new Date().toISOString().slice(0,10)}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
     }
 
     /**
