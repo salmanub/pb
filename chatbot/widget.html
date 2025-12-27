@@ -394,6 +394,9 @@
       // Mostrar indicador de escritura
       const typingId = showTypingIndicator();
 
+      // Detectar idioma
+      const currentLang = document.documentElement.lang || 'es';
+
       try {
         const response = await fetch(CONFIG.API_URL, {
           method: 'POST',
@@ -403,6 +406,7 @@
           body: JSON.stringify({
             sessionId: CONFIG.SESSION_ID,
             mensaje: mensaje,
+            userLang: currentLang
           }),
         });
 

@@ -143,6 +143,9 @@ class PeritoChatbot {
     // Mostrar indicador de escritura
     const typingId = this.showTypingIndicator();
 
+    // Detectar idioma
+    const currentLang = document.documentElement.lang || 'es';
+
     try {
       const response = await fetch(this.config.apiUrl, {
         method: 'POST',
@@ -152,6 +155,7 @@ class PeritoChatbot {
         body: JSON.stringify({
           sessionId: this.config.sessionId,
           mensaje: mensaje,
+          userLang: currentLang
         }),
       });
 

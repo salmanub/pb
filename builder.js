@@ -77,6 +77,15 @@ async function scanFiles() {
       // Inferir Tipo y Tags
       let tipo = 'info';
       let tags = [];
+      let lang = $('html').attr('lang') || 'es'; // Default a español
+
+      // Si no hay atributo lang, intentar inferir de la URL
+      if (!lang || lang === 'es') {
+        if (fullUrl.includes('/ca/')) lang = 'ca';
+        else if (fullUrl.includes('/en/')) lang = 'en';
+        else if (fullUrl.includes('/fr/')) lang = 'fr';
+        else if (fullUrl.includes('/it/')) lang = 'it';
+      }
 
       // Lógica de clasificación
       if (fullUrl.includes('/blog/')) {
@@ -108,7 +117,8 @@ async function scanFiles() {
         url: fullUrl,
         tipo: tipo,
         tags: tags.join(', '),
-        descripcion: description
+        descripcion: description,
+        lang: lang
       });
     } catch (err) {
       console.error(`Error procesando ${file}:`, err);
@@ -146,14 +156,14 @@ async function updateSheet(resources) {
     let sheet = doc.sheetsByTitle['Recursos_Web'];
     if (!sheet) {
       console.log('⚠️ Pestaña Recursos_Web no existe. Creándola...');
-      sheet = await doc.addSheet({ title: 'Recursos_Web', headerValues: ['titulo', 'url', 'tipo', 'tags', 'descripcion'] });
+      sheet = await doc.addSheet({ title: 'Recursos_Web', headerValues: ['titulo', 'url', 'tipo', 'tags', 'descripcion', 'lang'] });
     }
 
     console.log('🧹 Limpiando datos antiguos...');
     await sheet.clearRows(); 
     
     // Asegurar headers
-    await sheet.setHeaderRow(['titulo', 'url', 'tipo', 'tags', 'descripcion']);
+    await sheet.setHeaderRow(['titulo', 'url', 'tipo', 'tags', 'descripcion', 'lang']);
 
     console.log(`📝 Subiendo ${resources.length} nuevos recursos...`);
     await sheet.addRows(resources);

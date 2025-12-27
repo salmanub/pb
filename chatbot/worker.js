@@ -41,8 +41,10 @@ const CONFIG = {
 // SYSTEM PROMPT GENERATOR (DINÁMICO)
 // ============================================================================
 
-function generateSystemPrompt(userRole, caseType) {
-  let prompt = `Eres el Asistente de Peritaje de Perito.barcelona, especializado en ingeniería forense.`;
+function generateSystemPrompt(userRole, caseType, lang = 'es') {
+  let prompt = `Eres el Asistente de Peritaje de Perito.barcelona, especializado en ingeniería forense.
+IDIOMA OBLIGATORIO: Debes responder SIEMPRE en el idioma: ${lang.toUpperCase()}.
+`;
 
   if (userRole === 'Abogado') {
     prompt += `
@@ -285,7 +287,8 @@ class SheetsService {
         url: row[1],
         tipo: row[2],
         tags: row[3] ? row[3].toLowerCase().split(',').map(t => t.trim()) : [],
-        descripcion: row[4]
+        descripcion: row[4],
+        lang: row[5] || 'es' // Nueva columna F
       }));
 
       this.recursosCache = recursos;
@@ -324,7 +327,7 @@ class IAService {
   
   async chat(messages, systemPromptOverride = null) {
     // Usar el prompt dinámico si se proporciona, sino uno por defecto
-    const systemContent = systemPromptOverride || generateSystemPrompt('Particular', null);
+    const systemContent = systemPromptOverride || generateSystemPrompt('Particular', null, 'es');
 
     const systemMessage = {
       role: 'system',
@@ -539,7 +542,7 @@ class SheetsWriteService {
     const accessToken = await this.getAccessToken();
     
     // Preparar la fila de datos (ACTUALIZADO SCHEMA v11.0)
-    // [ID, Fecha, Origen, Servicio, Telefono, Email, Nombre, Ubicacion, TipoCliente, Rol, Descripcion, Urgencia, Estado]
+    // [ID, Fecha, Origen, Servicio, Telefono, Email, Nombre, Ubicacion, TipoCliente, Rol, Descripcion, Urgencia, Estado, Idioma]
     const fecha = new Date().toISOString();
     const fila = [
       leadData.sessionId,           // A [0]: lead_id
@@ -554,11 +557,12 @@ class SheetsWriteService {
       leadData.rol_cliente || '',   // J [9]: rol_usuario
       leadData.descripcion_caso || '', // K [10]: descripcion_caso
       leadData.urgencia || 'Normal', // L [11]: urgencia
-      'PENDIENTE'                   // M [12]: estado
+      'PENDIENTE',                  // M [12]: estado
+      leadData.lang || 'es'         // N [13]: idioma
     ];
     
     // Anexar a la hoja "Leads"
-    const range = 'Leads!A:M'; 
+    const range = 'Leads!A:N'; 
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${this.spreadsheetId}/values/${range}:append?valueInputOption=USER_ENTERED`;
     
     const response = await fetch(url, {
@@ -634,12 +638,14 @@ class ChatbotHandler {
   /**
    * Busca recursos web relevantes (Conserje Digital)
    */
-  async buscarRecursos(query) {
+  async buscarRecursos(query, lang = 'es') {
     const recursos = await this.sheets.getRecursosWeb();
     const queryLower = query.toLowerCase();
     const keywords = queryLower.split(' ').filter(w => w.length > 3);
 
-    const hits = recursos.map(r => {
+    const hits = recursos
+      .filter(r => r.lang === lang) // Filtrar por idioma
+      .map(r => {
       let score = 0;
       // Coincidencia en título
       if (r.titulo.toLowerCase().includes(queryLower)) score += 10;
@@ -659,7 +665,7 @@ class ChatbotHandler {
   /**
    * Procesa un mensaje del usuario
    */
-  async handleMessage(sessionId, mensaje, userAgent = '') {
+  async handleMessage(sessionId, mensaje, userAgent = '', userLang = 'es') {
     let session = sessionStore.get(sessionId);
     
     // Nueva sesión
@@ -669,6 +675,7 @@ class ChatbotHandler {
         historial: [],
         datos: {
             tipo_cliente: 'Particular', // Default
+            lang: userLang // Guardar idioma
         },
         sessionId,
         userAgent,
@@ -851,7 +858,7 @@ class ChatbotHandler {
     // DETECCIÓN DE INTENCIÓN INFORMATIVA (Conserje Digital)
     const intentInfo = ['blog', 'articulo', 'ejemplo', 'caso', 'informacion', 'leer', 'ver', 'guia', 'manual'];
     if (intentInfo.some(i => mensajeLower.includes(i))) {
-        const recursos = await this.buscarRecursos(mensaje);
+        const recursos = await this.buscarRecursos(mensaje, session.datos.lang);
         if (recursos.length > 0) {
             const botones = recursos.map(r => ({
                 type: 'link', // Frontend debe soportar esto o tratarlo como botón especial
@@ -1039,7 +1046,7 @@ class ChatbotHandler {
     if (!mensaje) {
       // Primera vez, solicitar descripción adaptada al tipo de servicio
       // AHORA USAMOS IA PARA GENERAR LA PREGUNTA ADAPTADA
-      const prompt = generateSystemPrompt(session.datos.tipo_cliente, session.datos.servicio_final.categoria);
+      const prompt = generateSystemPrompt(session.datos.tipo_cliente, session.datos.servicio_final.categoria, session.datos.lang);
       
       // Simulamos un mensaje del sistema para que la IA inicie la interacción pidiendo datos
       const mensajesParaIA = [
@@ -1182,6 +1189,7 @@ class ChatbotHandler {
       rol_cliente: session.datos.rol_cliente, // NUEVA COLUMNA
       tipo_cliente: session.datos.tipo_cliente, // NUEVO
       vip: session.datos.vip || false, // NUEVO
+      lang: session.datos.lang || 'es', // NUEVO
       conversacion: this.formatearConversacion(session.historial),
     };
     
@@ -1258,7 +1266,7 @@ export default {
     if (url.pathname === '/api/chat' && request.method === 'POST') {
       try {
         const body = await request.json();
-        const { sessionId, mensaje } = body;
+        const { sessionId, mensaje, userLang } = body;
         
         if (!sessionId || !mensaje) {
           return new Response(JSON.stringify({
@@ -1270,7 +1278,7 @@ export default {
         }
         
         const userAgent = request.headers.get('User-Agent') || '';
-        const respuesta = await chatbot.handleMessage(sessionId, mensaje, userAgent);
+        const respuesta = await chatbot.handleMessage(sessionId, mensaje, userAgent, userLang || 'es');
         
         return new Response(JSON.stringify(respuesta), {
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
