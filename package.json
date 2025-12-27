@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx eleventy",
+    "build": "node builder.js",
+    "build:only": "npx eleventy",
     "serve": "npx eleventy --serve",
     "optimize-images": "node src/scripts/optimize-images.js",
     "optimize-images-debug": "node src/scripts/optimize-images-debug.js",
@@ -28,6 +29,9 @@
   },
   "dependencies": {
     "@11ty/eleventy-img": "^6.0.4",
-    "glob": "^11.0.3"
+    "cheerio": "^1.1.2",
+    "dotenv": "^17.2.3",
+    "glob": "^11.0.3",
+    "google-spreadsheet": "^5.0.2"
   }
 }

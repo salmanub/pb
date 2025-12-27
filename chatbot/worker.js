@@ -253,6 +253,50 @@ class SheetsService {
     const servicios = await this.getServicios();
     return servicios.find(s => s.slug === slug);
   }
+
+  async getRecursosWeb() {
+    // Cache simple para recursos
+    if (this.recursosCache && (Date.now() - this.recursosCacheTime) < this.cacheDuration) {
+      return this.recursosCache;
+    }
+
+    try {
+      const range = 'Recursos_Web!A2:E200';
+      let values = [];
+
+      // Intentar con Service Account
+      if (this.writeService && this.writeService.serviceAccountEmail) {
+        const accessToken = await this.writeService.getAccessToken();
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${this.spreadsheetId}/values/${range}`;
+        const response = await fetch(url, { headers: { 'Authorization': `Bearer ${accessToken}` } });
+        const data = await response.json();
+        values = data.values || [];
+      } 
+      // Fallback a API Key
+      else if (this.apiKey && this.apiKey !== 'AIzaSy...tu-api-key-aqui...') {
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${this.spreadsheetId}/values/${range}?key=${this.apiKey}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        values = data.values || [];
+      }
+
+      const recursos = values.map(row => ({
+        titulo: row[0],
+        url: row[1],
+        tipo: row[2],
+        tags: row[3] ? row[3].toLowerCase().split(',').map(t => t.trim()) : [],
+        descripcion: row[4]
+      }));
+
+      this.recursosCache = recursos;
+      this.recursosCacheTime = Date.now();
+      return recursos;
+
+    } catch (error) {
+      console.error('Error al obtener recursos web:', error);
+      return [];
+    }
+  }
   
   async getConfig(clave) {
     const range = 'Configuracion!A2:C100';
@@ -494,28 +538,27 @@ class SheetsWriteService {
     
     const accessToken = await this.getAccessToken();
     
-    // Preparar la fila de datos (ACTUALIZADO con nuevas columnas)
+    // Preparar la fila de datos (ACTUALIZADO SCHEMA v11.0)
+    // [ID, Fecha, Origen, Servicio, Telefono, Email, Nombre, Ubicacion, TipoCliente, Rol, Descripcion, Urgencia, Estado]
     const fecha = new Date().toISOString();
     const fila = [
-      fecha, // A: Fecha
-      leadData.nombre, // B: Nombre
-      leadData.telefono, // C: Teléfono
-      leadData.ubicacion, // D: Ubicación
-      leadData.servicio_nombre, // E: Servicio
-      leadData.categoria, // F: Categoría
-      leadData.tipo_legal, // G: Tipo Legal
-      leadData.urgencia || 'Normal', // H: Urgencia
-      leadData.sessionId, // I: Session ID
-      'PENDIENTE', // J: Estado
-      '', // K: Notas (vacío inicialmente)
-      leadData.descripcion_caso || '', // L: Descripción del Caso
-      leadData.rol_cliente || '', // M: Rol del Cliente
-      leadData.email || '', // N: Email
-      leadData.tipo_cliente || 'Particular', // O: TIPO CLIENTE (NUEVO)
+      leadData.sessionId,           // A [0]: lead_id
+      fecha,                        // B [1]: fecha
+      'Chatbot',                    // C [2]: origen
+      leadData.servicio_nombre,     // D [3]: servicio
+      leadData.telefono,            // E [4]: telefono
+      leadData.email || '',         // F [5]: email
+      leadData.nombre,              // G [6]: nombre
+      leadData.ubicacion,           // H [7]: ubicacion
+      leadData.tipo_cliente || 'Particular', // I [8]: tipo_cliente
+      leadData.rol_cliente || '',   // J [9]: rol_usuario
+      leadData.descripcion_caso || '', // K [10]: descripcion_caso
+      leadData.urgencia || 'Normal', // L [11]: urgencia
+      'PENDIENTE'                   // M [12]: estado
     ];
     
     // Anexar a la hoja "Leads"
-    const range = 'Leads!A:O'; // ACTUALIZADO: ahora incluye columna O
+    const range = 'Leads!A:M'; 
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${this.spreadsheetId}/values/${range}:append?valueInputOption=USER_ENTERED`;
     
     const response = await fetch(url, {
@@ -586,6 +629,31 @@ class ChatbotHandler {
       text: `${s.icono} ${s.nombre_servicio}`,
       value: s.slug,
     }));
+  }
+
+  /**
+   * Busca recursos web relevantes (Conserje Digital)
+   */
+  async buscarRecursos(query) {
+    const recursos = await this.sheets.getRecursosWeb();
+    const queryLower = query.toLowerCase();
+    const keywords = queryLower.split(' ').filter(w => w.length > 3);
+
+    const hits = recursos.map(r => {
+      let score = 0;
+      // Coincidencia en título
+      if (r.titulo.toLowerCase().includes(queryLower)) score += 10;
+      // Coincidencia en tags
+      if (r.tags.some(t => queryLower.includes(t))) score += 5;
+      // Coincidencia parcial de palabras clave
+      keywords.forEach(k => {
+        if (r.titulo.toLowerCase().includes(k)) score += 2;
+        if (r.tags.some(t => t.includes(k))) score += 1;
+      });
+      return { ...r, score };
+    }).filter(r => r.score > 0).sort((a, b) => b.score - a.score);
+
+    return hits.slice(0, 3); // Devolver top 3
   }
   
   /**
@@ -778,6 +846,27 @@ class ChatbotHandler {
             texto: 'Entendido, compañero. Para valorar la colaboración, indícame: ¿De qué especialidad es el asunto (Vicios, Estructuras, Económico) y en qué fase procesal estamos?',
             botones: []
         };
+    }
+
+    // DETECCIÓN DE INTENCIÓN INFORMATIVA (Conserje Digital)
+    const intentInfo = ['blog', 'articulo', 'ejemplo', 'caso', 'informacion', 'leer', 'ver', 'guia', 'manual'];
+    if (intentInfo.some(i => mensajeLower.includes(i))) {
+        const recursos = await this.buscarRecursos(mensaje);
+        if (recursos.length > 0) {
+            const botones = recursos.map(r => ({
+                type: 'link', // Frontend debe soportar esto o tratarlo como botón especial
+                text: `📄 ${r.titulo}`,
+                value: r.url // El valor es la URL
+            }));
+            
+            // Añadir botón de volver al inicio
+            botones.push({ type: 'button', text: '↩️ Volver al inicio', value: 'inicio' });
+
+            return {
+                texto: 'He encontrado estos recursos en nuestra base de conocimiento que te pueden interesar:',
+                botones: botones
+            };
+        }
     }
 
     // Buscar el servicio seleccionado
