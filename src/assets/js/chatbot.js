@@ -271,7 +271,10 @@ class PeritoChatbot {
       buttonsDiv.className = 'mt-2 flex flex-col gap-2 text-left';
 
       botones.forEach(btn => {
-        if (btn.type === 'link') {
+        // Detectar si es link explícitamente o si el valor parece una URL
+        const isLink = btn.type === 'link' || (typeof btn.value === 'string' && btn.value.startsWith('http'));
+
+        if (isLink) {
           const link = document.createElement('a');
           link.href = btn.value;
           link.target = '_blank';
