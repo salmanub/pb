@@ -355,7 +355,10 @@
         <h3>Perito.barcelona</h3>
         <p>Asistente técnico</p>
       </div>
-      <button id="close-chat" aria-label="Cerrar chat">&times;</button>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <button id="download-chat" title="Guardar conversación" style="background:none; border:none; color:white; cursor:pointer; font-size:18px; padding:0; display:flex; align-items:center; justify-content:center;">⬇️</button>
+        <button id="close-chat" aria-label="Cerrar chat">&times;</button>
+      </div>
     </div>
 
     <div id="chat-messages"></div>
@@ -383,6 +386,7 @@
     const chatButton = document.getElementById('chat-button');
     const chatWindow = document.getElementById('chat-window');
     const closeButton = document.getElementById('close-chat');
+    const downloadButton = document.getElementById('download-chat');
     const messagesContainer = document.getElementById('chat-messages');
     const inputField = document.getElementById('chat-input');
     const sendButton = document.getElementById('send-button');
@@ -394,6 +398,7 @@
 
     // Event listeners
     chatButton.addEventListener('click', toggleChat);
+    if (downloadButton) downloadButton.addEventListener('click', downloadHistory);
     closeButton.addEventListener('click', toggleChat);
     sendButton.addEventListener('click', sendMessage);
     inputField.addEventListener('keypress', (e) => {
@@ -409,7 +414,40 @@
 
     // Iniciar conversación automáticamente
     initChat();
+Descarga el historial de chat
+     */
+    function downloadHistory() {
+      const messages = Array.from(messagesContainer.children);
+      let text = "HISTORIAL DE CHAT - PERITO.BARCELONA\n";
+      text += "====================================\n\n";
+      
+      messages.forEach(msg => {
+        // Ignorar indicadores de escritura
+        if (msg.classList.contains('typing-indicator')) return;
+        
+        const isBot = msg.classList.contains('bot');
+        const bubble = msg.querySelector('.message-bubble');
+        
+        if (bubble) {
+          const content = bubble.innerText;
+          const role = isBot ? "Asistente" : "Usuario";
+          text += `[${role}]: ${content}\n\n`;
+        }
+      });
+      
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `perito-barcelona-chat-${new Date().toISOString().slice(0,10)}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
+    }
 
+    /**
+     * 
     /**
      * Inicializa la lógica de redimensionado para móvil
      */

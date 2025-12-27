@@ -12,9 +12,9 @@ compatibility_date = "2025-12-26"
 # - EMAIL_DESTINO
 
 # KV Namespaces para sesiones persistentes (opcional, mejorar performance)
-# [[kv_namespaces]]
-# binding = "SESSIONS"
-# id = "tu-kv-namespace-id"
+kv_namespaces = [
+  { binding = "PERITO_SESSIONS", id = "13e999d7257b44e09c8808eada9dd2b6" }
+]
 
 # Routes para custom domain
 # routes = [

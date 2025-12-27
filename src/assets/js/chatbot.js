@@ -50,6 +50,7 @@ class PeritoChatbot {
       button: document.getElementById('chat-button'),
       window: document.getElementById('chat-window'),
       closeButton: document.getElementById('close-chat'),
+      downloadButton: document.getElementById('download-chat'),
       messages: document.getElementById('chat-messages'),
       input: document.getElementById('chat-input'),
       sendButton: document.getElementById('send-button'),
@@ -65,6 +66,9 @@ class PeritoChatbot {
     // Event listeners
     this.elements.button.addEventListener('click', () => this.toggleChat());
     this.elements.closeButton.addEventListener('click', () => this.toggleChat());
+    if (this.elements.downloadButton) {
+      this.elements.downloadButton.addEventListener('click', () => this.downloadHistory());
+    }
     this.elements.sendButton.addEventListener('click', () => this.sendMessage());
     
     this.elements.input.addEventListener('keypress', (e) => {
@@ -427,6 +431,39 @@ class PeritoChatbot {
     this.conversationStarted = false;
     this.elements.messages.innerHTML = '';
     this.elements.input.value = '';
+  }
+
+  /**
+   * Descarga el historial de chat
+   */
+  downloadHistory() {
+    const messages = Array.from(this.elements.messages.children);
+    let text = "HISTORIAL DE CHAT - PERITO.BARCELONA\n";
+    text += "====================================\n\n";
+    
+    messages.forEach(msg => {
+      // Ignorar indicadores de escritura
+      if (msg.classList.contains('typing-indicator')) return;
+      
+      const isBot = msg.classList.contains('bot');
+      const bubble = msg.querySelector('.message-bubble');
+      
+      if (bubble) {
+        const content = bubble.innerText;
+        const role = isBot ? "Asistente" : "Usuario";
+        text += `[${role}]: ${content}\n\n`;
+      }
+    });
+    
+    const blob = new Blob([text], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `perito-barcelona-chat-${new Date().toISOString().slice(0,10)}.txt`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
   }
 }
 
