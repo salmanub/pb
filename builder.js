@@ -4,7 +4,7 @@ import { glob } from 'glob';
 import * as cheerio from 'cheerio';
 import fs from 'fs/promises';
 import path from 'path';
-import { exec } from 'child_process';
+import { exec, spawn } from 'child_process';
 import util from 'util';
 import dotenv from 'dotenv';
 
@@ -26,15 +26,25 @@ const CONFIG = {
  */
 async function buildSite() {
   console.log('🚀 Iniciando build de 11ty...');
-  try {
-    const { stdout, stderr } = await execPromise('npx @11ty/eleventy');
-    console.log(stdout);
-    if (stderr) console.error(stderr);
-    console.log('✅ Build completado.');
-  } catch (error) {
-    console.error('❌ Error en el build:', error);
-    process.exit(1);
-  }
+  return new Promise((resolve, reject) => {
+    // Usar spawn para evitar problemas de buffer y ver output en tiempo real
+    const child = spawn('npx', ['@11ty/eleventy', '--quiet'], { stdio: 'inherit', shell: true });
+    
+    child.on('close', (code) => {
+      if (code === 0) {
+        console.log('✅ Build completado.');
+        resolve();
+      } else {
+        console.error(`❌ Build falló con código ${code}`);
+        process.exit(1);
+      }
+    });
+    
+    child.on('error', (err) => {
+      console.error('❌ Error al iniciar el proceso:', err);
+      process.exit(1);
+    });
+  });
 }
 
 /**
