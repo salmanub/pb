@@ -71,80 +71,83 @@ class PeritoChatbot {
       return;
     }
 
-    // Helper para eventos touch/click robustos en móvil
-    const addTapListener = (elem, callback) => {
-      if (!elem) return;
-      
-      let handled = false;
-      
-      const handleEvent = (e) => {
-        // Si es touch, marcamos como manejado para ignorar el click subsiguiente
-        if (e.type === 'touchend') {
-          handled = true;
-          setTimeout(() => handled = false, 500); // Reset flag
-        }
-        
-        // Si es click y ya fue manejado por touch, salir
-        if (e.type === 'click' && handled) {
-          return;
-        }
-
+    // Event listeners principales (usando click estándar para mayor compatibilidad)
+    if (this.elements.button) {
+      this.elements.button.addEventListener('click', (e) => {
         e.preventDefault();
-        e.stopPropagation();
-        callback(e);
-      };
-
-      elem.addEventListener('click', handleEvent);
-      elem.addEventListener('touchend', handleEvent);
-    };
-
-    // Event listeners principales
-    addTapListener(this.elements.button, () => this.toggleChat());
-    addTapListener(this.elements.closeButton, () => this.toggleChat());
+        this.toggleChat();
+      });
+    }
+    
+    if (this.elements.closeButton) {
+      this.elements.closeButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.toggleChat();
+      });
+    }
     
     if (this.elements.downloadButton) {
-      addTapListener(this.elements.downloadButton, () => this.showDownloadModal());
+      this.elements.downloadButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('[Chatbot] Click en descargar');
+        this.showDownloadModal();
+      });
     } else {
       console.warn('[Chatbot] Botón de descarga no encontrado en el DOM');
     }
 
     if (this.elements.restartButton) {
-      addTapListener(this.elements.restartButton, () => this.showRestartModal());
+      this.elements.restartButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('[Chatbot] Click en reiniciar');
+        this.showRestartModal();
+      });
     }
 
-    // Modal listeners (usando addTapListener para asegurar respuesta en móvil)
+    // Modal listeners
     if (this.elements.cancelRestart) {
-      addTapListener(this.elements.cancelRestart, () => this.hideRestartModal());
+      this.elements.cancelRestart.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.hideRestartModal();
+      });
     }
     if (this.elements.confirmRestart) {
-      addTapListener(this.elements.confirmRestart, () => {
+      this.elements.confirmRestart.addEventListener('click', (e) => {
+        e.preventDefault();
         this.restartChat();
         this.hideRestartModal();
       });
     }
     if (this.elements.cancelDownload) {
-      addTapListener(this.elements.cancelDownload, () => this.hideDownloadModal());
+      this.elements.cancelDownload.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.hideDownloadModal();
+      });
     }
     if (this.elements.confirmDownload) {
-      addTapListener(this.elements.confirmDownload, () => {
+      this.elements.confirmDownload.addEventListener('click', (e) => {
+        e.preventDefault();
         this.downloadHistory();
         this.hideDownloadModal();
       });
     }
 
-    addTapListener(this.elements.sendButton, () => this.sendMessage());
-    
-    this.elements.input.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter' && !this.isWaitingResponse) {
+    if (this.elements.sendButton) {
+      this.elements.sendButton.addEventListener('click', (e) => {
+        e.preventDefault();
         this.sendMessage();
-      }
-    });
+      });
+    }
     
-    this.elements.input.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter' && !this.isWaitingResponse) {
-        this.sendMessage();
-      }
-    });
+    if (this.elements.input) {
+      this.elements.input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' && !this.isWaitingResponse) {
+          this.sendMessage();
+        }
+      });
+    }
 
     // Inicializar resize móvil
     if (this.elements.resizeHandle) {
@@ -231,10 +234,9 @@ class PeritoChatbot {
     if (this.elements.restartModal) {
       this.elements.restartModal.classList.remove('hidden');
       this.elements.restartModal.style.display = 'flex'; // For widget.html compatibility
-      // Animación de entrada
-      requestAnimationFrame(() => {
-        this.elements.restartModal.style.opacity = '1';
-      });
+      // Forzar reflow
+      void this.elements.restartModal.offsetWidth;
+      this.elements.restartModal.style.opacity = '1';
     }
   }
 
@@ -258,10 +260,9 @@ class PeritoChatbot {
     if (this.elements.downloadModal) {
       this.elements.downloadModal.classList.remove('hidden');
       this.elements.downloadModal.style.display = 'flex'; // For widget.html compatibility
-      // Animación de entrada
-      requestAnimationFrame(() => {
-        this.elements.downloadModal.style.opacity = '1';
-      });
+      // Forzar reflow
+      void this.elements.downloadModal.offsetWidth;
+      this.elements.downloadModal.style.opacity = '1';
     }
   }
 
