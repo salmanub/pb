@@ -36,24 +36,43 @@
       </div>
       <div class="flex items-center gap-2">
         <button 
+          id="restart-chat" 
+          type="button"
+          aria-label="Reiniciar conversación"
+          class="group relative bg-transparent border-0 text-white cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-colors duration-200 hover:bg-white/20"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+            <path d="M3 3v5h5"></path>
+          </svg>
+          <span class="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50 shadow-sm">
+            Reiniciar
+          </span>
+        </button>
+        <button 
           id="download-chat" 
           type="button"
           aria-label="Guardar conversación"
-          title="Guardar conversación"
-          class="bg-transparent border-0 text-white cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-all duration-300 ease-out hover:bg-white/20 hover:scale-110"
+          class="group relative bg-transparent border-0 text-white cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-colors duration-200 hover:bg-white/20"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
+          <span class="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50 shadow-sm">
+            Guardar
+          </span>
         </button>
         <button 
           id="close-chat" 
           aria-label="Cerrar chat"
-          class="bg-transparent border-0 text-white text-3xl cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-all duration-300 ease-out hover:bg-white/20 hover:rotate-90"
+          class="group relative bg-transparent border-0 text-white text-3xl cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-colors duration-200 hover:bg-white/20"
         >
           &times;
+          <span class="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50 shadow-sm font-sans text-base">
+            Cerrar
+          </span>
         </button>
       </div>
     </div>
@@ -86,11 +105,37 @@
         </svg>
       </button>
     </div>
+
+    {# Créditos de agencia #}
+    <div class="chat-powered-by">
+      <span>⚡ Tecnología por </span>
+      <a href="https://growleads.es" target="_blank" rel="noopener">Grow Leads</a>
+    </div>
   </div>
 </div>
 
 {# Estilos adicionales para animaciones y clases especiales #}
 <style>
+  .chat-powered-by {
+    font-size: 10px;
+    text-align: center;
+    color: #94a3b8;
+    padding-bottom: 4px; /* Pegado al fondo */
+    background: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+  .chat-powered-by a {
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .chat-powered-by a:hover {
+    color: #475569;
+  }
+
   /* ==========================================
      DESKTOP: SIDEBAR (DRAWER)
      ========================================== */

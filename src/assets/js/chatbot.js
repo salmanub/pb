@@ -51,6 +51,7 @@ class PeritoChatbot {
       window: document.getElementById('chat-window'),
       closeButton: document.getElementById('close-chat'),
       downloadButton: document.getElementById('download-chat'),
+      restartButton: document.getElementById('restart-chat'),
       messages: document.getElementById('chat-messages'),
       input: document.getElementById('chat-input'),
       sendButton: document.getElementById('send-button'),
@@ -76,6 +77,17 @@ class PeritoChatbot {
     } else {
       console.warn('[Chatbot] Botón de descarga no encontrado en el DOM');
     }
+
+    if (this.elements.restartButton) {
+      this.elements.restartButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (confirm('¿Estás seguro de que quieres reiniciar la conversación? Se perderá el historial actual.')) {
+          this.restartChat();
+        }
+      });
+    }
+
     this.elements.sendButton.addEventListener('click', () => this.sendMessage());
     
     this.elements.input.addEventListener('keypress', (e) => {
@@ -482,6 +494,26 @@ class PeritoChatbot {
     this.conversationStarted = false;
     this.elements.messages.innerHTML = '';
     this.elements.input.value = '';
+  }
+
+  /**
+   * Reinicia la conversación completamente
+   */
+  restartChat() {
+    // 1. Limpiar UI
+    this.elements.messages.innerHTML = '';
+    this.elements.input.value = '';
+    
+    // 2. Limpiar estado local
+    localStorage.removeItem('chat_session_id');
+    this.config.sessionId = this.generateUUID(); // Generar nuevo ID forzado
+    localStorage.setItem('chat_session_id', this.config.sessionId);
+    
+    this.conversationStarted = false;
+    this.isWaitingResponse = false;
+    
+    // 3. Iniciar nueva conversación
+    this.initChat();
   }
 
   /**

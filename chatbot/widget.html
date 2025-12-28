@@ -108,6 +108,60 @@
       }
     }
 
+    /* Header Buttons & Tooltips */
+    .header-btn {
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 5px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      position: relative;
+      transition: background-color 0.2s;
+    }
+    
+    .header-btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .header-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .tooltip {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 8px;
+      background-color: #1f2937;
+      color: white;
+      font-size: 10px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+      z-index: 50;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .header-btn:hover .tooltip {
+      opacity: 1;
+    }
+
     #chat-header {
       background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%);
       color: white;
@@ -127,20 +181,6 @@
       margin: 5px 0 0 0;
       font-size: 12px;
       opacity: 0.8;
-    }
-
-    #close-chat {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 24px;
-      cursor: pointer;
-      padding: 0;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     #chat-messages {
@@ -318,6 +358,26 @@
       animation-delay: 0.4s;
     }
 
+    .chat-powered-by {
+      font-size: 10px;
+      text-align: center;
+      color: #94a3b8;
+      padding-bottom: 4px; /* Pegado al fondo */
+      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    .chat-powered-by a {
+      color: #64748b;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .chat-powered-by a:hover {
+      color: #475569;
+    }
+
     @keyframes bounce {
       0%, 60%, 100% { transform: translateY(0); }
       30% { transform: translateY(-10px); }
@@ -355,9 +415,19 @@
         <h3>Perito.barcelona</h3>
         <p>Asistente técnico</p>
       </div>
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <button id="download-chat" title="Guardar conversación" style="background:none; border:none; color:white; cursor:pointer; font-size:18px; padding:0; display:flex; align-items:center; justify-content:center;">⬇️</button>
-        <button id="close-chat" aria-label="Cerrar chat">&times;</button>
+      <div style="display: flex; align-items: center; gap: 5px;">
+        <button id="restart-chat" class="header-btn" aria-label="Reiniciar conversación">
+          <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+          <span class="tooltip">Reiniciar</span>
+        </button>
+        <button id="download-chat" class="header-btn" aria-label="Guardar conversación">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span class="tooltip">Guardar</span>
+        </button>
+        <button id="close-chat" class="header-btn" aria-label="Cerrar chat">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          <span class="tooltip">Cerrar</span>
+        </button>
       </div>
     </div>
 
@@ -370,6 +440,11 @@
           <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
         </svg>
       </button>
+    </div>
+
+    <div class="chat-powered-by">
+      <span>⚡ Tecnología por </span>
+      <a href="https://growleads.es" target="_blank" rel="noopener">Grow Leads</a>
     </div>
   </div>
 </div>
@@ -409,6 +484,7 @@
     const chatWindow = document.getElementById('chat-window');
     const closeButton = document.getElementById('close-chat');
     const downloadButton = document.getElementById('download-chat');
+    const restartButton = document.getElementById('restart-chat');
     const messagesContainer = document.getElementById('chat-messages');
     const inputField = document.getElementById('chat-input');
     const sendButton = document.getElementById('send-button');
@@ -421,6 +497,7 @@
     // Event listeners
     chatButton.addEventListener('click', toggleChat);
     if (downloadButton) downloadButton.addEventListener('click', downloadHistory);
+    if (restartButton) restartButton.addEventListener('click', restartChat);
     closeButton.addEventListener('click', toggleChat);
     sendButton.addEventListener('click', sendMessage);
     inputField.addEventListener('keypress', (e) => {
@@ -471,7 +548,27 @@
     }
 
     /**
-     * 
+     * Reinicia la conversación
+     */
+    function restartChat() {
+      if (!confirm('¿Estás seguro de que quieres reiniciar la conversación? Se perderá el historial actual.')) return;
+      
+      // Limpiar UI
+      messagesContainer.innerHTML = '';
+      inputField.value = '';
+      
+      // Limpiar estado
+      localStorage.removeItem('chat_session_id');
+      CONFIG.SESSION_ID = generateUUID();
+      localStorage.setItem('chat_session_id', CONFIG.SESSION_ID);
+      
+      isWaitingResponse = false;
+      updateInputState();
+      
+      // Iniciar de nuevo
+      initChat();
+    }
+
     /**
      * Descarga el historial de chat
      */
