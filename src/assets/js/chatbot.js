@@ -41,6 +41,31 @@ class PeritoChatbot {
   }
 
   /**
+   * Añade listeners para click y touch de forma segura
+   */
+  addSafeClick(element, callback) {
+    if (!element) return;
+    
+    let isScrolling = false;
+    element.addEventListener('touchstart', () => { isScrolling = false; }, { passive: true });
+    element.addEventListener('touchmove', () => { isScrolling = true; }, { passive: true });
+    
+    element.addEventListener('touchend', (e) => {
+      if (!isScrolling) {
+        e.preventDefault();
+        e.stopPropagation();
+        callback(e);
+      }
+    });
+    
+    element.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      callback(e);
+    });
+  }
+
+  /**
    * Setup de elementos y eventos
    */
   setup() {
@@ -73,23 +98,19 @@ class PeritoChatbot {
 
     // Event listeners principales (usando click estándar para mayor compatibilidad)
     if (this.elements.button) {
-      this.elements.button.addEventListener('click', (e) => {
-        e.preventDefault();
+      this.addSafeClick(this.elements.button, () => {
         this.toggleChat();
       });
     }
     
     if (this.elements.closeButton) {
-      this.elements.closeButton.addEventListener('click', (e) => {
-        e.preventDefault();
+      this.addSafeClick(this.elements.closeButton, () => {
         this.toggleChat();
       });
     }
     
     if (this.elements.downloadButton) {
-      this.elements.downloadButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+      this.addSafeClick(this.elements.downloadButton, () => {
         console.log('[Chatbot] Click en descargar');
         this.showDownloadModal();
       });
@@ -98,9 +119,7 @@ class PeritoChatbot {
     }
 
     if (this.elements.restartButton) {
-      this.elements.restartButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+      this.addSafeClick(this.elements.restartButton, () => {
         console.log('[Chatbot] Click en reiniciar');
         this.showRestartModal();
       });
@@ -458,6 +477,18 @@ class PeritoChatbot {
           link.rel = 'noopener noreferrer';
           link.innerHTML = btn.text;
           link.className = 'bg-white border-2 border-cyan-600 text-cyan-700 py-3 px-4 rounded-lg cursor-pointer text-sm font-medium transition-all duration-300 ease-out text-left flex items-center gap-2 hover:bg-cyan-600 hover:text-white hover:translate-x-1 hover:shadow-md active:translate-x-0.5 no-underline block w-full';
+          
+          // Fix para clicks en móvil
+          let isScrolling = false;
+          link.addEventListener('touchstart', () => { isScrolling = false; }, { passive: true });
+          link.addEventListener('touchmove', () => { isScrolling = true; }, { passive: true });
+          link.addEventListener('touchend', (e) => {
+            if (!isScrolling) {
+              e.preventDefault();
+              window.open(link.href, '_blank');
+            }
+          });
+
           buttonsDiv.appendChild(link);
         } else {
           const button = document.createElement('button');
