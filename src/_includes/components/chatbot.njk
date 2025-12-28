@@ -143,7 +143,7 @@
 {# Estilos adicionales para animaciones y clases especiales #}
 <style>
   .chat-powered-by {
-    font-size: 11px;
+    font-size: 12px;
     text-align: center;
     color: #94a3b8;
     padding-bottom: 4px; /* Pegado al fondo */
@@ -187,9 +187,14 @@
       right: 0;
     }
 
-    /* Superponer el chat sin empujar el contenido */
+    /* Empujar el contenido al abrir el chat */
+    body {
+      transition: margin-right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
     body.chat-open {
-      overflow: hidden; /* Evitar scroll en el body cuando el chat está abierto */
+      margin-right: 450px;
+      overflow-x: hidden;
     }
   }
 
