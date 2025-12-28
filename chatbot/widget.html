@@ -60,13 +60,8 @@
         right: 0;
       }
 
-      body {
-        transition: margin-right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      
       body.chat-open {
-        margin-right: 450px;
-        overflow-x: hidden;
+        overflow: hidden;
       }
     }
 
@@ -378,6 +373,83 @@
       color: #475569;
     }
 
+    /* Restart Modal Styles */
+    .restart-modal {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.95);
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+      backdrop-filter: blur(4px);
+    }
+
+    .restart-icon {
+      width: 64px;
+      height: 64px;
+      background-color: #fef3c7;
+      color: #d97706;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .restart-modal h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1e293b;
+      margin: 0 0 8px 0;
+    }
+
+    .restart-modal p {
+      font-size: 14px;
+      color: #64748b;
+      margin: 0 0 24px 0;
+      line-height: 1.5;
+    }
+
+    .restart-actions {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .restart-actions button {
+      flex: 1;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.2s;
+    }
+
+    .btn-cancel {
+      background-color: #f1f5f9;
+      color: #334155;
+    }
+
+    .btn-cancel:hover {
+      background-color: #e2e8f0;
+    }
+
+    .btn-confirm {
+      background-color: #0891b2;
+      color: white;
+      box-shadow: 0 4px 6px -1px rgba(8, 145, 178, 0.1), 0 2px 4px -1px rgba(8, 145, 178, 0.06);
+    }
+
+    .btn-confirm:hover {
+      background-color: #0e7490;
+    }
+
     @keyframes bounce {
       0%, 60%, 100% { transform: translateY(0); }
       30% { transform: translateY(-10px); }
@@ -444,7 +516,33 @@
 
     <div class="chat-powered-by">
       <span>⚡ Tecnología por </span>
-      <a href="https://growleads.es" target="_blank" rel="noopener">Grow Leads</a>
+      <a href="/growleads/" target="_blank" rel="noopener">Grow Leads</a>
+    </div>
+
+    <!-- Modal de confirmación de reinicio -->
+    <div id="restart-confirm-modal" class="restart-modal" style="display: none;">
+      <div class="restart-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+      </div>
+      <h4>¿Reiniciar conversación?</h4>
+      <p>Se perderá todo el historial actual y comenzarás una nueva consulta.</p>
+      <div class="restart-actions">
+        <button id="cancel-restart" class="btn-cancel">Cancelar</button>
+        <button id="confirm-restart" class="btn-confirm">Reiniciar</button>
+      </div>
+    </div>
+
+    <!-- Modal de confirmación de descarga -->
+    <div id="download-confirm-modal" class="restart-modal" style="display: none;">
+      <div class="restart-icon" style="background-color: #dbeafe; color: #2563eb;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </div>
+      <h4>¿Guardar conversación?</h4>
+      <p>Se descargará un archivo de texto con todo el historial de la conversación.</p>
+      <div class="restart-actions">
+        <button id="cancel-download" class="btn-cancel">Cancelar</button>
+        <button id="confirm-download" class="btn-confirm">Descargar</button>
+      </div>
     </div>
   </div>
 </div>

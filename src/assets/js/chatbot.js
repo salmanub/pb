@@ -56,6 +56,13 @@ class PeritoChatbot {
       input: document.getElementById('chat-input'),
       sendButton: document.getElementById('send-button'),
       resizeHandle: document.getElementById('chat-resize-handle'),
+      // Modal elements
+      restartModal: document.getElementById('restart-confirm-modal'),
+      cancelRestart: document.getElementById('cancel-restart'),
+      confirmRestart: document.getElementById('confirm-restart'),
+      downloadModal: document.getElementById('download-confirm-modal'),
+      cancelDownload: document.getElementById('cancel-download'),
+      confirmDownload: document.getElementById('confirm-download'),
     };
 
     // Verificar que existen los elementos
@@ -71,8 +78,7 @@ class PeritoChatbot {
       this.elements.downloadButton.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        console.log('[Chatbot] Click en descargar historial');
-        this.downloadHistory();
+        this.showDownloadModal();
       });
     } else {
       console.warn('[Chatbot] Botón de descarga no encontrado en el DOM');
@@ -82,9 +88,27 @@ class PeritoChatbot {
       this.elements.restartButton.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        if (confirm('¿Estás seguro de que quieres reiniciar la conversación? Se perderá el historial actual.')) {
-          this.restartChat();
-        }
+        this.showRestartModal();
+      });
+    }
+
+    // Modal listeners
+    if (this.elements.cancelRestart) {
+      this.elements.cancelRestart.addEventListener('click', () => this.hideRestartModal());
+    }
+    if (this.elements.confirmRestart) {
+      this.elements.confirmRestart.addEventListener('click', () => {
+        this.restartChat();
+        this.hideRestartModal();
+      });
+    }
+    if (this.elements.cancelDownload) {
+      this.elements.cancelDownload.addEventListener('click', () => this.hideDownloadModal());
+    }
+    if (this.elements.confirmDownload) {
+      this.elements.confirmDownload.addEventListener('click', () => {
+        this.downloadHistory();
+        this.hideDownloadModal();
       });
     }
 
@@ -172,6 +196,60 @@ class PeritoChatbot {
       localStorage.setItem('chat_session_id', sessionId);
     }
     return sessionId;
+  }
+
+  /**
+   * Muestra el modal de confirmación de reinicio
+   */
+  showRestartModal() {
+    if (this.elements.restartModal) {
+      this.elements.restartModal.classList.remove('hidden');
+      this.elements.restartModal.style.display = 'flex'; // For widget.html compatibility
+      // Animación de entrada
+      requestAnimationFrame(() => {
+        this.elements.restartModal.style.opacity = '1';
+      });
+    }
+  }
+
+  /**
+   * Oculta el modal de confirmación de reinicio
+   */
+  hideRestartModal() {
+    if (this.elements.restartModal) {
+      this.elements.restartModal.style.opacity = '0';
+      setTimeout(() => {
+        this.elements.restartModal.classList.add('hidden');
+        this.elements.restartModal.style.display = 'none'; // For widget.html compatibility
+      }, 200);
+    }
+  }
+
+  /**
+   * Muestra el modal de confirmación de descarga
+   */
+  showDownloadModal() {
+    if (this.elements.downloadModal) {
+      this.elements.downloadModal.classList.remove('hidden');
+      this.elements.downloadModal.style.display = 'flex'; // For widget.html compatibility
+      // Animación de entrada
+      requestAnimationFrame(() => {
+        this.elements.downloadModal.style.opacity = '1';
+      });
+    }
+  }
+
+  /**
+   * Oculta el modal de confirmación de descarga
+   */
+  hideDownloadModal() {
+    if (this.elements.downloadModal) {
+      this.elements.downloadModal.style.opacity = '0';
+      setTimeout(() => {
+        this.elements.downloadModal.classList.add('hidden');
+        this.elements.downloadModal.style.display = 'none'; // For widget.html compatibility
+      }, 200);
+    }
   }
 
   /**
