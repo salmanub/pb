@@ -116,9 +116,9 @@ class PeritoChatbot {
       const deltaY = startY - currentY; // Arrastrar hacia arriba aumenta la altura
       const newHeight = startHeight + deltaY;
       
-      // Límites (20vh a 90vh)
+      // Límites (20vh a 95vh)
       const vh = window.innerHeight;
-      if (newHeight > vh * 0.2 && newHeight < vh * 0.9) {
+      if (newHeight > vh * 0.2 && newHeight < vh * 0.95) {
         windowEl.style.height = `${newHeight}px`;
       }
       
