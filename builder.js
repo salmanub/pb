@@ -21,6 +21,12 @@ const CONFIG = {
   publicUrl: 'https://perito.barcelona'
 };
 
+// Verificación de entorno
+console.log('🔧 Configuración cargada:');
+console.log(`- Sheet ID: ${CONFIG.sheetId ? '✅ Configurado' : '❌ Faltante'}`);
+console.log(`- Service Account: ${CONFIG.serviceAccountEmail ? '✅ Configurado' : '❌ Faltante'}`);
+console.log(`- Private Key: ${CONFIG.privateKey ? '✅ Configurado' : '❌ Faltante'}`);
+
 /**
  * Ejecuta el build de Eleventy
  */
