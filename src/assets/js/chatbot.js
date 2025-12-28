@@ -71,48 +71,74 @@ class PeritoChatbot {
       return;
     }
 
-    // Event listeners
-    this.elements.button.addEventListener('click', () => this.toggleChat());
-    this.elements.closeButton.addEventListener('click', () => this.toggleChat());
-    if (this.elements.downloadButton) {
-      this.elements.downloadButton.addEventListener('click', (e) => {
+    // Helper para eventos touch/click robustos en móvil
+    const addTapListener = (elem, callback) => {
+      if (!elem) return;
+      
+      let handled = false;
+      
+      const handleEvent = (e) => {
+        // Si es touch, marcamos como manejado para ignorar el click subsiguiente
+        if (e.type === 'touchend') {
+          handled = true;
+          setTimeout(() => handled = false, 500); // Reset flag
+        }
+        
+        // Si es click y ya fue manejado por touch, salir
+        if (e.type === 'click' && handled) {
+          return;
+        }
+
         e.preventDefault();
         e.stopPropagation();
-        this.showDownloadModal();
-      });
+        callback(e);
+      };
+
+      elem.addEventListener('click', handleEvent);
+      elem.addEventListener('touchend', handleEvent);
+    };
+
+    // Event listeners principales
+    addTapListener(this.elements.button, () => this.toggleChat());
+    addTapListener(this.elements.closeButton, () => this.toggleChat());
+    
+    if (this.elements.downloadButton) {
+      addTapListener(this.elements.downloadButton, () => this.showDownloadModal());
     } else {
       console.warn('[Chatbot] Botón de descarga no encontrado en el DOM');
     }
 
     if (this.elements.restartButton) {
-      this.elements.restartButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        this.showRestartModal();
-      });
+      addTapListener(this.elements.restartButton, () => this.showRestartModal());
     }
 
-    // Modal listeners
+    // Modal listeners (usando addTapListener para asegurar respuesta en móvil)
     if (this.elements.cancelRestart) {
-      this.elements.cancelRestart.addEventListener('click', () => this.hideRestartModal());
+      addTapListener(this.elements.cancelRestart, () => this.hideRestartModal());
     }
     if (this.elements.confirmRestart) {
-      this.elements.confirmRestart.addEventListener('click', () => {
+      addTapListener(this.elements.confirmRestart, () => {
         this.restartChat();
         this.hideRestartModal();
       });
     }
     if (this.elements.cancelDownload) {
-      this.elements.cancelDownload.addEventListener('click', () => this.hideDownloadModal());
+      addTapListener(this.elements.cancelDownload, () => this.hideDownloadModal());
     }
     if (this.elements.confirmDownload) {
-      this.elements.confirmDownload.addEventListener('click', () => {
+      addTapListener(this.elements.confirmDownload, () => {
         this.downloadHistory();
         this.hideDownloadModal();
       });
     }
 
-    this.elements.sendButton.addEventListener('click', () => this.sendMessage());
+    addTapListener(this.elements.sendButton, () => this.sendMessage());
+    
+    this.elements.input.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && !this.isWaitingResponse) {
+        this.sendMessage();
+      }
+    });
     
     this.elements.input.addEventListener('keypress', (e) => {
       if (e.key === 'Enter' && !this.isWaitingResponse) {
