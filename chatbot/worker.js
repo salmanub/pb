@@ -12,30 +12,7 @@
 // CONFIGURACIÓN
 // ============================================================================
 
-const CONFIG = {
-  // Google Sheets API (lectura)
-  SHEETS_API_KEY: 'TU_API_KEY_AQUI',
-  SPREADSHEET_ID: 'TU_SPREADSHEET_ID_AQUI',
-  
-  // Google Service Account (escritura de leads)
-  GOOGLE_SERVICE_ACCOUNT_EMAIL: '',
-  GOOGLE_PRIVATE_KEY: '',
-  
-  // MailChannels para envío de leads
-  MAILCHANNELS_API: 'https://api.mailchannels.net/tx/v1/send',
-  EMAIL_DESTINO: 'info@perito.barcelona',
-  
-  // OpenAI API (o alternativa)
-  OPENAI_API_KEY: 'TU_OPENAI_KEY_AQUI',
-  OPENAI_MODEL: 'gpt-4-turbo-preview',
-  
-  // Límites
-  MAX_CONVERSATION_LENGTH: 20,
-  SESSION_TIMEOUT: 30 * 60 * 1000, // 30 minutos
-
-  // VIPs (Strict Name Matching)
-  VIP_NAMES: ['victor del mar', 'bufete x', 'victor pro', 'colaborador victor'],
-};
+// CONFIG eliminado. Se usa ConfigService.
 
 // ============================================================================
 // SYSTEM PROMPT GENERATOR (DINÁMICO)
@@ -387,6 +364,10 @@ class IAService {
 // ============================================================================
 
 class EmailService {
+  constructor(config) {
+    this.config = config;
+  }
+
   async enviarLead(leadData) {
     const emailBody = `
 NUEVO LEAD - PERITO.BARCELONA
@@ -420,7 +401,7 @@ METADATOS:
     
     const payload = {
       personalizations: [{
-        to: [{ email: CONFIG.EMAIL_DESTINO }],
+        to: [{ email: this.config.email_destino }],
       }],
       from: {
         email: 'chatbot@perito.barcelona',
@@ -433,7 +414,7 @@ METADATOS:
       }],
     };
     
-    const response = await fetch(CONFIG.MAILCHANNELS_API, {
+    const response = await fetch(this.config.mailchannels_api || 'https://api.mailchannels.net/tx/v1/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -450,10 +431,10 @@ METADATOS:
 // ============================================================================
 
 class SheetsWriteService {
-  constructor() {
-    this.serviceAccountEmail = CONFIG.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-    this.privateKey = CONFIG.GOOGLE_PRIVATE_KEY;
-    this.spreadsheetId = CONFIG.SPREADSHEET_ID;
+  constructor(env) {
+    this.serviceAccountEmail = env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
+    this.privateKey = env.GOOGLE_PRIVATE_KEY;
+    this.spreadsheetId = env.SPREADSHEET_ID;
   }
   
   /**
@@ -607,6 +588,142 @@ class SheetsWriteService {
 }
 
 // ============================================================================
+// CONFIG SERVICE (KV + SHEETS)
+// ============================================================================
+
+class ConfigService {
+  constructor(env) {
+    this.env = env;
+    // Default fallback config to prevent crashes if everything fails
+    this.defaults = {
+      email_destino: 'info@perito.barcelona',
+      openai_model: 'gpt-4-turbo-preview',
+      max_conversation_length: 20,
+      session_timeout: 1800000,
+      vip_names: ['victor del mar', 'bufete x'],
+      vip_list: [], // Nuevo default
+      mailchannels_api: 'https://api.mailchannels.net/tx/v1/send'
+    };
+  }
+
+  async load(forceRefresh = false) {
+    // 1. Try KV
+    if (!forceRefresh && this.env.PERITO_CONFIG) {
+      try {
+        const cached = await this.env.PERITO_CONFIG.get('app_config', { type: 'json' });
+        if (cached) {
+            return { ...this.defaults, ...cached };
+        }
+      } catch (e) {
+        console.error('KV Read Error:', e);
+      }
+    }
+
+    // 2. Fetch from Sheets
+    try {
+      const sheetsConfig = await this.fetchFromSheets();
+      
+      // 3. Save to KV
+      if (this.env.PERITO_CONFIG) {
+        await this.env.PERITO_CONFIG.put('app_config', JSON.stringify(sheetsConfig), { expirationTtl: 3600 });
+      }
+      
+      return { ...this.defaults, ...sheetsConfig };
+    } catch (e) {
+      console.error('Sheets Config Fetch Error:', e);
+      return this.defaults;
+    }
+  }
+
+  async fetchFromSheets() {
+    const spreadsheetId = this.env.SPREADSHEET_ID;
+    const rangeConfig = 'Configuracion!A2:B100';
+    const rangeVips = 'VIPs!A2:D100'; // Nueva pestaña
+    
+    let configValues = [];
+    let vipValues = [];
+
+    // Try Service Account first (more reliable for private sheets)
+    try {
+        const writeService = new SheetsWriteService(this.env);
+        const token = await writeService.getAccessToken();
+        
+        // Fetch en paralelo
+        const [resConfig, resVips] = await Promise.all([
+            fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${rangeConfig}`, { headers: { Authorization: `Bearer ${token}` } }),
+            fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${rangeVips}`, { headers: { Authorization: `Bearer ${token}` } })
+        ]);
+
+        const dataConfig = await resConfig.json();
+        const dataVips = await resVips.json();
+        
+        configValues = dataConfig.values || [];
+        vipValues = dataVips.values || [];
+    } catch (e) {
+        console.warn('Service Account config fetch failed, trying API Key', e);
+        // Fallback API Key
+        if (this.env.SHEETS_API_KEY) {
+             const baseUrl = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/`;
+             const [resConfig, resVips] = await Promise.all([
+                fetch(`${baseUrl}${rangeConfig}?key=${this.env.SHEETS_API_KEY}`),
+                fetch(`${baseUrl}${rangeVips}?key=${this.env.SHEETS_API_KEY}`)
+             ]);
+             
+             const dataConfig = await resConfig.json();
+             const dataVips = await resVips.json();
+             
+             configValues = dataConfig.values || [];
+             vipValues = dataVips.values || [];
+        }
+    }
+
+    // Parse Config
+    const config = {};
+    configValues.forEach(row => {
+        const key = row[0].toLowerCase().trim(); // Normalize keys
+        let val = row[1];
+
+        if (key === 'vip_names') {
+            // Legacy support if someone still uses this key in Config tab
+            val = val.split(',').map(v => v.trim().toLowerCase());
+        } else if (key.includes('timeout') || key.includes('max_') || !isNaN(val)) {
+            if (!isNaN(Number(val)) && val.trim() !== '') {
+                 val = Number(val);
+            }
+        }
+        // Boolean check
+        if (val === 'TRUE') val = true;
+        if (val === 'FALSE') val = false;
+
+        config[key] = val;
+    });
+    
+    // Parse VIP List (Enrichment)
+    config.vip_list = vipValues.map(row => ({
+        nombre: row[0] ? row[0].trim() : '',
+        telefono: row[1] ? row[1].trim() : '',
+        rol_especial: row[2] ? row[2].trim() : 'VIP',
+        notas: row[3] ? row[3].trim() : ''
+    })).filter(v => v.nombre); // Filter empty rows
+
+    // Generate simple names list for compatibility
+    const vipNamesFromList = config.vip_list.map(v => v.nombre.toLowerCase());
+    
+    // Merge with legacy vip_names if exists
+    if (config.vip_names) {
+        config.vip_names = [...new Set([...config.vip_names, ...vipNamesFromList])];
+    } else {
+        config.vip_names = vipNamesFromList;
+    }
+    
+    // Ensure defaults for critical keys if missing
+    if (!config.email_destino) config.email_destino = 'info@perito.barcelona';
+
+    return config;
+  }
+}
+
+// ============================================================================
 // ICONOS (EMOJIS - MÁS ROBUSTO Y LIGERO)
 // ============================================================================
 
@@ -634,14 +751,15 @@ const ICONS = {
 // ============================================================================
 
 class ChatbotHandler {
-  constructor(env) {
+  constructor(env, config) {
     this.env = env;
+    this.config = config;
     this.sessionStore = new SessionStore(env);
-    this.sheets = new SheetsService(CONFIG.SHEETS_API_KEY, CONFIG.SPREADSHEET_ID);
-    this.sheetsWrite = new SheetsWriteService();
+    this.sheets = new SheetsService(env.SHEETS_API_KEY, env.SPREADSHEET_ID);
+    this.sheetsWrite = new SheetsWriteService(env);
     this.sheets.setWriteService(this.sheetsWrite); // Inyectar servicio de escritura para lectura también
-    this.ia = new IAService(CONFIG.OPENAI_API_KEY, CONFIG.OPENAI_MODEL);
-    this.email = new EmailService();
+    this.ia = new IAService(env.OPENAI_API_KEY, config.openai_model || 'gpt-4-turbo-preview');
+    this.email = new EmailService(config);
   }
   
   /**
@@ -722,11 +840,21 @@ class ChatbotHandler {
     }
 
     // 1. DETECCIÓN VIP GLOBAL (Prioridad 1)
-    const esVip = CONFIG.VIP_NAMES.some(vip => mensajeLower.includes(vip));
+    const vipList = this.config.vip_list || [];
+    const vipNames = this.config.vip_names || [];
+    
+    // Buscar coincidencia exacta en la lista enriquecida
+    const vipMatch = vipList.find(v => mensajeLower.includes(v.nombre.toLowerCase()));
+    const esVip = vipMatch || vipNames.some(vip => mensajeLower.includes(vip));
     
     if (esVip && session.estado !== ESTADOS.FINALIZADO) {
         session.datos.tipo_cliente = 'VIP';
         session.datos.vip = true;
+        
+        // Guardar datos enriquecidos si los tenemos
+        if (vipMatch) {
+            session.datos.vip_data = vipMatch;
+        }
         
         if (!session.datos.servicio_final) {
             session.datos.servicio_final = { 
@@ -737,8 +865,14 @@ class ChatbotHandler {
         }
         session.estado = ESTADOS.CAPTURA_DESCRIPCION_CASO;
         
-        const nombreDetectado = mensaje.split(' ').find(w => CONFIG.VIP_NAMES.some(v => v.includes(w.toLowerCase()))) || 'Colaborador';
-        const nombreCapitalizado = nombreDetectado.charAt(0).toUpperCase() + nombreDetectado.slice(1);
+        // Usar nombre del match o intentar extraerlo
+        let nombreCapitalizado = 'Colaborador';
+        if (vipMatch) {
+            nombreCapitalizado = vipMatch.nombre;
+        } else {
+            const nombreDetectado = mensaje.split(' ').find(w => vipNames.some(v => v.includes(w.toLowerCase()))) || 'Colaborador';
+            nombreCapitalizado = nombreDetectado.charAt(0).toUpperCase() + nombreDetectado.slice(1);
+        }
 
         respuesta = {
             texto: `¡Hombre ${nombreCapitalizado}! Buenas. ¿Qué necesitas mover hoy? Descríbeme el tema y aviso urgente al equipo.`,
@@ -1126,6 +1260,75 @@ class ChatbotHandler {
     
     // Usuario ha proporcionado la descripción - CRÍTICO para el perito
     session.datos.descripcion_caso = mensaje.trim();
+
+    // CONDICIONAL VIP: Verificar si es VIP para atajo
+    if (session.datos.vip) {
+        session.estado = ESTADOS.FINALIZADO;
+
+        // Recuperar datos VIP
+        let nombreVip = 'Colaborador';
+        let telefonoVip = 'VIP';
+        let rolVip = 'VIP';
+        let notasVip = '';
+
+        if (session.datos.vip_data) {
+            // Datos enriquecidos desde Sheets
+            nombreVip = session.datos.vip_data.nombre;
+            telefonoVip = session.datos.vip_data.telefono || 'VIP';
+            rolVip = `VIP - ${session.datos.vip_data.rol_especial}`;
+            notasVip = session.datos.vip_data.notas ? `[VIP: ${session.datos.vip_data.nombre} - ${session.datos.vip_data.notas}] ` : '';
+        } else {
+            // Fallback lógica antigua
+            const vipNames = this.config.vip_names || [];
+            const triggerMsg = session.historial.find(m => m.role === 'user' && vipNames.some(v => m.content.toLowerCase().includes(v)));
+            if (triggerMsg) {
+                 const found = triggerMsg.content.split(' ').find(w => vipNames.some(v => v.includes(w.toLowerCase())));
+                 if (found) {
+                     nombreVip = found.charAt(0).toUpperCase() + found.slice(1);
+                 }
+            }
+        }
+        
+        session.datos.nombre = nombreVip;
+
+        // Preparar datos del lead VIP
+        const leadData = {
+            sessionId: session.sessionId,
+            userAgent: session.userAgent,
+            servicio_nombre: session.datos.servicio_final.nombre_servicio,
+            categoria: session.datos.servicio_final.categoria,
+            tipo_legal: 'VIP - Urgente',
+            urgencia: 'Alta',
+            ubicacion: 'VIP',
+            nombre: nombreVip,
+            email: 'VIP',
+            telefono: telefonoVip,
+            descripcion_caso: `${notasVip}${session.datos.descripcion_caso}`,
+            rol_cliente: rolVip,
+            tipo_cliente: session.datos.tipo_cliente,
+            vip: true,
+            lang: session.datos.lang || 'es',
+            conversacion: this.formatearConversacion(session.historial),
+        };
+
+        // Ejecutar guardado y envío
+        await this.email.enviarLead(leadData);
+        
+        try {
+            await this.sheetsWrite.guardarLead(leadData);
+        } catch (error) {
+            console.error('Error guardando lead VIP en Sheets:', error);
+        }
+
+        // Limpiar sesión
+        await this.sessionStore.delete(session.sessionId);
+
+        return {
+            texto: `Recibido ${nombreVip}. Le paso el aviso urgente a Albert/Equipo con lo que me has dicho. ¡Hablamos!`,
+            botones: []
+        };
+    }
+
     session.estado = ESTADOS.CUALIFICACION_JURIDICA;
     
     // Pasar a cualificación jurídica
@@ -1290,16 +1493,8 @@ class ChatbotHandler {
 
 export default {
   async fetch(request, env, ctx) {
-    // Aplicar configuración desde env
-    if (env.SHEETS_API_KEY) CONFIG.SHEETS_API_KEY = env.SHEETS_API_KEY;
-    if (env.SPREADSHEET_ID) CONFIG.SPREADSHEET_ID = env.SPREADSHEET_ID;
-    if (env.GOOGLE_SERVICE_ACCOUNT_EMAIL) CONFIG.GOOGLE_SERVICE_ACCOUNT_EMAIL = env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-    if (env.GOOGLE_PRIVATE_KEY) CONFIG.GOOGLE_PRIVATE_KEY = env.GOOGLE_PRIVATE_KEY;
-    if (env.OPENAI_API_KEY) CONFIG.OPENAI_API_KEY = env.OPENAI_API_KEY;
-    if (env.EMAIL_DESTINO) CONFIG.EMAIL_DESTINO = env.EMAIL_DESTINO;
-    
-    // Instanciar el chatbot DESPUÉS de configurar las variables de entorno
-    const chatbot = new ChatbotHandler(env);
+    // Initialize ConfigService
+    const configService = new ConfigService(env);
     
     const url = new URL(request.url);
     
@@ -1323,6 +1518,18 @@ export default {
     if (request.method === 'OPTIONS') {
       return new Response(null, { headers: corsHeaders });
     }
+
+    // Admin Reload Endpoint
+    if (url.pathname === '/api/admin/reload-config') {
+        const newConfig = await configService.load(true); // Force refresh
+        return new Response(JSON.stringify(newConfig), { headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+    }
+
+    // Load Config (Cached)
+    const config = await configService.load();
+    
+    // Instanciar el chatbot DESPUÉS de configurar las variables de entorno
+    const chatbot = new ChatbotHandler(env, config);
     
     // Endpoint de chat
     if (url.pathname === '/api/chat' && request.method === 'POST') {
