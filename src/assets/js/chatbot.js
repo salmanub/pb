@@ -323,6 +323,7 @@ class PeritoChatbot {
     // Mostrar mensaje del usuario
     this.addMessage(mensaje, 'user');
     this.elements.input.value = '';
+    this.elements.input.focus(); // Mantener foco después de enviar
 
     // Enviar al bot
     await this.sendToBot(mensaje);
@@ -390,6 +391,10 @@ class PeritoChatbot {
     } finally {
       this.isWaitingResponse = false;
       this.updateInputState();
+      // Recuperar foco al terminar de recibir respuesta
+      if (this.isOpen && !('ontouchstart' in window)) { // Solo en desktop para evitar teclado virtual en móvil
+        this.elements.input.focus();
+      }
     }
   }
 
