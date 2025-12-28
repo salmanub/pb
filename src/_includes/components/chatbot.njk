@@ -35,35 +35,53 @@
         <p class="m-0 mt-1 text-xs opacity-85 leading-tight">Asistente técnico</p>
       </div>
       <div class="flex items-center gap-2">
+        {# Botones Desktop (ocultos en móvil) #}
+        <div class="hidden md:flex items-center gap-2">
+          <button 
+            id="restart-chat" 
+            type="button"
+            aria-label="Reiniciar conversación"
+            class="group relative bg-transparent border-0 text-white cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-colors duration-200 hover:bg-white/20"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+              <path d="M3 3v5h5"></path>
+            </svg>
+            <span class="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50 shadow-sm">
+              Reiniciar
+            </span>
+          </button>
+          <button 
+            id="download-chat" 
+            type="button"
+            aria-label="Guardar conversación"
+            class="group relative bg-transparent border-0 text-white cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-colors duration-200 hover:bg-white/20"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span class="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50 shadow-sm">
+              Guardar
+            </span>
+          </button>
+        </div>
+
+        {# Botón Menú Móvil #}
         <button 
-          id="restart-chat" 
+          id="mobile-menu-toggle" 
           type="button"
-          aria-label="Reiniciar conversación"
-          class="group relative bg-transparent border-0 text-white cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-colors duration-200 hover:bg-white/20"
+          aria-label="Opciones"
+          class="md:hidden group relative bg-transparent border-0 text-white cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-colors duration-200 hover:bg-white/20"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
-            <path d="M3 3v5h5"></path>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="1"></circle>
+            <circle cx="12" cy="5" r="1"></circle>
+            <circle cx="12" cy="19" r="1"></circle>
           </svg>
-          <span class="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50 shadow-sm">
-            Reiniciar
-          </span>
         </button>
-        <button 
-          id="download-chat" 
-          type="button"
-          aria-label="Guardar conversación"
-          class="group relative bg-transparent border-0 text-white cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-colors duration-200 hover:bg-white/20"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
-          </svg>
-          <span class="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50 shadow-sm">
-            Guardar
-          </span>
-        </button>
+
         <button 
           id="close-chat" 
           aria-label="Cerrar chat"
@@ -75,6 +93,22 @@
           </span>
         </button>
       </div>
+    </div>
+
+    {# Menú de opciones móvil (Overlay) #}
+    <div id="mobile-options-menu" class="hidden absolute top-[60px] right-0 left-0 bg-white border-b border-gray-200 shadow-lg z-50 flex-col p-2 animate-in slide-in-from-top-2 duration-200 md:hidden">
+      <button id="mobile-restart" class="w-full text-left px-4 py-3 text-slate-700 hover:bg-slate-50 rounded-lg flex items-center gap-3 transition-colors">
+        <div class="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+        </div>
+        <span class="font-medium">Reiniciar conversación</span>
+      </button>
+      <button id="mobile-download" class="w-full text-left px-4 py-3 text-slate-700 hover:bg-slate-50 rounded-lg flex items-center gap-3 transition-colors">
+        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        </div>
+        <span class="font-medium">Guardar historial</span>
+      </button>
     </div>
 
     {# Área de mensajes #}
