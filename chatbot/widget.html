@@ -777,11 +777,18 @@
      * Toggle del chat
      */
     function toggleChat() {
+      const wasOpen = isOpen;
       isOpen = !isOpen;
       chatWindow.classList.toggle('open', isOpen);
       document.body.classList.toggle('chat-open', isOpen);
       if (isOpen) {
         inputField.focus();
+
+        // GA4: Chat Open
+        if (!wasOpen) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ 'event': 'chat_interaction', 'action': 'chat_open' });
+        }
       }
     }
 
@@ -799,7 +806,9 @@
     async function sendMessage() {
       const mensaje = inputField.value.trim();
       if (!mensaje || isWaitingResponse) return;
-
+      // GA4: Message Sent
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ 'event': 'chat_interaction', 'action': 'message_sent' });
       // Mostrar mensaje del usuario
       addMessage(mensaje, 'user');
       inputField.value = '';

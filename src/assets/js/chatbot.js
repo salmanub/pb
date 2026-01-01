@@ -324,6 +324,7 @@ class PeritoChatbot {
    * Toggle del chat (abrir/cerrar)
    */
   toggleChat(forceOpen = null) {
+    const wasOpen = this.isOpen;
     this.isOpen = forceOpen !== null ? forceOpen : !this.isOpen;
     
     this.elements.window.classList.toggle('open', this.isOpen);
@@ -332,6 +333,12 @@ class PeritoChatbot {
     if (this.isOpen) {
       this.elements.input.focus();
       
+      // GA4: Chat Open
+      if (!wasOpen) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'event': 'chat_interaction', 'action': 'chat_open' });
+      }
+
       // Iniciar conversación si es la primera vez
       if (!this.conversationStarted) {
         this.conversationStarted = true;
@@ -387,6 +394,10 @@ class PeritoChatbot {
     if (!mensaje || this.isWaitingResponse) {
       return;
     }
+
+    // GA4: Message Sent
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'event': 'chat_interaction', 'action': 'message_sent' });
 
     // Mostrar mensaje del usuario
     this.addMessage(mensaje, 'user');
