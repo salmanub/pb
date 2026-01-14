@@ -363,11 +363,82 @@
     }
   };
 
-  // Cargar el script del chatbot después de que la página haya cargado completamente
-  window.addEventListener('load', function() {
-    const script = document.createElement('script');
-    script.src = '/assets/js/chatbot.js?v=3';
-    script.defer = true;
-    document.body.appendChild(script);
+  // Cargador diferido e interactivo del chatbot
+  window.addEventListener('DOMContentLoaded', function() {
+    const chatButton = document.getElementById('chat-button');
+    const talkToExpertBtns = document.querySelectorAll('.talk-to-expert-btn'); // Si existen otros botones disparadores
+    let isScriptLoaded = false;
+    let isScriptLoading = false;
+
+    // Función para cargar el script
+    function loadChatbotScript(callback) {
+      if (isScriptLoaded) {
+        if (callback) callback();
+        return;
+      }
+      
+      if (isScriptLoading) return; // Evitar doble carga
+      isScriptLoading = true;
+
+      const script = document.createElement('script');
+      script.src = '/assets/js/chatbot.js?v=3';
+      script.defer = true;
+      script.onload = function() {
+        isScriptLoaded = true;
+        isScriptLoading = false;
+        // console.log('Chatbot script loaded via interaction');
+        if (callback) callback();
+      };
+      
+      document.body.appendChild(script);
+    }
+
+    // Inicialización
+    // 1. Si está configurado autoOpen, cargar inmediatamente (pero esperar idle si es posible)
+    if (window.PERITO_CHATBOT_CONFIG.autoOpen) {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => loadChatbotScript());
+      } else {
+        setTimeout(loadChatbotScript, 2000);
+      }
+    } else {
+      // 2. Si no, cargar al interactuar
+      
+      // Preload en mouseover para que esté listo al hacer clic
+      const preloadOnHover = () => {
+        loadChatbotScript();
+        chatButton.removeEventListener('mouseover', preloadOnHover);
+      };
+      
+      if (chatButton) {
+        chatButton.addEventListener('mouseover', preloadOnHover);
+        
+        // Cargar y abrir al click
+        chatButton.addEventListener('click', (e) => {
+          if (!isScriptLoaded) {
+            e.preventDefault(); // Evitar comportamiento default si el script no está
+            // Mostrar estado de carga visual si fuera necesario
+            loadChatbotScript(() => {
+              // Una vez cargado, si el script no maneja el click automáticamente, 
+              // el usuario tendrá que hacer clic de nuevo o podemos disparar un evento
+              // Pero normalmente el script se inicializa y bindeara sus eventos.
+              // Simulamos el click de nuevo o dejamos que el usuario lo haga?
+              // Mejor: el script del chatbot debería comprobar si el chat-window está oculto y abrirlo al init si se le indica
+              // O simplemente esperamos que el usuario haga click. 
+              // Dado que el botón ya existe, el script del chatbot probablemente se ata a él.
+              // Vamos a despachar un click manual después de cargar?
+              // Riesgo de bucle. Mejor dejamos que cargue.
+              // Opcional: chatButton.click(); 
+            });
+          }
+        });
+      }
+      
+      // Manejar otros botones (ej. "Hablar con un experto")
+      talkToExpertBtns.forEach(btn => {
+        btn.addEventListener('mouseover', preloadOnHover);
+        btn.addEventListener('click', () => loadChatbotScript());
+      });
+    }
   });
 </script>
