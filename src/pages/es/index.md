@@ -22,11 +22,11 @@ eleventyNavigation:
 
 # Hero Section
 hero:
-  tag: "Peritos Judiciales e Ingenieros Colegiados en Barcelona"
-  title: "Informes Periciales"
-  strong: "para Defender sus Intereses"
-  subtitle: "Especialistas en Peritajes, Auditorías de Obra y Asesoramiento Estructural"
-  description: "Elaboramos informes técnicos independientes para resolver litigios, auditar la calidad de proyectos y diagnosticar la seguridad de estructuras con el máximo rigor."
+  tag: "Perito Judicial Barcelona e Ingenieros Colegiados"
+  title: "Su Perito en Barcelona"
+  strong: "para la Defensa Técnica y Legal"
+  subtitle: "Expertos en Informes Periciales, Vicios Ocultos y Diagnóstico Estructural"
+  description: "Como despacho referente de Perito Barcelona, elaboramos informes técnicos independientes y dictámenes robustos para ganar litigios, auditar obras y garantizar la seguridad estructural."
   image:
     path: "src/assets/images/peritaje-construccion-ingenieros-obra.avif"
     alt: "Ingeniero perito supervisando obra en construcción"
