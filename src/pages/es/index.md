@@ -22,7 +22,7 @@ eleventyNavigation:
 
 # Hero Section
 hero:
-  tag: "Peritos Ingenieros Colegiados en Barcelona"
+  tag: "Peritos Judiciales e Ingenieros Colegiados en Barcelona"
   title: "Informes Periciales"
   strong: "para Defender sus Intereses"
   subtitle: "Especialistas en Peritajes, Auditorías de Obra y Asesoramiento Estructural"
