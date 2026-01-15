@@ -59,20 +59,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function validateCurrentStep() {
         const currentStepEl = steps[currentStep];
-        const input = currentStepEl.querySelector('input[required], textarea[required]');
-        if (input && !input.value.trim()) {
-            input.classList.add('border-red-400');
-            input.focus();
-            input.addEventListener('input', () => input.classList.remove('border-red-400'), { once: true });
-            return false;
+        const inputs = currentStepEl.querySelectorAll('input[required], textarea[required]');
+        let isValid = true;
+        let firstInvalidInput = null;
+
+        inputs.forEach(input => {
+            let inputValid = true;
+            
+            if (input.type === 'checkbox') {
+                if (!input.checked) inputValid = false;
+            } else if (!input.value.trim()) {
+                inputValid = false;
+            } else if (input.type === 'email' && !/^\S+@\S+\.\S+$/.test(input.value)) {
+                inputValid = false;
+            }
+
+            if (!inputValid) {
+                input.classList.add('border-red-400');
+                input.addEventListener('input', () => input.classList.remove('border-red-400'), { once: true });
+                if(input.type === 'checkbox') {
+                     input.addEventListener('change', () => input.classList.remove('border-red-400'), { once: true });
+                }
+                isValid = false;
+                if (!firstInvalidInput) firstInvalidInput = input;
+            }
+        });
+
+        if (firstInvalidInput) {
+            firstInvalidInput.focus();
         }
-        // Validación de email
-        if (input && input.type === 'email' && !/^\S+@\S+\.\S+$/.test(input.value)) {
-             input.classList.add('border-red-400');
-             input.focus();
-             return false;
-        }
-        return true;
+        return isValid;
     }
 
     function updateSubmitButton() {
