@@ -1,0 +1,29 @@
+{% if metadata.site.googleAnalyticsId %}
+<!-- Google Analytics 4 (Optimized for Performance) -->
+<script>
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Function to inject the GA script.
+    function loadGA() {
+        var script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id={{ metadata.site.googleAnalyticsId }}";
+        script.async = true;
+        document.head.appendChild(script);
+
+        gtag('js', new Date());
+        gtag('config', '{{ metadata.site.googleAnalyticsId }}');
+    }
+
+    // Load GA after page load
+    window.addEventListener('load', function() {
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => loadGA());
+        } else {
+            // Fallback for older browsers or if requestIdleCallback is not available
+            setTimeout(loadGA, 1000); 
+        }
+    });
+</script>
+{% endif %}

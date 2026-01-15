@@ -6,7 +6,8 @@
     "themeColor": "#2048e6",
     "faviconDataUriPath": "/images/logos/favicon.txt",
     "revisandoContenidos": false,
-    "placeholderImage": "/assets/images/placeholder-default.png"
+    "placeholderImage": "/assets/images/placeholder-default.png",
+    "googleAnalyticsId": "G-BHS8JR7NSY"
   },
   "default_lang": "es",
   "languages": [
