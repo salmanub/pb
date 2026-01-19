@@ -106,7 +106,7 @@ class SessionStore {
   constructor(env) {
     this.env = env;
   }
-  
+
   async get(sessionId) {
     if (!this.env.PERITO_SESSIONS) {
       console.warn('KV PERITO_SESSIONS no configurado. Usando memoria volátil.');
@@ -121,7 +121,7 @@ class SessionStore {
       return null;
     }
   }
-  
+
   async set(sessionId, data) {
     const sessionData = {
       ...data,
@@ -136,14 +136,14 @@ class SessionStore {
 
     try {
       // TTL en segundos (30 min = 1800s)
-      await this.env.PERITO_SESSIONS.put(sessionId, JSON.stringify(sessionData), { 
-        expirationTtl: 1800 
+      await this.env.PERITO_SESSIONS.put(sessionId, JSON.stringify(sessionData), {
+        expirationTtl: 1800
       });
     } catch (e) {
       console.error('Error escribiendo KV:', e);
     }
   }
-  
+
   async delete(sessionId) {
     if (!this.env.PERITO_SESSIONS) {
       if (this.memoryStore) this.memoryStore.delete(sessionId);
@@ -167,32 +167,32 @@ class SheetsService {
     this.cacheDuration = 5 * 60 * 1000; // 5 minutos
     this.writeService = null; // Se inyectará desde fuera
   }
-  
+
   setWriteService(writeService) {
     this.writeService = writeService;
   }
-  
+
   async getServicios() {
     // Cache simple para evitar hits constantes a Sheets
     if (this.cache && (Date.now() - this.cacheTime) < this.cacheDuration) {
       return this.cache;
     }
-    
+
     try {
       const range = 'Servicios_Periciales!A2:K1000';
-      
+
       // Intentar con Service Account si está disponible
       if (this.writeService && this.writeService.serviceAccountEmail) {
         const accessToken = await this.writeService.getAccessToken();
         const url = `https://sheets.googleapis.com/v4/spreadsheets/${this.spreadsheetId}/values/${range}`;
-        
+
         const response = await fetch(url, {
           headers: {
             'Authorization': `Bearer ${accessToken}`,
           },
         });
         const data = await response.json();
-        
+
         if (data.values) {
           const servicios = this.parseServiciosData(data.values);
           this.cache = servicios;
@@ -200,13 +200,13 @@ class SheetsService {
           return servicios;
         }
       }
-      
+
       // Fallback a API Key si no hay Service Account
       if (this.apiKey && this.apiKey !== 'AIzaSy...tu-api-key-aqui...') {
         const url = `https://sheets.googleapis.com/v4/spreadsheets/${this.spreadsheetId}/values/${range}?key=${this.apiKey}`;
         const response = await fetch(url);
         const data = await response.json();
-        
+
         if (data.values) {
           const servicios = this.parseServiciosData(data.values);
           this.cache = servicios;
@@ -214,14 +214,14 @@ class SheetsService {
           return servicios;
         }
       }
-      
+
       return [];
     } catch (error) {
       console.error('Error al obtener servicios de Google Sheets:', error);
       throw error; // Lanzar el error para que se vea en producción
     }
   }
-  
+
   parseServiciosData(values) {
     return values
       .filter(row => row[9] === 'TRUE' || row[9] === true) // Solo activos
@@ -239,15 +239,15 @@ class SheetsService {
       }))
       .sort((a, b) => a.orden - b.orden);
   }
-  
+
   async getServiciosByNivel(nivel, padreSlug = null) {
     const servicios = await this.getServicios();
-    return servicios.filter(s => 
-      s.nivel === nivel && 
+    return servicios.filter(s =>
+      s.nivel === nivel &&
       (padreSlug ? s.padre_slug === padreSlug : !s.padre_slug)
     );
   }
-  
+
   async getServicioBySlug(slug) {
     const servicios = await this.getServicios();
     return servicios.find(s => s.slug === slug);
@@ -270,7 +270,7 @@ class SheetsService {
         const response = await fetch(url, { headers: { 'Authorization': `Bearer ${accessToken}` } });
         const data = await response.json();
         values = data.values || [];
-      } 
+      }
       // Fallback a API Key
       else if (this.apiKey && this.apiKey !== 'AIzaSy...tu-api-key-aqui...') {
         const url = `https://sheets.googleapis.com/v4/spreadsheets/${this.spreadsheetId}/values/${range}?key=${this.apiKey}`;
@@ -297,16 +297,16 @@ class SheetsService {
       return [];
     }
   }
-  
+
   async getConfig(clave) {
     const range = 'Configuracion!A2:C100';
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${this.spreadsheetId}/values/${range}?key=${this.apiKey}`;
-    
+
     const response = await fetch(url);
     const data = await response.json();
-    
+
     if (!data.values) return null;
-    
+
     const config = data.values.find(row => row[0] === clave);
     return config ? config[1] : null;
   }
@@ -321,7 +321,7 @@ class IAService {
     this.apiKey = apiKey;
     this.model = model;
   }
-  
+
   async chat(messages, systemPromptOverride = null) {
     // Usar el prompt dinámico si se proporciona, sino uno por defecto
     const systemContent = systemPromptOverride || generateSystemPrompt('Particular', null, 'es');
@@ -330,7 +330,7 @@ class IAService {
       role: 'system',
       content: systemContent,
     };
-    
+
     try {
       const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
@@ -345,7 +345,7 @@ class IAService {
           max_tokens: 250,
         }),
       });
-      
+
       const data = await response.json();
       if (data.error) {
         console.error('OpenAI Error:', data.error);
@@ -398,7 +398,7 @@ METADATOS:
 - Session ID: ${leadData.sessionId}
 - User Agent: ${leadData.userAgent}
     `.trim();
-    
+
     const payload = {
       personalizations: [{
         to: [{ email: this.config.email_destino }],
@@ -413,7 +413,7 @@ METADATOS:
         value: emailBody,
       }],
     };
-    
+
     const response = await fetch(this.config.mailchannels_api || 'https://api.mailchannels.net/tx/v1/send', {
       method: 'POST',
       headers: {
@@ -421,7 +421,7 @@ METADATOS:
       },
       body: JSON.stringify(payload),
     });
-    
+
     return response.ok;
   }
 }
@@ -436,7 +436,7 @@ class SheetsWriteService {
     this.privateKey = env.GOOGLE_PRIVATE_KEY;
     this.spreadsheetId = env.SPREADSHEET_ID;
   }
-  
+
   /**
    * Genera un JWT para autenticación con Google APIs
    */
@@ -445,7 +445,7 @@ class SheetsWriteService {
       alg: 'RS256',
       typ: 'JWT',
     };
-    
+
     const now = Math.floor(Date.now() / 1000);
     const claim = {
       iss: this.serviceAccountEmail,
@@ -454,7 +454,7 @@ class SheetsWriteService {
       exp: now + 3600,
       iat: now,
     };
-    
+
     // Codificar header y claim en base64url
     const encodeBase64Url = (obj) => {
       const str = JSON.stringify(obj);
@@ -463,16 +463,16 @@ class SheetsWriteService {
         .replace(/\//g, '_')
         .replace(/=/g, '');
     };
-    
+
     const headerEncoded = encodeBase64Url(header);
     const claimEncoded = encodeBase64Url(claim);
     const signatureInput = `${headerEncoded}.${claimEncoded}`;
-    
+
     // Firmar con la private key
     const privateKeyPem = this.privateKey
       .replace(/\\n/g, '\n')
       .trim();
-    
+
     const key = await crypto.subtle.importKey(
       'pkcs8',
       this.pemToArrayBuffer(privateKeyPem),
@@ -483,20 +483,20 @@ class SheetsWriteService {
       false,
       ['sign']
     );
-    
+
     const signature = await crypto.subtle.sign(
       'RSASSA-PKCS1-v1_5',
       key,
       new TextEncoder().encode(signatureInput)
     );
-    
+
     const signatureEncoded = btoa(String.fromCharCode(...new Uint8Array(signature)))
       .replace(/\+/g, '-')
       .replace(/\//g, '_')
       .replace(/=/g, '');
-    
+
     const jwt = `${signatureInput}.${signatureEncoded}`;
-    
+
     // Intercambiar JWT por access token
     const tokenResponse = await fetch('https://oauth2.googleapis.com/token', {
       method: 'POST',
@@ -508,11 +508,11 @@ class SheetsWriteService {
         assertion: jwt,
       }),
     });
-    
+
     const tokenData = await tokenResponse.json();
     return tokenData.access_token;
   }
-  
+
   /**
    * Convierte PEM a ArrayBuffer
    */
@@ -521,7 +521,7 @@ class SheetsWriteService {
       .replace(/-----BEGIN PRIVATE KEY-----/, '')
       .replace(/-----END PRIVATE KEY-----/, '')
       .replace(/\s/g, '');
-    
+
     const binary = atob(b64);
     const bytes = new Uint8Array(binary.length);
     for (let i = 0; i < binary.length; i++) {
@@ -529,7 +529,7 @@ class SheetsWriteService {
     }
     return bytes.buffer;
   }
-  
+
   /**
    * Escribe un lead en la hoja de Google Sheets
    */
@@ -539,9 +539,9 @@ class SheetsWriteService {
       console.log('Service Account no configurado, saltando escritura en Sheets');
       return false;
     }
-    
+
     const accessToken = await this.getAccessToken();
-    
+
     // Preparar la fila de datos (ACTUALIZADO SCHEMA v11.0)
     // [ID, Fecha, Origen, Servicio, Telefono, Email, Nombre, Ubicacion, TipoCliente, Rol, Descripcion, Urgencia, Estado, Idioma]
     const fecha = new Date().toISOString();
@@ -561,11 +561,11 @@ class SheetsWriteService {
       'PENDIENTE',                  // M [12]: estado
       leadData.lang || 'es'         // N [13]: idioma
     ];
-    
+
     // Anexar a la hoja "Leads"
-    const range = 'Leads!A:N'; 
+    const range = 'Leads!A:N';
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${this.spreadsheetId}/values/${range}:append?valueInputOption=USER_ENTERED`;
-    
+
     const response = await fetch(url, {
       method: 'POST',
       headers: {
@@ -576,13 +576,13 @@ class SheetsWriteService {
         values: [fila],
       }),
     });
-    
+
     if (!response.ok) {
       const errorBody = await response.text();
       console.error(`Error escribiendo en Google Sheets (${response.status}):`, errorBody);
       throw new Error(`Google Sheets API Error: ${response.status} - ${errorBody}`);
     }
-    
+
     return true;
   }
 }
@@ -612,7 +612,7 @@ class ConfigService {
       try {
         const cached = await this.env.PERITO_CONFIG.get('app_config', { type: 'json' });
         if (cached) {
-            return { ...this.defaults, ...cached };
+          return { ...this.defaults, ...cached };
         }
       } catch (e) {
         console.error('KV Read Error:', e);
@@ -622,12 +622,12 @@ class ConfigService {
     // 2. Fetch from Sheets
     try {
       const sheetsConfig = await this.fetchFromSheets();
-      
+
       // 3. Save to KV
       if (this.env.PERITO_CONFIG) {
         await this.env.PERITO_CONFIG.put('app_config', JSON.stringify(sheetsConfig), { expirationTtl: 3600 });
       }
-      
+
       return { ...this.defaults, ...sheetsConfig };
     } catch (e) {
       console.error('Sheets Config Fetch Error:', e);
@@ -639,83 +639,83 @@ class ConfigService {
     const spreadsheetId = this.env.SPREADSHEET_ID;
     const rangeConfig = 'Configuracion!A2:B100';
     const rangeVips = 'VIPs!A2:D100'; // Nueva pestaña
-    
+
     let configValues = [];
     let vipValues = [];
 
     // Try Service Account first (more reliable for private sheets)
     try {
-        const writeService = new SheetsWriteService(this.env);
-        const token = await writeService.getAccessToken();
-        
-        // Fetch en paralelo
+      const writeService = new SheetsWriteService(this.env);
+      const token = await writeService.getAccessToken();
+
+      // Fetch en paralelo
+      const [resConfig, resVips] = await Promise.all([
+        fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${rangeConfig}`, { headers: { Authorization: `Bearer ${token}` } }),
+        fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${rangeVips}`, { headers: { Authorization: `Bearer ${token}` } })
+      ]);
+
+      const dataConfig = await resConfig.json();
+      const dataVips = await resVips.json();
+
+      configValues = dataConfig.values || [];
+      vipValues = dataVips.values || [];
+    } catch (e) {
+      console.warn('Service Account config fetch failed, trying API Key', e);
+      // Fallback API Key
+      if (this.env.SHEETS_API_KEY) {
+        const baseUrl = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/`;
         const [resConfig, resVips] = await Promise.all([
-            fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${rangeConfig}`, { headers: { Authorization: `Bearer ${token}` } }),
-            fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${rangeVips}`, { headers: { Authorization: `Bearer ${token}` } })
+          fetch(`${baseUrl}${rangeConfig}?key=${this.env.SHEETS_API_KEY}`),
+          fetch(`${baseUrl}${rangeVips}?key=${this.env.SHEETS_API_KEY}`)
         ]);
 
         const dataConfig = await resConfig.json();
         const dataVips = await resVips.json();
-        
+
         configValues = dataConfig.values || [];
         vipValues = dataVips.values || [];
-    } catch (e) {
-        console.warn('Service Account config fetch failed, trying API Key', e);
-        // Fallback API Key
-        if (this.env.SHEETS_API_KEY) {
-             const baseUrl = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/`;
-             const [resConfig, resVips] = await Promise.all([
-                fetch(`${baseUrl}${rangeConfig}?key=${this.env.SHEETS_API_KEY}`),
-                fetch(`${baseUrl}${rangeVips}?key=${this.env.SHEETS_API_KEY}`)
-             ]);
-             
-             const dataConfig = await resConfig.json();
-             const dataVips = await resVips.json();
-             
-             configValues = dataConfig.values || [];
-             vipValues = dataVips.values || [];
-        }
+      }
     }
 
     // Parse Config
     const config = {};
     configValues.forEach(row => {
-        const key = row[0].toLowerCase().trim(); // Normalize keys
-        let val = row[1];
+      const key = row[0].toLowerCase().trim(); // Normalize keys
+      let val = row[1];
 
-        if (key === 'vip_names') {
-            // Legacy support if someone still uses this key in Config tab
-            val = val.split(',').map(v => v.trim().toLowerCase());
-        } else if (key.includes('timeout') || key.includes('max_') || !isNaN(val)) {
-            if (!isNaN(Number(val)) && val.trim() !== '') {
-                 val = Number(val);
-            }
+      if (key === 'vip_names') {
+        // Legacy support if someone still uses this key in Config tab
+        val = val.split(',').map(v => v.trim().toLowerCase());
+      } else if (key.includes('timeout') || key.includes('max_') || !isNaN(val)) {
+        if (!isNaN(Number(val)) && val.trim() !== '') {
+          val = Number(val);
         }
-        // Boolean check
-        if (val === 'TRUE') val = true;
-        if (val === 'FALSE') val = false;
+      }
+      // Boolean check
+      if (val === 'TRUE') val = true;
+      if (val === 'FALSE') val = false;
 
-        config[key] = val;
+      config[key] = val;
     });
-    
+
     // Parse VIP List (Enrichment)
     config.vip_list = vipValues.map(row => ({
-        nombre: row[0] ? row[0].trim() : '',
-        telefono: row[1] ? row[1].trim() : '',
-        rol_especial: row[2] ? row[2].trim() : 'VIP',
-        notas: row[3] ? row[3].trim() : ''
+      nombre: row[0] ? row[0].trim() : '',
+      telefono: row[1] ? row[1].trim() : '',
+      rol_especial: row[2] ? row[2].trim() : 'VIP',
+      notas: row[3] ? row[3].trim() : ''
     })).filter(v => v.nombre); // Filter empty rows
 
     // Generate simple names list for compatibility
     const vipNamesFromList = config.vip_list.map(v => v.nombre.toLowerCase());
-    
+
     // Merge with legacy vip_names if exists
     if (config.vip_names) {
-        config.vip_names = [...new Set([...config.vip_names, ...vipNamesFromList])];
+      config.vip_names = [...new Set([...config.vip_names, ...vipNamesFromList])];
     } else {
-        config.vip_names = vipNamesFromList;
+      config.vip_names = vipNamesFromList;
     }
-    
+
     // Ensure defaults for critical keys if missing
     if (!config.email_destino) config.email_destino = 'info@perito.barcelona';
 
@@ -761,13 +761,13 @@ class ChatbotHandler {
     this.ia = new IAService(env.OPENAI_API_KEY, config.openai_model || 'gpt-4-turbo-preview');
     this.email = new EmailService(config);
   }
-  
+
   /**
    * Genera los botones para la fase de triaje
    */
   async generarBotonesTriaje(nivel = 1, padreSlug = null) {
     const servicios = await this.sheets.getServiciosByNivel(nivel, padreSlug);
-    
+
     return servicios.map(s => ({
       type: 'button',
       text: `${s.icono} ${s.nombre_servicio}`,
@@ -786,183 +786,183 @@ class ChatbotHandler {
     const hits = recursos
       .filter(r => r.lang === lang) // Filtrar por idioma
       .map(r => {
-      let score = 0;
-      // Coincidencia en título
-      if (r.titulo.toLowerCase().includes(queryLower)) score += 10;
-      // Coincidencia en tags
-      if (r.tags.some(t => queryLower.includes(t))) score += 5;
-      // Coincidencia parcial de palabras clave
-      keywords.forEach(k => {
-        if (r.titulo.toLowerCase().includes(k)) score += 2;
-        if (r.tags.some(t => t.includes(k))) score += 1;
-      });
-      return { ...r, score };
-    }).filter(r => r.score > 0).sort((a, b) => b.score - a.score);
+        let score = 0;
+        // Coincidencia en título
+        if (r.titulo.toLowerCase().includes(queryLower)) score += 10;
+        // Coincidencia en tags
+        if (r.tags.some(t => queryLower.includes(t))) score += 5;
+        // Coincidencia parcial de palabras clave
+        keywords.forEach(k => {
+          if (r.titulo.toLowerCase().includes(k)) score += 2;
+          if (r.tags.some(t => t.includes(k))) score += 1;
+        });
+        return { ...r, score };
+      }).filter(r => r.score > 0).sort((a, b) => b.score - a.score);
 
     return hits.slice(0, 3); // Devolver top 3
   }
-  
+
   /**
    * Procesa un mensaje del usuario
    */
   async handleMessage(sessionId, mensaje, userAgent = '', userLang = 'es') {
     let session = await this.sessionStore.get(sessionId);
-    
+
     // Nueva sesión
     if (!session) {
       session = {
         estado: ESTADOS.INICIO,
         historial: [],
         datos: {
-            tipo_cliente: 'Particular', // Default
-            lang: userLang // Guardar idioma
+          tipo_cliente: 'Particular', // Default
+          lang: userLang // Guardar idioma
         },
         sessionId,
         userAgent,
       };
     }
-    
+
     // Añadir mensaje del usuario al historial
     session.historial.push({
       role: 'user',
       content: mensaje,
       timestamp: Date.now(),
     });
-    
+
     let respuesta;
     const mensajeLower = mensaje.toLowerCase();
 
     // 0. RETOMAR FLUJO (Si el usuario viene de ver un recurso)
     if (mensaje === 'retomar_flujo') {
-        // Ignoramos el mensaje y dejamos que el switch re-ejecute el estado actual
-        // Al pasar mensaje=null, los handlers entenderán que deben repetir la pregunta
-        mensaje = null; 
+      // Ignoramos el mensaje y dejamos que el switch re-ejecute el estado actual
+      // Al pasar mensaje=null, los handlers entenderán que deben repetir la pregunta
+      mensaje = null;
     }
 
     // 1. DETECCIÓN VIP GLOBAL (Prioridad 1)
     const vipList = this.config.vip_list || [];
     const vipNames = this.config.vip_names || [];
-    
+
     // Buscar coincidencia exacta en la lista enriquecida
     const vipMatch = vipList.find(v => mensajeLower.includes(v.nombre.toLowerCase()));
     const esVip = vipMatch || vipNames.some(vip => mensajeLower.includes(vip));
-    
-    if (esVip && session.estado !== ESTADOS.FINALIZADO) {
-        session.datos.tipo_cliente = 'VIP';
-        session.datos.vip = true;
-        
-        // Guardar datos enriquecidos si los tenemos
-        if (vipMatch) {
-            session.datos.vip_data = vipMatch;
-        }
-        
-        if (!session.datos.servicio_final) {
-            session.datos.servicio_final = { 
-                nombre_servicio: 'Consulta VIP', 
-                categoria: 'VIP', 
-                slug: 'vip' 
-            };
-        }
-        session.estado = ESTADOS.CAPTURA_DESCRIPCION_CASO;
-        
-        // Usar nombre del match o intentar extraerlo
-        let nombreCapitalizado = 'Colaborador';
-        if (vipMatch) {
-            nombreCapitalizado = vipMatch.nombre;
-        } else {
-            const nombreDetectado = mensaje.split(' ').find(w => vipNames.some(v => v.includes(w.toLowerCase()))) || 'Colaborador';
-            nombreCapitalizado = nombreDetectado.charAt(0).toUpperCase() + nombreDetectado.slice(1);
-        }
 
-        respuesta = {
-            texto: `¡Hombre ${nombreCapitalizado}! Buenas. ¿Qué necesitas mover hoy? Descríbeme el tema y aviso urgente al equipo.`,
-            botones: []
+    if (esVip && session.estado !== ESTADOS.FINALIZADO) {
+      session.datos.tipo_cliente = 'VIP';
+      session.datos.vip = true;
+
+      // Guardar datos enriquecidos si los tenemos
+      if (vipMatch) {
+        session.datos.vip_data = vipMatch;
+      }
+
+      if (!session.datos.servicio_final) {
+        session.datos.servicio_final = {
+          nombre_servicio: 'Consulta VIP',
+          categoria: 'VIP',
+          slug: 'vip'
         };
-        
-        return this.guardarYResponder(session, respuesta);
+      }
+      session.estado = ESTADOS.CAPTURA_DESCRIPCION_CASO;
+
+      // Usar nombre del match o intentar extraerlo
+      let nombreCapitalizado = 'Colaborador';
+      if (vipMatch) {
+        nombreCapitalizado = vipMatch.nombre;
+      } else {
+        const nombreDetectado = mensaje.split(' ').find(w => vipNames.some(v => v.includes(w.toLowerCase()))) || 'Colaborador';
+        nombreCapitalizado = nombreDetectado.charAt(0).toUpperCase() + nombreDetectado.slice(1);
+      }
+
+      respuesta = {
+        texto: `¡Hombre ${nombreCapitalizado}! Buenas. ¿Qué necesitas mover hoy? Descríbeme el tema y aviso urgente al equipo.`,
+        botones: []
+      };
+
+      return this.guardarYResponder(session, respuesta);
     }
 
     // 2. CONSERJE DIGITAL (Prioridad 2 - Intercepción Global)
     // Evitamos interceptar si estamos capturando datos sensibles (email/teléfono) o si es VIP
     const estadosProhibidos = [ESTADOS.CAPTURA_EMAIL, ESTADOS.CAPTURA_TELEFONO];
     const intentInfo = ['blog', 'articulo', 'ejemplo', 'caso', 'informacion', 'leer', 'ver', 'guia', 'manual'];
-    
+
     if (mensaje && !session.datos.vip && !estadosProhibidos.includes(session.estado)) {
-         if (intentInfo.some(i => mensajeLower.includes(i))) {
-             const recursos = await this.buscarRecursos(mensaje, session.datos.lang);
-             if (recursos.length > 0) {
-                 const botones = recursos.map(r => ({
-                    type: 'link',
-                    text: `📄 ${r.titulo}`,
-                    value: r.url
-                 }));
-                 
-                 // Botón para volver al flujo actual
-                 botones.push({ type: 'button', text: '↩️ Continuar con el presupuesto', value: 'retomar_flujo' });
-                 
-                 respuesta = {
-                    texto: 'He encontrado estos recursos en nuestra base de conocimiento que te pueden interesar:',
-                    botones: botones
-                 };
-                 
-                 return this.guardarYResponder(session, respuesta);
-             }
-         }
+      if (intentInfo.some(i => mensajeLower.includes(i))) {
+        const recursos = await this.buscarRecursos(mensaje, session.datos.lang);
+        if (recursos.length > 0) {
+          const botones = recursos.map(r => ({
+            type: 'link',
+            text: `📄 ${r.titulo}`,
+            value: r.url
+          }));
+
+          // Botón para volver al flujo actual
+          botones.push({ type: 'button', text: '↩️ Continuar con el presupuesto', value: 'retomar_flujo' });
+
+          respuesta = {
+            texto: 'He encontrado estos recursos en nuestra base de conocimiento que te pueden interesar:',
+            botones: botones
+          };
+
+          return this.guardarYResponder(session, respuesta);
+        }
+      }
     }
 
     // 3. FLUJO NORMAL (Máquina de Estados)
     switch (session.estado) {
-    case ESTADOS.INICIO:
+      case ESTADOS.INICIO:
         respuesta = await this.handleInicio(session);
         break;
-        
-    case ESTADOS.SELECCION_PERFIL:
+
+      case ESTADOS.SELECCION_PERFIL:
         respuesta = await this.handleSeleccionPerfil(session, mensaje);
         break;
 
-    case ESTADOS.TRIAJE_NIVEL_1:
+      case ESTADOS.TRIAJE_NIVEL_1:
         respuesta = await this.handleTriajeNivel1(session, mensaje);
         break;
-        
-    case ESTADOS.TRIAJE_NIVEL_2:
+
+      case ESTADOS.TRIAJE_NIVEL_2:
         respuesta = await this.handleTriajeNivel2(session, mensaje);
         break;
-        
-    case ESTADOS.CAPTURA_ROL_CLIENTE:
+
+      case ESTADOS.CAPTURA_ROL_CLIENTE:
         respuesta = await this.handleCapturaRolCliente(session, mensaje);
         break;
-        
-    case ESTADOS.CAPTURA_DESCRIPCION_CASO:
+
+      case ESTADOS.CAPTURA_DESCRIPCION_CASO:
         respuesta = await this.handleCapturaDescripcionCaso(session, mensaje);
         break;
-        
-    case ESTADOS.CUALIFICACION_JURIDICA:
+
+      case ESTADOS.CUALIFICACION_JURIDICA:
         respuesta = await this.handleCualificacionJuridica(session, mensaje);
         break;
-        
-    case ESTADOS.CAPTURA_UBICACION:
+
+      case ESTADOS.CAPTURA_UBICACION:
         respuesta = await this.handleCapturaUbicacion(session, mensaje);
         break;
-        
-    case ESTADOS.CAPTURA_NOMBRE:
+
+      case ESTADOS.CAPTURA_NOMBRE:
         respuesta = await this.handleCapturaNombre(session, mensaje);
         break;
-        
-    case ESTADOS.CAPTURA_EMAIL:
+
+      case ESTADOS.CAPTURA_EMAIL:
         respuesta = await this.handleCapturaEmail(session, mensaje);
         break;
-        
-    case ESTADOS.CAPTURA_TELEFONO:
+
+      case ESTADOS.CAPTURA_TELEFONO:
         respuesta = await this.handleCapturaTelefono(session, mensaje);
         break;
-        
-    default:
+
+      default:
         respuesta = {
-        texto: 'Error en el sistema. Por favor, reinicia la conversación.',
-        botones: [],
+          texto: 'Error en el sistema. Por favor, reinicia la conversación.',
+          botones: [],
         };
     }
-    
+
     return this.guardarYResponder(session, respuesta);
   }
 
@@ -976,18 +976,18 @@ class ChatbotHandler {
       timestamp: Date.now(),
       botones: respuesta.botones,
     });
-    
+
     await this.sessionStore.set(session.sessionId, session);
     return respuesta;
   }
-  
+
   /**
    * FASE 0: INICIO - Detectar perfil
    */
   async handleInicio(session) {
     // Volvemos al flujo directo sin selección de perfil ni cartel de advertencia
     let botones = await this.generarBotonesTriaje(1);
-    
+
     if (!botones || botones.length === 0) {
       botones = [
         { type: 'button', text: `${ICONS.building} Daños en Alquiler/Arrendamiento`, value: 'danos-alquiler' },
@@ -998,16 +998,16 @@ class ChatbotHandler {
         { type: 'button', text: `${ICONS.landmark} Patologías Estructurales`, value: 'patologia-estructural' },
       ];
     }
-    
+
     // Añadir opción B2B para profesionales
     botones.push({
-        type: 'button',
-        text: `${ICONS.briefcase} Soy Abogado / Profesional`,
-        value: 'soy_abogado'
+      type: 'button',
+      text: `${ICONS.briefcase} Soy Abogado / Profesional`,
+      value: 'soy_abogado'
     });
 
     session.estado = ESTADOS.TRIAJE_NIVEL_1;
-    
+
     return {
       texto: 'Hola, soy el Asistente de Peritaje de Perito.barcelona. ¿En qué tipo de caso puedo ayudarte?',
       botones,
@@ -1023,30 +1023,30 @@ class ChatbotHandler {
     // ...
     return { texto: '...', botones: [] };
   }
-  
+
   /**
    * FASE 1.1: TRIAJE NIVEL 1 - Usuario selecciona categoría principal
    */
   async handleTriajeNivel1(session, mensaje) {
     // Si mensaje es null (retomar_flujo), saltamos validaciones y mostramos opciones de nuevo
     if (!mensaje) {
-        const botones = await this.generarBotonesTriaje(1);
-        // ... fallback logic ...
-        let botonesDefault = botones.length > 0 ? botones : [
-            { type: 'button', text: `${ICONS.building} Daños en Alquiler/Arrendamiento`, value: 'danos-alquiler' },
-            { type: 'button', text: `${ICONS.hardHat} Vicios Ocultos / Defectos Construcción`, value: 'vicios-ocultos' },
-            { type: 'button', text: `${ICONS.flame} Siniestros y Seguros`, value: 'siniestros-seguros' },
-            { type: 'button', text: `${ICONS.car} Reconstrucción de Accidentes`, value: 'accidentes' },
-            { type: 'button', text: `${ICONS.scale} Valoración Económica / Disputas`, value: 'valoracion-economica' },
-            { type: 'button', text: `${ICONS.landmark} Patologías Estructurales`, value: 'patologia-estructural' },
-        ];
-        if (!botonesDefault.some(b => b.value === 'soy_abogado')) {
-            botonesDefault.push({ type: 'button', text: `${ICONS.briefcase} Soy Abogado / Profesional`, value: 'soy_abogado' });
-        }
-        return {
-            texto: '¿En qué tipo de caso puedo ayudarte?',
-            botones: botonesDefault,
-        };
+      const botones = await this.generarBotonesTriaje(1);
+      // ... fallback logic ...
+      let botonesDefault = botones.length > 0 ? botones : [
+        { type: 'button', text: `${ICONS.building} Daños en Alquiler/Arrendamiento`, value: 'danos-alquiler' },
+        { type: 'button', text: `${ICONS.hardHat} Vicios Ocultos / Defectos Construcción`, value: 'vicios-ocultos' },
+        { type: 'button', text: `${ICONS.flame} Siniestros y Seguros`, value: 'siniestros-seguros' },
+        { type: 'button', text: `${ICONS.car} Reconstrucción de Accidentes`, value: 'accidentes' },
+        { type: 'button', text: `${ICONS.scale} Valoración Económica / Disputas`, value: 'valoracion-economica' },
+        { type: 'button', text: `${ICONS.landmark} Patologías Estructurales`, value: 'patologia-estructural' },
+      ];
+      if (!botonesDefault.some(b => b.value === 'soy_abogado')) {
+        botonesDefault.push({ type: 'button', text: `${ICONS.briefcase} Soy Abogado / Profesional`, value: 'soy_abogado' });
+      }
+      return {
+        texto: '¿En qué tipo de caso puedo ayudarte?',
+        botones: botonesDefault,
+      };
     }
 
     const mensajeLower = mensaje.toLowerCase();
@@ -1054,27 +1054,27 @@ class ChatbotHandler {
     // DETECCIÓN DE PROFESIONALES (B2B)
     const keywordsB2B = ['abogado', 'letrado', 'bufete', 'despacho', 'administrador', 'colegiado', 'soy_abogado'];
     if (mensaje === 'soy_abogado' || keywordsB2B.some(kw => mensajeLower.includes(kw))) {
-        session.datos.tipo_cliente = 'Abogado';
-        session.datos.servicio_final = { 
-            nombre_servicio: 'Consulta Profesional', 
-            categoria: 'Legal', 
-            slug: 'legal-b2b' 
-        };
-        
-        // Saltamos directamente a la descripción del caso
-        session.estado = ESTADOS.CAPTURA_DESCRIPCION_CASO;
-        
-        return {
-            texto: 'Entendido, compañero. Para valorar la colaboración, indícame: ¿De qué especialidad es el asunto (Vicios, Estructuras, Económico) y en qué fase procesal estamos?',
-            botones: []
-        };
+      session.datos.tipo_cliente = 'Abogado';
+      session.datos.servicio_final = {
+        nombre_servicio: 'Consulta Profesional',
+        categoria: 'Legal',
+        slug: 'legal-b2b'
+      };
+
+      // Saltamos directamente a la descripción del caso
+      session.estado = ESTADOS.CAPTURA_DESCRIPCION_CASO;
+
+      return {
+        texto: 'Entendido, compañero. Para valorar la colaboración, indícame: ¿De qué especialidad es el asunto (Vicios, Estructuras, Económico) y en qué fase procesal estamos?',
+        botones: []
+      };
     }
 
     // NOTA: La detección de "Conserje Digital" se ha movido a handleMessage (Intercepción Global)
 
     // Buscar el servicio seleccionado
     let servicio = await this.sheets.getServicioBySlug(mensaje);
-    
+
     // Si no encuentra por slug, intentar mapear por contenido del mensaje
     if (!servicio) {
       // Mapeo inteligente basado en palabras clave
@@ -1092,7 +1092,7 @@ class ChatbotHandler {
         servicio = { slug: 'patologia-estructural', categoria: 'Patologías Estructurales', nombre_servicio: 'Patologías Estructurales', nivel: 1 };
       }
     }
-    
+
     if (!servicio) {
       // Si realmente no puede clasificarlo, mostrar los botones de nuevo
       const botones = await this.generarBotonesTriaje(1);
@@ -1107,29 +1107,29 @@ class ChatbotHandler {
 
       // Asegurar que el botón de abogado también aparece en el fallback
       if (!botonesDefault.some(b => b.value === 'soy_abogado')) {
-          botonesDefault.push({
-            type: 'button',
-            text: `${ICONS.briefcase} Soy Abogado / Profesional`,
-            value: 'soy_abogado'
+        botonesDefault.push({
+          type: 'button',
+          text: `${ICONS.briefcase} Soy Abogado / Profesional`,
+          value: 'soy_abogado'
         });
       }
-      
+
       return {
         texto: 'No he entendido. ¿Podrías seleccionar la opción que mejor describa tu caso?',
         botones: botonesDefault,
       };
     }
-    
+
     // Guardar servicio nivel 1
     session.datos.servicio_nivel1 = servicio;
-    
+
     // Verificar si tiene hijos (nivel 2)
     const hijos = await this.sheets.getServiciosByNivel(2, servicio.slug);
-    
+
     if (hijos.length > 0) {
       // Tiene sub-niveles, mostrarlos
       session.estado = ESTADOS.TRIAJE_NIVEL_2;
-      
+
       return {
         texto: servicio.pregunta_filtro || '¿Qué tipo específicamente?',
         botones: hijos.map(h => ({
@@ -1141,48 +1141,48 @@ class ChatbotHandler {
     } else {
       // No tiene hijos, pasar a captura de ROL del cliente
       session.datos.servicio_final = servicio;
-      
+
       // Si es Abogado, saltamos la pregunta de "Rol Cliente" (Propietario/Inquilino) y vamos directo a descripción
       if (session.datos.tipo_cliente === 'Abogado') {
-          session.estado = ESTADOS.CAPTURA_DESCRIPCION_CASO;
-          return this.handleCapturaDescripcionCaso(session, null);
+        session.estado = ESTADOS.CAPTURA_DESCRIPCION_CASO;
+        return this.handleCapturaDescripcionCaso(session, null);
       }
 
       session.estado = ESTADOS.CAPTURA_ROL_CLIENTE;
       return this.handleCapturaRolCliente(session, null);
     }
   }
-  
+
   /**
    * FASE 1.2: TRIAJE NIVEL 2 - Usuario selecciona sub-categoría
    */
   async handleTriajeNivel2(session, mensaje) {
     const servicio = await this.sheets.getServicioBySlug(mensaje);
-    
+
     if (!servicio || servicio.nivel !== 2) {
       const padreSlug = session.datos.servicio_nivel1.slug;
       const botones = await this.generarBotonesTriaje(2, padreSlug);
-      
+
       return {
         texto: 'Selección no válida. Por favor, elige una opción:',
         botones,
       };
     }
-    
+
     // Guardar servicio final
     session.datos.servicio_final = servicio;
-    
+
     if (session.datos.tipo_cliente === 'Abogado') {
-        session.estado = ESTADOS.CAPTURA_DESCRIPCION_CASO;
-        return this.handleCapturaDescripcionCaso(session, null);
+      session.estado = ESTADOS.CAPTURA_DESCRIPCION_CASO;
+      return this.handleCapturaDescripcionCaso(session, null);
     }
 
     session.estado = ESTADOS.CAPTURA_ROL_CLIENTE;
-    
+
     // Pasar a captura de ROL del cliente
     return this.handleCapturaRolCliente(session, null);
   }
-  
+
   /**
    * FASE 2: CAPTURA ROL DEL CLIENTE - Determinar si es afectado, propietario, etc.
    */
@@ -1192,7 +1192,7 @@ class ChatbotHandler {
       const categoria = session.datos.servicio_final.categoria.toLowerCase();
       let pregunta = '';
       let botones = [];
-      
+
       if (categoria.includes('alquiler') || categoria.includes('arrendamiento')) {
         pregunta = '¿Eres el propietario que reclama o el inquilino?';
         botones = [
@@ -1220,21 +1220,21 @@ class ChatbotHandler {
           { type: 'button', text: `${ICONS.user} Otra situación`, value: 'otro' },
         ];
       }
-      
+
       return {
         texto: pregunta,
         botones,
       };
     }
-    
+
     // Usuario ha respondido, guardar rol
     session.datos.rol_cliente = mensaje;
     session.estado = ESTADOS.CAPTURA_DESCRIPCION_CASO;
-    
+
     // Pasar a descripción del caso
     return this.handleCapturaDescripcionCaso(session, null);
   }
-  
+
   /**
    * FASE 3: DESCRIPCIÓN DEL CASO - Información técnica detallada (CRÍTICO)
    */
@@ -1243,98 +1243,99 @@ class ChatbotHandler {
       // Primera vez, solicitar descripción adaptada al tipo de servicio
       // AHORA USAMOS IA PARA GENERAR LA PREGUNTA ADAPTADA
       const prompt = generateSystemPrompt(session.datos.tipo_cliente, session.datos.servicio_final.categoria, session.datos.lang);
-      
+
       // Simulamos un mensaje del sistema para que la IA inicie la interacción pidiendo datos
       const mensajesParaIA = [
-          ...session.historial,
-          { role: 'system', content: 'Genera ahora la pregunta para obtener la descripción técnica del caso, adaptando tu vocabulario según las instrucciones.' }
+        ...session.historial,
+        { role: 'system', content: 'Genera ahora la pregunta para obtener la descripción técnica del caso, adaptando tu vocabulario según las instrucciones.' }
       ];
 
       const respuestaIA = await this.ia.chat(mensajesParaIA, prompt);
-      
+
       return {
-          texto: respuestaIA,
-          botones: []
+        texto: respuestaIA,
+        botones: []
       };
     }
-    
+
     // Usuario ha proporcionado la descripción - CRÍTICO para el perito
     session.datos.descripcion_caso = mensaje.trim();
 
     // CONDICIONAL VIP: Verificar si es VIP para atajo
     if (session.datos.vip) {
-        session.estado = ESTADOS.FINALIZADO;
+      session.estado = ESTADOS.FINALIZADO;
 
-        // Recuperar datos VIP
-        let nombreVip = 'Colaborador';
-        let telefonoVip = 'VIP';
-        let rolVip = 'VIP';
-        let notasVip = '';
+      // Recuperar datos VIP
+      let nombreVip = 'Colaborador';
+      let telefonoVip = 'VIP';
+      let rolVip = 'VIP';
+      let notasVip = '';
 
-        if (session.datos.vip_data) {
-            // Datos enriquecidos desde Sheets
-            nombreVip = session.datos.vip_data.nombre;
-            telefonoVip = session.datos.vip_data.telefono || 'VIP';
-            rolVip = `VIP - ${session.datos.vip_data.rol_especial}`;
-            notasVip = session.datos.vip_data.notas ? `[VIP: ${session.datos.vip_data.nombre} - ${session.datos.vip_data.notas}] ` : '';
-        } else {
-            // Fallback lógica antigua
-            const vipNames = this.config.vip_names || [];
-            const triggerMsg = session.historial.find(m => m.role === 'user' && vipNames.some(v => m.content.toLowerCase().includes(v)));
-            if (triggerMsg) {
-                 const found = triggerMsg.content.split(' ').find(w => vipNames.some(v => v.includes(w.toLowerCase())));
-                 if (found) {
-                     nombreVip = found.charAt(0).toUpperCase() + found.slice(1);
-                 }
-            }
+      if (session.datos.vip_data) {
+        // Datos enriquecidos desde Sheets
+        nombreVip = session.datos.vip_data.nombre;
+        telefonoVip = session.datos.vip_data.telefono || 'VIP';
+        rolVip = `VIP - ${session.datos.vip_data.rol_especial}`;
+        notasVip = session.datos.vip_data.notas ? `[VIP: ${session.datos.vip_data.nombre} - ${session.datos.vip_data.notas}] ` : '';
+      } else {
+        // Fallback lógica antigua
+        const vipNames = this.config.vip_names || [];
+        const triggerMsg = session.historial.find(m => m.role === 'user' && vipNames.some(v => m.content.toLowerCase().includes(v)));
+        if (triggerMsg) {
+          const found = triggerMsg.content.split(' ').find(w => vipNames.some(v => v.includes(w.toLowerCase())));
+          if (found) {
+            nombreVip = found.charAt(0).toUpperCase() + found.slice(1);
+          }
         }
-        
-        session.datos.nombre = nombreVip;
+      }
 
-        // Preparar datos del lead VIP
-        const leadData = {
-            sessionId: session.sessionId,
-            userAgent: session.userAgent,
-            servicio_nombre: session.datos.servicio_final.nombre_servicio,
-            categoria: session.datos.servicio_final.categoria,
-            tipo_legal: 'VIP - Urgente',
-            urgencia: 'Alta',
-            ubicacion: 'VIP',
-            nombre: nombreVip,
-            email: 'VIP',
-            telefono: telefonoVip,
-            descripcion_caso: `${notasVip}${session.datos.descripcion_caso}`,
-            rol_cliente: rolVip,
-            tipo_cliente: session.datos.tipo_cliente,
-            vip: true,
-            lang: session.datos.lang || 'es',
-            conversacion: this.formatearConversacion(session.historial),
-        };
+      session.datos.nombre = nombreVip;
 
-        // Ejecutar guardado y envío
-        await this.email.enviarLead(leadData);
-        
-        try {
-            await this.sheetsWrite.guardarLead(leadData);
-        } catch (error) {
-            console.error('Error guardando lead VIP en Sheets:', error);
-        }
+      // Preparar datos del lead VIP
+      const leadData = {
+        sessionId: session.sessionId,
+        userAgent: session.userAgent,
+        servicio_nombre: session.datos.servicio_final.nombre_servicio,
+        categoria: session.datos.servicio_final.categoria,
+        tipo_legal: 'VIP - Urgente',
+        urgencia: 'Alta',
+        ubicacion: 'VIP',
+        nombre: nombreVip,
+        email: 'VIP',
+        telefono: telefonoVip,
+        descripcion_caso: `${notasVip}${session.datos.descripcion_caso}`,
+        rol_cliente: rolVip,
+        tipo_cliente: session.datos.tipo_cliente,
+        vip: true,
+        lang: session.datos.lang || 'es',
+        conversacion: this.formatearConversacion(session.historial),
+      };
 
-        // Limpiar sesión
-        await this.sessionStore.delete(session.sessionId);
+      // Ejecutar guardado y envío
+      await this.email.enviarLead(leadData);
 
-        return {
-            texto: `Recibido ${nombreVip}. Le paso el aviso urgente a Albert/Equipo con lo que me has dicho. ¡Hablamos!`,
-            botones: []
-        };
+      try {
+        await this.sheetsWrite.guardarLead(leadData);
+      } catch (error) {
+        console.error('Error guardando lead VIP en Sheets:', error);
+      }
+
+      // Limpiar sesión
+      await this.sessionStore.delete(session.sessionId);
+
+      return {
+        texto: `Recibido ${nombreVip}. Le paso el aviso urgente a Albert/Equipo con lo que me has dicho. ¡Hablamos!`,
+        botones: [],
+        leadCaptured: true
+      };
     }
 
     session.estado = ESTADOS.CUALIFICACION_JURIDICA;
-    
+
     // Pasar a cualificación jurídica
     return this.handleCualificacionJuridica(session, null);
   }
-  
+
   /**
    * FASE 4: CUALIFICACIÓN JURÍDICA - Pregunta crítica para peritos
    */
@@ -1350,7 +1351,7 @@ class ChatbotHandler {
         ],
       };
     }
-    
+
     // Usuario ha respondido
     if (mensaje === 'demanda') {
       session.datos.tipo_legal = 'demanda_judicial';
@@ -1371,48 +1372,48 @@ class ChatbotHandler {
         ],
       };
     }
-    
+
     // Pasar a captura de datos con mensaje confirmatorio
     session.estado = ESTADOS.CAPTURA_UBICACION;
-    
+
     return {
       texto: 'Recibido. Es un caso valorable. Déjame tus datos para que el perito te llame con un presupuesto. ¿En qué población está el inmueble?',
       botones: [],
     };
   }
-  
+
   /**
    * FASE 3.1: CAPTURA UBICACIÓN
    */
   async handleCapturaUbicacion(session, mensaje) {
     session.datos.ubicacion = mensaje.trim();
     session.estado = ESTADOS.CAPTURA_NOMBRE;
-    
+
     return {
       texto: '¿A quién dirijo el informe preliminar?',
       botones: [],
     };
   }
-  
+
   /**
    * FASE 3.2: CAPTURA NOMBRE
    */
   async handleCapturaNombre(session, mensaje) {
     session.datos.nombre = mensaje.trim();
     session.estado = ESTADOS.CAPTURA_EMAIL;
-    
+
     return {
       texto: '¿Cuál es tu email para enviarte el presupuesto?',
       botones: [],
     };
   }
-  
+
   /**
    * FASE 3.2: CAPTURA EMAIL
    */
   async handleCapturaEmail(session, mensaje) {
     const email = mensaje.trim();
-    
+
     // Validación básica de email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -1421,23 +1422,23 @@ class ChatbotHandler {
         botones: [],
       };
     }
-    
+
     session.datos.email = email;
     session.estado = ESTADOS.CAPTURA_TELEFONO;
-    
+
     return {
       texto: 'Teléfono para comentar el caso:',
       botones: [],
     };
   }
-  
+
   /**
    * FASE 3.3: CAPTURA TELÉFONO Y FINALIZACIÓN
    */
   async handleCapturaTelefono(session, mensaje) {
     session.datos.telefono = mensaje.trim();
     session.estado = ESTADOS.FINALIZADO;
-    
+
     // Enviar lead por email
     const leadData = {
       sessionId: session.sessionId,
@@ -1457,9 +1458,9 @@ class ChatbotHandler {
       lang: session.datos.lang || 'es', // NUEVO
       conversacion: this.formatearConversacion(session.historial),
     };
-    
+
     await this.email.enviarLead(leadData);
-    
+
     // Guardar en Google Sheets (si está configurado el Service Account)
     try {
       await this.sheetsWrite.guardarLead(leadData);
@@ -1467,16 +1468,17 @@ class ChatbotHandler {
       console.error('Error guardando lead en Sheets:', error);
       // No bloquear el flujo si falla Sheets
     }
-    
+
     // Limpiar sesión
     await this.sessionStore.delete(session.sessionId);
-    
+
     return {
       texto: `Gracias, ${session.datos.nombre}. Hemos recibido tu caso. Un perito te contactará en menos de 24h para valorar el expediente y enviarte un presupuesto detallado.`,
       botones: [],
+      leadCaptured: true,
     };
   }
-  
+
   /**
    * Formatea el historial de conversación para el email
    */
@@ -1495,9 +1497,9 @@ export default {
   async fetch(request, env, ctx) {
     // Initialize ConfigService
     const configService = new ConfigService(env);
-    
+
     const url = new URL(request.url);
-    
+
     // CORS - Permite requests desde el sitio perito.barcelona
     const origin = request.headers.get('Origin');
     const allowedOrigins = [
@@ -1507,36 +1509,36 @@ export default {
       'http://localhost:8082', // Para desarrollo local 11ty (puerto alternativo)
       'http://localhost:3000',
     ];
-    
+
     const corsHeaders = {
       'Access-Control-Allow-Origin': allowedOrigins.includes(origin) ? origin : '*',
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
       'Access-Control-Max-Age': '86400',
     };
-    
+
     if (request.method === 'OPTIONS') {
       return new Response(null, { headers: corsHeaders });
     }
 
     // Admin Reload Endpoint
     if (url.pathname === '/api/admin/reload-config') {
-        const newConfig = await configService.load(true); // Force refresh
-        return new Response(JSON.stringify(newConfig), { headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+      const newConfig = await configService.load(true); // Force refresh
+      return new Response(JSON.stringify(newConfig), { headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
     }
 
     // Load Config (Cached)
     const config = await configService.load();
-    
+
     // Instanciar el chatbot DESPUÉS de configurar las variables de entorno
     const chatbot = new ChatbotHandler(env, config);
-    
+
     // Endpoint de chat
     if (url.pathname === '/api/chat' && request.method === 'POST') {
       try {
         const body = await request.json();
         const { sessionId, mensaje, userLang, action } = body;
-        
+
         // CASO ESPECIAL: Recuperar historial
         if (action === 'recover_history' && sessionId) {
           const session = await chatbot.sessionStore.get(sessionId);
@@ -1565,10 +1567,10 @@ export default {
             headers: { ...corsHeaders, 'Content-Type': 'application/json' },
           });
         }
-        
+
         const userAgent = request.headers.get('User-Agent') || '';
         const respuesta = await chatbot.handleMessage(sessionId, mensaje, userAgent, userLang || 'es');
-        
+
         return new Response(JSON.stringify(respuesta), {
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
@@ -1581,7 +1583,7 @@ export default {
         });
       }
     }
-    
+
     // Endpoint de health check
     if (url.pathname === '/api/health') {
       return new Response(JSON.stringify({
@@ -1591,7 +1593,7 @@ export default {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     }
-    
+
     // 404
     return new Response('Not Found', { status: 404, headers: corsHeaders });
   },

@@ -22,7 +22,7 @@ class PeritoChatbot {
 
     // Elementos DOM
     this.elements = {};
-    
+
     // Inicializar
     this.init();
     console.log('[Chatbot] v2.1 loaded - Mobile Menu Support');
@@ -45,7 +45,7 @@ class PeritoChatbot {
    */
   addSafeClick(element, callback) {
     if (!element) return;
-    
+
     // En móvil, preferimos 'click' estándar si no hay conflictos de drag/scroll.
     // La implementación anterior con touchstart/touchend causaba problemas.
     element.addEventListener('click', (e) => {
@@ -95,11 +95,11 @@ class PeritoChatbot {
     if (this.elements.button) {
       this.addSafeClick(this.elements.button, () => this.toggleChat());
     }
-    
+
     if (this.elements.closeButton) {
       this.addSafeClick(this.elements.closeButton, () => this.toggleChat());
     }
-    
+
     // Desktop Buttons
     if (this.elements.downloadButton) {
       this.addSafeClick(this.elements.downloadButton, () => this.showDownloadModal());
@@ -132,10 +132,10 @@ class PeritoChatbot {
 
     // Cerrar menú móvil al hacer click fuera
     document.addEventListener('click', (e) => {
-      if (this.elements.mobileMenu && 
-          !this.elements.mobileMenu.classList.contains('hidden') && 
-          !this.elements.mobileMenu.contains(e.target) && 
-          !this.elements.mobileMenuToggle.contains(e.target)) {
+      if (this.elements.mobileMenu &&
+        !this.elements.mobileMenu.classList.contains('hidden') &&
+        !this.elements.mobileMenu.contains(e.target) &&
+        !this.elements.mobileMenuToggle.contains(e.target)) {
         this.toggleMobileMenu(false);
       }
     });
@@ -163,7 +163,7 @@ class PeritoChatbot {
     if (this.elements.sendButton) {
       this.addSafeClick(this.elements.sendButton, () => this.sendMessage());
     }
-    
+
     if (this.elements.input) {
       this.elements.input.addEventListener('keypress', (e) => {
         if (e.key === 'Enter' && !this.isWaitingResponse) {
@@ -190,10 +190,10 @@ class PeritoChatbot {
    */
   toggleMobileMenu(forceState = null) {
     if (!this.elements.mobileMenu) return;
-    
+
     const isHidden = this.elements.mobileMenu.classList.contains('hidden');
     const newState = forceState !== null ? forceState : isHidden;
-    
+
     if (newState) {
       this.elements.mobileMenu.classList.remove('hidden');
       this.elements.mobileMenu.style.display = 'flex';
@@ -221,13 +221,13 @@ class PeritoChatbot {
       const currentY = e.touches[0].clientY;
       const deltaY = startY - currentY; // Arrastrar hacia arriba aumenta la altura
       const newHeight = startHeight + deltaY;
-      
+
       // Límites (20vh a 95vh)
       const vh = window.innerHeight;
       if (newHeight > vh * 0.2 && newHeight < vh * 0.95) {
         windowEl.style.height = `${newHeight}px`;
       }
-      
+
       // Prevenir scroll de la página mientras se redimensiona
       e.preventDefault();
     };
@@ -250,7 +250,7 @@ class PeritoChatbot {
    * Genera un UUID simple
    */
   generateUUID() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
       var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
       return v.toString(16);
     });
@@ -326,13 +326,13 @@ class PeritoChatbot {
   toggleChat(forceOpen = null) {
     const wasOpen = this.isOpen;
     this.isOpen = forceOpen !== null ? forceOpen : !this.isOpen;
-    
+
     this.elements.window.classList.toggle('open', this.isOpen);
     document.body.classList.toggle('chat-open', this.isOpen);
-    
+
     if (this.isOpen) {
       this.elements.input.focus();
-      
+
       // GA4: Chat Open
       if (!wasOpen) {
         window.dataLayer = window.dataLayer || [];
@@ -363,7 +363,7 @@ class PeritoChatbot {
             action: 'recover_history'
           }),
         });
-        
+
         if (response.ok) {
           const data = await response.json();
           if (data.historial && data.historial.length > 0) {
@@ -390,7 +390,7 @@ class PeritoChatbot {
    */
   async sendMessage() {
     const mensaje = this.elements.input.value.trim();
-    
+
     if (!mensaje || this.isWaitingResponse) {
       return;
     }
@@ -451,13 +451,21 @@ class PeritoChatbot {
         tiene_botones: data.botones && data.botones.length > 0,
       });
 
+      // Conversión: Lead generado
+      if (data.leadCaptured) {
+        this.trackEvent('lead_generado', {
+          origen: 'chatbot',
+          idioma: currentLang
+        });
+      }
+
     } catch (error) {
       console.error('[Chatbot] Error:', error);
       this.removeTypingIndicator(typingId);
-      
+
       // Obtener el teléfono de metadata si está disponible
       const telefono = window.PERITO_METADATA?.contact?.phoneNumber || '+34 614 194 985';
-      
+
       this.addMessage(
         `Error de conexión. Por favor, intenta de nuevo o contacta directamente al ${telefono}.`,
         'bot'
@@ -510,10 +518,10 @@ class PeritoChatbot {
           link.rel = 'noopener noreferrer';
           link.innerHTML = btn.text;
           link.className = 'bg-white border-2 border-cyan-600 text-cyan-700 py-3 px-4 rounded-lg cursor-pointer text-sm font-medium transition-all duration-300 ease-out text-left flex items-center gap-2 hover:bg-cyan-600 hover:text-white hover:translate-x-1 hover:shadow-md active:translate-x-0.5 no-underline block w-full';
-          
+
           // Simplificado: Dejar que el navegador maneje el click nativamente
           // Esto soluciona problemas de bloqueo de popups y eventos touch
-          
+
           buttonsDiv.appendChild(link);
         } else {
           const button = document.createElement('button');
@@ -548,7 +556,7 @@ class PeritoChatbot {
         btn.disabled = true;
         btn.classList.add('disabled');
       });
-      
+
       // Resaltar el botón seleccionado
       event.target.classList.add('bg-cyan-600', 'text-white', 'border-cyan-600');
     }
@@ -602,7 +610,7 @@ class PeritoChatbot {
   updateInputState() {
     this.elements.input.disabled = this.isWaitingResponse;
     this.elements.sendButton.disabled = this.isWaitingResponse;
-    
+
     if (this.isWaitingResponse) {
       this.elements.sendButton.classList.add('loading');
     } else {
@@ -669,15 +677,15 @@ class PeritoChatbot {
     // 1. Limpiar UI
     this.elements.messages.innerHTML = '';
     this.elements.input.value = '';
-    
+
     // 2. Limpiar estado local
     localStorage.removeItem('chat_session_id');
     this.config.sessionId = this.generateUUID(); // Generar nuevo ID forzado
     localStorage.setItem('chat_session_id', this.config.sessionId);
-    
+
     this.conversationStarted = false;
     this.isWaitingResponse = false;
-    
+
     // 3. Iniciar nueva conversación
     this.initChat();
   }
@@ -688,66 +696,66 @@ class PeritoChatbot {
   downloadHistory() {
     console.log('[Chatbot] Iniciando descarga de historial...');
     const messages = Array.from(this.elements.messages.children);
-    
+
     if (messages.length === 0) {
-        console.warn('[Chatbot] No hay mensajes para descargar');
-        alert("No hay mensajes para descargar.");
-        return;
+      console.warn('[Chatbot] No hay mensajes para descargar');
+      alert("No hay mensajes para descargar.");
+      return;
     }
 
     let text = "HISTORIAL DE CHAT - PERITO.BARCELONA\n";
     text += "====================================\n\n";
     text += `Fecha: ${new Date().toLocaleString()}\n`;
     text += `ID Sesión: ${this.config.sessionId}\n\n`;
-    
+
     let count = 0;
     messages.forEach(msg => {
       // Ignorar indicadores de escritura
       if (msg.classList.contains('typing-indicator') || msg.id.startsWith('typing-')) return;
-      
+
       // Detectar rol basado en la clase de alineación
       const isUser = msg.classList.contains('text-right');
-      
+
       // Buscar la burbuja de texto (primer div hijo)
-      const bubble = msg.querySelector('div'); 
-      
+      const bubble = msg.querySelector('div');
+
       if (bubble) {
         // Clonar para limpiar HTML tags y obtener solo texto
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = bubble.innerHTML;
-        
+
         // Limpiar botones si los hubiera (están en otro div hermano, pero por si acaso)
         const buttons = tempDiv.querySelectorAll('button, a');
         buttons.forEach(b => b.remove());
 
         const content = (tempDiv.innerText || tempDiv.textContent).trim();
-        
+
         if (content) {
-            const role = isUser ? "Usuario" : "Asistente";
-            text += `[${role}]: ${content}\n\n`;
-            count++;
+          const role = isUser ? "Usuario" : "Asistente";
+          text += `[${role}]: ${content}\n\n`;
+          count++;
         }
       }
     });
 
     console.log(`[Chatbot] Procesados ${count} mensajes`);
-    
+
     try {
-        const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `perito-barcelona-chat-${new Date().toISOString().slice(0,10)}.txt`;
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(() => {
-            document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);
-            console.log('[Chatbot] Descarga completada');
-        }, 100);
+      const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `perito-barcelona-chat-${new Date().toISOString().slice(0, 10)}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+        console.log('[Chatbot] Descarga completada');
+      }, 100);
     } catch (e) {
-        console.error('[Chatbot] Error generando descarga:', e);
-        alert('Error al generar el archivo de descarga.');
+      console.error('[Chatbot] Error generando descarga:', e);
+      alert('Error al generar el archivo de descarga.');
     }
   }
 }
@@ -762,10 +770,10 @@ function initPeritoChatbot(config = {}) {
   }
 
   peritoChatbotInstance = new PeritoChatbot(config);
-  
+
   // Exponer en window para acceso global
   window.peritoChatbot = peritoChatbotInstance;
-  
+
   return peritoChatbotInstance;
 }
 
