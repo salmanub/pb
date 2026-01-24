@@ -1,6 +1,6 @@
 ---
 layout: "layouts/collaboration.njk"
-title: "Colaboración con Abogados | Perito Ingeniero para Despachos en Barcelona"
+title: "Perito Judicial para Abogados en Barcelona | Informes Técnicos y Ratificación"
 subtitle: "Soporte técnico-pericial para reforzar la solidez probatoria de sus casos"
 description: "Ofrecemos un servicio de peritaje especializado para despachos de abogados en Barcelona. Aportamos la prueba técnica indispensable para ganar casos de construcción, vicios ocultos y disputas."
 permalink: "/colaboracion-abogados/"

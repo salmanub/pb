@@ -1,6 +1,6 @@
 ---
 layout: "layouts/collaboration.njk"
-title: "Col·laboració amb Advocats | Pèrit Enginyer per a Despatxos a Barcelona"
+title: "Pèrit Judicial per a Advocats a Barcelona | Informes Tècnics i Ratificació"
 subtitle: "Suport tècnic-pericial per reforçar la solidesa probatòria dels seus casos"
 description: "Oferim un servei de peritatge especialitzat per a despatxos d'advocats a Barcelona. Aportem la prova tècnica indispensable per guanyar casos de construcció, vicis ocults i disputes."
 permalink: "/ca/collaboracio-advocats/"
