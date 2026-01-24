@@ -19,12 +19,11 @@ eleventyNavigation:
   title: "Àrea per a Advocats"
   notshow: true # Aquesta pàgina s'accedeix des del botó de la navbar, no necessita estar al menú principal.
   order: 99
+heroTitle: "PÈRIT JUDICIAL"
+heroHighlight: "PER A ADVOCATS"
 serviceTitle: "col·laboració amb despatxos d'advocats"
 
-# Parent Service (for breadcrumb and linking back to pillar)
-parentService:
-  title: "Inici"
-  url: "/"
+
 
 # Key features in the hero section
 keyFeatures:

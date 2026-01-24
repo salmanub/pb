@@ -19,12 +19,11 @@ eleventyNavigation:
   title: "Área para Abogados"
   notshow: true # Esta página se accede desde el botón de la navbar, no necesita estar en el menú principal.
   order: 99
+heroTitle: "PERITO JUDICIAL"
+heroHighlight: "PARA ABOGADOS"
 serviceTitle: "colaboración con despachos de abogados"
 
-# Parent Service (for breadcrumb and linking back to pillar)
-parentService:
-  title: "Inicio"
-  url: "/"
+
 
 # Key features in the hero section
 keyFeatures:

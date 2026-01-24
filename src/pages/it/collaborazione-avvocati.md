@@ -19,12 +19,11 @@ eleventyNavigation:
   title: "Area Avvocati"
   notshow: true # Questa pagina è accessibile dal pulsante della navbar, non è necessario che sia nel menu principale.
   order: 99
+heroTitle: "PERITO GIUDIZIARIO"
+heroHighlight: "PER AVVOCATI"
 serviceTitle: "collaborazione con studi legali"
 
-# Parent Service (for breadcrumb and linking back to pillar)
-parentService:
-  title: "Home"
-  url: "/it/"
+
 
 # Key features in the hero section
 keyFeatures:

@@ -19,12 +19,11 @@ eleventyNavigation:
   title: "Lawyers Area"
   notshow: true # This page is accessed from the navbar button, it doesn't need to be in the main menu.
   order: 99
+heroTitle: "EXPERT WITNESS"
+heroHighlight: "FOR LAWYERS"
 serviceTitle: "collaboration with law firms"
 
-# Parent Service (for breadcrumb and linking back to pillar)
-parentService:
-  title: "Home"
-  url: "/"
+
 
 # Key features in the hero section
 keyFeatures:

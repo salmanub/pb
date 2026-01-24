@@ -19,12 +19,11 @@ eleventyNavigation:
   title: "Espace Avocats"
   notshow: true # Cette page est accessible depuis le bouton de la navbar, pas besoin d'être dans le menu principal.
   order: 99
+heroTitle: "EXPERT JUDICIAIRE"
+heroHighlight: "POUR AVOCATS"
 serviceTitle: "collaboration avec les cabinets d'avocats"
 
-# Parent Service (for breadcrumb and linking back to pillar)
-parentService:
-  title: "Accueil"
-  url: "/fr/"
+
 
 # Key features in the hero section
 keyFeatures:
