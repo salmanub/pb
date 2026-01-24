@@ -15,6 +15,8 @@
 {% if lang == 'fr' %}{% set caseBaseUrl = "/fr/succes/" %}{% endif %}
 {% if lang == 'it' %}{% set caseBaseUrl = "/it/casi-di-successo/" %}{% endif %}
 
+
+
 {% if showDebug %}
 <div class="fixed top-0 right-0 z-50 p-4 bg-yellow-100 text-yellow-800 shadow-lg rounded-bl-lg max-w-sm" style="font-family: monospace; font-size: 12px;">
     <h4 class="font-bold mb-2">Debug Info:</h4>
@@ -78,7 +80,7 @@
                 {% include "partials/breadcrumb.njk" %}
 
                 <div class="max-w-[1000px] mx-auto text-center mt-10">
-                    <span class="badge badge-primary mb-6 text-sm md:text-base font-bold tracking-[0.2em] uppercase">Resultados Demostrados</span>
+                    <span class="badge badge-primary mb-6 text-sm md:text-base font-bold tracking-[0.2em] uppercase">{{ heroBadge }}</span>
                     <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[0.95] tracking-tight text-slate-900 mb-8" itemprop="headline">
                         {{ eleventyNavigation.title or title }}
                     </h1>

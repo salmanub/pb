@@ -4,6 +4,7 @@ title: "Cas de Succès en Expertises de Construction et Assurances"
 description: "Découvrez des exemples réels de la façon dont nos rapports d'expertise ont résolu des conflits et soutenu des réclamations à Barcelone."
 permalink: "/fr/succes/"
 lang: "fr"
+heroBadge: "Résultats Prouvés"
 translations:
   - lang: es
     permalink: /casos-exito/

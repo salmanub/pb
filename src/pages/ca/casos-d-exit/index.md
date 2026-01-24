@@ -4,6 +4,7 @@ title: "Casos d'Èxit en Peritatges de Construcció i Assegurances"
 description: "Descobreixi exemples reals de com els nostres informes pericials han resolt conflictes i fonamentat reclamacions a Barcelona."
 permalink: "/ca/casos-d-exit/"
 lang: "ca"
+heroBadge: "Resultats Demostrats"
 translations:
   - lang: es
     permalink: /casos-exito/

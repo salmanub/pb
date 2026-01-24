@@ -1,6 +1,30 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
+{% set collaborationBadge = "Colaboración Profesional" %}
+{% set collaborationTitleLine1 = "COLABORACIÓN" %}
+{% set collaborationTitleLine2 = "ESTRATÉGICA" %}
+
+{% if lang == 'ca' %}
+    {% set collaborationBadge = "Col·laboració Professional" %}
+    {% set collaborationTitleLine1 = "COL·LABORACIÓ" %}
+    {% set collaborationTitleLine2 = "ESTRATÈGICA" %}
+{% endif %}
+{% if lang == 'en' %}
+    {% set collaborationBadge = "Professional Collaboration" %}
+    {% set collaborationTitleLine1 = "STRATEGIC" %}
+    {% set collaborationTitleLine2 = "COLLABORATION" %}
+{% endif %}
+{% if lang == 'fr' %}
+    {% set collaborationBadge = "Collaboration Professionnelle" %}
+    {% set collaborationTitleLine1 = "COLLABORATION" %}
+    {% set collaborationTitleLine2 = "STRATÉGIQUE" %}
+{% endif %}
+{% if lang == 'it' %}
+    {% set collaborationBadge = "Collaborazione Professionale" %}
+    {% set collaborationTitleLine1 = "COLLABORAZIONE" %}
+    {% set collaborationTitleLine2 = "STRATEGICA" %}
+{% endif %}
 <main itemscope itemtype="https://schema.org/Article">
     <!-- Hero Section -->
     <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] bg-slate-50 overflow-hidden isolate">
@@ -16,10 +40,10 @@
                 {% include "partials/breadcrumb.njk" %}
                 
                 <div class="max-w-4xl mx-auto text-center mt-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                     <span class="badge badge-primary mb-6">Colaboración Profesional</span>
+                     <span class="badge badge-primary mb-6">{{ collaborationBadge }}</span>
                     <h1 class="text-4xl md:text-5xl lg:text-7xl font-black text-slate-900 mb-8 leading-[0.95] tracking-tight" itemprop="headline">
-                        COLABORACIÓN <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">ESTRATÉGICA</span>
+                        {{ collaborationTitleLine1 }} <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">{{ collaborationTitleLine2 }}</span>
                     </h1>
                     <p class="section-subtitle mx-auto" itemprop="description">
                         {{ description }}
