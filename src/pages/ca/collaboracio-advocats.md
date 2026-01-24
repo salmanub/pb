@@ -72,6 +72,10 @@ testimonials:
 # CTA Section
 ctaTitle: "Té un cas que necessita suport tècnic?"
 ctaDescription: "Contacti amb nosaltres per a una consulta de viabilitat inicial sense compromís. Convertim-nos en aliats estratègics."
+ctaButtonText1: "Sol·licitar Consulta"
+ctaButtonUrl1: "/ca/contacte/"
+ctaButtonText2: "Programar Trucada"
+ctaButtonUrl2: "/ca/contacte/"
 
 # Introduction (shown in hero section)
 intro: |

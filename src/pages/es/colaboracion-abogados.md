@@ -72,6 +72,10 @@ testimonials:
 # CTA Section
 ctaTitle: "¿Tiene un caso que necesita soporte técnico?"
 ctaDescription: "Contacte con nosotros para una consulta de viabilidad inicial sin compromiso. Convirtámonos en aliados estratégicos."
+ctaButtonText1: "Solicitar Consulta"
+ctaButtonUrl1: "/contacto/"
+ctaButtonText2: "Agendar Llamada"
+ctaButtonUrl2: "/contacto/"
 
 # Introduction (shown in hero section)
 intro: |

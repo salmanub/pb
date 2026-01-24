@@ -72,6 +72,10 @@ testimonials:
 # CTA Section
 ctaTitle: "Have a case that needs technical support?"
 ctaDescription: "Contact us for an initial viability consultation without commitment. Let's become strategic allies."
+ctaButtonText1: "Request Consultation"
+ctaButtonUrl1: "/en/contact/"
+ctaButtonText2: "Schedule a Call"
+ctaButtonUrl2: "/en/contact/"
 
 # Introduction (shown in hero section)
 intro: |

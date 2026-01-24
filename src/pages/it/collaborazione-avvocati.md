@@ -72,6 +72,10 @@ testimonials:
 # CTA Section
 ctaTitle: "Avete un caso che necessita di supporto tecnico?"
 ctaDescription: "Contattateci per una consulenza di fattibilità iniziale senza impegno. Diventiamo alleati strategici."
+ctaButtonText1: "Richiedi Consulenza"
+ctaButtonUrl1: "/it/contatti/"
+ctaButtonText2: "Programma una Chiamata"
+ctaButtonUrl2: "/it/contatti/"
 
 # Introduction (shown in hero section)
 intro: |

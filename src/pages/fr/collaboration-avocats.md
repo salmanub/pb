@@ -72,6 +72,10 @@ testimonials:
 # CTA Section
 ctaTitle: "Vous avez un dossier qui nécessite un support technique ?"
 ctaDescription: "Contactez-nous pour une consultation de faisabilité initiale sans engagement. Devenons des alliés stratégiques."
+ctaButtonText1: "Demander une Consultation"
+ctaButtonUrl1: "/fr/contact/"
+ctaButtonText2: "Planifier un Appel"
+ctaButtonUrl2: "/fr/contact/"
 
 # Introduction (shown in hero section)
 intro: |
