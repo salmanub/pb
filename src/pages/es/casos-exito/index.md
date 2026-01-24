@@ -6,9 +6,13 @@ permalink: '/casos-exito/'
 lang: es
 translations:
   - lang: ca
-    permalink: /ca/casos-exit/
+    permalink: /ca/casos-d-exit/
   - lang: en
-    permalink: /en/cases/
+    permalink: /en/success-cases/
+  - lang: fr
+    permalink: /fr/succes/
+  - lang: it
+    permalink: /it/casi-di-successo/
 
 eleventyNavigation:
   key: "Casos de éxito"
