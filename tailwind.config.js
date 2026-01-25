@@ -1,3 +1,5 @@
+import typography from '@tailwindcss/typography';
+
 export default {
   content: ['./src/**/*.{njk,md,js,html}'],
   theme: {
@@ -101,5 +103,8 @@ export default {
       }
     }
   },
-  safelist: ['group', 'group-hover:text-emerald-600']
+  safelist: ['group', 'group-hover:text-emerald-600'],
+  plugins: [
+    typography
+  ]
 }
