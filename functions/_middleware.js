@@ -21,7 +21,7 @@ export const onRequest = async (context) => {
             // Standard 11ty output Structure:
             // / -> /index.html -> /index.html.sxg
             // /about -> /about/index.html -> /about/index.html.sxg
-            // /post/hello -> /post/hello/index.html -> /post/hello/index.html.sxg
+            // /post/hello -> /post/hello/index.html -> /post/hello/index.html.sxg 
 
             let sxgPath = url.pathname;
 
