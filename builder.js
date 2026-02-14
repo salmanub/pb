@@ -35,7 +35,7 @@ async function buildSite() {
   return new Promise((resolve, reject) => {
     // Usar spawn para evitar problemas de buffer y ver output en tiempo real
     const child = spawn('npx', ['@11ty/eleventy', '--quiet'], { stdio: 'inherit', shell: true });
-    
+
     child.on('close', (code) => {
       if (code === 0) {
         console.log('✅ Build completado.');
@@ -45,7 +45,7 @@ async function buildSite() {
         process.exit(1);
       }
     });
-    
+
     child.on('error', (err) => {
       console.error('❌ Error al iniciar el proceso:', err);
       process.exit(1);
@@ -58,44 +58,37 @@ async function buildSite() {
  */
 async function scanFiles() {
   console.log(`🔍 Escaneando archivos en ${CONFIG.outputDir}...`);
-  
-  // Buscar todos los HTMLs excepto 404 y admin
-  // Usamos path.posix.join para asegurar separadores compatibles con glob
+
   const pattern = `${CONFIG.outputDir}/**/*.html`;
   const files = await glob(pattern, {
     ignore: [`${CONFIG.outputDir}/404.html`, `${CONFIG.outputDir}/admin/**`, `${CONFIG.outputDir}/google*.html`]
   });
 
-  const resources = [];
+  console.log(`📂 Procesando ${files.length} archivos en paralelo...`);
 
-  for (const file of files) {
+  // Procesar archivos en paralelo con Promise.all
+  const promises = files.map(async (file) => {
     try {
       const content = await fs.readFile(file, 'utf-8');
       const $ = cheerio.load(content);
-      
+
       const title = $('title').text().trim() || 'Sin título';
       const description = $('meta[name="description"]').attr('content') || '';
-      
+
       // Inferir URL pública
-      // Normalizar path separators a /
       let relativePath = path.relative(CONFIG.outputDir, file).split(path.sep).join('/');
-      
-      // Limpiar index.html para URLs limpias
+
       if (relativePath.endsWith('index.html')) {
         relativePath = relativePath.replace('index.html', '');
       }
-      
-      // Asegurar que no termine en / si no es la raíz, o sí? 
-      // Perito.barcelona suele usar trailing slash.
-      
+
       const fullUrl = `${CONFIG.publicUrl}/${relativePath}`;
 
       // Inferir Tipo y Tags
       let tipo = 'info';
       let tags = [];
-      let lang = $('html').attr('lang') || 'es'; // Default a español
+      let lang = $('html').attr('lang') || 'es';
 
-      // Si no hay atributo lang, intentar inferir de la URL
       if (!lang || lang === 'es') {
         if (fullUrl.includes('/ca/')) lang = 'ca';
         else if (fullUrl.includes('/en/')) lang = 'en';
@@ -103,7 +96,6 @@ async function scanFiles() {
         else if (fullUrl.includes('/it/')) lang = 'it';
       }
 
-      // Lógica de clasificación
       if (fullUrl.includes('/blog/')) {
         tipo = 'blog';
         tags.push('blog');
@@ -115,31 +107,32 @@ async function scanFiles() {
         tags.push('servicio');
       }
 
-      // Extraer keywords si existen en el HTML
       const metaKeywords = $('meta[name="keywords"]').attr('content');
       if (metaKeywords) {
         tags = [...tags, ...metaKeywords.split(',').map(t => t.trim())];
       }
 
-      // Añadir palabras clave del título
       const titleWords = title.toLowerCase().split(' ').filter(w => w.length > 4);
       tags = [...tags, ...titleWords];
-
-      // Limpiar tags duplicados y vacíos
       tags = [...new Set(tags)].filter(t => t);
 
-      resources.push({
+      return {
         titulo: title,
         url: fullUrl,
         tipo: tipo,
         tags: tags.join(', '),
         descripcion: description,
         lang: lang
-      });
+      };
     } catch (err) {
       console.error(`Error procesando ${file}:`, err);
+      return null;
     }
-  }
+  });
+
+  const results = await Promise.all(promises);
+  // Filtrar nulos (errores)
+  const resources = results.filter(r => r !== null);
 
   console.log(`✅ Encontrados ${resources.length} recursos.`);
   return resources;
@@ -150,7 +143,7 @@ async function scanFiles() {
  */
 async function updateSheet(resources) {
   console.log('📊 Conectando a Google Sheets...');
-  
+
   if (!CONFIG.serviceAccountEmail || !CONFIG.privateKey) {
     console.error('❌ Faltan credenciales de Service Account en .env');
     console.log('⚠️ Saltando sincronización con Sheets (Modo Dry Run)');
@@ -168,7 +161,7 @@ async function updateSheet(resources) {
     const doc = new GoogleSpreadsheet(CONFIG.sheetId, serviceAccountAuth);
 
     await doc.loadInfo();
-    
+
     let sheet = doc.sheetsByTitle['Recursos_Web'];
     if (!sheet) {
       console.log('⚠️ Pestaña Recursos_Web no existe. Creándola...');
@@ -176,14 +169,14 @@ async function updateSheet(resources) {
     }
 
     console.log('🧹 Limpiando datos antiguos...');
-    await sheet.clearRows(); 
-    
+    await sheet.clearRows();
+
     // Asegurar headers
     await sheet.setHeaderRow(['titulo', 'url', 'tipo', 'tags', 'descripcion', 'lang']);
 
     console.log(`📝 Subiendo ${resources.length} nuevos recursos...`);
     await sheet.addRows(resources);
-    
+
     console.log('✅ Sincronización completada.');
   } catch (error) {
     console.error('❌ Error actualizando Sheets:', error);

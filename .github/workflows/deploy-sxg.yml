@@ -114,36 +114,12 @@ jobs:
           export CERT_URL="https://$DOMAIN/cert.cbor"
           
           echo "Generating SXG files for $DOMAIN... using Cert URL: $CERT_URL"
+          echo "Runnning parallel generation script..."
           
-          find dist -name "*.html" | while read html_file; do
-            sxg_file="${html_file}.sxg"
-            
-            # Construct the URL for this file
-            rel_path="${html_file#dist/}"
-            if [ "$rel_path" == "index.html" ]; then
-              url_path=""
-            elif [[ "$rel_path" == */index.html ]]; then
-              url_path="${rel_path%/index.html}/"
-            else
-              url_path="${rel_path}"
-            fi
-            
-            full_url="https://$DOMAIN/$url_path"
-            
-            echo "Signing $full_url -> $sxg_file"
-            
-            gen-signedexchange \
-              -uri "$full_url" \
-              -content "$html_file" \
-              -certificate "$CERT_FILE" \
-              -privateKey "$KEY_FILE" \
-              -certUrl "$CERT_URL" \
-              -date $(date -u +%Y-%m-%dT%H:%M:%SZ) \
-              -expire 168h \
-              -o "$sxg_file" \
-              -validityUrl "https://$DOMAIN/resource.validity.msg"
-              
-          done
+          # Run the parallel Node.js script
+          # Pass valid env vars just in case we enhance it later
+          export DOMAIN="$DOMAIN"
+          node src/scripts/generate-sxg.js
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
