@@ -111,9 +111,9 @@ jobs:
           
           CERT_FILE=".certs/cert.pem"
           KEY_FILE=".certs/privkey.pem"
-          CERT_URL="https://$DOMAIN/cert.cbor"
+          export CERT_URL="https://$DOMAIN/cert.cbor"
           
-          echo "Generating SXG files for $DOMAIN..."
+          echo "Generating SXG files for $DOMAIN... using Cert URL: $CERT_URL"
           
           find dist -name "*.html" | while read html_file; do
             sxg_file="${html_file}.sxg"
