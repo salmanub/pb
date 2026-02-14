@@ -12,6 +12,7 @@ permissions:
   contents: write
   actions: write
   id-token: write
+  deployments: write
 
 env:
   DOMAIN: perito.barcelona
