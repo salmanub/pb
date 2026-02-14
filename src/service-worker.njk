@@ -5,7 +5,7 @@ headers:
   Referrer-Policy: strict-origin-when-cross-origin
 ---
 const VERSION = '{{ global.random() }}';
-const BUILD_TIME = '{{ global.currentTime() | safe }}';
+const BUILD_TIME = '{{ global.now | safe }}';
 
 // Nombre de los caches con timestamp para forzar actualización
 const CACHE_KEYS = {
