@@ -138,7 +138,7 @@ export default function (eleventyConfig) {
       }));
     }
 
-    const globalResult = await postId(globalPlugins).process(globalContent, {
+    const globalResult = await postcss(globalPlugins).process(globalContent, {
       from: globalInputPath,
       to: globalOutputPath
     });
