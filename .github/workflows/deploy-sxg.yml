@@ -139,6 +139,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: perito11ty # Adjust if your pages project name is different
+          projectName: pb # Updated to match user request
           directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
