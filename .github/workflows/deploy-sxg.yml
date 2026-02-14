@@ -133,7 +133,7 @@ jobs:
               -certificate "$CERT_FILE" \
               -privateKey "$KEY_FILE" \
               -date $(date -u +%Y-%m-%dT%H:%M:%SZ) \
-              -expire 604800 \
+              -expire 168h \
               -o "$sxg_file" \
               -validityUrl "https://$DOMAIN/resource.validity.msg"
               
