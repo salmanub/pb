@@ -15,7 +15,13 @@ export const onRequest = async (context) => {
     // Allow .html, otherwise if it has an extension it's likely an asset
     const isExcluded = hasExtension && !url.pathname.endsWith(".html");
 
-    if (supportsSxg && !isExcluded) {
+    // Check User Agent to bypass SXG for Lighthouse/PSI debugging
+    const userAgent = request.headers.get("User-Agent") || "";
+    // Google PageSpeed Insights uses 'Chrome-Lighthouse' or 'Google Page Speed Insights'
+    // We want to serve normal HTML to PSI to avoid connection errors if SXG is flaky for it
+    const isPSI = /Chrome-Lighthouse|Google Page Speed Insights/i.test(userAgent);
+
+    if (supportsSxg && !isExcluded && !isPSI) {
         try {
             // 3. Construct the path to the potential .sxg file
             // Standard 11ty output Structure:
