@@ -82,29 +82,36 @@ jobs:
           fi
 
       # --- SXG GENERATION ---
-      - name: Install gen-signedexchange
+      - name: Install gen-signedexchange & gen-certurl
         run: |
-          # Install using Go (easiest way to get the binary)
+          # Install using Go
           if ! command -v go &> /dev/null; then
              echo "Go not found, installing..."
              sudo apt-get update && sudo apt-get install -y golang-go
           fi
           
           go install github.com/WICG/webpackage/go/signedexchange/cmd/gen-signedexchange@latest
+          go install github.com/WICG/webpackage/go/signedexchange/cmd/gen-certurl@latest
           echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
 
       - name: Generate SXG Files
         run: |
-          # We need to process all HTML files in dist/
-          # Using the certificate and private key we just got/restored
+          # 1. Generate Certificate Chain (CBOR)
+          # We ideally need an OCSP response stapled, but for now let's generate the chain from fullchain
+          # acme.sh might have fetched ocsp in .certs/ folder?
           
-          CERT_FILE=".certs/cert.pem"
-          KEY_FILE=".certs/privkey.pem"
-          
-          if [ ! -f "$KEY_FILE" ]; then
+          if [ ! -f ".certs/privkey.pem" ]; then
              echo "No private key found, skipping SXG generation."
              exit 0
           fi
+          
+          echo "Generating cert.cbor..."
+          # Note: Real production use should fetch fresh OCSP response and pass -ocsp
+          gen-certurl -pem .certs/fullchain.pem -output dist/cert.cbor
+          
+          CERT_FILE=".certs/cert.pem"
+          KEY_FILE=".certs/privkey.pem"
+          CERT_URL="https://$DOMAIN/cert.cbor"
           
           echo "Generating SXG files for $DOMAIN..."
           
@@ -112,9 +119,6 @@ jobs:
             sxg_file="${html_file}.sxg"
             
             # Construct the URL for this file
-            # dist/index.html -> https://perito.barcelona/
-            # dist/about/index.html -> https://perito.barcelona/about/
-            
             rel_path="${html_file#dist/}"
             if [ "$rel_path" == "index.html" ]; then
               url_path=""
@@ -133,6 +137,7 @@ jobs:
               -content "$html_file" \
               -certificate "$CERT_FILE" \
               -privateKey "$KEY_FILE" \
+              -certUrl "$CERT_URL" \
               -date $(date -u +%Y-%m-%dT%H:%M:%SZ) \
               -expire 168h \
               -o "$sxg_file" \
