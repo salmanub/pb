@@ -107,7 +107,7 @@ jobs:
           
           echo "Generating cert.cbor..."
           # Note: Real production use should fetch fresh OCSP response and pass -ocsp
-          gen-certurl -pem .certs/fullchain.pem -output dist/cert.cbor
+          gen-certurl -pem .certs/fullchain.pem > dist/cert.cbor
           
           CERT_FILE=".certs/cert.pem"
           KEY_FILE=".certs/privkey.pem"
