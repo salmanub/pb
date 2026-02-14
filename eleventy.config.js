@@ -109,9 +109,74 @@ export default function (eleventyConfig) {
     return Image.generateHTML(metadata, imageAttributes);
   });
 
-  // ... (favicon code omitted for brevity passing through) ...
+  // Leer el contenido del favicon SVG como Data URI (opcional)
+  const faviconPath = path.join(__dirname, "src", "assets", "images", "logos", "favicon.txt");
+  const faviconSVGDataURI = fs.existsSync(faviconPath)
+    ? fs.readFileSync(faviconPath, "utf8").trim()
+    : null;
 
-  // ... (markdown config passing through) ...
+  // Shortcode para favicons
+  eleventyConfig.addShortcode("favicons", function () {
+    return `
+      <!-- Favicons básicos -->
+      ${faviconSVGDataURI ? `<link rel="icon" type="image/svg+xml" href="${faviconSVGDataURI}">` : ''}
+      <link rel="icon" type="image/png" sizes="96x96" href="https://perito.barcelona/assets/icons/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="48x48" href="https://perito.barcelona/assets/icons/favicon-48x48.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="https://perito.barcelona/assets/icons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://perito.barcelona/assets/icons/favicon-16x16.png">
+      
+      <!-- PWA/Mobile icons -->
+      <link rel="apple-touch-icon" sizes="180x180" href="https://perito.barcelona/assets/icons/apple-touch-icon.png">
+      <link rel="mask-icon" href="https://perito.barcelona/assets/icons/safari-pinned-tab.svg" color="#06b6d4">
+      
+      <!-- Manifest y configuración del navegador -->
+      <link rel="manifest" href="https://perito.barcelona/site.webmanifest">
+      <meta name="msapplication-TileColor" content="#06b6d4">
+      <meta name="theme-color" content="#06b6d4">
+    `;
+  });
+
+  // Configurar markdown-it
+  const md = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  });
+
+  // Añadir filtro markdown
+  eleventyConfig.addFilter("markdown", function (content) {
+    if (!content) {
+      console.warn("Se intentó renderizar contenido Markdown nulo o vacío");
+      return "";
+    }
+    try {
+      return md.render(content);
+    } catch (error) {
+      console.error("Error al renderizar Markdown:", error);
+      return `<p class="text-red-600">Error al procesar contenido: ${error.message}</p>`;
+    }
+  });
+
+  // Añadir filtro para comprobar si un valor es un array
+  eleventyConfig.addFilter("isArray", function (value) {
+    return Array.isArray(value);
+  });
+
+  // Añadir filtro default para valores nulos o undefined
+  eleventyConfig.addFilter("default", function (value, defaultValue) {
+    return (value !== null && value !== undefined) ? value : defaultValue;
+  });
+
+  // Shortcodes para capturar CSS y JS de componentes anidados
+  eleventyConfig.addPairedShortcode("css", function (content) {
+    this.page.css = (this.page.css || "") + content;
+    return "";
+  });
+
+  eleventyConfig.addPairedShortcode("js", function (content) {
+    this.page.js = (this.page.js || "") + content;
+    return "";
+  });
 
   // compile tailwind before eleventy processes the files
   eleventyConfig.on('eleventy.before', async () => {
