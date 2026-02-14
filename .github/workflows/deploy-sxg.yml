@@ -1,0 +1,144 @@
+
+name: Cloudflare Pages & SXG Deployment
+
+on:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: '0 0 * * 1' # Renew check weekly
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+  id-token: write
+
+env:
+  DOMAIN: perito.barcelona
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Project
+        run: npm run build
+
+      # --- CERTIFICATE MANAGEMENT (ACME.SH + GTS) ---
+      - name: Install acme.sh
+        run: |
+          wget -O -  https://get.acme.sh | sh -s email=info@perito.barcelona
+          
+      - name: Issue/Renew Certificate (GTS)
+        env:
+          CF_Token: ${{ secrets.CF_DNS_API_TOKEN }}
+          CF_Account_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          mkdir -p .certs
+          
+          # Try to restore cert from secrets if available (as files)
+          if [ ! -z "${{ secrets.SXG_CERT_PEM }}" ]; then
+            echo "${{ secrets.SXG_CERT_PEM }}" > .certs/cert.pem
+            echo "${{ secrets.SXG_KEY_PEM }}" > .certs/key.pem
+          fi
+
+          ~/.acme.sh/acme.sh --issue \
+            --server google \
+            --domain "$DOMAIN" \
+            --dns dns_cf \
+            --eab-kid "${{ secrets.GTS_EAB_KID }}" \
+            --eab-hmac-key "${{ secrets.GTS_EAB_HMAC }}" \
+            --keylength ec-256 \
+            --days 60 \
+            --force \
+            --fullchain-file .certs/fullchain.pem \
+            --key-file       .certs/privkey.pem \
+            --cert-file      .certs/cert.pem
+
+          # If successful, export to secrets for next time
+          if [ -f .certs/privkey.pem ]; then
+             echo "Certificate obtained successfully."
+             # Use gh cli to update secrets
+             echo "${{ secrets.GH_PAT }}" | gh auth login --with-token
+             gh secret set SXG_CERT_PEM < .certs/cert.pem
+             gh secret set SXG_KEY_PEM < .certs/privkey.pem
+             # Also fullchain might be needed for OCSP stapling if we did that, but for SXG we need specific format
+          fi
+
+      # --- SXG GENERATION ---
+      - name: Install gen-signedexchange
+        run: |
+          # Install using Go (easiest way to get the binary)
+          if ! command -v go &> /dev/null; then
+             echo "Go not found, installing..."
+             sudo apt-get update && sudo apt-get install -y golang-go
+          fi
+          
+          go install github.com/WICG/webpackage/go/signedexchange/cmd/gen-signedexchange@latest
+          echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
+
+      - name: Generate SXG Files
+        run: |
+          # We need to process all HTML files in dist/
+          # Using the certificate and private key we just got/restored
+          
+          CERT_FILE=".certs/cert.pem"
+          KEY_FILE=".certs/privkey.pem"
+          
+          if [ ! -f "$KEY_FILE" ]; then
+             echo "No private key found, skipping SXG generation."
+             exit 0
+          fi
+          
+          echo "Generating SXG files for $DOMAIN..."
+          
+          find dist -name "*.html" | while read html_file; do
+            sxg_file="${html_file}.sxg"
+            
+            # Construct the URL for this file
+            # dist/index.html -> https://perito.barcelona/
+            # dist/about/index.html -> https://perito.barcelona/about/
+            
+            rel_path="${html_file#dist/}"
+            if [ "$rel_path" == "index.html" ]; then
+              url_path=""
+            elif [[ "$rel_path" == */index.html ]]; then
+              url_path="${rel_path%/index.html}/"
+            else
+              url_path="${rel_path}"
+            fi
+            
+            full_url="https://$DOMAIN/$url_path"
+            
+            echo "Signing $full_url -> $sxg_file"
+            
+            gen-signedexchange \
+              -uri "$full_url" \
+              -content "$html_file" \
+              -certificate "$CERT_FILE" \
+              -privateKey "$KEY_FILE" \
+              -date $(date -u +%Y-%m-%dT%H:%M:%SZ) \
+              -expire 604800 \
+              -o "$sxg_file" \
+              -validityUrl "https://$DOMAIN/resource.validity.msg"
+              
+          done
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: perito11ty # Adjust if your pages project name is different
+          directory: dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
