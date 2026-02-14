@@ -52,12 +52,17 @@ jobs:
             echo "${{ secrets.SXG_KEY_PEM }}" > .certs/key.pem
           fi
 
+          # Register account with EAB explicitly first
+          ~/.acme.sh/acme.sh --register-account \
+            --server google \
+            --eab-kid "${{ secrets.GTS_EAB_KID }}" \
+            --eab-hmac-key "${{ secrets.GTS_EAB_HMAC }}" \
+            --email info@perito.barcelona
+
           ~/.acme.sh/acme.sh --issue \
             --server google \
             --domain "$DOMAIN" \
             --dns dns_cf \
-            --eab-kid "${{ secrets.GTS_EAB_KID }}" \
-            --eab-hmac-key "${{ secrets.GTS_EAB_HMAC }}" \
             --keylength ec-256 \
             --days 60 \
             --force \
