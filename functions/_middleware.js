@@ -45,16 +45,22 @@ export const onRequest = async (context) => {
             const sxgResponse = await env.ASSETS.fetch(sxgUrl);
 
             if (sxgResponse.ok) {
-                // 5. Serve the SXG file if found, with correct headers
+                // 5. Serve the SXG file if found
+
+                // Read body as ArrayBuffer to avoid streaming issues 
+                // and ensure correct content-length calculation in PSI
+                const sxgBody = await sxgResponse.arrayBuffer();
+
                 const newHeaders = new Headers(sxgResponse.headers);
                 newHeaders.set("Content-Type", "application/signed-exchange;v=b3");
                 newHeaders.set("X-Content-Type-Options", "nosniff");
 
-                // Remove headers that might cause connection issues if mismatch occurs
-                // Let the platform calculate length or use chunked encoding
-                newHeaders.delete("Content-Length");
+                // Clean up headers before serving fixed buffer
+                newHeaders.delete("Content-Encoding");
+                newHeaders.delete("Transfer-Encoding");
+                newHeaders.set("Content-Length", sxgBody.byteLength.toString());
 
-                return new Response(sxgResponse.body, {
+                return new Response(sxgBody, {
                     status: sxgResponse.status,
                     statusText: sxgResponse.statusText,
                     headers: newHeaders
