@@ -50,6 +50,10 @@ export const onRequest = async (context) => {
                 newHeaders.set("Content-Type", "application/signed-exchange;v=b3");
                 newHeaders.set("X-Content-Type-Options", "nosniff");
 
+                // Remove headers that might cause connection issues if mismatch occurs
+                // Let the platform calculate length or use chunked encoding
+                newHeaders.delete("Content-Length");
+
                 return new Response(sxgResponse.body, {
                     status: sxgResponse.status,
                     statusText: sxgResponse.statusText,
