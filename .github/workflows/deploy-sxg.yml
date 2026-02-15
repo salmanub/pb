@@ -51,10 +51,8 @@ jobs:
           mkdir -p .certs
           
           # Restore certs from secrets if available
-          if [ ! -z "${{ secrets.SXG_CERT_PEM }}" ]; then
-            echo "${{ secrets.SXG_CERT_PEM }}" > .certs/cert.pem
-            echo "${{ secrets.SXG_KEY_PEM }}" > .certs/key.pem
-          fi
+          rm -rf .certs
+          mkdir -p .certs
 
           # Attempt 1: Register with existing secrets
           set +e
@@ -104,9 +102,7 @@ jobs:
 
           # Issue or Renew Certificate
           # Generate/Ensure Private Key
-          if [ ! -f .certs/privkey.pem ]; then
-              openssl ecparam -name prime256v1 -genkey -noout -out .certs/privkey.pem
-          fi
+          openssl ecparam -name prime256v1 -genkey -noout -out .certs/privkey.pem
 
           # Generate CSR with CanSignHttpExchanges extension (OID: 1.3.6.1.4.1.11129.2.1.22)
           cat > sxg_openssl.cnf <<EOF
