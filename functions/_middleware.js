@@ -16,10 +16,14 @@ export const onRequest = async (context) => {
     const hasExtension = url.pathname.match(/\.[0-9a-z]+$/i);
     const isExcluded = hasExtension && !url.pathname.endsWith(".html");
 
+    // Check User Agent to bypass SXG for Lighthouse/PSI debugging
+    const userAgent = request.headers.get("User-Agent") || "";
+    const isPSI = /Chrome-Lighthouse|Google Page Speed Insights/i.test(userAgent);
+
     // SXG Enabled (Restored)
     const sxgEnabled = true;
 
-    if (sxgEnabled && supportsSxg && !isExcluded) {
+    if (sxgEnabled && supportsSxg && !isExcluded && !isPSI) {
         try {
             // 3. Construct the path to the potential .sxg file
             let sxgPath = url.pathname;

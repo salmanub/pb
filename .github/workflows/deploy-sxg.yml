@@ -151,7 +151,7 @@ jobs:
             --server https://dv-sxg.acme-v02.api.pki.goog/directory \
             --dns dns_cf \
             --force \
-            --dnssleep 120 \
+            --dnssleep 20 \
             --fullchain-file .certs/fullchain.pem \
             --cert-file      .certs/cert.pem \
             --ca-file        .certs/ca.pem
