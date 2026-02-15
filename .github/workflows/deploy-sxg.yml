@@ -69,7 +69,8 @@ jobs:
             --force \
             --fullchain-file .certs/fullchain.pem \
             --key-file       .certs/privkey.pem \
-            --cert-file      .certs/cert.pem
+            --cert-file      .certs/cert.pem \
+            --ca-file        .certs/ca.pem
 
           # If successful, export to secrets for next time
           if [ -f .certs/privkey.pem ]; then
@@ -78,7 +79,6 @@ jobs:
              echo "${{ secrets.GH_PAT }}" | gh auth login --with-token
              gh secret set SXG_CERT_PEM < .certs/cert.pem
              gh secret set SXG_KEY_PEM < .certs/privkey.pem
-             # Also fullchain might be needed for OCSP stapling if we did that, but for SXG we need specific format
           fi
 
       # --- SXG GENERATION ---
@@ -96,18 +96,33 @@ jobs:
 
       - name: Generate SXG Files
         run: |
-          # 1. Generate Certificate Chain (CBOR)
-          # We ideally need an OCSP response stapled, but for now let's generate the chain from fullchain
-          # acme.sh might have fetched ocsp in .certs/ folder?
+          # 1. Generate Certificate Chain (CBOR) with OCSP Stapling
           
           if [ ! -f ".certs/privkey.pem" ]; then
              echo "No private key found, skipping SXG generation."
              exit 0
           fi
+
+          echo "Fetching OCSP response..."
+          # Extract OCSP URI
+          OCSP_URI=$(openssl x509 -noout -ocsp_uri -in .certs/cert.pem)
+          echo "OCSP URI: $OCSP_URI"
           
-          echo "Generating cert.cbor..."
-          # Note: Real production use should fetch fresh OCSP response and pass -ocsp
-          gen-certurl -pem .certs/fullchain.pem > dist/cert.cbor
+          # Fetch OCSP response
+          # We use the CA file we requested from acme.sh as issuer
+          openssl ocsp -issuer .certs/ca.pem \
+                       -cert .certs/cert.pem \
+                       -url "$OCSP_URI" \
+                       -respout .certs/ocsp.resp \
+                       -noverify || echo "Warning: OCSP fetch failed or verification skipped"
+
+          echo "Generating cert.cbor with stapled OCSP..."
+          if [ -f .certs/ocsp.resp ]; then
+             gen-certurl -pem .certs/fullchain.pem -ocsp .certs/ocsp.resp > dist/cert.cbor
+          else
+             echo "Warning: No OCSP response available. Generating without stapling (might fail in Google Cache)."
+             gen-certurl -pem .certs/fullchain.pem > dist/cert.cbor
+          fi
           
           CERT_FILE=".certs/cert.pem"
           KEY_FILE=".certs/privkey.pem"
