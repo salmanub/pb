@@ -1,0 +1,127 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: Integration tests
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  cloudflare_worker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create self-signed cert
+        working-directory: credentials
+        run: |
+          cargo run -p tools -- gen-dev-cert --domain example.org
+      - run: npm install -g @cloudflare/wrangler
+      - name: Gen config
+        run: |
+          cargo run -p tools -- gen-config --use-ci-mode --input input.example.yaml --artifact artifact.yaml --platform cloudflare
+      - name: Build
+        working-directory: cloudflare_worker
+        run: |
+          ./publish.sh build
+      # TODO: ./publish.sh dev & curl | dump-signedexchange -verify
+  fastly_compute:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create self-signed cert
+        working-directory: credentials
+        run: |
+          cargo run -p tools -- gen-dev-cert --domain example.org
+      - name: Install fastly CLI
+        run: |
+          wget -nv https://github.com/fastly/cli/releases/download/v0.39.2/fastly_0.39.2_linux_amd64.deb
+          sudo apt-get install ./fastly_0.39.2_linux_amd64.deb
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          target: wasm32-wasi
+      - name: Gen config
+        run: |
+          cargo run -p tools -- gen-config --use-ci-mode --input input.example.yaml --artifact artifact.yaml --platform fastly
+      - name: Build and validate
+        working-directory: fastly_compute
+        run: |
+          fastly compute build
+          fastly compute validate -p pkg/sxg.tar.gz
+      - name: Serve
+        working-directory: fastly_compute
+        run: |
+          fastly compute serve --skip-build | tee log &
+          until grep -m1 'Listening on http' log; do sleep 1; done
+          kill $!
+      # TODO: curl | dump-signedexchange -verify
+  # TODO: Get rid of this once dump-signedexchange works on the above two cases.
+  gen_sxg:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create self-signed cert
+        working-directory: credentials
+        run: |
+          cargo run -p tools -- gen-dev-cert --domain example.org
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '>=1.16'
+      - run: go install github.com/WICG/webpackage/go/signedexchange/cmd/dump-signedexchange@latest
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          target: wasm32-wasi
+      - name: Generate and validate
+        run: |
+          cargo run -p tools -- gen-config --use-ci-mode --input input.example.yaml --artifact artifact.yaml --platform http-server
+          cargo run -p tools -- gen-sxg -- \
+            http_server/config.yaml credentials/cert.pem credentials/issuer.pem \
+            test.cert test.sxg
+          dump-signedexchange -i test.sxg -cert test.cert -verify
+  playground:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+            playground/node_modules
+          key: ${{ runner.os }}-playground-${{ hashFiles('**/Cargo.lock', 'playground/package.json') }}
+      - name: Gen Dev certificate
+        working-directory: credentials
+        run: |
+          cargo run -p tools -- gen-dev-cert --domain example.org
+      - name: Gen config
+        run: |
+          cargo run -p tools -- gen-config --use-ci-mode --input input.example.yaml --artifact artifact.yaml --platform cloudflare
+      - name: Build wasm
+        working-directory: cloudflare_worker
+        run: |
+          npm install -g @cloudflare/wrangler
+          wrangler build
+      - name: Build playground
+        working-directory: playground
+        run: |
+          npm install
+          npm run build
+          node dist/index.js --single-url https://example.com/
