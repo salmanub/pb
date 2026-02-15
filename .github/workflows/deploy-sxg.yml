@@ -206,6 +206,10 @@ jobs:
 
       # sxg-rs is now part of the repo, no checkout needed
 
+      - name: Update Rust Dependencies
+        working-directory: sxg-rs
+        run: cargo update
+
       - name: Build sxg-rs Worker
         working-directory: sxg-rs/cloudflare_worker
         run: |
