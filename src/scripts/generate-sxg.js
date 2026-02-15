@@ -51,6 +51,21 @@ async function main() {
     console.log(`🚀 Starting SXG generation for ${CONFIG.domain}...`);
     console.log(`   Concurrency: ${LIMIT}`);
 
+    // Generate cert.cbor to ensure consistency with signing key
+    console.log('📜 Generating cert.cbor...');
+    try {
+        await runCommand('gen-signedexchange', [
+            '-mode', 'cert',
+            '-certificate', CONFIG.certFile,
+            '-privateKey', CONFIG.keyFile,
+            '-o', path.join(CONFIG.distDir, 'cert.cbor')
+        ]);
+        console.log('   ✅ cert.cbor generated successfully.');
+    } catch (err) {
+        console.error('   ❌ Failed to generate cert.cbor:', err.message);
+        process.exit(1);
+    }
+
     // Find all HTML files
     const files = await glob(`${CONFIG.distDir}/**/*.html`, {
         ignore: [`${CONFIG.distDir}/404.html`, `${CONFIG.distDir}/admin/**`]

@@ -79,5 +79,28 @@ export const onRequest = async (context) => {
     }
 
     // Fallback: serve the standard HTML or asset response
-    return next();
+    const response = await next();
+
+    // Ensure correct Content-Type for SXG certificate and validity files
+    if (url.pathname.endsWith("/cert.cbor")) {
+        const newHeaders = new Headers(response.headers);
+        newHeaders.set("Content-Type", "application/cert-chain+cbor");
+        return new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: newHeaders
+        });
+    }
+
+    if (url.pathname.endsWith("/resource.validity.msg")) {
+        const newHeaders = new Headers(response.headers);
+        newHeaders.set("Content-Type", "application/cbor");
+        return new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: newHeaders
+        });
+    }
+
+    return response;
 };
