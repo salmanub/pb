@@ -64,40 +64,11 @@ jobs:
           REG_STATUS=$?
           set -e
 
-          # If registration failed, try to fetch new EAB credentials
+          # If registration failed, exit with error
           if [ $REG_STATUS -ne 0 ]; then
-             echo "⚠️ Registration failed or keys expired. Attempting to fetch new EAB credentials via Service Account..."
-             
-             if [ -z "$GOOGLE_SERVICE_ACCOUNT_EMAIL" ] || [ -z "$GOOGLE_PRIVATE_KEY" ]; then
-                echo "❌ Cannot fetch new EAB: Missing Google Service Account secrets."
-                exit 1
-             fi
-
-             # Run fetch script and capture the last line (JSON)
-             EAB_JSON=$(node src/scripts/fetch-gts-eab.js | tail -n 1)
-             
-             # Parse JSON using node
-             NEW_KID=$(echo "$EAB_JSON" | node -e 'console.log(JSON.parse(require("fs").readFileSync(0, "utf-8")).keyId)')
-             NEW_HMAC=$(echo "$EAB_JSON" | node -e 'console.log(JSON.parse(require("fs").readFileSync(0, "utf-8")).b64MacKey)')
-             
-             if [ -z "$NEW_KID" ] || [ "$NEW_KID" == "undefined" ]; then
-                echo "❌ Failed to parse new EAB credentials."
-                exit 1
-             fi
-
-             echo "✅ Obtained new EAB Key ID: ${NEW_KID:0:5}..."
-             
-             # Attempt 2: Register with new credentials
-             ~/.acme.sh/acme.sh --register-account \
-                --server google \
-                --eab-kid "$NEW_KID" \
-                --eab-hmac-key "$NEW_HMAC" \
-                --email info@perito.barcelona
-
-             # Update GitHub Secrets for future runs
-             gh secret set GTS_EAB_KID --body "$NEW_KID" --repo "${{ github.repository }}"
-             gh secret set GTS_EAB_HMAC --body "$NEW_HMAC" --repo "${{ github.repository }}"
-             echo "✅ GitHub Secrets updated with new EAB credentials."
+             echo "❌ ACME Registration failed. Your GTS_EAB_KID or GTS_EAB_HMAC secrets might be expired or invalid."
+             echo "Please generate new EAB credentials in Google Cloud Shell and update the GitHub repository secrets."
+             exit 1
           fi
 
           # Issue or Renew Certificate
