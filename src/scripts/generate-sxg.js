@@ -10,10 +10,16 @@ const CONFIG = {
     certFile: '.certs/cert.pem',
     keyFile: '.certs/privkey.pem',
     // Hardcoded as per workflow fixes
-    certUrl: 'https://perito.barcelona/cert.cbor',
-    validityUrl: 'https://perito.barcelona/resource.validity.msg',
+    // Use env vars or dynamic defaults based on domain
+    certUrl: process.env.CERT_URL || `https://${process.env.DOMAIN || 'perito.barcelona'}/cert.cbor`,
+    validityUrl: process.env.VALIDITY_URL || `https://${process.env.DOMAIN || 'perito.barcelona'}/resource.validity.msg`,
     expire: '168h'
 };
+
+console.log('🔧 SXG Configuration:');
+console.log(`   Domain: ${CONFIG.domain}`);
+console.log(`   Cert URL: ${CONFIG.certUrl}`);
+console.log(`   Validity URL: ${CONFIG.validityUrl}`);
 
 // Concurrency limit - aggressive but safe for Go binaries
 const LIMIT = Math.max(4, os.cpus().length * 2);
