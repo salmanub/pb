@@ -202,8 +202,8 @@ jobs:
         run: |
           echo "Generating SXG files statically..."
           mkdir -p dist
-          # Run the Node.js script
-          node src/scripts/generate-sxg.js
+          # Run the Node.js script (CommonJS)
+          node src/scripts/generate-sxg.cjs
 
       - name: Deploy Content to Cloudflare Pages
         uses: cloudflare/pages-action@v1
