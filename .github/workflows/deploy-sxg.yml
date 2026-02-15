@@ -142,66 +142,106 @@ jobs:
              fi
           fi
 
-      # --- SXG GENERATION ---
-      - name: Install gen-signedexchange & gen-certurl
+      # --- PREPARE CONTENT & CERT.CBOR ---
+      - name: Install gen-certurl
         run: |
-          # Install using Go
+          # Install Go if needed
           if ! command -v go &> /dev/null; then
-             echo "Go not found, installing..."
              sudo apt-get update && sudo apt-get install -y golang-go
           fi
-          
-          go install github.com/WICG/webpackage/go/signedexchange/cmd/gen-signedexchange@latest
           go install github.com/WICG/webpackage/go/signedexchange/cmd/gen-certurl@latest
           echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
 
-      - name: Generate SXG Files
+      - name: Generate cert.cbor for Pages
         run: |
-          # 1. Generate Certificate Chain (CBOR) with OCSP Stapling
-          
           if [ ! -f ".certs/privkey.pem" ]; then
-             echo "No private key found, skipping SXG generation."
+             echo "No private key found, skipping."
              exit 0
           fi
 
-          echo "Fetching OCSP response..."
-          # Extract OCSP URI
+          # Extract OCSP
           OCSP_URI=$(openssl x509 -noout -ocsp_uri -in .certs/cert.pem)
           echo "OCSP URI: $OCSP_URI"
           
-          # Fetch OCSP response
-          # We use the CA file we requested from acme.sh as issuer
+          # Fetch OCSP
           openssl ocsp -issuer .certs/ca.pem \
                        -cert .certs/cert.pem \
                        -url "$OCSP_URI" \
                        -respout .certs/ocsp.resp \
-                       -noverify || echo "Warning: OCSP fetch failed or verification skipped"
+                       -noverify || echo "Warning: OCSP fetch failed"
 
-          echo "Generating cert.cbor with stapled OCSP..."
+          echo "Generating cert.cbor..."
+          # Note: We use fullchain for the CBOR
           if [ -f .certs/ocsp.resp ]; then
              gen-certurl -pem .certs/fullchain.pem -ocsp .certs/ocsp.resp > dist/cert.cbor
           else
-             echo "Warning: No OCSP response available. Generating without stapling (might fail in Google Cache)."
              gen-certurl -pem .certs/fullchain.pem > dist/cert.cbor
           fi
-          
-          CERT_FILE=".certs/cert.pem"
-          KEY_FILE=".certs/privkey.pem"
-          export CERT_URL="https://$DOMAIN/cert.cbor"
-          
-          echo "Generating SXG files for $DOMAIN... using Cert URL: $CERT_URL"
-          echo "Runnning parallel generation script..."
-          
-          # Run the parallel Node.js script
-          # Pass valid env vars just in case we enhance it later
-          export DOMAIN="$DOMAIN"
-          node src/scripts/generate-sxg.js
 
-      - name: Deploy to Cloudflare Pages
+      - name: Deploy Content to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: pb # Updated to match user request
+          projectName: pb
           directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      # --- SXG WORKER DEPLOYMENT (sxg-rs) ---
+      - name: Setup Rust for Worker
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          target: wasm32-unknown-unknown
+
+      - name: Install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+      - name: Checkout sxg-rs
+        uses: actions/checkout@v4
+        with:
+          repository: google/sxg-rs
+          path: sxg-rs
+
+      - name: Build sxg-rs Worker
+        working-directory: sxg-rs/cloudflare_worker
+        run: |
+          wasm-pack build --target no-modules
+
+      - name: Configure Worker (wrangler.toml)
+        working-directory: sxg-rs/cloudflare_worker
+        run: |
+          cat > wrangler.toml <<EOF
+          name = "sxg-signer"
+          main = "worker.js"
+          compatibility_date = "2023-01-01"
+          account_id = "${{ secrets.CLOUDFLARE_ACCOUNT_ID }}"
+          workers_dev = false
+          
+          # Route traffic from perito.barcelona to this worker
+          [[routes]]
+          pattern = "perito.barcelona/*"
+          zone_name = "perito.barcelona"
+
+          [vars]
+          HTML_HOST = "pb.pages.dev"
+          CERT_URL = "https://perito.barcelona/cert.cbor"
+          VALIDITY_URL = "https://perito.barcelona/resource.validity.msg"
+          EOF
+
+      - name: Deploy Worker & Upload Secrets
+        working-directory: sxg-rs/cloudflare_worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          # Install wrangler locally to avoid global version issues
+          npm install wrangler
+
+          # 1. Deploy worker code
+          npx wrangler deploy
+
+          # 2. Upload Secrets (Cert & Key)
+          # Piping secrets prevents them from being logged
+          npx wrangler secret put SXG_PRIVATE_KEY_PEM < ../../.certs/privkey.pem
+          npx wrangler secret put SXG_CERT_CHAIN_PEM < ../../.certs/fullchain.pem
