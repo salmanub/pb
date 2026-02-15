@@ -16,14 +16,29 @@
         gtag('config', '{{ metadata.site.googleAnalyticsId }}');
     }
 
-    // Load GA after page load
-    window.addEventListener('load', function() {
+    // Optimization: Load GA only after user interaction or delay
+    const loadEvents = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
+    let loaded = false;
+
+    function triggerLoad() {
+        if (loaded) return;
+        loaded = true;
+        
+        // Clean up event listeners immediately
+        loadEvents.forEach(e => window.removeEventListener(e, triggerLoad));
+
+        // Use requestIdleCallback if available, otherwise run immediately
         if ('requestIdleCallback' in window) {
             requestIdleCallback(() => loadGA());
         } else {
-            // Fallback for older browsers or if requestIdleCallback is not available
-            setTimeout(loadGA, 1000); 
+            loadGA();
         }
-    });
+    }
+
+    // Add event listeners for user interaction
+    loadEvents.forEach(e => window.addEventListener(e, triggerLoad, { passive: true }));
+
+    // Fallback: load after 5 seconds if no interaction occurs
+    setTimeout(triggerLoad, 5000);
 </script>
 {% endif %}
