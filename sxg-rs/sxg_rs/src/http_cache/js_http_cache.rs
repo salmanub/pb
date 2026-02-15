@@ -54,7 +54,7 @@ impl HttpCache for JsHttpCache {
             .map_err(|_| anyhow!("Error invoking JS put"))?;
         let ret = wasm_bindgen_futures::JsFuture::from(js_sys::Promise::from(ret));
         let ret = ret.await.map_err(|_| anyhow!("Error returned by JS put"))?;
-        let _ret = serde_wasm_bindgen::from_value(ret)
+        let _ret: () = serde_wasm_bindgen::from_value(ret)
             .map_err(|e| Error::msg(e.to_string()).context("parsing ack from JS"))?;
         Ok(())
     }
