@@ -193,6 +193,18 @@ jobs:
              gen-certurl -pem .certs/fullchain.pem > dist/cert.cbor
           fi
 
+      - name: Install gen-signedexchange
+        run: |
+          go install github.com/WICG/webpackage/go/signedexchange/cmd/gen-signedexchange@latest
+          echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
+
+      - name: Generate SXG Files
+        run: |
+          echo "Generating SXG files statically..."
+          mkdir -p dist
+          # Run the Node.js script
+          node src/scripts/generate-sxg.js
+
       - name: Deploy Content to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
@@ -201,74 +213,3 @@ jobs:
           projectName: pb
           directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-
-      # --- SXG WORKER DEPLOYMENT (sxg-rs) ---
-
-      - name: Cache Cargo registry
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-            sxg-rs/target
-          key: ${{ runner.os }}-cargo-${{ hashFiles('sxg-rs/**/Cargo.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-cargo-
-
-      - name: Setup Rust for Worker
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          target: wasm32-unknown-unknown
-
-      - name: Install wasm-pack
-        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
-
-      # sxg-rs is now part of the repo, no checkout needed
-
-      - name: Update Rust Dependencies
-        working-directory: sxg-rs
-        run: cargo update
-
-      - name: Build sxg-rs Worker
-        working-directory: sxg-rs/cloudflare_worker
-        run: |
-          wasm-pack build --target no-modules
-
-      - name: Configure Worker (wrangler.toml)
-        working-directory: sxg-rs/cloudflare_worker
-        run: |
-          cat > wrangler.toml <<EOF
-          name = "sxg-signer"
-          main = "worker.js"
-          compatibility_date = "2023-01-01"
-          account_id = "${{ secrets.CLOUDFLARE_ACCOUNT_ID }}"
-          workers_dev = false
-          
-          # Route traffic from perito.barcelona to this worker
-          [[routes]]
-          pattern = "perito.barcelona/*"
-          zone_name = "perito.barcelona"
-
-          [vars]
-          HTML_HOST = "pb.pages.dev"
-          CERT_URL = "https://perito.barcelona/cert.cbor"
-          VALIDITY_URL = "https://perito.barcelona/resource.validity.msg"
-          EOF
-
-      - name: Deploy Worker & Upload Secrets
-        working-directory: sxg-rs/cloudflare_worker
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          # Install wrangler locally to avoid global version issues
-          npm install wrangler
-
-          # 1. Deploy worker code
-          npx wrangler deploy
-
-          # 2. Upload Secrets (Cert & Key)
-          # Piping secrets prevents them from being logged
-          npx wrangler secret put SXG_PRIVATE_KEY_PEM < ../../.certs/privkey.pem
-          npx wrangler secret put SXG_CERT_CHAIN_PEM < ../../.certs/fullchain.pem
