@@ -30,7 +30,6 @@
 
 {# Script del formulario - Se incluirá solo en los layouts donde el formulario sea necesario #}
 {% js %}
-<script>
 document.addEventListener('DOMContentLoaded', () => {
     const formWrapper = document.getElementById('typeform-wrapper');
     let steps = Array.from(formWrapper.querySelectorAll('.typeform-step'));
@@ -357,5 +356,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSteps();
     showStep(0);
 });
-</script>
 {% endjs %}
