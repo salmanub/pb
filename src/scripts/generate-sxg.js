@@ -96,6 +96,11 @@ async function main() {
 
                 // Run gen-signedexchange
                 // gen-signedexchange -uri ... -content ...
+
+                // Set date to 1 hour ago to avoid "invalid timestamp" (clock skew) errors
+                const date = new Date();
+                date.setHours(date.getHours() - 1);
+
                 const args = [
                     '-uri', uri,
                     '-content', file,
@@ -103,6 +108,7 @@ async function main() {
                     '-privateKey', CONFIG.keyFile,
                     '-certUrl', CONFIG.certUrl,
                     '-validityUrl', CONFIG.validityUrl,
+                    '-date', date.toISOString(),
                     '-o', outputFile,
                     '-expire', CONFIG.expire
                 ];
