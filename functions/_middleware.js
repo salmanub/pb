@@ -27,12 +27,16 @@ export const onRequest = async (context) => {
         try {
             // 3. Construct the path to the potential .sxg file
             let sxgPath = url.pathname;
+
+            // Only serve SXG for paths ending in / or .html to ensure URL matching
             if (sxgPath.endsWith("/")) {
                 sxgPath += "index.html.sxg";
             } else if (sxgPath.endsWith(".html")) {
                 sxgPath += ".sxg";
             } else {
-                sxgPath += "/index.html.sxg";
+                // If path is a directory without slash (e.g. /blog), let CF redirect to /blog/ first
+                // Serving SXG here would cause a URL mismatch (signed with /, browser has none)
+                return next();
             }
 
             // 4. Fetch the SXG asset

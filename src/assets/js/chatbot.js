@@ -25,7 +25,7 @@ class PeritoChatbot {
 
     // Inicializar
     this.init();
-    console.log('[Chatbot] v2.1 loaded - Mobile Menu Support');
+    // console.log('[Chatbot] v2.1 loaded - Mobile Menu Support');
   }
 
   /**
@@ -182,7 +182,7 @@ class PeritoChatbot {
       setTimeout(() => this.toggleChat(true), 1000);
     }
 
-    console.log('[Chatbot] Inicializado correctamente');
+    // console.log('[Chatbot] Inicializado correctamente');
   }
 
   /**
@@ -643,7 +643,7 @@ class PeritoChatbot {
     }
 
     // Console log para debug
-    console.log('[Chatbot Analytics]', eventName, properties);
+    // console.log('[Chatbot Analytics]', eventName, properties);
   }
 
   /**
@@ -694,7 +694,7 @@ class PeritoChatbot {
    * Descarga el historial de chat
    */
   downloadHistory() {
-    console.log('[Chatbot] Iniciando descarga de historial...');
+    // console.log('[Chatbot] Iniciando descarga de historial...');
     const messages = Array.from(this.elements.messages.children);
 
     if (messages.length === 0) {
@@ -738,7 +738,7 @@ class PeritoChatbot {
       }
     });
 
-    console.log(`[Chatbot] Procesados ${count} mensajes`);
+    // console.log(`[Chatbot] Procesados ${count} mensajes`);
 
     try {
       const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
@@ -751,7 +751,7 @@ class PeritoChatbot {
       setTimeout(() => {
         document.body.removeChild(a);
         window.URL.revokeObjectURL(url);
-        console.log('[Chatbot] Descarga completada');
+        // console.log('[Chatbot] Descarga completada');
       }, 100);
     } catch (e) {
       console.error('[Chatbot] Error generando descarga:', e);
