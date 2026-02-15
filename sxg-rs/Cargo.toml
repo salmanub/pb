@@ -1,9 +1,0 @@
-[workspace]
-members = [
-  "cloudflare_worker",
-  "distributor",
-  "fastly_compute",
-  "http_server",
-  "sxg_rs",
-  "tools",
-]
