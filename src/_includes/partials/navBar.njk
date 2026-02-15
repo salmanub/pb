@@ -331,10 +331,20 @@
     </div>
 </div>
 
-<!-- Botón flotante "Hablar con un perito" - Estilo Etiqueta Premium Clean (Dark Cyan + Orange Text/Ping) -->
+<!-- Botón flotante "Hablar con un perito" - Estilo Etiqueta Premium con Intro -->
+<style>
+@keyframes flash-orange {
+    0% { border-left-color: #f59e0b; border-left-width: 4px; }
+    40% { border-left-color: #f59e0b; border-left-width: 4px; }
+    100% { border-left-color: rgba(255,255,255,0.1); border-left-width: 1px; }
+}
+.animate-flash-orange {
+    animation: flash-orange 1.5s ease-in-out forwards;
+}
+</style>
 <a href="tel:{{metadata.contact.phoneNumber}}" 
    id="talkToExpert" 
-   class="hidden md:flex fixed top-1/2 right-0 z-[100] transform -translate-y-1/2 items-center justify-end bg-gradient-to-bl from-cyan-900 via-cyan-800 to-cyan-700 text-white rounded-l-xl shadow-2xl transition-all duration-500 ease-out group pl-5 py-4 pr-4 hover:pl-10 hover:pr-6 hover:bg-cyan-800 border-y border-white/10 border-l border-white/10 origin-right"
+   class="hidden md:flex fixed top-1/2 right-0 z-[100] transform -translate-y-1/2 items-center justify-end bg-gradient-to-bl from-cyan-900 via-cyan-800 to-cyan-700 text-white rounded-l-xl shadow-2xl transition-all duration-500 ease-out group pl-5 py-4 pr-4 hover:pl-10 hover:pr-6 hover:bg-cyan-800 border-y border-white/10 border-l border-white/10 origin-right animate-flash-orange"
    style="box-shadow: -8px 8px 30px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05) inset;">
     
     <div class="flex flex-col items-end mr-3 transition-all duration-500 group-hover:mr-5">
