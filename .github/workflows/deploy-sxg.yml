@@ -204,11 +204,7 @@ jobs:
       - name: Install wasm-pack
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 
-      - name: Checkout sxg-rs
-        uses: actions/checkout@v4
-        with:
-          repository: google/sxg-rs
-          path: sxg-rs
+      # sxg-rs is now part of the repo, no checkout needed
 
       - name: Build sxg-rs Worker
         working-directory: sxg-rs/cloudflare_worker
