@@ -21,7 +21,11 @@ export const onRequest = async (context) => {
     // We want to serve normal HTML to PSI to avoid connection errors if SXG is flaky for it
     const isPSI = /Chrome-Lighthouse|Google Page Speed Insights/i.test(userAgent);
 
-    if (supportsSxg && !isExcluded && !isPSI) {
+    // SXG DISABLED: Current certificate lacks required CanSignHttpExchanges extension.
+    // Re-enable this when a valid certificate is installed.
+    const sxgEnabled = false;
+
+    if (sxgEnabled && supportsSxg && !isExcluded && !isPSI) {
         try {
             // 3. Construct the path to the potential .sxg file
             // Standard 11ty output Structure:
