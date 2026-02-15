@@ -2215,6 +2215,9 @@ href="https://perito.barcelona/">
       margin-bottom: 0;
     }
   }
+  .-mt-0\.5 {
+    margin-top: calc(var(--spacing) * -0.5);
+  }
   .-mt-1 {
     margin-top: calc(var(--spacing) * -1);
   }
@@ -2259,6 +2262,9 @@ href="https://perito.barcelona/">
   }
   .mt-auto {
     margin-top: auto;
+  }
+  .-mr-0\.5 {
+    margin-right: calc(var(--spacing) * -0.5);
   }
   .-mr-1 {
     margin-right: calc(var(--spacing) * -1);
@@ -2404,6 +2410,9 @@ href="https://perito.barcelona/">
   .h-2 {
     height: calc(var(--spacing) * 2);
   }
+  .h-2\.5 {
+    height: calc(var(--spacing) * 2.5);
+  }
   .h-3 {
     height: calc(var(--spacing) * 3);
   }
@@ -2538,6 +2547,9 @@ href="https://perito.barcelona/">
   }
   .w-2 {
     width: calc(var(--spacing) * 2);
+  }
+  .w-2\.5 {
+    width: calc(var(--spacing) * 2.5);
   }
   .w-2\/3 {
     width: calc(2/3 * 100%);
@@ -8652,11 +8664,11 @@ href="https://perito.barcelona/">
     </div>
 </div>
 
-<!-- Botón flotante "Hablar con un perito" - Estilo Etiqueta Premium con Acento Naranja -->
+<!-- Botón flotante "Hablar con un perito" - Estilo Etiqueta Premium Clean (Dark Cyan + Orange Text/Ping) -->
 <a href="tel:+34 614 194 985" 
    id="talkToExpert" 
-   class="hidden md:flex fixed top-1/2 right-0 z-[100] transform -translate-y-1/2 items-center justify-end bg-gradient-to-bl from-cyan-900 via-cyan-800 to-cyan-700 text-white rounded-l-xl shadow-2xl transition-all duration-500 ease-out group pl-5 py-4 pr-4 hover:pl-10 hover:pr-6 hover:bg-cyan-800 border-y border-white/10 border-l-[6px] border-l-amber-500 origin-right"
-   style="box-shadow: -8px 8px 30px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.1) inset;">
+   class="hidden md:flex fixed top-1/2 right-0 z-[100] transform -translate-y-1/2 items-center justify-end bg-gradient-to-bl from-cyan-900 via-cyan-800 to-cyan-700 text-white rounded-l-xl shadow-2xl transition-all duration-500 ease-out group pl-5 py-4 pr-4 hover:pl-10 hover:pr-6 hover:bg-cyan-800 border-y border-white/10 border-l border-white/10 origin-right"
+   style="box-shadow: -8px 8px 30px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05) inset;">
     
     <div class="flex flex-col items-end mr-3 transition-all duration-500 group-hover:mr-5">
         <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest leading-tight opacity-90 group-hover:opacity-100 group-hover:tracking-[0.2em] transition-all duration-500">Consulta</span>
@@ -8667,10 +8679,10 @@ href="https://perito.barcelona/">
         <svg class="w-5 h-5 text-white/90 group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>
-        <!-- Ping dot orange -->
-        <span class="absolute top-0 right-0 -mt-1 -mr-1 flex h-3 w-3">
+        <!-- Ping dot orange (Restored) -->
+        <span class="absolute top-0 right-0 -mt-0.5 -mr-0.5 flex h-2.5 w-2.5">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500 border border-white/20 shadow-sm"></span>
         </span>
     </div>
 </a>
@@ -10455,18 +10467,14 @@ href="https://perito.barcelona/">
   <button 
     id="chat-button" 
     aria-label="Abrir chat de asistencia técnica"
-    class="w-14 h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 rounded-full bg-gradient-to-br from-cyan-900 via-cyan-800 to-cyan-700 border-2 border-white/10 cursor-pointer shadow-2xl flex items-center justify-center transition-all duration-300 ease-out hover:scale-110 hover:shadow-cyan-900/50 hover:bg-cyan-800 hover:border-amber-500/50 active:scale-95 group relative"
+    class="w-14 h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 rounded-full bg-gradient-to-br from-cyan-900 via-cyan-800 to-cyan-700 border-2 border-white/10 cursor-pointer shadow-2xl flex items-center justify-center transition-all duration-300 ease-out hover:scale-110 hover:shadow-cyan-900/50 hover:bg-cyan-800 active:scale-95 group relative"
     style="box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.1) inset;"
   >
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 fill-white transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-12 group-hover:fill-amber-50">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 fill-white transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-12">
       <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
     </svg>
     
-    <!-- Ping dot orange -->
-    <span class="absolute top-2 right-2 md:top-3 md:right-3 flex h-3 w-3">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500 border border-white/20"></span>
-    </span>
+
   </button>
 
   
