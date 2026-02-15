@@ -100,7 +100,7 @@ async function main() {
                     '-privateKey', CONFIG.keyFile,
                     '-certUrl', CONFIG.certUrl,
                     '-validityUrl', CONFIG.validityUrl,
-                    '-output', outputFile,
+                    '-o', outputFile,
                     '-expire', CONFIG.expire
                 ];
 
