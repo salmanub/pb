@@ -105,6 +105,7 @@ jobs:
           openssl ecparam -name prime256v1 -genkey -noout -out .certs/privkey.pem
 
           # Generate CSR with CanSignHttpExchanges extension (OID: 1.3.6.1.4.1.11129.2.1.22)
+          # IMPORTANT: Must include SAN (Subject Alternative Name) or CA might reject/modify it.
           cat > sxg_openssl.cnf <<EOF
           [ req ]
           distinguished_name = req_distinguished_name
@@ -115,6 +116,7 @@ jobs:
           CN = $DOMAIN
 
           [ v3_req ]
+          subjectAltName = DNS:$DOMAIN
           1.3.6.1.4.1.11129.2.1.22 = ASN1:NULL
           EOF
 
