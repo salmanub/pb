@@ -22,7 +22,7 @@ export const onRequest = async (context) => {
     const isPSI = /Chrome-Lighthouse|Google Page Speed Insights/i.test(userAgent);
 
     // SXG Enabled: Workflow updated to request CanSignHttpExchanges extension.
-    const sxgEnabled = true;
+    const sxgEnabled = false; // Disabled to investigate 503 errors
 
     if (sxgEnabled && supportsSxg && !isExcluded && !isPSI) {
         try {
