@@ -68,6 +68,7 @@ export const onRequest = async (context) => {
                 newHeaders.delete("Content-Encoding");
                 newHeaders.delete("Transfer-Encoding");
                 newHeaders.set("Content-Length", sxgBody.byteLength.toString());
+                newHeaders.set("Cache-Control", "public, max-age=600");
 
                 return new Response(sxgBody, {
                     status: sxgResponse.status,
@@ -88,6 +89,7 @@ export const onRequest = async (context) => {
     if (url.pathname.endsWith("/cert.cbor")) {
         const newHeaders = new Headers(response.headers);
         newHeaders.set("Content-Type", "application/cert-chain+cbor");
+        newHeaders.set("Cache-Control", "public, max-age=600");
         return new Response(response.body, {
             status: response.status,
             statusText: response.statusText,
@@ -98,6 +100,7 @@ export const onRequest = async (context) => {
     if (url.pathname.endsWith("/resource.validity.msg")) {
         const newHeaders = new Headers(response.headers);
         newHeaders.set("Content-Type", "application/cbor");
+        newHeaders.set("Cache-Control", "public, max-age=600");
         return new Response(response.body, {
             status: response.status,
             statusText: response.statusText,
