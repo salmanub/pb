@@ -97,9 +97,8 @@ jobs:
                 --email info@perito.barcelona
 
              # Update GitHub Secrets for future runs
-             echo "$GH_TOKEN" | gh auth login --with-token
-             gh secret set GTS_EAB_KID --body "$NEW_KID"
-             gh secret set GTS_EAB_HMAC --body "$NEW_HMAC"
+             gh secret set GTS_EAB_KID --body "$NEW_KID" --repo "${{ github.repository }}"
+             gh secret set GTS_EAB_HMAC --body "$NEW_HMAC" --repo "${{ github.repository }}"
              echo "✅ GitHub Secrets updated with new EAB credentials."
           fi
 
@@ -121,9 +120,8 @@ jobs:
              echo "✅ Certificate obtained successfully."
              # Use gh cli to update secrets
              if [ -z "$GH_TOKEN" ]; then echo "Warning: GH_PAT not set, skipping secret update"; else
-                 echo "$GH_TOKEN" | gh auth login --with-token
-                 gh secret set SXG_CERT_PEM < .certs/cert.pem
-                 gh secret set SXG_KEY_PEM < .certs/privkey.pem
+                 gh secret set SXG_CERT_PEM < .certs/cert.pem --repo "${{ github.repository }}"
+                 gh secret set SXG_KEY_PEM < .certs/privkey.pem --repo "${{ github.repository }}"
              fi
           fi
 
