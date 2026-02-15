@@ -463,9 +463,6 @@ href="https://perito.barcelona/">
   .bottom-8 {
     bottom: calc(var(--spacing) * 8);
   }
-  .bottom-24 {
-    bottom: calc(var(--spacing) * 24);
-  }
   .bottom-\[100px\] {
     bottom: 100px;
   }
@@ -2268,6 +2265,12 @@ href="https://perito.barcelona/">
   .mr-4 {
     margin-right: calc(var(--spacing) * 4);
   }
+  .mr-14 {
+    margin-right: calc(var(--spacing) * 14);
+  }
+  .mr-16 {
+    margin-right: calc(var(--spacing) * 16);
+  }
   .mb-0 {
     margin-bottom: calc(var(--spacing) * 0);
   }
@@ -2753,6 +2756,10 @@ href="https://perito.barcelona/">
     --tw-translate-y: calc(var(--spacing) * 5);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .translate-y-full {
+    --tw-translate-y: 100%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .scale-95 {
     --tw-scale-x: 95%;
     --tw-scale-y: 95%;
@@ -3009,9 +3016,21 @@ href="https://perito.barcelona/">
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
+  .rounded-t-xl {
+    border-top-left-radius: var(--radius-xl);
+    border-top-right-radius: var(--radius-xl);
+  }
+  .rounded-l-2xl {
+    border-top-left-radius: var(--radius-2xl);
+    border-bottom-left-radius: var(--radius-2xl);
+  }
   .rounded-l-lg {
     border-top-left-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
+  }
+  .rounded-r-none {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
   .rounded-br-sm {
     border-bottom-right-radius: calc(var(--radius) - 4px);
@@ -3130,6 +3149,9 @@ href="https://perito.barcelona/">
   }
   .border-slate-700\/50 {
     border-color: color-mix(in oklab, var(--color-slate-700) 50%, transparent);
+  }
+  .border-slate-800 {
+    border-color: var(--color-slate-800);
   }
   .border-slate-900 {
     border-color: var(--color-slate-900);
@@ -3292,6 +3314,9 @@ href="https://perito.barcelona/">
   }
   .bg-slate-900\/90 {
     background-color: color-mix(in oklab, var(--color-slate-900) 90%, transparent);
+  }
+  .bg-slate-900\/95 {
+    background-color: color-mix(in oklab, var(--color-slate-900) 95%, transparent);
   }
   .bg-teal-500\/10 {
     background-color: color-mix(in oklab, var(--color-teal-500) 10%, transparent);
@@ -3772,6 +3797,9 @@ href="https://perito.barcelona/">
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
   }
+  .pr-5 {
+    padding-right: calc(var(--spacing) * 5);
+  }
   .pb-1 {
     padding-bottom: calc(var(--spacing) * 1);
   }
@@ -4219,6 +4247,10 @@ href="https://perito.barcelona/">
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .shadow-\[0_-4px_6px_-1px_rgba\(0\,0\,0\,0\.3\)\] {
+    --tw-shadow: 0 -4px 6px -1px var(--tw-shadow-color, rgba(0,0,0,0.3));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -4252,6 +4284,9 @@ href="https://perito.barcelona/">
   }
   .shadow-cyan-500\/30 {
     --tw-shadow-color: color-mix(in oklab, var(--color-cyan-500) 30%, transparent);
+  }
+  .shadow-cyan-900\/20 {
+    --tw-shadow-color: color-mix(in oklab, var(--color-cyan-900) 20%, transparent);
   }
   .shadow-slate-200 {
     --tw-shadow-color: var(--color-slate-200);
@@ -4922,6 +4957,14 @@ href="https://perito.barcelona/">
   .placeholder\:text-slate-400 {
     &::placeholder {
       color: var(--color-slate-400);
+    }
+  }
+  .hover\:-translate-x-2 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-translate-x: calc(var(--spacing) * -2);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
     }
   }
   .hover\:translate-x-1 {
@@ -5623,9 +5666,34 @@ href="https://perito.barcelona/">
       line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
+  .md\:right-5 {
+    @media (width >= 48rem) {
+      right: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:right-6 {
+    @media (width >= 48rem) {
+      right: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:bottom-6 {
+    @media (width >= 48rem) {
+      bottom: calc(var(--spacing) * 6);
+    }
+  }
   .md\:bottom-8 {
     @media (width >= 48rem) {
       bottom: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:bottom-24 {
+    @media (width >= 48rem) {
+      bottom: calc(var(--spacing) * 24);
+    }
+  }
+  .md\:left-\[50\%\] {
+    @media (width >= 48rem) {
+      left: 50%;
     }
   }
   .md\:order-1 {
@@ -5683,6 +5751,11 @@ href="https://perito.barcelona/">
       margin-top: 90px;
     }
   }
+  .md\:mr-0 {
+    @media (width >= 48rem) {
+      margin-right: calc(var(--spacing) * 0);
+    }
+  }
   .md\:mb-10 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 10);
@@ -5696,6 +5769,11 @@ href="https://perito.barcelona/">
   .md\:mb-28 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 28);
+    }
+  }
+  .md\:ml-4 {
+    @media (width >= 48rem) {
+      margin-left: calc(var(--spacing) * 4);
     }
   }
   .md\:block {
@@ -5766,6 +5844,23 @@ href="https://perito.barcelona/">
   .md\:w-auto {
     @media (width >= 48rem) {
       width: auto;
+    }
+  }
+  .md\:flex-none {
+    @media (width >= 48rem) {
+      flex: none;
+    }
+  }
+  .md\:-translate-x-\[50\%\] {
+    @media (width >= 48rem) {
+      --tw-translate-x: calc(50% * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .md\:translate-y-2 {
+    @media (width >= 48rem) {
+      --tw-translate-y: calc(var(--spacing) * 2);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
   .md\:grid-cols-2 {
@@ -5856,6 +5951,17 @@ href="https://perito.barcelona/">
       }
     }
   }
+  .md\:rounded-2xl {
+    @media (width >= 48rem) {
+      border-radius: var(--radius-2xl);
+    }
+  }
+  .md\:border {
+    @media (width >= 48rem) {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
   .md\:border-l {
     @media (width >= 48rem) {
       border-left-style: var(--tw-border-style);
@@ -5873,6 +5979,11 @@ href="https://perito.barcelona/">
       border-color: var(--color-slate-200);
     }
   }
+  .md\:bg-slate-900 {
+    @media (width >= 48rem) {
+      background-color: var(--color-slate-900);
+    }
+  }
   .md\:p-5 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 5);
@@ -5888,6 +5999,11 @@ href="https://perito.barcelona/">
       padding: calc(var(--spacing) * 10);
     }
   }
+  .md\:px-6 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+  }
   .md\:px-8 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 8);
@@ -5901,6 +6017,16 @@ href="https://perito.barcelona/">
   .md\:px-\[5\%\] {
     @media (width >= 48rem) {
       padding-inline: 5%;
+    }
+  }
+  .md\:py-2 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 2);
+    }
+  }
+  .md\:py-4 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 4);
     }
   }
   .md\:py-12 {
@@ -6007,6 +6133,12 @@ href="https://perito.barcelona/">
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
+  .md\:text-xs {
+    @media (width >= 48rem) {
+      font-size: var(--text-xs);
+      line-height: var(--tw-leading, var(--text-xs--line-height));
+    }
+  }
   .md\:text-\[2\.5rem\] {
     @media (width >= 48rem) {
       font-size: 2.5rem;
@@ -6021,6 +6153,15 @@ href="https://perito.barcelona/">
     @media (width >= 48rem) {
       overflow-wrap: normal;
       word-break: normal;
+    }
+  }
+  .md\:hover\:bg-black {
+    @media (width >= 48rem) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-black);
+        }
+      }
     }
   }
   .lg\:sticky {
@@ -7288,7 +7429,111 @@ href="https://perito.barcelona/">
     </style>
   
 
-    
+    <script>
+/**
+ * Instant Navigation / Smart Prefetching
+ * Optimized to prevent 503 errors and server overload.
+ * Strategy: Low priority 'prefetch' on idle + High priority on hover/interaction.
+ */
+(function() {
+    const config = {
+        // Limit concurrent prefetches to avoid network congestion
+        maxConcurrent: 2,
+        // Delay before prefetching on hover (ms) to avoid accidental triggers
+        hoverDelay: 100,
+        // Exclude patterns
+        exclude: /\.(pdf|zip|jpg|png|gif|webp|mp4)$|^tel:|^mailto:|^#|^javascript:/i
+    };
+
+    let queue = [];
+    let active = 0;
+    let seen = new Set();
+
+    // Check if network is slow/data-saver enabled
+    const isSlowConnection = navigator.connection && 
+        (navigator.connection.saveData || (navigator.connection.effectiveType && navigator.connection.effectiveType.includes('2g')));
+
+    if (isSlowConnection) {
+        console.log('Skipping prefetch due to slow connection');
+        return;
+    }
+
+    // Helper: Add link tag
+    function addPrefetch(url) {
+        if (seen.has(url)) return;
+        seen.add(url);
+        
+        const link = document.createElement('link');
+        link.rel = 'prefetch'; // Low priority hint to browser
+        link.href = url;
+        document.head.appendChild(link);
+    }
+
+    // Interaction Observers
+    function setupInteraction() {
+        let hoverTimer;
+        
+        document.addEventListener('mouseover', (e) => {
+            const link = e.target.closest('a');
+            if (!link || !link.href) return;
+            
+            // Only internal links
+            if (link.hostname !== window.location.hostname) return;
+            if (config.exclude.test(link.href)) return;
+            if (link.href === window.location.href) return;
+
+            // Clear previous timer
+            if (hoverTimer) clearTimeout(hoverTimer);
+
+            // Fetch on hover intent
+            hoverTimer = setTimeout(() => {
+                addPrefetch(link.href);
+            }, config.hoverDelay);
+        }, { passive: true });
+
+        document.addEventListener('mouseout', () => {
+            if (hoverTimer) clearTimeout(hoverTimer);
+        }, { passive: true });
+
+        // Touch start for mobile instant load
+        document.addEventListener('touchstart', (e) => {
+            const link = e.target.closest('a');
+            if (link && link.href && link.hostname === window.location.hostname) {
+                if (!config.exclude.test(link.href)) {
+                     addPrefetch(link.href);
+                }
+            }
+        }, { passive: true });
+    }
+
+    // Idle Preloader (Optional: preload key nav items when idle)
+    function setupIdlePreload() {
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => {
+                // Preload high priority nav links (e.g. in header)
+                const navLinks = document.querySelectorAll('header nav a, .nav-link');
+                navLinks.forEach(link => {
+                    if (link.hostname === window.location.hostname && !config.exclude.test(link.href)) {
+                        addPrefetch(link.href);
+                    }
+                });
+            });
+        }
+    }
+
+    // Init
+    if (document.readyState === 'complete') {
+        setupInteraction();
+        setTimeout(setupIdlePreload, 2000); // Delay idle load
+    } else {
+        window.addEventListener('load', () => {
+            setupInteraction();
+            setTimeout(setupIdlePreload, 2000);
+        });
+    }
+})();
+</script>
+
 </head>
 <body itemscope itemtype="https://schema.org/WebPage" class="bg-white text-slate-900 selection:bg-cyan-100 selection:text-cyan-900">
     <header>
@@ -7748,7 +7993,7 @@ href="https://perito.barcelona/">
 </header>
 
 <!-- Mobile Menu -->
-<div id="mobileMenu" class="fixed top-[70px] lg:top-[80px] inset-x-0 bottom-0 bg-white transform translate-x-full transition-transform duration-300 ease-in-out z-40 flex flex-col peer-checked:translate-x-0 border-t border-slate-100">
+<div id="mobileMenu" class="fixed top-[70px] lg:top-[80px] inset-x-0 bottom-0 pb-24 bg-white transform translate-x-full transition-transform duration-300 ease-in-out z-40 flex flex-col peer-checked:translate-x-0 border-t border-slate-100">
     <div class="max-w-[1600px] mx-auto px-[5%] flex-1 overflow-y-auto flex flex-col">
         <!-- Navigation -->
         <nav class="flex-1 flex items-stretch">
@@ -8184,13 +8429,47 @@ href="https://perito.barcelona/">
 </div>
 
 <!-- Botón flotante para hablar con un perito -->
-<a href="tel:+34 614 194 985" id="talkToExpert" class="fixed bottom-[100px] md:bottom-8 right-5 z-[100] flex items-center justify-center px-6 py-3 font-bold uppercase tracking-wider text-sm rounded-xl transition-all duration-300 bg-cyan-600 text-white animate-soft-glow hover:bg-cyan-700 hover:-translate-y-1">
+<a href="tel:+34 614 194 985" id="talkToExpert" class="hidden md:flex fixed top-1/2 right-0 z-[100] transform -translate-y-1/2 items-center justify-center pl-6 pr-5 py-4 font-bold uppercase tracking-wider text-sm rounded-l-2xl rounded-r-none transition-all duration-300 bg-cyan-600 text-white shadow-2xl hover:bg-cyan-500 hover:-translate-x-2 shadow-cyan-900/20">
     <svg class="w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
     </svg>
     Hablar con un perito
 </a>
 
+
+<style>
+    #menuButton.active span:first-child {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #menuButton.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    #menuButton.active span:last-child {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    @keyframes softGlow {
+        0%, 100% {
+            box-shadow: 0 4px 6px -1px rgba(8, 145, 178, 0.2), 
+                       0 2px 4px -1px rgba(8, 145, 178, 0.1);
+        }
+        50% {
+            box-shadow: 0 10px 15px -3px rgba(8, 145, 178, 0.4), 
+                       0 4px 6px -2px rgba(8, 145, 178, 0.2);
+            transform: translateY(-2px);
+        }
+    }
+
+    .animate-soft-glow {
+        animation: softGlow 3s ease-in-out infinite;
+    }
+
+    /* Pause animation on hover */
+    .animate-soft-glow:hover {
+        animation-play-state: paused;
+    }
+</style>
 
 
 
@@ -9911,6 +10190,20 @@ href="https://perito.barcelona/">
     
 
     
+    
+
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-slate-900 border-t border-slate-800 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.3)] md:hidden h-16 flex items-center px-4 justify-between gap-4">
+    
+    <a href="tel:+34614194985" class="flex-1 flex items-center justify-center bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-sm tracking-wide py-2.5 rounded-lg shadow-lg active:scale-95 transition-all mr-16">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+        Hablar con un Perito
+    </a>
+    
+    
+    
+</div>
 
     
     
@@ -9918,7 +10211,7 @@ href="https://perito.barcelona/">
       
 
 
-<div id="perito-chat-widget" class="fixed bottom-24 right-5 z-[9999] font-sans">
+<div id="perito-chat-widget" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[9999] font-sans">
   
   <button 
     id="chat-button" 
@@ -10437,20 +10730,11 @@ href="https://perito.barcelona/">
         <script>
             const menuButton = document.getElementById('menuButton');
             const mobileMenu = document.getElementById('mobileMenu');
-            const talkToExpert = document.getElementById('talkToExpert');
 
             menuButton.addEventListener('click', function() {
                 const isMenuOpen = !mobileMenu.classList.contains('translate-x-full');
                 mobileMenu.classList.toggle('translate-x-full');
                 menuButton.classList.toggle('active');
-                
-                if (isMenuOpen) {
-                    talkToExpert.classList.remove('hidden');
-                    talkToExpert.classList.add('flex');
-                } else {
-                    talkToExpert.classList.add('hidden');
-                    talkToExpert.classList.remove('flex');
-                }
             });
         </script>
 
@@ -10514,15 +10798,30 @@ href="https://perito.barcelona/">
         gtag('config', 'G-BHS8JR7NSY');
     }
 
-    // Load GA after page load
-    window.addEventListener('load', function() {
+    // Optimization: Load GA only after user interaction or delay
+    const loadEvents = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
+    let loaded = false;
+
+    function triggerLoad() {
+        if (loaded) return;
+        loaded = true;
+        
+        // Clean up event listeners immediately
+        loadEvents.forEach(e => window.removeEventListener(e, triggerLoad));
+
+        // Use requestIdleCallback if available, otherwise run immediately
         if ('requestIdleCallback' in window) {
             requestIdleCallback(() => loadGA());
         } else {
-            // Fallback for older browsers or if requestIdleCallback is not available
-            setTimeout(loadGA, 1000); 
+            loadGA();
         }
-    });
+    }
+
+    // Add event listeners for user interaction
+    loadEvents.forEach(e => window.addEventListener(e, triggerLoad, { passive: true }));
+
+    // Fallback: load after 5 seconds if no interaction occurs
+    setTimeout(triggerLoad, 5000);
 </script>
 
         
