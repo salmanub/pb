@@ -1,9 +1,8 @@
 const { google } = require('googleapis');
 
 async function main() {
-    // Credentials injected via Environment Variables in GitHub Actions
     const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-    // Private key might contain literal \n characters if passed from GitHub Secrets
+    // Handle newlines in secret
     const key = (process.env.GOOGLE_PRIVATE_KEY || '').replace(/\\n/g, '\n');
 
     if (!email || !key) {
@@ -11,7 +10,6 @@ async function main() {
         process.exit(1);
     }
 
-    // Authenticate
     const auth = new google.auth.GoogleAuth({
         credentials: {
             client_email: email,
@@ -21,10 +19,33 @@ async function main() {
     });
 
     const client = await auth.getClient();
-    const projectId = await auth.getProjectId();
 
-    // Call Public CA API to create a new EAB key
-    // Docs: https://cloud.google.com/certificate-manager/docs/public-ca-tutorial
+    // Robust Project ID detection
+    let projectId;
+    try {
+        projectId = await auth.getProjectId();
+    } catch (e) {
+        // Provide hint but don't fail yet, try fallback
+    }
+
+    if (!projectId && email.includes('@')) {
+        // Fallback: extract from service account email
+        // e.g. sa-name@PROJECT-ID.iam.gserviceaccount.com
+        const parts = email.split('@');
+        if (parts.length > 1) {
+            const domainParts = parts[1].split('.');
+            // Typically the project ID is the first segment of the domain
+            projectId = domainParts[0];
+        }
+    }
+
+    if (!projectId) {
+        throw new Error("Unable to determine Google Cloud Project ID. Automatic detection failed and cannot extract from email.");
+    }
+
+    // Log to stderr so it doesn't break the JSON output on stdout
+    console.error(`Using Project ID: ${projectId}`);
+
     const url = `https://publicca.googleapis.com/v1beta1/projects/${projectId}/locations/global/externalAccountKeys`;
 
     const res = await client.request({
@@ -32,7 +53,6 @@ async function main() {
         method: 'POST',
     });
 
-    // Output JSON for the workflow to capture
     console.log(JSON.stringify(res.data));
 }
 
