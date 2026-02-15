@@ -12,7 +12,7 @@
         {{ indexCSS | safe }}
         {{ page.css | safe }}
     </style>{% block pageStyles %}{% endblock pageStyles %}
-    {# {% include "components/instant-nav.njk" %} #}
+    {# Instant Nav Removed - Using Speculation Rules API #}
 </head>
 <body itemscope itemtype="https://schema.org/WebPage" class="bg-white text-slate-900 selection:bg-cyan-100 selection:text-cyan-900">
     <header>
@@ -256,7 +256,36 @@
             {{ page.js | safe }}
         </script>
         {% include "components/analytics.njk" %}
-        {# {% include "components/instant-nav.njk" %} #}
+        
+        <!-- Speculation Rules API (Native Instant Loading) -->
+        <script type="speculationrules">
+        {
+          "prefetch": [
+            {
+              "source": "document",
+              "where": {
+                "and": [
+                  { "href_matches": "/*" },
+                  { "not": { "href_matches": "/*\\.(image|video|audio|pdf|zip)" } }
+                ]
+              },
+              "eagerness": "moderate"
+            }
+          ],
+          "prerender": [
+            {
+              "source": "document",
+              "where": {
+                "and": [
+                   { "href_matches": "/*" },
+                   { "not": { "href_matches": "/*\\.(image|video|audio|pdf|zip)" } }
+                ]
+              },
+              "eagerness": "conservative"
+            }
+          ]
+        }
+        </script>
     {% endblock scripts %}
 </body>
 </html>
