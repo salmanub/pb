@@ -1,7 +1,7 @@
 ---
 layout: "layouts/service-pillar.njk"
-title: "Expert Witness Reports in Barcelona | Expert Judicial Engineers"
-description: "We produce technical, party-appointed, and judicial expert reports in Barcelona. Our findings on pathologies, hidden defects, and construction disputes are the key evidence for your claim."
+title: "Expert Witness Report in Barcelona | Technical Opinions for Court"
+description: "Technical expert report in Barcelona for legal proceedings and claims. Party-appointed and court-appointed reports with legal validity."
 permalink: "/en/expert-witness-reports/"
 lang: "en"
 
@@ -25,20 +25,20 @@ translations:
 
 eleventyNavigation:
   key: "Expert Reports"
-  title: "Expert Reports"
+  title: "Technical Opinions"
   notshow: false
   order: 1
 
 hero:
-  title: "Technical Expert Reports"
-  strong: "The Key Evidence for Your Claim"
-  subtitle: "Objective assessments of pathologies, construction defects, and building disputes"
+  title: "The Technical Expert Report"
+  strong: "The Defintive Proof"
+  subtitle: "What is the legal validity of our Expert Opinion?"
   description: "As chartered engineering experts, we produce expert reports with the highest technical rigor to provide you with solid, clear, and defensible evidence. Our goal is to translate technical complexity into irrefutable arguments to protect your interests."
   intro: "A well-founded expert report is the essential tool for confident negotiation, conflict resolution, and, if necessary, obtaining a favorable ruling in legal proceedings."
   image: "src/assets/images/informe-pericial-patologias-barcelona.jpg"
 
 sections:
-  title: "What is an Expert Report and Why is it Essential?"
+  title: "Structure and Legal Validity of our Opinions"
   what_is:
     text: >
       An expert report is a technical document written by a qualified expert that analyzes a fact or state of affairs from a technical perspective to present objective conclusions. In construction, it is the decisive evidence to demonstrate the cause of damage, assess negligence, or quantify repairs.
@@ -51,7 +51,7 @@ sections:
       - "Provides technical solidity in negotiations with insurers and builders"
 
 serviceCluster:
-  title: "Types of Expert Reports We Produce"
+  title: "Types of Reports: Party-Appointed vs. Court-Appointed"
   intro: "We offer an expert solution for every need, adapting our analysis to the objective and context of the claim:"
   services:
     - title: "Party-Appointed Expert Report"
@@ -112,9 +112,9 @@ serviceCluster:
         - "Defense for the contractor"
 
 process:
-  title: "Our Working Methodology"
+  title: "Methodology: How We Prepare Expert Evidence"
   steps:
-    - title: "Preliminary Study and Viability"
+    - title: "Viability Pre-Report"
       description: "We analyze your case and available documentation to confirm the viability of the expert assessment."
     - title: "Technical Inspection and Data Collection"
       description: "We visit the property or construction site to conduct a thorough inspection and gather all evidence."
@@ -156,7 +156,7 @@ cta:
     url: "/en/contact/"
 ---
 
-## What Exactly is a Technical Expert Report and Why is it Your Best Tool?
+## The Importance of Expert Evidence in Legal Proceedings
 
 In the construction sector, opinions are many, but technical facts are irrefutable. An **expert report** is precisely that: a technical, objective, and documented analysis of a construction reality, prepared by an independent expert. It's not an opinion; it's the translation of a complex problem (a crack, moisture, cost overrun) into a language of causes, consequences, and responsibilities based on regulations and good engineering practice.
 
@@ -171,7 +171,7 @@ Although both seek to clarify technical facts, their origin and context are diff
 
 In both scenarios, our methodology and rigor are identical, guaranteeing the quality and objectivity of the final opinion.
 
-## In What Situations is an Expert Report Essential?
+## Damage Assessment and Causal Link: The Core of the Report
 
 If you find yourself in any of the following situations, an expert report is not an option, it's a necessity:
 
@@ -181,7 +181,7 @@ If you find yourself in any of the following situations, an expert report is not
 * **Insurance Claims:** To challenge the insurer's damage assessment and obtain the compensation that truly corresponds.
 * **Legal Proceedings:** As fundamental evidence to demonstrate technical facts before a court.
 
-## Our Process: From Analysis to Court Ratification
+## Ratification in Court: Defending the Opinion
 
 Our work goes beyond a simple visit. We follow a methodical process to ensure each conclusion is solid and defensible:
 
@@ -190,6 +190,6 @@ Our work goes beyond a simple visit. We follow a methodical process to ensure ea
 3. **Analysis and Writing:** We cross-reference inspection data with applicable regulations, project documentation, and our experience to write a clear, well-structured report with well-founded conclusions.
 4. **Delivery and Defense:** We deliver the report and explain it to you in detail. If the case goes to court, we attend to **ratify and defend our conclusions** before the judge and parties.
 
-## The Advantage of a Civil Engineering Expert
+## Civil Engineer Signature: Guarantee of Technical Solvency
 
 Choosing an expert with advanced training in Civil Engineering brings a deeper vision. Our knowledge of structural calculations, materials science, geotechnics, and large infrastructure regulations allows us to analyze complex problems from an integral perspective, guaranteeing the highest technical reliability of our conclusions.

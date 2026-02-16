@@ -29,7 +29,7 @@ hero:
   alt: "Perito de construcción revisando estructura en Barcelona"
   intro: |
     <p>Cuando surge un conflicto en una obra o propiedad, necesita más que una opinión: necesita certeza técnica. Como <strong>Peritos de Construcción en Barcelona</strong>, actuamos como sus ojos técnicos, identificando la raíz del problema y defendiendo su posición con solvencia ante la parte contraria o el juez.</p>
-    <p>No deje que un defecto constructivo se convierta en una pesadilla legal. <a href="#contacto">Cuéntenos su caso</a> y le orientaremos sobre la viabilidad de su reclamación.</p>
+    <p>No deje que un defecto constructivo se convierta en una pesadilla legal. <a href="/contacto/">Cuéntenos su caso</a> y le orientaremos sobre la viabilidad de su reclamación.</p>
 
 keyFeatures:
   - "Ingenieros Civiles colegiados con amplia experiencia judicial"

@@ -1,9 +1,8 @@
 ---
 layout: "layouts/service-pillar.njk"
 # SEO: Título potente con las keywords principales y geolocalización.
-title: "Rapports d'Expertise à Barcelone | Experts Judiciaires Agréés"
-# SEO: Descripción activa que resume el valor y los casos de uso.
-description: "Nous rédigeons des rapports d'expertise technique, de partie et judiciaires à Barcelone. Nos avis sur les pathologies, vices cachés et litiges de chantier sont la preuve clé pour votre réclamation."
+title: "Rapport d'Expertise à Barcelone | Avis Techniques de Partie et Judiciaires"
+description: "Rapport d'expertise technique à Barcelone pour procès et réclamations. Rapports de partie, judiciaires et évaluation de dommages constructifs avec validité juridique."
 permalink: "/fr/rapports-expertise/"
 lang: "fr"
 
@@ -27,22 +26,22 @@ translations:
 
 eleventyNavigation:
   key: "Rapports d'Expertise"
-  title: "Rapports d'Expertise"
+  title: "Avis Techniques"
   notshow: false
   order: 1
 
 # Hero Section
 hero:
-  title: "Rapports d'Expertise Technique"
-  strong: "La Preuve Clé pour Votre Réclamation"
-  subtitle: "Avis objectifs sur les pathologies, malfaçons et litiges de chantier"
+  title: "Le Rapport d'Expertise Technique"
+  strong: "La Preuve Définitive"
+  subtitle: "Quelle est la validité juridique de notre Avis d'Expert ?"
   description: "En tant qu'ingénieurs experts agréés, nous rédigeons des rapports d'expertise avec la plus grande rigueur technique afin que vous disposiez d'une preuve solide, claire et défendable. Notre objectif est de traduire la complexité technique en arguments irréfutables pour protéger vos intérêts."
   intro: "Un rapport d'expertise bien fondé est l'outil essentiel pour négocier en toute sécurité, résoudre les conflits et, si nécessaire, obtenir un jugement favorable dans une procédure judiciaire."
   image: "src/assets/images/informe-pericial-patologias-barcelona.jpg"
 
 # Sección "Qué es un Informe Pericial"
 sections:
-  title: "Qu'est-ce qu'un Rapport d'Expertise et pourquoi est-il fondamental ?"
+  title: "Structure et Validité Juridique de nos Avis"
   what_is:
     text: >
       Un rapport d'expertise est un document technique rédigé par un expert qualifié, qui analyse un fait ou un état de choses d'un point de vue technique pour exposer des conclusions objectives. Dans le domaine de la construction, c'est la preuve déterminante pour démontrer la cause d'un dommage, évaluer une négligence ou quantifier une réparation.
@@ -56,7 +55,7 @@ sections:
 
 # Service Cluster: Los diferentes tipos de informes que se ofrecen
 serviceCluster:
-  title: "Types de Rapports d'Expertise que Nous Réalisons"
+  title: "Typologie de Rapports : De Partie vs. Judiciaires"
   intro: "Nous offrons une solution d'expertise pour chaque besoin, en adaptant notre analyse à l'objectif et au contexte de la réclamation :"
   services:
     - title: "Rapport d'Expertise de Partie"
@@ -118,9 +117,9 @@ serviceCluster:
 
 # Proceso de Trabajo
 process:
-  title: "Notre Méthodologie d'Intervention"
+  title: "Méthodologie : Comment nous élaborons la Preuve Technique"
   steps:
-    - title: "Étude Préalable et Faisabilité"
+    - title: "Pré-rapport de Faisabilité"
       description: "Nous analysons votre cas et la documentation disponible pour confirmer la faisabilité de l'expertise."
     - title: "Inspection Technique et Collecte de Données"
       description: "Nous visitons le bien ou le chantier pour réaliser une inspection exhaustive et recueillir toutes les preuves."
@@ -165,7 +164,7 @@ cta:
     url: "/fr/contact/"
 ---
 
-## Qu'est-ce qu'un Rapport d'Expertise Technique et Pourquoi est-il votre Meilleur Outil ?
+## L'Importance de la Preuve Technique dans le Procès
 
 Dans le secteur de la construction, les opinions sont nombreuses, mais les faits techniques sont irréfutables. Un **rapport d'expertise** est précisément cela : une analyse technique, objective et documentée d'une réalité constructive, élaborée par un expert indépendant. Ce n'est pas une opinion ; c'est la traduction d'un problème complexe (une fissure, une humidité, un surcoût) en un langage de causes, de conséquences et de responsabilités basé sur la réglementation et les bonnes pratiques de l'ingénierie.
 
@@ -180,7 +179,7 @@ Bien que les deux visent à éclaircir des faits techniques, leur origine et leu
 
 Dans les deux scénarios, notre méthodologie et notre rigueur sont identiques, garantissant la qualité et l'objectivité du rapport final.
 
-## Dans Quelles Situations un Rapport d'Expertise est-il Indispensable ?
+## Évaluation des Dommages et Lien de Causalité : Le Cœur du Rapport
 
 Si vous vous trouvez dans l'une des situations suivantes, un rapport d'expertise n'est pas une option, c'est une nécessité :
 
@@ -190,7 +189,7 @@ Si vous vous trouvez dans l'une des situations suivantes, un rapport d'expertise
 * **Réclamations auprès des Assurances :** Pour contester l'évaluation des dommages de l'assureur et obtenir l'indemnisation qui correspond réellement.
 * **Procédures Judiciaires :** Comme preuve fondamentale pour démontrer des faits techniques devant un tribunal.
 
-## Notre Processus : De l'Analyse à la Ratification au Tribunal
+## Ratification au Tribunal : La Défense du Rapport
 
 Notre travail va au-delà d'une simple visite. Nous suivons un processus méthodique pour garantir que chaque conclusion soit solide et défendable :
 
@@ -199,6 +198,6 @@ Notre travail va au-delà d'une simple visite. Nous suivons un processus méthod
 3.  **Analyse et Rédaction :** Nous croisons les données de l'inspection avec la réglementation applicable, la documentation du projet et notre expérience pour rédiger un rapport clair, bien structuré et avec des conclusions fondées.
 4.  **Remise et Défense :** Nous vous remettons le rapport et vous l'expliquons en détail. Si l'affaire va au tribunal, nous nous y rendons pour **ratifier et défendre nos conclusions** devant le juge et les parties.
 
-## L'Avantage d'un Ingénieur Expert en Génie Civil
+## Signature d'Ingénieur Civil : Garantie de Solvabilité Technique
 
 Choisir un expert avec une formation supérieure en Génie Civil apporte une vision plus approfondie. Notre connaissance du calcul des structures, de la science des matériaux, de la géotechnique et de la réglementation des grandes infrastructures nous permet d'analyser des problèmes complexes sous un angle intégral, garantissant la solvabilité technique maximale de nos conclusions.

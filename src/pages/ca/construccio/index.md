@@ -15,7 +15,7 @@ translations:
   - lang: "it"
     permalink: "/it/perito-costruzioni/"
 eleventyNavigation:
-  key: "Pèrit Construcció"
+  key: "Perito Construcción"
   title: "Pèrit Construcció"
   order: 2
   icon: <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
@@ -29,7 +29,7 @@ hero:
   alt: "Pèrit de construcció revisant estructura a Barcelona"
   intro: |
     <p>Quan sorgeix un conflicte en una obra o propietat, necessita més que una opinió: necessita certesa tècnica. Com a <strong>Pèrits de Construcció a Barcelona</strong>, actuem com els seus ulls tècnics, identificant l'arrel del problema i defensant la seva posició amb solvència davant la part contrària o el jutge.</p>
-    <p>No deixi que un defecte constructiu es converteixi en un malson legal. <a href="#contacte">Expliqui'ns el seu cas</a> i l'orientarem sobre la viabilitat de la seva reclamació.</p>
+    <p>No deixi que un defecte constructiu es converteixi en un malson legal. <a href="/ca/contacte/">Expliqui'ns el seu cas</a> i l'orientarem sobre la viabilitat de la seva reclamació.</p>
 
 keyFeatures:
   - "Enginyers Civils col·legiats amb àmplia experiència judicial"
@@ -154,7 +154,7 @@ benefits:
 ---
 ## La Nostra Funció: Enginyers al Servei de la Seva Defensa
 
-Com a **pèrits de construcció a Barcelona**, la nostra tasca va més enllà de la simple inspecció. Actuem com el nexe entre l'enginyeria i el dret, traduint patologies constructives complexes en arguments tècnics comprensibles i sòlids.
+Com **pèrits de construcció a Barcelona**, la nostra tasca va més enllà de la simple inspecció. Actuem com el nexe entre l'enginyeria i el dret, traduint patologies constructives complexes en arguments tècnics comprensibles i sòlids.
 
 Un **dictamen pericial de construcció** és l'eina fonamental quan sorgeix el conflicte. A **Pèrit Barcelona**, cobrim totes les fases del cicle constructiu i les seves possibles patologies:
 
@@ -167,6 +167,6 @@ Un **dictamen pericial de construcció** és l'eina fonamental quan sorgeix el c
 
 ### La Nostra Autoritat Tècnica: Enginyers Civils Col·legiats
 
-No tots els pèrits tenen la mateixa solvència. La nostra formació com a **Enginyers Civils** ens permet analitzar l'estructura i la fonamentació amb un nivell de detall que altres tècnics no assoleixen. A més, la nostra experiència en la ratificació judicial als jutjats de Barcelona garanteix que l'informe serà defensat amb contundència davant el jutge.
+No tots els pèrits tenen la mateixa solvència. La nostra formació com **Enginyers Civils** ens permet analitzar l'estructura i la fonamentació amb un nivell de detall que altres tècnics no arriben. A més, la nostra experiència en la ratificació judicial als jutjats de Barcelona garanteix que l'informe serà defensat amb contundència davant el jutge.
 
-> "Un bon pèrit no només troba l'error, sinó que explica per què ha passat i quan costa solucionar-lo."
+> "Un bon pèrit no només troba l'error, sinó que explica per què ha passat i quant costa solucionar-lo."

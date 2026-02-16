@@ -1,7 +1,7 @@
 ---
 layout: "layouts/service-pillar.njk"
-title: "Informes Pericials a Barcelona | Pèrits Judicials Experts"
-description: "Elaborem informes pericials tècnics, de part i judicials a Barcelona. Els nostres dictàmens sobre patologies, vicis ocults i disputes d'obra són la prova clau per a la seva reclamació."
+title: "Informe Pericial a Barcelona | Dictàmens Tècnics de Part i Judicials"
+description: "Dictamen pericial tècnic a Barcelona per a judicis i reclamacions. Informes de part, judicials i valoració de danys constructius amb validesa legal."
 permalink: "/ca/informes-pericials/"
 lang: "ca"
 
@@ -25,20 +25,20 @@ translations:
 
 eleventyNavigation:
   key: "Informes Pericials"
-  title: "Informes Pericials"
+  title: "Dictàmens Tècnics"
   notshow: false
   order: 1
 
 hero:
-  title: "Informes Pericials Tècnics"
-  strong: "La Prova Clau per a la seva Reclamació"
-  subtitle: "Dictàmens objectius sobre patologies, defectes constructius i disputes d'obra"
+  title: "L'Informe Pericial Tècnic"
+  strong: "La Prova Definitiva"
+  subtitle: "Quina validesa legal té el nostre Dictamen Pericial?"
   description: "Com a pèrits enginyers col·legiats, elaborem informes pericials amb el màxim rigor tècnic perquè disposi d'una prova sòlida, clara i defensable. El nostre objectiu és traduir la complexitat tècnica en arguments irrefutables per protegir els seus interessos."
   intro: "Un dictamen pericial ben fonamentat és l'eina essencial per negociar amb seguretat, resoldre conflictes i, si és necessari, obtenir una sentència favorable en un procediment judicial."
   image: "src/assets/images/informe-pericial-patologias-barcelona.jpg"
 
 sections:
-  title: "Què és un Informe Pericial i per què és fonamental?"
+  title: "Estructura i Validesa Legal dels nostres Dictàmens"
   what_is:
     text: >
       Un informe pericial és un document tècnic redactat per un expert qualificat, que analitza un fet o estat de coses des d'una perspectiva tècnica per exposar unes conclusions objectives. En l'àmbit de la construcció, és la prova determinant per demostrar la causa d'un dany, valorar una negligència o quantificar una reparació.
@@ -51,7 +51,7 @@ sections:
       - "Aporta solidesa tècnica en negociacions amb asseguradores i constructores"
 
 serviceCluster:
-  title: "Tipus d'Informes Pericials que Realitzem"
+  title: "Tipologia d'Informes: De Part vs. Judicials"
   intro: "Oferim una solució pericial per a cada necessitat, adaptant la nostra anàlisi a l'objectiu i al context de la reclamació:"
   services:
     - title: "Informe Pericial de Part"
@@ -112,9 +112,9 @@ serviceCluster:
         - "Defensa de la constructora"
 
 process:
-  title: "La Nostra Metodologia d'Actuació"
+  title: "Metodologia: Com elaborem la Prova Pericial"
   steps:
-    - title: "Estudi Previ i Viabilitat"
+    - title: "Pre-informe de Viabilitat"
       description: "Analitzem el seu cas i la documentació disponible per confirmar la viabilitat de la pericial."
     - title: "Inspecció Tècnica i Presa de Dades"
       description: "Visitem l'immoble o l'obra per realitzar una inspecció exhaustiva i recopilar totes les evidències."
@@ -156,7 +156,7 @@ cta:
     url: "/ca/contacte/"
 ---
 
-## Què és Exactament un Informe Pericial Tècnic i Per Què és la seva Millor Eina?
+## La Importància de la Prova Pericial en el Procés Judicial
 
 En el sector de la construcció, les opinions són moltes, però els fets tècnics són irrefutables. Un **informe pericial** és precisament això: una anàlisi tècnica, objectiva i documentada d'una realitat constructiva, elaborada per un expert independent. No és una opinió; és la traducció d'un problema complex (una esquerda, una humitat, un sobrecost) a un llenguatge de causes, conseqüències i responsabilitats amb base en la normativa i la bona pràctica de l'enginyeria.
 
@@ -171,7 +171,7 @@ Tot i que ambdós busquen esclarir fets tècnics, el seu origen i context són d
 
 En ambdós escenaris, la nostra metodologia i rigor són idèntics, garantint la qualitat i objectivitat del dictamen final.
 
-## En Quines Situacions és Imprescindible un Informe Pericial?
+## Valoració de Danys i Nexo Causal: El Cor del Dictamen
 
 Si es troba en alguna de les següents situacions, un informe pericial no és una opció, és una necessitat:
 
@@ -181,7 +181,7 @@ Si es troba en alguna de les següents situacions, un informe pericial no és un
 * **Reclamacions a Assegurances:** Per rebatre la valoració de danys de l'asseguradora i obtenir la indemnització que realment correspon.
 * **Processos Judicials:** Com a prova fonamental per demostrar fets tècnics davant un tribunal.
 
-## El Nostre Procés: De l'Anàlisi a la Ratificació en Judici
+## Ratificació en Seu Judicial: La Defensa de l'Informe
 
 El nostre treball va més enllà d'una simple visita. Seguim un procés metòdic per garantir que cada conclusió sigui sòlida i defensable:
 
@@ -190,6 +190,6 @@ El nostre treball va més enllà d'una simple visita. Seguim un procés metòdic
 3. **Anàlisi i Redacció:** Creuem les dades de la inspecció amb la normativa aplicable, la documentació del projecte i la nostra experiència per redactar un informe clar, ben estructurat i amb conclusions fonamentades.
 4. **Lliurament i Defensa:** Li lliurem l'informe i l'hi expliquem en detall. Si el cas arriba a judici, acudim a la seu judicial per **ratificar i defensar les nostres conclusions** davant el jutge i les parts.
 
-## L'Avantatge d'un Pèrit Enginyer Civil
+## Signatura d'Enginyer Civil: Garantia de Solvència Tècnica
 
 Triar un pèrit amb formació superior en Enginyeria Civil aporta una visió més profunda. El nostre coneixement de càlcul d'estructures, ciència de materials, geotècnia i normativa de grans infraestructures ens permet analitzar problemes complexos des d'una perspectiva integral, garantint la màxima solvència tècnica de les nostres conclusions.

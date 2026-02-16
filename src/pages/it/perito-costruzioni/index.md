@@ -28,8 +28,8 @@ hero:
   image: "src/assets/images/perito-construccion-barcelona-profesional.jpg"
   alt: "Perito in costruzioni che esamina una struttura a Barcellona"
   intro: |
-    <p>Quando sorge un conflitto in un cantiere o una proprietà, hai bisogno di più di un'opinione: hai bisogno di certezza tecnica. Come **Periti in Costruzioni a Barcellona**, agiamo come i tuoi occhi tecnici, identificando la radice del problema e difendendo la tua posizione con la massima solvibilità davanti alla controparte o al giudice.</p>
-    <p>Non lasciare che un difetto costruttivo diventi un incubo legale. <a href="#contatti">Raccontaci il tuo caso</a> e ti orienteremo sulla fattibilità del tuo reclamo.</p>
+    <p>Quando sorge un conflitto in un cantiere o una proprietà, hai bisogno di più di un'opinione: hai bisogno di certezza tecnica. Come <strong>Periti in Costruzioni a Barcellona</strong>, agiamo come i tuoi occhi tecnici, identificando la radice del problema e difendendo la tua posizione con la massima solvibilità davanti alla controparte o al giudice.</p>
+    <p>Non lasciare che un difetto costruttivo diventi un incubo legale. <a href="/it/contatti/">Raccontaci il tuo caso</a> e ti orienteremo sulla fattibilità del tuo reclamo.</p>
 
 keyFeatures:
   - "Ingegneri Civili abilitati con ampia esperienza giudiziaria"
@@ -50,7 +50,7 @@ serviceCluster:
         - "Argomentazione per causa"
         - "Base per negoziazione"
     - title: "Perito Giudiziario"
-      description: "Intervento su nomina del tribunale o di parte (CTU/CTP). Forniamo rigore tecnico, imparzialità e una solida difesa orale."
+      description: "Intervento su nomina del tribunale o di parte (CTU/CTP). Forniamo rigore tecnico, imparcialità e una solida difesa orale."
       url: "/it/perizie-tecniche/giudiziaria/"
       icon: "scale"
       features:
@@ -147,7 +147,7 @@ benefits:
       description: "Asseverazione di perizie in tribunale."
     - icon: "file-check"
       title: "Relazioni Chiare"
-      description: "Documentazione tecnica comprensibile."
+      description: "Documentazione tecnica comprensible."
     - icon: "clock"
       title: "Risposta Rapida"
       description: "Agiamo con agilità."

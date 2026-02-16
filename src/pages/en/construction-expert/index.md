@@ -28,8 +28,8 @@ hero:
   image: "src/assets/images/perito-construccion-barcelona-profesional.jpg"
   alt: "Construction expert witness reviewing structure in Barcelona"
   intro: |
-    <p>When a conflict arises in a construction site or property, you need more than an opinion: you need technical certainty. As **Construction Expert Witnesses in Barcelona**, we act as your technical eyes, identifying the root cause of the problem and defending your position with solvency before the opposing party or the judge.</p>
-    <p>Do not let a construction defect become a legal nightmare. <a href="#contact">Tell us about your case</a> and we will guide you on the viability of your claim.</p>
+    <p>When a conflict arises in a construction site or property, you need more than an opinion: you need technical certainty. As <strong>Construction Expert Witnesses in Barcelona</strong>, we act as your technical eyes, identifying the root cause of the problem and defending your position with solvency before the opposing party or the judge.</p>
+    <p>Do not let a construction defect become a legal nightmare. <a href="/en/contact/">Tell us about your case</a> and we will guide you on the viability of your claim.</p>
 
 keyFeatures:
   - "Chartered Civil Engineers with extensive judicial experience"
@@ -51,7 +51,7 @@ serviceCluster:
         - "Basis for negotiation"
     - title: "Judicial Expert Witness"
       description: "Acting by court appointment or party proposal. We provide technical rigor, impartiality, and solvent oral defense in court."
-      url: "/en/expert-witness-reports/judicial/"
+      url: "/en/expert-witness-reports/court-expert/"
       icon: "scale"
       features:
         - "Court appointment"
@@ -67,7 +67,7 @@ serviceCluster:
         - "Reinforcement proposals"
     - title: "Persistent Dampness & Leaks"
       description: "Detection of origins, technical reports, and solutions for moisture problems in buildings."
-      url: "/en/expert-witness-reports/dampness-leaks/"
+      url: "/en/expert-witness-reports/damp-leaks/"
       icon: "droplet"
       features:
         - "Origin diagnosis"

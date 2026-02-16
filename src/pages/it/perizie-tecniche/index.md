@@ -1,9 +1,8 @@
 ---
 layout: "layouts/service-pillar.njk"
 # SEO: Título potente con las keywords principales y geolocalización.
-title: "Perizie Tecniche a Barcellona | Periti Esperti Giudiziari"
-# SEO: Descripción activa que resume el valor y los casos de uso.
-description: "Elaboriamo perizie tecniche, di parte e giudiziarie a Barcellona. I nostri pareri su patologie, vizi occulti e controversie edili sono la prova chiave per la vostra richiesta di risarcimento."
+title: "Perizia Tecnica a Barcellona | Pareri Tecnici di Parte e Giudiziari"
+description: "Perizia tecnica a Barcellona per processi e richieste di risarcimento. Perizie di parte, giudiziarie e valutazione dei danni costruttivi con validità legale."
 permalink: "/it/perizie-tecniche/"
 lang: "it"
 
@@ -27,22 +26,22 @@ translations:
 
 eleventyNavigation:
   key: "Perizie Tecniche"
-  title: "Perizie Tecniche"
+  title: "Pareri Tecnici"
   notshow: false
   order: 1 # El servicio más importante, va primero en el menú.
 
 # Hero Section
 hero:
-  title: "Perizie Tecniche"
-  strong: "La Prova Chiave per la Vostra Richiesta"
-  subtitle: "Pareri oggettivi su patologie, difetti di costruzione e controversie edili"
+  title: "La Perizia Tecnica"
+  strong: "La Prova Definitiva"
+  subtitle: "Qual è la validità legale del nostro Parere Peritale?"
   description: "In qualità di periti ingegneri abilitati, elaboriamo perizie con il massimo rigore tecnico affinché disponiate di una prova solida, chiara e difendibile. Il nostro obiettivo è tradurre la complessità tecnica in argomenti inconfutabili per proteggere i vostri interessi."
   intro: "Una perizia ben motivata è lo strumento essenziale per negoziare con sicurezza, risolvere conflitti e, se necessario, ottenere una sentenza favorevole in un procedimento giudiziario."
   image: "src/assets/images/informe-pericial-patologias-barcelona.jpg"
 
 # Sección "Qué es un Informe Pericial"
 sections:
-  title: "Cos'è una Perizia Tecnica e perché è fondamentale?"
+  title: "Struttura e Validità Legale dei nostri Pareri"
   what_is:
     text: >
       Una perizia è un documento tecnico redatto da un esperto qualificato, che analizza un fatto o uno stato di cose da una prospettiva tecnica per esporre conclusioni oggettive. In ambito edilizio, è la prova determinante per dimostrare la causa di un danno, valutare una negligenza o quantificare una riparazione.
@@ -56,7 +55,7 @@ sections:
 
 # Service Cluster: Los diferentes tipos de informes que se ofrecen
 serviceCluster:
-  title: "Tipi di Perizie Tecniche che Realizziamo"
+  title: "Tipologia di Perizie: Di Parte vs. Giudiziarie"
   intro: "Offriamo una soluzione peritale per ogni necessità, adattando la nostra analisi all'obiettivo e al contesto della richiesta:"
   services:
     - title: "Consulenza Tecnica di Parte (CTP)"
@@ -118,9 +117,9 @@ serviceCluster:
 
 # Proceso de Trabajo
 process:
-  title: "La Nostra Metodologia Operativa"
+  title: "Metodologia: Come elaboriamo la Prova Peritale"
   steps:
-    - title: "Studio Preliminare e di Fattibilità"
+    - title: "Pre-relazione di Fattibilità"
       description: "Analizziamo il vostro caso e la documentazione disponibile per confermare la fattibilità della perizia."
     - title: "Ispezione Tecnica e Raccolta Dati"
       description: "Visitiamo l'immobile o il cantiere per effettuare un'ispezione approfondita e raccogliere tutte le prove."
@@ -165,7 +164,7 @@ cta:
     url: "/it/contatti/"
 ---
 
-## Cos'è Esattamente una Perizia Tecnica e Perché è il Vostro Miglior Strumento?
+## L'Importanza della Prova Peritale nel Processo Giudiziario
 
 Nel settore edilizio, le opinioni sono molte, ma i fatti tecnici sono inconfutabili. Una **perizia** è precisamente questo: un'analisi tecnica, oggettiva e documentata di una realtà costruttiva, elaborata da un esperto indipendente. Non è un'opinione; è la traduzione di un problema complesso (una crepa, un'infiltrazione, un costo extra) in un linguaggio di cause, conseguenze e responsabilità basato sulla normativa e sulla buona pratica ingegneristica.
 
@@ -180,7 +179,7 @@ Sebbene entrambe cerchino di chiarire fatti tecnici, la loro origine e il loro c
 
 In entrambi gli scenari, la nostra metodologia e il nostro rigore sono identici, garantendo la qualità e l'oggettività del parere finale.
 
-## In Quali Situazioni è Indispensabile una Perizia?
+## Valutazione dei Danni e Nesso Causale: Il Cuore della Perizia
 
 Se vi trovate in una delle seguenti situazioni, una perizia non è un'opzione, è una necessità:
 
@@ -190,7 +189,7 @@ Se vi trovate in una delle seguenti situazioni, una perizia non è un'opzione, �
 * **Richieste alle Assicurazioni:** Per contestare la stima dei danni dell'assicurazione e ottenere l'indennizzo che spetta realmente.
 * **Processi Giudiziari:** Come prova fondamentale per dimostrare fatti tecnici davanti a un tribunale.
 
-## Il Nostro Processo: Dall'Analisi all'Asseverazione in Tribunale
+## Asseverazione in Tribunale: La Difesa del Parere
 
 Il nostro lavoro va oltre una semplice visita. Seguiamo un processo metodico per garantire che ogni conclusione sia solida e difendibile:
 
@@ -199,6 +198,6 @@ Il nostro lavoro va oltre una semplice visita. Seguiamo un processo metodico per
 3.  **Analisi e Redazione:** Incrociamo i dati dell'ispezione con la normativa applicabile, la documentazione del progetto e la nostra esperienza per redigere una relazione chiara, ben strutturata e con conclusioni motivate.
 4.  **Consegna e Difesa:** Vi consegniamo la perizia e ve la spieghiamo in dettaglio. Se il caso arriva in tribunale, ci presentiamo in sede giudiziaria per **asseverare e difendere le nostre conclusioni** davanti al giudice e alle parti.
 
-## Il Vantaggio di un Perito Ingegnere Civile
+## Firma di Ingegnere Civile: Garanzia di Solvibilità Tecnica
 
 Scegliere un perito con una formazione superiore in Ingegneria Civile offre una visione più approfondita. La nostra conoscenza del calcolo strutturale, della scienza dei materiali, della geotecnica e della normativa delle grandi infrastrutture ci permette di analizzare problemi complessi da una prospettiva integrale, garantendo la massima solvibilità tecnica delle nostre conclusioni.

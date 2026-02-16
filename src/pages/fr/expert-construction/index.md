@@ -28,8 +28,8 @@ hero:
   image: "src/assets/images/perito-construccion-barcelona-profesional.jpg"
   alt: "Expert en construction examinant une structure à Barcelone"
   intro: |
-    <p>Lorsqu'un conflit survient sur un chantier ou une propriété, vous avez besoin de plus qu'une opinion : vous avez besoin d'une certitude technique. En tant qu'**Experts en Construction à Barcelone**, nous agissons comme vos yeux techniques, identifiant la racine du problème et défendant votre position avec solvabilité devant la partie adverse ou le juge.</p>
-    <p>Ne laissez pas un défaut de construction devenir un cauchemar juridique. <a href="#contact">Parlez-nous de votre cas</a> et nous vous orienterons sur la viabilité de votre réclamation.</p>
+    <p>Lorsqu'un conflit survient sur un chantier ou une propriété, vous avez besoin de plus qu'une opinion : vous avez besoin d'une certitude technique. En tant qu'<strong>Experts en Construction à Barcelone</strong>, nous agissons comme vos yeux techniques, identifiant la racine du problème et défendant votre position avec solvabilité devant la partie adverse ou le juge.</p>
+    <p>Ne laissez pas un défaut de construction devenir un cauchemar juridique. <a href="/fr/contact/">Parlez-nous de votre cas</a> et nous vous orienterons sur la viabilité de votre réclamation.</p>
 
 keyFeatures:
   - "Ingénieurs Civils agréés avec une vaste expérience judiciaire"
