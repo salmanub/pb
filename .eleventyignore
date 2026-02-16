@@ -1,0 +1,6 @@
+src/assets/images/optimized/
+src/assets/images/**/*-[0-9]*w.avif
+src/assets/images/**/*-[0-9]*w.webp
+src/assets/images/**/*-[0-9]*w.jpeg
+src/assets/images/**/*-[0-9]*w.jpg
+src/assets/images/**/*-[0-9]*w.png

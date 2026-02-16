@@ -84,7 +84,7 @@ export default function (eleventyConfig) {
     let opts = {
       widths: isServe ? [null] : [320, 640, 960, 1280, 1920], // En dev solo tamaño original (o redimensionado básico)
       formats: isServe ? ["auto"] : ["avif", "webp", "jpeg"], // En dev solo formato original
-      outputDir: "./src/assets/images/optimized/",
+      outputDir: "./dist/assets/images/optimized/",
       urlPath: "/assets/images/optimized/",
       filenameFormat: function (id, src, width, format) {
         const extension = path.extname(src);

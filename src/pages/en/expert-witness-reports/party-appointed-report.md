@@ -20,7 +20,7 @@ eleventyNavigation:
   title: "Party-Appointed Opinion"
   notshow: true
   order: 1
-serviceTitle: "Party-Appointed Opinion" report'
+serviceTitle: "Party-Appointed Opinion"
 
 # Parent Service (for breadcrumb and linking back to pillar)
 parentService:

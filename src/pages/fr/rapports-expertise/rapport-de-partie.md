@@ -24,7 +24,7 @@ eleventyNavigation:
   title: "Expertise de Partie"
   notshow: true
   order: 1
-serviceTitle: "Expertise de Partie"se de partie'
+serviceTitle: "Expertise de Partie"
 
 # Parent Service
 parentService:
