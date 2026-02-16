@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
 // Configuración de dimensiones y formatos (coincidentes con el shortcode de imagen en eleventy.config.js)
-const widths = [320, 480, 640, 768, 1024, 1280, 1536, 1920, 2048];
+const widths = [320, 480, 640, 768, 1024, 1280, 1536, 1920];
 const formats = ["avif", "webp", "jpg"]; // Para imágenes con transparencia PNG se añadirá dinámicamente
 const outputDir = "./assets/images/optimized/"; // Revertido para optimización local
 const urlPath = "/assets/images/optimized/";
@@ -193,19 +193,31 @@ async function processAllImages() {
       // Buscar imágenes JPG/JPEG
       const jpgPattern = 'assets/images/**/*.{jpg,jpeg,JPG,JPEG}';
       console.log(`Buscando JPG/JPEG: ${jpgPattern}`);
-      jpgImages = await glob(jpgPattern, { cwd: rootDir, windowsPathsNoEscape: true });
+      jpgImages = await glob(jpgPattern, {
+        cwd: rootDir,
+        windowsPathsNoEscape: true,
+        ignore: 'assets/images/optimized/**'
+      });
       console.log(`✓ Encontradas ${jpgImages.length} imágenes JPG/JPEG`);
 
       // Buscar imágenes PNG (incluyendo mayúsculas)
       const pngPattern = 'assets/images/**/*.{png,PNG}';
       console.log(`Buscando PNG: ${pngPattern}`);
-      pngImages = await glob(pngPattern, { cwd: rootDir, windowsPathsNoEscape: true });
+      pngImages = await glob(pngPattern, {
+        cwd: rootDir,
+        windowsPathsNoEscape: true,
+        ignore: 'assets/images/optimized/**'
+      });
       console.log(`✓ Encontradas ${pngImages.length} imágenes PNG`);
 
       // Buscar imágenes GIF
       const gifPattern = 'assets/images/**/*.{gif,GIF}';
       console.log(`Buscando GIF: ${gifPattern}`);
-      gifImages = await glob(gifPattern, { cwd: rootDir, windowsPathsNoEscape: true });
+      gifImages = await glob(gifPattern, {
+        cwd: rootDir,
+        windowsPathsNoEscape: true,
+        ignore: 'assets/images/optimized/**'
+      });
       console.log(`✓ Encontradas ${gifImages.length} imágenes GIF`);
 
       // Convertir rutas relativas a absolutas
