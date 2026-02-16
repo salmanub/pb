@@ -190,29 +190,34 @@ jobs:
           # Ensure CA is present for OCSP issuer check
           if [ ! -f ".certs/ca.pem" ]; then
              echo "⚠️ CA cert missing (cached run). Attempting to fetch correct Issuer..."
-             # Extract CA Issuers URI (Handling both cases where it might be on the same line or next)
-             ISSUER_URI=$(openssl x509 -in .certs/cert.pem -noout -text | grep -i "CA Issuers" | awk -F "URI:" '{print $2}' | tr -d ' \n\r')
+             # Extract CA Issuers URI more robustly
+             ISSUER_URI=$(openssl x509 -in .certs/cert.pem -noout -text | grep -i "CA Issuers" | head -n 1 | awk -F "URI:" '{print $2}' | tr -d ' \n\r')
              
              if [ ! -z "$ISSUER_URI" ]; then
                 echo "Downloading Issuer from: $ISSUER_URI"
                 wget -O .certs/ca.der "$ISSUER_URI"
-                # Convert DER to PEM if needed (Microsoft CAs usually send CRT/DER)
-                openssl x509 -inform DER -in .certs/ca.der -out .certs/ca.pem || openssl x509 -inform PEM -in .certs/ca.der -out .certs/ca.pem
+                # Convert DER to PEM
+                if ! openssl x509 -inform DER -in .certs/ca.der -out .certs/ca.pem 2>/dev/null; then
+                    echo "DER convert failed, trying PEM..."
+                    mv .certs/ca.der .certs/ca.pem
+                fi
              else 
                 echo "⚠️ Could not find Issuer URI in cert. Falling back to GTS Root..."
-                wget -O .certs/ca.pem https://pki.goog/repo/certs/gts1d4.pem || wget -O .certs/ca.pem https://pki.goog/repo/certs/gts1c3.pem
+                wget -O .certs/ca.pem https://pki.goog/repo/certs/gts1d4.pem
              fi
           fi
 
           # Extract OCSP
           OCSP_URI=$(openssl x509 -noout -ocsp_uri -in .certs/cert.pem)
+          OCSP_HOST=$(echo "$OCSP_URI" | awk -F/ '{print $3}')
           echo "OCSP URI: $OCSP_URI"
+          echo "OCSP Host: $OCSP_HOST"
           
-          # Fetch OCSP
+          # Fetch OCSP with correct Host header
           openssl ocsp -issuer .certs/ca.pem \
                        -cert .certs/cert.pem \
                        -url "$OCSP_URI" \
-                       -header "HOST" "$DOMAIN" \
+                       -header "HOST" "$OCSP_HOST" \
                        -respout .certs/ocsp.resp \
                        -noverify || echo "Warning: OCSP fetch failed"
 
