@@ -213,13 +213,24 @@ jobs:
           echo "OCSP URI: $OCSP_URI"
           echo "OCSP Host: $OCSP_HOST"
           
-          # Fetch OCSP with correct Host header
-          openssl ocsp -issuer .certs/ca.pem \
-                       -cert .certs/cert.pem \
-                       -url "$OCSP_URI" \
-                       -header "HOST" "$OCSP_HOST" \
-                       -respout .certs/ocsp.resp \
-                       -noverify || echo "Warning: OCSP fetch failed"
+          if [ -f ".certs/ca.pem" ] && [ ! -z "$OCSP_URI" ]; then
+              # Try with explicit Host header (OpenSSL 1.1 syntax: -header key=value)
+              if ! openssl ocsp -issuer .certs/ca.pem \
+                           -cert .certs/cert.pem \
+                           -url "$OCSP_URI" \
+                           -header "Host=$OCSP_HOST" \
+                           -respout .certs/ocsp.resp \
+                           -noverify; then
+                  echo "Retry OCSP without explicit header..."
+                  openssl ocsp -issuer .certs/ca.pem \
+                               -cert .certs/cert.pem \
+                               -url "$OCSP_URI" \
+                               -respout .certs/ocsp.resp \
+                               -noverify || echo "Warning: OCSP fetch failed"
+              fi
+          else
+              echo "❌ Issuer cert missing or OCSP URI empty. Skipping OCSP fetch."
+          fi
 
           echo "Generating cert.cbor..."
           # Note: We use fullchain for the CBOR
