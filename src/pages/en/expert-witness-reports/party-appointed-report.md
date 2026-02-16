@@ -9,7 +9,7 @@ hero:
 description: "Service for drafting party-appointed expert reports in Barcelona. We provide the technical evidence and expert argumentation to strengthen your position in disputes, litigation, and claims."
 permalink: "/en/expert-witness-reports/party-appointed-report/"
 lang: 'en'
-translation:
+translations:
     - lang: "es"
       permalink: "/informes-periciales/informe-de-parte/"
     - lang: "ca"

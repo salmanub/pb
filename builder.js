@@ -183,8 +183,23 @@ async function updateSheet(resources) {
   }
 }
 
+
+async function optimizeImages() {
+  console.log('🖼️  Optimizando imágenes...');
+  try {
+    const { stdout, stderr } = await execPromise('npm run optimize-images');
+    console.log(stdout);
+    if (stderr) console.error(stderr);
+    console.log('✅ Imágenes optimizadas correctamente.');
+  } catch (err) {
+    console.error('❌ Error optimizando imágenes:', err);
+    process.exit(1);
+  }
+}
+
 async function main() {
   await buildSite();
+  await optimizeImages(); // Run optimization after build to popualte dist
   const resources = await scanFiles();
   await updateSheet(resources);
 }
