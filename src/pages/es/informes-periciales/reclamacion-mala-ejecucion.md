@@ -86,7 +86,7 @@ Ha invertido tiempo, dinero e ilusión en una obra o reforma, pero el resultado 
 
 Un informe pericial por mala ejecución de obra es un dictamen objetivo que contrasta lo ejecutado con lo que se debería haber hecho según el contrato, el presupuesto y la buena práctica constructiva (*lex artis*).
 
-Como especialistas en [perito construcción Barcelona](/perito-construccion-barcelona/), estamos acostumbrados a auditar obras en curso y finalizadas para detectar desviaciones normativas y contractuales.
+Como especialistas en [perito construcción Barcelona](/construccion/), estamos acostumbrados a auditar obras en curso y finalizadas para detectar desviaciones normativas y contractuales.
 
 
 ### ¿Qué Documentamos en un Informe de Mala Ejecución?
