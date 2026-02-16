@@ -1,9 +1,9 @@
 ---
 layout: "layouts/service-pillar.njk"
 # SEO: Título potente con las keywords principales y geolocalización.
-title: "Informes Periciales en Barcelona | Peritos Judiciales Expertos"
+title: "Informes Periciales Técnicos en Barcelona | Dictámenes de Ingeniería"
 # SEO: Descripción activa que resume el valor y los casos de uso.
-description: "Elaboramos informes periciales técnicos, de parte y judiciales en Barcelona. Nuestros dictámenes sobre patologías, vicios ocultos y disputas de obra son la prueba clave para su reclamación."
+description: "Elaboración de informes y dictámenes periciales en Barcelona. Documentación técnica experta para procedimientos judiciales, reclamaciones y arbitrajes."
 permalink: "/informes-periciales/"
 lang: "es"
 translations:
@@ -26,17 +26,17 @@ translations:
 
 eleventyNavigation:
   key: "Informes Periciales"
-  title: "Informes Periciales"
+  title: "Dictámenes Técnicos"
   notshow: false
-  order: 2 # El servicio más importante, va primero en el menú.
+  order: 3 
 
 # Hero Section
 hero:
-  title: "Informes Periciales Técnicos"
-  strong: "La Prueba Clave para su Reclamación"
-  subtitle: "Dictámenes objetivos sobre patologías, defectos constructivos y disputas de obra"
-  description: "Como peritos ingenieros colegiados, elaboramos informes periciales con el máximo rigor técnico para que disponga de una prueba sólida, clara y defendible. Nuestro objetivo es traducir la complejidad técnica en argumentos irrefutables para proteger sus intereses."
-  intro: "Un dictamen pericial bien fundamentado es la herramienta esencial para negociar con seguridad, resolver conflictos y, si es necesario, obtener una sentencia favorable en un procedimiento judicial."
+  title: "El Informe Pericial Técnico"
+  strong: "Fundamento de Ingeniería Forense"
+  subtitle: "Análisis patológico, diagnóstico y conclusiones probatorias para procesos judiciales"
+  description: "El dictamen pericial es el documento técnico-legal que objetiva una realidad constructiva compleja. Elaboramos informes con rigor normativo diseñados para servir como carga de prueba irrefutable en litigios y negociaciones."
+  intro: "Más allá de una opinión experta, nuestros informes son auditorías técnicas completas que vinculan la patología detectada con la normativa infringida (CTE, LOE) y las responsabilidades contractuales."
   image: "src/assets/images/informe-pericial-patologias-barcelona.jpg"
 
 # Sección "Qué es un Informe Pericial"
@@ -114,14 +114,7 @@ serviceCluster:
         - "Revisión de informes previos"
         - "Detección de errores"
         - "Nuevas líneas de defensa"
-    - title: "Reclamaciones a Seguros"
-      description: "Informes periciales independientes para rebatir la valoración de la aseguradora y conseguir la indemnización que le corresponde."
-      url: "/informes-periciales/reclamacion-seguros/"
-      icon: "shield-check" # Un icono que transmita protección
-      features:
-        - "Valoración de daños por incendio"
-        - "Análisis de coberturas"
-        - "Defensa del asegurado"
+
     - title: "Informes Periciales para Naves Industriales"
       description: "Dictámenes técnicos especializados en pavimentos, estructuras, daños post-alquiler y cumplimiento normativo (RSCIEI) en naves industriales."
       url: "/informes-periciales/naves-industriales/"

@@ -50,7 +50,7 @@
                         <p class="text-xl text-slate-600 mt-8 font-light" itemprop="description">{{ hero.description }}</p>
                         <div class="prose prose-lg prose-slate mt-8">
                             <div class="text-lg text-slate-600 tracking-wide font-light" itemprop="articleBody">
-                                {{ hero.intro }}
+                                {{ hero.intro | safe }}
                             </div>
                         </div>
                         <div hidden>
@@ -65,7 +65,7 @@
                         <!-- Imagen con clip-path y hover suave -->
                         <div class="service-pillar-image-wrapper w-full h-full bg-white">
                             {% image hero.image, 
-                                    hero.title, 
+                                    hero.alt or hero.title or title, 
                                     "(min-width: 1200px) 40vw, (min-width: 768px) 50vw, 100vw", 
                                     "eager", 
                                     "high" 
@@ -127,7 +127,7 @@
                         
                         <div class="pt-6 border-t border-slate-100 group-hover:border-cyan-100/50 transition-colors">
                             <ul class="space-y-2">
-                                {% for feature in service.features | slice(0, 3) %}
+                                {% for feature in (service.features or []) | slice(0, 3) %}
                                 <li class="flex items-start gap-2">
                                     <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 flex-shrink-0 mt-2"></span>
                                     <span class="text-slate-600 text-sm font-medium" itemprop="feature">{{ feature }}</span>

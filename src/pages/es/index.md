@@ -1,7 +1,7 @@
 ---
 layout: "layouts/index.njk"
-title: "Perito Barcelona | Despacho de Peritos Ingenieros Colegiados"
-description: "Perito Judicial Barcelona. Ingenieros colegiados expertos en informes periciales, vicios ocultos, grietas y auditorías. Defensa técnica y legal con máximo rigor."
+title: "Perito Judicial Barcelona | Ingeniería Forense y Consultoría"
+description: "Despacho de Ingeniería Forense en Barcelona. Expertos en dictámenes periciales, patologías de la edificación y consultoría técnica legal."
 permalink: "/"
 lang: "es"
 translations:
@@ -22,11 +22,11 @@ eleventyNavigation:
 
 # Hero Section
 hero:
-  tag: "Perito Judicial Barcelona e Ingenieros Colegiados"
-  title: "Informes Periciales"
-  strong: "para Defender sus Intereses"
-  subtitle: "Especialistas en Peritajes, Auditorías de Obra y Asesoramiento Estructural"
-  description: "Como despacho referente de Perito Barcelona, elaboramos informes técnicos independientes y dictámenes robustos para ganar litigios, auditar obras y garantizar la seguridad estructural."
+  tag: "Ingeniería Forense y Consultoría Técnica"
+  title: "Soluciones Técnicas"
+  strong: "para Conflictos Legales"
+  subtitle: "Consultoría de Ingeniería, Dictámenes Periciales y Auditoría de Edificación"
+  description: "Aportamos el rigor técnico necesario para resolver disputas complejas. Desde el análisis de patologías hasta la ratificación en sede judicial, somos su socio técnico de confianza."
   image:
     path: "src/assets/images/peritaje-construccion-ingenieros-obra.avif"
     alt: "Ingeniero perito supervisando obra en construcción"

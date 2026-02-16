@@ -83,6 +83,9 @@ La compra de una vivienda es una de las mayores inversiones de la vida. Descubri
 
 La ley le protege, pero para poder reclamar con éxito necesita demostrar tres cosas: que el defecto es grave, que no era visible en el momento de la compra y, lo más importante, que ya existía previamente. Aquí es donde nuestro informe pericial se vuelve imprescindible.
 
+Como especialistas en [perito construcción Barcelona](/perito-construccion-barcelona/), estamos acostumbrados a identificar estas patologías ocultas y documentarlas con el rigor técnico que exige un proceso judicial.
+
+
 ### El Plazo para Reclamar es Crucial: Actúe a Tiempo
 
 Es vital saber que el plazo legal para reclamar por vicios ocultos en la compra de una vivienda de segunda mano es, por lo general, de **seis meses desde la entrega**. En obra nueva, los plazos varían según la Ley de Ordenación de la Edificación (LOE). Por ello, es fundamental actuar con rapidez en cuanto se detecta el problema.
