@@ -121,17 +121,16 @@ jobs:
             # Generate Keys & CSR
             openssl ecparam -name prime256v1 -genkey -noout -out .certs/privkey.pem
             
-            cat > sxg_openssl.cnf <<EOF
-            [ req ]
-            distinguished_name = req_distinguished_name
-            req_extensions = v3_req
-            prompt = no
-            [ req_distinguished_name ]
-            CN = $DOMAIN
-            [ v3_req ]
-            subjectAltName = DNS:$DOMAIN
-            1.3.6.1.4.1.11129.2.1.22 = ASN1:NULL
-            EOF
+            # Create config using printf to avoid heredoc whitespace issues in YAML
+            printf "[ req ]\n" > sxg_openssl.cnf
+            printf "distinguished_name = req_distinguished_name\n" >> sxg_openssl.cnf
+            printf "req_extensions = v3_req\n" >> sxg_openssl.cnf
+            printf "prompt = no\n" >> sxg_openssl.cnf
+            printf "[ req_distinguished_name ]\n" >> sxg_openssl.cnf
+            printf "CN = $DOMAIN\n" >> sxg_openssl.cnf
+            printf "[ v3_req ]\n" >> sxg_openssl.cnf
+            printf "subjectAltName = DNS:$DOMAIN\n" >> sxg_openssl.cnf
+            printf "1.3.6.1.4.1.11129.2.1.22 = ASN1:NULL\n" >> sxg_openssl.cnf
 
             openssl req -new -key .certs/privkey.pem -out .certs/domain.csr -config sxg_openssl.cnf
 
