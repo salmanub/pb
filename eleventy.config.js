@@ -83,15 +83,17 @@ export default function (eleventyConfig) {
       return `<img src="${src}" alt="${alt}" class="${additionalClasses}">`;
     }
 
-    // En modo serve, reducimos la carga de procesamiento de imágenes
+    // Configuración alineada con scripts/optimize-images.js
     let opts = {
-      widths: isServe ? [null] : [320, 640, 960, 1280, 1920], // En dev solo tamaño original (o redimensionado básico)
-      formats: isServe ? ["auto"] : ["avif", "webp", "jpeg"], // En dev solo formato original
+      widths: [320, 480, 640, 768, 1024, 1280, 1536, 1920],
+      formats: ["avif", "webp", "jpeg"],
       outputDir: "./src/assets/images/optimized/",
       urlPath: "/assets/images/optimized/",
       filenameFormat: function (id, src, width, format) {
         const extension = path.extname(src);
         const name = path.basename(src, extension);
+        // Force jpg extension for jpeg format to match optimize-images.js
+        if (format === 'jpeg') format = 'jpg';
         return `${name}-${width}w.${format}`;
       }
     };
