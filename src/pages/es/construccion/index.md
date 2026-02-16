@@ -5,6 +5,15 @@ subtitle: "Especialistas en dictámenes técnicos, vicios ocultos y patologías 
 description: "Ingenieros Peritos en Barcelona especializados en construcción. Expertos en vicios ocultos, control de obras y defensa técnica en juicios. Consulte ahora."
 permalink: "/construccion/"
 lang: "es"
+translations:
+  - lang: "ca"
+    permalink: "/ca/construccio/"
+  - lang: "en"
+    permalink: "/en/construction-expert/"
+  - lang: "fr"
+    permalink: "/fr/expert-construction/"
+  - lang: "it"
+    permalink: "/it/perito-costruzioni/"
 eleventyNavigation:
   key: "Perito Construcción"
   title: "Perito Construcción"
