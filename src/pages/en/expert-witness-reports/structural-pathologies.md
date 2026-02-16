@@ -2,6 +2,10 @@
 layout: "layouts/service-child.njk"
 title: "Expert for Cracks and Structural Pathologies | Technical Report Barcelona"
 subtitle: "Expert diagnosis of cracks, deformations and structural safety assessment"
+hero:
+  image: "src/assets/images/analisis-grietas-estructurales.jpg"
+  alt: "Structural analysis of cracks in concrete pillar"
+  title: "Structural Pathologies Report"
 description: "Have you detected cracks in walls, beams or slabs? We conduct an expert witness report to diagnose the cause, assess the risk and determine the solution in Barcelona."
 permalink: "/en/expert-witness-reports/structural-pathologies/"
 lang: "en"

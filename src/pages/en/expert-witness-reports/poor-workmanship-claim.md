@@ -2,6 +2,10 @@
 layout: 'layouts/service-child.njk'
 title: "Expert Witness for Poor Workmanship | Claim Against Contractor"
 subtitle: 'We document breaches of contract and defects to substantiate your claim'
+hero:
+  image: "src/assets/images/reclamacion-mala-ejecucion.jpg"
+  alt: "Construction defects identified by expert engineer"
+  title: "Poor Workmanship Expert Report"
 description: "Is the quality of your construction or renovation project not as agreed in Barcelona? We document breaches and execution defects in an expert report so you can claim against the contractor."
 permalink: "/en/expert-witness-reports/poor-workmanship-claim/"
 lang: 'en'

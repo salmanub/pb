@@ -2,6 +2,10 @@
 layout: 'layouts/service-child.njk'
 title: "Party-Appointed Expert Report in Barcelona | Technical Defense for Your Case"
 subtitle: 'We draft the technical report you need to substantiate your position in a negotiation or lawsuit'
+hero:
+  image: "src/assets/images/elaboracion-informe-pericial.jpg"
+  alt: "Engineer preparing party-appointed expert report"
+  title: "Party-Appointed Expert Report"
 description: "Service for drafting party-appointed expert reports in Barcelona. We provide the technical evidence and expert argumentation to strengthen your position in disputes, litigation, and claims."
 permalink: "/en/expert-witness-reports/party-appointed-report/"
 lang: 'en'

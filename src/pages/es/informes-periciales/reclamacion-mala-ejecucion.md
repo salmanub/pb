@@ -2,6 +2,10 @@
 layout: "layouts/service-child.njk"
 title: "Perito por Mala Ejecución de Obra | Reclamación a Constructora"
 subtitle: "Documentamos incumplimientos y defectos para fundamentar su reclamación"
+hero:
+  image: "src/assets/images/reclamacion-mala-ejecucion.jpg"
+  alt: "Defectos de ejecución en obra detectados por perito ingeniero"
+  title: "Peritaje por Mala Ejecución de Obra"
 description: "¿La calidad de su obra o reforma no es la pactada en Barcelona? Documentamos incumplimientos y defectos de ejecución en un informe pericial para que pueda reclamar a la constructora."
 permalink: "/informes-periciales/reclamacion-mala-ejecucion/"
 lang: "es"

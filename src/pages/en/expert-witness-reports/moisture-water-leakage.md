@@ -2,6 +2,10 @@
 layout: layouts/service-child.njk
 title: "Moisture and Water Leakage Expert in Barcelona | Cause Report"
 subtitle: "Technical diagnosis of moisture origin from leakage, capillarity, or condensation"
+hero:
+  image: "src/assets/images/deteccion-humedades-termografia.jpg"
+  alt: "Thermal imaging detection of moisture and leaks"
+  title: "Dampness & Leakage Detection Report"
 description: "Suffering from persistent moisture or water leakage? We produce an expert report that identifies the exact origin of the problem to ensure a definitive repair in Barcelona."
 permalink: "/en/expert-witness-reports/damp-leaks/"
 lang: "en"

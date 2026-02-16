@@ -2,6 +2,10 @@
 layout: layouts/service-child.njk
 title: "Court Expert Witness in Barcelona | Expert Engineer for Litigation"
 subtitle: "Robust expert reports, ratification, and technical defense in court"
+hero:
+  image: "src/assets/images/ratificacion-perito-judicial.jpg"
+  alt: "Court expert witness ratifying report in Barcelona court"
+  title: "Court Expert Witness in Barcelona"
 description: "Court Expert Witness service in Barcelona. Civil Engineer expert in construction defects. We provide solid technical evidence, impartiality, and competent oral defense in court."
 permalink: "/en/expert-witness-reports/court-expert/"
 lang: "en"

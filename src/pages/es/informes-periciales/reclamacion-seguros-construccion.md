@@ -2,6 +2,10 @@
 layout: 'layouts/service-child.njk'
 title: "Perito de Seguros para Construcción en Barcelona | Grandes Siniestros"
 subtitle: 'Defensa técnica para constructoras e ingenierías en reclamaciones de Pólizas Todo Riesgo Construcción (TRC), Decenal y RC'
+hero:
+  image: "src/assets/images/reclamacion-seguros-construccion.jpg"
+  alt: "Perito ingeniero evaluando siniestro en obra de construcción"
+  title: "Peritaje de Seguros en Construcción"
 description: "Como Ingenieros Civiles expertos en peritaje de seguros (IRD), defendemos los intereses de constructoras en grandes siniestros (incendio, colapso, inundación) en Barcelona."
 permalink: "/informes-periciales/reclamacion-seguros-construccion/"
 lang: 'es'
