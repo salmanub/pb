@@ -28,7 +28,7 @@ eleventyNavigation:
   key: "Perizie Tecniche"
   title: "Pareri Tecnici"
   notshow: false
-  order: 1 # El servicio más importante, va primero en el menú.
+  order: 3 # El servicio più importante, va primero en el menú.
 
 # Hero Section
 hero:

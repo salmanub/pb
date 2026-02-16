@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/service-child.njk'
-title: "Informe Pericial de Part a Barcelona | Defensa Tècnica per al seu Cas"
+title: "Dictamen Pericial de Part a Barcelona | Prova per a Reclamacions"
 subtitle: "Elaborem l'informe tècnic que necessita per fonamentar la seva postura en una negociació o demanda"
 description: "Servei d'elaboració d'informes pericials de part a Barcelona. Aportem la prova tècnica i l'argument expert per reforçar la seva posició en disputes, litigis i reclamacions."
 permalink: "/ca/informes-pericials/informe-de-part/"
@@ -11,12 +11,12 @@ translations:
   - lang: "en"
     permalink: "/en/expert-witness-reports/party-appointed-report/"
 eleventyNavigation:
-  key: "Informe de Part"
+  key: "Dictamen de Part"
   parent: "Informes Pericials"
-  title: "Informe de Part"
+  title: "Dictamen de Part"
   notshow: true
   order: 1
-serviceTitle: 'informe pericial de part'
+serviceTitle: 'Dictamen de Part'
 
 # Parent Service (for breadcrumb and linking back to pillar)
 parentService:

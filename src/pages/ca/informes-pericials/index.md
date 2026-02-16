@@ -27,7 +27,7 @@ eleventyNavigation:
   key: "Informes Pericials"
   title: "Dictàmens Tècnics"
   notshow: false
-  order: 1
+  order: 3
 
 hero:
   title: "L'Informe Pericial Tècnic"

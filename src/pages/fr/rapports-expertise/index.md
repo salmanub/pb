@@ -28,7 +28,7 @@ eleventyNavigation:
   key: "Rapports d'Expertise"
   title: "Avis Techniques"
   notshow: false
-  order: 1
+  order: 3 # El servicio más importante, va primero en el menú.
 
 # Hero Section
 hero:

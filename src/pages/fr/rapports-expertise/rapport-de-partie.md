@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/service-child.njk'
-title: "Rapport d'Expertise de Partie à Barcelone | Défense Technique"
+title: "Avis Technique de Partie à Barcelone | Preuve pour Réclamation"
 hero:
   image: "src/assets/images/elaboracion-informe-pericial.jpg"
   alt: "Ingénieur élaborant un rapport d'expertise avec des plans techniques"
@@ -21,10 +21,10 @@ translations:
 eleventyNavigation:
   key: "Rapport de Partie"
   parent: "Rapports d'Expertise"
-  title: "Rapport de Partie"
+  title: "Expertise de Partie"
   notshow: true
   order: 1
-serviceTitle: 'rapport d''expertise de partie'
+serviceTitle: "Expertise de Partie"se de partie'
 
 # Parent Service
 parentService:

@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/service-child.njk'
-title: "Party-Appointed Expert Report in Barcelona | Technical Defense for Your Case"
+title: "Party-Appointed Expert Opinion | Local Technical Evidence"
 subtitle: 'We draft the technical report you need to substantiate your position in a negotiation or lawsuit'
 hero:
   image: "src/assets/images/elaboracion-informe-pericial.jpg"
@@ -17,10 +17,10 @@ translation:
 eleventyNavigation:
   key: "Party-Appointed Report"
   parent: "Expert Witness Reports"
-  title: "Party-Appointed Report"
+  title: "Party-Appointed Opinion"
   notshow: true
   order: 1
-serviceTitle: 'party-appointed expert report'
+serviceTitle: "Party-Appointed Opinion" report'
 
 # Parent Service (for breadcrumb and linking back to pillar)
 parentService:

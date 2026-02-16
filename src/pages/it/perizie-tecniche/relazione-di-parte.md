@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/service-child.njk'
-title: "Relazione Tecnica di Parte a Barcellona | Difesa Tecnica per il tuo Caso"
+title: "Perizia Tecnica di Parte a Barcellona | Prova di Reclamo"
 hero:
   image: "src/assets/images/elaboracion-informe-pericial.jpg"
   alt: "Ingegnere che elabora una relazione peritale su piani tecnici"
@@ -21,10 +21,10 @@ translations:
 eleventyNavigation:
   key: "Relazione di Parte"
   parent: "Perizie Tecniche"
-  title: "Relazione di Parte"
+  title: "Perizia di Parte"
   notshow: true
   order: 1
-serviceTitle: 'relazione tecnica di parte'
+serviceTitle: "Perizia di Parte"
 
 # Parent Service
 parentService:

@@ -1,6 +1,6 @@
 ---
 layout: layouts/service-child.njk
-title: "Pèrit Judicial a Barcelona | Enginyer Expert per a Judicis i Litigis"
+title: "Dictamen Pericial Judicial a Barcelona | Prova Tècnica per a Judicis"
 subtitle: "Dictàmens pericials robustos i ratificació experta davant dels tribunals"
 description: "Servei de Pèrit Judicial a Barcelona. Enginyer Civil expert en patologies i construcció. Oferim dictàmens tècnics sòlids, imparcialitat i una defensa oral solvent en judici."
 permalink: "/ca/informes-pericials/judicial/"
@@ -13,10 +13,10 @@ translations:
 eleventyNavigation:
   key: "Perit Judicial"
   parent: "Informes Pericials"
-  title: "Pèrit Judicial"
+  title: "Dictamen Judicial"
   notshow: true
   order: 2
-serviceTitle: 'pèrit judicial'
+serviceTitle: 'Dictamen Judicial'
 
 # Parent Service
 parentService:

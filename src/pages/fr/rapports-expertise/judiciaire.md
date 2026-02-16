@@ -1,6 +1,6 @@
 ---
 layout: layouts/service-child.njk
-title: "Expert Judiciaire à Barcelone | Ingénieur pour Procès"
+title: "Avis Technique Judiciaire à Barcelone | Preuve pour Procès"
 subtitle: "Avis techniques robustes et ratification experte devant les tribunaux"
 description: "Service d'Expert Judiciaire à Barcelone. Ingénieur Civil expert en pathologies et construction. Nous offrons des avis techniques solides, impartialité et une défense orale compétente au procès."
 permalink: "/fr/rapports-expertise/judiciaire/"
@@ -17,10 +17,10 @@ translations:
 eleventyNavigation:
   key: "Expert Judiciaire"
   parent: "Rapports d'Expertise"
-  title: "Expert Judiciaire"
+  title: "Avis Judiciaire"
   notshow: true
   order: 2
-serviceTitle: 'expert judiciaire'
+serviceTitle: "Avis Judiciaire"
 
 # Parent Service
 parentService:

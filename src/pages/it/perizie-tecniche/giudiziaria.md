@@ -1,6 +1,6 @@
 ---
 layout: layouts/service-child.njk
-title: "Perito Giudiziario a Barcellona | Ingegnere Esperto per Cause"
+title: "Parere Tecnico Giudiziario a Barcellona | Prova per il Tribunale"
 subtitle: "Pareri peritali robusti e ratifica esperta davanti ai tribunali"
 description: "Servizio di Perito Giudiziario a Barcellona. Ingegnere Civile esperto in patologie e costruzioni. Offriamo pareri tecnici solidi, imparzialità e una difesa orale competente in giudizio."
 permalink: "/it/perizie-tecniche/giudiziaria/"
@@ -17,10 +17,10 @@ translations:
 eleventyNavigation:
   key: "Perito Giudiziario"
   parent: "Perizie Tecniche"
-  title: "Perito Giudiziario"
+  title: "Parere Giudiziario"
   notshow: true
   order: 2
-serviceTitle: 'perito giudiziario'
+serviceTitle: "Parere Giudiziario"
 
 # Parent Service
 parentService:

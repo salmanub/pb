@@ -1,6 +1,6 @@
 ---
 layout: layouts/service-child.njk
-title: "Court Expert Witness in Barcelona | Expert Engineer for Litigation"
+title: "Judicial Expert Opinion in Barcelona | Technical Evidence for Court"
 subtitle: "Robust expert reports, ratification, and technical defense in court"
 hero:
   image: "src/assets/images/ratificacion-perito-judicial.jpg"
@@ -17,10 +17,10 @@ translations:
 eleventyNavigation:
   key: "Court Expert Witness"
   parent: "Expert Reports"
-  title: "Court Expert Witness"
+  title: "Judicial Opinion"
   notshow: true
   order: 2
-serviceTitle: "court expert witness"
+serviceTitle: "Judicial Opinion"
 
 # Parent Service
 parentService:
