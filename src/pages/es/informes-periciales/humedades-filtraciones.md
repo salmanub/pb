@@ -1,6 +1,10 @@
 ---
 layout: 'layouts/service-child.njk'
 title: "Perito de Humedades y Filtraciones en Barcelona | Informe de Causas"
+hero:
+  image: "src/assets/images/deteccion-humedades-termografia.jpg"
+  alt: "Detección de humedades y filtraciones mediante cámara termográfica"
+  title: "Peritaje de Humedades y Filtraciones - Diagnóstico Técnico"
 subtitle: 'Diagnóstico técnico del origen de humedades por filtración, capilaridad o condensación'
 description: "¿Sufre de humedades o filtraciones persistentes? Elaboramos un informe pericial que identifica el origen exacto del problema para garantizar una reparación definitiva en Barcelona."
 permalink: "/informes-periciales/humedades-filtraciones/"

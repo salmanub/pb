@@ -1,6 +1,10 @@
 ---
 layout: 'layouts/service-child.njk'
 title: "Informe Pericial de Parte en Barcelona | Defensa Técnica para su Caso"
+hero:
+  image: "src/assets/images/elaboracion-informe-pericial.jpg"
+  alt: "Ingeniero elaborando un informe pericial de parte sobre planos técnicos"
+  title: "Informe Pericial de Parte - Perito Barcelona"
 subtitle: 'Elaboramos el informe técnico que necesita para fundamentar su postura en una negociación o demanda'
 description: "Servicio de elaboración de informes periciales de parte en Barcelona. Aportamos la prueba técnica y el argumento experto para reforzar su posición en disputas, litigios y reclamaciones."
 permalink: "/informes-periciales/informe-de-parte/"

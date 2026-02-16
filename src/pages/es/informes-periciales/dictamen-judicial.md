@@ -1,6 +1,10 @@
 ---
 layout: 'layouts/service-child.njk'
 title: "Perito Judicial en Barcelona | Ingeniero Experto en Tribunales"
+hero:
+  image: "src/assets/images/ratificacion-perito-judicial.jpg"
+  alt: "Perito judicial ratificando un dictamen técnico en sede judicial"
+  title: "Perito Judicial en Barcelona - Ratificación en Juicio"
 subtitle: 'Dictámenes periciales, ratificación y defensa técnica en sede judicial'
 description: "Servicio de Perito Judicial en Barcelona. Ingeniero experto para litigios de construcción. Aportamos prueba pericial sólida, imparcialidad y solvencia en la ratificación ante el juez."
 permalink: "/informes-periciales/judicial/"

@@ -3565,6 +3565,16 @@ href="https://perito.barcelona/">
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-via-stops);
   }
+  .via-white\/80 {
+    --tw-gradient-via: color-mix(in oklab, var(--color-white) 80%, transparent);
+    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .via-white\/95 {
+    --tw-gradient-via: color-mix(in oklab, var(--color-white) 95%, transparent);
+    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
   .to-\[\#1a2452\] {
     --tw-gradient-to: #1a2452;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -3655,6 +3665,10 @@ href="https://perito.barcelona/">
   }
   .to-white {
     --tw-gradient-to: var(--color-white);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-white\/20 {
+    --tw-gradient-to: color-mix(in oklab, var(--color-white) 20%, transparent);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .\[background-size\:16px_16px\] {
@@ -6213,6 +6227,11 @@ href="https://perito.barcelona/">
       word-break: normal;
     }
   }
+  .md\:opacity-30 {
+    @media (width >= 48rem) {
+      opacity: 30%;
+    }
+  }
   .lg\:sticky {
     @media (width >= 64rem) {
       position: sticky;
@@ -8247,6 +8266,13 @@ href="https://perito.barcelona/">
                                 <a href="/obras-publicas/" 
                                 class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
                                     <span>Perito Obras Públicas</span>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="/informes-periciales/contrainforme-pericial/" 
+                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
+                                    <span>Contrainforme Pericial</span>
                                 </a>
                             </li>
                         

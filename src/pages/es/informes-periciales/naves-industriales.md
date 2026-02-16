@@ -1,6 +1,10 @@
 ---
 layout: 'layouts/service-child.njk'
 title: "Informes Periciales para Naves Industriales en Barcelona | Perito Experto"
+hero:
+  image: "src/assets/images/peritaje-nave-industrial.jpg"
+  alt: "Peritaje de pavimentos y estructura metálica en nave industrial"
+  title: "Informes Periciales Naves Industriales - Estructuras y Pavimentos"
 subtitle: 'Dictámenes técnicos sobre pavimentos, estructuras y daños en naves industriales'
 description: "Servicio de peritaje especializado en Naves Industriales en Barcelona. Informes técnicos sobre patologías, daños post-alquiler, estructuras y cumplimiento normativo."
 permalink: "/informes-periciales/naves-industriales/"

@@ -1,6 +1,10 @@
 ---
 layout: 'layouts/service-child.njk'
 title: "Perito para Grietas y Patologías Estructurales | Informe Técnico Barcelona"
+hero:
+  image: "src/assets/images/analisis-grietas-estructurales.jpg"
+  alt: "Medición técnica de grietas y patologías estructurales en pilar de hormigón"
+  title: "Informe de Patologías Estructurales - Perito Ingeniero"
 subtitle: 'Diagnóstico experto de fisuras, deformaciones y evaluación de la seguridad estructural'
 description: "¿Ha detectado grietas en paredes, vigas o forjados? Realizamos un informe pericial experto para diagnosticar la causa, evaluar el riesgo y determinar la solución en Barcelona."
 permalink: "/informes-periciales/patologias-estructurales/"

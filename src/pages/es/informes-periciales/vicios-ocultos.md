@@ -1,6 +1,10 @@
 ---
 layout: "layouts/service-child.njk"
 title: "Perito para Vicios Ocultos en Viviendas en Barcelona | Reclamación"
+hero:
+  image: "src/assets/images/inspeccion-vicios-ocultos.jpg"
+  alt: "Inspección técnica de vicios ocultos en instalaciones de vivienda"
+  title: "Informe por Vicios Ocultos - Reclamación Compraventa"
 subtitle: "Elaboramos el informe pericial técnico para fundamentar su reclamación legal"
 description: "¿Ha descubierto defectos graves en su vivienda recién comprada en Barcelona? Realizamos el informe pericial de vicios ocultos que necesita para demostrar su preexistencia y reclamar."
 permalink: "/informes-periciales/vicios-ocultos/"

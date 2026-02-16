@@ -1,6 +1,10 @@
 ---
 layout: 'layouts/service-child.njk'
 title: "Perito para Comunidades de Propietarios en Barcelona | Informes Técnicos"
+hero:
+  image: "src/assets/images/inspeccion-fachada-comunidad.jpg"
+  alt: "Perito inspeccionando fachada y elementos comunes en comunidad de propietarios"
+  title: "Informes para Comunidades de Propietarios - ITE y Fachadas"
 subtitle: 'Dictámenes periciales sobre elementos comunes para reclamaciones y toma de decisiones'
 description: "Servicio de peritaje para Comunidades de Propietarios en Barcelona. Elaboramos informes técnicos sobre patologías en fachadas, cubiertas, garajes y otros elementos comunes."
 permalink: "/informes-periciales/comunidades-propietarios/"

@@ -1,9 +1,9 @@
 ---
 layout: "layouts/service-pillar.njk"
 # SEO: Título potente con las keywords principales y geolocalización.
-title: "Informes Periciales Técnicos en Barcelona | Dictámenes de Ingeniería"
+title: "Informe Pericial en Barcelona | Dictámenes Técnicos de Parte y Judiciales"
 # SEO: Descripción activa que resume el valor y los casos de uso.
-description: "Elaboración de informes y dictámenes periciales en Barcelona. Documentación técnica experta para procedimientos judiciales, reclamaciones y arbitrajes."
+description: "Dictamen pericial técnico en Barcelona para juicios y reclamaciones. Informes de parte, judiciales y valoración de daños constructivos con validez legal."
 permalink: "/informes-periciales/"
 lang: "es"
 translations:
@@ -33,15 +33,15 @@ eleventyNavigation:
 # Hero Section
 hero:
   title: "El Informe Pericial Técnico"
-  strong: "Fundamento de Ingeniería Forense"
-  subtitle: "Análisis patológico, diagnóstico y conclusiones probatorias para procesos judiciales"
+  strong: "La Prueba Definitiva"
+  subtitle: "¿Qué validez legal tiene nuestro Dictamen Pericial?"
   description: "El dictamen pericial es el documento técnico-legal que objetiva una realidad constructiva compleja. Elaboramos informes con rigor normativo diseñados para servir como carga de prueba irrefutable en litigios y negociaciones."
   intro: "Más allá de una opinión experta, nuestros informes son auditorías técnicas completas que vinculan la patología detectada con la normativa infringida (CTE, LOE) y las responsabilidades contractuales."
   image: "src/assets/images/informe-pericial-patologias-barcelona.jpg"
 
 # Sección "Qué es un Informe Pericial"
 sections:
-  title: "¿Qué es un Informe Pericial y por qué es fundamental?"
+  title: "Estructura y Validez Legal de nuestros Dictámenes"
   what_is:
     text: >
       Un informe pericial es un documento técnico redactado por un experto cualificado, que analiza un hecho o estado de cosas desde una perspectiva técnica para exponer unas conclusiones objetivas. En el ámbito de la construcción, es la prueba determinante para demostrar la causa de un daño, valorar una negligencia o cuantificar una reparación.
@@ -55,7 +55,7 @@ sections:
 
 # Service Cluster: Los diferentes tipos de informes que se ofrecen
 serviceCluster:
-  title: "Tipos de Informes Periciales que Realizamos"
+  title: "Tipología de Informes: De Parte vs. Judiciales"
   intro: "Ofrecemos una solución pericial para cada necesidad, adaptando nuestro análisis al objetivo y al contexto de la reclamación:"
   services:
     - title: "Informe Pericial de Parte"
@@ -126,9 +126,9 @@ serviceCluster:
 
 # Proceso de Trabajo
 process:
-  title: "Nuestra Metodología de Actuación"
+  title: "Metodología: Cómo elaboramos la Prueba Pericial"
   steps:
-    - title: "Estudio Previo y Viabilidad"
+    - title: "Pre-informe de Viabilidad"
       description: "Analizamos su caso y la documentación disponible para confirmar la viabilidad de la pericial."
     - title: "Inspección Técnica y Toma de Datos"
       description: "Visitamos el inmueble o la obra para realizar una inspección exhaustiva y recopilar todas las evidencias."
@@ -173,7 +173,7 @@ cta:
     url: "/contacto/"
 ---
 
-## ¿Qué es Exactamente un Informe Pericial Técnico y Por Qué es su Mejor Herramienta?
+## La Importancia de la Prueba Pericial en el Proceso Judicial
 
 En el sector de la construcción, las opiniones son muchas, pero los hechos técnicos son irrefutables. Un **informe pericial** es precisamente eso: un análisis técnico, objetivo y documentado de una realidad constructiva, elaborado por un experto independiente. No es una opinión; es la traducción de un problema complejo (una grieta, una humedad, un sobrecoste) a un lenguaje de causas, consecuencias y responsabilidades con base en la normativa y la buena práctica de la ingeniería.
 
@@ -188,7 +188,7 @@ Aunque ambos buscan esclarecer hechos técnicos, su origen y contexto son distin
 
 En ambos escenarios, nuestra metodología y rigor son idénticos, garantizando la calidad y objetividad del dictamen final.
 
-## ¿En Qué Situaciones es Imprescindible un Informe Pericial?
+## Valoración de Daños y Nexo Causal: El Corazón del Informe
 
 Si se encuentra en alguna de las siguientes situaciones, un informe pericial no es una opción, es una necesidad:
 
@@ -198,7 +198,7 @@ Si se encuentra en alguna de las siguientes situaciones, un informe pericial no 
 * **Reclamaciones a Seguros:** Para rebatir la valoración de daños de la aseguradora y obtener la indemnización que realmente corresponde.
 * **Procesos Judiciales:** Como prueba fundamental para demostrar hechos técnicos ante un tribunal.
 
-## Nuestro Proceso: Del Análisis a la Ratificación en Juicio
+## Ratificación en Sede Judicial: La Defensa del Dictamen
 
 Nuestro trabajo va más allá de una simple visita. Seguimos un proceso metódico para garantizar que cada conclusión sea sólida y defendible:
 
@@ -207,7 +207,7 @@ Nuestro trabajo va más allá de una simple visita. Seguimos un proceso metódic
 3.  **Análisis y Redacción:** Cruzamos los datos de la inspección con la normativa aplicable, la documentación del proyecto y nuestra experiencia para redactar un informe claro, bien estructurado y con conclusiones fundamentadas.
 4.  **Entrega y Defensa:** Le entregamos el informe y se lo explicamos en detalle. Si el caso llega a juicio, acudimos a la sede judicial para **ratificar y defender nuestras conclusiones** ante el juez y las partes.
 
-## La Ventaja de un Perito Ingeniero Civil
+## Firma de Ingeniero Civil: Garantía de Solvencia Técnica
 
 Elegir un perito con formación superior en Ingeniería Civil aporta una visión más profunda. Nuestro conocimiento de cálculo de estructuras, ciencia de materiales, geotecnia y normativa de grandes infraestructuras nos permite analizar problemas complejos desde una perspectiva integral, garantizando la máxima solvencia técnica de nuestras conclusiones.
 

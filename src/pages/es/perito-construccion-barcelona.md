@@ -1,8 +1,8 @@
 ---
 layout: "layouts/service-pillar.njk"
-title: "Perito Construcción Barcelona | Ingenieros Expertos en Obras"
+title: "Perito Construcción Barcelona | Ingenieros Expertos en Obras y Reformas"
 subtitle: "Especialistas en dictámenes técnicos, vicios ocultos y patologías constructivas"
-description: "¿Necesita un Perito de Construcción en Barcelona? Somos ingenieros expertos en resolver conflictos de obra, vicios ocultos y reclamaciones judiciales. Hable con un técnico hoy."
+description: "Ingenieros Peritos en Barcelona especializados en construcción. Expertos en vicios ocultos, control de obras y defensa técnica en juicios. Consulte ahora."
 permalink: "/construccion/"
 lang: "es"
 eleventyNavigation:
@@ -12,8 +12,8 @@ eleventyNavigation:
 
 hero:
   title: "Perito de Construcción"
-  strong: "en Barcelona"
-  subtitle: "Su defensa técnica ante problemas constructivos"
+  strong: "Ingenieros Expertos en Obras"
+  subtitle: "Su defensa técnica en Barcelona ante problemas constructivos"
   description: "Protegemos sus intereses traduciendo defectos de obra en argumentos legales. Ingenieros Colegiados expertos en Tribunales de Justicia."
   image: "src/assets/images/perito-construccion-barcelona-profesional.jpg"
   alt: "Perito de construcción revisando estructura en Barcelona"
@@ -119,7 +119,7 @@ cta:
     url: "/contacto/"
 
 sections:
-  title: "¿Por qué es fundamental un Perito de Construcción?"
+  title: "¿Cuándo contratar a un Perito Especialista en Edificación?"
   what_is:
     text: "Un perito de construcción es un técnico experto que analiza, diagnostica y dictamina sobre problemas en edificaciones. Su intervención es decisiva para demostrar la causa de un siniestro, cuantificar daños o valorar incumplimientos contractuales."
     features:
@@ -142,20 +142,20 @@ benefits:
       title: "Respuesta Rápida"
       description: "Actuamos con agilidad."
 ---
-## Expertos en Peritaje de Construcción y Edificación
+## Nuestra Función: Ingenieros al Servicio de su Defensa
 
 Como **peritos de construcción en Barcelona**, nuestra labor va más allá de la simple inspección. Actuamos como el nexo entre la ingeniería y el derecho, traduciendo patologías constructivas complejas en argumentos técnicos comprensibles y sólidos.
 
 Un **dictamen pericial de construcción** es la herramienta fundamental cuando surge el conflicto. En **Perito Barcelona**, cubrimos todas las fases del ciclo constructivo y sus posibles patologías:
 
-### ¿Qué servicios ofrece nuestro perito de construcción?
+### Problemas que Resolvemos: Vicios Ocultos y Patologías
 
 * **Informes de Parte y Judiciales:** Elaboramos la prueba técnica necesaria para fundamentar su demanda o defensa.
 * **Inspección de Vicios Ocultos:** Si ha comprado una vivienda con problemas de humedades, grietas o instalaciones deficientes, documentamos el daño para su reclamación.
 * **Control de Calidad y Auditoría:** Verificamos que lo construido se ajusta al proyecto y a la normativa vigente (*Lex Artis*).
 * **Informes por Siniestros:** Análisis de causas en incendios, inundaciones o colapsos estructurales.
 
-### Por qué elegir a Perito Barcelona
+### Nuestra Autoridad Técnica: Ingenieros Civiles Colegiados
 
 No todos los peritos tienen la misma solvencia. Nuestra formación como **Ingenieros Civiles** nos permite analizar la estructura y la cimentación con un nivel de detalle que otros técnicos no alcanzan. Además, nuestra experiencia en la ratificación judicial en los juzgados de Barcelona garantiza que el informe será defendido con contundencia ante el juez.
 
