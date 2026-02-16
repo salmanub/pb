@@ -20,6 +20,9 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+  // Prevent build loop by ignoring the output directory of optimized images
+  eleventyConfig.watchIgnores.add("src/assets/images/optimized/");
+
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/scripts");
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
@@ -84,7 +87,7 @@ export default function (eleventyConfig) {
     let opts = {
       widths: isServe ? [null] : [320, 640, 960, 1280, 1920], // En dev solo tamaño original (o redimensionado básico)
       formats: isServe ? ["auto"] : ["avif", "webp", "jpeg"], // En dev solo formato original
-      outputDir: "./dist/assets/images/optimized/",
+      outputDir: "./src/assets/images/optimized/",
       urlPath: "/assets/images/optimized/",
       filenameFormat: function (id, src, width, format) {
         const extension = path.extname(src);

@@ -11,7 +11,7 @@ const rootDir = path.resolve(__dirname, '..');
 // Configuración de dimensiones y formatos (coincidentes con el shortcode de imagen en eleventy.config.js)
 const widths = [320, 480, 640, 768, 1024, 1280, 1536, 1920, 2048];
 const formats = ["avif", "webp", "jpg"]; // Para imágenes con transparencia PNG se añadirá dinámicamente
-const outputDir = "../dist/assets/images/optimized/"; // Modified to output to dist for production
+const outputDir = "./assets/images/optimized/"; // Revertido para optimización local
 const urlPath = "/assets/images/optimized/";
 
 // Opciones de calidad para cada formato
