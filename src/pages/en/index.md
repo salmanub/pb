@@ -26,7 +26,12 @@ hero:
   title: "Technical Solutions"
   strong: "for Legal Disputes"
   subtitle: "Engineering Consulting, Expert Witness Reports, and Building Audits"
-  description: "We produce independent technical reports to resolve litigation, audit project quality, and diagnose structural safety with the utmost rigor."
+  description: |
+    <p class="mb-4">We protect your interests by translating construction defects into legal arguments. Chartered Engineers expert in Court proceedings.</p>
+
+    <p class="mb-4">When a conflict arises in a construction site or property, you need more than an opinion: you need technical certainty. As <strong>Construction Expert Witnesses in Barcelona</strong>, we act as your technical eyes, identifying the root cause of the problem and defending your position with solvency before the opposing party or the judge.</p>
+
+    <p>Do not let a construction defect become a legal nightmare. Tell us about your case and we will guide you on the viability of your claim.</p>
   image:
     path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
     alt: "Perito ingeniero inspeccionando una estructura de hormigón"
