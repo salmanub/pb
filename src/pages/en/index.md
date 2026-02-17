@@ -29,7 +29,7 @@ hero:
   description: |
     <p class="mb-4">We protect your interests by translating construction defects into legal arguments. Chartered Engineers expert in Court proceedings.</p>
 
-    <p class="mb-4">When a conflict arises in a construction site or property, you need more than an opinion: you need technical certainty. As <strong>Construction Expert Witnesses in Barcelona</strong>, we act as your technical eyes, identifying the root cause of the problem and defending your position with solvency before the opposing party or the judge.</p>
+    <p class="mb-4">When a conflict arises in a construction site or property, you need more than an opinion: you need technical certainty. As <a href="/en/construction-expert/"><strong>Construction Expert Witnesses in Barcelona</strong></a>, we act as your technical eyes, identifying the root cause of the problem and defending your position with solvency before the opposing party or the judge.</p>
 
     <p>Do not let a construction defect become a legal nightmare. Tell us about your case and we will guide you on the viability of your claim.</p>
   image:

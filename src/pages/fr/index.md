@@ -26,7 +26,7 @@ hero:
   title: "Solutions Techniques"
   strong: "pour Conflits Juridiques"
   subtitle: "Conseil en Ingénierie, Rapports d'Expertise et Audit de Construction"
-  description: "Nous rédigeons des rapports techniques indépendants pour résoudre les litiges, auditer la qualité des projets et diagnostiquer la sécurité des structures avec la plus grande rigueur."
+  description: "Nous rédigeons des rapports techniques indépendants pour résoudre les litiges. De l'analyse des pathologies à la ratification au tribunal, en tant qu'<a href='/fr/expert-construction/'><strong>Experts en Construction</strong></a>, nous sommes votre partenaire technique de confiance."
   image:
     path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
     alt: "Ingénieur expert inspectant une structure en béton"

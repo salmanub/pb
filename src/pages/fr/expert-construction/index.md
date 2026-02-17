@@ -51,7 +51,7 @@ serviceCluster:
         - "Base pour négociation"
     - title: "Expert Judiciaire"
       description: "Intervention par désignation du tribunal ou de partie. Nous apportons rigueur technique, impartialité et une défense orale solide."
-      url: "/fr/rapports-expertise/judiciaire/"
+      url: "/fr/expert-construction/"
       icon: "scale"
       features:
         - "Désignation judiciaire"

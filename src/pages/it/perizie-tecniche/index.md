@@ -68,7 +68,7 @@ serviceCluster:
         - "Base per la negoziazione"
     - title: "Consulenza Tecnica d'Ufficio (CTU)"
       description: "Realizzata su nomina diretta di un tribunale, agendo come ausiliari del giudice con totale imparzialità."
-      url: "/it/perizie-tecniche/consulenza-tecnica-ufficio/"
+      url: "/it/perito-costruzioni/"
       icon: "scale"
       features:
         - "Nomina giudiziaria"

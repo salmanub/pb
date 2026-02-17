@@ -26,7 +26,7 @@ hero:
   title: "Solucions Tècniques"
   strong: "per a Conflictes Legals"
   subtitle: "Consultoria d'Enginyeria, Dictàmens Pericials i Auditoria d'Edificació"
-  description: "Elaborem informes tècnics independents per resoldre litigis, auditar la qualitat de projectes i diagnosticar la seguretat d'estructures amb el màxim rigor."
+  description: "Elaborem informes tècnics independents per resoldre litigis. Des de l'anàlisi de patologies fins a la ratificació en seu judicial, com a <a href='/ca/construccio/'><strong>Pèrits de Construcció</strong></a>, som el seu soci tècnic de confiança."
   image:
     path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
     alt: "Pèrit enginyer inspeccionant una estructura de formigó"

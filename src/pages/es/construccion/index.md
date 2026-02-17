@@ -51,7 +51,7 @@ serviceCluster:
         - "Base para negociación"
     - title: "Perito Judicial"
       description: "Actuación por designación del juzgado o de parte. Aportamos rigor técnico, imparcialidad y una defensa oral solvente en sede judicial."
-      url: "/informes-periciales/judicial/"
+      url: "/construccion/"
       icon: "scale"
       features:
         - "Designación judicial"

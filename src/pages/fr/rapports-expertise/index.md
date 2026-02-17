@@ -68,7 +68,7 @@ serviceCluster:
         - "Base de négociation"
     - title: "Rapport d'Expertise Judiciaire"
       description: "Réalisé sur désignation directe d'un tribunal, agissant comme auxiliaires de justice avec une totale impartialité."
-      url: "/fr/rapports-expertise/expertise-judiciaire/"
+      url: "/fr/expert-construction/"
       icon: "scale"
       features:
         - "Désignation judiciaire"

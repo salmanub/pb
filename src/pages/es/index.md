@@ -26,7 +26,7 @@ hero:
   title: "Soluciones Técnicas"
   strong: "para Conflictos Legales"
   subtitle: "Consultoría de Ingeniería, Dictámenes Periciales y Auditoría de Edificación"
-  description: "Aportamos el rigor técnico necesario para resolver disputas complejas. Desde el análisis de patologías hasta la ratificación en sede judicial, somos su socio técnico de confianza."
+  description: "Aportamos el rigor técnico necesario para resolver disputas complejas. Desde el análisis de patologías hasta la ratificación en sede judicial, como <a href='/construccion/'><strong>Peritos de Construcción</strong></a>, somos su socio técnico de confianza."
   image:
     path: "src/assets/images/peritaje-construccion-ingenieros-obra.avif"
     alt: "Ingeniero perito supervisando obra en construcción"

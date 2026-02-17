@@ -64,7 +64,7 @@ serviceCluster:
         - "Negotiation basis"
     - title: "Court-Appointed Expert Report"
       description: "Conducted by direct court appointment, acting as auxiliaries of justice with complete impartiality."
-      url: "/en/expert-witness-reports/court-appointed-report/"
+      url: "/en/construction-expert/"
       icon: "scale"
       features:
         - "Court appointment"

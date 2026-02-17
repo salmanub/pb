@@ -50,8 +50,8 @@ serviceCluster:
         - "Argomentazione per causa"
         - "Base per negoziazione"
     - title: "Perito Giudiziario"
-      description: "Intervento su nomina del tribunale o di parte (CTU/CTP). Forniamo rigore tecnico, imparcialità e una solida difesa orale."
-      url: "/it/perizie-tecniche/giudiziaria/"
+      description: "Intervento su nomina del tribunale o di parte (CTU/CTP). Forniamo rigore tecnico, imparzialità e una solida difesa orale."
+      url: "/it/perito-costruzioni/"
       icon: "scale"
       features:
         - "Nomina giudiziaria"

@@ -51,7 +51,7 @@ serviceCluster:
         - "Basis for negotiation"
     - title: "Judicial Expert Witness"
       description: "Acting by court appointment or party proposal. We provide technical rigor, impartiality, and solvent oral defense in court."
-      url: "/en/expert-witness-reports/court-expert/"
+      url: "/en/construction-expert/"
       icon: "scale"
       features:
         - "Court appointment"

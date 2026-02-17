@@ -51,7 +51,7 @@ serviceCluster:
         - "Base per a negociació"
     - title: "Pèrit Judicial"
       description: "Actuació per designació del jutjat o de part. Aportem rigor tècnic, imparcialitat i una defensa oral solvent en seu judicial."
-      url: "/ca/informes-pericials/judicial/"
+      url: "/ca/construccio/"
       icon: "scale"
       features:
         - "Designació judicial"

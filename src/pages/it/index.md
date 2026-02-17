@@ -26,7 +26,7 @@ hero:
   title: "Soluzioni Tecniche"
   strong: "per Controversie Legali"
   subtitle: "Consulenza Ingegneristica, Perizie Tecniche e Audit Edilizio"
-  description: "Elaboriamo perizie tecniche indipendenti per risolvere controversie, verificare la qualità dei progetti e diagnosticare la sicurezza delle strutture con il massimo rigore."
+  description: "Elaboriamo perizie tecniche indipendenti per risolvere controversie. Dall'analisi delle patologie alla ratifica in tribunale, come <a href='/it/perito-costruzioni/'><strong>Esperti in Costruzioni</strong></a>, siamo il vostro partner tecnico di fiducia."
   image:
     path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
     alt: "Perito ingegnere che ispeziona una struttura in cemento armato"
