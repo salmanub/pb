@@ -14,15 +14,15 @@ translations:
   - lang: en
     permalink: /en/expert-witness-reports/
     title: "Expert Witness Reports in Barcelona | Expert Judicial Engineers"
-    description: "We produce technical, party-appointed, and judicial expert reports in Barcelona. Our findings on pathologies, hidden defects, and construction disputes are the key evidence for your claim."
+    description: "Technical expert opinion in Barcelona for legal proceedings and claims. Party-appointed and court-appointed reports with legal validity."
   - lang: fr
     permalink: /fr/rapports-expertise/
     title: "Rapports d'Expertise à Barcelone | Experts Judiciaires"
-    description: "Nous rédigeons des rapports d'expertise technique, de partie et judiciaires à Barcelone. Nos conclusions sur les pathologies, les vices cachés et les litiges de construction sont la preuve clé pour votre réclamation."
+    description: "Avis technique d'expert à Barcelone pour procès et réclamations. Rapports de partie, judiciaires et évaluation de dommages constructifs avec validité juridique."
   - lang: it
     permalink: /it/perizie-tecniche/
     title: "Perizie Tecniche a Barcellona | Ingegneri Giudiziari Esperti"
-    description: "Redigiamo perizie tecniche, di parte e giudiziarie a Barcellona. Le nostre relazioni su patologie, vizi occulti e controversie edilizie sono la prova chiave per la tua richiesta."
+    description: "Parere tecnico peritale a Barcellona per processi e richieste di risarcimento. Perizie di parte, giudiziarie e valutazione dei danni costruttivi con validità legale."
 
 eleventyNavigation:
   key: "Informes Periciales"

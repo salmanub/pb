@@ -2,7 +2,7 @@
 layout: "layouts/service-pillar.njk"
 # SEO: Título potente con las keywords principales y geolocalización.
 title: "Perizia Tecnica a Barcellona | Pareri Tecnici di Parte e Giudiziari"
-description: "Perizia tecnica a Barcellona per processi e richieste di risarcimento. Perizie di parte, giudiziarie e valutazione dei danni costruttivi con validità legale."
+description: "Parere tecnico peritale a Barcellona per processi e richieste di risarcimento. Perizie di parte, giudiziarie e valutazione dei danni costruttivi con validità legale."
 permalink: "/it/perizie-tecniche/"
 lang: "it"
 

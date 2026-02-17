@@ -1,7 +1,7 @@
 ---
 layout: "layouts/service-pillar.njk"
 title: "Expert Witness Report in Barcelona | Technical Opinions for Court"
-description: "Technical expert report in Barcelona for legal proceedings and claims. Party-appointed and court-appointed reports with legal validity."
+description: "Technical expert opinion in Barcelona for legal proceedings and claims. Party-appointed and court-appointed reports with legal validity."
 permalink: "/en/expert-witness-reports/"
 lang: "en"
 

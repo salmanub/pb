@@ -2,7 +2,7 @@
 layout: "layouts/service-pillar.njk"
 # SEO: Título potente con las keywords principales y geolocalización.
 title: "Rapport d'Expertise à Barcelone | Avis Techniques de Partie et Judiciaires"
-description: "Rapport d'expertise technique à Barcelone pour procès et réclamations. Rapports de partie, judiciaires et évaluation de dommages constructifs avec validité juridique."
+description: "Avis technique d'expert à Barcelone pour procès et réclamations. Rapports de partie, judiciaires et évaluation de dommages constructifs avec validité juridique."
 permalink: "/fr/rapports-expertise/"
 lang: "fr"
 
