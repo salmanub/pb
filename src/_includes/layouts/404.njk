@@ -2,20 +2,6 @@
 
 {% block content %}
 <main id="page-404" class="relative mt-[70px] lg:mt-[100px] min-h-[calc(100vh-70px)] flex items-center justify-center isolate overflow-hidden bg-slate-50">
-    <!-- Snow Animation Background -->
-    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-    </div>
-
     <!-- Visual Identity Background -->
     <div class="absolute inset-0 z-0">
         <div class="absolute top-0 right-0 w-2/3 h-full bg-white skew-x-[-12deg] translate-x-1/4 origin-top"></div>
@@ -24,10 +10,12 @@
 
     <div class="relative z-10 w-full px-6 md:px-12 lg:px-16 py-12 md:py-24 text-center">
         <div class="max-w-3xl mx-auto">
-            <!-- 404 Illustration: Mouse Construction -->
+            <!-- 404 Illustration: Standard Construction Icon -->
             <div class="mb-8 flex justify-center">
-                <div class="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center animate-float">
-                    {% image "src/assets/images/mouse-construction-snow.png", "Mouse Engineer in Snow", "w-full h-full object-contain drop-shadow-2xl" %}
+                <div class="relative w-40 h-40 md:w-56 md:h-56 flex items-center justify-center animate-float text-slate-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
+                        <path fill-rule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" />
+                    </svg>
                 </div>
             </div>
             
@@ -74,43 +62,6 @@
 }
 .animate-float {
     animation: float 6s ease-in-out infinite;
-}
-
-/* Snowfall Animation */
-.snowflake {
-  color: #cbd5e1;
-  font-size: 1.5em;
-  font-family: Arial, sans-serif;
-  text-shadow: 0 0 5px #000;
-  position: fixed;
-  top: -10%;
-  z-index: 0;
-  user-select: none;
-  cursor: default;
-  animation-name: snowflakes-fall, snowflakes-shake;
-  animation-duration: 10s, 3s;
-  animation-timing-function: linear, ease-in-out;
-  animation-iteration-count: infinite, infinite;
-  animation-play-state: running, running;
-}
-.snowflake:nth-of-type(0) { left: 1%; animation-delay: 0s, 0s; }
-.snowflake:nth-of-type(1) { left: 10%; animation-delay: 1s, 1s; }
-.snowflake:nth-of-type(2) { left: 20%; animation-delay: 6s, 0.5s; }
-.snowflake:nth-of-type(3) { left: 30%; animation-delay: 4s, 2s; }
-.snowflake:nth-of-type(4) { left: 40%; animation-delay: 2s, 2s; }
-.snowflake:nth-of-type(5) { left: 50%; animation-delay: 8s, 3s; }
-.snowflake:nth-of-type(6) { left: 60%; animation-delay: 6s, 2s; }
-.snowflake:nth-of-type(7) { left: 70%; animation-delay: 2.5s, 1s; }
-.snowflake:nth-of-type(8) { left: 80%; animation-delay: 1s, 0s; }
-.snowflake:nth-of-type(9) { left: 90%; animation-delay: 3s, 1.5s; }
-
-@keyframes snowflakes-fall {
-  0% { top: -10%; }
-  100% { top: 100%; }
-}
-@keyframes snowflakes-shake {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(80px); }
 }
 </style>
 {% endblock %}
