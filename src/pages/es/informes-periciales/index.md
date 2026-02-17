@@ -66,14 +66,7 @@ serviceCluster:
         - "Visión técnica experta"
         - "Argumentación para demanda"
         - "Base para negociación"
-    - title: "Perito Judicial"
-      description: "Actuación por designación del juzgado o de parte. Aportamos rigor técnico, imparcialidad y una defensa oral solvente en sede judicial."
-      url: "/construccion/"
-      icon: "scale"
-      features:
-        - "Designación judicial"
-        - "Máxima objetividad"
-        - "Ratificación en juicio"
+
     - title: "Informe de Patologías Estructurales"
       description: "Análisis de grietas, fisuras, deformaciones y otros daños que afectan a la seguridad y estabilidad de un inmueble."
       url: "/informes-periciales/patologias-estructurales/"

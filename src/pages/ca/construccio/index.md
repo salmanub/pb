@@ -49,14 +49,7 @@ serviceCluster:
         - "Visió tècnica experta"
         - "Argumentació per a demanda"
         - "Base per a negociació"
-    - title: "Pèrit Judicial"
-      description: "Actuació per designació del jutjat o de part. Aportem rigor tècnic, imparcialitat i una defensa oral solvent en seu judicial."
-      url: "/ca/construccio/"
-      icon: "scale"
-      features:
-        - "Designació judicial"
-        - "Màxima objectivitat"
-        - "Ratificació en judici"
+
     - title: "Informe de Patologies Estructurals"
       description: "Anàlisi d'esquerdes, fissures, deformacions i altres danys que afecten la seguretat i estabilitat d'un immoble."
       url: "/ca/informes-pericials/patologies-estructurals/"

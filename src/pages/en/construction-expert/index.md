@@ -49,14 +49,7 @@ serviceCluster:
         - "Expert technical vision"
         - "Argumentation for lawsuit"
         - "Basis for negotiation"
-    - title: "Judicial Expert Witness"
-      description: "Acting by court appointment or party proposal. We provide technical rigor, impartiality, and solvent oral defense in court."
-      url: "/en/construction-expert/"
-      icon: "scale"
-      features:
-        - "Court appointment"
-        - "Maximum objectivity"
-        - "Ratification in trial"
+
     - title: "Structural Pathologies Report"
       description: "Analysis of cracks, fissures, deformations, and other damages affecting the safety and stability of a property."
       url: "/en/expert-witness-reports/structural-pathologies/"

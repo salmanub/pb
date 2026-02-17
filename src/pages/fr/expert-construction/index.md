@@ -49,14 +49,7 @@ serviceCluster:
         - "Vision technique experte"
         - "Argumentation pour procès"
         - "Base pour négociation"
-    - title: "Expert Judiciaire"
-      description: "Intervention par désignation du tribunal ou de partie. Nous apportons rigueur technique, impartialité et une défense orale solide."
-      url: "/fr/expert-construction/"
-      icon: "scale"
-      features:
-        - "Désignation judiciaire"
-        - "Impartialité maximale"
-        - "Ratification au tribunal"
+
     - title: "Rapport de Pathologies Structurelles"
       description: "Analyse de fissures, déformations et autres dommages affectant la sécurité et la stabilité d'un immeuble."
       url: "/fr/rapports-expertise/pathologies-structurelles/"

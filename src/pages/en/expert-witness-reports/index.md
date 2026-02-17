@@ -62,14 +62,7 @@ serviceCluster:
         - "Expert technical vision"
         - "Claim argumentation"
         - "Negotiation basis"
-    - title: "Court-Appointed Expert Report"
-      description: "Conducted by direct court appointment, acting as auxiliaries of justice with complete impartiality."
-      url: "/en/construction-expert/"
-      icon: "scale"
-      features:
-        - "Court appointment"
-        - "Maximum objectivity"
-        - "Court ratification"
+
     - title: "Structural Pathology Report"
       description: "Analysis of cracks, fissures, deformations, and other damage affecting building safety and stability."
       url: "/en/expert-witness-reports/structural-pathologies/"

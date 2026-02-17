@@ -1,0 +1,8 @@
+<svg class="w-48 h-48 md:w-56 md:h-56 text-yellow-500 drop-shadow-xl animate-float" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4L4 9v11a2 2 0 002 2h12a2 2 0 002-2V9l-8-5z" fill="#FCD34D" stroke="#D97706" stroke-width="0"/> <!-- Helmet body fill -->
+    <path d="M21 12H3" stroke="#D97706" stroke-width="2"/> <!-- Helmet Rim -->
+    <path d="M12 4C7.58 4 4 7.58 4 12" stroke="#D97706" stroke-width="2"/> <!-- Helmet Dome -->
+    <!-- Scarf -->
+    <path d="M10 12c0 2-2 3-2 5s2 3 4 3 4-1 4-3-2-3-2-5" stroke="#EF4444" stroke-width="3" fill="#FCA5A5" />
+    <path d="M14 17l3 3" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/>
+</svg>

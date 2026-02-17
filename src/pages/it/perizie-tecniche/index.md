@@ -66,14 +66,7 @@ serviceCluster:
         - "Visione tecnica esperta"
         - "Argomentazione per la causa"
         - "Base per la negoziazione"
-    - title: "Consulenza Tecnica d'Ufficio (CTU)"
-      description: "Realizzata su nomina diretta di un tribunale, agendo come ausiliari del giudice con totale imparzialità."
-      url: "/it/perito-costruzioni/"
-      icon: "scale"
-      features:
-        - "Nomina giudiziaria"
-        - "Massima oggettività"
-        - "Asseverazione in tribunale"
+
     - title: "Perizia di Patologie Strutturali"
       description: "Analisi di crepe, fessurazioni, deformazioni e altri danni che compromettono la sicurezza e la stabilità di un immobile."
       url: "/it/perizie-tecniche/patologie-strutturali/"

@@ -66,14 +66,7 @@ serviceCluster:
         - "Vision technique experte"
         - "Argumentation pour la demande"
         - "Base de négociation"
-    - title: "Rapport d'Expertise Judiciaire"
-      description: "Réalisé sur désignation directe d'un tribunal, agissant comme auxiliaires de justice avec une totale impartialité."
-      url: "/fr/expert-construction/"
-      icon: "scale"
-      features:
-        - "Désignation judiciaire"
-        - "Objectivité maximale"
-        - "Ratification au tribunal"
+
     - title: "Rapport de Pathologies Structurelles"
       description: "Analyse des fissures, lézardes, déformations et autres dommages affectant la sécurité et la stabilité d'un bien immobilier."
       url: "/fr/rapports-expertise/pathologies-structurelles/"

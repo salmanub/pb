@@ -49,14 +49,7 @@ serviceCluster:
         - "Visione tecnica esperta"
         - "Argomentazione per causa"
         - "Base per negoziazione"
-    - title: "Perito Giudiziario"
-      description: "Intervento su nomina del tribunale o di parte (CTU/CTP). Forniamo rigore tecnico, imparzialità e una solida difesa orale."
-      url: "/it/perito-costruzioni/"
-      icon: "scale"
-      features:
-        - "Nomina giudiziaria"
-        - "Imparzialità massima"
-        - "Asseverazione in tribunale"
+
     - title: "Relazione su Patologie Strutturali"
       description: "Analisi di crepe, fessure, deformazioni e altri danni che interessano la sicurezza e stabilità di un immobile."
       url: "/it/perizie-tecniche/patologie-strutturali/"

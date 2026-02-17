@@ -1,6 +1,6 @@
 ---
 layout: "layouts/index.njk"
-title: "Perito Judicial Barcelona | Ingeniería Forense y Consultoría"
+title: "Peritos Judiciales Barcelona | Ingeniería Forense y Consultoría"
 description: "Despacho de Ingeniería Forense en Barcelona. Expertos en dictámenes periciales, patologías de la edificación y consultoría técnica legal."
 permalink: "/"
 lang: "es"
