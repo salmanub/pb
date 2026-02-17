@@ -82,6 +82,14 @@ serviceCluster:
         - "Diagnosi di crepe"
         - "Valutazione della sicurezza"
         - "Proposte di rinforzo"
+    - title: "Umidità e Infiltrazioni Persistenti"
+      description: "Rilevamento dell'origine, relazioni tecniche e soluzioni per problemi di umidità negli edifici."
+      url: "/it/perizie-tecniche/umidita-infiltrazioni/"
+      icon: "droplet"
+      features:
+        - "Diagnosi dell'origine"
+        - "Misurazioni con igrometro"
+        - "Soluzioni definitive"
     - title: "Perizia per Vizi Occulti"
       description: "Identificazione e documentazione di difetti gravi non apparenti al momento della compravendita di un immobile."
       url: "/it/perizie-tecniche/vizi-occulti/"
@@ -106,14 +114,14 @@ serviceCluster:
         - "Revisione di perizie precedenti"
         - "Rilevamento di errori"
         - "Nuove linee di difesa"
-    - title: "Reclami su Assicurazioni Edili"
-      description: "Perizie per grandi sinistri su Polizze CAR (Contractor's All Risks), Decennale Postuma e RC, in difesa dell'impresa costruttrice."
-      url: "/it/perizie-tecniche/risarcimento-assicurativo-edile/"
-      icon: "shield-check"
+    - title: "Perizie per Capannoni Industriali"
+      description: "Pareri tecnici specializzati su pavimentazioni, strutture, danni post-locazione e conformità normativa (Antincendio) in capannoni industriali."
+      url: "/it/perizie-tecniche/capannoni-industriali/"
+      icon: "building"
       features:
-        - "Polizze CAR (All Risks)"
-        - "Grandi sinistri in cantiere"
-        - "Difesa dell'impresa costruttrice"
+        - "Analisi danni post-locazione"
+        - "Valutazione pavimenti e strutture"
+        - "Verifica normativa (Antincendio)"
 
 # Proceso de Trabajo
 process:

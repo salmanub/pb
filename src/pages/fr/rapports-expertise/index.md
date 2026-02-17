@@ -82,6 +82,14 @@ serviceCluster:
         - "Diagnostic des fissures"
         - "Évaluation de la sécurité"
         - "Propositions de renforcement"
+    - title: "Humidité et Infiltrations Persistantes"
+      description: "Détection de l'origine, rapports techniques et solutions pour les problèmes d'humidité dans les bâtiments."
+      url: "/fr/rapports-expertise/humidite-infiltrations/"
+      icon: "droplet"
+      features:
+        - "Diagnostic de l'origine"
+        - "Mesures hygrométriques"
+        - "Solutions définitives"
     - title: "Rapport pour Vices Cachés"
       description: "Identification et documentation de défauts graves non apparents au moment de la vente d'un bien immobilier."
       url: "/fr/rapports-expertise/vices-caches/"
@@ -106,14 +114,14 @@ serviceCluster:
         - "Examen de rapports antérieurs"
         - "Détection d'erreurs"
         - "Nouvelles lignes de défense"
-    - title: "Réclamations en Assurance Construction"
-      description: "Rapports pour sinistres majeurs sur polices Tous Risques Chantier (TRC), Décennale et Responsabilité Civile, en défense du constructeur."
-      url: "/fr/rapports-expertise/reclamation-assurance-construction/"
-      icon: "shield-check"
+    - title: "Rapports d'Expertise pour Bâtiments Industriels"
+      description: "Avis techniques spécialisés sur les dallages, structures, dommages post-location et conformité réglementaire (Incendie) dans les entrepôts industriels."
+      url: "/fr/rapports-expertise/batiments-industriels/"
+      icon: "building"
       features:
-        - "Polices Tous Risques (TRC)"
-        - "Sinistres majeurs sur chantier"
-        - "Défense du constructeur"
+        - "Analyse dommages post-location"
+        - "Évaluation dallages et structures"
+        - "Vérification réglementaire"
 
 # Proceso de Trabajo
 process:

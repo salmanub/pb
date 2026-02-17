@@ -58,7 +58,7 @@ relatedProblems:
     url: "/informes-periciales/"
   - title: "Auditorías de Obra"
     description: "Un servicio clave para disputas de certificaciones y liquidaciones de obra."
-    url: "/auditorias-de-obra/"
+    url: "/auditorias-obra/"
 
 # Client Testimonials
 testimonials:
