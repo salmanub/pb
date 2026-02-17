@@ -23,9 +23,9 @@ eleventyNavigation:
 # Hero Section
 hero:
   tag: "Pèrits Enginyers Col·legiats a Barcelona"
-  title: "Informes Pericials Tècnics"
-  strong: "per a Defensar els seus Interessos"
-  subtitle: "Especialistes en Peritatges, Auditories d'Obra i Assessorament Estructural"
+  title: "Solucions Tècniques"
+  strong: "per a Conflictes Legals"
+  subtitle: "Consultoria d'Enginyeria, Dictàmens Pericials i Auditoria d'Edificació"
   description: "Elaborem informes tècnics independents per resoldre litigis, auditar la qualitat de projectes i diagnosticar la seguretat d'estructures amb el màxim rigor."
   image:
     path: "/assets/images/perito-construccion-obra-edificacion-640.avif"

@@ -23,9 +23,9 @@ eleventyNavigation:
 # Hero Section
 hero:
   tag: "Periti Ingegneri Abilitati a Barcellona"
-  title: "Perizie Tecniche"
-  strong: "per Difendere i Vostri Interessi"
-  subtitle: "Specialisti in Perizie, Audit di Cantiere e Consulenza Strutturale"
+  title: "Soluzioni Tecniche"
+  strong: "per Controversie Legali"
+  subtitle: "Consulenza Ingegneristica, Perizie Tecniche e Audit Edilizio"
   description: "Elaboriamo perizie tecniche indipendenti per risolvere controversie, verificare la qualità dei progetti e diagnosticare la sicurezza delle strutture con il massimo rigore."
   image:
     path: "/assets/images/perito-construccion-obra-edificacion-640.avif"

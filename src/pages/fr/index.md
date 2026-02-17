@@ -23,9 +23,9 @@ eleventyNavigation:
 # Hero Section
 hero:
   tag: "Experts Ingénieurs Agréés à Barcelone"
-  title: "Rapports d'Expertise Technique"
-  strong: "pour Défendre Vos Intérêts"
-  subtitle: "Spécialistes en Expertises, Audits de Chantier et Conseil en Structure"
+  title: "Solutions Techniques"
+  strong: "pour Conflits Juridiques"
+  subtitle: "Conseil en Ingénierie, Rapports d'Expertise et Audit de Construction"
   description: "Nous rédigeons des rapports techniques indépendants pour résoudre les litiges, auditer la qualité des projets et diagnostiquer la sécurité des structures avec la plus grande rigueur."
   image:
     path: "/assets/images/perito-construccion-obra-edificacion-640.avif"

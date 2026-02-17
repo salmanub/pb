@@ -23,9 +23,9 @@ eleventyNavigation:
 # Hero Section
 hero:
   tag: "Chartered Engineer Expert Witnesses in Barcelona"
-  title: "Technical Expert Witness Reports"
-  strong: "to Defend Your Interests"
-  subtitle: "Specialists in Expert Reports, Construction Audits, and Structural Consulting"
+  title: "Technical Solutions"
+  strong: "for Legal Disputes"
+  subtitle: "Engineering Consulting, Expert Witness Reports, and Building Audits"
   description: "We produce independent technical reports to resolve litigation, audit project quality, and diagnose structural safety with the utmost rigor."
   image:
     path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
