@@ -148,7 +148,7 @@ jobs:
             if [ -f .certs/privkey.pem ]; then
                echo "✅ Certificate obtained successfully."
                if [ -z "$GH_TOKEN" ]; then echo "Warning: GH_PAT not set"; else
-                   gh secret set SXG_CERT_PEM < .certs/cert.pem --repo "${{ github.repository }}"
+                   gh secret set SXG_CERT_PEM < .certs/fullchain.pem --repo "${{ github.repository }}"
                    gh secret set SXG_KEY_PEM < .certs/privkey.pem --repo "${{ github.repository }}"
                fi
             fi
@@ -233,6 +233,18 @@ jobs:
           fi
 
           echo "Generating cert.cbor..."
+          
+          # CRITICAL FIX: Ensure fullchain.pem actually contains the full chain (Leaf + CA)
+          # If we reused a cert from secrets that only had the leaf, fullchain.pem is just the leaf.
+          # We must append the CA.
+          CERT_COUNT=$(grep -c "BEGIN CERTIFICATE" .certs/fullchain.pem || true)
+          echo "Debug: .certs/fullchain.pem contains $CERT_COUNT certificates."
+          
+          if [ "$CERT_COUNT" -lt 2 ] && [ -f ".certs/ca.pem" ]; then
+             echo "⚠️ Chain incomplete. Appending CA to fullchain..."
+             cat .certs/ca.pem >> .certs/fullchain.pem
+          fi
+
           # Note: We use fullchain for the CBOR
           if [ -f .certs/ocsp.resp ]; then
              gen-certurl -pem .certs/fullchain.pem -ocsp .certs/ocsp.resp > dist/cert.cbor
