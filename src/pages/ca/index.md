@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Pèrit Barcelona | Despatx de Pèrits Enginyers Col·legiats'
-description: "Pèrit Barcelona: Som un despatx de pèrits enginyers col·legiats especialitzats en informes pericials, auditories d'obra i assessorament estructural a Barcelona i província."
+title: 'Perits Judicials Barcelona | Enginyeria Forense i Consultoria'
+description: "Despatx d'Enginyeria Forense a Barcelona. Experts en dictàmens pericials, patologies de l'edificació i consultoria tècnica legal."
 permalink: /ca/
 lang: ca
 translations:

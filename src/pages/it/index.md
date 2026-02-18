@@ -1,7 +1,7 @@
 ---
 layout: "layouts/index.njk"
-title: "Perito Barcellona | Studio di Periti Ingegneri Abilitati"
-description: "Siamo uno studio di periti ingegneri abilitati a Barcellona, specializzati nell'elaborazione di perizie tecniche, audit di cantiere e consulenza strutturale."
+title: "Periti Giudiziari Barcellona | Ingegneria Forense e Consulenza"
+description: "Studio di Ingegneria Forense a Barcellona. Esperti in perizie, patologie edilizie e consulenza tecnica legale."
 permalink: "/it/"
 lang: "it"
 translations:

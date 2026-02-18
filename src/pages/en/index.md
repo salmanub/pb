@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Perito Barcelona | Chartered Engineer Expert Witness Firm'
-description: "Perito Barcelona: We are a firm of chartered engineers specializing in technical expert reports, construction audits, and structural consulting in Barcelona and its province."
+title: 'Forensic Engineers Barcelona | Court Expert Witness & Consultancy'
+description: "Forensic Engineering Firm in Barcelona. Experts in expert witness reports, building pathologies, and legal technical consultancy."
 permalink: /en/
 lang: en
 translations:

@@ -1,7 +1,7 @@
 ---
 layout: "layouts/index.njk"
-title: "Expert Barcelone | Cabinet d'Experts Ingénieurs Agréés"
-description: "Nous sommes un cabinet d'experts ingénieurs agréés à Barcelone, spécialisé dans la rédaction de rapports d'expertise technique, les audits de chantier et le conseil en structure."
+title: "Experts Judiciaires Barcelone | Ingénierie Forensique et Conseil"
+description: "Cabinet d'Ingénierie Forensique à Barcelone. Experts en rapports d'expertise, pathologies du bâtiment et conseil technique juridique."
 permalink: "/fr/"
 lang: "fr"
 translations:
