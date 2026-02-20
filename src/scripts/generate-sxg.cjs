@@ -9,7 +9,7 @@ const CONFIG = {
     // Hardcoded to domain to prevent usage of 'example.com' default
     certUrl: 'https://perito.barcelona/cert.cbor',
     validityUrl: 'https://perito.barcelona/resource.validity.msg',
-    expire: '168h' // 7 days matching cert validity
+    expire: '144h' // 6 days to be strictly < 7 days and avoid edge cases
 };
 
 async function main() {
@@ -50,7 +50,9 @@ async function main() {
             '-validityUrl', CONFIG.validityUrl,
             '-o', outputFile,
             '-expire', CONFIG.expire,
-            '-date', dateStr // Backdated timestamp
+            '-date', dateStr, // Backdated timestamp
+            '-responseHeader', 'Content-Type: text/html; charset=utf-8',
+            '-responseHeader', 'Cache-Control: public, max-age=604800, stale-while-revalidate=86400'
         ];
 
         const result = spawnSync('gen-signedexchange', args, { stdio: 'inherit' });
