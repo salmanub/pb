@@ -5,7 +5,7 @@ on:
   push:
     branches: ["main"]
   schedule:
-    - cron: '0 0 * * 1' # Renew check weekly
+    - cron: '0 0 */6 * *' # Renew check every 6 days
   workflow_dispatch:
 
 permissions:
@@ -58,9 +58,9 @@ jobs:
           
           NEED_RENEW=true
           if [ -s .certs/cert.pem ] && [ -s .certs/privkey.pem ]; then
-             # Check if cert is valid for at least 7 more days (604800 seconds)
-             if openssl x509 -checkend 604800 -noout -in .certs/cert.pem; then
-                echo "✅ Existing certificate is valid for >7 days. Skipping renewal."
+             # Check if cert is valid for at least 20 more days (1728000 seconds)
+             if openssl x509 -checkend 1728000 -noout -in .certs/cert.pem; then
+                echo "✅ Existing certificate is valid for >20 days. Skipping renewal."
                 NEED_RENEW=false
              else
                 echo "⚠️ Certificate is expiring soon or invalid. Renewing..."
