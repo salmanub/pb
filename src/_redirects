@@ -8,7 +8,6 @@
 
 # --- REDIRECCIONES DE PÁGINAS PRINCIPALES Y PILARES ---
 # Mapeamos las antiguas URLs de servicios a las nuevas páginas pilar.
-# (Excluido /construccion/ exacto porque ahora es una página pilar propia, pero redirigimos sus subpáginas antiguas abajo)
 
 /peritajes/                               /informes-periciales/                   301
 
@@ -43,9 +42,7 @@
 /peritajes-ejecucion-obra/                /informes-periciales/reclamacion-mala-ejecucion/ 301
 /reparacion-hormigon-armado/              /asesoramiento-estructural/reparacion-hormigon/ 301
 
-
 # --- Versiones en Catalán ---
-# (Excluido /ca/construccio/ exacto porque existe)
 /ca/serveis-pericials/                    /ca/informes-pericials/                 301
 
 # ACTUALIZACIÓN PERITO JUDICIAL (CA)
@@ -63,7 +60,6 @@
 /ca/vicis-ocults/                         /ca/informes-pericials/vicis-ocults/    301
 
 # --- Versiones en Inglés ---
-/en/construction/                         /en/construction-expert/                301
 /en/construction-expert-reports/          /en/expert-witness-reports/             301
 
 # ACTUALIZACIÓN PERITO JUDICIAL (EN)
@@ -84,7 +80,6 @@
 /en/expert-witness-reports/owners-associations/ /en/expert-witness-reports/owners-association/ 301
 /en/insurance/                            /en/expert-witness-reports/             301
 
-
 # --- REDIRECCIONES DE PÁGINAS DE PROBLEMAS (CLÚSTERES) ---
 /grietas-estructurales/                   /informes-periciales/patologias-estructurales/    301
 /humedades-filtraciones/                  /informes-periciales/humedades-filtraciones/      301
@@ -103,13 +98,10 @@
 
 # --- REDIRECCIONES CON WILDCARD PARA SECCIONES ANTIGUAS ---
 # Capturamos subpáginas antiguas para no perder tráfico
-/construccion/*                           /informes-periciales/                   301
+
 /peritajes/*                              /informes-periciales/                   301
 /judicial/*                               /informes-periciales/informe-de-parte/  301
 /perito-judicial/*                        /informes-periciales/informe-de-parte/  301
 /auditoria/*                              /auditorias-obra/                       301
 /estructuras/*                            /asesoramiento-estructural/             301
 /abogados/*                               /colaboracion-abogados/                 301
-
-/ca/construccio/*                         /ca/informes-pericials/                 301
-/en/construction/*                        /en/expert-witness-reports/             301
