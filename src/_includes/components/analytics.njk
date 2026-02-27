@@ -13,7 +13,12 @@
         document.head.appendChild(script);
 
         gtag('js', new Date());
-        gtag('config', '{{ metadata.site.googleAnalyticsId }}');
+        gtag('config', '{{ metadata.site.googleAnalyticsId }}', {
+            'page_location': window.location.href,
+            'linker': {
+                'domains': ['perito.barcelona', 'webpkgcache.com']
+            }
+        });
     }
 
     // Optimization: Load GA only after user interaction or delay
