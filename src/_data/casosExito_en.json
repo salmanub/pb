@@ -1,30 +1,106 @@
 [
     {
-        "title": "Expert Opinion on Rising Damp in Eixample",
-        "slug": "rising-damp-capillarity-eixample-barcelona",
+        "title": "Industrial Pavement Expert Report in Baix Llobregat: Claim for Compaction Defects",
+        "slug": "industrial-pavement-expert-report-logistics-barcelona",
         "translations": [
             {
                 "lang": "es",
-                "permalink": "/casos-exito/humedades-capilaridad-eixample-barcelona/"
+                "permalink": "/casos-exito/peritaje-pavimento-industrial-logistica-barcelona/"
             },
             {
                 "lang": "en",
-                "permalink": "/en/success-cases/rising-damp-capillarity-eixample-barcelona/"
+                "permalink": "/en/success-cases/industrial-pavement-expert-report-logistics-barcelona/"
             },
             {
                 "lang": "ca",
-                "permalink": "/ca/casos-d-exit/humitats-capillaritat-eixample-barcelona/"
+                "permalink": "/ca/casos-d-exit/peritatge-paviment-industrial-logistica-barcelona/"
             },
             {
                 "lang": "fr",
-                "permalink": "/fr/succes/humidite-capillarite-eixample-barcelone/"
+                "permalink": "/fr/succes/expertise-pavage-industriel-logistique-barcelone/"
             },
             {
                 "lang": "it",
-                "permalink": "/it/casi-di-successo/umidita-risalita-capillarita-eixample-barcellona/"
+                "permalink": "/it/casi-di-successo/perizia-pavimentazione-industriale-logistica-barcellona/"
             }
         ],
-        "description": "Analysis of a success case involving expert opinion on rising damp in a residential building in Eixample, Barcelona.",
+        "description": "Discover how our civil engineering expert report demonstrated compaction and design defects in a logistics yard, justifying a claim of over €115,000.",
+        "estado": "publicado",
+        "datePublished": "2026-02-27",
+        "dateModified": "2026-02-27",
+        "tags": [
+            "Industrial Pavement",
+            "Civil Works",
+            "Hidden Defects",
+            "Logistics"
+        ],
+        "summary": [
+            {
+                "label": "Location",
+                "value": "Industrial Estate, Baix Llobregat (Barcelona)"
+            },
+            {
+                "label": "Type of Work",
+                "value": "Logistics Platform and Heavy Vehicle Parking"
+            },
+            {
+                "label": "Problem Detected",
+                "value": "Settlements, deflections, and premature cracks in the asphalt pavement"
+            },
+            {
+                "label": "Result",
+                "value": "Expert report demonstrating compaction defects and quantifying the repair at over €115,000"
+            }
+        ],
+        "image": {
+            "url": "/assets/images/placeholder-default.png",
+            "alt": "Settlement and water accumulation in industrial asphalt pavement",
+            "caption": "Asymmetrical deflections and water accumulation in the heavy vehicle driving area."
+        },
+        "images": [
+            {
+                "url": "/assets/images/casos/logistica-pavimento-01.jpg",
+                "alt": "Asphalt cores and fatigue cracks in the logistics platform",
+                "caption": "Punching zones due to static loads where the use of concrete was omitted."
+            },
+            {
+                "url": "/assets/images/casos/logistica-drenaje-02.jpg",
+                "alt": "Perimeter failures in manholes and drainage",
+                "caption": "Local settlements around the drains due to deficient trench compaction."
+            }
+        ],
+        "relatedService": {
+            "title": "Construction Audits and Quality Control",
+            "url": "/auditorias-obra/"
+        },
+        "content": "## Industrial Pavement Settlement: The Case of a Logistics Platform in Barcelona\n\nWhen a company invests in the urbanization of its facilities, it expects the infrastructure to withstand its daily activity. However, in civil engineering, hidden errors in the subsoil eventually come to light, paralyzing operations and generating serious safety risks.\n\nAt **Perito Barcelona**, we were contacted by a major logistics operator to investigate the premature appearance of severe pathologies in the pavement of their new platform, located in an industrial estate in Baix Llobregat.\n\n### 1. The Challenge: A pavement collapsed by heavy traffic\n\nThe plot required the execution of a large embankment for topographic leveling. After the commissioning of the facilities, intended for the continuous traffic of heavy vehicles and static storage, alarming symptoms began to appear:\n\n* **Asymmetrical deflections and settlements** in the driving areas.\n* **Fatigue cracks** in the bituminous mixture (asphalt).\n* **Severe punching** in the static load support areas.\n* **Water accumulation** due to counter-slopes and perimeter failures in the manholes.\n\nThe property needed an independent technical diagnosis with judicial validity to demand responsibilities from the construction company before the warranty periods expired.\n\n### 2. Our Intervention: Technical and Geotechnical Audit\n\nUnder the technical direction of Albert Vilardell (Civil Engineer Col. No. 16448), we implemented a structural forensic analysis methodology, cross-referencing the initial executive project documentation with *in situ* tests.\n\nThrough the coordination of dynamic penetration tests (DPSH) and the extraction of pavement cores, the data obtained in the subsoil revealed a reality very different from what was projected on paper.\n\n### 3. The Diagnosis: Execution errors and deficient design\n\nOur expert report concluded that the structural damages were not due to ordinary use or a natural settlement of the ground, but to **demonstrable construction negligence**:\n\n* **Deficient Embankment Compaction:** Although the project required highly restrictive compaction (95-100% of the Modified Proctor), the tests showed that excessively thick layers were poured. Only the surface layer was compacted, leaving the interior in an unstable compaction state with a critical bearing capacity.\n* **Insufficient Pavement Design:** For the heavy traffic category required by the activity, current road regulations demand minimum granular layer thicknesses that were not respected, accelerating the depletion of the asphalt.\n* **Inadequate Choice of Materials:** Flexible pavement (asphalt) was used in areas for storing concentrated loads, whereas good civil engineering practice dictates the use of concrete slabs (rigid pavement) to prevent punching.\n\n### 4. The Result: A solid legal basis to claim\n\nThe detected pathologies threatened the total collapse of the lower granular layers if the root cause was not addressed. \n\nFrom our firm, we prepared a comprehensive repair budget that included demolition, deep excavation to the sound level, and the proper reconstruction of the subgrade and pavement. We economically valued the damage at **over €115,000**.\n\nWith this signed and endorsed Technical Expert Report, the company obtained the definitive evidentiary tool to demand the repair of the urban hidden defects from the contractor, passing the case to its legal team with full technical guarantees."
+    },
+    {
+        "title": "Expert Report on Rising Damp in the Center of Barcelona",
+        "slug": "rising-damp-capillarity-center-barcelona",
+        "translations": [
+            {
+                "lang": "es",
+                "permalink": "/casos-exito/humedades-capilaridad-centro-barcelona/"
+            },
+            {
+                "lang": "en",
+                "permalink": "/en/success-cases/rising-damp-capillarity-center-barcelona/"
+            },
+            {
+                "lang": "ca",
+                "permalink": "/ca/casos-d-exit/humitats-capillaritat-centre-barcelona/"
+            },
+            {
+                "lang": "fr",
+                "permalink": "/fr/succes/humidite-capillarite-centre-barcelone/"
+            },
+            {
+                "lang": "it",
+                "permalink": "/it/casi-di-successo/umidita-risalita-capillarita-centro-barcellona/"
+            }
+        ],
+        "description": "Analysis of a success story regarding an expert report on rising damp in a residential building in the center of Barcelona, favorable to the homeowners' association.",
         "estado": "publicado",
         "datePublished": "2025-09-27",
         "dateModified": "2025-09-27",
@@ -36,85 +112,86 @@
         "summary": [
             {
                 "label": "Location",
-                "value": "Eixample, Barcelona"
+                "value": "City Center, Barcelona"
             },
             {
-                "label": "Property Type",
+                "label": "Type of Property",
                 "value": "Multi-family residential building"
             },
             {
                 "label": "Problem Detected",
-                "value": "Persistent rising damp in ground floor"
+                "value": "Persistent rising damp on the ground floor"
             },
             {
                 "label": "Result",
-                "value": "Favorable opinion for the owners' community"
+                "value": "Favorable report for the homeowners' association"
             }
         ],
         "image": {
             "url": "/assets/images/placeholder-default.png",
-            "alt": "Detail of rising damp on an Eixample wall",
-            "caption": "Detailed inspection of walls affected by rising damp."
+            "alt": "Detail of rising damp on a wall of a historic building",
+            "caption": "Detailed inspection of the walls affected by rising damp."
         },
         "images": [
             {
                 "url": "/assets/images/casos/humedades-eixample-01.jpg",
-                "alt": "Technician measuring moisture",
-                "caption": "Contact hygrometers were used to quantify moisture levels."
+                "alt": "Technician measuring wall moisture with a hygrometer",
+                "caption": "Contact hygrometers were used to quantify the moisture level."
             },
             {
                 "url": "/assets/images/casos/humedades-eixample-02.jpg",
-                "alt": "Overview of affected basement",
-                "caption": "The problem affected load-bearing walls of the entire ground floor."
+                "alt": "General view of the basement affected by dampness",
+                "caption": "The problem affected the load-bearing walls of the entire ground floor of the building."
             }
         ],
         "relatedService": {
             "title": "Building Pathology Reports",
-            "url": "/en/expert-reports/building-pathologies/"
+            "url": "/servicios/informes-patologias-edificacion/"
         },
-        "content": "## 1. Background of the Problem\n\nThe community of owners of an emblematic building in the Eixample district contacted us due to recurrent damp patches and paint peeling. Despite superficial repairs, the problem persisted.\n\n### 2. Diagnosis Process\n\nOur technical team performed an exhaustive inspection:\n* **Visual Inspection:** Identified the rising pattern characteristic of capillarity.\n* **Hygrometer Measurements:** Mapped the extent and intensity of moisture.\n* **Environment Analysis:** Studied the water table proximity and foundation conditions.\n\n## 3. Technical Opinion Conclusion\n\nOur report concluded irrefutably that the dampness was caused by **capillarity**. The opinion detailed the origin and dismissed other causes like leaks. Thanks to our report, the community could claim against their insurance and obtain funding for a definitive solution."
+        "content": "## 1. Background of the Problem\n\nThe homeowners' association of a building in a central district of Barcelona contacted us due to the recurrent appearance of damp patches, peeling paint, and a persistent musty smell in the ground floor apartments and common areas. Despite having carried out several superficial repairs, the problem constantly reappeared, affecting habitability and devaluing the property.\n\n### 2. Diagnostic Process\n\nOur technical team traveled to the property to carry out a comprehensive inspection. The diagnostic process included:\n\n* **Detailed Visual Inspection:** The ascending pattern of the dampness, characteristic of capillarity, was identified.\n* **Hygrometer Measurements:** Surface and depth hygrometers were used to map the extent and intensity of the moisture in the affected walls.\n* **Environmental Analysis:** The proximity of the water table and the conditions of the building's foundation, constructed with porous materials typical of the era, were studied.\n\n## 3. Conclusion of the Technical Report\n\nOur expert report conclusively determined that the dampness was caused by **capillarity (rising damp)**, a phenomenon whereby subsoil water rises through the pores of construction materials. The report detailed the origin of the problem and ruled out other possible causes such as leaks or condensation.\n\nThanks to the solidity of our report, the homeowners' association was able to claim from the community insurance (based on a policy that covered extensive water damage) and obtain the necessary funding to implement a definitive solution, such as the installation of chemical injection barriers or electro-osmosis systems."
     },
     {
-        "title": "Structural Deficiencies in Winery Extension in Penedès",
-        "slug": "structural-deficiencies-winery-penedes",
+        "title": "Structural Deficiencies in the Extension of a Winery in Alt Penedès",
+        "slug": "structural-deficiencies-winery-alt-penedes",
         "translations": [
             {
                 "lang": "es",
-                "permalink": "/casos-exito/deficiencias-estructurales-bodega-penedes/"
+                "permalink": "/casos-exito/deficiencias-estructurales-bodega-alt-penedes/"
             },
             {
                 "lang": "en",
-                "permalink": "/en/success-cases/structural-deficiencies-winery-penedes/"
+                "permalink": "/en/success-cases/structural-deficiencies-winery-alt-penedes/"
             },
             {
                 "lang": "ca",
-                "permalink": "/ca/casos-d-exit/deficiencies-estructurals-celler-penedes/"
+                "permalink": "/ca/casos-d-exit/deficiencies-estructurals-celler-alt-penedes/"
             },
             {
                 "lang": "fr",
-                "permalink": "/fr/succes/deficiences-structurelles-cave-penedes/"
+                "permalink": "/fr/succes/deficiences-structurelles-cave-alt-penedes/"
             },
             {
                 "lang": "it",
-                "permalink": "/it/casi-di-successo/carenze-strutturali-cantina-penedes/"
+                "permalink": "/it/casi-di-successo/carenze-strutturali-cantina-alt-penedes/"
             }
         ],
-        "description": "Expert report on serious defects in pavements and metal structure of a winery extension in Subirats (Alt Penedès).",
+        "description": "Expert report on serious defects in pavements and the metallic structure of a winery extension, compromising its structural safety.",
+        "estado": "publicado",
         "datePublished": "2025-05-04",
         "dateModified": "2025-05-04",
         "tags": [
             "Structural",
             "Pathologies",
-            "Industrial"
+            "Industrial Warehouses"
         ],
         "summary": [
             {
                 "label": "Location",
-                "value": "Subirats, Alt Penedès"
+                "value": "Alt Penedès Region (Barcelona)"
             },
             {
-                "label": "Property Type",
-                "value": "Winery (Celler)"
+                "label": "Type of Property",
+                "value": "Industrial Winery"
             },
             {
                 "label": "Problem Detected",
@@ -122,31 +199,31 @@
             },
             {
                 "label": "Result",
-                "value": "Immediate correction order to guarantee safety"
+                "value": "Immediate correction order to guarantee the building's safety"
             }
         ],
         "image": {
             "url": "/assets/images/placeholder-default.png",
-            "alt": "Defective beam anchor detail",
-            "caption": "Fixing bolt extracted without mortar residues, showing lack of anchorage."
+            "alt": "Detail of the defective anchoring of a metal beam in the winery",
+            "caption": "Fixing bolt extracted without traces of mortar or resin, demonstrating the absence of anchoring."
         },
         "images": [
             {
                 "url": "/assets/images/casos/penedes-terraza-01.jpg",
-                "alt": "Cracked terrace mortar pavement",
-                "caption": "Lack of joints caused generalized cracking."
+                "alt": "Mortar pavement of the terrace completely cracked",
+                "caption": "The absence of joints and deficient curing caused widespread cracking of the support."
             },
             {
                 "url": "/assets/images/casos/penedes-calculo-01.jpg",
-                "alt": "Structural calculations",
-                "caption": "Technical analysis showed the projected solution was correct, but not the executed one."
+                "alt": "Structural calculations justifying the need for correct supports",
+                "caption": "The technical analysis demonstrated that the projected solution was correct, but not the one executed."
             }
         ],
         "relatedService": {
             "title": "Structural Deficiency Reports",
-            "url": "/en/structural-advisory/"
+            "url": "/asesoramiento-estructural/"
         },
-        "content": "## 1. The Problem: Critical Defects after Extension\n\nThe owner of a winery in Penedès contacted us after detecting anomalies in their extension work. Defects compromised functionality and structural safety.\n\n### 2. Technical Diagnosis\n\nOur inspection revealed three critical problems:\n1.  **Useless Terrace Pavement:** Cracks over 1mm and surface disintegration due to lack of expansion joints.\n2.  **Contaminated Ground Floor Pavement:** Concrete covered in slurry residues.\n3.  **Critical Structural Deficiency:** The main metal beam (HEA320) was not correctly anchored to the pillars.\n\n## 3. Solution and Conclusion\n\nOur report demonstrated that the executed solution did not guarantee stability. **Immediate correction of the anchorage system** was ordered, alongside pavement reconstruction."
+        "content": "## 1. The Problem: Critical Defects after an Extension\n\nThe owner of a major winery in the Alt Penedès wine region commissioned us for a report after detecting serious anomalies in the extension works of their facilities. The defects compromised the functionality of the new pavements and, more worryingly, the structural safety of the new floor slab.\n\n### 2. Technical Diagnosis: Three Areas of Serious Deficiencies\n\nOur inspection and subsequent technical analysis, cross-referenced with the original execution project, revealed three critical problems that required immediate intervention:\n\n1.  **Unusable Terrace Pavement:** The mortar of the new terrace had cracks of more than 1mm and surface disintegration due to deficient execution and the total absence of expansion joints. It was a useless support for the planned ceramic finish.\n2.  **Contaminated Ground Floor Pavement:** The concrete on the lower floor was covered with grout residues, generating constant dust that prevented its use as a support for an industrial rolling pavement.\n3.  **Critical Structural Deficiency:** This was the most serious finding. The main metallic beam supporting the new floor slab was not correctly anchored to the pillars according to the project. The intermediate supports, essential for structural calculation, were precariously fastened, compromising the stability and safety of the entire upper floor.\n\n## 3. Solution and Conclusion\n\nOur expert report was conclusive. It was demonstrated through calculations that the solution executed on the metallic structure did not guarantee the stability planned in the original project. An **immediate correction of the anchoring system** was ordered to ensure the integrity of the building.\n\nLikewise, the complete demolition and reconstruction of the terrace pavement and the mechanical milling of the ground floor pavement were recommended. The report provided the owner with the necessary technical guidelines to demand a proper rectification of all deficiencies."
     },
     {
         "title": "Successful Claim for Defective Parquet Installation in Barcelona",
@@ -154,7 +231,7 @@
         "translations": [
             {
                 "lang": "es",
-                "permalink": "/casos-exito/instalacion-defectuosa-parque-barcelona/"
+                "permalink": "/casos-exito/instalacion-defectuosa-parquet-barcelona/"
             },
             {
                 "lang": "en",
@@ -173,8 +250,8 @@
                 "permalink": "/it/casi-di-successo/installazione-difettosa-parquet-barcellona/"
             }
         ],
-        "description": "Expert report on a poorly installed high-end parquet (AC5) in Barcelona, identifying lack of joints and unlevelled support.",
-        "estado": "no publicado",
+        "description": "Expert report on poorly installed laminate parquet in a home, identifying the absence of joints and an unlevelled subfloor as the main cause.",
+        "estado": "publicado",
         "datePublished": "2025-09-03",
         "dateModified": "2025-09-03",
         "tags": [
@@ -185,46 +262,46 @@
         "summary": [
             {
                 "label": "Location",
-                "value": "Sants, Barcelona"
+                "value": "Barcelona City"
             },
             {
-                "label": "Work Type",
-                "value": "Laminate flooring installation"
+                "label": "Type of Work",
+                "value": "Laminate flooring installation during renovation"
             },
             {
                 "label": "Problem Detected",
-                "value": "Bulging and movement in new parquet"
+                "value": "Buckling, movement, and creaking in new parquet"
             },
             {
                 "label": "Result",
-                "value": "Opinion holding installer responsible for full repair cost"
+                "value": "Report holding the installer responsible for the full cost of repair"
             }
         ],
         "image": {
             "url": "/assets/images/placeholder-default.png",
-            "alt": "Bulging parquet hallway",
-            "caption": "Vertical movement of parquet was evident throughout the home."
+            "alt": "Hallway with parquet lifted and buckled due to lack of expansion joints",
+            "caption": "The vertical movement of the parquet when walking was evident throughout the home."
         },
         "images": [
             {
                 "url": "/assets/images/casos/parque-sants-02.jpg",
-                "alt": "Detail of unlevelled parquet",
-                "caption": "Lack of leveling caused visible undulations."
+                "alt": "Detail of the unevenness between the parquet and the baseboard",
+                "caption": "The lack of subfloor leveling caused visible undulations."
             },
             {
                 "url": "/assets/images/casos/parque-sants-03.jpg",
-                "alt": "Broken click system",
-                "caption": "Poor execution caused breakage of joints between planks."
+                "alt": "Parquet planks with the click locking system broken",
+                "caption": "The poor execution even caused the joints between planks to break."
             }
         ],
         "relatedService": {
-            "title": "Hidden Defects Reports",
-            "url": "/en/expert-reports/hidden-defects/"
+            "title": "Hidden Defects Expert Reports",
+            "url": "/servicios/informes-vicios-ocultos/"
         },
-        "content": "## 1. The Problem: A New Floor Looking Old\n\nA homeowner in Sants contacted us frustrated. Her new high-end parquet was lifting and creaking. The installer blamed the material.\n\n### 2. The Real Cause: Installation Errors\n\nInspection revealed excellent material but poor installation:\n* **No Expansion Joints:** Parquet was installed continuously without perimeter gaps.\n* **Unlevelled Support:** The base was not leveled, causing movement.\n* **General Malpractice:** Broken 'click' anchors and poor aesthetic pattern.\n\n## 3. Expert Conclusion\n\nOur report concluded defects were due to **incorrect execution**. The installer had to **assume 100% of the rectification costs**."
+        "content": "## 1. The Problem: A New Floor that Looks Old\n\nA homeowner in Barcelona contacted us out of frustration. Following a comprehensive renovation, the newly installed laminate parquet flooring presented serious problems: it lifted in several areas, 'creaked' when walked on, and showed visible undulations. The installation company attributed the problems to the quality of the material, a claim that our expert report debunked.\n\n### 2. The Real Cause: Installation Errors\n\nThe technical inspection revealed that the material was of excellent quality, but its installation was completely deficient. The errors violated the most basic rules of good construction practice (*lex artis*):\n\n* **Absence of Expansion Joints:** The installer laid the parquet continuously throughout the floor, without leaving the mandatory perimeter and transition joints. With no room to expand, the parquet buckled and lifted.\n* **Unlevelled Subfloor:** The base on which the flooring was installed was not correctly leveled, causing the undulations and vertical movement of the planks.\n* **General Bad Practice:** Planks with a broken 'click' anchoring system and an arrangement without proper interlocking were also detected, generating an anomalous aesthetic pattern ('staircase' effect).\n\n## 3. Expert Conclusion\n\nOur report unequivocally concluded that all the defects were attributable to an **incorrect execution of the installation**, and not to a defect in the material. It was determined that the only viable solution was the complete removal of the flooring, the proper leveling of the subfloor, and the reinstallation of the material from scratch.\n\nThe ruling established that the installation company had to **assume 100% of the rectification costs**, freeing the homeowner from any additional expense and providing her with the necessary legal tool to demand a definitive solution."
     },
     {
-        "title": "Claim for Breach of Contract in Post-Fire Renovation",
+        "title": "Expert Report for Breach of Contract in Post-Fire Renovation",
         "slug": "breach-contract-post-fire-renovation",
         "translations": [
             {
@@ -234,9 +311,22 @@
             {
                 "lang": "en",
                 "permalink": "/en/success-cases/breach-contract-post-fire-renovation/"
+            },
+            {
+                "lang": "ca",
+                "permalink": "/ca/casos-d-exit/incompliment-contracte-reforma-barcelona/"
+            },
+            {
+                "lang": "fr",
+                "permalink": "/fr/succes/rupture-contrat-renovation-post-incendie/"
+            },
+            {
+                "lang": "it",
+                "permalink": "/it/casi-di-successo/inadempimento-contrattuale-ristrutturazione-post-incendio/"
             }
         ],
-        "description": "Technical expert report on a post-fire renovation where the contractor received an advance but did not start work.",
+        "description": "Technical expert report on a post-fire renovation where the contractor received a financial advance without starting the work, performing only deficient actions.",
+        "estado": "publicado",
         "datePublished": "2025-08-20",
         "dateModified": "2025-08-20",
         "tags": [
@@ -247,42 +337,352 @@
         "summary": [
             {
                 "label": "Location",
-                "value": "Barcelona"
+                "value": "Barcelona City"
             },
             {
-                "label": "Work Type",
-                "value": "Renovation after fire"
+                "label": "Type of Work",
+                "value": "Home renovation after a fire"
             },
             {
                 "label": "Problem Detected",
-                "value": "Advance payment without real start of work"
+                "value": "Payment of substantial advance without real start of work"
             },
             {
                 "label": "Result",
-                "value": "Report justifying non-consideration of payment"
+                "value": "Technical report justifying the breach and supporting the refund of funds"
             }
         ],
         "image": {
             "url": "/assets/images/placeholder-default.png",
-            "alt": "Fire-damaged living room",
-            "caption": "State of home during inspection: no work started."
+            "alt": "View of the living room of the fire-affected and unrenovated home",
+            "caption": "State of the home during the inspection: no work started and with soot damage."
         },
         "images": [
             {
                 "url": "/assets/images/casos/incendio-barcelona-02.jpg",
-                "alt": "Poor painting over soot",
-                "caption": "Plastic paint applied directly over soot."
+                "alt": "Deficient paint over the fire soot",
+                "caption": "The applied plastic paint does not cover the soot, a totally inadequate treatment."
             },
             {
                 "url": "/assets/images/casos/incendio-barcelona-03.jpg",
-                "alt": "Dangerous electrical installation",
-                "caption": "New wiring connected over burnt installation."
+                "alt": "Dangerous electrical installation over burned wiring",
+                "caption": "New wiring was connected directly over the old fire-affected installation."
             }
         ],
         "relatedService": {
-            "title": "Construction Audits",
-            "url": "/en/construction-audits/"
+            "title": "Construction Audits and Quality Control",
+            "url": "/auditorias-obra/"
         },
-        "content": "## 1. The Conflict: Advance Without Service\n\nA homeowner paid a 40% advance (30,976 €) to a contractor to renovate her burnt home. Work did not start.\n\n### 2. Technical Verification\n\nWe verified if the advance had any real counterpart:\n* **No Work Start:** No materials or demolition started.\n* **Deficient Actions:** Painting over soot and dangerous electrical connections.\n\n## 3. Expert Conclusion\n\nThe report concluded **no physical evidence justified the payment**. The opinion served as key evidence to claim the return of the full amount."
+        "content": "## 1. The Conflict: An Advance Without Consideration\n\nA homeowner found herself in a situation of extreme vulnerability: after suffering a fire that left her home uninhabitable, she paid an advance of over €30,000 to a contractor to urgently start the renovation. However, after the payment, the work not only did not start, but the contractor made unusual financial requests that generated a total loss of trust.\n\n### 2. Technical Verification of the Facts\n\nOur expert task consisted of verifying whether the advance paid, conditioned on the 'start of work', had a real counterpart in the home. The inspection was decisive:\n\n* **No Start of Work:** No physical evidence of the start of the renovation was found. There was no stockpiling of materials (except for a few bags), no tools, and demolition or reconstruction work had not begun.\n* **Deficient Actions:** The only 'actions' carried out were partial and technically unacceptable. A layer of plastic paint had been applied directly over the soot (a useless treatment) and new cables had been connected over the original burned electrical installation, a dangerous practice outside of all regulations.\n* **Documentary Discrepancies:** It was found that the contractor presented himself as a direct authorized representative of the insurance company, when in reality he was a subcontractor of another collaborating company.\n\n## 3. Expert Conclusion\n\nThe report concluded that **there was no physical or technical evidence to justify the collection of the agreed advance**. The scarce work carried out was deficient and did not constitute a start of work. The expert report became the key piece of evidence for the homeowner to claim the full refund of the amount paid due to a clear breach of contract."
+    },
+    {
+        "title": "Damages to Industrial Warehouse due to Tenant Misuse in the Metropolitan Area",
+        "slug": "damages-industrial-warehouse-tenant-barcelona",
+        "translations": [
+            {
+                "lang": "es",
+                "permalink": "/casos-exito/danos-nave-industrial-arrendatario-barcelona/"
+            },
+            {
+                "lang": "en",
+                "permalink": "/en/success-cases/damages-industrial-warehouse-tenant-barcelona/"
+            },
+            {
+                "lang": "ca",
+                "permalink": "/ca/casos-d-exit/danys-nau-industrial-arrendatari-barcelona/"
+            },
+            {
+                "lang": "fr",
+                "permalink": "/fr/succes/dommages-entrepots-industriels-locataire-barcelone/"
+            },
+            {
+                "lang": "it",
+                "permalink": "/it/casi-di-successo/danni-capannone-industriale-inquilino-barcellona/"
+            }
+        ],
+        "description": "Expert report for claiming damages in an industrial warehouse after the end of a lease, valuing the repair of pavements, mezzanines, and fire protection.",
+        "estado": "publicado",
+        "datePublished": "2025-06-18",
+        "dateModified": "2025-06-18",
+        "tags": [
+            "Industrial Warehouses",
+            "Pathologies",
+            "Claims"
+        ],
+        "summary": [
+            {
+                "label": "Location",
+                "value": "Barcelona Metropolitan Area"
+            },
+            {
+                "label": "Type of Property",
+                "value": "Industrial warehouse"
+            },
+            {
+                "label": "Problem Detected",
+                "value": "Severe damages after the end of a commercial lease agreement"
+            },
+            {
+                "label": "Result",
+                "value": "Economic valuation of damages exceeding €330,000"
+            }
+        ],
+        "image": {
+            "url": "/assets/images/placeholder-default.png",
+            "alt": "Completely broken and cracked industrial pavement in the warehouse",
+            "caption": "A large part of the pavement tiles were broken, requiring complete replacement."
+        },
+        "images": [
+            {
+                "url": "/assets/images/casos/nave-industrial-ignifugo-01.jpg",
+                "alt": "Detachment of the fireproof protection mortar from the metallic structure",
+                "caption": "The lack of passive protection severely compromised the warehouse's fire safety."
+            },
+            {
+                "url": "/assets/images/casos/nave-industrial-anclajes-01.jpg",
+                "alt": "Marks of anchors from mezzanines dismantled by the tenant",
+                "caption": "Evidence of the dismantling of large storage structures not included in the project."
+            }
+        ],
+        "relatedService": {
+            "title": "Expert Reports for Industrial Warehouses",
+            "url": "/servicios/informes-patologias-edificacion/"
+        },
+        "content": "## 1. The Origin: End of a Lease Agreement\n\nThe company owning a large industrial warehouse in Barcelona's logistics belt contacted us after their previous tenant left. They found a property with multiple damages that clearly exceeded ordinary wear and tear, and needed a technical report to document them and value their repair for a civil claim.\n\n### 2. Extent of Detected Damages\n\nThe expert inspection revealed a state of generalized deterioration that affected the safety, legality, and functionality of the warehouse:\n\n* **Destroyed Industrial Pavements:** A high percentage of the pavement on several floors was completely broken, indicating use that significantly exceeded the load capacity for which it was designed.\n* **Compromised Fire Protection:** The fireproof mortar covering the main metallic structure had detached in several areas, leaving the profiles exposed and drastically reducing the building's stability in the event of a fire (non-compliance with fire safety regulations).\n* **Dismantled Mezzanines:** Clear evidence (anchor marks) was found of the assembly and subsequent dismantling of large-format mezzanines. A documentary consultation confirmed that there was no administrative license for such structures.\n* **Inoperative Electrical Installation:** The previous tenant removed essential components of the supply, making it necessary to draft a new electrical project to legalize and reactivate the installation.\n\n## 3. Conclusion and Economic Valuation\n\nThe expert report concluded that the set of interventions was indispensable for the functional and legal restitution of the building. A detailed economic valuation was carried out based on updated market prices for each item (pavements, structural adaptation, and fire protection).\n\nThe estimated total cost for repairing all damages was valued in a range **exceeding €330,000 (excluding VAT)**, providing the property with a solid technical evidentiary basis for its claim for the damages caused."
+    },
+    {
+        "title": "Expert Report for Construction Company due to Parquet Defects in New Development",
+        "slug": "defective-parquet-new-construction",
+        "translations": [
+            {
+                "lang": "es",
+                "permalink": "/casos-exito/defectos-parquet-obra-nueva-constructora/"
+            },
+            {
+                "lang": "en",
+                "permalink": "/en/success-cases/defective-parquet-new-construction/"
+            },
+            {
+                "lang": "ca",
+                "permalink": "/ca/casos-d-exit/defectes-parquet-obra-nova-constructora/"
+            },
+            {
+                "lang": "fr",
+                "permalink": "/fr/succes/defauts-parquet-construction-neuve/"
+            },
+            {
+                "lang": "it",
+                "permalink": "/it/casi-di-successo/difetti-parquet-nuova-costruzione/"
+            }
+        ],
+        "description": "Success story of an expert report for a large construction company regarding parquet installation defects in dozens of homes in a new housing development.",
+        "estado": "publicado",
+        "datePublished": "2025-02-18",
+        "dateModified": "2025-02-18",
+        "tags": [
+            "Construction Companies",
+            "Pathologies",
+            "New Construction",
+            "Claims"
+        ],
+        "summary": [
+            {
+                "label": "Location",
+                "value": "Baix Llobregat Region (Barcelona)"
+            },
+            {
+                "label": "Type of Work",
+                "value": "Expert audit for a large national construction company"
+            },
+            {
+                "label": "Problem Detected",
+                "value": "Widespread defects in parquet installation in dozens of homes"
+            },
+            {
+                "label": "Result",
+                "value": "Report attributing responsibility to the subcontracted installation company"
+            }
+        ],
+        "image": {
+            "url": "/assets/images/placeholder-default.png",
+            "alt": "Edge of a parquet plank lifted due to a broken connecting clip",
+            "caption": "The vertical movement of the planks evidenced a deficient installation."
+        },
+        "images": [
+            {
+                "url": "/assets/images/casos/viladecans-parque-escalera.jpg",
+                "alt": "Staircase effect in parquet layout, violating UNE regulations",
+                "caption": "The poor arrangement of the planks generated an anomalous visual pattern."
+            },
+            {
+                "url": "/assets/images/casos/viladecans-parque-rodapie.jpg",
+                "alt": "Undulation and poor finishing of the parquet next to the kitchen baseboard",
+                "caption": "The lack of subfloor leveling caused undulations and poor adjustments."
+            }
+        ],
+        "relatedService": {
+            "title": "Construction Audits for Builders",
+            "url": "/auditorias-obra/"
+        },
+        "content": "## 1. The Challenge: Dozens of Homes with After-Sales Claims\n\nOne of the largest national construction companies faced a complex problem in a new residential development in Baix Llobregat: dozens of new owners submitted formal complaints about widespread defects in the parquet of their homes. The technical and legal doubt was crucial: Was it a manufacturing defect of the premium planks installed or an execution failure by the subcontracted installation company? They needed an independent technical report to determine responsibilities.\n\n### 2. Expert Investigation: Execution Analysis\n\nOur work consisted of conducting a methodical inspection on a representative sample of the affected homes. Accompanied by the construction company's after-sales department, we identified a systemic pattern of defects that was invariably repeated:\n\n* **Broken Connecting Clips:** Numerous planks yielded vertically when stepped on due to the breakage of the anchoring system, a typical defect of using brute force or bad practice during the installation phase.\n* **'Staircase Effect':** The layout of the planks did not respect the minimum longitudinal offset required by technical regulations (UNE 56810), weakening the whole and generating an unacceptable aesthetic pattern.\n* **Poor Adjustments and Undulations:** Excessive separations and a wavy effect were documented where the flooring met the baseboards, indicative of a total lack of prior leveling of the base.\n* **Lack of Quality Control:** Planks were found installed with obvious marks that should have been visually discarded by the operators prior to assembly.\n\n## 3. Conclusion: Responsibility in Installation\n\nOur expert report was conclusive: the material supplied showed no manufacturing flaws or original dimensional alterations. All the defects detected were unequivocally attributable to an **incorrect and negligent execution of the installation** by the subcontractor.\n\nThanks to the robustness of this expert report, the developer construction company was able to exempt the material manufacturer from blame and legally shift the responsibility and the full cost of the rectification to the installation company, resolving the after-sales crisis with guarantees."
+    },
+    {
+        "title": "Diagnosis of Rising Damp and Cracks in a Home in Anoia",
+        "slug": "rising-damp-cracks-anoia",
+        "translations": [
+            {
+                "lang": "es",
+                "permalink": "/casos-exito/humedades-capilaridad-fisuras-anoia/"
+            },
+            {
+                "lang": "en",
+                "permalink": "/en/success-cases/rising-damp-cracks-anoia/"
+            },
+            {
+                "lang": "ca",
+                "permalink": "/ca/casos-d-exit/humitats-capillaritat-fissures-anoia/"
+            },
+            {
+                "lang": "fr",
+                "permalink": "/fr/succes/humidite-capillarite-fissures-anoia/"
+            },
+            {
+                "lang": "it",
+                "permalink": "/it/casi-di-successo/umidita-risalita-crepe-anoia/"
+            }
+        ],
+        "description": "Success story: Expert report in the Anoia region that diagnosed rising damp and non-structural cracks, proposing definitive solutions.",
+        "estado": "publicado",
+        "datePublished": "2025-02-18",
+        "dateModified": "2025-02-18",
+        "tags": [
+            "Pathologies",
+            "Dampness",
+            "Cracks",
+            "Single-Family Home"
+        ],
+        "summary": [
+            {
+                "label": "Location",
+                "value": "Anoia Region, Barcelona"
+            },
+            {
+                "label": "Type of Property",
+                "value": "Single-family home (built in the 70s)"
+            },
+            {
+                "label": "Problem Detected",
+                "value": "Severe rising damp and appearance of interior cracks"
+            },
+            {
+                "label": "Result",
+                "value": "Precise diagnosis: Structural stability confirmed and drying protocol established"
+            }
+        ],
+        "image": {
+            "url": "/assets/images/placeholder-default.png",
+            "alt": "Rising damp visible at the bottom of an interior partition wall",
+            "caption": "Moisture rose from the ground due to the lack of a constructive waterproof barrier."
+        },
+        "images": [
+            {
+                "url": "/assets/images/casos/claramunt-fisura-pavimento-01.jpg",
+                "alt": "Crack in the exterior ceramic pavement starting from a pillar",
+                "caption": "Non-structural crack, attributed to normal settlement movements."
+            },
+            {
+                "url": "/assets/images/casos/claramunt-humedad-detalle-01.jpg",
+                "alt": "Detail of the damage caused by moisture on an interior partition wall",
+                "caption": "Severe deterioration of the coating caused by capillary moisture."
+            }
+        ],
+        "relatedServices": [
+            {
+                "title": "Persistent Dampness and Leaks",
+                "url": "/informes-periciales/humedades-filtraciones/"
+            },
+            {
+                "title": "Structural Pathology Report",
+                "url": "/informes-periciales/patologias-estructurales/"
+            }
+        ],
+        "content": "## 1. The Problem: Persistent Dampness and Structural Alarm\n\nThe owner of a single-family home in the Anoia region contacted us alarmed by the rapid proliferation of **severe dampness** on the lower walls of the house and the appearance of **cracks** on both interior walls and exterior terraces. Her main concern (and the reason for requesting the visit of an Expert Engineer) was to rule out a possible safety failure in the building's foundation.\n\n### 2. Technical Inspection and Diagnosis\n\nWe deployed a technical visual inspection, complemented with moisture measurement instruments, without the need to resort to immediate destructive testing. The diagnosis revealed two independent fronts:\n\n* **Structural Failure Ruled Out:** A marked horizontal crack in a partition wall and cracks in the exterior pavement were analyzed. The study concluded that their origin responded to normal deformations (deflection of the support beam) and natural settlements of the ground stabilized over time. The openings were **within normatively tolerable limits** and posed no risk of collapse.\n* **Rising Damp Pathology:** A clear ascent of moisture was documented in the walls in direct contact with the lower levels of the ground. The origin was intrinsic to the construction techniques of the time: the **absence of waterproofing on the back** of the foundation and load-bearing walls.\n\n## 3. Conclusion and Proposed Solution\n\nThe expert report provided a twofold solution. Firstly, it offered the owner the technical and documented peace of mind that **the structure of her home was sound and operational**.\n\nSecondly, regarding the unhealthy source of the dampness, the report established an unavoidable technical roadmap: the execution of **waterproofing through the injection of water-repellent resins** at the base of the walls, creating a chemical cut-off plane to halt capillary advance. With this document, the client was able to request accurate renovation quotes, avoiding ineffective cosmetic solutions proposed by third parties."
+    },
+    {
+        "title": "Expert Audit of Certifications in a Luxury Urban Hotel",
+        "slug": "expert-audit-certifications-luxury-hotel-barcelona",
+        "translations": [
+            {
+                "lang": "es",
+                "permalink": "/casos-exito/auditoria-pericial-certificaciones-hotel-lujo-barcelona/"
+            },
+            {
+                "lang": "en",
+                "permalink": "/en/success-cases/expert-audit-certifications-luxury-hotel-barcelona/"
+            },
+            {
+                "lang": "ca",
+                "permalink": "/ca/casos-d-exit/auditoria-pericial-certificacions-hotel-luxe-barcelona/"
+            },
+            {
+                "lang": "fr",
+                "permalink": "/fr/succes/audit-expert-certifications-hotel-luxe-barcelone/"
+            },
+            {
+                "lang": "it",
+                "permalink": "/it/casi-di-successo/audit-peritale-certificazioni-hotel-lusso-barcellona/"
+            }
+        ],
+        "description": "Success story regarding a technical-economic expert report in a high-end urban hotel in Barcelona that justified deviations and validated construction certifications.",
+        "estado": "publicado",
+        "datePublished": "2025-10-21",
+        "dateModified": "2025-10-21",
+        "tags": [
+            "Hotels",
+            "Certifications",
+            "Construction",
+            "Counter-expert Report",
+            "Economic"
+        ],
+        "summary": [
+            {
+                "label": "Location",
+                "value": "Prime District of Barcelona"
+            },
+            {
+                "label": "Type of Work",
+                "value": "Technical-economic expert report of hotel construction"
+            },
+            {
+                "label": "Problem Detected",
+                "value": "Disagreement on final certifications and allegation of presumed cost overruns"
+            },
+            {
+                "label": "Result",
+                "value": "Favorable report: validated certifications and opposing party's counter-report technically and economically refuted"
+            }
+        ],
+        "image": {
+            "url": "/assets/images/placeholder-default.png",
+            "alt": "High-end urban hotel suite after renovation",
+            "caption": "Intervention on upper floors of a luxury hotel with the building in continuous use."
+        },
+        "images": [
+            {
+                "url": "/assets/images/casos/hotel-urbano-lujo-01.jpg",
+                "alt": "Measurement plan and table of reviewed certifications",
+                "caption": "Rigorous cross-audit between budgets, certifications, and approval emails from the technical management."
+            },
+            {
+                "url": "/assets/images/casos/hotel-urbano-lujo-02.jpg",
+                "alt": "Detail of premium finishes in a hotel room",
+                "caption": "Logistical requirements and high-end materials conditioned the viability of the economic ratios."
+            }
+        ],
+        "relatedService": {
+            "title": "Certification Reports and Construction Audit",
+            "url": "/auditorias-obra/"
+        },
+        "content": "This highly complex economic expert assignment was requested by the operating entity of a Luxury Urban Hotel after a deep dispute arose during the settlement phase of the final certifications, derived from the comprehensive renovation of several guest room floors. The property submitted a party-appointed expert report alleging unjustified cost overruns compared to theoretical market prices. Our report acted as an shielding audit, demonstrating the legitimacy of the charges.\n\n## 1) The Conflict\n\n* The complete renovation of upper-level rooms was carried out while the hotel complex maintained its accommodation operations intact.\n* During the progress of the works, qualitative increases and design modifications were authorized.\n* Upon completion, a counter-report emerged that attempted to challenge the invoicing by assimilating the construction costs to standard generic construction scales, ignoring the reality of the intervention.\n\n## 2) Forensic Audit Deployment\n\nWe deployed a strategy based on the mathematical and documentary reconstruction of the construction milestones:\n\n* **Documentary Traceability:** We cross-referenced the base budget with the monthly certifications, the 'change order' annexes, and the electronic correspondence that demonstrated the conformity of the hotel's technical management regarding the improvements.\n* **Parametric Market Study:** We refuted the opposing thesis. A top-tier hotel does not operate with standard construction prices. We used specialized price databases (BEDEC) applying the mandatory correcting coefficients for: execution on high floors, severe noise/schedule restrictions due to the hotel being active, and *premium* finishes.\n* **Margin Analysis:** The contractor's income statement was audited, verifying that the Industrial Profit applied to the new items did not exceed the originally bid margins.\n\n## 3) The Technical Ruling\n\nOur firm's report categorically dismantled the counter-expert report for incurring in serious homogeneity biases (comparing interventions that are not alike). We demonstrated that **the certified amounts were fair, equitable, and strictly proportional** to the quality executed and the high degree of logistical difficulty imposed by the property.\n\n## 4) Conclusion and Value Added\n\nWe delivered an endorsed expert report that not only supported the contractor's collection rights for the entire withheld amount, but also served to prevent the prolongation of legal proceedings, forcing an agreement based on irrefutable technical data."
     }
 ]
