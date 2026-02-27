@@ -122,13 +122,13 @@ cta:
     url: "/contacto/"
 
 sections:
-  title: "¿Cuándo contratar a un Perito Especialista en Edificación?"
+  title: "¿Qué es un perito en la construcción?"
   what_is:
-    text: "Un perito de construcción es un técnico experto que analiza, diagnostica y dictamina sobre problemas en edificaciones. Su intervención es decisiva para demostrar la causa de un siniestro, cuantificar daños o valorar incumplimientos contractuales."
+    text: "Un **perito en construcción** es un técnico especialista (arquitecto o ingeniero) que evalúa la calidad, estructura y cumplimiento normativo de una obra. Elabora informes técnicos con validez judicial para identificar defectos, patologías (humedades, fisuras), vicios ocultos o valorar costes de reparación en casos de obras mal hechas o litigios."
     features:
-      - "Análisis objetivo de patologías"
-      - "Prueba técnica para juicios"
-      - "Valoración de costes de reparación"
+      - "<strong>Inspección y Diagnóstico:</strong> Análisis in situ de deficiencias en estructuras, materiales e instalaciones."
+      - "<strong>Informe Pericial:</strong> Redacción de la prueba documental técnica esencial para reclamar daños en tribunales."
+      - "<strong>Valoración Económica:</strong> Cuantificación exacta de los costes de reparación."
 
 benefits:
   items:
@@ -163,3 +163,65 @@ Un **dictamen pericial de construcción** es la herramienta fundamental cuando s
 No todos los peritos tienen la misma solvencia. Nuestra formación como **Ingenieros Civiles** nos permite analizar la estructura y la cimentación con un nivel de detalle que otros técnicos no alcanzan. Además, nuestra experiencia en la ratificación judicial en los juzgados de Barcelona garantiza que el informe será defendido con contundencia ante el juez.
 
 > "Un buen perito no solo encuentra el error, sino que explica por qué ha ocurrido y cuánto cuesta solucionarlo."
+
+<div class="mt-16">
+  <h2 class="text-3xl font-light text-slate-800 mb-8">Preguntas Frecuentes sobre Top Peritajes (FAQS)</h2>
+  
+  <div class="space-y-6">
+    <div class="bg-slate-50 p-6 rounded-lg border border-slate-100">
+      <h3 class="text-xl font-semibold text-slate-900 mb-3">¿Qué es un perito en la construcción?</h3>
+      <p class="text-slate-600">Un perito en la construcción es un profesional colegiado (ingeniero civil, arquitecto o arquitecto técnico) con conocimientos especializados que inspecciona edificaciones para diagnosticar problemas constructivos, vicios ocultos o incumplimientos contractuales. Su rol culmina en la elaboración de un informe pericial que sirve como prueba técnica fundamental para resolver disputas, ya sea mediante negociación o en un juicio.</p>
+    </div>
+
+    <div class="bg-slate-50 p-6 rounded-lg border border-slate-100">
+      <h3 class="text-xl font-semibold text-slate-900 mb-3">¿Cuánto cobra un perito de obra?</h3>
+      <p class="text-slate-600">Los honorarios de un perito de obra varían dependiendo de la complejidad del daño, la urgencia, la cantidad de visitas necesarias a la edificación, el alcance de los ensayos especiales requeridos y si es necesaria su asistencia para ratificar el informe pericial en un juzgado. En Barcelona, las tarifas suelen comenzar desde los 300€-500€ para estudios preliminares o inspecciones puntuales básicas, ascendiendo en función de la envergadura del dictamen técnico completo.</p>
+    </div>
+
+    <div class="bg-slate-50 p-6 rounded-lg border border-slate-100">
+      <h3 class="text-xl font-semibold text-slate-900 mb-3">¿Cuáles son los 3 tipos de peritos en edificación?</h3>
+      <p class="text-slate-600">Generalmente, se dividen según quién los nombra o su principal enfoque: <strong>1) Peritos de Parte:</strong> Contratados privadamente por el demandante o demandado para defender sus intereses técnicos; <strong>2) Peritos Judiciales:</strong> Designados imparcialmente por el juez a partir de las listas de los Colegios Profesionales; <strong>3) Peritos Tasadores / de Seguros:</strong> Especializados en evaluar el coste de daños y determinar las indemnizaciones con aseguradoras tras un siniestro.</p>
+    </div>
+
+    <div class="bg-slate-50 p-6 rounded-lg border border-slate-100">
+      <h3 class="text-xl font-semibold text-slate-900 mb-3">¿Qué hay que estudiar para ser perito de obra?</h3>
+      <p class="text-slate-600">Para ejercer como perito de obra con plenas garantías y validez legal, es requisito tener una titulación oficial universitaria relacionada con el área de la edificación o ingeniería. Lo idóneo es ser graduado en <strong>Ingeniería Civil (Obras Públicas), Arquitectura o Arquitectura Técnica / Aparejador</strong>. Además, es imprescindible estar inscrito y colegiado en el Colegio Profesional correspondiente.</p>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "¿Qué es un perito en la construcción?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Un perito en la construcción es un profesional colegiado (ingeniero civil, arquitecto o arquitecto técnico) con conocimientos especializados que inspecciona edificaciones para diagnosticar problemas constructivos, vicios ocultos o incumplimientos contractuales. Su rol culmina en la elaboración de un informe pericial."
+    }
+  }, {
+    "@type": "Question",
+    "name": "¿Cuánto cobra un perito de obra?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Los honorarios varían según la complejidad del daño y el alcance del dictamen. En Barcelona, suelen comenzar desde los 300€-500€ para inspecciones previas, incrementándose para peritajes judiciales complejos e intervenciones en tribunales."
+    }
+  }, {
+    "@type": "Question",
+    "name": "¿Cuáles son los 3 tipos de peritos en edificación?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "1) Peritos de parte, contratados por particulares o empresas para defenderse; 2) Peritos judiciales, designados de forma aleatoria por un juez; 3) Peritos de seguros, que evalúan los daños para pólizas y aseguradoras."
+    }
+  }, {
+    "@type": "Question",
+    "name": "¿Qué hay que estudiar para ser perito de obra?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Para ser perito de obra es necesario cursar una titulación universitaria técnica habilitante como Ingeniería Civil, Arquitectura o Arquitectura Técnica y estar colegiado en el correspondiente colegio oficial."
+    }
+  }]
+}
+</script>
