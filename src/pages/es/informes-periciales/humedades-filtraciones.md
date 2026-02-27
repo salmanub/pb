@@ -1,12 +1,12 @@
 ---
 layout: 'layouts/service-child.njk'
-title: "Perito de Humedades y Filtraciones en Barcelona | Informe de Causas"
+title: "Perito de Humedades en Barcelona | Informe Pericial Arquitecto"
 hero:
   image: "src/assets/images/deteccion-humedades-termografia.jpg"
-  alt: "Detección de humedades y filtraciones mediante cámara termográfica"
-  title: "Peritaje de Humedades y Filtraciones - Diagnóstico Técnico"
+  alt: "Perito arquitecto realizando diagnóstico y detección de humedades con cámara termográfica"
+  title: "Perito en Humedades"
 subtitle: 'Diagnóstico técnico del origen de humedades por filtración, capilaridad o condensación'
-description: "¿Sufre de humedades o filtraciones persistentes? Elaboramos un informe pericial que identifica el origen exacto del problema para garantizar una reparación definitiva en Barcelona."
+description: "¿Necesita un Perito en Humedades en Barcelona? Informe pericial para identificar filtraciones o capilaridad. Válido para juicios y reclamaciones a seguros."
 permalink: "/informes-periciales/humedades-filtraciones/"
 lang: 'es'
 translations:
@@ -76,9 +76,29 @@ ctaDescription: 'Solicite un diagnóstico técnico profesional para identificar 
 
 # Introduction (shown in hero section)
 intro: |
-  <p>Las manchas de humedad, el moho o las goteras son problemas que afectan gravemente al confort, la salubridad y el valor de su propiedad. Aplicar soluciones superficiales sin un diagnóstico correcto es un error común que solo cronifica el problema.</p>
+  <p><strong>¿Qué es un informe pericial de humedades?</strong> Un informe pericial de humedades es un documento técnico elaborado por un experto en la materia, generalmente un arquitecto o ingeniero, que tiene como objetivo identificar y analizar las causas y consecuencias de las humedades presentes en un edificio o vivienda.</p>
   
-  <p>Como parte de nuestros <a href="/informes-periciales/">servicios de informes periciales</a>, nos especializamos en la detección del origen exacto de cualquier tipo de humedad, elaborando un dictamen técnico que le servirá como hoja de ruta para su erradicación definitiva.</p>
+  <p>Si sufre de manchas, moho o filtraciones persistentes, nuestro equipo de <a href="/construccion/">peritos arquitectos e ingenieros</a> dictaminará el origen exacto del problema, proporcionándole la prueba legal necesaria para reclamar al seguro, a la comunidad de propietarios o a los constructores.</p>
+
+sections:
+  title: "¿Qué analiza un Perito Judicial en Humedades?"
+  what_is:
+    text: "Un <strong>perito de humedades</strong> evalúa técnicamente su vivienda para determinar si el origen del agua se debe a factores estructurales, roturas de instalaciones o defectos de aislamiento. Su informe es fundamental para exigir responsabilidades y cobrar indemnizaciones."
+    features:
+      - "<strong>Humedad por Filtración:</strong> Entrada de agua externa por terrazas, cubiertas, fachadas o roturas de tuberías."
+      - "<strong>Humedad por Capilaridad:</strong> Ascensión de agua desde el subsuelo a través de los cimientos y muros de plantas bajas."
+      - "<strong>Humedad por Condensación:</strong> Generación de moho negro por falta de aislamiento térmico (puentes térmicos) o ventilación deficiente."
+
+faqs:
+  title: "Preguntas Frecuentes sobre Peritajes de Humedades"
+  items:
+    - question: "¿Cuánto cobra un perito por un informe pericial de humedades?"
+      answer: "Como referencia inicial, un informe pericial básico sobre humedades suele oscilar entre 300€ y 800€. Sin embargo, un informe completo que requiera el uso de cámaras termográficas, ensayos técnicos específicos, valoración de daños extensa o asistencia a juicio, tendrá un coste superior ajustado a la complejidad del caso."
+    - question: "¿Quién debe arreglar las humedades?"
+      answer: "Depende del origen dictaminado por el perito. Si las humedades provienen de elementos comunes (fachadas, cubiertas, terrazas comunitarias o bajantes), la responsabilidad de la reparación recae sobre la <strong>Comunidad de Propietarios</strong>. Si el daño se origina por la rotura de una tubería privativa, el responsable es el <strong>propietario o su seguro de hogar</strong>. En viviendas de obra nueva, podría ser un <strong>vicio constructivo</strong> reclamable a la promotora/constructora."
+    - question: "¿Qué validez tiene el informe para reclamar daños por agua?"
+      answer: "Nuestros informes periciales están firmados por ingenieros y arquitectos técnicos colegiados, por lo que tienen <strong>plena validez legal y judicial</strong>. Son la herramienta exigida por los jueces y las compañías aseguradoras para demostrar técnicamente el nexo causal entre el origen (la filtración) y las consecuencias (los daños estéticos y materiales en su vivienda)."
+
 ---
 
 ## ¿Cansado de Luchar contra las Humedades?
