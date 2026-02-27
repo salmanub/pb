@@ -1,0 +1,18 @@
+{% if faqs %}
+<div class="mt-16 mb-16 max-w-4xl mx-auto" itemscope itemtype="https://schema.org/FAQPage">
+  <h2 class="text-[2rem] md:text-[2.5rem] font-light text-slate-800 mb-8 text-center">{{ faqs.title | default("Preguntas Frecuentes") }}</h2>
+  
+  <div class="space-y-6">
+    {% for item in faqs.items %}
+    <div class="bg-slate-50 p-6 rounded-lg border border-slate-100 hover:shadow-md transition-shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <h3 class="text-xl font-semibold text-slate-900 mb-3" itemprop="name">{{ item.question }}</h3>
+      <div class="text-slate-600 prose prose-slate" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          {{ item.answer | safe }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

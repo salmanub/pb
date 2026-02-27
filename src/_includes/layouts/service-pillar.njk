@@ -284,6 +284,9 @@
             <div class="prose prose-lg prose-slate max-w-4xl mx-auto">
                 <!-- Renderiza el contenido markdown -->
                 {{ content | safe }}
+
+                <!-- Renderiza FAQs estructuradas si existen en el frontmatter -->
+                {% include "partials/faqs.njk" %}
             </div>
         </div>
     </section>
