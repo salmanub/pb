@@ -33,13 +33,13 @@ hero:
     badge: "Perito Ingegnere"
     caption: "Perizie tecniche con rigore e chiarezza"
   rotatingTexts:
-    default: "con rigore tecnico"
+    default: "con rigore tecnico e solidità"
     items:
-      - "con rigore tecnico"
-      - "che risolvono controversie edili"
-      - "con validità legale garantita"
-      - "per garantire la qualità del vostro progetto"
-      - "con diagnosi strutturali precise"
+      - "con rigore tecnico e solidità"
+      - "per reclami ingegneristici complessi"
+      - "con una solida base geotecnica"
+      - "che risolvono dispute sulle certificazioni"
+      - "con inattaccabile validità legale"
   cta:
     primary: "Valuta il Tuo Caso"
     primaryUrl: "/it/contatti/"
@@ -53,7 +53,7 @@ hero:
     - value: "97%"
       text: "Perizie Asseverate"
       subtext: "In procedimenti giudiziari"
-  logosText: "Le nostre perizie sono accettate dai principali tribunali ed enti assicurativi."
+  logosText: "Le nostre perizie sono richieste da studi legali, promotori immobiliari e compagnie assicurative di primo livello."
 
 # Servicios Destacados
 highlightedServices:
@@ -78,7 +78,7 @@ highlightedServices:
       icon: "tool"
       cta: "Vedi di più"
 
-# Sección "En qué podemos ayudarte" (CORREGIDA)
+# Sección "En qué podemos ayudarte"
 ayuda:
   encabezado:
     title: "Come Possiamo"
@@ -124,7 +124,7 @@ solucion:
     titulo: "La"
     highlight: "Soluzione Tecnica"
     subtitulo: "di cui Hai Bisogno"
-    descripcion: "In perito.barcelona combiniamo l'esperienza in ingegneria civile con la metodologia peritale per fornire relazioni precise, imparziali e tecnicamente solide. Il nostro intervento fornisce argomenti chiari per prendere decisioni, contestare difetti o definire soluzioni costruttive sicure."
+    descripcion: "In perito.barcelona combiniamo l'esperienza in ingegneria civile con la metodologia peritale per fornire relazioni precise, imparciali e tecnicamente solide. Il nostro intervento fornisce argomenti chiari per prendere decisioni, contestare difetti o definire soluzioni costruttive sicure."
     caracteristicas:
       - icono: "search"
         titulo: "Chiaramo la Causa Radice"
@@ -176,34 +176,34 @@ proceso:
     texto: "Inizia Ora - Valuta il tuo caso"
     url: "/it/contatti/"
 
-# Sección Testimonios
+# Sección Testimonios (CASOS DE ÉXITO DE ALTO VALOR B2B)
 testimonios:
   tag: "Casi di Successo"
-  titulo: "Clienti Soddisfatti"
-  highlight: "Confermano la Nostra Esperienza"
-  descripcion: "Scopri come abbiamo aiutato proprietari, condomini e aziende a risolvere i loro casi tecnici con successo."
+  titulo: "Casi Risolti"
+  highlight: "che Confermano la Nostra Esperienza"
+  descripcion: "Dimostriamo il nostro rigore tecnico in richieste di risarcimento ad alta complessità, offrendo basi probatorie inattaccabili per grandi aziende e studi legali."
   items:
-    - nombre: "Condominio Les Corts"
-      rol: "Amministratore di Condominio"
+    - nombre: "Operatore Logistico Internazionale"
+      rol: "Direzione Operativa"
       tipo: "empresa"
-      cita: "La perizia ha identificato l'origine delle infiltrazioni dal tetto e ha facilitato l'assunzione delle riparazioni necessarie da parte del responsabile."
-      fecha: "2 mesi fa"
-      servicioRelacionado: "Perizia di Patologie Edilizie"
-      tipoProyecto: "Patologia del Tetto"
-    - nombre: "COSTRUZIONI TECNICHE BCN, S.L."
-      rol: "Direttore dei Progetti"
+      cita: "L'audit geotecnico è stato inconfutabile. Ha dimostrato difetti di compattazione nel sottosuolo, permettendoci di richiedere oltre 115.000 € all'impresa costruttrice."
+      fecha: "In Evidenza"
+      servicioRelacionado: "Perizia Geotecnica su Pavimentazioni"
+      tipoProyecto: "Opere Civili Logistiche"
+    - nombre: "Hotel Urbano di Alta Gamma"
+      rol: "Direzione Finanziaria e Proprietà"
       tipo: "empresa"
-      cita: "L'audit tecnico preventivo ha permesso di correggere le carenze prima della consegna di 24 unità abitative, evitando reclami e costi aggiuntivi."
-      fecha: "1 mese fa"
-      servicioRelacionado: "Audit Tecnico di Cantiere"
-      tipoProyecto: "Controllo Qualità"
-    - nombre: "Ana S. García"
-      rol: "Proprietaria Danneggiata"
-      tipo: "persona"
-      cita: "La perizia ha accertato la presenza di vizi occulti nell'abitazione, costituendo la base per l'azione legale che ci ha permesso di riparare i danni."
-      fecha: "3 mesi fa"
-      servicioRelacionado: "Perizia Giudiziaria"
-      tipoProyecto: "Vizi Occulti"
+      cita: "Il loro audit forense ha smontato la controperizia, giustificando ogni deviazione e validando le certificazioni di fronte a una critica controversia economica."
+      fecha: "In Evidenza"
+      servicioRelacionado: "Audit delle Certificazioni"
+      tipoProyecto: "Ristrutturazione Alberghiera in Esercizio"
+    - nombre: "Promotore Immobiliare Nazionale"
+      rol: "Dipartimento Post-Vendita"
+      tipo: "empresa"
+      cita: "La perizia tecnica ha individuato la causa principale di 39 reclami sistemici, trasferendo la responsabilità al subappaltatore e facendoci risparmiare costi elevati."
+      fecha: "In Evidenza"
+      servicioRelacionado: "Audit di Esecuzione"
+      tipoProyecto: "Sviluppo di Nuove Costruzioni"
 
 # Sección CTA Contacto
 contactCTA:

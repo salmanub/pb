@@ -33,13 +33,13 @@ hero:
     badge: "Ingénieur Expert"
     caption: "Rapports techniques rigoureux et clairs"
   rotatingTexts:
-    default: "avec rigueur technique"
+    default: "avec rigueur technique et solidité"
     items:
-      - "avec rigueur technique"
-      - "qui résolvent les litiges de construction"
-      - "à validité juridique garantie"
-      - "pour assurer la qualité de votre projet"
-      - "avec des diagnostics structurels précis"
+      - "avec rigueur technique et solidité"
+      - "pour des réclamations complexes d'ingénierie"
+      - "avec une fondation géotechnique avancée"
+      - "qui résolvent les litiges de certification"
+      - "à validité juridique inattaquable"
   cta:
     primary: "Évaluer Votre Cas"
     primaryUrl: "/fr/contact/"
@@ -53,7 +53,7 @@ hero:
     - value: "97%"
       text: "Rapports Ratifiés"
       subtext: "En procédure judiciaire"
-  logosText: "Nos rapports sont acceptés par les principaux tribunaux et compagnies d'assurance."
+  logosText: "Nos expertises sont sollicitées par des cabinets d'avocats, des promoteurs et des assureurs de premier plan."
 
 # Servicios Destacados
 highlightedServices:
@@ -78,7 +78,7 @@ highlightedServices:
       icon: "tool"
       cta: "Voir plus"
 
-# Sección "En qué podemos ayudarte" (CORREGIDA)
+# Sección "En qué podemos ayudarte"
 ayuda:
   encabezado:
     title: "Comment Pouvons-Nous"
@@ -176,34 +176,34 @@ proceso:
     texto: "Commencez - Évaluez votre cas"
     url: "/fr/contact/"
 
-# Sección Testimonios
+# Sección Testimonios (CASOS DE ÉXITO DE ALTO VALOR B2B)
 testimonios:
   tag: "Cas de Réussite"
-  titulo: "Nos Clients Satisfaits"
-  highlight: "Témoignent de Notre Expérience"
-  descripcion: "Découvrez comment nous avons aidé des propriétaires, des syndics et des entreprises à résoudre leurs cas techniques avec succès."
+  titulo: "Cas Résolus"
+  highlight: "Témoignant de Notre Expérience"
+  descripcion: "Nous démontrons notre rigueur technique dans des réclamations de haute complexité, offrant des bases probatoires inattaquables pour les grands comptes et les cabinets d'avocats."
   items:
-    - nombre: "Syndic de Copropriété Les Corts"
-      rol: "Président du Syndic"
+    - nombre: "Opérateur Logistique International"
+      rol: "Direction des Opérations"
       tipo: "empresa"
-      cita: "Le rapport d'expertise a identifié l'origine des infiltrations en toiture et a facilité la prise en charge des réparations nécessaires par le responsable."
-      fecha: "il y a 2 mois"
-      servicioRelacionado: "Rapport d'Expertise de Pathologies"
-      tipoProyecto: "Pathologie de Toiture"
-    - nombre: "CONSTRUCCIONES TÉCNICAS BCN, S.L."
-      rol: "Directeur de Projets"
+      cita: "L'audit géotechnique a été irréfutable. Il a démontré des défauts de compactage dans le sous-sol, nous permettant de réclamer plus de 115 000 € à l'entreprise de construction."
+      fecha: "À la Une"
+      servicioRelacionado: "Expertise Géotechnique de Pavage"
+      tipoProyecto: "Génie Civil Logistique"
+    - nombre: "Hôtel Urbain Haut de Gamme"
+      rol: "Direction Financière et Propriété"
       tipo: "empresa"
-      cita: "L'audit technique préventif a permis de corriger les malfaçons avant la livraison de 24 logements, évitant ainsi des réclamations et des surcoûts."
-      fecha: "il y a 1 mois"
-      servicioRelacionado: "Audit Technique de Chantier"
-      tipoProyecto: "Contrôle Qualité"
-    - nombre: "Ana S. García"
-      rol: "Propriétaire Affectée"
-      tipo: "persona"
-      cita: "L'expertise a prouvé l'existence de vices cachés dans le logement, servant de base à la réclamation judiciaire qui nous a permis de réparer les dommages."
-      fecha: "il y a 3 mois"
-      servicioRelacionado: "Expertise Judiciaire"
-      tipoProyecto: "Vices Cachés"
+      cita: "Leur audit médico-légal a démonté la contre-expertise, justifiant chaque écart et validant les certifications face à un litige économique critique."
+      fecha: "À la Une"
+      servicioRelacionado: "Audit des Certifications"
+      tipoProyecto: "Rénovation Hôtelière en Activité"
+    - nombre: "Promoteur Immobilier National"
+      rol: "Service Après-Vente"
+      tipo: "empresa"
+      cita: "Le rapport technique a identifié la cause profonde de 39 réclamations systémiques, transférant la responsabilité au sous-traitant et nous évitant des coûts élevés."
+      fecha: "À la Une"
+      servicioRelacionado: "Audit d'Exécution"
+      tipoProyecto: "Promotion de Logements Neufs"
 
 # Sección CTA Contacto
 contactCTA:

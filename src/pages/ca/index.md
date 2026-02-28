@@ -33,13 +33,13 @@ hero:
     badge: "Pèrit Enginyer"
     caption: "Informes tècnics amb rigor i claredat"
   rotatingTexts:
-    default: "amb rigor tècnic"
+    default: "amb rigor tècnic i solidesa"
     items:
-      - "amb rigor tècnic"
-      - "que resolen disputes d'obra"
-      - "amb validesa judicial garantida"
-      - "per assegurar la qualitat del seu projecte"
-      - "amb diagnòstics estructurals precisos"
+      - "amb rigor tècnic i solidesa"
+      - "per a reclamacions complexes d'enginyeria"
+      - "amb fonamentació geotècnica avançada"
+      - "que resolen disputes de certificacions"
+      - "amb validesa judicial inexpugnable"
   cta:
     primary: "Avaluar el seu Cas"
     primaryUrl: "/ca/contacte/"
@@ -53,7 +53,7 @@ hero:
     - value: "97%"
       text: "Informes Ratificats"
       subtext: "En processos judicials"
-  logosText: "Els nostres informes són acceptats pels principals jutjats i entitats asseguradores."
+  logosText: "Els nostres dictàmens són sol·licitats per despatxos d'advocats, promotores i asseguradores de primer nivell."
 
 # Servicios Destacados
 highlightedServices:
@@ -176,34 +176,34 @@ proceso:
     texto: "Comenci Ara - Avaluï el seu cas"
     url: "/ca/contacte/"
 
-# Sección Testimonios
+# Sección Testimonios (CASOS D'ÈXIT D'ALT VALOR B2B)
 testimonios:
   tag: "Casos d'Èxit"
-  titulo: "Clients Satisfets"
-  highlight: "Avalen la Nostra Experiència"
-  descripcion: "Descobreixi com hem ajudat a propietaris, comunitats i empreses a resoldre els seus casos tècnics amb èxit."
+  titulo: "Casos Resolts"
+  highlight: "que Avalen la Nostra Experiència"
+  descripcion: "Demostrem el nostre rigor tècnic en reclamacions d'alta complexitat, oferint bases probatòries inexpugnables per a grans comptes i despatxos jurídics."
   items:
-    - nombre: "Comunitat de Propietaris Les Corts"
-      rol: "President de la Comunitat"
+    - nombre: "Operador Logístic Internacional"
+      rol: "Direcció d'Operacions"
       tipo: "empresa"
-      cita: "L'informe pericial va identificar l'origen de les filtracions a la coberta i va facilitar que la part responsable assumís les reparacions necessàries."
-      fecha: "fa 2 mesos"
-      servicioRelacionado: "Informe Pericial de Patologies"
-      tipoProyecto: "Patologia de Coberta"
-    - nombre: "CONSTRUCCIONS TÈCNIQUES BCN, S.L."
-      rol: "Director de Projectes"
+      cita: "L'auditoria geotècnica va ser irrefutable. Va demostrar defectes de compactació al subsòl, permetent-nos reclamar més de 115.000 € a la constructora."
+      fecha: "Destacat"
+      servicioRelacionado: "Peritatge Geotècnic de Paviment"
+      tipoProyecto: "Obra Civil Logística"
+    - nombre: "Hotel Urbà d'Alta Gamma"
+      rol: "Direcció Financera i Propietat"
       tipo: "empresa"
-      cita: "L'auditoria tècnica preventiva va permetre corregir deficiències abans del lliurament de 24 habitatges, evitant reclamacions i sobrecostos."
-      fecha: "fa 1 mes"
-      servicioRelacionado: "Auditoria Tècnica d'Obres"
-      tipoProyecto: "Control de Qualitat"
-    - nombre: "Anna S. Garcia"
-      rol: "Propietària Afectada"
-      tipo: "persona"
-      cita: "El peritatge va acreditar vicis ocultos a l'habitatge, sent la base per a la reclamació judicial que ens va permetre reparar els danys."
-      fecha: "fa 3 mesos"
-      servicioRelacionado: "Peritatge Judicial"
-      tipoProyecto: "Vicis Ocultos"
+      cita: "La seva auditoria forense va desmuntar la contrapericial, justificant cada desviació i validant les certificacions davant d'una disputa econòmica crítica."
+      fecha: "Destacat"
+      servicioRelacionado: "Auditoria de Certificacions"
+      tipoProyecto: "Reforma Hotelera en Actiu"
+    - nombre: "Constructora Promotora Nacional"
+      rol: "Departament Postvenda"
+      tipo: "empresa"
+      cita: "El dictamen tècnic va identificar la causa arrel de 39 reclamacions sistèmiques, derivant la responsabilitat a la subcontracta i estalviant-nos alts costos."
+      fecha: "Destacat"
+      servicioRelacionado: "Auditoria d'Execució"
+      tipoProyecto: "Promoció Obra Nova"
 
 # Sección CTA Contacto
 contactCTA:

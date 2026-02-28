@@ -34,17 +34,17 @@ hero:
     <p>Do not let a construction defect become a legal nightmare. Tell us about your case and we will guide you on the viability of your claim.</p>
   image:
     path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
-    alt: "Perito ingeniero inspeccionando una estructura de hormigón"
-    badge: "Perito Ingeniero"
-    caption: "Informes técnicos con rigor y claridad"
+    alt: "Expert engineer inspecting a concrete structure"
+    badge: "Chartered Engineer"
+    caption: "Technical reports with rigor and clarity"
   rotatingTexts:
-    default: "with technical rigor"
+    default: "with technical rigor and solidity"
     items:
-      - "with technical rigor"
-      - "that resolve construction disputes"
-      - "with guaranteed judicial validity"
-      - "to ensure your project's quality"
-      - "with precise structural diagnostics"
+      - "with technical rigor and solidity"
+      - "for complex engineering claims"
+      - "with advanced geotechnical foundation"
+      - "that resolve certification disputes"
+      - "with unassailable judicial validity"
   cta:
     primary: "Evaluate Your Case"
     primaryUrl: "/en/contact/"
@@ -54,11 +54,11 @@ hero:
   badges:
     - value: "15+"
       text: "Years of Experience"
-      subtext: "In the field"
+      subtext: "In the sector"
     - value: "97%"
       text: "Reports Ratified"
       subtext: "In court proceedings"
-  logosText: "Our reports are accepted by major courts and insurance entities."
+  logosText: "Our expert reports are requested by top-tier law firms, developers, and insurance companies."
 
 # Highlighted Services
 highlightedServices:
@@ -181,34 +181,34 @@ proceso:
     texto: "Start Now - Evaluate Your Case"
     url: "/en/contact/"
 
-# Testimonials Section
+# Testimonials Section (CASOS DE ÉXITO DE ALTO VALOR B2B)
 testimonios:
   tag: "Success Stories"
-  titulo: "Satisfied Clients"
+  titulo: "Resolved Cases"
   highlight: "Endorse Our Experience"
-  descripcion: "Discover how we have helped property owners, communities, and companies to successfully resolve their technical cases."
+  descripcion: "We demonstrate our technical rigor in highly complex claims, offering unassailable evidentiary bases for major accounts and law firms."
   items:
-    - nombre: "Les Corts Homeowners Association"
-      rol: "President of the Association"
+    - nombre: "International Logistics Operator"
+      rol: "Operations Management"
       tipo: "empresa"
-      cita: "The expert report identified the source of the roof leaks and facilitated the assumption of the necessary repairs by the responsible party."
-      fecha: "2 months ago"
-      servicioRelacionado: "Pathology Expert Report"
-      tipoProyecto: "Roof Pathology"
-    - nombre: "CONSTRUCCIONES TÉCNICAS BCN, S.L."
-      rol: "Project Manager"
+      cita: "The geotechnical audit was irrefutable. It demonstrated compaction defects in the subsoil, allowing us to claim over €115,000 from the contractor."
+      fecha: "Featured"
+      servicioRelacionado: "Geotechnical Pavement Expertise"
+      tipoProyecto: "Logistics Civil Works"
+    - nombre: "High-End Urban Hotel"
+      rol: "Financial & Property Management"
       tipo: "empresa"
-      cita: "The preventive technical audit allowed for the correction of deficiencies before the handover of 24 homes, avoiding claims and cost overruns."
-      fecha: "1 month ago"
-      servicioRelacionado: "Technical Construction Audit"
-      tipoProyecto: "Quality Control"
-    - nombre: "Ana S. Garcia"
-      rol: "Affected Homeowner"
-      tipo: "persona"
-      cita: "The expert assessment proved the existence of hidden defects in the home, providing the basis for the legal claim that allowed us to repair the damages."
-      fecha: "3 months ago"
-      servicioRelacionado: "Judicial Expert Report"
-      tipoProyecto: "Hidden Defects"
+      cita: "Their forensic audit dismantled the counter-report, justifying each deviation and validating the certifications in a critical economic dispute."
+      fecha: "Featured"
+      servicioRelacionado: "Certification Audit"
+      tipoProyecto: "Active Hotel Renovation"
+    - nombre: "National Real Estate Developer"
+      rol: "After-Sales Department"
+      tipo: "empresa"
+      cita: "The technical report identified the root cause of 39 systemic claims, shifting responsibility to the subcontractor and saving us high costs."
+      fecha: "Featured"
+      servicioRelacionado: "Execution Audit"
+      tipoProyecto: "New Build Development"
 
 # Contact CTA Section
 contactCTA:

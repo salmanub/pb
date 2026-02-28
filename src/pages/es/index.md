@@ -33,13 +33,13 @@ hero:
     badge: "Perito Ingeniero"
     caption: "Informes técnicos con rigor y claridad"
   rotatingTexts:
-    default: "con rigor técnico"
+    default: "con rigor técnico y solidez"
     items:
-      - "con rigor técnico"
-      - "que resuelven disputas de obra"
-      - "con validez judicial garantizada"
-      - "para asegurar la calidad de su proyecto"
-      - "con diagnósticos estructurales precisos"
+      - "con rigor técnico y solidez"
+      - "para reclamaciones complejas de ingeniería"
+      - "con fundamentación geotécnica avanzada"
+      - "que resuelven disputas de certificaciones"
+      - "con validez judicial inexpugnable"
   cta:
     primary: "Evaluar su Caso"
     primaryUrl: "/contacto/"
@@ -53,7 +53,7 @@ hero:
     - value: "97%"
       text: "Informes Ratificados"
       subtext: "En procesos judiciales"
-  logosText: "Nuestros informes son aceptados por los principales juzgados y entidades aseguradoras."
+  logosText: "Nuestros dictámenes son solicitados por despachos de abogados, promotoras y aseguradoras de primer nivel."
 
 # Servicios Destacados
 highlightedServices:
@@ -78,7 +78,7 @@ highlightedServices:
       icon: "tool"
       cta: "Ver más"
 
-# Sección "En qué podemos ayudarte" (CORREGIDA)
+# Sección "En qué podemos ayudarte"
 ayuda:
   encabezado:
     title: "¿En Qué Podemos"
@@ -102,7 +102,6 @@ ayuda:
       icon: "file-text"
     - title: "Vicios Ocultos en Compraventa o Post-obra"
       description: "Identificación y documentación de defectos no visibles tras la entrega o compra de un inmueble."
-      # URL CORREGIDA para mantener la estructura del pilar "Informes Periciales"
       url: "/informes-periciales/vicios-ocultos/"
       icon: "search"
     - title: "Mala Ejecución de Obras"
@@ -177,34 +176,34 @@ proceso:
     texto: "Empiece Ahora - Evalúe su caso"
     url: "/contacto/"
 
-# Sección Testimonios
+# Sección Testimonios (CASOS DE ÉXITO DE ALTO VALOR B2B)
 testimonios:
   tag: "Casos de Éxito"
-  titulo: "Clientes Satisfechos"
-  highlight: "Avalan Nuestra Experiencia"
-  descripcion: "Descubra cómo hemos ayudado a propietarios, comunidades y empresas a resolver sus casos técnicos con éxito."
+  titulo: "Casos Resueltos"
+  highlight: "que Avalan Nuestra Experiencia"
+  descripcion: "Demostramos nuestro rigor técnico en reclamaciones de alta complejidad, ofreciendo bases probatorias inexpugnables para grandes cuentas y despachos jurídicos."
   items:
-    - nombre: "Comunidad de Propietarios Les Corts"
-      rol: "Presidente de la Comunidad"
+    - nombre: "Operador Logístico Internacional"
+      rol: "Dirección de Operaciones"
       tipo: "empresa"
-      cita: "El informe pericial identificó el origen de las filtraciones en la cubierta y facilitó la asunción de las reparaciones necesarias por la parte responsable."
-      fecha: "hace 2 meses"
-      servicioRelacionado: "Informe Pericial de Patologías"
-      tipoProyecto: "Patología de Cubierta"
-    - nombre: "CONSTRUCCIONES TÉCNICAS BCN, S.L."
-      rol: "Director de Proyectos"
+      cita: "La auditoría geotécnica fue irrefutable. Demostró defectos de compactación en el subsuelo, permitiéndonos reclamar más de 115.000 € a la constructora."
+      fecha: "Destacado"
+      servicioRelacionado: "Peritaje Geotécnico de Pavimento"
+      tipoProyecto: "Obra Civil Logística"
+    - nombre: "Hotel Urbano de Alta Gama"
+      rol: "Dirección Financiera y Propiedad"
       tipo: "empresa"
-      cita: "La auditoría técnica preventiva permitió corregir deficiencias antes de la entrega de 24 viviendas, evitando reclamaciones y sobrecostes."
-      fecha: "hace 1 mes"
-      servicioRelacionado: "Auditoría Técnica de Obras"
-      tipoProyecto: "Control de Calidad"
-    - nombre: "Ana S. García"
-      rol: "Propietaria Afectada"
-      tipo: "persona"
-      cita: "El peritaje acreditó vicios ocultos en la vivienda, siendo la base para la reclamación judicial que nos permitió reparar los daños."
-      fecha: "hace 3 meses"
-      servicioRelacionado: "Peritaje Judicial"
-      tipoProyecto: "Vicios Ocultos"
+      cita: "Su auditoría forense desmontó la contrapericial, justificando cada desviación y validando las certificaciones ante una disputa económica crítica."
+      fecha: "Destacado"
+      servicioRelacionado: "Auditoría de Certificaciones"
+      tipoProyecto: "Reforma Hotelera en Activo"
+    - nombre: "Constructora Promotora Nacional"
+      rol: "Departamento Postventa"
+      tipo: "empresa"
+      cita: "El dictamen técnico identificó la causa raíz de 39 reclamaciones sistémicas, derivando la responsabilidad a la subcontrata y ahorrándonos altos costes."
+      fecha: "Destacado"
+      servicioRelacionado: "Auditoría de Ejecución"
+      tipoProyecto: "Promoción Obra Nueva"
 
 # Sección CTA Contacto
 contactCTA:
