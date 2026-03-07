@@ -46,6 +46,16 @@ export const onRequest = async (context) => {
             if (sxgResponse.ok) {
                 // 5. Serve the SXG file if found
                 const sxgBody = await sxgResponse.arrayBuffer();
+
+                // CRÍTICO: Validar que el archivo es realmente un SXG y no un HTML 404 de Pages
+                // Verificamos si empieza por los magic bytes "sxg1" (115, 120, 103, 49) o un tamaño mínimo razonable.
+                const view = new Uint8Array(sxgBody);
+                const isSxg = view.length > 8 && view[0] === 115 && view[1] === 120 && view[2] === 103 && view[3] === 49;
+
+                if (!isSxg) {
+                    throw new Error("El archivo .sxg solicitado está ausente o es inválido, activando fallback");
+                }
+
                 const newHeaders = new Headers(sxgResponse.headers);
                 newHeaders.set("Content-Type", "application/signed-exchange;v=b3");
                 newHeaders.set("X-Content-Type-Options", "nosniff");
