@@ -14,6 +14,10 @@ translations:
     permalink: '/ca/informes-pericials/humitats-filtracions/'
   - lang: 'en'
     permalink: '/en/expert-witness-reports/damp-leaks/'
+  - lang: 'it'
+    permalink: '/it/relazioni-peritali/umidita-infiltrazioni/'
+  - lang: 'fr'
+    permalink: '/fr/rapports-peritaux/humidite-infiltrations/'
 eleventyNavigation:
   key: "Humedades y Filtraciones"
   parent: "Informes Periciales"
