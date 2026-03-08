@@ -4,7 +4,7 @@ title: "Perito de Humedades en Barcelona | Informe Pericial Arquitecto"
 hero:
   image: "src/assets/images/deteccion-humedades-termografia.jpg"
   alt: "Perito arquitecto realizando diagnóstico y detección de humedades con cámara termográfica"
-  title: "Perito en Humedades"
+  title: "Perito de Humedades en Barcelona | Informe Pericial Arquitecto"
 subtitle: 'Diagnóstico técnico del origen de humedades por filtración, capilaridad o condensación'
 description: "¿Necesita un Perito en Humedades en Barcelona? Informe pericial para identificar filtraciones o capilaridad. Válido para juicios y reclamaciones a seguros."
 permalink: "/informes-periciales/humedades-filtraciones/"
