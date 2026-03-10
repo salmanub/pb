@@ -1,5 +1,5 @@
 {
-  "successful": 186,
+  "successful": 187,
   "failed": 0,
   "details": [
     {
@@ -13036,6 +13036,37 @@
             "height": 960,
             "size": "157.9KB",
             "url": "/assets/images/optimized/employees/joan_franch-geoleg-961w.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "success": true,
+      "imagePath": "C:\\Users\\avila\\perito11ty\\src\\assets\\images\\employees\\albert_vilardell-ingeniero_civil.jpg",
+      "count": 3,
+      "summary": {
+        "avif": [
+          {
+            "width": 300,
+            "height": 358,
+            "size": "47.1KB",
+            "url": "/assets/images/optimized/employees/albert_vilardell-ingeniero_civil-300w.avif"
+          }
+        ],
+        "webp": [
+          {
+            "width": 300,
+            "height": 358,
+            "size": "39.6KB",
+            "url": "/assets/images/optimized/employees/albert_vilardell-ingeniero_civil-300w.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "width": 300,
+            "height": 358,
+            "size": "44.9KB",
+            "url": "/assets/images/optimized/employees/albert_vilardell-ingeniero_civil-300w.jpeg"
           }
         ]
       }

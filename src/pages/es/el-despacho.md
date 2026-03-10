@@ -2,6 +2,15 @@
 layout: layouts/despacho.njk
 permalink: /el-despacho/
 lang: es
+translations:
+  - lang: ca
+    permalink: /ca/el-despatx/
+  - lang: en
+    permalink: /en/the-firm/
+  - lang: fr
+    permalink: /fr/le-cabinet/
+  - lang: it
+    permalink: /it/lo-studio/
 eleventyNavigation:
   key: "El Despacho"
   title: "El Despacho"
@@ -20,6 +29,7 @@ team_section:
   description: "Un equipo multidisciplinar de especialistas liderado por el Perito Titular, integrando la ingeniería civil y la geotecnia para resolver las patologías más complejas."
 team_members:
   - name: "Albert Vilardell"
+    image: "src/assets/images/employees/albert_vilardell-ingeniero_civil.jpg"
     role: "Ingeniero Civil y Perito Judicial Titular"
     license_label: "Col. Nº"
     license: "16448"
