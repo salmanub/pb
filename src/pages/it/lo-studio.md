@@ -30,6 +30,7 @@ team_section:
 team_members:
   - name: "Albert Vilardell"
     image: "src/assets/images/employees/albert_vilardell-ingeniero_civil.jpg"
+    linkedin: "https://www.linkedin.com/in/albert-vilardell/"
     role: "Ingegnere Civile e Perito Giudiziario Titolare"
     license_label: "Col. Nº"
     license: "16448"
@@ -44,6 +45,7 @@ team_members:
       - "Ingegneria Forense Edile"
   - name: "Joan Franch"
     image: "src/assets/images/employees/joan_franch-geoleg.jpeg"
+    linkedin: "https://www.linkedin.com/in/joan-franch-geotecnia/"
     role: "Geologo e Supporto Tecnico Geotecnico"
     license_label: "Col. Nº"
     license: "4169"
