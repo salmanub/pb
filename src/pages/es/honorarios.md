@@ -2,45 +2,54 @@
 layout: layouts/honorarios.njk
 permalink: /honorarios-perito-judicial-barcelona/
 lang: es
+translations:
+  - lang: ca
+    permalink: /ca/honoraris-perit-judicial/
+  - lang: en
+    permalink: /en/expert-witness-fees/
+  - lang: fr
+    permalink: /fr/honoraires-expert-judiciaire/
+  - lang: it
+    permalink: /it/onorari-perito-giudiziario/
 eleventyNavigation:
   key: "Honorarios"
   title: "Honorarios"
   notshow: false
   order: 4
-title: "Honorarios de Perito Judicial en Barcelona | Presupuesto y Tarifas"
-description: "Conoce cómo se calculan los honorarios de un perito judicial en Barcelona. Factores que influyen en el precio de un informe pericial y tarifas de mercado."
+title: "¿Cuánto cuesta un Perito Judicial en Barcelona? | Honorarios y Tarifas"
+description: "Descubra cómo se calculan los honorarios de un perito judicial ingeniero en Barcelona. Factores, ensayos geotécnicos y el valor de una ingeniería forense."
 hero:
   title: "Honorarios Periciales"
-  subtitle: "Transparencia y rigor en cada presupuesto"
-  description: "Entendemos que el coste de un Informe Pericial es un factor importante, especialmente en procedimientos judiciales. Cada caso es único, por lo que nuestros presupuestos se elaboran a medida tras evaluar la documentación inicial sin compromiso."
+  subtitle: "Transparencia, rigor técnico y presupuestos a medida"
+  description: "En litigios complejos, un dictamen pericial no es un gasto, es la inversión que sostiene su defensa. Entendemos el impacto económico de su caso, por lo que elaboramos presupuestos a medida tras una evaluación técnica preliminar, sin compromiso."
 factors:
   title: "¿De qué dependen nuestros honorarios?"
-  description: "El coste de un peritaje técnico no es fijo. Se calcula en función de la complejidad y las horas de dedicación que requiera cada expediente."
+  description: "El coste de un peritaje técnico de ingeniería no es estándar. Se calcula en función del rigor científico, las pruebas físicas y las horas de dedicación que requiera cada expediente para ser inexpugnable."
   items:
-    - name: "Volumen de documentación"
-      description: "Cantidad de planos, correos, contratos, informes previos y sentencias que debemos revisar exhaustivamente para contextualizar el caso."
-    - name: "Dificultad técnica"
-      description: "Amplitud y profundidad de las patologías o incumplimientos a evaluar. Algunos casos requieren ensayos de laboratorio o modelados 3D."
-    - name: "Desplazamientos e inspecciones"
-      description: "Número de visitas necesarias a la obra o inmueble, ubicación del mismo y tipo de acceso necesario para la toma de datos."
-    - name: "Ratificación en sede judicial"
-      description: "La asistencia a la vista oral requiere preparación adicional, asistencia al juzgado y exposición de las conclusiones ante el juez."
+    - name: "Complejidad Técnica y Normativa"
+      description: "Amplitud de las patologías a evaluar y justificación bajo el Código Técnico de la Edificación (CTE) o normativas industriales (PG-3, EHE). Algunos casos exigen cálculos estructurales avanzados."
+    - name: "Ensayos Físicos y de Laboratorio"
+      description: "Para blindar el informe, a menudo requerimos Ensayos No Destructivos (Termografía, Higrometría), catas, pruebas geotécnicas (SPT, DPSH) o análisis de materiales en laboratorios acreditados."
+    - name: "Volumen de Análisis Documental"
+      description: "Cantidad de proyectos de ejecución, modificaciones de obra, certificaciones, correos y sentencias previas que debemos auditar de forma exhaustiva para contextualizar la causa raíz."
+    - name: "Ratificación en Sede Judicial"
+      description: "La defensa oral del dictamen. Incluye la preparación de la estrategia técnica con su equipo legal, la asistencia a la vista y la exposición de las conclusiones ante el juez soportando el contrainterrogatorio."
 pricing_context:
-  title: "Un presupuesto ajustado a la realidad del encargo"
+  title: "Un presupuesto ajustado a la realidad del litigio"
   paragraphs:
-    - "Un Informe Pericial contundente y riguroso requiere tiempo. Trabajamos con una tarifa horaria propia del sector de la ingeniería forense. Rechazamos métodos de 'peritaje express', ya que en sede judicial la solidez del informe es vital."
-    - "Una vez nos explique su caso y revisemos superficialmente la documentación (de forma totalmente gratuita y confidencial), le propondremos un presupuesto cerrado que cubrirá el estudio, redacción y visado del informe."
+    - "Un Informe Pericial contundente y riguroso requiere tiempo y dedicación exclusiva. Rechazamos los métodos de 'peritaje express' o low-cost basados en meras inspecciones visuales, ya que colapsan fácilmente ante una contrapericial sólida en el juzgado."
+    - "Nuestro proceso es transparente: una vez nos explique su caso y auditemos preliminarmente la situación (de forma totalmente confidencial y gratuita), le propondremos un presupuesto cerrado. Este cubrirá el trabajo de campo, la redacción técnica y el visado oficial por el Colegio de Ingenieros."
   cta:
-    text: "Solicitar estudio previo sin compromiso"
+    text: "Solicitar evaluación y presupuesto sin compromiso"
     url: "/contacto/"
 faqs_section:
   title: "Preguntas Frecuentes sobre Honorarios"
-  description: "Resolvemos las dudas más habituales sobre costes y presupuestos."
+  description: "Resolvemos las dudas más habituales sobre los costes de una intervención pericial."
 faqs:
-  - question: "¿Cuánto cuesta de media un informe pericial de construcción?"
-    answer: "No existe una tarifa fija, oscilando habitualmente entre los 800€ y los 3.000€ dependiendo del tipo de inmueble, si hay daños estructurales y el número de visitas. Le daremos un presupuesto exacto antes de empezar tras revisar la situación inicial."
+  - question: "¿Cuánto cuesta de media un informe pericial de ingeniería o construcción?"
+    answer: "No existe una tarifa fija. Un dictamen técnico preliminar para patologías localizadas puede partir de los 800€ - 1.500€. Sin embargo, peritajes estructurales complejos, auditorías de grandes obras o estudios geotécnicos requieren presupuestos a medida basados en las pruebas necesarias. Le daremos un presupuesto exacto y cerrado antes de iniciar cualquier gestión."
   - question: "¿El presupuesto incluye la asistencia al juicio (ratificación)?"
-    answer: "Por lo general, nuestros presupuestos se dividen en dos partidas claras: la redacción del informe pericial y, en caso de llegar a juicio, los honorarios correspondientes a la asistencia y ratificación ante el juez. De esta manera, si hay acuerdo previo, no deberá abonar la parte del juicio."
+    answer: "Para ofrecer la máxima transparencia, nuestros presupuestos se dividen en dos partidas independientes: 1) El estudio y redacción del informe pericial, y 2) Los honorarios por la asistencia y ratificación en sede judicial. De esta forma, si logran un acuerdo extrajudicial previo a la vista, usted no deberá abonar la parte correspondiente al juicio."
   - question: "¿Tengo que pagar por adelantado?"
-    answer: "Solicitamos una provisión de fondos en el momento de aceptar el encargo para iniciar el trabajo de campo y estudio. El importe restante se abonará a la entrega del borrador del informe, antes de su visado oficial por el Colegio Profesional correspondiente."
+    answer: "Solicitamos una provisión de fondos (habitualmente del 50%) en el momento de aceptar el encargo para cubrir los costes de desplazamiento, apertura del expediente y el inicio del trabajo de campo. El importe restante se abonará a la entrega del borrador final del informe, justo antes de su visado oficial por el Colegio Profesional."
 ---
