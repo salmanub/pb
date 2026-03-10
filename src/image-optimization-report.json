@@ -1,5 +1,5 @@
 {
-  "successful": 185,
+  "successful": 186,
   "failed": 0,
   "details": [
     {
@@ -12933,6 +12933,109 @@
             "height": 1024,
             "size": "101.1KB",
             "url": "/assets/images/optimized/gmb/informe-pericial-vicios-ocultos-vivienda-barcelona-1024w.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "success": true,
+      "imagePath": "C:\\Users\\avila\\perito11ty\\src\\assets\\images\\employees\\joan_franch-geoleg.jpeg",
+      "count": 15,
+      "summary": {
+        "avif": [
+          {
+            "width": 320,
+            "height": 319,
+            "size": "12.4KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-320w.avif"
+          },
+          {
+            "width": 480,
+            "height": 479,
+            "size": "22.7KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-480w.avif"
+          },
+          {
+            "width": 640,
+            "height": 639,
+            "size": "38.0KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-640w.avif"
+          },
+          {
+            "width": 768,
+            "height": 767,
+            "size": "54.2KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-768w.avif"
+          },
+          {
+            "width": 961,
+            "height": 960,
+            "size": "104.9KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-961w.avif"
+          }
+        ],
+        "webp": [
+          {
+            "width": 320,
+            "height": 319,
+            "size": "11.4KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-320w.webp"
+          },
+          {
+            "width": 480,
+            "height": 479,
+            "size": "22.0KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-480w.webp"
+          },
+          {
+            "width": 640,
+            "height": 639,
+            "size": "34.3KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-640w.webp"
+          },
+          {
+            "width": 768,
+            "height": 767,
+            "size": "49.2KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-768w.webp"
+          },
+          {
+            "width": 961,
+            "height": 960,
+            "size": "92.3KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-961w.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "width": 320,
+            "height": 319,
+            "size": "20.2KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-320w.jpeg"
+          },
+          {
+            "width": 480,
+            "height": 479,
+            "size": "40.6KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-480w.jpeg"
+          },
+          {
+            "width": 640,
+            "height": 639,
+            "size": "68.0KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-640w.jpeg"
+          },
+          {
+            "width": 768,
+            "height": 767,
+            "size": "96.5KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-768w.jpeg"
+          },
+          {
+            "width": 961,
+            "height": 960,
+            "size": "157.9KB",
+            "url": "/assets/images/optimized/employees/joan_franch-geoleg-961w.jpeg"
           }
         ]
       }
