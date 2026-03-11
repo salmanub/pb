@@ -148,7 +148,7 @@
         @apply max-w-none text-slate-600;
 
         /* Headings */
-        @apply prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-slate-900;
+        @apply prose-headings:font-display prose-headings:font-light prose-headings:uppercase prose-headings:tracking-tight prose-headings:text-slate-900;
 
         /* Links */
         @apply prose-a:text-cyan-600 prose-a:no-underline prose-a:font-medium transition-colors hover:prose-a:text-cyan-700;

@@ -68,7 +68,7 @@
             {% endif %}
 
             <!-- Title -->
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tighter" itemprop="headline name">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-light uppercase text-slate-900 mb-8 leading-[1.1] tracking-tighter" itemprop="headline name">
                 {{ title }}
             </h1>
 
@@ -243,16 +243,11 @@
     }
 
     .prose h2 {
-        @apply text-3xl md:text-4xl font-light text-slate-800 mt-16 mb-10;
-        background: linear-gradient(to right, #0891b2, #0e7490);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @apply text-3xl md:text-4xl font-light uppercase text-slate-900 mt-16 mb-10;
     }
 
     .prose h3 {
-        @apply text-2xl font-semibold text-slate-700 mt-12 mb-6;
-        border-bottom: 2px solid #06b6d4;
-        display: inline-block;
+        @apply text-2xl font-light uppercase text-slate-900 mt-12 mb-6;
     }
 
     .prose p {
