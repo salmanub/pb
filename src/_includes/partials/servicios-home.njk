@@ -11,7 +11,7 @@
         <header class="max-w-4xl mx-auto text-center mb-20 md:mb-28 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
             <span class="badge badge-primary mb-6">{{ highlightedServices.tag | default("Servicios Especializados") }}</span>
             <h2 class="section-title mb-8">
-                {{ highlightedServices.titulo }} <strong class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600 font-black block mt-2">{{ highlightedServices.highlight }}</strong>
+                {{ highlightedServices.titulo }} <strong class="text-cyan-400 font-normal block mt-2">{{ highlightedServices.highlight }}</strong>
             </h2>
             <p class="section-subtitle">{{ highlightedServices.descripcion }}</p>
         </header>
@@ -43,7 +43,7 @@
                             </div>
                             
                             <!-- Título -->
-                            <h3 id="service-title-{{ loop.index }}" class="text-2xl font-bold text-slate-900 group-hover/card:text-cyan-600 transition-colors mb-4 leading-tight tracking-tight">
+                            <h3 id="service-title-{{ loop.index }}" class="text-2xl font-light uppercase text-slate-900 group-hover/card:text-cyan-600 transition-colors mb-4 leading-tight tracking-tight">
                                 {{ servicio.titulo }}
                             </h3>
                             

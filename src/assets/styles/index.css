@@ -131,7 +131,7 @@
     }
 
     .section-title {
-        @apply font-display text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight leading-[1.1];
+        @apply font-display text-4xl md:text-5xl font-light text-slate-900 mb-6 tracking-tight leading-[1.1] uppercase;
     }
 
     .section-subtitle {

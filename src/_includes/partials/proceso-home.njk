@@ -8,9 +8,9 @@
     <div class="w-full relative z-10">
         <header class="max-w-3xl mx-auto text-center mb-24 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
              <span class="badge badge-primary mb-6">Metodología Perito</span>
-            <h2 class="text-4xl md:text-5xl lg:text-7xl font-black text-slate-900 mb-8 leading-[0.95] tracking-tight">
+            <h2 class="text-4xl md:text-5xl lg:text-7xl font-light uppercase text-slate-900 mb-8 leading-[0.95] tracking-tight">
                 {{ proceso.titulo }} <br>
-                <strong class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 block mt-2">{{ proceso.highlight }}</strong>
+                <strong class="text-cyan-400 font-normal block mt-2">{{ proceso.highlight }}</strong>
             </h2>
             <p class="section-subtitle mx-auto max-w-2xl">{{ proceso.descripcion }}</p>
         </header>
@@ -28,7 +28,7 @@
                         </span>
                         <div class="text-6xl font-black text-slate-100 group-hover/card:text-cyan-50 transition-colors">{{ paso.numero }}</div>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover/card:text-cyan-700 transition-colors">{{ paso.titulo }}</h3>
+                    <h3 class="text-2xl font-light uppercase text-slate-900 mb-4 group-hover/card:text-cyan-700 transition-colors">{{ paso.titulo }}</h3>
                     <p class="text-slate-500 leading-relaxed mb-8 font-light text-lg min-h-[5rem]">{{ paso.descripcion }}</p>
                     <div class="h-px w-full bg-slate-100 mb-6 group-hover/card:bg-cyan-200 transition-colors"></div>
                     <div class="flex items-center justify-between">

@@ -32,8 +32,8 @@
 
             <!-- Column 2: Contenido -->
             <div>
-                <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-800 mb-8 leading-tight">
-                    {{ solucion.contenido.titulo }} <strong class="text-cyan-500 font-bold">{{ solucion.contenido.highlight }}</strong> {{ solucion.contenido.subtitulo }}
+                <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-900 mb-8 leading-tight uppercase">
+                    {{ solucion.contenido.titulo }} <strong class="text-cyan-400 font-normal">{{ solucion.contenido.highlight }}</strong> {{ solucion.contenido.subtitulo }}
                 </h2>
                 
                 <p class="text-lg text-slate-600 mb-10">{{ solucion.contenido.descripcion }}</p>
@@ -45,7 +45,7 @@
                             {% include "icons/" + caracteristica.icono + ".svg" ignore missing %}
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">{{ caracteristica.titulo }}</h3>
+                            <h3 class="text-xl font-light uppercase text-slate-900 mb-2">{{ caracteristica.titulo }}</h3>
                             <p class="text-slate-600">{{ caracteristica.descripcion }}</p>
                         </div>
                     </div>

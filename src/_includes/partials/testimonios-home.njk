@@ -3,7 +3,7 @@
         <div class="max-w-4xl mb-20 text-center mx-auto">
             <span class="badge badge-primary mb-6">{{ testimonios.tag | default("Confianza") }}</span>
             <h2 class="section-title mb-6">
-                {{ testimonios.titulo }} <span class="block text-slate-300">{{ testimonios.highlight }}</span>
+                {{ testimonios.titulo }} <span class="block text-cyan-400 font-normal mt-2">{{ testimonios.highlight }}</span>
             </h2>
             <p class="section-subtitle">{{ testimonios.descripcion }}</p>
             
@@ -37,7 +37,7 @@
                         {% endif %}
                     </div>
                     <div>
-                        <h3 class="font-bold text-lg text-slate-900 group-hover:text-white transition-colors">{{ testimonio.nombre }}</h3>
+                        <h3 class="font-light uppercase text-lg text-slate-900 group-hover:text-white transition-colors">{{ testimonio.nombre }}</h3>
                         <p class="text-slate-500 group-hover:text-slate-400 transition-colors text-sm font-medium">{{ testimonio.rol }}</p>
                     </div>
                 </div>

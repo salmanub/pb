@@ -8,8 +8,8 @@
     <div class="w-full relative z-10">
         <!-- Header -->
         <header class="max-w-4xl mx-auto mb-20 text-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
-            <h2 class="text-5xl md:text-7xl font-bold text-slate-900 mb-8 leading-[0.9] tracking-tighter">
-                {{ ayuda.encabezado.title }} <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-cyan-600">{{ ayuda.encabezado.highlight }}</span>?
+            <h2 class="text-5xl md:text-7xl font-light text-slate-900 mb-8 leading-[0.9] tracking-tighter uppercase">
+                {{ ayuda.encabezado.title }} <span class="text-cyan-400 font-normal">{{ ayuda.encabezado.highlight }}</span>?
             </h2>
             <p class="text-xl md:text-2xl text-slate-500 max-w-2xl mx-auto font-light leading-relaxed">
                 {{ ayuda.encabezado.subtitle }}
@@ -31,7 +31,7 @@
                             </div>
                         {% endif %}
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 group-hover/card:text-cyan-600 transition-colors mb-4 tracking-tight leading-tight">{{ problema.title }}</h3>
+                    <h3 class="text-2xl font-light uppercase text-slate-900 group-hover/card:text-cyan-600 transition-colors mb-4 tracking-tight leading-tight">{{ problema.title }}</h3>
                     <p class="text-slate-500 text-lg leading-relaxed font-light group-hover/card:text-slate-600 transition-colors">{{ problema.description }}</p>
                 </div>
                 
