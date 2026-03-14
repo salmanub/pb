@@ -37,7 +37,7 @@ factors:
 pricing_context:
   title: "Un presupuesto ajustado a la realidad del litigio"
   paragraphs:
-    - "Un Informe Pericial contundente y riguroso requiere tiempo y dedicación exclusiva por parte de los profesionales de [nuestro despacho](/el-despacho/). Rechazamos los métodos de 'peritaje express' o low-cost basados en meras inspecciones visuales, ya que colapsan fácilmente ante una contrapericial sólida en el juzgado."
+    - "Un Informe Pericial contundente y riguroso requiere tiempo y dedicación exclusiva por parte de los profesionales de <a href='/el-despacho/' class='font-semibold text-cyan-500 hover:text-cyan-600 underline transition-colors'>nuestro despacho</a>. Rechazamos los métodos de 'peritaje express' o low-cost basados en meras inspecciones visuales, ya que colapsan fácilmente ante una contrapericial sólida en el juzgado."
     - "Nuestro proceso es transparente: una vez nos explique su caso y auditemos preliminarmente la situación (de forma totalmente confidencial y gratuita), le propondremos un presupuesto cerrado. Este cubrirá el trabajo de campo, la redacción técnica y el visado oficial por el Colegio de Ingenieros."
   cta:
     text: "Solicitar evaluación y presupuesto sin compromiso"

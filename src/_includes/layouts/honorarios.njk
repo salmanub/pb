@@ -82,7 +82,7 @@
             <h2 class="text-[2rem] md:text-[2.5rem] font-light text-slate-800 mb-10">{{ pricing_context.title }}</h2>
             <div class="prose prose-lg prose-slate mx-auto text-slate-600 font-light mb-12">
                 {% for paragraph in pricing_context.paragraphs %}
-                <p class="text-[1.15rem] leading-relaxed mb-6">{{ paragraph }}</p>
+                <p class="text-[1.15rem] leading-relaxed mb-6">{{ paragraph | safe }}</p>
                 {% endfor %}
             </div>
             <a href="{{ pricing_context.cta.url }}" class="btn-primary inline-flex mt-4 text-base font-semibold px-8 py-3.5 shadow-lg">

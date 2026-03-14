@@ -23,7 +23,7 @@ intro:
   subtitle: "Rigueur scientifique, indépendance et solvabilité en justice"
 firm_description:
   - "Nous sommes un cabinet boutique spécialisé en Ingénierie Forensique dont le siège est à Barcelone. Nous intervenons dans des procédures judiciaires, des arbitrages et des réclamations extrajudiciaires d'une grande complexité, en apportant la preuve technique définitive lors de litiges B2B pour les cabinets d'avocats, les promoteurs et les compagnies d'assurance."
-  - "Notre cabinet est régi par la plus grande impartialité et rigueur normative. Nous analysons chaque dossier en nous basant exclusivement sur des calculs d'ingénierie, le Code Technique de la Construction (CTE) et des preuves physiques extraites par le biais d'essais, garantissant un rapport inattaquable devant les Tribunaux, toujours avec une transparence totale sur nos [honoraires d'expert](/fr/honoraires-expert-judiciaire/)."
+  - "Notre cabinet est régi par la plus grande impartialité et rigueur normative. Nous analysons chaque dossier en nous basant exclusivement sur des calculs d'ingénierie, le Code Technique de la Construction (CTE) et des preuves physiques extraites par le biais d'essais, garantissant un rapport inattaquable devant les Tribunaux, toujours avec une transparence totale sur nos <a href='/fr/honoraires-expert-judiciaire/' class='font-semibold text-cyan-500 hover:text-cyan-600 underline transition-colors'>honoraires d'expert</a>."
 team_section:
   title: "Direction de l'Expertise et Support Technique"
   description: "Une équipe multidisciplinaire de spécialistes dirigée par l'Expert Titulaire, intégrant le génie civil et la géotechnique pour résoudre les pathologies les plus complexes."

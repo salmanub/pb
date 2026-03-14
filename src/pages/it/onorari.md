@@ -37,7 +37,7 @@ factors:
 pricing_context:
   title: "Un preventivo adeguato alla realtà del contenzioso"
   paragraphs:
-    - "Una Relazione Peritale convincente e rigorosa richiede tempo e dedizione esclusiva da parte dei professionisti del [nostro studio](/it/lo-studio/). Rifiutiamo i metodi di perizia 'express' o low-cost basati su mere ispezioni visive, poiché crollano facilmente di fronte a una solida controperizia in tribunale."
+    - "Una Relazione Peritale convincente e rigorosa richiede tempo e dedizione esclusiva da parte dei professionisti del <a href='/it/lo-studio/' class='font-semibold text-cyan-500 hover:text-cyan-600 underline transition-colors'>nostro studio</a>. Rifiutiamo i metodi di perizia 'express' o low-cost basati su mere ispezioni visive, poiché crollano facilmente di fronte a una solida controperizia in tribunale."
     - "Il nostro processo è trasparente: una volta che ci avrai spiegato il tuo caso e avremo effettuato un audit preliminare della situazione (in modo totalmente confidenziale e gratuito), ti proporremo un preventivo fisso. Questo coprirà il lavoro sul campo, la stesura tecnica e il visto ufficiale dell'Ordine degli Ingegneri."
   cta:
     text: "Richiedi una valutazione e un preventivo senza impegno"

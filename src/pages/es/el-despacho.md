@@ -23,7 +23,7 @@ intro:
   subtitle: "Rigor científico, independencia y solvencia en sede judicial"
 firm_description:
   - "Somos una firma boutique especializada en Ingeniería Forense con sede central en Barcelona. Actuamos en procedimientos judiciales, arbitrajes y reclamaciones extrajudiciales de alta complejidad, aportando la prueba técnica definitiva ante disputas B2B para despachos de abogados, promotoras y aseguradoras."
-  - "Nuestra firma se rige por la máxima imparcialidad y rigor normativo. Analizamos cada asunto basándonos exclusivamente en cálculos de ingeniería, el Código Técnico de la Edificación (CTE) y evidencias físicas extraídas mediante ensayos, garantizando un dictamen inexpugnable ante los Tribunales, siempre con total transparencia en nuestros [honorarios como perito judicial](/honorarios-perito-judicial-barcelona/)."
+  - "Nuestra firma se rige por la máxima imparcialidad y rigor normativo. Analizamos cada asunto basándonos exclusivamente en cálculos de ingeniería, el Código Técnico de la Edificación (CTE) y evidencias físicas extraídas mediante ensayos, garantizando un dictamen inexpugnable ante los Tribunales, siempre con total transparencia en nuestros <a href='/honorarios-perito-judicial-barcelona/' class='font-semibold text-cyan-500 hover:text-cyan-600 underline transition-colors'>honorarios como perito judicial</a>."
 team_section:
   title: "Dirección Pericial y Soporte Técnico"
   description: "Un equipo multidisciplinar de especialistas liderado por el Perito Titular, integrando la ingeniería civil y la geotecnia para resolver las patologías más complejas."
