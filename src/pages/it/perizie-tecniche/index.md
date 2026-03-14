@@ -199,6 +199,6 @@ Il nostro lavoro va oltre una semplice visita. Seguiamo un processo metodico per
 3.  **Analisi e Redazione:** Incrociamo i dati dell'ispezione con la normativa applicabile, la documentazione del progetto e la nostra esperienza per redigere una relazione chiara, ben strutturata e con conclusioni motivate.
 4.  **Consegna e Difesa:** Vi consegniamo la perizia e ve la spieghiamo in dettaglio. Se il caso arriva in tribunale, ci presentiamo in sede giudiziaria per **asseverare e difendere le nostre conclusioni** davanti al giudice e alle parti.
 
-## Firma di Ingegnere Civile: Garanzia di Solvibilità Tecnica
+## Firma di Ingegnere Civile e Lavoro di Squadra: Garanzia di Solvibilità Tecnica
 
-Scegliere un perito con una formazione superiore in Ingegneria Civile offre una visione più approfondita. La nostra conoscenza del calcolo strutturale, della scienza dei materiali, della geotecnica e della normativa delle grandi infrastrutture ci permette di analizzare problemi complessi da una prospettiva integrale, garantendo la massima solvibilità tecnica delle nostre conclusioni.
+Scegliere un perito con una formazione superiore in Ingegneria Civile offre una visione più approfondita. Inoltre, la struttura del [nostro studio](/it/lo-studio/) consente a diversi specialisti di apportare la loro visione tecnica. La nostra conoscenza del calcolo strutturale, della scienza dei materiali, della geotecnica e della normativa ci permette di analizzare problemi complessi da una prospettiva integrale, garantendo la massima solvibilità tecnica delle nostre conclusioni, sempre con [onorari peritali](/it/onorari-perito-giudiziario/) chiari e fissati fin dal primo momento.

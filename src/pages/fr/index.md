@@ -124,7 +124,7 @@ solucion:
     titulo: "La"
     highlight: "Solution Technique"
     subtitulo: "qu'il Vous Faut"
-    descripcion: "Chez expert.barcelone, nous combinons l'expérience en génie civil avec la méthodologie de l'expertise pour fournir des rapports précis, impartiaux et techniquement fondés. Notre intervention fournit des arguments clairs pour prendre des décisions, réclamer pour des malfaçons ou définir des solutions de construction sûres."
+    descripcion: "Chez [expert.barcelone](/fr/le-cabinet/), nous combinons l'expérience en génie civil avec la méthodologie de l'expertise pour fournir des rapports précis, impartiaux et techniquement fondés. Notre intervention fournit des arguments clairs, toujours fondés sur un cadre d'[honoraires transparents](/fr/honoraires-expert-judiciaire/), pour prendre des décisions, réclamer pour des malfaçons ou définir des solutions de construction sûres."
     caracteristicas:
       - icono: "search"
         titulo: "Nous Clarifions la Cause Racine"

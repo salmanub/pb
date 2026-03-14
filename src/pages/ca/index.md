@@ -124,7 +124,7 @@ solucion:
     titulo: "La"
     highlight: "Solució Tècnica"
     subtitulo: "que Necessita"
-    descripcion: "A perito.barcelona combinem experiència en enginyeria civil amb metodologia pericial per lliurar informes precisos, imparcials i tècnicament sòlids. La nostra intervenció proporciona arguments clars per prendre decisions, reclamar per defectes o definir solucions constructives segures."
+    descripcion: "A [perito.barcelona](/ca/el-despatx/) combinem experiència en enginyeria civil amb metodologia pericial per lliurar informes precisos, imparcials i tècnicament sòlids. La nostra intervenció proporciona arguments clars, sempre fonamentats en un marc d'[honoraris transparents](/ca/honoraris-perit-judicial/), per prendre decisions, reclamar per defectes o definir solucions constructives segures."
     caracteristicas:
       - icono: "search"
         titulo: "Aclarim la Causa Arrel"

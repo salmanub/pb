@@ -199,6 +199,6 @@ Notre travail va au-delà d'une simple visite. Nous suivons un processus méthod
 3.  **Analyse et Rédaction :** Nous croisons les données de l'inspection avec la réglementation applicable, la documentation du projet et notre expérience pour rédiger un rapport clair, bien structuré et avec des conclusions fondées.
 4.  **Remise et Défense :** Nous vous remettons le rapport et vous l'expliquons en détail. Si l'affaire va au tribunal, nous nous y rendons pour **ratifier et défendre nos conclusions** devant le juge et les parties.
 
-## Signature d'Ingénieur Civil : Garantie de Solvabilité Technique
+## Signature d'Ingénieur Civil et Travail en Équipe : Garantie de Solvabilité Technique
 
-Choisir un expert avec une formation supérieure en Génie Civil apporte une vision plus approfondie. Notre connaissance du calcul des structures, de la science des matériaux, de la géotechnique et de la réglementation des grandes infrastructures nous permet d'analyser des problèmes complexes sous un angle intégral, garantissant la solvabilité technique maximale de nos conclusions.
+Choisir un expert avec une formation supérieure en Génie Civil apporte une vision plus approfondie. De plus, la structure de [notre cabinet](/fr/le-cabinet/) permet à différents spécialistes d'apporter leur vision technique. Notre connaissance du calcul des structures, de la science des matériaux, de la géotechnique et de la réglementation nous permet d'analyser des problèmes complexes sous un angle intégral, garantissant la solvabilité technique maximale de nos conclusions, toujours avec des [honoraires d'expert](/fr/honoraires-expert-judiciaire/) clairs et fixes dès le premier instant.

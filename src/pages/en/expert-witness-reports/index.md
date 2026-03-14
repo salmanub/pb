@@ -191,6 +191,6 @@ Our work goes beyond a simple visit. We follow a methodical process to ensure ea
 3. **Analysis and Writing:** We cross-reference inspection data with applicable regulations, project documentation, and our experience to write a clear, well-structured report with well-founded conclusions.
 4. **Delivery and Defense:** We deliver the report and explain it to you in detail. If the case goes to court, we attend to **ratify and defend our conclusions** before the judge and parties.
 
-## Civil Engineer Signature: Guarantee of Technical Solvency
+## Civil Engineer Signature and Teamwork: Guarantee of Technical Solvency
 
-Choosing an expert with advanced training in Civil Engineering brings a deeper vision. Our knowledge of structural calculations, materials science, geotechnics, and large infrastructure regulations allows us to analyze complex problems from an integral perspective, guaranteeing the highest technical reliability of our conclusions.
+Choosing an expert with advanced training in Civil Engineering brings a deeper vision. Furthermore, the structure of [our firm](/en/the-firm/) allows different specialists to contribute their technical vision. Our knowledge of structural calculations, materials science, geotechnics, and regulations allows us to analyze complex problems from an integral perspective, guaranteeing the highest technical reliability of our conclusions, always with clear and fixed [expert witness fees](/en/expert-witness-fees/) from the very beginning.

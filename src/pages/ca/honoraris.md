@@ -37,7 +37,7 @@ factors:
 pricing_context:
   title: "Un pressupost ajustat a la realitat del litigi"
   paragraphs:
-    - "Un Informe Pericial contundent i rigorós requereix temps i dedicació exclusiva. Rebutgem els mètodes de 'peritatge express' o low-cost basats en meres inspeccions visuals, ja que col·lapsen fàcilment davant una contrapericial sòlida al jutjat."
+    - "Un Informe Pericial contundent i rigorós requereix temps i dedicació exclusiva per part dels professionals del [nostre despatx](/ca/el-despatx/). Rebutgem els mètodes de 'peritatge express' o low-cost basats en meres inspeccions visuals, ja que col·lapsen fàcilment davant una contrapericial sòlida al jutjat."
     - "El nostre procés és transparent: un cop ens expliqui el seu cas i auditem preliminarment la situació (de forma totalment confidencial i gratuïta), li proposarem un pressupost tancat. Aquest cobrirà el treball de camp, la redacció tècnica i el visat oficial pel Col·legi d'Enginyers."
   cta:
     text: "Sol·licitar avaluació i pressupost sense compromís"

@@ -191,6 +191,6 @@ El nostre treball va més enllà d'una simple visita. Seguim un procés metòdic
 3. **Anàlisi i Redacció:** Creuem les dades de la inspecció amb la normativa aplicable, la documentació del projecte i la nostra experiència per redactar un informe clar, ben estructurat i amb conclusions fonamentades.
 4. **Lliurament i Defensa:** Li lliurem l'informe i l'hi expliquem en detall. Si el cas arriba a judici, acudim a la seu judicial per **ratificar i defensar les nostres conclusions** davant el jutge i les parts.
 
-## Signatura d'Enginyer Civil: Garantia de Solvència Tècnica
+## Signatura d'Enginyer Civil i Treball en Equip: Garantia de Solvència Tècnica
 
-Triar un pèrit amb formació superior en Enginyeria Civil aporta una visió més profunda. El nostre coneixement de càlcul d'estructures, ciència de materials, geotècnia i normativa de grans infraestructures ens permet analitzar problemes complexos des d'una perspectiva integral, garantint la màxima solvència tècnica de les nostres conclusions.
+Triar un pèrit amb formació superior en Enginyeria Civil aporta una visió més profunda. A més, l'estructura del [nostre despatx](/ca/el-despatx/) permet que diferents especialistes aportin la seva visió tècnica. El nostre coneixement de càlcul d'estructures, ciència de materials, geotècnia i normativa ens permet analitzar problemes complexos des d'una perspectiva integral, garantint la màxima solvència tècnica de les nostres conclusions, sempre amb uns [honoraris pericials](/ca/honoraris-perit-judicial/) clars i tancats des del primer moment.

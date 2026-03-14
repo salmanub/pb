@@ -23,7 +23,7 @@ intro:
   subtitle: "Rigore scientifico, indipendenza e solidità in sede giudiziaria"
 firm_description:
   - "Siamo uno studio boutique specializzato in Ingegneria Forense con sede a Barcellona. Operiamo in procedimenti giudiziari, arbitrati e reclami stragiudiziali di elevata complessità, fornendo la prova tecnica definitiva in controversie B2B per studi legali, promotori immobiliari e compagnie assicurative."
-  - "Il nostro studio si basa sulla massima imparzialità e sul rigore normativo. Analizziamo ogni caso basandoci esclusivamente su calcoli ingegneristici, sul Codice Tecnico dell'Edilizia (CTE) e su prove fisiche ottenute tramite test, garantendo una perizia inattaccabile in Tribunale."
+  - "Il nostro studio si basa sulla massima imparzialità e sul rigore normativo. Analizziamo ogni caso basandoci esclusivamente su calcoli ingegneristici, sul Codice Tecnico dell'Edilizia (CTE) e su prove fisiche ottenute tramite test, garantendo una perizia inattaccabile in Tribunale, sempre con totale trasparenza nei nostri [onorari come perito](/it/onorari-perito-giudiziario/)."
 team_section:
   title: "Direzione Peritale e Supporto Tecnico"
   description: "Un team multidisciplinare di specialisti guidato dal Perito Titolare, che integra l'ingegneria civile e la geotecnica per risolvere le patologie più complesse."

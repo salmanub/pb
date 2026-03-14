@@ -129,7 +129,7 @@ solucion:
     titulo: "The"
     highlight: "Technical Solution"
     subtitulo: "You Need"
-    descripcion: "At perito.barcelona we combine civil engineering experience with expert witness methodology to deliver precise, impartial, and technically sound reports. Our intervention provides clear arguments to make decisions, claim for defects, or define safe construction solutions."
+    descripcion: "At [perito.barcelona](/en/the-firm/) we combine civil engineering experience with expert witness methodology to deliver precise, impartial, and technically sound reports. Our intervention provides clear arguments, always based on a framework of transparent [expert witness fees](/en/expert-witness-fees/), to make decisions, claim for defects, or define safe construction solutions."
     caracteristicas:
       - icono: "search"
         titulo: "We Clarify the Root Cause"

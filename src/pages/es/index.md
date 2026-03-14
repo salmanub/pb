@@ -124,7 +124,7 @@ solucion:
     titulo: "La"
     highlight: "Solución Técnica"
     subtitulo: "que Necesita"
-    descripcion: "En perito.barcelona combinamos experiencia en ingeniería civil con metodología pericial para entregar informes precisos, imparciales y técnicamente sólidos. Nuestra intervención proporciona argumentos claros para tomar decisiones, reclamar por defectos o definir soluciones constructivas seguras."
+    descripcion: "En [perito.barcelona](/el-despacho/) combinamos experiencia en ingeniería civil con metodología pericial para entregar informes precisos, imparciales y técnicamente sólidos. Nuestra intervención proporciona argumentos claros, siempre fundamentados en un marco de [honorarios transparentes](/honorarios-perito-judicial-barcelona/), para tomar decisiones, reclamar por defectos o definir soluciones constructivas seguras."
     caracteristicas:
       - icono: "search"
         titulo: "Aclaramos la Causa Raíz"

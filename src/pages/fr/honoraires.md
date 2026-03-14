@@ -37,7 +37,7 @@ factors:
 pricing_context:
   title: "Un devis adapté à la réalité du litige"
   paragraphs:
-    - "Un Rapport d'Expertise convaincant et rigoureux demande du temps et un dévouement exclusif. Nous rejetons les méthodes d'expertise 'express' ou low-cost basées sur de simples inspections visuelles, car elles s'effondrent facilement face à une contre-expertise solide au tribunal."
+    - "Un Rapport d'Expertise convaincant et rigoureux demande du temps et un dévouement exclusif de la part des professionnels de [notre cabinet](/fr/le-cabinet/). Nous rejetons les méthodes d'expertise 'express' ou low-cost basées sur de simples inspections visuelles, car elles s'effondrent facilement face à une contre-expertise solide au tribunal."
     - "Notre processus est transparent : une fois que vous nous aurez expliqué votre cas et que nous aurons audité la situation de manière préliminaire (de façon totalement confidentielle et gratuite), nous vous proposerons un devis fixe. Celui-ci couvrira le travail sur le terrain, la rédaction technique et le visa officiel par l'Ordre des Ingénieurs."
   cta:
     text: "Demander une évaluation et un devis"

@@ -37,7 +37,7 @@ factors:
 pricing_context:
   title: "A proposal tailored to the reality of the litigation"
   paragraphs:
-    - "A compelling and rigorous Expert Report requires time and exclusive dedication. We reject 'express' or low-cost appraisal methods based on mere visual inspections, as they easily collapse against a solid counter-expert report in court."
+    - "A compelling and rigorous Expert Report requires time and exclusive dedication from the professionals at [our firm](/en/the-firm/). We reject 'express' or low-cost appraisal methods based on mere visual inspections, as they easily collapse against a solid counter-expert report in court."
     - "Our process is transparent: once you explain your case and we preliminarily audit the situation (completely confidentially and free of charge), we will provide a fixed-price proposal. This will cover fieldwork, technical writing, and official endorsement by the College of Engineers."
   cta:
     text: "Request an assessment and proposal"

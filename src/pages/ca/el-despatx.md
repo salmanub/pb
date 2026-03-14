@@ -23,7 +23,7 @@ intro:
   subtitle: "Rigor científic, independència i solvència en seu judicial"
 firm_description:
   - "Som una firma boutique especialitzada en Enginyeria Forense amb seu central a Barcelona. Actuem en procediments judicials, arbitratges i reclamacions extrajudicials d'alta complexitat, aportant la prova tècnica definitiva davant disputes B2B per a despatxos d'advocats, promotores i asseguradores."
-  - "La nostra firma es regeix per la màxima imparcialitat i rigor normatiu. Analitzem cada assumpte basant-nos exclusivament en càlculs d'enginyeria, el Codi Tècnic de l'Edificació (CTE) i evidències físiques extretes mitjançant assajos, garantint un dictamen inexpugnable davant els Tribunals."
+  - "La nostra firma es regeix per la màxima imparcialitat i rigor normatiu. Analitzem cada assumpte basant-nos exclusivament en càlculs d'enginyeria, el Codi Tècnic de l'Edificació (CTE) i evidències físiques extretes mitjançant assajos, garantint un dictamen inexpugnable davant els Tribunals, sempre amb total transparència en els nostres [honoraris com a pèrit judicial](/ca/honoraris-perit-judicial/)."
 team_section:
   title: "Direcció Pericial i Suport Tècnic"
   description: "Un equip multidisciplinari d'especialistes liderat pel Pèrit Titular, integrant l'enginyeria civil i la geotècnia per resoldre les patologies més complexes."

@@ -200,8 +200,8 @@ Nuestro trabajo va más allá de una simple visita. Seguimos un proceso metódic
 3.  **Análisis y Redacción:** Cruzamos los datos de la inspección con la normativa aplicable, la documentación del proyecto y nuestra experiencia para redactar un informe claro, bien estructurado y con conclusiones fundamentadas.
 4.  **Entrega y Defensa:** Le entregamos el informe y se lo explicamos en detalle. Si el caso llega a juicio, acudimos a la sede judicial para **ratificar y defender nuestras conclusiones** ante el juez y las partes.
 
-## Firma de Ingeniero Civil: Garantía de Solvencia Técnica
+## Firma de Ingeniero Civil y Trabajo en Equipo: Garantía de Solvencia Técnica
 
-Elegir un perito con formación superior en Ingeniería Civil aporta una visión más profunda. Nuestro conocimiento de cálculo de estructuras, ciencia de materiales, geotecnia y normativa de grandes infraestructuras nos permite analizar problemas complejos desde una perspectiva integral, garantizando la máxima solvencia técnica de nuestras conclusiones.
+Elegir un perito con formación superior en Ingeniería Civil aporta una visión más profunda. Además, la estructura de [nuestro despacho](/el-despacho/) permite que distintos especialistas aporten su visión técnica. Nuestro conocimiento de cálculo de estructuras, ciencia de materiales, geotecnia y normativa nos permite analizar problemas complejos desde una perspectiva integral, garantizando la máxima solvencia técnica de nuestras conclusiones, siempre con unos [honorarios periciales](/honorarios-perito-judicial-barcelona/) claros y cerrados desde el primer momento.
 
 ---

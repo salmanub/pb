@@ -23,7 +23,7 @@ intro:
   subtitle: "Scientific rigor, independence, and technical solvency in court"
 firm_description:
   - "We are a boutique firm specializing in Forensic Engineering headquartered in Barcelona. We act in highly complex judicial proceedings, arbitrations, and out-of-court claims, providing definitive technical evidence in B2B disputes for law firms, developers, and insurance companies."
-  - "Our firm is governed by the utmost technical impartiality and regulatory rigor. We analyze each case based exclusively on engineering calculations, the Technical Building Code (CTE), and physical evidence extracted through testing, guaranteeing an unassailable expert report before the Courts."
+  - "Our firm is governed by the utmost technical impartiality and regulatory rigor. We analyze each case based exclusively on engineering calculations, the Technical Building Code (CTE), and physical evidence extracted through testing, guaranteeing an unassailable expert report before the Courts, always with total transparency in our [expert witness fees](/en/expert-witness-fees/)."
 team_section:
   title: "Expert Direction and Technical Support"
   description: "A multidisciplinary team of specialists led by the Principal Expert Witness, integrating civil engineering and geotechnics to resolve the most complex construction pathologies."
