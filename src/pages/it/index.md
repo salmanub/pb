@@ -124,7 +124,7 @@ solucion:
     titulo: "La"
     highlight: "Soluzione Tecnica"
     subtitulo: "di cui Hai Bisogno"
-    descripcion: "In [perito.barcelona](/it/lo-studio/) combiniamo l\'esperienza in ingegneria civile con la metodologia peritale per fornire relazioni precise, imparciali e tecnicamente solide. Il nostro intervento fornisce argomenti chiari, sempre basati su un quadro di [onorari trasparenti](/it/onorari-perito-giudiziario/), per prendere decisioni, contestare difetti o definire soluzioni costruttive sicure."
+    descripcion: "In [perito.barcelona](/it/lo-studio/) combiniamo l'esperienza in ingegneria civile con la metodologia peritale per fornire relazioni precise, imparziali e tecnicamente solide. Il nostro intervento fornisce argomenti chiari, sempre basati su un quadro di [onorari trasparenti](/it/onorari-perito-giudiziario/), per prendere decisioni, contestare difetti o definire soluzioni costruttive sicure."
     caracteristicas:
       - icono: "search"
         titulo: "Chiaramo la Causa Radice"
