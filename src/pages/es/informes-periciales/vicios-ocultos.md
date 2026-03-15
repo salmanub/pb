@@ -74,6 +74,17 @@ testimonials:
 # CTA Section
 ctaTitle: "¿El vendedor se niega a pagar la reparación?"
 ctaDescription: "El plazo legal para reclamar (6 meses en segunda mano) juega en su contra. Contacte hoy mismo para iniciar el peritaje."
+faqs:
+  title: "Preguntas Frecuentes sobre Vicios Ocultos"
+  items:
+    - question: "¿Qué pasa si el vendedor afirma que no conocía el vicio oculto?"
+      answer: "La ley es clara (Art. 1485 del Código Civil): el vendedor responde del saneamiento por los vicios ocultos aunque los ignorase. Nuestro informe pericial demostrará objetivamente la preexistencia del daño, haciendo irrelevante si el vendedor lo sabía o no."
+    - question: "¿Quién paga los honorarios del perito en un juicio por defectos constructivos?"
+      answer: "Inicialmente, los abona la parte demandante que contrata el dictamen. Sin embargo, si se gana el juicio y el juez dicta una 'condena en costas' para la parte contraria, el vendedor perdedor estará obligado a reembolsarle estos honorarios periciales y los de su abogado."
+    - question: "¿Sirve el seguro del hogar o de la comunidad para reclamar?"
+      answer: "Por regla general, no. Los seguros de hogar cubren daños súbitos o accidentales (como la rotura puntual de una tubería), pero sus pólizas excluyen expresamente los defectos de construcción, patologías previas o vicios ocultos. Para reclamar al vendedor necesitará un dictamen pericial privado e independiente."
+    - question: "¿Puedo arreglar el defecto por mi cuenta y luego reclamar la factura?"
+      answer: "Es un error muy común y peligroso. Si repara el daño antes de que un Perito Judicial lo inspeccione, levante acta y emita el dictamen, destruirá la prueba (el 'cuerpo del delito'). Sin prueba técnica previa a la reparación, perderá el juicio casi con total seguridad."
 ---
 
 ## ¿Qué se considera legalmente un Vicio Oculto en una vivienda?
