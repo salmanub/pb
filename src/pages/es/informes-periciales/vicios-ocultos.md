@@ -18,7 +18,7 @@ description: "¿Problemas graves tras comprar una casa? Como peritos arquitectos
 hero:
   image: "src/assets/images/inspeccion-vicios-ocultos.jpg"
   alt: "Perito analizando grietas estructurales como vicio oculto en una vivienda"
-  title: "Informe Pericial de Vicios Ocultos"
+  title: "Informe Pericial de Vicios Ocultos en Barcelona"
   subtitle: "La prueba técnica irrefutable para ganar su reclamación por compraventa"
   description: "Descubrir defectos estructurales, humedades o fallos en instalaciones tras comprar un inmueble requiere acción rápida. Elaboramos el dictamen judicial para exigir la reparación o la resolución del contrato."
 serviceTitle: "Vicios Ocultos en Edificación"
