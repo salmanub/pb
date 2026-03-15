@@ -1,106 +1,108 @@
 ---
-layout: "layouts/service-child.njk"
-title: "Perito para Vicios Ocultos en Viviendas en Barcelona | Reclamación"
-hero:
-  image: "src/assets/images/inspeccion-vicios-ocultos.jpg"
-  alt: "Inspección técnica de vicios ocultos en instalaciones de vivienda"
-  title: "Informe por Vicios Ocultos - Reclamación Compraventa"
-subtitle: "Elaboramos el informe pericial técnico para fundamentar su reclamación legal"
-description: "¿Ha descubierto defectos graves en su vivienda recién comprada en Barcelona? Realizamos el informe pericial de vicios ocultos que necesita para demostrar su preexistencia y reclamar."
-permalink: "/informes-periciales/vicios-ocultos/"
-lang: "es"
+layout: layouts/service-child.njk
+permalink: /informes-periciales/vicios-ocultos/
+lang: es
 translations:
-  - lang: "ca"
-    permalink: "/ca/informes-pericials/vicis-ocults/"
-  - lang: "en"
-    permalink: "/en/expert-witness-reports/hidden-defects/"
+  - lang: ca
+    permalink: /ca/informes-pericials/vicis-ocults/
+  - lang: en
+    permalink: /en/expert-witness-reports/hidden-defects/
 eleventyNavigation:
   key: "Vicios Ocultos"
   parent: "Informes Periciales"
   title: "Vicios Ocultos"
   notshow: true
   order: 3
-serviceTitle: "vicios ocultos"
+title: "Perito para Vicios Ocultos en Viviendas | Informe Judicial"
+description: "¿Problemas graves tras comprar una casa? Como peritos arquitectos e ingenieros, elaboramos el dictamen técnico para demostrar y reclamar vicios ocultos en viviendas y locales."
+hero:
+  image: "src/assets/images/inspeccion-vicios-ocultos.jpg"
+  alt: "Perito analizando grietas estructurales como vicio oculto en una vivienda"
+  title: "Informe Pericial de Vicios Ocultos"
+  subtitle: "La prueba técnica irrefutable para ganar su reclamación por compraventa"
+  description: "Descubrir defectos estructurales, humedades o fallos en instalaciones tras comprar un inmueble requiere acción rápida. Elaboramos el dictamen judicial para exigir la reparación o la resolución del contrato."
+serviceTitle: "Vicios Ocultos en Edificación"
 
-# Parent Service (for breadcrumb and linking back to pillar)
+# Parent Service
 parentService:
   title: "Informes Periciales"
   url: "/informes-periciales/"
 
-# Key features in the hero section
+# Key features in the hero section (Focus on LSI Keywords)
 keyFeatures:
-  - "Acreditación técnica de la preexistencia del defecto antes de la compra"
-  - "Demostración de la gravedad del vicio y su impacto en la habitabilidad"
-  - "Valoración económica detallada del coste de reparación para la demanda"
-  - "Asesoramiento sobre el cumplimiento de los plazos legales para reclamar"
+  - "Demostración técnica de la preexistencia del defecto (Art. 1484 Código Civil)"
+  - "Evaluación de la gravedad y merma de habitabilidad del inmueble"
+  - "Cuantificación exacta (presupuesto ciego) de los costes de reparación"
+  - "Asistencia técnica para el envío del burofax y paralización de plazos"
 
-# Service Process (for sidebar)
+# Service Process
 serviceProcess:
-  - title: "Análisis de la compraventa"
-    description: "Estudio de la documentación y fechas clave del contrato"
-  - title: "Inspección técnica exhaustiva"
-    description: "Búsqueda y documentación de los defectos no aparentes"
-  - title: "Redacción del informe pericial"
-    description: "Elaboración del dictamen con argumentación técnica y legal"
-  - title: "Soporte para la demanda"
-    description: "Colaboramos con su abogado y ratificamos el informe en juicio"
+  - title: "Análisis del Contrato de Compraventa"
+    description: "Revisamos las escrituras y las cláusulas de saneamiento para definir la viabilidad técnica de la reclamación."
+  - title: "Inspección Forense in situ"
+    description: "Uso de herramientas avanzadas (termografía, higrómetros, catas) para aflorar el defecto oculto."
+  - title: "Redacción del Dictamen Pericial"
+    description: "Documento blindado bajo la normativa técnica (CTE) que demuestra que el daño no era visible a simple vista."
+  - title: "Ratificación en Tribunales"
+    description: "Defensa oral de nuestro informe ante el juez, apoyando la estrategia de su despacho de abogados."
 
-# Service Benefits (for sidebar)
+# Service Benefits
 serviceBenefits:
-  - "Convierta una sospecha en una prueba técnica sólida y defendible"
-  - "Maximice las posibilidades de éxito de su reclamación judicial o extrajudicial"
-  - "Aporte seguridad y rigor a su abogado para plantear la demanda"
-  - "Es la única vía para poder recuperar el coste de la reparación"
+  - "Evite perder el juicio por falta de carga probatoria técnica."
+  - "Obligue al vendedor a asumir los costes de reparación o a rebajar el precio (Acción Quanti Minoris)."
+  - "Aporte a su abogado una herramienta de negociación extrajudicial demoledora."
+  - "Tranquilidad al contar con un Perito Ingeniero Colegiado."
 
-# Related Problems (optional)
+# Related Problems
 relatedProblems:
   - title: "Patologías Estructurales"
-    description: "Las grietas graves son uno de los vicios ocultos más comunes y peligrosos."
+    description: "Asientos diferenciales o aluminosis ocultos bajo falsos techos."
     url: "/informes-periciales/patologias-estructurales/"
-  - title: "Humedades y Filtraciones"
-    description: "Problemas de impermeabilización ocultos pueden dar lugar a una reclamación."
+  - title: "Humedades por Capilaridad"
+    description: "Filtraciones previas maquilladas con pintura antes de la venta."
     url: "/informes-periciales/humedades-filtraciones/"
 
 # Client Testimonials
 testimonials:
-  - quote: "Descubrimos aluminosis en las viguetas del piso que acabábamos de comprar. El informe pericial fue la prueba clave que nuestro abogado necesitaba para la demanda. Caso ganado."
-    author: "Familia Pérez"
-    role: "Caso: Vicio oculto estructural en vivienda"
-  - quote: "El informe demostró que los problemas de la instalación de climatización eran previos a la compra. Gracias a ello, pudimos negociar y el vendedor asumió el coste."
-    author: "David R."
-    role: "Propietario de local comercial"
+  - quote: "Compramos un ático y a los dos meses el techo se llenó de goteras. El vendedor decía que era nuevo. El informe del perito demostró con termografías que el problema llevaba años y había sido ocultado. Ganamos la demanda."
+    author: "Familia S.M. (Barcelona)"
+    role: "Reclamación por vicios ocultos en cubierta"
+  - quote: "La red de saneamiento del local estaba colapsada desde antes de la firma. Sin el dictamen pericial de Albert, habríamos tenido que pagar los 15.000€ de la obra nosotros."
+    author: "J.C. Inversores"
+    role: "Vicio oculto en local comercial"
 
 # CTA Section
-ctaTitle: "¿Ha descubierto un defecto grave tras la compra?"
-ctaDescription: "El tiempo es crucial. Contacte con nosotros para evaluar su caso y preparar la prueba técnica que necesitará para reclamar."
-
-# Introduction (shown in hero section)
-intro: |
-  <p>Comprar una propiedad y descubrir después problemas graves que no estaban a la vista es una de las peores experiencias para un propietario. La ley le protege frente a estos <strong>vicios ocultos</strong>, pero exige una prueba técnica para poder reclamar.</p>
-  
-  <p>Nuestro trabajo como peritos, dentro de nuestros <a href="/informes-periciales/">servicios de informes periciales</a>, es elaborar ese documento indispensable: un dictamen que demuestre la gravedad y preexistencia del defecto, convirtiéndose en la herramienta fundamental para su abogado.</p>
+ctaTitle: "¿El vendedor se niega a pagar la reparación?"
+ctaDescription: "El plazo legal para reclamar (6 meses en segunda mano) juega en su contra. Contacte hoy mismo para iniciar el peritaje."
 ---
 
-## ¿Ha Descubierto un Defecto Grave en su Nueva Propiedad?
+## ¿Qué se considera legalmente un Vicio Oculto en una vivienda?
 
-La compra de una vivienda es una de las mayores inversiones de la vida. Descubrir después de la firma que existen problemas graves que no estaban a la vista (humedades estructurales, problemas de cimentación, instalaciones defectuosas, aluminosis) puede ser devastador. Estos son los denominados **vicios ocultos**.
+La compra de una casa o local comercial es una inversión crítica. Lamentablemente, es común descubrir semanas después de la firma notarial que el inmueble sufre defectos graves que el vendedor omitió (de forma intencionada o no). 
 
-La ley le protege, pero para poder reclamar con éxito necesita demostrar tres cosas: que el defecto es grave, que no era visible en el momento de la compra y, lo más importante, que ya existía previamente. Aquí es donde nuestro informe pericial se vuelve imprescindible.
+Para que un defecto constructivo sea catalogado legalmente como **vicio oculto** y genere derecho a indemnización (según el Código Civil español), deben cumplirse tres requisitos técnicos innegociables que nuestro despacho pericial se encarga de demostrar:
 
-Como especialistas en [perito construcción Barcelona](/construccion/), estamos acostumbrados a identificar estas patologías ocultas y documentarlas con el rigor técnico que exige un proceso judicial.
+1.  **Que sea oculto:** El defecto no podía ser detectado a simple vista por un comprador medio durante la visita. Si requería conocimientos de arquitectura o ingeniería para ser visto, es un vicio oculto. (Ej: vigas con aluminosis tapadas, tuberías podridas en patinillos).
+2.  **Que sea preexistente:** El daño ya existía en el momento de perfeccionarse la compraventa, aunque haya dado la cara meses después.
+3.  **Que sea grave:** La patología debe disminuir el valor del inmueble de tal manera que, de haberlo sabido, usted no lo habría comprado o habría pagado mucho menos.
 
+### ¿Cuánto tiempo tengo para reclamar? Los plazos legales
 
-### El Plazo para Reclamar es Crucial: Actúe a Tiempo
+La ley es muy estricta con los tiempos de reclamación (saneamiento por vicios ocultos):
+* **Viviendas de Segunda Mano:** Dispone de un plazo de caducidad de solo **6 meses** desde la entrega de llaves. 
+* **Obra Nueva:** Los plazos se rigen por la Ley de Ordenación de la Edificación (LOE), variando entre 1, 3 o 10 años dependiendo de si el defecto afecta a los acabados, la habitabilidad o la estructura.
 
-Es vital saber que el plazo legal para reclamar por vicios ocultos en la compra de una vivienda de segunda mano es, por lo general, de **seis meses desde la entrega**. En obra nueva, los plazos varían según la Ley de Ordenación de la Edificación (LOE). Por ello, es fundamental actuar con rapidez en cuanto se detecta el problema.
+**Nota técnica:** El primer paso antes de que expire el plazo es enviar un burofax al vendedor adjuntando, de ser posible, un informe pericial preliminar.
 
-### Nuestro Papel: Documentar el Defecto y Fundamentar su Reclamación
+### ¿Cómo demostrar un vicio oculto? La importancia del Perito Judicial
 
-Un juez no es un técnico. Para que su demanda prospere, necesita una prueba objetiva y profesional. Nuestro informe pericial para vicios ocultos se centra en:
+Los tribunales son claros: la carga de la prueba recae sobre el comprador. No basta con hacer fotos con el móvil a una humedad o a una grieta y enseñárselas al juez.
 
-1.  **Acreditar la Preexistencia del Defecto:** Utilizamos nuestra experiencia técnica para demostrar que el problema es anterior a la fecha de compraventa.
-2.  **Demostrar la Gravedad:** Describimos técnicamente por qué el defecto hace que la vivienda sea "impropia para el uso al que se destina" o disminuye notablemente su valor.
-3.  **Documentar que no era "Aparente":** Justificamos por qué un comprador medio, sin conocimientos técnicos, no podría haber detectado el problema en una visita normal.
-4.  **Valorar el Coste de Reparación:** Cuantificamos económicamente la subsanación del defecto, que será la base de su reclamación económica.
+El vendedor argumentará invariablemente que el defecto surgió "por un mal uso" posterior a la venta o que "estaba a la vista". Para desmontar esta defensa, su abogado necesita nuestro **Informe Pericial de Vicios Ocultos**.
 
-No inicie una reclamación sin la prueba técnica que la sustente. Nuestro informe es su mejor garantía.
+Nuestra metodología de ingeniería forense incluye:
+* **Ensayos No Destructivos (END):** Uso de cámaras termográficas para detectar humedades ocultas tras paredes recién pintadas, o esclerómetros para medir la resistencia del hormigón.
+* **Trazabilidad del Daño:** Análisis de la evolución de las grietas o el grado de corrosión de las tuberías para calcular científicamente en qué año se originó el problema.
+* **Cálculo de la "Acción Quanti Minoris":** Elaboramos un presupuesto de reparación detallado con bases de precios oficiales, determinando exactamente la cantidad económica que debe reclamar en su demanda.
+
+Si sospecha que le han ocultado información sobre el estado real de su propiedad, no deje pasar el tiempo. Un dictamen técnico contundente es la diferencia entre asumir una reforma ruinosa o ganar el juicio.
