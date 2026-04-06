@@ -268,11 +268,11 @@
             showStep(steps.findIndex(s => s.id === 'loading-state'));
             
             const formDataToSend = {
-                areaInteres: formData.areaInteres,
-                mensaje: document.getElementById('mensaje').value,
                 nombre: document.getElementById('nombre').value,
                 email: document.getElementById('email').value,
                 telefono: document.getElementById('telefono').value,
+                tipoSiniestro: formData.areaInteres,
+                mensaje: document.getElementById('mensaje').value,
                 privacidad: 'Aceptada',
                 origen: '{{ contactFormOrigin | default("Página de Contacto", true) }}',
                 fecha: new Date().toISOString()

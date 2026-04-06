@@ -3737,6 +3737,9 @@ href="https://perito.barcelona/">
   .p-2\.5 {
     padding: calc(var(--spacing) * 2.5);
   }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
@@ -4140,6 +4143,9 @@ href="https://perito.barcelona/">
   }
   .text-cyan-700 {
     color: var(--color-cyan-700);
+  }
+  .text-emerald-600 {
+    color: var(--color-emerald-600);
   }
   .text-emerald-700\/80 {
     color: color-mix(in oklab, var(--color-emerald-700) 80%, transparent);
@@ -8373,6 +8379,13 @@ href="https://perito.barcelona/">
                     <ul class="ml-4 mt-1 border-l border-slate-100 pl-2 space-y-1">
                         
                             <li class="nav-item">
+                                <a href="/ingenieria-forense-construccion/" 
+                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
+                                    <span>Ingeniería Forense</span>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
                                 <a href="/informes-periciales/informe-de-parte/" 
                                 class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
                                     <span>Informe de Parte</span>
@@ -10128,11 +10141,11 @@ href="https://perito.barcelona/">
             showStep(steps.findIndex(s => s.id === 'loading-state'));
             
             const formDataToSend = {
-                areaInteres: formData.areaInteres,
-                mensaje: document.getElementById('mensaje').value,
                 nombre: document.getElementById('nombre').value,
                 email: document.getElementById('email').value,
                 telefono: document.getElementById('telefono').value,
+                tipoSiniestro: formData.areaInteres,
+                mensaje: document.getElementById('mensaje').value,
                 privacidad: 'Aceptada',
                 origen: 'CTA Form perito.barcelona',
                 fecha: new Date().toISOString()
@@ -10492,7 +10505,7 @@ href="https://perito.barcelona/">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
         </svg>
-        Hablar con un Perito
+        Hablar con un perito
     </a>
     
     
