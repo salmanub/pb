@@ -1,16 +1,16 @@
 const fs = require('fs');
 const path = require('path');
-const walkSync = function(dir, filelist) {
-  let files = fs.readdirSync(dir);
-  filelist = filelist || [];
-  files.forEach(function(file) {
-    if (fs.statSync(path.join(dir, file)).isDirectory()) {
-      filelist = walkSync(path.join(dir, file), filelist);
-    } else if (file.endsWith('.md')) {
-      filelist.push(path.join(dir, file));
-    }
-  });
-  return filelist;
+const walkSync = function (dir, filelist) {
+    let files = fs.readdirSync(dir);
+    filelist = filelist || [];
+    files.forEach(function (file) {
+        if (fs.statSync(path.join(dir, file)).isDirectory()) {
+            filelist = walkSync(path.join(dir, file), filelist);
+        } else if (file.endsWith('.md')) {
+            filelist.push(path.join(dir, file));
+        }
+    });
+    return filelist;
 };
 
 const defaultTitles = {
@@ -47,11 +47,11 @@ files.forEach(file => {
     let langMatch = content.match(/lang:\s*['"]?([a-z]{2})['"]?/);
     let lang = langMatch ? langMatch[1] : 'es';
     let type = identifyType(file);
-    
+
     // Replace the entire eleventyNavigation block
     // It captures "eleventyNavigation:" and any subsequent lines that start with at least 2 spaces
     let regex = /eleventyNavigation:\r?\n(?:\s{2,}.*?(?:\r?\n|$))*/g;
-    
+
     let newNavBlock = '';
     if (type === 'Other' || type === 'Inicio') {
         newNavBlock = 'eleventyNavigation:\\n  notshow: true\\n';
@@ -91,3 +91,5 @@ console.log('✔️ Opciones anidadas bajo "Especialidades Forenses".');
 console.log('✔️ Elementos basura eliminados del menú principal.');
 console.log('✔️ Configuración eleventyNavigation sincronizada en los 5 idiomas.');
 console.log('===================================================');
+
+
