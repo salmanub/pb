@@ -1,4 +1,6 @@
 ---
+
+
 layout: layouts/despacho.njk
 permalink: /el-despacho/
 lang: es
@@ -14,8 +16,7 @@ translations:
 eleventyNavigation:
   key: "El Despacho"
   title: "El Despacho"
-  notshow: false
-  order: 2
+  order: 1
 title: "El Despacho | Peritos Ingenieros Forenses en Barcelona"
 description: "Conoce al equipo técnico y directivo de Perito Barcelona. Ingenieros civiles y geólogos colegiados especializados en ingeniería forense y litigios B2B."
 intro:
@@ -35,7 +36,7 @@ team_members:
     license_label: "Col. Nº"
     license: "16448"
     description:
-      - "Ingeniero Técnico de Obras Públicas (UPC) y Postgrado especialista en Peritaje de Seguros y Riesgos Diversos (INESE), con más de 18 años de experiencia en el sector. Ha desarrollado su carrera técnica como especialista en reparación y refuerzo estructural en multinacionales del nivel de BASF y como supervisor de obra pública."
+      - "Ingeniero Técnico de Obras Públicas (UPC) y Postgrado especialista en Peritaje de Seguros y Riesgos Diversos (INESE), con más de 18 años de experiencia en el sector. Ha desarrollado su carrera técnica como experto en patología estructural y supervisión de infraestructuras críticas."
       - "Como Director Técnico y fundador de Perito Barcelona, lidera la elaboración de informes periciales, auditorías técnicas y consultoría avanzada para la resolución de disputas en construcción y patologías de la edificación."
       - "Posee una sólida trayectoria defendiendo dictámenes en vista oral. Su profundo conocimiento de la lex artis constructiva le permite comunicar cálculos y conceptos técnicos de manera irrefutable, clara y persuasiva para juristas y magistrados."
     specialties_title: "Áreas de Experiencia"
@@ -63,4 +64,7 @@ cta:
   description: "Expónganos su caso. Realizamos una primera evaluación técnica y de viabilidad de su expediente sin compromiso."
   text: "Contactar con el Despacho"
   url: "/contacto/"
----
+---## Consultoría de Validación Técnica Independiente
+
+Operamos como validadores técnicos independientes, auditando y asumiendo responsabilidad sin sesgo hacia marcas comerciales de materiales químicos.
+

@@ -24,11 +24,7 @@ translations:
     description: "Conseil expert en réparation et renforcement de structures pour le bâtiment et les infrastructures (ponts, murs). Nous diagnostiquons les pathologies et concevons des solutions techniques."
 
 eleventyNavigation:
-  key: "Consulenza Strutturale"
-  title: "Consulenza Strutturale"
-  notshow: false
-  order: 2
-
+  notshow: true
 # Hero Section
 hero:
   title: "Consulenza Esperta su Strutture"

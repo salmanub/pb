@@ -1,4 +1,6 @@
 ---
+
+
 layout: layouts/despacho.njk
 permalink: /it/lo-studio/
 lang: it
@@ -12,10 +14,9 @@ translations:
   - lang: fr
     permalink: /fr/le-cabinet/
 eleventyNavigation:
-  key: "Lo Studio"
+  key: "El Despacho"
   title: "Lo Studio"
-  notshow: false
-  order: 2
+  order: 1
 title: "Lo Studio | Periti Ingegneri Forensi a Barcellona"
 description: "Scopri il team tecnico e direttivo di Perito Barcelona. Ingegneri civili e geologi abilitati specializzati in ingegneria forense e contenziosi B2B."
 intro:
@@ -63,4 +64,7 @@ cta:
   description: "Esponici il tuo caso. Effettueremo una prima valutazione tecnica e di fattibilità della pratica senza impegno."
   text: "Contatta lo Studio"
   url: "/it/contatti/"
----
+---## Consulenza di Validazione Tecnica Indipendente
+
+Operiamo come validatori tecnici indipendenti, assumendoci la responsabilità senza pregiudizi commerciali.
+

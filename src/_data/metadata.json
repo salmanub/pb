@@ -304,7 +304,7 @@
   "footer": {
     "es": {
       "brand": {
-        "description": "Peritos judiciales e ingenieros colegiados en Barcelona. Especializados en informes periciales técnicos, auditorías de obra y asesoramiento estructural para edificación y obra civil.",
+        "description": "Peritos judiciales e ingenieros colegiados en Barcelona. Especializados en informes periciales técnicos, Ingeniería Forense de Construcción y asesoramiento estructural para edificación y obra civil.",
         "social": [
           {
             "url": "https://www.linkedin.com/company/peritobarcelona",
@@ -325,8 +325,8 @@
             "url": "/asesoramiento-estructural/"
           },
           {
-            "title": "Auditorías de Obra",
-            "url": "/auditorias-obra/"
+            "title": "Ingeniería Forense de Construcción",
+            "url": "/ingenieria-forense-construccion/"
           },
           {
             "title": "Peritajes de Obras Públicas",
@@ -377,7 +377,7 @@
     },
     "ca": {
       "brand": {
-        "description": "Despatx de pèrits enginyers col·legiats a Barcelona, especialitzats en informes tècnics, auditories d'obra i assessorament estructural per a edificació i obra civil.",
+        "description": "Despatx de pèrits enginyers col·legiats a Barcelona, especialitzats en informes tècnics, Enginyeria Forense de Construcció i assessorament estructural per a edificació i obra civil.",
         "social": [
           {
             "url": "https://www.linkedin.com/company/peritobarcelona",
@@ -398,8 +398,8 @@
             "url": "/ca/assessorament-estructural/"
           },
           {
-            "title": "Auditories d'Obra",
-            "url": "/ca/auditories-obra/"
+            "title": "Enginyeria Forense de Construcció",
+            "url": "/ca/enginyeria-forense-construccio/"
           },
           {
             "title": "Peritatges d'Obres Públiques",
@@ -450,7 +450,7 @@
     },
     "en": {
       "brand": {
-        "description": "Office of chartered engineers in Barcelona, specializing in technical reports, construction audits, and structural consulting for buildings and civil works.",
+        "description": "Office of chartered engineers in Barcelona, specializing in technical reports, Civil Forensic Engineering, and structural consulting for buildings and civil works.",
         "social": [
           {
             "url": "https://www.linkedin.com/company/peritobarcelona",
@@ -471,8 +471,8 @@
             "url": "/en/structural-consulting/"
           },
           {
-            "title": "Construction Audits",
-            "url": "/en/construction-audits/"
+            "title": "Civil Forensic Engineering",
+            "url": "/en/civil-forensic-engineering/"
           },
           {
             "title": "Public Works Expertise",
@@ -523,7 +523,7 @@
     },
     "fr": {
       "brand": {
-        "description": "Cabinet d'experts ingénieurs agréés à Barcelone, spécialisé en rapports techniques, audits de chantier et conseil structurel pour le bâtiment et les travaux publics.",
+        "description": "Cabinet d'experts ingénieurs agréés à Barcelone, spécialisé en rapports techniques, Ingénierie Légale de Construction et conseil structurel pour le bâtiment et les travaux publics.",
         "social": [
           {
             "url": "https://www.linkedin.com/company/peritobarcelona",
@@ -544,7 +544,7 @@
             "url": "/fr/conseil-structurel/"
           },
           {
-            "title": "Audits de Chantier",
+            "title": "Ingénierie Légale de Construction",
             "url": "/fr/audits-de-chantier/"
           },
           {
@@ -596,7 +596,7 @@
     },
     "it": {
       "brand": {
-        "description": "Studio di periti ingegneri abilitati a Barcellona, specializzati in relazioni tecniche, audit di cantiere e consulenza strutturale per edilizia e opere civili.",
+        "description": "Studio di periti ingegneri abilitati a Barcellona, specializzati in relazioni tecniche, Ingegneria Forense Edile e consulenza strutturale per edilizia e opere civili.",
         "social": [
           {
             "url": "https://www.linkedin.com/company/peritobarcelona",
@@ -617,7 +617,7 @@
             "url": "/it/consulenza-strutturale/"
           },
           {
-            "title": "Audit di Cantiere",
+            "title": "Ingegneria Forense Edile",
             "url": "/it/audit-di-cantiere/"
           },
           {
@@ -762,8 +762,8 @@
               "label": "Asesoramiento Estructural (reparación, refuerzo)"
             },
             {
-              "key": "auditorias_obra",
-              "label": "Auditorías de Obra (certificaciones, calidad)"
+              "key": "ingenieria_forense",
+              "label": "Ingeniería Forense de Construcción (certificaciones, calidad)"
             },
             {
               "key": "otra_consulta",
@@ -858,8 +858,8 @@
               "label": "Assessorament Estructural (reparació, reforç)"
             },
             {
-              "key": "auditorias_obra",
-              "label": "Auditories d'Obra (certificacions, qualitat)"
+              "key": "ingenieria_forense",
+              "label": "Enginyeria Forense de Construcció (certificacions, qualitat)"
             },
             {
               "key": "otra_consulta",
@@ -954,8 +954,8 @@
               "label": "Structural Consulting (repair, reinforcement)"
             },
             {
-              "key": "auditorias_obra",
-              "label": "Construction Audits (certifications, quality)"
+              "key": "ingenieria_forense",
+              "label": "Civil Forensic Engineering (certifications, quality)"
             },
             {
               "key": "otra_consulta",
@@ -1050,8 +1050,8 @@
               "label": "Conseil Structurel (réparation, renforcement)"
             },
             {
-              "key": "auditorias_obra",
-              "label": "Audits de Chantier (certifications, qualité)"
+              "key": "ingenieria_forense",
+              "label": "Ingénierie Légale de Construction (certifications, qualité)"
             },
             {
               "key": "otra_consulta",
@@ -1146,8 +1146,8 @@
               "label": "Consulenza Strutturale (riparazione, rinforzo)"
             },
             {
-              "key": "auditorias_obra",
-              "label": "Audit di Cantiere (certificazioni, qualità)"
+              "key": "ingenieria_forense",
+              "label": "Ingegneria Forense Edile (certificazioni, qualità)"
             },
             {
               "key": "otra_consulta",
@@ -1222,8 +1222,8 @@
               "label": "Asesoramiento Estructural (reparación, refuerzo)"
             },
             {
-              "value": "auditorias_obra",
-              "label": "Auditorías de Obra (certificaciones, calidad)"
+              "value": "ingenieria_forense",
+              "label": "Ingeniería Forense de Construcción (certificaciones, calidad)"
             },
             {
               "value": "otra_consulta",
@@ -1306,8 +1306,8 @@
               "label": "Assessorament Estructural (reparació, reforç)"
             },
             {
-              "value": "auditorias_obra",
-              "label": "Auditories d'Obra (certificacions, qualitat)"
+              "value": "ingenieria_forense",
+              "label": "Enginyeria Forense de Construcció (certificacions, qualitat)"
             },
             {
               "value": "otra_consulta",
@@ -1390,8 +1390,8 @@
               "label": "Structural Consulting (repair, reinforcement)"
             },
             {
-              "value": "auditorias_obra",
-              "label": "Construction Audits (certifications, quality)"
+              "value": "ingenieria_forense",
+              "label": "Civil Forensic Engineering (certifications, quality)"
             },
             {
               "value": "otra_consulta",
@@ -1474,8 +1474,8 @@
               "label": "Conseil Structurel (réparation, renforcement)"
             },
             {
-              "value": "auditorias_obra",
-              "label": "Audits de Chantier (certifications, qualité)"
+              "value": "ingenieria_forense",
+              "label": "Ingénierie Légale de Construction (certifications, qualité)"
             },
             {
               "value": "otra_consulta",
@@ -1558,8 +1558,8 @@
               "label": "Consulenza Strutturale (riparazione, rinforzo)"
             },
             {
-              "value": "auditorias_obra",
-              "label": "Audit di Cantiere (certificazioni, qualità)"
+              "value": "ingenieria_forense",
+              "label": "Ingegneria Forense Edile (certificazioni, qualità)"
             },
             {
               "value": "otra_consulta",

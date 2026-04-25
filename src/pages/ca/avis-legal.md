@@ -4,6 +4,8 @@ title: "Avís Legal i Termes d'Ús | Perito.Barcelona"
 description: "Consulti l'avís legal i els termes d'ús de Perito.Barcelona. Informació legal sobre el titular del web, propietat intel·lectual i condicions d'ús."
 permalink: "/ca/avis-legal/"
 lang: 'ca'
+eleventyNavigation:
+  notshow: true
 seo: noindex
 translations:
   - lang: es

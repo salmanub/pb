@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Forensic Engineers Barcelona | Court Expert Witness & Consultancy'
-description: "Forensic Engineering Firm in Barcelona. Experts in expert witness reports, building pathologies, and legal technical consultancy."
+title: 'Perito Barcelona | Chartered Engineer Expert Witness Firm'
+description: "Perito Barcelona: We are a firm of chartered engineers specializing in technical expert reports, construction audits, and structural consulting in Barcelona and its province."
 permalink: /en/
 lang: en
 translations:
@@ -33,18 +33,18 @@ hero:
 
     <p>Do not let a construction defect become a legal nightmare. Tell us about your case and we will guide you on the viability of your claim.</p>
   image:
-    path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
-    alt: "Expert engineer inspecting a concrete structure"
-    badge: "Chartered Engineer"
-    caption: "Technical reports with rigor and clarity"
+    path: "src/assets/images/peritaje-construccion-ingenieros-obra.avif"
+    alt: "Perito ingeniero inspeccionando una estructura de hormigón"
+    badge: "Perito Ingeniero"
+    caption: "Informes técnicos con rigor y claridad"
   rotatingTexts:
-    default: "with technical rigor and solidity"
+    default: "with technical rigor"
     items:
-      - "with technical rigor and solidity"
-      - "for complex engineering claims"
-      - "with advanced geotechnical foundation"
-      - "that resolve certification disputes"
-      - "with unassailable judicial validity"
+      - "with technical rigor"
+      - "that resolve construction disputes"
+      - "with guaranteed judicial validity"
+      - "to ensure your project's quality"
+      - "with precise structural diagnostics"
   cta:
     primary: "Evaluate Your Case"
     primaryUrl: "/en/contact/"
@@ -54,11 +54,11 @@ hero:
   badges:
     - value: "15+"
       text: "Years of Experience"
-      subtext: "In the sector"
+      subtext: "In the field"
     - value: "97%"
       text: "Reports Ratified"
       subtext: "In court proceedings"
-  logosText: "Our expert reports are requested by top-tier law firms, developers, and insurance companies."
+  logosText: "Our reports are accepted by major courts and insurance entities."
 
 # Highlighted Services
 highlightedServices:
@@ -72,10 +72,10 @@ highlightedServices:
       url: "/en/expert-witness-reports/"
       icon: "scale"
       cta: "View more"
-    - titulo: "Construction Audits"
-      descripcion: "We perform quality control, execution supervision, and technical mediation in disputes over certifications and payments."
-      url: "/en/construction-audits/"
-      icon: "clipboard-list"
+    - titulo: "Civil Forensic Engineering"
+      descripcion: "Specialized analysis of structural collapses, material fatigue, and critical foundation failures with scientific rigor."
+      url: "/en/civil-forensic-engineering/"
+      icon: "search-check"
       cta: "View more"
     - titulo: "Structural Consulting"
       descripcion: "An independent diagnosis before the repair. We analyze the real cause of the problem to define the safest and most cost-effective reinforcement solution."
@@ -101,9 +101,9 @@ ayuda:
       description: "Origin detection, technical reports, and solutions for moisture problems in buildings."
       url: "/en/expert-witness-reports/damp-leaks/"
       icon: "droplet"
-    - title: "Certification & Payment Disputes"
-      description: "Technical audit for conflicts arising from certifications, measurements, and contract compliance."
-      url: "/en/construction-audits/payment-certification-disputes/"
+    - title: "Structural Collapses and Major Failures"
+      description: "Forensic investigation of breakages, sinkages, and major structural defects using advanced modeling."
+      url: "/en/civil-forensic-engineering/"
       icon: "file-text"
     - title: "Hidden Defects in Property Sales"
       description: "Identification and documentation of defects not visible upon handover or purchase of a property."
@@ -129,7 +129,7 @@ solucion:
     titulo: "The"
     highlight: "Technical Solution"
     subtitulo: "You Need"
-    descripcion: "At [perito.barcelona](/en/the-firm/) we combine civil engineering experience with expert witness methodology to deliver precise, impartial, and technically sound reports. Our intervention provides clear arguments, always based on a framework of transparent [expert witness fees](/en/expert-witness-fees/), to make decisions, claim for defects, or define safe construction solutions."
+    descripcion: "At perito.barcelona we combine civil engineering experience with expert witness methodology to deliver precise, impartial, and technically sound reports. Our intervention provides clear arguments to make decisions, claim for defects, or define safe construction solutions."
     caracteristicas:
       - icono: "search"
         titulo: "We Clarify the Root Cause"
@@ -181,34 +181,34 @@ proceso:
     texto: "Start Now - Evaluate Your Case"
     url: "/en/contact/"
 
-# Testimonials Section (CASOS DE ÉXITO DE ALTO VALOR B2B)
+# Testimonials Section
 testimonios:
   tag: "Success Stories"
-  titulo: "Resolved Cases"
+  titulo: "Satisfied Clients"
   highlight: "Endorse Our Experience"
-  descripcion: "We demonstrate our technical rigor in highly complex claims, offering unassailable evidentiary bases for major accounts and law firms."
+  descripcion: "Discover how we have helped property owners, communities, and companies to successfully resolve their technical cases."
   items:
-    - nombre: "International Logistics Operator"
-      rol: "Operations Management"
+    - nombre: "Les Corts Homeowners Association"
+      rol: "President of the Association"
       tipo: "empresa"
-      cita: "The geotechnical audit was irrefutable. It demonstrated compaction defects in the subsoil, allowing us to claim over €115,000 from the contractor."
-      fecha: "Featured"
-      servicioRelacionado: "Geotechnical Pavement Expertise"
-      tipoProyecto: "Logistics Civil Works"
-    - nombre: "High-End Urban Hotel"
-      rol: "Financial & Property Management"
+      cita: "The expert report identified the source of the roof leaks and facilitated the assumption of the necessary repairs by the responsible party."
+      fecha: "2 months ago"
+      servicioRelacionado: "Pathology Expert Report"
+      tipoProyecto: "Roof Pathology"
+    - nombre: "CONSTRUCCIONES TÉCNICAS BCN, S.L."
+      rol: "Project Manager"
       tipo: "empresa"
-      cita: "Their forensic audit dismantled the counter-report, justifying each deviation and validating the certifications in a critical economic dispute."
-      fecha: "Featured"
-      servicioRelacionado: "Certification Audit"
-      tipoProyecto: "Active Hotel Renovation"
-    - nombre: "National Real Estate Developer"
-      rol: "After-Sales Department"
-      tipo: "empresa"
-      cita: "The technical report identified the root cause of 39 systemic claims, shifting responsibility to the subcontractor and saving us high costs."
-      fecha: "Featured"
-      servicioRelacionado: "Execution Audit"
-      tipoProyecto: "New Build Development"
+      cita: "The preventive technical audit allowed for the correction of deficiencies before the handover of 24 homes, avoiding claims and cost overruns."
+      fecha: "1 month ago"
+      servicioRelacionado: "Technical Construction Audit"
+      tipoProyecto: "Quality Control"
+    - nombre: "Ana S. Garcia"
+      rol: "Affected Homeowner"
+      tipo: "persona"
+      cita: "The expert assessment proved the existence of hidden defects in the home, providing the basis for the legal claim that allowed us to repair the damages."
+      fecha: "3 months ago"
+      servicioRelacionado: "Judicial Expert Report"
+      tipoProyecto: "Hidden Defects"
 
 # Contact CTA Section
 contactCTA:

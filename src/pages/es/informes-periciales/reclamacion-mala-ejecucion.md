@@ -15,11 +15,7 @@ translations:
   - lang: "en"
     permalink: "/en/expert-witness-reports/poor-workmanship-claim/"
 eleventyNavigation:
-  key: "Mala Ejecución de Obra"
-  parent: "Informes Periciales"
-  title: "Mala Ejecución de Obra"
   notshow: true
-  order: 4
 serviceTitle: "mala ejecución de obra"
 
 # Parent Service (for breadcrumb and linking back to pillar)
@@ -54,9 +50,6 @@ serviceBenefits:
 
 # Related Problems (optional)
 relatedProblems:
-  - title: "Auditorías de Obra"
-    description: "Una auditoría durante la ejecución puede prevenir estos problemas."
-    url: "/auditorias-de-obra/"
   - title: "Patologías Estructurales"
     description: "Una mala ejecución puede derivar en graves problemas estructurales."
     url: "/informes-periciales/patologias-estructurales/"

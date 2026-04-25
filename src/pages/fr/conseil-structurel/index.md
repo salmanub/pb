@@ -24,11 +24,7 @@ translations:
     description: "Consulenza esperta per la riparazione e il rinforzo di strutture per edilizia e infrastrutture (ponti, muri). Diagnostichiamo patologie e progettiamo soluzioni tecniche."
 
 eleventyNavigation:
-  key: "Conseil en Structure"
-  title: "Conseil en Structure"
-  notshow: false
-  order: 2
-
+  notshow: true
 # Hero Section
 hero:
   title: "Conseil Expert en Structures"

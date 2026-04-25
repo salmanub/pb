@@ -11,11 +11,7 @@ translations:
   - lang: 'ca'
     permalink: '/ca/assessorament-estructural/avaluacio-seguretat-estructural-ite-iee/'
 eleventyNavigation:
-  key: "Safety Assessment (ITE/IEE)"
-  parent: "Structural Consulting"
-  title: "Safety Assessment (ITE/IEE)"
   notshow: true
-  order: 4
 serviceTitle: 'structural safety assessment post-inspection'
 
 # Parent Service (for breadcrumb and linking back to pillar)

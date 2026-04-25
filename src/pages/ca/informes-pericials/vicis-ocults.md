@@ -11,10 +11,9 @@ translations:
   - lang: "en"
     permalink: "/en/expert-witness-reports/hidden-defects/"
 eleventyNavigation:
-  key: "Vicis Ocults"
-  parent: "Informes Pericials"
-  title: "Vicis Ocults"
-  notshow: true
+  key: "Vicios Ocultos en Edificación"
+  parent: "Especialidades Forenses"
+  title: "Vicis Ocults en Edificació"
   order: 3
 serviceTitle: "vicis ocults"
 

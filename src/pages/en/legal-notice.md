@@ -4,6 +4,8 @@ title: "Legal Notice and Terms of Use | Perito.Barcelona"
 description: "Consult the legal notice and terms of use for Perito.Barcelona. Legal information about the website owner, intellectual property, and conditions of use."
 permalink: "/en/legal-notice/"
 lang: 'en'
+eleventyNavigation:
+  notshow: true
 seo: noindex
 translations:
   - lang: es

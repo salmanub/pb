@@ -19,11 +19,7 @@ translations:
   - lang: 'fr'
     permalink: '/fr/rapports-expertise/coproprietes/'
 eleventyNavigation:
-  key: "Condomini"
-  parent: "Perizie Tecniche"
-  title: "Condomini"
   notshow: true
-  order: 4
 serviceTitle: 'perizie per condomini'
 
 # Parent Service

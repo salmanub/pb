@@ -1,4 +1,6 @@
----
+﻿---
+
+
 layout: layouts/honorarios.njk
 permalink: /en/expert-witness-fees/
 lang: en
@@ -12,10 +14,9 @@ translations:
   - lang: it
     permalink: /it/onorari-perito-giudiziario/
 eleventyNavigation:
-  key: "Fees"
+  key: "Honorarios"
   title: "Fees"
-  notshow: false
-  order: 4
+  order: 3
 title: "How much does an Expert Witness cost in Barcelona? | Fees & Pricing"
 description: "Discover how the fees of an engineering expert witness in Barcelona are calculated. Factors, geotechnical testing, and the value of forensic engineering."
 hero:
@@ -52,4 +53,8 @@ faqs:
     answer: "To offer maximum transparency, our proposals are divided into two independent items: 1) The study and drafting of the expert report, and 2) The fees for attendance and ratification in court. This way, if you reach an out-of-court settlement prior to the hearing, you will not have to pay the portion corresponding to the trial."
   - question: "Do I have to pay in advance?"
     answer: "We request an initial retainer fee (usually 50%) upon accepting the assignment to cover travel costs, file opening, and the start of fieldwork. The remaining amount will be paid upon delivery of the final draft of the report, just before its official endorsement by the Professional Association."
----
+---## Major Construction Losses and Collapses
+
+For major losses, we justify our value through million-euro risk mitigation, FEA recalculation, and assuming civil liability.
+
+

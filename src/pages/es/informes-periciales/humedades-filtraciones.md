@@ -1,4 +1,6 @@
 ---
+
+
 layout: 'layouts/service-child.njk'
 title: "Perito de Humedades en Barcelona"
 hero:
@@ -20,10 +22,9 @@ translations:
     permalink: '/fr/rapports-peritaux/humidite-infiltrations/'
 eleventyNavigation:
   key: "Humedades y Filtraciones"
-  parent: "Informes Periciales"
+  parent: "Especialidades Forenses"
   title: "Humedades y Filtraciones"
-  notshow: true
-  order: 2
+  order: 4
 serviceTitle: 'humedades y filtraciones'
 
 # Parent Service (for breadcrumb and linking back to pillar)
@@ -103,11 +104,15 @@ faqs:
     - question: "¿Qué validez tiene el informe para reclamar daños por agua?"
       answer: "Nuestros informes periciales están firmados por ingenieros y arquitectos técnicos colegiados, por lo que tienen <strong>plena validez legal y judicial</strong>. Son la herramienta exigida por los jueces y las compañías aseguradoras para demostrar técnicamente el nexo causal entre el origen (la filtración) y las consecuencias (los daños estéticos y materiales en su vivienda)."
 
----
+---## Enfoque Físico y Termodinámico
+
+Analizamos las humedades desde la termodinámica. Para ejecución material, contacte a [nuestra división especializada](https://humedades.barcelona).
+
+
 
 ## ¿Cansado de Luchar contra las Humedades?
 
-Las manchas en la pared, el olor a moho o las goteras son problemas que van más allá de la estética. Afectan a la salubridad de su vivienda y pueden degradar la estructura del edificio de forma silenciosa. Aplicar pinturas "antihumedad" o soluciones superficiales sin atacar la causa es un error común que solo enmascara el problema temporalmente.
+Las patologías por presencia de agua no son meros defectos estéticos; obedecen a principios físicos y termodinámicos estrictos. Aplicar pinturas "antihumedad" o soluciones superficiales sin alterar las condiciones de contorno higrotérmicas es un error común que solo enmascara el problema temporalmente.
 
 Para una solución definitiva, es indispensable un **diagnóstico técnico profesional** que determine con precisión el tipo y el origen de la humedad.
 
@@ -115,9 +120,9 @@ Para una solución definitiva, es indispensable un **diagnóstico técnico profe
 
 Nuestro equipo de peritos analiza las evidencias para identificar la causa real, que suele ser una de estas tres:
 
-* **Humedad por Filtración:** El agua penetra desde el exterior a través de cubiertas, fachadas, juntas o roturas en tuberías. Son las más comunes en garajes, sótanos y plantas bajo cubierta.
-* **Humedad por Condensación:** Se produce cuando el vapor de agua interior se condensa en superficies frías (ventanas, paredes mal aisladas, puentes térmicos). Suele manifestarse con moho en esquinas y armarios.
-* **Humedad por Capilaridad:** El agua asciende desde el terreno a través de los poros de los muros y cimentaciones. Es típica en plantas bajas y sótanos.
+* **Humedad por Filtración:** El agua líquida franquea la envolvente del edificio debido a un fallo en la impermeabilización o rotura de conducciones bajo presión.
+* **Humedad por Condensación:** El vapor de agua alcanza su punto de rocío al entrar en contacto con superficies frías, indicando deficiencias en el aislamiento (puentes térmicos) o desequilibrios en la ventilación.
+* **Humedad por Capilaridad:** Ascensión de agua freática contra la gravedad a través de la red porosa de los materiales constructivos, gobernada por la ley de Jurin.
 
 ### ¿Qué Incluye Nuestro Informe de Diagnóstico de Humedades?
 
@@ -126,4 +131,4 @@ Elaboramos un dictamen técnico que le servirá para entender el problema y pode
 1.  **Identificación del Origen:** Conclusiones claras sobre la causa de la humedad, utilizando herramientas como medidores de humedad y termografía si es necesario.
 2.  **Mapeo de Daños:** Descripción detallada de las zonas afectadas y la gravedad de los daños.
 3.  **Propuesta de Solución Técnica:** Especificamos el tratamiento adecuado (impermeabilización, mejora del aislamiento, ventilación, etc.) para erradicar el problema de raíz.
-4.  **Valoración Económica:** Una estimación del coste de la reparación, fundamental para reclamaciones a seguros o a la comunidad de propietarios.
+4.  **Derivación Ejecutiva:** Al finalizar nuestro dictamen técnico, la ejecución material de las reparaciones recomendadas se deriva directamente a nuestra unidad técnica especializada, la cual puede consultar en [humedades.barcelona](https://humedades.barcelona).

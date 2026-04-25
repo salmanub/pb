@@ -15,11 +15,7 @@ translations:
   - lang: 'ca'
     permalink: '/ca/informes-pericials/contrainforme-pericial/'
 eleventyNavigation:
-  key: "Counter-Report"
-  parent: "Expert Reports"
-  title: "Counter-Report"
   notshow: true
-  order: 6
 serviceTitle: 'counter-expert report'
 
 # Parent Service

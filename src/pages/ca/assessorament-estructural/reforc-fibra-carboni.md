@@ -1,4 +1,6 @@
 ---
+
+
 layout: "layouts/service-child.njk"
 title: "Reforç Estructural amb Fibra de Carboni | Projectes a Barcelona"
 subtitle: "Dissenyem i calculem solucions de reforç amb composites (CFRP) per a formigó i fusta"
@@ -11,11 +13,10 @@ translations:
   - lang: "en"
     permalink: "/en/structural-consulting/carbon-fiber-reinforcement/"
 eleventyNavigation:
-    key: "Reforç Fibra de Carboni"
-    parent: "Assessorament Estructural"
-    title: "Fibra de Carboni"
-    notshow: true
-    order: 2
+  key: "Refuerzo Estructural"
+  parent: "Especialidades Forenses"
+  title: "Reforç Estructural"
+  order: 2
 serviceTitle: "Reforç amb fibra de carboni"
 
 parentService:
@@ -67,14 +68,18 @@ intro: |
     <p>Quan un reforç estructural tradicional amb acer o formigó no és viable per limitacions de pes, espai o terminis, els sistemes de reforç amb fibra de carboni (CFRP) són la solució d'enginyeria més avançada i eficient.</p>
     
     <p>Com a part del nostre servei d'<a href="/ca/assessorament-estructural/">assessorament estructural</a>, ens especialitzem en el càlcul i disseny de projectes de reforç amb aquests materials composites, garantint una intervenció de màxima eficàcia i durabilitat.</p>
----
+---## Auditoria i Assumpció de RC
+
+Calculem, auditem i assumim RC. Execució a càrrec de [Urbenis](https://urbenis.com) i [Refuerzo Fibra](https://refuerzofibra.es).
+
+
 
 ## Reforç amb Fibra de Carboni (CFRP): La Solució d'Avantguarda
 
 El reforç d'una estructura ja no es limita a afegir pesats perfils d'acer o a augmentar les seccions de formigó. La tecnologia dels materials compostos, i en particular els polímers reforçats amb fibra de carboni (CFRP), ha revolucionat l'enginyeria estructural, oferint solucions on abans hi havia limitacions.
 
 El nostre rol com a enginyers consultors és determinar si aquesta tecnologia és l'adequada per al vostre cas i, en cas afirmatiu, dissenyar un projecte de reforç
-  <p>Com a part del nostre servei d'<a href="/ca/assessorament-estructural/">assessorament estructural</a>, ens especialitzem en el càlcul i disseny de projectes de reforç amb aquests materials composites, garantint una intervenció de màxima eficàcia i durabilitat.</p>
+  Com a part del nostre servei d'assessorament estructural, ens especialitzem en el càlcul i disseny de projectes de reforç amb aquests materials composites, garantint una intervenció de màxima eficàcia i durabilitat.
 
 
 ## Reforç amb Fibra de Carboni (CFRP): La Solució d'Avantguarda

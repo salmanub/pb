@@ -5,7 +5,7 @@
 {% macro renderNavListItem(entry) %}
     {% if not entry.notshow %}
         <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            {% if entry.key == "Servicios" and entry.children %}
+            {% if entry.key == "Especialidades Forenses" and entry.children %}
                 <div class="group relative">
                     <button class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm
                                  {% if entry.url == page.url %}text-cyan-600{% endif %}
@@ -71,7 +71,7 @@
                     </ul>
                 </div>
             </li>
-        {% elif entry.key != "Servicios" and not entry.parent %}
+        {% elif not entry.parent %}
             <li class="nav-item">
                 <a href="{{ entry.url }}"
                 class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
@@ -263,18 +263,11 @@
             <!-- Desktop Navigation -->
             <nav class="hidden lg:flex flex-1 ml-8 xl:ml-12" itemprop="hasPart" itemscope itemtype="https://schema.org/SiteNavigationElement">
                 <ul class="flex items-center w-full">
-                    <!-- Servicios (Primer bloque) -->
-                    {%- for entry in navPages -%}
-                        {%- if entry.key == "Servicios" -%}
-                            {{ renderNavListItem(entry) }}
-                        {%- endif -%}
-                    {%- endfor -%}
-                    
-                    <!-- Resto de enlaces corporativos (Agrupados a la derecha) -->
+                    <!-- Todos los enlaces corporativos agrupados a la derecha en la píldora -->
                     <li class="flex items-center ml-auto">
                         <ul class="flex items-center gap-6 px-6 py-1.5 bg-slate-50/80 border border-slate-100 rounded-full shadow-sm shadow-slate-200/50">
                             {%- for entry in navPages -%}
-                                {%- if entry.key != "Servicios" and entry.key != "Inicio" -%}
+                                {%- if entry.key != "Inicio" -%}
                                     {{ renderNavListItem(entry) }}
                                 {%- endif -%}
                             {%- endfor -%}

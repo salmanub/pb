@@ -11,11 +11,7 @@ translations:
   - lang: "ca"
     permalink: "/ca/assessorament-estructural/diagnostic-patologies/"
 eleventyNavigation:
-  key: "Pathology Diagnosis"
-  parent: "Structural Consulting"
-  title: "Pathology Diagnosis"
   notshow: true
-  order: 1
 serviceTitle: "structural pathology diagnosis"
 
 # Parent Service (for breadcrumb and linking back to pillar)

@@ -67,6 +67,11 @@ export default function (eleventyConfig) {
 
   // El shortcode de imagen asíncrono optimizado para dev
   eleventyConfig.addAsyncShortcode("image", async function (src, alt, sizes = "100vw", loading = "lazy", fetchpriority = "auto", additionalClasses = "") {
+    if (!src) {
+      console.warn(`Warning: Image shortcode called without a src parameter. Alt was: ${alt}`);
+      return "";
+    }
+    
     if (alt === undefined) {
       throw new Error(`Missing \`alt\` on image from: ${src}`);
     }

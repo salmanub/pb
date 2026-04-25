@@ -2418,6 +2418,9 @@
   .h-\[400px\] {
     height: 400px;
   }
+  .h-\[500px\] {
+    height: 500px;
+  }
   .h-\[550px\] {
     height: 550px;
   }
@@ -4066,9 +4069,6 @@
   }
   .text-cyan-700 {
     color: var(--color-cyan-700);
-  }
-  .text-emerald-600 {
-    color: var(--color-emerald-600);
   }
   .text-emerald-700\/80 {
     color: color-mix(in oklab, var(--color-emerald-700) 80%, transparent);
@@ -6381,6 +6381,11 @@
   .lg\:h-\[85vh\] {
     @media (width >= 64rem) {
       height: 85vh;
+    }
+  }
+  .lg\:h-\[600px\] {
+    @media (width >= 64rem) {
+      height: 600px;
     }
   }
   .lg\:h-full {

@@ -1,5 +1,5 @@
 {
-  "successful": 187,
+  "successful": 188,
   "failed": 0,
   "details": [
     {
@@ -675,6 +675,163 @@
             "height": 1024,
             "size": "42.6KB",
             "url": "/assets/images/optimized/placeholder-default copy-1024w.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "success": true,
+      "imagePath": "C:\\Users\\avila\\perito11ty\\src\\assets\\images\\perito-ingeniero-forense-construccion-barcelona.jpg",
+      "count": 24,
+      "summary": {
+        "avif": [
+          {
+            "width": 320,
+            "height": 213,
+            "size": "10.1KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-320w.avif"
+          },
+          {
+            "width": 480,
+            "height": 320,
+            "size": "17.7KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-480w.avif"
+          },
+          {
+            "width": 640,
+            "height": 426,
+            "size": "26.3KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-640w.avif"
+          },
+          {
+            "width": 768,
+            "height": 512,
+            "size": "36.4KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-768w.avif"
+          },
+          {
+            "width": 1024,
+            "height": 682,
+            "size": "57.4KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-1024w.avif"
+          },
+          {
+            "width": 1280,
+            "height": 853,
+            "size": "83.4KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-1280w.avif"
+          },
+          {
+            "width": 1536,
+            "height": 1024,
+            "size": "112.7KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-1536w.avif"
+          },
+          {
+            "width": 1920,
+            "height": 1280,
+            "size": "162.7KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-1920w.avif"
+          }
+        ],
+        "webp": [
+          {
+            "width": 320,
+            "height": 213,
+            "size": "13.5KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-320w.webp"
+          },
+          {
+            "width": 480,
+            "height": 320,
+            "size": "25.4KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-480w.webp"
+          },
+          {
+            "width": 640,
+            "height": 426,
+            "size": "41.0KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-640w.webp"
+          },
+          {
+            "width": 768,
+            "height": 512,
+            "size": "58.6KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-768w.webp"
+          },
+          {
+            "width": 1024,
+            "height": 682,
+            "size": "94.7KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-1024w.webp"
+          },
+          {
+            "width": 1280,
+            "height": 853,
+            "size": "144.6KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-1280w.webp"
+          },
+          {
+            "width": 1536,
+            "height": 1024,
+            "size": "193.8KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-1536w.webp"
+          },
+          {
+            "width": 1920,
+            "height": 1280,
+            "size": "279.2KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-1920w.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "width": 320,
+            "height": 213,
+            "size": "19.0KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-320w.jpeg"
+          },
+          {
+            "width": 480,
+            "height": 320,
+            "size": "37.1KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-480w.jpeg"
+          },
+          {
+            "width": 640,
+            "height": 426,
+            "size": "60.6KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-640w.jpeg"
+          },
+          {
+            "width": 768,
+            "height": 512,
+            "size": "85.8KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-768w.jpeg"
+          },
+          {
+            "width": 1024,
+            "height": 682,
+            "size": "144.8KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-1024w.jpeg"
+          },
+          {
+            "width": 1280,
+            "height": 853,
+            "size": "216.8KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-1280w.jpeg"
+          },
+          {
+            "width": 1536,
+            "height": 1024,
+            "size": "297.1KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-1536w.jpeg"
+          },
+          {
+            "width": 1920,
+            "height": 1280,
+            "size": "437.4KB",
+            "url": "/assets/images/optimized/perito-ingeniero-forense-construccion-barcelona-1920w.jpeg"
           }
         ]
       }

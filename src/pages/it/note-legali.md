@@ -4,6 +4,8 @@ title: "Note Legali e Termini di Utilizzo | Perito.Barcellona"
 description: "Consulta le note legali e i termini di utilizzo di Perito.Barcellona. Informazioni legali sul titolare del sito, proprietà intellettuale e condizioni d'uso."
 permalink: "/it/note-legali/"
 lang: 'it'
+eleventyNavigation:
+  notshow: true
 seo: noindex
 translations:
   - lang: 'ca'

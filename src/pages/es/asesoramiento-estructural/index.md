@@ -16,11 +16,7 @@ translations:
     description: "Expert consulting for structural repair and reinforcement for buildings and infrastructures (bridges, walls). We diagnose pathologies and design technical solutions."
 
 eleventyNavigation:
-  key: "Asesoramiento Estructural"
-  title: "Asesoramiento Estructural"
-  notshow: false
-  order: 3
-
+  notshow: true
 # Hero Section
 hero:
   title: "Asesoramiento Experto en Estructuras"

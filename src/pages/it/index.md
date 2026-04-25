@@ -1,7 +1,7 @@
 ---
 layout: "layouts/index.njk"
-title: "Periti Giudiziari Barcellona | Ingegneria Forense e Consulenza"
-description: "Studio di Ingegneria Forense a Barcellona. Esperti in perizie, patologie edilizie e consulenza tecnica legale."
+title: "Perito Barcellona | Studio di Periti Ingegneri Abilitati"
+description: "Siamo uno studio di periti ingegneri abilitati a Barcellona, specializzati nell'elaborazione di perizie tecniche, audit di cantiere e consulenza strutturale."
 permalink: "/it/"
 lang: "it"
 translations:
@@ -28,18 +28,18 @@ hero:
   subtitle: "Consulenza Ingegneristica, Perizie Tecniche e Audit Edilizio"
   description: "Elaboriamo perizie tecniche indipendenti per risolvere controversie. Dall'analisi delle patologie alla ratifica in tribunale, come <a href='/it/perito-costruzioni/'><strong>Esperti in Costruzioni</strong></a>, siamo il vostro partner tecnico di fiducia."
   image:
-    path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
+    path: "src/assets/images/peritaje-construccion-ingenieros-obra.avif"
     alt: "Perito ingegnere che ispeziona una struttura in cemento armato"
     badge: "Perito Ingegnere"
     caption: "Perizie tecniche con rigore e chiarezza"
   rotatingTexts:
-    default: "con rigore tecnico e solidità"
+    default: "con rigore tecnico"
     items:
-      - "con rigore tecnico e solidità"
-      - "per reclami ingegneristici complessi"
-      - "con una solida base geotecnica"
-      - "che risolvono dispute sulle certificazioni"
-      - "con inattaccabile validità legale"
+      - "con rigore tecnico"
+      - "che risolvono controversie edili"
+      - "con validità legale garantita"
+      - "per garantire la qualità del vostro progetto"
+      - "con diagnosi strutturali precise"
   cta:
     primary: "Valuta il Tuo Caso"
     primaryUrl: "/it/contatti/"
@@ -53,7 +53,7 @@ hero:
     - value: "97%"
       text: "Perizie Asseverate"
       subtext: "In procedimenti giudiziari"
-  logosText: "Le nostre perizie sono richieste da studi legali, promotori immobiliari e compagnie assicurative di primo livello."
+  logosText: "Le nostre perizie sono accettate dai principali tribunali ed enti assicurativi."
 
 # Servicios Destacados
 highlightedServices:
@@ -67,10 +67,10 @@ highlightedServices:
       url: "/it/perizie-tecniche/"
       icon: "scale"
       cta: "Vedi di più"
-    - titulo: "Audit di Cantiere"
-      descripcion: "Eseguiamo controlli di qualità, supervisione dell'esecuzione e mediazione tecnica in controversie su certificazioni e pagamenti."
-      url: "/it/audit-di-cantiere/"
-      icon: "clipboard-list"
+    - titulo: "Ingegneria Forense delle Costruzioni"
+      descripcion: "Analisi specializzata di crolli strutturali, fatica dei materiali e cedimenti critici delle fondazioni con rigore scientifico."
+      url: "/it/ingegneria-forense-costruzioni/"
+      icon: "search-check"
       cta: "Vedi di più"
     - titulo: "Consulenza Strutturale"
       descripcion: "Emettiamo diagnosi esperte di patologie strutturali e offriamo consulenza sulle migliori soluzioni di rinforzo."
@@ -78,7 +78,7 @@ highlightedServices:
       icon: "tool"
       cta: "Vedi di più"
 
-# Sección "En qué podemos ayudarte"
+# Sección "En qué podemos ayudarte" (CORREGIDA)
 ayuda:
   encabezado:
     title: "Come Possiamo"
@@ -96,9 +96,9 @@ ayuda:
       description: "Rilevamento dell'origine, relazioni tecniche e soluzioni per problemi di umidità negli edifici."
       url: "/it/perizie-tecniche/umidita-infiltrazioni/"
       icon: "droplet"
-    - title: "Controversie su Certificazioni e Pagamenti"
-      description: "Audit tecnico per conflitti derivanti da certificazioni, misurazioni e adempimento contrattuale."
-      url: "/it/audit-di-cantiere/controversie-certificazioni-pagamenti/"
+    - title: "Crolli e Gravi Cedimenti Strutturali"
+      description: "Indagine forense su rotture, cedimenti e gravi difetti strutturali attraverso modelli avanzati."
+      url: "/it/ingegneria-forense-costruzioni/"
       icon: "file-text"
     - title: "Vizi Occulti in Compravendite o Post-lavori"
       description: "Identificazione e documentazione di difetti non visibili dopo la consegna o l'acquisto di un immobile."
@@ -124,7 +124,7 @@ solucion:
     titulo: "La"
     highlight: "Soluzione Tecnica"
     subtitulo: "di cui Hai Bisogno"
-    descripcion: "In [perito.barcelona](/it/lo-studio/) combiniamo l'esperienza in ingegneria civile con la metodologia peritale per fornire relazioni precise, imparziali e tecnicamente solide. Il nostro intervento fornisce argomenti chiari, sempre basati su un quadro di [onorari trasparenti](/it/onorari-perito-giudiziario/), per prendere decisioni, contestare difetti o definire soluzioni costruttive sicure."
+    descripcion: "In perito.barcelona combiniamo l'esperienza in ingegneria civile con la metodologia peritale per fornire relazioni precise, imparziali e tecnicamente solide. Il nostro intervento fornisce argomenti chiari per prendere decisioni, contestare difetti o definire soluzioni costruttive sicure."
     caracteristicas:
       - icono: "search"
         titulo: "Chiaramo la Causa Radice"
@@ -176,34 +176,34 @@ proceso:
     texto: "Inizia Ora - Valuta il tuo caso"
     url: "/it/contatti/"
 
-# Sección Testimonios (CASOS DE ÉXITO DE ALTO VALOR B2B)
+# Sección Testimonios
 testimonios:
   tag: "Casi di Successo"
-  titulo: "Casi Risolti"
-  highlight: "che Confermano la Nostra Esperienza"
-  descripcion: "Dimostriamo il nostro rigore tecnico in richieste di risarcimento ad alta complessità, offrendo basi probatorie inattaccabili per grandi aziende e studi legali."
+  titulo: "Clienti Soddisfatti"
+  highlight: "Confermano la Nostra Esperienza"
+  descripcion: "Scopri come abbiamo aiutato proprietari, condomini e aziende a risolvere i loro casi tecnici con successo."
   items:
-    - nombre: "Operatore Logistico Internazionale"
-      rol: "Direzione Operativa"
+    - nombre: "Condominio Les Corts"
+      rol: "Amministratore di Condominio"
       tipo: "empresa"
-      cita: "L'audit geotecnico è stato inconfutabile. Ha dimostrato difetti di compattazione nel sottosuolo, permettendoci di richiedere oltre 115.000 € all'impresa costruttrice."
-      fecha: "In Evidenza"
-      servicioRelacionado: "Perizia Geotecnica su Pavimentazioni"
-      tipoProyecto: "Opere Civili Logistiche"
-    - nombre: "Hotel Urbano di Alta Gamma"
-      rol: "Direzione Finanziaria e Proprietà"
+      cita: "La perizia ha identificato l'origine delle infiltrazioni dal tetto e ha facilitato l'assunzione delle riparazioni necessarie da parte del responsabile."
+      fecha: "2 mesi fa"
+      servicioRelacionado: "Perizia di Patologie Edilizie"
+      tipoProyecto: "Patologia del Tetto"
+    - nombre: "COSTRUZIONI TECNICHE BCN, S.L."
+      rol: "Direttore dei Progetti"
       tipo: "empresa"
-      cita: "Il loro audit forense ha smontato la controperizia, giustificando ogni deviazione e validando le certificazioni di fronte a una critica controversia economica."
-      fecha: "In Evidenza"
-      servicioRelacionado: "Audit delle Certificazioni"
-      tipoProyecto: "Ristrutturazione Alberghiera in Esercizio"
-    - nombre: "Promotore Immobiliare Nazionale"
-      rol: "Dipartimento Post-Vendita"
-      tipo: "empresa"
-      cita: "La perizia tecnica ha individuato la causa principale di 39 reclami sistemici, trasferendo la responsabilità al subappaltatore e facendoci risparmiare costi elevati."
-      fecha: "In Evidenza"
-      servicioRelacionado: "Audit di Esecuzione"
-      tipoProyecto: "Sviluppo di Nuove Costruzioni"
+      cita: "L'audit tecnico preventivo ha permesso di correggere le carenze prima della consegna di 24 unità abitative, evitando reclami e costi aggiuntivi."
+      fecha: "1 mese fa"
+      servicioRelacionado: "Audit Tecnico di Cantiere"
+      tipoProyecto: "Controllo Qualità"
+    - nombre: "Ana S. García"
+      rol: "Proprietaria Danneggiata"
+      tipo: "persona"
+      cita: "La perizia ha accertato la presenza di vizi occulti nell'abitazione, costituendo la base per l'azione legale che ci ha permesso di riparare i danni."
+      fecha: "3 mesi fa"
+      servicioRelacionado: "Perizia Giudiziaria"
+      tipoProyecto: "Vizi Occulti"
 
 # Sección CTA Contacto
 contactCTA:

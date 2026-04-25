@@ -1,4 +1,6 @@
 ---
+
+
 layout: "layouts/service-child.njk"
 title: "Carbon Fiber Reinforcement | CFRP Projects in Barcelona"
 subtitle: "We design and calculate reinforcement solutions with composites (CFRP) for concrete and timber"
@@ -11,10 +13,9 @@ translations:
   - lang: "ca"
     permalink: "/ca/assessorament-estructural/reforc-fibra-carboni/"
 eleventyNavigation:
-  key: "Carbon Fiber Reinforcement"
-  parent: "Structural Consulting"
-  title: "Carbon Fiber"
-  notshow: true
+  key: "Refuerzo Estructural"
+  parent: "Especialidades Forenses"
+  title: "Structural Reinforcement"
   order: 2
 serviceTitle: "carbon fiber reinforcement"
 
@@ -75,7 +76,11 @@ intro: |
   <p>When traditional structural reinforcement with steel or concrete is not feasible due to weight, space, or time constraints, carbon fiber (CFRP) reinforcement systems are the most advanced and efficient engineering solution.</p>
   
   <p>As part of our <a href="/en/structural-consulting/">structural consulting</a> service, we specialize in calculating and designing reinforcement projects with these composite materials, ensuring maximum effectiveness and durability intervention.</p>
----
+---## Auditing and Assuming Liability
+
+We calculate, audit, and assume civil liability. Execution is handled by approved divisions: [Urbenis](https://urbenis.com) and [Refuerzo Fibra](https://refuerzofibra.es).
+
+
 
 ## Carbon Fiber Reinforcement (CFRP): The Cutting-Edge Solution
 

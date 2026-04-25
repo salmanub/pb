@@ -6,11 +6,7 @@ description: "Realizamos informes periciales para obras públicas en Barcelona. 
 permalink: "/obras-publicas/"
 lang: 'es'
 eleventyNavigation:
-  key: "Obras Públicas"
-  parent: "Informes Periciales"
-  title: "Perito Obras Públicas"
   notshow: true
-  order: 5
 serviceTitle: 'peritajes de obras públicas'
 
 # Parent Service (for breadcrumb and linking back to pillar)
@@ -49,10 +45,6 @@ relatedProblems:
   - title: 'Disputas en Certificaciones'
     description: 'Análisis de mediciones y pagos, un conflicto común en obra pública.'
     url: '/auditorias-obra/disputas-certificaciones-pago/'
-  - title: 'Auditorías de Obra'
-    description: 'La auditoría es clave para el control de los proyectos públicos.'
-    url: '/auditorias-de-obra/'
-
 # Client Testimonials
 testimonials:
   - quote: 'El informe pericial fue clave para justificar técnicamente el modificado del proyecto y resolver el conflicto con la administración.'

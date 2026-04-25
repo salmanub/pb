@@ -1,4 +1,6 @@
 ---
+
+
 layout: layouts/despacho.njk
 permalink: /ca/el-despatx/
 lang: ca
@@ -12,10 +14,9 @@ translations:
   - lang: it
     permalink: /it/lo-studio/
 eleventyNavigation:
-  key: "El Despatx"
+  key: "El Despacho"
   title: "El Despatx"
-  notshow: false
-  order: 2
+  order: 1
 title: "El Despatx | Pèrits Enginyers Forenses a Barcelona"
 description: "Conegui l'equip tècnic i directiu de Perito Barcelona. Enginyers civils i geòlegs col·legiats especialitzats en enginyeria forense i litigis B2B."
 intro:
@@ -63,4 +64,7 @@ cta:
   description: "Exposi'ns el seu cas. Realitzem una primera avaluació tècnica i de viabilitat del seu expedient sense compromís."
   text: "Contactar amb el Despatx"
   url: "/ca/contacte/"
----
+---## Consultoria de Validació Tècnica Independent
+
+Operem com a validadors tècnics independents, auditant sense biaix comercial.
+

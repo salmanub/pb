@@ -14,13 +14,9 @@ translations:
   - lang: it
     permalink: /it/contatti/
 eleventyNavigation:
-  key: "Contacte"
+  key: "Contacto"
   title: "Contacte"
-  notshow: false
   order: 5
-  icon: <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-
-# Contact Page Content
 contact:
     title: "PARLEM DEL<strong class='block text-cyan-400 mt-4'>SEU CAS</strong>"
     intro: "Si necessita una anàlisi tècnica per al seu cas, ja sigui un informe pericial, una auditoria d'obra o assessorament estructural, estem aquí per ajudar-lo. Expliqui'ns la seva situació i li oferirem una primera valoració sense compromís."
@@ -60,7 +56,6 @@ contact:
                 - "Seleccioni un servei..."
                 - "Informes Pericials (esquerdes, vicis ocults, etc.)"
                 - "Assessorament Estructural (reparació, reforç)"
-                - "Auditories d'Obra (certificacions, qualitat)"
                 - "Altra consulta"
               
             - label: "Missatge"

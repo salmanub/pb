@@ -1,4 +1,6 @@
 ---
+
+
 layout: layouts/service-child.njk
 title: "Moisture and Water Leakage Expert in Barcelona | Cause Report"
 subtitle: "Technical diagnosis of moisture origin from leakage, capillarity, or condensation"
@@ -15,11 +17,10 @@ translations:
   - lang: "ca"
     permalink: "/ca/informes-pericials/humitats-filtracions/"
 eleventyNavigation:
-  key: "Moisture and Water Leakage"
-  parent: "Expert Reports"
-  title: "Moisture and Water Leakage"
-  notshow: true
-  order: 2
+  key: "Humedades y Filtraciones"
+  parent: "Especialidades Forenses"
+  title: "Moisture & Leakage"
+  order: 4
 serviceTitle: "moisture and water leakage"
 
 parentService:
@@ -71,7 +72,11 @@ intro: |
   <p>Moisture stains, mold, or leaks are problems that seriously affect your property's comfort, healthiness, and value. Applying superficial solutions without a correct diagnosis is a common mistake that only makes the problem chronic.</p>
   
   <p>As part of our <a href="/en/expert-witness-reports/">expert report services</a>, we specialize in detecting the exact origin of any type of moisture, producing a technical assessment that will serve as your roadmap for its definitive eradication.</p>
----
+---## Physical and Thermodynamic Approach
+
+We analyze dampness using thermodynamics. For material execution, contact [our specialized division](https://humedades.barcelona).
+
+
 
 ## Tired of Fighting Against Moisture?
 

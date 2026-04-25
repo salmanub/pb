@@ -15,10 +15,7 @@ translations:
   - lang: "fr"
     permalink: "/fr/collaboration-avocats/"
 eleventyNavigation:
-  key: "Collaborazione Avvocati"
-  title: "Area Avvocati"
-  notshow: true # Questa pagina è accessibile dal pulsante della navbar, non è necessario che sia nel menu principale.
-  order: 99
+  notshow: true
 heroTitle: "PERITO GIUDIZIARIO"
 heroHighlight: "PER AVVOCATI"
 serviceTitle: "collaborazione con studi legali"
@@ -56,10 +53,6 @@ relatedProblems:
   - title: "Perizie Tecniche"
     description: "Esplorate in dettaglio i tipi di perizie che elaboriamo per i vostri casi."
     url: "/it/perizie-tecniche/"
-  - title: "Audit di Cantiere"
-    description: "Un servizio chiave per controversie su certificazioni e liquidazioni di lavori."
-    url: "/it/audit-di-cantiere/"
-
 # Client Testimonials
 testimonials:
   - quote: "La loro perizia è stata l'elemento centrale della nostra azione legale per vizi occulti. La chiarezza espositiva e la solidità tecnica sono state determinanti per ottenere una sentenza favorevole."

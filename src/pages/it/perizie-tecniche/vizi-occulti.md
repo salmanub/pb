@@ -19,10 +19,9 @@ translations:
   - lang: 'fr'
     permalink: '/fr/rapports-expertise/vices-caches/'
 eleventyNavigation:
-  key: "Vizi Occulti"
-  parent: "Perizie Tecniche"
-  title: "Vizi Occulti"
-  notshow: true
+  key: "Vicios Ocultos en Edificación"
+  parent: "Especialidades Forenses"
+  title: "Vizi Occulti in Edilizia"
   order: 3
 serviceTitle: 'vizi occulti'
 

@@ -6,5 +6,5 @@ description: "Esta página aún no está disponible en español, pero puedes con
 permalink: "/no-disponible/"
 eleventyExcludeFromCollections: true
 eleventyNavigation:
-    notshow: true
+  notshow: true
 ---

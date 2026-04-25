@@ -25,11 +25,7 @@ translations:
     description: "Parere tecnico peritale a Barcellona per processi e richieste di risarcimento. Perizie di parte, giudiziarie e valutazione dei danni costruttivi con validità legale."
 
 eleventyNavigation:
-  key: "Informes Periciales"
-  title: "Dictámenes Técnicos"
-  notshow: false
-  order: 3 
-
+  notshow: true
 # Hero Section
 hero:
   title: "El Informe Pericial Técnico"

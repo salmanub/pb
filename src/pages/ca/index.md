@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/index.njk'
-title: 'Perits Judicials Barcelona | Enginyeria Forense i Consultoria'
-description: "Despatx d'Enginyeria Forense a Barcelona. Experts en dictàmens pericials, patologies de l'edificació i consultoria tècnica legal."
+title: 'Pèrit Barcelona | Despatx de Pèrits Enginyers Col·legiats'
+description: "Pèrit Barcelona: Som un despatx de pèrits enginyers col·legiats especialitzats en informes pericials, auditories d'obra i assessorament estructural a Barcelona i província."
 permalink: /ca/
 lang: ca
 translations:
@@ -28,18 +28,18 @@ hero:
   subtitle: "Consultoria d'Enginyeria, Dictàmens Pericials i Auditoria d'Edificació"
   description: "Elaborem informes tècnics independents per resoldre litigis. Des de l'anàlisi de patologies fins a la ratificació en seu judicial, com a <a href='/ca/construccio/'><strong>Pèrits de Construcció</strong></a>, som el seu soci tècnic de confiança."
   image:
-    path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
+    path: "src/assets/images/peritaje-construccion-ingenieros-obra.avif"
     alt: "Pèrit enginyer inspeccionant una estructura de formigó"
     badge: "Pèrit Enginyer"
     caption: "Informes tècnics amb rigor i claredat"
   rotatingTexts:
-    default: "amb rigor tècnic i solidesa"
+    default: "amb rigor tècnic"
     items:
-      - "amb rigor tècnic i solidesa"
-      - "per a reclamacions complexes d'enginyeria"
-      - "amb fonamentació geotècnica avançada"
-      - "que resolen disputes de certificacions"
-      - "amb validesa judicial inexpugnable"
+      - "amb rigor tècnic"
+      - "que resolen disputes d'obra"
+      - "amb validesa judicial garantida"
+      - "per assegurar la qualitat del seu projecte"
+      - "amb diagnòstics estructurals precisos"
   cta:
     primary: "Avaluar el seu Cas"
     primaryUrl: "/ca/contacte/"
@@ -53,7 +53,7 @@ hero:
     - value: "97%"
       text: "Informes Ratificats"
       subtext: "En processos judicials"
-  logosText: "Els nostres dictàmens són sol·licitats per despatxos d'advocats, promotores i asseguradores de primer nivell."
+  logosText: "Els nostres informes són acceptats pels principals jutjats i entitats asseguradores."
 
 # Servicios Destacados
 highlightedServices:
@@ -67,10 +67,10 @@ highlightedServices:
       url: "/ca/informes-pericials/"
       icon: "scale"
       cta: "Veure més"
-    - titulo: "Auditories d'Obra"
-      descripcion: "Realitzem el control de qualitat, supervisió de l'execució i mediació tècnica en disputes sobre certificacions i pagaments."
-      url: "/ca/auditories-d-obra/"
-      icon: "clipboard-list"
+    - titulo: "Enginyeria Forense"
+      descripcion: "Anàlisi especialitzada de col·lapses estructurals, fatiga de materials i fallades crítiques de fonamentació amb rigor científic."
+      url: "/ca/enginyeria-forense-construccio/"
+      icon: "search-check"
       cta: "Veure més"
     - titulo: "Assessorament Estructural"
       descripcion: "Un diagnòstic independent abans de la reparació. Analitzem la causa real del problema per definir la solució de reforç més segura i econòmica."
@@ -96,9 +96,9 @@ ayuda:
       description: "Detecció d'orígens, informes tècnics i solucions per a problemes d'humitat en edificacions."
       url: "/ca/informes-pericials/humitats-filtracions/"
       icon: "droplet"
-    - title: "Disputes en Certificacions i Pagaments"
-      description: "Auditoria tècnica per a conflictes derivats de certificacions, amidaments i compliment de contracte."
-      url: "/ca/auditories-obra/disputes-certificacions-pagament/"
+    - title: "Col·lapses i Fallades Estructurals Greus"
+      description: "Investigació pericial de trencaments, enfonsaments i grans defectes estructurals mitjançant modelatge avançat."
+      url: "/ca/enginyeria-forense-construccio/"
       icon: "file-text"
     - title: "Vicis Ocults en Compravenda o Post-obra"
       description: "Identificació i documentació de defectes no visibles després del lliurament o compra d'un immoble."
@@ -124,7 +124,7 @@ solucion:
     titulo: "La"
     highlight: "Solució Tècnica"
     subtitulo: "que Necessita"
-    descripcion: "A [perito.barcelona](/ca/el-despatx/) combinem experiència en enginyeria civil amb metodologia pericial per lliurar informes precisos, imparcials i tècnicament sòlids. La nostra intervenció proporciona arguments clars, sempre fonamentats en un marc d'[honoraris transparents](/ca/honoraris-perit-judicial/), per prendre decisions, reclamar per defectes o definir solucions constructives segures."
+    descripcion: "A perito.barcelona combinem experiència en enginyeria civil amb metodologia pericial per lliurar informes precisos, imparcials i tècnicament sòlids. La nostra intervenció proporciona arguments clars per prendre decisions, reclamar per defectes o definir solucions constructives segures."
     caracteristicas:
       - icono: "search"
         titulo: "Aclarim la Causa Arrel"
@@ -176,34 +176,34 @@ proceso:
     texto: "Comenci Ara - Avaluï el seu cas"
     url: "/ca/contacte/"
 
-# Sección Testimonios (CASOS D'ÈXIT D'ALT VALOR B2B)
+# Sección Testimonios
 testimonios:
   tag: "Casos d'Èxit"
-  titulo: "Casos Resolts"
-  highlight: "que Avalen la Nostra Experiència"
-  descripcion: "Demostrem el nostre rigor tècnic en reclamacions d'alta complexitat, oferint bases probatòries inexpugnables per a grans comptes i despatxos jurídics."
+  titulo: "Clients Satisfets"
+  highlight: "Avalen la Nostra Experiència"
+  descripcion: "Descobreixi com hem ajudat a propietaris, comunitats i empreses a resoldre els seus casos tècnics amb èxit."
   items:
-    - nombre: "Operador Logístic Internacional"
-      rol: "Direcció d'Operacions"
+    - nombre: "Comunitat de Propietaris Les Corts"
+      rol: "President de la Comunitat"
       tipo: "empresa"
-      cita: "L'auditoria geotècnica va ser irrefutable. Va demostrar defectes de compactació al subsòl, permetent-nos reclamar més de 115.000 € a la constructora."
-      fecha: "Destacat"
-      servicioRelacionado: "Peritatge Geotècnic de Paviment"
-      tipoProyecto: "Obra Civil Logística"
-    - nombre: "Hotel Urbà d'Alta Gamma"
-      rol: "Direcció Financera i Propietat"
+      cita: "L'informe pericial va identificar l'origen de les filtracions a la coberta i va facilitar que la part responsable assumís les reparacions necessàries."
+      fecha: "fa 2 mesos"
+      servicioRelacionado: "Informe Pericial de Patologies"
+      tipoProyecto: "Patologia de Coberta"
+    - nombre: "CONSTRUCCIONS TÈCNIQUES BCN, S.L."
+      rol: "Director de Projectes"
       tipo: "empresa"
-      cita: "La seva auditoria forense va desmuntar la contrapericial, justificant cada desviació i validant les certificacions davant d'una disputa econòmica crítica."
-      fecha: "Destacat"
-      servicioRelacionado: "Auditoria de Certificacions"
-      tipoProyecto: "Reforma Hotelera en Actiu"
-    - nombre: "Constructora Promotora Nacional"
-      rol: "Departament Postvenda"
-      tipo: "empresa"
-      cita: "El dictamen tècnic va identificar la causa arrel de 39 reclamacions sistèmiques, derivant la responsabilitat a la subcontracta i estalviant-nos alts costos."
-      fecha: "Destacat"
-      servicioRelacionado: "Auditoria d'Execució"
-      tipoProyecto: "Promoció Obra Nova"
+      cita: "L'auditoria tècnica preventiva va permetre corregir deficiències abans del lliurament de 24 habitatges, evitant reclamacions i sobrecostos."
+      fecha: "fa 1 mes"
+      servicioRelacionado: "Auditoria Tècnica d'Obres"
+      tipoProyecto: "Control de Qualitat"
+    - nombre: "Anna S. Garcia"
+      rol: "Propietària Afectada"
+      tipo: "persona"
+      cita: "El peritatge va acreditar vicis ocultos a l'habitatge, sent la base per a la reclamació judicial que ens va permetre reparar els danys."
+      fecha: "fa 3 mesos"
+      servicioRelacionado: "Peritatge Judicial"
+      tipoProyecto: "Vicis Ocultos"
 
 # Sección CTA Contacto
 contactCTA:

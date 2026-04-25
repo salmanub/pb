@@ -8,10 +8,9 @@ translations:
   - lang: en
     permalink: /en/expert-witness-reports/hidden-defects/
 eleventyNavigation:
-  key: "Vicios Ocultos"
-  parent: "Informes Periciales"
-  title: "Vicios Ocultos"
-  notshow: true
+  key: "Vicios Ocultos en Edificación"
+  parent: "Especialidades Forenses"
+  title: "Vicios Ocultos en Edificación"
   order: 3
 title: "Perito para Vicios Ocultos en Viviendas | Informe Judicial"
 description: "¿Problemas graves tras comprar una casa? Como peritos arquitectos e ingenieros, elaboramos el dictamen técnico para demostrar y reclamar vicios ocultos en viviendas y locales."

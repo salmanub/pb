@@ -15,11 +15,7 @@ translations:
   - lang: "en"
     permalink: "/en/expert-witness-reports/party-appointed-report/"
 eleventyNavigation:
-  key: "Informe de Parte"
-  parent: "Informes Periciales"
-  title: "Informe de Parte"
   notshow: true
-  order: 1
 serviceTitle: 'informe pericial de parte'
 
 # Parent Service (for breadcrumb and linking back to pillar)

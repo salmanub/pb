@@ -14,16 +14,12 @@ translations:
   - lang: "it"
     permalink: "/it/contatti/"
 eleventyNavigation:
-  key: "Contact"
+  key: "Contacto"
   title: "Contact"
-  notshow: false
   order: 5
-  icon: <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-
-# Contact Page Content
 contact:
     title: "PARLONS DE<strong class='block text-cyan-400 mt-4'>VOTRE CAS</strong>"
-    intro: "Si vous avez besoin d'une analyse technique pour votre cas, qu'il s'agisse d'un rapport d'expertise, d'un audit de chantier ou d'un conseil en structure, nous sommes là pour vous aider. Expliquez-nous votre situation et nous vous offrirons une première évaluation sans engagement."
+    intro: "Si vous avez besoin d'une analyse technique pour votre cas, qu'il s'agisse d'un rapport d'expertise, d'un ingénierie légale ou d'un conseil en structure, nous sommes là pour vous aider. Expliquez-nous votre situation et nous vous offrirons une première évaluation sans engagement."
     
     # Información de contacto directo
     direct_contact:
@@ -61,7 +57,6 @@ contact:
                 - "Sélectionnez un service..."
                 - "Rapports d'Expertise (fissures, vices cachés, etc.)"
                 - "Conseil en Structure (réparation, renforcement)"
-                - "Audits de Chantier (certifications, qualité)"
                 - "Autre demande"
               
             - label: "Message"

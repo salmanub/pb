@@ -19,11 +19,7 @@ translations:
   - lang: "fr"
     permalink: "/fr/rapports-expertise/rapport-de-partie/"
 eleventyNavigation:
-  key: "Relazione di Parte"
-  parent: "Perizie Tecniche"
-  title: "Perizia di Parte"
   notshow: true
-  order: 1
 serviceTitle: "Perizia di Parte"
 
 # Parent Service

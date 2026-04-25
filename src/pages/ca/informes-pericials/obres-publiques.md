@@ -11,11 +11,7 @@ translations:
   - lang: "en"
     permalink: "/en/public-works/"
 eleventyNavigation:
-  key: "Obres Públiques"
-  parent: "Informes Pericials"
-  title: "Pèrit Obres Públiques"
   notshow: true
-  order: 5
 serviceTitle: "peritatges d'obres públiques"
 
 parentService:
@@ -49,10 +45,6 @@ relatedProblems:
   - title: "Disputes en Certificacions"
     description: "Anàlisi de mesuraments i pagaments, un conflicte comú en obra pública."
     url: "/ca/auditories-d-obra/disputes-certificacions-pagament/"
-  - title: "Auditories d'Obra"
-    description: "L'auditoria és clau per al control dels projectes públics."
-    url: "/ca/auditories-d-obra/"
-
 testimonials:
   - quote: "L'informe pericial va ser clau per justificar tècnicament el modificat del projecte i resoldre el conflicte amb l'administració."
     author: "CONSTRUCTORA TÈCNICA BCN, S.L."

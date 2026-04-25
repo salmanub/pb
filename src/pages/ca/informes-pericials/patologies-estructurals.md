@@ -11,11 +11,7 @@ translations:
   - lang: 'en'
     permalink: '/en/expert-reports/structural-pathologies/'
 eleventyNavigation:
-  key: "Patologies Estructurals"
-  parent: "Informes Pericials"
-  title: "Patologies Estructurals"
   notshow: true
-  order: 1
 serviceTitle: 'patologies estructurals'
 
 # Parent Service (for breadcrumb and linking back to pillar)

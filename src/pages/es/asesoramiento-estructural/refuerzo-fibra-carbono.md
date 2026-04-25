@@ -1,4 +1,6 @@
 ---
+
+
 layout: 'layouts/service-child.njk'
 title: "Refuerzo Estructural con Fibra de Carbono | Proyectos en Barcelona"
 subtitle: 'Diseñamos y calculamos soluciones de refuerzo con composites (CFRP) para hormigón y madera'
@@ -6,10 +8,9 @@ description: "Servicio de asesoramiento y cálculo de proyectos de refuerzo estr
 permalink: "/asesoramiento-estructural/refuerzo-fibra-carbono/"
 lang: 'es'
 eleventyNavigation:
-  key: "Refuerzo Fibra de Carbono"
-  parent: "Asesoramiento Estructural"
-  title: "Refuerzo de Estructuras con Fibra de Carbono"
-  notshow: true
+  key: "Refuerzo Estructural"
+  parent: "Especialidades Forenses"
+  title: "Refuerzo Estructural"
   order: 2
 serviceTitle: 'refuerzo con fibra de carbono'
 
@@ -70,7 +71,11 @@ intro: |
   <p>Cuando un refuerzo estructural tradicional con acero u hormigón no es viable por limitaciones de peso, espacio o plazos, los sistemas de refuerzo con fibra de carbono (CFRP) son la solución de ingeniería más avanzada y eficiente.</p>
   
   <p>Como parte de nuestro servicio de <a href="/asesoramiento-estructural/">asesoramiento estructural</a>, nos especializamos en el cálculo y diseño de proyectos de refuerzo con estos materiales composites, garantizando una intervención de máxima eficacia y durabilidad.</p>
----
+---## Auditoría y Asunción de RC
+
+Calculamos, auditamos y asumimos RC. La ejecución corre a cargo de nuestras divisiones homologadas: [Urbenis](https://urbenis.com) y [Refuerzo Fibra](https://refuerzofibra.es).
+
+
 
 
 ## Refuerzo con Fibra de Carbono (CFRP): La Solución de Vanguardia
@@ -104,4 +109,4 @@ Nuestro servicio se centra en la fase de ingeniería, que es la más crítica pa
 
 1.  **Diagnóstico y Cálculo:** Analizamos la estructura existente y realizamos el cálculo para determinar el tipo de refuerzo (laminados, tejidos), la cantidad y la disposición exacta.
 2.  **Proyecto Técnico:** Elaboramos un documento detallado con planos, especificaciones de los materiales (confiamos en la calidad de sistemas líderes como **SIKA® CarboDur® y SikaWrap®**) y un protocolo de aplicación paso a paso.
-3.  **Puente a la Ejecución:** Con nuestro proyecto, usted puede solicitar presupuestos a empresas especializadas. Para garantizar la máxima calidad en la aplicación, colaboramos estrechamente con **urbenis.com**, nuestros socios expertos en la instalación de estos sistemas.
+3.  **Separación de Poderes y Garantía Ejecutiva:** Nuestro despacho **solo calcula, audita y asume la Responsabilidad Civil (RC)** del diseño mediante el visado colegial. Para garantizar una ejecución material impecable, derivamos la instalación a nuestras divisiones homologadas: [Urbenis](https://urbenis.com) y [Refuerzo Fibra](https://refuerzofibra.es). Esta separación entre prescripción y ejecución asegura su total independencia y seguridad jurídica.

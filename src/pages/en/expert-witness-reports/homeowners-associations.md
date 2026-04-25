@@ -11,11 +11,7 @@ translations:
   - lang: 'es'
     permalink: '/informes-periciales/comunidades-propietarios/'
 eleventyNavigation:
-  key: "Homeowners' Associations"
-  parent: "Expert Witness Reports"
-  title: "For HOAs"
   notshow: true
-  order: 4
 serviceTitle: 'expert reports for Homeowners Associations'
 
 # Parent Service (for breadcrumb and linking back to pillar)

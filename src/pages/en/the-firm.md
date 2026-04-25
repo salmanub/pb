@@ -1,4 +1,6 @@
 ---
+
+
 layout: layouts/despacho.njk
 permalink: /en/the-firm/
 lang: en
@@ -12,10 +14,9 @@ translations:
   - lang: it
     permalink: /it/lo-studio/
 eleventyNavigation:
-  key: "The Firm"
+  key: "El Despacho"
   title: "The Firm"
-  notshow: false
-  order: 2
+  order: 1
 title: "The Firm | Forensic Expert Engineers in Barcelona"
 description: "Meet the technical and management team of Perito Barcelona. Chartered civil engineers and geologists specializing in forensic engineering and B2B litigation."
 intro:
@@ -63,4 +64,7 @@ cta:
   description: "Present your case. We will conduct an initial technical and viability assessment of your file without any obligation."
   text: "Contact the Firm"
   url: "/en/contact/"
----
+---## Independent Technical Validation Consulting
+
+We operate as independent technical validators, auditing and assuming responsibility without commercial bias toward chemical material brands.
+

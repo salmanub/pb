@@ -16,14 +16,10 @@ translations:
 eleventyNavigation:
   key: "Contacto"
   title: "Contacto"
-  notshow: false
-  order: 5 # Recomiendo ponerlo antes de Blog si lo tienes.
-  icon: <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-
-# Contact Page Content
+  order: 5
 contact:
     title: "HABLEMOS DE<strong class='block text-cyan-400 mt-4'>SU CASO</strong>"
-    intro: "Si necesita un análisis técnico para su caso, ya sea un informe pericial, una auditoría de obra o asesoramiento estructural, estamos aquí para ayudarle. Explíquenos su situación y le ofreceremos una primera valoración sin compromiso."
+    intro: "Si necesita un análisis técnico para su caso, ya sea un informe pericial, una ingeniería forense o asesoramiento estructural, estamos aquí para ayudarle. Explíquenos su situación y le ofreceremos una primera valoración sin compromiso."
     
     # Información de contacto directo
     direct_contact:
@@ -61,7 +57,6 @@ contact:
                 - "Seleccione un servicio..."
                 - "Informes Periciales (grietas, vicios ocultos, etc.)"
                 - "Asesoramiento Estructural (reparación, refuerzo)"
-                - "Auditorías de Obra (certificaciones, calidad)"
                 - "Otra consulta"
               
             - label: "Mensaje"

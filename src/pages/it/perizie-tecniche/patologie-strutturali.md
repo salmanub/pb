@@ -19,11 +19,7 @@ translations:
   - lang: 'fr'
     permalink: '/fr/rapports-expertise/pathologies-structurelles/'
 eleventyNavigation:
-  key: "Patologie Strutturali"
-  parent: "Perizie Tecniche"
-  title: "Patologie Strutturali"
   notshow: true
-  order: 1
 serviceTitle: 'patologie strutturali'
 
 # Parent Service

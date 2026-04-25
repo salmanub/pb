@@ -2495,6 +2495,9 @@ href="https://perito.barcelona/">
   .h-\[400px\] {
     height: 400px;
   }
+  .h-\[500px\] {
+    height: 500px;
+  }
   .h-\[550px\] {
     height: 550px;
   }
@@ -4143,9 +4146,6 @@ href="https://perito.barcelona/">
   }
   .text-cyan-700 {
     color: var(--color-cyan-700);
-  }
-  .text-emerald-600 {
-    color: var(--color-emerald-600);
   }
   .text-emerald-700\/80 {
     color: color-mix(in oklab, var(--color-emerald-700) 80%, transparent);
@@ -6460,6 +6460,11 @@ href="https://perito.barcelona/">
       height: 85vh;
     }
   }
+  .lg\:h-\[600px\] {
+    @media (width >= 64rem) {
+      height: 600px;
+    }
+  }
   .lg\:h-full {
     @media (width >= 64rem) {
       height: 100%;
@@ -8039,11 +8044,9 @@ href="https://perito.barcelona/">
             <!-- Desktop Navigation -->
             <nav class="hidden lg:flex flex-1 ml-8 xl:ml-12" itemprop="hasPart" itemscope itemtype="https://schema.org/SiteNavigationElement">
                 <ul class="flex items-center w-full">
-                    <!-- Servicios (Primer bloque) --><!-- Resto de enlaces corporativos (Agrupados a la derecha) -->
+                    <!-- Todos los enlaces corporativos agrupados a la derecha en la píldora -->
                     <li class="flex items-center ml-auto">
                         <ul class="flex items-center gap-6 px-6 py-1.5 bg-slate-50/80 border border-slate-100 rounded-full shadow-sm shadow-slate-200/50">
-    
-
     
         <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             
@@ -8060,55 +8063,44 @@ href="https://perito.barcelona/">
     
         <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             
-                <a href="/auditorias-obra/"
-                   class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm transition-colors
-                          ">
-                    
-                    <span>Auditorías de Obra</span>
-                </a>
-            
-        </li>
-    
-
-    
-        <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            
-                <a href="/construccion/"
-                   class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm transition-colors
-                          ">
-                    
-                        <svg class="w-4 h-4 text-slate-400 group-hover:text-cyan-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                <div class="group relative">
+                    <button class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm
+                                 
+                                 py-2 transition-colors">
+                        
+                        <span>Especialidades Forenses</span>
+                        <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180 text-slate-400 group-hover:text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
-                    
-                    <span>Perito Construcción</span>
-                </a>
-            
-        </li>
-    
-
-    
-        <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            
-                <a href="/asesoramiento-estructural/"
-                   class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm transition-colors
-                          ">
-                    
-                    <span>Asesoramiento Estructural</span>
-                </a>
-            
-        </li>
-    
-
-    
-        <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            
-                <a href="/informes-periciales/"
-                   class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm transition-colors
-                          ">
-                    
-                    <span>Dictámenes Técnicos</span>
-                </a>
+                    </button>
+                    <div class="absolute top-full left-0 hidden group-hover:block w-64 bg-white rounded-xl shadow-xl shadow-slate-200/50 border border-slate-100 py-3 z-50">
+                        
+                            <a href="/ingenieria-forense-construccion/" 
+                               class="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 text-slate-600 hover:text-cyan-600 transition-colors group/item">
+                                <span class="text-cyan-500 opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
+                                <span class="font-medium text-sm">Ingeniería Forense de Construcción</span>
+                            </a>
+                        
+                            <a href="/asesoramiento-estructural/refuerzo-fibra-carbono/" 
+                               class="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 text-slate-600 hover:text-cyan-600 transition-colors group/item">
+                                <span class="text-cyan-500 opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
+                                <span class="font-medium text-sm">Refuerzo Estructural</span>
+                            </a>
+                        
+                            <a href="/informes-periciales/vicios-ocultos/" 
+                               class="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 text-slate-600 hover:text-cyan-600 transition-colors group/item">
+                                <span class="text-cyan-500 opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
+                                <span class="font-medium text-sm">Vicios Ocultos en Edificación</span>
+                            </a>
+                        
+                            <a href="/informes-periciales/humedades-filtraciones/" 
+                               class="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 text-slate-600 hover:text-cyan-600 transition-colors group/item">
+                                <span class="text-cyan-500 opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
+                                <span class="font-medium text-sm">Humedades y Filtraciones</span>
+                            </a>
+                        
+                    </div>
+                </div>
             
         </li>
     
@@ -8133,11 +8125,7 @@ href="https://perito.barcelona/">
                    class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm transition-colors
                           ">
                     
-                        <svg class="w-4 h-4 text-slate-400 group-hover:text-cyan-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>
-                        </svg>
-                    
-                    <span>Casos de éxito</span>
+                    <span>Casos de Éxito</span>
                 </a>
             
         </li>
@@ -8150,10 +8138,6 @@ href="https://perito.barcelona/">
                    class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm transition-colors
                           ">
                     
-                        <svg class="w-4 h-4 text-slate-400 group-hover:text-cyan-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
-                    
                     <span>Contacto</span>
                 </a>
             
@@ -8163,18 +8147,42 @@ href="https://perito.barcelona/">
     
         <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             
-                <a href="/blog/"
+                <a href="/casos-exito/humedades-fisuras-sant-cugat/"
                    class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm transition-colors
                           ">
                     
-                        <svg class="w-4 h-4 text-slate-400 group-hover:text-cyan-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                        </svg>
-                    
-                    <span>Blog</span>
+                    <span></span>
                 </a>
             
         </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -8240,6 +8248,22 @@ href="https://perito.barcelona/">
         
             <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <div class="flex flex-col">
+                    <a href="/el-despacho/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
+                        
+                        <span>El Despacho</span>
+                    </a>
+                    <ul class="ml-4 mt-1 border-l border-slate-100 pl-2 space-y-1">
+                        
+                    </ul>
+                </div>
+            </li>
+        
+    
+
+    
+        
+            <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <div class="flex flex-col">
                     <a href="/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
                         
                             <svg class="w-5 h-5 text-slate-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -8257,145 +8281,33 @@ href="https://perito.barcelona/">
     
 
     
-
-    
         
             <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <div class="flex flex-col">
-                    <a href="/el-despacho/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
+                    <a href="/especialidades-forenses/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
                         
-                        <span>El Despacho</span>
-                    </a>
-                    <ul class="ml-4 mt-1 border-l border-slate-100 pl-2 space-y-1">
-                        
-                    </ul>
-                </div>
-            </li>
-        
-    
-
-    
-        
-            <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <div class="flex flex-col">
-                    <a href="/auditorias-obra/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
-                        
-                        <span>Auditorías de Obra</span>
-                    </a>
-                    <ul class="ml-4 mt-1 border-l border-slate-100 pl-2 space-y-1">
-                        
-                            <li class="nav-item">
-                                <a href="/auditorias-obra/disputas-certificaciones-pago/" 
-                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Disputas en Certificaciones</span>
-                                </a>
-                            </li>
-                        
-                            <li class="nav-item">
-                                <a href="/auditorias-de-obra/auditoria-cumplimiento-normativo-proyecto/" 
-                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Cumplimiento Normativo</span>
-                                </a>
-                            </li>
-                        
-                    </ul>
-                </div>
-            </li>
-        
-    
-
-    
-        
-            <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <div class="flex flex-col">
-                    <a href="/construccion/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
-                        
-                            <svg class="w-5 h-5 text-slate-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                        </svg>
-                        
-                        <span>Perito Construcción</span>
-                    </a>
-                    <ul class="ml-4 mt-1 border-l border-slate-100 pl-2 space-y-1">
-                        
-                    </ul>
-                </div>
-            </li>
-        
-    
-
-    
-        
-            <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <div class="flex flex-col">
-                    <a href="/asesoramiento-estructural/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
-                        
-                        <span>Asesoramiento Estructural</span>
-                    </a>
-                    <ul class="ml-4 mt-1 border-l border-slate-100 pl-2 space-y-1">
-                        
-                            <li class="nav-item">
-                                <a href="/asesoramiento-estructural/diagnostico-patologias/" 
-                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Diagnóstico de Patologías</span>
-                                </a>
-                            </li>
-                        
-                            <li class="nav-item">
-                                <a href="/asesoramiento-estructural/refuerzo-fibra-carbono/" 
-                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Refuerzo de Estructuras con Fibra de Carbono</span>
-                                </a>
-                            </li>
-                        
-                            <li class="nav-item">
-                                <a href="/asesoramiento-estructural/reparacion-hormigon/" 
-                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Reparación de Hormigón</span>
-                                </a>
-                            </li>
-                        
-                            <li class="nav-item">
-                                <a href="/asesoramiento-estructural/evaluacion-seguridad-estructural-ite-iee/" 
-                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Seguridad Estructural (ITE/IEE)</span>
-                                </a>
-                            </li>
-                        
-                    </ul>
-                </div>
-            </li>
-        
-    
-
-    
-        
-            <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <div class="flex flex-col">
-                    <a href="/informes-periciales/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
-                        
-                        <span>Dictámenes Técnicos</span>
+                        <span>Especialidades Forenses</span>
                     </a>
                     <ul class="ml-4 mt-1 border-l border-slate-100 pl-2 space-y-1">
                         
                             <li class="nav-item">
                                 <a href="/ingenieria-forense-construccion/" 
                                 class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Ingeniería Forense</span>
+                                    <span>Ingeniería Forense de Construcción</span>
                                 </a>
                             </li>
                         
                             <li class="nav-item">
-                                <a href="/informes-periciales/informe-de-parte/" 
+                                <a href="/asesoramiento-estructural/refuerzo-fibra-carbono/" 
                                 class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Informe de Parte</span>
+                                    <span>Refuerzo Estructural</span>
                                 </a>
                             </li>
                         
                             <li class="nav-item">
-                                <a href="/informes-periciales/patologias-estructurales/" 
+                                <a href="/informes-periciales/vicios-ocultos/" 
                                 class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Patologías Estructurales</span>
+                                    <span>Vicios Ocultos en Edificación</span>
                                 </a>
                             </li>
                         
@@ -8403,48 +8315,6 @@ href="https://perito.barcelona/">
                                 <a href="/informes-periciales/humedades-filtraciones/" 
                                 class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
                                     <span>Humedades y Filtraciones</span>
-                                </a>
-                            </li>
-                        
-                            <li class="nav-item">
-                                <a href="/informes-periciales/vicios-ocultos/" 
-                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Vicios Ocultos</span>
-                                </a>
-                            </li>
-                        
-                            <li class="nav-item">
-                                <a href="/informes-periciales/comunidades-propietarios/" 
-                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Comunidades de Propietarios</span>
-                                </a>
-                            </li>
-                        
-                            <li class="nav-item">
-                                <a href="/informes-periciales/reclamacion-mala-ejecucion/" 
-                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Mala Ejecución de Obra</span>
-                                </a>
-                            </li>
-                        
-                            <li class="nav-item">
-                                <a href="/informes-periciales/naves-industriales/" 
-                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Naves Industriales</span>
-                                </a>
-                            </li>
-                        
-                            <li class="nav-item">
-                                <a href="/obras-publicas/" 
-                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Perito Obras Públicas</span>
-                                </a>
-                            </li>
-                        
-                            <li class="nav-item">
-                                <a href="/informes-periciales/contrainforme-pericial/" 
-                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
-                                    <span>Contrainforme Pericial</span>
                                 </a>
                             </li>
                         
@@ -8476,11 +8346,7 @@ href="https://perito.barcelona/">
                 <div class="flex flex-col">
                     <a href="/casos-exito/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
                         
-                            <svg class="w-5 h-5 text-slate-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>
-                        </svg>
-                        
-                        <span>Casos de éxito</span>
+                        <span>Casos de Éxito</span>
                     </a>
                     <ul class="ml-4 mt-1 border-l border-slate-100 pl-2 space-y-1">
                         
@@ -8496,10 +8362,6 @@ href="https://perito.barcelona/">
                 <div class="flex flex-col">
                     <a href="/contacto/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
                         
-                            <svg class="w-5 h-5 text-slate-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
-                        
                         <span>Contacto</span>
                     </a>
                     <ul class="ml-4 mt-1 border-l border-slate-100 pl-2 space-y-1">
@@ -8512,22 +8374,42 @@ href="https://perito.barcelona/">
 
     
         
-            <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <div class="flex flex-col">
-                    <a href="/blog/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
-                        
-                            <svg class="w-5 h-5 text-slate-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                        </svg>
-                        
-                        <span>Blog</span>
-                    </a>
-                    <ul class="ml-4 mt-1 border-l border-slate-100 pl-2 space-y-1">
-                        
-                    </ul>
-                </div>
+            <li class="nav-item">
+                <a href="/casos-exito/humedades-fisuras-sant-cugat/"
+                class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
+                    
+                    <span></span>
+                </a>
             </li>
         
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -8866,23 +8748,23 @@ href="https://perito.barcelona/">
                             <div class="mt-4 grid grid-cols-1 grid-rows-1" aria-live="polite" aria-atomic="true">
                                 
                                 <strong class="hero-rotating-text col-start-1 row-start-1 block text-cyan-400 transition-opacity duration-700 leading-[1.1] font-normal opacity-100" aria-hidden="false">
-                                    con rigor técnico y solidez
+                                    con rigor técnico
                                 </strong>
                                 
                                 <strong class="hero-rotating-text col-start-1 row-start-1 block text-cyan-400 transition-opacity duration-700 leading-[1.1] font-normal opacity-0" aria-hidden="true">
-                                    para reclamaciones complejas de ingeniería
+                                    que resuelven disputas de obra
                                 </strong>
                                 
                                 <strong class="hero-rotating-text col-start-1 row-start-1 block text-cyan-400 transition-opacity duration-700 leading-[1.1] font-normal opacity-0" aria-hidden="true">
-                                    con fundamentación geotécnica avanzada
+                                    con validez judicial garantizada
                                 </strong>
                                 
                                 <strong class="hero-rotating-text col-start-1 row-start-1 block text-cyan-400 transition-opacity duration-700 leading-[1.1] font-normal opacity-0" aria-hidden="true">
-                                    que resuelven disputas de certificaciones
+                                    para asegurar la calidad de su proyecto
                                 </strong>
                                 
                                 <strong class="hero-rotating-text col-start-1 row-start-1 block text-cyan-400 transition-opacity duration-700 leading-[1.1] font-normal opacity-0" aria-hidden="true">
-                                    con validez judicial inexpugnable
+                                    con diagnósticos estructurales precisos
                                 </strong>
                                 
                             </div>
@@ -8930,7 +8812,7 @@ href="https://perito.barcelona/">
                  <div class="absolute inset-0 bg-slate-100/50 rounded-3xl -z-10 transform scale-[0.98] translate-y-4"></div>
                  
                  <!-- Image Container - Clean, specific aspect ratio, refined shadow -->
-                 <div class="hero-image-wrapper relative w-full h-full min-h-[600px] rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 ring-1 ring-slate-900/5 bg-white">
+                 <div class="hero-image-wrapper relative w-full h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 ring-1 ring-slate-900/5 bg-white">
                      <picture><source type="image/avif" srcset="/assets/images/optimized/peritaje-construccion-ingenieros-obra-320w.avif 320w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-480w.avif 480w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-640w.avif 640w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-768w.avif 768w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-1024w.avif 1024w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-1280w.avif 1280w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-1536w.avif 1536w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-1920w.avif 1920w" sizes="(min-width: 1200px) 50vw, 100vw"><source type="image/webp" srcset="/assets/images/optimized/peritaje-construccion-ingenieros-obra-320w.webp 320w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-480w.webp 480w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-640w.webp 640w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-768w.webp 768w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-1024w.webp 1024w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-1280w.webp 1280w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-1536w.webp 1536w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-1920w.webp 1920w" sizes="(min-width: 1200px) 50vw, 100vw"><img src="/assets/images/optimized/peritaje-construccion-ingenieros-obra-320w.jpg" alt="Ingeniero perito supervisando obra en construcción" loading="eager" fetchpriority="high" decoding="async" class="" width="1920" height="1280" srcset="/assets/images/optimized/peritaje-construccion-ingenieros-obra-320w.jpg 320w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-480w.jpg 480w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-640w.jpg 640w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-768w.jpg 768w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-1024w.jpg 1024w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-1280w.jpg 1280w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-1536w.jpg 1536w, /assets/images/optimized/peritaje-construccion-ingenieros-obra-1920w.jpg 1920w" sizes="(min-width: 1200px) 50vw, 100vw"></picture>
                      <!-- Gradient Overlay for Contrast if needed -->
                      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none"></div>
@@ -9062,7 +8944,7 @@ href="https://perito.barcelona/">
                 </div>
             </a>
             
-            <a href="/auditorias-obra/disputas-certificaciones-pago/" class="group/card relative block bg-white p-10 pb-24 rounded-[2rem] shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:shadow-cyan-900/10 transition-all duration-500 overflow-hidden isolate border border-slate-100/80 hover:border-cyan-100 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-4" style="animation-delay: 450ms">
+            <a href="/ingenieria-forense-construccion/" class="group/card relative block bg-white p-10 pb-24 rounded-[2rem] shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:shadow-cyan-900/10 transition-all duration-500 overflow-hidden isolate border border-slate-100/80 hover:border-cyan-100 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-4" style="animation-delay: 450ms">
                 <!-- Hover background effect -->
                 <div class="absolute inset-0 bg-gradient-to-br from-cyan-50/50 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
                 
@@ -9075,8 +8957,8 @@ href="https://perito.barcelona/">
                             </div>
                         
                     </div>
-                    <h3 class="text-2xl font-light uppercase text-slate-900 group-hover/card:text-cyan-600 transition-colors mb-4 tracking-tight leading-tight">Disputas en Certificaciones y Pagos</h3>
-                    <p class="text-slate-500 text-lg leading-relaxed font-light group-hover/card:text-slate-600 transition-colors">Auditoría técnica para conflictos derivados de certificaciones, mediciones y cumplimiento de contrato.</p>
+                    <h3 class="text-2xl font-light uppercase text-slate-900 group-hover/card:text-cyan-600 transition-colors mb-4 tracking-tight leading-tight">Colapsos y Fallos Estructurales Graves</h3>
+                    <p class="text-slate-500 text-lg leading-relaxed font-light group-hover/card:text-slate-600 transition-colors">Investigación pericial de roturas, hundimientos y grandes defectos estructurales mediante modelado avanzado.</p>
                 </div>
                 
                 <!-- Botón de CTA con texto localizado -->
@@ -9341,7 +9223,7 @@ href="https://perito.barcelona/">
             </article>
             
             <article class="group/card relative isolate animate-in fade-in slide-in-from-bottom-8 duration-700" style="animation-delay: 400ms">
-                <a href="/auditorias-obra/" class="block h-full card-avant p-8 pb-24" title="Ver detalles de Auditorías de Obra" aria-labelledby="service-title-2">
+                <a href="/ingenieria-forense-construccion/" class="block h-full card-avant p-8 pb-24" title="Ver detalles de Ingeniería Forense" aria-labelledby="service-title-2">
                     
                     <!-- Background accent -->
                     <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-50/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover/card:bg-cyan-100/50 transition-colors duration-500"></div>
@@ -9353,7 +9235,10 @@ href="https://perito.barcelona/">
                             <div class="mb-8">
                                 <div class="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center group-hover/card:bg-cyan-500 group-hover/card:rotate-6 transition-all duration-500 ease-out border border-slate-100">
                                     <div class="w-8 h-8 flex items-center justify-center text-slate-900 group-hover/card:text-white transition-colors duration-500">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-cyan-400 group-hover:text-cyan-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/>
+</svg>
 
                                     </div>
                                 </div>
@@ -9361,11 +9246,11 @@ href="https://perito.barcelona/">
                             
                             <!-- Título -->
                             <h3 id="service-title-2" class="text-2xl font-light uppercase text-slate-900 group-hover/card:text-cyan-600 transition-colors mb-4 leading-tight tracking-tight">
-                                Auditorías de Obra
+                                Ingeniería Forense
                             </h3>
                             
                             <!-- Descripción -->
-                            <p class="text-slate-500 leading-relaxed text-lg font-light group-hover/card:text-slate-600 transition-colors mb-6">Realizamos el control de calidad, supervisión de la ejecución y mediación técnica en disputas sobre certificaciones y pagos.</p>
+                            <p class="text-slate-500 leading-relaxed text-lg font-light group-hover/card:text-slate-600 transition-colors mb-6">Análisis especializado de colapsos estructurales, fatiga de materiales y fallos críticos de cimentación con rigor científico.</p>
                             
                             <span class="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold group mt-auto">
                                 Saber más
@@ -9431,9 +9316,9 @@ href="https://perito.barcelona/">
         <div class="max-w-4xl mb-20 text-center mx-auto">
             <span class="badge badge-primary mb-6">Casos de Éxito</span>
             <h2 class="section-title mb-6">
-                Casos Resueltos <span class="block text-cyan-400 font-normal mt-2">que Avalan Nuestra Experiencia</span>
+                Clientes Satisfechos <span class="block text-cyan-400 font-normal mt-2">Avalan Nuestra Experiencia</span>
             </h2>
-            <p class="section-subtitle">Demostramos nuestro rigor técnico en reclamaciones de alta complejidad, ofreciendo bases probatorias inexpugnables para grandes cuentas y despachos jurídicos.</p>
+            <p class="section-subtitle">Descubra cómo hemos ayudado a propietarios, comunidades y empresas a resolver sus casos técnicos con éxito.</p>
             
             
             
@@ -9464,19 +9349,19 @@ href="https://perito.barcelona/">
                         
                     </div>
                     <div>
-                        <h3 class="font-light uppercase text-lg text-slate-900 group-hover:text-white transition-colors">Operador Logístico Internacional</h3>
-                        <p class="text-slate-500 group-hover:text-slate-400 transition-colors text-sm font-medium">Dirección de Operaciones</p>
+                        <h3 class="font-light uppercase text-lg text-slate-900 group-hover:text-white transition-colors">Comunidad de Propietarios Les Corts</h3>
+                        <p class="text-slate-500 group-hover:text-slate-400 transition-colors text-sm font-medium">Presidente de la Comunidad</p>
                     </div>
                 </div>
                 
                 <blockquote class="text-slate-600 group-hover:text-slate-300 transition-colors leading-relaxed text-lg mb-8 relative">
                     <span class="absolute -top-4 -left-2 text-4xl text-cyan-500/20 group-hover:text-cyan-500/40 font-serif">"</span>
-                    La auditoría geotécnica fue irrefutable. Demostró defectos de compactación en el subsuelo, permitiéndonos reclamar más de 115.000 € a la constructora.
+                    El informe pericial identificó el origen de las filtraciones en la cubierta y facilitó la asunción de las reparaciones necesarias por la parte responsable.
                 </blockquote>
                 
                 <div class="flex items-center gap-2 group-hover:opacity-80 transition-opacity">
                     <div class="flex text-cyan-400 text-sm">★★★★★</div>
-                    <span class="text-slate-400 text-xs font-semibold uppercase tracking-wider">Destacado</span>
+                    <span class="text-slate-400 text-xs font-semibold uppercase tracking-wider">hace 2 meses</span>
                 </div>
             </div>
             
@@ -9491,19 +9376,19 @@ href="https://perito.barcelona/">
                         
                     </div>
                     <div>
-                        <h3 class="font-light uppercase text-lg text-slate-900 group-hover:text-white transition-colors">Hotel Urbano de Alta Gama</h3>
-                        <p class="text-slate-500 group-hover:text-slate-400 transition-colors text-sm font-medium">Dirección Financiera y Propiedad</p>
+                        <h3 class="font-light uppercase text-lg text-slate-900 group-hover:text-white transition-colors">CONSTRUCCIONES TÉCNICAS BCN, S.L.</h3>
+                        <p class="text-slate-500 group-hover:text-slate-400 transition-colors text-sm font-medium">Director de Proyectos</p>
                     </div>
                 </div>
                 
                 <blockquote class="text-slate-600 group-hover:text-slate-300 transition-colors leading-relaxed text-lg mb-8 relative">
                     <span class="absolute -top-4 -left-2 text-4xl text-cyan-500/20 group-hover:text-cyan-500/40 font-serif">"</span>
-                    Su auditoría forense desmontó la contrapericial, justificando cada desviación y validando las certificaciones ante una disputa económica crítica.
+                    La auditoría técnica preventiva permitió corregir deficiencias antes de la entrega de 24 viviendas, evitando reclamaciones y sobrecostes.
                 </blockquote>
                 
                 <div class="flex items-center gap-2 group-hover:opacity-80 transition-opacity">
                     <div class="flex text-cyan-400 text-sm">★★★★★</div>
-                    <span class="text-slate-400 text-xs font-semibold uppercase tracking-wider">Destacado</span>
+                    <span class="text-slate-400 text-xs font-semibold uppercase tracking-wider">hace 1 mes</span>
                 </div>
             </div>
             
@@ -9512,25 +9397,25 @@ href="https://perito.barcelona/">
                     <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center flex-shrink-0 shadow-sm group-hover:bg-slate-800 transition-colors">
                         
                              <div class="text-slate-400 group-hover:text-cyan-400 transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 
                              </div>
                         
                     </div>
                     <div>
-                        <h3 class="font-light uppercase text-lg text-slate-900 group-hover:text-white transition-colors">Constructora Promotora Nacional</h3>
-                        <p class="text-slate-500 group-hover:text-slate-400 transition-colors text-sm font-medium">Departamento Postventa</p>
+                        <h3 class="font-light uppercase text-lg text-slate-900 group-hover:text-white transition-colors">Ana S. García</h3>
+                        <p class="text-slate-500 group-hover:text-slate-400 transition-colors text-sm font-medium">Propietaria Afectada</p>
                     </div>
                 </div>
                 
                 <blockquote class="text-slate-600 group-hover:text-slate-300 transition-colors leading-relaxed text-lg mb-8 relative">
                     <span class="absolute -top-4 -left-2 text-4xl text-cyan-500/20 group-hover:text-cyan-500/40 font-serif">"</span>
-                    El dictamen técnico identificó la causa raíz de 39 reclamaciones sistémicas, derivando la responsabilidad a la subcontrata y ahorrándonos altos costes.
+                    El peritaje acreditó vicios ocultos en la vivienda, siendo la base para la reclamación judicial que nos permitió reparar los daños.
                 </blockquote>
                 
                 <div class="flex items-center gap-2 group-hover:opacity-80 transition-opacity">
                     <div class="flex text-cyan-400 text-sm">★★★★★</div>
-                    <span class="text-slate-400 text-xs font-semibold uppercase tracking-wider">Destacado</span>
+                    <span class="text-slate-400 text-xs font-semibold uppercase tracking-wider">hace 3 meses</span>
                 </div>
             </div>
             
@@ -9878,9 +9763,9 @@ href="https://perito.barcelona/">
                         </div>
                     </button>
                     
-                    <button type="button" data-value="auditorias_obra" class="area-interes-option w-full px-6 py-5 text-left bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 rounded-2xl transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-slate-900/10 shadow-sm hover:shadow-md">
+                    <button type="button" data-value="ingenieria_forense" class="area-interes-option w-full px-6 py-5 text-left bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 rounded-2xl transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-slate-900/10 shadow-sm hover:shadow-md">
                         <div class="flex items-center justify-between">
-                            <span class="text-lg font-medium text-slate-700 group-hover:text-slate-900 transition-colors">Auditorías de Obra (certificaciones, calidad)</span>
+                            <span class="text-lg font-medium text-slate-700 group-hover:text-slate-900 transition-colors">Ingeniería Forense de Construcción (certificaciones, calidad)</span>
                             <span class="w-6 h-6 rounded-full border border-slate-300 group-hover:border-slate-900 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                                 <svg class="w-3 h-3 text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
                             </span>
@@ -10356,7 +10241,7 @@ href="https://perito.barcelona/">
                 </div>
                 
                 <p class="text-slate-500 text-sm leading-relaxed mb-8 max-w-sm" itemprop="description">
-                    Peritos judiciales e ingenieros colegiados en Barcelona. Especializados en informes periciales técnicos, auditorías de obra y asesoramiento estructural para edificación y obra civil.
+                    Peritos judiciales e ingenieros colegiados en Barcelona. Especializados en informes periciales técnicos, Ingeniería Forense de Construcción y asesoramiento estructural para edificación y obra civil.
                 </p>
                 
                 <!-- Social links -->
@@ -10400,9 +10285,9 @@ href="https://perito.barcelona/">
                     </li>
                     
                     <li>
-                        <a href="/auditorias-obra/" class="text-slate-500 hover:text-cyan-600 transition-colors text-sm flex items-center group">
+                        <a href="/ingenieria-forense-construccion/" class="text-slate-500 hover:text-cyan-600 transition-colors text-sm flex items-center group">
                             <span class="w-1.5 h-1.5 rounded-full bg-slate-200 mr-2 group-hover:bg-cyan-500 transition-colors"></span>
-                            Auditorías de Obra
+                            Ingeniería Forense de Construcción
                         </a>
                     </li>
                     

@@ -4,6 +4,8 @@ title: "Informativa sulla Privacy | Perito.Barcellona"
 description: "Consulta l'informativa sulla privacy di Perito.Barcellona. Informazioni sul trattamento dei tuoi dati personali, i tuoi diritti e i nostri obblighi secondo il GDPR."
 permalink: "/it/privacy/"
 lang: 'it'
+eleventyNavigation:
+  notshow: true
 translations:
   - lang: "es"
     permalink: "/privacidad/"

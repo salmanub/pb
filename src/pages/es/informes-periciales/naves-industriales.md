@@ -15,11 +15,7 @@ translations:
   - lang: 'en'
     permalink: '/en/expert-witness-reports/industrial-buildings/' # Asegúrate que esta URL sea correcta
 eleventyNavigation:
-  key: "Naves Industriales"
-  parent: "Informes Periciales" # Concepto padre, aunque no esté en el menú principal directo
-  title: "Naves Industriales"
-  notshow: true # No mostrar directamente en el menú principal
-  order: 5 # Orden lógico si se mostrara en un submenú
+  notshow: true
 serviceTitle: 'peritajes para naves industriales'
 
 # Parent Service (conceptual, para breadcrumb y estructura lógica)
@@ -57,10 +53,6 @@ relatedProblems:
   - title: 'Patologías Estructurales'
     description: 'La seguridad estructural es crítica en naves con grandes luces.'
     url: '/servicios/informes-estructurales/' # Asegúrate que esta URL sea correcta
-  - title: 'Auditorías de Obra'
-    description: 'Verificamos la correcta ejecución durante la construcción o reforma.'
-    url: '/servicios/auditorias-obra-reclamaciones/' # Asegúrate que esta URL sea correcta
-
 # Client Testimonials (Based on Sant Joan Despí case, anonymized)
 testimonials:
   - quote: 'Tras la marcha de un inquilino, la nave presentaba daños severos. El informe pericial fue clave para documentar todo y cuantificar una reclamación de más de 330.000€.'

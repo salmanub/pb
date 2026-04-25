@@ -1,4 +1,6 @@
 ---
+
+
 layout: layouts/service-child.njk
 title: "Pèrit d'Humitats i Filtracions a Barcelona | Informe de Causes"
 subtitle: "Diagnòstic tècnic de l'origen d'humitats per filtració, capil·laritat o condensació"
@@ -11,11 +13,10 @@ translations:
   - lang: "en"
     permalink: "/en/expert-witness-reports/damp-leaks/"
 eleventyNavigation:
-  key: "Humitats i Filtracions"
-  parent: "Informes Pericials"
+  key: "Humedades y Filtraciones"
+  parent: "Especialidades Forenses"
   title: "Humitats i Filtracions"
-  notshow: true
-  order: 2
+  order: 4
 serviceTitle: "humitats i filtracions"
 
 parentService:
@@ -67,7 +68,11 @@ intro: |
   <p>Les taques d'humitat, la floridura o les goteres són problemes que afecten greument el confort, la salubritat i el valor de la seva propietat. Aplicar solucions superficials sense un diagnòstic correcte és un error comú que només cronifica el problema.</p>
   
   <p>Com a part dels nostres <a href="/ca/informes-pericials/">serveis d'informes pericials</a>, ens especialitzem en la detecció de l'origen exacte de qualsevol tipus d'humitat, elaborant un dictamen tècnic que li servirà com a full de ruta per a la seva erradicació definitiva.</p>
----
+---## Enfocament Físic i Termodinàmic
+
+Analitzem les humitats des de la termodinàmica. Per execució, contacteu [nostra divisió](https://humedades.barcelona).
+
+
 
 ## Cansat de Lluitar contra les Humitats?
 

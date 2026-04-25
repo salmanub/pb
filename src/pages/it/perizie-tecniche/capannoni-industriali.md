@@ -19,11 +19,7 @@ translations:
   - lang: 'fr'
     permalink: '/fr/rapports-expertise/entrepots-industriels/'
 eleventyNavigation:
-  key: "Capannoni Industriali"
-  parent: "Perizie Tecniche"
-  title: "Capannoni Industriali"
   notshow: true
-  order: 5
 serviceTitle: 'perizie per capannoni industriali'
 
 # Parent Service

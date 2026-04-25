@@ -15,11 +15,7 @@ translations:
   - lang: 'en'
     permalink: '/en/expert-witness-reports/counter-report/'
 eleventyNavigation:
-  key: "Contrainforme Pericial"
-  parent: "Informes Pericials"
-  title: "Contrainforme Pericial"
   notshow: true
-  order: 6
 serviceTitle: 'contrainforme pericial'
 
 # Parent Service

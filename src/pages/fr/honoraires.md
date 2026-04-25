@@ -1,4 +1,6 @@
----
+﻿---
+
+
 layout: layouts/honorarios.njk
 permalink: /fr/honoraires-expert-judiciaire/
 lang: fr
@@ -12,10 +14,9 @@ translations:
   - lang: it
     permalink: /it/onorari-perito-giudiziario/
 eleventyNavigation:
-  key: "Honoraires"
+  key: "Honorarios"
   title: "Honoraires"
-  notshow: false
-  order: 4
+  order: 3
 title: "Combien coûte un Expert Judiciaire à Barcelone ? | Honoraires et Tarifs"
 description: "Découvrez comment sont calculés les honoraires d'un ingénieur expert judiciaire à Barcelone. Facteurs, essais géotechniques et valeur de l'ingénierie forensique."
 hero:
@@ -52,4 +53,8 @@ faqs:
     answer: "Afin d'offrir une transparence maximale, nos devis sont divisés en deux parties indépendantes : 1) L'étude et la rédaction du rapport d'expertise, et 2) Les honoraires pour l'assistance et la ratification au tribunal. Ainsi, si vous parvenez à un accord à l'amiable avant l'audience, vous n'aurez pas à payer la part correspondante au procès."
   - question: "Dois-je payer à l'avance ?"
     answer: "Nous demandons une provision sur honoraires (généralement 50 %) au moment de l'acceptation de la mission pour couvrir les frais de déplacement, l'ouverture du dossier et le début du travail sur le terrain. Le montant restant sera payé à la remise de la version finale du rapport, juste avant son visa officiel par l'Ordre Professionnel."
----
+---## Sinistres Majeurs de Construction et Effondrements
+
+Pour les sinistres majeurs, notre valeur est justifiée par la mitigation des risques et le calcul FEA.
+
+

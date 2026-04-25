@@ -24,11 +24,7 @@ translations:
     description: "Redigiamo rapporti peritali tecnici, di parte e giudiziari a Barcellona. Le nostre relazioni su patologie, vizi occulti e controversie edilizie sono la prova chiave per la tua richiesta."
 
 eleventyNavigation:
-  key: "Expert Reports"
-  title: "Technical Opinions"
-  notshow: false
-  order: 3
-
+  notshow: true
 hero:
   title: "The Technical Expert Report"
   strong: "The Defintive Proof"

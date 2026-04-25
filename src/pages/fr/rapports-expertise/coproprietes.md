@@ -19,11 +19,7 @@ translations:
   - lang: 'it'
     permalink: '/it/perizie-tecniche/condomini/'
 eleventyNavigation:
-  key: "Copropriétés"
-  parent: "Rapports d'Expertise"
-  title: "Copropriétés"
   notshow: true
-  order: 4
 serviceTitle: 'expertises pour copropriétés'
 
 # Parent Service

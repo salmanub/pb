@@ -4,6 +4,8 @@ title: "Política de Privacitat | Perito.Barcelona"
 description: "Consulti la política de privacitat de Perito.Barcelona. Informació sobre el tractament de les seves dades personals, els seus drets i les nostres obligacions segons el RGPD."
 permalink: "/ca/privacitat/"
 lang: 'ca'
+eleventyNavigation:
+  notshow: true
 seo: noindex
 translations:
   - lang: es

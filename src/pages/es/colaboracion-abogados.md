@@ -15,10 +15,7 @@ translations:
   - lang: "it"
     permalink: "/it/collaborazione-avvocati/"
 eleventyNavigation:
-  key: "Colaboración con Abogados"
-  title: "Área para Abogados"
-  notshow: true # Esta página se accede desde el botón de la navbar, no necesita estar en el menú principal.
-  order: 99
+  notshow: true
 heroTitle: "PERITO JUDICIAL"
 heroHighlight: "PARA ABOGADOS"
 serviceTitle: "colaboración con despachos de abogados"
@@ -56,10 +53,6 @@ relatedProblems:
   - title: "Informes Periciales"
     description: "Explore en detalle los tipos de informes que elaboramos para sus casos."
     url: "/informes-periciales/"
-  - title: "Auditorías de Obra"
-    description: "Un servicio clave para disputas de certificaciones y liquidaciones de obra."
-    url: "/auditorias-obra/"
-
 # Client Testimonials
 testimonials:
   - quote: "Su informe pericial fue la pieza central de nuestra demanda por vicios ocultos. La claridad expositiva y la contundencia técnica fueron determinantes para obtener una sentencia favorable."

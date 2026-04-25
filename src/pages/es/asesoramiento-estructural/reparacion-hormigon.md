@@ -11,11 +11,7 @@ translations:
   - lang: 'en'
     permalink: '/en/structural-consulting/concrete-repair/'
 eleventyNavigation:
-  key: "Reparación de Hormigón"
-  parent: "Asesoramiento Estructural"
-  title: "Reparación de Hormigón"
   notshow: true
-  order: 3
 serviceTitle: 'reparación de hormigón'
 
 # Parent Service (for breadcrumb and linking back to pillar)

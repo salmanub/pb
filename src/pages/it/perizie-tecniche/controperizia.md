@@ -19,11 +19,7 @@ translations:
   - lang: 'fr'
     permalink: '/fr/rapports-expertise/contre-rapport/'
 eleventyNavigation:
-  key: "Controperizia"
-  parent: "Perizie Tecniche"
-  title: "Controperizia"
   notshow: true
-  order: 6
 serviceTitle: 'controperizia tecnica'
 
 # Parent Service

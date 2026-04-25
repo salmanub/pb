@@ -15,11 +15,7 @@ translations:
   - lang: 'en'
     permalink: '/en/expert-witness-reports/industrial-warehouses/'
 eleventyNavigation:
-  key: "Naus Industrials"
-  parent: "Informes Pericials"
-  title: "Naus Industrials"
   notshow: true
-  order: 5
 serviceTitle: 'peritatges per a naus industrials'
 
 # Parent Service
@@ -57,10 +53,6 @@ relatedProblems:
   - title: "Patologies Estructurals"
     description: "La seguretat estructural és crítica en naus amb grans llums."
     url: '/ca/informes-pericials/patologies-estructurals/'
-  - title: "Auditories d'Obra"
-    description: "Verifiquem la correcta execució durant la construcció o reforma."
-    url: '/ca/serveis/auditories-obra-reclamacions/'
-
 # Client Testimonials
 testimonials:
   - quote: "Després de la marxa d'un llogater, la nau presentava danys severs. L'informe pericial va ser clau per documentar-ho tot i quantificar una reclamació de més de 330.000€."

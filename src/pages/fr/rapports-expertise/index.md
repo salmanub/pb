@@ -25,11 +25,7 @@ translations:
     description: "Redigiamo perizie tecniche, di parte e giudiziarie a Barcellona. Le nostre relazioni su patologie, vizi occulti e controversie edilizie sono la prova chiave per la tua richiesta."
 
 eleventyNavigation:
-  key: "Rapports d'Expertise"
-  title: "Avis Techniques"
-  notshow: false
-  order: 3 # El servicio más importante, va primero en el menú.
-
+  notshow: true
 # Hero Section
 hero:
   title: "Le Rapport d'Expertise Technique"

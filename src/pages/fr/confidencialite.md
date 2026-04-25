@@ -4,6 +4,8 @@ title: "Politique de Confidentialité | Expert.Barcelone"
 description: "Consultez la politique de confidentialité d'Expert.Barcelone. Informations sur le traitement de vos données personnelles, vos droits et nos obligations conformément au RGPD."
 permalink: "/fr/confidentialite/"
 lang: 'fr'
+eleventyNavigation:
+  notshow: true
 translations:
   - lang: "es"
     permalink: "/privacidad/"

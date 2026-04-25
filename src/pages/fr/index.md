@@ -1,7 +1,7 @@
 ---
 layout: "layouts/index.njk"
-title: "Experts Judiciaires Barcelone | Ingénierie Forensique et Conseil"
-description: "Cabinet d'Ingénierie Forensique à Barcelone. Experts en rapports d'expertise, pathologies du bâtiment et conseil technique juridique."
+title: "Expert Barcelone | Cabinet d'Experts Ingénieurs Agréés"
+description: "Nous sommes un cabinet d'experts ingénieurs agréés à Barcelone, spécialisé dans la rédaction de rapports d'expertise technique, les audits de chantier et le conseil en structure."
 permalink: "/fr/"
 lang: "fr"
 translations:
@@ -28,18 +28,18 @@ hero:
   subtitle: "Conseil en Ingénierie, Rapports d'Expertise et Audit de Construction"
   description: "Nous rédigeons des rapports techniques indépendants pour résoudre les litiges. De l'analyse des pathologies à la ratification au tribunal, en tant qu'<a href='/fr/expert-construction/'><strong>Experts en Construction</strong></a>, nous sommes votre partenaire technique de confiance."
   image:
-    path: "/assets/images/perito-construccion-obra-edificacion-640.avif"
+    path: "src/assets/images/peritaje-construccion-ingenieros-obra.avif"
     alt: "Ingénieur expert inspectant une structure en béton"
     badge: "Ingénieur Expert"
     caption: "Rapports techniques rigoureux et clairs"
   rotatingTexts:
-    default: "avec rigueur technique et solidité"
+    default: "avec rigueur technique"
     items:
-      - "avec rigueur technique et solidité"
-      - "pour des réclamations complexes d'ingénierie"
-      - "avec une fondation géotechnique avancée"
-      - "qui résolvent les litiges de certification"
-      - "à validité juridique inattaquable"
+      - "avec rigueur technique"
+      - "qui résolvent les litiges de construction"
+      - "à validité juridique garantie"
+      - "pour assurer la qualité de votre projet"
+      - "avec des diagnostics structurels précis"
   cta:
     primary: "Évaluer Votre Cas"
     primaryUrl: "/fr/contact/"
@@ -53,7 +53,7 @@ hero:
     - value: "97%"
       text: "Rapports Ratifiés"
       subtext: "En procédure judiciaire"
-  logosText: "Nos expertises sont sollicitées par des cabinets d'avocats, des promoteurs et des assureurs de premier plan."
+  logosText: "Nos rapports sont acceptés par les principaux tribunaux et compagnies d'assurance."
 
 # Servicios Destacados
 highlightedServices:
@@ -67,10 +67,10 @@ highlightedServices:
       url: "/fr/rapports-expertise/"
       icon: "scale"
       cta: "Voir plus"
-    - titulo: "Audits de Chantier"
-      descripcion: "Nous effectuons le contrôle qualité, la supervision de l'exécution et la médiation technique dans les litiges sur les certifications et paiements."
-      url: "/fr/audits-de-chantier/"
-      icon: "clipboard-list"
+    - titulo: "Ingénierie Légale de Construction"
+      descripcion: "Analyse spécialisée des effondrements structurels, de la fatigue des matériaux et des défaillances critiques des fondations avec rigueur scientifique."
+      url: "/fr/ingenierie-legale-construction/"
+      icon: "search-check"
       cta: "Voir plus"
     - titulo: "Conseil en Structure"
       descripcion: "Nous émettons un diagnostic expert des pathologies structurelles et offrons des conseils sur les meilleures solutions de renforcement."
@@ -78,7 +78,7 @@ highlightedServices:
       icon: "tool"
       cta: "Voir plus"
 
-# Sección "En qué podemos ayudarte"
+# Sección "En qué podemos ayudarte" (CORREGIDA)
 ayuda:
   encabezado:
     title: "Comment Pouvons-Nous"
@@ -96,9 +96,9 @@ ayuda:
       description: "Détection de l'origine, rapports techniques et solutions pour les problèmes d'humidité dans les bâtiments."
       url: "/fr/rapports-expertise/humidite-infiltrations/"
       icon: "droplet"
-    - title: "Litiges de Certification & Paiement"
-      description: "Audit technique pour les conflits découlant des certifications, des métrés et du respect des contrats."
-      url: "/fr/audits-de-chantier/litiges-certification-paiement/"
+    - title: "Effondrements et Défaillances Majeures"
+      description: "Investigation légale des ruptures, affaissements et défauts structurels majeurs à l'aide d'une modélisation avancée."
+      url: "/fr/ingenierie-legale-construction/"
       icon: "file-text"
     - title: "Vices Cachés (Achat-Vente / Post-chantier)"
       description: "Identification et documentation des défauts non apparents après la livraison ou l'achat d'un bien immobilier."
@@ -124,7 +124,7 @@ solucion:
     titulo: "La"
     highlight: "Solution Technique"
     subtitulo: "qu'il Vous Faut"
-    descripcion: "Chez [expert.barcelone](/fr/le-cabinet/), nous combinons l'expérience en génie civil avec la méthodologie de l'expertise pour fournir des rapports précis, impartiaux et techniquement fondés. Notre intervention fournit des arguments clairs, toujours fondés sur un cadre d'[honoraires transparents](/fr/honoraires-expert-judiciaire/), pour prendre des décisions, réclamer pour des malfaçons ou définir des solutions de construction sûres."
+    descripcion: "Chez expert.barcelone, nous combinons l'expérience en génie civil avec la méthodologie de l'expertise pour fournir des rapports précis, impartiaux et techniquement fondés. Notre intervention fournit des arguments clairs pour prendre des décisions, réclamer pour des malfaçons ou définir des solutions de construction sûres."
     caracteristicas:
       - icono: "search"
         titulo: "Nous Clarifions la Cause Racine"
@@ -176,34 +176,34 @@ proceso:
     texto: "Commencez - Évaluez votre cas"
     url: "/fr/contact/"
 
-# Sección Testimonios (CASOS DE ÉXITO DE ALTO VALOR B2B)
+# Sección Testimonios
 testimonios:
   tag: "Cas de Réussite"
-  titulo: "Cas Résolus"
-  highlight: "Témoignant de Notre Expérience"
-  descripcion: "Nous démontrons notre rigueur technique dans des réclamations de haute complexité, offrant des bases probatoires inattaquables pour les grands comptes et les cabinets d'avocats."
+  titulo: "Nos Clients Satisfaits"
+  highlight: "Témoignent de Notre Expérience"
+  descripcion: "Découvrez comment nous avons aidé des propriétaires, des syndics et des entreprises à résoudre leurs cas techniques avec succès."
   items:
-    - nombre: "Opérateur Logistique International"
-      rol: "Direction des Opérations"
+    - nombre: "Syndic de Copropriété Les Corts"
+      rol: "Président du Syndic"
       tipo: "empresa"
-      cita: "L'audit géotechnique a été irréfutable. Il a démontré des défauts de compactage dans le sous-sol, nous permettant de réclamer plus de 115 000 € à l'entreprise de construction."
-      fecha: "À la Une"
-      servicioRelacionado: "Expertise Géotechnique de Pavage"
-      tipoProyecto: "Génie Civil Logistique"
-    - nombre: "Hôtel Urbain Haut de Gamme"
-      rol: "Direction Financière et Propriété"
+      cita: "Le rapport d'expertise a identifié l'origine des infiltrations en toiture et a facilité la prise en charge des réparations nécessaires par le responsable."
+      fecha: "il y a 2 mois"
+      servicioRelacionado: "Rapport d'Expertise de Pathologies"
+      tipoProyecto: "Pathologie de Toiture"
+    - nombre: "CONSTRUCCIONES TÉCNICAS BCN, S.L."
+      rol: "Directeur de Projets"
       tipo: "empresa"
-      cita: "Leur audit médico-légal a démonté la contre-expertise, justifiant chaque écart et validant les certifications face à un litige économique critique."
-      fecha: "À la Une"
-      servicioRelacionado: "Audit des Certifications"
-      tipoProyecto: "Rénovation Hôtelière en Activité"
-    - nombre: "Promoteur Immobilier National"
-      rol: "Service Après-Vente"
-      tipo: "empresa"
-      cita: "Le rapport technique a identifié la cause profonde de 39 réclamations systémiques, transférant la responsabilité au sous-traitant et nous évitant des coûts élevés."
-      fecha: "À la Une"
-      servicioRelacionado: "Audit d'Exécution"
-      tipoProyecto: "Promotion de Logements Neufs"
+      cita: "L'audit technique préventif a permis de corriger les malfaçons avant la livraison de 24 logements, évitant ainsi des réclamations et des surcoûts."
+      fecha: "il y a 1 mois"
+      servicioRelacionado: "Audit Technique de Chantier"
+      tipoProyecto: "Contrôle Qualité"
+    - nombre: "Ana S. García"
+      rol: "Propriétaire Affectée"
+      tipo: "persona"
+      cita: "L'expertise a prouvé l'existence de vices cachés dans le logement, servant de base à la réclamation judiciaire qui nous a permis de réparer les dommages."
+      fecha: "il y a 3 mois"
+      servicioRelacionado: "Expertise Judiciaire"
+      tipoProyecto: "Vices Cachés"
 
 # Sección CTA Contacto
 contactCTA:

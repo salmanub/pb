@@ -1,4 +1,6 @@
----
+﻿---
+
+
 layout: layouts/honorarios.njk
 permalink: /it/onorari-perito-giudiziario/
 lang: it
@@ -12,10 +14,9 @@ translations:
   - lang: fr
     permalink: /fr/honoraires-expert-judiciaire/
 eleventyNavigation:
-  key: "Onorari"
+  key: "Honorarios"
   title: "Onorari"
-  notshow: false
-  order: 4
+  order: 3
 title: "Quanto costa un Perito Giudiziario a Barcellona? | Onorari e Tariffe"
 description: "Scopri come vengono calcolati gli onorari di un ingegnere perito giudiziario a Barcellona. Fattori, prove geotecniche e il valore dell'ingegneria forense."
 hero:
@@ -52,4 +53,8 @@ faqs:
     answer: "Per offrire la massima trasparenza, i nostri preventivi sono divisi in due voci indipendenti: 1) Lo studio e la stesura della perizia tecnica, e 2) Gli onorari per l'assistenza e la ratifica in sede giudiziaria. In questo modo, se raggiungi un accordo stragiudiziale prima dell'udienza, non dovrai pagare la parte corrispondente al processo."
   - question: "Devo pagare in anticipo?"
     answer: "Richiediamo un fondo spese (solitamente del 50%) al momento dell'accettazione dell'incarico per coprire i costi di trasferta, l'apertura della pratica e l'inizio del lavoro sul campo. L'importo rimanente sarà versato alla consegna della bozza finale della relazione, prima del suo visto ufficiale da parte dell'Ordine Professionale."
----
+---## Grandi Sinistri di Costruzione e Crolli
+
+Per grandi sinistri, giustifichiamo il nostro valore attraverso la mitigazione di rischi milionari e ricalcolo FEA.
+
+

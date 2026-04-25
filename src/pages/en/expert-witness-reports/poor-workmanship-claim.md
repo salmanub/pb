@@ -15,11 +15,7 @@ translations:
   - lang: "ca"
     permalink: "/ca/informes-pericials/reclamacio-mala-execucio/"
 eleventyNavigation:
-  key: "Poor Workmanship Claim"
-  parent: "Expert Witness Reports"
-  title: "Poor Workmanship"
   notshow: true
-  order: 4
 serviceTitle: 'claims for poor workmanship'
 
 # Parent Service (for breadcrumb and linking back to pillar)
@@ -54,9 +50,6 @@ serviceBenefits:
 
 # Related Problems (optional)
 relatedProblems:
-  - title: 'Construction Audits'
-    description: 'An audit during the execution phase can prevent these problems.'
-    url: '/en/construction-audits/'
   - title: 'Structural Pathologies'
     description: 'Poor workmanship can lead to serious structural problems.'
     url: '/en/expert-witness-reports/structural-pathologies/'

@@ -11,11 +11,7 @@ translations:
   - lang: 'en'
     permalink: '/en/expert-witness-reports/owners-association/'
 eleventyNavigation:
-  key: "Comunitats de Propietaris"
-  parent: "Informes Pericials"
-  title: "Comunitats de Propietaris"
   notshow: true
-  order: 4
 serviceTitle: 'peritatges per a comunitats de propietaris'
 
 # Parent Service (for breadcrumb and linking back to pillar)

@@ -14,16 +14,12 @@ translations:
   - lang: it
     permalink: /it/contatti/
 eleventyNavigation:
-  key: "Contact"
+  key: "Contacto"
   title: "Contact"
-  notshow: false
   order: 5
-  icon: <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-
-# Contact Page Content
 contact:
     title: "LET'S DISCUSS<strong class='block text-cyan-400 mt-4'>YOUR CASE</strong>"
-    intro: "If you require a technical analysis for your case, whether for an expert report, a construction audit, or structural consulting, we are here to help. Tell us about your situation, and we will offer an initial, no-commitment assessment."
+    intro: "If you require a technical analysis for your case, whether for an expert report, a forensic engineering, or structural consulting, we are here to help. Tell us about your situation, and we will offer an initial, no-commitment assessment."
     
     # Direct contact information
     direct_contact:
@@ -60,7 +56,6 @@ contact:
                 - "Select a service..."
                 - "Expert Witness Reports (cracks, hidden defects, etc.)"
                 - "Structural Consulting (repair, reinforcement)"
-                - "Construction Audits (certifications, quality)"
                 - "Other inquiry"
               
             - label: "Message"

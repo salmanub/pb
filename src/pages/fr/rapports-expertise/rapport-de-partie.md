@@ -19,11 +19,7 @@ translations:
   - lang: "it"
     permalink: "/it/perizie-tecniche/relazione-di-parte/"
 eleventyNavigation:
-  key: "Rapport de Partie"
-  parent: "Rapports d'Expertise"
-  title: "Expertise de Partie"
   notshow: true
-  order: 1
 serviceTitle: "Expertise de Partie"
 
 # Parent Service

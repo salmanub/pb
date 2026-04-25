@@ -15,10 +15,7 @@ translations:
   - lang: "it"
     permalink: "/it/collaborazione-avvocati/"
 eleventyNavigation:
-  key: "Col·laboració amb Advocats"
-  title: "Àrea per a Advocats"
-  notshow: true # Aquesta pàgina s'accedeix des del botó de la navbar, no necessita estar al menú principal.
-  order: 99
+  notshow: true
 heroTitle: "PÈRIT JUDICIAL"
 heroHighlight: "PER A ADVOCATS"
 serviceTitle: "col·laboració amb despatxos d'advocats"
@@ -56,10 +53,6 @@ relatedProblems:
   - title: "Informes Pericials"
     description: "Explori en detall els tipus d'informes que elaborem per als seus casos."
     url: "/ca/informes-pericials/"
-  - title: "Auditories d'Obra"
-    description: "Un servei clau per a disputes de certificacions i liquidacions d'obra."
-    url: "/ca/auditories-d-obra/"
-
 # Client Testimonials
 testimonials:
   - quote: "El seu informe pericial va ser la peça central de la nostra demanda per vicis ocults. La claredat expositiva i la contundència tècnica van ser determinants per obtenir una sentència favorable."

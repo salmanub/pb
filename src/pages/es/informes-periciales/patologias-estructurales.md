@@ -10,11 +10,7 @@ description: "¿Ha detectado grietas en paredes, vigas o forjados? Realizamos un
 permalink: "/informes-periciales/patologias-estructurales/"
 lang: 'es'
 eleventyNavigation:
-  key: "Patologías Estructurales"
-  parent: "Informes Periciales"
-  title: "Patologías Estructurales"
   notshow: true
-  order: 1
 serviceTitle: 'patologías estructurales'
 
 # Parent Service (for breadcrumb and linking back to pillar)

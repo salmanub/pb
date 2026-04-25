@@ -1,4 +1,6 @@
----
+﻿---
+
+
 layout: layouts/honorarios.njk
 permalink: /ca/honoraris-perit-judicial/
 lang: ca
@@ -12,10 +14,9 @@ translations:
   - lang: it
     permalink: /it/onorari-perito-giudiziario/
 eleventyNavigation:
-  key: "Honoraris"
+  key: "Honorarios"
   title: "Honoraris"
-  notshow: false
-  order: 4
+  order: 3
 title: "Quant costa un Pèrit Judicial a Barcelona? | Honoraris i Tarifes"
 description: "Descobreixi com es calculen els honoraris d'un pèrit judicial enginyer a Barcelona. Factors, assajos geotècnics i el valor d'una enginyeria forense."
 hero:
@@ -52,4 +53,8 @@ faqs:
     answer: "Per oferir la màxima transparència, els nostres pressupostos es divideixen en dues partides independents: 1) L'estudi i redacció de l'informe pericial, i 2) Els honoraris per l'assistència i ratificació en seu judicial. D'aquesta manera, si aconsegueixen un acord extrajudicial previ a la vista, vostè no haurà d'abonar la part corresponent al judici."
   - question: "He de pagar per avançat?"
     answer: "Sol·licitem una provisió de fons (habitualment del 50%) en el moment d'acceptar l'encàrrec per cobrir els costos de desplaçament, obertura de l'expedient i l'inici del treball de camp. L'import restant s'abonarà a l'entrega de l'esborrany final de l'informe, just abans del seu visat oficial pel Col·legi Professional."
----
+---## Grans Sinistres de Construcció i Col·lapses
+
+Per a grans sinistres, justifiquem el valor mitjançant mitigació de riscos i recàlcul FEA.
+
+

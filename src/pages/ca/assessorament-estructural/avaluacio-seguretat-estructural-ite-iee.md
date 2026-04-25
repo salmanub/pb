@@ -11,11 +11,7 @@ translations:
   - lang: 'en'
     permalink: '/en/structural-consulting/structural-safety-assessment-building-inspection/'
 eleventyNavigation:
-  key: "Seguretat Estructural (ITE/IEE)"
-  parent: "Assessorament Estructural"
-  title: "Seguretat Estructural (ITE/IEE)"
   notshow: true
-  order: 4
 serviceTitle: 'avaluació de seguretat estructural post-ite/iee'
 
 # Parent Service (for breadcrumb and linking back to pillar)

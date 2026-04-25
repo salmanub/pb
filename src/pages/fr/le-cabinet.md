@@ -1,4 +1,6 @@
 ---
+
+
 layout: layouts/despacho.njk
 permalink: /fr/le-cabinet/
 lang: fr
@@ -12,10 +14,9 @@ translations:
   - lang: it
     permalink: /it/lo-studio/
 eleventyNavigation:
-  key: "Le Cabinet"
+  key: "El Despacho"
   title: "Le Cabinet"
-  notshow: false
-  order: 2
+  order: 1
 title: "Le Cabinet | Ingénieurs Experts Judiciaires à Barcelone"
 description: "Découvrez l'équipe technique et de direction de Perito Barcelona. Ingénieurs civils et géologues agréés spécialisés en ingénierie forensique et litiges B2B."
 intro:
@@ -63,4 +64,7 @@ cta:
   description: "Exposez-nous votre cas. Nous réaliserons une première évaluation technique et de viabilité de votre dossier sans engagement."
   text: "Contacter le Cabinet"
   url: "/fr/contact/"
----
+---## Conseil en Validation Technique Indépendante
+
+Nous opérons en tant que validateurs techniques indépendants, sans biais commercial envers les marques.
+

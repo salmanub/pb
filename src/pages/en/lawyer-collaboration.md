@@ -15,10 +15,7 @@ translations:
   - lang: "it"
     permalink: "/it/collaborazione-avvocati/"
 eleventyNavigation:
-  key: "Lawyer Collaboration"
-  title: "Lawyers Area"
-  notshow: true # This page is accessed from the navbar button, it doesn't need to be in the main menu.
-  order: 99
+  notshow: true
 heroTitle: "EXPERT WITNESS"
 heroHighlight: "FOR LAWYERS"
 serviceTitle: "collaboration with law firms"
@@ -56,10 +53,6 @@ relatedProblems:
   - title: "Expert Reports"
     description: "Explore in detail the types of reports we prepare for your cases."
     url: "/en/expert-witness-reports/"
-  - title: "Construction Audits"
-    description: "A key service for certification and construction payment disputes."
-    url: "/en/construction-audits/"
-
 # Client Testimonials
 testimonials:
   - quote: "Their expert report was the centerpiece of our hidden defects claim. The clarity of presentation and technical forcefulness were decisive in obtaining a favorable judgment."

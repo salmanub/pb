@@ -11,11 +11,7 @@ translations:
   - lang: 'ca'
     permalink: '/ca/assessorament-estructural/reparacio-formigo/'
 eleventyNavigation:
-  key: "Concrete Repair"
-  parent: "Structural Consulting"
-  title: "Concrete Repair"
   notshow: true
-  order: 3
 serviceTitle: 'concrete repair'
 
 # Parent Service (for breadcrumb and linking back to pillar)

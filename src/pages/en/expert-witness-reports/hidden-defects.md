@@ -15,10 +15,9 @@ translations:
   - lang: "ca"
     permalink: "/ca/informes-pericials/vicis-ocults/"
 eleventyNavigation:
-  key: "Hidden Defects"
-  parent: "Expert Reports"
-  title: "Hidden Defects"
-  notshow: true
+  key: "Vicios Ocultos en Edificación"
+  parent: "Especialidades Forenses"
+  title: "Hidden Defects in Buildings"
   order: 3
 serviceTitle: "hidden defects"
 

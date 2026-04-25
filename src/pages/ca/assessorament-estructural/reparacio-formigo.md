@@ -11,11 +11,7 @@ translations:
   - lang: "en"
     permalink: "/en/structural-consulting/concrete-repair/"
 eleventyNavigation:
-  key: "Reparació de Formigó"
-  parent: "Assessorament Estructural"
-  title: "Reparació de Formigó"
   notshow: true
-  order: 3
 serviceTitle: "reparació de formigó"
 
 # Parent Service (for breadcrumb and linking back to pillar)

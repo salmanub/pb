@@ -14,16 +14,13 @@ translations:
   - lang: "fr"
     permalink: "/fr/contact/"
 eleventyNavigation:
-  key: "Contatti"
+  key: "Contacto"
   title: "Contatti"
-  notshow: false
   order: 5
-  icon: <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-
 # Contact Page Content
 contact:
     title: "PARLIAMO DEL<strong class='block text-cyan-400 mt-4'>TUO CASO</strong>"
-    intro: "Se hai bisogno di un'analisi tecnica per il tuo caso, che si tratti di una perizia, un audit di cantiere o una consulenza strutturale, siamo qui per aiutarti. Spiegaci la tua situazione e ti offriremo una prima valutazione senza impegno."
+    intro: "Se hai bisogno di un'analisi tecnica per il tuo caso, che si tratti di una perizia, un ingegneria forense o una consulenza strutturale, siamo qui per aiutarti. Spiegaci la tua situazione e ti offriremo una prima valutazione senza impegno."
     
     # Información de contacto directo
     direct_contact:
@@ -61,7 +58,6 @@ contact:
                 - "Seleziona un servizio..."
                 - "Perizie Tecniche (crepe, vizi occulti, ecc.)"
                 - "Consulenza Strutturale (riparazione, rinforzo)"
-                - "Audit di Cantiere (certificazioni, qualità)"
                 - "Altra richiesta"
               
             - label: "Messaggio"

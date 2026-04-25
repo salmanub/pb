@@ -15,10 +15,7 @@ translations:
   - lang: "it"
     permalink: "/it/collaborazione-avvocati/"
 eleventyNavigation:
-  key: "Collaboration Avocats"
-  title: "Espace Avocats"
-  notshow: true # Cette page est accessible depuis le bouton de la navbar, pas besoin d'être dans le menu principal.
-  order: 99
+  notshow: true
 heroTitle: "EXPERT JUDICIAIRE"
 heroHighlight: "POUR AVOCATS"
 serviceTitle: "collaboration avec les cabinets d'avocats"
@@ -56,10 +53,6 @@ relatedProblems:
   - title: "Rapports d'Expertise"
     description: "Explorez en détail les types de rapports que nous élaborons pour vos dossiers."
     url: "/fr/rapports-expertise/"
-  - title: "Audits de Chantier"
-    description: "Un service clé pour les litiges de certification et les liquidations de travaux."
-    url: "/fr/audits-de-chantier/"
-
 # Client Testimonials
 testimonials:
   - quote: "Leur rapport d'expertise a été la pièce maîtresse de notre demande pour vices cachés. La clarté de l'exposé et la force technique ont été déterminantes pour obtenir un jugement favorable."

@@ -15,11 +15,7 @@ translations:
   - lang: 'ca'
     permalink: '/ca/informes-pericials/naus-industrials/'
 eleventyNavigation:
-  key: "Industrial Warehouses"
-  parent: "Expert Reports"
-  title: "Industrial Warehouses"
   notshow: true
-  order: 5
 serviceTitle: 'industrial warehouse reports'
 
 # Parent Service
@@ -57,10 +53,6 @@ relatedProblems:
   - title: 'Structural Pathologies'
     description: 'Structural safety is critical in large-span warehouses.'
     url: '/en/expert-witness-reports/structural-pathologies/'
-  - title: 'Construction Audits'
-    description: 'We verify correct execution during construction or refurbishment.'
-    url: '/en/services/construction-audits/'
-
 # Testimonials
 testimonials:
   - quote: 'After a tenant left, the warehouse had severe damages. The expert report was key to documenting everything and quantifying a claim of over €330,000.'

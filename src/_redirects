@@ -18,8 +18,8 @@
 /perito-judicial/                         /informes-periciales/informe-de-parte/  301
 /informes-periciales/perito-judicial-barcelona/ /informes-periciales/informe-de-parte/ 301
 
-/auditoria-tecnica-obra/                  /auditorias-obra/                       301
-/auditoria/                               /auditorias-obra/                       301
+/auditoria-tecnica-obra/                  /ingenieria-forense-construccion/                       301
+/auditoria/                               /ingenieria-forense-construccion/                       301
 /estructuras/                             /asesoramiento-estructural/             301
 /peritaje-estructuras/                    /asesoramiento-estructural/             301
 /abogados/                                /colaboracion-abogados/                 301
@@ -49,13 +49,13 @@
 /ca/informes-pericials/dictamen-judicial/ /ca/informes-pericials/informe-de-part/ 301
 /ca/peritatge-judicial/                   /ca/informes-pericials/informe-de-part/ 301
 
-/ca/auditoria-tecnica-obra/               /ca/auditories-obra/                    301
+/ca/auditoria-tecnica-obra/               /ca/enginyeria-forense-construccio/                    301
 /ca/estructures/                          /ca/assessorament-estructural/          301
 /ca/advocats/                             /ca/collaboracio-advocats/              301
 /ca/peritatges-construccio/               /ca/informes-pericials/                 301
 /ca/informes-pericials/reclamacio-assegurances/ /ca/informes-pericials/           301
 /ca/assegurances/                         /ca/informes-pericials/                 301
-/ca/auditories-d-obra/                    /ca/auditories-obra/                    301
+/ca/auditories-d-obra/                    /ca/enginyeria-forense-construccio/                    301
 /ca/contacto/                             /ca/contacte/                           301
 /ca/vicis-ocults/                         /ca/informes-pericials/vicis-ocults/    301
 
@@ -67,7 +67,7 @@
 /en/legal-expert/                         /en/expert-witness-reports/party-appointed-report/ 301
 /en/expert-witness-reports/judicial-expert/ /en/expert-witness-reports/party-appointed-report/ 301
 
-/en/construction-technical-audit/         /en/construction-audits/                301
+/en/construction-technical-audit/         /en/civil-forensic-engineering/                301
 /en/structures/                           /en/structural-consulting/              301
 /en/lawyers/                              /en/lawyer-collaboration/               301
 /en/contacto/                             /en/contact/                            301
@@ -102,6 +102,26 @@
 /peritajes/*                              /informes-periciales/                   301
 /judicial/*                               /informes-periciales/informe-de-parte/  301
 /perito-judicial/*                        /informes-periciales/informe-de-parte/  301
-/auditoria/*                              /auditorias-obra/                       301
+/auditoria/*                              /ingenieria-forense-construccion/                       301
 /estructuras/*                            /asesoramiento-estructural/             301
 /abogados/*                               /colaboracion-abogados/                 301
+# REDIRECTS FASE 1
+/auditoria-de-obras/ /ingenieria-forense-construccion/ 301
+/ca/auditoria-d-obres/ /ca/enginyeria-forense-construccio/ 301
+/en/construction-technical-audit/ /en/civil-forensic-engineering/ 301
+/fr/audit-de-construction/ /fr/ingenierie-legale-construction/ 301
+/it/audit-di-costruzione/ /it/ingegneria-forense-costruzioni/ 301
+
+# REDIRECTS FASE 1
+/auditoria-de-obras/ /ingenieria-forense-construccion/ 301
+/ca/auditoria-d-obres/ /ca/enginyeria-forense-construccio/ 301
+/en/construction-technical-audit/ /en/civil-forensic-engineering/ 301
+/fr/audit-de-construction/ /fr/ingenierie-legale-construction/ 301
+/it/audit-di-costruzione/ /it/ingegneria-forense-costruzioni/ 301
+
+# REDIRECTS FASE 1
+/auditoria-de-obras/ /ingenieria-forense-construccion/ 301
+/ca/auditoria-d-obres/ /ca/enginyeria-forense-construccio/ 301
+/en/construction-technical-audit/ /en/civil-forensic-engineering/ 301
+/fr/audit-de-construction/ /fr/ingenierie-legale-construction/ 301
+/it/audit-di-costruzione/ /it/ingegneria-forense-costruzioni/ 301

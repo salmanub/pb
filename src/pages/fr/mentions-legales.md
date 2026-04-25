@@ -4,6 +4,8 @@ title: "Mentions Légales et Conditions d'Utilisation | Expert.Barcelone"
 description: "Consultez les mentions légales et les conditions d'utilisation d'Expert.Barcelone. Informations légales sur le titulaire du site, la propriété intellectuelle et les conditions d'utilisation."
 permalink: "/fr/mentions-legales/"
 lang: 'fr'
+eleventyNavigation:
+  notshow: true
 seo: noindex
 translations:
   - lang: es

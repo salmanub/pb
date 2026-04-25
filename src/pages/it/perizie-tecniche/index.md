@@ -25,11 +25,7 @@ translations:
     description: "Nous rédigeons des rapports d'expertise technique, de partie et judiciaires à Barcelone. Nos conclusions sur les pathologies, les vices cachés et les litiges de construction sont la preuve clé pour votre réclamation."
 
 eleventyNavigation:
-  key: "Perizie Tecniche"
-  title: "Pareri Tecnici"
-  notshow: false
-  order: 3 # El servicio più importante, va primero en el menú.
-
+  notshow: true
 # Hero Section
 hero:
   title: "La Perizia Tecnica"

@@ -1,4 +1,6 @@
 ---
+
+
 layout: 'layouts/service-child.njk'
 title: "Expert en Humidité et Infiltrations à Barcelone | Diagnostic Causes"
 hero:
@@ -19,11 +21,10 @@ translations:
   - lang: 'it'
     permalink: '/it/perizie-tecniche/umidita-infiltrazioni/'
 eleventyNavigation:
-  key: "Humidité et Infiltrations"
-  parent: "Rapports d'Expertise"
+  key: "Humedades y Filtraciones"
+  parent: "Especialidades Forenses"
   title: "Humidité et Infiltrations"
-  notshow: true
-  order: 2
+  order: 4
 serviceTitle: 'humidité et infiltrations'
 
 # Parent Service
@@ -83,7 +84,11 @@ intro: |
   <p>Les taches d'humidité, la moisissure ou les fuites sont des problèmes qui affectent gravement le confort, la salubrité et la valeur de votre propriété. Appliquer des solutions superficielles sans un diagnostic correct est une erreur commune.</p>
   
   <p>Dans le cadre de nos <a href="/fr/rapports-expertise/">services de rapports d'expertise</a>, nous nous spécialisons dans la détection de l'origine exacte de tout type d'humidité, en élaborant un avis technique qui vous servira de feuille de route pour son éradication définitive.</p>
----
+---## Approche Physique et Thermodynamique
+
+Nous analysons l'humidité via la thermodynamique. Pour l'exécution, contactez [notre division spécialisée](https://humedades.barcelona).
+
+
 
 ## Fatigué de Lutter contre l'Humidité ?
 

@@ -13,11 +13,7 @@ translations:
   - lang: "en"
     permalink: "/en/public-works/"
 eleventyNavigation:
-  key: "Public Works"
-  parent: "Expert Reports"
-  title: "Public Works Expert"
   notshow: true
-  order: 5
 serviceTitle: "public works expert reports"
 
 parentService:
@@ -51,10 +47,6 @@ relatedProblems:
   - title: "Payment Certificate Disputes"
     description: "Analysis of measurements and payments, a common conflict in public works."
     url: "/en/construction-audits/payment-certification-disputes/"
-  - title: "Construction Audits"
-    description: "Auditing is key for public project control."
-    url: "/en/construction-audits/"
-
 testimonials:
   - quote: "The expert report was key to technically justify the project modification and resolve the conflict with the administration."
     author: "TECHNICAL CONSTRUCTION BCN, S.L."

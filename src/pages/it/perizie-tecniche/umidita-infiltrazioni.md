@@ -1,4 +1,6 @@
 ---
+
+
 layout: 'layouts/service-child.njk'
 title: "Perito per Umidità e Infiltrazioni a Barcellona | Diagnosi Cause"
 hero:
@@ -19,11 +21,10 @@ translations:
   - lang: 'fr'
     permalink: '/fr/rapports-expertise/humidite-infiltrations/'
 eleventyNavigation:
-  key: "Umidità e Infiltrazioni"
-  parent: "Perizie Tecniche"
+  key: "Humedades y Filtraciones"
+  parent: "Especialidades Forenses"
   title: "Umidità e Infiltrazioni"
-  notshow: true
-  order: 2
+  order: 4
 serviceTitle: 'umidità e infiltrazioni'
 
 # Parent Service
@@ -84,7 +85,11 @@ intro: |
   <p>Le macchie di umidità, la muffa o le perdite sono problemi che colpiscono gravemente il comfort, la salubrità e il valore della tua proprietà. Applicare soluzioni superficiali senza una diagnosi corretta è un errore comune che cronicizza solo il problema.</p>
   
   <p>Come parte dei nostri servizi di <a href="/it/perizie-tecniche/">perizie tecniche</a>, ci specializziamo nel rilevamento dell'origine esatta di qualsiasi tipo di umidità, elaborando un parere tecnico che ti servirà come tabella di marcia per la sua eradicazione definitiva.</p>
----
+---## Approccio Fisico e Termodinamico
+
+Analizziamo l'umidità attraverso la termodinamica. Per l'esecuzione materiale, contattare [la nostra divisione](https://humedades.barcelona).
+
+
 
 ## Stanco di Lottare contro le Umidità?
 

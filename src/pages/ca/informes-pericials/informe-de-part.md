@@ -11,11 +11,7 @@ translations:
   - lang: "en"
     permalink: "/en/expert-witness-reports/party-appointed-report/"
 eleventyNavigation:
-  key: "Dictamen de Part"
-  parent: "Informes Pericials"
-  title: "Dictamen de Part"
   notshow: true
-  order: 1
 serviceTitle: 'Dictamen de Part'
 
 # Parent Service (for breadcrumb and linking back to pillar)

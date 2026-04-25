@@ -4,6 +4,8 @@ title: "Privacy Policy | Perito.Barcelona"
 description: "Consult the privacy policy for Perito.Barcelona. Information on the processing of your personal data, your rights, and our obligations under the GDPR."
 permalink: "/en/privacy/"
 lang: 'en'
+eleventyNavigation:
+  notshow: true
 seo: noindex
 translations:
   - lang: es
