@@ -113,8 +113,8 @@ jobs:
                   --email info@perito.barcelona
 
                if [ ! -z "$GH_TOKEN" ]; then
-                   gh secret set GTS_EAB_KID --body "$NEW_KID" --repo "${{ github.repository }}"
-                   gh secret set GTS_EAB_HMAC --body "$NEW_HMAC" --repo "${{ github.repository }}"
+                   gh secret set GTS_EAB_KID --body "$NEW_KID" --repo "${{ github.repository }}" || echo "⚠️ Failed to save GTS_EAB_KID secret"
+                   gh secret set GTS_EAB_HMAC --body "$NEW_HMAC" --repo "${{ github.repository }}" || echo "⚠️ Failed to save GTS_EAB_HMAC secret"
                fi
             fi
 
@@ -148,8 +148,8 @@ jobs:
             if [ -f .certs/privkey.pem ]; then
                echo "✅ Certificate obtained successfully."
                if [ -z "$GH_TOKEN" ]; then echo "Warning: GH_PAT not set"; else
-                   gh secret set SXG_CERT_PEM < .certs/fullchain.pem --repo "${{ github.repository }}"
-                   gh secret set SXG_KEY_PEM < .certs/privkey.pem --repo "${{ github.repository }}"
+                   gh secret set SXG_CERT_PEM < .certs/fullchain.pem --repo "${{ github.repository }}" || echo "⚠️ Failed to save SXG_CERT_PEM secret"
+                   gh secret set SXG_KEY_PEM < .certs/privkey.pem --repo "${{ github.repository }}" || echo "⚠️ Failed to save SXG_KEY_PEM secret"
                fi
             fi
           else
