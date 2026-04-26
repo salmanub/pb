@@ -3072,6 +3072,20 @@ href="https://perito.barcelona/">
   .gap-y-16 {
     row-gap: calc(var(--spacing) * 16);
   }
+  .divide-y {
+    :where(& > :not(:last-child)) {
+      --tw-divide-y-reverse: 0;
+      border-bottom-style: var(--tw-border-style);
+      border-top-style: var(--tw-border-style);
+      border-top-width: calc(1px * var(--tw-divide-y-reverse));
+      border-bottom-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+    }
+  }
+  .divide-slate-100 {
+    :where(& > :not(:last-child)) {
+      border-color: var(--color-slate-100);
+    }
+  }
   .self-start {
     align-self: flex-start;
   }
@@ -4609,6 +4623,9 @@ href="https://perito.barcelona/">
   .shadow-cyan-900\/50 {
     --tw-shadow-color: color-mix(in oklab, var(--color-cyan-900) 50%, transparent);
   }
+  .shadow-slate-100\/50 {
+    --tw-shadow-color: color-mix(in oklab, var(--color-slate-100) 50%, transparent);
+  }
   .shadow-slate-200 {
     --tw-shadow-color: var(--color-slate-200);
   }
@@ -5801,6 +5818,13 @@ href="https://perito.barcelona/">
     &:hover {
       @media (hover: hover) {
         color: var(--color-cyan-700);
+      }
+    }
+  }
+  .hover\:text-cyan-800 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-cyan-800);
       }
     }
   }
@@ -7869,6 +7893,11 @@ href="https://perito.barcelona/">
   initial-value: 0;
 }
 @property --tw-space-x-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-divide-y-reverse {
   syntax: "*";
   inherits: false;
   initial-value: 0;
