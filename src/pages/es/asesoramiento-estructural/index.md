@@ -76,7 +76,7 @@ serviceCluster:
       features:
         - "Aplicaciones en edificación y obra civil"
         - "Cálculo y dimensionamiento"
-        - "Sistemas SIKA®"
+        - "Sistemas los grandes fabricantes®"
     - title: "Análisis de Muros de Contención y Taludes"
       description: "Evaluación de la estabilidad de muros, análisis de empujes del terreno, y proyectos de anclaje o reparación."
       url: "/asesoramiento-estructural/muros-contencion-taludes/"
@@ -165,7 +165,7 @@ Nuestra experiencia como Ingenieros Civiles nos permite abordar un amplio espect
 
 ## Soluciones Avanzadas: Más Allá de la Reparación Tradicional
 
-La ingeniería de estructuras avanza constantemente. No nos limitamos a las soluciones convencionales; estamos especializados en el cálculo y la proyección de técnicas avanzadas que ofrecen mejores prestaciones con una menor intervención. Destacamos especialmente en el diseño de **refuerzos con composites como la fibra de carbono (CFRP)**, utilizando sistemas de empresas líderes como SIKA®, para aumentar la capacidad portante de vigas y pilares de forma eficaz y duradera.
+La ingeniería de estructuras avanza constantemente. No nos limitamos a las soluciones convencionales; estamos especializados en el cálculo y la proyección de técnicas avanzadas que ofrecen mejores prestaciones con una menor intervención. Destacamos especialmente en el diseño de **refuerzos con composites como la fibra de carbono (CFRP)**, utilizando sistemas de empresas líderes como los grandes fabricantes®, para aumentar la capacidad portante de vigas y pilares de forma eficaz y duradera.
 
 ---
 

@@ -17,10 +17,7 @@ translations:
   - lang: "ca"
     permalink: "/ca/informes-pericials/humitats-filtracions/"
 eleventyNavigation:
-  key: "Humedades y Filtraciones"
-  parent: "Especialidades Forenses"
-  title: "Moisture & Leakage"
-  order: 4
+  notshow: true
 serviceTitle: "moisture and water leakage"
 
 parentService:

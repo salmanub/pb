@@ -6,6 +6,10 @@ date: 2025-01-15
 permalink: '/ca/casos-d-exit/humitats-fissures-sant-cugat/'
 tags: ['Construcció', 'Humitats', 'Estructural']
 lang: ca
+eleventyNavigation:
+  key: "Casos de Éxito"
+  title: "Casos d'Èxit"
+  order: 4
 translations:
   - lang: es
     permalink: /casos-exito/humedades-fisuras-sant-cugat/

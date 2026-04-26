@@ -27,7 +27,7 @@ keyFeatures:
     - "Augment significatiu de la capacitat de càrrega de l'estructura"
     - "Solució de mínim impacte visual, gruix i pes afegit"
     - "Excel·lent durabilitat i resistència a la corrosió i la fatiga"
-    - "Càlcul i disseny de projectes a mida amb sistemes líders (SIKA®)"
+    - "Càlcul i disseny de projectes a mida amb sistemes líders (los grandes fabricantes®)"
 
 serviceProcess:
     - title: "Anàlisi de viabilitat"
@@ -112,5 +112,5 @@ Dissenyem projectes de reforç amb fibra de carboni per a una àmplia varietat d
 El nostre servei se centra en la fase d'enginyeria, que és la més crítica per a l'èxit del reforç:
 
 1. **Diagnòstic i Càlcul:** Analitzem l'estructura existent i realitzem el càlcul per determinar el tipus de reforç (laminats, teixits), la quantitat i la disposició exacta.
-2. **Projecte Tècnic:** Elaborem un document detallat amb plànols, especificacions dels materials (confiem en la qualitat de sistemes líders com **SIKA® CarboDur® i SikaWrap®**) i un protocol d'aplicació pas a pas.
+2. **Projecte Tècnic:** Elaborem un document detallat amb plànols, especificacions dels materials (confiem en la qualitat de sistemes líders com **los grandes fabricantes® CarboDur® i SikaWrap®**) i un protocol d'aplicació pas a pas.
 3. **Pont a l'Execució:** Amb el nostre projecte, podeu sol·licitar pressupostos a empreses especialitzades. Per garantir la màxima qualitat en l'aplicació, col·laborem estretament amb **urbenis.com**, els nostres socis experts en la instal·lació d'aquests sistemes.

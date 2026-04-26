@@ -6,6 +6,10 @@ date: 2025-01-15
 permalink: '/en/success-cases/dampness-cracks-sant-cugat/'
 tags: ['Construction', 'Dampness', 'Structural']
 lang: en
+eleventyNavigation:
+  key: "Casos de Éxito"
+  title: "Success Cases"
+  order: 4
 translations:
   - lang: es
     permalink: /casos-exito/humedades-fisuras-sant-cugat/

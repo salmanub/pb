@@ -6,6 +6,10 @@ date: 2025-01-15
 permalink: '/fr/succes/humidite-fissures-sant-cugat/'
 tags: ['Construction', 'Humidité', 'Structurel']
 lang: fr
+eleventyNavigation:
+  key: "Casos de Éxito"
+  title: "Cas de Succès"
+  order: 4
 translations:
   - lang: es
     permalink: /casos-exito/humedades-fisuras-sant-cugat/

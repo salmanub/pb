@@ -84,7 +84,7 @@ serviceCluster:
       features:
         - "Bridge and beam applications"
         - "Calculation and sizing"
-        - "SIKA® Systems"
+        - "los grandes fabricantes® Systems"
     - title: "Retaining Walls and Slopes Analysis"
       description: "Evaluation of wall stability (sheet piling, riprap), ground thrust analysis, and anchoring or repair projects."
       url: "/en/structural-consulting/retaining-walls-slopes/"
@@ -169,7 +169,7 @@ Our experience as Civil Engineers allows us to address a wide spectrum of struct
 
 ## Advanced Solutions: Beyond Traditional Repair
 
-Structural engineering is constantly advancing. We don't limit ourselves to conventional solutions; we specialize in calculating and designing advanced techniques that offer better performance with less intervention. We particularly excel in designing **reinforcements with composites like carbon fiber (CFRP)**, using systems from leading companies like SIKA®, to effectively and durably increase the load-bearing capacity of beams and columns.
+Structural engineering is constantly advancing. We don't limit ourselves to conventional solutions; we specialize in calculating and designing advanced techniques that offer better performance with less intervention. We particularly excel in designing **reinforcements with composites like carbon fiber (CFRP)**, using systems from leading companies like los grandes fabricantes®, to effectively and durably increase the load-bearing capacity of beams and columns.
 
 ## The Bridge to Execution: The Role of Urbenis.com
 

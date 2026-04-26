@@ -92,7 +92,18 @@ cta:
   button:
     text: "Richiedi una Valutazione Confidenziale"
     url: "/it/contatti/"
----## Ingegneria Civile e Meccanica della Frattura
+---
+### Audit e Validazione di Soluzioni Chimico-Strutturali
+Nel settore della riabilitazione ad alta complessità, è prassi comune che ingegnerie e promotori ricevano proposte di riparazione (studi di idoneità) redatte dai dipartimenti commerciali dei grandi produttori di prodotti chimici per l'edilizia.
+Tuttavia, la prescrizione di un materiale non equivale a un progetto strutturale. **I produttori forniscono il prodotto, ma escludono esplicitamente dal loro ambito l'assunzione della Responsabilità Civile sulla struttura esistente.**
+Il nostro studio copre questo vuoto legale e tecnico assumendo la Direzione dell'Ingegneria Forense della riparazione. Auditiamo soluzioni basate su:
+* **Sistemi CFRP (Polimeri Rinforzati con Fibra di Carbonio):** Ricalcolo del trasferimento delle tensioni tangenziali e validazione a taglio/flessione.
+* **Ancoraggi Chimici Post-Installati e Resine Epossidiche:** Verifica della profondità effettiva e dei coni di estrazione in calcestruzzi fessurati.
+* **Malte Strutturali e Sottomurazioni con Resine Espansive:** Validazione dell'interazione terreno-struttura e compatibilità delle deformazioni.
+**Il nostro prodotto finale:** Una relazione tecnica vistata dall'Ordine Ufficiale degli Ingegneri Civili, supportata dal calcolo agli Elementi Finiti (FEA). Verifichiamo matematicamente la soluzione del produttore, la adattiamo alla realtà della vostra patologia ed emettiamo il documento legale che blinda la Responsabilità Civile della Proprietà.
+
+
+## Ingegneria Civile e Meccanica della Frattura
 
 Il nostro approccio si concentra sul calcolo strutturale avanzato.
 

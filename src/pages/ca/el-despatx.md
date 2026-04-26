@@ -36,7 +36,7 @@ team_members:
     license_label: "Col. Nº"
     license: "16448"
     description:
-      - "Enginyer Tècnic d'Obres Públiques (UPC) i Postgrau especialista en Peritatge d'Assegurances i Riscos Diversos (INESE), amb més de 18 anys d'experiència en el sector. Ha desenvolupat la seva carrera tècnica com a especialista en reparació i reforç estructural en multinacionals del nivell de BASF i com a supervisor d'obra pública."
+      - "Enginyer Tècnic d'Obres Públiques (UPC) i Postgrau especialista en Peritatge d'Assegurances i Riscos Diversos (INESE), amb més de 18 anys d'experiència en el sector. Ha desenvolupat la seva carrera tècnica com a especialista en reparació i reforç estructural en multinacionals del nivell de los grandes fabricantes i com a supervisor d'obra pública."
       - "Com a Director Tècnic i fundador de Perito Barcelona, lidera l'elaboració d'informes pericials, auditories tècniques i consultoria avançada per a la resolució de disputes en construcció i patologies de l'edificació."
       - "Posseeix una sòlida trajectòria defensant dictàmens en vista oral. El seu profund coneixement de la lex artis constructiva li permet comunicar càlculs i conceptes tècnics de manera irrefutable, clara i persuasiva per a juristes i magistrats."
     specialties_title: "Àrees d'Experiència"

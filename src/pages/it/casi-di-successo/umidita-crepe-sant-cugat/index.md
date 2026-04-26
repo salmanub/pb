@@ -6,6 +6,10 @@ date: 2025-01-15
 permalink: '/it/casi-di-successo/umidita-crepe-sant-cugat/'
 tags: ['Costruzione', 'Umidità', 'Strutturale']
 lang: it
+eleventyNavigation:
+  key: "Casos de Éxito"
+  title: "Casi di Successo"
+  order: 4
 translations:
   - lang: es
     permalink: /casos-exito/humedades-fisuras-sant-cugat/

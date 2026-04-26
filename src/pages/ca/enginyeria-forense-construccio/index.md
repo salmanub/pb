@@ -92,7 +92,18 @@ cta:
   button:
     text: "Sol·licitar Avaluació Confidencial"
     url: "/ca/contacte/"
----## Enginyeria Civil i Mecànica de Fractura
+---
+### Auditoria i Visat de Solucions Químico-Estructurals
+En el sector de la rehabilitació d'alta complexitat, és pràctica habitual que les enginyeries i promotores rebin propostes de reparació (estudis d'idoneïtat) redactades pels departaments comercials dels grans fabricants de productes químics per a la construcció.
+No obstant això, la prescripció d'un material no equival a un projecte estructural. **Els fabricants subministren el producte, però exclouen explícitament del seu abast l'assumpció de la Responsabilitat Civil sobre l'estructura existent.**
+El nostre gabinet cobreix aquest buit legal i tècnic assumint la Direcció d'Enginyeria Forense de la reparació. Auditem solucions basades en:
+* **Sistemes CFRP (Polímers Reforçats amb Fibra de Carboni):** Recàlcul de transferència de tensions rasants i validació a tallant/flexió.
+* **Ancoratges Químics Post-Instal·lats i Resines Epoxi:** Verificació de profunditat efectiva i cons d'arrencament en formigons fissurats.
+* **Morters Estructurals i Recalçaments amb Resines Expansives:** Validació de la interacció terreny-estructura i compatibilitat de deformacions.
+**El nostre lliurable:** Un dictamen tècnic visat pel Col·legi Oficial d'Enginyers de Camins, Canals i Ports, recolzat per càlcul d'Elements Finits (FEA). Verifiquem matemàticament la solució del fabricant, l'adaptem a la realitat de la seva patologia i emetem el document legal que blinda la Responsabilitat Civil de la Propietat.
+
+
+## Enginyeria Civil i Mecànica de Fractura
 
 El nostre enfocament se centra en el càlcul estructural avançat.
 

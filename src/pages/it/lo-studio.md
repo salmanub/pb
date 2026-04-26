@@ -36,7 +36,7 @@ team_members:
     license_label: "Col. Nº"
     license: "16448"
     description:
-      - "Ingegnere Tecnico dei Lavori Pubblici (UPC) con specializzazione post-laurea in Perizie Assicurative e Rischi Diversi (INESE), con oltre 18 anni di esperienza nel settore. Ha sviluppato la sua carriera tecnica come specialista nella riparazione e nel rinforzo strutturale in multinazionali del calibro di BASF e come supervisore di opere pubbliche."
+      - "Ingegnere Tecnico dei Lavori Pubblici (UPC) con specializzazione post-laurea in Perizie Assicurative e Rischi Diversi (INESE), con oltre 18 anni di esperienza nel settore. Ha sviluppato la sua carriera tecnica come specialista nella riparazione e nel rinforzo strutturale in multinazionali del calibro di los grandes fabricantes e come supervisore di opere pubbliche."
       - "In qualità di Direttore Tecnico e fondatore di Perito Barcelona, guida la stesura di perizie, audit tecnici e consulenze avanzate per la risoluzione di controversie edilizie e patologie delle costruzioni."
       - "Vanta una solida esperienza nella difesa delle perizie in udienza. La sua profonda conoscenza della regola dell'arte (lex artis) costruttiva gli consente di esporre calcoli e concetti tecnici in modo inconfutabile, chiaro e persuasivo per avvocati e magistrati."
     specialties_title: "Aree di Competenza"

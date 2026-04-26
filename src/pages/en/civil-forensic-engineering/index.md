@@ -92,7 +92,18 @@ cta:
   button:
     text: "Request Confidential Evaluation"
     url: "/en/contact/"
----## Civil Engineering and Fracture Mechanics
+---
+### Audit and Endorsement of Chemical-Structural Solutions
+In the highly complex rehabilitation sector, it is common practice for engineering firms and developers to receive repair proposals (suitability studies) drafted by the commercial departments of major construction chemical manufacturers.
+However, prescribing a material is not equivalent to a structural project. **Manufacturers supply the product but explicitly exclude the assumption of Civil Liability over the existing structure from their scope.**
+Our firm bridges this legal and technical gap by assuming the Forensic Engineering Direction of the repair. We audit solutions based on:
+* **CFRP Systems (Carbon Fiber Reinforced Polymers):** Recalculation of shear stress transfer and validation of shear/bending.
+* **Post-Installed Chemical Anchors and Epoxy Resins:** Verification of effective depth and pull-out cones in cracked concrete.
+* **Structural Mortars and Underpinning with Expansive Resins:** Validation of soil-structure interaction and deformation compatibility.
+**Our deliverable:** A technical report endorsed by the Official College of Civil Engineers, supported by Finite Element Analysis (FEA). We mathematically verify the manufacturer's solution, adapt it to the reality of your pathology, and issue the legal document that shields the Civil Liability of the Property.
+
+
+## Civil Engineering and Fracture Mechanics
 
 Our approach focuses on advanced structural calculation.
 

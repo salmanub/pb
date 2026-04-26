@@ -48,7 +48,11 @@ faqs_section:
   description: "Resolem els dubtes més habituals sobre els costos d'una intervenció pericial."
 faqs:
   - question: "Quant costa de mitjana un informe pericial d'enginyeria o construcció?"
-    answer: "No hi ha una tarifa fixa. Un dictamen tècnic preliminar per a patologies localitzades pot partir dels 800€ - 1.500€. No obstant això, peritatges estructurals complexos, auditories de grans obres o estudis geotècnics requereixen pressupostos a mida basats en les proves necessàries. Li donarem un pressupost exacte i tancat abans d'iniciar qualsevol gestió."
+    answer:
+      - "Els nostres honoraris reflecteixen l'assumpció de Responsabilitat Civil, la profunditat del càlcul matemàtic i el risc del litigi. Operem amb els següents nivells d'intervenció tècnica:"
+      - "1. Grans Sinistres i Col·lapses (Des de 20.000€): Direccions forenses en ensorraments, recàlculs estructurals complets i litigis d'alt impacte."
+      - "2. Auditories Estructurals Complexes: Avaluacions detallades de patologies greus que requereixen assajos no destructius i validació de reforços."
+      - "3. Informes Pericials Especialitzats: Dictàmens tècnics contundents per a patologies localitzades."
   - question: "El pressupost inclou l'assistència al judici (ratificació)?"
     answer: "Per oferir la màxima transparència, els nostres pressupostos es divideixen en dues partides independents: 1) L'estudi i redacció de l'informe pericial, i 2) Els honoraris per l'assistència i ratificació en seu judicial. D'aquesta manera, si aconsegueixen un acord extrajudicial previ a la vista, vostè no haurà d'abonar la part corresponent al judici."
   - question: "He de pagar per avançat?"

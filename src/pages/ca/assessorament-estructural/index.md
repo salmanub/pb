@@ -84,7 +84,7 @@ serviceCluster:
       features:
         - "Aplicacions en ponts i bigues"
         - "Càlcul i dimensionament"
-        - "Sistemes SIKA®"
+        - "Sistemes los grandes fabricantes®"
     - title: "Anàlisi de Murs de Contenció i Talussos"
       description: "Avaluació de l'estabilitat de murs (pantalla, escullera), anàlisi d'empentes del terreny, i projectes d'ancoratge o reparació."
       url: "/ca/assessorament-estructural/murs-contencio-talussos/"
@@ -173,7 +173,7 @@ La nostra experiència com a Enginyers Civils ens permet abordar un ampli espect
 
 ## Solucions Avançades: Més Enllà de la Reparació Tradicional
 
-L'enginyeria d'estructures avança constantment. No ens limitem a les solucions convencionals; estem especialitzats en el càlcul i la projecció de tècniques avançades que ofereixen millors prestacions amb una menor intervenció. Destaquem especialment en el disseny de **reforços amb composites com la fibra de carboni (CFRP)**, utilitzant sistemes d'empreses líders com SIKA®, per augmentar la capacitat portant de bigues i pilars de forma eficaç i duradora.
+L'enginyeria d'estructures avança constantment. No ens limitem a les solucions convencionals; estem especialitzats en el càlcul i la projecció de tècniques avançades que ofereixen millors prestacions amb una menor intervenció. Destaquem especialment en el disseny de **reforços amb composites com la fibra de carboni (CFRP)**, utilitzant sistemes d'empreses líders com los grandes fabricantes®, per augmentar la capacitat portant de bigues i pilars de forma eficaç i duradora.
 
 ---
 

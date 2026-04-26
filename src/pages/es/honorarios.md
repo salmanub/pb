@@ -48,7 +48,11 @@ faqs_section:
   description: "Resolvemos las dudas más habituales sobre los costes de una intervención pericial."
 faqs:
   - question: "¿Cuánto cuesta de media un informe pericial de ingeniería o construcción?"
-    answer: "No existe una tarifa fija. Un dictamen técnico preliminar para patologías localizadas puede partir de los 800€ - 1.500€. Sin embargo, para **Grandes Siniestros de Construcción y Colapsos**, peritajes estructurales complejos, auditorías de grandes obras o estudios geotécnicos requieren presupuestos a medida basados en el volumen de cálculo matemático y las pruebas físicas necesarias. Le daremos un presupuesto exacto y cerrado antes de iniciar cualquier gestión."
+    answer:
+      - "Nuestros honorarios reflejan la asunción de Responsabilidad Civil, la profundidad del cálculo matemático y el riesgo del litigio. Operamos con los siguientes niveles de intervención técnica:"
+      - "1. Grandes Siniestros y Colapsos (Desde 20.000€): Direcciones forenses en derrumbes, recálculos estructurales completos y litigios de alto impacto."
+      - "2. Auditorías Estructurales Complejas: Evaluaciones detalladas de patologías graves que requieren ensayos no destructivos y validación de refuerzos."
+      - "3. Informes Periciales Especializados: Dictámenes técnicos contundentes para patologías localizadas."
   - question: "¿El presupuesto incluye la asistencia al juicio (ratificación)?"
     answer: "Para ofrecer la máxima transparencia, nuestros presupuestos se dividen en dos partidas independientes: 1) El estudio y redacción del informe pericial, y 2) Los honorarios por la asistencia y ratificación en sede judicial. De esta forma, si logran un acuerdo extrajudicial previo a la vista, usted no deberá abonar la parte correspondiente al juicio."
   - question: "¿Tengo que pagar por adelantado?"

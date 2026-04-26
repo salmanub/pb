@@ -84,7 +84,7 @@ serviceCluster:
       features:
         - "Applicazioni su ponti e travi"
         - "Calcolo e dimensionamento"
-        - "Sistemi SIKA®"
+        - "Sistemi los grandes fabricantes®"
     - title: "Analisi di Muri di Sostegno e Scarpate"
       description: "Valutazione della stabilità di muri (diaframmi, scogliere), analisi delle spinte del terreno e progetti di ancoraggio o riparazione."
       url: "/it/consulenza-strutturale/muri-sostegno-scarpate/"
@@ -173,7 +173,7 @@ La nostra esperienza come Ingegneri Civili ci permette di affrontare un ampio sp
 
 ## Soluzioni Avanzate: Oltre la Riparazione Tradizionale
 
-L'ingegneria strutturale è in costante evoluzione. Non ci limitiamo alle soluzioni convenzionali; siamo specializzati nel calcolo e nella progettazione di tecniche avanzate che offrono prestazioni migliori con un intervento meno invasivo. Eccelliamo in particolare nella progettazione di **rinforzi con materiali compositi come la fibra di carbonio (CFRP)**, utilizzando sistemi di aziende leader come SIKA®, per aumentare la capacità portante di travi e pilastri in modo efficace e duraturo.
+L'ingegneria strutturale è in costante evoluzione. Non ci limitiamo alle soluzioni convenzionali; siamo specializzati nel calcolo e nella progettazione di tecniche avanzate che offrono prestazioni migliori con un intervento meno invasivo. Eccelliamo in particolare nella progettazione di **rinforzi con materiali compositi come la fibra di carbonio (CFRP)**, utilizzando sistemi di aziende leader come los grandes fabricantes®, per aumentare la capacità portante di travi e pilastri in modo efficace e duraturo.
 
 ---
 

@@ -134,7 +134,18 @@ cta:
   button:
     text: "Solicitar Evaluación Confidencial"
     url: "/contacto/"
----## Ingeniería Civil y Mecánica de Fractura
+---
+### Auditoría y Visado de Soluciones Químico-Estructurales
+En el sector de la rehabilitación de alta complejidad, es práctica habitual que las ingenierías y promotoras reciban propuestas de reparación (estudios de idoneidad) redactadas por los departamentos comerciales de los grandes fabricantes de productos químicos para la construcción.
+Sin embargo, la prescripción de un material no equivale a un proyecto estructural. **Los fabricantes suministran el producto, pero excluyen explícitamente de su alcance la asunción de la Responsabilidad Civil sobre la estructura existente.**
+Nuestro gabinete cubre este vacío legal y técnico asumiendo la Dirección de Ingeniería Forense de la reparación. Auditamos soluciones basadas en:
+* **Sistemas CFRP (Polímeros Reforzados con Fibra de Carbono):** Recálculo de transferencia de tensiones rasantes y validación a cortante/flexión.
+* **Anclajes Químicos Post-Instalados y Resinas Epoxi:** Verificación de profundidad efectiva y conos de arrancamiento en hormigones fisurados.
+* **Morteros Estructurales y Recalces con Resinas Expansivas:** Validación de la interacción terreno-estructura y compatibilidad de deformaciones.
+**Nuestro entregable:** Un dictamen técnico visado por el Colegio Oficial de Ingenieros de Caminos, Canales y Puertos, respaldado por cálculo de Elementos Finitos (FEA). Verificamos matemáticamente la solución del fabricante, la adaptamos a la realidad de su patología y emitimos el documento legal que blinda la Responsabilidad Civil de la Propiedad.
+
+
+## Ingeniería Civil y Mecánica de Fractura
 
 Nuestro enfoque se centra en el cálculo estructural avanzado.
 

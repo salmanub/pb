@@ -84,7 +84,7 @@ serviceCluster:
       features:
         - "Applications sur ponts et poutres"
         - "Calcul et dimensionnement"
-        - "Systèmes SIKA®"
+        - "Systèmes los grandes fabricantes®"
     - title: "Analyse de Murs de Soutènement et Talus"
       description: "Évaluation de la stabilité des murs (paroi moulée, enrochement), analyse des poussées des terres, et projets d'ancrage ou de réparation."
       url: "/fr/conseil-structurel/murs-soutenement-talus/"
@@ -173,7 +173,7 @@ Notre expérience en tant qu'Ingénieurs Civils nous permet d'aborder un large �
 
 ## Solutions Avancées : Au-delà de la Réparation Traditionnelle
 
-L'ingénierie des structures évolue constamment. Nous ne nous limitons pas aux solutions conventionnelles ; nous sommes spécialisés dans le calcul et la conception de techniques avancées qui offrent de meilleures performances avec une intervention moindre. Nous excellons notamment dans la conception de **renforts en composites comme la fibre de carbone (CFRP)**, en utilisant des systèmes d'entreprises leaders comme SIKA®, pour augmenter la capacité portante des poutres et des poteaux de manière efficace et durable.
+L'ingénierie des structures évolue constamment. Nous ne nous limitons pas aux solutions conventionnelles ; nous sommes spécialisés dans le calcul et la conception de techniques avancées qui offrent de meilleures performances avec une intervention moindre. Nous excellons notamment dans la conception de **renforts en composites comme la fibre de carbone (CFRP)**, en utilisant des systèmes d'entreprises leaders comme los grandes fabricantes®, pour augmenter la capacité portante des poutres et des poteaux de manière efficace et durable.
 
 ---
 

@@ -36,7 +36,7 @@ team_members:
     license_label: "Col. Nº"
     license: "16448"
     description:
-      - "Ingénieur des Travaux Publics (UPC) et post-gradué spécialiste en Expertise d'Assurances et Risques Divers (INESE), avec plus de 18 ans d'expérience dans le secteur. Il a développé sa carrière technique en tant que spécialiste en réparation et renforcement structurel au sein de multinationales du niveau de BASF et comme superviseur de travaux publics."
+      - "Ingénieur des Travaux Publics (UPC) et post-gradué spécialiste en Expertise d'Assurances et Risques Divers (INESE), avec plus de 18 ans d'expérience dans le secteur. Il a développé sa carrière technique en tant que spécialiste en réparation et renforcement structurel au sein de multinationales du niveau de los grandes fabricantes et comme superviseur de travaux publics."
       - "En tant que Directeur Technique et fondateur de Perito Barcelona, il dirige la préparation des rapports d'expertise, les audits techniques et le conseil avancé pour la résolution de litiges dans la construction et les pathologies du bâtiment."
       - "Il possède une solide expérience dans la défense de rapports lors d'audiences orales. Sa connaissance approfondie des règles de l'art (lex artis) en matière de construction lui permet de communiquer des calculs et des concepts techniques de manière irréfutable, claire et persuasive pour les juristes et les magistrats."
     specialties_title: "Domaines d'Expertise"

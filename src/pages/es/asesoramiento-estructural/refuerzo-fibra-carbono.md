@@ -24,7 +24,7 @@ keyFeatures:
   - 'Aumento significativo de la capacidad de carga de la estructura'
   - 'Solución de mínimo impacto visual, espesor y peso añadido'
   - 'Excelente durabilidad y resistencia a la corrosión y la fatiga'
-  - 'Cálculo y diseño de proyectos a medida con sistemas líderes (SIKA®)'
+  - 'Cálculo y diseño de proyectos a medida con sistemas líderes (los grandes fabricantes®)'
 
 # Service Process (for sidebar)
 serviceProcess:
@@ -108,5 +108,5 @@ Diseñamos proyectos de refuerzo con fibra de carbono para una amplia variedad d
 Nuestro servicio se centra en la fase de ingeniería, que es la más crítica para el éxito del refuerzo:
 
 1.  **Diagnóstico y Cálculo:** Analizamos la estructura existente y realizamos el cálculo para determinar el tipo de refuerzo (laminados, tejidos), la cantidad y la disposición exacta.
-2.  **Proyecto Técnico:** Elaboramos un documento detallado con planos, especificaciones de los materiales (confiamos en la calidad de sistemas líderes como **SIKA® CarboDur® y SikaWrap®**) y un protocolo de aplicación paso a paso.
+2.  **Proyecto Técnico:** Elaboramos un documento detallado con planos, especificaciones de los materiales (confiamos en la calidad de sistemas líderes como **los grandes fabricantes® CarboDur® y SikaWrap®**) y un protocolo de aplicación paso a paso.
 3.  **Separación de Poderes y Garantía Ejecutiva:** Nuestro despacho **solo calcula, audita y asume la Responsabilidad Civil (RC)** del diseño mediante el visado colegial. Para garantizar una ejecución material impecable, derivamos la instalación a nuestras divisiones homologadas: [Urbenis](https://urbenis.com) y [Refuerzo Fibra](https://refuerzofibra.es). Esta separación entre prescripción y ejecución asegura su total independencia y seguridad jurídica.

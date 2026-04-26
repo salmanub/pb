@@ -48,7 +48,11 @@ faqs_section:
   description: "Risolviamo i dubbi più comuni sui costi di un intervento peritale."
 faqs:
   - question: "Qual è il costo medio di una perizia ingegneristica o edile?"
-    answer: "Non esiste una tariffa fissa. Un parere tecnico preliminare per patologie localizzate può partire da 800€ - 1.500€. Tuttavia, perizie strutturali complesse, audit di grandi opere o studi geotecnici richiedono preventivi su misura basati sulle prove necessarie. Ti forniremo un preventivo esatto e definitivo prima di iniziare qualsiasi pratica."
+    answer:
+      - "I nostri onorari riflettono l'assunzione della Responsabilità Civile, la profondità del calcolo matematico e il rischio del contenzioso. Operiamo con i seguenti livelli di intervento tecnico:"
+      - "1. Grandi Sinistri e Crolli (Da 20.000€): Direzione forense in crolli, ricalcoli strutturali completi e contenziosi ad alto impatto."
+      - "2. Audit Strutturali Complessi: Valutazioni dettagliate di patologie gravi che richiedono prove non distruttive e validazione di rinforzi."
+      - "3. Perizie Specializzate: Relazioni tecniche convincenti per patologie localizzate."
   - question: "Il preventivo include l'assistenza al processo (ratifica)?"
     answer: "Per offrire la massima trasparenza, i nostri preventivi sono divisi in due voci indipendenti: 1) Lo studio e la stesura della perizia tecnica, e 2) Gli onorari per l'assistenza e la ratifica in sede giudiziaria. In questo modo, se raggiungi un accordo stragiudiziale prima dell'udienza, non dovrai pagare la parte corrispondente al processo."
   - question: "Devo pagare in anticipo?"

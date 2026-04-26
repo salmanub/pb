@@ -104,6 +104,8 @@ href="https://perito.barcelona/">
     --color-green-600: oklch(0.627 0.194 149.214);
     --color-green-700: oklch(0.527 0.154 150.069);
     --color-emerald-50: oklch(0.979 0.021 166.113);
+    --color-emerald-300: oklch(0.845 0.143 164.978);
+    --color-emerald-400: oklch(0.765 0.177 163.223);
     --color-emerald-500: oklch(0.696 0.17 162.48);
     --color-emerald-600: oklch(0.596 0.145 163.225);
     --color-emerald-700: oklch(0.508 0.118 165.612);
@@ -204,6 +206,7 @@ href="https://perito.barcelona/">
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
+    --drop-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.15);
     --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 0.12);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -364,6 +367,9 @@ href="https://perito.barcelona/">
   }
 }
 @layer utilities {
+  .pointer-events-auto {
+    pointer-events: auto;
+  }
   .pointer-events-none {
     pointer-events: none;
   }
@@ -405,6 +411,12 @@ href="https://perito.barcelona/">
   .inset-x-0 {
     inset-inline: calc(var(--spacing) * 0);
   }
+  .-top-1 {
+    top: calc(var(--spacing) * -1);
+  }
+  .-top-1\.5 {
+    top: calc(var(--spacing) * -1.5);
+  }
   .-top-4 {
     top: calc(var(--spacing) * -4);
   }
@@ -419,6 +431,12 @@ href="https://perito.barcelona/">
   }
   .top-2 {
     top: calc(var(--spacing) * 2);
+  }
+  .top-2\.5 {
+    top: calc(var(--spacing) * 2.5);
+  }
+  .top-3 {
+    top: calc(var(--spacing) * 3);
   }
   .top-6 {
     top: calc(var(--spacing) * 6);
@@ -441,11 +459,20 @@ href="https://perito.barcelona/">
   .top-full {
     top: 100%;
   }
+  .-right-1 {
+    right: calc(var(--spacing) * -1);
+  }
+  .-right-1\.5 {
+    right: calc(var(--spacing) * -1.5);
+  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
   .right-2 {
     right: calc(var(--spacing) * 2);
+  }
+  .right-2\.5 {
+    right: calc(var(--spacing) * 2.5);
   }
   .right-4 {
     right: calc(var(--spacing) * 4);
@@ -461,6 +488,12 @@ href="https://perito.barcelona/">
   }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
+  }
+  .bottom-2 {
+    bottom: calc(var(--spacing) * 2);
+  }
+  .bottom-3 {
+    bottom: calc(var(--spacing) * 3);
   }
   .bottom-4 {
     bottom: calc(var(--spacing) * 4);
@@ -2444,6 +2477,9 @@ href="https://perito.barcelona/">
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -2482,6 +2518,9 @@ href="https://perito.barcelona/">
   }
   .h-\[2px\] {
     height: 2px;
+  }
+  .h-\[18px\] {
+    height: 18px;
   }
   .h-\[70px\] {
     height: 70px;
@@ -2537,9 +2576,6 @@ href="https://perito.barcelona/">
   .min-h-\[500px\] {
     min-height: 500px;
   }
-  .min-h-\[600px\] {
-    min-height: 600px;
-  }
   .min-h-\[calc\(100vh-70px\)\] {
     min-height: calc(100vh - 70px);
   }
@@ -2551,6 +2587,9 @@ href="https://perito.barcelona/">
   }
   .w-0 {
     width: calc(var(--spacing) * 0);
+  }
+  .w-0\.5 {
+    width: calc(var(--spacing) * 0.5);
   }
   .w-1 {
     width: calc(var(--spacing) * 1);
@@ -2588,6 +2627,9 @@ href="https://perito.barcelona/">
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
+  }
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
@@ -2620,6 +2662,12 @@ href="https://perito.barcelona/">
   }
   .w-72 {
     width: calc(var(--spacing) * 72);
+  }
+  .w-\[2px\] {
+    width: 2px;
+  }
+  .w-\[18px\] {
+    width: 18px;
   }
   .w-\[45\%\] {
     width: 45%;
@@ -2877,6 +2925,9 @@ href="https://perito.barcelona/">
   .justify-start {
     justify-content: flex-start;
   }
+  .gap-0 {
+    gap: calc(var(--spacing) * 0);
+  }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
   }
@@ -3061,6 +3112,10 @@ href="https://perito.barcelona/">
     border-top-left-radius: var(--radius-xl);
     border-bottom-left-radius: var(--radius-xl);
   }
+  .rounded-r {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
   .rounded-br-sm {
     border-bottom-right-radius: calc(var(--radius) - 4px);
   }
@@ -3180,8 +3235,17 @@ href="https://perito.barcelona/">
   .border-slate-300 {
     border-color: var(--color-slate-300);
   }
+  .border-slate-600 {
+    border-color: var(--color-slate-600);
+  }
+  .border-slate-700 {
+    border-color: var(--color-slate-700);
+  }
   .border-slate-700\/50 {
     border-color: color-mix(in oklab, var(--color-slate-700) 50%, transparent);
+  }
+  .border-slate-700\/80 {
+    border-color: color-mix(in oklab, var(--color-slate-700) 80%, transparent);
   }
   .border-slate-800 {
     border-color: var(--color-slate-800);
@@ -3189,11 +3253,17 @@ href="https://perito.barcelona/">
   .border-slate-900 {
     border-color: var(--color-slate-900);
   }
+  .border-white {
+    border-color: var(--color-white);
+  }
   .border-white\/10 {
     border-color: color-mix(in oklab, var(--color-white) 10%, transparent);
   }
   .border-white\/20 {
     border-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+  }
+  .border-white\/30 {
+    border-color: color-mix(in oklab, var(--color-white) 30%, transparent);
   }
   .border-yellow-100 {
     border-color: var(--color-yellow-100);
@@ -3278,6 +3348,12 @@ href="https://perito.barcelona/">
   }
   .bg-cyan-600 {
     background-color: var(--color-cyan-600);
+  }
+  .bg-emerald-300 {
+    background-color: var(--color-emerald-300);
+  }
+  .bg-emerald-400 {
+    background-color: var(--color-emerald-400);
   }
   .bg-emerald-600 {
     background-color: var(--color-emerald-600);
@@ -3374,6 +3450,9 @@ href="https://perito.barcelona/">
   }
   .bg-white\/20 {
     background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+  }
+  .bg-white\/30 {
+    background-color: color-mix(in oklab, var(--color-white) 30%, transparent);
   }
   .bg-white\/50 {
     background-color: color-mix(in oklab, var(--color-white) 50%, transparent);
@@ -3589,6 +3668,16 @@ href="https://perito.barcelona/">
   }
   .via-white {
     --tw-gradient-via: var(--color-white);
+    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .via-white\/10 {
+    --tw-gradient-via: color-mix(in oklab, var(--color-white) 10%, transparent);
+    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .via-white\/50 {
+    --tw-gradient-via: color-mix(in oklab, var(--color-white) 50%, transparent);
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-via-stops);
   }
@@ -3875,6 +3964,9 @@ href="https://perito.barcelona/">
   .pr-2 {
     padding-right: calc(var(--spacing) * 2);
   }
+  .pr-3 {
+    padding-right: calc(var(--spacing) * 3);
+  }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
   }
@@ -4010,8 +4102,20 @@ href="https://perito.barcelona/">
   .text-\[4rem\] {
     font-size: 4rem;
   }
+  .text-\[7px\] {
+    font-size: 7px;
+  }
+  .text-\[9px\] {
+    font-size: 9px;
+  }
   .text-\[10px\] {
     font-size: 10px;
+  }
+  .text-\[13px\] {
+    font-size: 13px;
+  }
+  .text-\[14px\] {
+    font-size: 14px;
   }
   .leading-\[0\.9\] {
     --tw-leading: 0.9;
@@ -4068,6 +4172,14 @@ href="https://perito.barcelona/">
   .tracking-\[0\.2em\] {
     --tw-tracking: 0.2em;
     letter-spacing: 0.2em;
+  }
+  .tracking-\[0\.18em\] {
+    --tw-tracking: 0.18em;
+    letter-spacing: 0.18em;
+  }
+  .tracking-\[0\.22em\] {
+    --tw-tracking: 0.22em;
+    letter-spacing: 0.22em;
   }
   .tracking-\[2px\] {
     --tw-tracking: 2px;
@@ -4131,6 +4243,9 @@ href="https://perito.barcelona/">
   }
   .text-cyan-400\/20 {
     color: color-mix(in oklab, var(--color-cyan-400) 20%, transparent);
+  }
+  .text-cyan-400\/80 {
+    color: color-mix(in oklab, var(--color-cyan-400) 80%, transparent);
   }
   .text-cyan-500 {
     color: var(--color-cyan-500);
@@ -4233,6 +4348,9 @@ href="https://perito.barcelona/">
   }
   .text-white\/60 {
     color: color-mix(in oklab, var(--color-white) 60%, transparent);
+  }
+  .text-white\/70 {
+    color: color-mix(in oklab, var(--color-white) 70%, transparent);
   }
   .text-white\/80 {
     color: color-mix(in oklab, var(--color-white) 80%, transparent);
@@ -4350,6 +4468,30 @@ href="https://perito.barcelona/">
     --tw-shadow: 0 -4px 6px -1px var(--tw-shadow-color, rgba(0,0,0,0.3));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .shadow-\[0_6px_24px_rgba\(0\,0\,0\,0\.35\)\] {
+    --tw-shadow: 0 6px 24px var(--tw-shadow-color, rgba(0,0,0,0.35));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0_6px_24px_rgba\(6\,182\,212\,0\.5\)\] {
+    --tw-shadow: 0 6px 24px var(--tw-shadow-color, rgba(6,182,212,0.5));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0_8px_28px_rgba\(0\,0\,0\,0\.45\)\] {
+    --tw-shadow: 0 8px 28px var(--tw-shadow-color, rgba(0,0,0,0.45));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0_8px_28px_rgba\(6\,182\,212\,0\.55\)\] {
+    --tw-shadow: 0 8px 28px var(--tw-shadow-color, rgba(6,182,212,0.55));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0_8px_32px_rgba\(0\,0\,0\,0\.35\)\] {
+    --tw-shadow: 0 8px 32px var(--tw-shadow-color, rgba(0,0,0,0.35));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0_8px_32px_rgba\(6\,182\,212\,0\.45\)\] {
+    --tw-shadow: 0 8px 32px var(--tw-shadow-color, rgba(6,182,212,0.45));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -4430,6 +4572,10 @@ href="https://perito.barcelona/">
     --tw-drop-shadow: drop-shadow(var(--drop-shadow-md));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+  .drop-shadow-sm {
+    --tw-drop-shadow: drop-shadow(var(--drop-shadow-sm));
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
@@ -4500,6 +4646,10 @@ href="https://perito.barcelona/">
     --tw-duration: 300ms;
     transition-duration: 300ms;
   }
+  .duration-400 {
+    --tw-duration: 400ms;
+    transition-duration: 400ms;
+  }
   .duration-500 {
     --tw-duration: 500ms;
     transition-duration: 500ms;
@@ -4511,6 +4661,10 @@ href="https://perito.barcelona/">
   .duration-1000 {
     --tw-duration: 1000ms;
     transition-duration: 1000ms;
+  }
+  .ease-\[cubic-bezier\(0\.23\,1\,0\.32\,1\)\] {
+    --tw-ease: cubic-bezier(0.23,1,0.32,1);
+    transition-timing-function: cubic-bezier(0.23,1,0.32,1);
   }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
@@ -4735,6 +4889,20 @@ href="https://perito.barcelona/">
       }
     }
   }
+  .group-hover\:border-cyan-500\/40 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        border-color: color-mix(in oklab, var(--color-cyan-500) 40%, transparent);
+      }
+    }
+  }
+  .group-hover\:border-cyan-500\/50 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        border-color: color-mix(in oklab, var(--color-cyan-500) 50%, transparent);
+      }
+    }
+  }
   .group-hover\:border-slate-900 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -4784,6 +4952,13 @@ href="https://perito.barcelona/">
       }
     }
   }
+  .group-hover\:bg-cyan-500\/10 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, var(--color-cyan-500) 10%, transparent);
+      }
+    }
+  }
   .group-hover\:bg-slate-800 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -4795,6 +4970,20 @@ href="https://perito.barcelona/">
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         background-color: transparent;
+      }
+    }
+  }
+  .group-hover\:bg-white\/30 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, var(--color-white) 30%, transparent);
+      }
+    }
+  }
+  .group-hover\:bg-white\/60 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, var(--color-white) 60%, transparent);
       }
     }
   }
@@ -5141,6 +5330,21 @@ href="https://perito.barcelona/">
       margin-bottom: calc(var(--spacing) * 0);
     }
   }
+  .hover\:w-52 {
+    &:hover {
+      @media (hover: hover) {
+        width: calc(var(--spacing) * 52);
+      }
+    }
+  }
+  .hover\:-translate-x-1 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-translate-x: calc(var(--spacing) * -1);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
   .hover\:translate-x-1 {
     &:hover {
       @media (hover: hover) {
@@ -5215,6 +5419,13 @@ href="https://perito.barcelona/">
     &:hover {
       @media (hover: hover) {
         border-color: var(--color-cyan-600);
+      }
+    }
+  }
+  .hover\:border-cyan-600\/50 {
+    &:hover {
+      @media (hover: hover) {
+        border-color: color-mix(in oklab, var(--color-cyan-600) 50%, transparent);
       }
     }
   }
@@ -5554,6 +5765,30 @@ href="https://perito.barcelona/">
     &:hover {
       @media (hover: hover) {
         --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+    }
+  }
+  .hover\:shadow-\[0_8px_32px_rgba\(6\,182\,212\,0\.65\)\] {
+    &:hover {
+      @media (hover: hover) {
+        --tw-shadow: 0 8px 32px var(--tw-shadow-color, rgba(6,182,212,0.65));
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+    }
+  }
+  .hover\:shadow-\[0_12px_40px_rgba\(0\,0\,0\,0\.6\)\] {
+    &:hover {
+      @media (hover: hover) {
+        --tw-shadow: 0 12px 40px var(--tw-shadow-color, rgba(0,0,0,0.6));
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+    }
+  }
+  .hover\:shadow-\[0_12px_40px_rgba\(6\,182\,212\,0\.75\)\] {
+    &:hover {
+      @media (hover: hover) {
+        --tw-shadow: 0 12px 40px var(--tw-shadow-color, rgba(6,182,212,0.75));
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
       }
     }
@@ -6822,6 +7057,11 @@ href="https://perito.barcelona/">
       height: calc(var(--spacing) * 10);
     }
   }
+  .xl\:h-14 {
+    @media (width >= 80rem) {
+      height: calc(var(--spacing) * 14);
+    }
+  }
   .xl\:h-20 {
     @media (width >= 80rem) {
       height: calc(var(--spacing) * 20);
@@ -6835,6 +7075,11 @@ href="https://perito.barcelona/">
   .xl\:w-10 {
     @media (width >= 80rem) {
       width: calc(var(--spacing) * 10);
+    }
+  }
+  .xl\:w-14 {
+    @media (width >= 80rem) {
+      width: calc(var(--spacing) * 14);
     }
   }
   .xl\:w-20 {
@@ -8121,6 +8366,19 @@ href="https://perito.barcelona/">
     
         <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             
+                <a href="/casos-exito/humedades-fisuras-sant-cugat/"
+                   class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm transition-colors
+                          ">
+                    
+                    <span>Casos de Éxito</span>
+                </a>
+            
+        </li>
+    
+
+    
+        <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            
                 <a href="/casos-exito/"
                    class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm transition-colors
                           ">
@@ -8144,17 +8402,6 @@ href="https://perito.barcelona/">
         </li>
     
 
-    
-        <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            
-                <a href="/casos-exito/humedades-fisuras-sant-cugat/"
-                   class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm transition-colors
-                          ">
-                    
-                    <span></span>
-                </a>
-            
-        </li>
     
 
     
@@ -8264,26 +8511,6 @@ href="https://perito.barcelona/">
         
             <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <div class="flex flex-col">
-                    <a href="/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
-                        
-                            <svg class="w-5 h-5 text-slate-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                        </svg>
-                        
-                        <span>Inicio</span>
-                    </a>
-                    <ul class="ml-4 mt-1 border-l border-slate-100 pl-2 space-y-1">
-                        
-                    </ul>
-                </div>
-            </li>
-        
-    
-
-    
-        
-            <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <div class="flex flex-col">
                     <a href="/especialidades-forenses/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
                         
                         <span>Especialidades Forenses</span>
@@ -8344,6 +8571,22 @@ href="https://perito.barcelona/">
         
             <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <div class="flex flex-col">
+                    <a href="/casos-exito/humedades-fisuras-sant-cugat/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
+                        
+                        <span>Casos de Éxito</span>
+                    </a>
+                    <ul class="ml-4 mt-1 border-l border-slate-100 pl-2 space-y-1">
+                        
+                    </ul>
+                </div>
+            </li>
+        
+    
+
+    
+        
+            <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <div class="flex flex-col">
                     <a href="/casos-exito/" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
                         
                         <span>Casos de Éxito</span>
@@ -8372,16 +8615,6 @@ href="https://perito.barcelona/">
         
     
 
-    
-        
-            <li class="nav-item">
-                <a href="/casos-exito/humedades-fisuras-sant-cugat/"
-                class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
-                    
-                    <span></span>
-                </a>
-            </li>
-        
     
 
     
@@ -8602,28 +8835,7 @@ href="https://perito.barcelona/">
     </div>
 </div>
 
-<!-- Botón flotante "Hablar con un perito" - Estilo Etiqueta Premium Clean -->
-<a href="tel:+34 614 194 985" 
-   id="talkToExpert" 
-   class="hidden md:flex fixed top-1/2 right-0 z-[100] transform -translate-y-1/2 items-center justify-end bg-gradient-to-bl from-cyan-900 via-cyan-800 to-cyan-700 text-white rounded-l-xl shadow-2xl transition-all duration-500 ease-out group pl-5 py-4 pr-4 hover:pl-10 hover:pr-6 hover:bg-cyan-800 border-y border-white/10 border-l border-white/10 origin-right"
-   style="box-shadow: -8px 8px 30px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05) inset;">
-    
-    <div class="flex flex-col items-end mr-3 transition-all duration-500 group-hover:mr-5">
-        <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest leading-tight opacity-90 group-hover:opacity-100 group-hover:tracking-[0.2em] transition-all duration-500">Consulta</span>
-        <span class="text-sm lg:text-base font-extrabold text-white leading-tight tracking-wide whitespace-nowrap drop-shadow-md">Hablar con un perito</span>
-    </div>
 
-    <div class="relative bg-white/10 rounded-full p-2.5 backdrop-blur-md group-hover:bg-amber-500/10 group-hover:text-amber-200 transition-colors duration-500 border border-white/10">
-        <svg class="w-5 h-5 text-white/90 group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-        </svg>
-        <!-- Ping dot orange (Restored) -->
-        <span class="absolute top-0 right-0 -mt-0.5 -mr-0.5 flex h-2.5 w-2.5">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500 border border-white/20 shadow-sm"></span>
-        </span>
-    </div>
-</a>
 
 
 <style>
@@ -10382,6 +10594,142 @@ href="https://perito.barcelona/">
     
 
     
+
+<div id="floating-cta-group"
+     class="hidden md:flex flex-col gap-2.5 fixed right-0 top-1/2 z-40"
+     style="transform: translateY(-50%) translateX(110%); opacity:0; transition: transform 0.65s cubic-bezier(0.22,1,0.36,1), opacity 0.5s ease;">
+
+  
+  <a href="tel:+34614194985"
+     aria-label="Llamar al perito ahora"
+     class="group relative flex items-center gap-0 rounded-l-2xl overflow-hidden
+            shadow-[0_8px_28px_rgba(6,182,212,0.55)]
+            hover:shadow-[0_12px_40px_rgba(6,182,212,0.75)]
+            hover:-translate-x-1
+            transition-all duration-300 ease-out"
+     style="background: linear-gradient(135deg, #0891b2 0%, #06b6d4 60%, #22d3ee 100%);">
+
+    
+    <span class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"></span>
+
+    
+    <span class="flex items-center gap-3 pl-5 pr-4 py-3.5 w-full">
+      
+      <span class="relative flex-shrink-0">
+        <span class="flex items-center justify-center w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30 group-hover:bg-white/30 transition-colors">
+          <svg class="w-[18px] h-[18px] text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </span>
+        
+        <span class="absolute -top-1 -right-1 flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-80"></span>
+          <span class="relative inline-flex h-3 w-3 rounded-full bg-emerald-400 border-2 border-white shadow-sm"></span>
+        </span>
+      </span>
+
+      
+      <span class="flex flex-col items-start leading-none">
+        <span class="text-[9px] font-black uppercase tracking-[0.22em] text-cyan-100/80 mb-1">Perito disponible</span>
+        <span class="text-[14px] font-bold text-white whitespace-nowrap leading-tight drop-shadow-sm">Hablar con un perito</span>
+      </span>
+    </span>
+
+    
+    <span class="absolute right-0 top-0 bottom-0 w-0.5 bg-white/10 pointer-events-none"></span>
+  </a>
+
+  
+  <button
+     id="floating-chat-trigger"
+     aria-label="Abrir asistente técnico"
+     type="button"
+     class="group relative flex items-center gap-0 rounded-l-2xl overflow-hidden w-full text-left
+            bg-slate-900 border border-slate-700/80
+            shadow-[0_8px_28px_rgba(0,0,0,0.45)]
+            hover:shadow-[0_12px_40px_rgba(0,0,0,0.6)]
+            hover:border-cyan-600/50
+            hover:-translate-x-1
+            transition-all duration-300 ease-out cursor-pointer">
+
+    
+    <span class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none"></span>
+    
+    <span class="absolute left-0 top-3 bottom-3 w-[2px] rounded-r bg-cyan-500/0 group-hover:bg-cyan-400 transition-all duration-400 pointer-events-none"></span>
+
+    
+    <span class="flex items-center gap-3 pl-5 pr-4 py-3.5 w-full">
+      
+      <span class="relative flex-shrink-0">
+        <span class="flex items-center justify-center w-9 h-9 rounded-xl bg-white/5 border border-slate-600 group-hover:bg-cyan-500/10 group-hover:border-cyan-500/50 transition-colors">
+          <svg class="w-[18px] h-[18px] text-slate-300 group-hover:text-cyan-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+          </svg>
+        </span>
+        
+        <span class="absolute -top-1.5 -right-1.5 flex items-center justify-center h-4 w-4 rounded-full bg-cyan-500 border-2 border-slate-900 shadow-sm">
+          <span class="text-[7px] font-black text-white leading-none">AI</span>
+        </span>
+      </span>
+
+      
+      <span class="flex flex-col items-start leading-none">
+        <span class="text-[9px] font-black uppercase tracking-[0.22em] text-cyan-400/80 mb-1 group-hover:text-cyan-300 transition-colors">Asistente técnico</span>
+        <span class="text-[14px] font-bold text-slate-100 whitespace-nowrap leading-tight group-hover:text-white transition-colors">Consulta por chat</span>
+      </span>
+    </span>
+
+    <span class="absolute right-0 top-0 bottom-0 w-0.5 bg-white/5 pointer-events-none"></span>
+  </button>
+
+</div>
+
+<script>
+  (function () {
+    const g = document.getElementById('floating-cta-group');
+    if (!g) return;
+
+    // Entrada con animación scroll-aware
+    let shown = false;
+    function show() {
+      if (shown) return;
+      shown = true;
+      g.style.transform = 'translateY(-50%) translateX(0)';
+      g.style.opacity = '1';
+    }
+    window.addEventListener('scroll', function () { if (window.scrollY > 150) show(); }, { passive: true });
+    setTimeout(show, 2200);
+
+    // Botón de chat: carga el script y abre el chatbot
+    const chatTrigger = document.getElementById('floating-chat-trigger');
+    if (chatTrigger) {
+      chatTrigger.addEventListener('mouseenter', function () {
+        // Precarga el script del chatbot disparando el mouseover del botón nativo
+        const nativeBtn = document.getElementById('chat-button');
+        if (nativeBtn) nativeBtn.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+      });
+      chatTrigger.addEventListener('click', function () {
+        const nativeBtn = document.getElementById('chat-button');
+        if (nativeBtn) {
+          // Primero mouseover para asegurar que el script está cargado
+          nativeBtn.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+          // Breve delay para que el script lazy cargue antes del click
+          setTimeout(function () { nativeBtn.click(); }, 80);
+        }
+      });
+    }
+  })();
+</script>
+
+
+<style>
+  @media (min-width: 768px) {
+    #chat-button { display: none !important; }
+  }
+</style>
+
+
+
     
 
 <div class="fixed bottom-0 left-0 right-0 z-40 bg-slate-900 border-t border-slate-800 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.3)] md:hidden h-16 flex items-center px-4 justify-between gap-4">

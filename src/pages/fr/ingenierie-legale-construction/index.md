@@ -92,7 +92,18 @@ cta:
   button:
     text: "Demander une Évaluation Confidentielle"
     url: "/fr/contact/"
----## Ingénierie Civile et Mécanique de Rupture
+---
+### Audit et Validation de Solutions Chimico-Structurelles
+Dans le secteur de la réhabilitation de haute complexité, il est de pratique courante que les ingénieries et les promoteurs reçoivent des propositions de réparation (études d'adéquation) rédigées par les départements commerciaux des grands fabricants de produits chimiques pour la construction.
+Cependant, la prescription d'un matériau n'équivaut pas à un projet structurel. **Les fabricants fournissent le produit, mais excluent explicitement de leur champ d'application la prise en charge de la Responsabilité Civile sur la structure existante.**
+Notre cabinet comble ce vide juridique et technique en assumant la Direction de l'Ingénierie Légale de la réparation. Nous auditons des solutions basées sur :
+* **Systèmes CFRP (Polymères Renforcés de Fibres de Carbone) :** Recalcul du transfert des contraintes de cisaillement et validation au cisaillement/flexion.
+* **Ancrages Chimiques Post-Installés et Résines Époxy :** Vérification de la profondeur effective et des cônes d'arrachement dans les bétons fissurés.
+* **Mortiers Structurels et Reprises en Sous-Œuvre avec Résines Expansives :** Validation de l'interaction sol-structure et compatibilité des déformations.
+**Notre livrable :** Un rapport technique visé par l'Ordre Officiel des Ingénieurs des Ponts et Chaussées, appuyé par un calcul par Éléments Finis (FEA). Nous vérifions mathématiquement la solution du fabricant, l'adaptons à la réalité de votre pathologie et émettons le document légal qui blinde la Responsabilité Civile de la Propriété.
+
+
+## Ingénierie Civile et Mécanique de Rupture
 
 Notre approche se concentre sur le calcul structurel avancé.
 

@@ -48,7 +48,11 @@ faqs_section:
   description: "We resolve the most common doubts regarding the costs of an expert intervention."
 faqs:
   - question: "What is the average cost of an engineering or construction expert report?"
-    answer: "There is no fixed rate. A preliminary technical report for localized pathologies can start at €800 - €1,500. However, complex structural expertises, audits of major works, or geotechnical studies require tailored proposals based on the necessary testing. We will provide an exact, fixed-price proposal before starting any procedure."
+    answer:
+      - "Our fees reflect the assumption of Civil Liability, the depth of mathematical calculation, and the litigation risk. We operate with the following levels of technical intervention:"
+      - "1. Major Losses and Collapses (From €20,000): Forensic management in collapses, complete structural recalculations, and high-impact litigation."
+      - "2. Complex Structural Audits: Detailed evaluations of severe pathologies requiring non-destructive testing and reinforcement validation."
+      - "3. Specialized Expert Reports: Compelling technical reports for localized pathologies."
   - question: "Does the proposal include court attendance (ratification)?"
     answer: "To offer maximum transparency, our proposals are divided into two independent items: 1) The study and drafting of the expert report, and 2) The fees for attendance and ratification in court. This way, if you reach an out-of-court settlement prior to the hearing, you will not have to pay the portion corresponding to the trial."
   - question: "Do I have to pay in advance?"

@@ -48,7 +48,11 @@ faqs_section:
   description: "Nous répondons aux doutes les plus courants concernant les coûts d'une intervention d'expertise."
 faqs:
   - question: "Quel est le coût moyen d'un rapport d'expertise en ingénierie ou en construction ?"
-    answer: "Il n'y a pas de tarif fixe. Un rapport technique préliminaire pour des pathologies localisées peut commencer entre 800 € et 1 500 €. Cependant, les expertises structurelles complexes, les audits de grands travaux ou les études géotechniques nécessitent des devis sur mesure basés sur les tests nécessaires. Nous vous fournirons un devis exact et définitif avant d'entamer toute démarche."
+    answer:
+      - "Nos honoraires reflètent l'hypothèse de la Responsabilité Civile, la profondeur du calcul mathématique et le risque du litige. Nous opérons avec les niveaux d'intervention technique suivants :"
+      - "1. Sinistres Majeurs et Effondrements (À partir de 20 000 €) : Direction légale dans les effondrements, recalculs structurels complets et litiges à fort impact."
+      - "2. Audits Structurels Complexes : Évaluations détaillées de pathologies graves nécessitant des essais non destructifs et la validation de renforcements."
+      - "3. Rapports d'Expertise Spécialisés : Rapports techniques convaincants pour les pathologies localisées."
   - question: "Le devis inclut-il l'assistance au procès (ratification) ?"
     answer: "Afin d'offrir une transparence maximale, nos devis sont divisés en deux parties indépendantes : 1) L'étude et la rédaction du rapport d'expertise, et 2) Les honoraires pour l'assistance et la ratification au tribunal. Ainsi, si vous parvenez à un accord à l'amiable avant l'audience, vous n'aurez pas à payer la part correspondante au procès."
   - question: "Dois-je payer à l'avance ?"

@@ -98,7 +98,7 @@ faqs:
   title: "Preguntas Frecuentes sobre Peritajes de Humedades"
   items:
     - question: "¿Cuánto cobra un perito por un informe pericial de humedades?"
-      answer: "Como referencia inicial, un informe pericial básico sobre humedades suele oscilar entre 300€ y 800€. Sin embargo, un informe completo que requiera el uso de cámaras termográficas, ensayos técnicos específicos, valoración de daños extensa o asistencia a juicio, tendrá un coste superior ajustado a la complejidad del caso."
+      answer: 'Para ofrecer una solución integral, las evaluaciones técnicas y las reparaciones definitivas se gestionan a través de nuestra división especializada. Puede consultar los detalles y solicitar una evaluación visitando <a href="https://humedades.barcelona">humedades.barcelona</a>.'
     - question: "¿Quién debe arreglar las humedades?"
       answer: "Depende del origen dictaminado por el perito. Si las humedades provienen de elementos comunes (fachadas, cubiertas, terrazas comunitarias o bajantes), la responsabilidad de la reparación recae sobre la <strong>Comunidad de Propietarios</strong>. Si el daño se origina por la rotura de una tubería privativa, el responsable es el <strong>propietario o su seguro de hogar</strong>. En viviendas de obra nueva, podría ser un <strong>vicio constructivo</strong> reclamable a la promotora/constructora."
     - question: "¿Qué validez tiene el informe para reclamar daños por agua?"

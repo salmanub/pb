@@ -147,7 +147,7 @@ faqs:
     - question: "¿Qué es un perito en la construcción?"
       answer: "Un perito en la construcción es un profesional colegiado (ingeniero civil, arquitecto o arquitecto técnico) con conocimientos especializados que inspecciona edificaciones para diagnosticar problemas constructivos, vicios ocultos o incumplimientos contractuales. Su rol culmina en la elaboración de un informe pericial que sirve como prueba técnica fundamental para resolver disputas, ya sea mediante negociación o en un juicio."
     - question: "¿Cuánto cobra un perito de obra?"
-      answer: "Los honorarios de un perito de obra varían dependiendo de la complejidad del daño, la urgencia, la cantidad de visitas necesarias a la edificación, el alcance de los ensayos especiales requeridos y si es necesaria su asistencia para ratificar el informe pericial en un juzgado. En Barcelona, las tarifas suelen comenzar desde los 300€-500€ para estudios preliminares o inspecciones puntuales básicas, ascendiendo en función de la envergadura del dictamen técnico completo."
+      answer: "Los honorarios de un perito de obra varían dependiendo de la complejidad del daño, la urgencia, la cantidad de visitas necesarias a la edificación, el alcance de los ensayos especiales requeridos y si es necesaria su asistencia para ratificar el informe pericial en un juzgado. Elaboramos presupuestos a medida tras una evaluación preliminar de la patología constructiva."
     - question: "¿Cuáles son los 3 tipos de peritos en edificación?"
       answer: |
         Generalmente, se dividen según quién los nombra o su principal enfoque:

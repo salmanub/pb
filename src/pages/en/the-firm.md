@@ -36,7 +36,7 @@ team_members:
     license_label: "License Nº"
     license: "16448"
     description:
-      - "Civil Engineer (UPC) and Postgraduate specialist in Insurance Expertise and Diverse Risks (INESE), with over 18 years of experience in the sector. He has developed his technical career as a specialist in structural repair and reinforcement in multinationals such as BASF and as a public works supervisor."
+      - "Civil Engineer (UPC) and Postgraduate specialist in Insurance Expertise and Diverse Risks (INESE), with over 18 years of experience in the sector. He has developed his technical career as a specialist in structural repair and reinforcement in multinationals such as los grandes fabricantes and as a public works supervisor."
       - "As Technical Director and founder of Perito Barcelona, he leads the preparation of expert reports, technical audits, and advanced consulting for the resolution of construction disputes and building pathologies."
       - "He has a solid track record defending expert reports in oral hearings. His deep knowledge of best engineering practices (lex artis) allows him to communicate calculations and technical concepts in an irrefutable, clear, and persuasive manner for lawyers and judges."
     specialties_title: "Areas of Expertise"

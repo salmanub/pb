@@ -29,7 +29,7 @@ keyFeatures:
   - "Significant increase in structure load capacity"
   - "Minimal visual impact, thickness, and added weight solution"
   - "Excellent durability and resistance to corrosion and fatigue"
-  - "Custom project calculation and design with leading systems (SIKA®)"
+  - "Custom project calculation and design with leading systems (los grandes fabricantes®)"
 
 # Service Process (for sidebar)
 serviceProcess:
@@ -112,5 +112,5 @@ We design carbon fiber reinforcement projects for a wide variety of situations i
 Our service focuses on the engineering phase, which is most critical for reinforcement success:
 
 1. **Diagnosis and Calculation:** We analyze the existing structure and perform calculations to determine the type of reinforcement (laminates, fabrics), quantity, and exact arrangement.
-2. **Technical Project:** We prepare a detailed document with plans, material specifications (we trust in the quality of leading systems like **SIKA® CarboDur® and SikaWrap®**) and a step-by-step application protocol.
+2. **Technical Project:** We prepare a detailed document with plans, material specifications (we trust in the quality of leading systems like **los grandes fabricantes® CarboDur® and SikaWrap®**) and a step-by-step application protocol.
 3. **Bridge to Execution:** With our project, you can request quotes from specialized companies. To ensure maximum quality in application, we work closely with **urbenis.com**, our expert partners in installing these systems.
