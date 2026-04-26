@@ -1,8 +1,8 @@
 ---
 layout: "layouts/collaboration.njk"
-title: "Pèrit Judicial per a Advocats a Barcelona | Informes Tècnics i Ratificació"
-subtitle: "Suport tècnic-pericial per reforçar la solidesa probatòria dels seus casos"
-description: "Oferim un servei de peritatge especialitzat per a despatxos d'advocats a Barcelona. Aportem la prova tècnica indispensable per guanyar casos de construcció, vicis ocults i disputes."
+title: "Enginyeria Forense per a Litigis | Dictàmens Pericials per a Advocats a Barcelona"
+subtitle: "Evidència tècnica de precisió matemàtica per a litigis de construcció d'alta complexitat"
+description: "Enginyeria Forense Civil per a despatxos d'advocats. Dictàmens amb Anàlisi de Causa Arrel (RCA), Simulació per Elements Finits (FEA) i Avaluació del Quantum. Independència pericial total. Duty to the Court."
 permalink: "/ca/collaboracio-advocats/"
 lang: "ca"
 translations:
@@ -16,88 +16,104 @@ translations:
     permalink: "/it/collaborazione-avvocati/"
 eleventyNavigation:
   notshow: true
-heroTitle: "PÈRIT JUDICIAL"
-heroHighlight: "PER A ADVOCATS"
-serviceTitle: "col·laboració amb despatxos d'advocats"
+heroTitle: "ENGINYERIA FORENSE"
+heroHighlight: "PER A LITIGIS"
+heroBadge: "Àrea Legal — Duty to the Court"
+serviceTitle: "dictàmens pericials per a despatxos d'advocats"
 
-
-
-# Key features in the hero section
 keyFeatures:
-  - "Reforç de la seva estratègia processal amb arguments tècnics irrefutables"
-  - "Pèrits solvents amb experiència provada en ratificació judicial"
-  - "Anàlisi de viabilitat tècnica per avaluar la solidesa d'un cas abans de la demanda"
-  - "Col·laboració àgil i confidencial adaptada als terminis processals"
+  - "Anàlisi de Causa Arrel (RCA) mitjançant Simulació per Elements Finits (FEA)"
+  - "Avaluació econòmica del dany: Quantum conforme als Eurocòdis i normativa CTE"
+  - "Contrainformes pericials: auditoria tècnica rigorosa de dictàmens de la contrapart"
+  - "Ratificació en seu judicial i arbitral internacional. Imparcialitat certificada"
 
-# Service Process (for sidebar)
 serviceProcess:
-  - title: "Anàlisi confidencial del cas"
-    description: "Estudiem la documentació per oferir-li una primera valoració de viabilitat tècnica"
-  - title: "Proposta d'enfocament pericial"
-    description: "Definim l'estratègia i l'abast de l'informe per maximitzar el seu impacte"
-  - title: "Elaboració de l'informe tècnic"
-    description: "Redactem un dictamen sòlid, clar i enfocat en els punts clau de la seva demanda"
-  - title: "Suport i defensa en judici"
-    description: "Li oferim suport continu i defensem l'informe en seu judicial amb convicció"
+  - title: "Avaluació preliminar del Quantum"
+    description: "Anàlisi documental inicial per determinar la magnitud tècnica i econòmica del dany. Valoració sense compromís en 48 h."
+  - title: "Dictamen de Causa Arrel (RCA)"
+    description: "Investigació forense amb FEA, termografia i assaigs no destructius. Determinació de la cadena causal amb base matemàtica."
+  - title: "Contrainforme pericial"
+    description: "Auditoria tècnica del dictamen de la contrapart. Identificació d'errors metodològics, omissions i vulnerabilitats."
+  - title: "Ratificació judicial i arbitral"
+    description: "Defensa del dictamen davant el tribunal. Independència pericial total conforme a l'estàndard Duty to the Court."
 
-# Service Benefits (for sidebar)
 serviceBenefits:
-  - "Augmenti la probabilitat d'èxit de les seves demandes i reclamacions"
-  - "Estalviï temps i recursos delegant tota la part tècnica en un expert"
-  - "Aporti als seus clients una solució integral i de màxima professionalitat"
-  - "Compti amb un aliat tècnic de confiança per a col·laboracions a llarg termini"
-  - "Fonamenti els seus arguments legals amb proves objectives i irrefutables"
+  - "Evidència matemàtica inatacable que resisteix el contrainterrogatori més rigorós"
+  - "Vocabulari tècnic normalitzat (Eurocòdis, Normes UNE, CTE) que el tribunal reconeix com a autoritat"
+  - "Separació nítida entre rol tècnic i estratègia legal: el dictamen és imparcial, el seu argument no ho és"
+  - "Reducció del risc reputacional del despatx davant peritatges febles o qüestionables"
+  - "Cobertura en arbitratge internacional: ICC, CIAM, CIADI"
 
-# Related Problems (optional)
 relatedProblems:
   - title: "Informes Pericials"
-    description: "Explori en detall els tipus d'informes que elaborem per als seus casos."
+    description: "Catàleg tècnic dels dictàmens que elaborem: patologia estructural, humitats, vicis ocults i quantificació de danys."
     url: "/ca/informes-pericials/"
-# Client Testimonials
-testimonials:
-  - quote: "El seu informe pericial va ser la peça central de la nostra demanda per vicis ocults. La claredat expositiva i la contundència tècnica van ser determinants per obtenir una sentència favorable."
-    author: "Sánchez & Martí Advocats"
-    role: "Despatx especialista en Dret Immobiliari"
-  - quote: "La col·laboració ha estat excepcional. No només lliuren un informe impecable, sinó que la seva disponibilitat per resoldre dubtes i la seva solvència durant la ratificació en el judici marquen la diferència."
-    author: "Bufet Legal Garrido"
-    role: "Àrea de Litigació Civil"
 
-# CTA Section
-ctaTitle: "Té un cas que necessita suport tècnic?"
-ctaDescription: "Contacti amb nosaltres per a una consulta de viabilitat inicial sense compromís. Convertim-nos en aliats estratègics."
-ctaButtonText1: "Sol·licitar Consulta"
+testimonials:
+  - quote: "El dictamen pericial va estructurar la cadena causal amb una precisió que el tribunal no va poder refutar. El contrainterrogatori va durar quatre hores; les conclusions van romandre intactes."
+    author: "Sánchez & Martí Advocats"
+    role: "Àrea de Litigació Civil — Dret de la Construcció"
+  - quote: "Vam sol·licitar un contrainforme sobre el dictamen de la contrapart. En 72 hores havien identificat tres errors metodològics que invalidaven les seves conclusions principals."
+    author: "Bufete Legal Garrido"
+    role: "Litigació Civil i Arbitratge Internacional"
+
+ctaTitle: "Té un litigi tècnic d'alta complexitat?"
+ctaDescription: "Sol·liciti una avaluació preliminar del Quantum i la viabilitat tècnica del cas. Resposta en 48 hores. Sense compromís."
+ctaButtonText1: "Sol·licitar Avaluació Tècnica"
 ctaButtonUrl1: "/ca/contacte/"
-ctaButtonText2: "Programar Trucada"
+ctaButtonText2: "Àrea Privada per a Advocats"
 ctaButtonUrl2: "/ca/contacte/"
 
-# Introduction (shown in hero section)
 intro: |
-  <p>Entenem que la solidesa d'un argument legal en casos de construcció, patologies o disputes tècniques resideix en la qualitat de la prova pericial. Un cas ben defensat necessita una base tècnica irrefutable.</p>
-  
-  <p>Ens posicionem com el seu <strong>aliat estratègic</strong>, un departament tècnic extern per al seu despatx. Traduïm la complexitat de l'enginyeria en arguments clars i defensables que reforcen la seva estratègia processal i l'ajuden a assolir els objectius dels seus clients.</p>
+  <p>En litigis de construcció d'alta complexitat, la diferència entre una sentència favorable i una de desfavorable no la determina l'estratègia legal: la determina la qualitat de l'evidència tècnica. Un dictamen pericial amb base matemàtica rigorosa transforma la incertesa en un fet físic inatacable.</p>
+
+  <p>Operem sota l'estàndard d'<strong>independència pericial absoluta (Duty to the Court)</strong>. El nostre mandat és la veritat tècnica, no el resultat del client. Aquesta imparcialitat és la que dóna al dictamen la seva autoritat científica —i la que protegeix la reputació del despatx davant qualsevol interrogatori hostil.</p>
 ---
 
-# El Seu Aliat Tècnic per a Casos de Construcció, Vicis Ocults i Disputes
+# Dictàmens d'Enginyeria Forense per a Litigis d'Alta Complexitat
 
-**Entenem que la solidesa del seu argument legal depèn de la qualitat de les seves proves. Com a pèrits enginyers, ens integrem en el seu equip per aportar el rigor tècnic que els seus casos necessiten per prosperar.**
+L'enginyeria forense civil no assisteix el litigi: el fonamenta. Quan la controvèrsia gira al voltant d'una fallada estructural, una patologia constructiva o la quantificació d'un dany, el dictamen pericial és l'única prova que el tribunal pot mesurar, contrastar i verificar amb independència del relat de cada part.
 
-## Reforcem la Seva Estratègia Processal amb Evidència Tècnica Irrefutable
+## Independència Pericial: l'Estàndard Duty to the Court
 
-Un litigi en l'àmbit de la construcció es guanya o es perd en els detalls tècnics. El nostre treball és proporcionar-li a vostè i al tribunal una visió clara, objectiva i fonamentada de la realitat constructiva, convertint la complexitat tècnica en un argument simple i poderós.
+El perit judicial no és l'expert del client. És l'expert del tribunal. Aquest principi, recollit a l'article 335.2 LEC, estableix que el dictamen ha de ser objectivament correcte encara que perjudiqui qui l'encarrega.
 
-### El que Oferim al Seu Despatx
+Aquesta independència no debilita la posició del despatx: la reforça. Un dictamen emès sota l'estàndard *Duty to the Court* té una autoritat científica que cap contrainforme motivat per interès no pot igualar.
 
-* **Solidesa Probatòria:** Els nostres informes pericials estan meticulosament documentats i basats en normativa i ciència, dissenyats per resistir qualsevol contrainforme.
-* **Eficiència i Estalvi de Temps:** Actuem com el seu departament tècnic extern, realitzant les inspeccions, anàlisis i estudis perquè vostè pugui centrar-se en l'estratègia legal.
-* **Credibilitat a la Sala:** No només lliurem un document. Oferim un pèrit amb experiència que sap com comunicar i defensar les seves conclusions de forma clara i convincent davant un jutge.
+## Metodologia Forense: de la Hipòtesi a l'Evidència Matemàtica
 
-## El Nostre Procés de Col·laboració
+### Anàlisi de Causa Arrel (RCA)
 
-1.  **Anàlisi de Viabilitat del Cas:** En una primera presa de contacte confidencial, avaluem la documentació i li oferim una visió honesta sobre la solidesa tècnica del cas.
-2.  **Elaboració de l'Informe Pericial:** Realitzem una investigació exhaustiva i redactem un informe a mida, enfocat en els punts clau per a la seva estratègia legal.
-3.  **Suport Continu:** El mantenim informat i resolem qualsevol dubte tècnic que pugui sorgir durant el procés.
-4.  **Ratificació Judicial:** Acudim a judici per exposar, aclarir i defensar el dictamen pericial amb la màxima solvència.
+L'Anàlisi de Causa Arrel determina la cadena causal d'una fallada constructiva mitjançant un procés d'eliminació sistemàtica d'hipòtesis. No és una opinió tècnica: és un mètode d'investigació amb protocol normalitzat (ISO 17020, EN 13791) que produeix conclusions verificables i reproduïbles.
 
-## Té un cas entre mans?
+### Simulació per Elements Finits (FEA)
 
-**No esperi que la part contrària presenti la seva prova pericial. Asseguri la seva posició amb un informe tècnic sòlid des del principi.**
+Per a patologies estructurals complexes —fletxes, fisuració, col·lapse parcial— emprem models de simulació numèrica que reprodueixen el comportament real de l'estructura. Els resultats quantifiquen amb exactitud el grau d'incompliment dels Eurocòdis (EC2, EC3, EC7) aplicables.
+
+### Avaluació del Quantum
+
+La determinació del *quantum* —el valor econòmic del dany— és la peça més litigada del procés. Apliquem metodologia de cost de reposició certificada (BCIS, BEDEC) i diferenciem amb precisió entre el dany directe, el dany conseqüencial i el lucre cessant tècnicament atribuïble al defecte.
+
+## Serveis per a Despatxos d'Advocats
+
+### Dictamen Pericial Principal
+
+Elaboració de l'informe tècnic forense des de la inspecció fins a les conclusions. Estructura normalitzada per a seu judicial espanyola, arbitratge ICC/CIADI i procediments transfronterers.
+
+### Contrainforme Pericial
+
+Auditoria tècnica rigorosa del dictamen presentat per la contrapart. Identifiquem errors metodològics, incompliments normatius i omissions causals que permeten impugnar les seves conclusions amb base científica.
+
+### Consulta de Viabilitat Tècnica
+
+Abans d'interposar demanda: anàlisi de la documentació disponible, determinació del *quantum* preliminar i avaluació de la solidesa causal del cas. Confidencial. Sense compromís econòmic.
+
+### Ratificació en Seu Judicial i Arbitral
+
+Compareixença davant el tribunal per exposar, aclarir i defensar el dictamen sota interrogatori de la part contrària i del jutge. Experiència en procediments davant l'Audiència Provincial de Barcelona, el Tribunal Superior de Justícia de Catalunya i arbitratges ICC.
+
+## La Reputació Tècnica del Despatx Comença en el Dictamen
+
+Un dictamen pericial qüestionat en sala danya la credibilitat del despatx, no només del cas. La selecció del perit no és un tràmit: és una decisió estratègica que afecta el resultat del litigi i la percepció que el tribunal té del rigor professional del lletrat.
+
+Els nostres dictàmens estan dissenyats per resistir el contrainterrogatori més exigent perquè estan construïts sobre evidència, no sobre argumentació.

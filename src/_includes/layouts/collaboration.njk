@@ -1,114 +1,413 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
+
+{# ── Resolución de textos por idioma ── #}
 {% set badgeText = heroBadge or "Colaboración Profesional" %}
-{% set titleLine1 = heroTitle or "COLABORACIÓN" %}
-{% set titleLine2 = heroHighlight or "ESTRATÉGICA" %}
+{% set titleLine1 = heroTitle or "INGENIERÍA FORENSE" %}
+{% set titleLine2 = heroHighlight or "PARA LITIGIOS" %}
 
 {% if lang == 'ca' %}
-    {% set badgeText = heroBadge or "Col·laboració Professional" %}
-    {% set titleLine1 = heroTitle or "COL·LABORACIÓ" %}
-    {% set titleLine2 = heroHighlight or "ESTRATÈGICA" %}
+  {% set badgeText = heroBadge or "Col·laboració Professional" %}
+  {% set titleLine1 = heroTitle or "ENGINYERIA FORENSE" %}
+  {% set titleLine2 = heroHighlight or "PER A LITIGIS" %}
 {% endif %}
 {% if lang == 'en' %}
-    {% set badgeText = heroBadge or "Professional Collaboration" %}
-    {% set titleLine1 = heroTitle or "STRATEGIC" %}
-    {% set titleLine2 = heroHighlight or "COLLABORATION" %}
+  {% set badgeText = heroBadge or "Legal Practice" %}
+  {% set titleLine1 = heroTitle or "FORENSIC ENGINEERING" %}
+  {% set titleLine2 = heroHighlight or "FOR LITIGATION" %}
 {% endif %}
 {% if lang == 'fr' %}
-    {% set badgeText = heroBadge or "Collaboration Professionnelle" %}
-    {% set titleLine1 = heroTitle or "COLLABORATION" %}
-    {% set titleLine2 = heroHighlight or "STRATÉGIQUE" %}
+  {% set badgeText = heroBadge or "Espace Juridique" %}
+  {% set titleLine1 = heroTitle or "INGÉNIERIE FORENSIQUE" %}
+  {% set titleLine2 = heroHighlight or "POUR LES LITIGES" %}
 {% endif %}
 {% if lang == 'it' %}
-    {% set badgeText = heroBadge or "Collaborazione Professionale" %}
-    {% set titleLine1 = heroTitle or "COLLABORAZIONE" %}
-    {% set titleLine2 = heroHighlight or "STRATEGICA" %}
+  {% set badgeText = heroBadge or "Area Legale" %}
+  {% set titleLine1 = heroTitle or "INGEGNERIA FORENSE" %}
+  {% set titleLine2 = heroHighlight or "PER LE CONTROVERSIE" %}
 {% endif %}
+
 <main itemscope itemtype="https://schema.org/Article">
-    <!-- Hero Section -->
-    <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] bg-slate-50 overflow-hidden isolate">
-        <!-- Efectos decorativos -->
-        <div class="absolute inset-0">
-            <div class="absolute inset-0 bg-grid-pattern opacity-[0.5]"></div>
-            <div class="absolute inset-0 bg-radial-fade"></div>
+
+  {# ══════════════════════════════════════════════
+     HERO — Dark forensic / slate premium
+  ══════════════════════════════════════════════ #}
+  <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] overflow-hidden isolate"
+          style="background: linear-gradient(160deg, #0f172a 0%, #0e2536 55%, #0f2d40 100%);">
+
+    {# Grid pattern overlay #}
+    <div class="absolute inset-0 opacity-[0.07]"
+         style="background-image: linear-gradient(rgba(6,182,212,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.6) 1px, transparent 1px); background-size: 48px 48px;"></div>
+
+    {# Glow radial derecho #}
+    <div class="absolute -right-40 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
+         style="background: radial-gradient(circle, rgba(6,182,212,0.12) 0%, transparent 70%);"></div>
+
+    {# Línea de acento superior #}
+    <div class="absolute inset-x-0 top-0 h-px"
+         style="background: linear-gradient(90deg, transparent, rgba(6,182,212,0.6), transparent);"></div>
+
+    <div class="relative z-10 container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
+      <div class="py-20 lg:py-32">
+
+        {# Breadcrumb #}
+        {% include "partials/breadcrumb.njk" %}
+
+        <div class="max-w-4xl mt-10">
+
+          {# Badge #}
+          <div class="inline-flex items-center gap-2 mb-6">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span class="text-[11px] font-black uppercase tracking-[0.25em] text-cyan-400">{{ badgeText }}</span>
+          </div>
+
+          {# Título principal #}
+          <h1 class="font-black text-white leading-[0.92] tracking-tight mb-6"
+              style="font-size: clamp(2.5rem, 7vw, 5.5rem);"
+              itemprop="headline">
+            {{ titleLine1 }}<br>
+            <span style="background: linear-gradient(135deg, #06b6d4, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">{{ titleLine2 }}</span>
+          </h1>
+
+          {# Subtitle #}
+          <p class="text-slate-300 text-lg md:text-xl font-light leading-relaxed max-w-2xl mb-10" itemprop="description">
+            {{ description }}
+          </p>
+
+          {# Key features pills #}
+          {% if keyFeatures %}
+          <div class="flex flex-wrap gap-3">
+            {% for feat in keyFeatures %}
+            <span class="inline-flex items-center gap-2 text-[12px] font-semibold text-slate-300 px-4 py-2 rounded-lg"
+                  style="background: rgba(6,182,212,0.08); border: 1px solid rgba(6,182,212,0.2);">
+              <svg class="w-3.5 h-3.5 text-cyan-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+              </svg>
+              {{ feat }}
+            </span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+
+    {# Línea de cierre inferior #}
+    <div class="absolute inset-x-0 bottom-0 h-px"
+         style="background: linear-gradient(90deg, transparent, rgba(6,182,212,0.3), transparent);"></div>
+  </header>
+
+  {# ══════════════════════════════════════════════
+     PROCESO — Pasos de colaboración
+  ══════════════════════════════════════════════ #}
+  {% if serviceProcess %}
+  <section class="py-20 bg-slate-50 border-b border-slate-100">
+    <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
+
+      <div class="max-w-2xl mb-12">
+        <p class="text-[11px] font-black uppercase tracking-[0.22em] text-cyan-600 mb-3">
+          {% if lang == 'ca' %}Procés de Col·laboració
+          {% elif lang == 'en' %}Collaboration Process
+          {% elif lang == 'fr' %}Processus de Collaboration
+          {% elif lang == 'it' %}Processo di Collaborazione
+          {% else %}Proceso de Colaboración{% endif %}
+        </p>
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight tracking-tight">
+          {% if lang == 'ca' %}Metodologia Forense en 4 Fases
+          {% elif lang == 'en' %}Forensic Methodology in 4 Phases
+          {% elif lang == 'fr' %}Méthodologie Forensique en 4 Phases
+          {% elif lang == 'it' %}Metodologia Forense in 4 Fasi
+          {% else %}Metodología Forense en 4 Fases{% endif %}
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {% for step in serviceProcess %}
+        <div class="relative group">
+          {# Número de paso #}
+          <div class="flex items-center gap-3 mb-4">
+            <span class="flex items-center justify-center w-10 h-10 rounded-xl font-black text-sm text-white flex-shrink-0"
+                  style="background: linear-gradient(135deg, #0891b2, #06b6d4);">
+              {{ loop.index }}
+            </span>
+            {% if not loop.last %}
+            <div class="flex-1 h-px hidden lg:block" style="background: linear-gradient(90deg, rgba(6,182,212,0.4), transparent);"></div>
+            {% endif %}
+          </div>
+          <h3 class="text-base font-black text-slate-900 mb-2 leading-tight">{{ step.title }}</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">{{ step.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </section>
+  {% endif %}
+
+  {# ══════════════════════════════════════════════
+     CONTENIDO PRINCIPAL — Prose forense
+  ══════════════════════════════════════════════ #}
+  <article class="py-24 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-16 max-w-6xl mx-auto">
+
+        {# Columna principal: contenido markdown #}
+        <div class="prose-forensic" itemprop="articleBody">
+          {{ content | safe }}
         </div>
 
-        <div class="relative z-10 container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
-            <div class="py-16 lg:py-24">
-                <!-- Breadcrumb -->
-                {% include "partials/breadcrumb.njk" %}
-                
-                <div class="max-w-4xl mx-auto text-center mt-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                     <span class="badge badge-primary mb-6">{{ badgeText }}</span>
-                    <h1 class="text-4xl md:text-5xl lg:text-7xl font-black text-slate-900 mb-8 leading-[0.95] tracking-tight" itemprop="headline">
-                        {{ titleLine1 }} <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">{{ titleLine2 }}</span>
-                    </h1>
-                    <p class="section-subtitle mx-auto" itemprop="description">
-                        {{ description }}
-                    </p>
-                </div>
+        {# Sidebar: autoridad + beneficios #}
+        <aside class="space-y-6">
+
+          {# Bloque Duty to the Court #}
+          <div class="rounded-2xl overflow-hidden border border-cyan-900/20"
+               style="background: linear-gradient(160deg, #0f172a, #0e2536);">
+            <div class="px-6 pt-6 pb-4 border-b border-cyan-900/20">
+              <p class="text-[10px] font-black uppercase tracking-[0.2em] text-cyan-400 mb-1">Estándar de imparcialidad</p>
+              <p class="text-white font-black text-lg leading-tight">Duty to the Court</p>
             </div>
-        </div>
-    </header>
-
-    <!-- Main Content Section -->
-    <article class="py-24 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
-            <div class="max-w-4xl mx-auto">
-                <!-- Content Zone -->
-                <div class="prose prose-lg mx-auto" itemprop="articleBody">
-                    {{ content | safe }}
+            <div class="px-6 py-5">
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                {% if lang == 'ca' %}El dictamen pericial és objectivament correcte, independentment de qui el sol·liciti. Principi recollit a l'art. 335.2 LEC.
+                {% elif lang == 'en' %}The expert report is objectively correct, regardless of who instructs it. Principle enshrined in CPR Part 35.
+                {% elif lang == 'fr' %}Le rapport d'expertise est objectivement correct, indépendamment de qui le commande. Principe consacré par le CPR Part 35.
+                {% elif lang == 'it' %}La perizia è oggettivamente corretta, indipendentemente da chi la commissiona. Principio sancito dal CPR Part 35.
+                {% else %}El dictamen pericial es objetivamente correcto, independientemente de quién lo encargue. Principio recogido en el art. 335.2 LEC.{% endif %}
+              </p>
+              <div class="flex flex-col gap-2">
+                {% for benefit in serviceBenefits %}
+                <div class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-slate-300 text-xs leading-snug">{{ benefit }}</span>
                 </div>
+                {% endfor %}
+              </div>
             </div>
-        </div>
-    </article>
+          </div>
 
-    <!-- CTA Section -->
-    <section class="py-24 bg-slate-50 relative overflow-hidden isolate">
-        <!-- Efectos decorativos -->
-        <div class="absolute inset-0">
-            <div class="absolute inset-0 bg-grid-pattern opacity-[0.4]"></div>
-        </div>
-
-        <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0 relative z-10">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="section-title mb-6">
-                    {{ ctaTitle }}
-                </h2>
-                <p class="section-subtitle mb-12">{{ ctaDescription }}</p>
-                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <a href="{{ ctaButtonUrl1 }}" class="btn-primary">
-                        {{ ctaButtonText1 }}
-                    </a>
-                    <a href="{{ ctaButtonUrl2 }}" class="btn-secondary">
-                        {{ ctaButtonText2 }}
-                    </a>
-                </div>
+          {# Credenciales técnicas #}
+          <div class="rounded-2xl p-6 border border-slate-200 bg-slate-50">
+            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-4">
+              {% if lang == 'ca' %}Normativa i Estàndards
+              {% elif lang == 'en' %}Standards & Methodology
+              {% elif lang == 'fr' %}Normes & Méthodologie
+              {% elif lang == 'it' %}Norme & Metodologia
+              {% else %}Normativa y Estándares{% endif %}
+            </p>
+            <div class="flex flex-wrap gap-2">
+              {% set standards = ["Eurocódigos EC2/EC3/EC7", "ISO 17020", "EN 13791", "CTE DB-SE", "FEA / MEF", "BCIS · BEDEC", "ICC · CIADI · LCIA", "Art. 335.2 LEC"] %}
+              {% for s in standards %}
+              <span class="inline-block text-[11px] font-semibold text-slate-600 px-3 py-1.5 rounded-lg bg-white border border-slate-200">{{ s }}</span>
+              {% endfor %}
             </div>
+          </div>
+
+          {# Testimoniales #}
+          {% if testimonials %}
+          <div class="space-y-4">
+            {% for t in testimonials %}
+            <blockquote class="rounded-2xl p-5 border border-slate-200 bg-white">
+              <svg class="w-6 h-6 text-cyan-200 mb-3" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+              <p class="text-slate-700 text-sm leading-relaxed italic mb-4">{{ t.quote }}</p>
+              <footer>
+                <span class="block text-xs font-black text-slate-900">{{ t.author }}</span>
+                <span class="block text-[11px] text-slate-500 mt-0.5">{{ t.role }}</span>
+              </footer>
+            </blockquote>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+        </aside>
+      </div>
+    </div>
+  </article>
+
+  {# ══════════════════════════════════════════════
+     CTA — Dark premium
+  ══════════════════════════════════════════════ #}
+  <section class="py-24 relative overflow-hidden isolate"
+           style="background: linear-gradient(160deg, #0f172a 0%, #0e2536 100%);">
+
+    <div class="absolute inset-0 opacity-[0.06]"
+         style="background-image: linear-gradient(rgba(6,182,212,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.6) 1px, transparent 1px); background-size: 48px 48px;"></div>
+    <div class="absolute inset-x-0 top-0 h-px"
+         style="background: linear-gradient(90deg, transparent, rgba(6,182,212,0.5), transparent);"></div>
+
+    <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+
+        <span class="inline-flex items-center gap-2 mb-6">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          <span class="text-[11px] font-black uppercase tracking-[0.25em] text-cyan-400">
+            {% if lang == 'ca' %}Consulta Sense Compromís
+            {% elif lang == 'en' %}No-Obligation Consultation
+            {% elif lang == 'fr' %}Consultation Sans Engagement
+            {% elif lang == 'it' %}Consulenza Senza Impegno
+            {% else %}Consulta Sin Compromiso{% endif %}
+          </span>
+        </span>
+
+        <h2 class="font-black text-white leading-tight tracking-tight mb-4"
+            style="font-size: clamp(1.8rem, 4vw, 3rem);">
+          {{ ctaTitle }}
+        </h2>
+        <p class="text-slate-400 text-lg font-light mb-10 max-w-xl mx-auto">{{ ctaDescription }}</p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="{{ ctaButtonUrl1 }}"
+             class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-white text-sm transition-all duration-300 hover:opacity-90 hover:scale-[1.02]"
+             style="background: linear-gradient(135deg, #0891b2, #06b6d4); box-shadow: 0 8px 28px rgba(6,182,212,0.35);">
+            {{ ctaButtonText1 }}
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a href="{{ ctaButtonUrl2 }}"
+             class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-slate-200 text-sm transition-all duration-300 hover:text-white hover:border-cyan-500/50"
+             style="border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04);">
+            {{ ctaButtonText2 }}
+          </a>
         </div>
-    </section>
+
+      </div>
+    </div>
+  </section>
+
 </main>
 {% endblock %}
 
 {% block pageStyles %}
- {% set indexCSS %} {% include "dist/assets/styles/index.css" %} {% endset %}
 <style>
-/* Mejoras visuales para contenido específico de colaboración */
-.collaboration-feature {
-    @apply relative pl-12 py-4;
+/* ─── Prose Forense: tipografía premium para contenido técnico B2B ─── */
+.prose-forensic {
+  color: #334155;
+  font-size: 1.0625rem;
+  line-height: 1.75;
 }
 
-.collaboration-feature::before {
-    content: '';
-    @apply absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-cyan-50 text-cyan-600 rounded-xl flex items-center justify-center border border-cyan-100;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%230891b2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat;
+.prose-forensic h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
 }
 
-{{ indexCSS | safe }}
+.prose-forensic h2 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.prose-forensic h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0891b2;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-forensic p {
+  color: #475569;
+  margin-bottom: 1.25rem;
+}
+
+.prose-forensic strong {
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.prose-forensic em {
+  font-style: italic;
+  color: #0891b2;
+  font-weight: 600;
+}
+
+.prose-forensic ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0;
+  space-y: 0.5rem;
+}
+
+.prose-forensic ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #475569;
+}
+
+.prose-forensic ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #06b6d4;
+}
+
+.prose-forensic ol {
+  counter-reset: forensic-ol;
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0;
+}
+
+.prose-forensic ol li {
+  counter-increment: forensic-ol;
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: #475569;
+}
+
+.prose-forensic ol li::before {
+  content: counter(forensic-ol);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: linear-gradient(135deg, #0891b2, #06b6d4);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.prose-forensic blockquote {
+  border-left: 3px solid #06b6d4;
+  padding: 1rem 1.25rem;
+  background: #f8fafc;
+  border-radius: 0 0.75rem 0.75rem 0;
+  color: #334155;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
 </style>
 {% endblock %}
