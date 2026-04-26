@@ -18,6 +18,14 @@ body {
     overflow-x: hidden;
 }
 
+/* Espacio inferior en móvil para la barra fija de CTAs */
+@media (max-width: 767px) {
+    body {
+        padding-bottom: 64px;
+    }
+}
+
+
 .container {
     max-width: 1600px;
     margin: 0 auto;
