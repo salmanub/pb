@@ -47,11 +47,11 @@ team_members:
   - name: "Joan Franch"
     image: "src/assets/images/employees/joan_franch-geoleg.jpeg"
     linkedin: "https://www.linkedin.com/in/joan-franch-geotecnia/"
-    role: "Geòleg i Suport Tècnic Geotècnic"
+    role: "Geòleg (Col·laborador Extern) i Suport Tècnic Geotècnic"
     license_label: "Col. Nº"
     license: "4169"
     description:
-      - "Geòleg col·legiat amb més de 20 anys d'experiència, aportant el suport científic fonamental en mecànica de sòls i interacció terreny-estructura."
+      - "Geòleg col·legiat i col·laborador extern del despatx amb més de 20 anys d'experiència, aportant el suport científic fonamental en mecànica de sòls i interacció terreny-estructura."
       - "La seva intervenció és clau en litigis de gran envergadura derivats de defectes de compactació en terraplens, esllavissades, assentaments diferencials i patologies complexes de fonamentació profunda."
       - "El seu enfocament es basa en la direcció, coordinació i interpretació d'assajos in situ (SPT, penetròmetres DPSH) i mostrejos de camp, brindant una base probatòria sòlida sobre el subsòl que complementa i blinda el dictamen pericial principal."
     specialties_title: "Àrees d'Experiència"

@@ -47,11 +47,11 @@ team_members:
   - name: "Joan Franch"
     image: "src/assets/images/employees/joan_franch-geoleg.jpeg"
     linkedin: "https://www.linkedin.com/in/joan-franch-geotecnia/"
-    role: "Géologue et Support Technique Géotechnique"
+    role: "Géologue (Collaborateur Externe) et Support Technique Géotechnique"
     license_label: "Col. Nº"
     license: "4169"
     description:
-      - "Géologue agréé avec plus de 20 ans d'expérience, apportant le support scientifique fondamental en mécanique des sols et interaction sol-structure."
+      - "Géologue agréé et collaborateur externe du cabinet avec plus de 20 ans d'expérience, apportant le support scientifique fondamental en mécanique des sols et interaction sol-structure."
       - "Son intervention est primordiale dans les litiges de grande envergure découlant de défauts de compactage dans les remblais, glissements de terrain, tassements différentiels et pathologies complexes de fondations profondes."
       - "Son approche est basée sur la direction, la coordination et l'interprétation d'essais in situ (SPT, pénétromètres DPSH) et d'échantillonnages sur le terrain, fournissant une base probante solide sur le sous-sol qui complète et blinde le rapport d'expertise principal."
     specialties_title: "Domaines d'Expertise"
