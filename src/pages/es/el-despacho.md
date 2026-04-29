@@ -1,4 +1,4 @@
----
+﻿---
 
 
 layout: layouts/despacho.njk
@@ -44,21 +44,6 @@ team_members:
       - "Patología Estructural y Refuerzos"
       - "Reclamaciones de Seguros y Siniestros"
       - "Ingeniería Forense Constructiva"
-  - name: "Joan Franch"
-    image: "src/assets/images/employees/joan_franch-geoleg.jpeg"
-    linkedin: "https://www.linkedin.com/in/joan-franch-geotecnia/"
-    role: "Geólogo (Colaborador Externo) y Soporte Técnico Geotécnico"
-    license_label: "Col. Nº"
-    license: "4169"
-    description:
-      - "Geólogo colegiado y colaborador externo del despacho con más de 20 años de experiencia, aportando el soporte científico fundamental en mecánica de suelos e interacción terreno-estructura."
-      - "Su intervención es clave en litigios de gran envergadura derivados de defectos de compactación en terraplenes, deslizamientos, asientos diferenciales y patologías complejas de cimentación profunda."
-      - "Su enfoque se basa en la dirección, coordinación e interpretación de ensayos in situ (SPT, penetrómetros DPSH) y muestreos de campo, brindando una base probatoria sólida sobre el subsuelo que complementa y blinda el dictamen pericial principal."
-    specialties_title: "Áreas de Experiencia"
-    specialties:
-      - "Patologías de Cimentación"
-      - "Mecánica de Suelos"
-      - "Interpretación de Ensayos (SPT, DPSH)"
 cta:
   title: "¿Necesitamos colaborar?"
   description: "Expónganos su caso. Realizamos una primera evaluación técnica y de viabilidad de su expediente sin compromiso."

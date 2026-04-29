@@ -44,21 +44,6 @@ team_members:
       - "Patologia Strutturale e Rinforzi"
       - "Reclami Assicurativi e Sinistri"
       - "Ingegneria Forense Edile"
-  - name: "Joan Franch"
-    image: "src/assets/images/employees/joan_franch-geoleg.jpeg"
-    linkedin: "https://www.linkedin.com/in/joan-franch-geotecnia/"
-    role: "Geologo (Collaboratore Esterno) e Supporto Tecnico Geotecnico"
-    license_label: "Col. Nº"
-    license: "4169"
-    description:
-      - "Geologo abilitato e collaboratore esterno dello studio con oltre 20 anni di esperienza, fornisce il fondamentale supporto scientifico nella meccanica delle terre e nell'interazione terreno-struttura."
-      - "Il suo intervento è fondamentale in contenziosi di grande entità derivanti da difetti di compattazione in rilevati, frane, cedimenti differenziali e complesse patologie delle fondazioni profonde."
-      - "Il suo approccio si basa sulla direzione, il coordinamento e l'interpretazione di prove in situ (SPT, penetrometri DPSH) e campionamenti sul campo, fornendo una solida base probatoria sul sottosuolo che completa e blinda la perizia principale."
-    specialties_title: "Aree di Competenza"
-    specialties:
-      - "Patologie delle Fondazioni"
-      - "Meccanica delle Terre"
-      - "Interpretazione di Prove (SPT, DPSH)"
 cta:
   title: "Dobbiamo collaborare?"
   description: "Esponici il tuo caso. Effettueremo una prima valutazione tecnica e di fattibilità della pratica senza impegno."

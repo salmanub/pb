@@ -44,21 +44,6 @@ team_members:
       - "Structural Pathology & Reinforcement"
       - "Insurance Claims & Casualties"
       - "Forensic Construction Engineering"
-  - name: "Joan Franch"
-    image: "src/assets/images/employees/joan_franch-geoleg.jpeg"
-    linkedin: "https://www.linkedin.com/in/joan-franch-geotecnia/"
-    role: "Geologist (External Collaborator) & Geotechnical Technical Support"
-    license_label: "License Nº"
-    license: "4169"
-    description:
-      - "Chartered geologist and external collaborator of the firm with over 20 years of experience, providing fundamental scientific support in soil mechanics and soil-structure interaction."
-      - "His intervention is key in large-scale litigation derived from compaction defects in embankments, landslides, differential settlements, and complex deep foundation pathologies."
-      - "His approach is based on the direction, coordination, and interpretation of in-situ tests (SPT, DPSH penetrometers) and field sampling, providing a solid evidentiary base regarding the subsoil that complements and fortifies the main expert report."
-    specialties_title: "Areas of Expertise"
-    specialties:
-      - "Foundation Pathologies"
-      - "Soil Mechanics"
-      - "Test Interpretation (SPT, DPSH)"
 cta:
   title: "Need to collaborate?"
   description: "Present your case. We will conduct an initial technical and viability assessment of your file without any obligation."
