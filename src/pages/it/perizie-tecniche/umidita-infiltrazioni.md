@@ -87,7 +87,7 @@ intro: |
   <p>Come parte dei nostri servizi di <a href="/it/perizie-tecniche/">perizie tecniche</a>, ci specializziamo nel rilevamento dell'origine esatta di qualsiasi tipo di umidità, elaborando un parere tecnico che ti servirà come tabella di marcia per la sua eradicazione definitiva.</p>
 ---## Approccio Fisico e Termodinamico
 
-Analizziamo l'umidità attraverso la termodinamica. Per l'esecuzione materiale, contattare [la nostra divisione](https://humedades.barcelona).
+Analizziamo l'umidità attraverso la termodinamica. Per l'esecuzione materiale, contatta [Humedades Barcelona, la piattaforma che ti mette in contatto con i professionisti giusti per diagnosticare e risolvere ogni tipo di umidità](https://humedades.barcelona).
 
 
 

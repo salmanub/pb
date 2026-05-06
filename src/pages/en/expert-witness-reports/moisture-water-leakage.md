@@ -71,7 +71,7 @@ intro: |
   <p>As part of our <a href="/en/expert-witness-reports/">expert report services</a>, we specialize in detecting the exact origin of any type of moisture, producing a technical assessment that will serve as your roadmap for its definitive eradication.</p>
 ---## Physical and Thermodynamic Approach
 
-We analyze dampness using thermodynamics. For material execution, contact [our specialized division](https://humedades.barcelona).
+We analyze dampness using thermodynamics. For material execution, contact [Humedades Barcelona, the platform that connects clients with the right professionals to diagnose and solve each type of moisture issue](https://humedades.barcelona).
 
 
 

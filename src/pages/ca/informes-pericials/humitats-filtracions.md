@@ -70,7 +70,7 @@ intro: |
   <p>Com a part dels nostres <a href="/ca/informes-pericials/">serveis d'informes pericials</a>, ens especialitzem en la detecció de l'origen exacte de qualsevol tipus d'humitat, elaborant un dictamen tècnic que li servirà com a full de ruta per a la seva erradicació definitiva.</p>
 ---## Enfocament Físic i Termodinàmic
 
-Analitzem les humitats des de la termodinàmica. Per execució, contacteu [nostra divisió](https://humedades.barcelona).
+Analitzem les humitats des de la termodinàmica. Per a l'execució material, contacteu amb [Humedades Barcelona, la plataforma que us connecta amb el professional adequat per diagnosticar i solucionar cada tipus d'humitat](https://humedades.barcelona).
 
 
 

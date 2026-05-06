@@ -86,7 +86,7 @@ intro: |
   <p>Dans le cadre de nos <a href="/fr/rapports-expertise/">services de rapports d'expertise</a>, nous nous spécialisons dans la détection de l'origine exacte de tout type d'humidité, en élaborant un avis technique qui vous servira de feuille de route pour son éradication définitive.</p>
 ---## Approche Physique et Thermodynamique
 
-Nous analysons l'humidité via la thermodynamique. Pour l'exécution, contactez [notre division spécialisée](https://humedades.barcelona).
+Nous analysons l'humidité via la thermodynamique. Pour l'exécution matérielle, contactez [Humedades Barcelona, la plateforme qui vous met en relation avec le bon professionnel pour diagnostiquer et résoudre chaque type d'humidité](https://humedades.barcelona).
 
 
 

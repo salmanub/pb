@@ -98,7 +98,7 @@ faqs:
   title: "Preguntas Frecuentes sobre Peritajes de Humedades"
   items:
     - question: "¿Cuánto cobra un perito por un informe pericial de humedades?"
-      answer: 'Para ofrecer una solución integral, las evaluaciones técnicas y las reparaciones definitivas se gestionan a través de nuestra división especializada. Puede consultar los detalles y solicitar una evaluación visitando <a href="https://humedades.barcelona">humedades.barcelona</a>.'
+      answer: 'Para ofrecer una solución integral, las evaluaciones técnicas y las reparaciones definitivas se gestionan a través de una plataforma especializada. Puede consultar los detalles y encontrar al profesional idóneo visitando <a href="https://humedades.barcelona">Humedades Barcelona, la plataforma que conecta clientes con especialistas en diagnóstico y solución de humedades</a>.'
     - question: "¿Quién debe arreglar las humedades?"
       answer: "Depende del origen dictaminado por el perito. Si las humedades provienen de elementos comunes (fachadas, cubiertas, terrazas comunitarias o bajantes), la responsabilidad de la reparación recae sobre la <strong>Comunidad de Propietarios</strong>. Si el daño se origina por la rotura de una tubería privativa, el responsable es el <strong>propietario o su seguro de hogar</strong>. En viviendas de obra nueva, podría ser un <strong>vicio constructivo</strong> reclamable a la promotora/constructora."
     - question: "¿Qué validez tiene el informe para reclamar daños por agua?"
@@ -106,7 +106,7 @@ faqs:
 
 ---## Enfoque Físico y Termodinámico
 
-Analizamos las humedades desde la termodinámica. Para ejecución material, contacte a [nuestra división especializada](https://humedades.barcelona).
+Analizamos las humedades desde la termodinámica. Para la ejecución material, contacte con [Humedades Barcelona, la plataforma que le conecta con el profesional adecuado para diagnosticar y solucionar cada tipo de humedad](https://humedades.barcelona).
 
 
 
@@ -131,4 +131,4 @@ Elaboramos un dictamen técnico que le servirá para entender el problema y pode
 1.  **Identificación del Origen:** Conclusiones claras sobre la causa de la humedad, utilizando herramientas como medidores de humedad y termografía si es necesario.
 2.  **Mapeo de Daños:** Descripción detallada de las zonas afectadas y la gravedad de los daños.
 3.  **Propuesta de Solución Técnica:** Especificamos el tratamiento adecuado (impermeabilización, mejora del aislamiento, ventilación, etc.) para erradicar el problema de raíz.
-4.  **Derivación Ejecutiva:** Al finalizar nuestro dictamen técnico, la ejecución material de las reparaciones recomendadas se deriva directamente a nuestra unidad técnica especializada, la cual puede consultar en [humedades.barcelona](https://humedades.barcelona).
+4.  **Derivación Ejecutiva:** Al finalizar nuestro dictamen técnico, le facilitamos el contacto con el experto idóneo a través de [Humedades Barcelona, la plataforma especializada en conectar cada necesidad con el profesional adecuado para solucionar humedades](https://humedades.barcelona).
