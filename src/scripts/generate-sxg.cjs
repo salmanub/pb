@@ -4,7 +4,10 @@ const { spawnSync } = require('child_process');
 
 const CONFIG = {
     distDir: 'dist',
-    certFile: '.certs/cert.pem',
+    // CRITICAL: Must use the same cert that was used to generate cert.cbor (fullchain.pem).
+    // Using only cert.pem (leaf) causes cert-sha256 mismatch because gen-certurl
+    // embeds the leaf from fullchain.pem, so the sha256 must match the same leaf cert.
+    certFile: fs.existsSync('.certs/fullchain.pem') ? '.certs/fullchain.pem' : '.certs/cert.pem',
     keyFile: '.certs/privkey.pem',
     // Hardcoded to domain to prevent usage of 'example.com' default
     certUrl: 'https://perito.barcelona/cert.cbor',

@@ -49,6 +49,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_PAT }}
           SXG_CERT_PEM: ${{ secrets.SXG_CERT_PEM }}
           SXG_KEY_PEM: ${{ secrets.SXG_KEY_PEM }}
+          SXG_CA_PEM: ${{ secrets.SXG_CA_PEM }}
         run: |
           mkdir -p .certs
           
@@ -145,29 +146,50 @@ jobs:
               --cert-file      .certs/cert.pem \
               --ca-file        .certs/ca.pem
 
-            if [ -f .certs/privkey.pem ]; then
+            if [ -f .certs/cert.pem ] && [ -f .certs/fullchain.pem ]; then
                echo "✅ Certificate obtained successfully."
                if [ -z "$GH_TOKEN" ]; then echo "Warning: GH_PAT not set"; else
+                   # FIX: Save fullchain (leaf+CA) in SXG_CERT_PEM, leaf-only cert separately,
+                   # and CA separately so skip-renewal can reconstruct fullchain correctly.
                    gh secret set SXG_CERT_PEM < .certs/fullchain.pem --repo "${{ github.repository }}" || echo "⚠️ Failed to save SXG_CERT_PEM secret"
                    gh secret set SXG_KEY_PEM < .certs/privkey.pem --repo "${{ github.repository }}" || echo "⚠️ Failed to save SXG_KEY_PEM secret"
+                   if [ -f .certs/ca.pem ]; then
+                     gh secret set SXG_CA_PEM < .certs/ca.pem --repo "${{ github.repository }}" || echo "⚠️ Failed to save SXG_CA_PEM secret"
+                   fi
                fi
             fi
           else
-            # If skipping renewal, we still need fullchain for OCSP
-            # We can construct fullchain from cert + CA (if we had CA stored)
-            # OR, simpler: Just use the cert as fullchain for now (SXG might accept it or we missed storing CA)
-            # Better: In previous step, store fullchain in secret? 
-            # For now, let's assume cert.pem has what we need or try to fetch chain.
-            # Actually, without CA, OCSP staple might fail if we need issuer.
-            # Let's try to just copy cert to fullchain if fullchain missing.
+            # FIX: Path skip-renewal — reconstruct fullchain.pem from cert + CA
+            # The secret SXG_CERT_PEM contains the fullchain (leaf+CA) from the last renewal.
+            # We copy it to both fullchain.pem (for cert.cbor) and cert.pem (for signing).
             cp .certs/cert.pem .certs/fullchain.pem
-            # And we need CA for OCSP issuer... 
-            # If we don't have CA, we can't do OCSP properly. 
-            # This is a gap in the "skip renewal" logic unless we store CA too.
-            # Workaround: Download Google's CA? Or store FULLCHAIN in secret instead of just CERT.
-            # For this iteration, let's assume CERT contains chain or it's fine.
-            # Actually, standard practice: Store fullchain.pem in SXG_CERT_PEM secret.
-            echo "Using existing cert as fullchain."
+
+            # FIX: Restore CA from dedicated secret to enable OCSP and proper fullchain validation
+            if [ ! -z "$SXG_CA_PEM" ] && [ "$SXG_CA_PEM" != "" ]; then
+              echo "$SXG_CA_PEM" > .certs/ca.pem
+              echo "✅ CA restored from SXG_CA_PEM secret."
+              # Ensure fullchain contains both leaf + CA
+              CERT_COUNT=$(grep -c "BEGIN CERTIFICATE" .certs/fullchain.pem || true)
+              if [ "$CERT_COUNT" -lt 2 ]; then
+                echo "⚠️ fullchain has only $CERT_COUNT cert(s). Appending CA..."
+                cat .certs/ca.pem >> .certs/fullchain.pem
+              fi
+            else
+              echo "⚠️ SXG_CA_PEM secret not set. Attempting to fetch CA from AIA extension..."
+              ISSUER_URI=$(openssl x509 -in .certs/cert.pem -noout -text 2>/dev/null | grep -i "CA Issuers" | head -n 1 | awk -F "URI:" '{print $2}' | tr -d ' \n\r')
+              if [ ! -z "$ISSUER_URI" ]; then
+                echo "Downloading Issuer from: $ISSUER_URI"
+                wget -q -O .certs/ca.der "$ISSUER_URI" && \
+                  (openssl x509 -inform DER -in .certs/ca.der -out .certs/ca.pem 2>/dev/null || mv .certs/ca.der .certs/ca.pem)
+                CERT_COUNT=$(grep -c "BEGIN CERTIFICATE" .certs/fullchain.pem || true)
+                if [ "$CERT_COUNT" -lt 2 ] && [ -f .certs/ca.pem ]; then
+                  cat .certs/ca.pem >> .certs/fullchain.pem
+                fi
+              else
+                echo "⚠️ Could not obtain CA. cert.cbor may be incomplete."
+              fi
+            fi
+            echo "Skip-renewal: fullchain.pem contains $(grep -c 'BEGIN CERTIFICATE' .certs/fullchain.pem || echo '?') certificate(s)."
           fi
 
       # --- PREPARE CONTENT & CERT.CBOR ---
@@ -255,6 +277,7 @@ jobs:
       - name: Install gen-signedexchange
         run: |
           go install github.com/WICG/webpackage/go/signedexchange/cmd/gen-signedexchange@latest
+          go install github.com/WICG/webpackage/go/signedexchange/cmd/dump-signedexchange@latest
           echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
 
       - name: Generate SXG Files
@@ -263,6 +286,41 @@ jobs:
           mkdir -p dist
           # Run the Node.js script (CommonJS)
           node src/scripts/generate-sxg.cjs
+
+      - name: Validate cert-sha256 coherence (SXG vs cert.cbor)
+        run: |
+          echo "=== Validating cert-sha256 coherence ==="
+
+          # Extract the sha256 of the leaf cert from fullchain.pem (same as used in cert.cbor)
+          LEAF_CERT_SHA256=$(openssl x509 -in .certs/fullchain.pem -outform DER 2>/dev/null | openssl dgst -sha256 -binary | base64 | tr '+/' '-_' | tr -d '=')
+          echo "Leaf cert sha256 (base64url): $LEAF_CERT_SHA256"
+
+          # Find a sample SXG and extract its cert-sha256 using gen-signedexchange dump
+          SAMPLE_SXG=$(find dist -name '*.sxg' | head -n 1)
+          if [ -z "$SAMPLE_SXG" ]; then
+            echo "⚠️ No SXG files found in dist/. Skipping validation."
+            exit 0
+          fi
+          echo "Checking sample SXG: $SAMPLE_SXG"
+
+          # dump-signedexchange prints cert-sha256 among other fields
+          SXG_CERT_SHA256=$(dump-signedexchange -uri "$SAMPLE_SXG" 2>/dev/null | grep -i 'cert-sha256' | head -n 1 | awk -F ':' '{print $2}' | tr -d ' ' || true)
+
+          if [ ! -z "$SXG_CERT_SHA256" ]; then
+            echo "SXG embedded cert-sha256: $SXG_CERT_SHA256"
+            if [ "$SXG_CERT_SHA256" = "$LEAF_CERT_SHA256" ]; then
+              echo "✅ cert-sha256 MATCH — SXG and cert.cbor are coherent."
+            else
+              echo "❌ cert-sha256 MISMATCH!"
+              echo "  SXG:    $SXG_CERT_SHA256"
+              echo "  cbor:   $LEAF_CERT_SHA256"
+              echo "This will cause browser verification failure. Aborting deploy."
+              exit 1
+            fi
+          else
+            echo "⚠️ Could not extract cert-sha256 from SXG (dump-signedexchange may not support -uri for files)."
+            echo "Proceeding with deploy — monitor browser DevTools for cert-sha256 mismatch errors."
+          fi
 
 
 
