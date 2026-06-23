@@ -29,7 +29,7 @@ export default function (eleventyConfig) {
 
   // ── Passthrough copies ──
   eleventyConfig.addPassthroughCopy('src/assets/images');
-  eleventyConfig.addPassthroughCopy('src/assets/js');
+  // JS is inlined by the inline-js transform — no passthrough needed
   eleventyConfig.addPassthroughCopy('src/assets/fonts');
   eleventyConfig.addPassthroughCopy('src/assets/favicons');
   eleventyConfig.addPassthroughCopy({ 'Design System/assets/icons': 'assets/icons' });
@@ -254,6 +254,22 @@ export default function (eleventyConfig) {
       console.warn(`[PurgeCSS] Error en ${outputPath}:`, err.message);
       return content.replace('</head>', `<style>${fullCss}</style>\n</head>`);
     }
+  });
+
+  // ── Inline JS — replace <script src="/assets/js/…"> with inline <script> ──
+  const jsDir = path.resolve(__dirname, 'src', 'assets', 'js');
+  eleventyConfig.addTransform('inline-js', function (content, outputPath) {
+    if (!outputPath || !outputPath.endsWith('.html')) return content;
+
+    return content.replace(
+      /<script\s+src="(\/assets\/js\/([^"]+))"[^>]*>\s*<\/script>/gi,
+      (match, srcPath, filename) => {
+        const filePath = path.join(jsDir, filename);
+        if (!fs.existsSync(filePath)) return match; // keep external if file not found
+        const js = fs.readFileSync(filePath, 'utf8');
+        return `<script>${js}</script>`;
+      }
+    );
   });
 
   // ── Favicon shortcode (Design System/assets/icons/) ──
