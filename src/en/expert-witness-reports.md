@@ -15,10 +15,6 @@ translations:
   - lang: ca
     permalink: /ca/informes-pericials/
 permalink: "/en/expert-witness-reports/"
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Reports"
 ---
 {% set ui = en %}
 {% set langPrefix = "/en" %}

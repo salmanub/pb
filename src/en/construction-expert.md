@@ -33,10 +33,6 @@ band_eyebrow: "First contact"
 band_title: "Have a construction issue to document?"
 band_lede: "Free initial consultation. We'll advise whether you need a report and its scope."
 band_cta: "Tell us about your case"
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Construction Expert"
 ---
 {% set ui = en %}
 {% include "layouts/service.njk" %}

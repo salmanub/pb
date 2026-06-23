@@ -32,11 +32,5 @@ faq:
     a: "Determina qué daños son uso normal (arrendador) y cuáles imputables al arrendatario por uso indebido o modificaciones no autorizadas."
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Dictámenes"
-    url: "/informes-periciales/"
-  - label: "EXP·08"
 ---
 {% include "layouts/service.njk" %}

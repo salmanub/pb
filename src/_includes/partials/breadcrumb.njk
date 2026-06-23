@@ -1,15 +1,45 @@
 {#
   breadcrumb.njk — BreadcrumbList con microdata
-  Label encima, trail debajo
+  Auto-generates trail from page metadata when no explicit breadcrumb is provided.
+  Uses: lang, ui, svc_num, breadcrumb_parent, title
 #}
 {% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
 {% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
-{% set trail = breadcrumb | default([]) %}
+
+{# ── Auto-generate trail if not explicitly provided ── #}
+{% if not breadcrumb or breadcrumb | length == 0 %}
+  {% set _svcIndexUrl = "/informes-pericials/" if lang == "ca" else ("/expert-witness-reports/" if lang == "en" else "/informes-periciales/") %}
+  {% set _svcIndexLabel = ui.nav.dictamenes %}
+
+  {% if svc_num %}
+    {# Service page: Inicio → Dictámenes → EXP·XX #}
+    {% set trail = [
+      { label: ui.breadcrumb.inicio, url: "/" },
+      { label: _svcIndexLabel, url: _svcIndexUrl },
+      { label: svc_num }
+    ] %}
+  {% elif breadcrumb_parent %}
+    {# Sub-page with parent: Inicio → Parent → Title #}
+    {% set trail = [
+      { label: ui.breadcrumb.inicio, url: "/" },
+      { label: breadcrumb_parent.label, url: breadcrumb_parent.url },
+      { label: title }
+    ] %}
+  {% else %}
+    {# Single-level page: Inicio → Title #}
+    {% set trail = [
+      { label: ui.breadcrumb.inicio, url: "/" },
+      { label: title }
+    ] %}
+  {% endif %}
+{% else %}
+  {% set trail = breadcrumb %}
+{% endif %}
 
 {% if trail | length > 0 %}
 <div class="breadcrumb-band" style="background: var(--accent-tint, #e6f2ec);">
 <div style="max-width: var(--container-wide); margin: 0 auto; padding: 10px var(--gutter) 10px;">
-<div class="breadcrumb-label" style="display: inline-flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+<div class="breadcrumb-label" style="display: inline-flex; align-items: center; gap: 6px; margin-bottom: 4px; opacity: 0.45; transition: opacity 0.25s ease;">
 <span style="width: 16px; height: 1.5px; background: var(--accent); display: inline-block;"></span>
 <span style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-accent); font-weight: 500;">{{ ui.breadcrumb.label }}</span>
 </div>

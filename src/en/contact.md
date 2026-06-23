@@ -12,10 +12,6 @@ translations:
   - lang: ca
     permalink: /ca/contacte/
 permalink: "/en/contact/"
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Contact"
 ---
 {% set ui = en %}
 {% set heroTitle = "Request a<br>technical consultation" %}

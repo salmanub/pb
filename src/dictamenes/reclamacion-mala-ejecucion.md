@@ -32,11 +32,5 @@ faq:
     a: "No es obligatorio en fase extrajudicial, pero es la herramienta más efectiva para que la empresa acepte subsanar sin juicio."
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Dictámenes"
-    url: "/informes-periciales/"
-  - label: "EXP·06"
 ---
 {% include "layouts/service.njk" %}

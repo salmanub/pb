@@ -39,12 +39,6 @@ faq:
     a: "La termografia infraroja detecta diferències de temperatura que indiquen presència d'humitat oculta. Complementada amb higròmetre i proves d'estanquitat, permet localitzar l'origen amb fiabilitat."
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Dictàmens"
-    url: "/informes-pericials/"
-  - label: "EXP·04"
 ---
 
 {% set ui = ca %}

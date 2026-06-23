@@ -30,12 +30,6 @@ faq:
     a: "Yes. Travel throughout Spain within 24-48 hours for public works and major infrastructure."
 band_title: "Do you need this report?"
 band_lede: "Free initial consultation. Contractual delivery deadlines."
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Reports"
-    url: "/expert-witness-reports/"
-  - label: "EXP·10"
 ---
 {% set ui = en %}
 {% include "layouts/service.njk" %}

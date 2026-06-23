@@ -32,11 +32,5 @@ faq:
     a: "Entre 10 y 20 días hábiles desde la recepción del informe a refutar. Acelerable con plazo procesal próximo."
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Dictámenes"
-    url: "/informes-periciales/"
-  - label: "EXP·07"
 ---
 {% include "layouts/service.njk" %}

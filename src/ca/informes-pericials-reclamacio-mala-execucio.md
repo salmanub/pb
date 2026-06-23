@@ -32,12 +32,6 @@ faq:
     a: "Sí. El pressupost, els correus electrònics, les transferències i qualsevol acord documentat serveixen com a base de comparació."
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Dictàmens"
-    url: "/informes-pericials/"
-  - label: "EXP·06"
 ---
 {% set ui = ca %}
 {% include "layouts/service.njk" %}

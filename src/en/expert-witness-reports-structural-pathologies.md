@@ -32,12 +32,6 @@ faq:
     a: "When the crack is active, affects load-bearing elements, exceeds 1 mm with a diagonal pattern, or there is perceptible deformation."
 band_title: "Do you need this report?"
 band_lede: "Free initial consultation. Contractual delivery deadlines."
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Reports"
-    url: "/expert-witness-reports/"
-  - label: "EXP·03"
 ---
 {% set ui = en %}
 {% include "layouts/service.njk" %}

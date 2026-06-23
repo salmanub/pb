@@ -39,11 +39,5 @@ band_eyebrow: "Refuerzo CFRP"
 band_title: "¿Necesitas reforzar una estructura existente?"
 band_lede: "Consulta técnica sobre la viabilidad del refuerzo con fibra de carbono."
 band_cta: "Consultar caso"
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Asesoramiento"
-    url: "/asesoramiento-estructural/"
-  - label: "Fibra de carbono"
 ---
 {% include "layouts/service.njk" %}

@@ -102,16 +102,16 @@
     {% for stat in h.stats %}
     <div itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
       <meta itemprop="position" content="{{ loop.index }}">
-      <div style="font-family: var(--font-mono); font-size: var(--fs-data-xl);
+      <div class="stat-value" style="font-family: var(--font-mono); font-size: var(--fs-data-xl);
                   font-weight: var(--fw-medium); line-height: 1;
                   color: {{ 'var(--oxide-400)' if stat.accent else 'var(--text-strong)' }};
                   font-variant-numeric: tabular-nums;">
         <span itemprop="name">{{ stat.value }}</span>
       </div>
-      <div style="margin-top: 10px; font-size: var(--fs-body-sm); color: var(--text-muted); line-height: 1.45;">
+      <div class="stat-label" style="margin-top: 10px; font-size: var(--fs-body-sm); color: var(--text-muted); line-height: 1.45;">
         {{ stat.label }}
       </div>
-      <div style="margin-top: 6px; font-family: var(--font-mono); font-size: 0.6875rem;
+      <div class="stat-source" style="margin-top: 6px; font-family: var(--font-mono); font-size: 0.6875rem;
                   letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-faint);">
         {{ stat.source }}
       </div>

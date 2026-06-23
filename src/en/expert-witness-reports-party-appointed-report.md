@@ -30,12 +30,6 @@ faq:
     a: "The party report is commissioned by you or your lawyer; the court report is appointed by the judge. The methodology is identical."
 band_title: "Do you need this report?"
 band_lede: "Free initial consultation. Contractual delivery deadlines."
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Reports"
-    url: "/expert-witness-reports/"
-  - label: "EXP·01"
 ---
 {% set ui = en %}
 {% include "layouts/service.njk" %}

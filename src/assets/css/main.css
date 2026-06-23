@@ -155,6 +155,7 @@
 .breadcrumb-nav { display: flex !important; align-items: center; flex-wrap: nowrap; }
 .breadcrumb-nav svg { display: inline-block !important; max-width: none; flex-shrink: 0; }
 .breadcrumb-nav span { flex-shrink: 0; }
+.breadcrumb-band:hover .breadcrumb-label { opacity: 1 !important; }
 
 /* ── Breadcrumb responsive: mobile ↔ desktop switch ── */
 /* Mobile back-link — hidden on desktop */
@@ -164,6 +165,7 @@
 @media (max-width: 768px) {
   .breadcrumb-desktop { display: none !important; }
   .breadcrumb-label { display: none !important; }
+
   .breadcrumb-mobile {
     display: flex !important;
     align-items: center;
@@ -531,7 +533,23 @@ select:focus-visible {
   .two-col { grid-template-columns: 1fr !important; }
   .three-col { grid-template-columns: 1fr !important; }
   .site-three { grid-template-columns: 1fr !important; }
-  .stats-grid { grid-template-columns: 1fr !important; }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px 16px !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+  .stat-value {
+    font-size: clamp(1.5rem, 5vw, 2rem) !important;
+  }
+  .stat-label {
+    font-size: 0.78rem !important;
+    margin-top: 6px !important;
+  }
+  .stat-source {
+    font-size: 0.6rem !important;
+    margin-top: 3px !important;
+  }
   .method-grid { grid-template-columns: 1fr !important; }
   .form-row { grid-template-columns: 1fr !important; }
   .hero-badge { display: none !important; }

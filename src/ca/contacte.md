@@ -12,10 +12,6 @@ translations:
   - lang: en
     permalink: /en/contact/
 permalink: "/ca/contacte/"
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Contacte"
 ---
 {% set ui = ca %}
 {% set heroTitle = "Sol·licitar<br>consulta tècnica" %}

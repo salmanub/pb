@@ -45,9 +45,5 @@ band_eyebrow: "Asesoramiento estructural"
 band_title: "¿Necesitas una evaluación estructural?"
 band_lede: "Consulta técnica sin compromiso. Actuación en toda España."
 band_cta: "Consultar caso"
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Asesoramiento Estructural"
 ---
 {% include "layouts/service.njk" %}

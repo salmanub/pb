@@ -34,10 +34,6 @@ qualNote: "Mon–Thu 9am–6pm · Fri 9am–2pm · By appointment"
 band_eyebrow: "Availability"
 band_title: "Need an expert with this background?"
 band_cta: "Enquire about your case"
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "The Firm"
 ---
 {% set ui = en %}
 {% include "layouts/about.njk" %}

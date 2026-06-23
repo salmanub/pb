@@ -32,12 +32,6 @@ faq:
     a: "Depèn del cas. Sovint la visita independent és necessària per verificar les dades de l'informe original."
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Dictàmens"
-    url: "/informes-pericials/"
-  - label: "EXP·07"
 ---
 {% set ui = ca %}
 {% include "layouts/service.njk" %}

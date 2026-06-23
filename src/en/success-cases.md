@@ -13,10 +13,6 @@ translations:
   - lang: ca
     permalink: /ca/casos-exit/
 permalink: "/en/success-cases/"
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Cases"
 band_eyebrow: "No commitment"
 band_title: "Have a similar case?"
 band_lede: "Tell us about it and we'll let you know if it has expert potential."

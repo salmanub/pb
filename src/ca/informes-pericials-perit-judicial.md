@@ -32,12 +32,6 @@ faq:
     a: "Les parts poden taxar el perit o impugnar el dictamen (LEC art. 343). El rigor metodològic de l'informe és la defensa més eficaç."
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Dictàmens"
-    url: "/informes-pericials/"
-  - label: "EXP·02"
 ---
 {% set ui = ca %}
 {% include "layouts/service.njk" %}

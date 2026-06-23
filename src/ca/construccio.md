@@ -33,10 +33,6 @@ band_eyebrow: "Primer contacte"
 band_title: "Tens un problema constructiu que documentar?"
 band_lede: "Consulta inicial sense cost. T'orientem sobre si necessites un dictamen i amb quin abast."
 band_cta: "Explica'ns el teu cas"
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Construcció"
 ---
 {% set ui = ca %}
 {% include "layouts/service.njk" %}

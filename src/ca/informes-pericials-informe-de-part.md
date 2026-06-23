@@ -39,12 +39,6 @@ faq:
     a: "El de part l'encarrega vostè o el seu lletrat; el judicial el designa el jutjat. La metodologia és idèntica."
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Dictàmens"
-    url: "/informes-pericials/"
-  - label: "EXP·01"
 ---
 
 {% set ui = ca %}

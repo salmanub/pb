@@ -40,12 +40,6 @@ faq:
     a: "Cuando la grieta es activa, afecta a elementos portantes, supera 1 mm con disposición diagonal o hay deformación perceptible."
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Dictámenes"
-    url: "/informes-periciales/"
-  - label: "EXP·03"
 ---
 
 {% include "layouts/service.njk" %}

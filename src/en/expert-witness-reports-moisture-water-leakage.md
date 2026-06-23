@@ -32,12 +32,6 @@ faq:
     a: "Infrared thermography detects temperature differences indicating hidden moisture. Combined with hygrometer readings and waterproofing tests, it reliably locates the source."
 band_title: "Do you need this report?"
 band_lede: "Free initial consultation. Contractual delivery deadlines."
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Reports"
-    url: "/expert-witness-reports/"
-  - label: "EXP·04"
 ---
 {% set ui = en %}
 {% include "layouts/service.njk" %}

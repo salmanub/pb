@@ -32,12 +32,6 @@ faq:
     a: "Quan l'esquerda és activa, afecta elements portants, supera 1 mm amb disposició diagonal o hi ha deformació perceptible."
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Dictàmens"
-    url: "/informes-pericials/"
-  - label: "EXP·03"
 ---
 {% set ui = ca %}
 {% include "layouts/service.njk" %}

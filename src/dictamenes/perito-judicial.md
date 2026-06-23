@@ -32,11 +32,5 @@ faq:
     a: "Las partes pueden tachar al perito o impugnar el dictamen (LEC art. 343). El rigor metodológico del informe es la defensa más eficaz."
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Dictámenes"
-    url: "/informes-periciales/"
-  - label: "EXP·02"
 ---
 {% include "layouts/service.njk" %}

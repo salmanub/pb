@@ -34,9 +34,5 @@ qualNote: "L–J 9h–18h · V 9h–14h · Cita previa"
 band_eyebrow: "Disponibilidad"
 band_title: "¿Necesitas un perito con esta formación?"
 band_cta: "Consultar caso"
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "El Despacho"
 ---
 {% include "layouts/about.njk" %}

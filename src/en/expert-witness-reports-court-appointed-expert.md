@@ -30,12 +30,6 @@ faq:
     a: "The parties may challenge the expert or contest the report (LEC art. 343). The methodological rigour of the report is the most effective defence."
 band_title: "Do you need this report?"
 band_lede: "Free initial consultation. Contractual delivery deadlines."
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Reports"
-    url: "/expert-witness-reports/"
-  - label: "EXP·02"
 ---
 {% set ui = en %}
 {% include "layouts/service.njk" %}

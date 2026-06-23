@@ -32,11 +32,5 @@ faq:
     a: "El de parte lo encarga usted o su letrado; el judicial lo designa el juzgado. La metodología es idéntica."
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Dictámenes"
-    url: "/informes-periciales/"
-  - label: "EXP·01"
 ---
 {% include "layouts/service.njk" %}

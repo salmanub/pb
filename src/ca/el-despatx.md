@@ -34,10 +34,6 @@ qualNote: "Dl–Dj 9h–18h · Dv 9h–14h · Cita prèvia"
 band_eyebrow: "Disponibilitat"
 band_title: "Necessites un perit amb aquesta formació?"
 band_cta: "Consultar cas"
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "El Despatx"
 ---
 {% set ui = ca %}
 {% include "layouts/about.njk" %}

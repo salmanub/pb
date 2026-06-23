@@ -32,12 +32,6 @@ faq:
     a: "Sí. Desplaçament a tota Espanya en 24-48h per a obres públiques i grans infraestructures."
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Dictàmens"
-    url: "/informes-pericials/"
-  - label: "EXP·10"
 ---
 {% set ui = ca %}
 {% include "layouts/service.njk" %}

@@ -27,12 +27,6 @@ band_eyebrow: "Sin coste"
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
 band_cta: "Consultar caso"
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Dictámenes"
-    url: "/informes-periciales/"
-  - label: "EXP·04"
 translations:
   - lang: 'ca'
     permalink: '/ca/informes-pericials/humitats-filtracions/'

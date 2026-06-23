@@ -32,12 +32,6 @@ faq:
     a: "Mitjançant l'anàlisi tècnic del grau de desenvolupament de la patologia: l'antiguitat d'una humitat o l'evolució d'una fissura permeten acreditar la preexistència."
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Dictàmens"
-    url: "/informes-pericials/"
-  - label: "EXP·05"
 ---
 {% set ui = ca %}
 {% include "layouts/service.njk" %}

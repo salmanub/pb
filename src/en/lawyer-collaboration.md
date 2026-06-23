@@ -13,10 +13,6 @@ translations:
   - lang: ca
     permalink: /ca/collaboracio-advocats/
 permalink: "/en/lawyer-collaboration/"
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Lawyers · Insurers"
 ---
 {# lawyer-collaboration — Port 1:1 de SitePages.jsx → Abogados() #}
 {# ── Microdata Article ── #}

@@ -35,10 +35,6 @@ band_eyebrow: "Sense cost"
 band_title: "Vols saber quant costaria el teu informe?"
 band_lede: "Primera consulta sense cost i pressupost tancat per escrit."
 band_cta: "Sol·licitar pressupost"
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Honoraris"
 ---
 {% set ui = ca %}
 {% include "layouts/service.njk" %}

@@ -15,10 +15,6 @@ translations:
   - lang: en
     permalink: /en/expert-witness-reports/
 permalink: "/informes-periciales/"
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Dictámenes"
 ---
 {# informes-periciales/index — Port 1:1 de SitePages.jsx → Informes() L48-57 #}
 {# Microdata: CollectionPage + each service = Article #}

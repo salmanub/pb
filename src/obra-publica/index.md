@@ -48,9 +48,5 @@ band_eyebrow: "Obra civil"
 band_title: "¿Necesitas un dictamen sobre infraestructuras?"
 band_lede: "Consulta inicial sin coste. Actuación en toda España."
 band_cta: "Consultar caso"
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Obra Civil"
 ---
 {% include "layouts/service.njk" %}

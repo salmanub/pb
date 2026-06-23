@@ -40,12 +40,6 @@ faq:
     a: 'Las evaluaciones técnicas y las reparaciones definitivas se gestionan a través de una plataforma especializada. Puede consultar los detalles visitando <a href="https://humedades.barcelona">Humedades Barcelona, la plataforma que conecta clientes con especialistas en diagnóstico y solución de humedades</a>.'
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Dictámenes"
-    url: "/informes-periciales/"
-  - label: "EXP·04"
 ---
 {% include "layouts/service.njk" %}
 

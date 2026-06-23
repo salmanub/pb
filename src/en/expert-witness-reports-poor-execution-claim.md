@@ -32,12 +32,6 @@ faq:
     a: "Yes. The quote, emails, bank transfers and any documented agreement serve as a basis for comparison."
 band_title: "Do you need this report?"
 band_lede: "Free initial consultation. Contractual delivery deadlines."
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Reports"
-    url: "/expert-witness-reports/"
-  - label: "EXP·06"
 ---
 {% set ui = en %}
 {% include "layouts/service.njk" %}

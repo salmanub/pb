@@ -32,11 +32,5 @@ faq:
     a: "Mediante el análisis técnico del grado de desarrollo de la patología: la antigüedad de una humedad o la evolución de una fisura permiten acreditar la preexistencia."
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Dictámenes"
-    url: "/informes-periciales/"
-  - label: "EXP·05"
 ---
 {% include "layouts/service.njk" %}

@@ -32,11 +32,5 @@ faq:
     a: "Sí. Desplazamiento a toda España en 24–48h para obras públicas y grandes infraestructuras."
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Dictámenes"
-    url: "/informes-periciales/"
-  - label: "EXP·10"
 ---
 {% include "layouts/service.njk" %}

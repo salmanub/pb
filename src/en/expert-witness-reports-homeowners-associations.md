@@ -32,12 +32,6 @@ faq:
     a: "Yes. Within the LOE deadlines (art. 17), the report documents defects attributable to the developer or contractor."
 band_title: "Do you need this report?"
 band_lede: "Free initial consultation. Contractual delivery deadlines."
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Reports"
-    url: "/expert-witness-reports/"
-  - label: "EXP·09"
 ---
 {% set ui = en %}
 {% include "layouts/service.njk" %}

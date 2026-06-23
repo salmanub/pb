@@ -13,10 +13,6 @@ translations:
   - lang: en
     permalink: /en/success-cases/
 permalink: "/ca/casos-exit/"
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Casos"
 band_eyebrow: "Sense compromís"
 band_title: "Tens un cas similar?"
 band_lede: "Explica'ns-el i et diem si té recorregut pericial."

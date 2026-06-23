@@ -12,10 +12,6 @@ translations:
   - lang: en
     permalink: /en/contact/
 permalink: "/contacto/"
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Contacto"
 ---
 {# contacto #}
 <div itemscope itemtype="https://schema.org/Article" style="display: none;" aria-hidden="true"><meta itemprop="headline" content="{{ title }}"><meta itemprop="description" content="{{ description }}"><meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}"><div itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ metadata.author.name }}"></div><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"></div></div>

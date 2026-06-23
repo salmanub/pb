@@ -35,9 +35,5 @@ band_eyebrow: "Sin coste"
 band_title: "¿Quieres saber cuánto costaría tu informe?"
 band_lede: "Primera consulta sin coste y presupuesto cerrado por escrito."
 band_cta: "Solicitar presupuesto"
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Honorarios"
 ---
 {% include "layouts/service.njk" %}

@@ -37,10 +37,6 @@ faq:
     a: "Es requisito una titulación universitaria en Ingeniería Civil (Obras Públicas), Arquitectura o Arquitectura Técnica. Además, es imprescindible estar inscrito en el Colegio Profesional correspondiente."
 band_title: "¿Necesita un peritaje de construcción?"
 band_lede: "Hablemos de su caso. Primera valoración técnica sin coste."
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Perito Construcción"
 qualItems:
   - num: "01"
     text: "Ingenieros Civiles colegiados — ECCAT"

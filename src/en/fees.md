@@ -33,10 +33,6 @@ band_eyebrow: "Free"
 band_title: "Want to know how much your report would cost?"
 band_lede: "Free initial consultation and fixed written quote."
 band_cta: "Request a quote"
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Fees"
 ---
 {% set ui = en %}
 {% include "layouts/service.njk" %}

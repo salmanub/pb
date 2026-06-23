@@ -32,12 +32,6 @@ faq:
     a: "Sí. Dins dels terminis de la LOE (art. 17), el dictamen documenta els defectes imputables al promotor o al contractista."
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Dictàmens"
-    url: "/informes-pericials/"
-  - label: "EXP·09"
 ---
 {% set ui = ca %}
 {% include "layouts/service.njk" %}

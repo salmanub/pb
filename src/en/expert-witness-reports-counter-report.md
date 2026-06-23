@@ -30,12 +30,6 @@ faq:
     a: "It depends on the case. Often an independent site visit is necessary to verify the original report's data."
 band_title: "Do you need this report?"
 band_lede: "Free initial consultation. Contractual delivery deadlines."
-breadcrumb:
-  - label: "Home"
-    url: "/"
-  - label: "Reports"
-    url: "/expert-witness-reports/"
-  - label: "EXP·07"
 ---
 {% set ui = en %}
 {% include "layouts/service.njk" %}

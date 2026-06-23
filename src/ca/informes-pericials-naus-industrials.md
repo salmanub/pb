@@ -32,12 +32,6 @@ faq:
     a: "Determina quins danys són ús normal (arrendador) i quins imputables a l'arrendatari per ús indegut o modificacions no autoritzades."
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
-breadcrumb:
-  - label: "Inici"
-    url: "/"
-  - label: "Dictàmens"
-    url: "/informes-pericials/"
-  - label: "EXP·08"
 ---
 {% set ui = ca %}
 {% include "layouts/service.njk" %}

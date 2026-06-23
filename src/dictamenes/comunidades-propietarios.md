@@ -32,11 +32,5 @@ faq:
     a: "No es obligatorio, pero es la base técnica que justifica la derrama ante la junta y, en caso de impugnación, ante el juez."
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
-breadcrumb:
-  - label: "Inicio"
-    url: "/"
-  - label: "Dictámenes"
-    url: "/informes-periciales/"
-  - label: "EXP·09"
 ---
 {% include "layouts/service.njk" %}
