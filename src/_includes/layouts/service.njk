@@ -238,7 +238,7 @@ dictámenes") %}
             <div>
               <span itemprop="name"
                 style="display: block; font-family: var(--font-serif); font-size: 1.05rem; font-weight: 500; color: var(--text-strong); line-height: 1.25; margin-bottom: 6px;">{{
-                svc.t }}</span>
+                svc.t_ca if lang == "ca" and svc.t_ca else (svc.t_en if lang == "en" and svc.t_en else svc.t) }}</span>
               <span
                 style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); line-height: 1.5;"
                 class="svc-norm">{{ svc.norm }}</span>
