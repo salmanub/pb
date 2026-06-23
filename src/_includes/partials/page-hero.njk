@@ -1,0 +1,43 @@
+{#
+  page-hero.njk — PageHero component matching DS SiteData.jsx L86-98
+  Renders H1 + lede + optional image. Breadcrumb is placed ABOVE the hero section.
+  NOTE: All HTML on single lines to prevent Markdown <p> wrapping in .md files
+  
+  Variables from frontmatter/context:
+  - breadcrumb: [{label, url}] trail
+  - title: page title (H1)
+  - description: lede text
+  - heroTitle: override for title (allows HTML like <br>)
+  - image: filename in assets/images/ (optional)
+  - image_alt: alt text for image
+#}
+{% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
+{% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
+
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-top: clamp(20px,3vw,32px);">
+{% include "partials/breadcrumb.njk" %}
+</div>
+
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-top: clamp(24px,4vw,48px); padding-bottom: var(--space-12);">
+{% if image %}
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px,4vw,48px); align-items: center;" class="site-two">
+<div>
+<h1 style="font-family: var(--font-serif); font-size: var(--fs-display-1); line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0; font-weight: 400;">{{ heroTitle | default(title) | safe }}</h1>
+{% if description %}<p style="margin-top: 22px; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 60ch;">{{ description }}</p>{% endif %}
+</div>
+<div>
+{% set imgBase = image | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") %}
+<picture>
+<source srcset="/assets/images/{{ imgBase }}.avif" type="image/avif">
+<source srcset="/assets/images/{{ imgBase }}.webp" type="image/webp">
+<img src="/assets/images/{{ image }}" alt="{{ image_alt | default(title) }}" loading="lazy" decoding="async" width="640" height="480" style="width: 100%; height: auto; border-radius: var(--radius-md); object-fit: cover; aspect-ratio: 4/3;">
+</picture>
+</div>
+</div>
+{% else %}
+<div>
+<h1 style="font-family: var(--font-serif); font-size: var(--fs-display-1); line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0; font-weight: 400;">{{ heroTitle | default(title) | safe }}</h1>
+{% if description %}<p style="margin-top: 22px; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 60ch;">{{ description }}</p>{% endif %}
+</div>
+{% endif %}
+</section>

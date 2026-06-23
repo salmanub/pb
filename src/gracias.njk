@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: "Gracias por su consulta"
+description: "Hemos recibido su consulta. Le responderemos en menos de 24h laborables."
+lang: es
+translations:
+  - lang: ca
+    permalink: /ca/gracies/
+  - lang: en
+    permalink: /en/thank-you/
+permalink: "/gracias/"
+breadcrumb:
+  - label: "Inicio"
+    url: "/"
+  - label: "Gracias"
+---
+
+<section style="max-width: var(--container-text); margin: 0 auto; padding: 0 var(--gutter);
+                padding-top: clamp(36px,6vw,84px); padding-bottom: var(--section-y); text-align: center;">
+  <div style="text-align: left; margin-bottom: var(--space-8);">
+    {% include "partials/breadcrumb.njk" %}
+  </div>
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin: 0 auto;">
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+  </svg>
+  <h1 style="font-family: var(--font-serif); font-size: var(--fs-display-2); line-height: var(--lh-display); color: var(--text-strong); margin: 24px 0 0; font-weight: 400;">
+    Consulta recibida
+  </h1>
+  <p style="margin-top: 18px; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 48ch; margin-left: auto; margin-right: auto;">
+    Hemos recibido su consulta. Le responderemos en menos de 24 horas laborables con una valoración de viabilidad técnica.
+  </p>
+  <a href="/" style="display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; margin-top: 32px; font-family: var(--font-sans); font-size: var(--fs-body); font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid var(--ink-900); background: transparent; color: var(--ink-900);">
+    Volver al inicio
+  </a>
+</section>

@@ -1,4 +1,4 @@
-{% set currentLanguage = page.lang or lang %} 
+﻿{% set currentLanguage = page.lang or lang %} 
 {% set defaultLanguage = metadata.default_lang %}
 {% set navPages = collections.langCollections[currentLanguage] | eleventyNavigation %}
 
@@ -8,24 +8,24 @@
             {% if entry.key == "Especialidades Forenses" and entry.children %}
                 <div class="group relative">
                     <a href="{{ entry.url }}"
-                       class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm
-                              {% if entry.url == page.url %}text-cyan-600{% endif %}
+                       class="flex items-center gap-1.5 text-slate-600 hover:text-teal-600 font-medium text-sm
+                              {% if entry.url == page.url %}text-teal-600{% endif %}
                               py-2 transition-colors">
                         {% if entry.icon %}
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-cyan-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-teal-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 {{entry.icon | safe}}
                             </svg>
                         {% endif %}
                         <span>{{ entry.title }}</span>
-                        <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180 text-slate-400 group-hover:text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180 text-slate-400 group-hover:text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </a>
-                    <div class="absolute top-full left-0 hidden group-hover:block w-64 bg-white rounded-xl shadow-xl shadow-slate-200/50 border border-slate-100 py-3 z-50">
+                    <div class="absolute top-full left-0 hidden group-hover:block w-64 bg-white rounded-none shadow-xl shadow-slate-200/50 border border-slate-100 py-3 z-50">
                         {% for child in entry.children %}
                             <a href="{{ child.url }}" 
-                               class="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 {% if child.url == page.url %}text-cyan-600 bg-slate-50{% else %}text-slate-600{% endif %} hover:text-cyan-600 transition-colors group/item">
-                                <span class="text-cyan-500 opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
+                               class="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 {% if child.url == page.url %}text-teal-600 bg-slate-50{% else %}text-slate-600{% endif %} hover:text-teal-600 transition-colors group/item">
+                                <span class="text-teal-500 opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
                                 <span class="font-medium text-sm">{{ child.title }}</span>
                             </a>
                         {% endfor %}
@@ -33,10 +33,10 @@
                 </div>
             {% else %}
                 <a href="{{ entry.url }}"
-                   class="flex items-center gap-1.5 text-slate-600 hover:text-cyan-600 font-medium text-sm transition-colors
-                          {% if entry.url == page.url %}text-cyan-600 font-semibold{% endif %}">
+                   class="flex items-center gap-1.5 text-slate-600 hover:text-teal-600 font-medium text-sm transition-colors
+                          {% if entry.url == page.url %}text-teal-600 font-semibold{% endif %}">
                     {% if entry.icon %}
-                        <svg class="w-4 h-4 text-slate-400 group-hover:text-cyan-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg class="w-4 h-4 text-slate-400 group-hover:text-teal-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             {{entry.icon | safe}}
                         </svg>
                     {% endif %}
@@ -52,7 +52,7 @@
         {% if entry.children %}
             <li class="nav-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <div class="flex flex-col">
-                    <a href="{{ entry.url }}" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
+                    <a href="{{ entry.url }}" class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-teal-600 hover:bg-slate-50 rounded-none px-4 py-3 transition-colors">
                         {% if entry.icon %}
                             <svg class="w-5 h-5 text-slate-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             {{ entry.icon | safe }}
@@ -64,7 +64,7 @@
                         {% for child in entry.children %}
                             <li class="nav-item">
                                 <a href="{{ child.url }}" 
-                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-2 transition-colors">
+                                class="flex items-center gap-3 text-slate-600 font-medium text-base hover:text-teal-600 hover:bg-slate-50 rounded-none px-4 py-2 transition-colors">
                                     <span>{{ child.title }}</span>
                                 </a>
                             </li>
@@ -75,9 +75,9 @@
         {% elif not entry.parent %}
             <li class="nav-item">
                 <a href="{{ entry.url }}"
-                class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
+                class="flex items-center gap-3 text-slate-800 font-semibold text-lg hover:text-teal-600 hover:bg-slate-50 rounded-none px-4 py-3 transition-colors">
                     {% if entry.icon %}
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-cyan-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-teal-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 {{entry.icon | safe}}
                             </svg>
                     {% endif %}
@@ -115,7 +115,7 @@
                     {% endif %}
                     
                     <a href="{% if language == currentLanguage %}{{permalink}}{% else %}{{ translatedUrl }}{% endif %}" 
-                       class="font-medium tracking-wide uppercase transition-colors duration-300 {% if language == currentLanguage %}text-cyan-600 font-bold{% else %}text-slate-400 hover:text-slate-800{% endif %}"
+                       class="font-medium tracking-wide uppercase transition-colors duration-300 {% if language == currentLanguage %}text-teal-600 font-bold{% else %}text-slate-400 hover:text-slate-800{% endif %}"
                        {% if language == currentLanguage %}aria-current="true"{% endif %}>
                         {{ language | upper }}
                     </a>
@@ -126,17 +126,17 @@
             <div class="flex items-center">
                 <!-- Lawyer Button -->
                 <a href="{{metadata.navBar[currentLanguage].linkAbogados}}" 
-                   class="flex items-center gap-2 px-4 py-1.5 text-slate-600 hover:text-cyan-600 border-l border-slate-50 transition-colors group">
+                   class="flex items-center gap-2 px-4 py-1.5 text-slate-600 hover:text-teal-600 border-l border-slate-50 transition-colors group">
                     <span class="font-medium relative overflow-hidden">
                         {{ metadata.navBar[currentLanguage].ctaAbogados }}
-                        <span class="absolute bottom-0 left-0 w-full h-[1px] bg-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-full h-[1px] bg-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                     </span>
                 </a>
                 <!-- Phone Number -->
-                <a href="tel:{{metadata.contact.phoneNumber}}" class="flex items-center gap-2 px-4 py-1.5 text-slate-600 hover:text-cyan-600 border-l border-slate-50 transition-colors" itemprop="url">
+                <a href="tel:{{metadata.contact.phoneNumber}}" class="flex items-center gap-2 px-4 py-1.5 text-slate-600 hover:text-teal-600 border-l border-slate-50 transition-colors" itemprop="url">
                     <span class="font-medium tracking-wide">{{metadata.contact.phoneNumber}}</span>
                 </a>
-                <a href="{{ metadata.navBar[currentLanguage].linkPresupuesto }}" class="btn-primary !px-6 !py-2 !text-xs !rounded-lg" itemprop="url">
+                <a href="{{ metadata.navBar[currentLanguage].linkPresupuesto }}" class="btn-primary !px-6 !py-2 !text-xs !rounded-none" itemprop="url">
                     {{ metadata.navBar[currentLanguage].ctaPresupuesto | upper }}
                 </a>
             </div>
@@ -148,7 +148,7 @@
             <a href="{% if currentLanguage == 'es' %}/{% elif currentLanguage == 'en' %}/en/{% elif currentLanguage == 'fr' %}/fr/{% elif currentLanguage == 'it' %}/it/{% else %}/ca/{% endif %}" 
                class="flex items-center gap-4 group" 
                itemprop="url">
-                <svg class="w-10 h-10 lg:w-12 lg:h-12 text-cyan-500 transition-transform duration-500 ease-out"
+                <svg class="w-10 h-10 lg:w-12 lg:h-12 text-teal-500 transition-transform duration-500 ease-out"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 375 375"
                     preserveAspectRatio="xMidYMid meet">
@@ -257,7 +257,7 @@
                 </svg>
                 <div class="flex flex-col">
                     <span class="text-xl lg:text-2xl font-extrabold uppercase leading-none text-slate-900 tracking-tighter" itemprop="name">PERITO</span>
-                    <span class="text-xs lg:text-sm font-bold text-cyan-600 tracking-[0.2em] uppercase ml-0.5">BARCELONA</span>
+                    <span class="text-xs lg:text-sm font-bold text-teal-600 tracking-[0.2em] uppercase ml-0.5">BARCELONA</span>
                 </div>
             </a>
 
@@ -266,7 +266,7 @@
                 <ul class="flex items-center w-full">
                     <!-- Todos los enlaces corporativos agrupados a la derecha en la píldora -->
                     <li class="flex items-center ml-auto">
-                        <ul class="flex items-center gap-6 px-6 py-1.5 bg-slate-50/80 border border-slate-100 rounded-full shadow-sm shadow-slate-200/50">
+                        <ul class="flex items-center gap-6 px-6 py-1.5 bg-slate-50/80 border border-slate-100 rounded-none shadow-sm shadow-slate-200/50">
                             {%- for entry in navPages -%}
                                 {%- if entry.key != "Inicio" -%}
                                     {{ renderNavListItem(entry) }}
@@ -279,7 +279,7 @@
 
             <!-- Hamburger Menu Button -->
             <input type="checkbox" id="menuToggle" class="sr-only peer">
-            <label for="menuToggle" id="menuButton" class="lg:hidden flex flex-col justify-center items-center w-12 h-12 rounded-full hover:bg-slate-50 transition-all duration-300 relative gap-1.5 cursor-pointer z-50">
+            <label for="menuToggle" id="menuButton" class="lg:hidden flex flex-col justify-center items-center w-12 h-12 rounded-none hover:bg-slate-50 transition-all duration-300 relative gap-1.5 cursor-pointer z-50">
                 <span class="w-6 h-0.5 bg-slate-900 transition-all duration-300 ease-out p-origin-center peer-checked:transform peer-checked:translate-y-[8px] peer-checked:rotate-45"></span>
                 <span class="w-6 h-0.5 bg-slate-900 transition-all duration-300 ease-out peer-checked:opacity-0 peer-checked:transform peer-checked:translate-x-4"></span>
                 <span class="w-6 h-0.5 bg-slate-900 transition-all duration-300 ease-out p-origin-center peer-checked:transform peer-checked:translate-y-[-8px] peer-checked:rotate-[-45deg]"></span>
@@ -299,7 +299,7 @@
                 <!-- Botón de área de abogados - Mobile -->
                 <li class="nav-item mt-6 pt-6 border-t border-slate-100">
                     <a href="{{metadata.navBar[currentLanguage].linkAbogados}}" 
-                    class="flex items-center gap-3 text-slate-600 font-medium text-lg hover:text-cyan-600 hover:bg-slate-50 rounded-lg px-4 py-3 transition-colors">
+                    class="flex items-center gap-3 text-slate-600 font-medium text-lg hover:text-teal-600 hover:bg-slate-50 rounded-none px-4 py-3 transition-colors">
                         <span class="font-medium">{{ metadata.navBar[currentLanguage].ctaAbogados }}</span>
                     </a>
                 </li>
@@ -332,7 +332,7 @@
                 {% endif %}
                 
                 <a href="{% if language == currentLanguage %}{{permalink}}{% else %}{{ translatedUrl }}{% endif %}" 
-                   class="font-medium px-4 py-2 rounded-md transition-all text-sm {% if language == currentLanguage %}text-white bg-slate-900 shadow-sm{% else %}text-slate-500 hover:text-slate-900 hover:bg-white{% endif %}"
+                   class="font-medium px-4 py-2 rounded-none transition-all text-sm {% if language == currentLanguage %}text-white bg-slate-900 shadow-sm{% else %}text-slate-500 hover:text-slate-900 hover:bg-white{% endif %}"
                    {% if language == currentLanguage %}aria-current="true"{% endif %}>
                     {{ language | upper }}
                 </a>

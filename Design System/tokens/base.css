@@ -1,0 +1,43 @@
+/* ============================================================
+   BASE — minimal reset + brand defaults
+   Consumers linking styles.css get a sensible baseline.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--text-strong);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-heading);
+  margin: 0;
+}
+
+p { margin: 0; text-wrap: pretty; }
+
+a { color: var(--text-accent); text-decoration: none; }
+
+/* Brand utility: the mono evidence label / eyebrow */
+.label-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: var(--fw-medium);
+}
+
+::selection { background: var(--oxide-200); color: var(--ink-900); }

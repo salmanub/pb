@@ -1,0 +1,338 @@
+{#
+nav.njk — Cabecera fixed con navegación principal (2 filas)
+AGENTES §6: WPHeader + SiteNavigationElement (cada item con name+url+ReadAction)
+Fuente: SiteChrome.jsx → SiteHeader
+Zero-JS: menú móvil con checkbox :checked (AGENTES §5.6)
+Datos: metadata.json (navBar, services, contact) + {lang}.json (nav.*)
+#}
+{% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
+{% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
+{% set navData = metadata.navBar[lang | default("es")] %}
+{% set currentLang = lang | default("es") %}
+{% set contactUrl = "/contacto/profesional/" if currentLang == "es" else ("/ca/contacte/professional/" if currentLang == "ca" else
+"/en/contact/professional/") %}
+
+{# Build lang selector: frontmatter translations or fallback to i18n.json #}
+{% set _hasTranslations = translations and translations.length %}
+{% if not _hasTranslations %}
+{% set navAlts = page.url | navAlternates(i18n.pages) %}
+{% endif %}
+
+<div class="nav-wrapper" style="position: sticky; top: 0; z-index: 70; background: rgba(241,241,234,0.9);
+            backdrop-filter: saturate(180%) blur(10px); -webkit-backdrop-filter: saturate(180%) blur(10px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: background var(--dur-base), border-color var(--dur-base);">
+
+  {# ══ ROW 1: Logo + Phone + Lang + CTA + Burger ══ #}
+  <div class="nav-row-1" style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter);
+              height: 48px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+
+    {# ── Logo ── #}
+    <a href="{{ langPrefix }}/" aria-label="{{ metadata.site.title }}"
+      style="display: inline-flex; align-items: baseline; line-height: 1; font-size: 25px;" itemprop="url">
+      <span
+        style="font-family: var(--font-serif); font-weight: 500; color: var(--ink-900); letter-spacing: -0.01em;">perito</span><span
+        style="color: var(--accent); font-family: var(--font-serif); font-weight: 600;">.</span><span
+        style="font-family: var(--font-mono); font-weight: 500; color: var(--concrete-600); font-size: 15.5px; letter-spacing: 0.01em;">barcelona</span>
+    </a>
+
+    {# ── Right group: phone + lang + CTA + burger ── #}
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <a href="tel:{{ metadata.contact.phoneNumber | replace(' ', '') }}" style="display: flex; align-items: center; gap: 8px; font-family: var(--font-mono);
+                font-size: 0.8125rem; color: var(--text-strong); letter-spacing: 0.02em;" class="site-phone">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6
+                   19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81
+                   a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339
+                   1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        {{ metadata.contact.phoneNumber | replace('+34 ', '') }}
+      </a>
+
+      {# ── Language selector — inline pills ── #}
+      <div class="lang-pills" style="display: flex; align-items: center; gap: 2px;
+                  border: 1px solid var(--border-hairline); border-radius: var(--radius-sm);
+                  padding: 2px; background: rgba(0,0,0,0.02);">
+        {% if _hasTranslations %}
+        {# Current page pill #}
+        <a href="{{ page.url }}" hreflang="{{ currentLang }}" class="lang-pill lang-pill--active" style="display: inline-flex; align-items: center; justify-content: center;
+                    padding: 3px 8px; font-family: var(--font-mono); font-size: 0.68rem;
+                    font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+                    text-decoration: none; border-radius: 2px; line-height: 1.2;
+                    background: var(--accent); color: #fff;">
+          {{ currentLang }}
+        </a>
+        {# Translation pills #}
+        {% for t in translations %}
+        <a href="{{ t.permalink }}" hreflang="{{ t.lang }}" class="lang-pill" style="display: inline-flex; align-items: center; justify-content: center;
+                    padding: 3px 8px; font-family: var(--font-mono); font-size: 0.68rem;
+                    font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+                    text-decoration: none; border-radius: 2px; line-height: 1.2;
+                    color: var(--text-muted); background: transparent;">
+          {{ t.lang }}
+        </a>
+        {% endfor %}
+        {% else %}
+        {% for alt in navAlts %}
+        <a href="{{ alt.url }}" hreflang="{{ alt.lang }}"
+          class="lang-pill{% if alt.lang == currentLang %} lang-pill--active{% endif %}"
+          style="display: inline-flex; align-items: center; justify-content: center;
+                    padding: 3px 8px; font-family: var(--font-mono); font-size: 0.68rem;
+                    font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+                    text-decoration: none; border-radius: 2px; line-height: 1.2;
+                    {% if alt.lang == currentLang %}background: var(--accent); color: #fff;{% else %}color: var(--text-muted); background: transparent;{% endif %}">
+          {{ alt.lang }}
+        </a>
+        {% endfor %}
+        {% endif %}
+      </div>
+
+      <a href="{{ contactUrl }}" class="cta-hero" style="display: inline-flex; align-items: center; justify-content: center;
+                padding: 8px 14px; font-family: var(--font-sans); font-size: 0.8125rem;
+                font-weight: var(--fw-semibold); line-height: 1; letter-spacing: 0.005em;
+                border-radius: var(--radius-sm); border: 1.5px solid transparent;
+                background: var(--accent); color: var(--accent-on);
+                transition: background-color 0.3s, color 0.3s;" onmouseenter="this.style.backgroundColor='#145a38'"
+        onmouseleave="this.style.backgroundColor='var(--accent)'">
+        {{ ui.nav.solicitar }}
+      </a>
+
+      {# ── Burger icon (animated → X on :checked) ── #}
+      <label for="menu-toggle" class="site-burger" aria-label="{{ ui.nav.menu }}" style="display: none; cursor: pointer; color: var(--text-strong); padding: 4px;
+                    position: relative; z-index: 61; width: 26px; height: 22px;">
+        <span class="burger-bar burger-bar--1"></span>
+        <span class="burger-bar burger-bar--2"></span>
+        <span class="burger-bar burger-bar--3"></span>
+      </label>
+    </div>
+  </div>
+
+  {# ══ ROW 2: Nav links ribbon ══ #}
+  {# eleventyNavigation keys are the same across languages; filterByLang separates them #}
+  {% set navLabels = {
+  "Construcción": ui.nav.construccion,
+  "Dictamenes": ui.nav.dictamenes,
+  "Casos": ui.nav.casos,
+  "Abogados": ui.nav.abogados,
+  "Honorarios": ui.nav.honorarios,
+  "Despacho": ui.nav.despacho
+  } %}
+  {% set svcBasePath = "/informes-pericials/" if currentLang == "ca" else ("/expert-witness-reports/" if currentLang ==
+  "en" else "/informes-periciales/") %}
+  {% set megaFooterText = "Veure tots els dictàmens" if currentLang == "ca" else ("View all reports" if currentLang ==
+  "en" else "Ver todos los dictámenes") %}
+  {% set topNav = collections.all | filterByLang(currentLang) | eleventyNavigation %}
+
+  <div class="nav-row-2" style="display: flex; justify-content: center; padding: 0 var(--gutter);
+              border-top: 1px solid var(--border-hairline);">
+    <nav itemscope itemtype="https://schema.org/SiteNavigationElement"
+      style="display: flex; align-items: center; gap: 26px; height: 38px;" class="site-nav"
+      aria-label="Navegación principal">
+
+      {% for entry in topNav %}
+      {% if navLabels[entry.key] %}
+      {% set label = navLabels[entry.key] if navLabels[entry.key] else entry.title %}
+
+      {% if entry.key == "Dictamenes" %}
+      {# ── Dictámenes with mega-menu dropdown ── #}
+      <div class="nav-dropdown" style="position: relative;">
+        <a href="{{ entry.url }}" itemprop="url"
+          style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500;
+                                     color: var(--text-body); padding: 4px 0; display: inline-flex; align-items: center; gap: 5px;">
+          <meta itemprop="name" content="{{ label }}">
+          <span itemprop="potentialAction" itemscope itemtype="https://schema.org/ReadAction">
+            <meta itemprop="target" content="{{ metadata.site.url }}{{ entry.url }}">
+          </span>
+          {{ label }}
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </a>
+        <div class="nav-dropdown-panel" style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+                 padding-top: 12px; display: none;">
+          <div class="mega-menu" style="background: var(--surface-raised); border: 1px solid var(--border-hairline);
+                   border-radius: var(--radius-md); box-shadow: var(--shadow-overlay);
+                   width: 720px; padding: 20px 24px 16px;">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+              {# ── Col 1: Informes periciales ── #}
+              {% set catLabel1 = "Informes pericials" if currentLang == "ca" else ("Expert reports" if currentLang == "en" else "Informes periciales") %}
+              <div>
+                <div class="mega-cat">{{ catLabel1 }}</div>
+                {% for svc in metadata.services %}{% if svc.cat == "Informes periciales" %}
+                {% set svcName = svc["name_" + currentLang] if svc["name_" + currentLang] else svc.name %}
+                {% set svcDesc = svc["description_" + currentLang] if svc["description_" + currentLang] else svc.description %}
+                {% set svcSlug = svc["path_" + currentLang] if svc["path_" + currentLang] else svc.path %}
+                <a href="{{ langPrefix + svcBasePath + svcSlug + '/' }}" class="mega-card"
+                  itemprop="url">
+                  <meta itemprop="name" content="{{ svcName }}">
+                  <span class="mega-card__title">{{ svcName }}</span>
+                  <span class="mega-card__desc">{{ svcDesc }}</span>
+                </a>
+                {% endif %}{% endfor %}
+              </div>
+              {# ── Col 2: Patologías ── #}
+              {% set catLabel2 = "Patologies" if currentLang == "ca" else ("Pathologies" if currentLang == "en" else "Patologías") %}
+              <div>
+                <div class="mega-cat">{{ catLabel2 }}</div>
+                {% for svc in metadata.services %}{% if svc.cat == "Patologías" %}
+                {% set svcName = svc["name_" + currentLang] if svc["name_" + currentLang] else svc.name %}
+                {% set svcDesc = svc["description_" + currentLang] if svc["description_" + currentLang] else svc.description %}
+                {% set svcSlug = svc["path_" + currentLang] if svc["path_" + currentLang] else svc.path %}
+                <a href="{{ langPrefix + svcBasePath + svcSlug + '/' }}" class="mega-card"
+                  itemprop="url">
+                  <meta itemprop="name" content="{{ svcName }}">
+                  <span class="mega-card__title">{{ svcName }}</span>
+                  <span class="mega-card__desc">{{ svcDesc }}</span>
+                </a>
+                {% endif %}{% endfor %}
+              </div>
+              {# ── Col 3: Especialidades + Ingeniería ── #}
+              {% set catLabel3 = "Especialitats" if currentLang == "ca" else ("Specialities" if currentLang == "en" else "Especialidades") %}
+              {% set catLabel4 = "Enginyeria" if currentLang == "ca" else ("Engineering" if currentLang == "en" else "Ingeniería") %}
+              <div>
+                <div class="mega-cat">{{ catLabel3 }}</div>
+                {% for svc in metadata.services %}{% if svc.cat == "Especialidades" %}
+                {% set svcName = svc["name_" + currentLang] if svc["name_" + currentLang] else svc.name %}
+                {% set svcDesc = svc["description_" + currentLang] if svc["description_" + currentLang] else svc.description %}
+                {% set svcSlug = svc["path_" + currentLang] if svc["path_" + currentLang] else svc.path %}
+                <a href="{{ svc.href if svc.href else (langPrefix + svcBasePath + svcSlug + '/') }}" class="mega-card"
+                  itemprop="url">
+                  <meta itemprop="name" content="{{ svcName }}">
+                  <span class="mega-card__title">{{ svcName }}</span>
+                  <span class="mega-card__desc">{{ svcDesc }}</span>
+                </a>
+                {% endif %}{% endfor %}
+                <div class="mega-cat" style="margin-top: 14px;">{{ catLabel4 }}</div>
+                {% for svc in metadata.services %}{% if svc.cat == "Ingeniería" %}
+                {% set svcName = svc["name_" + currentLang] if svc["name_" + currentLang] else svc.name %}
+                {% set svcDesc = svc["description_" + currentLang] if svc["description_" + currentLang] else svc.description %}
+                {% set svcSlug = svc["path_" + currentLang] if svc["path_" + currentLang] else svc.path %}
+                <a href="{{ svc.href if svc.href else (langPrefix + '/' + svcSlug + '/') }}" class="mega-card"
+                  itemprop="url">
+                  <meta itemprop="name" content="{{ svcName }}">
+                  <span class="mega-card__title">{{ svcName }}</span>
+                  <span class="mega-card__desc">{{ svcDesc }}</span>
+                </a>
+                {% endif %}{% endfor %}
+              </div>
+            </div>
+            {# Footer link #}
+            <div
+              style="margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border-subtle); text-align: center;">
+              <a href="{{ entry.url }}" style="font-family: var(--font-mono); font-size: 0.68rem;
+                     letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-accent); font-weight: 600;
+                     text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                {{ megaFooterText }}
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% else %}
+      {# ── Standard nav link ── #}
+      <a href="{{ entry.url }}" itemprop="url" style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500;
+                                   color: var(--text-body); padding: 4px 0;">
+        <meta itemprop="name" content="{{ label }}">
+        <span itemprop="potentialAction" itemscope itemtype="https://schema.org/ReadAction">
+          <meta itemprop="target" content="{{ metadata.site.url }}{{ entry.url }}">
+        </span>
+        {{ label }}
+      </a>
+      {% endif %}
+
+      {% endif %}
+      {% endfor %}
+
+    </nav>
+  </div>
+</div>
+{# ── END fixed header ── #}
+
+{# ── Checkbox + Splash OUTSIDE header (backdrop-filter creates containing block) ── #}
+<input type="checkbox" id="menu-toggle" class="sr-only" aria-label="{{ ui.nav.menu }}">
+<div class="site-mobile-splash" role="dialog" aria-label="{{ ui.nav.menu }}" aria-modal="true" aria-hidden="true">
+  <div class="splash-inner">
+    <nav class="splash-nav" aria-label="Menú principal">
+      <div class="splash-eyebrow" role="heading" aria-level="2">Navegación</div>
+      {% set splashCount = { val: 0 } %}
+      {% for entry in topNav %}
+      {% if navLabels[entry.key] %}
+      {% set splashCount = { val: splashCount.val + 1 } %}
+      {% if splashCount.val == 5 %}
+      <div class="splash-eyebrow" style="margin-top: 24px;" role="heading" aria-level="2">El despacho</div>
+      {% endif %}
+      {% set label = navLabels[entry.key] if navLabels[entry.key] else entry.title %}
+      <a href="{{ entry.url }}" class="splash-link" aria-label="{{ label }}">
+        <span class="splash-link__num" aria-hidden="true">{{ "%02d" | format(splashCount.val) }}</span>
+        <span class="splash-link__text">{{ label }}</span>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </nav>
+
+    {# ── Language selector (mobile splash) ── #}
+    <nav class="splash-lang" aria-label="Idioma"
+      style="margin-top: 28px; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;">
+      {% if _hasTranslations %}
+      <a href="{{ page.url }}" hreflang="{{ currentLang }}" lang="{{ currentLang }}" aria-current="true"
+        aria-label="Idioma actual: {{ currentLang | upper }}" style="display: inline-flex; align-items: center; justify-content: center;
+                   padding: 10px 20px; font-family: var(--font-mono); font-size: 0.88rem;
+                   font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+                   text-decoration: none; border-radius: 6px; line-height: 1.2;
+                   min-height: 44px; min-width: 44px;
+                   background: var(--accent); color: #fff;">
+        {{ currentLang }}
+      </a>
+      {% for t in translations %}
+      <a href="{{ t.permalink }}" hreflang="{{ t.lang }}" lang="{{ t.lang }}"
+        aria-label="Cambiar a {{ t.lang | upper }}"
+        style="display: inline-flex; align-items: center; justify-content: center;
+                   padding: 10px 20px; font-family: var(--font-mono); font-size: 0.88rem;
+                   font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+                   text-decoration: none; border-radius: 6px; line-height: 1.2;
+                   min-height: 44px; min-width: 44px;
+                   color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);">
+        {{ t.lang }}
+      </a>
+      {% endfor %}
+      {% else %}
+      {% for alt in navAlts %}
+      <a href="{{ alt.url }}" hreflang="{{ alt.lang }}" lang="{{ alt.lang }}" {% if alt.lang==currentLang
+        %}aria-current="true" aria-label="Idioma actual: {{ alt.lang | upper }}" {% else
+        %}aria-label="Cambiar a {{ alt.lang | upper }}" {% endif %}
+        style="display: inline-flex; align-items: center; justify-content: center;
+                   padding: 10px 20px; font-family: var(--font-mono); font-size: 0.88rem;
+                   font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+                   text-decoration: none; border-radius: 6px; line-height: 1.2;
+                   min-height: 44px; min-width: 44px;
+                   {% if alt.lang == currentLang %}background: var(--accent); color: #fff;{% else %}color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);{% endif %}">
+        {{ alt.lang }}
+      </a>
+      {% endfor %}
+      {% endif %}
+    </nav>
+
+    <div class="splash-footer" role="group" aria-label="Contacto">
+      <a href="tel:{{ metadata.contact.phoneNumber | replace(' ', '') }}" class="splash-phone"
+        aria-label="Llamar al {{ metadata.contact.phoneNumber | replace('+34 ', '') }}">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6
+                   19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81
+                   a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339
+                   1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        {{ metadata.contact.phoneNumber | replace('+34 ', '') }}
+      </a>
+      <a href="{{ contactUrl }}" class="splash-cta" role="button" aria-label="{{ ui.nav.solicitar }}">{{
+        ui.nav.solicitar }}</a>
+    </div>
+  </div>
+</div>

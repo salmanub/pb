@@ -1,0 +1,11 @@
+/* ============================================================
+   FONTS — Vilardell Peritaje Forense
+   ------------------------------------------------------------
+   Spectral      → serif voice / display (authority, gravitas)
+   IBM Plex Sans → body & UI (engineered clarity)
+   IBM Plex Mono → evidence: reference codes, data labels, figures
+   Loaded via Google Fonts CDN. See readme.md > VISUAL FOUNDATIONS
+   for the self-hosting note.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');

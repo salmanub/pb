@@ -1,0 +1,84 @@
+/* ============================================================
+   COLORS — Vilardell Peritaje Forense
+   ------------------------------------------------------------
+   Verde inglés vivo + neutros fríos (gris-verdosos). Grave y
+   atemporal — tradición jurídica (baize, biblioteca de despacho),
+   permanencia (perenne), distintivo frente al azul corporativo.
+   Acento único. (Los tokens conservan el prefijo --oxide-* por
+   compatibilidad; ahora portan el verde.)
+   ============================================================ */
+
+:root {
+  /* ---- Ink & neutros fríos -------------------------------- */
+  --ink-900: #18211C;   /* primary text, dark surfaces (negro-verdoso) */
+  --ink-800: #232E27;   /* strong text on light             */
+  --ink-700: #34403A;   /* dark surface step                */
+  --concrete-600: #5E665F; /* secondary text                */
+  --concrete-500: #828A82; /* tertiary text                 */
+  --stone-400: #AEB4AE; /* faint text / disabled            */
+  --stone-300: #D5DAD5; /* hairline on light                */
+  --stone-250: #DFE3DE; /* hairline subtle                  */
+  --stone-200: #E8EBE7; /* muted fills                      */
+  --bone-100: #F1F1EA;  /* page ground (piedra fría)        */
+  --paper-50: #FAFAF4;  /* card surface                     */
+  --white:    #FFFFFF;
+
+  /* ---- Acento: verde inglés vivo ------------------------- */
+  --oxide-700: #11502F;
+  --oxide-600: #15633C; /* pressed                          */
+  --oxide-500: #1C7A4A; /* accent                           */
+  --oxide-400: #2A9760; /* hover                            */
+  --oxide-200: #A6D8BD; /* tint border                      */
+  --oxide-100: #DCEFE3; /* tint surface                     */
+
+  /* ---- Earthy semantics (sober, never neon) --------------- */
+  --moss-600:  #4C6650; /* positive / ratificado            */
+  --moss-100:  #E2E9E0;
+  --ochre-600: #936E22; /* caution / pendiente              */
+  --ochre-100: #F0E7CF;
+  --slate-700: #324350; /* info (deep, not corporate blue)  */
+  --slate-100: #E0E6EA;
+
+  /* ====== SEMANTIC ALIASES ================================= */
+  /* Text */
+  --text-strong:  var(--ink-900);
+  --text-body:    var(--ink-800);
+  --text-muted:   var(--concrete-600);
+  --text-faint:   var(--stone-400);
+  --text-accent:  var(--oxide-500);
+  --text-on-dark: var(--bone-100);
+  --text-on-dark-muted: #A9A296;
+
+  /* Surfaces */
+  --surface-page:   var(--bone-100);
+  --surface-card:   var(--paper-50);
+  --surface-raised: var(--white);
+  --surface-ink:    var(--ink-900);
+  --surface-ink-2:  var(--ink-700);
+  --surface-tint:   var(--oxide-100);
+  --surface-muted:  var(--stone-200);
+
+  /* Borders */
+  --border-hairline: var(--stone-300);
+  --border-subtle:   var(--stone-250);
+  --border-strong:   var(--ink-900);
+  --border-accent:   var(--oxide-500);
+
+  /* Accent roles */
+  --accent:       var(--oxide-500);
+  --accent-hover: var(--oxide-400);
+  --accent-press: var(--oxide-600);
+  --accent-tint:  var(--oxide-100);
+  --accent-on:    var(--bone-100); /* text/icon on accent fill */
+
+  /* Status roles */
+  --positive:      var(--moss-600);
+  --positive-tint: var(--moss-100);
+  --caution:       var(--ochre-600);
+  --caution-tint:  var(--ochre-100);
+  --info:          var(--slate-700);
+  --info-tint:     var(--slate-100);
+
+  /* Focus ring */
+  --focus-ring: var(--oxide-500);
+}

@@ -1,0 +1,30 @@
+<!-- @dsCard group="Components" viewport="700x200" name="Data — Stat" subtitle="Verifiable figures presented as evidence" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../../styles.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style> body { margin: 0; background: var(--surface-page); padding: 28px; } </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { Stat } = window.VilardellPeritajeForenseDesignSystem_58f0b0;
+function Demo() {
+  return (
+    <div style={{ display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:'40px', alignItems:'start' }}>
+      <Stat value="€2,8 M" label="Mayor importe peritado en un único dictamen" source="EXP. 22-074" accent />
+      <Stat value="340+" label="Dictámenes emitidos en edificación y obra civil" source="2009 – 2025" />
+      <Stat value="100 %" label="Dictámenes ratificados en sede judicial" source="Sin impugnación pericial" />
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!-- @dsCard group="Documentos" viewport="794x1040" name="Dictamen pericial — base A4" subtitle="Plantilla de informe imprimible (DIN-A4): portada, índice, cuerpo, conclusiones y firma" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dictamen pericial — plantilla A4</title>
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  /* Documento sobrio: tipografía del sistema (Spectral / Plex), acento teal
+     para alinear con la dirección elegida. Imprimible en DIN-A4. */
+  :root {
+    --doc-accent: #1C7A4A;
+    --doc-ink: #16202A;
+    --doc-muted: #5B6770;
+    --doc-faint: #9AA3A9;
+    --doc-line: #D7DBDE;
+    --doc-paper: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #E7E5DF; font-family: var(--font-sans); color: var(--doc-ink); }
+
+  .toolbar { position: fixed; top: 16px; right: 16px; z-index: 20; display: flex; gap: 8px; }
+  .toolbar button { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+    background: var(--doc-ink); color: #fff; border: none; padding: 10px 16px; border-radius: 4px; cursor: pointer; }
+
+  .stack { padding: 40px 16px 80px; display: flex; flex-direction: column; align-items: center; gap: 28px; }
+  .sheet { width: 210mm; min-height: 297mm; background: var(--doc-paper); box-shadow: 0 8px 40px rgba(22,32,42,.16);
+    padding: 22mm 20mm; position: relative; display: flex; flex-direction: column; }
+
+  /* running header / footer */
+  .rh { display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px solid var(--doc-line);
+    font-family: var(--font-mono); font-size: 8.5pt; letter-spacing: .08em; text-transform: uppercase; color: var(--doc-muted); }
+  .rh .dot { color: var(--doc-accent); }
+  .rf { margin-top: auto; padding-top: 10px; border-top: 1px solid var(--doc-line); display: flex; justify-content: space-between;
+    font-family: var(--font-mono); font-size: 8pt; letter-spacing: .06em; color: var(--doc-faint); text-transform: uppercase; }
+
+  .mono { font-family: var(--font-mono); }
+  .eyebrow { font-family: var(--font-mono); font-size: 8.5pt; letter-spacing: .2em; text-transform: uppercase; color: var(--doc-accent); }
+  h1, h2, h3 { font-family: var(--font-serif); font-weight: 500; color: var(--doc-ink); margin: 0; }
+  p { margin: 0 0 9pt; font-size: 10.5pt; line-height: 1.62; text-align: justify; color: #24303a; }
+
+  /* COVER */
+  .cover-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .brand { display: flex; align-items: baseline; gap: 2px; font-family: var(--font-serif); font-size: 17pt; font-weight: 500; }
+  .brand .b-bcn { font-family: var(--font-mono); font-size: 10.5pt; color: var(--doc-muted); }
+  .brand .b-dot { color: var(--doc-accent); }
+  .cover-meta { margin-top: 60mm; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1.5px solid var(--doc-ink); border-bottom: 1px solid var(--doc-line); }
+  .cm { padding: 12px 14px 14px 0; }
+  .cm .k { font-family: var(--font-mono); font-size: 7.5pt; letter-spacing: .14em; text-transform: uppercase; color: var(--doc-faint); }
+  .cm .v { font-family: var(--font-mono); font-size: 10pt; color: var(--doc-ink); margin-top: 5px; }
+  .cover-title { margin-top: 16mm; }
+  .cover-title .eyebrow { display: block; margin-bottom: 12px; }
+  .cover-title h1 { font-size: 40pt; line-height: 1.02; letter-spacing: -.02em; }
+  .cover-title .obj { margin-top: 14px; font-family: var(--font-serif); font-style: italic; font-size: 15pt; color: var(--doc-muted); max-width: 80%; }
+  .parties { margin-top: 16mm; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--doc-line); border: 1px solid var(--doc-line); }
+  .pcell { background: #fff; padding: 13px 15px; }
+  .pcell .k { font-family: var(--font-mono); font-size: 7.5pt; letter-spacing: .14em; text-transform: uppercase; color: var(--doc-accent); }
+  .pcell .v { font-size: 10.5pt; margin-top: 4px; color: var(--doc-ink); }
+
+  .seal { width: 78px; height: 78px; flex-shrink: 0; }
+
+  /* BODY */
+  .sec-head { display: grid; grid-template-columns: 42px 1fr; gap: 14px; align-items: baseline; margin: 0 0 12px; padding-top: 6px; border-top: 2px solid var(--doc-ink); }
+  .sec-num { font-family: var(--font-mono); font-size: 10pt; color: var(--doc-accent); font-weight: 600; padding-top: 7px; }
+  .sec-title { font-family: var(--font-serif); font-size: 17pt; }
+  .block { margin-bottom: 16px; }
+  .lead { font-size: 11pt; }
+  ul.docs { list-style: none; margin: 6px 0 0; padding: 0; }
+  ul.docs li { display: grid; grid-template-columns: 58px 1fr; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--doc-line); font-size: 10pt; }
+  ul.docs li .ref { font-family: var(--font-mono); font-size: 8.5pt; color: var(--doc-accent); letter-spacing: .04em; }
+
+  .index-list { list-style: none; margin: 0; padding: 0; }
+  .index-list li { display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--doc-line); }
+  .index-list .n { font-family: var(--font-mono); font-size: 9pt; color: var(--doc-accent); width: 28px; }
+  .index-list .t { font-family: var(--font-serif); font-size: 12.5pt; flex: 1; }
+  .index-list .pg { font-family: var(--font-mono); font-size: 9pt; color: var(--doc-faint); }
+
+  table.data { width: 100%; border-collapse: collapse; margin-top: 6px; }
+  table.data td { padding: 9px 10px; border-bottom: 1px solid var(--doc-line); font-size: 10pt; vertical-align: top; }
+  table.data td.k { font-family: var(--font-mono); font-size: 8.5pt; letter-spacing: .06em; text-transform: uppercase; color: var(--doc-muted); width: 38%; }
+
+  .figs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
+  .fig { border: 1px solid var(--doc-line); }
+  .fig .ph { aspect-ratio: 4/3; background: repeating-linear-gradient(135deg,#EEF0F1 0 1px,#F7F8F8 1px 12px); display: flex; align-items: center; justify-content: center; }
+  .fig .ph span { font-family: var(--font-mono); font-size: 8pt; letter-spacing: .12em; text-transform: uppercase; color: var(--doc-faint); }
+  .fig .cap { padding: 8px 10px; font-size: 8.5pt; color: var(--doc-muted); line-height: 1.4; border-top: 1px solid var(--doc-line); }
+  .fig .cap b { font-family: var(--font-mono); color: var(--doc-accent); font-size: 8pt; }
+
+  .concl { counter-reset: c; margin-top: 4px; }
+  .concl .item { display: grid; grid-template-columns: 36px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--doc-line); }
+  .concl .item::before { counter-increment: c; content: counter(c,decimal-leading-zero); font-family: var(--font-mono); font-size: 11pt; color: var(--doc-accent); font-weight: 600; }
+  .concl .item p { margin: 0; }
+
+  .closing { margin-top: 18px; padding: 16px 18px; background: #F4F6F6; border-left: 3px solid var(--doc-accent); font-family: var(--font-serif); font-size: 11pt; font-style: italic; color: #2a3640; }
+  .sign { margin-top: 26mm; display: flex; justify-content: space-between; align-items: flex-end; }
+  .sign .line { width: 60mm; border-top: 1px solid var(--doc-ink); padding-top: 8px; font-family: var(--font-mono); font-size: 8.5pt; letter-spacing: .06em; text-transform: uppercase; color: var(--doc-muted); }
+  .sign .name { font-family: var(--font-serif); font-size: 12pt; color: var(--doc-ink); margin-bottom: 3px; font-style: normal; }
+
+  @media print {
+    body { background: #fff; }
+    .toolbar { display: none; }
+    .stack { padding: 0; gap: 0; }
+    .sheet { box-shadow: none; width: auto; min-height: auto; padding: 0; page-break-after: always; }
+    @page { size: A4; margin: 18mm 17mm; }
+  }
+</style>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#16202A">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect x="430" y="170" width="340" height="470" rx="8" fill="#FAFAF4"/>
+    <circle cx="600" cy="330" r="62" fill="none" stroke="#1C7A4A" stroke-width="6"/>
+    <text x="600" y="350" text-anchor="middle" font-family="Georgia, serif" font-size="46" fill="#16202A">VS</text>
+    <rect x="500" y="445" width="200" height="10" rx="5" fill="#1C7A4A"/>
+    <rect x="490" y="495" width="220" height="7" rx="3" fill="#C9CFC9"/>
+    <rect x="490" y="520" width="220" height="7" rx="3" fill="#C9CFC9"/>
+    <rect x="490" y="545" width="160" height="7" rx="3" fill="#C9CFC9"/>
+  </svg>
+</template>
+<div class="toolbar"><button onclick="window.print()">Imprimir / PDF</button></div>
+<div class="stack">
+
+  <!-- ░░ PORTADA ░░ -->
+  <section class="sheet">
+    <div class="cover-top">
+      <div class="brand">perito<span class="b-dot">.</span><span class="b-bcn">barcelona</span></div>
+      <svg class="seal" viewBox="0 0 120 120" aria-hidden="true">
+        <defs>
+          <path id="st" d="M 19,60 A 41,41 0 0 1 101,60" fill="none" />
+          <path id="sb" d="M 19,60 A 41,41 0 0 0 101,60" fill="none" />
+        </defs>
+        <circle cx="60" cy="60" r="50" fill="none" stroke="#1C7A4A" stroke-width="1.5" />
+        <circle cx="60" cy="60" r="45" fill="none" stroke="#1C7A4A" stroke-width=".75" opacity=".5" />
+        <text font-family="var(--font-mono)" font-size="7.5" letter-spacing="2.2" fill="#15633C" font-weight="500"><textPath href="#st" startOffset="50%" text-anchor="middle">PERITO · BARCELONA</textPath></text>
+        <text font-family="var(--font-mono)" font-size="7" letter-spacing="2" fill="#1C7A4A"><textPath href="#sb" startOffset="50%" text-anchor="middle">ECCAT · 16448</textPath></text>
+        <text x="60" y="60" text-anchor="middle" dominant-baseline="central" font-family="var(--font-serif)" font-size="30" font-weight="500" fill="#15633C">VS</text>
+        <line x1="44" y1="72" x2="76" y2="72" stroke="#1C7A4A" stroke-width=".75" opacity=".5" />
+      </svg>
+    </div>
+
+    <div class="cover-meta">
+      <div class="cm"><div class="k">Expediente</div><div class="v">EXP·24-118</div></div>
+      <div class="cm"><div class="k">Tipo</div><div class="v">Dictamen de parte</div></div>
+      <div class="cm"><div class="k">Fecha</div><div class="v">[DD.MM.AAAA]</div></div>
+      <div class="cm"><div class="k">Páginas</div><div class="v">[NN]</div></div>
+    </div>
+
+    <div class="cover-title">
+      <span class="eyebrow">Dictamen pericial · Ingeniería forense</span>
+      <h1>Dictamen Pericial<br>de Edificación</h1>
+      <div class="obj">Sobre [patología / objeto de la pericia] en el inmueble sito en [dirección completa].</div>
+    </div>
+
+    <div class="parties">
+      <div class="pcell"><div class="k">Solicitante</div><div class="v">[Nombre / razón social del solicitante]</div></div>
+      <div class="pcell"><div class="k">A instancia de</div><div class="v">[Letrado / despacho / compañía aseguradora]</div></div>
+      <div class="pcell"><div class="k">Procedimiento</div><div class="v">[Tipo y nº de procedimiento · Juzgado]</div></div>
+      <div class="pcell"><div class="k">Inmueble objeto</div><div class="v">[Dirección · referencia catastral]</div></div>
+    </div>
+
+    <div class="rf"><span>Documento confidencial · uso pericial</span><span>perito.barcelona</span></div>
+  </section>
+
+  <!-- ░░ ÍNDICE + DATOS ░░ -->
+  <section class="sheet">
+    <div class="rh"><span><span class="dot">EXP·24-118</span> · Dictamen pericial de edificación</span><span>02</span></div>
+    <div style="margin-top:14mm">
+      <span class="eyebrow">Contenido</span>
+      <h2 style="font-size:22pt;margin-top:10px;letter-spacing:-.02em">Índice del dictamen</h2>
+      <ul class="index-list">
+        <li><span class="n">§ 1</span><span class="t">Objeto del dictamen</span><span class="pg">03</span></li>
+        <li><span class="n">§ 2</span><span class="t">Antecedentes y encargo</span><span class="pg">03</span></li>
+        <li><span class="n">§ 3</span><span class="t">Documentación analizada</span><span class="pg">03</span></li>
+        <li><span class="n">§ 4</span><span class="t">Metodología y normativa de aplicación</span><span class="pg">04</span></li>
+        <li><span class="n">§ 5</span><span class="t">Inspección y trabajos de campo</span><span class="pg">04</span></li>
+        <li><span class="n">§ 6</span><span class="t">Análisis técnico y diagnóstico</span><span class="pg">04</span></li>
+        <li><span class="n">§ 7</span><span class="t">Valoración económica del daño</span><span class="pg">05</span></li>
+        <li><span class="n">§ 8</span><span class="t">Conclusiones periciales</span><span class="pg">05</span></li>
+        <li><span class="n">§ 9</span><span class="t">Juramento, firma y anexos</span><span class="pg">05</span></li>
+      </ul>
+    </div>
+
+    <div style="margin-top:14mm">
+      <span class="eyebrow">Datos del perito</span>
+      <table class="data" style="margin-top:10px">
+        <tr><td class="k">Perito</td><td>Albert Vilardell Serra</td></tr>
+        <tr><td class="k">Titulación</td><td>Ingeniero Civil — ETSECCPB · UPC</td></tr>
+        <tr><td class="k">Colegiación</td><td>ECCAT nº 16448</td></tr>
+        <tr><td class="k">Habilitación</td><td>Perito judicial inscrito (Ministerio de Justicia) · Perito de seguros IRD</td></tr>
+        <tr><td class="k">Sede</td><td>Carrer de Numància, 95, Local 5 · 08029 Barcelona</td></tr>
+      </table>
+    </div>
+    <div class="rf"><span>Documento confidencial · uso pericial</span><span>perito.barcelona · ECCAT 16448</span></div>
+  </section>
+
+  <!-- ░░ CUERPO 1 ░░ -->
+  <section class="sheet">
+    <div class="rh"><span><span class="dot">EXP·24-118</span> · Dictamen pericial de edificación</span><span>03</span></div>
+    <div style="margin-top:10mm">
+      <div class="sec-head"><div class="sec-num">§ 1</div><h3 class="sec-title">Objeto del dictamen</h3></div>
+      <p class="lead">El presente dictamen tiene por objeto determinar, con criterio técnico e independiente, [el origen, alcance y responsabilidad de la patología descrita], a fin de servir como prueba pericial conforme a los artículos 335 y siguientes de la Ley de Enjuiciamiento Civil.</p>
+
+      <div class="sec-head"><div class="sec-num">§ 2</div><h3 class="sec-title">Antecedentes y encargo</h3></div>
+      <p>A instancia de [solicitante], se encarga la emisión de un dictamen pericial relativo a [descripción del problema]. El inmueble objeto, [tipología y dirección], presenta [síntomas observados] desde [fecha aproximada]. Con carácter previo se ha mantenido reunión de instrucción con la dirección letrada y se ha acordado el alcance que se detalla.</p>
+
+      <div class="sec-head"><div class="sec-num">§ 3</div><h3 class="sec-title">Documentación analizada</h3></div>
+      <ul class="docs">
+        <li><span class="ref">DOC·01</span><span>Escritura de compraventa / contrato de obra. [referencia]</span></li>
+        <li><span class="ref">DOC·02</span><span>Proyecto de ejecución y memoria de calidades. [referencia]</span></li>
+        <li><span class="ref">DOC·03</span><span>Informes y reparaciones previas aportados por la propiedad.</span></li>
+        <li><span class="ref">DOC·04</span><span>Reportaje fotográfico fechado de la inspección.</span></li>
+        <li><span class="ref">DOC·05</span><span>Normativa técnica de aplicación (CTE, EHE-08, LOE).</span></li>
+      </ul>
+    </div>
+    <div class="rf"><span>Documento confidencial · uso pericial</span><span>perito.barcelona · ECCAT 16448</span></div>
+  </section>
+
+  <!-- ░░ CUERPO 2 ░░ -->
+  <section class="sheet">
+    <div class="rh"><span><span class="dot">EXP·24-118</span> · Dictamen pericial de edificación</span><span>04</span></div>
+    <div style="margin-top:10mm">
+      <div class="sec-head"><div class="sec-num">§ 4</div><h3 class="sec-title">Metodología y normativa</h3></div>
+      <p>El diagnóstico se ha desarrollado conforme a la <em>lex artis</em> de la ingeniería de la edificación, mediante inspección directa, ensayos no destructivos y contraste documental. Marco normativo: Código Técnico de la Edificación (CTE DB-SE, DB-HS), Instrucción EHE-08 y Ley de Ordenación de la Edificación (LOE, art. 17).</p>
+
+      <div class="sec-head"><div class="sec-num">§ 5</div><h3 class="sec-title">Inspección y trabajos de campo</h3></div>
+      <p>La inspección se realizó el [fecha], con registro fotográfico fechado, mediciones y ensayos instrumentales (termografía infrarroja, higrometría de profundidad y testigos). Se documentan a continuación las evidencias más relevantes.</p>
+      <div class="figs">
+        <div class="fig"><div class="ph"><span>Fotografía</span></div><div class="cap"><b>FIG·01</b> — [Descripción de la evidencia: localización y patología observada.]</div></div>
+        <div class="fig"><div class="ph"><span>Termografía</span></div><div class="cap"><b>FIG·02</b> — [Lectura instrumental: gradiente térmico / humedad detectada.]</div></div>
+      </div>
+
+      <div class="sec-head" style="margin-top:16px"><div class="sec-num">§ 6</div><h3 class="sec-title">Análisis técnico y diagnóstico</h3></div>
+      <p>A partir de las evidencias, se concluye que el origen de [la patología] se localiza en [elemento constructivo], por causa de [causa técnica]. Se descartan [hipótesis alternativas] al no ser compatibles con [observaciones]. La responsabilidad técnica recae, conforme a la LOE art. 17, en [agente: proyecto / dirección / ejecución].</p>
+    </div>
+    <div class="rf"><span>Documento confidencial · uso pericial</span><span>perito.barcelona · ECCAT 16448</span></div>
+  </section>
+
+  <!-- ░░ CONCLUSIONES + FIRMA ░░ -->
+  <section class="sheet">
+    <div class="rh"><span><span class="dot">EXP·24-118</span> · Dictamen pericial de edificación</span><span>05</span></div>
+    <div style="margin-top:10mm">
+      <div class="sec-head"><div class="sec-num">§ 7</div><h3 class="sec-title">Valoración económica</h3></div>
+      <table class="data">
+        <tr><td class="k">Reparación del origen</td><td>[importe] €</td></tr>
+        <tr><td class="k">Reposición de acabados afectados</td><td>[importe] €</td></tr>
+        <tr><td class="k">Total daño peritado</td><td style="font-family:var(--font-mono);font-weight:600;color:var(--doc-accent)">[TOTAL] €</td></tr>
+      </table>
+
+      <div class="sec-head" style="margin-top:18px"><div class="sec-num">§ 8</div><h3 class="sec-title">Conclusiones periciales</h3></div>
+      <div class="concl">
+        <div class="item"><p>El origen de la patología queda determinado en [conclusión técnica], con base en las evidencias documentadas.</p></div>
+        <div class="item"><p>La responsabilidad técnica corresponde a [agente], conforme a la normativa de aplicación citada.</p></div>
+        <div class="item"><p>El coste de reparación necesario para subsanar el daño asciende a [TOTAL] €, IVA no incluido.</p></div>
+      </div>
+
+      <div class="closing">«Es cuanto tengo el honor de informar, sometiéndome a cualquier otro criterio mejor fundado en Derecho y en la técnica, y jurando haber actuado y manifestar mi actuación con la mayor objetividad posible.»</div>
+
+      <div class="sign">
+        <div>
+          <div class="name">Albert Vilardell Serra</div>
+          <div class="line">Ingeniero Civil · Perito · ECCAT 16448</div>
+        </div>
+        <svg class="seal" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#1C7A4A" stroke-width="1.5" />
+          <circle cx="60" cy="60" r="45" fill="none" stroke="#1C7A4A" stroke-width=".75" opacity=".5" />
+          <text font-family="var(--font-mono)" font-size="7.5" letter-spacing="2.2" fill="#15633C" font-weight="500"><textPath href="#st" startOffset="50%" text-anchor="middle">PERITO · BARCELONA</textPath></text>
+          <text font-family="var(--font-mono)" font-size="7" letter-spacing="2" fill="#1C7A4A"><textPath href="#sb" startOffset="50%" text-anchor="middle">RATIFICADO · 2026</textPath></text>
+          <text x="60" y="60" text-anchor="middle" dominant-baseline="central" font-family="var(--font-serif)" font-size="30" font-weight="500" fill="#15633C">VS</text>
+        </svg>
+      </div>
+    </div>
+    <div class="rf"><span>Documento confidencial · uso pericial</span><span>perito.barcelona · ECCAT 16448</span></div>
+  </section>
+
+</div>
+</body>
+</html>

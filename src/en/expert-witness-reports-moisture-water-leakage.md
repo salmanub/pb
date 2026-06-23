@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+templateEngineOverride: njk
+title: "Moisture and Water Leakage Assessment"
+image: "deteccion-humedades-termografia.jpg"
+image_alt: "Moisture detection with infrared thermography"
+description: "Diagnosis of water origin using infrared thermography and waterproofing tests. Expert report for claims against builders, homeowner associations or insurers. CTE DB-HS."
+audience: "particular"
+lang: en
+eleventyNavigation:
+  key: Humedades y filtraciones
+  parent: Dictamenes
+  order: 3
+translations:
+  - lang: es
+    permalink: /informes-periciales/humedades-filtraciones/
+  - lang: ca
+    permalink: /ca/informes-pericials/humitats-filtracions/
+permalink: "/en/expert-witness-reports/moisture-water-leakage/"
+svc_num: "EXP·04"
+svc_tag: "Water pathology"
+svc_lsi: ["CTE DB-HS", "Infrared thermography", "Waterproofing", "Rising damp", "Interstitial condensation"]
+body_blocks:
+  - h: "Origin of moisture problems"
+    p: "Not all moisture issues have the same origin or the same solution. They may be caused by infiltration, rising damp, condensation or plumbing failures. The expert report identifies the cause with objective evidence — infrared thermography, waterproofing tests, hygrometer — and determines responsibilities under CTE DB-HS."
+  - h: "When is an expert report needed?"
+    p: "When moisture reappears after repairs, when the origin is disputed between the homeowner association and the property owner, when a claim needs to be filed against the builder within the warranty period (LOE art. 17), or when the insurer rejects the claim."
+faq:
+  - q: "How much does a moisture assessment cost?"
+    a: "It depends on the complexity. Free initial consultation: we assess the case and issue a fixed written quote."
+  - q: "Can the origin be detected with thermography?"
+    a: "Infrared thermography detects temperature differences indicating hidden moisture. Combined with hygrometer readings and waterproofing tests, it reliably locates the source."
+band_title: "Do you need this report?"
+band_lede: "Free initial consultation. Contractual delivery deadlines."
+breadcrumb:
+  - label: "Home"
+    url: "/"
+  - label: "Reports"
+    url: "/expert-witness-reports/"
+  - label: "EXP·04"
+---
+{% set ui = en %}
+{% include "layouts/service.njk" %}

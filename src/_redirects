@@ -112,16 +112,7 @@
 /fr/audit-de-construction/ /fr/ingenierie-legale-construction/ 301
 /it/audit-di-costruzione/ /it/ingegneria-forense-costruzioni/ 301
 
-# REDIRECTS FASE 1
-/auditoria-de-obras/ /ingenieria-forense-construccion/ 301
-/ca/auditoria-d-obres/ /ca/enginyeria-forense-construccio/ 301
-/en/construction-technical-audit/ /en/civil-forensic-engineering/ 301
-/fr/audit-de-construction/ /fr/ingenierie-legale-construction/ 301
-/it/audit-di-costruzione/ /it/ingegneria-forense-costruzioni/ 301
-
-# REDIRECTS FASE 1
-/auditoria-de-obras/ /ingenieria-forense-construccion/ 301
-/ca/auditoria-d-obres/ /ca/enginyeria-forense-construccio/ 301
-/en/construction-technical-audit/ /en/civil-forensic-engineering/ 301
-/fr/audit-de-construction/ /fr/ingenierie-legale-construction/ 301
-/it/audit-di-costruzione/ /it/ingegneria-forense-costruzioni/ 301
+# REDIRECTS FASE 2 — Auditoría SEO Semántica
+/despacho/ /el-despacho/ 301
+/honorarios/ /honorarios-perito-judicial-barcelona/ 301
+/obra-civil-infraestructura/ /obras-publicas/ 301

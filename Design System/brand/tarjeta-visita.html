@@ -1,0 +1,91 @@
+<!-- @dsCard group="Brand" viewport="780x620" name="Tarjeta de visita — Luxe & Cotton" subtitle="Dos acabados MOO: Luxe (600 g, seam verde) y Cotton (algodón, sin estucar). Mismo trim 88,9×50,8 mm." -->
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #DEDFD9; font-family: var(--font-sans); padding: 30px; }
+  .grid { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; max-width: 760px; margin: 0 auto; }
+  .group { display: flex; flex-direction: column; gap: 14px; }
+  .ghead { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-900); }
+  .ghead b { color: var(--accent); }
+  .gnote { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .04em; color: #5b6760; line-height: 1.6; max-width: 320px; }
+  .card { width: 320px; height: 183px; position: relative; overflow: hidden; }
+  .pad { position: absolute; inset: 18px; display: flex; flex-direction: column; }
+  /* ANVERSO comparten estructura */
+  .wm { display: flex; align-items: baseline; font-family: var(--font-serif); font-size: 15px; font-weight: 500; color: var(--ink-900); letter-spacing: -.01em; }
+  .wm .dot { color: var(--accent); } .wm .bcn { font-family: var(--font-mono); font-size: 9.5px; color: var(--concrete-600); }
+  .nm { font-family: var(--font-serif); font-size: 19px; font-weight: 500; color: var(--ink-900); line-height: 1.08; }
+  .role { font-family: var(--font-mono); font-size: 8px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-top: 5px; }
+  .rule { height: 2px; width: 28px; background: var(--accent); margin: 10px 0; }
+  .col { font-family: var(--font-mono); font-size: 7.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--text-faint); }
+  .front .pad { justify-content: space-between; }
+  /* REVERSO */
+  .back .pad { align-items: center; justify-content: center; text-align: center; gap: 8px; }
+  .lab { font-family: var(--font-mono); font-size: 7.5px; letter-spacing: .24em; text-transform: uppercase; color: var(--text-on-dark-muted); }
+  .contact { font-family: var(--font-mono); font-size: 9px; color: var(--bone-100); line-height: 1.9; }
+
+  /* ── LUXE: 600 g, sombra densa, canto con seam verde ── */
+  .luxe .front { background: var(--paper-50); }
+  .luxe .back { background: var(--ink-900); }
+  .luxe .card { box-shadow: 0 14px 34px rgba(24,33,28,.28); border-radius: 2px; }
+  .luxe .card::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: var(--accent); }
+  .luxe .card::before { content: ''; position: absolute; left: 0; right: 0; bottom: 5px; height: 2px; background: rgba(0,0,0,.12); z-index: 2; }
+
+  /* ── COTTON: algodón crudo, mate, textura sutil, sin seam ── */
+  .cotton .front { background:
+    repeating-linear-gradient(90deg, rgba(140,135,120,.05) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(0deg, rgba(140,135,120,.05) 0 1px, transparent 1px 3px),
+    #FBFBF4; }
+  .cotton .back { background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.03) 0 1px, transparent 1px 3px),
+    var(--ink-800); }
+  .cotton .card { box-shadow: 0 6px 16px rgba(24,33,28,.12); border-radius: 1px; }
+</style></head>
+<body>
+  <div class="grid">
+    <!-- LUXE -->
+    <div class="group luxe">
+      <div class="ghead">Luxe · 600 g · <b>seam verde inglés</b></div>
+      <div class="card front"><div class="pad">
+        <div class="wm">perito<span class="dot">.</span><span class="bcn">barcelona</span></div>
+        <div><div class="nm">Albert Vilardell<br>Serra</div><div class="role">Ingeniero Civil · Perito Judicial</div><div class="rule"></div></div>
+        <div class="col">ECCAT nº 16448 · Min. Justicia · IRD</div>
+      </div></div>
+      <div class="card back"><div class="pad">
+        <svg width="58" height="58" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="lt" d="M 21,60 A 39,39 0 0 1 99,60" fill="none"/><path id="lb" d="M 21,60 A 39,39 0 0 0 99,60" fill="none"/></defs>
+          <circle cx="60" cy="60" r="49" fill="none" stroke="#2A9760" stroke-width="1.4"/>
+          <text font-family="var(--font-mono)" font-size="7.4" letter-spacing="2.4" fill="#A6D8BD" font-weight="500"><textPath href="#lt" startOffset="50%" text-anchor="middle">PERITO · BARCELONA</textPath></text>
+          <text font-family="var(--font-mono)" font-size="7" letter-spacing="2.2" fill="#A6D8BD"><textPath href="#lb" startOffset="50%" text-anchor="middle">ECCAT · 16448</textPath></text>
+          <text x="60" y="61" text-anchor="middle" dominant-baseline="central" font-family="var(--font-serif)" font-size="29" font-weight="500" fill="#DCEFE3">VS</text>
+        </svg>
+        <div class="lab">Ingeniería forense</div>
+        <div class="contact">+34 614 194 985<br>info@perito.barcelona</div>
+      </div></div>
+      <div class="gnote">Triple capa con costura central a la vista. Máxima percepción premium para socios de despacho y aseguradoras.</div>
+    </div>
+
+    <!-- COTTON -->
+    <div class="group cotton">
+      <div class="ghead">Cotton · algodón · <b>sin estucar</b></div>
+      <div class="card front"><div class="pad">
+        <div class="wm">perito<span class="dot">.</span><span class="bcn">barcelona</span></div>
+        <div><div class="nm">Albert Vilardell<br>Serra</div><div class="role">Ingeniero Civil · Perito Judicial</div><div class="rule"></div></div>
+        <div class="col">ECCAT nº 16448 · Min. Justicia · IRD</div>
+      </div></div>
+      <div class="card back"><div class="pad">
+        <svg width="58" height="58" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="ct" d="M 21,60 A 39,39 0 0 1 99,60" fill="none"/><path id="cb" d="M 21,60 A 39,39 0 0 0 99,60" fill="none"/></defs>
+          <circle cx="60" cy="60" r="49" fill="none" stroke="#2A9760" stroke-width="1.4"/>
+          <text font-family="var(--font-mono)" font-size="7.4" letter-spacing="2.4" fill="#A6D8BD" font-weight="500"><textPath href="#ct" startOffset="50%" text-anchor="middle">PERITO · BARCELONA</textPath></text>
+          <text font-family="var(--font-mono)" font-size="7" letter-spacing="2.2" fill="#A6D8BD"><textPath href="#cb" startOffset="50%" text-anchor="middle">ECCAT · 16448</textPath></text>
+          <text x="60" y="61" text-anchor="middle" dominant-baseline="central" font-family="var(--font-serif)" font-size="29" font-weight="500" fill="#DCEFE3">VS</text>
+        </svg>
+        <div class="lab">Ingeniería forense</div>
+        <div class="contact">+34 614 194 985<br>info@perito.barcelona</div>
+      </div></div>
+      <div class="gnote">Tacto de papelería jurídica, mate y cálido, sin brillo plástico. Sobriedad atemporal a menor coste.</div>
+    </div>
+  </div>
+</body></html>

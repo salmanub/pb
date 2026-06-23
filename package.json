@@ -1,15 +1,16 @@
 {
   "name": "perito11ty",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "perito.barcelona — Eleventy v3 + Design System forense",
   "main": "index.js",
   "scripts": {
-    "build": "node builder.js",
-    "build:only": "npx eleventy",
-    "serve": "npx eleventy --serve",
+    "build:css": "node build-css.js",
+    "build": "npm run build:css && npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve --port=3000",
     "optimize-images": "node src/scripts/optimize-images.js",
     "optimize-images-debug": "node src/scripts/optimize-images-debug.js",
-    "optimize-images-force": "node src/scripts/optimize-images-force.js"
+    "optimize-images-force": "node src/scripts/optimize-images-force.js",
+    "images": "node optimize-images.mjs"
   },
   "keywords": [],
   "author": "",
@@ -17,22 +18,18 @@
   "type": "module",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-navigation": "^1.0.4",
-    "@tailwindcss/forms": "^0.5.10",
+    "@11ty/eleventy-navigation": "^1.0.5",
     "@tailwindcss/postcss": "^4.0.17",
     "@tailwindcss/typography": "^0.5.16",
     "cssnano": "^7.0.6",
-    "html-minifier-terser": "^7.2.0",
     "markdown-it": "^14.1.0",
     "postcss": "^8.5.3",
+    "purgecss": "^7.0.2",
+    "sharp": "^0.35.2",
     "tailwindcss": "^4.0.17"
   },
   "dependencies": {
     "@11ty/eleventy-img": "^6.0.4",
-    "cheerio": "^1.1.2",
-    "dotenv": "^17.2.3",
-    "glob": "^11.0.3",
-    "google-auth-library": "^10.5.0",
-    "google-spreadsheet": "^5.0.2"
+    "dotenv": "^17.2.3"
   }
 }

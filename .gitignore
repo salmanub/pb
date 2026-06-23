@@ -1,5 +1,7 @@
 node_modules
+public
+_site
 dist
 .env
 .DS_Store
-
+*.log

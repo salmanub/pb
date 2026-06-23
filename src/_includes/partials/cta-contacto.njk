@@ -1,23 +1,23 @@
-<section class="py-24 relative z-10 bg-slate-50 overflow-hidden">
+﻿<section class="py-24 relative z-10 bg-slate-50 overflow-hidden">
     <div class="absolute inset-0 bg-white/50"></div>
     
     <div class="w-full px-6 md:px-12 lg:px-16 relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
             <div>
                 <h2 class="text-4xl md:text-5xl lg:text-6xl font-light uppercase text-slate-900 mb-8 leading-[0.95] tracking-tight">
-                    {{ contactCTA.titulo }} <strong class="text-cyan-400 font-normal">{{ contactCTA.highlight }}</strong>?
+                    {{ contactCTA.titulo }} <strong class="text-teal-400 font-normal">{{ contactCTA.highlight }}</strong>?
                 </h2>
                 <p class="text-xl md:text-2xl text-slate-600 mb-12 font-light leading-relaxed">{{ contactCTA.descripcion }}</p>
 
                 <div class="space-y-8">
                     {% for contacto in metadata.ctaContact[lang].contactInfo %}
                     <div class="flex items-start gap-4 group">
-                        <div class="w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-100 transition-colors">
+                        <div class="w-12 h-12 rounded-none bg-teal-50 flex items-center justify-center flex-shrink-0 group-hover:bg-teal-100 transition-colors">
                             {% include "icons/" + contacto.icon + ".svg" ignore missing %}
                         </div>
                         <div>
                             <h3 class="text-lg font-light uppercase text-slate-800 mb-1">{{ contacto.titulo }}</h3>
-                            <a href="{{ contacto.url }}" class="text-2xl font-bold text-cyan-500 hover:text-cyan-600 transition-colors">{{ contacto.valor }}</a>
+                            <a href="{{ contacto.url }}" class="text-2xl font-bold text-teal-500 hover:text-teal-600 transition-colors">{{ contacto.valor }}</a>
                             <p class="text-slate-600 mt-2">{{ contacto.horario }}</p>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border border-slate-100">
+            <div class="bg-white rounded-none shadow-xl p-8 lg:p-12 border border-slate-100">
                 {% set contactFormOrigin = "CTA Form perito.barcelona" %}
                 {% include "partials/contact-form.njk" %}
             </div>

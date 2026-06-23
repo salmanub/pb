@@ -1,0 +1,40 @@
+{#
+  qual.njk — Sidebar sticky de cualificación del caso
+  Fuente: SiteData.jsx → Qual component
+  Props: qualItems [{num, text}], qualCta, qualNote, audience ('pro'|'particular'|'mix')
+  Datos: {lang}.json (qual.*) + frontmatter
+  NOTE: All HTML on single lines to prevent Markdown <p> wrapping
+#}
+{% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
+{% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
+{% set _contactPro = "/contacto/profesional/" if (not lang or lang == "es") else ("/en/contact/professional/" if lang == "en" else "/ca/contacte/professional/") %}
+{% set _contactPart = "/contacto/particular/" if (not lang or lang == "es") else ("/en/contact/particular/" if lang == "en" else "/ca/contacte/particular/") %}
+{% set _aud = audience | default("pro") %}
+{% set items = qualItems | default([]) %}
+{# ── Sticky wrapper: card + bridge stay together ── #}
+<div style="position: sticky; top: 92px;">
+<div style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; border-bottom: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);">{{ qualLabel | default(ui.qual.label) }}</div>
+<div style="padding: 22px 22px 24px;">
+<div style="font-family: var(--font-serif); font-style: italic; font-size: 1.6rem; color: var(--text-accent); margin-bottom: 4px;">{{ ui.qual.consulta_sin_coste }}</div>
+<div style="margin-top: 14px;">
+{% for item in items %}
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">{{ item.num }}</span><span>{{ item.text }}</span></div>
+{% endfor %}
+</div>
+<a href="{{ _contactPath | default(_contactPro) }}" style="display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; margin-top: 18px; padding: 12px 22px; font-family: var(--font-sans); font-size: 0.9375rem; font-weight: var(--fw-semibold); line-height: 1; letter-spacing: 0.005em; border-radius: var(--radius-sm); border: 1.5px solid transparent; background: var(--accent); color: var(--accent-on); text-decoration: none; transition: background-color 0.3s;" onmouseenter="this.style.backgroundColor='#145a38'" onmouseleave="this.style.backgroundColor='var(--accent)'">{{ qualCta | default(ui.qual.consultar_caso) }}<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+<div style="margin-top: 12px; text-align: center; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint);">{{ qualNote | default(ui.qual.nota) }}</div>
+</div>
+</div>
+{# ── Enlace-puente bidireccional: cruza a la otra audiencia ── #}
+{% if _aud == "particular" %}
+{% set _bridgeHref = _contactPro %}
+{% set _bridgeText = "¿Es despacho o aseguradora? " if (not lang or lang == "es") else ("Law firm or insurer? " if lang == "en" else "És despatx o asseguradora? ") %}
+{% set _bridgeLink = "Solicitar colaboración técnica →" if (not lang or lang == "es") else ("Request professional collaboration →" if lang == "en" else "Sol·licitar col·laboració tècnica →") %}
+{% else %}
+{% set _bridgeHref = _contactPart %}
+{% set _bridgeText = "¿No es un profesional? " if (not lang or lang == "es") else ("Not a professional? " if lang == "en" else "No és un professional? ") %}
+{% set _bridgeLink = "Cuéntenos su caso como particular →" if (not lang or lang == "es") else ("Tell us about your case as an individual →" if lang == "en" else "Expliqui'ns el seu cas com a particular →") %}
+{% endif %}
+<div style="margin-top: 12px; text-align: center;"><span style="font-size: var(--fs-small, 0.8rem); color: var(--text-muted);">{{ _bridgeText }}</span><a href="{{ _bridgeHref }}" style="font-size: var(--fs-small, 0.8rem); color: var(--text-accent); text-decoration: none; border-bottom: 1px solid transparent;" onmouseenter="this.style.borderBottomColor='var(--accent)'" onmouseleave="this.style.borderBottomColor='transparent'">{{ _bridgeLink }}</a></div>
+</div>

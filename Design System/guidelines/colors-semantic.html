@@ -1,0 +1,28 @@
+<!-- @dsCard group="Colors" viewport="700x170" name="Earthy semantics" subtitle="Sober status colors — moss, ochre, slate. Never neon." -->
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin:0; background:var(--surface-page); padding:24px; font-family:var(--font-mono); }
+  .row { display:flex; gap:16px; }
+  .pair { flex:1; display:flex; gap:8px; }
+  .chip { height:56px; flex:1; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); }
+  .cap { margin-top:10px; font-size:11px; letter-spacing:0.04em; color:var(--text-strong); text-transform:uppercase; }
+  .role { font-size:10px; color:var(--text-muted); }
+</style></head>
+<body>
+  <div class="row">
+    <div>
+      <div class="pair"><div class="chip" style="background:var(--moss-600)"></div><div class="chip" style="background:var(--moss-100)"></div></div>
+      <div class="cap">moss · positivo</div><div class="role">resuelto / ratificado</div>
+    </div>
+    <div>
+      <div class="pair"><div class="chip" style="background:var(--ochre-600)"></div><div class="chip" style="background:var(--ochre-100)"></div></div>
+      <div class="cap">ochre · atención</div><div class="role">pendiente / aviso</div>
+    </div>
+    <div>
+      <div class="pair"><div class="chip" style="background:var(--slate-700)"></div><div class="chip" style="background:var(--slate-100)"></div></div>
+      <div class="cap">slate · info</div><div class="role">nota / contexto</div>
+    </div>
+  </div>
+</body></html>

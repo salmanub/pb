@@ -1,0 +1,114 @@
+---
+layout: layouts/base.njk
+title: "Request Technical Collaboration — Professionals"
+description: "Form for law firms, insurers and public authorities. Viability report within 48 h. Court ratification included."
+lang: en
+eleventyNavigation:
+  key: ContactProfessional
+  notshow: true
+translations:
+  - lang: es
+    permalink: /contacto/profesional/
+  - lang: ca
+    permalink: /ca/contacte/professional/
+permalink: "/en/contact/professional/"
+breadcrumb:
+  - label: "Home"
+    url: "/"
+  - label: "Contact"
+    url: "/contact/"
+  - label: "Professional"
+---
+{% set ui = en %}
+{% set heroTitle = "Request<br>technical collaboration" %}
+{% include "partials/page-hero.njk" %}
+
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 12px var(--gutter) 0; border-top: 1px solid var(--border-subtle);"><span style="font-size: var(--fs-small, 0.8rem); color: var(--text-muted);">Not a professional? </span><a href="/en/contact/particular/" style="font-size: var(--fs-small, 0.8rem); color: var(--text-accent); text-decoration: none; border-bottom: 1px solid transparent;" onmouseenter="this.style.borderBottomColor='var(--accent)'" onmouseleave="this.style.borderBottomColor='transparent'">Tell us about your case as an individual →</a></div>
+
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
+<div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(28px,4vw,64px); align-items: start;" class="site-two">
+
+<div>
+<div style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;">
+<div style="padding: 18px 24px 0;">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+<span style="font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);">Technical collaboration</span>
+<span id="intake-b-counter" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; color: var(--text-faint);">§ 01 / 05</span>
+</div>
+<div style="height: 2px; background: var(--stone-250, #d6d3cd); margin-top: 14px; border-radius: 1px; overflow: hidden;">
+<div id="intake-b-bar" style="height: 100%; width: 20%; background: var(--accent); transition: width 0.4s ease;"></div>
+</div>
+</div>
+<div id="intake-b-body" style="padding: 28px 24px 8px; min-height: 280px;"></div>
+<div id="intake-b-footer" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 24px 22px; border-top: 1px solid var(--border-subtle); margin-top: 8px;">
+<button id="intake-b-back" type="button" style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; color: var(--text-muted); background: transparent; border: none; cursor: pointer; padding: 8px 12px; visibility: hidden;">Back</button>
+<span id="intake-b-hint" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint);">Select an option</span>
+</div>
+</div>
+</div>
+
+<div>
+<div style="position: sticky; top: 92px;">
+<div style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; border-bottom: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);">B2B Protocol</div>
+<div style="padding: 22px 22px 24px;">
+<div style="font-family: var(--font-serif); font-style: italic; font-size: 1.6rem; color: var(--text-accent); margin-bottom: 4px;">Viability in 48 h</div>
+<div style="margin-top: 14px;">
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">01</span><span>Preliminary viability report</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">02</span><span>Fixed fees agreed in writing</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">03</span><span>Guaranteed ratification (LEC art. 347)</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">04</span><span>Court expert — Min. of Justice</span></div>
+</div>
+<div style="display: flex; gap: 14px; margin-top: 18px;">
+<a href="tel:{{ metadata.contact.phoneNumber | replace(' ', '') }}" style="flex: 1; display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-hairline); background: var(--surface-raised); text-decoration: none; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; color: var(--text-strong);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>{{ metadata.contact.phoneNumber | replace('+34 ', '') }}</a>
+<a href="mailto:{{ metadata.company.email }}" style="flex: 1; display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-hairline); background: var(--surface-raised); text-decoration: none; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; color: var(--text-strong);">Email</a>
+</div>
+<div style="margin-top: 12px; text-align: center; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint);">Confidential · No obligation</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<script>
+(function(){
+  'use strict';
+  var STEPS = [
+    { key: 'entity', eyebrow: '§ 01 · Your organisation', type: 'choice', question: 'What type of organisation are you contacting from?', options: ['Law firm', 'Insurer or reinsurer', 'Public authority', 'Construction company or developer', 'Other entity'] },
+    { key: 'assignment', eyebrow: '§ 02 · Type of assignment', type: 'choice', question: 'What type of expert action do you need?', helper: 'If unsure, select the closest option.', options: ['Party-appointed expert report', 'Court-appointed expert witness', 'Counter-report', 'Insurance claim assessment', 'Technical advisory / due diligence'] },
+    { key: 'amount', eyebrow: '§ 03 · Amount', type: 'choice', question: 'What is the approximate amount in dispute?', helper: 'This helps us scope the report appropriately.', options: ['Under 100,000 EUR', '100,000 - 500,000 EUR', '500,000 - 1,000,000 EUR', 'Over 1,000,000 EUR', 'Not yet defined'] },
+    { key: 'litigation', eyebrow: '§ 04 · Litigation status', type: 'choice', question: 'What stage is the matter at?', options: ['Pre-litigation / negotiation', 'Active litigation (claim filed)', 'Mediation or arbitration', 'Insurance claim management', 'Preliminary enquiry'] },
+    { key: 'contact', eyebrow: '§ 05 · Contact details', type: 'fields', question: 'How can we reach you?', helper: 'Viability report within 48 h. Direct contact with the expert.',
+      fields: [
+        { name: 'name', label: 'Full name', placeholder: 'Name and surname', required: true },
+        { name: 'entity_name', label: 'Organisation', placeholder: 'Firm or company name', required: true },
+        { name: 'role', label: 'Position', placeholder: 'Partner / Director / Counsel', required: false },
+        { name: 'email', label: 'Professional email', type: 'email', placeholder: 'name@firm.com', required: true },
+        { name: 'phone', label: 'Direct phone', type: 'tel', placeholder: '+34 ___ ___ ___', required: false },
+        { name: 'description', label: 'Brief case description', multiline: true, rows: 3, placeholder: 'Type of pathology, location, urgency...', required: false }
+      ] }
+  ];
+  var TOTAL=STEPS.length, current=0, answers={}, done=false;
+  function pad(n){return String(n).length<2?'0'+n:String(n);}
+  function render(){
+    var body=document.getElementById('intake-b-body'),bar=document.getElementById('intake-b-bar'),counter=document.getElementById('intake-b-counter'),backBtn=document.getElementById('intake-b-back'),hint=document.getElementById('intake-b-hint'),footer=document.getElementById('intake-b-footer');
+    if(!body)return;body.innerHTML='';var pct=done?100:Math.round(((current+1)/TOTAL)*100);bar.style.width=pct+'%';counter.textContent='§ '+pad(done?TOTAL:current+1)+' / '+pad(TOTAL);backBtn.style.visibility=current===0?'hidden':'visible';
+    if(done){footer.style.display='none';body.innerHTML='<div style="text-align:center;padding:14px 0 24px;"><div style="width:48px;height:48px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;background:var(--positive-tint,#e8f5e9);color:var(--positive,#2e7d32);font-size:22px;font-weight:600;">✓</div><h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;margin:20px 0 0;color:var(--text-strong);">Enquiry received</h3><p style="margin:12px auto 0;max-width:40ch;color:var(--text-muted);line-height:1.55;">We have registered your enquiry. We will respond within 24 business hours with a preliminary viability report.</p></div>';return;}
+    var step=STEPS[current],html='';
+    if(step.eyebrow)html+='<div style="font-family:var(--font-mono);font-size:var(--fs-mono-label,0.6875rem);letter-spacing:var(--tracking-label,0.14em);text-transform:uppercase;color:var(--text-accent);margin-bottom:12px;">'+step.eyebrow+'</div>';
+    html+='<h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;line-height:1.2;color:var(--text-strong);margin:0;">'+step.question+'</h3>';
+    if(step.helper)html+='<p style="margin:12px 0 0;color:var(--text-muted);font-size:0.95rem;line-height:1.55;">'+step.helper+'</p>';
+    if(step.type==='choice'){hint.textContent='Select an option';html+='<div style="display:flex;flex-direction:column;gap:10px;margin-top:22px;">';step.options.forEach(function(opt,k){var letter=String.fromCharCode(65+k);var sel=answers[step.key]===opt;html+='<button type="button" data-choice="'+k+'" style="display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:14px 16px;cursor:pointer;font-family:inherit;font-size:inherit;background:'+(sel?'var(--accent-tint)':'var(--surface-raised,#fff)')+';border:1.5px solid;border-color:'+(sel?'var(--accent)':'var(--border-hairline)')+';border-radius:var(--radius-sm);"><span style="width:24px;height:24px;flex-shrink:0;border-radius:var(--radius-xs);border:1px solid;border-color:'+(sel?'var(--accent)':'var(--border-hairline)')+';background:'+(sel?'var(--accent)':'transparent')+';color:'+(sel?'var(--bone-100)':'var(--text-muted)')+';display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.7rem;font-weight:600;">'+letter+'</span><span style="font-family:var(--font-sans);font-size:0.975rem;color:var(--text-strong);">'+opt+'</span></button>';});html+='</div>';}
+    if(step.type==='fields'){hint.textContent='';hint.innerHTML='<button type="button" id="intake-b-submit" style="font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--accent-on,#fff);background:var(--accent);border:1.5px solid transparent;border-radius:var(--radius-sm);padding:10px 20px;cursor:pointer;">Send enquiry</button>';html+='<div style="display:flex;flex-direction:column;gap:16px;margin-top:22px;">';step.fields.forEach(function(f){var val=(answers[step.key]&&answers[step.key][f.name])||'';html+='<div><label for="ib-'+f.name+'" style="display:block;font-family:var(--font-sans);font-size:0.85rem;font-weight:500;color:var(--text-strong);margin-bottom:6px;">'+f.label+(f.required?'':'<span style="color:var(--text-faint);font-weight:400;margin-left:6px;">(optional)</span>')+'</label>';if(f.multiline){html+='<textarea id="ib-'+f.name+'" name="'+f.name+'" rows="'+(f.rows||3)+'" placeholder="'+(f.placeholder||'')+'" '+(f.required?'required':'')+' style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);resize:vertical;outline:none;">'+val+'</textarea>';}else{html+='<input id="ib-'+f.name+'" type="'+(f.type||'text')+'" name="'+f.name+'" placeholder="'+(f.placeholder||'')+'" value="'+val+'" '+(f.required?'required':'')+' style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);outline:none;">';}html+='</div>';});html+='</div>';}
+    body.innerHTML=html;
+    body.querySelectorAll('[data-choice]').forEach(function(btn){btn.addEventListener('click',function(){answers[step.key]=step.options[parseInt(btn.getAttribute('data-choice'))];setTimeout(function(){if(current<TOTAL-1){current++;render();}},240);render();});});
+    body.querySelectorAll('input,textarea').forEach(function(inp){inp.addEventListener('input',function(){if(!answers[step.key])answers[step.key]={};answers[step.key][inp.name]=inp.value;});inp.addEventListener('focus',function(){inp.style.borderColor='var(--accent)';});inp.addEventListener('blur',function(){inp.style.borderColor='var(--border-hairline)';});});
+    var sb=document.getElementById('intake-b-submit');if(sb){sb.addEventListener('click',function(){var cd=answers.contact||{};var valid=step.fields.every(function(f){if(!f.required)return true;var v=cd[f.name];return v&&v.trim().length>0;});if(!valid){alert('Please fill in the required fields.');return;}submitForm();});}
+  }
+  function submitForm(){var cd=answers.contact||{};var payload={tipo_cliente:'profesional',name:cd.name||'',entity_name:cd.entity_name||'',role:cd.role||'',email:cd.email||'',phone:cd.phone||'',description:cd.description||'',entity:answers.entity||'',assignment:answers.assignment||'',amount:answers.amount||'',litigation:answers.litigation||'',lang:'en',timestamp:new Date().toISOString(),source:'perito.barcelona'};done=true;render();fetch('/api/contacto',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).then(function(r){if(r.ok)setTimeout(function(){window.location.href='/en/thank-you/';},2500);}).catch(function(){});}
+  document.getElementById('intake-b-back').addEventListener('click',function(){if(current>0){current--;render();}});
+  render();
+})();
+</script>

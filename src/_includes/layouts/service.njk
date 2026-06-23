@@ -1,0 +1,279 @@
+{#
+service.njk — Layout para páginas de servicio individual
+Port de SitePages.jsx → Svc
+AGENTES §6 microdata: Service + Offer + HowTo + FAQPage
+Cadena: content.md → service.njk → base.njk
+Datos: frontmatter (svc_*, faq, body_blocks) + {lang}.json + metadata.json
+NOTE: All HTML on single lines to prevent Markdown <p> wrapping in .md files
+  #}
+  {% if not ui %}{% set ui = es %}{% endif %}
+  {% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
+  {% set _contactPro = "/contacto/profesional/" if (not lang or lang == "es") else ("/en/contact/professional/" if lang == "en" else "/ca/contacte/professional/") %}
+  {% set _contactPart = "/contacto/particular/" if (not lang or lang == "es") else ("/en/contact/particular/" if lang == "en" else "/ca/contacte/particular/") %}
+
+  {# ── Resolve audience from sitedata.svcs by slug ── #}
+  {% set _audience = "pro" %}
+  {% for svc in sitedata.svcs %}
+    {% if svc.slug == page.fileSlug %}
+      {% set _audience = svc.audience %}
+    {% endif %}
+  {% endfor %}
+  {% if audience %}{% set _audience = audience %}{% endif %}
+  {% set _contactPath = _contactPart if _audience == "particular" else _contactPro %}
+
+  {# ── Microdata Service (existing) + Article ── #}
+<div itemscope itemtype="https://schema.org/Service" style="display: none;" aria-hidden="true">
+  <meta itemprop="name" content="{{ title }}">
+  <meta itemprop="description" content="{{ description }}">
+  <meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/ProfessionalService">
+    <meta itemprop="name" content="{{ metadata.company.name }}">
+  </div>
+  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <meta itemprop="name" content="{{ title }}">
+    <meta itemprop="priceCurrency" content="EUR">
+    <meta itemprop="availability" content="https://schema.org/InStock">
+  </div>
+  <meta itemprop="areaServed" content="España">
+</div>
+<div itemscope itemtype="https://schema.org/Article" style="display: none;" aria-hidden="true">
+  <meta itemprop="headline" content="{{ title }}">
+  <meta itemprop="description" content="{{ description }}">
+  <meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}">
+  <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <meta itemprop="name" content="{{ metadata.author.name }}">
+  </div>
+  <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+    <meta itemprop="name" content="{{ metadata.company.name }}">
+  </div>
+</div>
+
+{# ===== BREADCRUMB (above hero) ===== #}
+<div
+  style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-top: clamp(20px,3vw,32px);">
+  {% set trail = breadcrumb | default([
+  { label: ui.breadcrumb.inicio, url: "/" },
+  { label: ui.nav.dictamenes, url: "/informes-periciales/" },
+  { label: svc_num | default("") }
+  ]) %}
+  {% include "partials/breadcrumb.njk" %}
+</div>
+
+{# ===== PAGE HERO ===== #}
+<section
+  style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-top: clamp(28px,5vw,56px); padding-bottom: clamp(32px,5vw,56px);">
+  {% if image %}
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px,5vw,64px); align-items: center;"
+    class="site-two">
+    <div>
+      <h1
+        style="font-family: var(--font-serif); font-size: var(--fs-display-1); line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0; font-weight: 400;">
+        {{ title | safe }}</h1>
+      {% if svc_tag %}<p
+        style="margin-top: 16px; font-style: italic; font-size: clamp(0.95rem,1.2vw,1.1rem); color: var(--text-accent); letter-spacing: 0; line-height: 1.4;">
+        {{ svc_tag }}</p>{% endif %}
+      <p
+        style="margin-top: 20px; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 60ch;">
+        {{ description }}</p>
+    </div>
+    <div>
+      {% set imgBase = image | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") %}
+      <picture>
+        <source srcset="/assets/images/{{ imgBase }}.avif" type="image/avif">
+        <source srcset="/assets/images/{{ imgBase }}.webp" type="image/webp">
+        <img src="/assets/images/{{ image }}" alt="{{ image_alt | default(title) }}" loading="eager" decoding="async"
+          width="640" height="480"
+          style="width: 100%; height: auto; border-radius: var(--radius-md); object-fit: cover; aspect-ratio: 4/3; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+      </picture>
+    </div>
+  </div>
+  {% else %}
+  <div>
+    <h1
+      style="font-family: var(--font-serif); font-size: var(--fs-display-1); line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0; font-weight: 400;">
+      {{ title | safe }}</h1>
+    {% if svc_tag %}<p
+      style="margin-top: 16px; font-style: italic; font-size: clamp(0.95rem,1.2vw,1.1rem); color: var(--text-accent); letter-spacing: 0; line-height: 1.4;">
+      {{ svc_tag }}</p>{% endif %}
+    <p
+      style="margin-top: 20px; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 60ch;">
+      {{ description }}</p>
+  </div>
+  {% endif %}
+</section>
+
+{# ===== DIVIDER ===== #}
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter);">
+  <hr style="border: none; border-top: 1px solid var(--border-hairline); margin: 0;">
+</div>
+
+{# ===== BODY + SIDEBAR ===== #}
+<section
+  style="max-width: var(--container-wide); margin: 0 auto; padding: clamp(40px,6vw,72px) var(--gutter) var(--section-y);">
+  <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(40px,5vw,72px); align-items: start;"
+    class="site-two">
+    <div>
+      {% if svc_lsi %}
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: clamp(28px,4vw,40px);">
+        {%- for tag in svc_lsi %}<span
+          style="display: inline-flex; align-items: center; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; padding: 5px 10px; border-radius: var(--radius-xs); background: var(--surface-ink); color: var(--text-on-dark);">{{
+          tag }}</span>{%- endfor %}
+      </div>
+      {% endif %}
+      {% for block in body_blocks %}
+      <div style="margin-bottom: clamp(28px,4vw,40px);">
+        <h3
+          style="font-family: var(--font-serif); font-size: var(--fs-h3); font-weight: 500; color: var(--text-strong); margin: 0 0 14px; padding-bottom: 10px; border-bottom: 2px solid var(--accent); display: inline-block;">
+          {{ block.h }}</h3>
+        <p style="font-size: 1rem; line-height: 1.8; color: var(--text-body); margin: 0; max-width: 62ch;">{{ block.p |
+          safe }}</p>
+      </div>
+      {% endfor %}
+      {% if method_steps %}
+      <div itemscope itemtype="https://schema.org/HowTo" style="margin-top: 40px;">
+        <meta itemprop="name" content="{{ title }}">{% for step in method_steps %}<div itemprop="step" itemscope
+          itemtype="https://schema.org/HowToStep">
+          <meta itemprop="name" content="{{ step.t }}">
+          <meta itemprop="text" content="{{ step.d }}">
+        </div>{% endfor %}
+      </div>
+      {% endif %}
+      {% if faq %}
+      <div
+        style="margin-top: clamp(40px,6vw,64px); padding-top: clamp(28px,4vw,40px); border-top: 1px solid var(--border-hairline);">
+        {% set faqEyebrow = "Preguntes freqüents" if lang == "ca" else ("Frequently asked questions" if lang == "en"
+        else "Preguntas frecuentes") %}
+        {% set faqTitle = "Abans d'encarregar un dictamen" if lang == "ca" else ("Before commissioning a report" if lang
+        == "en" else "Antes de encargar un dictamen") %}
+        <div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono);
+            font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label);
+            text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 18px;">
+          <span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span>
+          § 06 · {{ faqEyebrow }}
+        </div>
+        <h3 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400;
+           line-height: var(--lh-display); letter-spacing: var(--tracking-tight);
+           color: var(--text-strong); margin: 0 0 32px;">{{ faqTitle }}</h3>
+        <div itemscope itemtype="https://schema.org/FAQPage">
+          {% for item in faq %}
+          <details style="border-top: 1px solid var(--border-hairline);" class="ds-faq" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question" {{ 'open' if loop.first }}>
+            <summary style="padding: 18px 0; cursor: pointer; display: grid; grid-template-columns: 36px 1fr 24px;
+                  gap: 14px; align-items: center; list-style: none;">
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-faint);
+                 letter-spacing: 0.06em; font-variant-numeric: tabular-nums;">{{ '%02d' | format(loop.index) }}</span>
+              <span itemprop="name" style="font-family: var(--font-serif); font-size: 1.05rem;
+                 font-weight: 500; color: var(--text-strong); line-height: 1.35;">{{ item.q }}</span>
+              <span class="ds-faq-icon" style="color: var(--text-faint); font-size: 1.1rem; font-weight: 300;
+                 display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">+</span>
+            </summary>
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"
+              style="padding: 0 0 22px 50px; font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; max-width: 58ch;">
+              <span itemprop="text">{{ item.a | safe }}</span>
+            </div>
+          </details>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    {% if not qualLabel %}
+    {% set qualLabel = "Expediente · " + (svc_num | default("")) %}
+    {% endif %}
+    {% if not qualItems or qualItems | length == 0 %}
+    {% set qualItems = svc_qual | default([
+    { num: "01", text: "Tipo de dictamen — parte, judicial o contrainforme" },
+    { num: "02", text: "Complejidad técnica del caso" },
+    { num: "03", text: "Ratificación en sala incluida" },
+    { num: "04", text: "Desplazamiento a toda España 24–48h" }
+    ]) %}
+    {% endif %}
+    {% if not qualCta %}
+    {% set qualCta = "Consultar este dictamen" %}
+    {% endif %}
+    {% include "partials/qual.njk" %}
+  </div>
+</section>
+
+{# ===== RELATED SERVICES — CollectionPage microdata ===== #}
+{% set relEyebrow = "Altres dictàmens" if lang == "ca" else ("Other reports" if lang == "en" else "Otros dictámenes") %}
+{% set relTitle = "Serveis relacionats" if lang == "ca" else ("Related services" if lang == "en" else "Servicios
+relacionados") %}
+{% set relCta = "Veure tots els dictàmens" if lang == "ca" else ("View all reports" if lang == "en" else "Ver todos los
+dictámenes") %}
+{% set relBasePath = "/informes-pericials/" if lang == "ca" else ("/expert-witness-reports/" if lang == "en" else
+"/informes-periciales/") %}
+<section itemscope itemtype="https://schema.org/CollectionPage" Y
+  style="background: #fff; border-top: 1px solid var(--border-hairline);">
+  <div style="max-width: var(--container-wide); margin: 0 auto; padding: clamp(48px,7vw,80px) var(--gutter);">
+    <meta itemprop="name" content="{{ relEyebrow }} — {{ relTitle }}">
+    <div
+      style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: clamp(28px,4vw,44px);">
+      <div>
+        <div
+          style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 10px;">
+          <span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span> {{
+          relEyebrow }}
+        </div>
+        <h2
+          style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0;">
+          {{ relTitle }}</h2>
+      </div>
+      <a href="{{ langPrefix }}{{ relBasePath }}"
+        style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; color: var(--text-accent); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 8px 0; white-space: nowrap;">{{
+        relCta }} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg></a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;" class="site-two">
+      {% set currentSlug = page.fileSlug %}
+      {% set count = { v: 0 } %}
+      {% for svc in sitedata.svcs %}
+      {% if svc.slug != currentSlug and count.v < 4 %} <article itemprop="hasPart" itemscope
+        itemtype="https://schema.org/Article">
+        <a itemprop="url" href="{{ langPrefix }}{{ relBasePath }}{{ svc.slug }}/" class="related-card"
+          style="display: block; background: var(--surface-raised); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); padding: 20px 24px; text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+            <div>
+              <span itemprop="name"
+                style="display: block; font-family: var(--font-serif); font-size: 1.05rem; font-weight: 500; color: var(--text-strong); line-height: 1.25; margin-bottom: 6px;">{{
+                svc.t }}</span>
+              <span
+                style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); line-height: 1.5;"
+                class="svc-norm">{{ svc.norm }}</span>
+            </div>
+            <span
+              style="display: flex; justify-content: center; align-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--surface-tint); color: var(--text-faint); flex-shrink: 0;"><svg
+                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></span>
+          </div>
+        </a>
+        </article>
+        {% set count = { v: count.v + 1 } %}
+        {% endif %}
+        {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ===== BAND CTA ===== #}
+<section style="background: var(--surface-tint); border-top: 1px solid var(--oxide-200);">
+  <div
+    style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter); text-align: center;">
+    <div
+      style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 18px;">
+      {{ band_eyebrow | default(ui.qual.label) }}</div>
+    <h2
+      style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); color: var(--text-strong); margin: 0;">
+      {{ band_title | default("¿Necesitas este dictamen?") }}</h2>
+    <p
+      style="margin: 14px auto 0; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 50ch;">
+      {{ band_lede | default("Consulta inicial sin coste. Plazo de entrega por contrato.") }}</p>
+    <div style="margin-top: 28px;"><a href="{{ _contactPath }}"
+        style="display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; font-family: var(--font-sans); font-size: var(--fs-body); font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid transparent; background: var(--accent); color: var(--accent-on); text-decoration: none; transition: background-color 0.3s;" onmouseenter="this.style.backgroundColor='#145a38'" onmouseleave="this.style.backgroundColor='var(--accent)'">{{
+        band_cta | default(ui.qual.consultar_caso) }}</a></div>
+  </div>
+</section>

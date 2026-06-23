@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "construccion": "Perito Construcción",
+    "dictamenes": "Dictámenes",
+    "casos": "Casos",
+    "abogados": "Abogados·Seguros",
+    "honorarios": "Honorarios",
+    "despacho": "Despacho",
+    "contacto": "Contacto",
+    "solicitar": "Solicitar dictamen",
+    "menu": "Menú"
+  },
+  "footer": {
+    "col_dictamenes": "Dictámenes",
+    "col_despacho": "Despacho",
+    "col_contacto": "Contacto",
+    "brand_desc": "Dictámenes periciales sobre edificación y obra civil. Sede en Barcelona, actuación en toda España.",
+    "copyright": "© 2026 Albert Vilardell Serra · Perito judicial",
+    "aviso_legal": "Aviso legal",
+    "privacidad": "Privacidad",
+    "cookies": "Cookies",
+    "ver_catalogo": "Ver catálogo",
+    "primera_consulta": "Primera consulta",
+    "casos_ratificados": "Casos ratificados",
+    "perito_construccion": "Perito Construcción",
+    "abogados_seguros": "Abogados y Seguros",
+    "el_despacho": "El Despacho"
+  },
+  "breadcrumb": {
+    "inicio": "Inicio",
+    "aria": "Estás aquí"
+  },
+  "form": {
+    "titulo": "Solicitar dictamen",
+    "subtitulo": "Consulta preliminar sin coste. Respuesta en 24 h laborables.",
+    "nombre": "Nombre completo",
+    "email": "Email profesional",
+    "telefono": "Teléfono (opcional)",
+    "asunto": "Tipo de dictamen",
+    "mensaje": "Describa brevemente su caso",
+    "privacidad": "He leído y acepto la",
+    "politica_privacidad": "Política de Privacidad",
+    "enviar": "Enviar consulta",
+    "siguiente": "Siguiente",
+    "anterior": "Anterior",
+    "step": "Paso",
+    "de": "de",
+    "opciones": {
+      "vicios": "Vicios ocultos",
+      "humedades": "Humedades y filtraciones",
+      "patologias": "Patologías estructurales",
+      "mala_ejecucion": "Mala ejecución",
+      "contrainforme": "Contrainforme pericial",
+      "otro": "Otro dictamen"
+    }
+  },
+  "qual": {
+    "label": "Cualificación del caso",
+    "consulta_sin_coste": "Consulta sin coste",
+    "consultar_caso": "Consultar caso",
+    "nota": "Ratificación incluida · Toda España"
+  },
+  "schema": {
+    "services_offered": "Servicios periciales ofrecidos",
+    "areas_served": "Áreas de actuación"
+  }
+}

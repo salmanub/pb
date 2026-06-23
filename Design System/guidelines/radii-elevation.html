@@ -1,0 +1,20 @@
+<!-- @dsCard group="Spacing" viewport="700x200" name="Radii, borders & shadows" subtitle="Near-square corners, hairline borders, shadows only for overlays" -->
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin:0; background:var(--surface-page); padding:28px; font-family:var(--font-mono); }
+  .row { display:flex; gap:24px; align-items:flex-end; flex-wrap:wrap; }
+  .b { width:84px; height:64px; background:var(--surface-card); border:1px solid var(--border-hairline); display:flex; align-items:flex-end; }
+  .cap { font-size:10px; color:var(--text-muted); padding:5px; }
+  .lbl { font-size:11px; color:var(--text-strong); margin-top:8px; }
+</style></head>
+<body>
+  <div class="row">
+    <div><div class="b" style="border-radius:var(--radius-xs);"><span class="cap">2px</span></div><div class="lbl">--radius-xs</div></div>
+    <div><div class="b" style="border-radius:var(--radius-md);"><span class="cap">5px</span></div><div class="lbl">--radius-md</div></div>
+    <div><div class="b" style="border-radius:var(--radius-lg);"><span class="cap">8px</span></div><div class="lbl">--radius-lg</div></div>
+    <div><div class="b" style="border:1.5px solid var(--ink-900); border-radius:var(--radius-md);"><span class="cap">strong</span></div><div class="lbl">--bw-strong</div></div>
+    <div><div class="b" style="border-color:transparent; box-shadow:var(--shadow-overlay); border-radius:var(--radius-md);"><span class="cap">overlay</span></div><div class="lbl">--shadow-overlay</div></div>
+  </div>
+</body></html>

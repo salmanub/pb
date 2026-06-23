@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "eyebrow": "Ingeniería forense · Perito judicial · Barcelona",
+    "h1": "Peritajes de Ingeniería Civil<br>y Edificación en Barcelona",
+    "lede": "Despacho de ingeniería forense con dirección técnica colegiada (ECCAT nº 16448) e inscripción como perito judicial en el Ministerio de Justicia. Como <a href='/construccion/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">Peritos de Construcción</a>, aportamos el rigor técnico que los tribunales exigen. Conozca <a href='/el-despacho/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">el despacho</a>.",
+    "cta_primary": "Solicitar dictamen",
+    "cta_secondary": "Tengo un problema en mi vivienda",
+    "badge_label": "Inscrito · Min. Justicia",
+    "badge_text": "Perito judicial y de seguros (IRD)"
+  },
+  "stats": [
+    { "value": "€2,8 M", "label": "Mayor importe peritado en un único dictamen", "source": "EXP. 22-074", "accent": true },
+    { "value": "340+", "label": "Dictámenes en edificación y obra civil", "source": "2009 – 2025" },
+    { "value": "100 %", "label": "Dictámenes ratificados en sede judicial", "source": "Sin impugnación pericial" },
+    { "value": "16 años", "label": "Colegiado ECCAT nº 16448", "source": "Ingeniería civil" }
+  ],
+  "audience": {
+    "eyebrow": "§ 01 · A quién acompañamos",
+    "title": "Clientes profesionales y particulares",
+    "lede": "Tanto si gestiona un siniestro de varios millones como si necesita documentar una patología en su vivienda, el dictamen pericial se elabora con la misma metodología.",
+    "cards": [
+      {
+        "icon": "landmark",
+        "tag": "Aseguradoras · Despachos · Administración",
+        "title": "Para despachos, aseguradoras y AAPP",
+        "points": [
+          "Dictámenes defendibles frente a la pericial contraria",
+          "Cuantificación rigurosa del daño y la responsabilidad",
+          "Ratificación y comparecencia en sede judicial"
+        ],
+        "cta": "Encargar una pericial",
+        "tone": "ink"
+      },
+      {
+        "icon": "home",
+        "tag": "Particulares · Comunidades",
+        "title": "Para particulares y comunidades",
+        "points": [
+          "Te explicamos qué pasa y qué opciones tienes",
+          "Presupuesto cerrado tras una primera consulta sin coste",
+          "Un informe que sirve ante tu aseguradora o el juzgado"
+        ],
+        "cta": "Cuéntanos tu caso",
+        "tone": "paper"
+      }
+    ]
+  },
+  "services_section": {
+    "eyebrow": "§ 02 · Servicios periciales",
+    "title": "Cada patología, un dictamen específico",
+    "lede": "Seis áreas de actuación. Todas terminan en un informe trazable, fundado en normativa y defendible ante el juzgado.",
+    "ver_servicio": "Ver servicio",
+    "servicio_label": "Servicio",
+    "items": [
+      { "code": "2.1", "slug": "patologias-estructurales", "icon": "building-2", "t": "Patología de la edificación", "d": "Grietas, fisuras, asentamientos y daños estructurales. Causa, alcance y responsabilidad." },
+      { "code": "2.2", "slug": "vicios-ocultos", "icon": "house", "t": "Vicios ocultos", "d": "Defectos no aparentes en compraventa o tras la entrega de obra nueva. Art. 1.484 CC y LOE." },
+      { "code": "2.3", "slug": "humedades-filtraciones", "icon": "droplets", "t": "Humedades y filtraciones", "d": "Origen real de la humedad, no el síntoma. Diagnóstico instrumental y solución valorada." },
+      { "code": "2.4", "slug": "obras-publicas", "href": "/obras-publicas/", "icon": "hard-hat", "t": "Obra civil e infraestructura", "d": "Dictámenes sobre viaductos, estructuras de fábrica, modificados de proyecto, liquidación de contrato y cumplimiento LCSP." },
+      { "code": "2.5", "slug": "reclamacion-mala-ejecucion", "icon": "scale", "t": "Valoración de daños", "d": "Cuantificación pericial del coste de reparación y del perjuicio para reclamación o juicio." },
+      { "code": "2.6", "slug": "contrainforme-pericial", "icon": "file-check-2", "t": "Contrainforme y ratificación", "d": "Revisión crítica de dictámenes de la parte contraria y comparecencia en sede judicial." }
+    ]
+  },
+  "method": {
+    "eyebrow": "§ 03 · Método pericial",
+    "title": "Del indicio a la prueba",
+    "lede": "Un procedimiento documentado en cada fase. La trazabilidad es lo que hace que un dictamen se sostenga.",
+    "steps": [
+      { "n": "01", "t": "Inspección", "d": "Visita técnica documentada: mediciones, ensayos y registro fotográfico fechado." },
+      { "n": "02", "t": "Análisis", "d": "Diagnóstico de la causa conforme a normativa (CTE, LOE, EHE) y a la lex artis." },
+      { "n": "03", "t": "Dictamen", "d": "Informe trazable con conclusiones fundadas y valoración económica del daño." },
+      { "n": "04", "t": "Ratificación", "d": "Defensa del dictamen en sala, frente al juez y a la pericial contraria." }
+    ]
+  },
+  "cases_section": {
+    "eyebrow": "§ 04 · Casos ratificados",
+    "title": "La prueba, en cifras verificables",
+    "lede": "Una selección de expedientes recientes. Los importes corresponden al daño peritado; los números de expediente son reales en el sistema interno del despacho.",
+    "items": [
+      { "exp": "EXP. 22-074", "loc": "Barcelona", "t": "Defectos estructurales en promoción de 84 viviendas", "amount": "€2,84 M", "tag": "Ratificado" },
+      { "exp": "EXP. 23-119", "loc": "Girona", "t": "Filtraciones en cubierta de equipamiento público", "amount": "€640 K", "tag": "Acuerdo" },
+      { "exp": "EXP. 24-058", "loc": "Tarragona", "t": "Vicios ocultos tras compraventa de vivienda unifamiliar", "amount": "€118 K", "tag": "Ratificado" }
+    ]
+  },
+  "about_section": {
+    "eyebrow": "§ 05 · El perito",
+    "title": "Ingeniería forense y experiencia judicial",
+    "lede": "Despacho técnico dirigido por un ingeniero civil colegiado (ECCAT nº 16448), perito judicial inscrito en el Ministerio de Justicia y perito de seguros IRD. Diecisiete años de experiencia en ingeniería forense, con más de 340 ratificaciones en sede judicial.",
+    "tags": ["Ingeniero civil · ECCAT 16448", "Perito judicial · Min. Justicia", "Perito de seguros · IRD", "Actuación en toda España"],
+    "quote": "«Mi trabajo consiste en documentar la causa de forma que el juez pueda verificarla por sí mismo.»"
+  },
+  "faq": {
+    "eyebrow": "§ 06 · Preguntas frecuentes",
+    "title": "Antes de encargar un dictamen",
+    "items": [
+      { "q": "¿Cuánto cuesta un dictamen pericial?", "a": "Depende del alcance y la complejidad. Tras una primera consulta sin coste recibirás un presupuesto cerrado por escrito antes de iniciar cualquier trabajo." },
+      { "q": "¿El informe sirve ante un juez o solo ante mi aseguradora?", "a": "Sirve para ambos. Cada dictamen se redacta conforme a la LEC y a la normativa técnica aplicable, con la trazabilidad necesaria para ser ratificado en sede judicial." },
+      { "q": "¿Cuánto se tarda desde que os contacto?", "a": "Entre dos y cuatro semanas desde la inspección, según el caso. Los plazos siempre se acuerdan por escrito de antemano." },
+      { "q": "¿Actuáis fuera de Cataluña?", "a": "Sí. La sede está en Barcelona, pero se actúa en toda España, presencialmente para la inspección y la ratificación." }
+    ]
+  },
+  "contact_section": {
+    "eyebrow": "§ 07 · Primer contacto",
+    "title": "Cuéntanos el caso",
+    "lede": "Una primera consulta sin coste para orientarte sobre si necesitas un dictamen y con qué alcance. Respondemos en 24 h laborables.",
+    "field_nombre": "Nombre",
+    "field_soy": "Soy",
+    "field_email": "Correo electrónico",
+    "field_caso": "El caso",
+    "field_caso_hint": "Ubicación del inmueble y problema, en una línea.",
+    "placeholder_nombre": "Nombre y apellidos",
+    "placeholder_soy": "Particular / Despacho / Aseguradora",
+    "placeholder_email": "nombre@empresa.com",
+    "placeholder_caso": "Humedades persistentes en…",
+    "submit": "Enviar solicitud",
+    "success_title": "Solicitud recibida",
+    "success_text": "Te responderemos en 24 h laborables."
+  }
+}

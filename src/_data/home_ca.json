@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "eyebrow": "Enginyeria forense · Perit judicial · Barcelona",
+    "h1": "Peritatges d'Enginyeria Civil<br>i Edificació a Barcelona",
+    "lede": "Despatx d'enginyeria forense amb direcció tècnica col·legiada (ECCAT núm. 16448) i inscripció com a perit judicial al Ministeri de Justícia. Com a <a href='/ca/construccio/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">Pèrits de Construcció</a>, aportem el rigor tècnic que els tribunals exigeixen. Conegui <a href='/ca/el-despatx/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">el despatx</a>.",
+    "cta_primary": "Sol·licitar dictamen",
+    "cta_secondary": "Tinc un problema al meu habitatge",
+    "badge_label": "Inscrit · Min. Justícia",
+    "badge_text": "Perit judicial i d'assegurances (IRD)"
+  },
+  "stats": [
+    { "value": "€2,8 M", "label": "Major import peritat en un únic dictamen", "source": "EXP. 22-074", "accent": true },
+    { "value": "340+", "label": "Dictàmens en edificació i obra civil", "source": "2009 – 2025" },
+    { "value": "100 %", "label": "Dictàmens ratificats en seu judicial", "source": "Sense impugnació pericial" },
+    { "value": "16 anys", "label": "Col·legiat ECCAT núm. 16448", "source": "Enginyeria civil" }
+  ],
+  "audience": {
+    "eyebrow": "§ 01 · A qui acompanyem",
+    "title": "Clients professionals i particulars",
+    "lede": "Tant si gestiona un sinistre de diversos milions com si necessita documentar una patologia al seu habitatge, el dictamen pericial s'elabora amb la mateixa metodologia.",
+    "cards": [
+      {
+        "icon": "landmark",
+        "tag": "Asseguradores · Despatxos · Administració",
+        "title": "Per a despatxos, asseguradores i AAPP",
+        "points": [
+          "Dictàmens defensables davant la pericial contrària",
+          "Quantificació rigorosa del dany i la responsabilitat",
+          "Ratificació i compareixença en seu judicial"
+        ],
+        "cta": "Encarregar una pericial",
+        "tone": "ink"
+      },
+      {
+        "icon": "home",
+        "tag": "Particulars · Comunitats",
+        "title": "Per a particulars i comunitats",
+        "points": [
+          "T'expliquem què passa i quines opcions tens",
+          "Pressupost tancat després d'una primera consulta sense cost",
+          "Un informe que serveix davant la teva asseguradora o el jutjat"
+        ],
+        "cta": "Explica'ns el teu cas",
+        "tone": "paper"
+      }
+    ]
+  },
+  "services_section": {
+    "eyebrow": "§ 02 · Serveis pericials",
+    "title": "Cada patologia, un dictamen específic",
+    "lede": "Sis àrees d'actuació. Totes acaben en un informe traçable, fonamentat en normativa i defensable davant el jutjat.",
+    "ver_servicio": "Veure servei",
+    "servicio_label": "Servei",
+    "items": [
+      { "code": "2.1", "slug": "patologias-estructurales", "icon": "building-2", "t": "Patologia de l'edificació", "d": "Esquerdes, fissures, assentaments i danys estructurals. Causa, abast i responsabilitat." },
+      { "code": "2.2", "slug": "vicios-ocultos", "icon": "house", "t": "Vicis ocults", "d": "Defectes no aparents en compravenda o després del lliurament d'obra nova." },
+      { "code": "2.3", "slug": "humedades-filtraciones", "icon": "droplets", "t": "Humitats i filtracions", "d": "L'origen real de la humitat, no el símptoma. Diagnòstic instrumental i solució valorada." },
+      { "code": "2.4", "slug": "obras-publicas", "href": "/obras-publicas/", "icon": "hard-hat", "t": "Obra civil i infraestructura", "d": "Dictàmens sobre viaductes, estructures de fàbrica, modificats de projecte i compliment LCSP." },
+      { "code": "2.5", "slug": "reclamacion-mala-ejecucion", "icon": "scale", "t": "Valoració de danys", "d": "Quantificació pericial del cost de reparació i del perjudici per a reclamació o judici." },
+      { "code": "2.6", "slug": "contrainforme-pericial", "icon": "file-check-2", "t": "Contrainforme i ratificació", "d": "Revisió crítica de dictàmens de la part contrària i compareixença en seu judicial." }
+    ]
+  },
+  "method": {
+    "eyebrow": "§ 03 · Mètode pericial",
+    "title": "De l'indici a la prova",
+    "lede": "Un procediment documentat en cada fase. La traçabilitat és el que fa que un dictamen es sostingui.",
+    "steps": [
+      { "n": "01", "t": "Inspecció", "d": "Visita tècnica documentada: mesuraments, assaigs i registre fotogràfic datat." },
+      { "n": "02", "t": "Anàlisi", "d": "Diagnòstic de la causa conforme a normativa (CTE, LOE, EHE) i a la lex artis." },
+      { "n": "03", "t": "Dictamen", "d": "Informe traçable amb conclusions fonamentades i valoració econòmica del dany." },
+      { "n": "04", "t": "Ratificació", "d": "Defensa del dictamen a sala, davant el jutge i la pericial contrària." }
+    ]
+  },
+  "cases_section": {
+    "eyebrow": "§ 04 · Casos ratificats",
+    "title": "La prova, en xifres verificables",
+    "lede": "Una selecció d'expedients recents. Els imports corresponen al dany peritat; els números d'expedient són reals al sistema intern del despatx.",
+    "items": [
+      { "exp": "EXP. 22-074", "loc": "Barcelona", "t": "Defectes estructurals en promoció de 84 habitatges", "amount": "€2,84 M", "tag": "Ratificat" },
+      { "exp": "EXP. 23-119", "loc": "Girona", "t": "Filtracions a coberta d'equipament públic", "amount": "€640 K", "tag": "Acord" },
+      { "exp": "EXP. 24-058", "loc": "Tarragona", "t": "Vicis ocults en compravenda d'habitatge unifamiliar", "amount": "€118 K", "tag": "Ratificat" }
+    ]
+  },
+  "about_section": {
+    "eyebrow": "§ 05 · El perit",
+    "title": "Enginyeria forense i experiència judicial",
+    "lede": "Despatx tècnic dirigit per un enginyer civil col·legiat (ECCAT núm. 16448), perit judicial inscrit al Ministeri de Justícia i perit d'assegurances IRD. Disset anys d'experiència en enginyeria forense, amb més de 340 ratificacions en seu judicial.",
+    "tags": ["Enginyer civil · ECCAT 16448", "Perit judicial · Min. Justícia", "Perit d'assegurances · IRD", "Actuació a tota Espanya"],
+    "quote": "«La meva feina consisteix a documentar la causa de manera que el jutge pugui verificar-la per si mateix.»"
+  },
+  "faq": {
+    "eyebrow": "§ 06 · Preguntes freqüents",
+    "title": "Abans d'encarregar un dictamen",
+    "items": [
+      { "q": "Quant costa un dictamen pericial?", "a": "Depèn de l'abast i la complexitat. Després d'una primera consulta sense cost rebràs un pressupost tancat per escrit abans d'iniciar qualsevol treball." },
+      { "q": "L'informe serveix davant un jutge o només davant la meva asseguradora?", "a": "Serveix per a ambdós. Cada dictamen es redacta conforme a la LEC i a la normativa tècnica aplicable, amb la traçabilitat necessària per ser ratificat en seu judicial." },
+      { "q": "Quant es tarda des que us contacto?", "a": "Entre dues i quatre setmanes des de la inspecció, segons el cas. Els terminis sempre s'acorden per escrit prèviament." },
+      { "q": "Actueu fora de Catalunya?", "a": "Sí. La seu és a Barcelona, però s'actua a tota Espanya, presencialment per a la inspecció i la ratificació." }
+    ]
+  },
+  "contact_section": {
+    "eyebrow": "§ 07 · Primer contacte",
+    "title": "Explica'ns el cas",
+    "lede": "Una primera consulta sense cost per orientar-te sobre si necessites un dictamen i amb quin abast. Responem en 24 h laborables.",
+    "field_nombre": "Nom",
+    "field_soy": "Sóc",
+    "field_email": "Correu electrònic",
+    "field_caso": "El cas",
+    "field_caso_hint": "Ubicació de l'immoble i problema, en una línia.",
+    "placeholder_nombre": "Nom i cognoms",
+    "placeholder_soy": "Particular / Despatx / Asseguradora",
+    "placeholder_email": "nom@empresa.com",
+    "placeholder_caso": "Humitats persistents a…",
+    "submit": "Enviar sol·licitud",
+    "success_title": "Sol·licitud rebuda",
+    "success_text": "Et respondrem en 24 h laborables."
+  }
+}

@@ -1,4 +1,4 @@
-{% extends "layouts/base.njk" %}
+﻿{% extends "layouts/base.njk" %}
 
 {% block content %}
 <main class="overflow-hidden relative h-auto">
@@ -19,7 +19,7 @@
                         <h1 class="text-[2.5rem] md:text-[3.5rem] font-black text-slate-900 leading-[1.1] tracking-tight mb-6">
                             {{ title }}
                             {% if subtitle %}
-                            <span class="block text-[0.7em] text-cyan-600 font-bold mt-4 uppercase tracking-wider">{{ subtitle }}</span>
+                            <span class="block text-[0.7em] text-teal-600 font-bold mt-4 uppercase tracking-wider">{{ subtitle }}</span>
                             {% endif %}
                         </h1>
                         {% if hero.socialProof %}
@@ -37,11 +37,11 @@
                         <!-- CTA Buttons -->
                         <div class="flex flex-col sm:flex-row gap-4">
                             <a href="{{ hero.cta.primaryUrl }}" 
-                               class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white font-bold uppercase tracking-wider text-sm rounded-lg shadow-lg hover:bg-black transition-all duration-300">
+                               class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white font-bold uppercase tracking-wider text-sm rounded-none shadow-lg hover:bg-black transition-all duration-300">
                                 {{ hero.cta.primary }}
                             </a>
                             <a href="{{ hero.cta.secondaryUrl }}" 
-                               class="inline-flex items-center justify-center px-8 py-4 border-2 border-slate-200 text-slate-700 font-bold uppercase tracking-wider text-sm rounded-lg hover:border-cyan-500 hover:text-cyan-600 transition-all duration-300 bg-white">
+                               class="inline-flex items-center justify-center px-8 py-4 border-2 border-slate-200 text-slate-700 font-bold uppercase tracking-wider text-sm rounded-none hover:border-teal-500 hover:text-teal-600 transition-all duration-300 bg-white">
                                 {{ hero.cta.secondary }}
                             </a>
                         </div>
@@ -50,7 +50,7 @@
                     <div class="w-full lg:w-5/12 animate-in fade-in slide-in-from-right-8 duration-700 delay-200">
                         <img src="{{ hero.image }}" 
                              alt="{{ hero.imageAlt }}" 
-                             class="w-full h-auto rounded-2xl shadow-2xl shadow-slate-200/50 border border-slate-100"
+                             class="w-full h-auto rounded-none shadow-2xl shadow-slate-200/50 border border-slate-100"
                              loading="eager"
                              decoding="async">
                     </div>
@@ -65,7 +65,7 @@
         <!-- Efectos decorativos globales -->
         <div class="absolute inset-0">
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(203,213,225,0.1)_1px,transparent_1px)] [background-size:48px_48px]"></div>
-            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-50/40 via-transparent to-slate-50/30"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-teal-50/40 via-transparent to-slate-50/30"></div>
         </div>
 
         <div class="relative">
@@ -87,7 +87,7 @@
                         <div>
                             <img src="{{ whatIs.image.src }}" 
                                  alt="{{ whatIs.image.alt }}" 
-                                 class="rounded-lg shadow-xl w-full object-cover aspect-square">
+                                 class="rounded-none shadow-xl w-full object-cover aspect-square">
                         </div>
                     </div>
                 </div>
@@ -101,9 +101,9 @@
                     </div>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {% for benefit in keyBenefits.benefits %}
-                        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-                            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div class="bg-white p-6 rounded-none shadow-sm hover:shadow-md transition-all">
+                            <div class="w-12 h-12 rounded-none bg-teal-500/10 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <use href="#icon-{{ benefit.icon }}"/>
                                 </svg>
                             </div>
@@ -124,10 +124,10 @@
                     </div>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {% for system in inspectionDetails.systems %}
-                        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                        <div class="bg-white p-6 rounded-none shadow-sm hover:shadow-md transition-all">
                             <div class="flex flex-col h-full">
                                 <div class="flex-1">
-                                    <div class="w-full h-40 rounded-xl bg-slate-100 mb-4 overflow-hidden">
+                                    <div class="w-full h-40 rounded-none bg-slate-100 mb-4 overflow-hidden">
                                         {% if system.image %}
                                         <img src="{{ system.image }}" 
                                              alt="{{ system.imageAlt }}" 
@@ -141,7 +141,7 @@
                                 </div>
                                 <div class="mt-4">
                                     <a href="{{ system.cta.url }}" 
-                                       class="inline-flex items-center justify-center px-4 py-2 bg-cyan-400 text-white font-semibold text-sm rounded-lg shadow-md hover:bg-cyan-500 transition-all duration-300">
+                                       class="inline-flex items-center justify-center px-4 py-2 bg-teal-400 text-white font-semibold text-sm rounded-none shadow-md hover:bg-teal-500 transition-all duration-300">
                                         {{ system.cta.text }}
                                     </a>
                                 </div>
@@ -163,7 +163,7 @@
                         <div class="space-y-12">
                             {% for step in process.steps %}
                             <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-none bg-teal-500 text-white flex items-center justify-center font-bold">
                                     {{ loop.index }}
                                 </div>
                                 <div>
@@ -173,7 +173,7 @@
                             </div>
                             {% endfor %}
                         </div>
-                        <div class="bg-white rounded-xl p-8 shadow-sm">
+                        <div class="bg-white rounded-none p-8 shadow-sm">
                             <h3 class="text-2xl font-bold mb-6">{{ process.secondaryContentTitle }}</h3>
                             <div class="prose prose-lg">{{ process.secondaryContent | safe }}</div>
                         </div>
@@ -188,7 +188,7 @@
                     <h2 class="font-display text-4xl font-bold text-center mb-16">{{ faq.title }}</h2>
                     <div class="space-y-8">
                         {% for item in faq.questions %}
-                        <div class="bg-slate-50 rounded-xl p-6">
+                        <div class="bg-slate-50 rounded-none p-6">
                             <h3 class="text-xl font-semibold mb-3">{{ item.question }}</h3>
                             <p class="text-slate-600">{{ item.answer }}</p>
                         </div>
@@ -204,7 +204,7 @@
                 <div class="relative mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-8">
                     <div class="grid md:grid-cols-2 gap-8">
                         {% for testimonial in testimonials %}
-                        <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <div class="bg-white p-8 rounded-none shadow-sm">
                             <blockquote class="text-lg text-slate-600 mb-6">{{ testimonial.quote }}</blockquote>
                             <cite class="flex items-center gap-2">
                                 <span class="font-semibold text-slate-900">{{ testimonial.author }}</span>
@@ -224,13 +224,13 @@
                 <!-- Efectos decorativos -->
                 <div class="absolute inset-0">
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(203,213,225,0.1)_1px,transparent_1px)] [background-size:48px_48px]"></div>
-                    <div class="absolute inset-0 bg-gradient-to-tr from-cyan-50/40 via-transparent to-slate-50/30"></div>
-                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-200/20 blur-[100px] rounded-full"></div>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-teal-50/40 via-transparent to-slate-50/30"></div>
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-teal-200/20 blur-[100px] rounded-none"></div>
                 </div>
 
                 <div class="relative w-full px-4 sm:px-6 md:px-8 lg:px-12 mx-auto max-w-[1400px]">
                     <div class="mb-16 text-center">
-                        <div class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-cyan-600 rounded-lg mb-6">
+                        <div class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-teal-600 rounded-none mb-6">
                             <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
                             </svg>
@@ -244,8 +244,8 @@
                         prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6
                         prose-h3:text-2xl prose-h3:mt-12 prose-h3:mb-4
                         prose-p:text-lg prose-p:text-slate-700 prose-p:leading-relaxed
-                        prose-strong:text-cyan-700 prose-strong:font-semibold
-                        prose-a:text-cyan-600 prose-a:font-medium prose-a:no-underline hover:prose-a:text-cyan-700
+                        prose-strong:text-teal-700 prose-strong:font-semibold
+                        prose-a:text-teal-600 prose-a:font-medium prose-a:no-underline hover:prose-a:text-teal-700
                         prose-ul:mt-6 prose-ul:space-y-3 prose-li:text-slate-700
                         [&>*:first-child]:mt-0">
                         {{ strategicContent | renderMarkdown | safe }}
@@ -253,7 +253,7 @@
 
                     <div class="mt-16 text-center">
                         <a href="/contacto/?tipo=abogado" 
-                           class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-cyan-500/25 transition-all group text-lg">
+                           class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white font-semibold rounded-none shadow-lg hover:shadow-xl hover:shadow-teal-500/25 transition-all group text-lg">
                             <span>Contactar para Colaboración Profesional</span>
                         </a>
                     </div>
@@ -271,9 +271,9 @@
                 <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center z-10">
                     <h2 class="text-5xl md:text-6xl font-black text-white leading-[0.95] tracking-tight mb-8 uppercase">{{ finalCTA.title }}</h2>
                     <p class="text-xl md:text-2xl text-slate-300 mb-12 font-light max-w-2xl mx-auto">{{ finalCTA.description }}</p>
-                    <div class="inline-flex items-center gap-4 p-1 rounded-2xl">
+                    <div class="inline-flex items-center gap-4 p-1 rounded-none">
                         <a href="{{ finalCTA.buttonUrl }}" 
-                           class="inline-flex items-center justify-center px-10 py-5 bg-white text-slate-900 font-bold uppercase tracking-wider rounded-xl shadow-lg hover:bg-cyan-50 transition-all duration-300 hover:-translate-y-1">
+                           class="inline-flex items-center justify-center px-10 py-5 bg-white text-slate-900 font-bold uppercase tracking-wider rounded-none shadow-lg hover:bg-teal-50 transition-all duration-300 hover:-translate-y-1">
                             {{ finalCTA.button }}
                         </a>
                     </div>

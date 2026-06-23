@@ -1,0 +1,44 @@
+<!-- @dsCard group="Components" viewport="700x470" name="Forms — StepForm (intake guiado)" subtitle="Multi-step homeowner intake: conversational structure, documentary form" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../../styles.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style> body { margin: 0; background: var(--surface-page); padding: 28px; display: flex; justify-content: center; } </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { StepForm } = window.VilardellPeritajeForenseDesignSystem_58f0b0;
+function Demo() {
+  return (
+    <StepForm
+      title="Cuéntanos tu caso"
+      steps={[
+        { key: 'problema', eyebrow: '§ 01 · Tu situación', type: 'choice',
+          question: '¿Qué está pasando en tu inmueble?',
+          helper: 'Elige lo que más se acerque. Después podrás detallarlo.',
+          options: ['Humedades o filtraciones', 'Grietas, fisuras o movimientos', 'Vicios ocultos tras comprar', 'Reforma u obra mal ejecutada'] },
+        { key: 'inmueble', eyebrow: '§ 02 · El inmueble', type: 'choice',
+          question: '¿De qué tipo de inmueble hablamos?',
+          options: ['Vivienda particular', 'Comunidad de propietarios', 'Local o nave', 'Edificio u obra pública'] },
+        { key: 'contacto', eyebrow: '§ 03 · Contacto', type: 'fields',
+          question: '¿Cómo te contactamos?',
+          helper: 'Una primera consulta sin coste. Respondemos en 24 h laborables.',
+          fields: [
+            { name: 'nombre', label: 'Nombre y apellidos', placeholder: 'Tu nombre' },
+            { name: 'email', label: 'Correo electrónico', type: 'email', placeholder: 'nombre@correo.com' },
+          ] },
+      ]}
+    />
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

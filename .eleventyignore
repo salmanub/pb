@@ -1,0 +1,5 @@
+# Ignorar páginas legacy durante la transición
+# Se eliminarán cuando se porten a la nueva estructura
+src/pages/
+node_modules/
+Design System/

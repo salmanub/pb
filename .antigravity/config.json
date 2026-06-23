@@ -1,0 +1,35 @@
+{
+  "project": "perito.barcelona",
+  "version": "2.0",
+  "stack": "11ty + Tailwind + Cloudflare Pages",
+  "agents": {
+    "manager":          { "model": "claude-opus-4",   "system_file": ".antigravity/MANAGER.md",   "max_retries": 3,  "timeout_ms": 120000 },
+    "writer":           { "model": "claude-sonnet-4", "system_file": ".antigravity/WORKERS.md",   "scope": ["src/_pages/**/*.md","src/_data/**/*.json"], "timeout_ms": 60000 },
+    "coder":            { "model": "claude-sonnet-4", "system_file": ".antigravity/WORKERS.md",   "scope": ["src/_layouts/**","src/_includes/**","src/assets/**"], "timeout_ms": 90000 },
+    "seo":              { "model": "claude-sonnet-4", "system_file": ".antigravity/WORKERS.md",   "scope": ["src/_includes/schema.njk","src/_includes/hreflang.njk"], "timeout_ms": 45000 },
+    "builder":          { "model": "claude-sonnet-4", "system_file": ".antigravity/WORKERS.md",   "scope": [".eleventy.js","tailwind.config.js","package.json"], "timeout_ms": 60000 },
+    "validator":        { "model": "claude-opus-4",   "system_file": ".antigravity/VALIDATOR.md", "max_retries": 5,  "timeout_ms": 60000 },
+    "security_auditor": { "model": "claude-opus-4",   "system_file": ".antigravity/SECURITY.md",  "veto": true, "bypass": false },
+    "build_validator":  { "model": "claude-sonnet-4", "system_file": ".antigravity/BUILD.md",     "veto": true, "bypass": false }
+  },
+  "pipeline": ["manager","workers","validator","security_auditor","build_validator","deploy"],
+  "hooks": {
+    "before_worker":      "manager.checkpoint()",
+    "after_worker":       "validator.diff_check()",
+    "before_deploy":      "build_validator.run()",
+    "on_validation_fail": "manager.retry_with_diff()"
+  },
+  "build": { "command": "npm run build", "check_cmd": "npx @11ty/eleventy --dryrun", "must_pass": true, "output_dir": "_site" },
+  "guardrails": {
+    "max_files_per_task": 20,
+    "forbidden_patterns": ["rm -rf","drop table","process.env"],
+    "require_confirmation": ["package.json",".eleventy.js","wrangler.toml"],
+    "never_touch": [".env","*.secret","wrangler.toml"]
+  },
+  "completion": {
+    "require_checklist": true,
+    "require_build_pass": true,
+    "require_validator_ok": true,
+    "forbidden_done_phrases": ["done","listo","completado","terminado","all done","finished","ready"]
+  }
+}

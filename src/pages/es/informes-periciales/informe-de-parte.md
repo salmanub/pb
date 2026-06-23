@@ -1,105 +1,45 @@
 ---
-layout: 'layouts/service-child.njk'
-title: "Informe Pericial de Parte en Barcelona | Defensa Técnica para su Caso"
-hero:
-  image: "src/assets/images/elaboracion-informe-pericial.jpg"
-  alt: "Ingeniero elaborando un informe pericial de parte sobre planos técnicos"
-  title: "Informe Pericial de Parte - Perito Barcelona"
-subtitle: 'Elaboramos el informe técnico que necesita para fundamentar su postura en una negociación o demanda'
-description: "Servicio de elaboración de informes periciales de parte en Barcelona. Aportamos la prueba técnica y el argumento experto para reforzar su posición en disputas, litigios y reclamaciones."
+layout: layouts/base.njk
+title: "Informe Pericial de Parte"
+description: "Dictamen encargado por una de las partes para fundamentar su postura en negociación, mediación o demanda. Plena validez probatoria."
+lang: es
 permalink: "/informes-periciales/informe-de-parte/"
-lang: 'es'
+svc_num: "EXP·01"
+svc_tag: "Litigación civil"
+svc_lsi:
+  - "LEC art. 335"
+  - "Dictamen técnico"
+  - "Ratificación de parte"
+  - "Procedimiento civil"
+  - "Prueba pericial"
+body_blocks:
+  - h: "Su argumento técnico en una disputa"
+    p: "En cualquier litigio, la parte que presenta los argumentos técnicos más sólidos tiene ventaja decisiva. Un <b>informe pericial de parte</b> es un dictamen encargado por usted para investigar la realidad técnica de los hechos y defender su postura con objetividad y rigor."
+  - h: "Cuándo es esencial"
+    p: "<b>Antes de una demanda</b> — para evaluar la solidez técnica de la reclamación. <b>Durante una negociación</b> — un informe contundente fuerza acuerdos favorables sin juicio. <b>Como prueba</b> conforme a la LEC. <b>Para refutar</b> el dictamen de la parte contraria mediante un contrainforme."
+faq:
+  - q: "¿Tiene validez en un juicio?"
+    a: "Sí. Es un medio de prueba reconocido por la LEC (arts. 335 y ss.) y puede defenderse como prueba pericial ante el juez."
+  - q: "¿Diferencia con el dictamen judicial?"
+    a: "El de parte lo encarga usted o su letrado; el judicial lo designa el juzgado. La metodología es idéntica."
+band_eyebrow: "Sin coste"
+band_title: "¿Necesitas este dictamen?"
+band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
+band_cta: "Consultar caso"
+breadcrumb:
+  - label: "Inicio"
+    url: "/"
+  - label: "Dictámenes"
+    url: "/informes-periciales/"
+  - label: "EXP·01"
 translations:
-  - lang: "ca"
-    permalink: "/ca/informes-pericials/informe-de-part/"
-  - lang: "en"
-    permalink: "/en/expert-witness-reports/party-appointed-report/"
-eleventyNavigation:
-  notshow: true
-serviceTitle: 'informe pericial de parte'
-
-# Parent Service (for breadcrumb and linking back to pillar)
-parentService:
-  title: 'Informes Periciales'
-  url: '/informes-periciales/'
-
-# Key features in the hero section
-keyFeatures:
-  - 'Análisis técnico y objetivo enfocado en los puntos clave de su caso'
-  - 'Argumentación sólida para reforzar la estrategia de su abogado'
-  - 'Valoración de daños y cuantificación económica precisa de la reclamación'
-  - 'Documento preparado para ser defendido y ratificado en sede judicial'
-
-# Service Process (for sidebar)
-serviceProcess:
-  - title: 'Análisis de viabilidad'
-    description: 'Estudiamos su caso y la documentación para confirmar la solidez de la postura técnica'
-  - title: 'Inspección y toma de datos'
-    description: 'Recopilamos todas las evidencias necesarias para fundamentar nuestras conclusiones'
-  - title: 'Redacción del informe'
-    description: 'Elaboramos un dictamen claro, riguroso y centrado en los objetivos de la reclamación'
-  - title: 'Soporte y defensa'
-    description: 'Colaboramos con su letrado y defendemos el informe en el procedimiento'
-
-# Service Benefits (for sidebar)
-serviceBenefits:
-  - 'Equilibre la contienda técnica frente a la parte contraria'
-  - 'Aporte una prueba experta y objetiva que dé credibilidad a su reclamación'
-  - 'Aumente significativamente sus posibilidades de éxito en una negociación o juicio'
-  - 'Tome decisiones con la seguridad que le proporciona un criterio técnico independiente'
-
-# Related Problems (optional)
-relatedProblems:
-  - title: 'Colaboración con Abogados'
-    description: 'Somos el aliado técnico perfecto para los despachos de abogados.'
-    url: '/colaboracion-abogados/'
-  - title: 'Contrainformes Periciales'
-    description: 'Si la otra parte ya ha presentado un informe, podemos analizarlo y rebatirlo.'
-    url: '/informes-periciales/contrainforme-pericial/'
-
-# Client Testimonials
-testimonials:
-  - quote: 'El informe de parte que elaboraron fue la base de toda nuestra estrategia de negociación. Fue tan claro y contundente que logramos un acuerdo favorable sin necesidad de ir a juicio.'
-    author: 'Despacho de Abogados, Barcelona'
-    role: 'Caso: Disputa por defectos constructivos'
-  - quote: 'Presentamos su informe en el juicio y fue demoledor. La solvencia de Albert durante la ratificación fue clave para que el juez entendiera nuestra postura. Un trabajo impecable.'
-    author: 'Cliente Particular'
-    role: 'Caso: Reclamación por vicios ocultos'
-
-# CTA Section
-ctaTitle: '¿Necesita una prueba técnica para reforzar su caso?'
-ctaDescription: 'Un informe pericial de parte es su mejor argumento. Contacte con nosotros y analizaremos la viabilidad de su reclamación.'
-
-# Introduction (shown in hero section)
-intro: |
-  <p>En cualquier disputa o litigio, la parte que presenta los argumentos técnicos más sólidos tiene una ventaja decisiva. Un <strong>informe pericial de parte</strong> es un dictamen encargado por usted para investigar la realidad técnica de los hechos y defender su postura con objetividad y rigor.</p>
-  
-  <p>Como peritos expertos e independientes, dentro de nuestros <a href="/informes-periciales/">servicios de informes periciales</a>, elaboramos el documento técnico que su abogado necesita para construir la estrategia legal más sólida.</p>
+  - lang: 'ca'
+    permalink: '/ca/informes-pericials/informe-de-part/'
+  - lang: 'en'
+    permalink: '/en/expert-witness-reports/party-appointed-report/'
+  - lang: 'fr'
+    permalink: '/fr/rapports-expertise/rapport-de-partie/'
+  - lang: 'it'
+    permalink: '/it/perizie-tecniche/relazione-di-parte/'
 ---
-
-
-## Su Argumento Técnico en una Disputa
-
-Cuando se enfrenta a un conflicto técnico —ya sea con una constructora, una aseguradora o en un litigio—, la opinión de cada parte está, por naturaleza, sesgada. Para que su postura gane credibilidad y peso, necesita un argumento externo, objetivo y basado en pruebas: un **informe pericial de parte**.
-
-A diferencia del perito judicial (designado por el juez), el perito de parte es un experto que usted contrata para que se integre en su equipo de defensa. Nuestra función es analizar el caso desde una perspectiva de ingeniería, encontrar la evidencia técnica y plasmarla en un dictamen claro y riguroso que sirva como pilar para la estrategia de su abogado.
-
-### ¿Cuándo es Esencial un Informe de Parte?
-
-Este tipo de informe es su mejor herramienta en múltiples situaciones:
-
-* **Antes de una Demanda:** Para evaluar la solidez técnica de su reclamación y asegurarse de que tiene una base sólida antes de iniciar un costoso proceso judicial.
-* **Durante una Negociación:** Un informe contundente puede forzar a la parte contraria a llegar a un acuerdo favorable sin necesidad de ir a juicio.
-* **Como Prueba en un Juicio:** Es una de las pruebas periciales clave que su abogado presentará para demostrar los hechos técnicos ante el juez.
-* **Para Rebatir Otro Informe:** Si la parte contraria presenta su propio informe, elaboramos un contrainforme técnico que lo analiza y refuta.
-
-### Nuestra Metodología: Del Análisis a la Defensa
-
-Nuestro compromiso es doble: con el rigor técnico y con los objetivos de su caso.
-
-1.  **Inmersión en el Caso:** Trabajamos mano a mano con usted y su abogado para entender todos los matices del conflicto.
-2.  **Investigación Pericial:** Realizamos las inspecciones y análisis necesarios para recopilar pruebas irrefutables.
-3.  **Redacción Estratégica:** Escribimos el informe de forma clara y persuasiva, enfocándonos en los puntos que son cruciales para su estrategia legal.
-4.  **Defensa en Juicio:** Si es necesario, acudimos a sede judicial para ratificar el informe y responder a las preguntas del juez y de la parte contraria con la máxima solvencia.
-
-Un informe pericial de parte bien elaborado no es solo un documento; es la pieza que a menudo determina el resultado de una disputa.
+{% include "layouts/service.njk" %}

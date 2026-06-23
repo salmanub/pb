@@ -1,0 +1,27 @@
+/* ============================================================
+   ELEVATION — radii, borders, shadows
+   ------------------------------------------------------------
+   Near-square corners and hairline borders, not glossy cards.
+   Documentary, precise. Shadows reserved for true overlays.
+   ============================================================ */
+
+:root {
+  /* ---- Radii (small — document-like) ---------------------- */
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 8px;     /* used sparingly, e.g. images       */
+  --radius-pill: 999px;
+
+  /* ---- Border widths -------------------------------------- */
+  --bw-hair: 1px;
+  --bw-strong: 1.5px;
+  --bw-rule: 2px;       /* the structural rule               */
+
+  /* ---- Shadows (restrained) ------------------------------- */
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px rgba(28, 26, 23, 0.05);
+  --shadow-card: 0 1px 0 rgba(28, 26, 23, 0.03), 0 2px 8px rgba(28, 26, 23, 0.04);
+  --shadow-overlay: 0 12px 40px -8px rgba(28, 26, 23, 0.22), 0 4px 12px rgba(28, 26, 23, 0.10);
+  --shadow-focus: 0 0 0 3px rgba(28, 122, 74, 0.28);
+}

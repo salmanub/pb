@@ -3,39 +3,42 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    {# ── Pages from collections ── #}
     {% for page in collections.all %}
-       {% if not page.data.draft %}
-       {% if not page.data.notshow %}
+       {% if not page.data.draft and not page.data.notshow %}
         <url>
             <loc>{{ metadata.site.url }}{{ page.url | url }}</loc>
-            
-            <!-- Self-referencing hreflang (con el idioma de la página actual) -->
-            <xhtml:link rel="alternate" hreflang="{{ page.data.lang }}" href="{{ metadata.site.url }}{{ page.url | url }}" />
 
-            <!-- Alternate language versions -->
-            {% if page.data.translations %}
-            {% for translation in page.data.translations %}
-              <xhtml:link rel="alternate" hreflang="{{ translation.lang }}" href="{{ metadata.site.url }}{{ translation.permalink }}" />
+            {# hreflang from i18n.json map #}
+            {% set alternates = page.url | hreflangAlternates(i18n.pages) %}
+            {% for alt in alternates %}
+              <xhtml:link rel="alternate" hreflang="{{ alt.lang }}" href="{{ metadata.site.url }}{{ alt.url }}" />
             {% endfor %}
+            {% if alternates | length %}
+              <xhtml:link rel="alternate" hreflang="x-default" href="{{ metadata.site.url }}{{ (alternates | selectattr('lang', 'equalto', 'es') | first).url | default(page.url) }}" />
             {% endif %}
-            
-            <!-- x-default (usando la versión en español como predeterminada) -->
-            {% if page.data.lang != "es" %}
-            {% for translation in page.data.translations %}
-              {% if translation.lang == "es" %}
-              <xhtml:link rel="alternate" hreflang="x-default" href="{{ metadata.site.url }}{{ translation.permalink }}" />
-              {% endif %}
-            {% endfor %}
-            {% else %}
-            <xhtml:link rel="alternate" hreflang="x-default" href="{{ metadata.site.url }}{{ page.url | url }}" />
-            {% endif %}
-            
+
             <lastmod>{{ page.date.toISOString() }}</lastmod>
             <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
         </url>
        {% endif %}
-       {% endif %}
+    {% endfor %}
+
+    {# ── i18n alternate URLs not yet as pages ── #}
+    {% for key, langs in i18n.pages %}
+    {% for altLang, altUrl in langs %}
+    {% if altLang != "es" %}
+        <url>
+            <loc>{{ metadata.site.url }}{{ altUrl }}</loc>
+            {% for l2, u2 in langs %}
+              <xhtml:link rel="alternate" hreflang="{{ l2 }}" href="{{ metadata.site.url }}{{ u2 }}" />
+            {% endfor %}
+            <xhtml:link rel="alternate" hreflang="x-default" href="{{ metadata.site.url }}{{ langs.es }}" />
+            <changefreq>monthly</changefreq>
+        </url>
+    {% endif %}
+    {% endfor %}
     {% endfor %}
 </urlset>

@@ -1,328 +1,121 @@
+{#
+base.njk — Layout raíz de perito.barcelona
+AGENTES §6: microdata anidada html → WebPage
+AGENTES §5: CSS inline (inyectado por transform), cero
+<link> de CSS
+#}
+{# ── i18n contact paths (used by all CTAs) ── #}
+{% set _contactPro = "/contacto/profesional/" if (not lang or lang == "es") else ("/en/contact/professional/" if lang == "en" else "/ca/contacte/professional/") %}
+{% set _contactPart = "/contacto/particular/" if (not lang or lang == "es") else ("/en/contact/particular/" if lang == "en" else "/ca/contacte/particular/") %}
 <!DOCTYPE html>
-<html lang="{{lang}}" itemscope itemtype="https://schema.org/WebPage">
+<html lang="{{ lang | default('es') }}" itemscope itemtype="https://schema.org/WebPage">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title itemprop="name">{{title}} - {{metadata.site.title}}</title>
-    {% include "components/seo.njk" %}
-    {# Critical CSS & Page Specific CSS #}
-    {% set indexCSS %} {% include "dist/assets/styles/index.css" %} {% endset %}
-    <style>
-        {{ indexCSS | safe }}
-        {{ page.css | safe }}
-    </style>{% block pageStyles %}{% endblock pageStyles %}
-    {# Instant Nav Removed - Using Speculation Rules API #}
-    <script type="application/ld+json">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {# ── SEO ── #}
+  <title>{{ title }} — {{ metadata.site.title }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ metadata.site.url }}{{ page.url }}">
+
+  {# ── Open Graph ── #}
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ metadata.site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ metadata.site.title }}">
+  <meta property="og:locale" content="{{ lang | default('es') }}_{{ 'ES' if lang == 'es' or lang == 'ca' else 'GB' }}">
+
+  {# ── Twitter ── #}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+
+  {# ── hreflang (AGENTES §8: recíproco + x-default) ── #}
+  {# Priority: frontmatter translations > i18n.json lookup #}
+  {% if translations and translations.length %}
+  <link rel="alternate" hreflang="{{ lang | default('es') }}" href="{{ metadata.site.url }}{{ page.url }}">
+  {% for t in translations %}
+  <link rel="alternate" hreflang="{{ t.lang }}" href="{{ metadata.site.url }}{{ t.permalink }}">
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default"
+    href="{{ metadata.site.url }}{{ page.url if lang == 'es' or not lang else ('/' if lang != 'es' else page.url) }}">
+  {% else %}
+  {% set alternates = page.url | hreflangAlternates(i18n.pages) %}
+  {% for alt in alternates %}
+  <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ metadata.site.url }}{{ alt.url }}">
+  {% endfor %}
+  {% if alternates | length %}
+  <link rel="alternate" hreflang="x-default"
+    href="{{ metadata.site.url }}{{ (alternates | selectattr('lang', 'equalto', 'es') | first).url | default(page.url) }}">
+  {% endif %}
+  {% endif %}
+
+  {# ── Fonts (self-hosted from perito.barcelona) ── #}
+  <style>
     {
-      "@context": "https://schema.org",
-      "@type": ["ProfessionalService", "LegalService", "EngineeringFirm"],
-      "name": "Gabinete de Ingeniería Forense | Perito Barcelona",
-      "image": "https://perito.barcelona/assets/images/logo.png",
-      "@id": "https://perito.barcelona",
-      "url": "https://perito.barcelona",
-      "telephone": "+34 614 194 985",
-      "priceRange": "$$$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Carrer Numància, 95, Local 5, Distrito de Les Corts",
-        "addressLocality": "Barcelona",
-        "postalCode": "08029",
-        "addressCountry": "ES"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 41.3874,
-        "longitude": 2.1686
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Barcelona"
-      },
-      "description": "Gabinete de Ingeniería Civil especializado en patología estructural compleja, simulación FEA y peritaje judicial B2B para grandes litigios y siniestros.",
-      "knowsAbout": [
-        "Ingeniería Forense",
-        "Patología Estructural",
-        "Colapsos Estructurales",
-        "Cálculo de Elementos Finitos (FEA)",
-        "Duty to the Court",
-        "Arbitraje Técnico"
-      ]
+      % include "../../assets/css/fonts.css" %
     }
-    </script>
+  </style>
+
+  {# ── Favicons ── #}
+  {% favicons %}
+
+  {# ── CSS: inyectado inline por el transform de .eleventy.js (AGENTES §5) ── #}
+  {# NO hay
+  <link rel="stylesheet"> — cero CSS externo #}
 </head>
-<body itemscope itemtype="https://schema.org/WebPage" class="bg-white text-slate-900 selection:bg-cyan-100 selection:text-cyan-900">
-    <header>
-        <meta itemprop="name" content="{{ title }}">
-        <meta itemprop="description" content="{{ description }}">
-        <meta itemprop="url" content="{{ metadata.site.url }}">
-    </header>
 
-    {% include "partials/navBar.njk" %}
-    
-    {% block content %}
-    {% endblock content %}
+<body>
+  {# ── Header (AGENTES §6: WPHeader → SiteNavigationElement) ── #}
+  <header itemscope itemtype="https://schema.org/WPHeader">
+    {% include "partials/nav.njk" %}
+  </header>
 
+  {# ── Main content ── #}
+  <main itemprop="mainContentOfPage">
+    {{ content | safe }}
+  </main>
+
+  {# ── Footer (AGENTES §6: WPFooter → LocalBusiness) ── #}
+  <footer itemscope itemtype="https://schema.org/WPFooter">
     {% include "partials/footer.njk" %}
-    {% include "partials/floating-notice.njk" %}
-    {% include "components/mobile-bar.njk" %}
-    
-    {# Chatbot - Asistente técnico #}
-    {% if chatbot.enabled %}
-      {% include "components/chatbot.njk" %}
-    {% endif %}
+  </footer>
+  {# ── Intake modal (JS autorizado solo para formulario — AGENTES §5.6 override) ── #}
+  <script src="/assets/js/intake.js" defer></script>
+  {# ── Micro-interactions + favicon attention ── #}
+  <script src="/assets/js/motion.js" defer></script>
 
-    <!-- Schema for LocalBusiness -->
-    <div itemscope itemtype="https://schema.org/LocalBusiness" hidden>
-        <meta itemprop="name" content="Perito Barcelona">
-        <meta itemprop="description" content="Expertos en peritajes técnicos y resolución de conflictos legales en construcción.">
-        <meta itemprop="url" content="{{ metadata.site.url }}{{ page.permalink }}">
-        <meta itemprop="telephone" content="{{ metadata.contact.phoneNumber }}">
-        <meta itemprop="email" content="{{ metadata.contact.email }}">
-        <meta itemprop="address" content="{{ metadata}}">
-        <meta itemprop="priceRange" content="€€">
-        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <meta itemprop="streetAddress" content="C/ Numancia 95, Local 5">
-            <meta itemprop="addressLocality" content="Barcelona">
-            <meta itemprop="addressRegion" content="Cataluña">
-            <meta itemprop="postalCode" content="08029">
-            <meta itemprop="addressCountry" content="ES">
-        </div>
-        <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-            <meta itemprop="latitude" content="41.3850643" />
-            <meta itemprop="longitude" content="2.136047" />
-        </div>
-
-        <meta itemprop="openingHours" content="Mo-Fr 09:00-18:00">
-    </div>
-
-    <!-- Schema for Author -->
-    <div itemscope itemtype="https://schema.org/Person" hidden>
-        <meta itemprop="name" content="{{ metadata.author.name }}">
-        <meta itemprop="email" content="{{ metadata.author.email }}">
-        <meta itemprop="url" content="{{ metadata.site.url }}">
-        <meta itemprop="jobTitle" content="{{ metadata.author.jobTitle[lang] }}">
-        <meta itemprop="worksFor" content="{{ metadata.author.organization }}">
-        <meta itemprop="telephone" content="{{ metadata.contact.phoneNumber }}">
-        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <meta itemprop="streetAddress" content="C/ Numancia 95, Local 5">
-            <meta itemprop="addressLocality" content="Barcelona">
-            <meta itemprop="addressRegion" content="Cataluña">
-            <meta itemprop="postalCode" content="08029">
-            <meta itemprop="addressCountry" content="ES">
-        </div>
-        <meta itemprop="sameAs" content="{{ metadata.author.linkedin }}">
-    </div>
-
-    <!-- Schema for Publisher/Organization -->
-    <div itemscope itemtype="https://schema.org/Organization" hidden>
-        <meta itemprop="name" content="{{ metadata.site.title }}">
-        <meta itemprop="url" content="{{ metadata.site.url }}">
-        <meta itemprop="email" content="{{ metadata.contact.email }}">
-        <meta itemprop="telephone" content="{{ metadata.contact.phoneNumber }}">
-        <meta itemprop="description" content="{{ metadata.site.description }}">
-        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <meta itemprop="streetAddress" content="{{ metadata.contact.address.street }}">
-            <meta itemprop="addressLocality" content="{{ metadata.contact.address.city }}">
-            <meta itemprop="postalCode" content="{{ metadata.contact.address.postalCode }}">
-            <meta itemprop="addressCountry" content="{{ metadata.contact.address.country }}">
-        </div>
-        <div itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
-            <meta itemprop="telephone" content="{{ metadata.contact.phoneNumber }}">
-            <meta itemprop="email" content="{{ metadata.contact.email }}">
-            <meta itemprop="contactType" content="customer service">
-            <meta itemprop="availableLanguage" content="Spanish">
-            <meta itemprop="availableLanguage" content="Catalan">
-            <meta itemprop="availableLanguage" content="English">
-            <meta itemprop="availableLanguage" content="French">
-            <meta itemprop="availableLanguage" content="Italian">
-        </div>
-        <meta itemprop="sameAs" content="{{ metadata.company.linkedin }}">
-    </div>
-    
-    {% block scripts %}
-    {% include "partials/head.njk" %}
-    
-    {# <!-- Configuración global para el script de manejo de enlaces 404 -->
-    <script>
-        window.error404Texts = {
-            pageUnavailable: "{{ metadata.error404Suggestion[lang].pageUnavailable | safe }}",
-            pageAvailableIn: "{{ metadata.error404Suggestion[lang].pageAvailableIn | safe }}",
-            viewPageIn: "{{ metadata.error404Suggestion[lang].viewPageIn | safe }}"
-        };
-    </script> #}
-    
-    {# <!-- Script para interceptar enlaces rotos -->
-    <script src="/assets/js/language-404-handler.js" defer></script> #}
-    
-{#     
-        <!-- Service Worker Handler -->
-        <script>
-            class ServiceWorkerHandler {
-                constructor() {
-                    this.registration = null;
-                    this.updateNotificationShown = false;
-                    
-                    // Inicializar cuando el DOM esté listo
-                    if (document.readyState === 'loading') {
-                        document.addEventListener('DOMContentLoaded', () => this.init());
-                    } else {
-                        this.init();
-                    }
-                }
-
-                async init() {
-                    if ('serviceWorker' in navigator) {
-                        try {
-                            // Registrar el service worker
-                            this.registration = await navigator.serviceWorker.register('/service-worker.js');
-                            console.log('Service Worker registrado con éxito');
-
-                            // Escuchar mensajes del service worker
-                            navigator.serviceWorker.addEventListener('message', (event) => this.handleMessage(event));
-
-                            // Si ya hay un service worker activo
-                            if (this.registration.active) {
-                                this.checkForUpdates();
-                            }
-                        } catch (error) {
-                            console.error('Error al registrar el Service Worker:', error);
-                        }
-                    }
-                }
-
-                async checkForUpdates() {
-                    try {
-                        // Forzar una actualización del service worker
-                        await this.registration.update();
-                    } catch (error) {
-                        console.error('Error al verificar actualizaciones:', error);
-                    }
-                }
-
-                handleMessage(event) {
-                    if (!event.data) return;
-
-                    switch (event.data.type) {
-                        case 'NEW_VERSION_AVAILABLE':
-                            this.showUpdateNotification();
-                            break;
-                        case 'SW_ACTIVATED':
-                            console.log('Nuevo Service Worker activado');
-                            break;
-                    }
-                }
-
-                showUpdateNotification() {
-                    // Evitar mostrar múltiples notificaciones
-                    if (this.updateNotificationShown) return;
-                    this.updateNotificationShown = true;
-
-                    // Crear el contenedor de la notificación
-                    const notification = document.createElement('div');
-                    notification.className = 'update-notification';
-                    notification.innerHTML = `
-                        <div class="fixed bottom-4 right-4 max-w-md bg-white rounded-lg shadow-lg border border-cyan-100 p-4 z-50 flex items-center gap-4">
-                            <div class="flex-grow">
-                                <p class="text-slate-800 font-medium">¡Nueva versión disponible!</p>
-                                <p class="text-slate-600 text-sm">Hay una versión actualizada del sitio.</p>
-                            </div>
-                            <div class="flex gap-2">
-                                <button class="reload-button px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors text-sm font-medium">
-                                    Actualizar ahora
-                                </button>
-                                <button class="dismiss-button p-2 text-slate-400 hover:text-slate-600 transition-colors">
-                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    `;
-
-                    // Agregar la notificación al DOM
-                    document.body.appendChild(notification);
-
-                    // Manejar el botón de actualizar
-                    notification.querySelector('.reload-button').addEventListener('click', () => {
-                        window.location.reload();
-                    });
-
-                    // Manejar el botón de descartar
-                    notification.querySelector('.dismiss-button').addEventListener('click', () => {
-                        notification.remove();
-                        this.updateNotificationShown = false;
-                    });
-                }
-            }
-
-            // Inicializar el manejador cuando la página esté lista
-            window.addEventListener('load', () => {
-                new ServiceWorkerHandler();
-            });
-        </script> #}
-        
-        <script>
-            const menuButton = document.getElementById('menuButton');
-            const mobileMenu = document.getElementById('mobileMenu');
-
-            menuButton.addEventListener('click', function() {
-                const isMenuOpen = !mobileMenu.classList.contains('translate-x-full');
-                mobileMenu.classList.toggle('translate-x-full');
-                menuButton.classList.toggle('active');
-            });
-        </script>
-
-        <!-- Desinstalar Service Worker al cargar la nueva versión del sitio -->
-        <script>
-            self.addEventListener('install', function(e) {
-            self.skipWaiting();
-            });
-
-            self.addEventListener('activate', function(e) {
-            self.registration.unregister()
-                .then(function() {
-                return self.clients.matchAll();
-                })
-                .then(function(clients) {
-                clients.forEach(client => client.navigate(client.url));
-                });
-            });
-        </script>
-        <script>
-            {{ page.js | safe }}
-        </script>
-        {% include "components/analytics.njk" %}
-        
-        <!-- Speculation Rules API (Native Instant Loading) -->
-        <script type="speculationrules">
-        {
-          "prefetch": [
-            {
-              "source": "document",
-              "where": {
-                "and": [
-                  { "href_matches": "/*" },
-                  { "not": { "href_matches": "/*\\.(image|video|audio|pdf|zip)" } }
-                ]
-              },
-              "eagerness": "moderate"
-            }
-          ],
-          "prerender": [
-            {
-              "source": "document",
-              "where": {
-                "and": [
-                   { "href_matches": "/*" },
-                   { "not": { "href_matches": "/*\\.(image|video|audio|pdf|zip)" } }
-                ]
-              },
-              "eagerness": "conservative"
-            }
-          ]
-        }
-        </script>
-    {% endblock scripts %}
+  {# ── Mobile bottom CTA bar ── #}
+  {% set mbbCall = "Trucar" if lang == "ca" else ("Call" if lang == "en" else "Llamar") %}
+  {% set mbbEmail = "Enviar email" if lang == "ca" else ("Send email" if lang == "en" else "Enviar email") %}
+  <div class="mobile-bottom-bar" aria-label="Acciones rápidas">
+    <a href="tel:{{ metadata.contact.phoneNumber | replace(' ', '') }}" class="mbb-btn mbb-btn--call"
+      onmouseenter="this.style.backgroundColor='var(--stone-200)';this.querySelector('svg').style.stroke='var(--accent-dark, #145a38)'"
+      onmouseleave="this.style.backgroundColor='var(--surface-card)';this.querySelector('svg').style.stroke='var(--accent)'">
+      <svg class="mbb-icon-call" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
+      <span>{{ mbbCall }}</span>
+    </a>
+    <a href="mailto:{{ metadata.company.email }}" class="mbb-btn mbb-btn--form"
+      onmouseenter="this.style.backgroundColor='#145a38';this.style.color='#fff';this.querySelector('svg').style.stroke='#fff'"
+      onmouseleave="this.style.backgroundColor='var(--accent)';this.style.color='var(--accent-on)';this.querySelector('svg').style.stroke='currentColor'">
+      <svg class="mbb-icon-form" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+        <polyline points="22,6 12,13 2,6" />
+      </svg>
+      <span>{{ mbbEmail }}</span>
+    </a>
+  </div>
+  <script>
+    {% include "components/instant-nav.njk" %}
+  </script>
+  {# ── openIntake toast removed — CTAs now link to /contacto/particular/ or /contacto/profesional/ ── #}
 </body>
+
 </html>

@@ -1,0 +1,56 @@
+/* ============================================================
+   TYPOGRAPHY — Vilardell Peritaje Forense
+   ------------------------------------------------------------
+   Three voices, three jobs:
+   - SERIF (Spectral): authority. Headlines, pull quotes.
+   - SANS  (IBM Plex Sans): clarity. Body, UI.
+   - MONO  (IBM Plex Mono): evidence. Ref codes, labels, figures.
+   ============================================================ */
+
+:root {
+  /* ---- Families ------------------------------------------- */
+  --font-serif: 'Spectral', Georgia, 'Times New Roman', serif;        /* @kind font */
+  --font-sans:  'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; /* @kind font */
+  --font-mono:  'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; /* @kind font */
+
+  /* ---- Weights -------------------------------------------- */
+  --fw-light:    300;   /* @kind font */
+  --fw-regular:  400;   /* @kind font */
+  --fw-medium:   500;   /* @kind font */
+  --fw-semibold: 600;   /* @kind font */
+  --fw-bold:     700;   /* @kind font */
+
+  /* ---- Display & headings (serif) ------------------------- */
+  --fs-display-1: clamp(2.75rem, 5.2vw, 4.5rem);   /* @kind font */
+  --fs-display-2: clamp(2.1rem, 3.6vw, 3.1rem);    /* @kind font */
+  --fs-h1: clamp(1.9rem, 2.8vw, 2.5rem);           /* @kind font */
+  --fs-h2: clamp(1.55rem, 2.1vw, 2rem);            /* @kind font */
+  --fs-h3: 1.3rem;                                 /* @kind font */
+  --fs-h4: 1.1rem;                                 /* @kind font */
+
+  --lh-display: 1.04;   /* @kind font */
+  --lh-heading: 1.14;   /* @kind font */
+
+  /* ---- Body (sans) ---------------------------------------- */
+  --fs-lede:  clamp(1.125rem, 1.4vw, 1.3rem);  /* @kind font */
+  --fs-body:  1rem;        /* @kind font */
+  --fs-body-sm: 0.9375rem; /* @kind font */
+  --fs-small: 0.8125rem;   /* @kind font */
+  --fs-caption: 0.75rem;   /* @kind font */
+
+  --lh-lede: 1.55;   /* @kind font */
+  --lh-body: 1.65;   /* @kind font */
+  --lh-tight: 1.4;   /* @kind font */
+
+  /* ---- Mono (evidence labels & data) ---------------------- */
+  --fs-mono-label: 0.75rem;   /* @kind font */
+  --fs-mono-sm:    0.8125rem; /* @kind font */
+  --fs-mono-data:  1rem;      /* @kind font */
+  --fs-data-xl: clamp(2.4rem, 4vw, 3.4rem); /* @kind font */
+
+  /* ---- Tracking ------------------------------------------- */
+  --tracking-label: 0.14em;   /* @kind font */
+  --tracking-mono:  0.02em;    /* @kind font */
+  --tracking-tight: -0.015em;  /* @kind font */
+  --tracking-normal: 0;        /* @kind font */
+}

@@ -1,0 +1,114 @@
+---
+layout: layouts/base.njk
+title: "Sol·licitar Col·laboració Tècnica — Professionals"
+description: "Formulari per a despatxos d'advocats, asseguradores i administracions públiques. Informe de viabilitat en 48 h. Ratificació en sala inclosa."
+lang: ca
+eleventyNavigation:
+  key: ContacteProfessional
+  notshow: true
+translations:
+  - lang: es
+    permalink: /contacto/profesional/
+  - lang: en
+    permalink: /en/contact/professional/
+permalink: "/ca/contacte/professional/"
+breadcrumb:
+  - label: "Inici"
+    url: "/"
+  - label: "Contacte"
+    url: "/contacte/"
+  - label: "Professional"
+---
+{% set ui = ca %}
+{% set heroTitle = "Sol·licitar<br>col·laboració tècnica" %}
+{% include "partials/page-hero.njk" %}
+
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 12px var(--gutter) 0; border-top: 1px solid var(--border-subtle);"><span style="font-size: var(--fs-small, 0.8rem); color: var(--text-muted);">No és un professional? </span><a href="/ca/contacte/particular/" style="font-size: var(--fs-small, 0.8rem); color: var(--text-accent); text-decoration: none; border-bottom: 1px solid transparent;" onmouseenter="this.style.borderBottomColor='var(--accent)'" onmouseleave="this.style.borderBottomColor='transparent'">Expliqui'ns el seu cas com a particular →</a></div>
+
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
+<div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(28px,4vw,64px); align-items: start;" class="site-two">
+
+<div>
+<div style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;">
+<div style="padding: 18px 24px 0;">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+<span style="font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);">Col·laboració tècnica</span>
+<span id="intake-b-counter" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; color: var(--text-faint);">§ 01 / 05</span>
+</div>
+<div style="height: 2px; background: var(--stone-250, #d6d3cd); margin-top: 14px; border-radius: 1px; overflow: hidden;">
+<div id="intake-b-bar" style="height: 100%; width: 20%; background: var(--accent); transition: width 0.4s ease;"></div>
+</div>
+</div>
+<div id="intake-b-body" style="padding: 28px 24px 8px; min-height: 280px;"></div>
+<div id="intake-b-footer" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 24px 22px; border-top: 1px solid var(--border-subtle); margin-top: 8px;">
+<button id="intake-b-back" type="button" style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; color: var(--text-muted); background: transparent; border: none; cursor: pointer; padding: 8px 12px; visibility: hidden;">Enrere</button>
+<span id="intake-b-hint" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint);">Seleccioneu una opció</span>
+</div>
+</div>
+</div>
+
+<div>
+<div style="position: sticky; top: 92px;">
+<div style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; border-bottom: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);">Protocol B2B</div>
+<div style="padding: 22px 22px 24px;">
+<div style="font-family: var(--font-serif); font-style: italic; font-size: 1.6rem; color: var(--text-accent); margin-bottom: 4px;">Viabilitat en 48 h</div>
+<div style="margin-top: 14px;">
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">01</span><span>Informe preliminar de viabilitat</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">02</span><span>Honoraris fixos pactats per escrit</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">03</span><span>Ratificació garantida (LEC art. 347)</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">04</span><span>Perit judicial — Min. Justícia</span></div>
+</div>
+<div style="display: flex; gap: 14px; margin-top: 18px;">
+<a href="tel:{{ metadata.contact.phoneNumber | replace(' ', '') }}" style="flex: 1; display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-hairline); background: var(--surface-raised); text-decoration: none; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; color: var(--text-strong);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>{{ metadata.contact.phoneNumber | replace('+34 ', '') }}</a>
+<a href="mailto:{{ metadata.company.email }}" style="flex: 1; display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-hairline); background: var(--surface-raised); text-decoration: none; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; color: var(--text-strong);">Email</a>
+</div>
+<div style="margin-top: 12px; text-align: center; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint);">Confidencial · Sense compromís</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<script>
+(function(){
+  'use strict';
+  var STEPS = [
+    { key: 'entitat', eyebrow: '§ 01 · La seva entitat', type: 'choice', question: 'Des de quin tipus d\'organització ens contacta?', options: ['Despatx d\'advocats', 'Asseguradora o reasseguradora', 'Administració pública', 'Empresa constructora o promotora', 'Altra entitat'] },
+    { key: 'encarrec', eyebrow: '§ 02 · Tipus d\'encàrrec', type: 'choice', question: 'Quin tipus d\'actuació pericial necessita?', helper: 'Si no n\'està segur, triï l\'opció més propera.', options: ['Informe pericial de part', 'Actuació com a perit judicial', 'Contrainforme pericial', 'Valoració de sinistre', 'Assessorament tècnic / due diligence'] },
+    { key: 'import', eyebrow: '§ 03 · Quantia', type: 'choice', question: 'Quin és l\'import aproximat en disputa?', helper: 'Ens permet dimensionar l\'abast del dictamen.', options: ['Menys de 100.000 €', 'Entre 100.000 € i 500.000 €', 'Entre 500.000 € i 1.000.000 €', 'Més d\'1.000.000 €', 'No definit encara'] },
+    { key: 'processal', eyebrow: '§ 04 · Situació processal', type: 'choice', question: 'En quina fase es troba l\'assumpte?', options: ['Pre-litigi / negociació', 'Litigi actiu (demanda interposada)', 'Mediació o arbitratge', 'Gestió de sinistre', 'Consulta preliminar'] },
+    { key: 'contacte', eyebrow: '§ 05 · Dades de contacte', type: 'fields', question: 'Com el contactem?', helper: 'Informe de viabilitat en 48 h. Interlocució directa amb el perit.',
+      fields: [
+        { name: 'nom', label: 'Nom complet', placeholder: 'Nom i cognoms', required: true },
+        { name: 'entitat_nom', label: 'Entitat', placeholder: 'Nom del despatx o empresa', required: true },
+        { name: 'carrec', label: 'Càrrec', placeholder: 'Soci / Director / Lletrat', required: false },
+        { name: 'email', label: 'Correu electrònic professional', type: 'email', placeholder: 'nom@despatx.com', required: true },
+        { name: 'telefon', label: 'Telèfon directe', type: 'tel', placeholder: '+34 ___ ___ ___', required: false },
+        { name: 'descripcio', label: 'Descripció breu de l\'assumpte', multiline: true, rows: 3, placeholder: 'Tipus de patologia, ubicació, urgència…', required: false }
+      ] }
+  ];
+  var TOTAL=STEPS.length, current=0, answers={}, done=false;
+  function pad(n){return String(n).length<2?'0'+n:String(n);}
+  function render(){
+    var body=document.getElementById('intake-b-body'),bar=document.getElementById('intake-b-bar'),counter=document.getElementById('intake-b-counter'),backBtn=document.getElementById('intake-b-back'),hint=document.getElementById('intake-b-hint'),footer=document.getElementById('intake-b-footer');
+    if(!body)return;body.innerHTML='';var pct=done?100:Math.round(((current+1)/TOTAL)*100);bar.style.width=pct+'%';counter.textContent='§ '+pad(done?TOTAL:current+1)+' / '+pad(TOTAL);backBtn.style.visibility=current===0?'hidden':'visible';
+    if(done){footer.style.display='none';body.innerHTML='<div style="text-align:center;padding:14px 0 24px;"><div style="width:48px;height:48px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;background:var(--positive-tint,#e8f5e9);color:var(--positive,#2e7d32);font-size:22px;font-weight:600;">✓</div><h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;margin:20px 0 0;color:var(--text-strong);">Sol·licitud rebuda</h3><p style="margin:12px auto 0;max-width:40ch;color:var(--text-muted);line-height:1.55;">Hem registrat la seva consulta. Li respondrem en 24 h laborables amb un informe preliminar de viabilitat.</p></div>';return;}
+    var step=STEPS[current],html='';
+    if(step.eyebrow)html+='<div style="font-family:var(--font-mono);font-size:var(--fs-mono-label,0.6875rem);letter-spacing:var(--tracking-label,0.14em);text-transform:uppercase;color:var(--text-accent);margin-bottom:12px;">'+step.eyebrow+'</div>';
+    html+='<h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;line-height:1.2;color:var(--text-strong);margin:0;">'+step.question+'</h3>';
+    if(step.helper)html+='<p style="margin:12px 0 0;color:var(--text-muted);font-size:0.95rem;line-height:1.55;">'+step.helper+'</p>';
+    if(step.type==='choice'){hint.textContent='Seleccioneu una opció';html+='<div style="display:flex;flex-direction:column;gap:10px;margin-top:22px;">';step.options.forEach(function(opt,k){var letter=String.fromCharCode(65+k);var sel=answers[step.key]===opt;html+='<button type="button" data-choice="'+k+'" style="display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:14px 16px;cursor:pointer;font-family:inherit;font-size:inherit;background:'+(sel?'var(--accent-tint)':'var(--surface-raised,#fff)')+';border:1.5px solid;border-color:'+(sel?'var(--accent)':'var(--border-hairline)')+';border-radius:var(--radius-sm);"><span style="width:24px;height:24px;flex-shrink:0;border-radius:var(--radius-xs);border:1px solid;border-color:'+(sel?'var(--accent)':'var(--border-hairline)')+';background:'+(sel?'var(--accent)':'transparent')+';color:'+(sel?'var(--bone-100)':'var(--text-muted)')+';display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.7rem;font-weight:600;">'+letter+'</span><span style="font-family:var(--font-sans);font-size:0.975rem;color:var(--text-strong);">'+opt+'</span></button>';});html+='</div>';}
+    if(step.type==='fields'){hint.textContent='';hint.innerHTML='<button type="button" id="intake-b-submit" style="font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--accent-on,#fff);background:var(--accent);border:1.5px solid transparent;border-radius:var(--radius-sm);padding:10px 20px;cursor:pointer;">Enviar sol·licitud</button>';html+='<div style="display:flex;flex-direction:column;gap:16px;margin-top:22px;">';step.fields.forEach(function(f){var val=(answers[step.key]&&answers[step.key][f.name])||'';html+='<div><label for="ib-'+f.name+'" style="display:block;font-family:var(--font-sans);font-size:0.85rem;font-weight:500;color:var(--text-strong);margin-bottom:6px;">'+f.label+(f.required?'':'<span style="color:var(--text-faint);font-weight:400;margin-left:6px;">(opcional)</span>')+'</label>';if(f.multiline){html+='<textarea id="ib-'+f.name+'" name="'+f.name+'" rows="'+(f.rows||3)+'" placeholder="'+(f.placeholder||'')+'" '+(f.required?'required':'')+' style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);resize:vertical;outline:none;">'+val+'</textarea>';}else{html+='<input id="ib-'+f.name+'" type="'+(f.type||'text')+'" name="'+f.name+'" placeholder="'+(f.placeholder||'')+'" value="'+val+'" '+(f.required?'required':'')+' style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);outline:none;">';}html+='</div>';});html+='</div>';}
+    body.innerHTML=html;
+    body.querySelectorAll('[data-choice]').forEach(function(btn){btn.addEventListener('click',function(){answers[step.key]=step.options[parseInt(btn.getAttribute('data-choice'))];setTimeout(function(){if(current<TOTAL-1){current++;render();}},240);render();});});
+    body.querySelectorAll('input,textarea').forEach(function(inp){inp.addEventListener('input',function(){if(!answers[step.key])answers[step.key]={};answers[step.key][inp.name]=inp.value;});inp.addEventListener('focus',function(){inp.style.borderColor='var(--accent)';});inp.addEventListener('blur',function(){inp.style.borderColor='var(--border-hairline)';});});
+    var sb=document.getElementById('intake-b-submit');if(sb){sb.addEventListener('click',function(){var cd=answers.contacte||{};var valid=step.fields.every(function(f){if(!f.required)return true;var v=cd[f.name];return v&&v.trim().length>0;});if(!valid){alert('Si us plau, ompli els camps obligatoris.');return;}submitForm();});}
+  }
+  function submitForm(){var cd=answers.contacte||{};var payload={tipo_cliente:'profesional',nom:cd.nom||'',entitat_nom:cd.entitat_nom||'',carrec:cd.carrec||'',email:cd.email||'',telefon:cd.telefon||'',descripcio:cd.descripcio||'',entitat:answers.entitat||'',encarrec:answers.encarrec||'',import_disputa:answers.import||'',processal:answers.processal||'',lang:'ca',timestamp:new Date().toISOString(),source:'perito.barcelona'};done=true;render();fetch('/api/contacto',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).then(function(r){if(r.ok)setTimeout(function(){window.location.href='/ca/gracies/';},2500);}).catch(function(){});}
+  document.getElementById('intake-b-back').addEventListener('click',function(){if(current>0){current--;render();}});
+  render();
+})();
+</script>

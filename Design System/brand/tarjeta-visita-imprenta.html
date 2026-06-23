@@ -1,0 +1,97 @@
+<!-- @dsCard group="Brand" viewport="780x520" name="Tarjeta — arte para imprenta (MOO)" subtitle="Listo para MOO · trim 88,9×50,8 mm · sangrado 2 mm · zona segura · seam verde (Luxe)" -->
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  :root { --bleed-w: 92.9mm; --bleed-h: 54.8mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #DEDFD9; font-family: var(--font-sans); padding: 26px; }
+  .spec { max-width: 760px; margin: 0 auto 22px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; color: #41463F; line-height: 1.8; }
+  .spec b { color: var(--ink-900); }
+  .spec .toolbar { margin-top: 10px; display: flex; gap: 10px; align-items: center; }
+  .spec button, .spec label { font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+  .spec button { background: var(--ink-900); color: #fff; border: none; padding: 9px 14px; border-radius: 4px; }
+  .faces { max-width: 760px; margin: 0 auto; display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
+
+  .bleed { width: var(--bleed-w); height: var(--bleed-h); position: relative; overflow: hidden; box-shadow: 0 8px 26px rgba(24,33,28,.2); }
+  /* guías (sólo pantalla) */
+  .guide { position: absolute; pointer-events: none; z-index: 9; }
+  .g-trim { inset: 2mm; outline: 1px dashed rgba(220,60,60,.85); }
+  .g-safe { inset: 5mm; outline: 1px dashed rgba(40,120,220,.7); }
+  body.noguides .guide { display: none; }
+
+  /* contenido (dentro de la zona segura, inset 5mm) */
+  .pad { position: absolute; inset: 5mm; display: flex; flex-direction: column; }
+  /* ANVERSO */
+  .front { background: var(--paper-50); }
+  .front .pad { justify-content: space-between; }
+  .wm { display: flex; align-items: baseline; font-family: var(--font-serif); font-size: 13pt; font-weight: 500; color: var(--ink-900); letter-spacing: -.01em; }
+  .wm .dot { color: var(--accent); } .wm .bcn { font-family: var(--font-mono); font-size: 8.5pt; color: var(--concrete-600); }
+  .nm { font-family: var(--font-serif); font-size: 16pt; font-weight: 500; color: var(--ink-900); line-height: 1.08; }
+  .role { font-family: var(--font-mono); font-size: 6.6pt; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-top: 5px; }
+  .rule { height: 2px; width: 26px; background: var(--accent); margin: 9px 0; }
+  .col { font-family: var(--font-mono); font-size: 6pt; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); }
+  /* REVERSO */
+  .back { background: var(--ink-900); }
+  .back .pad { align-items: center; justify-content: center; text-align: center; gap: 9px; }
+  .back .lab { font-family: var(--font-mono); font-size: 6.4pt; letter-spacing: .26em; text-transform: uppercase; color: var(--text-on-dark-muted); }
+  .back .contact { font-family: var(--font-mono); font-size: 7.6pt; color: var(--bone-100); line-height: 2; letter-spacing: .02em; }
+  /* indicador de seam (canto Luxe) — sólo visual, NO va en el arte */
+  .seam { position: absolute; right: -9px; top: 8mm; bottom: 8mm; width: 4px; background: var(--accent); border-radius: 2px; }
+  .seam-cap { position: absolute; right: -52px; top: 50%; transform: translateY(-50%) rotate(90deg); font-family: var(--font-mono); font-size: 6pt; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .spec { display: none; }
+    .guide, .seam, .seam-cap { display: none; }
+    .faces { gap: 0; }
+    .bleed { box-shadow: none; }
+    @page { margin: 8mm; }
+  }
+</style></head>
+<body class="noguides">
+  <div class="spec">
+    <div><b>Tarjeta de visita · perito.barcelona</b> — arte listo para MOO (tamaño Standard, válido para Luxe / Cotton / Original).</div>
+    <div><b>Corte (trim):</b> 88,9 × 50,8 mm · <b>Sangrado (bleed):</b> +2 mm/lado (92,9 × 54,8 mm) · <b>Zona segura:</b> 5 mm desde el sangrado · <b>300 dpi · CMYK</b></div>
+    <div><b>Seam (Luxe):</b> verde inglés #1C7A4A — se elige al pedir; es el canto de la capa central, no forma parte del archivo subido.</div>
+    <div class="toolbar">
+      <button onclick="document.body.classList.toggle('noguides')">Mostrar / ocultar guías</button>
+      <button onclick="window.print()">Imprimir / PDF</button>
+      <span style="text-transform:none;letter-spacing:0;color:#6a6f66">Rojo = corte · Azul = zona segura (no se imprimen)</span>
+    </div>
+  </div>
+
+  <div class="faces">
+    <!-- ANVERSO -->
+    <div class="bleed front">
+      <div class="seam"></div><div class="seam-cap">seam · verde</div>
+      <div class="guide g-trim"></div><div class="guide g-safe"></div>
+      <div class="pad">
+        <div class="wm">perito<span class="dot">.</span><span class="bcn">barcelona</span></div>
+        <div>
+          <div class="nm">Albert Vilardell<br>Serra</div>
+          <div class="role">Ingeniero Civil · Perito Judicial</div>
+          <div class="rule"></div>
+        </div>
+        <div class="col">ECCAT nº 16448 · Min. Justicia · IRD</div>
+      </div>
+    </div>
+    <!-- REVERSO -->
+    <div class="bleed back">
+      <div class="seam"></div><div class="seam-cap">seam · verde</div>
+      <div class="guide g-trim"></div><div class="guide g-safe"></div>
+      <div class="pad">
+        <svg width="62" height="62" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="t" d="M 21,60 A 39,39 0 0 1 99,60" fill="none"/><path id="b" d="M 21,60 A 39,39 0 0 0 99,60" fill="none"/></defs>
+          <circle cx="60" cy="60" r="49" fill="none" stroke="#2A9760" stroke-width="1.4"/>
+          <circle cx="60" cy="60" r="44" fill="none" stroke="#2A9760" stroke-width=".7" opacity=".5"/>
+          <text font-family="var(--font-mono)" font-size="7.4" letter-spacing="2.4" fill="#A6D8BD" font-weight="500"><textPath href="#t" startOffset="50%" text-anchor="middle">PERITO · BARCELONA</textPath></text>
+          <text font-family="var(--font-mono)" font-size="7" letter-spacing="2.2" fill="#A6D8BD"><textPath href="#b" startOffset="50%" text-anchor="middle">ECCAT · 16448</textPath></text>
+          <text x="60" y="61" text-anchor="middle" dominant-baseline="central" font-family="var(--font-serif)" font-size="30" font-weight="500" fill="#DCEFE3">VS</text>
+        </svg>
+        <div class="lab">Ingeniería forense</div>
+        <div class="contact">+34 614 194 985<br>info@perito.barcelona<br>perito.barcelona</div>
+      </div>
+    </div>
+  </div>
+</body></html>

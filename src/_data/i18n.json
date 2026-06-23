@@ -1,0 +1,67 @@
+{
+  "pages": {
+    "/": {
+      "es": "/",
+      "ca": "/ca/",
+      "en": "/en/"
+    },
+    "/contacto/": {
+      "es": "/contacto/",
+      "ca": "/ca/contacte/",
+      "en": "/en/contact/"
+    },
+    "/gracias/": {
+      "es": "/gracias/",
+      "ca": "/ca/gracies/",
+      "en": "/en/thank-you/"
+    },
+    "/informes-periciales/": {
+      "es": "/informes-periciales/"
+    },
+    "/informes-periciales/informe-de-parte/": {
+      "es": "/informes-periciales/informe-de-parte/"
+    },
+    "/informes-periciales/patologias-estructurales/": {
+      "es": "/informes-periciales/patologias-estructurales/"
+    },
+    "/informes-periciales/humedades-filtraciones/": {
+      "es": "/informes-periciales/humedades-filtraciones/"
+    },
+    "/informes-periciales/vicios-ocultos/": {
+      "es": "/informes-periciales/vicios-ocultos/"
+    },
+    "/informes-periciales/reclamacion-mala-ejecucion/": {
+      "es": "/informes-periciales/reclamacion-mala-ejecucion/"
+    },
+    "/informes-periciales/contrainforme-pericial/": {
+      "es": "/informes-periciales/contrainforme-pericial/"
+    },
+    "/informes-periciales/naves-industriales/": {
+      "es": "/informes-periciales/naves-industriales/"
+    },
+    "/informes-periciales/comunidades-propietarios/": {
+      "es": "/informes-periciales/comunidades-propietarios/"
+    },
+    "/informes-periciales/obras-publicas/": {
+      "es": "/informes-periciales/obras-publicas/"
+    },
+    "/el-despacho/": {
+      "es": "/el-despacho/"
+    },
+    "/honorarios-perito-judicial-barcelona/": {
+      "es": "/honorarios-perito-judicial-barcelona/"
+    },
+    "/construccion/": {
+      "es": "/construccion/"
+    },
+    "/colaboracion-abogados/": {
+      "es": "/colaboracion-abogados/"
+    },
+    "/obras-publicas/": {
+      "es": "/obras-publicas/"
+    },
+    "/asesoramiento-estructural/": {
+      "es": "/asesoramiento-estructural/"
+    }
+  }
+}

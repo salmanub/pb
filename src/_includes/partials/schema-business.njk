@@ -1,0 +1,109 @@
+{#
+  schema-business.njk — Microdata LocalBusiness/ProfessionalService anidada COMPLETA
+  AGENTES §6: PostalAddress, GeoCoordinates, OpeningHoursSpecification, ContactPoint,
+  Person→worksFor Organization, OfferCatalog→Offers (cada uno con name),
+  areaServed (cada zona con SU PROPIO itemscope + <meta itemprop="name">), potentialAction.
+  Alimentado desde metadata.json — cero texto hardcodeado.
+#}
+{% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
+{% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
+
+<div itemscope itemtype="https://schema.org/ProfessionalService"
+     style="display: none;" aria-hidden="true">
+
+  {# ── Identificación ── #}
+  <meta itemprop="name" content="{{ metadata.company.name }}">
+  <meta itemprop="url" content="{{ metadata.site.url }}">
+  <meta itemprop="image" content="{{ metadata.site.url }}/assets/images/logos/og-image.png">
+  <meta itemprop="description" content="{{ metadata.site.description }}">
+  <meta itemprop="telephone" content="{{ metadata.contact.phoneNumber }}">
+  <meta itemprop="email" content="{{ metadata.company.email }}">
+  <meta itemprop="priceRange" content="{{ metadata.contact.priceRange | default('€€€') }}">
+
+  {# ── PostalAddress ── #}
+  <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+    <meta itemprop="streetAddress" content="{{ metadata.contact.address.street }}">
+    <meta itemprop="addressLocality" content="{{ metadata.contact.address.city }}">
+    <meta itemprop="addressRegion" content="{{ metadata.contact.address.region }}">
+    <meta itemprop="postalCode" content="{{ metadata.contact.address.postalCode }}">
+    <meta itemprop="addressCountry" content="{{ metadata.contact.address.country }}">
+  </div>
+
+  {# ── GeoCoordinates ── #}
+  <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+    <meta itemprop="latitude" content="{{ metadata.contact.geo.latitude }}">
+    <meta itemprop="longitude" content="{{ metadata.contact.geo.longitude }}">
+  </div>
+
+  {# ── OpeningHoursSpecification ── #}
+  {% for hours in metadata.contact.openingHours %}
+  <div itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification">
+    {% for day in hours.days %}
+    <meta itemprop="dayOfWeek" content="{{ day }}">
+    {% endfor %}
+    <meta itemprop="opens" content="{{ hours.opens }}">
+    <meta itemprop="closes" content="{{ hours.closes }}">
+  </div>
+  {% endfor %}
+
+  {# ── ContactPoint ── #}
+  <div itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
+    <meta itemprop="telephone" content="{{ metadata.contact.phoneNumber }}">
+    <meta itemprop="email" content="{{ metadata.company.email }}">
+    <meta itemprop="contactType" content="customer service">
+    <meta itemprop="availableLanguage" content="Spanish">
+    <meta itemprop="availableLanguage" content="Catalan">
+    <meta itemprop="availableLanguage" content="English">
+  </div>
+
+  {# ── Person → worksFor Organization ── #}
+  <div itemprop="founder" itemscope itemtype="https://schema.org/Person">
+    <meta itemprop="name" content="{{ metadata.author.name }}">
+    <meta itemprop="jobTitle" content="{{ metadata.author.jobTitle[lang | default('es')] }}">
+    <meta itemprop="url" content="{{ metadata.author.linkedin }}">
+    <div itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+      <meta itemprop="name" content="{{ metadata.company.name }}">
+      <meta itemprop="url" content="{{ metadata.company.url }}">
+    </div>
+  </div>
+
+  {# ── OfferCatalog → Offers (cada uno con name explícito) ── #}
+  <div itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/OfferCatalog">
+    <meta itemprop="name" content="{{ ui.schema.services_offered }}">
+    {% for svc in metadata.services %}
+    <div itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+      <meta itemprop="name" content="{{ svc.name }}">
+      <meta itemprop="url" content="{{ metadata.site.url }}{{ langPrefix }}/informes-periciales/{{ svc.path }}/">
+      <div itemprop="itemOffered" itemscope itemtype="https://schema.org/Service">
+        <meta itemprop="name" content="{{ svc.name }}">
+        <meta itemprop="description" content="{{ svc.description | default(svc.name) }}">
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {# ── areaServed (cada zona en SU PROPIO itemscope con <meta itemprop="name">) ── #}
+  {% for area in metadata.contact.areaServed %}
+  <div itemprop="areaServed" itemscope itemtype="https://schema.org/{{ area.type | default('City') }}">
+    <meta itemprop="name" content="{{ area.name }}">
+  </div>
+  {% endfor %}
+
+  {# ── potentialAction → ReserveAction ── #}
+  <div itemprop="potentialAction" itemscope itemtype="https://schema.org/ReserveAction">
+    <meta itemprop="name" content="{{ ui.nav.solicitar }}">
+    <div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
+      <meta itemprop="urlTemplate" content="{{ metadata.site.url }}{{ langPrefix }}/contacto/">
+      <meta itemprop="actionPlatform" content="https://schema.org/DesktopWebPlatform">
+      <meta itemprop="actionPlatform" content="https://schema.org/MobileWebPlatform">
+    </div>
+  </div>
+
+  {# ── Acreditaciones ── #}
+  {% for cred in metadata.credentials %}
+  <div itemprop="hasCredential" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+    <meta itemprop="name" content="{{ cred.name }}">
+    <meta itemprop="credentialCategory" content="{{ cred.category | default('Professional License') }}">
+  </div>
+  {% endfor %}
+</div>

@@ -1,4 +1,4 @@
-{% extends "layouts/base.njk" %}
+﻿{% extends "layouts/base.njk" %}
 
 {% block content %}
 <main id="page-404" class="relative mt-[70px] lg:mt-[100px] min-h-[calc(100vh-70px)] flex items-center justify-center isolate overflow-hidden bg-slate-50">
@@ -30,10 +30,10 @@
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/{{ ((lang + '/') if lang != 'es' else '') }}" class="inline-flex items-center justify-center px-8 py-3 bg-slate-900 text-white font-medium rounded-full hover:bg-slate-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                <a href="/{{ ((lang + '/') if lang != 'es' else '') }}" class="inline-flex items-center justify-center px-8 py-3 bg-slate-900 text-white font-medium rounded-none hover:bg-slate-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                     {{ metadata.error404[lang].homeButton }}
                 </a>
-                <a href="/{{ ((lang + '/') if lang != 'es' else '') }}{{ metadata.error404[lang].servicesPath }}" class="inline-flex items-center justify-center px-8 py-3 bg-white text-slate-700 font-medium rounded-full border border-slate-200 hover:bg-slate-50 transition-colors shadow-sm hover:shadow-md">
+                <a href="/{{ ((lang + '/') if lang != 'es' else '') }}{{ metadata.error404[lang].servicesPath }}" class="inline-flex items-center justify-center px-8 py-3 bg-white text-slate-700 font-medium rounded-none border border-slate-200 hover:bg-slate-50 transition-colors shadow-sm hover:shadow-md">
                     {{ metadata.error404[lang].servicesButton }}
                 </a>
             </div>

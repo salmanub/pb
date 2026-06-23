@@ -1,11 +1,11 @@
-<div class="flex flex-col lg:flex-row gap-12 items-center {{ 'lg:flex-row-reverse' if service.order == 'reversed' }} {{ additionalClasses }}">
+﻿<div class="flex flex-col lg:flex-row gap-12 items-center {{ 'lg:flex-row-reverse' if service.order == 'reversed' }} {{ additionalClasses }}">
   <div class="w-full lg:w-1/2">
     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">{{ service.title }}</h2>
     <p class="text-lg text-slate-600 mb-8 leading-relaxed">{{ service.description }}</p>
     <ul class="space-y-4 mb-8">
       {% for feature in service.features %}
         <li class="flex items-start">
-            <svg class="w-5 h-5 text-cyan-500 mt-1 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="w-5 h-5 text-teal-500 mt-1 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>
             <span class="text-slate-700">{{ feature }}</span>
@@ -14,12 +14,12 @@
     </ul>
     {% if service.cta_text and service.url %}
       <div>
-        <a href="{{ service.url }}" class="inline-flex items-center justify-center px-8 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-black transition-colors">{{ service.cta_text }}</a>
+        <a href="{{ service.url }}" class="inline-flex items-center justify-center px-8 py-3 bg-slate-900 text-white font-semibold rounded-none hover:bg-black transition-colors">{{ service.cta_text }}</a>
       </div>
     {% endif %}
   </div>
   <div class="w-full lg:w-1/2">
-    <img src="{{ service.image }}" alt="{{ service.title }}" class="w-full h-auto rounded-2xl shadow-xl shadow-slate-200/50">
+    <img src="{{ service.image }}" alt="{{ service.title }}" class="w-full h-auto rounded-none shadow-xl shadow-slate-200/50">
   </div>
   
   {% if service.urbenis_cta and service.urbenis_cta.show %}
@@ -27,7 +27,7 @@
       <a href="{{ service.urbenis_cta.url }}" 
          target="_blank"
          rel="noopener"
-         class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-600 to-emerald-500 text-white font-medium rounded-lg hover:from-emerald-700 hover:to-emerald-600 transition-all">
+         class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-600 to-emerald-500 text-white font-medium rounded-none hover:from-emerald-700 hover:to-emerald-600 transition-all">
         <span>{{ service.urbenis_cta.text }}</span>
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>

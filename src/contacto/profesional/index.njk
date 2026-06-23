@@ -1,0 +1,255 @@
+---
+layout: layouts/base.njk
+title: "Solicitar Colaboración Técnica — Profesionales"
+description: "Formulario para despachos de abogados, aseguradoras y administraciones públicas. Informe de viabilidad en 48 h. Ratificación en sala incluida."
+lang: es
+eleventyNavigation:
+  key: ContactoProfesional
+  notshow: true
+translations:
+  - lang: ca
+    permalink: /ca/contacte/
+  - lang: en
+    permalink: /en/contact/
+permalink: "/contacto/profesional/"
+breadcrumb:
+  - label: "Inicio"
+    url: "/"
+  - label: "Contacto"
+    url: "/contacto/"
+  - label: "Profesional"
+---
+{# contacto/profesional — Formulario guiado para profesionales #}
+<div itemscope itemtype="https://schema.org/Article" style="display: none;" aria-hidden="true"><meta itemprop="headline" content="{{ title }}"><meta itemprop="description" content="{{ description }}"><meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}"><div itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ metadata.author.name }}"></div><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"></div></div>
+{% set ui = es %}
+{% set heroTitle = "Solicitar<br>colaboración técnica" %}
+{% include "partials/page-hero.njk" %}
+
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 12px var(--gutter) 0; border-top: 1px solid var(--border-subtle);"><span style="font-size: var(--fs-small, 0.8rem); color: var(--text-muted);">¿No es un profesional? </span><a href="/contacto/particular/" style="font-size: var(--fs-small, 0.8rem); color: var(--text-accent); text-decoration: none; border-bottom: 1px solid transparent;" onmouseenter="this.style.borderBottomColor='var(--accent)'" onmouseleave="this.style.borderBottomColor='transparent'">Cuéntenos su caso como particular →</a></div>
+
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
+<div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(28px,4vw,64px); align-items: start;" class="site-two">
+
+{# ── Formulario guiado (profesional) ── #}
+<div>
+<div style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;">
+
+{# Header #}
+<div style="padding: 18px 24px 0;">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+<span style="font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);">Colaboración técnica</span>
+<span id="intake-b-counter" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; color: var(--text-faint);">§ 01 / 05</span>
+</div>
+<div style="height: 2px; background: var(--stone-250, #d6d3cd); margin-top: 14px; border-radius: 1px; overflow: hidden;">
+<div id="intake-b-bar" style="height: 100%; width: 20%; background: var(--accent); transition: width 0.4s ease;"></div>
+</div>
+</div>
+
+{# Steps container #}
+<div id="intake-b-body" style="padding: 28px 24px 8px; min-height: 280px;">
+</div>
+
+{# Footer #}
+<div id="intake-b-footer" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 24px 22px; border-top: 1px solid var(--border-subtle); margin-top: 8px;">
+<button id="intake-b-back" type="button" style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; color: var(--text-muted); background: transparent; border: none; cursor: pointer; padding: 8px 12px; visibility: hidden;">Atrás</button>
+<span id="intake-b-hint" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint);">Seleccione una opción</span>
+</div>
+
+</div>
+</div>
+
+{# ── Sidebar info ── #}
+<div>
+<div style="position: sticky; top: 92px;">
+<div style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; border-bottom: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);">Protocolo B2B</div>
+<div style="padding: 22px 22px 24px;">
+<div style="font-family: var(--font-serif); font-style: italic; font-size: 1.6rem; color: var(--text-accent); margin-bottom: 4px;">Viabilidad en 48 h</div>
+<div style="margin-top: 14px;">
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">01</span><span>Informe preliminar de viabilidad</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">02</span><span>Honorarios fijos pactados por escrito</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">03</span><span>Ratificación garantizada (LEC art. 347)</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">04</span><span>Perito judicial — Min. Justicia</span></div>
+</div>
+
+<div style="display: flex; gap: 14px; margin-top: 18px;">
+<a href="tel:{{ metadata.contact.phoneNumber | replace(' ', '') }}" style="flex: 1; display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-hairline); background: var(--surface-raised); text-decoration: none; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; color: var(--text-strong); transition: border-color 0.3s;" onmouseenter="this.style.borderColor='var(--accent)'" onmouseleave="this.style.borderColor='var(--border-hairline)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>{{ metadata.contact.phoneNumber | replace('+34 ', '') }}</a>
+<a href="mailto:{{ metadata.company.email }}" style="flex: 1; display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-hairline); background: var(--surface-raised); text-decoration: none; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; color: var(--text-strong); transition: border-color 0.3s;" onmouseenter="this.style.borderColor='var(--accent)'" onmouseleave="this.style.borderColor='var(--border-hairline)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a>
+</div>
+
+<div style="margin-top: 12px; text-align: center; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint);">Confidencial · Sin compromiso</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<script>
+(function(){
+  'use strict';
+  var STEPS = [
+    { key: 'entidad', eyebrow: '§ 01 · Su entidad', type: 'choice',
+      question: '¿Desde qué tipo de organización nos contacta?',
+      options: ['Despacho de abogados', 'Aseguradora o reaseguradora', 'Administración pública', 'Empresa constructora o promotora', 'Otra entidad'] },
+    { key: 'encargo', eyebrow: '§ 02 · Tipo de encargo', type: 'choice',
+      question: '¿Qué tipo de actuación pericial necesita?',
+      helper: 'Si no está seguro, seleccione la opción más cercana.',
+      options: ['Informe pericial de parte', 'Actuación como perito judicial', 'Contrainforme pericial', 'Valoración de siniestro', 'Asesoramiento técnico / due diligence'] },
+    { key: 'importe', eyebrow: '§ 03 · Cuantía', type: 'choice',
+      question: '¿Cuál es el importe aproximado en disputa?',
+      helper: 'Nos permite dimensionar el alcance del dictamen.',
+      options: ['Menos de 100.000 €', 'Entre 100.000 € y 500.000 €', 'Entre 500.000 € y 1.000.000 €', 'Más de 1.000.000 €', 'No definido todavía'] },
+    { key: 'procesal', eyebrow: '§ 04 · Situación procesal', type: 'choice',
+      question: '¿En qué fase se encuentra el asunto?',
+      options: ['Pre-litigio / negociación', 'Litigio activo (demanda interpuesta)', 'Mediación o arbitraje', 'Gestión de siniestro', 'Consulta preliminar'] },
+    { key: 'contacto', eyebrow: '§ 05 · Datos de contacto', type: 'fields',
+      question: '¿Cómo le contactamos?',
+      helper: 'Informe de viabilidad en 48 h. Interlocución directa con el perito.',
+      fields: [
+        { name: 'nombre', label: 'Nombre completo', placeholder: 'Nombre y apellidos', required: true },
+        { name: 'entidad_nombre', label: 'Entidad', placeholder: 'Nombre del despacho o empresa', required: true },
+        { name: 'cargo', label: 'Cargo', placeholder: 'Socio / Director / Letrado', required: false },
+        { name: 'email', label: 'Correo electrónico profesional', type: 'email', placeholder: 'nombre@despacho.com', required: true },
+        { name: 'telefono', label: 'Teléfono directo', type: 'tel', placeholder: '+34 ___ ___ ___', required: false },
+        { name: 'descripcion', label: 'Descripción breve del asunto', multiline: true, rows: 3, placeholder: 'Tipo de patología, ubicación, urgencia…', required: false }
+      ] }
+  ];
+  var TOTAL = STEPS.length, current = 0, answers = {}, done = false;
+
+  function pad(n){ return String(n).length < 2 ? '0'+n : String(n); }
+
+  function render(){
+    var body = document.getElementById('intake-b-body');
+    var bar = document.getElementById('intake-b-bar');
+    var counter = document.getElementById('intake-b-counter');
+    var backBtn = document.getElementById('intake-b-back');
+    var hint = document.getElementById('intake-b-hint');
+    var footer = document.getElementById('intake-b-footer');
+    if(!body) return;
+    body.innerHTML = '';
+    var pct = done ? 100 : Math.round(((current+1)/TOTAL)*100);
+    bar.style.width = pct+'%';
+    counter.textContent = '§ '+pad(done?TOTAL:current+1)+' / '+pad(TOTAL);
+    backBtn.style.visibility = current===0 ? 'hidden' : 'visible';
+
+    if(done){
+      footer.style.display = 'none';
+      body.innerHTML = '<div style="text-align:center;padding:14px 0 24px;">'+
+        '<div style="width:48px;height:48px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;background:var(--positive-tint,#e8f5e9);color:var(--positive,#2e7d32);font-size:22px;font-weight:600;">✓</div>'+
+        '<h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;margin:20px 0 0;color:var(--text-strong);">Solicitud recibida</h3>'+
+        '<p style="margin:12px auto 0;max-width:40ch;color:var(--text-muted);line-height:1.55;">Hemos registrado su consulta. Le responderemos en 24 h laborables con un informe preliminar de viabilidad.</p>'+
+        '</div>';
+      return;
+    }
+
+    var step = STEPS[current];
+    var html = '';
+    if(step.eyebrow) html += '<div style="font-family:var(--font-mono);font-size:var(--fs-mono-label,0.6875rem);letter-spacing:var(--tracking-label,0.14em);text-transform:uppercase;color:var(--text-accent);margin-bottom:12px;">'+step.eyebrow+'</div>';
+    html += '<h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;line-height:1.2;color:var(--text-strong);margin:0;">'+step.question+'</h3>';
+    if(step.helper) html += '<p style="margin:12px 0 0;color:var(--text-muted);font-size:0.95rem;line-height:1.55;">'+step.helper+'</p>';
+
+    if(step.type==='choice'){
+      hint.textContent = 'Seleccione una opción';
+      html += '<div style="display:flex;flex-direction:column;gap:10px;margin-top:22px;">';
+      step.options.forEach(function(opt,k){
+        var letter = String.fromCharCode(65+k);
+        var sel = answers[step.key]===opt;
+        html += '<button type="button" data-choice="'+k+'" style="display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:14px 16px;cursor:pointer;font-family:inherit;font-size:inherit;background:'+(sel?'var(--accent-tint)':'var(--surface-raised,#fff)')+';border:1.5px solid;border-color:'+(sel?'var(--accent)':'var(--border-hairline)')+';border-radius:var(--radius-sm);transition:background 0.15s ease,border-color 0.15s ease;">'+
+          '<span style="width:24px;height:24px;flex-shrink:0;border-radius:var(--radius-xs);border:1px solid;border-color:'+(sel?'var(--accent)':'var(--border-hairline)')+';background:'+(sel?'var(--accent)':'transparent')+';color:'+(sel?'var(--bone-100)':'var(--text-muted)')+';display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.7rem;font-weight:600;">'+letter+'</span>'+
+          '<span style="font-family:var(--font-sans);font-size:0.975rem;color:var(--text-strong);">'+opt+'</span>'+
+          '</button>';
+      });
+      html += '</div>';
+    }
+
+    if(step.type==='fields'){
+      hint.textContent = '';
+      hint.innerHTML = '<button type="button" id="intake-b-submit" style="font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--accent-on,#fff);background:var(--accent);border:1.5px solid transparent;border-radius:var(--radius-sm);padding:10px 20px;cursor:pointer;line-height:1;letter-spacing:0.005em;">Enviar solicitud</button>';
+      html += '<div style="display:flex;flex-direction:column;gap:16px;margin-top:22px;">';
+      step.fields.forEach(function(f){
+        var val = (answers[step.key]&&answers[step.key][f.name]) || '';
+        html += '<div><label for="ib-'+f.name+'" style="display:block;font-family:var(--font-sans);font-size:0.85rem;font-weight:500;color:var(--text-strong);margin-bottom:6px;">'+f.label+(f.required?'':'<span style="color:var(--text-faint);font-weight:400;margin-left:6px;">(opcional)</span>')+'</label>';
+        if(f.multiline){
+          html += '<textarea id="ib-'+f.name+'" name="'+f.name+'" rows="'+(f.rows||3)+'" placeholder="'+(f.placeholder||'')+'" '+(f.required?'required':'')+' style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);resize:vertical;outline:none;">'+val+'</textarea>';
+        } else {
+          html += '<input id="ib-'+f.name+'" type="'+(f.type||'text')+'" name="'+f.name+'" placeholder="'+(f.placeholder||'')+'" value="'+val+'" '+(f.required?'required':'')+' style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);outline:none;">';
+        }
+        html += '</div>';
+      });
+      html += '</div>';
+    }
+
+    body.innerHTML = html;
+
+    body.querySelectorAll('[data-choice]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var idx = parseInt(btn.getAttribute('data-choice'));
+        answers[step.key] = step.options[idx];
+        setTimeout(function(){ if(current<TOTAL-1){current++;render();} }, 240);
+        render();
+      });
+    });
+
+    body.querySelectorAll('input,textarea').forEach(function(inp){
+      inp.addEventListener('input', function(){
+        if(!answers[step.key]) answers[step.key]={};
+        answers[step.key][inp.name] = inp.value;
+      });
+      inp.addEventListener('focus', function(){ inp.style.borderColor='var(--accent)'; });
+      inp.addEventListener('blur', function(){ inp.style.borderColor='var(--border-hairline)'; });
+    });
+
+    var submitBtn = document.getElementById('intake-b-submit');
+    if(submitBtn){
+      submitBtn.addEventListener('click', function(){
+        var contactData = answers.contacto || {};
+        var valid = step.fields.every(function(f){
+          if(!f.required) return true;
+          var v = contactData[f.name];
+          return v && v.trim().length > 0;
+        });
+        if(!valid){ alert('Por favor, complete los campos obligatorios.'); return; }
+        submitForm();
+      });
+    }
+  }
+
+  function submitForm(){
+    var contactData = answers.contacto || {};
+    var payload = {
+      tipo_cliente: 'profesional',
+      nombre: contactData.nombre || '',
+      entidad_nombre: contactData.entidad_nombre || '',
+      cargo: contactData.cargo || '',
+      email: contactData.email || '',
+      telefono: contactData.telefono || '',
+      descripcion: contactData.descripcion || '',
+      entidad: answers.entidad || '',
+      encargo: answers.encargo || '',
+      importe: answers.importe || '',
+      procesal: answers.procesal || '',
+      lang: 'es',
+      timestamp: new Date().toISOString(),
+      source: 'perito.barcelona'
+    };
+    done = true;
+    render();
+    /* TODO: Configure endpoint (Netlify Forms / Formspree / Cloudflare Workers) */
+    fetch('/api/contacto', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function(res){
+      if(res.ok) setTimeout(function(){ window.location.href='/gracias/'; }, 2500);
+    }).catch(function(){});
+  }
+
+  document.getElementById('intake-b-back').addEventListener('click', function(){
+    if(current>0){ current--; render(); }
+  });
+
+  render();
+})();
+</script>

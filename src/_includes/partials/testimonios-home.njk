@@ -1,9 +1,9 @@
-<section class="py-24 md:py-32 px-6 md:px-12 lg:px-16 bg-white overflow-hidden isolate relative">
+﻿<section class="py-24 md:py-32 px-6 md:px-12 lg:px-16 bg-white overflow-hidden isolate relative">
     <div class="w-full relative z-10">
         <div class="max-w-4xl mb-20 text-center mx-auto">
             <span class="badge badge-primary mb-6">{{ testimonios.tag | default("Confianza") }}</span>
             <h2 class="section-title mb-6">
-                {{ testimonios.titulo }} <span class="block text-cyan-400 font-normal mt-2">{{ testimonios.highlight }}</span>
+                {{ testimonios.titulo }} <span class="block text-teal-400 font-normal mt-2">{{ testimonios.highlight }}</span>
             </h2>
             <p class="section-subtitle">{{ testimonios.descripcion }}</p>
             
@@ -15,7 +15,7 @@
             
             {% if currentCase and currentCase.exists %}
             <div class="mt-10">
-                <a href="{{ currentCase.url }}" class="inline-flex items-center gap-3 text-slate-900 border-b-2 border-slate-900 pb-1 font-bold hover:text-cyan-600 hover:border-cyan-600 transition-colors">
+                <a href="{{ currentCase.url }}" class="inline-flex items-center gap-3 text-slate-900 border-b-2 border-slate-900 pb-1 font-bold hover:text-teal-600 hover:border-teal-600 transition-colors">
                     {{ currentCase.label }}
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
@@ -27,11 +27,11 @@
             {% for testimonio in testimonios.items %}
             <div class="group relative p-8 md:p-10 bg-slate-50 rounded-[2rem] hover:bg-slate-900 transition-colors duration-500 shadow-soft hover:shadow-hard">
                 <div class="flex items-start gap-6 mb-8">
-                    <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center flex-shrink-0 shadow-sm group-hover:bg-slate-800 transition-colors">
+                    <div class="w-16 h-16 rounded-none bg-white flex items-center justify-center flex-shrink-0 shadow-sm group-hover:bg-slate-800 transition-colors">
                         {% if testimonio.imagen %}
-                            <img src="{{ testimonio.imagen }}" alt="Foto de {{ testimonio.nombre }}" class="w-full h-full object-cover rounded-2xl" loading="lazy">
+                            <img src="{{ testimonio.imagen }}" alt="Foto de {{ testimonio.nombre }}" class="w-full h-full object-cover rounded-none" loading="lazy">
                         {% else %}
-                             <div class="text-slate-400 group-hover:text-cyan-400 transition-colors">
+                             <div class="text-slate-400 group-hover:text-teal-400 transition-colors">
                                 {% if testimonio.tipo == 'empresa' %}{% include "icons/avatar-company.svg" %}{% else %}{% include "icons/avatar-person.svg" %}{% endif %}
                              </div>
                         {% endif %}
@@ -43,12 +43,12 @@
                 </div>
                 
                 <blockquote class="text-slate-600 group-hover:text-slate-300 transition-colors leading-relaxed text-lg mb-8 relative">
-                    <span class="absolute -top-4 -left-2 text-4xl text-cyan-500/20 group-hover:text-cyan-500/40 font-serif">"</span>
+                    <span class="absolute -top-4 -left-2 text-4xl text-teal-500/20 group-hover:text-teal-500/40 font-serif">"</span>
                     {{ testimonio.cita }}
                 </blockquote>
                 
                 <div class="flex items-center gap-2 group-hover:opacity-80 transition-opacity">
-                    <div class="flex text-cyan-400 text-sm">★★★★★</div>
+                    <div class="flex text-teal-400 text-sm">★★★★★</div>
                     <span class="text-slate-400 text-xs font-semibold uppercase tracking-wider">{{ testimonio.fecha }}</span>
                 </div>
             </div>

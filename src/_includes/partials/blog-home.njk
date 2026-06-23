@@ -1,4 +1,4 @@
-<section class="py-20 px-4 md:px-[5%] bg-white relative" itemprop="mentions" itemscope itemtype="https://schema.org/Blog">
+﻿<section class="py-20 px-4 md:px-[5%] bg-white relative" itemprop="mentions" itemscope itemtype="https://schema.org/Blog">
     {# Calcular la fecha del artículo más reciente #}
     {% if posts and posts.length > 0 %}
         {% set sortedPosts = posts | sort(attribute='datePublished') | reverse %}
@@ -15,7 +15,7 @@
                 <span class="badge badge-primary mb-6">BLOG TÉCNICO</span>
                 <h2 class="section-title" itemprop="headline">
                     Artículos y Guías <br>
-                    <span class="text-cyan-400 font-normal">Sobre Peritajes</span>
+                    <span class="text-teal-400 font-normal">Sobre Peritajes</span>
                 </h2>
                 <p class="section-subtitle">
                     Informes técnicos detallados y guías legales sobre construcción y edificación.
@@ -51,10 +51,10 @@
                                     <span class="badge bg-slate-100 text-slate-600 border border-slate-200" itemprop="articleSection">{{ post.category }}</span>
                                     <time datetime="{{ post.datePublished }}T00:00:00+01:00" class="text-xs text-slate-400 font-medium" itemprop="datePublished">{{ post.datePublished }}</time>
                                 </div>
-                                <h3 class="text-xl font-light uppercase text-slate-900 mb-3 line-clamp-2 group-hover:text-cyan-600 transition-colors" itemprop="headline">{{ post.title }}</h3>
+                                <h3 class="text-xl font-light uppercase text-slate-900 mb-3 line-clamp-2 group-hover:text-teal-600 transition-colors" itemprop="headline">{{ post.title }}</h3>
                                 <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow line-clamp-3" itemprop="description">{{ post.excerpt }}</p>
                                 
-                                <div class="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold group mt-auto">
+                                <div class="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold group mt-auto">
                                     Leer artículo
                                     <svg class="w-5 h-5 ml-2 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -69,11 +69,11 @@
 
             {# Card de "Ver más blog" Refactored to Light Theme #}
             <div class="group h-full">
-                <a href="/blog/" class="flex flex-col items-center justify-center bg-slate-50 border border-slate-200 rounded-2xl p-8 text-center h-full hover:border-cyan-200 hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 relative overflow-hidden group/more">
+                <a href="/blog/" class="flex flex-col items-center justify-center bg-slate-50 border border-slate-200 rounded-none p-8 text-center h-full hover:border-teal-200 hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 relative overflow-hidden group/more">
                      <div class="absolute inset-0 bg-grid-pattern opacity-[0.3]"></div>
                      <div class="relative z-10 flex flex-col items-center">
-                        <div class="w-16 h-16 rounded-2xl bg-white border border-slate-100 flex items-center justify-center mb-6 shadow-sm group-hover/more:scale-110 group-hover/more:border-cyan-100 transition-all">
-                            <svg class="w-8 h-8 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div class="w-16 h-16 rounded-none bg-white border border-slate-100 flex items-center justify-center mb-6 shadow-sm group-hover/more:scale-110 group-hover/more:border-teal-100 transition-all">
+                            <svg class="w-8 h-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
                             </svg>
                         </div>

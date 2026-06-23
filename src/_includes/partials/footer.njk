@@ -1,248 +1,115 @@
-{% set currentLanguage = page.lang or lang %} 
+{#
+  footer.njk — Footer del sitio (ink background, 4 columnas)
+  AGENTES §6: WPFooter + schema-business.njk anidado
+  Fuente: SiteChrome.jsx → SiteFooter + FooterCol
+  Datos: metadata.json + {lang}.json — CERO texto hardcodeado
+#}
+{% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
+{% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
+{% set _contactPro = "/contacto/profesional/" if (not lang or lang == "es") else ("/en/contact/professional/" if lang == "en" else "/ca/contacte/professional/") %}
 
-<footer class="relative bg-white pt-24 pb-12 border-t border-slate-100" itemscope itemtype="https://schema.org/WPFooter">
-    <div class="w-full px-6 md:px-12 lg:px-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
-            <!-- Brand Column -->
-            <div class="lg:col-span-1" itemscope itemtype="https://schema.org/Organization">
-                <div class="flex items-center gap-3 mb-6 group hover:-translate-y-0.5 transition-transform duration-300">
-                    <svg class="w-10 h-10 sm:w-11 sm:h-11 text-cyan-500 transition-all duration-300"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 375 375"
-                        preserveAspectRatio="xMidYMid meet">
-                        
-                <defs>
-                    <clipPath id="2717b77dc4">
-                        <path
-                            d="M 223.109375 37.496094 L 314.597656 37.496094 L 314.597656 337.6875 L 223.109375 337.6875 Z M 223.109375 37.496094"
-                            clip-rule="nonzero"
-                        />
-                    </clipPath>
+<div style="background: var(--ink-900); color: var(--bone-100);">
+  <div style="max-width: var(--container-wide); margin: 0 auto; padding: 80px var(--gutter) 48px;">
+    <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px;" class="footer-grid">
 
-                    <clipPath id="9422b2d12e">
-                        <path
-                            d="M 314.597656 67.992188 L 314.597656 337.496094 L 223.109375 307 L 223.109375 37.496094 Z M 314.597656 67.992188"
-                            clip-rule="nonzero"
-                        />
-                    </clipPath>
-
-                    <clipPath id="b07c821656">
-                        <path
-                            d="M 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 L 146.625 249.945312 Z M 146.625 37.496094"
-                            clip-rule="nonzero"
-                        />
-                    </clipPath>
-
-                    <clipPath id="55959a45ff">
-                        <path
-                            d="M 146.625 62.996094 L 146.625 249.945312 L 223.117188 224.449219 L 223.117188 37.496094 Z M 146.625 62.996094"
-                            clip-rule="nonzero"
-                        />
-                    </clipPath>
-
-                    <clipPath id="a83aa56b9b">
-                        <path
-                            d="M 112.101562 111.523438 L 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 Z M 112.101562 111.523438"
-                            clip-rule="nonzero"
-                        />
-                    </clipPath>
-
-                    <clipPath id="1c3af9afe2">
-                        <path
-                            d="M 177.742188 133.402344 L 177.742188 291.402344 L 112.101562 269.523438 L 112.101562 111.523438 Z M 177.742188 133.402344"
-                            clip-rule="nonzero"
-                        />
-                    </clipPath>
-
-                    <clipPath id="a2157cede2">
-                        <path
-                            d="M 60.398438 111.367188 L 112.109375 111.367188 L 112.109375 237.410156 L 60.398438 237.410156 Z M 60.398438 111.367188"
-                            clip-rule="nonzero"
-                        />
-                    </clipPath>
-
-                    <clipPath id="1adccc21aa">
-                        <path
-                            d="M 60.398438 128.75 L 60.398438 237.410156 L 112.109375 220.175781 L 112.109375 111.515625 Z M 60.398438 128.75"
-                            clip-rule="nonzero"
-                        />
-                    </clipPath>
-                </defs>
-
-                <g clip-path="url(#2717b77dc4)">
-                    <g clip-path="url(#9422b2d12e)">
-                        <path
-                            fill="currentColor"
-                            d="M 314.597656 37.496094 L 314.597656 337.332031 L 223.109375 337.332031 L 223.109375 37.496094 Z M 314.597656 37.496094"
-                            fill-opacity="1"
-                            fill-rule="nonzero"
-                        />
-                    </g>
-                </g>
-
-                <g clip-path="url(#b07c821656)">
-                    <g clip-path="url(#55959a45ff)">
-                        <path
-                            fill="currentColor"
-                            d="M 146.625 249.945312 L 146.625 37.496094 L 223.117188 37.496094 L 223.117188 249.945312 Z M 146.625 249.945312"
-                            fill-opacity="1"
-                            fill-rule="nonzero"
-                        />
-                    </g>
-                </g>
-
-                <g clip-path="url(#a83aa56b9b)">
-                    <g clip-path="url(#1c3af9afe2)">
-                        <path
-                            fill="currentColor"
-                            d="M 177.742188 111.523438 L 177.742188 291.515625 L 112.101562 291.515625 L 112.101562 111.523438 Z M 177.742188 111.523438"
-                            fill-opacity="1"
-                            fill-rule="nonzero"
-                        />
-                    </g>
-                </g>
-
-                <g clip-path="url(#a2157cede2)">
-                    <g clip-path="url(#1adccc21aa)">
-                        <path
-                            fill="currentColor"
-                            d="M 60.398438 237.410156 L 60.398438 111.570312 L 112.109375 111.570312 L 112.109375 237.410156 Z M 60.398438 237.410156"
-                            fill-opacity="1"
-                            fill-rule="nonzero"
-                        />
-                    </g>
-                </g>
-            
-                    </svg>
-                    <div class="flex flex-col">
-                        <span class="text-xl font-extrabold uppercase leading-none text-slate-900 tracking-tight" itemprop="name">PERITO</span>
-                        <span class="text-sm font-bold text-cyan-600 tracking-widest uppercase">BARCELONA</span>
-                    </div>
-                </div>
-                
-                <p class="text-slate-500 text-sm leading-relaxed mb-8 max-w-sm" itemprop="description">
-                    {{ metadata.footer[currentLanguage].brand.description }}
-                </p>
-                
-                <!-- Social links -->
-                <div class="flex gap-4" itemprop="sameAs">
-                    <!-- LinkedIn -->
-                    <a href="{{ metadata.contact.social.linkedin }}" class="group" aria-label="LinkedIn" target="_blank" rel="noopener">
-                        <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center transition-all group-hover:bg-[#0077b5] group-hover:text-white text-slate-600">
-                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </div>
-                    </a>
-                    
-                    {% for social in metadata.footer[currentLanguage].brand.social %}
-                    {% if social.icon != 'linkedin' %}
-                    <a href="{{ social.url }}" class="group" aria-label="{{ social.label }}" target="_blank" rel="noopener">
-                        <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center transition-all group-hover:bg-cyan-500 group-hover:text-white text-slate-600">
-                            {% include "icons/" + social.icon + ".svg" ignore missing %}
-                        </div>
-                    </a>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-
-            <!-- Services Column -->
-            <div>
-                <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-6">
-                    {{ metadata.footer[currentLanguage].services.title }}
-                </h5>
-                <ul class="space-y-3">
-                    {% for service in metadata.footer[currentLanguage].services.items %}
-                    <li>
-                        <a href="{{ service.url }}" class="text-slate-500 hover:text-cyan-600 transition-colors text-sm flex items-center group">
-                            <span class="w-1.5 h-1.5 rounded-full bg-slate-200 mr-2 group-hover:bg-cyan-500 transition-colors"></span>
-                            {{ service.title }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-
-            <!-- Contact Column -->
-            <div>
-                <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-6">
-                    {{ metadata.footer[currentLanguage].contact.title }}
-                </h5>
-                <div class="space-y-4">
-                    {% for item in metadata.footer[currentLanguage].contact.items %}
-                    <a href="{{ item.url }}" class="flex items-start gap-3 group">
-                        <div class="w-5 h-5 text-slate-400 group-hover:text-cyan-600 transition-colors mt-0.5">
-                           {% include "icons/" + item.icon + ".svg" ignore missing %}
-                        </div>
-                        <div>
-                            <span class="block text-xs font-semibold text-slate-900 uppercase mb-0.5">{{ item.label }}</span>
-                            <span class="text-sm text-slate-500 group-hover:text-cyan-600 transition-colors">{{ item.value }}</span>
-                        </div>
-                    </a>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <!-- Columna Ubicación -->
-            <div>
-                <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-6">
-                    {{ metadata.footer[currentLanguage].location.title }}
-                </h5>
-                <div class="space-y-6">
-                    {% for office in metadata.footer[currentLanguage].location.offices %}
-                    <div class="flex items-start gap-3 group">
-                        <div class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center flex-shrink-0 text-slate-400 group-hover:text-cyan-600 transition-colors">
-                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <p class="font-medium text-slate-900 text-sm">{{ office.city }}</p>
-                            <p class="text-slate-500 text-sm mt-0.5">{{ office.address }}<br>{{ metadata.contact.address.postalCode }} {{ office.city }}</p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
+      {# ── Col 1: Marca ── #}
+      <div>
+        {# Wordmark stacked (Wordmark.jsx tone=light) #}
+        <span style="display: inline-flex; flex-direction: column; gap: 6px;">
+          <span style="display: inline-flex; align-items: baseline; line-height: 1; font-size: 24px;">
+            <span style="font-family: var(--font-serif); font-weight: 500; color: var(--bone-100); letter-spacing: -0.01em;">perito</span><span style="color: var(--accent); font-family: var(--font-serif); font-weight: 600;">.</span><span style="font-family: var(--font-mono); font-weight: 500; color: var(--text-on-dark-muted); font-size: 14.88px; letter-spacing: 0.01em;">barcelona</span>
+          </span>
+          <span style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-on-dark-muted); font-weight: 500;">Peritaje · Ingeniería forense</span>
+        </span>
+        <p style="margin-top: 22px; max-width: 34ch; color: var(--text-on-dark-muted);
+                  font-size: 0.9rem; line-height: 1.6;">
+          {{ ui.footer.brand_desc }}
+        </p>
+        <div style="display: flex; gap: 8px; margin-top: 22px; flex-wrap: wrap;">
+          {% for cred in metadata.credentials %}
+          <span style="display: inline-flex; align-items: center; font-family: var(--font-mono);
+                       font-weight: var(--fw-medium); letter-spacing: var(--tracking-label);
+                       text-transform: uppercase; line-height: 1.2; border-radius: var(--radius-xs);
+                       font-size: var(--fs-mono-label); padding: 4px 9px;
+                       color: var(--text-on-dark-muted); border: 1px solid var(--ink-700);
+                       background: transparent;">
+            {{ cred.name }}
+          </span>
+          {% endfor %}
         </div>
+      </div>
 
-        <!-- Links legales y copyright -->
-        <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-slate-100">
-            <div class="text-center md:text-left">
-                <p class="text-slate-400 text-xs font-medium">{{ metadata.footer[currentLanguage].bottom.copyright }}</p>
-                <div class="mt-2 text-sm text-slate-400 opacity-70">
-                    🚀 Estrategia Digital por <a href="https://growleads.es" target="_blank" rel="noopener" class="font-bold hover:text-cyan-600 transition-colors">GrowLeads.es</a>
-                </div>
-            </div>
-            <div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
-                {% for link in metadata.footer[currentLanguage].bottom.links %}
-                    <a href="{{ link.url }}" class="text-slate-400 hover:text-cyan-600 text-xs font-medium transition-colors">{{ link.text }}</a>
-                {% endfor %}
-            </div>
+      {# ── Col 2: Dictámenes ── #}
+      {% set fSvcBase = "/informes-pericials/" if lang == "ca" else ("/expert-witness-reports/" if lang == "en" else "/informes-periciales/") %}
+      <div>
+        <div style="font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.14em;
+                    text-transform: uppercase; color: var(--text-on-dark-muted); margin-bottom: 18px;">
+          {{ ui.footer.col_dictamenes }}
         </div>
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px;">
+          {% for svc in metadata.services %}{% if svc.cat == "Patologías" or svc.cat == "Informes periciales" %}
+          {% set fSlug = svc["path_" + lang] if svc["path_" + lang] else svc.path %}
+          {% set fName = svc["name_" + lang] if svc["name_" + lang] else svc.name %}
+          <li><a href="{{ langPrefix + fSvcBase + fSlug + '/' }}"
+                 style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ fName }}</a></li>
+          {% endif %}{% endfor %}
+          <li><a href="{{ langPrefix + fSvcBase }}"
+                 style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.footer.ver_catalogo }}</a></li>
+        </ul>
+      </div>
+
+      {# ── Col 3: Despacho ── #}
+      {% set fConstruccion = "/construccio/" if lang == "ca" else ("/construction-expert/" if lang == "en" else "/construccion/") %}
+      {% set fCasos = "/casos-exit/" if lang == "ca" else ("/success-cases/" if lang == "en" else "/casos-exito/") %}
+      {% set fAbogados = "/collaboracio-advocats/" if lang == "ca" else ("/lawyer-collaboration/" if lang == "en" else "/colaboracion-abogados/") %}
+      {% set fHonorarios = "/honoraris/" if lang == "ca" else ("/fees/" if lang == "en" else "/honorarios-perito-judicial-barcelona/") %}
+      {% set fDespacho = "/el-despatx/" if lang == "ca" else ("/the-firm/" if lang == "en" else "/el-despacho/") %}
+      <div>
+        <div style="font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.14em;
+                    text-transform: uppercase; color: var(--text-on-dark-muted); margin-bottom: 18px;">
+          {{ ui.footer.col_despacho }}
+        </div>
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px;">
+          <li><a href="{{ langPrefix + fConstruccion }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.footer.perito_construccion }}</a></li>
+          <li><a href="{{ langPrefix + fCasos }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.footer.casos_ratificados }}</a></li>
+          <li><a href="{{ langPrefix + fAbogados }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.footer.abogados_seguros }}</a></li>
+          <li><a href="{{ langPrefix + fHonorarios }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.nav.honorarios }}</a></li>
+          <li><a href="{{ langPrefix + fDespacho }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.footer.el_despacho }}</a></li>
+        </ul>
+      </div>
+
+      {# ── Col 4: Contacto ── #}
+      {% set fContacto = _contactPro %}
+      <div>
+        <div style="font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.14em;
+                    text-transform: uppercase; color: var(--text-on-dark-muted); margin-bottom: 18px;">
+          {{ ui.footer.col_contacto }}
+        </div>
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px;">
+          <li><a href="{{ fContacto }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.nav.solicitar }}</a></li>
+          <li><a href="{{ fContacto }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.footer.primera_consulta }}</a></li>
+          <li><a href="tel:{{ metadata.contact.phoneNumber | replace(' ', '') }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ metadata.contact.phoneNumber | replace('+34 ', '') }}</a></li>
+          <li><a href="mailto:{{ metadata.company.email }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ metadata.company.email }}</a></li>
+        </ul>
+      </div>
     </div>
-</footer>
 
-{% css %}
-<style>
-/* Optimizaciones de rendimiento para gradientes y efectos */
-@media (prefers-reduced-motion: no-preference) {
-    .footer-hover-effect {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-}
+    {# ── Bottom bar ── #}
+    {% set fLegal = "/avis-legal/" if lang == "ca" else ("/legal-notice/" if lang == "en" else "/aviso-legal/") %}
+    {% set fPriv = "/privadesa/" if lang == "ca" else ("/privacy/" if lang == "en" else "/privacidad/") %}
+    <div style="margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--ink-700);
+                display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+                font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.08em;
+                text-transform: uppercase; color: var(--text-on-dark-muted);">
+      <span>{{ ui.footer.copyright }}</span>
+      <span>
+        <a href="{{ langPrefix + fLegal }}" style="color: inherit;">{{ ui.footer.aviso_legal }}</a>
+        ·
+        <a href="{{ langPrefix + fPriv }}" style="color: inherit;">{{ ui.footer.privacidad }}</a>
+      </span>
+    </div>
+  </div>
 
-@media (prefers-reduced-motion: reduce) {
-    .footer-hover-effect {
-        transition: none;
-    }
-}
-</style>
-{% endcss %}
-    
+  {# ── Schema de negocio (partial reutilizable) ── #}
+  {% include "partials/schema-business.njk" %}
+</div>

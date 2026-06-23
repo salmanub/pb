@@ -104,12 +104,31 @@
   "contact": {
     "email": "info@perito.barcelona",
     "phoneNumber": "+34 614 194 985",
+    "priceRange": "€€€",
     "address": {
       "street": "Carrer Numància, 95, Local 5, Distrito de Les Corts",
       "city": "Barcelona",
+      "region": "Cataluña",
       "postalCode": "08029",
-      "country": "Spain"
+      "country": "ES"
     },
+    "geo": {
+      "latitude": "41.3808",
+      "longitude": "2.1334"
+    },
+    "openingHours": [
+      {
+        "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "areaServed": [
+      { "name": "Barcelona", "type": "City" },
+      { "name": "Cataluña", "type": "AdministrativeArea" },
+      { "name": "Madrid", "type": "City" },
+      { "name": "España", "type": "Country" }
+    ],
     "social": {
       "linkedin": "https://www.linkedin.com/company/perito-barcelona",
       "twitter": "https://twitter.com/peritobarcelona"
@@ -122,6 +141,10 @@
       "it": "Parla con un perito"
     }
   },
+  "credentials": [
+    { "name": "ECCAT · 16448", "category": "Professional License" },
+    { "name": "Min. Justicia", "category": "Professional License" }
+  ],
   "serviceChild": {
     "es": {
       "sufresProblema": "¿Sufre este problema?",
@@ -196,40 +219,135 @@
   },
   "services": [
     {
-      "name": "Peritaje de Seguros",
-      "path": "peritaje-seguros",
-      "icon": "Shield",
-      "description": "Valoración de daños y siniestros para aseguradoras"
+      "name": "Informe de parte",
+      "name_ca": "Informe de part",
+      "name_en": "Party-appointed report",
+      "path": "informe-de-parte",
+      "path_ca": "informe-de-part",
+      "path_en": "party-appointed-report",
+      "description": "Dictamen técnico de parte sobre edificación y obra civil",
+      "description_ca": "Dictamen tècnic de part sobre edificació i obra civil",
+      "description_en": "Party-appointed technical report on building and civil engineering",
+      "cat": "Informes periciales"
     },
     {
-      "name": "Peritaje Técnico",
-      "path": "peritaje-tecnico",
-      "icon": "Building",
-      "description": "Análisis de estructuras e instalaciones"
+      "name": "Perito judicial",
+      "name_ca": "Perit judicial",
+      "name_en": "Court-appointed expert",
+      "path": "perito-judicial",
+      "path_ca": "perit-judicial",
+      "path_en": "court-appointed-expert",
+      "description": "Designación judicial y ratificación en sala",
+      "description_ca": "Designació judicial i ratificació en sala",
+      "description_en": "Court appointment and courtroom ratification",
+      "cat": "Informes periciales"
     },
     {
-      "name": "Peritaje Judicial",
-      "path": "peritaje-judicial",
-      "icon": "Scale",
-      "description": "Informes periciales para procedimientos judiciales"
+      "name": "Contrainforme pericial",
+      "name_ca": "Contrainforme pericial",
+      "name_en": "Counter-report",
+      "path": "contrainforme-pericial",
+      "path_ca": "contrainforme-pericial",
+      "path_en": "counter-report",
+      "description": "Revisión técnica de dictámenes de la parte contraria",
+      "description_ca": "Revisió tècnica de dictàmens de la part contrària",
+      "description_en": "Technical review of opposing party's expert reports",
+      "cat": "Informes periciales"
     },
     {
-      "name": "Valoraciones",
-      "path": "valoraciones",
-      "icon": "Calculator",
-      "description": "Tasación de inmuebles y activos"
+      "name": "Patologías estructurales",
+      "name_ca": "Patologies estructurals",
+      "name_en": "Structural pathologies",
+      "path": "patologias-estructurales",
+      "path_ca": "patologies-estructurals",
+      "path_en": "structural-pathologies",
+      "description": "Diagnóstico de daños en estructura portante",
+      "description_ca": "Diagnòstic de danys en estructura portant",
+      "description_en": "Load-bearing structure damage diagnosis",
+      "cat": "Patologías"
     },
     {
-      "name": "Patologías Constructivas",
-      "path": "patologias-constructivas",
-      "icon": "Microscope",
-      "description": "Diagnóstico de defectos en edificaciones"
+      "name": "Humedades y filtraciones",
+      "name_ca": "Humitats i filtracions",
+      "name_en": "Moisture and water leakage",
+      "path": "humedades-filtraciones",
+      "path_ca": "humitats-filtracions",
+      "path_en": "moisture-water-leakage",
+      "description": "Origen, causa y cuantificación de humedades",
+      "description_ca": "Origen, causa i quantificació d'humitats",
+      "description_en": "Origin, cause and quantification of moisture",
+      "cat": "Patologías"
     },
     {
-      "name": "ITE y Certificados",
-      "path": "ite-certificados",
-      "icon": "Document",
-      "description": "Inspecciones técnicas y certificaciones"
+      "name": "Vicios ocultos",
+      "name_ca": "Vicis ocults",
+      "name_en": "Hidden defects",
+      "path": "vicios-ocultos",
+      "path_ca": "vicis-ocults",
+      "path_en": "hidden-defects",
+      "description": "Defectos constructivos ocultos en compraventa",
+      "description_ca": "Defectes constructius ocults en compravenda",
+      "description_en": "Hidden construction defects in property sales",
+      "cat": "Patologías"
+    },
+    {
+      "name": "Mala ejecución",
+      "name_ca": "Mala execució",
+      "name_en": "Poor workmanship",
+      "path": "reclamacion-mala-ejecucion",
+      "path_ca": "reclamacio-mala-execucio",
+      "path_en": "poor-execution-claim",
+      "description": "Incumplimientos de proyecto y normativa",
+      "description_ca": "Incompliments de projecte i normativa",
+      "description_en": "Project and regulatory non-compliance",
+      "cat": "Patologías"
+    },
+    {
+      "name": "Naves industriales",
+      "name_ca": "Naus industrials",
+      "name_en": "Industrial warehouses",
+      "path": "naves-industriales",
+      "path_ca": "naus-industrials",
+      "path_en": "industrial-warehouses",
+      "description": "Peritaje especializado en naves y edificación industrial",
+      "description_ca": "Peritatge especialitzat en naus i edificació industrial",
+      "description_en": "Specialised assessment of warehouses and industrial buildings",
+      "cat": "Especialidades"
+    },
+    {
+      "name": "Obra civil e infraestructura",
+      "name_ca": "Obra civil i infraestructura",
+      "name_en": "Civil works and infrastructure",
+      "path": "obras-publicas",
+      "path_ca": "obres-publiques",
+      "path_en": "public-works",
+      "href": "/obras-publicas/",
+      "description": "Viaductos, LCSP, modificados de proyecto y liquidación de contrato",
+      "description_ca": "Viaductes, LCSP, modificats de projecte i liquidació de contracte",
+      "description_en": "Viaducts, public procurement, project modifications and contract settlement",
+      "cat": "Especialidades"
+    },
+    {
+      "name": "Asesoramiento estructural",
+      "name_ca": "Assessorament estructural",
+      "name_en": "Structural consulting",
+      "path": "asesoramiento-estructural",
+      "href": "/asesoramiento-estructural/",
+      "description": "Diagnosis estructural, recalce de cimentaciones y estabilidad",
+      "description_ca": "Diagnosi estructural, recalçament de fonamentacions i estabilitat",
+      "description_en": "Structural diagnosis, underpinning and stability",
+      "cat": "Ingeniería"
+    },
+    {
+      "name": "Refuerzo con fibra de carbono",
+      "name_ca": "Reforç amb fibra de carboni",
+      "name_en": "Carbon fibre reinforcement",
+      "path": "refuerzo-fibra-carbono",
+      "href": "/asesoramiento-estructural/refuerzo-fibra-carbono/",
+      "description": "Consultoría CFRP, dirección técnica y Eurocódigo 2",
+      "description_ca": "Consultoria CFRP, direcció tècnica i Eurocodi 2",
+      "description_en": "CFRP consultancy, technical management and Eurocode 2",
+      "cat": "Ingeniería"
     }
   ],
   "translations": {
@@ -253,17 +371,17 @@
     "es": {
       "btn1": {
         "title": "LLAMAR AHORA",
-        "link": "tel:+34932123456"
+        "link": "tel:+34614194985"
       },
       "btn2": {
         "title": "SOLICITAR PRESUPUESTO",
-        "link": "/contacto/"
+        "link": "/contacto/profesional/"
       }
     },
     "en": {
       "btn1": {
         "title": "CALL NOW",
-        "link": "tel:+34932123456"
+        "link": "tel:+34614194985"
       },
       "btn2": {
         "title": "REQUEST QUOTE",
@@ -273,7 +391,7 @@
     "ca": {
       "btn1": {
         "title": "TRUCAR ARA",
-        "link": "tel:+34932123456"
+        "link": "tel:+34614194985"
       },
       "btn2": {
         "title": "SOL·LICITAR PRESSUPOST",
@@ -283,7 +401,7 @@
     "fr": {
       "btn1": {
         "title": "APPELER MAINTENANT",
-        "link": "tel:+34932123456"
+        "link": "tel:+34614194985"
       },
       "btn2": {
         "title": "DEMANDER UN DEVIS",
@@ -293,7 +411,7 @@
     "it": {
       "btn1": {
         "title": "CHIAMA ORA",
-        "link": "tel:+34932123456"
+        "link": "tel:+34614194985"
       },
       "btn2": {
         "title": "RICHIEDI PREVENTIVO",

@@ -1,100 +1,38 @@
-{% extends "layouts/base.njk" %}
+{#
+  legal.njk — Layout para páginas legales (aviso legal, privacidad, cookies)
+  Diseño sobrio con el DS vanilla CSS, sin Tailwind
+#}
+---
+layout: layouts/base.njk
+---
+{% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
 
-{% block content %}
-<main itemscope itemtype="https://schema.org/WebPage">
+{# Hero legal #}
+<section style="background: var(--surface-ink); color: #fff; padding: clamp(48px,8vw,80px) var(--gutter) clamp(36px,6vw,56px);">
+<div style="max-width: var(--container-wide); margin: 0 auto;">
+<h1 style="font-family: var(--font-serif); font-size: var(--fs-display-1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: #fff; margin: 0;">{{ hero.title if hero and hero.title else title }}</h1>
+{% if hero and hero.subtitle %}<p style="margin-top: 14px; font-size: var(--fs-lede); color: var(--accent-light, #7ec8a0); line-height: 1.5;">{{ hero.subtitle }}</p>{% endif %}
+{% if hero and hero.lastUpdated %}<p style="margin-top: 20px; font-size: 0.78rem; color: rgba(255,255,255,0.45); display: flex; align-items: center; gap: 6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>{{ hero.lastUpdated }}</p>{% endif %}
+</div>
+</section>
 
-    {# --- INICIO HERO PARA PÁGINAS LEGALES --- #}
-    {# Hero con estilo similar a service-child.njk, pero más sobrio para contenido legal #}
-    <header class="relative mt-[70px] md:mt-[90px] lg:mt-[120px] min-h-[320px] bg-gradient-to-br from-[#0B1030] via-[#141d3d] to-[#1a2452] text-white overflow-hidden isolate">
-        <!-- Efectos decorativos modernos -->
-        <div class="absolute inset-0">
-            <!-- Patrón de puntos con mejor contraste -->
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:48px_48px] opacity-25"></div>
-            <!-- Gradientes suaves -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-cyan-400/5"></div>
-            <!-- Efecto de luz moderna - más sutil para contenido legal -->
-            <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-cyan-400/15 blur-[100px] rounded-full"></div>
-            <!-- Velo sutil para mejorar legibilidad -->
-            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/10 to-slate-900/20 mix-blend-overlay"></div>
-        </div>
-        
-        <div class="relative z-10 w-full px-6 md:px-12 lg:px-16">
-            <div class="py-16 lg:py-20 max-w-4xl">
-                {% if hero and hero.title %}
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight" itemprop="headline">{{ hero.title }}</h1>
-                {% else %}
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight" itemprop="headline">{{ title }}</h1>
-                {% endif %}
-                
-                {% if hero and hero.subtitle %}
-                    <p class="mt-4 text-lg md:text-xl text-cyan-300">{{ hero.subtitle }}</p>
-                {% endif %}
-                
-                {% if hero and hero.lastUpdated %}
-                    <p class="mt-8 text-sm text-white/60 flex items-center">
-                        <svg class="w-4 h-4 mr-2 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                        </svg>
-                        {{ hero.lastUpdated }}
-                    </p>
-                {% endif %}
-            </div>
-        </div>
-    </header>
-    {# --- FIN HERO PARA PÁGINAS LEGALES --- #}
+{# Contenido legal #}
+<article style="max-width: 720px; margin: 0 auto; padding: clamp(32px,6vw,64px) var(--gutter);">
+<div class="legal-prose">
+{{ content | safe }}
+</div>
+</article>
 
-    {# --- INICIO CONTENIDO PRINCIPAL DEL TEXTO LEGAL --- #}
-    <article class="py-16 lg:py-24 bg-white" itemprop="mainContentOfPage">
-        <div class="w-full px-6 md:px-12 lg:px-16">
-            {# Contenedor centrado y con ancho máximo para facilitar la lectura #}
-            <div class="prose prose-lg max-w-4xl mx-auto">
-                {{ content | safe }}
-            </div>
-        </div>
-    </article>
-    {# --- FIN CONTENIDO PRINCIPAL --- #}
-
-</main>
-{% endblock %}
-
-
-{% block pageStyles %}
-{# Heredamos los estilos principales y añadimos estilos específicos para el 'prose' de textos legales #}
-{% set baseCss %} {% include "dist/assets/styles/index.css" %} {% endset %}
 <style>
-{{ baseCss | safe }}
-
-.prose {
-    @apply text-slate-700 max-w-none text-base leading-relaxed;
-}
-
-.prose h3 {
-    @apply text-xl font-bold text-slate-800 mt-10 mb-4 border-b border-slate-200 pb-2;
-}
-
-.prose h4 {
-    @apply text-lg font-semibold text-slate-700 mt-8 mb-3;
-}
-
-.prose p {
-    @apply mb-4;
-}
-
-.prose ul {
-    @apply list-disc pl-6 space-y-2 my-6;
-}
-
-.prose ol {
-    @apply list-decimal pl-6 space-y-2 my-6;
-}
-
-.prose a {
-    @apply text-cyan-600 hover:text-cyan-700 underline;
-}
-
-.prose strong {
-    @apply font-semibold text-slate-800;
-}
-
+.legal-prose { font-family: var(--font-sans); font-size: 1rem; line-height: 1.75; color: var(--text-body); }
+.legal-prose h2 { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 600; color: var(--text-strong); margin: 40px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border-subtle); }
+.legal-prose h3 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; color: var(--text-strong); margin: 36px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border-hairline); }
+.legal-prose h4 { font-family: var(--font-sans); font-size: 1rem; font-weight: 600; color: var(--text-strong); margin: 28px 0 8px; }
+.legal-prose p { margin: 0 0 16px; }
+.legal-prose ul, .legal-prose ol { padding-left: 24px; margin: 12px 0 20px; }
+.legal-prose li { margin-bottom: 8px; }
+.legal-prose a { color: var(--text-accent); text-decoration: underline; }
+.legal-prose a:hover { color: var(--accent); }
+.legal-prose strong { font-weight: 600; color: var(--text-strong); }
+.legal-prose code { font-family: var(--font-mono); font-size: 0.88em; background: var(--surface-tint); padding: 2px 6px; border-radius: 3px; }
 </style>
-{% endblock %}

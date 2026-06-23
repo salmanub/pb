@@ -1,0 +1,48 @@
+{
+  "title": "Dictámenes de alta cuantía resueltos",
+  "description": "Selección de casos en edificación, obra civil y siniestros industriales. Importes y detalles anonimizados para preservar la confidencialidad de las partes.",
+  "items": [
+    {
+      "tag": "Siniestro de incendio",
+      "amount": "€1,2 M",
+      "t": "Incendio estructural en nave logística",
+      "d": "Causa, origen y extensión en 8.000 m². Cuantificación para aseguradora nacional. Ratificado en juzgado.",
+      "pills": ["Aseguradora", "90 días", "Ratificado"]
+    },
+    {
+      "tag": "Obra civil",
+      "amount": "€2,8 M",
+      "t": "Asiento diferencial en puente de vía rápida",
+      "d": "Patologías en hormigón pretensado. Contencioso-administrativo contra constructora.",
+      "pills": ["AAPP", "Litigio C-A", "Barcelona"]
+    },
+    {
+      "tag": "Vicios ocultos",
+      "amount": "€680 K",
+      "t": "Patologías de envolvente en 120 viviendas",
+      "d": "Fachada ventilada, cubierta y carpinterías. Comunidad contra promotora. Resolución favorable.",
+      "pills": ["Comunidad", "2024", "Barcelona"]
+    },
+    {
+      "tag": "Humedades",
+      "amount": "€340 K",
+      "t": "Filtración por cubierta en plurifamiliar",
+      "d": "Termografía. CTE DB-HS. Reparación íntegra a cargo de la constructora.",
+      "pills": ["Extrajudicial", "Granollers"]
+    },
+    {
+      "tag": "Mala ejecución",
+      "amount": "€430 K",
+      "t": "Incumplimientos en reforma de local",
+      "d": "Partidas no ejecutadas y materiales inferiores a memoria de calidades.",
+      "pills": ["Despacho", "Mediación", "BCN"]
+    },
+    {
+      "tag": "Contrainforme",
+      "amount": "€920 K",
+      "t": "Refutación en colapso de forjado",
+      "d": "Carencias metodológicas en el informe de la aseguradora. Ratificación en juicio oral.",
+      "pills": ["Juicio oral", "Valencia"]
+    }
+  ]
+}

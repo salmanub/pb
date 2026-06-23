@@ -1,4 +1,4 @@
-<section id="proceso" class="relative py-28 md:py-36 px-6 md:px-12 lg:px-16 bg-slate-50 overflow-hidden isolate">
+﻿<section id="proceso" class="relative py-28 md:py-36 px-6 md:px-12 lg:px-16 bg-slate-50 overflow-hidden isolate">
     <!-- Decorative overlays -->
     <div class="absolute inset-0">
         <div class="absolute inset-0 bg-grid-pattern opacity-[0.4]"></div>
@@ -10,7 +10,7 @@
              <span class="badge badge-primary mb-6">Metodología Perito</span>
             <h2 class="text-4xl md:text-5xl lg:text-7xl font-light uppercase text-slate-900 mb-8 leading-[0.95] tracking-tight">
                 {{ proceso.titulo }} <br>
-                <strong class="text-cyan-400 font-normal block mt-2">{{ proceso.highlight }}</strong>
+                <strong class="text-teal-400 font-normal block mt-2">{{ proceso.highlight }}</strong>
             </h2>
             <p class="section-subtitle mx-auto max-w-2xl">{{ proceso.descripcion }}</p>
         </header>
@@ -19,21 +19,21 @@
             {% for paso in proceso.pasos %}
             <div class="group/card relative card-avant p-10 animate-in fade-in slide-in-from-bottom-4" style="animation-delay: {{ loop.index * 150 }}ms">
                 <!-- Hover gradient -->
-                <div class="absolute inset-0 bg-gradient-to-br from-cyan-50/50 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute inset-0 bg-gradient-to-br from-teal-50/50 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
                 
                 <div class="relative z-10">
                     <div class="flex items-start justify-between mb-8">
-                        <span class="w-16 h-16 flex items-center justify-center rounded-2xl bg-slate-50 text-cyan-600 group-hover/card:scale-110 group-hover/card:bg-cyan-500 group-hover/card:text-white transition-all duration-500 shadow-sm border border-slate-100">
+                        <span class="w-16 h-16 flex items-center justify-center rounded-none bg-slate-50 text-teal-600 group-hover/card:scale-110 group-hover/card:bg-teal-500 group-hover/card:text-white transition-all duration-500 shadow-sm border border-slate-100">
                             {% include "icons/" + paso.icon + ".svg" ignore missing %}
                         </span>
-                        <div class="text-6xl font-black text-slate-100 group-hover/card:text-cyan-50 transition-colors">{{ paso.numero }}</div>
+                        <div class="text-6xl font-black text-slate-100 group-hover/card:text-teal-50 transition-colors">{{ paso.numero }}</div>
                     </div>
-                    <h3 class="text-2xl font-light uppercase text-slate-900 mb-4 group-hover/card:text-cyan-700 transition-colors">{{ paso.titulo }}</h3>
+                    <h3 class="text-2xl font-light uppercase text-slate-900 mb-4 group-hover/card:text-teal-700 transition-colors">{{ paso.titulo }}</h3>
                     <p class="text-slate-500 leading-relaxed mb-8 font-light text-lg min-h-[5rem]">{{ paso.descripcion }}</p>
-                    <div class="h-px w-full bg-slate-100 mb-6 group-hover/card:bg-cyan-200 transition-colors"></div>
+                    <div class="h-px w-full bg-slate-100 mb-6 group-hover/card:bg-teal-200 transition-colors"></div>
                     <div class="flex items-center justify-between">
-                        <span class="text-cyan-600/80 text-sm font-bold uppercase tracking-wider">{{ paso.tiempoLabel }}:</span>
-                        <span class="text-slate-700 font-bold bg-slate-100 px-3 py-1 rounded-full text-sm group-hover/card:bg-white">{{ paso.tiempo }}</span>
+                        <span class="text-teal-600/80 text-sm font-bold uppercase tracking-wider">{{ paso.tiempoLabel }}:</span>
+                        <span class="text-slate-700 font-bold bg-slate-100 px-3 py-1 rounded-none text-sm group-hover/card:bg-white">{{ paso.tiempo }}</span>
                     </div>
                 </div>
             </div>
@@ -42,9 +42,9 @@
 
         <!-- CTA Button -->
         <div class="text-center animate-in fade-in zoom-in duration-500 delay-500 relative z-20">
-            <a href="{{ proceso.cta.url }}" class="btn-primary !px-12 !py-6 !text-lg !rounded-full group">
+            <a href="{{ proceso.cta.url }}" class="btn-primary !px-12 !py-6 !text-lg !rounded-none group">
                 {{ proceso.cta.texto }}
-                <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white group-hover:rotate-45 transition-transform duration-300">
+                <div class="w-8 h-8 rounded-none bg-white/20 flex items-center justify-center text-white group-hover:rotate-45 transition-transform duration-300">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                     </svg>

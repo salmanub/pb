@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "construccion": "Construction Expert",
+    "dictamenes": "Expert Reports",
+    "casos": "Cases",
+    "abogados": "Lawyers·Insurers",
+    "honorarios": "Fees",
+    "despacho": "The Firm",
+    "contacto": "Contact",
+    "solicitar": "Request a report",
+    "menu": "Menu"
+  },
+  "footer": {
+    "col_dictamenes": "Expert Reports",
+    "col_despacho": "The Firm",
+    "col_contacto": "Contact",
+    "brand_desc": "Expert witness reports on building and civil engineering. Based in Barcelona, operating throughout Spain.",
+    "copyright": "© 2026 Albert Vilardell Serra · Expert witness",
+    "aviso_legal": "Legal notice",
+    "privacidad": "Privacy",
+    "cookies": "Cookies",
+    "ver_catalogo": "View services",
+    "primera_consulta": "Free consultation",
+    "casos_ratificados": "Ratified cases",
+    "perito_construccion": "Construction Expert",
+    "abogados_seguros": "Lawyers and Insurers",
+    "el_despacho": "The Firm"
+  },
+  "breadcrumb": {
+    "inicio": "Home",
+    "aria": "You are here"
+  },
+  "form": {
+    "titulo": "Request a report",
+    "subtitulo": "Free preliminary consultation. Response within 24 business hours.",
+    "nombre": "Full name",
+    "email": "Professional email",
+    "telefono": "Phone (optional)",
+    "asunto": "Report type",
+    "mensaje": "Briefly describe your case",
+    "privacidad": "I have read and accept the",
+    "politica_privacidad": "Privacy Policy",
+    "enviar": "Send enquiry",
+    "siguiente": "Next",
+    "anterior": "Back",
+    "step": "Step",
+    "de": "of",
+    "opciones": {
+      "vicios": "Hidden defects",
+      "humedades": "Damp and leaks",
+      "patologias": "Structural pathologies",
+      "mala_ejecucion": "Poor workmanship",
+      "contrainforme": "Counter-report",
+      "otro": "Other report"
+    }
+  },
+  "qual": {
+    "label": "Case qualification",
+    "consulta_sin_coste": "Free consultation",
+    "consultar_caso": "Discuss your case",
+    "nota": "Court ratification included · All Spain"
+  },
+  "schema": {
+    "services_offered": "Expert witness services offered",
+    "areas_served": "Areas of operation"
+  }
+}

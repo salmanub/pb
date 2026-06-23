@@ -1,18 +1,43 @@
+{# faqs.njk — FAQ accordion (Design System)
+   Ref: DS §06 · Preguntas frecuentes
+   Data: frontmatter.faqs { title, items[{ question, answer }] }
+   Used by: service-child.njk, service-pillar.njk
+#}
 {% if faqs %}
-<div class="mt-16 mb-16 max-w-4xl mx-auto" itemscope itemtype="https://schema.org/FAQPage">
-  <h2 class="text-[2rem] md:text-[2.5rem] font-light text-slate-800 mb-8 text-center">{{ faqs.title | default("Preguntas Frecuentes") }}</h2>
-  
-  <div class="space-y-6">
-    {% for item in faqs.items %}
-    <div class="bg-slate-50 p-6 rounded-lg border border-slate-100 hover:shadow-md transition-shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <h3 class="text-xl font-semibold text-slate-900 mb-3" itemprop="name">{{ item.question }}</h3>
-      <div class="text-slate-600 prose prose-slate" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <div itemprop="text">
-          {{ item.answer | markdown | safe }}
-        </div>
-      </div>
-    </div>
-    {% endfor %}
+{% set faqEyebrow = "Preguntes freqüents" if lang == "ca" else ("Frequently asked questions" if lang == "en" else "Preguntas frecuentes") %}
+{% set faqTitle = faqs.title | default("Antes d'encarregar un dictamen" if lang == "ca" else ("Before commissioning a report" if lang == "en" else "Antes de encargar un dictamen")) %}
+<div style="margin-top: clamp(48px,6vw,72px); padding-top: clamp(28px,4vw,40px); border-top: 1px solid var(--border-hairline);"
+     itemscope itemtype="https://schema.org/FAQPage">
+  {# Eyebrow #}
+  <div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono);
+              font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label);
+              text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 18px;">
+    <span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span>
+    § 06 · {{ faqEyebrow }}
   </div>
+  {# Title #}
+  <h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400;
+             line-height: var(--lh-display); letter-spacing: var(--tracking-tight);
+             color: var(--text-strong); margin: 0 0 32px;">{{ faqTitle }}</h2>
+  {# Items #}
+  {% for item in faqs.items %}
+  <details style="border-top: 1px solid var(--border-hairline);" class="ds-faq"
+           itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
+           {{ 'open' if loop.first }}>
+    <summary style="padding: 18px 0; cursor: pointer; display: grid; grid-template-columns: 36px 1fr 24px;
+                    gap: 14px; align-items: center; list-style: none;">
+      <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-faint);
+                   letter-spacing: 0.06em; font-variant-numeric: tabular-nums;">{{ '%02d' | format(loop.index) }}</span>
+      <span itemprop="name" style="font-family: var(--font-serif); font-size: 1.05rem;
+                   font-weight: 500; color: var(--text-strong); line-height: 1.35;">{{ item.question }}</span>
+      <span class="ds-faq-icon" style="color: var(--text-faint); font-size: 1.1rem; font-weight: 300;
+                   display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">+</span>
+    </summary>
+    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"
+         style="padding: 0 0 22px 50px; font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; max-width: 58ch;">
+      <div itemprop="text">{{ item.answer | markdown | safe }}</div>
+    </div>
+  </details>
+  {% endfor %}
 </div>
 {% endif %}

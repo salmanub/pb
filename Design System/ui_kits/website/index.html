@@ -1,0 +1,148 @@
+<!-- @dsCard group="Website" viewport="1320x800" name="perito.barcelona — sitio web" subtitle="Sitio completo: home, construcción, dictámenes (8), casos, B2B, honorarios, despacho, contacto" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>perito.barcelona · Ingeniería forense</title>
+<link rel="stylesheet" href="../../styles.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--surface-page); overflow-x: hidden; }
+  a { text-decoration: none; }
+  @keyframes om-fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes om-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @media (max-width: 1024px) {
+    .stats-grid, .three-col, .four-col, .footer-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .method-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .method-cell:nth-child(2) { border-right: none !important; }
+  }
+  @media (max-width: 860px) {
+    .site-nav { display: none !important; }
+    .hero-grid, .two-col, .svc-hero { grid-template-columns: 1fr !important; }
+    .hero-aside { max-width: 460px; }
+  }
+  @media (max-width: 600px) {
+    .stats-grid, .three-col, .four-col, .footer-grid, .method-grid, .form-row { grid-template-columns: 1fr !important; }
+    .method-cell { border-right: none !important; border-bottom: 1px solid var(--border-hairline); padding-bottom: 24px; }
+    .site-phone { display: none !important; }
+  }
+  @media (max-width: 980px) {
+    .site-nav { display: none !important; }
+    .site-burger { display: inline-flex !important; }
+    .site-mobile { display: flex !important; }
+  }
+  @media (max-width: 1024px) { .site-three { grid-template-columns: repeat(2, 1fr) !important; } }
+  @media (max-width: 860px) {
+    .site-two, .pagehero-grid { grid-template-columns: 1fr !important; }
+    .pagehero-seal { display: none !important; }
+    .svc-row { grid-template-columns: 1fr 28px !important; }
+    .svc-norm { display: none !important; }
+  }
+  @media (max-width: 600px) { .site-three { grid-template-columns: 1fr !important; } }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="SiteChrome.jsx"></script>
+<script type="text/babel" src="SiteData.jsx"></script>
+<script type="text/babel" src="HomePage.jsx"></script>
+<script type="text/babel" src="SitePages.jsx"></script>
+<script type="text/babel" data-presets="react">
+const { useState, useEffect } = React;
+const DSNS = window.VilardellPeritajeForenseDesignSystem_58f0b0;
+
+const INTAKE_STEPS = [
+  { key: 'problema', eyebrow: '§ 01 · Tu situación', type: 'choice',
+    question: '¿Qué está pasando en tu inmueble?',
+    helper: 'Elige lo que más se acerque. Después podrás detallarlo.',
+    options: ['Humedades o filtraciones', 'Grietas, fisuras o movimientos', 'Vicios ocultos tras comprar', 'Reforma u obra mal ejecutada', 'Otro problema constructivo'] },
+  { key: 'inmueble', eyebrow: '§ 02 · El inmueble', type: 'choice',
+    question: '¿De qué tipo de inmueble hablamos?',
+    options: ['Vivienda particular', 'Comunidad de propietarios', 'Local o nave', 'Edificio u obra pública'] },
+  { key: 'antiguedad', eyebrow: '§ 03 · Desde cuándo', type: 'choice',
+    question: '¿Desde cuándo aparece el problema?',
+    helper: 'Nos ayuda a valorar plazos de garantía y responsabilidad.',
+    options: ['Menos de 6 meses', 'Entre 6 meses y 2 años', 'Más de 2 años', 'No lo sé con certeza'] },
+  { key: 'contacto', eyebrow: '§ 04 · Contacto', type: 'fields',
+    question: '¿Cómo te contactamos?',
+    helper: 'Una primera consulta sin coste. Respondemos en 24 h laborables.',
+    fields: [
+      { name: 'nombre', label: 'Nombre y apellidos', placeholder: 'Tu nombre' },
+      { name: 'poblacion', label: 'Población del inmueble', placeholder: 'Ej. Barcelona' },
+      { name: 'email', label: 'Correo electrónico', type: 'email', placeholder: 'nombre@correo.com' },
+      { name: 'telefono', label: 'Teléfono', type: 'tel', optional: true, placeholder: '+34 ___ ___ ___' },
+      { name: 'detalle', label: 'Cuéntanoslo en una línea', multiline: true, rows: 3, optional: true, placeholder: 'Lo que creas relevante…' },
+    ] },
+];
+
+function Intake({ open, onClose }) {
+  useEffect(() => {
+    function onKey(e) { if (e.key === 'Escape') onClose(); }
+    if (open) { document.addEventListener('keydown', onKey); document.body.style.overflow = 'hidden'; }
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
+  }, [open]);
+  if (!open) return null;
+  const { StepForm } = DSNS;
+  return (
+    <div onClick={onClose} style={{
+      position: 'fixed', inset: 0, zIndex: 100, background: 'rgba(28,26,23,0.55)',
+      backdropFilter: 'blur(3px)', display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
+      padding: '6vh 20px 48px', overflowY: 'auto', animation: 'om-fade var(--dur-base) var(--ease-out)',
+    }}>
+      <div onClick={(e) => e.stopPropagation()} style={{
+        width: '100%', maxWidth: '560px', boxShadow: 'var(--shadow-overlay)', borderRadius: 'var(--radius-md)',
+        animation: 'om-rise var(--dur-slow) var(--ease-out)',
+      }}>
+        <StepForm onClose={onClose} title="Cuéntanos tu caso" steps={INTAKE_STEPS} />
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [page, setPage] = useState('home');
+  const [target, setTarget] = useState(null);
+  const [intake, setIntake] = useState(false);
+
+  function go(dest, hash) {
+    if (dest === 'intake') { setIntake(true); return; }
+    setPage(dest);
+    setTarget({ h: hash || null, n: Date.now() });
+  }
+
+  useEffect(() => {
+    if (!target) return;
+    const id = requestAnimationFrame(() => {
+      if (target.h) {
+        const el = document.getElementById(target.h);
+        if (el) { window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 84, behavior: 'smooth' }); return; }
+      }
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    });
+    return () => cancelAnimationFrame(id);
+  }, [target]);
+
+  const open = () => setIntake(true);
+  const svc = page.startsWith('svc-') ? (window.SVCS || []).find((s) => s.slug === page.slice(4)) : null;
+  const PageMap = { home: window.HomePage, construccion: window.Construccion, informes: window.Informes, casos: window.Casos, abogados: window.Abogados, honorarios: window.Honorarios, despacho: window.Despacho, contacto: window.Contacto };
+  const Page = PageMap[page] || window.HomePage;
+  return (
+    <React.Fragment>
+      <window.SiteHeader go={go} active={page} />
+      <main>{svc ? <window.Svc svc={svc} go={go} open={open} /> : <Page go={go} open={open} />}</main>
+      <window.SiteFooter go={go} />
+      <Intake open={intake} onClose={() => setIntake(false)} />
+    </React.Fragment>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

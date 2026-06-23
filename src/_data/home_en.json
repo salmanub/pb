@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "eyebrow": "Forensic Engineering · Expert Witness · Barcelona",
+    "h1": "Civil Engineering<br>& Building Expert Reports in Barcelona",
+    "lede": "Forensic engineering firm with chartered technical direction (ECCAT No. 16448) and court-appointed expert witness registration with the Spanish Ministry of Justice. As <a href='/en/construction-expert/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">Construction Expert Witnesses</a>, we deliver the technical rigour that courts demand. Meet <a href='/en/the-firm/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">the firm</a>.",
+    "cta_primary": "Request a report",
+    "cta_secondary": "I have a problem with my property",
+    "badge_label": "Registered · Min. of Justice",
+    "badge_text": "Court-appointed and insurance expert (IRD)"
+  },
+  "stats": [
+    { "value": "€2.8 M", "label": "Largest single-report amount assessed", "source": "FILE 22-074", "accent": true },
+    { "value": "340+", "label": "Reports on building and civil engineering", "source": "2009 – 2025" },
+    { "value": "100 %", "label": "Reports ratified in court", "source": "No expert challenges" },
+    { "value": "16 years", "label": "ECCAT Member No. 16448", "source": "Civil engineering" }
+  ],
+  "audience": {
+    "eyebrow": "§ 01 · Who we serve",
+    "title": "Professional and private clients",
+    "lede": "Whether you are managing a multi-million claim or need to document a defect in your home, the expert report follows the same methodology.",
+    "cards": [
+      {
+        "icon": "landmark",
+        "tag": "Insurers · Law firms · Public bodies",
+        "title": "For law firms, insurers and public authorities",
+        "points": [
+          "Defensible reports against opposing expert evidence",
+          "Rigorous quantification of damage and liability",
+          "Court ratification and appearance"
+        ],
+        "cta": "Commission a report",
+        "tone": "ink"
+      },
+      {
+        "icon": "home",
+        "tag": "Homeowners · Communities",
+        "title": "For homeowners and communities",
+        "points": [
+          "We explain what's happening and your options",
+          "Fixed-price quote after a free initial consultation",
+          "A report that works before your insurer or the court"
+        ],
+        "cta": "Tell us your case",
+        "tone": "paper"
+      }
+    ]
+  },
+  "services_section": {
+    "eyebrow": "§ 02 · Expert services",
+    "title": "Each pathology, a specific report",
+    "lede": "Six areas of practice. All result in a traceable report grounded in regulation and defensible in court.",
+    "ver_servicio": "View service",
+    "servicio_label": "Service",
+    "items": [
+      { "code": "2.1", "slug": "patologias-estructurales", "icon": "building-2", "t": "Building pathology", "d": "Cracks, settlements and structural damage. Cause, scope and liability." },
+      { "code": "2.2", "slug": "vicios-ocultos", "icon": "house", "t": "Hidden defects", "d": "Non-apparent defects in property sales or after new-build handover." },
+      { "code": "2.3", "slug": "humedades-filtraciones", "icon": "droplets", "t": "Damp and leaks", "d": "The real source of moisture, not just the symptom. Instrumental diagnosis and costed solution." },
+      { "code": "2.4", "slug": "obras-publicas", "href": "/obras-publicas/", "icon": "hard-hat", "t": "Civil works & infrastructure", "d": "Reports on bridges, masonry structures, project modifications and public procurement compliance." },
+      { "code": "2.5", "slug": "reclamacion-mala-ejecucion", "icon": "scale", "t": "Damage assessment", "d": "Expert quantification of repair costs and loss for claims or litigation." },
+      { "code": "2.6", "slug": "contrainforme-pericial", "icon": "file-check-2", "t": "Counter-report & ratification", "d": "Critical review of opposing expert reports and court appearance." }
+    ]
+  },
+  "method": {
+    "eyebrow": "§ 03 · Expert method",
+    "title": "From clue to evidence",
+    "lede": "A documented procedure at every stage. Traceability is what makes a report stand up.",
+    "steps": [
+      { "n": "01", "t": "Inspection", "d": "Documented site visit: measurements, tests and dated photographic record." },
+      { "n": "02", "t": "Analysis", "d": "Root-cause diagnosis under applicable standards (CTE, LOE, EHE) and best practice." },
+      { "n": "03", "t": "Report", "d": "Traceable report with reasoned conclusions and economic damage assessment." },
+      { "n": "04", "t": "Ratification", "d": "Defence of the report in court, before the judge and opposing experts." }
+    ]
+  },
+  "cases_section": {
+    "eyebrow": "§ 04 · Ratified cases",
+    "title": "The evidence, in verifiable figures",
+    "lede": "A selection of recent files. Amounts refer to the assessed damage; file numbers are real references in the firm's internal system.",
+    "items": [
+      { "exp": "FILE 22-074", "loc": "Barcelona", "t": "Structural defects in 84-unit residential development", "amount": "€2.84 M", "tag": "Ratified" },
+      { "exp": "FILE 23-119", "loc": "Girona", "t": "Roof leaks in public facility", "amount": "€640 K", "tag": "Settlement" },
+      { "exp": "FILE 24-058", "loc": "Tarragona", "t": "Hidden defects after single-family home sale", "amount": "€118 K", "tag": "Ratified" }
+    ]
+  },
+  "about_section": {
+    "eyebrow": "§ 05 · The expert",
+    "title": "Forensic engineering and courtroom experience",
+    "lede": "A technical practice led by a chartered civil engineer (ECCAT No. 16448), court-appointed expert witness registered with the Ministry of Justice and insurance expert (IRD). Seventeen years of forensic engineering experience, with over 340 court ratifications.",
+    "tags": ["Civil engineer · ECCAT 16448", "Court expert · Min. of Justice", "Insurance expert · IRD", "Operating throughout Spain"],
+    "quote": "\"My job is to document the cause in a way that the judge can verify it independently.\""
+  },
+  "faq": {
+    "eyebrow": "§ 06 · Frequently asked questions",
+    "title": "Before commissioning a report",
+    "items": [
+      { "q": "How much does an expert report cost?", "a": "It depends on the scope and complexity. After a free initial consultation you will receive a fixed written quote before any work begins." },
+      { "q": "Does the report work in court or only with my insurer?", "a": "Both. Every report is drafted under the Spanish Civil Procedure Act and applicable technical standards, with the traceability required for judicial ratification." },
+      { "q": "How long does it take from first contact?", "a": "Between two and four weeks from inspection, depending on the case. Deadlines are always agreed in writing beforehand." },
+      { "q": "Do you operate outside Catalonia?", "a": "Yes. The firm is based in Barcelona but we operate throughout Spain, attending in person for inspections and court appearances." }
+    ]
+  },
+  "contact_section": {
+    "eyebrow": "§ 07 · First contact",
+    "title": "Tell us about your case",
+    "lede": "A free initial consultation to advise whether you need a report and its scope. We respond within 24 business hours.",
+    "field_nombre": "Name",
+    "field_soy": "I am",
+    "field_email": "Email address",
+    "field_caso": "The case",
+    "field_caso_hint": "Property location and issue, in one line.",
+    "placeholder_nombre": "Full name",
+    "placeholder_soy": "Homeowner / Law firm / Insurer",
+    "placeholder_email": "name@company.com",
+    "placeholder_caso": "Persistent damp in…",
+    "submit": "Send enquiry",
+    "success_title": "Enquiry received",
+    "success_text": "We will respond within 24 business hours."
+  }
+}

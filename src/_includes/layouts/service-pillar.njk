@@ -44,7 +44,7 @@
                     <div class="space-y-6">
                         <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light text-slate-900 leading-[0.95] tracking-tight uppercase" itemprop="headline">
                             <span class="text-slate-900 font-light">{{ hero.title }}</span>
-                            <strong class="block text-cyan-400 font-normal mt-2">{{ hero.strong }}</strong>
+                            <strong class="block text-teal-400 font-normal mt-2">{{ hero.strong }}</strong>
                             <span class="block text-[0.45em] text-slate-500 font-normal mt-6 uppercase tracking-wider">{{ hero.subtitle }}</span>
                         </h1>
                         <p class="text-xl text-slate-600 mt-8 font-light" itemprop="description">{{ hero.description }}</p>
@@ -61,15 +61,15 @@
 
                 <!-- Columna derecha - Imagen con efectos mejorados -->
                 <div class="lg:col-span-5">
-                    <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-slate-200/50 relative border border-slate-100">
+                    <div class="aspect-video rounded-none overflow-hidden shadow-2xl shadow-slate-200/50 relative border border-slate-100">
                         <!-- Imagen con clip-path y hover suave -->
                         <div class="service-pillar-image-wrapper w-full h-full bg-white">
-                            {% image hero.image, 
-                                    hero.alt or hero.title or title, 
-                                    "(min-width: 1200px) 40vw, (min-width: 768px) 50vw, 100vw", 
-                                    "eager", 
-                                    "high" 
-                            %}
+                            <img src="/assets/images/{{ hero.image | replace('src/assets/images/', '') }}"
+                                 alt="{{ hero.alt or hero.title or title }}"
+                                 loading="eager"
+                                 fetchpriority="high"
+                                 style="width:100%;height:100%;object-fit:cover;"
+                            >
                             <style>
                                 /* Aplicar estilos al contenedor de imagen generado por el shortcode */
                                 .service-pillar-image-wrapper img {
@@ -95,12 +95,12 @@
         <!-- Efectos decorativos -->
         <div class="absolute inset-0">
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(203,213,225,0.1)_1px,transparent_1px)] [background-size:48px_48px]"></div>
-            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-50/40 via-transparent to-slate-100/30"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-teal-50/40 via-transparent to-slate-100/30"></div>
         </div>
 
         <div class="relative z-10 w-full px-6 md:px-12 lg:px-16">
             <div class="max-w-3xl mx-auto text-center mb-16">
-                <span class="text-cyan-500 font-medium uppercase tracking-wider mb-4 block">{{ serviceCluster.title }}</span>
+                <span class="text-teal-500 font-medium uppercase tracking-wider mb-4 block">{{ serviceCluster.title }}</span>
                 <h2 class="text-3xl md:text-4xl font-light uppercase text-slate-900" itemprop="name">
                     {{ serviceCluster.intro }}
                 </h2>
@@ -111,8 +111,8 @@
                 {% for service in serviceCluster.services %}
                 <a href="{{ service.url }}" class="group block h-full card-avant animate-in fade-in slide-in-from-bottom-4" style="animation-delay: {{ loop.index0 * 100 }}ms">
                     <div class="p-6 lg:p-8 flex flex-col h-full">
-                        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
-                            <div class="w-8 h-8 text-cyan-500">
+                        <div class="w-14 h-14 rounded-none bg-teal-500/10 flex items-center justify-center mb-6">
+                            <div class="w-8 h-8 text-teal-500">
                                 {% set iconPath = "icons/" + service.icon + ".svg" %}
                                 {% if service.icon %}
                                     {% include iconPath ignore missing %}
@@ -125,17 +125,17 @@
                         <h3 class="text-xl font-light uppercase text-slate-900 mb-4">{{ service.title }}</h3>
                         <p class="text-slate-600 mb-6 flex-grow">{{ service.description }}</p>
                         
-                        <div class="pt-6 border-t border-slate-100 group-hover:border-cyan-100/50 transition-colors">
+                        <div class="pt-6 border-t border-slate-100 group-hover:border-teal-100/50 transition-colors">
                             <ul class="space-y-2">
                                 {% for feature in (service.features or []) | slice(0, 3) %}
                                 <li class="flex items-start gap-2">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 flex-shrink-0 mt-2"></span>
+                                    <span class="w-1.5 h-1.5 rounded-none bg-teal-500 flex-shrink-0 mt-2"></span>
                                     <span class="text-slate-600 text-sm font-medium" itemprop="feature">{{ feature }}</span>
                                 </li>
                                 {% endfor %}
                             </ul>
                         </div>
-                        <span class="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold group mt-auto pt-6">
+                        <span class="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold group mt-auto pt-6">
                             Saber más
                             <svg class="w-5 h-5 ml-2 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -166,7 +166,7 @@
                         <ul class="space-y-4">
                             {% for feature in sections.what_is.features %}
                             <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-cyan-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg class="w-6 h-6 text-teal-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                 </svg>
                                 <span class="text-slate-600" itemprop="feature">{{ feature }}</span>
@@ -189,16 +189,16 @@
         <div class="w-full px-6 md:px-12 lg:px-16">
             <div class="max-w-3xl mx-auto text-center mb-16">
                 <h2 class="text-[2.5rem] md:text-[3.5rem] font-light uppercase text-slate-900 mb-6">
-                    {{ metadata.servicePillar[lang].processTitle | replace(metadata.servicePillar[lang].processStrong, '<strong class="text-cyan-400 font-normal">' + metadata.servicePillar[lang].processStrong + '</strong>') | safe }}
+                    {{ metadata.servicePillar[lang].processTitle | replace(metadata.servicePillar[lang].processStrong, '<strong class="text-teal-400 font-normal">' + metadata.servicePillar[lang].processStrong + '</strong>') | safe }}
                 </h2>
                 <p class="text-xl text-slate-600">{{ metadata.servicePillar[lang].processDescription }}</p>
             </div>
 
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 {% for step in process.steps %}
-                <div class="bg-white p-8 rounded-xl relative group hover:shadow-xl transition-all duration-300 border border-slate-100">
+                <div class="bg-white p-8 rounded-none relative group hover:shadow-xl transition-all duration-300 border border-slate-100">
                     <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-cyan-50 text-cyan-600 transition-colors">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-none bg-teal-50 text-teal-600 transition-colors">
                             {% if step.icon %}
                                 {% include "icons/" + step.icon + ".svg" ignore missing %}
                             {% else %}
@@ -218,9 +218,9 @@
     <section class="relative py-24 md:py-32 bg-gradient-to-b from-slate-50 to-white">
         <div class="w-full px-6 md:px-12 lg:px-16">
             <div class="max-w-3xl mx-auto text-center mb-16">
-                <span class="text-cyan-500 font-semibold tracking-wider uppercase mb-4 block">{{ metadata.servicePillar[lang].whyChooseUs }}</span>
+                <span class="text-teal-500 font-semibold tracking-wider uppercase mb-4 block">{{ metadata.servicePillar[lang].whyChooseUs }}</span>
                 <h2 class="text-[2.5rem] md:text-[3.5rem] font-light uppercase text-slate-900 mb-6">
-                    {{ metadata.servicePillar[lang].expertsTitle }} <strong class="text-cyan-500 font-normal">{{ metadata.servicePillar[lang].expertsStrong }}</strong>
+                    {{ metadata.servicePillar[lang].expertsTitle }} <strong class="text-teal-500 font-normal">{{ metadata.servicePillar[lang].expertsStrong }}</strong>
                 </h2>
             </div>
 
@@ -228,8 +228,8 @@
                 {% for item in benefits.items %}
                 <div class="card-avant group h-full">
                     <div class="p-6 lg:p-8 flex flex-col h-full">
-                        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
-                            <div class="w-8 h-8 text-cyan-500">
+                        <div class="w-14 h-14 rounded-none bg-teal-500/10 flex items-center justify-center mb-6">
+                            <div class="w-8 h-8 text-teal-500">
                                 {% include "icons/" + item.icon + ".svg" %}
                             </div>
                         </div>
@@ -257,15 +257,15 @@
             {# Adaptado de casos-home.njk para 2 columnas #}
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
                 {% for item in testimonials.items %}
-                <div class="bg-white p-8 lg:p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative border-l-4 border-cyan-400">
+                <div class="bg-white p-8 lg:p-10 rounded-none shadow-lg hover:shadow-xl transition-shadow duration-300 relative border-l-4 border-teal-400">
                     <p class="text-slate-700 mb-6 text-lg relative pl-6">
-                        <span class="absolute top-[-1rem] left-[-0.5rem] text-[4rem] text-cyan-400/20 font-serif">"</span>
+                        <span class="absolute top-[-1rem] left-[-0.5rem] text-[4rem] text-teal-400/20 font-serif">"</span>
                         {{ item.quote }}
                     </p>
                     <div class="flex items-center mt-auto pt-4">
-                        <span class="w-12 h-[2px] bg-cyan-400/30 mr-4"></span>
+                        <span class="w-12 h-[2px] bg-teal-400/30 mr-4"></span>
                         <div>
-                            <p class="font-semibold text-cyan-500">{{ item.author }}</p>
+                            <p class="font-semibold text-teal-500">{{ item.author }}</p>
                             {% if item.role %}
                             <p class="text-sm text-slate-500">{{ item.role }}</p>
                             {% endif %}
@@ -305,7 +305,7 @@
                 </h2>
                 <p class="text-xl text-slate-300 mb-12 font-light">{{ cta.description }}</p>
                 <!-- Actualización de botones CTA sin flechas -->
-                <a href="{{ cta.button.url }}" class="inline-flex items-center justify-center px-8 py-4 font-bold uppercase tracking-wider text-sm rounded-xl transition-colors duration-300 bg-white text-slate-900 hover:bg-cyan-50 hover:text-cyan-600 shadow-xl">
+                <a href="{{ cta.button.url }}" class="inline-flex items-center justify-center px-8 py-4 font-bold uppercase tracking-wider text-sm rounded-none transition-colors duration-300 bg-white text-slate-900 hover:bg-teal-50 hover:text-teal-600 shadow-xl">
                     {{ cta.button.text }}
                 </a>
             </div>
@@ -405,7 +405,7 @@
     @apply prose prose-lg max-w-none 
            prose-headings:text-slate-800 
            prose-p:text-slate-600 
-           prose-a:text-cyan-600 
+           prose-a:text-teal-600 
            prose-a:no-underline 
            prose-a:font-semibold;
 }
@@ -414,7 +414,7 @@
     @apply prose-invert 
            prose-headings:text-white/90 
            prose-p:text-white/80 
-           prose-a:text-cyan-400;
+           prose-a:text-teal-400;
 }
 
 /* Efectos de interacción */

@@ -16,13 +16,13 @@
                     <!-- Columna Izquierda: Título -->
                     <div class="lg:col-span-5 flex flex-col justify-center animate-in fade-in slide-in-from-bottom-8 duration-700">
                         <div class="mb-8 md:mb-10">
-                            <span class="flex items-center text-sm md:text-base font-bold tracking-[0.2em] uppercase text-cyan-600 mb-6">
-                                <span class="w-12 h-[2px] bg-cyan-600 mr-4" aria-hidden="true"></span>
+                            <span class="flex items-center text-sm md:text-base font-bold tracking-[0.2em] uppercase text-teal-600 mb-6">
+                                <span class="w-12 h-[2px] bg-teal-600 mr-4" aria-hidden="true"></span>
                                 Presupuesto
                             </span>
                             <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[0.95] tracking-tight text-slate-900 uppercase" itemprop="headline">
                                 <span class="text-slate-900 font-light">{{ hero.title }}</span>
-                                <strong class="block text-cyan-400 font-normal mt-4">{{ hero.subtitle }}</strong>
+                                <strong class="block text-teal-400 font-normal mt-4">{{ hero.subtitle }}</strong>
                             </h1>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                 
                 <!-- Columna Izquierda: Título de Sección -->
                 <div class="lg:col-span-4 lg:sticky lg:top-32">
-                    <span class="text-cyan-500 font-medium uppercase tracking-wider mb-4 block">Factores</span>
+                    <span class="text-teal-500 font-medium uppercase tracking-wider mb-4 block">Factores</span>
                     <h2 class="text-3xl md:text-[2.5rem] font-light text-slate-900 leading-tight mb-6">{{ factors.title }}</h2>
                     <p class="text-xl text-slate-600 font-light">{{ factors.description }}</p>
                 </div>
@@ -59,9 +59,9 @@
                 <div class="lg:col-span-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                         {% for factor in factors.items %}
-                        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
-                            <div class="w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center mb-6 group-hover:bg-cyan-100 transition-colors">
-                                <svg class="w-6 h-6 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div class="bg-white rounded-none p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
+                            <div class="w-12 h-12 rounded-none bg-teal-50 flex items-center justify-center mb-6 group-hover:bg-teal-100 transition-colors">
+                                <svg class="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                 </svg>
                             </div>
@@ -92,35 +92,56 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-24 px-6 md:px-12 lg:px-16 bg-white" itemscope itemtype="https://schema.org/FAQPage">
-        <div class="w-full">
-            <div class="text-center mb-16">
-                <span class="text-cyan-500 font-medium uppercase tracking-wider mb-4 block">Dudas Resueltas</span>
-                <h2 class="text-3xl md:text-[2.5rem] font-light text-slate-900 mb-6">{{ faqs_section.title }}</h2>
-                <p class="text-xl font-light text-slate-600">{{ faqs_section.description }}</p>
-            </div>
-
-            <div class="space-y-6">
-                {% for faq in faqs %}
-                <div class="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                    <h3 class="text-xl font-bold text-slate-800 mb-4" itemprop="name">
-                        {{ faq.question }}
-                    </h3>
-                    <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                        <div class="text-slate-600 font-light text-lg leading-relaxed space-y-4" itemprop="text">
-                            {% if faq.answer is string %}
-                            <p>{{ faq.answer }}</p>
-                            {% else %}
-                            {% for paragraph in faq.answer %}
-                            <p>{{ paragraph }}</p>
-                            {% endfor %}
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
+    <section style="background: var(--paper-50); border-top: 1px solid var(--border-subtle);"
+             itemscope itemtype="https://schema.org/FAQPage">
+      <div style="max-width: 880px; margin: 0 auto; padding: var(--section-y) var(--gutter);">
+        <div style="margin-bottom: var(--block-gap);">
+          <div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono);
+                      font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label);
+                      text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 18px;">
+            <span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span>
+            § 06 · {{ faqs_section.eyebrow | default("Dudas resueltas") }}
+          </div>
+          <h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400;
+                     line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0;">
+            {{ faqs_section.title }}
+          </h2>
+          {% if faqs_section.description %}
+          <p style="margin-top: 14px; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 60ch;">
+            {{ faqs_section.description }}
+          </p>
+          {% endif %}
         </div>
+        <div style="margin-top: 40px;">
+          {% for faq in faqs %}
+          <details style="border-top: 1px solid var(--border-hairline);" class="ds-faq"
+                   itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
+                   {{ 'open' if loop.first }}>
+            <summary style="padding: 18px 0; cursor: pointer; display: grid; grid-template-columns: 36px 1fr 24px;
+                            gap: 14px; align-items: center; list-style: none;">
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-faint);
+                           letter-spacing: 0.06em; font-variant-numeric: tabular-nums;">{{ '%02d' | format(loop.index) }}</span>
+              <span itemprop="name" style="font-family: var(--font-serif); font-size: 1.1rem;
+                           font-weight: 500; color: var(--text-strong); line-height: 1.35;">{{ faq.question }}</span>
+              <span class="ds-faq-icon" style="color: var(--text-faint); font-size: 1.1rem; font-weight: 300;
+                           display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">+</span>
+            </summary>
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer"
+                 style="padding: 0 0 22px 50px; font-size: 0.95rem; color: var(--text-muted); line-height: 1.65; max-width: 58ch;">
+              <div itemprop="text">
+                {% if faq.answer is string %}
+                <p>{{ faq.answer }}</p>
+                {% else %}
+                {% for paragraph in faq.answer %}
+                <p style="margin: 0 0 10px;">{{ paragraph }}</p>
+                {% endfor %}
+                {% endif %}
+              </div>
+            </div>
+          </details>
+          {% endfor %}
+        </div>
+      </div>
     </section>
 </main>
 {% endblock content %}

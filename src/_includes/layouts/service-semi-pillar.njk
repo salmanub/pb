@@ -1,4 +1,4 @@
-{% extends "layouts/base.njk" %}
+﻿{% extends "layouts/base.njk" %}
 
 {% block content %}
 <main>
@@ -10,7 +10,7 @@
             
             <div class="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 lg:px-0 lg:ml-[5%] pt-12 md:pt-16">
                 <nav class="text-sm text-slate-500 mb-6 flex items-center gap-2">
-                    <a href="/" class="hover:text-cyan-600 transition-colors font-medium">Inicio</a> 
+                    <a href="/" class="hover:text-teal-600 transition-colors font-medium">Inicio</a> 
                     <span class="text-slate-300">/</span>
                     <span class="font-semibold text-slate-800">{{ eleventyNavigation.title }}</span>
                 </nav>
@@ -22,7 +22,7 @@
                         {{ subTitle }}
                     </p>
                     <a href="{{ ctaUrl | default('/contacto/') }}" 
-                       class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white font-bold uppercase tracking-widest text-sm rounded-lg shadow-lg hover:bg-black transition-all duration-300 transform hover:-translate-y-1">
+                       class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white font-bold uppercase tracking-widest text-sm rounded-none shadow-lg hover:bg-black transition-all duration-300 transform hover:-translate-y-1">
                         {{ ctaText | default('Solicitar Inspección') }}
                     </a>
                 </div>
@@ -36,7 +36,7 @@
                 <div class="max-w-[1000px] mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
                     <div>
                         <h2 class="text-3xl font-bold text-slate-900 mb-6">¿Qué es un 
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">Home Inspector</span> 
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">Home Inspector</span> 
                             y Por Qué Necesita Uno?
                         </h2>
                         <p class="text-lg text-slate-600 leading-relaxed mb-6 font-light">
@@ -44,26 +44,26 @@
                         </p>
                         <ul class="space-y-3 text-slate-700 mt-6">
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-cyan-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Conocer el estado real de la propiedad.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-cyan-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Identificar reparaciones necesarias y estimar costes.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-cyan-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Argumentos sólidos para negociar el precio.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-cyan-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <svg class="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>Evitar sorpresas desagradables post-compra.</span>
                             </li>
                         </ul>
                     </div>
                     <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 to-transparent rounded-2xl transform rotate-3"></div>
-                        <img src="/images/home-inspector-trabajando.jpg" alt="Home inspector revisando una vivienda en Barcelona" class="rounded-2xl shadow-2xl shadow-slate-200/50 w-full object-cover aspect-square relative z-10 border border-slate-100">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-teal-500/10 to-transparent rounded-none transform rotate-3"></div>
+                        <img src="/images/home-inspector-trabajando.jpg" alt="Home inspector revisando una vivienda en Barcelona" class="rounded-none shadow-2xl shadow-slate-200/50 w-full object-cover aspect-square relative z-10 border border-slate-100">
                     </div>
                 </div>
             </section>
@@ -90,8 +90,8 @@
                                       {title: "Humedades", desc: "Búsqueda de manchas, moho, condensaciones interiore.", icon: "cloud"},
                                       {title: "Acabados", desc: "Estado de suelos, paredes, techos, puertas, ventanas.", icon: "eye"},
                                       {title: "Vicios Ocultos", desc: "Búsqueda de indicios de problemas no evidentes a primera vista.", icon: "search"}] %}
-                        <div class="bg-white p-8 rounded-xl shadow-lg shadow-slate-200/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100">
-                            <div class="w-12 h-12 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-6">
+                        <div class="bg-white p-8 rounded-none shadow-lg shadow-slate-200/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100">
+                            <div class="w-12 h-12 rounded-none bg-teal-50 text-teal-600 flex items-center justify-center mb-6">
                                 <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
                             </div>
                             <h3 class="text-xl font-bold text-slate-800 mb-3">{{ item.title }}</h3>
@@ -110,7 +110,7 @@
                         <ol class="space-y-6">
                             {% for step in ["Contacto Inicial y Presupuesto", "Coordinación de la Visita", "Inspección Exhaustiva", "Análisis de la Información", "Redacción del Informe", "Entrega y Aclaraciones"] %}
                             <li class="flex gap-4">
-                                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-sm">{{ loop.index }}</span>
+                                <span class="flex-shrink-0 w-8 h-8 rounded-none bg-slate-900 text-white flex items-center justify-center font-bold text-sm">{{ loop.index }}</span>
                                 <p class="text-slate-700 pt-1 font-medium">{{ step }}</p>
                             </li>
                             {% endfor %}
@@ -118,11 +118,11 @@
                     </div>
                     <div>
                         <h2 class="text-3xl font-bold text-slate-900 mb-8">El Informe Incluye:</h2>
-                        <div class="bg-cyan-50/50 p-8 rounded-2xl border border-cyan-100">
+                        <div class="bg-teal-50/50 p-8 rounded-none border border-teal-100">
                             <ul class="space-y-4">
                                 {% for item in ["Descripción de sistemas", "Identificación de defectos", "Fotografías ilustrativas", "Grado de urgencia", "Recomendaciones", "Conclusiones generales"] %}
                                 <li class="flex items-center gap-3">
-                                    <svg class="w-5 h-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <svg class="w-5 h-5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                     <span class="text-slate-700">{{ item }}</span>
                                 </li>
                                 {% endfor %}
@@ -138,16 +138,16 @@
                 <div class="max-w-[1000px] mx-auto text-center px-6 relative z-10">
                     <h2 class="text-3xl md:text-4xl font-bold mb-12">¿Por Qué Elegirnos?</h2>
                     <div class="grid md:grid-cols-3 gap-8">
-                        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-                            <h3 class="text-xl font-bold mb-3 text-cyan-400">Ingeniería</h3>
+                        <div class="p-6 rounded-none bg-white/5 border border-white/10">
+                            <h3 class="text-xl font-bold mb-3 text-teal-400">Ingeniería</h3>
                             <p class="text-slate-300 text-sm">Visión técnica profunda para detectar problemas estructurales.</p>
                         </div>
-                        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-                            <h3 class="text-xl font-bold mb-3 text-cyan-400">Objetividad</h3>
+                        <div class="p-6 rounded-none bg-white/5 border border-white/10">
+                            <h3 class="text-xl font-bold mb-3 text-teal-400">Objetividad</h3>
                             <p class="text-slate-300 text-sm">Independencia total de inmobiliarias.</p>
                         </div>
-                        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-                            <h3 class="text-xl font-bold mb-3 text-cyan-400">Claridad</h3>
+                        <div class="p-6 rounded-none bg-white/5 border border-white/10">
+                            <h3 class="text-xl font-bold mb-3 text-teal-400">Claridad</h3>
                             <p class="text-slate-300 text-sm">Informes explicados con lenguaje claro y preciso.</p>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                 <div class="max-w-[1000px] mx-auto text-center">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">¿Listo para Conocer el Verdadero Estado de su Futura Vivienda?</h2>
                     <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">Una inspección pre-compra es una inversión inteligente. Contacte hoy mismo para solicitar su inspección en Barcelona y provincia.</p>
-                    <a href="/contacto/?servicio=home-inspector" class="inline-block px-10 py-5 bg-cyan-400 text-white font-bold text-lg rounded-lg hover:bg-cyan-500 transition-all">
+                    <a href="/contacto/?servicio=home-inspector" class="inline-block px-10 py-5 bg-teal-400 text-white font-bold text-lg rounded-none hover:bg-teal-500 transition-all">
                         {{ ctaText | default('Contactar para Inspección de Vivienda') }}
                     </a>
                 </div>

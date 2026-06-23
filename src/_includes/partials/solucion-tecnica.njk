@@ -1,16 +1,16 @@
-<section class="py-20 md:py-28 px-4 md:px-[5%] bg-gradient-to-b from-slate-100 via-white to-slate-100 relative overflow-hidden">
+﻿<section class="py-20 md:py-28 px-4 md:px-[5%] bg-gradient-to-b from-slate-100 via-white to-slate-100 relative overflow-hidden">
     <!-- Decorative pattern -->
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,slate-400_1px,transparent_1px)] bg-[size:32px_32px] opacity-[0.15] mix-blend-multiply"></div>
     
     <!-- Subtle decorative gradient -->
-    <div class="absolute inset-0 bg-gradient-to-tr from-cyan-100/30 via-transparent to-slate-200/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-tr from-teal-100/30 via-transparent to-slate-200/40"></div>
     
     <div class="max-w-[1400px] mx-auto relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <!-- Column 1: Image con overlay original -->
             <div class="relative">
-                <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-cyan-400/5 rounded-2xl mix-blend-overlay"></div>
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-tr from-teal-500/20 to-teal-400/5 rounded-none mix-blend-overlay"></div>
+                <div class="relative rounded-none overflow-hidden shadow-2xl">
                     <img 
                         src="{{ solucion.imagen.src }}" 
                         alt="{{ solucion.imagen.alt }}" 
@@ -19,7 +19,7 @@
                         height="567"
                         loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0B1030]/70 via-transparent to-transparent flex flex-col justify-end p-6">
-                        <div class="inline-flex items-center bg-cyan-500 text-white text-sm font-medium px-3 py-1 rounded-md mb-2 w-max">
+                        <div class="inline-flex items-center bg-teal-500 text-white text-sm font-medium px-3 py-1 rounded-none mb-2 w-max">
                             <svg class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                             </svg>
@@ -33,15 +33,15 @@
             <!-- Column 2: Contenido -->
             <div>
                 <h2 class="text-[2.5rem] md:text-[3.5rem] font-light text-slate-900 mb-8 leading-tight uppercase">
-                    {{ solucion.contenido.titulo }} <strong class="text-cyan-400 font-normal">{{ solucion.contenido.highlight }}</strong> {{ solucion.contenido.subtitulo }}
+                    {{ solucion.contenido.titulo }} <strong class="text-teal-400 font-normal">{{ solucion.contenido.highlight }}</strong> {{ solucion.contenido.subtitulo }}
                 </h2>
                 
                 <p class="text-lg text-slate-600 mb-10">{{ solucion.contenido.descripcion }}</p>
                 
                 <div class="grid gap-6 mb-12">
                     {% for caracteristica in solucion.contenido.caracteristicas %}
-                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50/50 transition-colors group/card">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-cyan-50 flex items-center justify-center">
+                    <div class="flex items-start gap-4 p-4 rounded-none hover:bg-slate-50/50 transition-colors group/card">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-none bg-teal-50 flex items-center justify-center">
                             {% include "icons/" + caracteristica.icono + ".svg" ignore missing %}
                         </div>
                         <div>
@@ -52,7 +52,7 @@
                     {% endfor %}
                 </div>
                 
-                <a href="{{ solucion.contenido.cta.url }}" class="inline-flex items-center px-6 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-cyan-200/20 hover:-translate-y-0.5 transition-all">
+                <a href="{{ solucion.contenido.cta.url }}" class="inline-flex items-center px-6 py-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white font-semibold rounded-none shadow-lg hover:shadow-teal-200/20 hover:-translate-y-0.5 transition-all">
                     {{ solucion.contenido.cta.texto }}
                 </a>
             </div>

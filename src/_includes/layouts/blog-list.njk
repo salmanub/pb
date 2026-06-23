@@ -1,4 +1,4 @@
-{% extends "layouts/base.njk" %}
+﻿{% extends "layouts/base.njk" %}
 
 {% block content %}
 <main class="pt-[70px] lg:pt-[120px]" itemscope itemtype="https://schema.org/CollectionPage">
@@ -25,10 +25,10 @@
         
         <div class="w-full relative z-10">
             <div class="max-w-4xl mx-auto text-center mb-6">
-                <span class="inline-block py-1 px-3 border border-cyan-500 rounded-full text-cyan-600 font-bold tracking-[0.2em] uppercase text-sm md:text-base mb-4 bg-cyan-50/50 backdrop-blur-sm">Blog & Recursos</span>
+                <span class="inline-block py-1 px-3 border border-teal-500 rounded-none text-teal-600 font-bold tracking-[0.2em] uppercase text-sm md:text-base mb-4 bg-teal-50/50 backdrop-blur-sm">Blog & Recursos</span>
                 <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[0.95] text-slate-900 mb-4 tracking-tight uppercase" itemprop="name">
                     {{ hero.title }}
-                    <span class="block text-cyan-400 font-normal mt-4">{{ hero.strong }}</span>
+                    <span class="block text-teal-400 font-normal mt-4">{{ hero.strong }}</span>
                 </h1>
                 <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed" itemprop="description">{{ hero.subtitle }}</p>
             </div>
@@ -46,7 +46,7 @@
                 {% set sortedPosts = currentPosts | sort(attribute='datePublished') | reverse %}
                 {% for post in sortedPosts %}
                 {% if not post.estado or post.estado == "publicado" %}
-                <article class="group/card relative flex flex-col h-full bg-white rounded-[2rem] overflow-hidden shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-cyan-900/10 transition-all duration-500 border border-slate-100 hover:border-cyan-200 hover:-translate-y-2 isolate"
+                <article class="group/card relative flex flex-col h-full bg-white rounded-[2rem] overflow-hidden shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-teal-900/10 transition-all duration-500 border border-slate-100 hover:border-teal-200 hover:-translate-y-2 isolate"
                          itemprop="itemListElement" itemscope itemtype="https://schema.org/BlogPosting">
                     
                     <!-- Featured Image -->
@@ -85,7 +85,7 @@
                         
                         <!-- Category Badge -->
                         <div class="absolute top-6 left-6">
-                            <span class="px-4 py-1 bg-white/90 backdrop-blur-md text-cyan-700 text-xs font-bold uppercase tracking-wider rounded-full shadow-sm">
+                            <span class="px-4 py-1 bg-white/90 backdrop-blur-md text-teal-700 text-xs font-bold uppercase tracking-wider rounded-none shadow-sm">
                                 {{ post.category }}
                             </span>
                         </div>
@@ -98,7 +98,7 @@
                             <time datetime="{{ post.datePublished }}T00:00:00+01:00" itemprop="datePublished">
                                 {{ post.datePublished }}
                             </time>
-                            <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                            <span class="w-1 h-1 rounded-none bg-slate-300"></span>
                             <span itemprop="author" itemscope itemtype="https://schema.org/Person">
                                 <span itemprop="name">{{ post.author }}</span>
                                 <meta itemprop="url" content="{{ metadata.author.linkedin }}">
@@ -106,7 +106,7 @@
                         </div>
 
                         <!-- Title -->
-                        <h2 class="text-2xl font-bold text-slate-900 mb-4 group-hover/card:text-cyan-600 transition-colors leading-tight tracking-tight" itemprop="headline">
+                        <h2 class="text-2xl font-bold text-slate-900 mb-4 group-hover/card:text-teal-600 transition-colors leading-tight tracking-tight" itemprop="headline">
                             <a href="{{ blogBaseUrl }}{{ post.slug }}/" class="no-underline focus:outline-none" itemprop="url">
                                 <span class="absolute inset-0" aria-hidden="true"></span>
                                 {{ post.title }}
@@ -130,7 +130,7 @@
                             </div>
                             {% endif %}
 
-                            <span class="text-cyan-600 font-bold text-sm uppercase tracking-wider group-hover/card:translate-x-1 transition-transform flex items-center gap-1">
+                            <span class="text-teal-600 font-bold text-sm uppercase tracking-wider group-hover/card:translate-x-1 transition-transform flex items-center gap-1">
                                 Leer artículo <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                             </span>
                         </div>
@@ -166,7 +166,7 @@
             <h2 class="text-3xl font-bold text-slate-800 mb-4">{{ cta.title }}</h2>
             <p class="text-lg text-slate-600 mb-8">{{ cta.description }}</p>
             <a href="{{ cta.button.url }}" 
-               class="inline-flex items-center px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 shadow-md hover:shadow-lg transition-all group">
+               class="inline-flex items-center px-8 py-4 bg-teal-500 text-white font-semibold rounded-none hover:bg-teal-600 shadow-md hover:shadow-lg transition-all group">
                 {{ cta.button.text }}
                 <svg class="w-5 h-5 ml-2 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
