@@ -92,7 +92,7 @@
 /en/structural-consulting/                /asesoramiento-estructural/             301
 /en/structural-consulting/*               /asesoramiento-estructural/             301
 /en/expert-witness-fees/                  /en/fees/                               301
-/en/construction-expert/                  /en/construction-expert/                301
+# /en/construction-expert/ — removed: was self-redirect loop
 /en/success-cases/                        /casos-exito/                           301
 /en/success-cases/*                       /casos-exito/                           301
 /en/blog/                                 /en/                                    301
@@ -115,7 +115,7 @@
 /peritajes/                               /informes-periciales/                   301
 /informes-periciales/dictamen-judicial/   /informe-de-parte/                     301
 /judicial/                                /informe-de-parte/                     301
-/perito-judicial/                         /perito-judicial/                       301
+# /perito-judicial/ — removed: was self-redirect loop
 /informes-periciales/perito-judicial-barcelona/ /perito-judicial/                 301
 
 /auditoria-tecnica-obra/                  /informes-periciales/                   301
@@ -136,14 +136,14 @@
 /servicios/                               /informes-periciales/                   301
 /servicios/peritajes-seguros              /informes-periciales/                   301
 /informe-pericial-pavimentos/             /informes-periciales/                   301
-/comunidades-propietarios/                /comunidades-propietarios/              301
+# /comunidades-propietarios/ — removed: was self-redirect loop
 /es/colaboracion-abogados/                /colaboracion-abogados/                 301
 /peritajes-ejecucion-obra/                /reclamacion-mala-ejecucion/            301
 /reparacion-hormigon-armado/              /asesoramiento-estructural/             301
 
 /grietas-estructurales/                   /patologias-estructurales/              301
-/humedades-filtraciones/                  /humedades-filtraciones/                301
-/vicios-ocultos/                          /vicios-ocultos/                        301
+# /humedades-filtraciones/ — removed: was self-redirect loop
+# /vicios-ocultos/ — removed: was self-redirect loop
 /mala-ejecucion/                          /reclamacion-mala-ejecucion/            301
 /desprendimientos-danos-ejecucion/        /reclamacion-mala-ejecucion/            301
 /inspecciones-tecnicas-especializadas/    /informes-periciales/                   301
@@ -158,7 +158,7 @@
 /ca/informes-pericials/reclamacio-assegurances/ /ca/informes-pericials/            301
 /ca/assegurances/                         /ca/informes-pericials/                 301
 /ca/auditories-d-obra/                    /ca/informes-pericials/                 301
-/ca/vicis-ocults/                         /ca/vicis-ocults/                       301
+# /ca/vicis-ocults/ — removed: was self-redirect loop
 
 /en/construction-expert-reports/          /en/expert-witness-reports/             301
 /en/expert-witness-reports/court-appointed-report/ /en/party-appointed-report/    301
