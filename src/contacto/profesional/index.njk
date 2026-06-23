@@ -234,8 +234,10 @@ breadcrumb:
       timestamp: new Date().toISOString(),
       source: 'perito.barcelona'
     };
-    done = true;
-    render();
+    /* Show sending state */
+    var body = document.getElementById('intake-b-body');
+    if(body) body.innerHTML = '<div style="text-align:center;padding:40px 0;"><div style="width:36px;height:36px;border:3px solid var(--border-hairline);border-top-color:var(--accent);border-radius:50%;margin:0 auto;animation:spin 0.8s linear infinite;"></div><p style="margin:16px 0 0;color:var(--text-muted);font-size:0.95rem;">Enviando…</p></div><style>@keyframes spin{to{transform:rotate(360deg)}}</style>';
+    document.getElementById('intake-b-footer').style.display='none';
     var ctrl = new AbortController();
     var timer = setTimeout(function(){ ctrl.abort(); }, 10000);
     fetch('/api/contacto', {
@@ -246,6 +248,7 @@ breadcrumb:
     }).then(function(res){
       clearTimeout(timer);
       if(!res.ok) throw new Error('HTTP ' + res.status);
+      done = true; render();
       setTimeout(function(){ window.location.href='/gracias/'; }, 2500);
     }).catch(function(){
       clearTimeout(timer);
@@ -258,15 +261,12 @@ breadcrumb:
         '\nSituación procesal: ' + (answers.procesal||'') +
         '\n\nDescripción:\n' + (contactData.descripcion||'');
       var mailto = 'mailto:info@perito.barcelona?subject=' + subject + '&body=' + encodeURIComponent(bodyParts);
-      var body = document.getElementById('intake-b-body');
       if(body) body.innerHTML =
-        '<div style="text-align:center;padding:14px 0 24px;">' +
-          '<div style="width:48px;height:48px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;background:var(--positive-tint,#e8f5e9);color:var(--positive,#2e7d32);font-size:22px;font-weight:600;">✓</div>' +
-          '<h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;margin:20px 0 0;color:var(--text-strong);">Solicitud registrada</h3>' +
-          '<p style="margin:12px auto 0;max-width:40ch;color:var(--text-muted);line-height:1.55;">Hemos registrado su consulta. Le responderemos en 24 h laborables con un informe preliminar de viabilidad.</p>' +
-        '</div>' +
-        '<div style="margin:18px 0 0;padding:16px 18px;background:var(--accent-tint,#F1F5F2);border-left:3px solid var(--accent);border-radius:var(--radius-sm);">' +
-          '<p style="margin:0;font-size:0.9rem;line-height:1.6;color:var(--text-strong);">No hemos podido enviar tu consulta. Escríbenos a <a href="' + mailto + '" style="color:var(--text-accent);font-weight:600;">info@perito.barcelona</a> (se abrirá con tus datos ya rellenados) o llámanos al <a href="tel:+34614194985" style="color:var(--text-accent);font-weight:600;">+34 614 194 985</a>.</p>' +
+        '<div style="padding:24px 0;">' +
+          '<div style="padding:16px 18px;background:var(--accent-tint,#F1F5F2);border-left:3px solid var(--accent);border-radius:var(--radius-sm);">' +
+            '<p style="margin:0 0 12px;font-size:0.95rem;line-height:1.6;color:var(--text-strong);">No hemos podido enviar tu consulta. Escríbenos a <a href="' + mailto + '" style="color:var(--text-accent);font-weight:600;">info@perito.barcelona</a> (se abrirá con tus datos ya rellenados) o llámanos al <a href="tel:+34614194985" style="color:var(--text-accent);font-weight:600;">+34 614 194 985</a>.</p>' +
+            '<a href="' + mailto + '" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--accent-on,#fff);background:var(--accent);border:none;border-radius:var(--radius-sm);text-decoration:none;cursor:pointer;">Abrir email con datos</a>' +
+          '</div>' +
         '</div>';
     });
   }
