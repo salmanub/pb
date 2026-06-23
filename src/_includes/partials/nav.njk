@@ -118,7 +118,7 @@ Datos: metadata.json (navBar, services, contact) + {lang}.json (nav.*)
   "Honorarios": ui.nav.honorarios,
   "Despacho": ui.nav.despacho
   } %}
-  {% set svcBasePath = "/informes-pericials/" if currentLang == "ca" else ("/expert-witness-reports/" if currentLang ==
+  {% set svcBasePath = "/informes-pericials/" if currentLang == "ca" else ("/" if currentLang ==
   "en" else "/informes-periciales/") %}
   {% set megaFooterText = "Veure tots els dictàmens" if currentLang == "ca" else ("View all reports" if currentLang ==
   "en" else "Ver todos los dictámenes") %}

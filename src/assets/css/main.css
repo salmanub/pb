@@ -163,6 +163,7 @@
 /* Mobile: show compact back-link, hide full trail */
 @media (max-width: 768px) {
   .breadcrumb-desktop { display: none !important; }
+  .breadcrumb-label { display: none !important; }
   .breadcrumb-mobile {
     display: flex !important;
     align-items: center;

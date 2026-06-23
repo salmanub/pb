@@ -6330,6 +6330,9 @@
   .breadcrumb-desktop {
     display: none !important;
   }
+  .breadcrumb-label {
+    display: none !important;
+  }
   .breadcrumb-mobile {
     display: flex !important;
     align-items: center;

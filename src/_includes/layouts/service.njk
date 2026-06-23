@@ -201,7 +201,7 @@ NOTE: All HTML on single lines to prevent Markdown <p> wrapping in .md files
 relacionados") %}
 {% set relCta = "Veure tots els dictàmens" if lang == "ca" else ("View all reports" if lang == "en" else "Ver todos los
 dictámenes") %}
-{% set relBasePath = "/informes-pericials/" if lang == "ca" else ("/expert-witness-reports/" if lang == "en" else
+{% set relBasePath = "/informes-pericials/" if lang == "ca" else ("/" if lang == "en" else
 "/informes-periciales/") %}
 <section itemscope itemtype="https://schema.org/CollectionPage" Y
   style="background: #fff; border-top: 1px solid var(--border-hairline);">
