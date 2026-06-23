@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+templateEngineOverride: njk
 title: "Expert Witness Fees and Costs"
 description: "Fixed written quote before commencement. No variable costs. Court ratification included. Detailed engagement letter."
 audience: "pro"

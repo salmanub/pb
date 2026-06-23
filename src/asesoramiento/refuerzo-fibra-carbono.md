@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+templateEngineOverride: njk
 title: "Consultoría en Refuerzos con Fibra de Carbono (CFRP)"
 description: "Asesoramiento técnico y dirección de obra en refuerzos estructurales con polímeros reforzados con fibra de carbono (FRP). Laminados de carbono, capacidad portante y Eurocódigo 2."
 audience: "pro"

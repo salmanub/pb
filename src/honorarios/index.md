@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+templateEngineOverride: njk
 title: "Coste y Honorarios de Informes Periciales"
 description: "Presupuesto cerrado por escrito antes del inicio. Honorarios fijos sin costes variables. Ratificación en sala incluida. Hoja de encargo detallada."
 image: "elaboracion-informe-pericial.jpg"

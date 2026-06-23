@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+templateEngineOverride: njk
 title: "Consultoría y Asesoramiento Estructural"
 description: "Diagnosis estructural, peritaje preventivo y asesoramiento en ingeniería civil en Barcelona. Recalce de cimentaciones, estabilidad de edificios e intervención técnica previa a la adquisición."
 audience: "pro"

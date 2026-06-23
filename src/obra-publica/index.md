@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+templateEngineOverride: njk
 title: "Peritajes Técnicos de Obra Pública e Infraestructuras"
 description: "Dictámenes periciales sobre obra civil e infraestructura en Barcelona. Viaductos, estructuras de fábrica, LCSP, modificados de proyecto, liquidación de contrato y ensayos geotécnicos."
 audience: "pro"

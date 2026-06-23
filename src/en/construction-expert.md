@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+templateEngineOverride: njk
 title: "Construction Expert in Barcelona"
 image: "perito-construccion-barcelona-profesional.jpg"
 image_alt: "Professional construction expert in Barcelona"

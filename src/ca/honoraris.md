@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+templateEngineOverride: njk
 title: "Cost i Honoraris d'Informes Pericials"
 description: "Pressupost tancat per escrit abans de l'inici. Honoraris fixos sense costos variables. Ratificació en sala inclosa. Full d'encàrrec detallat."
 image: "elaboracion-informe-pericial.jpg"
