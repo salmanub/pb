@@ -51,6 +51,8 @@ jobs:
           SXG_KEY_PEM: ${{ secrets.SXG_KEY_PEM }}
           SXG_CA_PEM: ${{ secrets.SXG_CA_PEM }}
         run: |
+          # Authenticate gh CLI with PAT (GITHUB_TOKEN lacks secret-write scope)
+          echo "$GH_TOKEN" | gh auth login --with-token 2>/dev/null || echo "⚠️ gh auth login failed (GH_PAT may be invalid)"
           mkdir -p .certs
           
           # 1. Try to reuse existing valid certs from secrets
@@ -141,7 +143,7 @@ jobs:
               --server https://dv-sxg.acme-v02.api.pki.goog/directory \
               --dns dns_cf \
               --force \
-              --dnssleep 20 \
+              --dnssleep 60 \
               --fullchain-file .certs/fullchain.pem \
               --cert-file      .certs/cert.pem \
               --ca-file        .certs/ca.pem
