@@ -28,7 +28,8 @@
   },
   "breadcrumb": {
     "inicio": "Home",
-    "aria": "You are here"
+    "aria": "You are here",
+    "label": "You are here"
   },
   "form": {
     "titulo": "Request a report",

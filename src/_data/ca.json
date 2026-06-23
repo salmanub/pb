@@ -28,7 +28,8 @@
   },
   "breadcrumb": {
     "inicio": "Inici",
-    "aria": "Sou aquí"
+    "aria": "Sou aquí",
+    "label": "Sou aquí"
   },
   "form": {
     "titulo": "Sol·licitar dictamen",
