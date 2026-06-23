@@ -5,7 +5,7 @@
  * - Nunjucks como template engine
  * - CSS: Tailwind → built.css → inline purgado por página (transform)
  * - Cero <link> de CSS en producción
- * - Output: public/
+ * - Output: dist/
  */
 import fs from 'fs';
 import path from 'path';
@@ -273,8 +273,8 @@ export default function (eleventyConfig) {
     callbacks: {
       ready: function (err, bs) {
         bs.addMiddleware('*', (req, res) => {
-          const content404 = fs.existsSync('public/404.html')
-            ? fs.readFileSync('public/404.html')
+          const content404 = fs.existsSync('dist/404.html')
+            ? fs.readFileSync('dist/404.html')
             : '<h1>404</h1>';
           res.writeHead(404, { 'Content-Type': 'text/html; charset=UTF-8' });
           res.write(content404);
@@ -287,7 +287,7 @@ export default function (eleventyConfig) {
   return {
     dir: {
       input: 'src',
-      output: 'public',
+      output: 'dist',
       includes: '_includes',
       data: '_data',
     },
