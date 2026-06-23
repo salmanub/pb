@@ -13,10 +13,10 @@ eleventyNavigation:
   order: 7
 translations:
   - lang: ca
-    permalink: /ca/informes-pericials/naus-industrials/
+    permalink: /ca/naus-industrials/
   - lang: en
-    permalink: /en/expert-witness-reports/industrial-warehouses/
-permalink: "/informes-periciales/naves-industriales/"
+    permalink: /en/industrial-warehouses/
+permalink: "/naves-industriales/"
 svc_num: "EXP·08"
 svc_tag: "Industrial · B2B · RSCIEI · TR-34"
 svc_lsi: ["RSCIEI", "Pavimentos logísticos", "Daños post-alquiler", "Estructura metálica", "TR-34", "Siniestro industrial"]

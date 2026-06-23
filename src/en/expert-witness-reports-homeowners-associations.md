@@ -13,10 +13,10 @@ eleventyNavigation:
   order: 8
 translations:
   - lang: es
-    permalink: /informes-periciales/comunidades-propietarios/
+    permalink: /comunidades-propietarios/
   - lang: ca
-    permalink: /ca/informes-pericials/comunitats-propietaris/
-permalink: "/en/expert-witness-reports/homeowners-associations/"
+    permalink: /ca/comunitats-propietaris/
+permalink: "/en/homeowners-associations/"
 svc_num: "EXP·09"
 svc_tag: "Horizontal property · LPH"
 svc_lsi: ["LPH", "Common elements", "Horizontal property", "Special assessments", "Façade damage"]

@@ -13,10 +13,10 @@ eleventyNavigation:
   order: 2
 translations:
   - lang: es
-    permalink: /informes-periciales/vicios-ocultos/
+    permalink: /vicios-ocultos/
   - lang: en
-    permalink: /en/expert-witness-reports/hidden-defects/
-permalink: "/ca/informes-pericials/vicis-ocults/"
+    permalink: /en/hidden-defects/
+permalink: "/ca/vicis-ocults/"
 svc_num: "EXP·05"
 svc_tag: "Compravenda immobiliària · CC art. 1484"
 svc_lsi: ["Codi Civil art. 1484", "Defectes no aparents", "Termini de sanejament", "Preexistència", "Acció redhibitòria"]

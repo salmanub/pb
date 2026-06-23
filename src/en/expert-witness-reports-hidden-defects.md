@@ -13,10 +13,10 @@ eleventyNavigation:
   order: 2
 translations:
   - lang: es
-    permalink: /informes-periciales/vicios-ocultos/
+    permalink: /vicios-ocultos/
   - lang: ca
-    permalink: /ca/informes-pericials/vicis-ocults/
-permalink: "/en/expert-witness-reports/hidden-defects/"
+    permalink: /ca/vicis-ocults/
+permalink: "/en/hidden-defects/"
 svc_num: "EXP·05"
 svc_tag: "Property transactions · CC art. 1484"
 svc_lsi: ["Civil Code art. 1484", "Non-apparent defects", "Warranty period", "Pre-existence", "Redhibitory action"]

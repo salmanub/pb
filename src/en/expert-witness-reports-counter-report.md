@@ -11,10 +11,10 @@ eleventyNavigation:
   order: 5
 translations:
   - lang: es
-    permalink: /informes-periciales/contrainforme-pericial/
+    permalink: /contrainforme-pericial/
   - lang: ca
-    permalink: /ca/informes-pericials/contrainforme-pericial/
-permalink: "/en/expert-witness-reports/counter-report/"
+    permalink: /ca/contrainforme-pericial/
+permalink: "/en/counter-report/"
 svc_num: "EXP·07"
 svc_tag: "Critical analysis · LEC art. 348"
 svc_lsi: ["LEC art. 348", "Technical rebuttal", "Contradictory assessment", "Critical analysis", "Evidence evaluation"]

@@ -13,10 +13,10 @@ eleventyNavigation:
   order: 10
 translations:
   - lang: ca
-    permalink: /ca/informes-pericials/perit-judicial/
+    permalink: /ca/perit-judicial/
   - lang: en
-    permalink: /en/expert-witness-reports/court-appointed-expert/
-permalink: "/informes-periciales/perito-judicial/"
+    permalink: /en/court-appointed-expert/
+permalink: "/perito-judicial/"
 svc_num: "EXP·02"
 svc_tag: "Designación judicial · LEC art. 347"
 svc_lsi: ["Designación judicial", "Lista de peritos", "LEC art. 347", "Tacha de peritos", "Ratificación en sala"]

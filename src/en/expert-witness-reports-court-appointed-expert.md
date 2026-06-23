@@ -11,10 +11,10 @@ eleventyNavigation:
   order: 10
 translations:
   - lang: es
-    permalink: /informes-periciales/perito-judicial/
+    permalink: /perito-judicial/
   - lang: ca
-    permalink: /ca/informes-pericials/perit-judicial/
-permalink: "/en/expert-witness-reports/court-appointed-expert/"
+    permalink: /ca/perit-judicial/
+permalink: "/en/court-appointed-expert/"
 svc_num: "EXP·02"
 svc_tag: "Court appointment · LEC art. 347"
 svc_lsi: ["Court appointment", "Expert witness list", "LEC art. 347", "Expert challenge", "Court ratification"]

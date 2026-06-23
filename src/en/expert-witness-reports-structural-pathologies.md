@@ -13,10 +13,10 @@ eleventyNavigation:
   order: 1
 translations:
   - lang: es
-    permalink: /informes-periciales/patologias-estructurales/
+    permalink: /patologias-estructurales/
   - lang: ca
-    permalink: /ca/informes-pericials/patologies-estructurals/
-permalink: "/en/expert-witness-reports/structural-pathologies/"
+    permalink: /ca/patologies-estructurals/
+permalink: "/en/structural-pathologies/"
 svc_num: "EXP·03"
 svc_tag: "Structural diagnosis · CTE DB-SE · EHE-08"
 svc_lsi: ["CTE DB-SE", "EHE-08", "Active cracks", "Differential settlement", "Structural analysis", "FEM modelling"]

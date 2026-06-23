@@ -13,10 +13,10 @@ eleventyNavigation:
   order: 3
 translations:
   - lang: es
-    permalink: /informes-periciales/humedades-filtraciones/
+    permalink: /humedades-filtraciones/
   - lang: en
-    permalink: /en/expert-witness-reports/moisture-water-leakage/
-permalink: "/ca/informes-pericials/humitats-filtracions/"
+    permalink: /en/moisture-water-leakage/
+permalink: "/ca/humitats-filtracions/"
 svc_num: "EXP·04"
 svc_tag: "Patologia hídrica"
 svc_lsi:

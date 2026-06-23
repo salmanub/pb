@@ -13,10 +13,10 @@ eleventyNavigation:
   order: 3
 translations:
   - lang: es
-    permalink: /informes-periciales/humedades-filtraciones/
+    permalink: /humedades-filtraciones/
   - lang: ca
-    permalink: /ca/informes-pericials/humitats-filtracions/
-permalink: "/en/expert-witness-reports/moisture-water-leakage/"
+    permalink: /ca/humitats-filtracions/
+permalink: "/en/moisture-water-leakage/"
 svc_num: "EXP·04"
 svc_tag: "Water pathology"
 svc_lsi: ["CTE DB-HS", "Infrared thermography", "Waterproofing", "Rising damp", "Interstitial condensation"]

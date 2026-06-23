@@ -13,10 +13,10 @@ eleventyNavigation:
   order: 8
 translations:
   - lang: ca
-    permalink: /ca/informes-pericials/comunitats-propietaris/
+    permalink: /ca/comunitats-propietaris/
   - lang: en
     permalink: /en/expert-witness-reports/owners-association/
-permalink: "/informes-periciales/comunidades-propietarios/"
+permalink: "/comunidades-propietarios/"
 svc_num: "EXP·09"
 svc_tag: "Propiedad horizontal · LPH"
 svc_lsi: ["Ley Propiedad Horizontal", "Elementos comunes", "Derrama", "ITE", "Comunidad de propietarios"]

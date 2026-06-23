@@ -13,10 +13,10 @@ eleventyNavigation:
   order: 4
 translations:
   - lang: es
-    permalink: /informes-periciales/reclamacion-mala-ejecucion/
+    permalink: /reclamacion-mala-ejecucion/
   - lang: ca
-    permalink: /ca/informes-pericials/reclamacio-mala-execucio/
-permalink: "/en/expert-witness-reports/poor-execution-claim/"
+    permalink: /ca/reclamacio-mala-execucio/
+permalink: "/en/poor-execution-claim/"
 svc_num: "EXP·06"
 svc_tag: "Contractual breach · LOE art. 17"
 svc_lsi: ["LOE art. 17", "Specification of materials", "Lex artis", "Finishing defects", "Contractual breach"]

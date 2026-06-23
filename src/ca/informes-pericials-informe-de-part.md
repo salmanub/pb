@@ -13,10 +13,10 @@ eleventyNavigation:
   order: 6
 translations:
   - lang: es
-    permalink: /informes-periciales/informe-de-parte/
+    permalink: /informe-de-parte/
   - lang: en
-    permalink: /en/expert-witness-reports/party-appointed-report/
-permalink: "/ca/informes-pericials/informe-de-part/"
+    permalink: /en/party-appointed-report/
+permalink: "/ca/informe-de-part/"
 svc_num: "EXP·01"
 svc_tag: "Litigació civil · LEC art. 335"
 svc_lsi:

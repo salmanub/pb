@@ -13,10 +13,10 @@ eleventyNavigation:
   order: 4
 translations:
   - lang: ca
-    permalink: /ca/informes-pericials/reclamacio-mala-execucio/
+    permalink: /ca/reclamacio-mala-execucio/
   - lang: en
     permalink: /en/expert-witness-reports/poor-workmanship-claim/
-permalink: "/informes-periciales/reclamacion-mala-ejecucion/"
+permalink: "/reclamacion-mala-ejecucion/"
 svc_num: "EXP·06"
 svc_tag: "Incumplimiento contractual · LOE art. 17"
 svc_lsi: ["LOE art. 17", "Memoria de calidades", "Lex artis", "Partidas no ejecutadas", "Subsanación"]
