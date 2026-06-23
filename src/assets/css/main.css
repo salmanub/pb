@@ -156,6 +156,7 @@
 .breadcrumb-nav svg { display: inline-block !important; max-width: none; flex-shrink: 0; }
 .breadcrumb-nav span { flex-shrink: 0; }
 .breadcrumb-band:hover .breadcrumb-label { opacity: 1 !important; }
+.related-card:hover { background: var(--accent-tint, #e6f2ec) !important; }
 
 /* ── Breadcrumb responsive: mobile ↔ desktop switch ── */
 /* Mobile back-link — hidden on desktop */

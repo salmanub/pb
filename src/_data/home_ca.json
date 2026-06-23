@@ -52,11 +52,11 @@
     "ver_servicio": "Veure servei",
     "servicio_label": "Servei",
     "items": [
-      { "code": "2.1", "slug": "patologias-estructurales", "icon": "building-2", "t": "Patologia de l'edificació", "d": "Esquerdes, fissures, assentaments i danys estructurals. Causa, abast i responsabilitat." },
-      { "code": "2.2", "slug": "vicios-ocultos", "icon": "house", "t": "Vicis ocults", "d": "Defectes no aparents en compravenda o després del lliurament d'obra nova." },
-      { "code": "2.3", "slug": "humedades-filtraciones", "icon": "droplets", "t": "Humitats i filtracions", "d": "L'origen real de la humitat, no el símptoma. Diagnòstic instrumental i solució valorada." },
-      { "code": "2.4", "slug": "obras-publicas", "href": "/obras-publicas/", "icon": "hard-hat", "t": "Obra civil i infraestructura", "d": "Dictàmens sobre viaductes, estructures de fàbrica, modificats de projecte i compliment LCSP." },
-      { "code": "2.5", "slug": "reclamacion-mala-ejecucion", "icon": "scale", "t": "Valoració de danys", "d": "Quantificació pericial del cost de reparació i del perjudici per a reclamació o judici." },
+      { "code": "2.1", "slug": "patologies-estructurals", "icon": "building-2", "t": "Patologia de l'edificació", "d": "Esquerdes, fissures, assentaments i danys estructurals. Causa, abast i responsabilitat." },
+      { "code": "2.2", "slug": "vicis-ocults", "icon": "house", "t": "Vicis ocults", "d": "Defectes no aparents en compravenda o després del lliurament d'obra nova." },
+      { "code": "2.3", "slug": "humitats-filtracions", "icon": "droplets", "t": "Humitats i filtracions", "d": "L'origen real de la humitat, no el símptoma. Diagnòstic instrumental i solució valorada." },
+      { "code": "2.4", "slug": "obres-publiques", "href": "/ca/informes-pericials/obres-publiques/", "icon": "hard-hat", "t": "Obra civil i infraestructura", "d": "Dictàmens sobre viaductes, estructures de fàbrica, modificats de projecte i compliment LCSP." },
+      { "code": "2.5", "slug": "reclamacio-mala-execucio", "icon": "scale", "t": "Valoració de danys", "d": "Quantificació pericial del cost de reparació i del perjudici per a reclamació o judici." },
       { "code": "2.6", "slug": "contrainforme-pericial", "icon": "file-check-2", "t": "Contrainforme i ratificació", "d": "Revisió crítica de dictàmens de la part contrària i compareixença en seu judicial." }
     ]
   },

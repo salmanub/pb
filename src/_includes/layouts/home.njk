@@ -258,7 +258,8 @@
           <span>§ {{ svc.code }}</span>
           <span>{{ h.services_section.servicio_label }}</span>
         </div>
-        <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/informes-periciales/' + svc.slug + '/') }}"
+        {% set _svcBase = "/" %}
+        <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + _svcBase + svc.slug + '/') }}"
            style="display: block; padding: 24px 24px 26px; cursor: pointer; position: relative;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

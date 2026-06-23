@@ -41,7 +41,7 @@ permalink: "/ca/informes-pericials/"
     {% set svcDesc = svc["description_ca"] if svc["description_ca"] else svc.description %}
     {% set svcSlug = svc["path_ca"] if svc["path_ca"] else svc.path %}
     <article itemprop="hasPart" itemscope itemtype="https://schema.org/Article" style="display: contents;">
-    <a itemprop="url" href="{{ langPrefix + '/informes-pericials/' + svcSlug + '/' }}" style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center; border-top: 1px solid var(--border-hairline); padding: 16px 12px; text-decoration: none; color: inherit;" class="svc-row">
+    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/' + svcSlug + '/') }}" style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center; border-top: 1px solid var(--border-hairline); padding: 16px 12px; text-decoration: none; color: inherit;" class="svc-row">
       <div>
         <span itemprop="name" style="display: block; font-family: var(--font-serif); font-size: 1.05rem; font-weight: 400; color: var(--text-strong); line-height: 1.2;">{{ svcName }}</span>
         <span style="display: block; margin-top: 3px; font-size: 0.78rem; color: var(--text-muted); line-height: 1.35;">{{ svcDesc }}</span>
@@ -65,7 +65,7 @@ permalink: "/ca/informes-pericials/"
     {% set svcDesc = svc["description_ca"] if svc["description_ca"] else svc.description %}
     {% set svcSlug = svc["path_ca"] if svc["path_ca"] else svc.path %}
     <article itemprop="hasPart" itemscope itemtype="https://schema.org/Article" style="display: contents;">
-    <a itemprop="url" href="{{ langPrefix + '/informes-pericials/' + svcSlug + '/' }}" style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center; border-top: 1px solid var(--border-hairline); padding: 16px 12px; text-decoration: none; color: inherit;" class="svc-row">
+    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/' + svcSlug + '/') }}" style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center; border-top: 1px solid var(--border-hairline); padding: 16px 12px; text-decoration: none; color: inherit;" class="svc-row">
       <div>
         <span itemprop="name" style="display: block; font-family: var(--font-serif); font-size: 1.05rem; font-weight: 400; color: var(--text-strong); line-height: 1.2;">{{ svcName }}</span>
         <span style="display: block; margin-top: 3px; font-size: 0.78rem; color: var(--text-muted); line-height: 1.35;">{{ svcDesc }}</span>
@@ -89,7 +89,7 @@ permalink: "/ca/informes-pericials/"
     {% set svcDesc = svc["description_ca"] if svc["description_ca"] else svc.description %}
     {% set svcSlug = svc["path_ca"] if svc["path_ca"] else svc.path %}
     <article itemprop="hasPart" itemscope itemtype="https://schema.org/Article" style="display: contents;">
-    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/informes-pericials/' + svcSlug + '/' ) }}" style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center; border-top: 1px solid var(--border-hairline); padding: 16px 12px; text-decoration: none; color: inherit;" class="svc-row">
+    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/' + svcSlug + '/') }}" style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center; border-top: 1px solid var(--border-hairline); padding: 16px 12px; text-decoration: none; color: inherit;" class="svc-row">
       <div>
         <span itemprop="name" style="display: block; font-family: var(--font-serif); font-size: 1.05rem; font-weight: 400; color: var(--text-strong); line-height: 1.2;">{{ svcName }}</span>
         <span style="display: block; margin-top: 3px; font-size: 0.78rem; color: var(--text-muted); line-height: 1.35;">{{ svcDesc }}</span>
@@ -113,7 +113,7 @@ permalink: "/ca/informes-pericials/"
     {% set svcDesc = svc["description_ca"] if svc["description_ca"] else svc.description %}
     {% set svcSlug = svc["path_ca"] if svc["path_ca"] else svc.path %}
     <article itemprop="hasPart" itemscope itemtype="https://schema.org/Article" style="display: contents;">
-    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/informes-pericials/' + svcSlug + '/') }}" style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center; border-top: 1px solid var(--border-hairline); padding: 16px 12px; text-decoration: none; color: inherit;" class="svc-row">
+    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/' + svcSlug + '/') }}" style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center; border-top: 1px solid var(--border-hairline); padding: 16px 12px; text-decoration: none; color: inherit;" class="svc-row">
       <div>
         <span itemprop="name" style="display: block; font-family: var(--font-serif); font-size: 1.05rem; font-weight: 400; color: var(--text-strong); line-height: 1.2;">{{ svcName }}</span>
         <span style="display: block; margin-top: 3px; font-size: 0.78rem; color: var(--text-muted); line-height: 1.35;">{{ svcDesc }}</span>

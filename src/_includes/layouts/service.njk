@@ -192,13 +192,11 @@ NOTE: All HTML on single lines to prevent Markdown <p> wrapping in .md files
 
 {# ===== RELATED SERVICES — CollectionPage microdata ===== #}
 {% set relEyebrow = "Altres dictàmens" if lang == "ca" else ("Other reports" if lang == "en" else "Otros dictámenes") %}
-{% set relTitle = "Serveis relacionats" if lang == "ca" else ("Related services" if lang == "en" else "Servicios
-relacionados") %}
-{% set relCta = "Veure tots els dictàmens" if lang == "ca" else ("View all reports" if lang == "en" else "Ver todos los
-dictámenes") %}
-{% set relBasePath = "/informes-pericials/" if lang == "ca" else ("/" if lang == "en" else
-"/informes-periciales/") %}
-<section itemscope itemtype="https://schema.org/CollectionPage" Y
+{% set relTitle = "Serveis relacionats" if lang == "ca" else ("Related services" if lang == "en" else "Servicios relacionados") %}
+{% set relCta = "Veure tots els dictàmens" if lang == "ca" else ("View all reports" if lang == "en" else "Ver todos los dictámenes") %}
+{% set hubUrl = "/ca/informes-pericials/" if lang == "ca" else ("/en/expert-witness-reports/" if lang == "en" else "/informes-periciales/") %}
+
+<section itemscope itemtype="https://schema.org/CollectionPage"
   style="background: #fff; border-top: 1px solid var(--border-hairline);">
   <div style="max-width: var(--container-wide); margin: 0 auto; padding: clamp(48px,7vw,80px) var(--gutter);">
     <meta itemprop="name" content="{{ relEyebrow }} — {{ relTitle }}">
@@ -214,42 +212,40 @@ dictámenes") %}
           style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0;">
           {{ relTitle }}</h2>
       </div>
-      <a href="{{ langPrefix }}{{ relBasePath }}"
+      <a href="{{ hubUrl }}"
         style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; color: var(--text-accent); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 8px 0; white-space: nowrap;">{{
         relCta }} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block">
           <path d="M5 12h14M12 5l7 7-7 7" />
         </svg></a>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;" class="site-two">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 40px;" class="two-col">
       {% set currentSlug = page.fileSlug %}
       {% set count = { v: 0 } %}
       {% for svc in sitedata.svcs %}
-      {% if svc.slug != currentSlug and count.v < 4 %} <article itemprop="hasPart" itemscope
-        itemtype="https://schema.org/Article">
-        <a itemprop="url" href="{{ langPrefix }}{{ relBasePath }}{{ svc.slug }}/" class="related-card"
-          style="display: block; background: var(--surface-raised); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); padding: 20px 24px; text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s;">
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
-            <div>
-              <span itemprop="name"
-                style="display: block; font-family: var(--font-serif); font-size: 1.05rem; font-weight: 500; color: var(--text-strong); line-height: 1.25; margin-bottom: 6px;">{{
+      {% if svc.slug != currentSlug and count.v < 4 %}
+        <article itemprop="hasPart" itemscope itemtype="https://schema.org/Article" style="display: contents;">
+        <a itemprop="url" href="{{ langPrefix }}/{{ svc.slug }}/"
+           style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center;
+                  border-top: 1px solid var(--border-hairline); padding: 16px 12px;
+                  text-decoration: none; color: inherit;" class="svc-row">
+          <div>
+            <span itemprop="name" style="display: block; font-family: var(--font-serif); font-size: 1.05rem;
+                  font-weight: 400; color: var(--text-strong); line-height: 1.2;">{{
                 svc.t_ca if lang == "ca" and svc.t_ca else (svc.t_en if lang == "en" and svc.t_en else svc.t) }}</span>
-              <span
-                style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); line-height: 1.5;"
-                class="svc-norm">{{ svc.norm }}</span>
-            </div>
-            <span
-              style="display: flex; justify-content: center; align-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--surface-tint); color: var(--text-faint); flex-shrink: 0;"><svg
-                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg></span>
+            <span style="display: block; margin-top: 3px; font-family: var(--font-mono); font-size: 0.6rem;
+                  letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint);
+                  line-height: 1.5;">{{ svc.norm }}</span>
           </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)"
+               stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
         </a>
         </article>
         {% set count = { v: count.v + 1 } %}
-        {% endif %}
-        {% endfor %}
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </section>

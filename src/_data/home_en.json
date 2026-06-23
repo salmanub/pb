@@ -52,12 +52,12 @@
     "ver_servicio": "View service",
     "servicio_label": "Service",
     "items": [
-      { "code": "2.1", "slug": "patologias-estructurales", "icon": "building-2", "t": "Building pathology", "d": "Cracks, settlements and structural damage. Cause, scope and liability." },
-      { "code": "2.2", "slug": "vicios-ocultos", "icon": "house", "t": "Hidden defects", "d": "Non-apparent defects in property sales or after new-build handover." },
-      { "code": "2.3", "slug": "humedades-filtraciones", "icon": "droplets", "t": "Damp and leaks", "d": "The real source of moisture, not just the symptom. Instrumental diagnosis and costed solution." },
-      { "code": "2.4", "slug": "obras-publicas", "href": "/obras-publicas/", "icon": "hard-hat", "t": "Civil works & infrastructure", "d": "Reports on bridges, masonry structures, project modifications and public procurement compliance." },
-      { "code": "2.5", "slug": "reclamacion-mala-ejecucion", "icon": "scale", "t": "Damage assessment", "d": "Expert quantification of repair costs and loss for claims or litigation." },
-      { "code": "2.6", "slug": "contrainforme-pericial", "icon": "file-check-2", "t": "Counter-report & ratification", "d": "Critical review of opposing expert reports and court appearance." }
+      { "code": "2.1", "slug": "structural-pathologies", "icon": "building-2", "t": "Building pathology", "d": "Cracks, settlements and structural damage. Cause, scope and liability." },
+      { "code": "2.2", "slug": "hidden-defects", "icon": "house", "t": "Hidden defects", "d": "Non-apparent defects in property sales or after new-build handover." },
+      { "code": "2.3", "slug": "moisture-water-leakage", "icon": "droplets", "t": "Damp and leaks", "d": "The real source of moisture, not just the symptom. Instrumental diagnosis and costed solution." },
+      { "code": "2.4", "slug": "public-works", "href": "/en/expert-witness-reports/public-works/", "icon": "hard-hat", "t": "Civil works & infrastructure", "d": "Reports on bridges, masonry structures, project modifications and public procurement compliance." },
+      { "code": "2.5", "slug": "poor-execution-claim", "icon": "scale", "t": "Damage assessment", "d": "Expert quantification of repair costs and loss for claims or litigation." },
+      { "code": "2.6", "slug": "counter-report", "icon": "file-check-2", "t": "Counter-report & ratification", "d": "Critical review of opposing expert reports and court appearance." }
     ]
   },
   "method": {
