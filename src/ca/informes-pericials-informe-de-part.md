@@ -34,7 +34,7 @@ body_blocks:
     p: "<b>Abans d'una demanda</b> o per avaluar la solidesa tècnica de la reclamació. <b>Durant una negociació</b> o un informe fonamentat facilita la negociació extrajudicial. <b>Com a prova</b> conforme a la LEC. <b>Per refutar</b> el dictamen de la part contrària mitjançant un contrainforme."
 faq:
   - q: "Té validesa en un judici?"
-    a: "Sí. ó?s un mitjà de prova reconegut per la LEC (arts. 335 i ss.) i pot defensar-se com a prova pericial davant el jutge."
+    a: "Sí. És un mitjà de prova reconegut per la LEC (arts. 335 i ss.) i pot defensar-se com a prova pericial davant el jutge."
   - q: "Diferència amb el dictamen judicial?"
     a: "El de part l'encarrega vostè o el seu lletrat; el judicial el designa el jutjat. La metodologia és idèntica."
 band_title: "Necessites aquest dictamen?"
