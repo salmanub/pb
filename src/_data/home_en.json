@@ -113,6 +113,12 @@
     "placeholder_caso": "Persistent damp in…",
     "submit": "Send enquiry",
     "success_title": "Enquiry received",
-    "success_text": "We will respond within 24 business hours."
+    "success_text": "We will respond within 24 business hours.",
+    "error_title": "Could not send",
+    "error_text": "Your details are saved. Use one of these options to contact us directly:",
+    "error_email_cta": "Open email with your details",
+    "error_phone_cta": "Call now",
+    "error_retry": "Retry",
+    "sending": "Sending…"
   }
 }

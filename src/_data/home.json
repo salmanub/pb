@@ -113,6 +113,12 @@
     "placeholder_caso": "Humedades persistentes en…",
     "submit": "Enviar solicitud",
     "success_title": "Solicitud recibida",
-    "success_text": "Te responderemos en 24 h laborables."
+    "success_text": "Te responderemos en 24 h laborables.",
+    "error_title": "No se ha podido enviar",
+    "error_text": "Tus datos están guardados. Usa una de estas opciones para contactarnos:",
+    "error_email_cta": "Abrir email con tus datos",
+    "error_phone_cta": "Llamar ahora",
+    "error_retry": "Reintentar envío",
+    "sending": "Enviando…"
   }
 }
