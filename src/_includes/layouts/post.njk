@@ -4,7 +4,8 @@ layout: layouts/base.njk
 {#
   post.njk — Layout para articulos individuales de Blog
   Cadena: pagination → post.njk → base.njk
-  NOTE: All HTML on single lines to prevent Markdown <p> wrapping
+  Hero via page-hero.njk (igual que service pages)
+  2-col body: articulo (65%) + sidebar (35%)
 #}
 {% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
 {% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
@@ -12,34 +13,41 @@ layout: layouts/base.njk
 {% set _contactPart = "/contacto/particular/" if (not lang or lang == "es") else ("/en/contact/particular/" if lang == "en" else "/ca/contacte/particular/") %}
 {% set breadcrumb_parent = { label: "Blog", url: _blogUrl } %}
 {% set title = post.title %}
+{% set heroTitle = post.title %}
+{% set description = post.excerpt | default(post.description) %}
 <div itemscope itemtype="https://schema.org/BlogPosting" style="display:none;" aria-hidden="true"><meta itemprop="headline" content="{{ post.title | truncate(110) }}"><meta itemprop="description" content="{{ post.description }}"><meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}"><meta itemprop="datePublished" content="{{ post.datePublished }}T00:00:00+01:00"><meta itemprop="dateModified" content="{{ post.dateModified }}T00:00:00+01:00"><meta itemprop="inLanguage" content="{{ lang | default('es') }}"><div itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ post.author }}"></div><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"></div></div>
-{% include "partials/breadcrumb.njk" %}
-<section style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-top: clamp(32px,5vw,64px); padding-bottom: var(--section-y);">
-<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:600;color:var(--text-accent);margin-bottom:18px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>{{ post.category | default("Blog") }}</div>
-<h1 style="font-family:var(--font-serif);font-size:var(--fs-display-1);line-height:var(--lh-display);letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:0;font-weight:400;max-width:22ch;">{{ post.title }}</h1>
-<p style="margin-top:20px;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);max-width:58ch;">{{ post.excerpt | default(post.description) }}</p>
-<div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:28px;padding-top:22px;border-top:1px solid var(--border-hairline);">
+{% include "partials/page-hero.njk" %}
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-bottom: var(--space-12);">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--border-hairline);">
 <div style="display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;border-radius:50%;background:var(--surface-ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.7rem;font-weight:700;color:var(--bone-100);flex-shrink:0;">AV</div><div><div style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;color:var(--text-strong);">{{ post.author }}</div><div style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);">{{ "Ingeniero Civil · ECCAT 16448" if (not lang or lang == "es") else ("Civil Engineer · ECCAT 16448" if lang == "en" else "Enginyer Civil · ECCAT 16448") }}</div></div></div>
-<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+{% if post.category %}<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-accent);font-weight:600;">{{ post.category }}</span>{% endif %}
 {% for tag in post.tags | slice(0, 3) %}<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;padding:3px 9px;border-radius:var(--radius-xs);border:1px solid var(--border-hairline);color:var(--text-muted);">{{ tag }}</span>{% endfor %}
 <time datetime="{{ post.datePublished }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);">{{ post.datePublished | replace("-", " · ") }}</time>
 </div>
 </div>
-</section>
+</div>
 <div style="max-width:var(--container-wide);margin:0 auto;padding:0 var(--gutter);"><div style="height:1px;background:var(--border-hairline);"></div></div>
-<section style="max-width:var(--container-text);margin:0 auto;padding:var(--section-y) var(--gutter);">
+<section style="max-width:var(--container-wide);margin:0 auto;padding:var(--section-y) var(--gutter);">
+<div style="display:grid;grid-template-columns:1.6fr 0.4fr;gap:clamp(32px,5vw,72px);align-items:start;" class="hero-grid">
 <div class="prose">
 {{ post.content | markdown | safe }}
 </div>
-</section>
+<aside style="position:sticky;top:100px;">
 {% if post.relatedServices and post.relatedServices.length > 0 %}
-<section style="background:var(--paper-50);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);">
-<div style="max-width:var(--container-wide);margin:0 auto;padding:var(--space-10) var(--gutter);">
-<div style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);margin-bottom:18px;">{{ "Servicios relacionados" if (not lang or lang == "es") else ("Related services" if lang == "en" else "Serveis relacionats") }}</div>
-<div style="display:flex;flex-wrap:wrap;gap:12px;">{% for svc in post.relatedServices %}<a href="{{ svc.url }}" style="display:inline-flex;align-items:center;gap:8px;padding:11px 18px;font-family:var(--font-sans);font-size:var(--fs-body-sm);font-weight:var(--fw-semibold);border-radius:var(--radius-sm);border:1.5px solid var(--ink-900);background:transparent;color:var(--ink-900);text-decoration:none;">{{ svc.title }} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>{% endfor %}</div>
+<div style="border:1px solid var(--border-hairline);border-radius:var(--radius-md);background:var(--surface-card);overflow:hidden;margin-bottom:20px;">
+<div style="padding:14px 18px;border-bottom:1px solid var(--border-hairline);font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">{{ "Servicios relacionados" if (not lang or lang == "es") else ("Related services" if lang == "en" else "Serveis relacionats") }}</div>
+<div style="padding:12px 18px;display:flex;flex-direction:column;gap:8px;">{% for svc in post.relatedServices %}<a href="{{ svc.url }}" style="display:flex;align-items:center;gap:8px;font-family:var(--font-sans);font-size:0.875rem;font-weight:600;color:var(--ink-900);text-decoration:none;padding:8px 0;border-bottom:1px solid var(--border-hairline);" onmouseenter="this.style.color='var(--accent)'" onmouseleave="this.style.color='var(--ink-900)'">{{ svc.title }} <svg style="margin-left:auto;flex-shrink:0;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>{% endfor %}</div>
+</div>
+{% endif %}
+<div style="border:1px solid var(--oxide-200);border-radius:var(--radius-md);background:var(--surface-tint);padding:22px;text-align:center;">
+<div style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-accent);margin-bottom:12px;">{{ "Primera consulta" if (not lang or lang == "es") else ("Free consultation" if lang == "en" else "Primera consulta") }}</div>
+<p style="font-family:var(--font-sans);font-size:0.875rem;color:var(--text-muted);margin:0 0 16px;">{{ "Sin coste. Valoramos si su caso tiene recorrido pericial." if (not lang or lang == "es") else ("No charge. We assess your expert claim." if lang == "en" else "Sense cost. Valorem si el seu cas te recorregut pericial.") }}</p>
+<a href="{{ _contactPart }}" class="cta-hero" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;font-family:var(--font-sans);font-size:0.875rem;font-weight:600;border-radius:var(--radius-sm);background:var(--accent);color:var(--accent-on);text-decoration:none;width:100%;box-sizing:border-box;">{{ "Solicitar consulta" if (not lang or lang == "es") else ("Request consultation" if lang == "en" else "Sol·licitar consulta") }} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+</div>
+</aside>
 </div>
 </section>
-{% endif %}
 <section style="background:var(--surface-tint);border-top:1px solid var(--oxide-200);">
 <div style="max-width:var(--container-wide);margin:0 auto;padding:var(--section-y) var(--gutter);text-align:center;">
 <div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:600;color:var(--text-accent);margin-bottom:18px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>{{ "Necesita un informe pericial?" if (not lang or lang == "es") else ("Need an expert report?" if lang == "en" else "Necessita un dictamen pericial?") }}</div>
