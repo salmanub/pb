@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 ---
 {#
@@ -115,29 +115,31 @@ layout: layouts/base.njk
 
 {# ── 4. ARTÍCULOS RELACIONADOS (DS: 2-col, misma cat) ── #}
 {% set allPosts = posts | sort(attribute="datePublished") | reverse %}
-{% set relPosts = [] %}
-{% for p in allPosts %}{% if p.slug != post.slug and p.category == post.category and relPosts | length < 2 %}{% set relPosts = relPosts.concat([p]) %}{% endif %}{% endfor %}
-{% if relPosts | length < 2 %}
-{% for p in allPosts %}{% if p.slug != post.slug and p.slug not in (relPosts | map(attribute="slug") | list) and relPosts | length < 2 %}{% set relPosts = relPosts.concat([p]) %}{% endif %}{% endfor %}
+{% set relCount = 0 %}
+{% set rel1 = null %}
+{% set rel2 = null %}
+{% for p in allPosts %}{% if p.slug != post.slug and p.category == post.category and relCount < 2 %}{% if relCount == 0 %}{% set rel1 = p %}{% else %}{% set rel2 = p %}{% endif %}{% set relCount = relCount + 1 %}{% endif %}{% endfor %}
+{% if relCount < 2 %}
+{% for p in allPosts %}{% if p.slug != post.slug and p.slug != (rel1.slug if rel1 else "") and relCount < 2 %}{% if relCount == 0 %}{% set rel1 = p %}{% else %}{% set rel2 = p %}{% endif %}{% set relCount = relCount + 1 %}{% endif %}{% endfor %}
 {% endif %}
-{% if relPosts | length > 0 %}
-<section style="max-width:var(--container-wide);margin:0 auto;padding:var(--space-12) var(--gutter) var(--section-y);margin-top:var(--space-12);border-top:1px solid var(--border-hairline);">
+{% if relCount > 0 %}
+<section style="max-width:var(--container-wide);margin:0 auto;padding:var(--space-12) var(--gutter) var(--section-y);border-top:1px solid var(--border-hairline);">
 <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:var(--space-8);">
 <div><div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:600;color:var(--text-accent);margin-bottom:10px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>§ Seguir leyendo</div><h2 style="font-family:var(--font-serif);font-size:var(--fs-h2);font-weight:400;color:var(--text-strong);margin:0;">Notas relacionadas</h2></div>
 <a href="{{ _blogUrl }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);text-decoration:none;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;">Ver todas <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
 </div>
 <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(28px,4vw,56px);" class="two-col">
-{% for p in relPosts %}
-<a href="{{ langPrefix }}/blog/{{ p.slug }}/" style="text-decoration:none;display:flex;flex-direction:column;">
+{% for rp in [rel1, rel2] %}{% if rp %}
+<a href="{{ langPrefix }}/blog/{{ rp.slug }}/" style="text-decoration:none;display:flex;flex-direction:column;">
 <div style="overflow:hidden;border-radius:var(--radius-md);border:1px solid var(--border-hairline);aspect-ratio:3/2;background:var(--surface-card);">
-{% if p.image and p.image.url and "placeholder" not in p.image.url %}<img src="{{ p.image.url }}" alt="{{ p.image.alt | default(p.title) }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">{% else %}<div style="width:100%;height:100%;background:linear-gradient(135deg,var(--surface-tint) 0%,var(--paper-50,#eef1ee) 100%);display:flex;align-items:center;justify-content:center;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>{% endif %}
+{% if rp.image and rp.image.url and "placeholder" not in rp.image.url %}<img src="{{ rp.image.url }}" alt="{{ rp.image.alt | default(rp.title) }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">{% else %}<div style="width:100%;height:100%;background:linear-gradient(135deg,var(--surface-tint) 0%,var(--paper-50,#eef1ee) 100%);display:flex;align-items:center;justify-content:center;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>{% endif %}
 </div>
-<div style="display:flex;align-items:center;gap:10px;margin-top:18px;font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;"><span style="color:var(--text-accent);font-weight:600;">{{ p.category }}</span></div>
-<h3 style="font-family:var(--font-serif);font-size:1.32rem;font-weight:400;line-height:1.2;color:var(--text-strong);margin:10px 0 0;">{{ p.title }}</h3>
-<p style="margin:10px 0 0;font-size:0.9rem;color:var(--text-muted);line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">{{ p.excerpt | default(p.description) | truncate(160) }}</p>
-<time datetime="{{ p.datePublished }}" style="display:block;margin-top:14px;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-faint);">{{ p.datePublished | replace("-", "/") | truncate(7, true, "") }}</time>
+<div style="display:flex;align-items:center;gap:10px;margin-top:18px;font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;"><span style="color:var(--text-accent);font-weight:600;">{{ rp.category }}</span></div>
+<h3 style="font-family:var(--font-serif);font-size:1.32rem;font-weight:400;line-height:1.2;color:var(--text-strong);margin:10px 0 0;">{{ rp.title }}</h3>
+<p style="margin:10px 0 0;font-size:0.9rem;color:var(--text-muted);line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">{{ rp.excerpt | default(rp.description) | truncate(160) }}</p>
+<time datetime="{{ rp.datePublished }}" style="display:block;margin-top:14px;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-faint);">{{ rp.datePublished | replace("-", "/") | truncate(7, true, "") }}</time>
 </a>
-{% endfor %}
+{% endif %}{% endfor %}
 </div>
 </section>
 {% endif %}
