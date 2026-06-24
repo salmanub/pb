@@ -1,12 +1,12 @@
-{
+﻿{
   "hero": {
-    "eyebrow": "Enginyeria forense · Perit judicial · Barcelona",
+    "eyebrow": "Enginyeria forense · Perits judicials · Barcelona",
     "h1": "Peritatges d'Enginyeria Civil<br>i Edificació a Barcelona",
-    "lede": "Despatx d'enginyeria forense amb direcció tècnica col·legiada (ECCAT núm. 16448) i inscripció com a perit judicial al Ministeri de Justícia. Com a <a href='/ca/construccio/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">Pèrits de Construcció</a>, aportem el rigor tècnic que els tribunals exigeixen. Conegui <a href='/ca/el-despatx/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">el despatx</a>.",
+    "lede": "Despatx d'enginyeria forense amb direcció tècnica col·legiada (ECCAT núm. 16448) i inscrits com a perits judicials al Ministeri de Justícia. Com a <a href='/ca/construccio/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">Pèrits de Construcció</a>, aportem el rigor tècnic que els tribunals exigeixen. Conegui <a href='/ca/el-despatx/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">el despatx</a>.",
     "cta_primary": "Sol·licitar dictamen",
     "cta_secondary": "Tinc un problema al meu habitatge",
     "badge_label": "Inscrit · Min. Justícia",
-    "badge_text": "Perit judicial i d'assegurances (IRD)"
+    "badge_text": "Perits judicials i d'assegurances (IRD)"
   },
   "stats": [
     { "value": "€2,8 M", "label": "Major import peritat en un únic dictamen", "source": "EXP. 22-074", "accent": true },

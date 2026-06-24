@@ -1,12 +1,12 @@
-{
+﻿{
   "hero": {
-    "eyebrow": "Forensic Engineering · Expert Witness · Barcelona",
+    "eyebrow": "Forensic Engineering · Expert Witnesses · Barcelona",
     "h1": "Civil Engineering<br>& Building Expert Reports in Barcelona",
-    "lede": "Forensic engineering firm with chartered technical direction (ECCAT No. 16448) and court-appointed expert witness registration with the Spanish Ministry of Justice. As <a href='/en/construction-expert/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">Construction Expert Witnesses</a>, we deliver the technical rigour that courts demand. Meet <a href='/en/the-firm/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">the firm</a>.",
+    "lede": "Forensic engineering firm with chartered technical direction (ECCAT No. 16448) and court-appointed expert witnesses registered with the Spanish Ministry of Justice. As <a href='/en/construction-expert/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">Construction Expert Witnesses</a>, we deliver the technical rigour that courts demand. Meet <a href='/en/the-firm/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">the firm</a>.",
     "cta_primary": "Request a report",
     "cta_secondary": "I have a problem with my property",
     "badge_label": "Registered · Min. of Justice",
-    "badge_text": "Court-appointed and insurance expert (IRD)"
+    "badge_text": "Court-appointed and insurance experts (IRD)"
   },
   "stats": [
     { "value": "€2.8 M", "label": "Largest single-report amount assessed", "source": "FILE 22-074", "accent": true },

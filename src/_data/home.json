@@ -1,12 +1,12 @@
-{
+﻿{
   "hero": {
-    "eyebrow": "Ingeniería forense · Perito judicial · Barcelona",
+    "eyebrow": "Ingeniería forense · Peritos judiciales · Barcelona",
     "h1": "Peritajes de Ingeniería Civil<br>y Edificación en Barcelona",
-    "lede": "Despacho de ingeniería forense con dirección técnica colegiada (ECCAT nº 16448) e inscripción como perito judicial en el Ministerio de Justicia. Como <a href='/construccion/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">Peritos de Construcción</a>, aportamos el rigor técnico que los tribunales exigen. Conozca <a href='/el-despacho/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">el despacho</a>.",
+    "lede": "Despacho de ingeniería forense con dirección técnica colegiada (ECCAT nº 16448) e inscritos como peritos judiciales en el Ministerio de Justicia. Como <a href='/construccion/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">Peritos de Construcción</a>, aportamos el rigor técnico que los tribunales exigen. Conozca <a href='/el-despacho/' style='color:inherit;text-decoration:none;border-bottom:1px solid transparent;' onmouseenter=\"this.style.borderBottomColor='var(--text-muted)'\" onmouseleave=\"this.style.borderBottomColor='transparent'\">el despacho</a>.",
     "cta_primary": "Solicitar dictamen",
     "cta_secondary": "Tengo un problema en mi vivienda",
     "badge_label": "Inscrito · Min. Justicia",
-    "badge_text": "Perito judicial y de seguros (IRD)"
+    "badge_text": "Peritos judiciales y de seguros (IRD)"
   },
   "stats": [
     { "value": "€2,8 M", "label": "Mayor importe peritado en un único dictamen", "source": "EXP. 22-074", "accent": true },
