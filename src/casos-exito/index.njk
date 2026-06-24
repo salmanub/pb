@@ -30,24 +30,28 @@ permalink: "/casos-exito/"
 {% for caso in casosExito %}
 {% if caso.estado == "publicado" %}
 <a href="/casos-exito/{{ caso.slug }}/" style="text-decoration:none;display:block;" itemprop="hasPart" itemscope itemtype="https://schema.org/Article">
-<article style="border-radius: var(--radius-md); border: 1px solid {{ 'var(--ink-700)' if loop.index % 3 == 2 else 'var(--border-hairline)' }}; background: {{ 'var(--surface-ink)' if loop.index % 3 == 2 else 'var(--surface-card)' }}; padding: 24px; height: 100%; box-sizing: border-box; transition: box-shadow 0.2s ease; display:flex; flex-direction:column;">
-<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:16px;">
-<div style="display:flex;gap:6px;flex-wrap:wrap;">{% for tag in caso.tags | slice(0, 2) %}<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ 'var(--text-on-dark-muted)' if loop.parent.loop.index % 3 == 2 else 'var(--text-accent)' }};font-weight:600;">{{ tag }}</span>{% if not loop.last %}<span style="color:var(--text-faint);">·</span>{% endif %}{% endfor %}</div>
+<article style="border-radius: var(--radius-md); border: 1px solid {{ 'var(--ink-700)' if loop.index % 3 == 2 else 'var(--border-hairline)' }}; background: {{ 'var(--surface-ink)' if loop.index % 3 == 2 else 'var(--surface-card)' }}; padding: 24px; height: 100%; box-sizing: border-box; display:flex; flex-direction:column; transition: box-shadow 0.2s ease;" onmouseenter="this.style.boxShadow='0 4px 24px rgba(0,0,0,0.08)'" onmouseleave="this.style.boxShadow='none'">
+{# Fila superior: categoría verde + fecha #}
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:14px;">
+<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ 'var(--accent-light, #6fcf97)' if loop.index % 3 == 2 else 'var(--text-accent)' }};font-weight:600;">{{ caso.category | default(caso.tags[0]) }}</span>
 <time datetime="{{ caso.datePublished }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);color:{{ 'var(--text-on-dark-muted)' if loop.index % 3 == 2 else 'var(--text-faint)' }};white-space:nowrap;">{{ caso.datePublished | replace("-", "/") | truncate(7, true, "") }}</time>
 </div>
-<div itemprop="name" style="font-family:var(--font-serif);font-size:var(--fs-h2);font-weight:400;line-height:1.25;color:{{ 'var(--bone-100)' if loop.index % 3 == 2 else 'var(--text-strong)' }};margin-bottom:12px;">{{ caso.title }}</div>
-<p itemprop="description" style="font-size:var(--fs-body-sm);line-height:1.55;color:{{ 'rgba(241,241,234,0.72)' if loop.index % 3 == 2 else 'var(--text-muted)' }};flex-grow:1;">{{ caso.description | truncate(140) }}</p>
-{% if caso.summary %}
-<div style="margin-top:18px;border-top:1px solid {{ 'var(--ink-600)' if loop.index % 3 == 2 else 'var(--border-hairline)' }};padding-top:16px;">
-{% for item in caso.summary | slice(0, 2) %}
-<div style="display:grid;grid-template-columns:1fr 1.4fr;gap:8px;{% if not loop.last %}margin-bottom:8px;{% endif %}">
-<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ 'var(--text-on-dark-muted)' if loop.parent.loop.index % 3 == 2 else 'var(--text-faint)' }};">{{ item.label }}</span>
-<span style="font-size:var(--fs-body-sm);color:{{ 'var(--bone-200)' if loop.parent.loop.index % 3 == 2 else 'var(--text-strong)' }};line-height:1.35;">{{ item.value | truncate(60) }}</span>
-</div>
-{% endfor %}
+{# Importe en grande #}
+{% if caso.amount and caso.amount != "—" %}
+<div style="font-family:var(--font-mono);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;letter-spacing:-0.01em;font-variant-numeric:tabular-nums;color:{{ 'var(--bone-100)' if loop.index % 3 == 2 else 'var(--text-strong)' }};margin-bottom:10px;line-height:1;">{{ caso.amount }}</div>
+{% endif %}
+{# Título #}
+<div itemprop="name" style="font-family:var(--font-serif);font-size:var(--fs-h2);font-weight:400;line-height:1.25;color:{{ 'var(--bone-100)' if loop.index % 3 == 2 else 'var(--text-strong)' }};margin-bottom:10px;">{{ caso.title }}</div>
+{# Descripción corta #}
+<p itemprop="description" style="font-size:var(--fs-body-sm);line-height:1.55;color:{{ 'rgba(241,241,234,0.72)' if loop.index % 3 == 2 else 'var(--text-muted)' }};flex-grow:1;">{{ caso.description | truncate(120) }}</p>
+{# Tags/pills #}
+{% if caso.tags %}
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;">
+{% for tag in caso.tags | slice(0,3) %}<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;padding:3px 8px;border-radius:var(--radius-xs);border:1px solid {{ 'var(--ink-600)' if loop.parent.loop.index % 3 == 2 else 'var(--border-hairline)' }};color:{{ 'var(--text-on-dark-muted)' if loop.parent.loop.index % 3 == 2 else 'var(--text-muted)' }};">{{ tag }}</span>{% endfor %}
 </div>
 {% endif %}
-<div style="margin-top:18px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ 'var(--text-accent)' if loop.index % 3 == 2 else 'var(--text-accent)' }};display:flex;align-items:center;gap:6px;">Leer caso <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+{# CTA row #}
+<div style="margin-top:18px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-accent);display:flex;align-items:center;gap:6px;">Leer caso <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
 </article>
 </a>
 {% endif %}

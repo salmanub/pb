@@ -1,688 +1,706 @@
-[
-  {
-    "title": "Peritaje Geotécnico de Pavimento Industrial: Reclamación por Defectos de Compactación",
-    "slug": "peritaje-geotecnico-pavimento-industrial-barcelona",
-    "translations": [
-      {
-        "lang": "es",
-        "permalink": "/casos-exito/peritaje-geotecnico-pavimento-industrial-barcelona/"
-      },
-      {
-        "lang": "en",
-        "permalink": "/en/success-cases/geotechnical-expert-report-industrial-pavement-barcelona/"
-      },
-      {
-        "lang": "ca",
-        "permalink": "/ca/casos-d-exit/peritatge-geotecnic-paviment-industrial-barcelona/"
-      },
-      {
-        "lang": "fr",
-        "permalink": "/fr/succes/expertise-geotechnique-pavage-industriel-barcelone/"
-      },
-      {
-        "lang": "it",
-        "permalink": "/it/casi-di-successo/perizia-geotecnica-pavimentazione-industriale-barcellona/"
-      }
-    ],
-    "description": "Descubra cómo nuestro informe pericial y estudio geotécnico demostró defectos de compactación y graves incumplimientos de la normativa en una plataforma logística, justificando una reclamación superior a 122.000 €.",
-    "estado": "publicado",
-    "datePublished": "2026-02-27",
-    "dateModified": "2026-02-28",
-    "tags": [
-      "Geotecnia",
-      "Pavimento Industrial",
-      "Obra Civil",
-      "Vicios Ocultos"
-    ],
-    "summary": [
-      {
-        "label": "Ubicación",
-        "value": "Área Metropolitana de Barcelona"
-      },
-      {
-        "label": "Tipo de Obra",
-        "value": "Plataforma Logística (Tráfico Pesado T41)"
-      },
-      {
-        "label": "Problema Detectado",
-        "value": "Hundimientos, deflexiones y grietas prematuras en el firme asfáltico"
-      },
-      {
-        "label": "Resultado",
-        "value": "Dictamen pericial técnico-geotécnico que justifica demolición y reparación integral por más de 115.000 €"
-      }
-    ],
-    "image": {
-      "url": "/assets/images/placeholder-default.png",
-      "alt": "Hundimiento y acumulación de agua en pavimento asfáltico industrial",
-      "caption": "Deflexiones asimétricas y acumulación de agua en la zona de rodadura de vehículos pesados."
+﻿[
+    {
+        "title":  "Peritaje Geotécnico de Pavimento Industrial: Reclamación por Defectos de Compactación",
+        "slug":  "peritaje-geotecnico-pavimento-industrial-barcelona",
+        "translations":  [
+                             {
+                                 "lang":  "es",
+                                 "permalink":  "/casos-exito/peritaje-geotecnico-pavimento-industrial-barcelona/"
+                             },
+                             {
+                                 "lang":  "en",
+                                 "permalink":  "/en/success-cases/geotechnical-expert-report-industrial-pavement-barcelona/"
+                             },
+                             {
+                                 "lang":  "ca",
+                                 "permalink":  "/ca/casos-d-exit/peritatge-geotecnic-paviment-industrial-barcelona/"
+                             },
+                             {
+                                 "lang":  "fr",
+                                 "permalink":  "/fr/succes/expertise-geotechnique-pavage-industriel-barcelone/"
+                             },
+                             {
+                                 "lang":  "it",
+                                 "permalink":  "/it/casi-di-successo/perizia-geotecnica-pavimentazione-industriale-barcellona/"
+                             }
+                         ],
+        "description":  "Descubra cómo nuestro informe pericial y estudio geotécnico demostró defectos de compactación y graves incumplimientos de la normativa en una plataforma logística, justificando una reclamación superior a 122.000 €.",
+        "estado":  "publicado",
+        "datePublished":  "2026-02-27",
+        "dateModified":  "2026-02-28",
+        "tags":  [
+                     "Geotecnia",
+                     "Pavimento Industrial",
+                     "Obra Civil",
+                     "Vicios Ocultos"
+                 ],
+        "summary":  [
+                        {
+                            "label":  "Ubicación",
+                            "value":  "Área Metropolitana de Barcelona"
+                        },
+                        {
+                            "label":  "Tipo de Obra",
+                            "value":  "Plataforma Logística (Tráfico Pesado T41)"
+                        },
+                        {
+                            "label":  "Problema Detectado",
+                            "value":  "Hundimientos, deflexiones y grietas prematuras en el firme asfáltico"
+                        },
+                        {
+                            "label":  "Resultado",
+                            "value":  "Dictamen pericial técnico-geotécnico que justifica demolición y reparación integral por más de 115.000 €"
+                        }
+                    ],
+        "image":  {
+                      "url":  "/assets/images/placeholder-default.png",
+                      "alt":  "Hundimiento y acumulación de agua en pavimento asfáltico industrial",
+                      "caption":  "Deflexiones asimétricas y acumulación de agua en la zona de rodadura de vehículos pesados."
+                  },
+        "images":  [
+                       {
+                           "url":  "/assets/images/casos/logistica-pavimento-01.jpg",
+                           "alt":  "Testigos de asfalto y grietas de fatiga en la plataforma logística",
+                           "caption":  "Zonas de punzonamiento por cargas estáticas donde se omitió el uso de hormigón."
+                       },
+                       {
+                           "url":  "/assets/images/casos/logistica-drenaje-02.jpg",
+                           "alt":  "Fallos perimetrales en pozos de registro y drenaje",
+                           "caption":  "Asientos locales alrededor de los sumideros debido a la deficiente compactación de las zanjas."
+                       }
+                   ],
+        "relatedService":  {
+                               "title":  "Ingeniería Forense de Construcción y Control de Calidad",
+                               "url":  "/ingenieria-forense-construccion/"
+                           },
+        "content":  "## Peritaje Geotécnico de Pavimento Industrial: Reclamación por Defectos de Compactación\n\nCuando un operador logístico invierte en la urbanización de sus instalaciones, la infraestructura debe estar calculada para soportar solicitaciones extremas. Sin embargo, en la ingeniería civil, los vicios ocultos en la ejecución del subsuelo acaban saliendo a la luz, paralizando la operativa y generando graves riesgos de seguridad.\n\nEn **Perito Barcelona**, fuimos contactados por un importante operador logístico para investigar la aparición prematura de patologías severas en el pavimento de su nueva plataforma, ubicada en el área metropolitana de Barcelona.\n\n### 1. El Reto: Un firme colapsado por el tráfico pesado\n\nLa adecuación de la parcela requirió la ejecución de un terraplén de hasta 4 metros de altura para su nivelación topográfica. Tras la puesta en marcha de las instalaciones, destinadas al tráfico continuo de vehículos pesados (categoría T41) y almacenamiento estático, comenzaron a aparecer síntomas alarmantes:\n\n* **Deflexiones y hundimientos asimétricos** en las zonas de rodadura.\n* **Grietas de fatiga** en la mezcla bituminosa.\n* **Punzonamiento severo** en las áreas de apoyo de cargas estáticas.\n* **Acumulación de agua** por contrapendientes y asientos perimetrales en los pozos de registro.\n\nLa propiedad necesitaba un dictamen técnico irrefutable para exigir responsabilidades a la empresa constructora antes de que expiraran los plazos de garantía.\n\n### 2. Nuestra Intervención: Auditoría Técnica y Geotécnica\n\nPara fundamentar la reclamación con pruebas periciales objetivas, bajo la dirección técnica de Albert Vilardell (Ingeniero Civil Col. Nº 16448), coordinamos una exhaustiva campaña de investigación geotécnica *in situ* cruzada con la planimetría del proyecto original.\n\nLa metodología empleada incluyó:\n* Extracción de testigos del firme mediante sonda rotativa de corona diamantada (HILTI).\n* Ejecución de sondeos mecánicos con recuperación de testigo continuo y ensayos de penetración estándar (SPT).\n* Ensayos de penetración dinámica continua superpesada (DPSH).\n* Ensayos de laboratorio (granulometría, plasticidad y edómetros de colapso).\n\n### 3. El Diagnóstico: Negligencia constructiva e incumplimiento normativo\n\nEl análisis de los datos reveló una realidad muy distinta a la proyectada, descartando asientos naturales o fenómenos de hidroconsolidación (colapso). El dictamen demostró **negligencias constructivas graves**:\n\n* **Incumplimiento en la compactación del terraplén:** El proyecto exigía compactar la explanada al 95-100% del ensayo Proctor Modificado en tongadas de 20-25 cm. Los registros DPSH (con patrón \u0027en diente de sierra\u0027) demostraron que se vertieron tongadas excesivas de hasta 1,5 metros. Solo se compactó la superficie, dejando el interior en un estado de compacidad inestable (valores N_SPT de 7).\n* **Capacidad Portante Crítica:** El subsuelo presentaba un índice correlacionado CBR inferior a 3, incapacitándolo normativamente para conformar una explanada categoría E1 (que exige un CBR mayor o igual a 6).\n* **Infracción de la Instrucción 6.1 IC (Firmes):** Para la categoría de tráfico pesado T41, la normativa estatal exige espesores mínimos de capas granulares (40 cm) y asfálticas (10 cm). El firme ejecutado (12 cm de asfalto y apenas 15-20 cm de base) era claramente deficitario para absorber las cargas.\n* **Elección Inadecuada de Materiales:** Se utilizó pavimento flexible (asfalto) en zonas de almacenamiento de cargas concentradas, cuando la buena praxis de la ingeniería civil dictamina el uso de soleras de hormigón para evitar punzonamientos.\n\n### 4. El Resultado: Una base probatoria inexpugnable\n\nLas patologías amenazaban con el colapso total de las capas inferiores si no se intervenía de raíz. Para solucionar el problema, no bastaba con un simple reasfaltado; era necesario demoler el firme, excavar 60 cm de explanada deficiente y reconstruir bajo normativa.\n\nValoramos económicamente el daño en **más de 115.000 €**. Con este Informe Pericial Técnico y Geotécnico visado, la empresa logística obtuvo la herramienta probatoria definitiva para exigir a la contrata la reparación integral de los vicios ocultos, derivando el caso a su equipo legal con plenas garantías técnicas.",
+        "amount":  "+115.000 €",
+        "category":  "Obra Civil"
     },
-    "images": [
-      {
-        "url": "/assets/images/casos/logistica-pavimento-01.jpg",
-        "alt": "Testigos de asfalto y grietas de fatiga en la plataforma logística",
-        "caption": "Zonas de punzonamiento por cargas estáticas donde se omitió el uso de hormigón."
-      },
-      {
-        "url": "/assets/images/casos/logistica-drenaje-02.jpg",
-        "alt": "Fallos perimetrales en pozos de registro y drenaje",
-        "caption": "Asientos locales alrededor de los sumideros debido a la deficiente compactación de las zanjas."
-      }
-    ],
-    "relatedService": {
-      "title": "Ingeniería Forense de Construcción y Control de Calidad",
-      "url": "/ingenieria-forense-construccion/"
+    {
+        "title":  "Dictamen Pericial por Humedades de Capilaridad en el Centro de Barcelona",
+        "slug":  "humedades-capilaridad-centro-barcelona",
+        "translations":  [
+                             {
+                                 "lang":  "es",
+                                 "permalink":  "/casos-exito/humedades-capilaridad-centro-barcelona/"
+                             },
+                             {
+                                 "lang":  "en",
+                                 "permalink":  "/en/success-cases/rising-damp-capillarity-center-barcelona/"
+                             },
+                             {
+                                 "lang":  "ca",
+                                 "permalink":  "/ca/casos-d-exit/humitats-capillaritat-centre-barcelona/"
+                             },
+                             {
+                                 "lang":  "fr",
+                                 "permalink":  "/fr/succes/humidite-capillarite-centre-barcelone/"
+                             },
+                             {
+                                 "lang":  "it",
+                                 "permalink":  "/it/casi-di-successo/umidita-risalita-capillarita-centro-barcellona/"
+                             }
+                         ],
+        "description":  "Análisis de un caso de éxito sobre un dictamen pericial por humedades de capilaridad en un edificio residencial en el centro de Barcelona, favorable para la comunidad de propietarios.",
+        "estado":  "publicado",
+        "datePublished":  "2025-09-27",
+        "dateModified":  "2025-09-27",
+        "tags":  [
+                     "Patologías",
+                     "Humedades",
+                     "Comunidades"
+                 ],
+        "summary":  [
+                        {
+                            "label":  "Ubicación",
+                            "value":  "Centro urbano, Barcelona"
+                        },
+                        {
+                            "label":  "Tipo de Inmueble",
+                            "value":  "Edificio residencial plurifamiliar"
+                        },
+                        {
+                            "label":  "Problema Detectado",
+                            "value":  "Humedades persistentes por capilaridad en planta baja"
+                        },
+                        {
+                            "label":  "Resultado",
+                            "value":  "Dictamen favorable para la comunidad de propietarios"
+                        }
+                    ],
+        "image":  {
+                      "url":  "/assets/images/placeholder-default.png",
+                      "alt":  "Detalle de las humedades por capilaridad en una pared de un edificio histórico",
+                      "caption":  "Inspección detallada de las paredes afectadas por la humedad ascendente."
+                  },
+        "images":  [
+                       {
+                           "url":  "/assets/images/casos/humedades-eixample-01.jpg",
+                           "alt":  "Técnico midiendo la humedad en la pared con un higrómetro",
+                           "caption":  "Se utilizaron higrómetros de contacto para cuantificar el nivel de humedad."
+                       },
+                       {
+                           "url":  "/assets/images/casos/humedades-eixample-02.jpg",
+                           "alt":  "Vista general del sótano afectado por las humedades",
+                           "caption":  "El problema afectaba a los muros de carga de toda la planta baja del edificio."
+                       }
+                   ],
+        "relatedService":  {
+                               "title":  "Informes de Patologías de la Edificación",
+                               "url":  "/patologias-estructurales/"
+                           },
+        "content":  "## 1. Antecedentes del Problema\n\nLa comunidad de propietarios de un edificio en un céntrico distrito de Barcelona nos contactó debido a la aparición recurrente de manchas de humedad, desconchones en la pintura y un persistente olor a humedad en las viviendas de la planta baja y en las zonas comunes. A pesar de haber realizado varias reparaciones superficiales, el problema reaparecía constantemente, afectando la habitabilidad y devaluando la propiedad.\n\n### 2. Proceso de Diagnóstico\n\nNuestro equipo técnico se desplazó al inmueble para realizar una inspección exhaustiva. El proceso de diagnóstico incluyó:\n\n* **Inspección Visual Detallada:** Se identificó el patrón ascendente de las humedades, característico de la capilaridad.\n* **Mediciones con Higrómetro:** Se utilizaron higrómetros de superficie y de profundidad para mapear la extensión y la intensidad de la humedad en los muros afectados.\n* **Análisis del Entorno:** Se estudió la proximidad del nivel freático y las condiciones de la cimentación del edificio, construida con materiales porosos típicos de la época.\n\n## 3. Conclusión del Dictamen Técnico\n\nNuestro informe pericial concluyó de manera irrefutable que las humedades eran causadas por **capilaridad**, un fenómeno por el cual el agua del subsuelo asciende a través de los poros de los materiales de construcción. El dictamen detalló el origen del problema y desestimó otras posibles causas como filtraciones o condensación.\n\nGracias a la solidez de nuestro informe, la comunidad de propietarios pudo reclamar al seguro de la comunidad (en base a una póliza que cubría daños extensivos por agua) y obtener la financiación necesaria para implementar una solución definitiva, como la instalación de barreras de inyecciones químicas o sistemas de electroósmosis.",
+        "amount":  "—",
+        "category":  "Patologías"
     },
-    "content": "## Peritaje Geotécnico de Pavimento Industrial: Reclamación por Defectos de Compactación\n\nCuando un operador logístico invierte en la urbanización de sus instalaciones, la infraestructura debe estar calculada para soportar solicitaciones extremas. Sin embargo, en la ingeniería civil, los vicios ocultos en la ejecución del subsuelo acaban saliendo a la luz, paralizando la operativa y generando graves riesgos de seguridad.\n\nEn **Perito Barcelona**, fuimos contactados por un importante operador logístico para investigar la aparición prematura de patologías severas en el pavimento de su nueva plataforma, ubicada en el área metropolitana de Barcelona.\n\n### 1. El Reto: Un firme colapsado por el tráfico pesado\n\nLa adecuación de la parcela requirió la ejecución de un terraplén de hasta 4 metros de altura para su nivelación topográfica. Tras la puesta en marcha de las instalaciones, destinadas al tráfico continuo de vehículos pesados (categoría T41) y almacenamiento estático, comenzaron a aparecer síntomas alarmantes:\n\n* **Deflexiones y hundimientos asimétricos** en las zonas de rodadura.\n* **Grietas de fatiga** en la mezcla bituminosa.\n* **Punzonamiento severo** en las áreas de apoyo de cargas estáticas.\n* **Acumulación de agua** por contrapendientes y asientos perimetrales en los pozos de registro.\n\nLa propiedad necesitaba un dictamen técnico irrefutable para exigir responsabilidades a la empresa constructora antes de que expiraran los plazos de garantía.\n\n### 2. Nuestra Intervención: Auditoría Técnica y Geotécnica\n\nPara fundamentar la reclamación con pruebas periciales objetivas, bajo la dirección técnica de Albert Vilardell (Ingeniero Civil Col. Nº 16448), coordinamos una exhaustiva campaña de investigación geotécnica *in situ* cruzada con la planimetría del proyecto original.\n\nLa metodología empleada incluyó:\n* Extracción de testigos del firme mediante sonda rotativa de corona diamantada (HILTI).\n* Ejecución de sondeos mecánicos con recuperación de testigo continuo y ensayos de penetración estándar (SPT).\n* Ensayos de penetración dinámica continua superpesada (DPSH).\n* Ensayos de laboratorio (granulometría, plasticidad y edómetros de colapso).\n\n### 3. El Diagnóstico: Negligencia constructiva e incumplimiento normativo\n\nEl análisis de los datos reveló una realidad muy distinta a la proyectada, descartando asientos naturales o fenómenos de hidroconsolidación (colapso). El dictamen demostró **negligencias constructivas graves**:\n\n* **Incumplimiento en la compactación del terraplén:** El proyecto exigía compactar la explanada al 95-100% del ensayo Proctor Modificado en tongadas de 20-25 cm. Los registros DPSH (con patrón 'en diente de sierra') demostraron que se vertieron tongadas excesivas de hasta 1,5 metros. Solo se compactó la superficie, dejando el interior en un estado de compacidad inestable (valores N_SPT de 7).\n* **Capacidad Portante Crítica:** El subsuelo presentaba un índice correlacionado CBR inferior a 3, incapacitándolo normativamente para conformar una explanada categoría E1 (que exige un CBR mayor o igual a 6).\n* **Infracción de la Instrucción 6.1 IC (Firmes):** Para la categoría de tráfico pesado T41, la normativa estatal exige espesores mínimos de capas granulares (40 cm) y asfálticas (10 cm). El firme ejecutado (12 cm de asfalto y apenas 15-20 cm de base) era claramente deficitario para absorber las cargas.\n* **Elección Inadecuada de Materiales:** Se utilizó pavimento flexible (asfalto) en zonas de almacenamiento de cargas concentradas, cuando la buena praxis de la ingeniería civil dictamina el uso de soleras de hormigón para evitar punzonamientos.\n\n### 4. El Resultado: Una base probatoria inexpugnable\n\nLas patologías amenazaban con el colapso total de las capas inferiores si no se intervenía de raíz. Para solucionar el problema, no bastaba con un simple reasfaltado; era necesario demoler el firme, excavar 60 cm de explanada deficiente y reconstruir bajo normativa.\n\nValoramos económicamente el daño en **más de 115.000 €**. Con este Informe Pericial Técnico y Geotécnico visado, la empresa logística obtuvo la herramienta probatoria definitiva para exigir a la contrata la reparación integral de los vicios ocultos, derivando el caso a su equipo legal con plenas garantías técnicas."
-  },
-  {
-    "title": "Dictamen Pericial por Humedades de Capilaridad en el Centro de Barcelona",
-    "slug": "humedades-capilaridad-centro-barcelona",
-    "translations": [
-      {
-        "lang": "es",
-        "permalink": "/casos-exito/humedades-capilaridad-centro-barcelona/"
-      },
-      {
-        "lang": "en",
-        "permalink": "/en/success-cases/rising-damp-capillarity-center-barcelona/"
-      },
-      {
-        "lang": "ca",
-        "permalink": "/ca/casos-d-exit/humitats-capillaritat-centre-barcelona/"
-      },
-      {
-        "lang": "fr",
-        "permalink": "/fr/succes/humidite-capillarite-centre-barcelone/"
-      },
-      {
-        "lang": "it",
-        "permalink": "/it/casi-di-successo/umidita-risalita-capillarita-centro-barcellona/"
-      }
-    ],
-    "description": "Análisis de un caso de éxito sobre un dictamen pericial por humedades de capilaridad en un edificio residencial en el centro de Barcelona, favorable para la comunidad de propietarios.",
-    "estado": "publicado",
-    "datePublished": "2025-09-27",
-    "dateModified": "2025-09-27",
-    "tags": [
-      "Patologías",
-      "Humedades",
-      "Comunidades"
-    ],
-    "summary": [
-      {
-        "label": "Ubicación",
-        "value": "Centro urbano, Barcelona"
-      },
-      {
-        "label": "Tipo de Inmueble",
-        "value": "Edificio residencial plurifamiliar"
-      },
-      {
-        "label": "Problema Detectado",
-        "value": "Humedades persistentes por capilaridad en planta baja"
-      },
-      {
-        "label": "Resultado",
-        "value": "Dictamen favorable para la comunidad de propietarios"
-      }
-    ],
-    "image": {
-      "url": "/assets/images/placeholder-default.png",
-      "alt": "Detalle de las humedades por capilaridad en una pared de un edificio histórico",
-      "caption": "Inspección detallada de las paredes afectadas por la humedad ascendente."
+    {
+        "title":  "Deficiencias Estructurales en la Ampliación de una Bodega en el Alt Penedès",
+        "slug":  "deficiencias-estructurales-bodega-alt-penedes",
+        "translations":  [
+                             {
+                                 "lang":  "es",
+                                 "permalink":  "/casos-exito/deficiencias-estructurales-bodega-alt-penedes/"
+                             },
+                             {
+                                 "lang":  "en",
+                                 "permalink":  "/en/success-cases/structural-deficiencies-winery-alt-penedes/"
+                             },
+                             {
+                                 "lang":  "ca",
+                                 "permalink":  "/ca/casos-d-exit/deficiencies-estructurals-celler-alt-penedes/"
+                             },
+                             {
+                                 "lang":  "fr",
+                                 "permalink":  "/fr/succes/deficiences-structurelles-cave-alt-penedes/"
+                             },
+                             {
+                                 "lang":  "it",
+                                 "permalink":  "/it/casi-di-successo/carenze-strutturali-cantina-alt-penedes/"
+                             }
+                         ],
+        "description":  "Informe pericial sobre defectos graves en pavimentos y en la estructura metálica de la ampliación de una bodega, comprometiendo su seguridad estructural.",
+        "estado":  "publicado",
+        "datePublished":  "2025-05-04",
+        "dateModified":  "2025-05-04",
+        "tags":  [
+                     "Estructural",
+                     "Patologías",
+                     "Naves Industriales"
+                 ],
+        "summary":  [
+                        {
+                            "label":  "Ubicación",
+                            "value":  "Comarca del Alt Penedès (Barcelona)"
+                        },
+                        {
+                            "label":  "Tipo de Inmueble",
+                            "value":  "Bodega industrial (Celler)"
+                        },
+                        {
+                            "label":  "Problema Detectado",
+                            "value":  "Ejecución deficiente de pavimentos y anclajes estructurales"
+                        },
+                        {
+                            "label":  "Resultado",
+                            "value":  "Orden de corrección inmediata para garantizar la seguridad del edificio"
+                        }
+                    ],
+        "image":  {
+                      "url":  "/assets/images/placeholder-default.png",
+                      "alt":  "Detalle del anclaje defectuoso de viga metálica en la bodega",
+                      "caption":  "Perno de fijación extraído sin restos de mortero o resina, demostrando la ausencia de anclaje."
+                  },
+        "images":  [
+                       {
+                           "url":  "/assets/images/casos/penedes-terraza-01.jpg",
+                           "alt":  "Pavimento de mortero de la terraza completamente fisurado",
+                           "caption":  "La ausencia de juntas y un curado deficiente provocaron la fisuración generalizada del soporte."
+                       },
+                       {
+                           "url":  "/assets/images/casos/penedes-calculo-01.jpg",
+                           "alt":  "Cálculos estructurales que justifican la necesidad de los apoyos correctos",
+                           "caption":  "El análisis técnico demostró que la solución proyectada era correcta, pero no la ejecutada."
+                       }
+                   ],
+        "relatedService":  {
+                               "title":  "Informes de Deficiencias Estructurales",
+                               "url":  "/asesoramiento-estructural/"
+                           },
+        "content":  "## 1. El Problema: Defectos Críticos tras una Ampliación\n\nEl propietario de una importante bodega en la comarca vitivinícola del Alt Penedès nos encargó un informe tras detectar graves anomalías en la obra de ampliación de sus instalaciones. Los defectos comprometían la funcionalidad de los nuevos pavimentos y, lo que es más preocupante, la seguridad estructural del nuevo forjado.\n\n### 2. Diagnóstico Técnico: Tres Focos de Deficiencias Graves\n\nNuestra inspección y el posterior análisis técnico, cotejado con el proyecto de ejecución original, revelaron tres problemas críticos que requerían una intervención inmediata:\n\n1.  **Pavimento de Terraza Inservible:** El mortero de la nueva terraza presentaba fisuras de más de 1mm y disgregación superficial por una ejecución deficiente y la ausencia total de juntas de dilatación. Era un soporte inútil para el acabado cerámico previsto.\n2.  **Pavimento de Planta Baja Contaminado:** El hormigón de la planta inferior estaba cubierto de restos de lechada, generando un polvo constante que impedía su uso como soporte para un pavimento de rodadura industrial.\n3.  **Deficiencia Estructural Crítica:** Este fue el hallazgo más grave. La viga metálica principal que soportaba el nuevo forjado no estaba anclada correctamente a los pilares según el proyecto. Los apoyos intermedios, esenciales para el cálculo estructural, estaban sujetos de forma precaria, comprometiendo la estabilidad y seguridad de toda la planta superior.\n\n## 3. Solución y Conclusión\n\nNuestro informe pericial fue concluyente. Se demostró mediante cálculos que la solución ejecutada en la estructura metálica no garantizaba la estabilidad prevista en el proyecto original. Se ordenó la **corrección inmediata del sistema de anclaje** para asegurar la integridad del edificio.\n\nAsimismo, se recomendó la demolición y reconstrucción completa del pavimento de la terraza y el fresado mecánico del pavimento de la planta baja. El informe proporcionó al propietario las directrices técnicas necesarias para exigir una correcta subsanación de todas las deficiencias.",
+        "amount":  "—",
+        "category":  "Estructural"
     },
-    "images": [
-      {
-        "url": "/assets/images/casos/humedades-eixample-01.jpg",
-        "alt": "Técnico midiendo la humedad en la pared con un higrómetro",
-        "caption": "Se utilizaron higrómetros de contacto para cuantificar el nivel de humedad."
-      },
-      {
-        "url": "/assets/images/casos/humedades-eixample-02.jpg",
-        "alt": "Vista general del sótano afectado por las humedades",
-        "caption": "El problema afectaba a los muros de carga de toda la planta baja del edificio."
-      }
-    ],
-    "relatedService": {
-      "title": "Informes de Patologías de la Edificación",
-      "url": "/patologias-estructurales/"
+    {
+        "title":  "Reclamación Exitosa por Instalación Defectuosa de Parquet en Barcelona",
+        "slug":  "instalacion-defectuosa-parquet-barcelona",
+        "translations":  [
+                             {
+                                 "lang":  "es",
+                                 "permalink":  "/casos-exito/instalacion-defectuosa-parquet-barcelona/"
+                             },
+                             {
+                                 "lang":  "en",
+                                 "permalink":  "/en/success-cases/defective-parquet-installation-barcelona/"
+                             },
+                             {
+                                 "lang":  "ca",
+                                 "permalink":  "/ca/casos-d-exit/instal-lacio-defectuosa-parquet-barcelona/"
+                             },
+                             {
+                                 "lang":  "fr",
+                                 "permalink":  "/fr/succes/installation-defectueuse-parquet-barcelone/"
+                             },
+                             {
+                                 "lang":  "it",
+                                 "permalink":  "/it/casi-di-successo/installazione-difettosa-parquet-barcellona/"
+                             }
+                         ],
+        "description":  "Informe pericial sobre un parquet laminado mal instalado en una vivienda, identificando la ausencia de juntas y un soporte no nivelado como causa principal.",
+        "estado":  "publicado",
+        "datePublished":  "2025-09-03",
+        "dateModified":  "2025-09-03",
+        "tags":  [
+                     "Vicios Ocultos",
+                     "Reformas",
+                     "Reclamaciones"
+                 ],
+        "summary":  [
+                        {
+                            "label":  "Ubicación",
+                            "value":  "Barcelona Ciudad"
+                        },
+                        {
+                            "label":  "Tipo de Obra",
+                            "value":  "Instalación de pavimento laminado en reforma"
+                        },
+                        {
+                            "label":  "Problema Detectado",
+                            "value":  "Abombamiento, movimiento y crujidos en parquet nuevo"
+                        },
+                        {
+                            "label":  "Resultado",
+                            "value":  "Dictamen que responsabiliza a la instaladora del coste íntegro de la reparación"
+                        }
+                    ],
+        "image":  {
+                      "url":  "/assets/images/placeholder-default.png",
+                      "alt":  "Pasillo con el parquet levantado y abombado por la falta de juntas de dilatación",
+                      "caption":  "El movimiento vertical del parquet al caminar era evidente en toda la vivienda."
+                  },
+        "images":  [
+                       {
+                           "url":  "/assets/images/casos/parque-sants-02.jpg",
+                           "alt":  "Detalle del desnivel entre el parquet y el rodapié",
+                           "caption":  "La falta de nivelación del soporte provocaba ondulaciones visibles."
+                       },
+                       {
+                           "url":  "/assets/images/casos/parque-sants-03.jpg",
+                           "alt":  "Lamas de parquet con el sistema de anclaje clic roto",
+                           "caption":  "La mala ejecución provocó incluso la rotura de las uniones entre lamas."
+                       }
+                   ],
+        "relatedService":  {
+                               "title":  "Informes Periciales por Vicios Ocultos",
+                               "url":  "/vicios-ocultos/"
+                           },
+        "content":  "## 1. El Problema: Un Suelo Nuevo que Parece Viejo\n\nUna propietaria en Barcelona nos contactó frustrada. Tras una reforma integral, el pavimento de parquet laminado recién instalado presentaba graves problemas: se levantaba en varias zonas, \u0027crujía\u0027 al caminar y presentaba ondulaciones visibles. La empresa instaladora atribuía los problemas a la calidad del material, una afirmación que nuestro peritaje desmintió.\n\n### 2. La Causa Real: Errores de Instalación\n\nLa inspección técnica reveló que el material era de excelente calidad, pero su instalación fue completamente deficiente. Los errores contravenían las normas más básicas de la buena construcción (*lex artis*):\n\n* **Ausencia de Juntas de Dilatación:** El instalador colocó el parquet de forma continua por toda la planta, sin dejar las juntas perimetrales y de transición obligatorias. Al no tener espacio para expandirse, el parquet se abombaba y se levantaba.\n* **Soporte sin Nivelar:** La base sobre la que se instaló el pavimento no fue correctamente nivelada, lo que provocaba las ondulaciones y el movimiento vertical de las lamas.\n* **Mala Praxis General:** Se detectaron además lamas con el sistema de anclaje \u0027clic\u0027 roto y una colocación sin la trabazón adecuada, generando un patrón estético anómalo (efecto \u0027escalera\u0027).\n\n## 3. Conclusión Pericial\n\nNuestro informe concluyó de forma inequívoca que todos los defectos eran atribuibles a una **incorrecta ejecución de la instalación**, y no a un defecto del material. Se determinó que la única solución viable era el desmontaje completo del pavimento, la correcta nivelación del soporte y la reinstalación del material desde cero.\n\nEl dictamen estableció que la empresa instaladora debía **asumir el 100% de los costes de la subsanación**, liberando a la propietaria de cualquier gasto adicional y proporcionándole la herramienta legal necesaria para exigir una solución definitiva.",
+        "amount":  "—",
+        "category":  "Vicios Ocultos"
     },
-    "content": "## 1. Antecedentes del Problema\n\nLa comunidad de propietarios de un edificio en un céntrico distrito de Barcelona nos contactó debido a la aparición recurrente de manchas de humedad, desconchones en la pintura y un persistente olor a humedad en las viviendas de la planta baja y en las zonas comunes. A pesar de haber realizado varias reparaciones superficiales, el problema reaparecía constantemente, afectando la habitabilidad y devaluando la propiedad.\n\n### 2. Proceso de Diagnóstico\n\nNuestro equipo técnico se desplazó al inmueble para realizar una inspección exhaustiva. El proceso de diagnóstico incluyó:\n\n* **Inspección Visual Detallada:** Se identificó el patrón ascendente de las humedades, característico de la capilaridad.\n* **Mediciones con Higrómetro:** Se utilizaron higrómetros de superficie y de profundidad para mapear la extensión y la intensidad de la humedad en los muros afectados.\n* **Análisis del Entorno:** Se estudió la proximidad del nivel freático y las condiciones de la cimentación del edificio, construida con materiales porosos típicos de la época.\n\n## 3. Conclusión del Dictamen Técnico\n\nNuestro informe pericial concluyó de manera irrefutable que las humedades eran causadas por **capilaridad**, un fenómeno por el cual el agua del subsuelo asciende a través de los poros de los materiales de construcción. El dictamen detalló el origen del problema y desestimó otras posibles causas como filtraciones o condensación.\n\nGracias a la solidez de nuestro informe, la comunidad de propietarios pudo reclamar al seguro de la comunidad (en base a una póliza que cubría daños extensivos por agua) y obtener la financiación necesaria para implementar una solución definitiva, como la instalación de barreras de inyecciones químicas o sistemas de electroósmosis."
-  },
-  {
-    "title": "Deficiencias Estructurales en la Ampliación de una Bodega en el Alt Penedès",
-    "slug": "deficiencias-estructurales-bodega-alt-penedes",
-    "translations": [
-      {
-        "lang": "es",
-        "permalink": "/casos-exito/deficiencias-estructurales-bodega-alt-penedes/"
-      },
-      {
-        "lang": "en",
-        "permalink": "/en/success-cases/structural-deficiencies-winery-alt-penedes/"
-      },
-      {
-        "lang": "ca",
-        "permalink": "/ca/casos-d-exit/deficiencies-estructurals-celler-alt-penedes/"
-      },
-      {
-        "lang": "fr",
-        "permalink": "/fr/succes/deficiences-structurelles-cave-alt-penedes/"
-      },
-      {
-        "lang": "it",
-        "permalink": "/it/casi-di-successo/carenze-strutturali-cantina-alt-penedes/"
-      }
-    ],
-    "description": "Informe pericial sobre defectos graves en pavimentos y en la estructura metálica de la ampliación de una bodega, comprometiendo su seguridad estructural.",
-    "estado": "publicado",
-    "datePublished": "2025-05-04",
-    "dateModified": "2025-05-04",
-    "tags": [
-      "Estructural",
-      "Patologías",
-      "Naves Industriales"
-    ],
-    "summary": [
-      {
-        "label": "Ubicación",
-        "value": "Comarca del Alt Penedès (Barcelona)"
-      },
-      {
-        "label": "Tipo de Inmueble",
-        "value": "Bodega industrial (Celler)"
-      },
-      {
-        "label": "Problema Detectado",
-        "value": "Ejecución deficiente de pavimentos y anclajes estructurales"
-      },
-      {
-        "label": "Resultado",
-        "value": "Orden de corrección inmediata para garantizar la seguridad del edificio"
-      }
-    ],
-    "image": {
-      "url": "/assets/images/placeholder-default.png",
-      "alt": "Detalle del anclaje defectuoso de viga metálica en la bodega",
-      "caption": "Perno de fijación extraído sin restos de mortero o resina, demostrando la ausencia de anclaje."
+    {
+        "title":  "Dictamen por Incumplimiento de Contrato en Reforma Post-Incendio",
+        "slug":  "incumplimiento-contrato-reforma-barcelona",
+        "translations":  [
+                             {
+                                 "lang":  "es",
+                                 "permalink":  "/casos-exito/incumplimiento-contrato-reforma-barcelona/"
+                             },
+                             {
+                                 "lang":  "en",
+                                 "permalink":  "/en/success-cases/breach-contract-post-fire-renovation/"
+                             },
+                             {
+                                 "lang":  "ca",
+                                 "permalink":  "/ca/casos-d-exit/incompliment-contracte-reforma-barcelona/"
+                             },
+                             {
+                                 "lang":  "fr",
+                                 "permalink":  "/fr/succes/rupture-contrat-renovation-post-incendie/"
+                             },
+                             {
+                                 "lang":  "it",
+                                 "permalink":  "/it/casi-di-successo/inadempimento-contrattuale-ristrutturazione-post-incendio/"
+                             }
+                         ],
+        "description":  "Peritaje técnico sobre una reforma post-incendio donde el contratista recibió un adelanto económico sin iniciar los trabajos, realizando solo actuaciones deficientes.",
+        "estado":  "publicado",
+        "datePublished":  "2025-08-20",
+        "dateModified":  "2025-08-20",
+        "tags":  [
+                     "Reclamaciones",
+                     "Reformas",
+                     "Seguros"
+                 ],
+        "summary":  [
+                        {
+                            "label":  "Ubicación",
+                            "value":  "Barcelona Ciudad"
+                        },
+                        {
+                            "label":  "Tipo de Obra",
+                            "value":  "Reforma de vivienda tras un incendio"
+                        },
+                        {
+                            "label":  "Problema Detectado",
+                            "value":  "Pago de adelanto sustancial sin inicio real de los trabajos"
+                        },
+                        {
+                            "label":  "Resultado",
+                            "value":  "Informe técnico que justifica el incumplimiento y fundamenta el reintegro de los fondos"
+                        }
+                    ],
+        "image":  {
+                      "url":  "/assets/images/placeholder-default.png",
+                      "alt":  "Vista del salón de la vivienda afectada por el incendio y sin reformar",
+                      "caption":  "Estado de la vivienda durante la inspección: sin inicio de obra y con daños por hollín."
+                  },
+        "images":  [
+                       {
+                           "url":  "/assets/images/casos/incendio-barcelona-02.jpg",
+                           "alt":  "Pintura deficiente sobre el hollín del incendio",
+                           "caption":  "La pintura plástica aplicada no cubre el hollín, un tratamiento totalmente inadecuado."
+                       },
+                       {
+                           "url":  "/assets/images/casos/incendio-barcelona-03.jpg",
+                           "alt":  "Instalación eléctrica peligrosa sobre cableado quemado",
+                           "caption":  "Se conectó cableado nuevo directamente sobre la instalación antigua afectada por el fuego."
+                       }
+                   ],
+        "relatedService":  {
+                               "title":  "Ingeniería Forense de Construcción y Control de Calidad",
+                               "url":  "/ingenieria-forense-construccion/"
+                           },
+        "content":  "## 1. El Conflicto: Un Adelanto Sin Contraprestación\n\nUna propietaria se encontró en una situación de extrema vulnerabilidad: tras sufrir un incendio que dejó su vivienda inhabitable, pagó un adelanto superior a los 30.000 € a un contratista para iniciar la reforma con urgencia. Sin embargo, tras el pago, los trabajos no solo no comenzaron, sino que el contratista realizó solicitudes económicas inusuales que generaron una total pérdida de confianza.\n\n### 2. Verificación Técnica de los Hechos\n\nNuestra labor pericial consistió en verificar si el adelanto pagado, condicionado al \u0027inicio de los trabajos\u0027, tenía una contraprestación real en la vivienda. La inspección fue determinante:\n\n* **No Inicio de la Obra:** No se encontraron evidencias físicas del inicio de la reforma. No había acopio de materiales (salvo unos pocos sacos), ni herramientas, ni se habían comenzado las labores de demolición o reconstrucción.\n* **Actuaciones Deficientes:** Las únicas \u0027actuaciones\u0027 realizadas eran parciales y técnicamente inaceptables. Se había aplicado una capa de pintura plástica directamente sobre el hollín (un tratamiento inútil) y se habían conectado cables nuevos sobre la instalación eléctrica original quemada, una práctica peligrosa y fuera de toda normativa.\n* **Discrepancias Documentales:** Se constató que el contratista se presentó como un autorizado directo de la aseguradora, cuando en realidad era un subcontratado de otra empresa colaboradora.\n\n## 3. Conclusión Pericial\n\nEl informe concluyó que **no existía ninguna evidencia física ni técnica que justificara el cobro del adelanto pactado**. Las escasas labores realizadas eran deficientes y no constituían un inicio de obra. El dictamen pericial se convirtió en la prueba clave para que la propietaria pudiera reclamar la devolución íntegra del importe abonado por un claro incumplimiento de contrato.",
+        "amount":  "—",
+        "category":  "Reclamaciones"
     },
-    "images": [
-      {
-        "url": "/assets/images/casos/penedes-terraza-01.jpg",
-        "alt": "Pavimento de mortero de la terraza completamente fisurado",
-        "caption": "La ausencia de juntas y un curado deficiente provocaron la fisuración generalizada del soporte."
-      },
-      {
-        "url": "/assets/images/casos/penedes-calculo-01.jpg",
-        "alt": "Cálculos estructurales que justifican la necesidad de los apoyos correctos",
-        "caption": "El análisis técnico demostró que la solución proyectada era correcta, pero no la ejecutada."
-      }
-    ],
-    "relatedService": {
-      "title": "Informes de Deficiencias Estructurales",
-      "url": "/asesoramiento-estructural/"
+    {
+        "title":  "Daños en Nave Industrial por Uso Indebido del Arrendatario en el Área Metropolitana",
+        "slug":  "danos-nave-industrial-arrendatario-barcelona",
+        "translations":  [
+                             {
+                                 "lang":  "es",
+                                 "permalink":  "/casos-exito/danos-nave-industrial-arrendatario-barcelona/"
+                             },
+                             {
+                                 "lang":  "en",
+                                 "permalink":  "/en/success-cases/damages-industrial-warehouse-tenant-barcelona/"
+                             },
+                             {
+                                 "lang":  "ca",
+                                 "permalink":  "/ca/casos-d-exit/danys-nau-industrial-arrendatari-barcelona/"
+                             },
+                             {
+                                 "lang":  "fr",
+                                 "permalink":  "/fr/succes/dommages-entrepots-industriels-locataire-barcelone/"
+                             },
+                             {
+                                 "lang":  "it",
+                                 "permalink":  "/it/casi-di-successo/danni-capannone-industriale-inquilino-barcellona/"
+                             }
+                         ],
+        "description":  "Informe pericial para la reclamación de daños en una nave industrial tras el fin de un alquiler, valorando la reparación de pavimentos, altillos y protección contra incendios.",
+        "estado":  "publicado",
+        "datePublished":  "2025-06-18",
+        "dateModified":  "2025-06-18",
+        "tags":  [
+                     "Naves Industriales",
+                     "Patologías",
+                     "Reclamaciones"
+                 ],
+        "summary":  [
+                        {
+                            "label":  "Ubicación",
+                            "value":  "Área Metropolitana de Barcelona"
+                        },
+                        {
+                            "label":  "Tipo de Inmueble",
+                            "value":  "Nave industrial"
+                        },
+                        {
+                            "label":  "Problema Detectado",
+                            "value":  "Daños severos tras la finalización de un contrato de alquiler comercial"
+                        },
+                        {
+                            "label":  "Resultado",
+                            "value":  "Valoración económica de daños superior a los 330.000 €"
+                        }
+                    ],
+        "image":  {
+                      "url":  "/assets/images/placeholder-default.png",
+                      "alt":  "Pavimento industrial completamente roto y fisurado en la nave",
+                      "caption":  "Gran parte de las losetas del pavimento se encontraban rotas, requiriendo su sustitución completa."
+                  },
+        "images":  [
+                       {
+                           "url":  "/assets/images/casos/nave-industrial-ignifugo-01.jpg",
+                           "alt":  "Desprendimiento del mortero de protección ignífuga de la estructura metálica",
+                           "caption":  "La falta de protección pasiva comprometía gravemente la seguridad contra incendios de la nave."
+                       },
+                       {
+                           "url":  "/assets/images/casos/nave-industrial-anclajes-01.jpg",
+                           "alt":  "Marcas de anclajes de los altillos desmontados por el inquilino",
+                           "caption":  "Evidencias del desmontaje de grandes estructuras de almacenaje que no constaban en proyecto."
+                       }
+                   ],
+        "relatedService":  {
+                               "title":  "Informes Periciales para Naves Industriales",
+                               "url":  "/patologias-estructurales/"
+                           },
+        "content":  "## 1. El Origen: Finalización de un Contrato de Alquiler\n\nLa empresa propietaria de una gran nave industrial en el cinturón logístico de Barcelona nos contactó tras la marcha de su anterior inquilino. Se encontraron con un inmueble con múltiples daños que excedían claramente el desgaste por un uso ordinario, y necesitaban un informe técnico para documentarlos y valorar su reparación de cara a una reclamación civil.\n\n### 2. Alcance de los Daños Detectados\n\nLa inspección pericial reveló un estado de deterioro generalizado que afectaba a la seguridad, la legalidad y la funcionalidad de la nave:\n\n* **Pavimentos Industriales Destruidos:** Un alto porcentaje del pavimento de varias plantas estaba completamente roto, indicando un uso que excedió notablemente la capacidad de carga para la que fue diseñado.\n* **Protección Contra Incendios Comprometida:** El mortero ignífugo que recubría la estructura metálica principal se había desprendido en varias zonas, dejando los perfiles expuestos y reduciendo drásticamente la estabilidad del edificio en caso de incendio (incumplimiento de normativas de seguridad contra el fuego).\n* **Altillos Desmontados:** Se encontraron evidencias claras (marcas de anclajes) del montaje y posterior desmontaje de altillos de gran formato. Una consulta documental confirmó que no existía licencia administrativa para dichas estructuras.\n* **Instalación Eléctrica Inoperativa:** El anterior inquilino retiró componentes esenciales del suministro, siendo necesario redactar un nuevo proyecto eléctrico para poder legalizar y reactivar la instalación.\n\n## 3. Conclusión y Valoración Económica\n\nEl informe pericial concluyó que el conjunto de intervenciones era indispensable para la restitución funcional y legal del edificio. Se realizó una valoración económica detallada basada en precios de mercado actualizados para cada partida (pavimentos, adecuación de estructuras y protección ignífuga).\n\nEl coste total estimado para la reparación de todos los daños se valoró en un rango **superior a los 330.000 € (sin IVA)**, proporcionando a la propiedad una base probatoria técnica sólida para su reclamación por los perjuicios causados.",
+        "amount":  "+330.000 €",
+        "category":  "Siniestro Industrial"
     },
-    "content": "## 1. El Problema: Defectos Críticos tras una Ampliación\n\nEl propietario de una importante bodega en la comarca vitivinícola del Alt Penedès nos encargó un informe tras detectar graves anomalías en la obra de ampliación de sus instalaciones. Los defectos comprometían la funcionalidad de los nuevos pavimentos y, lo que es más preocupante, la seguridad estructural del nuevo forjado.\n\n### 2. Diagnóstico Técnico: Tres Focos de Deficiencias Graves\n\nNuestra inspección y el posterior análisis técnico, cotejado con el proyecto de ejecución original, revelaron tres problemas críticos que requerían una intervención inmediata:\n\n1.  **Pavimento de Terraza Inservible:** El mortero de la nueva terraza presentaba fisuras de más de 1mm y disgregación superficial por una ejecución deficiente y la ausencia total de juntas de dilatación. Era un soporte inútil para el acabado cerámico previsto.\n2.  **Pavimento de Planta Baja Contaminado:** El hormigón de la planta inferior estaba cubierto de restos de lechada, generando un polvo constante que impedía su uso como soporte para un pavimento de rodadura industrial.\n3.  **Deficiencia Estructural Crítica:** Este fue el hallazgo más grave. La viga metálica principal que soportaba el nuevo forjado no estaba anclada correctamente a los pilares según el proyecto. Los apoyos intermedios, esenciales para el cálculo estructural, estaban sujetos de forma precaria, comprometiendo la estabilidad y seguridad de toda la planta superior.\n\n## 3. Solución y Conclusión\n\nNuestro informe pericial fue concluyente. Se demostró mediante cálculos que la solución ejecutada en la estructura metálica no garantizaba la estabilidad prevista en el proyecto original. Se ordenó la **corrección inmediata del sistema de anclaje** para asegurar la integridad del edificio.\n\nAsimismo, se recomendó la demolición y reconstrucción completa del pavimento de la terraza y el fresado mecánico del pavimento de la planta baja. El informe proporcionó al propietario las directrices técnicas necesarias para exigir una correcta subsanación de todas las deficiencias."
-  },
-  {
-    "title": "Reclamación Exitosa por Instalación Defectuosa de Parquet en Barcelona",
-    "slug": "instalacion-defectuosa-parquet-barcelona",
-    "translations": [
-      {
-        "lang": "es",
-        "permalink": "/casos-exito/instalacion-defectuosa-parquet-barcelona/"
-      },
-      {
-        "lang": "en",
-        "permalink": "/en/success-cases/defective-parquet-installation-barcelona/"
-      },
-      {
-        "lang": "ca",
-        "permalink": "/ca/casos-d-exit/instal-lacio-defectuosa-parquet-barcelona/"
-      },
-      {
-        "lang": "fr",
-        "permalink": "/fr/succes/installation-defectueuse-parquet-barcelone/"
-      },
-      {
-        "lang": "it",
-        "permalink": "/it/casi-di-successo/installazione-difettosa-parquet-barcellona/"
-      }
-    ],
-    "description": "Informe pericial sobre un parquet laminado mal instalado en una vivienda, identificando la ausencia de juntas y un soporte no nivelado como causa principal.",
-    "estado": "publicado",
-    "datePublished": "2025-09-03",
-    "dateModified": "2025-09-03",
-    "tags": [
-      "Vicios Ocultos",
-      "Reformas",
-      "Reclamaciones"
-    ],
-    "summary": [
-      {
-        "label": "Ubicación",
-        "value": "Barcelona Ciudad"
-      },
-      {
-        "label": "Tipo de Obra",
-        "value": "Instalación de pavimento laminado en reforma"
-      },
-      {
-        "label": "Problema Detectado",
-        "value": "Abombamiento, movimiento y crujidos en parquet nuevo"
-      },
-      {
-        "label": "Resultado",
-        "value": "Dictamen que responsabiliza a la instaladora del coste íntegro de la reparación"
-      }
-    ],
-    "image": {
-      "url": "/assets/images/placeholder-default.png",
-      "alt": "Pasillo con el parquet levantado y abombado por la falta de juntas de dilatación",
-      "caption": "El movimiento vertical del parquet al caminar era evidente en toda la vivienda."
+    {
+        "title":  "Informe Pericial para Constructora por Defectos en Parquet de Obra Nueva",
+        "slug":  "defectos-parquet-obra-nueva-constructora",
+        "translations":  [
+                             {
+                                 "lang":  "es",
+                                 "permalink":  "/casos-exito/defectos-parquet-obra-nueva-constructora/"
+                             },
+                             {
+                                 "lang":  "en",
+                                 "permalink":  "/en/success-cases/defective-parquet-new-construction/"
+                             },
+                             {
+                                 "lang":  "ca",
+                                 "permalink":  "/ca/casos-d-exit/defectes-parquet-obra-nova-constructora/"
+                             },
+                             {
+                                 "lang":  "fr",
+                                 "permalink":  "/fr/succes/defauts-parquet-construction-neuve/"
+                             },
+                             {
+                                 "lang":  "it",
+                                 "permalink":  "/it/casi-di-successo/difetti-parquet-nuova-costruzione/"
+                             }
+                         ],
+        "description":  "Caso de éxito de un informe pericial para una gran constructora sobre defectos de instalación de parquet en decenas de viviendas de una promoción de obra nueva.",
+        "estado":  "publicado",
+        "datePublished":  "2025-02-18",
+        "dateModified":  "2025-02-18",
+        "tags":  [
+                     "Constructoras",
+                     "Patologías",
+                     "Obra Nueva",
+                     "Reclamaciones"
+                 ],
+        "summary":  [
+                        {
+                            "label":  "Ubicación",
+                            "value":  "Comarca del Baix Llobregat (Barcelona)"
+                        },
+                        {
+                            "label":  "Tipo de Actuación",
+                            "value":  "Auditoría pericial para gran constructora nacional"
+                        },
+                        {
+                            "label":  "Problema Detectado",
+                            "value":  "Defectos generalizados en la instalación de parquet en decenas de viviendas"
+                        },
+                        {
+                            "label":  "Resultado",
+                            "value":  "Dictamen que atribuye la responsabilidad a la empresa instaladora subcontratada"
+                        }
+                    ],
+        "image":  {
+                      "url":  "/assets/images/placeholder-default.png",
+                      "alt":  "Canto de una lama de parquet levantado por la rotura del clip de unión",
+                      "caption":  "El movimiento vertical de las lamas evidenciaba una instalación deficiente."
+                  },
+        "images":  [
+                       {
+                           "url":  "/assets/images/casos/viladecans-parque-escalera.jpg",
+                           "alt":  "Efecto escalera en la colocación del parquet, incumpliendo la normativa UNE",
+                           "caption":  "La mala disposición de las lamas generaba un patrón visual anómalo."
+                       },
+                       {
+                           "url":  "/assets/images/casos/viladecans-parque-rodapie.jpg",
+                           "alt":  "Ondulación y mala terminación del parquet junto al rodapié de la cocina",
+                           "caption":  "La falta de nivelación del soporte provocaba ondulaciones y malos ajustes."
+                       }
+                   ],
+        "relatedService":  {
+                               "title":  "Ingeniería Forense de Construcción para Constructoras",
+                               "url":  "/ingenieria-forense-construccion/"
+                           },
+        "content":  "## 1. El Desafío: Decenas de Viviendas con Reclamaciones Postventa\n\nUna de las mayores constructoras nacionales se enfrentó a un problema complejo en una promoción residencial de obra nueva en el Baix Llobregat: decenas de nuevos propietarios presentaban quejas formales por defectos generalizados en el parquet de sus viviendas. La duda técnica y legal era crucial: ¿Se trataba de un defecto de fábrica de las lamas premium instaladas o de un fallo en la ejecución por parte de la empresa instaladora subcontratada? Necesitaban un dictamen técnico independiente para depurar responsabilidades.\n\n### 2. Investigación Pericial: Análisis de la Ejecución\n\nNuestra labor consistió en realizar una inspección metódica sobre una muestra representativa de las viviendas afectadas. Acompañados por el departamento de postventa de la constructora, identificamos un patrón de defectos sistémico que se repetía invariablemente:\n\n* **Rotura de Clips de Unión:** Numerosas lamas cedían verticalmente al pisarlas debido a la rotura del sistema de anclaje, un defecto típico del uso de fuerza bruta o mala praxis durante la fase de colocación.\n* **\u0027Efecto Escalera\u0027:** La disposición de las lamas no respetaba el decalaje longitudinal mínimo exigido por la normativa técnica (UNE 56810), debilitando el conjunto y generando un patrón estético inaceptable.\n* **Malos Ajustes y Ondulaciones:** Se documentaron separaciones excesivas y un efecto ondulado en los encuentros perimetrales con los rodapiés, indicativo de una carencia total de nivelación previa de la base.\n* **Falta de Control de Calidad:** Se encontraron lamas instaladas con marcas evidentes que deberían haber sido descartadas visualmente por los operarios antes de su montaje.\n\n## 3. Conclusión: Responsabilidad en la Instalación\n\nNuestro informe pericial fue concluyente: el material suministrado no presentaba vicios de fabricación ni alteraciones dimensionales de origen. Todos los problemas detectados eran inequívocamente atribuibles a una **incorrecta y negligente ejecución de la instalación** por parte de la subcontrata.\n\nGracias a la robustez de este informe pericial, la constructora promotora pudo eximir de culpa al fabricante del material y derivar legalmente la responsabilidad y el coste íntegro de la subsanación a la empresa instaladora, resolviendo la crisis postventa con garantías.",
+        "amount":  "—",
+        "category":  "Obra Nueva"
     },
-    "images": [
-      {
-        "url": "/assets/images/casos/parque-sants-02.jpg",
-        "alt": "Detalle del desnivel entre el parquet y el rodapié",
-        "caption": "La falta de nivelación del soporte provocaba ondulaciones visibles."
-      },
-      {
-        "url": "/assets/images/casos/parque-sants-03.jpg",
-        "alt": "Lamas de parquet con el sistema de anclaje clic roto",
-        "caption": "La mala ejecución provocó incluso la rotura de las uniones entre lamas."
-      }
-    ],
-    "relatedService": {
-      "title": "Informes Periciales por Vicios Ocultos",
-      "url": "/vicios-ocultos/"
+    {
+        "title":  "Diagnóstico de Humedades por Capilaridad y Fisuras en Vivienda de L\u0027Anoia",
+        "slug":  "humedades-capilaridad-fisuras-anoia",
+        "translations":  [
+                             {
+                                 "lang":  "es",
+                                 "permalink":  "/casos-exito/humedades-capilaridad-fisuras-anoia/"
+                             },
+                             {
+                                 "lang":  "en",
+                                 "permalink":  "/en/success-cases/rising-damp-cracks-anoia/"
+                             },
+                             {
+                                 "lang":  "ca",
+                                 "permalink":  "/ca/casos-d-exit/humitats-capillaritat-fissures-anoia/"
+                             },
+                             {
+                                 "lang":  "fr",
+                                 "permalink":  "/fr/succes/humidite-capillarite-fissures-anoia/"
+                             },
+                             {
+                                 "lang":  "it",
+                                 "permalink":  "/it/casi-di-successo/umidita-risalita-crepe-anoia/"
+                             }
+                         ],
+        "description":  "Caso de éxito: Informe pericial en la comarca de L\u0027Anoia que diagnosticó humedades por capilaridad y fisuras no estructurales, proponiendo soluciones definitivas.",
+        "estado":  "publicado",
+        "datePublished":  "2025-02-18",
+        "dateModified":  "2025-02-18",
+        "tags":  [
+                     "Patologías",
+                     "Humedades",
+                     "Fisuras",
+                     "Vivienda Unifamiliar"
+                 ],
+        "summary":  [
+                        {
+                            "label":  "Ubicación",
+                            "value":  "Comarca de L\u0027Anoia, Barcelona"
+                        },
+                        {
+                            "label":  "Tipo de Inmueble",
+                            "value":  "Vivienda unifamiliar (construida en los años 70)"
+                        },
+                        {
+                            "label":  "Problema Detectado",
+                            "value":  "Humedad severa por capilaridad y aparición de fisuras interiores"
+                        },
+                        {
+                            "label":  "Resultado",
+                            "value":  "Diagnóstico preciso: Estabilidad estructural confirmada y protocolo de secado establecido"
+                        }
+                    ],
+        "image":  {
+                      "url":  "/assets/images/placeholder-default.png",
+                      "alt":  "Humedad por capilaridad visible en la parte inferior de un tabique interior",
+                      "caption":  "La humedad ascendía desde el terreno por falta de barrera impermeable constructiva."
+                  },
+        "images":  [
+                       {
+                           "url":  "/assets/images/casos/claramunt-fisura-pavimento-01.jpg",
+                           "alt":  "Fisura en el pavimento cerámico exterior partiendo de un pilar",
+                           "caption":  "Fisura no estructural, atribuida a movimientos de asentamiento normales."
+                       },
+                       {
+                           "url":  "/assets/images/casos/claramunt-humedad-detalle-01.jpg",
+                           "alt":  "Detalle de los daños causados por la humedad en un tabique interior",
+                           "caption":  "Deterioro severo del revestimiento causado por la humedad capilar."
+                       }
+                   ],
+        "relatedServices":  [
+                                {
+                                    "title":  "Humedades y Filtraciones Persistentes",
+                                    "url":  "/humedades-filtraciones/"
+                                },
+                                {
+                                    "title":  "Informe de Patologías Estructurales",
+                                    "url":  "/patologias-estructurales/"
+                                }
+                            ],
+        "content":  "## 1. El Problema: Humedades Persistentes y Alarma Estructural\n\nLa propietaria de una vivienda unifamiliar en la comarca de l\u0027Anoia nos contactó alarmada por la rápida proliferación de **humedades severas** en los muros inferiores de la vivienda y la aparición de **fisuras** tanto en paramentos interiores como en las terrazas exteriores. Su principal preocupación (y el motivo de solicitar la visita de un Ingeniero Perito) era descartar un posible fallo de seguridad en los cimientos del inmueble.\n\n### 2. Inspección Técnica y Diagnóstico\n\nDesplegamos una inspección visual técnica, complementada con instrumental de medición de humedad, sin necesidad de recurrir a ensayos destructivos inmediatos. El diagnóstico desveló dos frentes independientes:\n\n* **Fallo Estructural Descartado:** Se analizó una marcada fisura horizontal en un tabique y grietas en el pavimento exterior. El estudio concluyó que su origen respondía a deformaciones normales (flecha de viga de apoyo) y asientos naturales del terreno estabilizados en el tiempo. Las aperturas se encontraban **dentro de los límites tolerables normativamente** y no suponían riesgo alguno de colapso.\n* **Patología de Humedad por Capilaridad:** Se documentó un claro ascenso de humedad en los paramentos en contacto directo con las cotas bajas del terreno. El origen era intrínseco a las técnicas constructivas de la época: la **ausencia de impermeabilización en el trasdós** de la cimentación y los muros de carga.\n\n## 3. Conclusión y Solución Propuesta\n\nEl dictamen pericial aportó una doble solución. En primer lugar, ofreció a la propietaria la tranquilidad técnica y documentada de que **la estructura de su vivienda estaba sana y operativa**. \n\nEn segundo lugar, respecto al foco insalubre de las humedades, el informe estableció una hoja de ruta técnica ineludible: la ejecución de una **impermeabilización mediante inyección de resinas hidrófugas** en la base de los muros, creando un plano de corte químico que paralizara el avance capilar. Con este documento, el cliente pudo solicitar presupuestos de reforma precisos, evitando soluciones cosméticas ineficaces propuestas por terceros.",
+        "amount":  "—",
+        "category":  "Patologías"
     },
-    "content": "## 1. El Problema: Un Suelo Nuevo que Parece Viejo\n\nUna propietaria en Barcelona nos contactó frustrada. Tras una reforma integral, el pavimento de parquet laminado recién instalado presentaba graves problemas: se levantaba en varias zonas, 'crujía' al caminar y presentaba ondulaciones visibles. La empresa instaladora atribuía los problemas a la calidad del material, una afirmación que nuestro peritaje desmintió.\n\n### 2. La Causa Real: Errores de Instalación\n\nLa inspección técnica reveló que el material era de excelente calidad, pero su instalación fue completamente deficiente. Los errores contravenían las normas más básicas de la buena construcción (*lex artis*):\n\n* **Ausencia de Juntas de Dilatación:** El instalador colocó el parquet de forma continua por toda la planta, sin dejar las juntas perimetrales y de transición obligatorias. Al no tener espacio para expandirse, el parquet se abombaba y se levantaba.\n* **Soporte sin Nivelar:** La base sobre la que se instaló el pavimento no fue correctamente nivelada, lo que provocaba las ondulaciones y el movimiento vertical de las lamas.\n* **Mala Praxis General:** Se detectaron además lamas con el sistema de anclaje 'clic' roto y una colocación sin la trabazón adecuada, generando un patrón estético anómalo (efecto 'escalera').\n\n## 3. Conclusión Pericial\n\nNuestro informe concluyó de forma inequívoca que todos los defectos eran atribuibles a una **incorrecta ejecución de la instalación**, y no a un defecto del material. Se determinó que la única solución viable era el desmontaje completo del pavimento, la correcta nivelación del soporte y la reinstalación del material desde cero.\n\nEl dictamen estableció que la empresa instaladora debía **asumir el 100% de los costes de la subsanación**, liberando a la propietaria de cualquier gasto adicional y proporcionándole la herramienta legal necesaria para exigir una solución definitiva."
-  },
-  {
-    "title": "Dictamen por Incumplimiento de Contrato en Reforma Post-Incendio",
-    "slug": "incumplimiento-contrato-reforma-barcelona",
-    "translations": [
-      {
-        "lang": "es",
-        "permalink": "/casos-exito/incumplimiento-contrato-reforma-barcelona/"
-      },
-      {
-        "lang": "en",
-        "permalink": "/en/success-cases/breach-contract-post-fire-renovation/"
-      },
-      {
-        "lang": "ca",
-        "permalink": "/ca/casos-d-exit/incompliment-contracte-reforma-barcelona/"
-      },
-      {
-        "lang": "fr",
-        "permalink": "/fr/succes/rupture-contrat-renovation-post-incendie/"
-      },
-      {
-        "lang": "it",
-        "permalink": "/it/casi-di-successo/inadempimento-contrattuale-ristrutturazione-post-incendio/"
-      }
-    ],
-    "description": "Peritaje técnico sobre una reforma post-incendio donde el contratista recibió un adelanto económico sin iniciar los trabajos, realizando solo actuaciones deficientes.",
-    "estado": "publicado",
-    "datePublished": "2025-08-20",
-    "dateModified": "2025-08-20",
-    "tags": [
-      "Reclamaciones",
-      "Reformas",
-      "Seguros"
-    ],
-    "summary": [
-      {
-        "label": "Ubicación",
-        "value": "Barcelona Ciudad"
-      },
-      {
-        "label": "Tipo de Obra",
-        "value": "Reforma de vivienda tras un incendio"
-      },
-      {
-        "label": "Problema Detectado",
-        "value": "Pago de adelanto sustancial sin inicio real de los trabajos"
-      },
-      {
-        "label": "Resultado",
-        "value": "Informe técnico que justifica el incumplimiento y fundamenta el reintegro de los fondos"
-      }
-    ],
-    "image": {
-      "url": "/assets/images/placeholder-default.png",
-      "alt": "Vista del salón de la vivienda afectada por el incendio y sin reformar",
-      "caption": "Estado de la vivienda durante la inspección: sin inicio de obra y con daños por hollín."
-    },
-    "images": [
-      {
-        "url": "/assets/images/casos/incendio-barcelona-02.jpg",
-        "alt": "Pintura deficiente sobre el hollín del incendio",
-        "caption": "La pintura plástica aplicada no cubre el hollín, un tratamiento totalmente inadecuado."
-      },
-      {
-        "url": "/assets/images/casos/incendio-barcelona-03.jpg",
-        "alt": "Instalación eléctrica peligrosa sobre cableado quemado",
-        "caption": "Se conectó cableado nuevo directamente sobre la instalación antigua afectada por el fuego."
-      }
-    ],
-    "relatedService": {
-      "title": "Ingeniería Forense de Construcción y Control de Calidad",
-      "url": "/ingenieria-forense-construccion/"
-    },
-    "content": "## 1. El Conflicto: Un Adelanto Sin Contraprestación\n\nUna propietaria se encontró en una situación de extrema vulnerabilidad: tras sufrir un incendio que dejó su vivienda inhabitable, pagó un adelanto superior a los 30.000 € a un contratista para iniciar la reforma con urgencia. Sin embargo, tras el pago, los trabajos no solo no comenzaron, sino que el contratista realizó solicitudes económicas inusuales que generaron una total pérdida de confianza.\n\n### 2. Verificación Técnica de los Hechos\n\nNuestra labor pericial consistió en verificar si el adelanto pagado, condicionado al 'inicio de los trabajos', tenía una contraprestación real en la vivienda. La inspección fue determinante:\n\n* **No Inicio de la Obra:** No se encontraron evidencias físicas del inicio de la reforma. No había acopio de materiales (salvo unos pocos sacos), ni herramientas, ni se habían comenzado las labores de demolición o reconstrucción.\n* **Actuaciones Deficientes:** Las únicas 'actuaciones' realizadas eran parciales y técnicamente inaceptables. Se había aplicado una capa de pintura plástica directamente sobre el hollín (un tratamiento inútil) y se habían conectado cables nuevos sobre la instalación eléctrica original quemada, una práctica peligrosa y fuera de toda normativa.\n* **Discrepancias Documentales:** Se constató que el contratista se presentó como un autorizado directo de la aseguradora, cuando en realidad era un subcontratado de otra empresa colaboradora.\n\n## 3. Conclusión Pericial\n\nEl informe concluyó que **no existía ninguna evidencia física ni técnica que justificara el cobro del adelanto pactado**. Las escasas labores realizadas eran deficientes y no constituían un inicio de obra. El dictamen pericial se convirtió en la prueba clave para que la propietaria pudiera reclamar la devolución íntegra del importe abonado por un claro incumplimiento de contrato."
-  },
-  {
-    "title": "Daños en Nave Industrial por Uso Indebido del Arrendatario en el Área Metropolitana",
-    "slug": "danos-nave-industrial-arrendatario-barcelona",
-    "translations": [
-      {
-        "lang": "es",
-        "permalink": "/casos-exito/danos-nave-industrial-arrendatario-barcelona/"
-      },
-      {
-        "lang": "en",
-        "permalink": "/en/success-cases/damages-industrial-warehouse-tenant-barcelona/"
-      },
-      {
-        "lang": "ca",
-        "permalink": "/ca/casos-d-exit/danys-nau-industrial-arrendatari-barcelona/"
-      },
-      {
-        "lang": "fr",
-        "permalink": "/fr/succes/dommages-entrepots-industriels-locataire-barcelone/"
-      },
-      {
-        "lang": "it",
-        "permalink": "/it/casi-di-successo/danni-capannone-industriale-inquilino-barcellona/"
-      }
-    ],
-    "description": "Informe pericial para la reclamación de daños en una nave industrial tras el fin de un alquiler, valorando la reparación de pavimentos, altillos y protección contra incendios.",
-    "estado": "publicado",
-    "datePublished": "2025-06-18",
-    "dateModified": "2025-06-18",
-    "tags": [
-      "Naves Industriales",
-      "Patologías",
-      "Reclamaciones"
-    ],
-    "summary": [
-      {
-        "label": "Ubicación",
-        "value": "Área Metropolitana de Barcelona"
-      },
-      {
-        "label": "Tipo de Inmueble",
-        "value": "Nave industrial"
-      },
-      {
-        "label": "Problema Detectado",
-        "value": "Daños severos tras la finalización de un contrato de alquiler comercial"
-      },
-      {
-        "label": "Resultado",
-        "value": "Valoración económica de daños superior a los 330.000 €"
-      }
-    ],
-    "image": {
-      "url": "/assets/images/placeholder-default.png",
-      "alt": "Pavimento industrial completamente roto y fisurado en la nave",
-      "caption": "Gran parte de las losetas del pavimento se encontraban rotas, requiriendo su sustitución completa."
-    },
-    "images": [
-      {
-        "url": "/assets/images/casos/nave-industrial-ignifugo-01.jpg",
-        "alt": "Desprendimiento del mortero de protección ignífuga de la estructura metálica",
-        "caption": "La falta de protección pasiva comprometía gravemente la seguridad contra incendios de la nave."
-      },
-      {
-        "url": "/assets/images/casos/nave-industrial-anclajes-01.jpg",
-        "alt": "Marcas de anclajes de los altillos desmontados por el inquilino",
-        "caption": "Evidencias del desmontaje de grandes estructuras de almacenaje que no constaban en proyecto."
-      }
-    ],
-    "relatedService": {
-      "title": "Informes Periciales para Naves Industriales",
-      "url": "/patologias-estructurales/"
-    },
-    "content": "## 1. El Origen: Finalización de un Contrato de Alquiler\n\nLa empresa propietaria de una gran nave industrial en el cinturón logístico de Barcelona nos contactó tras la marcha de su anterior inquilino. Se encontraron con un inmueble con múltiples daños que excedían claramente el desgaste por un uso ordinario, y necesitaban un informe técnico para documentarlos y valorar su reparación de cara a una reclamación civil.\n\n### 2. Alcance de los Daños Detectados\n\nLa inspección pericial reveló un estado de deterioro generalizado que afectaba a la seguridad, la legalidad y la funcionalidad de la nave:\n\n* **Pavimentos Industriales Destruidos:** Un alto porcentaje del pavimento de varias plantas estaba completamente roto, indicando un uso que excedió notablemente la capacidad de carga para la que fue diseñado.\n* **Protección Contra Incendios Comprometida:** El mortero ignífugo que recubría la estructura metálica principal se había desprendido en varias zonas, dejando los perfiles expuestos y reduciendo drásticamente la estabilidad del edificio en caso de incendio (incumplimiento de normativas de seguridad contra el fuego).\n* **Altillos Desmontados:** Se encontraron evidencias claras (marcas de anclajes) del montaje y posterior desmontaje de altillos de gran formato. Una consulta documental confirmó que no existía licencia administrativa para dichas estructuras.\n* **Instalación Eléctrica Inoperativa:** El anterior inquilino retiró componentes esenciales del suministro, siendo necesario redactar un nuevo proyecto eléctrico para poder legalizar y reactivar la instalación.\n\n## 3. Conclusión y Valoración Económica\n\nEl informe pericial concluyó que el conjunto de intervenciones era indispensable para la restitución funcional y legal del edificio. Se realizó una valoración económica detallada basada en precios de mercado actualizados para cada partida (pavimentos, adecuación de estructuras y protección ignífuga).\n\nEl coste total estimado para la reparación de todos los daños se valoró en un rango **superior a los 330.000 € (sin IVA)**, proporcionando a la propiedad una base probatoria técnica sólida para su reclamación por los perjuicios causados."
-  },
-  {
-    "title": "Informe Pericial para Constructora por Defectos en Parquet de Obra Nueva",
-    "slug": "defectos-parquet-obra-nueva-constructora",
-    "translations": [
-      {
-        "lang": "es",
-        "permalink": "/casos-exito/defectos-parquet-obra-nueva-constructora/"
-      },
-      {
-        "lang": "en",
-        "permalink": "/en/success-cases/defective-parquet-new-construction/"
-      },
-      {
-        "lang": "ca",
-        "permalink": "/ca/casos-d-exit/defectes-parquet-obra-nova-constructora/"
-      },
-      {
-        "lang": "fr",
-        "permalink": "/fr/succes/defauts-parquet-construction-neuve/"
-      },
-      {
-        "lang": "it",
-        "permalink": "/it/casi-di-successo/difetti-parquet-nuova-costruzione/"
-      }
-    ],
-    "description": "Caso de éxito de un informe pericial para una gran constructora sobre defectos de instalación de parquet en decenas de viviendas de una promoción de obra nueva.",
-    "estado": "publicado",
-    "datePublished": "2025-02-18",
-    "dateModified": "2025-02-18",
-    "tags": [
-      "Constructoras",
-      "Patologías",
-      "Obra Nueva",
-      "Reclamaciones"
-    ],
-    "summary": [
-      {
-        "label": "Ubicación",
-        "value": "Comarca del Baix Llobregat (Barcelona)"
-      },
-      {
-        "label": "Tipo de Actuación",
-        "value": "Auditoría pericial para gran constructora nacional"
-      },
-      {
-        "label": "Problema Detectado",
-        "value": "Defectos generalizados en la instalación de parquet en decenas de viviendas"
-      },
-      {
-        "label": "Resultado",
-        "value": "Dictamen que atribuye la responsabilidad a la empresa instaladora subcontratada"
-      }
-    ],
-    "image": {
-      "url": "/assets/images/placeholder-default.png",
-      "alt": "Canto de una lama de parquet levantado por la rotura del clip de unión",
-      "caption": "El movimiento vertical de las lamas evidenciaba una instalación deficiente."
-    },
-    "images": [
-      {
-        "url": "/assets/images/casos/viladecans-parque-escalera.jpg",
-        "alt": "Efecto escalera en la colocación del parquet, incumpliendo la normativa UNE",
-        "caption": "La mala disposición de las lamas generaba un patrón visual anómalo."
-      },
-      {
-        "url": "/assets/images/casos/viladecans-parque-rodapie.jpg",
-        "alt": "Ondulación y mala terminación del parquet junto al rodapié de la cocina",
-        "caption": "La falta de nivelación del soporte provocaba ondulaciones y malos ajustes."
-      }
-    ],
-    "relatedService": {
-      "title": "Ingeniería Forense de Construcción para Constructoras",
-      "url": "/ingenieria-forense-construccion/"
-    },
-    "content": "## 1. El Desafío: Decenas de Viviendas con Reclamaciones Postventa\n\nUna de las mayores constructoras nacionales se enfrentó a un problema complejo en una promoción residencial de obra nueva en el Baix Llobregat: decenas de nuevos propietarios presentaban quejas formales por defectos generalizados en el parquet de sus viviendas. La duda técnica y legal era crucial: ¿Se trataba de un defecto de fábrica de las lamas premium instaladas o de un fallo en la ejecución por parte de la empresa instaladora subcontratada? Necesitaban un dictamen técnico independiente para depurar responsabilidades.\n\n### 2. Investigación Pericial: Análisis de la Ejecución\n\nNuestra labor consistió en realizar una inspección metódica sobre una muestra representativa de las viviendas afectadas. Acompañados por el departamento de postventa de la constructora, identificamos un patrón de defectos sistémico que se repetía invariablemente:\n\n* **Rotura de Clips de Unión:** Numerosas lamas cedían verticalmente al pisarlas debido a la rotura del sistema de anclaje, un defecto típico del uso de fuerza bruta o mala praxis durante la fase de colocación.\n* **'Efecto Escalera':** La disposición de las lamas no respetaba el decalaje longitudinal mínimo exigido por la normativa técnica (UNE 56810), debilitando el conjunto y generando un patrón estético inaceptable.\n* **Malos Ajustes y Ondulaciones:** Se documentaron separaciones excesivas y un efecto ondulado en los encuentros perimetrales con los rodapiés, indicativo de una carencia total de nivelación previa de la base.\n* **Falta de Control de Calidad:** Se encontraron lamas instaladas con marcas evidentes que deberían haber sido descartadas visualmente por los operarios antes de su montaje.\n\n## 3. Conclusión: Responsabilidad en la Instalación\n\nNuestro informe pericial fue concluyente: el material suministrado no presentaba vicios de fabricación ni alteraciones dimensionales de origen. Todos los problemas detectados eran inequívocamente atribuibles a una **incorrecta y negligente ejecución de la instalación** por parte de la subcontrata.\n\nGracias a la robustez de este informe pericial, la constructora promotora pudo eximir de culpa al fabricante del material y derivar legalmente la responsabilidad y el coste íntegro de la subsanación a la empresa instaladora, resolviendo la crisis postventa con garantías."
-  },
-  {
-    "title": "Diagnóstico de Humedades por Capilaridad y Fisuras en Vivienda de L'Anoia",
-    "slug": "humedades-capilaridad-fisuras-anoia",
-    "translations": [
-      {
-        "lang": "es",
-        "permalink": "/casos-exito/humedades-capilaridad-fisuras-anoia/"
-      },
-      {
-        "lang": "en",
-        "permalink": "/en/success-cases/rising-damp-cracks-anoia/"
-      },
-      {
-        "lang": "ca",
-        "permalink": "/ca/casos-d-exit/humitats-capillaritat-fissures-anoia/"
-      },
-      {
-        "lang": "fr",
-        "permalink": "/fr/succes/humidite-capillarite-fissures-anoia/"
-      },
-      {
-        "lang": "it",
-        "permalink": "/it/casi-di-successo/umidita-risalita-crepe-anoia/"
-      }
-    ],
-    "description": "Caso de éxito: Informe pericial en la comarca de L'Anoia que diagnosticó humedades por capilaridad y fisuras no estructurales, proponiendo soluciones definitivas.",
-    "estado": "publicado",
-    "datePublished": "2025-02-18",
-    "dateModified": "2025-02-18",
-    "tags": [
-      "Patologías",
-      "Humedades",
-      "Fisuras",
-      "Vivienda Unifamiliar"
-    ],
-    "summary": [
-      {
-        "label": "Ubicación",
-        "value": "Comarca de L'Anoia, Barcelona"
-      },
-      {
-        "label": "Tipo de Inmueble",
-        "value": "Vivienda unifamiliar (construida en los años 70)"
-      },
-      {
-        "label": "Problema Detectado",
-        "value": "Humedad severa por capilaridad y aparición de fisuras interiores"
-      },
-      {
-        "label": "Resultado",
-        "value": "Diagnóstico preciso: Estabilidad estructural confirmada y protocolo de secado establecido"
-      }
-    ],
-    "image": {
-      "url": "/assets/images/placeholder-default.png",
-      "alt": "Humedad por capilaridad visible en la parte inferior de un tabique interior",
-      "caption": "La humedad ascendía desde el terreno por falta de barrera impermeable constructiva."
-    },
-    "images": [
-      {
-        "url": "/assets/images/casos/claramunt-fisura-pavimento-01.jpg",
-        "alt": "Fisura en el pavimento cerámico exterior partiendo de un pilar",
-        "caption": "Fisura no estructural, atribuida a movimientos de asentamiento normales."
-      },
-      {
-        "url": "/assets/images/casos/claramunt-humedad-detalle-01.jpg",
-        "alt": "Detalle de los daños causados por la humedad en un tabique interior",
-        "caption": "Deterioro severo del revestimiento causado por la humedad capilar."
-      }
-    ],
-    "relatedServices": [
-      {
-        "title": "Humedades y Filtraciones Persistentes",
-        "url": "/humedades-filtraciones/"
-      },
-      {
-        "title": "Informe de Patologías Estructurales",
-        "url": "/patologias-estructurales/"
-      }
-    ],
-    "content": "## 1. El Problema: Humedades Persistentes y Alarma Estructural\n\nLa propietaria de una vivienda unifamiliar en la comarca de l'Anoia nos contactó alarmada por la rápida proliferación de **humedades severas** en los muros inferiores de la vivienda y la aparición de **fisuras** tanto en paramentos interiores como en las terrazas exteriores. Su principal preocupación (y el motivo de solicitar la visita de un Ingeniero Perito) era descartar un posible fallo de seguridad en los cimientos del inmueble.\n\n### 2. Inspección Técnica y Diagnóstico\n\nDesplegamos una inspección visual técnica, complementada con instrumental de medición de humedad, sin necesidad de recurrir a ensayos destructivos inmediatos. El diagnóstico desveló dos frentes independientes:\n\n* **Fallo Estructural Descartado:** Se analizó una marcada fisura horizontal en un tabique y grietas en el pavimento exterior. El estudio concluyó que su origen respondía a deformaciones normales (flecha de viga de apoyo) y asientos naturales del terreno estabilizados en el tiempo. Las aperturas se encontraban **dentro de los límites tolerables normativamente** y no suponían riesgo alguno de colapso.\n* **Patología de Humedad por Capilaridad:** Se documentó un claro ascenso de humedad en los paramentos en contacto directo con las cotas bajas del terreno. El origen era intrínseco a las técnicas constructivas de la época: la **ausencia de impermeabilización en el trasdós** de la cimentación y los muros de carga.\n\n## 3. Conclusión y Solución Propuesta\n\nEl dictamen pericial aportó una doble solución. En primer lugar, ofreció a la propietaria la tranquilidad técnica y documentada de que **la estructura de su vivienda estaba sana y operativa**. \n\nEn segundo lugar, respecto al foco insalubre de las humedades, el informe estableció una hoja de ruta técnica ineludible: la ejecución de una **impermeabilización mediante inyección de resinas hidrófugas** en la base de los muros, creando un plano de corte químico que paralizara el avance capilar. Con este documento, el cliente pudo solicitar presupuestos de reforma precisos, evitando soluciones cosméticas ineficaces propuestas por terceros."
-  },
-  {
-    "title": "Auditoría Pericial de Certificaciones en Hotel Urbano de Lujo",
-    "slug": "auditoria-pericial-certificaciones-hotel-lujo-barcelona",
-    "translations": [
-      {
-        "lang": "es",
-        "permalink": "/casos-exito/auditoria-pericial-certificaciones-hotel-lujo-barcelona/"
-      },
-      {
-        "lang": "en",
-        "permalink": "/en/success-cases/expert-audit-certifications-luxury-hotel-barcelona/"
-      },
-      {
-        "lang": "ca",
-        "permalink": "/ca/casos-d-exit/auditoria-pericial-certificacions-hotel-luxe-barcelona/"
-      },
-      {
-        "lang": "fr",
-        "permalink": "/fr/succes/audit-expert-certifications-hotel-luxe-barcelone/"
-      },
-      {
-        "lang": "it",
-        "permalink": "/it/casi-di-successo/audit-peritale-certificazioni-hotel-lusso-barcellona/"
-      }
-    ],
-    "description": "Caso de éxito sobre un informe pericial técnico-económico en un hotel urbano de alta gama en Barcelona que justificó desviaciones y validó las certificaciones de obra.",
-    "estado": "publicado",
-    "datePublished": "2025-10-21",
-    "dateModified": "2025-10-21",
-    "tags": [
-      "Hoteles",
-      "Certificaciones",
-      "Obra",
-      "Contrapericial",
-      "Económico"
-    ],
-    "summary": [
-      {
-        "label": "Ubicación",
-        "value": "Distrito Prime de Barcelona"
-      },
-      {
-        "label": "Tipo de Actuación",
-        "value": "Informe pericial técnico-económico de obra hotelera"
-      },
-      {
-        "label": "Problema Detectado",
-        "value": "Desacuerdo en certificaciones finales y alegación de presuntos sobrecostes"
-      },
-      {
-        "label": "Resultado",
-        "value": "Dictamen favorable: certificaciones validadas y contrainforme de la parte contraria rebatido técnica y económicamente"
-      }
-    ],
-    "image": {
-      "url": "/assets/images/placeholder-default.png",
-      "alt": "Suite de hotel urbano de alta gama tras la reforma",
-      "caption": "Intervención en plantas altas de un hotel de lujo con el edificio en uso continuo."
-    },
-    "images": [
-      {
-        "url": "/assets/images/casos/hotel-urbano-lujo-01.jpg",
-        "alt": "Plano de mediciones y cuadro de certificaciones revisadas",
-        "caption": "Auditoría cruzada rigurosa entre presupuestos, certificaciones y correos de aprobación de la dirección técnica."
-      },
-      {
-        "url": "/assets/images/casos/hotel-urbano-lujo-02.jpg",
-        "alt": "Detalle de acabados premium en habitación de hotel",
-        "caption": "Los requerimientos logísticos y los materiales de alta gama condicionaron la viabilidad de los ratios económicos."
-      }
-    ],
-    "relatedService": {
-      "title": "Informes de Certificaciones y Auditoría de Obra",
-      "url": "/ingenieria-forense-construccion/"
-    },
-    "content": "Este encargo pericial de alta complejidad económica fue solicitado por la entidad operadora de un Hotel Urbano de Lujo tras aflorar una profunda disputa en la fase de liquidación de las certificaciones finales, derivadas de la reforma integral de varias plantas de habitaciones. La propiedad interpuso una pericial de parte alegando sobrecostes injustificados comparados con precios teóricos de mercado. Nuestro dictamen actuó como una auditoría de blindaje, demostrando la legitimidad de los cobros.\n\n## 1) El Conflicto\n\n* Se ejecutó la reforma completa de estancias en altura mientras el recinto hotelero mantenía sus operaciones de alojamiento intactas.\n* Durante el avance de las obras, se autorizaron incrementos cualitativos y modificaciones de diseño.\n* Al finalizar, surgió un contrainforme que intentaba impugnar la facturación asimilando los costes de la obra a baremos estándar de construcción genérica, ignorando la realidad de la intervención.\n\n## 2) Despliegue de Auditoría Forense\n\nDesplegamos una estrategia basada en la reconstrucción matemática y documental de los hitos de la obra:\n\n* **Trazabilidad Documental:** Cruzamos el presupuesto base con las certificaciones mensuales, los anexos de 'órdenes de cambio' y la correspondencia electrónica que demostraba la conformidad de la dirección facultativa del hotel frente a las mejoras.\n* **Estudio Paramétrico de Mercado:** Refutamos la tesis contraria. Un hotel de máxima categoría no opera con precios de construcción estándar. Utilizamos bases de precios especializadas (BEDEC) aplicando los coeficientes correctores obligatorios por: ejecución en plantas altas, restricciones severas de ruidos/horarios por estar el hotel en activo y acabados *premium*.\n* **Análisis de Márgenes:** Se auditó la cuenta de resultados de la contrata, comprobando que el Beneficio Industrial aplicado a las nuevas partidas no superaba los márgenes licitados originalmente.\n\n## 3) El Fallo Técnico\n\nEl dictamen de nuestro despacho desmontó categóricamente la contrapericial por incurrir en sesgos graves de homogeneidad (comparar intervenciones que no lo son). Demostramos que **los importes certificados eran justos, equitativos y estrictamente proporcionales** a la calidad ejecutada y al elevado grado de dificultad logística que impuso la propiedad.\n\n## 4) Conclusión y Valor Aportado\n\nEntregamos un dictamen pericial visado que no solo avaló los derechos de cobro de la contrata por la totalidad del importe retenido, sino que sirvió para evitar la dilatación de un procedimiento judicial, forzando un acuerdo basado en datos técnicos irrefutables."
-  }
+    {
+        "title":  "Auditoría Pericial de Certificaciones en Hotel Urbano de Lujo",
+        "slug":  "auditoria-pericial-certificaciones-hotel-lujo-barcelona",
+        "translations":  [
+                             {
+                                 "lang":  "es",
+                                 "permalink":  "/casos-exito/auditoria-pericial-certificaciones-hotel-lujo-barcelona/"
+                             },
+                             {
+                                 "lang":  "en",
+                                 "permalink":  "/en/success-cases/expert-audit-certifications-luxury-hotel-barcelona/"
+                             },
+                             {
+                                 "lang":  "ca",
+                                 "permalink":  "/ca/casos-d-exit/auditoria-pericial-certificacions-hotel-luxe-barcelona/"
+                             },
+                             {
+                                 "lang":  "fr",
+                                 "permalink":  "/fr/succes/audit-expert-certifications-hotel-luxe-barcelone/"
+                             },
+                             {
+                                 "lang":  "it",
+                                 "permalink":  "/it/casi-di-successo/audit-peritale-certificazioni-hotel-lusso-barcellona/"
+                             }
+                         ],
+        "description":  "Caso de éxito sobre un informe pericial técnico-económico en un hotel urbano de alta gama en Barcelona que justificó desviaciones y validó las certificaciones de obra.",
+        "estado":  "publicado",
+        "datePublished":  "2025-10-21",
+        "dateModified":  "2025-10-21",
+        "tags":  [
+                     "Hoteles",
+                     "Certificaciones",
+                     "Obra",
+                     "Contrapericial",
+                     "Económico"
+                 ],
+        "summary":  [
+                        {
+                            "label":  "Ubicación",
+                            "value":  "Distrito Prime de Barcelona"
+                        },
+                        {
+                            "label":  "Tipo de Actuación",
+                            "value":  "Informe pericial técnico-económico de obra hotelera"
+                        },
+                        {
+                            "label":  "Problema Detectado",
+                            "value":  "Desacuerdo en certificaciones finales y alegación de presuntos sobrecostes"
+                        },
+                        {
+                            "label":  "Resultado",
+                            "value":  "Dictamen favorable: certificaciones validadas y contrainforme de la parte contraria rebatido técnica y económicamente"
+                        }
+                    ],
+        "image":  {
+                      "url":  "/assets/images/placeholder-default.png",
+                      "alt":  "Suite de hotel urbano de alta gama tras la reforma",
+                      "caption":  "Intervención en plantas altas de un hotel de lujo con el edificio en uso continuo."
+                  },
+        "images":  [
+                       {
+                           "url":  "/assets/images/casos/hotel-urbano-lujo-01.jpg",
+                           "alt":  "Plano de mediciones y cuadro de certificaciones revisadas",
+                           "caption":  "Auditoría cruzada rigurosa entre presupuestos, certificaciones y correos de aprobación de la dirección técnica."
+                       },
+                       {
+                           "url":  "/assets/images/casos/hotel-urbano-lujo-02.jpg",
+                           "alt":  "Detalle de acabados premium en habitación de hotel",
+                           "caption":  "Los requerimientos logísticos y los materiales de alta gama condicionaron la viabilidad de los ratios económicos."
+                       }
+                   ],
+        "relatedService":  {
+                               "title":  "Informes de Certificaciones y Auditoría de Obra",
+                               "url":  "/ingenieria-forense-construccion/"
+                           },
+        "content":  "Este encargo pericial de alta complejidad económica fue solicitado por la entidad operadora de un Hotel Urbano de Lujo tras aflorar una profunda disputa en la fase de liquidación de las certificaciones finales, derivadas de la reforma integral de varias plantas de habitaciones. La propiedad interpuso una pericial de parte alegando sobrecostes injustificados comparados con precios teóricos de mercado. Nuestro dictamen actuó como una auditoría de blindaje, demostrando la legitimidad de los cobros.\n\n## 1) El Conflicto\n\n* Se ejecutó la reforma completa de estancias en altura mientras el recinto hotelero mantenía sus operaciones de alojamiento intactas.\n* Durante el avance de las obras, se autorizaron incrementos cualitativos y modificaciones de diseño.\n* Al finalizar, surgió un contrainforme que intentaba impugnar la facturación asimilando los costes de la obra a baremos estándar de construcción genérica, ignorando la realidad de la intervención.\n\n## 2) Despliegue de Auditoría Forense\n\nDesplegamos una estrategia basada en la reconstrucción matemática y documental de los hitos de la obra:\n\n* **Trazabilidad Documental:** Cruzamos el presupuesto base con las certificaciones mensuales, los anexos de \u0027órdenes de cambio\u0027 y la correspondencia electrónica que demostraba la conformidad de la dirección facultativa del hotel frente a las mejoras.\n* **Estudio Paramétrico de Mercado:** Refutamos la tesis contraria. Un hotel de máxima categoría no opera con precios de construcción estándar. Utilizamos bases de precios especializadas (BEDEC) aplicando los coeficientes correctores obligatorios por: ejecución en plantas altas, restricciones severas de ruidos/horarios por estar el hotel en activo y acabados *premium*.\n* **Análisis de Márgenes:** Se auditó la cuenta de resultados de la contrata, comprobando que el Beneficio Industrial aplicado a las nuevas partidas no superaba los márgenes licitados originalmente.\n\n## 3) El Fallo Técnico\n\nEl dictamen de nuestro despacho desmontó categóricamente la contrapericial por incurrir en sesgos graves de homogeneidad (comparar intervenciones que no lo son). Demostramos que **los importes certificados eran justos, equitativos y estrictamente proporcionales** a la calidad ejecutada y al elevado grado de dificultad logística que impuso la propiedad.\n\n## 4) Conclusión y Valor Aportado\n\nEntregamos un dictamen pericial visado que no solo avaló los derechos de cobro de la contrata por la totalidad del importe retenido, sino que sirvió para evitar la dilatación de un procedimiento judicial, forzando un acuerdo basado en datos técnicos irrefutables.",
+        "amount":  "—",
+        "category":  "Auditoría"
+    }
 ]
