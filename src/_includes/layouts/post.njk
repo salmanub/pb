@@ -21,14 +21,15 @@ layout: layouts/base.njk
 <article>
 <div class="post-header">
 
-  {# DS Breadcrumb inline #}
-  <nav class="ds-breadcrumb" aria-label="Breadcrumb">
-    <a href="{{ langPrefix }}/">Inicio</a>
-    <span class="ds-breadcrumb__sep">/</span>
-    <a href="{{ langPrefix }}{{ _blogUrl }}">{{ _blogLabel }}</a>
-    <span class="ds-breadcrumb__sep">/</span>
-    <span class="ds-breadcrumb__current">{{ post.category }}</span>
-  </nav>
+  {# Breadcrumb inline vía partial #}
+  {% set breadcrumb_inline = true %}
+  {% set breadcrumb_items = [
+    { label: "Inicio", url: "/" },
+    { label: _blogLabel, url: _blogUrl },
+    { label: post.category }
+  ] %}
+  {% include "partials/breadcrumb.njk" %}
+  {% set breadcrumb_inline = false %}
 
   {# Eyebrow: categoría + audiencia #}
   <div class="post-eyebrow">

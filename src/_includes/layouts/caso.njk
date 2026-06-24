@@ -21,14 +21,15 @@ layout: layouts/base.njk
 {# ── 1. HERO SECTION ── #}
 <section style="max-width:var(--container-wide);margin:0 auto;padding:clamp(36px,6vw,84px) var(--gutter) var(--space-10);">
 
-  {# DS Breadcrumb inline #}
-  <nav class="ds-breadcrumb" aria-label="Breadcrumb">
-    <a href="{{ langPrefix }}/">Inicio</a>
-    <span class="ds-breadcrumb__sep">/</span>
-    <a href="{{ langPrefix }}{{ _casosUrl }}">{{ _casosLabel }}</a>
-    <span class="ds-breadcrumb__sep">/</span>
-    <span class="ds-breadcrumb__current">{{ caso.category | default(caso.tags[0]) }}</span>
-  </nav>
+  {# Breadcrumb inline vía partial #}
+  {% set breadcrumb_inline = true %}
+  {% set breadcrumb_items = [
+    { label: "Inicio", url: "/" },
+    { label: _casosLabel, url: _casosUrl },
+    { label: caso.category | default(caso.tags[0]) }
+  ] %}
+  {% include "partials/breadcrumb.njk" %}
+  {% set breadcrumb_inline = false %}
 
   {# DS: grid 1fr auto — left: tag+resultado+H1+description | right: importe #}
   <div class="pagehero-grid">

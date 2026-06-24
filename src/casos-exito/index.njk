@@ -19,12 +19,14 @@ permalink: "/casos-exito/"
 {% set ui = es %}
 {% set langPrefix = "" %}
 
-{# ── DS Breadcrumb inline ── #}
-<nav class="ds-breadcrumb ds-wrap" aria-label="Breadcrumb">
-  <a href="/">Inicio</a>
-  <span class="ds-breadcrumb__sep">/</span>
-  <span class="ds-breadcrumb__current">Casos</span>
-</nav>
+{# ── Breadcrumb inline vía partial ── #}
+{% set breadcrumb_inline = true %}
+{% set breadcrumb_items = [
+  { label: "Inicio", url: "/" },
+  { label: "Casos" }
+] %}
+{% include "partials/breadcrumb.njk" %}
+{% set breadcrumb_inline = false %}
 
 {# ── PageHero (DS: serif display, lede 2 líneas) ── #}
 <section class="page-hero">
