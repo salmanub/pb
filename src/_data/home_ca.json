@@ -112,13 +112,13 @@
     "placeholder_email": "nom@empresa.com",
     "placeholder_caso": "Humitats persistents a…",
     "submit": "Enviar sol·licitud",
-    "success_title": "Sol·licitud rebuda",
-    "success_text": "Et respondrem en 24 h laborables.",
+    "success_title": "Últim pas: envia l'email",
+    "success_text": "S'ha obert el teu programa de correu. Prem «Enviar» perquè ens arribi la teva consulta. Et respondrem en 24 h laborables.",
     "error_title": "No s'ha pogut enviar",
     "error_text": "Les teves dades estan guardades. Fes servir una d'aquestes opcions:",
     "error_email_cta": "Obrir email amb les teves dades",
     "error_phone_cta": "Trucar ara",
     "error_retry": "Reintentar enviament",
-    "sending": "Enviant…"
+    "sending": "Obrint email…"
   }
 }

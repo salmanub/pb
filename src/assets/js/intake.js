@@ -41,6 +41,7 @@
   var current = 0;
   var answers = {};
   var done = false;
+  var doneHTML = '';
   var perfil = '';
   var overlay = null;
 
@@ -97,14 +98,11 @@
     var body = el('div', { style: { padding: '28px 24px 8px', minHeight: '200px' } });
 
     if (done) {
-      /* Confirmation */
-      var confirm = el('div', { style: { textAlign: 'center', padding: '14px 0 24px' } });
-      var checkCircle = el('div', { style: { width: '48px', height: '48px', borderRadius: '50%', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--positive-tint, #e8f5e9)', color: 'var(--positive, #2e7d32)', fontSize: '22px', fontWeight: '600' } }, '✓');
-      confirm.appendChild(checkCircle);
-      var h3 = el('h3', { style: { fontFamily: 'var(--font-serif)', fontSize: 'var(--fs-h2, 1.75rem)', fontWeight: '400', margin: '20px 0 0', color: 'var(--text-strong)' } }, 'Solicitud recibida');
-      confirm.appendChild(h3);
-      confirm.appendChild(el('p', { style: { margin: '12px auto 0', maxWidth: '40ch', color: 'var(--text-muted)', lineHeight: '1.55' } }, 'Hemos registrado tu caso. Te responderemos en 24 h laborables con los siguientes pasos.'));
-      body.appendChild(confirm);
+      /* Options screen */
+      body.innerHTML = doneHTML;
+      card.appendChild(body);
+      wrapper.appendChild(card);
+      return wrapper;
     } else {
       /* Step content */
       var content = el('div', { class: 'intake-step-content' });
@@ -252,37 +250,45 @@
   /* ── Submit ──────────────────────────────────────────── */
   function submitForm() {
     var contactData = answers.contacto || {};
-    var payload = {
-      nombre: contactData.nombre || '',
-      poblacion: contactData.poblacion || '',
-      email: contactData.email || '',
-      telefono: contactData.telefono || '',
-      detalle: contactData.detalle || '',
-      problema: answers.problema || '',
-      inmueble: answers.inmueble || '',
-      antiguedad: answers.antiguedad || '',
-      perfil: perfil || '',
-      lang: document.documentElement.lang || 'es',
-      timestamp: new Date().toISOString(),
-      source: 'perito.barcelona'
-    };
+    var subject = encodeURIComponent('Consulta web — ' + (perfil === 'pro' ? 'Profesional' : 'Particular') + ' — ' + (contactData.nombre || ''));
+    var bodyParts = 'CONSULTA WEB (perito.barcelona)\n========================================\n\n' +
+      'Nombre: ' + (contactData.nombre || '') + '\n' +
+      'Población: ' + (contactData.poblacion || '') + '\n' +
+      'Email: ' + (contactData.email || '') + '\n' +
+      'Teléfono: ' + (contactData.telefono || '') + '\n' +
+      'Problema: ' + (answers.problema || '') + '\n' +
+      'Inmueble: ' + (answers.inmueble || '') + '\n' +
+      'Antigüedad: ' + (answers.antiguedad || '') + '\n' +
+      'Perfil: ' + (perfil || '') + '\n\n' +
+      'Detalle:\n' + (contactData.detalle || '') + '\n\n' +
+      'Fecha: ' + new Date().toLocaleString('es-ES') + '\n' +
+      'Origen: perito.barcelona (intake modal)';
+    var mailto = 'mailto:info@perito.barcelona?subject=' + subject + '&body=' + encodeURIComponent(bodyParts);
+
+    doneHTML =
+      '<div style="padding:20px 0;">' +
+        '<div style="text-align:center;margin-bottom:24px;">' +
+          '<div style="width:52px;height:52px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;background:rgba(220,160,40,0.1);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>' +
+          '<h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;margin:16px 0 0;color:var(--text-strong);">No se ha podido enviar automáticamente</h3>' +
+          '<p style="margin:8px auto 0;max-width:38ch;color:var(--text-muted);font-size:0.9rem;line-height:1.55;">Tus datos están guardados. Escoge una de estas opciones para contactarnos:</p>' +
+        '</div>' +
+        '<div style="display:flex;flex-direction:column;gap:10px;">' +
+          '<a href="' + mailto + '" style="display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:var(--radius-sm);border:1.5px solid var(--accent);background:var(--accent);text-decoration:none;transition:opacity 0.2s;">' +
+            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-on,#fff)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>' +
+            '<span style="flex:1;"><span style="display:block;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--accent-on,#fff);">Abrir email con tus datos</span><span style="display:block;font-family:var(--font-mono);font-size:0.7rem;color:rgba(255,255,255,0.7);margin-top:2px;">info@perito.barcelona</span></span>' +
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>' +
+          '</a>' +
+          '<a href="tel:+34614194985" style="display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:var(--radius-sm);border:1.5px solid var(--border-hairline);background:var(--surface-raised,#fff);text-decoration:none;transition:border-color 0.2s;">' +
+            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>' +
+            '<span style="flex:1;"><span style="display:block;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--text-strong);">Llamar ahora</span><span style="display:block;font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);margin-top:2px;">614 194 985</span></span>' +
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>' +
+          '</a>' +
+        '</div>' +
+        '<button type="button" onclick="location.reload()" style="display:block;width:100%;margin-top:16px;padding:10px;font-family:var(--font-sans);font-size:0.8rem;font-weight:500;color:var(--text-muted);background:transparent;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:3px;">Reintentar</button>' +
+      '</div>';
 
     done = true;
     render();
-
-    fetch('/api/contacto', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    }).then(function (res) {
-      if (res.redirected) {
-        setTimeout(function () { window.location.href = res.url; }, 2000);
-      } else if (res.ok) {
-        setTimeout(function () { window.location.href = '/gracias/'; }, 2000);
-      }
-    }).catch(function () {
-      /* Silently stay on confirmation screen */
-    });
   }
 
   /* ── Overlay ─────────────────────────────────────────── */

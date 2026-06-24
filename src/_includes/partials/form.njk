@@ -13,7 +13,7 @@
   <meta itemprop="email" content="{{ metadata.company.email }}">
   <meta itemprop="contactType" content="customer service">
 
-  <form action="/api/contacto" method="POST"
+  <form action="mailto:{{ metadata.company.email }}" method="POST" enctype="text/plain"
         style="max-width: var(--container-text); margin: 0 auto;">
     <input type="hidden" name="lang" value="{{ lang | default('es') }}">
 
