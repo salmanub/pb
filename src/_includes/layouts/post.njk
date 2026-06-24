@@ -1,76 +1,50 @@
----
+﻿---
 layout: layouts/base.njk
 ---
 {#
-  post.njk — Layout para artículos individuales de Blog
+  post.njk — Layout para articulos individuales de Blog
   Cadena: pagination → post.njk → base.njk
-  Design System: font-serif, font-mono, font-sans, CSS tokens
   NOTE: All HTML on single lines to prevent Markdown <p> wrapping
 #}
 {% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
 {% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
 {% set _blogUrl = "/blog/" if (not lang or lang == "es") else ("/en/blog/" if lang == "en" else "/ca/blog/") %}
-{% set _blogLabel = "Blog" %}
 {% set _contactPart = "/contacto/particular/" if (not lang or lang == "es") else ("/en/contact/particular/" if lang == "en" else "/ca/contacte/particular/") %}
-
-{# ── Microdata Article ── #}
-<div itemscope itemtype="https://schema.org/BlogPosting" style="display:none;" aria-hidden="true"><meta itemprop="headline" content="{{ post.title | truncate(110) }}"><meta itemprop="description" content="{{ post.description }}"><meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}"><meta itemprop="datePublished" content="{{ post.datePublished }}T00:00:00+01:00"><meta itemprop="dateModified" content="{{ post.dateModified }}T00:00:00+01:00"><meta itemprop="inLanguage" content="{{ lang | default('es') }}"><div itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ post.author }}"><meta itemprop="url" content="{{ metadata.author.linkedin }}"></div><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"></div>{% if post.image %}<meta itemprop="image" content="{{ metadata.site.url }}{{ post.image.url }}">{% endif %}</div>
-
-{# ── Breadcrumb ── #}
-<div style="max-width:var(--container-wide);margin:0 auto;padding:0 var(--gutter);padding-top:clamp(20px,3vw,32px);">
-<nav aria-label="Breadcrumb"><ol style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;list-style:none;margin:0;padding:0;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);"><li><a href="{{ langPrefix }}/" style="color:var(--text-muted);text-decoration:none;">{{ "Inicio" if (not lang or lang == "es") else ("Home" if lang == "en" else "Inici") }}</a></li><li style="opacity:0.4;">·</li><li><a href="{{ _blogUrl }}" style="color:var(--text-muted);text-decoration:none;">Blog</a></li><li style="opacity:0.4;">·</li><li style="color:var(--text-accent);" aria-current="page">{{ post.title | truncate(50) }}</li></ol></nav>
-</div>
-
-{# ── Article Header ── #}
-<section style="max-width:var(--container-prose);margin:0 auto;padding:0 var(--gutter);padding-top:clamp(32px,5vw,64px);padding-bottom:var(--space-12);">
-<div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:20px;">
+{% set breadcrumb_parent = { label: "Blog", url: _blogUrl } %}
+{% set heroTitle = post.title %}
+{% set description = post.excerpt | default(post.description) %}
+<div itemscope itemtype="https://schema.org/BlogPosting" style="display:none;" aria-hidden="true"><meta itemprop="headline" content="{{ post.title | truncate(110) }}"><meta itemprop="description" content="{{ post.description }}"><meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}"><meta itemprop="datePublished" content="{{ post.datePublished }}T00:00:00+01:00"><meta itemprop="dateModified" content="{{ post.dateModified }}T00:00:00+01:00"><meta itemprop="inLanguage" content="{{ lang | default('es') }}"><div itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ post.author }}"></div><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"></div></div>
+{% include "partials/page-hero.njk" %}
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter) var(--space-10);">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--border-hairline);">
+<div style="display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;border-radius:50%;background:var(--surface-ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.7rem;font-weight:700;color:var(--bone-100);flex-shrink:0;">AV</div><div><div style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;color:var(--text-strong);">{{ post.author }}</div><div style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);">{{ "Ingeniero Civil · ECCAT 16448" if (not lang or lang == "es") else ("Civil Engineer · ECCAT 16448" if lang == "en" else "Enginyer Civil · ECCAT 16448") }}</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
 {% if post.category %}<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-accent);font-weight:600;">{{ post.category }}</span>{% endif %}
 {% for tag in post.tags | slice(0, 3) %}<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;padding:3px 9px;border-radius:var(--radius-xs);border:1px solid var(--border-hairline);color:var(--text-muted);">{{ tag }}</span>{% endfor %}
+<time datetime="{{ post.datePublished }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);">{{ post.datePublished | replace("-", " · ") }}</time>
 </div>
-<h1 style="font-family:var(--font-serif);font-size:var(--fs-display-1);line-height:var(--lh-display);letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:0;font-weight:400;">{{ post.title }}</h1>
-<p style="margin-top:20px;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);">{{ post.excerpt | default(post.description) }}</p>
-<div style="display:flex;align-items:center;gap:20px;margin-top:24px;padding-top:24px;border-top:1px solid var(--border-hairline);">
-<div style="display:flex;align-items:center;gap:10px;"><div style="width:32px;height:32px;border-radius:50%;background:var(--surface-ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.7rem;font-weight:700;color:var(--bone-100);">AV</div><div><div style="font-family:var(--font-sans);font-size:0.85rem;font-weight:600;color:var(--text-strong);">{{ post.author }}</div><div style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);">Ingeniero Civil · ECCAT 16448</div></div></div>
-<div style="margin-left:auto;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);"><time datetime="{{ post.datePublished }}">{{ post.datePublished | replace("-", " · ") }}</time></div>
 </div>
-</section>
-
-{# ── Featured Image ── #}
-{% if post.image and post.image.url and post.image.url != "/assets/images/placeholder-default.jpg" %}
-<div style="max-width:var(--container-wide);margin:0 auto;padding:0 var(--gutter);padding-bottom:var(--section-y);">
-<figure style="margin:0;"><img src="{{ post.image.url }}" alt="{{ post.image.alt | default(post.title) }}" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:var(--radius-md);border:1px solid var(--border-hairline);aspect-ratio:16/7;object-fit:cover;">{% if post.image.caption %}<figcaption style="margin-top:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:0.04em;color:var(--text-faint);text-align:center;">{{ post.image.caption }}</figcaption>{% endif %}</figure>
 </div>
-{% endif %}
-
-{# ── Divider ── #}
 <div style="max-width:var(--container-wide);margin:0 auto;padding:0 var(--gutter);"><div style="height:1px;background:var(--border-hairline);"></div></div>
-
-{# ── Article Body ── #}
 <section style="max-width:var(--container-prose);margin:0 auto;padding:var(--section-y) var(--gutter);">
-<div class="prose" style="font-size:var(--fs-body);line-height:var(--lh-body);color:var(--text-muted);">
+<div class="prose">
 {{ post.content | markdown | safe }}
 </div>
 </section>
-
-{# ── Related Services ── #}
 {% if post.relatedServices and post.relatedServices.length > 0 %}
 <section style="background:var(--paper-50);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);">
 <div style="max-width:var(--container-wide);margin:0 auto;padding:var(--space-10) var(--gutter);">
 <div style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);margin-bottom:18px;">{{ "Servicios relacionados" if (not lang or lang == "es") else ("Related services" if lang == "en" else "Serveis relacionats") }}</div>
-<div style="display:flex;flex-wrap:wrap;gap:12px;">
-{% for svc in post.relatedServices %}<a href="{{ svc.url }}" style="display:inline-flex;align-items:center;gap:8px;padding:11px 18px;font-family:var(--font-sans);font-size:var(--fs-body-sm);font-weight:var(--fw-semibold);border-radius:var(--radius-sm);border:1.5px solid var(--ink-900);background:transparent;color:var(--ink-900);text-decoration:none;">{{ svc.title }} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>{% endfor %}
-</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;">{% for svc in post.relatedServices %}<a href="{{ svc.url }}" style="display:inline-flex;align-items:center;gap:8px;padding:11px 18px;font-family:var(--font-sans);font-size:var(--fs-body-sm);font-weight:var(--fw-semibold);border-radius:var(--radius-sm);border:1.5px solid var(--ink-900);background:transparent;color:var(--ink-900);text-decoration:none;">{{ svc.title }} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>{% endfor %}</div>
 </div>
 </section>
 {% endif %}
-
-{# ── BandCTA ── #}
 <section style="background:var(--surface-tint);border-top:1px solid var(--oxide-200);">
 <div style="max-width:var(--container-wide);margin:0 auto;padding:var(--section-y) var(--gutter);text-align:center;">
 <div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:18px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>{{ "¿Necesita un informe pericial?" if (not lang or lang == "es") else ("Need an expert report?" if lang == "en" else "Necessita un dictamen pericial?") }}</div>
-<h2 style="font-family:var(--font-serif);font-size:var(--fs-h1);font-weight:400;line-height:var(--lh-display);letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:0;">{{ "Primera consulta gratuita" if (not lang or lang == "es") else ("Free initial consultation" if lang == "en" else "Primera consulta gratuïta") }}</h2>
-<p style="margin-top:14px;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);max-width:60ch;margin-left:auto;margin-right:auto;">{{ "Evaluamos su caso sin compromiso y le indicamos si tiene recorrido pericial. Respuesta en 24 h." if (not lang or lang == "es") else ("We assess your case at no charge and advise whether it has expert potential. Reply within 24 h." if lang == "en" else "Valorem el seu cas sense compromís i l'informem si té recorregut pericial. Resposta en 24 h.") }}</p>
-<div style="margin-top:28px;"><a href="{{ _contactPart }}" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 28px;font-family:var(--font-sans);font-size:var(--fs-body);font-weight:var(--fw-semibold);line-height:1;letter-spacing:0.005em;border-radius:var(--radius-sm);border:1.5px solid transparent;background:var(--accent);color:var(--accent-on);text-decoration:none;">{{ "Solicitar consulta" if (not lang or lang == "es") else ("Request a consultation" if lang == "en" else "Sol·licitar consulta") }} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-<div style="margin-top:16px;"><a href="{{ _blogUrl }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);text-decoration:none;">← {{ _blogLabel }}</a></div>
+<h2 style="font-family:var(--font-serif);font-size:var(--fs-h1);font-weight:400;line-height:var(--lh-display);letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:0;">{{ "Primera consulta gratuita" if (not lang or lang == "es") else ("Free initial consultation" if lang == "en" else "Primera consulta gratuita") }}</h2>
+<p style="margin-top:14px;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);max-width:60ch;margin-left:auto;margin-right:auto;">{{ "Evaluamos su caso sin compromiso y le indicamos si tiene recorrido pericial. Respuesta en 24 h." if (not lang or lang == "es") else ("We assess your case at no charge and advise whether it has expert potential. Reply within 24 h." if lang == "en" else "Valorem el seu cas sense compromis i l'informem si te recorregut pericial. Resposta en 24 h.") }}</p>
+<div style="margin-top:28px;"><a href="{{ _contactPart }}" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 28px;font-family:var(--font-sans);font-size:var(--fs-body);font-weight:var(--fw-semibold);line-height:1;letter-spacing:0.005em;border-radius:var(--radius-sm);border:1.5px solid transparent;background:var(--accent);color:var(--accent-on);text-decoration:none;" class="cta-hero">{{ "Solicitar consulta" if (not lang or lang == "es") else ("Request a consultation" if lang == "en" else "Sol·licitar consulta") }} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+<div style="margin-top:16px;"><a href="{{ _blogUrl }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);text-decoration:none;">← Blog</a></div>
 </div>
 </section>

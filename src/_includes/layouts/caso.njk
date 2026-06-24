@@ -1,39 +1,30 @@
----
+﻿---
 layout: layouts/base.njk
 ---
 {#
-  caso.njk — Layout para fichas individuales de Casos de Éxito
+  caso.njk — Layout para fichas individuales de Casos de Exito
   Cadena: pagination → caso.njk → base.njk
-  Design System: font-serif, font-mono, font-sans, CSS tokens
-  NOTE: All HTML on single lines to prevent Markdown <p> wrapping in .md files
+  NOTE: All HTML on single lines to prevent Markdown <p> wrapping
 #}
 {% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
 {% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
 {% set _casosUrl = "/casos-exito/" if (not lang or lang == "es") else ("/en/success-cases/" if lang == "en" else "/ca/casos-d-exit/") %}
-{% set _casosLabel = "Casos de Éxito" if (not lang or lang == "es") else ("Success Cases" if lang == "en" else "Casos d'Èxit") %}
+{% set _casosLabel = "Casos de Exito" if (not lang or lang == "es") else ("Success Cases" if lang == "en" else "Casos d'Exit") %}
 {% set _contactPro = "/contacto/profesional/" if (not lang or lang == "es") else ("/en/contact/professional/" if lang == "en" else "/ca/contacte/professional/") %}
-
-{# ── Microdata Article ── #}
+{% set breadcrumb_parent = { label: _casosLabel, url: _casosUrl } %}
+{% set heroTitle = caso.title %}
+{% set description = caso.description %}
 <div itemscope itemtype="https://schema.org/Article" style="display:none;" aria-hidden="true"><meta itemprop="headline" content="{{ caso.title }}"><meta itemprop="description" content="{{ caso.description }}"><meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}"><meta itemprop="datePublished" content="{{ caso.datePublished }}"><meta itemprop="dateModified" content="{{ caso.dateModified }}"><div itemprop="author" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"></div></div>
-
-{# ── Breadcrumb ── #}
-<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-top: clamp(20px,3vw,32px);">
-<nav aria-label="Breadcrumb"><ol style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;list-style:none;margin:0;padding:0;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);"><li><a href="{{ langPrefix }}/" style="color:var(--text-muted);text-decoration:none;">{{ "Inicio" if (not lang or lang == "es") else ("Home" if lang == "en" else "Inici") }}</a></li><li style="opacity:0.4;">·</li><li><a href="{{ _casosUrl }}" style="color:var(--text-muted);text-decoration:none;">{{ _casosLabel }}</a></li><li style="opacity:0.4;">·</li><li style="color:var(--text-accent);" aria-current="page">{{ caso.title | truncate(50) }}</li></ol></nav>
-</div>
-
-{# ── Page Hero ── #}
-<section style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-top: clamp(32px,5vw,64px); padding-bottom: var(--space-12);">
-<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:18px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>{{ "Caso de Éxito" if (not lang or lang == "es") else ("Success Case" if lang == "en" else "Cas d'Èxit") }}</div>
+{% include "partials/page-hero.njk" %}
+<section itemscope itemtype="https://schema.org/Article" style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-bottom: var(--section-y);">
 <div style="display:grid;grid-template-columns:1.4fr 0.6fr;gap:clamp(32px,5vw,64px);align-items:start;" class="hero-grid">
 <div>
-<h1 style="font-family:var(--font-serif);font-size:var(--fs-display-1);line-height:var(--lh-display);letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:0;font-weight:400;">{{ caso.title }}</h1>
-<p style="margin-top:22px;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);max-width:60ch;">{{ caso.description }}</p>
 {% if caso.tags %}
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:22px;">{% for tag in caso.tags %}<span style="display:inline-flex;align-items:center;font-family:var(--font-mono);font-weight:var(--fw-medium);letter-spacing:var(--tracking-label);text-transform:uppercase;line-height:1.2;border-radius:var(--radius-xs);font-size:var(--fs-mono-label);padding:4px 10px;color:var(--text-accent);border:1px solid var(--oxide-200);background:var(--surface-tint);">{{ tag }}</span>{% endfor %}</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">{% for tag in caso.tags %}<span style="display:inline-flex;align-items:center;font-family:var(--font-mono);font-weight:var(--fw-medium);letter-spacing:var(--tracking-label);text-transform:uppercase;line-height:1.2;border-radius:var(--radius-xs);font-size:var(--fs-mono-label);padding:4px 10px;color:var(--text-accent);border:1px solid var(--oxide-200);background:var(--surface-tint);">{{ tag }}</span>{% endfor %}</div>
 {% endif %}
+<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>{{ "Caso de Exito ratificado" if (not lang or lang == "es") else ("Verified success case" if lang == "en" else "Cas d'Exit verificat") }}</div>
 </div>
 <div>
-{# Summary card #}
 <div style="border:1px solid var(--border-hairline);border-radius:var(--radius-md);background:var(--surface-card);overflow:hidden;">
 <div style="padding:14px 18px;border-bottom:1px solid var(--border-hairline);font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">{{ "Ficha del caso" if (not lang or lang == "es") else ("Case file" if lang == "en" else "Fitxa del cas") }}</div>
 {% for item in caso.summary %}
@@ -43,38 +34,24 @@ layout: layouts/base.njk
 </div>
 {% endfor %}
 </div>
-{# Date #}
-<div style="margin-top:16px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);">{{ "Publicado" if (not lang or lang == "es") else ("Published" if lang == "en" else "Publicat") }} · <time datetime="{{ caso.datePublished }}">{{ caso.datePublished | replace("-", " · ") }}</time></div>
+<div style="margin-top:16px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);">{{ "Publicado" if (not lang or lang == "es") else ("Published" if lang == "en" else "Publicat") }} · <time datetime="{{ caso.datePublished }}">{{ caso.datePublished | replace("-", " / ") }}</time></div>
 </div>
 </div>
 </section>
-
-{# ── Divider ── #}
 <div style="max-width:var(--container-wide);margin:0 auto;padding:0 var(--gutter);"><div style="height:1px;background:var(--border-hairline);"></div></div>
-
-{# ── Main Content (Markdown) ── #}
 <section style="max-width:var(--container-prose);margin:0 auto;padding:var(--section-y) var(--gutter);">
-<div class="prose" style="font-size:var(--fs-body);line-height:var(--lh-body);color:var(--text-muted);">
+<div class="prose">
 {{ caso.content | markdown | safe }}
 </div>
 </section>
-
-{# ── Gallery ── #}
-{% if caso.images and caso.images.length > 0 %}
+{% if caso.images and caso.images | length > 0 %}
 <section style="max-width:var(--container-wide);margin:0 auto;padding:0 var(--gutter) var(--section-y) var(--gutter);">
-<div style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);margin-bottom:18px;">{{ "Documentación gráfica" if (not lang or lang == "es") else ("Visual documentation" if lang == "en" else "Documentació gràfica") }}</div>
+<div style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);margin-bottom:18px;">{{ "Documentacion grafica" if (not lang or lang == "es") else ("Visual documentation" if lang == "en" else "Documentacio grafica") }}</div>
 <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;" class="two-col">
-{% for img in caso.images %}
-<figure style="margin:0;">
-<img src="{{ img.url }}" alt="{{ img.alt }}" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:var(--radius-md);border:1px solid var(--border-hairline);aspect-ratio:16/10;object-fit:cover;">
-{% if img.caption %}<figcaption style="margin-top:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:0.04em;color:var(--text-faint);">{{ img.caption }}</figcaption>{% endif %}
-</figure>
-{% endfor %}
+{% for img in caso.images %}<figure style="margin:0;"><img src="{{ img.url }}" alt="{{ img.alt }}" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:var(--radius-md);border:1px solid var(--border-hairline);aspect-ratio:16/10;object-fit:cover;">{% if img.caption %}<figcaption style="margin-top:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:0.04em;color:var(--text-faint);">{{ img.caption }}</figcaption>{% endif %}</figure>{% endfor %}
 </div>
 </section>
 {% endif %}
-
-{# ── Related Service ── #}
 {% if caso.relatedService %}
 <section style="background:var(--paper-50);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);">
 <div style="max-width:var(--container-wide);margin:0 auto;padding:var(--space-10) var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
@@ -86,14 +63,12 @@ layout: layouts/base.njk
 </div>
 </section>
 {% endif %}
-
-{# ── BandCTA ── #}
 <section style="background:var(--surface-tint);border-top:1px solid var(--oxide-200);">
 <div style="max-width:var(--container-wide);margin:0 auto;padding:var(--section-y) var(--gutter);text-align:center;">
-<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:18px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>{{ "¿Tiene un caso similar?" if (not lang or lang == "es") else ("Similar situation?" if lang == "en" else "Té un cas similar?") }}</div>
-<h2 style="font-family:var(--font-serif);font-size:var(--fs-h1);font-weight:400;line-height:var(--lh-display);letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:0;">{{ "Cuéntenos su problema" if (not lang or lang == "es") else ("Tell us about your case" if lang == "en" else "Expliqui'ns el seu problema") }}</h2>
-<p style="margin-top:14px;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);max-width:60ch;margin-left:auto;margin-right:auto;">{{ "Primera consulta sin coste para valorar si su caso tiene recorrido pericial." if (not lang or lang == "es") else ("Free initial consultation to assess the expert potential of your case." if lang == "en" else "Primera consulta sense cost per valorar si el seu cas té recorregut pericial.") }}</p>
-<div style="margin-top:28px;"><a href="{{ _contactPro }}" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 28px;font-family:var(--font-sans);font-size:var(--fs-body);font-weight:var(--fw-semibold);line-height:1;letter-spacing:0.005em;border-radius:var(--radius-sm);border:1.5px solid transparent;background:var(--accent);color:var(--accent-on);text-decoration:none;">{{ "Solicitar consulta" if (not lang or lang == "es") else ("Request a consultation" if lang == "en" else "Sol·licitar consulta") }} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:18px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>{{ "Tiene un caso similar?" if (not lang or lang == "es") else ("Similar situation?" if lang == "en" else "Te un cas similar?") }}</div>
+<h2 style="font-family:var(--font-serif);font-size:var(--fs-h1);font-weight:400;line-height:var(--lh-display);letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:0;">{{ "Cuentenos su problema" if (not lang or lang == "es") else ("Tell us about your case" if lang == "en" else "Expliqui'ns el seu problema") }}</h2>
+<p style="margin-top:14px;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);max-width:60ch;margin-left:auto;margin-right:auto;">{{ "Primera consulta sin coste para valorar si su caso tiene recorrido pericial." if (not lang or lang == "es") else ("Free initial consultation to assess the expert potential of your case." if lang == "en" else "Primera consulta sense cost per valorar si el seu cas te recorregut pericial.") }}</p>
+<div style="margin-top:28px;"><a href="{{ _contactPro }}" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 28px;font-family:var(--font-sans);font-size:var(--fs-body);font-weight:var(--fw-semibold);line-height:1;letter-spacing:0.005em;border-radius:var(--radius-sm);border:1.5px solid transparent;background:var(--accent);color:var(--accent-on);text-decoration:none;" class="cta-hero">{{ "Solicitar consulta" if (not lang or lang == "es") else ("Request a consultation" if lang == "en" else "Sol·licitar consulta") }} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
 <div style="margin-top:16px;"><a href="{{ _casosUrl }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);text-decoration:none;">← {{ _casosLabel }}</a></div>
 </div>
 </section>
