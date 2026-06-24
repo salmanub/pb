@@ -16,7 +16,7 @@ translations:
     permalink: /humedades-filtraciones/
   - lang: ca
     permalink: /ca/humitats-filtracions/
-permalink: "/en/moisture-water-leakage/"
+permalink: "/en/expert-witness-reports/damp-leaks/"
 svc_num: "EXP·04"
 svc_tag: "Water pathology"
 svc_lsi: ["CTE DB-HS", "Infrared thermography", "Waterproofing", "Rising damp", "Interstitial condensation"]

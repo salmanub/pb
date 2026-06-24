@@ -1,38 +1,107 @@
-{#
-  legal.njk — Layout para páginas legales (aviso legal, privacidad, cookies)
-  Diseño sobrio con el DS vanilla CSS, sin Tailwind
-#}
 ---
 layout: layouts/base.njk
 ---
 {% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
 
 {# Hero legal #}
-<section style="background: var(--surface-ink); color: #fff; padding: clamp(48px,8vw,80px) var(--gutter) clamp(36px,6vw,56px);">
-<div style="max-width: var(--container-wide); margin: 0 auto;">
-<h1 style="font-family: var(--font-serif); font-size: var(--fs-display-1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: #fff; margin: 0;">{{ hero.title if hero and hero.title else title }}</h1>
-{% if hero and hero.subtitle %}<p style="margin-top: 14px; font-size: var(--fs-lede); color: var(--accent-light, #7ec8a0); line-height: 1.5;">{{ hero.subtitle }}</p>{% endif %}
-{% if hero and hero.lastUpdated %}<p style="margin-top: 20px; font-size: 0.78rem; color: rgba(255,255,255,0.45); display: flex; align-items: center; gap: 6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>{{ hero.lastUpdated }}</p>{% endif %}
-</div>
+<section
+  style="background: var(--surface-ink); color: #fff; padding: clamp(48px,8vw,80px) var(--gutter) clamp(36px,6vw,56px);">
+  <div style="max-width: var(--container-wide); margin: 0 auto;">
+    <h1
+      style="font-family: var(--font-serif); font-size: var(--fs-display-1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: #fff; margin: 0;">
+      {{ hero.title if hero and hero.title else title }}</h1>
+    {% if hero and hero.subtitle %}<p
+      style="margin-top: 14px; font-size: var(--fs-lede); color: var(--accent-light, #7ec8a0); line-height: 1.5;">{{
+      hero.subtitle }}</p>{% endif %}
+    {% if hero and hero.lastUpdated %}<p
+      style="margin-top: 20px; font-size: 0.78rem; color: rgba(255,255,255,0.45); display: flex; align-items: center; gap: 6px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+        <line x1="16" y1="2" x2="16" y2="6" />
+        <line x1="8" y1="2" x2="8" y2="6" />
+        <line x1="3" y1="10" x2="21" y2="10" />
+      </svg>{{ hero.lastUpdated }}
+    </p>{% endif %}
+  </div>
 </section>
 
 {# Contenido legal #}
 <article style="max-width: 720px; margin: 0 auto; padding: clamp(32px,6vw,64px) var(--gutter);">
-<div class="legal-prose">
-{{ content | safe }}
-</div>
+  <div class="legal-prose">
+    {{ content | safe }}
+  </div>
 </article>
 
 <style>
-.legal-prose { font-family: var(--font-sans); font-size: 1rem; line-height: 1.75; color: var(--text-body); }
-.legal-prose h2 { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 600; color: var(--text-strong); margin: 40px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border-subtle); }
-.legal-prose h3 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; color: var(--text-strong); margin: 36px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border-hairline); }
-.legal-prose h4 { font-family: var(--font-sans); font-size: 1rem; font-weight: 600; color: var(--text-strong); margin: 28px 0 8px; }
-.legal-prose p { margin: 0 0 16px; }
-.legal-prose ul, .legal-prose ol { padding-left: 24px; margin: 12px 0 20px; }
-.legal-prose li { margin-bottom: 8px; }
-.legal-prose a { color: var(--text-accent); text-decoration: underline; }
-.legal-prose a:hover { color: var(--accent); }
-.legal-prose strong { font-weight: 600; color: var(--text-strong); }
-.legal-prose code { font-family: var(--font-mono); font-size: 0.88em; background: var(--surface-tint); padding: 2px 6px; border-radius: 3px; }
+  .legal-prose {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-body);
+  }
+
+  .legal-prose h2 {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text-strong);
+    margin: 40px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .legal-prose h3 {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-strong);
+    margin: 36px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border-hairline);
+  }
+
+  .legal-prose h4 {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-strong);
+    margin: 28px 0 8px;
+  }
+
+  .legal-prose p {
+    margin: 0 0 16px;
+  }
+
+  .legal-prose ul,
+  .legal-prose ol {
+    padding-left: 24px;
+    margin: 12px 0 20px;
+  }
+
+  .legal-prose li {
+    margin-bottom: 8px;
+  }
+
+  .legal-prose a {
+    color: var(--text-accent);
+    text-decoration: underline;
+  }
+
+  .legal-prose a:hover {
+    color: var(--accent);
+  }
+
+  .legal-prose strong {
+    font-weight: 600;
+    color: var(--text-strong);
+  }
+
+  .legal-prose code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    background: var(--surface-tint);
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
 </style>
