@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 ---
 {#
@@ -33,18 +33,16 @@ layout: layouts/base.njk
 <div class="prose">
 {{ post.content | markdown | safe }}
 </div>
-<aside style="position:sticky;top:100px;">
+<aside>
 {% if post.relatedServices and post.relatedServices.length > 0 %}
 <div style="border:1px solid var(--border-hairline);border-radius:var(--radius-md);background:var(--surface-card);overflow:hidden;margin-bottom:20px;">
 <div style="padding:14px 18px;border-bottom:1px solid var(--border-hairline);font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">{{ "Servicios relacionados" if (not lang or lang == "es") else ("Related services" if lang == "en" else "Serveis relacionats") }}</div>
-<div style="padding:12px 18px;display:flex;flex-direction:column;gap:8px;">{% for svc in post.relatedServices %}<a href="{{ svc.url }}" style="display:flex;align-items:center;gap:8px;font-family:var(--font-sans);font-size:0.875rem;font-weight:600;color:var(--ink-900);text-decoration:none;padding:8px 0;border-bottom:1px solid var(--border-hairline);" onmouseenter="this.style.color='var(--accent)'" onmouseleave="this.style.color='var(--ink-900)'">{{ svc.title }} <svg style="margin-left:auto;flex-shrink:0;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>{% endfor %}</div>
+<div>{% for svc in post.relatedServices %}<a href="{{ svc.url }}" style="display:grid;grid-template-columns:1fr 24px;gap:14px;align-items:center;border-top:1px solid var(--border-hairline);padding:16px 12px;text-decoration:none;color:inherit;" class="svc-row"><div><span style="display:block;font-family:var(--font-serif);font-size:1.05rem;font-weight:400;color:var(--text-strong);line-height:1.2;">{{ svc.title }}</span>{% if svc.norm %}<span style="display:block;margin-top:3px;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-faint);line-height:1.5;">{{ svc.norm }}</span>{% endif %}</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>{% endfor %}</div>
 </div>
 {% endif %}
-<div style="border:1px solid var(--oxide-200);border-radius:var(--radius-md);background:var(--surface-tint);padding:22px;text-align:center;">
-<div style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-accent);margin-bottom:12px;">{{ "Primera consulta" if (not lang or lang == "es") else ("Free consultation" if lang == "en" else "Primera consulta") }}</div>
-<p style="font-family:var(--font-sans);font-size:0.875rem;color:var(--text-muted);margin:0 0 16px;">{{ "Sin coste. Valoramos si su caso tiene recorrido pericial." if (not lang or lang == "es") else ("No charge. We assess your expert claim." if lang == "en" else "Sense cost. Valorem si el seu cas te recorregut pericial.") }}</p>
-<a href="{{ _contactPart }}" class="cta-hero" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;font-family:var(--font-sans);font-size:0.875rem;font-weight:600;border-radius:var(--radius-sm);background:var(--accent);color:var(--accent-on);text-decoration:none;width:100%;box-sizing:border-box;">{{ "Solicitar consulta" if (not lang or lang == "es") else ("Request consultation" if lang == "en" else "Sol·licitar consulta") }} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-</div>
+{% set _contactPath = _contactPart %}
+{% set audience = "particular" %}
+{% include "partials/qual.njk" %}
 </aside>
 </div>
 </section>
