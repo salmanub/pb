@@ -15,56 +15,75 @@ translations:
     permalink: /en/success-cases/
 permalink: "/casos-exito/"
 ---
-{# casos-exito/index.njk — Listado de Casos de Éxito con casosExito.json #}
+{# casos-exito/index.njk — Listado DS-pixel-fiel (SitePages.jsx Casos) #}
 {% set ui = es %}
-{% set heroTitle = "Casos de Éxito<br>en Peritaje" %}
-{% include "partials/page-hero.njk" %}
+{% set langPrefix = "" %}
 
-<section itemscope itemtype="https://schema.org/CollectionPage" style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
-<meta itemprop="name" content="{{ title }}">
-<meta itemprop="description" content="{{ description }}">
-{# Eyebrow #}
-<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:clamp(28px,4vw,48px);"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>— § 04 · Expedientes ratificados</div>
-{# Grid 3 columnas #}
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;" class="three-col">
-{% for caso in casosExito %}
-{% if caso.estado == "publicado" %}
-<a href="/casos-exito/{{ caso.slug }}/" style="text-decoration:none;display:block;" itemprop="hasPart" itemscope itemtype="https://schema.org/Article">
-<article style="border-radius: var(--radius-md); border: 1px solid {{ 'var(--ink-700)' if loop.index % 3 == 2 else 'var(--border-hairline)' }}; background: {{ 'var(--surface-ink)' if loop.index % 3 == 2 else 'var(--surface-card)' }}; padding: 24px; height: 100%; box-sizing: border-box; display:flex; flex-direction:column; transition: box-shadow 0.2s ease;" onmouseenter="this.style.boxShadow='0 4px 24px rgba(0,0,0,0.08)'" onmouseleave="this.style.boxShadow='none'">
-{# Fila superior: categoría verde + fecha #}
-<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:14px;">
-<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ 'var(--accent-light, #6fcf97)' if loop.index % 3 == 2 else 'var(--text-accent)' }};font-weight:600;">{{ caso.category | default(caso.tags[0]) }}</span>
-<time datetime="{{ caso.datePublished }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);color:{{ 'var(--text-on-dark-muted)' if loop.index % 3 == 2 else 'var(--text-faint)' }};white-space:nowrap;">{{ caso.datePublished | replace("-", "/") | truncate(7, true, "") }}</time>
-</div>
-{# Importe en grande #}
-{% if caso.amount and caso.amount != "—" %}
-<div style="font-family:var(--font-mono);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;letter-spacing:-0.01em;font-variant-numeric:tabular-nums;color:{{ 'var(--bone-100)' if loop.index % 3 == 2 else 'var(--text-strong)' }};margin-bottom:10px;line-height:1;">{{ caso.amount }}</div>
-{% endif %}
-{# Título #}
-<div itemprop="name" style="font-family:var(--font-serif);font-size:var(--fs-h2);font-weight:400;line-height:1.25;color:{{ 'var(--bone-100)' if loop.index % 3 == 2 else 'var(--text-strong)' }};margin-bottom:10px;">{{ caso.title }}</div>
-{# Descripción corta #}
-<p itemprop="description" style="font-size:var(--fs-body-sm);line-height:1.55;color:{{ 'rgba(241,241,234,0.72)' if loop.index % 3 == 2 else 'var(--text-muted)' }};flex-grow:1;">{{ caso.description | truncate(120) }}</p>
-{# Tags/pills #}
-{% if caso.tags %}
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;">
-{% for tag in caso.tags | slice(0,3) %}<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;padding:3px 8px;border-radius:var(--radius-xs);border:1px solid {{ 'var(--ink-600)' if loop.parent.loop.index % 3 == 2 else 'var(--border-hairline)' }};color:{{ 'var(--text-on-dark-muted)' if loop.parent.loop.index % 3 == 2 else 'var(--text-muted)' }};">{{ tag }}</span>{% endfor %}
-</div>
-{% endif %}
-{# CTA row #}
-<div style="margin-top:18px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-accent);display:flex;align-items:center;gap:6px;">Leer caso <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-</article>
-</a>
-{% endif %}
-{% endfor %}
-</div>
+{# ── DS Breadcrumb inline ── #}
+<nav class="ds-breadcrumb ds-wrap" aria-label="Breadcrumb">
+  <a href="/">Inicio</a>
+  <span class="ds-breadcrumb__sep">/</span>
+  <span class="ds-breadcrumb__current">Casos</span>
+</nav>
+
+{# ── PageHero (DS: serif display, lede 2 líneas) ── #}
+<section class="page-hero">
+  <div class="page-hero__eyebrow" aria-hidden="true">
+    <span class="page-hero__eyebrow-line"></span>
+    § 04 · Expedientes ratificados
+  </div>
+  <h1 class="page-hero__h1">Dictámenes de<br>alta cuantía resueltos</h1>
+  <p class="page-hero__lede">Selección de casos en edificación, obra civil y siniestros industriales. Importes y detalles anonimizados para preservar la confidencialidad de las partes.</p>
 </section>
 
-{# BandCTA #}
-<section style="background: var(--surface-tint); border-top: 1px solid var(--oxide-200);">
-<div style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter); text-align: center;">
-<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:18px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span> Sin compromiso</div>
-<h2 style="font-family:var(--font-serif);font-size:var(--fs-h1);font-weight:400;line-height:var(--lh-display);letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:0;">¿Tiene un caso similar?</h2>
-<p style="margin-top:14px;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);max-width:60ch;margin-left:auto;margin-right:auto;">Primera consulta sin coste para valorar si su caso tiene recorrido pericial. Respuesta en 24 horas.</p>
-<div style="margin-top:28px;"><a href="/contacto/profesional/" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 28px;font-family:var(--font-sans);font-size:var(--fs-body);font-weight:var(--fw-semibold);line-height:1;letter-spacing:0.005em;border-radius:var(--radius-sm);border:1.5px solid transparent;background:var(--accent);color:var(--accent-on);text-decoration:none;">Consultar mi caso <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-</div>
+{# ── GRID 3 × CaseCard (DS: dark = index % 3 === 1) ── #}
+<section class="ds-sec" itemscope itemtype="https://schema.org/CollectionPage">
+  <meta itemprop="name" content="{{ title }}">
+  <meta itemprop="description" content="{{ description }}">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="three-col">
+    {% set cardIdx = 0 %}
+    {% for caso in casosExito %}
+    {% if caso.estado == "publicado" %}
+    {% set isDark = "case-card--dark" if (cardIdx % 3 == 1) else "" %}
+    <a href="/casos-exito/{{ caso.slug }}/" class="case-card {{ isDark }}" itemprop="hasPart" itemscope itemtype="https://schema.org/Article">
+      <div class="case-card__top">
+        <span class="case-card__cat" itemprop="about">{{ caso.category | default(caso.tags[0]) }}</span>
+        <time datetime="{{ caso.datePublished }}" class="case-card__date">{{ caso.datePublished | replace("-", "/") | truncate(7, true, "") }}</time>
+      </div>
+      {% if caso.amount and caso.amount != "—" %}
+      <div class="case-card__amount">{{ caso.amount }}</div>
+      {% endif %}
+      <div class="case-card__title" itemprop="name">{{ caso.title }}</div>
+      <p class="case-card__desc" itemprop="description">{{ caso.description | truncate(120) }}</p>
+      {% if caso.tags %}
+      <div class="case-card__tags">
+        {% for tag in caso.tags | slice(0,3) %}
+        <span class="case-card__tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <div class="case-card__cta">
+        Leer caso
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+    {% set cardIdx = cardIdx + 1 %}
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+{# ── BandCTA (DS: tint) ── #}
+<section class="band-cta band-cta--tint">
+  <div style="max-width:var(--container-wide);margin:0 auto;">
+    <div class="band-cta__eyebrow"><span class="page-hero__eyebrow-line"></span>Sin compromiso</div>
+    <h2 class="band-cta__h2">¿Tiene un caso similar?</h2>
+    <p class="band-cta__lede">Primera consulta sin coste para valorar si su caso tiene recorrido pericial. Respuesta en 24 horas.</p>
+    <div class="band-cta__btn-wrap">
+      <a href="/contacto/profesional/" class="band-cta__btn">
+        Consultar mi caso
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
 </section>
