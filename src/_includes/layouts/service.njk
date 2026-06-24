@@ -220,12 +220,13 @@ NOTE: All HTML on single lines to prevent Markdown <p> wrapping in .md files
         </svg></a>
     </div>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 40px;" class="two-col">
-      {% set currentSlug = page.fileSlug %}
+      {% set currentUrl = page.url %}
       {% set count = { v: 0 } %}
       {% for svc in sitedata.svcs %}
-      {% if svc.slug != currentSlug and count.v < 4 %}
+      {% set svcUrl = ('/en/' + svc.slug_en + '/') if lang == 'en' else (('/ca/' + svc.slug_ca + '/') if lang == 'ca' else ('/informes-periciales/' + svc.slug + '/')) %}
+      {% if svcUrl != currentUrl and count.v < 4 %}
         <article itemprop="hasPart" itemscope itemtype="https://schema.org/Article" style="display: contents;">
-        <a itemprop="url" href="{{ langPrefix }}/{{ svc.slug }}/"
+        <a itemprop="url" href="{{ svcUrl }}"
            style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center;
                   border-top: 1px solid var(--border-hairline); padding: 16px 12px;
                   text-decoration: none; color: inherit;" class="svc-row">

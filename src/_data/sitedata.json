@@ -1,6 +1,6 @@
 {
   "svcs": [
-    { "slug": "informe-de-parte", "num": "EXP·01", "tag": "Litigación civil", "t": "Informe Pericial de Parte", "t_ca": "Informe Pericial de Part", "t_en": "Party-Appointed Expert Report", "norm": "LEC art. 335", "audience": "pro",
+    { "slug": "informe-de-parte", "slug_en": "party-appointed-report", "slug_ca": "informe-de-part", "num": "EXP·01", "tag": "Litigación civil", "t": "Informe Pericial de Parte", "t_ca": "Informe Pericial de Part", "t_en": "Party-Appointed Expert Report", "norm": "LEC art. 335", "audience": "pro",
       "desc": "Dictamen encargado por una de las partes para fundamentar su postura en negociación, mediación o demanda. Plena validez probatoria.",
       "lsi": ["LEC art. 335", "Dictamen técnico", "Ratificación de parte", "Procedimiento civil", "Prueba pericial"],
       "body": [
@@ -12,7 +12,7 @@
         {"q": "¿Diferencia con el dictamen judicial?", "a": "El de parte lo encarga usted o su letrado; el judicial lo designa el juzgado. La metodología es idéntica."}
       ]
     },
-    { "slug": "perito-judicial", "num": "EXP·02", "tag": "Designación judicial", "t": "Actuación como Perito Judicial", "t_ca": "Actuació com a Perit Judicial", "t_en": "Court-Appointed Expert Witness", "norm": "LEC art. 347", "audience": "pro",
+    { "slug": "perito-judicial", "slug_en": "court-appointed-expert", "slug_ca": "perit-judicial", "num": "EXP·02", "tag": "Designación judicial", "t": "Actuación como Perito Judicial", "t_ca": "Actuació com a Perit Judicial", "t_en": "Court-Appointed Expert Witness", "norm": "LEC art. 347", "audience": "pro",
       "desc": "Por designación del juzgado o de parte. Imparcialidad acreditada y defensa oral del dictamen ante interrogatorio cruzado.",
       "lsi": ["Designación judicial", "Lista de peritos", "LEC art. 347", "Tacha de peritos", "Ratificación en sala"],
       "body": [
@@ -24,7 +24,7 @@
         {"q": "¿Puede impugnarse el dictamen?", "a": "Las partes pueden tachar al perito o impugnar el dictamen (LEC art. 343). La solvencia del informe es la mejor defensa."}
       ]
     },
-    { "slug": "patologias-estructurales", "num": "EXP·03", "tag": "Diagnóstico estructural", "t": "Patologías Estructurales", "t_ca": "Patologies Estructurals", "t_en": "Structural Pathology", "norm": "CTE DB-SE · EHE-08", "audience": "mix",
+    { "slug": "patologias-estructurales", "slug_en": "structural-pathologies", "slug_ca": "patologies-estructurals", "num": "EXP·03", "tag": "Diagnóstico estructural", "t": "Patologías Estructurales", "t_ca": "Patologies Estructurals", "t_en": "Structural Pathology", "norm": "CTE DB-SE · EHE-08", "audience": "mix",
       "desc": "Grietas activas, fisuras en forjados, asientos diferenciales y deformaciones críticas. Modelado FEM y ensayos in situ.",
       "lsi": ["CTE DB-SE", "EHE-08", "Grietas activas", "Asiento diferencial", "Cálculo estructural", "Modelado FEM"],
       "body": [
@@ -36,7 +36,7 @@
         {"q": "¿Cuándo es urgente actuar?", "a": "Cuando la grieta es activa, afecta a elementos portantes, supera 1 mm con disposición diagonal o hay deformación perceptible."}
       ]
     },
-    { "slug": "humedades-filtraciones", "num": "EXP·04", "tag": "Patología hídrica", "t": "Humedades y Filtraciones", "t_ca": "Humitats i Filtracions", "t_en": "Moisture and Water Leakage", "norm": "CTE DB-HS", "audience": "particular",
+    { "slug": "humedades-filtraciones", "slug_en": "expert-witness-reports/damp-leaks", "slug_ca": "humitats-filtracions", "num": "EXP·04", "tag": "Patología hídrica", "t": "Humedades y Filtraciones", "t_ca": "Humitats i Filtracions", "t_en": "Moisture and Water Leakage", "norm": "CTE DB-HS", "audience": "particular",
       "desc": "Detección no destructiva del origen mediante termografía infrarroja y pruebas de estanqueidad. Dictamen para reclamar a constructora, comunidad o aseguradora.",
       "lsi": ["Termografía infrarroja", "CTE DB-HS", "Capilaridad ascendente", "Condensación", "Prueba de estanqueidad", "Perito humedades Barcelona"],
       "body": [
@@ -48,7 +48,7 @@
         {"q": "¿Sirve para reclamar al seguro?", "a": "Sí. El dictamen delimita si el origen corresponde a la constructora, a la comunidad o está cubierto por la póliza."}
       ]
     },
-    { "slug": "vicios-ocultos", "num": "EXP·05", "tag": "Compraventa inmobiliaria", "t": "Vicios Ocultos", "t_ca": "Vicis Ocults", "t_en": "Hidden Defects", "norm": "CC art. 1484", "audience": "particular",
+    { "slug": "vicios-ocultos", "slug_en": "hidden-defects", "slug_ca": "vicis-ocults", "num": "EXP·05", "tag": "Compraventa inmobiliaria", "t": "Vicios Ocultos", "t_ca": "Vicis Ocults", "t_en": "Hidden Defects", "norm": "CC art. 1484", "audience": "particular",
       "desc": "Defectos graves no aparentes en la compraventa. Acreditación de preexistencia dentro del plazo de saneamiento de 6 meses.",
       "lsi": ["Código Civil art. 1484", "Defectos no aparentes", "Plazo de saneamiento", "Preexistencia", "Acción redhibitoria"],
       "body": [
@@ -60,7 +60,7 @@
         {"q": "¿Cómo se demuestra que el defecto es anterior a la compra?", "a": "Mediante el análisis técnico del grado de desarrollo de la patología: la antigüedad de una humedad o la evolución de una fisura permiten acreditar la preexistencia."}
       ]
     },
-    { "slug": "reclamacion-mala-ejecucion", "num": "EXP·06", "tag": "Incumplimiento contractual", "t": "Mala Ejecución de Obra", "t_ca": "Mala Execució d'Obra", "t_en": "Construction Defects", "norm": "LOE art. 17", "audience": "mix",
+    { "slug": "reclamacion-mala-ejecucion", "slug_en": "poor-execution-claim", "slug_ca": "reclamacio-mala-execucio", "num": "EXP·06", "tag": "Incumplimiento contractual", "t": "Mala Ejecución de Obra", "t_ca": "Mala Execució d'Obra", "t_en": "Construction Defects", "norm": "LOE art. 17", "audience": "mix",
       "desc": "Contraste objetivo de la obra frente a contrato, memoria de calidades y lex artis. Cuantificación de incumplimientos.",
       "lsi": ["LOE art. 17", "Memoria de calidades", "Lex artis", "Partidas no ejecutadas", "Subsanación"],
       "body": [
@@ -72,7 +72,7 @@
         {"q": "¿Necesito informe para reclamar?", "a": "No es obligatorio en fase extrajudicial, pero es la herramienta más efectiva para que la empresa acepte subsanar sin juicio."}
       ]
     },
-    { "slug": "contrainforme-pericial", "num": "EXP·07", "tag": "Análisis crítico", "t": "Contrainforme Pericial", "t_ca": "Contrainforme Pericial", "t_en": "Counter-Report", "norm": "LEC art. 348", "audience": "pro",
+    { "slug": "contrainforme-pericial", "slug_en": "counter-report", "slug_ca": "contrainforme-pericial", "num": "EXP·07", "tag": "Análisis crítico", "t": "Contrainforme Pericial", "t_ca": "Contrainforme Pericial", "t_en": "Counter-Report", "norm": "LEC art. 348", "audience": "pro",
       "desc": "Detección de carencias metodológicas y refutación técnica de dictámenes presentados por la parte contraria.",
       "lsi": ["Refutación técnica", "Carencias metodológicas", "Pericial contraria", "Sana crítica", "Juicio oral"],
       "body": [
@@ -84,7 +84,7 @@
         {"q": "¿Cuánto se tarda?", "a": "Entre 10 y 20 días hábiles desde la recepción del informe a refutar. Acelerable con plazo procesal próximo."}
       ]
     },
-    { "slug": "naves-industriales", "num": "EXP·08", "tag": "Industrial · B2B", "t": "Naves Industriales", "t_ca": "Naus Industrials", "t_en": "Industrial Buildings", "norm": "RSCIEI · TR-34", "audience": "pro",
+    { "slug": "naves-industriales", "slug_en": "industrial-warehouses", "slug_ca": "naus-industrials", "num": "EXP·08", "tag": "Industrial · B2B", "t": "Naves Industriales", "t_ca": "Naus Industrials", "t_en": "Industrial Buildings", "norm": "RSCIEI · TR-34", "audience": "pro",
       "desc": "Pavimentos logísticos, estructuras metálicas, daños post-alquiler y cumplimiento RSCIEI. Para aseguradoras y operadores.",
       "lsi": ["RSCIEI", "Pavimentos logísticos", "Daños post-alquiler", "Estructura metálica", "TR-34", "Siniestro industrial"],
       "body": [
