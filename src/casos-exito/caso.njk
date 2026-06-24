@@ -1,0 +1,12 @@
+﻿---
+layout: layouts/caso.njk
+pagination:
+  data: casosExito
+  size: 1
+  alias: caso
+eleventyComputed:
+  permalink: "{{ '/casos-exito/' + caso.slug + '/' }}"
+  title: "{{ caso.title }}"
+  description: "{{ caso.description }}"
+  lang: es
+---

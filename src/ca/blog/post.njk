@@ -1,0 +1,12 @@
+﻿---
+layout: layouts/post.njk
+pagination:
+  data: posts_ca
+  size: 1
+  alias: post
+eleventyComputed:
+  permalink: "{{ '/ca/blog/' + post.slug + '/' }}"
+  title: "{{ post.title }}"
+  description: "{{ post.description }}"
+  lang: ca
+---

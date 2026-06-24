@@ -1,0 +1,12 @@
+﻿---
+layout: layouts/post.njk
+pagination:
+  data: posts_en
+  size: 1
+  alias: post
+eleventyComputed:
+  permalink: "{{ '/en/blog/' + post.slug + '/' }}"
+  title: "{{ post.title }}"
+  description: "{{ post.description }}"
+  lang: en
+---
