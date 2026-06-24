@@ -5,6 +5,11 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>perito.barcelona · Ingeniería forense</title>
+<link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="../../assets/icons/favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
+<link rel="manifest" href="../../assets/icons/site.webmanifest" />
+<meta name="theme-color" content="#16202A" />
 <link rel="stylesheet" href="../../styles.css" />
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
@@ -53,6 +58,7 @@
 <script type="text/babel" src="SiteData.jsx"></script>
 <script type="text/babel" src="HomePage.jsx"></script>
 <script type="text/babel" src="SitePages.jsx"></script>
+<script type="text/babel" src="SiteBlog.jsx"></script>
 <script type="text/babel" data-presets="react">
 const { useState, useEffect } = React;
 const DSNS = window.VilardellPeritajeForenseDesignSystem_58f0b0;
@@ -130,12 +136,19 @@ function App() {
 
   const open = () => setIntake(true);
   const svc = page.startsWith('svc-') ? (window.SVCS || []).find((s) => s.slug === page.slice(4)) : null;
-  const PageMap = { home: window.HomePage, construccion: window.Construccion, informes: window.Informes, casos: window.Casos, abogados: window.Abogados, honorarios: window.Honorarios, despacho: window.Despacho, contacto: window.Contacto };
+  const article = page.startsWith('post-') ? (window.ARTICLES || []).find((a) => a.slug === page.slice(5)) : null;
+  const caso = page.startsWith('caso-') ? window.casoBySlug(page.slice(5)) : null;
+  const PageMap = { home: window.HomePage, construccion: window.Construccion, informes: window.Informes, casos: window.Casos, abogados: window.Abogados, honorarios: window.Honorarios, despacho: window.Despacho, contacto: window.Contacto, bitacora: window.Bitacora };
   const Page = PageMap[page] || window.HomePage;
   return (
     <React.Fragment>
       <window.SiteHeader go={go} active={page} />
-      <main>{svc ? <window.Svc svc={svc} go={go} open={open} /> : <Page go={go} open={open} />}</main>
+      <main>{
+        svc ? <window.Svc svc={svc} go={go} open={open} />
+        : article ? <window.Post article={article} go={go} open={open} />
+        : caso ? <window.CasoDetalle caso={caso} go={go} open={open} />
+        : <Page go={go} open={open} />
+      }</main>
       <window.SiteFooter go={go} />
       <Intake open={intake} onClose={() => setIntake(false)} />
     </React.Fragment>

@@ -1,57 +1,154 @@
----
+﻿---
 layout: layouts/base.njk
 ---
 {#
-  post.njk — Layout para articulos individuales de Blog
-  Cadena: pagination → post.njk → base.njk
-  Hero via page-hero.njk (igual que service pages)
-  2-col body: articulo (65%) + sidebar (35%)
+  post.njk — Layout DS-fiel para articulos individuales de Blog
+  Sigue exactamente SiteBlog.jsx Post component:
+  1. Breadcrumb (max 820px center)  
+  2. Cat + audience meta
+  3. H1 titulo grande
+  4. Lede
+  5. Author strip (avatar + name + date + readtime)
+  6. Imagen banner 21/9
+  7. 2-col grid: prose(maxW 680px) + sidebar sticky (refs + qual CTA)
+  8. AuthorBio al final del prose
+  9. Artículos relacionados (2-col)
+  10. BandCTA tint
 #}
 {% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
 {% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
 {% set _blogUrl = "/blog/" if (not lang or lang == "es") else ("/en/blog/" if lang == "en" else "/ca/blog/") %}
+{% set _blogLabel = "Blog" %}
 {% set _contactPart = "/contacto/particular/" if (not lang or lang == "es") else ("/en/contact/particular/" if lang == "en" else "/ca/contacte/particular/") %}
-{% set breadcrumb_parent = { label: "Blog", url: _blogUrl } %}
-{% set title = post.title %}
-{% set heroTitle = post.title %}
-{% set description = post.excerpt | default(post.description) %}
+
+{# ── Schema SEO (invisible) ── #}
 <div itemscope itemtype="https://schema.org/BlogPosting" style="display:none;" aria-hidden="true"><meta itemprop="headline" content="{{ post.title | truncate(110) }}"><meta itemprop="description" content="{{ post.description }}"><meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}"><meta itemprop="datePublished" content="{{ post.datePublished }}T00:00:00+01:00"><meta itemprop="dateModified" content="{{ post.dateModified }}T00:00:00+01:00"><meta itemprop="inLanguage" content="{{ lang | default('es') }}"><div itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ post.author }}"></div><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"></div></div>
-{% include "partials/page-hero.njk" %}
-<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-bottom: var(--space-12);">
-<div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--border-hairline);">
-<div style="display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;border-radius:50%;background:var(--surface-ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.7rem;font-weight:700;color:var(--bone-100);flex-shrink:0;">AV</div><div><div style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;color:var(--text-strong);">{{ post.author }}</div><div style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);">{{ "Ingeniero Civil · ECCAT 16448" if (not lang or lang == "es") else ("Civil Engineer · ECCAT 16448" if lang == "en" else "Enginyer Civil · ECCAT 16448") }}</div></div></div>
-<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-{% if post.category %}<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-accent);font-weight:600;">{{ post.category }}</span>{% endif %}
-{% for tag in post.tags | slice(0, 3) %}<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;padding:3px 9px;border-radius:var(--radius-xs);border:1px solid var(--border-hairline);color:var(--text-muted);">{{ tag }}</span>{% endfor %}
-<time datetime="{{ post.datePublished }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint);">{{ post.datePublished | replace("-", " · ") }}</time>
+
+{# ── 1. CABECERA DEL ARTÍCULO (DS Post — max 820px center) ── #}
+<article>
+<section style="max-width:820px;margin:0 auto;padding:clamp(36px,6vw,72px) var(--gutter) 0;">
+
+{# Breadcrumb inline (DS: dentro del artículo, no en banda verde) #}
+{% set breadcrumb_parent = { label: _blogLabel, url: _blogUrl } %}
+{% set title = post.title %}
+{% include "partials/breadcrumb.njk" %}
+
+{# Categoría + audiencia #}
+<div style="display:flex;align-items:center;gap:10px;margin-top:var(--space-8);font-family:var(--font-mono);font-size:0.64rem;letter-spacing:0.14em;text-transform:uppercase;">
+<span style="color:var(--text-accent);font-weight:600;">{{ post.category }}</span>
+{% if post.audience %}<span style="color:var(--text-faint);">·</span><span style="color:var(--text-faint);">{{ post.audience }}</span>{% endif %}
+</div>
+
+{# H1 — DS: clamp(2rem,4vw,3rem) #}
+<h1 style="font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.1;letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:16px 0 0;">{{ post.title }}</h1>
+
+{# Lede #}
+<p style="margin:20px 0 0;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);">{{ post.excerpt | default(post.description) }}</p>
+
+{# Author strip (DS: avatar 42px + name + date·readtime) #}
+<div style="display:flex;align-items:center;gap:14px;margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--border-hairline);">
+<div style="width:42px;height:42px;border-radius:50%;overflow:hidden;flex-shrink:0;border:1px solid var(--border-subtle);background:var(--surface-ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.75rem;font-weight:700;color:var(--bone-100);">AV</div>
+<div>
+<div style="font-size:0.86rem;font-weight:600;color:var(--text-strong);">{{ post.author | default("Albert Vilardell Serra") }}</div>
+<div style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-faint);margin-top:2px;">{{ post.datePublished | replace("-", " / ") | truncate(8, true, "") }}{% if post.readTime %} · {{ post.readTime }} de lectura{% endif %}</div>
 </div>
 </div>
-</div>
-<div style="max-width:var(--container-wide);margin:0 auto;padding:0 var(--gutter);"><div style="height:1px;background:var(--border-hairline);"></div></div>
-<section style="max-width:var(--container-wide);margin:0 auto;padding:var(--section-y) var(--gutter);">
-<div style="display:grid;grid-template-columns:1.6fr 0.4fr;gap:clamp(32px,5vw,72px);align-items:start;" class="hero-grid">
-<div class="prose">
+
+</section>
+
+{# ── 2. IMAGEN BANNER 21/9 (DS: max 1040px) ── #}
+{% if post.image and post.image.url and "placeholder" not in post.image.url %}
+<section style="max-width:1040px;margin:0 auto;padding:var(--space-10) var(--gutter) 0;">
+<img src="{{ post.image.url }}" alt="{{ post.image.alt | default(post.title) }}" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:var(--radius-md);border:1px solid var(--border-hairline);aspect-ratio:21/9;object-fit:cover;">
+{% if post.image.caption %}<p style="margin-top:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:0.04em;color:var(--text-faint);">{{ post.image.caption }}</p>{% endif %}
+</section>
+{% endif %}
+
+{# ── 3. BODY GRID: prose (680px) + sidebar sticky ── #}
+<section style="max-width:1040px;margin:0 auto;padding:var(--space-12) var(--gutter) 0;">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(32px,5vw,72px);align-items:start;" class="post-grid">
+
+{# PROSE #}
+<div style="max-width:680px;" class="prose">
 {{ post.content | markdown | safe }}
+
+{# AuthorBio (DS: al final del contenido) #}
+<div style="display:flex;gap:20px;align-items:center;margin-top:var(--space-12);padding:var(--space-6);background:var(--surface-card);border-radius:var(--radius-md);border:1px solid var(--border-subtle);">
+<div style="width:74px;height:74px;border-radius:50%;overflow:hidden;flex-shrink:0;border:1px solid var(--border-subtle);background:var(--surface-ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:1rem;font-weight:700;color:var(--bone-100);">AV</div>
+<div>
+<div style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-accent);margin-bottom:5px;">El autor</div>
+<div style="font-family:var(--font-serif);font-size:1.18rem;color:var(--text-strong);">Albert Vilardell Serra</div>
+<p style="margin:5px 0 0;font-size:0.88rem;color:var(--text-muted);line-height:1.55;max-width:54ch;">Ingeniero Civil colegiado (ECCAT nº 16448), perito judicial especializado en construcción y perito de seguros IRD. Diecisiete años redactando dictámenes que se sostienen ante el juez.</p>
 </div>
-<aside>
-{% if post.relatedServices and post.relatedServices.length > 0 %}
-<div style="border:1px solid var(--border-hairline);border-radius:var(--radius-md);background:var(--surface-card);overflow:hidden;margin-bottom:20px;">
-<div style="padding:14px 18px;border-bottom:1px solid var(--border-hairline);font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">{{ "Servicios relacionados" if (not lang or lang == "es") else ("Related services" if lang == "en" else "Serveis relacionats") }}</div>
-<div>{% for svc in post.relatedServices %}<a href="{{ svc.url }}" style="display:grid;grid-template-columns:1fr 24px;gap:14px;align-items:center;border-top:1px solid var(--border-hairline);padding:16px 12px;text-decoration:none;color:inherit;" class="svc-row"><div><span style="display:block;font-family:var(--font-serif);font-size:1.05rem;font-weight:400;color:var(--text-strong);line-height:1.2;">{{ svc.title }}</span>{% if svc.norm %}<span style="display:block;margin-top:3px;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-faint);line-height:1.5;">{{ svc.norm }}</span>{% endif %}</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>{% endfor %}</div>
+</div>
+</div>
+
+{# SIDEBAR STICKY #}
+<aside class="post-aside">
+<div style="position:sticky;top:92px;display:flex;flex-direction:column;gap:20px;">
+{% if post.tags and post.tags | length > 0 %}
+{# Refs card (DS: § símbolos para normas/tags) #}
+<div style="padding:22px;border:1px solid var(--border-subtle);border-radius:var(--radius-md);background:var(--surface-card);">
+<div style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-faint);margin-bottom:14px;">Referencias</div>
+<div style="display:flex;flex-direction:column;gap:9px;">
+{% for tag in post.tags %}<div style="display:flex;gap:9px;align-items:baseline;font-family:var(--font-mono);font-size:0.74rem;color:var(--text-body);"><span style="color:var(--text-accent);">§</span>{{ tag }}</div>{% endfor %}
+</div>
 </div>
 {% endif %}
-{% set _contactPath = _contactPart %}
-{% set audience = "particular" %}
-{% include "partials/qual.njk" %}
+{# CTA card (DS: ink surface, "¿Le afecta a usted?") #}
+<div style="padding:22px;border-radius:var(--radius-md);background:var(--surface-ink);color:var(--bone-100);">
+<div style="font-family:var(--font-serif);font-style:italic;font-size:1.3rem;color:var(--bone-100);">¿Le afecta a usted?</div>
+<p style="margin:10px 0 16px;font-size:0.86rem;line-height:1.55;color:var(--text-on-dark-muted);">Primera valoración técnica sin coste. Respondemos en 24 h laborables.</p>
+<a href="{{ _contactPart }}" style="display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:13px 18px;font-family:var(--font-sans);font-size:var(--fs-body);font-weight:var(--fw-semibold);border-radius:var(--radius-sm);border:1.5px solid transparent;background:var(--accent);color:var(--accent-on);text-decoration:none;box-sizing:border-box;">Plantear mi caso <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+{% if post.relatedServices and post.relatedServices.length > 0 %}
+<div style="margin-top:16px;border-top:1px solid var(--ink-700);padding-top:16px;">
+<div style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-on-dark-muted);margin-bottom:10px;">{{ "Servicios relacionados" if (not lang or lang == "es") else ("Related services" if lang == "en" else "Serveis relacionats") }}</div>
+{% for svc in post.relatedServices %}<a href="{{ svc.url }}" style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--ink-700);text-decoration:none;"><span style="font-family:var(--font-serif);font-size:0.95rem;color:var(--bone-100);line-height:1.2;">{{ svc.title }}</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-on-dark-muted)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>{% endfor %}
+</div>
+{% endif %}
+</div>
+</div>
 </aside>
 </div>
 </section>
+</article>
+
+{# ── 4. ARTÍCULOS RELACIONADOS (DS: 2-col, misma cat) ── #}
+{% set allPosts = posts | sort(attribute="datePublished") | reverse %}
+{% set relPosts = [] %}
+{% for p in allPosts %}{% if p.slug != post.slug and p.category == post.category and relPosts | length < 2 %}{% set relPosts = relPosts.concat([p]) %}{% endif %}{% endfor %}
+{% if relPosts | length < 2 %}
+{% for p in allPosts %}{% if p.slug != post.slug and p.slug not in (relPosts | map(attribute="slug") | list) and relPosts | length < 2 %}{% set relPosts = relPosts.concat([p]) %}{% endif %}{% endfor %}
+{% endif %}
+{% if relPosts | length > 0 %}
+<section style="max-width:var(--container-wide);margin:0 auto;padding:var(--space-12) var(--gutter) var(--section-y);margin-top:var(--space-12);border-top:1px solid var(--border-hairline);">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:var(--space-8);">
+<div><div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:600;color:var(--text-accent);margin-bottom:10px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>§ Seguir leyendo</div><h2 style="font-family:var(--font-serif);font-size:var(--fs-h2);font-weight:400;color:var(--text-strong);margin:0;">Notas relacionadas</h2></div>
+<a href="{{ _blogUrl }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);text-decoration:none;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;">Ver todas <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(28px,4vw,56px);" class="two-col">
+{% for p in relPosts %}
+<a href="{{ langPrefix }}/blog/{{ p.slug }}/" style="text-decoration:none;display:flex;flex-direction:column;">
+<div style="overflow:hidden;border-radius:var(--radius-md);border:1px solid var(--border-hairline);aspect-ratio:3/2;background:var(--surface-card);">
+{% if p.image and p.image.url and "placeholder" not in p.image.url %}<img src="{{ p.image.url }}" alt="{{ p.image.alt | default(p.title) }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">{% else %}<div style="width:100%;height:100%;background:linear-gradient(135deg,var(--surface-tint) 0%,var(--paper-50,#eef1ee) 100%);display:flex;align-items:center;justify-content:center;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>{% endif %}
+</div>
+<div style="display:flex;align-items:center;gap:10px;margin-top:18px;font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;"><span style="color:var(--text-accent);font-weight:600;">{{ p.category }}</span></div>
+<h3 style="font-family:var(--font-serif);font-size:1.32rem;font-weight:400;line-height:1.2;color:var(--text-strong);margin:10px 0 0;">{{ p.title }}</h3>
+<p style="margin:10px 0 0;font-size:0.9rem;color:var(--text-muted);line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">{{ p.excerpt | default(p.description) | truncate(160) }}</p>
+<time datetime="{{ p.datePublished }}" style="display:block;margin-top:14px;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-faint);">{{ p.datePublished | replace("-", "/") | truncate(7, true, "") }}</time>
+</a>
+{% endfor %}
+</div>
+</section>
+{% endif %}
+
+{# ── 5. BAND CTA TINT (DS: "¿Su caso se parece a alguno de estos?") ── #}
 <section style="background:var(--surface-tint);border-top:1px solid var(--oxide-200);">
 <div style="max-width:var(--container-wide);margin:0 auto;padding:var(--section-y) var(--gutter);text-align:center;">
-<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:600;color:var(--text-accent);margin-bottom:18px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>{{ "Necesita un informe pericial?" if (not lang or lang == "es") else ("Need an expert report?" if lang == "en" else "Necessita un dictamen pericial?") }}</div>
-<h2 style="font-family:var(--font-serif);font-size:var(--fs-h1);font-weight:400;line-height:var(--lh-display);letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:0;">{{ "Primera consulta gratuita" if (not lang or lang == "es") else ("Free initial consultation" if lang == "en" else "Primera consulta gratuita") }}</h2>
-<p style="margin-top:14px;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);max-width:58ch;margin-left:auto;margin-right:auto;">{{ "Evaluamos su caso sin compromiso y le indicamos si tiene recorrido pericial. Respuesta en 24 h." if (not lang or lang == "es") else ("We assess your case at no charge and advise whether it has expert potential. Reply within 24 h." if lang == "en" else "Valorem el seu cas sense compromis i l'informem si te recorregut pericial. Resposta en 24 h.") }}</p>
-<div style="margin-top:28px;"><a href="{{ _contactPart }}" class="cta-hero" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 28px;font-family:var(--font-sans);font-size:var(--fs-body);font-weight:var(--fw-semibold);line-height:1;letter-spacing:0.005em;border-radius:var(--radius-sm);border:1.5px solid transparent;background:var(--accent);color:var(--accent-on);text-decoration:none;">{{ "Solicitar consulta" if (not lang or lang == "es") else ("Request a consultation" if lang == "en" else "Sol·licitar consulta") }} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:600;color:var(--text-accent);margin-bottom:18px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>§ Consulta</div>
+<h2 style="font-family:var(--font-serif);font-size:var(--fs-h1);font-weight:400;line-height:var(--lh-display);letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:0;">Primera consulta<br>Sin coste</h2>
+<p style="margin-top:14px;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);max-width:58ch;margin-left:auto;margin-right:auto;">Valoramos si su caso tiene recorrido pericial. Respuesta en 24 horas laborables sin compromiso.</p>
+<div style="margin-top:28px;"><a href="{{ _contactPart }}" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 28px;font-family:var(--font-sans);font-size:var(--fs-body);font-weight:var(--fw-semibold);line-height:1;letter-spacing:0.005em;border-radius:var(--radius-sm);border:1.5px solid transparent;background:var(--accent);color:var(--accent-on);text-decoration:none;">Solicitar consulta <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
 <div style="margin-top:16px;"><a href="{{ _blogUrl }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);text-decoration:none;">← Blog</a></div>
 </div>
 </section>

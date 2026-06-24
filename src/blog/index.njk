@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 title: "Blog · Ingeniería Forense y Peritaje"
 description: "Artículos técnicos sobre patologías de la edificación, vicios ocultos, humedades y peritaje judicial. Recursos para propietarios, abogados y aseguradoras."
@@ -14,38 +14,101 @@ translations:
 permalink: "/blog/"
 ---
 {% set ui = es %}
-{% set heroTitle = "Blog · Ingeniería<br>Forense" %}
-{% include "partials/page-hero.njk" %}
-
-<section itemscope itemtype="https://schema.org/CollectionPage" style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
-<meta itemprop="name" content="{{ title }}">
-<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:clamp(28px,4vw,48px);"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>— § 08 · Recursos técnicos</div>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;" class="three-col">
+{% set langPrefix = "" %}
 {% set sortedPosts = posts | sort(attribute="datePublished") | reverse %}
-{% for post in sortedPosts %}{% if post.estado == "publicado" or not post.estado %}
-<a href="/blog/{{ post.slug }}/" style="text-decoration:none;display:flex;flex-direction:column;" itemprop="hasPart" itemscope itemtype="https://schema.org/BlogPosting">
-<article style="border-radius:var(--radius-md);border:1px solid {{ 'var(--ink-700)' if loop.index % 3 == 2 else 'var(--border-hairline)' }};background:{{ 'var(--surface-ink)' if loop.index % 3 == 2 else 'var(--surface-card)' }};padding:24px;flex-grow:1;display:flex;flex-direction:column;">
-<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:16px;">
-<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:600;color:{{ 'var(--text-on-dark-muted)' if loop.index % 3 == 2 else 'var(--text-accent)' }};">{{ post.category }}</span>
-<time datetime="{{ post.datePublished }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);color:{{ 'var(--text-on-dark-muted)' if loop.index % 3 == 2 else 'var(--text-faint)' }};">{{ post.datePublished | replace("-", "/") | truncate(7, true, "") }}</time>
+
+{# BREADCRUMB #}
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-top: clamp(20px,3vw,32px);">
+{% include "partials/breadcrumb.njk" %}
 </div>
-<div itemprop="headline" style="font-family:var(--font-serif);font-size:var(--fs-h2);font-weight:400;line-height:1.25;color:{{ 'var(--bone-100)' if loop.index % 3 == 2 else 'var(--text-strong)' }};margin-bottom:12px;">{{ post.title }}</div>
-<p itemprop="description" style="font-size:var(--fs-body-sm);line-height:1.55;color:{{ 'rgba(241,241,234,0.72)' if loop.index % 3 == 2 else 'var(--text-muted)' }};flex-grow:1;">{{ post.excerpt | default(post.description) | truncate(120) }}</p>
-{% if post.tags %}
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;">{% for tag in post.tags | slice(0,3) %}<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;padding:3px 8px;border-radius:var(--radius-xs);border:1px solid {{ 'var(--ink-600)' if loop.parent.loop.index % 3 == 2 else 'var(--border-hairline)' }};color:{{ 'var(--text-on-dark-muted)' if loop.parent.loop.index % 3 == 2 else 'var(--text-muted)' }};">{{ tag }}</span>{% endfor %}</div>
+
+
+{# HERO — DS Bitacora style (texto, sin imagen) #}
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-top: clamp(24px,4vw,48px); padding-bottom: var(--space-10);">
+<h1 style="font-family: var(--font-serif); font-size: var(--fs-display-1); line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0; font-weight: 400; max-width: 18ch;">Criterio técnico,<br>en abierto</h1>
+<p style="margin-top: 22px; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 58ch;">Notas periciales sobre patología de la edificación y obra civil. Para el particular que quiere entender su problema antes de actuar, y para el profesional que busca rigor metodológico.</p>
+</section>
+
+{# FILTROS DE CATEGORÍA #}
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter) var(--space-10);">
+<div id="blog-filter-wrap" style="display: flex; gap: 10px; flex-wrap: wrap; border-top: 1px solid var(--border-hairline); padding-top: var(--space-6);">
+{% set publishedPosts = [] %}
+{% for post in sortedPosts %}{% if post.estado == "publicado" or not post.estado %}{% set publishedPosts = publishedPosts.concat([post]) %}{% endif %}{% endfor %}
+<button class="blog-cat-btn active" data-cat="Todos" onclick="blogFilter(this,'Todos')" style="font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;padding:8px 16px;border-radius:var(--radius-pill);cursor:pointer;border:1px solid var(--surface-ink);background:var(--surface-ink);color:var(--bone-100);transition:all 0.15s ease;">Todos</button>
+{% set seenCats = [] %}
+{% for post in publishedPosts %}{% if post.category and post.category not in seenCats %}{% set seenCats = seenCats.concat([post.category]) %}<button class="blog-cat-btn" data-cat="{{ post.category }}" onclick="blogFilter(this,'{{ post.category }}')" style="font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;padding:8px 16px;border-radius:var(--radius-pill);cursor:pointer;border:1px solid var(--border-subtle);background:transparent;color:var(--text-muted);transition:all 0.15s ease;">{{ post.category }}</button>{% endif %}{% endfor %}
+</div>
+</section>
+
+{# ARTÍCULO DESTACADO (primer post) #}
+{% set featPost = publishedPosts | first %}
+{% if featPost %}
+<section id="blog-featured" data-cat="{{ featPost.category }}" style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter) var(--space-16);">
+<a href="/blog/{{ featPost.slug }}/" style="display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,4vw,56px);align-items:center;text-decoration:none;" class="site-two">
+<div style="overflow:hidden;border-radius:var(--radius-md);border:1px solid var(--border-hairline);background:var(--surface-card);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;">
+{% if featPost.image and featPost.image.url and "placeholder" not in featPost.image.url %}
+<img src="{{ featPost.image.url }}" alt="{{ featPost.image.alt | default(featPost.title) }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;">
+{% else %}
+<div style="width:100%;height:100%;background:linear-gradient(135deg,var(--surface-tint) 0%,var(--paper-50,#eef1ee) 100%);display:flex;align-items:center;justify-content:center;"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
 {% endif %}
-<div style="margin-top:18px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-accent);display:flex;align-items:center;gap:6px;">Leer artículo <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-</article>
+</div>
+<div>
+<div style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:0.64rem;letter-spacing:0.14em;text-transform:uppercase;"><span style="color:var(--text-accent);font-weight:600;">Destacado</span><span style="color:var(--text-faint);">·</span><span style="color:var(--text-faint);">{{ featPost.category }}</span></div>
+<h2 style="font-family:var(--font-serif);font-size:clamp(1.7rem,3vw,2.4rem);font-weight:400;line-height:1.12;letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:16px 0 0;">{{ featPost.title }}</h2>
+<p style="margin:16px 0 0;font-size:1.02rem;color:var(--text-muted);line-height:1.6;max-width:52ch;">{{ featPost.excerpt | default(featPost.description) | truncate(200) }}</p>
+<div style="display:flex;align-items:center;gap:14px;margin-top:24px;font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-faint);"><span>{{ featPost.datePublished | replace("-", "/") | truncate(7, true, "") }}</span>{% if featPost.readTime %}<span>·</span><span>{{ featPost.readTime }} de lectura</span>{% endif %}</div>
+<div style="margin-top:22px;display:inline-flex;align-items:center;gap:9px;color:var(--text-accent);font-weight:500;font-size:0.95rem;">Leer el artículo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+</div>
+</a>
+</section>
+{% endif %}
+
+{# GRID 3 COLUMNAS (posts del 2 en adelante) #}
+{% if publishedPosts.length > 1 %}
+<section style="max-width:var(--container-wide);margin:0 auto;padding:0 var(--gutter) var(--section-y);" itemscope itemtype="https://schema.org/CollectionPage">
+<meta itemprop="name" content="{{ title }}">
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,3vw,44px);" class="three-col" id="blog-cards">
+{% for post in publishedPosts %}{% if not loop.first %}
+<a href="/blog/{{ post.slug }}/" class="blog-card" data-cat="{{ post.category }}" style="text-decoration:none;display:flex;flex-direction:column;" itemprop="hasPart" itemscope itemtype="https://schema.org/BlogPosting">
+<div style="overflow:hidden;border-radius:var(--radius-md);border:1px solid var(--border-hairline);aspect-ratio:3/2;background:var(--surface-card);flex-shrink:0;">
+{% if post.image and post.image.url and "placeholder" not in post.image.url %}
+<img src="{{ post.image.url }}" alt="{{ post.image.alt | default(post.title) }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseenter="this.style.transform='scale(1.04)'" onmouseleave="this.style.transform='none'">
+{% else %}
+<div style="width:100%;height:100%;background:linear-gradient(135deg,var(--surface-tint) 0%,var(--paper-50,#eef1ee) 100%);display:flex;align-items:center;justify-content:center;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+{% endif %}
+</div>
+<div style="display:flex;align-items:center;gap:10px;margin-top:18px;font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;"><span style="color:var(--text-accent);font-weight:600;" itemprop="about">{{ post.category }}</span>{% if post.readTime %}<span style="color:var(--text-faint);">·</span><span style="color:var(--text-faint);">{{ post.readTime }}</span>{% endif %}</div>
+<h3 itemprop="headline" style="font-family:var(--font-serif);font-size:1.32rem;font-weight:400;line-height:1.2;color:var(--text-strong);margin:10px 0 0;transition:color 0.15s;" onmouseenter="this.style.color='var(--text-accent)'" onmouseleave="this.style.color='var(--text-strong)'">{{ post.title }}</h3>
+<p itemprop="description" style="margin:10px 0 0;font-size:0.9rem;color:var(--text-muted);line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex-grow:1;">{{ post.excerpt | default(post.description) | truncate(200) }}</p>
+<time datetime="{{ post.datePublished }}" itemprop="datePublished" style="display:block;margin-top:14px;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-faint);">{{ post.datePublished | replace("-", "/") | truncate(7, true, "") }}</time>
 </a>
 {% endif %}{% endfor %}
 </div>
 </section>
+{% endif %}
 
+{# BANDA CTA #}
 <section style="background:var(--surface-tint);border-top:1px solid var(--oxide-200);">
 <div style="max-width:var(--container-wide);margin:0 auto;padding:var(--section-y) var(--gutter);text-align:center;">
-<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:18px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span> Sin compromiso</div>
-<h2 style="font-family:var(--font-serif);font-size:var(--fs-h1);font-weight:400;line-height:var(--lh-display);letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:0;">¿Necesita un informe pericial?</h2>
-<p style="margin-top:14px;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);max-width:60ch;margin-left:auto;margin-right:auto;">Primera consulta gratuita para evaluar su caso. Respuesta en 24 horas laborables.</p>
-<div style="margin-top:28px;"><a href="/contacto/particular/" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 28px;font-family:var(--font-sans);font-size:var(--fs-body);font-weight:var(--fw-semibold);line-height:1;letter-spacing:0.005em;border-radius:var(--radius-sm);border:1.5px solid transparent;background:var(--accent);color:var(--accent-on);text-decoration:none;">Consultar mi caso <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:18px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>§ Consulta</div>
+<h2 style="font-family:var(--font-serif);font-size:var(--fs-h1);font-weight:400;line-height:var(--lh-display);letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:0;">¿Su caso se parece a alguno de estos?</h2>
+<p style="margin-top:14px;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);max-width:60ch;margin-left:auto;margin-right:auto;">Primera valoración técnica sin coste y sin compromiso. Respondemos en 24 horas laborables.</p>
+<div style="margin-top:28px;"><a href="/contacto/particular/" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 28px;font-family:var(--font-sans);font-size:var(--fs-body);font-weight:var(--fw-semibold);line-height:1;letter-spacing:0.005em;border-radius:var(--radius-sm);border:1.5px solid transparent;background:var(--accent);color:var(--accent-on);text-decoration:none;">Plantear mi caso <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
 </div>
 </section>
+
+<script>
+function blogFilter(btn, cat) {
+  document.querySelectorAll('.blog-cat-btn').forEach(function(b) {
+    var on = b === btn;
+    b.style.background = on ? 'var(--surface-ink)' : 'transparent';
+    b.style.color = on ? 'var(--bone-100)' : 'var(--text-muted)';
+    b.style.borderColor = on ? 'var(--surface-ink)' : 'var(--border-subtle)';
+  });
+  var feat = document.getElementById('blog-featured');
+  if (feat) { feat.style.display = (cat === 'Todos' || feat.getAttribute('data-cat') === cat) ? '' : 'none'; }
+  document.querySelectorAll('.blog-card').forEach(function(c) {
+    c.style.display = (cat === 'Todos' || c.getAttribute('data-cat') === cat) ? '' : 'none';
+  });
+}
+</script>

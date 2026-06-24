@@ -54,7 +54,7 @@ function HomePage({ go }) {
             <div style={{ position: 'absolute', bottom: '-22px', left: '-22px', background: 'var(--paper-50)', border: '1px solid var(--border-hairline)', borderRadius: 'var(--radius-md)', padding: '16px 18px', boxShadow: 'var(--shadow-card)', maxWidth: '230px' }} className="hero-badge">
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <Icon name="shield-check" size={20} color="var(--accent)" />
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Inscrito · Min. Justicia</span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Colegiado · ECCAT 16448</span>
               </div>
               <div style={{ marginTop: '8px', fontFamily: 'var(--font-serif)', fontSize: '1rem', color: 'var(--text-strong)' }}>Perito judicial y de seguros (IRD)</div>
             </div>
@@ -167,9 +167,9 @@ function HomePage({ go }) {
           <Placeholder label="Albert Vilardell Serra" ratio="4 / 5" />
           <div>
             <SectionHeader eyebrow="§ 05 · El perito" title="Albert Vilardell Serra" size="md"
-              lede="Ingeniero civil colegiado (ECCAT nº 16448), perito judicial inscrito en el Ministerio de Justicia y perito de seguros IRD. Diecisiete años redactando dictámenes que se sostienen ante el juez." />
+              lede="Ingeniero civil colegiado (ECCAT nº 16448), perito judicial especializado en construcción y perito de seguros IRD. Diecisiete años redactando dictámenes que se sostienen ante el juez." />
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginTop: '24px' }}>
-              {['Ingeniero civil · ECCAT 16448', 'Perito judicial · Min. Justicia', 'Perito de seguros · IRD', 'Actuación en toda España'].map((t) => (
+              {['Ingeniero civil · ECCAT 16448', 'Perito judicial · Construcción', 'Perito de seguros · IRD', 'Actuación en toda España'].map((t) => (
                 <Tag key={t} variant="outline">{t}</Tag>
               ))}
             </div>

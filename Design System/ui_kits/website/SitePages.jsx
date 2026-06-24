@@ -89,7 +89,12 @@ function Casos({ go, open }) {
     <PageHero go={go} trail={[{ label: 'Inicio', go: 'home' }, { label: 'Casos' }]}
       title='Dictámenes de<br/>alta cuantía resueltos'
       lede="Selección de casos en edificación, obra civil y siniestros industriales. Importes y detalles anonimizados para preservar la confidencialidad de las partes." />
-    <section style={sec}><div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '20px' }} className="site-three">{CASOS.map((c, i) => <CaseCard key={i} c={c} dark={i % 3 === 1} />)}</div></section>
+    <section style={sec}><div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '20px' }} className="site-three">{CASOS.map((c, i) => {
+      const slug = (window.CASE_DETAIL && window.CASE_DETAIL[i]) ? window.CASE_DETAIL[i].slug : null;
+      return slug
+        ? <button key={i} onClick={() => go('caso-' + slug)} style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', textAlign: 'left' }}><CaseCard c={c} dark={i % 3 === 1} /></button>
+        : <CaseCard key={i} c={c} dark={i % 3 === 1} />;
+    })}</div></section>
     <BandCTA eyebrow="Sin compromiso" title="¿Tienes un caso similar?" lede="Cuéntanoslo y te decimos si tiene recorrido pericial." btn="Consultar caso" onClick={open} />
   </>);
 }
@@ -162,7 +167,7 @@ function Despacho({ go, open }) {
           ]} />
         </div>
         <Qual label="Habilitación profesional" onIntake={open} cta="Consultar disponibilidad" note="L–J 9h–18h · V 9h–14h · Cita previa"
-          items={[['TÍT', 'Ingeniero Civil — ETSECCPB · UPC'], ['COL', 'ECCAT nº 16448'], ['JUD', 'Perito Judicial — Ministerio de Justicia'], ['IRD', 'Perito de Seguros — INESE'], ['BCN', 'C. de Numància, 95 · 08029 Barcelona'], ['GRA', 'C. Navarra, 14 · 08401 Granollers']]} />
+          items={[['TÍT', 'Ingeniero Civil — ETSECCPB · UPC'], ['COL', 'ECCAT nº 16448'], ['JUD', 'Perito Judicial — especializado en construcción'], ['IRD', 'Perito de Seguros — INESE'], ['BCN', 'C. de Numància, 95 · 08029 Barcelona'], ['GRA', 'C. Navarra, 14 · 08401 Granollers']]} />
       </div>
     </section>
     <BandCTA eyebrow="Disponibilidad" title="¿Necesitas un perito con esta formación?" btn="Consultar caso" onClick={open} />

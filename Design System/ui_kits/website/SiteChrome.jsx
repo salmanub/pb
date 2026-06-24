@@ -94,7 +94,7 @@ const NAVITEMS = [
   ['Perito Construcción', 'construccion'],
   ['Casos', 'casos'],
   ['Abogados·Seguros', 'abogados'],
-  ['Honorarios', 'honorarios'],
+  ['Bitácora', 'bitacora'],
   ['Despacho', 'despacho'],
 ];
 
@@ -181,11 +181,11 @@ function SiteFooter({ go }) {
             </p>
             <div style={{ display: 'flex', gap: '8px', marginTop: '22px', flexWrap: 'wrap' }}>
               <Tag variant="outline" style={{ color: 'var(--text-on-dark-muted)', borderColor: 'var(--ink-700)' }}>ECCAT · 16448</Tag>
-              <Tag variant="outline" style={{ color: 'var(--text-on-dark-muted)', borderColor: 'var(--ink-700)' }}>Min. Justicia</Tag>
+              <Tag variant="outline" style={{ color: 'var(--text-on-dark-muted)', borderColor: 'var(--ink-700)' }}>Perito judicial</Tag>
             </div>
           </div>
           <FooterCol go={go} title="Dictámenes" links={[['Vicios ocultos', 'svc-vicios-ocultos'], ['Humedades y filtraciones', 'svc-humedades-filtraciones'], ['Patologías estructurales', 'svc-patologias-estructurales'], ['Mala ejecución', 'svc-reclamacion-mala-ejecucion'], ['Ver catálogo', 'informes']]} />
-          <FooterCol go={go} title="Despacho" links={[['Perito Construcción', 'construccion'], ['Casos ratificados', 'casos'], ['Abogados y Seguros', 'abogados'], ['Honorarios', 'honorarios'], ['El Despacho', 'despacho']]} />
+          <FooterCol go={go} title="Despacho" links={[['Perito Construcción', 'construccion'], ['Casos ratificados', 'casos'], ['Bitácora técnica', 'bitacora'], ['Honorarios', 'honorarios'], ['El Despacho', 'despacho']]} />
           <FooterCol go={go} title="Contacto" links={[['Solicitar dictamen', 'contacto'], ['Primera consulta', 'contacto'], ['614 194 985', null], ['info@perito.barcelona', null]]} />
         </div>
         <div style={{

@@ -1,4 +1,4 @@
----
+﻿---
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Coste y Honorarios de Informes Periciales"
@@ -7,9 +7,6 @@ image: "elaboracion-informe-pericial.jpg"
 image_alt: "Presupuesto de informe pericial"
 audience: "pro"
 lang: es
-eleventyNavigation:
-  key: Honorarios
-  order: 5
 translations:
   - lang: ca
     permalink: /ca/honoraris/
@@ -37,3 +34,4 @@ band_lede: "Primera consulta sin coste y presupuesto cerrado por escrito."
 band_cta: "Solicitar presupuesto"
 ---
 {% include "layouts/service.njk" %}
+
