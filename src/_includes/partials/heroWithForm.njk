@@ -1,4 +1,4 @@
-﻿<header class="relative mt-[70px] lg:mt-[100px] min-h-[85vh] flex items-center bg-white overflow-hidden isolate border-b border-slate-100">
+<header class="relative mt-[70px] lg:mt-[100px] min-h-[85vh] flex items-center bg-white overflow-hidden isolate border-b border-slate-100">
     <!-- Background Elements -->
     <div class="absolute inset-0 z-0">
         <div class="absolute top-0 right-0 w-2/3 h-full bg-slate-50 skew-x-[-12deg] translate-x-1/4 origin-top opacity-50"></div>
@@ -75,12 +75,21 @@
 
                                 const formData = new FormData(form);
                                 const payload = {
+                                    tipo_cliente: 'particular',
+                                    lang: '{{ lang | default("es") }}',
                                     nombre: formData.get('nombre'),
                                     email: formData.get('email'),
                                     telefono: formData.get('telefono'),
-                                    tipoSiniestro: formData.get('tipoSiniestro'),
-                                    mensaje: "Solicitud de Evaluación Exprés desde la Home",
-                                    origen: 'Evaluación Exprés (Home)'
+                                    ciudad: '',
+                                    empresa: '',
+                                    cargo: '',
+                                    problema: formData.get('tipoSiniestro'),
+                                    inmueble: '',
+                                    importe: '',
+                                    procesal: '',
+                                    detalle: 'Solicitud de Evaluación Exprés desde la Home',
+                                    origen: 'Evaluación Exprés (Home)',
+                                    timestamp: new Date().toISOString()
                                 };
 
                                 try {

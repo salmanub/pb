@@ -1,4 +1,4 @@
----
+﻿---
 layout: layouts/base.njk
 title: "Cuéntanos tu caso — Consulta para particulares"
 description: "Formulario guiado para particulares y comunidades. Primera consulta sin coste. Te orientamos sobre si necesitas un dictamen pericial."
@@ -212,17 +212,20 @@ breadcrumb_parent:
     var contactData = answers.contacto || {};
     var payload = {
       tipo_cliente: 'particular',
+      lang: 'es',
       nombre: contactData.nombre || '',
-      poblacion: contactData.poblacion || '',
       email: contactData.email || '',
       telefono: contactData.telefono || '',
-      detalle: contactData.detalle || '',
+      ciudad: contactData.poblacion || '',
+      empresa: '',
+      cargo: '',
       problema: answers.problema || '',
       inmueble: answers.inmueble || '',
-      antiguedad: answers.antiguedad || '',
-      lang: 'es',
-      timestamp: new Date().toISOString(),
-      source: 'perito.barcelona'
+      importe: answers.antiguedad || '',
+      procesal: '',
+      detalle: contactData.detalle || '',
+      origen: 'Formulario Particular ES',
+      timestamp: new Date().toISOString()
     };
     var mailto = 'mailto:{{ metadata.company.email }}?subject=' + encodeURIComponent('Consulta web — Particular — ' + (contactData.nombre || '')) + '&body=' + encodeURIComponent('Nombre: ' + (contactData.nombre||'') + '\nPoblación: ' + (contactData.poblacion||'') + '\nEmail: ' + (contactData.email||'') + '\nTeléfono: ' + (contactData.telefono||'') + '\nProblema: ' + (answers.problema||'') + '\nInmueble: ' + (answers.inmueble||'') + '\nAntigüedad: ' + (answers.antiguedad||'') + '\n\nDetalle:\n' + (contactData.detalle||''));
     var bd = document.getElementById('intake-p-body');

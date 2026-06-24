@@ -1,4 +1,4 @@
----
+﻿---
 layout: layouts/base.njk
 title: "Tell us your case — Homeowner consultation"
 description: "Guided form for homeowners and communities. Free initial consultation. We advise whether you need an expert report."
@@ -179,7 +179,7 @@ breadcrumb_parent:
   }
   function submitForm(){
     var cd = answers.contact || {};
-    var payload = { tipo_cliente:'particular', name:cd.name||'', location:cd.location||'', email:cd.email||'', phone:cd.phone||'', details:cd.details||'', problem:answers.problem||'', property:answers.property||'', timeframe:answers.timeframe||'', lang:'en', timestamp:new Date().toISOString(), source:'perito.barcelona' };
+    var payload={tipo_cliente:'particular',lang:'en',nombre:cd.name||'',email:cd.email||'',telefono:cd.phone||'',ciudad:cd.location||'',empresa:'',cargo:'',problema:answers.problem||'',inmueble:answers.property||'',importe:answers.timeframe||'',procesal:'',detalle:cd.details||'',origen:'Form Particular EN',timestamp:new Date().toISOString()};
     var bd=document.getElementById('intake-p-body');if(bd)bd.innerHTML='<div style="text-align:center;padding:40px 0;"><div style="width:36px;height:36px;border:3px solid var(--border-hairline);border-top-color:var(--accent);border-radius:50%;margin:0 auto;animation:spin 0.8s linear infinite;"></div><p style="margin:16px 0 0;color:var(--text-muted);font-size:0.95rem;">Sending…</p></div><style>@keyframes spin{to{transform:rotate(360deg)}}</style>';document.getElementById('intake-p-footer').style.display='none';
     var ctrl=new AbortController();var timer=setTimeout(function(){ctrl.abort();},10000);
     fetch('https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:ctrl.signal}).then(function(r){clearTimeout(timer);if(!r.ok)throw new Error('HTTP '+r.status);done=true;render();setTimeout(function(){window.location.href='/en/thank-you/';},2500);}).catch(function(){
