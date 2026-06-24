@@ -1,68 +1,69 @@
 ﻿{
-  "nav": {
-    "construccion": "Perit Construcció",
-    "dictamenes": "Dictàmens",
-    "casos": "Casos",
-    "abogados": "Advocats·Assegurances",
-    "honorarios": "Honoraris",
-    "despacho": "Despatx",
-    "contacto": "Contacte",
-    "solicitar": "Sol·licitar dictamen",
-    "menu": "Menú"
-  },
-  "footer": {
-    "col_dictamenes": "Dictàmens",
-    "col_despacho": "Despatx",
-    "col_contacto": "Contacte",
-    "brand_desc": "Dictàmens pericials sobre edificació i obra civil. Seu a Barcelona, actuació a tota Espanya.",
-    "copyright": "© 2026 Perito Barcelona",
-    "aviso_legal": "Avís legal",
-    "privacidad": "Privacitat",
-    "cookies": "Cookies",
-    "ver_catalogo": "Veure catàleg",
-    "primera_consulta": "Primera consulta",
-    "casos_ratificados": "Casos ratificats",
-    "perito_construccion": "Perit Construcció",
-    "abogados_seguros": "Advocats i Assegurances",
-    "el_despacho": "El Despatx"
-  },
-  "breadcrumb": {
-    "inicio": "Inici",
-    "aria": "Sou aquí",
-    "label": "Sou aquí"
-  },
-  "form": {
-    "titulo": "Sol·licitar dictamen",
-    "subtitulo": "Consulta preliminar sense cost. Resposta en 24 h laborables.",
-    "nombre": "Nom complet",
-    "email": "Email professional",
-    "telefono": "Telèfon (opcional)",
-    "asunto": "Tipus de dictamen",
-    "mensaje": "Descriviu breument el vostre cas",
-    "privacidad": "He llegit i accepto la",
-    "politica_privacidad": "Política de Privacitat",
-    "enviar": "Enviar consulta",
-    "siguiente": "Següent",
-    "anterior": "Anterior",
-    "step": "Pas",
-    "de": "de",
-    "opciones": {
-      "vicios": "Vicis ocults",
-      "humedades": "Humitats i filtracions",
-      "patologias": "Patologies estructurals",
-      "mala_ejecucion": "Mala execució",
-      "contrainforme": "Contrainforme pericial",
-      "otro": "Altre dictamen"
-    }
-  },
-  "qual": {
-    "label": "Qualificació del cas",
-    "consulta_sin_coste": "Consulta sense cost",
-    "consultar_caso": "Consultar cas",
-    "nota": "Ratificació inclosa · Tota Espanya"
-  },
-  "schema": {
-    "services_offered": "Serveis pericials oferts",
-    "areas_served": "Àrees d'actuació"
-  }
+    "nav":  {
+                "construccion":  "Perit Construcció",
+                "dictamenes":  "Dictàmens",
+                "casos":  "Casos",
+                "abogados":  "Advocats·Assegurances",
+                "honorarios":  "Honoraris",
+                "despacho":  "Despatx",
+                "contacto":  "Contacte",
+                "solicitar":  "Sol·licitar dictamen",
+                "menu":  "Menú",
+                "blog":  "Blog"
+            },
+    "footer":  {
+                   "col_dictamenes":  "Dictàmens",
+                   "col_despacho":  "Despatx",
+                   "col_contacto":  "Contacte",
+                   "brand_desc":  "Dictàmens pericials sobre edificació i obra civil. Seu a Barcelona, actuació a tota Espanya.",
+                   "copyright":  "© 2026 Perito Barcelona",
+                   "aviso_legal":  "Avís legal",
+                   "privacidad":  "Privacitat",
+                   "cookies":  "Cookies",
+                   "ver_catalogo":  "Veure catàleg",
+                   "primera_consulta":  "Primera consulta",
+                   "casos_ratificados":  "Casos ratificats",
+                   "perito_construccion":  "Perit Construcció",
+                   "abogados_seguros":  "Advocats i Assegurances",
+                   "el_despacho":  "El Despatx"
+               },
+    "breadcrumb":  {
+                       "inicio":  "Inici",
+                       "aria":  "Sou aquí",
+                       "label":  "Sou aquí"
+                   },
+    "form":  {
+                 "titulo":  "Sol·licitar dictamen",
+                 "subtitulo":  "Consulta preliminar sense cost. Resposta en 24 h laborables.",
+                 "nombre":  "Nom complet",
+                 "email":  "Email professional",
+                 "telefono":  "Telèfon (opcional)",
+                 "asunto":  "Tipus de dictamen",
+                 "mensaje":  "Descriviu breument el vostre cas",
+                 "privacidad":  "He llegit i accepto la",
+                 "politica_privacidad":  "Política de Privacitat",
+                 "enviar":  "Enviar consulta",
+                 "siguiente":  "Següent",
+                 "anterior":  "Anterior",
+                 "step":  "Pas",
+                 "de":  "de",
+                 "opciones":  {
+                                  "vicios":  "Vicis ocults",
+                                  "humedades":  "Humitats i filtracions",
+                                  "patologias":  "Patologies estructurals",
+                                  "mala_ejecucion":  "Mala execució",
+                                  "contrainforme":  "Contrainforme pericial",
+                                  "otro":  "Altre dictamen"
+                              }
+             },
+    "qual":  {
+                 "label":  "Qualificació del cas",
+                 "consulta_sin_coste":  "Consulta sense cost",
+                 "consultar_caso":  "Consultar cas",
+                 "nota":  "Ratificació inclosa · Tota Espanya"
+             },
+    "schema":  {
+                   "services_offered":  "Serveis pericials oferts",
+                   "areas_served":  "Àrees d\u0027actuació"
+               }
 }

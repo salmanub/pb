@@ -1,0 +1,49 @@
+﻿---
+layout: layouts/base.njk
+title: "Success Cases · Resolved Expert Reports"
+description: "Selection of real expert witness cases in construction, civil works and insurance. Documented pathologies, assessed amounts and results obtained for our clients."
+lang: en
+eleventyNavigation:
+  key: Casos
+  order: 3
+translations:
+  - lang: es
+    permalink: /casos-exito/
+  - lang: ca
+    permalink: /ca/casos-d-exit/
+permalink: "/en/success-cases/"
+---
+{% set ui = en %}
+{% set heroTitle = "Success Cases<br>in Expert Reports" %}
+{% include "partials/page-hero.njk" %}
+<section itemscope itemtype="https://schema.org/CollectionPage" style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
+<meta itemprop="name" content="{{ title }}">
+<meta itemprop="description" content="{{ description }}">
+<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:clamp(28px,4vw,48px);"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>— § 04 · Verified cases</div>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;" class="three-col">
+{% for caso in casosExito_en %}
+{% if caso.estado == "publicado" %}
+<a href="/en/success-cases/{{ caso.slug }}/" style="text-decoration:none;display:block;" itemprop="hasPart" itemscope itemtype="https://schema.org/Article">
+<article style="border-radius: var(--radius-md); border: 1px solid {{ 'var(--ink-700)' if loop.index % 3 == 2 else 'var(--border-hairline)' }}; background: {{ 'var(--surface-ink)' if loop.index % 3 == 2 else 'var(--surface-card)' }}; padding: 24px; height: 100%; box-sizing: border-box; display:flex; flex-direction:column;">
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:16px;">
+<div style="display:flex;gap:6px;flex-wrap:wrap;">{% for tag in caso.tags | slice(0, 2) %}<span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ 'var(--text-on-dark-muted)' if loop.parent.loop.index % 3 == 2 else 'var(--text-accent)' }};font-weight:600;">{{ tag }}</span>{% if not loop.last %}<span style="color:var(--text-faint);">·</span>{% endif %}{% endfor %}</div>
+<time datetime="{{ caso.datePublished }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);color:{{ 'var(--text-on-dark-muted)' if loop.index % 3 == 2 else 'var(--text-faint)' }};white-space:nowrap;">{{ caso.datePublished | replace("-", "/") | truncate(7, true, "") }}</time>
+</div>
+<div itemprop="name" style="font-family:var(--font-serif);font-size:var(--fs-h2);font-weight:400;line-height:1.25;color:{{ 'var(--bone-100)' if loop.index % 3 == 2 else 'var(--text-strong)' }};margin-bottom:12px;">{{ caso.title }}</div>
+<p itemprop="description" style="font-size:var(--fs-body-sm);line-height:1.55;color:{{ 'rgba(241,241,234,0.72)' if loop.index % 3 == 2 else 'var(--text-muted)' }};flex-grow:1;">{{ caso.description | truncate(140) }}</p>
+{% if caso.summary %}<div style="margin-top:18px;border-top:1px solid {{ 'var(--ink-600)' if loop.index % 3 == 2 else 'var(--border-hairline)' }};padding-top:16px;">{% for item in caso.summary | slice(0, 2) %}<div style="display:grid;grid-template-columns:1fr 1.4fr;gap:8px;{% if not loop.last %}margin-bottom:8px;{% endif %}"><span style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:{{ 'var(--text-on-dark-muted)' if loop.parent.loop.index % 3 == 2 else 'var(--text-faint)' }};">{{ item.label }}</span><span style="font-size:var(--fs-body-sm);color:{{ 'var(--bone-200)' if loop.parent.loop.index % 3 == 2 else 'var(--text-strong)' }};line-height:1.35;">{{ item.value | truncate(60) }}</span></div>{% endfor %}</div>{% endif %}
+<div style="margin-top:18px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-accent);display:flex;align-items:center;gap:6px;">Read case <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+</article>
+</a>
+{% endif %}
+{% endfor %}
+</div>
+</section>
+<section style="background: var(--surface-tint); border-top: 1px solid var(--oxide-200);">
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter); text-align: center;">
+<div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:18px;"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span> No commitment</div>
+<h2 style="font-family:var(--font-serif);font-size:var(--fs-h1);font-weight:400;line-height:var(--lh-display);letter-spacing:var(--tracking-tight);color:var(--text-strong);margin:0;">Have a similar case?</h2>
+<p style="margin-top:14px;font-size:var(--fs-lede);line-height:var(--lh-lede);color:var(--text-muted);max-width:60ch;margin-left:auto;margin-right:auto;">Free initial consultation to assess whether your case has expert witness potential. Reply within 24 business hours.</p>
+<div style="margin-top:28px;"><a href="/en/contact/professional/" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 28px;font-family:var(--font-sans);font-size:var(--fs-body);font-weight:var(--fw-semibold);line-height:1;letter-spacing:0.005em;border-radius:var(--radius-sm);border:1.5px solid transparent;background:var(--accent);color:var(--accent-on);text-decoration:none;">Discuss my case <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+</div>
+</section>
