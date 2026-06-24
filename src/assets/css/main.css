@@ -110,6 +110,7 @@
     --gutter: clamp(20px, 5vw, 64px);
     --container-max: 1200px;
     --container-text: 720px;
+    --container-prose: 720px;
     --container-wide: 1320px;
 
     /* Elevación */
