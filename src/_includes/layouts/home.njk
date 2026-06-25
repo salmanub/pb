@@ -598,10 +598,13 @@
       '\n\nFecha: ' + new Date().toLocaleString('es-ES') + '\nOrigen: perito.barcelona (home)';
     var mailto = 'mailto:{{ metadata.company.email }}?subject=' + subject + '&body=' + encodeURIComponent(bodyParts);
 
-    /* Show loading state */
-    var submitBtn = document.getElementById('home-submit-btn');
-    submitBtn.disabled = true;
-    submitBtn.textContent = i18n.sending;
+    /* Show loading state — replace form with prominent spinner */
+    wrapper.innerHTML =
+      '<style>@keyframes homeFormSpin{to{transform:rotate(360deg)}}</style>' +
+      '<div style="text-align:center;padding:48px 0;">' +
+        '<div style="width:40px;height:40px;border:3px solid var(--border-hairline);border-top-color:var(--accent);border-radius:50%;margin:0 auto;animation:homeFormSpin 0.8s linear infinite;"></div>' +
+        '<p style="margin:18px 0 0;color:var(--text-muted);font-size:0.95rem;font-weight:500;">' + i18n.sending + '</p>' +
+      '</div>';
 
     var ctrl = new AbortController();
     var timer = setTimeout(function(){ ctrl.abort(); }, 10000);
@@ -617,9 +620,10 @@
       if(!r.ok) throw new Error('HTTP ' + r.status);
       /* Success */
       wrapper.innerHTML =
-        '<div style="text-align:center;padding:28px 0;">' +
-          '<div style="width:52px;height:52px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;background:rgba(30,100,60,0.08);">' +
-            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
+        '<style>@keyframes homeSlideIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}@keyframes homePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}</style>' +
+        '<div style="text-align:center;padding:28px 0;animation:homeSlideIn 0.5s ease-out;">' +
+          '<div style="width:56px;height:56px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;background:rgba(30,100,60,0.1);animation:homePulse 0.6s ease-in-out 0.2s 1;">' +
+            '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
           '</div>' +
           '<h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;margin:16px 0 0;color:var(--text-strong);">' + i18n.successTitle + '</h3>' +
           '<p style="margin:10px auto 0;max-width:40ch;color:var(--text-muted);font-size:0.9rem;line-height:1.55;">' + i18n.successText + '</p>' +
@@ -630,9 +634,10 @@
       clearTimeout(timer);
       /* Error — show mailto/phone fallback */
       wrapper.innerHTML =
-        '<div style="padding:20px 0;">' +
+        '<style>@keyframes homeErrSlide{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}@keyframes homeErrPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}</style>' +
+        '<div style="padding:20px 0;animation:homeErrSlide 0.4s ease-out;">' +
           '<div style="text-align:center;margin-bottom:24px;">' +
-            '<div style="width:52px;height:52px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;background:rgba(220,53,69,0.1);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dc3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>' +
+            '<div style="width:56px;height:56px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;background:rgba(220,53,69,0.1);animation:homeErrPulse 0.6s ease-in-out 0.2s 1;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#dc3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>' +
             '<h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;margin:16px 0 0;color:var(--text-strong);">' + i18n.errorTitle + '</h3>' +
             '<p style="margin:8px auto 0;max-width:38ch;color:var(--text-muted);font-size:0.9rem;line-height:1.55;">' + i18n.errorText + '</p>' +
           '</div>' +
