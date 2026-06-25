@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 title: "Cuéntanos tu caso — Consulta para particulares"
 description: "Formulario guiado para particulares y comunidades. Primera consulta sin coste. Te orientamos sobre si necesitas un dictamen pericial."
@@ -224,7 +224,7 @@ breadcrumb_parent:
       importe: answers.antiguedad || '',
       procesal: '',
       detalle: contactData.detalle || '',
-      origen: 'Formulario Particular ES',
+      origen: window.location.href,
       timestamp: new Date().toISOString()
     };
     var mailto = 'mailto:{{ metadata.company.email }}?subject=' + encodeURIComponent('Consulta web — Particular — ' + (contactData.nombre || '')) + '&body=' + encodeURIComponent('Nombre: ' + (contactData.nombre||'') + '\nPoblación: ' + (contactData.poblacion||'') + '\nEmail: ' + (contactData.email||'') + '\nTeléfono: ' + (contactData.telefono||'') + '\nProblema: ' + (answers.problema||'') + '\nInmueble: ' + (answers.inmueble||'') + '\nAntigüedad: ' + (answers.antiguedad||'') + '\n\nDetalle:\n' + (contactData.detalle||''));

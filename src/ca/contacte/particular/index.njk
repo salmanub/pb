@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 title: "Explica'ns el teu cas — Consulta per a particulars"
 description: "Formulari guiat per a particulars i comunitats. Primera consulta sense cost. T'orientem sobre si necessites un dictamen pericial."
@@ -114,7 +114,7 @@ breadcrumb_parent:
     var sb=document.getElementById('intake-p-submit'); if(sb){sb.addEventListener('click',function(){ var cd=answers.contacte||{}; var valid=step.fields.every(function(f){if(!f.required)return true;var v=cd[f.name];return v&&v.trim().length>0;}); if(!valid){alert('Si us plau, omple els camps obligatoris.');return;} submitForm(); });}
   }
   function submitForm(){
-    var cd=answers.contacte||{}; var payload={tipo_cliente:'particular',lang:'ca',nombre:cd.nom||'',email:cd.email||'',telefono:cd.telefon||'',ciudad:cd.poblacio||'',empresa:'',cargo:'',problema:answers.problema||'',inmueble:answers.immoble||'',importe:answers.antiguitat||'',procesal:'',detalle:cd.detall||'',origen:'Formulari Particular CA',timestamp:new Date().toISOString()};
+    var cd=answers.contacte||{}; var payload={tipo_cliente:'particular',lang:'ca',nombre:cd.nom||'',email:cd.email||'',telefono:cd.telefon||'',ciudad:cd.poblacio||'',empresa:'',cargo:'',problema:answers.problema||'',inmueble:answers.immoble||'',importe:answers.antiguitat||'',procesal:'',detalle:cd.detall||'',origen:window.location.href,timestamp:new Date().toISOString()};
     var bd=document.getElementById('intake-p-body');if(bd)bd.innerHTML='<div style="text-align:center;padding:40px 0;"><div style="width:36px;height:36px;border:3px solid var(--border-hairline);border-top-color:var(--accent);border-radius:50%;margin:0 auto;animation:spin 0.8s linear infinite;"></div><p style="margin:16px 0 0;color:var(--text-muted);font-size:0.95rem;">Enviant…</p></div><style>@keyframes spin{to{transform:rotate(360deg)}}</style>';document.getElementById('intake-p-footer').style.display='none';
     var ctrl=new AbortController();var timer=setTimeout(function(){ctrl.abort();},10000);
     fetch('https://hook.eu2.make.com/76yaogaunrc9cqdtf26ldcoxb3fpndma',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:ctrl.signal}).then(function(r){clearTimeout(timer);if(!r.ok)throw new Error('HTTP '+r.status);done=true;render();setTimeout(function(){window.location.href='/ca/gracies/';},2500);}).catch(function(){

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: layouts/base.njk
 title: "Solicitar Colaboración Técnica — Profesionales"
 description: "Formulario para despachos de abogados, aseguradoras y administraciones públicas. Informe de viabilidad en 48 h. Ratificación en sala incluida."
@@ -225,7 +225,7 @@ breadcrumb_parent:
       importe: answers.importe || '',
       procesal: answers.procesal || '',
       detalle: contactData.descripcion || '',
-      origen: 'Formulario Profesional ES',
+      origen: window.location.href,
       timestamp: new Date().toISOString()
     };
     var mailto = 'mailto:{{ metadata.company.email }}?subject=' + encodeURIComponent('Consulta web � Profesional � ' + (contactData.nombre || '')) + '&body=' + encodeURIComponent('Nombre: ' + (contactData.nombre||'') + '\nEntidad: ' + (contactData.entidad_nombre||'') + '\nCargo: ' + (contactData.cargo||'') + '\nEmail: ' + (contactData.email||'') + '\nTel�fono: ' + (contactData.telefono||'') + '\nEntidad: ' + (answers.entidad||'') + '\nEncargo: ' + (answers.encargo||'') + '\nImporte: ' + (answers.importe||'') + '\nProcesal: ' + (answers.procesal||'') + '\n\nDescripci�n:\n' + (contactData.descripcion||''));
