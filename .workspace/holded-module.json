@@ -1,0 +1,41 @@
+﻿{
+    "id":  11,
+    "mapper":  {
+                   "name":  "{{if(1.name; 1.name; if(1.nombre; 1.nombre; if(1.email; 1.email; \"Lead web\")))}}",
+                   "note":  "Mensaje (patología): {{1.step1}}\nFecha: {{formatDate(now; \"DD/MM/YYYY HH:mm\")}}\nTipo inmueble: {{1.step0}} | Antigüedad: {{1.step2}} | Zona: {{1.step3}} | Dirección: {{1.address}}\nOrigen: humedades",
+                   "type":  "lead",
+                   "email":  "{{1.email}}",
+                   "phone":  "{{if(1.phone; 1.phone; 1.telefono)}}",
+                   "mobile":  "{{if(1.phone; 1.phone; 1.telefono)}}"
+               },
+    "module":  "holded:createAContact",
+    "version":  1,
+    "metadata":  {
+                     "restore":  {
+                                     "parameters":  {
+                                                        "__IMTCONN__":  {
+                                                                            "data":  {
+                                                                                         "scoped":  "true",
+                                                                                         "connection":  "holded"
+                                                                                     },
+                                                                            "label":  "Create contact-Lead"
+                                                                        }
+                                                    }
+                                 },
+                     "designer":  {
+                                      "x":  900,
+                                      "y":  -600
+                                  },
+                     "parameters":  [
+                                        {
+                                            "name":  "__IMTCONN__",
+                                            "type":  "account:holded",
+                                            "label":  "Connection",
+                                            "required":  true
+                                        }
+                                    ]
+                 },
+    "parameters":  {
+                       "__IMTCONN__":  14373346
+                   }
+}

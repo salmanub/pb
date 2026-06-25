@@ -1,0 +1,165 @@
+﻿{
+    "flow":  [
+                 {
+                     "id":  1,
+                     "mapper":  {
+
+                                },
+                     "module":  "gateway:CustomWebHook",
+                     "version":  1,
+                     "metadata":  {
+                                      "restore":  {
+                                                      "parameters":  {
+                                                                         "hook":  {
+                                                                                      "data":  {
+                                                                                                   "editable":  "true"
+                                                                                               },
+                                                                                      "label":  "Leads Claude webhook"
+                                                                                  }
+                                                                     }
+                                                  },
+                                      "designer":  {
+                                                       "x":  0,
+                                                       "y":  0
+                                                   },
+                                      "interface":  [
+                                                        {
+                                                            "name":  "nombre",
+                                                            "type":  "text"
+                                                        },
+                                                        {
+                                                            "name":  "email",
+                                                            "type":  "text"
+                                                        },
+                                                        {
+                                                            "name":  "telefono",
+                                                            "type":  "text"
+                                                        },
+                                                        {
+                                                            "name":  "ciudad",
+                                                            "type":  "text"
+                                                        },
+                                                        {
+                                                            "name":  "problema",
+                                                            "type":  "text"
+                                                        },
+                                                        {
+                                                            "name":  "detalle",
+                                                            "type":  "text"
+                                                        },
+                                                        {
+                                                            "name":  "origen",
+                                                            "type":  "text"
+                                                        }
+                                                    ]
+                                  },
+                     "parameters":  {
+                                        "hook":  1260673,
+                                        "maxResults":  1
+                                    }
+                 },
+                 {
+                     "id":  2,
+                     "mapper":  {
+                                    "name":  "{{if(1.nombre; 1.nombre; if(1.email; 1.email; \"Lead web\"))}}",
+                                    "note":  "Mensaje: {{1.detalle}}\nFecha: {{formatDate(now; \"DD/MM/YYYY HH:mm\")}}\nServicio: {{1.problema}}\nOrigen: {{1.origen}} | Ciudad: {{1.ciudad}} | Tel: {{1.telefono}}",
+                                    "type":  "lead",
+                                    "email":  "{{1.email}}",
+                                    "phone":  "{{1.telefono}}",
+                                    "mobile":  "{{1.telefono}}"
+                                },
+                     "module":  "holded:createAContact",
+                     "version":  1,
+                     "metadata":  {
+                                      "restore":  {
+                                                      "parameters":  {
+                                                                         "__IMTCONN__":  {
+                                                                                             "data":  {
+                                                                                                          "scoped":  "true",
+                                                                                                          "connection":  "holded"
+                                                                                                      },
+                                                                                             "label":  "Create contact-Lead"
+                                                                                         }
+                                                                     }
+                                                  },
+                                      "designer":  {
+                                                       "x":  300,
+                                                       "y":  0
+                                                   },
+                                      "parameters":  [
+                                                         {
+                                                             "name":  "__IMTCONN__",
+                                                             "type":  "account:holded",
+                                                             "label":  "Connection",
+                                                             "required":  true
+                                                         }
+                                                     ]
+                                  },
+                     "parameters":  {
+                                        "__IMTCONN__":  14373346
+                                    }
+                 },
+                 {
+                     "id":  3,
+                     "mapper":  {
+                                    "to":  [
+                                               "info@perito.barcelona"
+                                           ],
+                                    "subject":  "Nuevo Lead Web ({{1.origen}}): {{1.nombre}} - {{1.problema}}",
+                                    "bodyType":  "html",
+                                    "contents":  "\u003cp\u003eNuevo lead recibido desde \u003cstrong\u003e{{1.origen}}\u003c/strong\u003e:\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eNombre:\u003c/strong\u003e {{1.nombre}}\u003cbr\u003e\u003cstrong\u003eEmail:\u003c/strong\u003e {{1.email}}\u003cbr\u003e\u003cstrong\u003eTeléfono:\u003c/strong\u003e {{1.telefono}}\u003cbr\u003e\u003cstrong\u003eCiudad:\u003c/strong\u003e {{1.ciudad}}\u003cbr\u003e\u003cstrong\u003eServicio/Problema:\u003c/strong\u003e {{1.problema}}\u003cbr\u003e\u003cstrong\u003eMensaje:\u003c/strong\u003e {{1.detalle}}\u003cbr\u003e\u003cstrong\u003eFecha:\u003c/strong\u003e {{formatDate(now; \"DD/MM/YYYY HH:mm\")}}\u003c/p\u003e\u003cp\u003e\u003csmall\u003eCreado automáticamente en Holded como Lead.\u003c/small\u003e\u003c/p\u003e"
+                                },
+                     "module":  "google-email:sendAnEmail",
+                     "version":  4,
+                     "metadata":  {
+                                      "restore":  {
+                                                      "parameters":  {
+                                                                         "__IMTCONN__":  {
+                                                                                             "data":  {
+                                                                                                          "scoped":  "true",
+                                                                                                          "connection":  "google-email"
+                                                                                                      },
+                                                                                             "label":  "My Gmail connection (info@perito.barcelona)"
+                                                                                         }
+                                                                     }
+                                                  },
+                                      "designer":  {
+                                                       "x":  600,
+                                                       "y":  0
+                                                   },
+                                      "parameters":  [
+                                                         {
+                                                             "name":  "__IMTCONN__",
+                                                             "type":  "account:google-email",
+                                                             "label":  "Connection",
+                                                             "required":  true
+                                                         }
+                                                     ]
+                                  },
+                     "parameters":  {
+                                        "__IMTCONN__":  13259654
+                                    }
+                 }
+             ],
+    "name":  "Leads Claude",
+    "metadata":  {
+                     "instant":  true,
+                     "version":  1,
+                     "designer":  {
+                                      "orphans":  [
+
+                                                  ]
+                                  },
+                     "scenario":  {
+                                      "dlq":  false,
+                                      "dataloss":  false,
+                                      "maxErrors":  3,
+                                      "autoCommit":  true,
+                                      "roundtrips":  1,
+                                      "sequential":  false,
+                                      "confidential":  false,
+                                      "freshVariables":  false,
+                                      "autoCommitTriggerLast":  true
+                                  }
+                 }
+}

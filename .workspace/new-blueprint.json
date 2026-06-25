@@ -1,0 +1,216 @@
+{
+  "flow": [
+    {
+      "id": 1,
+      "module": "gateway:CustomWebHook",
+      "version": 1,
+      "mapper": {},
+      "metadata": {
+        "restore": {
+          "parameters": {
+            "hook": {
+              "data": { "editable": "true" },
+              "label": "Leads Claude webhook"
+            }
+          }
+        },
+        "designer": { "x": 0, "y": 0 },
+        "interface": [
+          { "name": "nombre", "type": "text" },
+          { "name": "name", "type": "text" },
+          { "name": "email", "type": "text" },
+          { "name": "telefono", "type": "text" },
+          { "name": "phone", "type": "text" },
+          { "name": "ciudad", "type": "text" },
+          { "name": "problema", "type": "text" },
+          { "name": "detalle", "type": "text" },
+          { "name": "origen", "type": "text" },
+          { "name": "source_url", "type": "text" },
+          { "name": "address", "type": "text" },
+          { "name": "step0", "type": "text" },
+          { "name": "step1", "type": "text" },
+          { "name": "step2", "type": "text" },
+          { "name": "step3", "type": "text" },
+          { "name": "tipo_cliente", "type": "text" },
+          { "name": "lang", "type": "text" },
+          { "name": "empresa", "type": "text" },
+          { "name": "cargo", "type": "text" },
+          { "name": "inmueble", "type": "text" },
+          { "name": "importe", "type": "text" },
+          { "name": "procesal", "type": "text" },
+          { "name": "timestamp", "type": "text" },
+          { "name": "sector", "type": "text" },
+          { "name": "elemento", "type": "text" },
+          { "name": "patologia", "type": "text" },
+          { "name": "metros", "type": "text" },
+          { "name": "reference_id", "type": "text" },
+          { "name": "processed_at", "type": "text" },
+          { "name": "tipoProyecto", "type": "text" },
+          { "name": "mensaje", "type": "text" },
+          { "name": "privacidad", "type": "text" },
+          { "name": "fechaEnvio", "type": "text" },
+          { "name": "horaEnvio", "type": "text" },
+          { "name": "timestampEnvio", "type": "text" },
+          { "name": "tipo_proyecto", "type": "text" },
+          { "name": "elemento_edificacion", "type": "text" },
+          { "name": "elemento_civil", "type": "text" },
+          { "name": "source", "type": "text" },
+          { "name": "tiene_fotos", "type": "text" },
+          { "name": "privacy_policy", "type": "text" }
+        ]
+      },
+      "parameters": { "hook": 1260673, "maxResults": 1 }
+    },
+    {
+      "id": 2,
+      "module": "builtin:BasicRouter",
+      "version": 1,
+      "mapper": null,
+      "metadata": { "designer": { "x": 300, "y": 0 } },
+      "routes": [
+        {
+          "flow": [
+            {
+              "id": 10, "module": "google-sheets:addRow", "version": 2,
+              "mapper": { "from": "drive", "mode": "select", "values": { "0": "{{formatDate(now; \"DD/MM/YYYY HH:mm\")}}", "1": "{{1.step0}}", "2": "{{1.step1}}", "3": "{{1.step2}}", "4": "{{1.step3}}", "5": "{{1.address}}", "6": "{{if(1.name; 1.name; 1.nombre)}}", "7": "{{if(1.phone; 1.phone; 1.telefono)}}", "8": "{{1.email}}", "9": "{{1.source_url}}" }, "sheetId": "Hoja 1", "includesHeaders": true, "insertDataOption": "INSERT_ROWS", "spreadsheetId": "1uC8tqrHQE4LI63hFXy64oqJzvttTOgqsWZi1BD29q7w", "tableFirstRow": "A1" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "google-restricted" }, "label": "Google Sheets" } } }, "designer": { "x": 600, "y": -600 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:google-restricted", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 3533384 }
+            },
+            {
+              "id": 11, "module": "holded:createAContact", "version": 1,
+              "mapper": { "name": "{{if(1.name; 1.name; if(1.nombre; 1.nombre; if(1.email; 1.email; \"Lead web\")))}}", "type": "lead", "email": "{{1.email}}", "phone": "{{if(1.phone; 1.phone; 1.telefono)}}", "mobile": "{{if(1.phone; 1.phone; 1.telefono)}}", "note": "Mensaje (patología): {{1.step1}}\nFecha: {{formatDate(now; \"DD/MM/YYYY HH:mm\")}}\nTipo inmueble: {{1.step0}} | Antigüedad: {{1.step2}} | Zona: {{1.step3}} | Dirección: {{1.address}}\nOrigen: humedades" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "holded" }, "label": "Create contact-Lead" } } }, "designer": { "x": 900, "y": -600 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:holded", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 14373346 }
+            },
+            {
+              "id": 12, "module": "google-email:sendAnEmail", "version": 4,
+              "mapper": { "to": ["info@perito.barcelona"], "subject": "Nuevo Lead Humedades: {{if(1.name; 1.name; 1.nombre)}}", "bodyType": "html", "contents": "<p>Nuevo lead desde <strong>humedades.barcelona</strong>:</p><p><strong>Nombre:</strong> {{if(1.name; 1.name; 1.nombre)}}<br><strong>Email:</strong> {{1.email}}<br><strong>Teléfono:</strong> {{if(1.phone; 1.phone; 1.telefono)}}<br><strong>Tipo inmueble:</strong> {{1.step0}}<br><strong>Patología:</strong> {{1.step1}}<br><strong>Antigüedad:</strong> {{1.step2}}<br><strong>Zona:</strong> {{1.step3}}<br><strong>Dirección:</strong> {{1.address}}<br><strong>Fecha:</strong> {{formatDate(now; \"DD/MM/YYYY HH:mm\")}}</p>" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "google-email" }, "label": "My Gmail connection (info@perito.barcelona)" } } }, "designer": { "x": 1200, "y": -600 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:google-email", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 13259654 }
+            }
+          ],
+          "filter": { "name": "humedades", "conditions": [[{ "a": "{{1.origen}}", "b": "humedades", "o": "text:equal" }]] }
+        },
+        {
+          "flow": [
+            {
+              "id": 20, "module": "google-sheets:addRow", "version": 2,
+              "mapper": { "from": "drive", "mode": "select", "values": { "0": "{{1.tipo_cliente}}", "1": "{{1.lang}}", "2": "{{1.nombre}}", "3": "{{1.email}}", "4": "{{1.telefono}}", "5": "{{1.ciudad}}", "6": "{{1.empresa}}", "7": "{{1.cargo}}", "8": "{{1.problema}}", "9": "{{1.inmueble}}", "10": "{{1.importe}}", "11": "{{1.procesal}}", "12": "{{1.detalle}}", "13": "{{1.origen}}", "14": "{{1.timestamp}}" }, "sheetId": "Leads", "includesHeaders": true, "insertDataOption": "INSERT_ROWS", "spreadsheetId": "1ZR-gZxLLsbf9kZU7q4haI12zffKiuD17R1Pq302FVT4", "tableFirstRow": "A1" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "google-restricted" }, "label": "Google Sheets" } } }, "designer": { "x": 600, "y": -300 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:google-restricted", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 3533384 }
+            },
+            {
+              "id": 21, "module": "holded:createAContact", "version": 1,
+              "mapper": { "name": "{{if(1.nombre; 1.nombre; if(1.email; 1.email; \"Lead web\"))}}", "type": "lead", "email": "{{1.email}}", "phone": "{{1.telefono}}", "mobile": "{{1.telefono}}", "note": "Mensaje: {{1.detalle}}\nFecha: {{formatDate(now; \"DD/MM/YYYY HH:mm\")}}\nServicio: {{1.problema}} | Empresa: {{1.empresa}} | Cargo: {{1.cargo}} | Inmueble: {{1.inmueble}} | Importe: {{1.importe}} | Procesal: {{1.procesal}} | Ciudad: {{1.ciudad}}\nOrigen: perito-express" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "holded" }, "label": "Create contact-Lead" } } }, "designer": { "x": 900, "y": -300 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:holded", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 14373346 }
+            },
+            {
+              "id": 22, "module": "google-email:sendAnEmail", "version": 4,
+              "mapper": { "to": ["info@perito.barcelona"], "subject": "Nuevo Lead Perito Express: {{1.nombre}} - {{1.problema}}", "bodyType": "html", "contents": "<p>Nuevo lead desde <strong>perito.barcelona</strong> (express):</p><p><strong>Nombre:</strong> {{1.nombre}}<br><strong>Email:</strong> {{1.email}}<br><strong>Teléfono:</strong> {{1.telefono}}<br><strong>Ciudad:</strong> {{1.ciudad}}<br><strong>Servicio:</strong> {{1.problema}}<br><strong>Empresa:</strong> {{1.empresa}}<br><strong>Mensaje:</strong> {{1.detalle}}<br><strong>Fecha:</strong> {{formatDate(now; \"DD/MM/YYYY HH:mm\")}}</p>" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "google-email" }, "label": "My Gmail connection (info@perito.barcelona)" } } }, "designer": { "x": 1200, "y": -300 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:google-email", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 13259654 }
+            }
+          ],
+          "filter": { "name": "perito-express", "conditions": [[{ "a": "{{1.origen}}", "b": "perito-express", "o": "text:equal" }]] }
+        },
+        {
+          "flow": [
+            {
+              "id": 30, "module": "google-sheets:addRow", "version": 2,
+              "mapper": { "from": "drive", "mode": "select", "values": { "0": "{{if(1.nombre; 1.nombre; if(1.name; 1.name; \"Lead web\"))}}", "1": "{{1.email}}", "2": "{{if(1.telefono; 1.telefono; 1.phone)}}", "3": "{{if(1.address; 1.address; 1.ciudad)}}", "4": "{{if(1.detalle; 1.detalle; 1.problema)}}", "5": "{{if(1.step0; 1.step0; \"\")}} | {{if(1.step1; 1.step1; \"\")}} | {{if(1.step2; 1.step2; \"\")}} | {{if(1.step3; 1.step3; \"\")}}", "6": "{{formatDate(now; \"DD/MM/YYYY HH:mm\")}}", "7": "", "8": "Nuevo" }, "sheetId": "Perito_BCN", "includesHeaders": true, "insertDataOption": "INSERT_ROWS", "spreadsheetId": "1sYIzvDpNthNSIzB8ejdTNhSIJmlTMMeBp50m9QHlMyg", "tableFirstRow": "A1" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "google-restricted" }, "label": "Google Sheets" } } }, "designer": { "x": 600, "y": 0 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:google-restricted", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 3533384 }
+            },
+            {
+              "id": 31, "module": "holded:createAContact", "version": 1,
+              "mapper": { "name": "{{if(1.nombre; 1.nombre; if(1.name; 1.name; if(1.email; 1.email; \"Lead web\")))}}", "type": "lead", "email": "{{1.email}}", "phone": "{{if(1.telefono; 1.telefono; 1.phone)}}", "mobile": "{{if(1.telefono; 1.telefono; 1.phone)}}", "note": "Mensaje: {{if(1.detalle; 1.detalle; 1.problema)}}\nFecha: {{formatDate(now; \"DD/MM/YYYY HH:mm\")}}\nTipo inmueble: {{1.step0}} | Patología: {{1.step1}} | Antigüedad: {{1.step2}} | Zona: {{1.step3}}\nOrigen: perito-encargos" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "holded" }, "label": "Create contact-Lead" } } }, "designer": { "x": 900, "y": 0 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:holded", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 14373346 }
+            }
+          ],
+          "filter": { "name": "perito-encargos", "conditions": [[{ "a": "{{1.origen}}", "b": "perito-encargos", "o": "text:equal" }]] }
+        },
+        {
+          "flow": [
+            {
+              "id": 40, "module": "google-sheets:addRow", "version": 2,
+              "mapper": { "from": "drive", "mode": "select", "values": { "0": "{{1.sector}}", "1": "{{1.elemento}}", "2": "{{1.patologia}}", "3": "{{1.metros}}", "4": "{{1.tiene_fotos}}", "5": "{{1.nombre}}", "6": "{{1.email}}", "7": "{{1.telefono}}", "8": "{{1.privacy_policy}}", "9": "{{1.reference_id}}", "10": "{{1.processed_at}}" }, "sheetId": "Leads", "includesHeaders": true, "insertDataOption": "INSERT_ROWS", "spreadsheetId": "1vpW3qox-Adjuv9NZeYXdIfthxtI6hi2d5GG6x70FuNA", "tableFirstRow": "A1" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "google-restricted" }, "label": "Google Sheets" } } }, "designer": { "x": 600, "y": 300 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:google-restricted", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 3533384 }
+            },
+            {
+              "id": 41, "module": "holded:createAContact", "version": 1,
+              "mapper": { "name": "{{if(1.nombre; 1.nombre; if(1.email; 1.email; \"Lead web\"))}}", "type": "lead", "email": "{{1.email}}", "phone": "{{1.telefono}}", "mobile": "{{1.telefono}}", "note": "Mensaje (patología): {{1.patologia}}\nFecha: {{formatDate(now; \"DD/MM/YYYY HH:mm\")}}\nElemento: {{1.elemento}} | Sector: {{1.sector}} | Metros: {{1.metros}} | Ref: {{1.reference_id}}\nOrigen: refuerzofibra" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "holded" }, "label": "Create contact-Lead" } } }, "designer": { "x": 900, "y": 300 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:holded", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 14373346 }
+            },
+            {
+              "id": 42, "module": "gateway:WebhookRespond", "version": 1,
+              "mapper": { "body": "OK", "status": "200", "headers": [] },
+              "metadata": { "designer": { "x": 1200, "y": 300 } }
+            }
+          ],
+          "filter": { "name": "refuerzofibra", "conditions": [[{ "a": "{{1.origen}}", "b": "refuerzofibra", "o": "text:equal" }]] }
+        },
+        {
+          "flow": [
+            {
+              "id": 50, "module": "google-sheets:addRow", "version": 2,
+              "mapper": { "from": "drive", "mode": "select", "values": { "0": "{{1.tipoProyecto}}", "1": "{{1.nombre}}", "2": "{{1.cargo}}", "3": "{{1.empresa}}", "4": "{{1.email}}", "5": "{{1.telefono}}", "6": "{{1.mensaje}}", "7": "{{1.privacidad}}", "8": "{{1.fechaEnvio}}", "9": "{{1.horaEnvio}}", "10": "{{1.timestampEnvio}}" }, "sheetId": "Hoja 1", "includesHeaders": true, "insertDataOption": "INSERT_ROWS", "spreadsheetId": "1Yb0-4XaRI5S0KDTkNEx_lJ0SpeGtJVwndJXImjQ08-o", "tableFirstRow": "A1" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "google-restricted" }, "label": "Google Sheets" } } }, "designer": { "x": 600, "y": 600 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:google-restricted", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 3533384 }
+            },
+            {
+              "id": 51, "module": "holded:createAContact", "version": 1,
+              "mapper": { "name": "{{if(1.nombre; 1.nombre; if(1.email; 1.email; \"Lead web\"))}}", "type": "lead", "email": "{{1.email}}", "phone": "{{1.telefono}}", "mobile": "{{1.telefono}}", "note": "Mensaje: {{1.mensaje}}\nFecha: {{1.fechaEnvio}} {{1.horaEnvio}}\nProyecto: {{1.tipoProyecto}} | Empresa: {{1.empresa}} | Cargo: {{1.cargo}}\nOrigen: urbenis" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "holded" }, "label": "Create contact-Lead" } } }, "designer": { "x": 900, "y": 600 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:holded", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 14373346 }
+            }
+          ],
+          "filter": { "name": "urbenis", "conditions": [[{ "a": "{{1.origen}}", "b": "urbenis", "o": "text:equal" }]] }
+        },
+        {
+          "flow": [
+            {
+              "id": 60, "module": "holded:createAContact", "version": 1,
+              "mapper": { "name": "{{if(1.nombre; 1.nombre; if(1.email; 1.email; \"Lead web\"))}}", "type": "lead", "email": "{{1.email}}", "phone": "{{1.telefono}}", "mobile": "{{1.telefono}}", "note": "Mensaje: {{1.detalle}}\nFecha: {{formatDate(now; \"DD/MM/YYYY HH:mm\")}}\nProblema: {{1.problema}} | Ciudad: {{1.ciudad}}\nOrigen: pavimento" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "holded" }, "label": "Create contact-Lead" } } }, "designer": { "x": 600, "y": 900 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:holded", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 14373346 }
+            },
+            {
+              "id": 61, "module": "google-email:sendAnEmail", "version": 4,
+              "mapper": { "to": ["info@perito.barcelona"], "subject": "Nuevo Lead Pavimento: {{1.nombre}} - {{1.problema}}", "bodyType": "html", "contents": "<p>Nuevo lead desde <strong>pavimentoalimentario.es</strong>:</p><p><strong>Nombre:</strong> {{1.nombre}}<br><strong>Email:</strong> {{1.email}}<br><strong>Teléfono:</strong> {{1.telefono}}<br><strong>Ciudad:</strong> {{1.ciudad}}<br><strong>Problema:</strong> {{1.problema}}<br><strong>Mensaje:</strong> {{1.detalle}}<br><strong>Fecha:</strong> {{formatDate(now; \"DD/MM/YYYY HH:mm\")}}</p>" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "google-email" }, "label": "My Gmail connection (info@perito.barcelona)" } } }, "designer": { "x": 900, "y": 900 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:google-email", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 13259654 }
+            }
+          ],
+          "filter": { "name": "pavimento", "conditions": [[{ "a": "{{1.origen}}", "b": "pavimento", "o": "text:equal" }]] }
+        },
+        {
+          "flow": [
+            {
+              "id": 70, "module": "holded:createAContact", "version": 1,
+              "mapper": { "name": "{{if(1.nombre; 1.nombre; if(1.name; 1.name; if(1.email; 1.email; \"Lead web\")))}}", "type": "lead", "email": "{{1.email}}", "phone": "{{if(1.telefono; 1.telefono; 1.phone)}}", "mobile": "{{if(1.telefono; 1.telefono; 1.phone)}}", "note": "Mensaje: {{if(1.detalle; 1.detalle; if(1.mensaje; 1.mensaje; 1.problema))}}\nFecha: {{formatDate(now; \"DD/MM/YYYY HH:mm\")}}\nOrigen: {{1.origen}} (fallback)\nURL: {{1.source_url}}" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "holded" }, "label": "Create contact-Lead" } } }, "designer": { "x": 600, "y": 1200 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:holded", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 14373346 }
+            },
+            {
+              "id": 71, "module": "google-email:sendAnEmail", "version": 4,
+              "mapper": { "to": ["info@perito.barcelona"], "subject": "Lead sin ruta ({{1.origen}}): {{if(1.nombre; 1.nombre; 1.name)}}", "bodyType": "html", "contents": "<p>Lead recibido <strong>sin ruta conocida</strong> (origen: {{1.origen}}):</p><p><strong>Nombre:</strong> {{if(1.nombre; 1.nombre; 1.name)}}<br><strong>Email:</strong> {{1.email}}<br><strong>Teléfono:</strong> {{if(1.telefono; 1.telefono; 1.phone)}}<br><strong>Mensaje:</strong> {{if(1.detalle; 1.detalle; 1.mensaje)}}<br><strong>Fecha:</strong> {{formatDate(now; \"DD/MM/YYYY HH:mm\")}}</p><p><small>Revisa la configuración del router.</small></p>" },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "google-email" }, "label": "My Gmail connection (info@perito.barcelona)" } } }, "designer": { "x": 900, "y": 1200 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:google-email", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 13259654 }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "name": "Leads Claude",
+  "metadata": {
+    "instant": true,
+    "version": 1,
+    "designer": { "orphans": [] },
+    "scenario": { "dlq": false, "dataloss": false, "maxErrors": 3, "autoCommit": true, "roundtrips": 1, "sequential": false, "confidential": false, "freshVariables": false, "autoCommitTriggerLast": true }
+  }
+}
