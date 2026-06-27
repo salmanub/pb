@@ -16,6 +16,7 @@ import tailwindcss from '@tailwindcss/postcss';
 import cssnano from 'cssnano';
 import { PurgeCSS } from 'purgecss';
 import eleventyNavigationPlugin from '@11ty/eleventy-navigation';
+import { minify } from 'html-minifier-terser';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -270,6 +271,22 @@ export default function (eleventyConfig) {
         return `<script>${js}</script>`;
       }
     );
+  });
+
+  // ── HTML minify (producción) ──
+  eleventyConfig.addTransform('html-minify', async function (content, outputPath) {
+    if (isServe) return content;
+    if (!outputPath || !outputPath.endsWith('.html')) return content;
+    return await minify(content, {
+      collapseWhitespace: true,
+      removeComments: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true,
+      useShortDoctype: true,
+      minifyCSS: false,   // ya lo hace cssnano
+      minifyJS: false,    // JS está inlineado y ya minificado
+    });
   });
 
   // ── Favicon shortcode (Design System/assets/icons/) ──
