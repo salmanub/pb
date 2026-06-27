@@ -52,7 +52,7 @@ Activar con: {% set breadcrumb_inline = true %}
 ══════════════════════════════════════════════ #}
 {% if breadcrumb_inline %}
 <nav class="ds-breadcrumb" aria-label="{{ ui.breadcrumb.aria }}" itemscope itemtype="https://schema.org/BreadcrumbList">
-  <meta itemprop="name" content="{{ {{ title }} - metadata.site.title }}">
+  <meta itemprop="name" content="{{ title }} - {{ metadata.site.title }}">
   {% for crumb in _trail %}
   <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
     {% if crumb.url %}
