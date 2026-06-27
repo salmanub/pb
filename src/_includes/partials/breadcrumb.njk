@@ -53,6 +53,7 @@ Uses: lang, ui, svc_num, breadcrumb_parent, breadcrumb_inline, breadcrumb_items[
 <nav class="ds-breadcrumb" aria-label="{{ ui.breadcrumb.aria }}"
   itemscope itemtype="https://schema.org/BreadcrumbList">
   <meta itemprop="name" content="{{ title }}">
+  <meta itemprop="name" content="{{ metadata.site.title }}">
   {% for crumb in _trail %}
   <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
     {% if crumb.url %}
