@@ -373,7 +373,7 @@
         "category": "Geotechnics",
         "tags": ["Slope Stability", "Retaining Wall", "Geotechnics", "Expert Assessment"],
         "image": {
-            "url": "/assets/img/blog/estabilidad-taludes.png",
+            "url": "/assets/images/blog/estabilidad-taludes.png",
             "alt": "Composite view of an unstable slope with pool at the crest and excavation at the toe",
             "caption": "Left: crest view. Right: toe with excavation and moisture."
         },

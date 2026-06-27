@@ -373,7 +373,7 @@
     "category": "Geotecnia",
     "tags": ["Estabilidad de taludes", "Muro de contención", "Geotecnia", "Peritaje"],
     "image": {
-      "url": "/assets/img/blog/estabilidad-taludes.png",
+      "url": "/assets/images/blog/estabilidad-taludes.png",
       "alt": "Vista compuesta de un talud inestable con piscina en coronación y excavación al pie",
       "caption": "Izquierda: vista desde coronación. Derecha: vista desde el pie con excavación y humedad."
     },

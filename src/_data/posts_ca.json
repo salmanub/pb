@@ -373,7 +373,7 @@
         "category": "Geotècnia",
         "tags": ["Estabilitat de talussos", "Mur de contenció", "Geotècnia", "Peritatge"],
         "image": {
-            "url": "/assets/img/blog/estabilidad-taludes.png",
+            "url": "/assets/images/blog/estabilidad-taludes.png",
             "alt": "Vista composta d'un talús inestable amb piscina a la coronació i excavació al peu",
             "caption": "Esquerra: coronació. Dreta: peu amb excavació i humitat."
         },
