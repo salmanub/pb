@@ -1,4 +1,4 @@
-[
+﻿[
     {
         "title": "Hidden Defects in Purchase: Rights and Claim Deadlines",
         "slug": "hidden-defects-purchase-rights-deadlines",
@@ -355,5 +355,30 @@
             }
         ],
         "content": "## The Golden Deadline: 6 Months\n\nMany buyers are unaware that the Civil Code establishes a very strict deadline: you have **6 months** from the handover of keys to claim for hidden defects. After this time, the action expires and you lose the right.\n\n## The 3 Requirements of the Hidden Defect\n\nNot every defect is claimable. For a judge to consider it a 'hidden defect', it must meet three conditions:\n\n1.  **Hidden:** It must not have been visible during the visit. If it was evident (a huge crack), it is assumed you bought knowing it. *Note: If you are an expert (architect, builder), the criteria is stricter.*\n2.  **Serious:** It must make the home unfit for use or decrease its value so much that, had you known, you would not have bought it or would have paid much less.\n3.  **Pre-existing:** The defect must have existed **before** the purchase, even if it manifested later. This is where the expert report is vital to prove the age of the damage.\n\n## Possible Legal Actions\n\nIf the requirements are confirmed, you can choose:\n* **Redhibitory Action:** Undo the purchase (return the apartment and recover the money + expenses).\n* **Quanti Minoris Action:** Keep the property but demand a price reduction proportional to the repair cost.\n\n## Conclusion\n\nIf you discover a serious defect, do not wait. Document everything, do not repair anything yet, and call a judicial expert immediately to certify pre-existence before the deadline runs out."
+    },
+    {
+        "title": "Slope Stability and Retaining Walls: Expert Assessment, Site Visit and Engineering Solutions",
+        "slug": "slope-stability-retaining-walls",
+        "translations": [
+            { "lang": "es", "permalink": "/blog/estabilidad-taludes-muros-contencion/" },
+            { "lang": "ca", "permalink": "/ca/blog/estabilitat-talussos-murs-contencio/" },
+            { "lang": "en", "permalink": "/en/blog/slope-stability-retaining-walls/" }
+        ],
+        "description": "Is your retaining wall cracking, has your neighbour excavated at the base, or is your pool leaking near a slope? Slope stability analysis in Barcelona.",
+        "excerpt": "A neighbour excavated at the toe of a 6-metre wall while a pool was leaking at the crest. Real case, diagnosis and stabilisation solutions.",
+        "estado": "publicado",
+        "datePublished": "2025-06-27",
+        "dateModified": "2025-06-27",
+        "author": "Albert Vilardell Serra",
+        "category": "Geotechnics",
+        "tags": ["Slope Stability", "Retaining Wall", "Geotechnics", "Expert Assessment"],
+        "image": {
+            "url": "/assets/img/blog/estabilidad-taludes.png",
+            "alt": "Composite view of an unstable slope with pool at the crest and excavation at the toe",
+            "caption": "Left: crest view. Right: toe with excavation and moisture."
+        },
+        "relatedServices": [
+            { "title": "Slope stability assessment", "url": "/en/contact/particular/" }
+        ]
     }
 ]

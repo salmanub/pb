@@ -87,18 +87,6 @@ Clases CSS del DS: .post-header .post-eyebrow .post-h1 .post-lede
     {# PROSE — DS Prose + AuthorBio #}
     <div class="post-prose">
       {{ post.content | markdown | safe }}
-
-      {# AuthorBio (DS: al final del contenido) #}
-      <div class="post-author-bio">
-        <div class="post-author-bio__avatar">AV</div>
-        <div>
-          <div class="post-author-bio__eyebrow">El autor</div>
-          <div class="post-author-bio__name">Albert Vilardell Serra</div>
-          <p class="post-author-bio__desc">Ingeniero Civil colegiado (ECCAT nº 16448), perito judicial especializado en
-            construcción y perito de seguros IRD. Diecisiete años redactando dictámenes que se sostienen ante el juez.
-          </p>
-        </div>
-      </div>
     </div>
 
     {# ASIDE sticky (DS: .post-aside, sticky top:92px) #}
