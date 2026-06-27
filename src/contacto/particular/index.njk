@@ -103,7 +103,8 @@ breadcrumb_parent:
       helper: 'Una primera consulta sin coste. Respondemos en 24 h laborables.',
       fields: [
         { name: 'nombre', label: 'Nombre y apellidos', placeholder: 'Tu nombre', required: true },
-        { name: 'poblacion', label: 'Población del inmueble', placeholder: 'Ej. Barcelona', required: true },
+        { name: 'direccion', label: 'Dirección del inmueble', placeholder: 'Calle y número', required: true },
+        { name: 'poblacion', label: 'Población', placeholder: 'Ej. Barcelona', required: true },
         { name: 'email', label: 'Correo electrónico', type: 'email', placeholder: 'nombre@correo.com', required: true },
         { name: 'telefono', label: 'Teléfono', type: 'tel', placeholder: '+34 ___ ___ ___', required: true },
         { name: 'detalle', label: 'Cuéntanoslo en una línea', multiline: true, rows: 3, placeholder: 'Lo que creas relevante…', required: false }
@@ -216,6 +217,7 @@ breadcrumb_parent:
       nombre: contactData.nombre || '',
       email: contactData.email || '',
       telefono: contactData.telefono || '',
+      direccion: contactData.direccion || '',
       ciudad: contactData.poblacion || '',
       empresa: '',
       cargo: '',

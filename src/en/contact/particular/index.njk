@@ -89,7 +89,8 @@ breadcrumb_parent:
       helper: 'Free initial consultation. We respond within 24 business hours.',
       fields: [
         { name: 'name', label: 'Full name', placeholder: 'Your name', required: true },
-        { name: 'location', label: 'Property location', placeholder: 'e.g. Barcelona', required: true },
+        { name: 'address', label: 'Property address', placeholder: 'Street and number', required: true },
+        { name: 'location', label: 'City', placeholder: 'e.g. Barcelona', required: true },
         { name: 'email', label: 'Email address', type: 'email', placeholder: 'name@email.com', required: true },
         { name: 'phone', label: 'Phone number', type: 'tel', placeholder: '+34 ___ ___ ___', required: true },
         { name: 'details', label: 'Tell us in one line', multiline: true, rows: 3, placeholder: 'Whatever you think is relevant…', required: false }
@@ -179,7 +180,7 @@ breadcrumb_parent:
   }
   function submitForm(){
     var cd = answers.contact || {};
-    var payload={tipo_cliente:'particular',lang:'en',nombre:cd.name||'',email:cd.email||'',telefono:cd.phone||'',ciudad:cd.location||'',empresa:'',cargo:'',problema:answers.problem||'',inmueble:answers.property||'',importe:answers.timeframe||'',procesal:'',detalle:cd.details||'',origen:'perito-encargos',timestamp:new Date().toISOString()};
+    var payload={tipo_cliente:'particular',lang:'en',nombre:cd.name||'',email:cd.email||'',telefono:cd.phone||'',direccion:cd.address||'',ciudad:cd.location||'',empresa:'',cargo:'',problema:answers.problem||'',inmueble:answers.property||'',importe:answers.timeframe||'',procesal:'',detalle:cd.details||'',origen:'perito-encargos',timestamp:new Date().toISOString()};
     var bd=document.getElementById('intake-p-body');if(bd)bd.innerHTML='<div style="text-align:center;padding:40px 0;"><div style="width:36px;height:36px;border:3px solid var(--border-hairline);border-top-color:var(--accent);border-radius:50%;margin:0 auto;animation:spin 0.8s linear infinite;"></div><p style="margin:16px 0 0;color:var(--text-muted);font-size:0.95rem;">Sending…</p></div><style>@keyframes spin{to{transform:rotate(360deg)}}</style>';document.getElementById('intake-p-footer').style.display='none';
     var ctrl=new AbortController();var timer=setTimeout(function(){ctrl.abort();},10000);
     fetch('https://hook.eu2.make.com/kj6gdinjq1ck5wx7g8sjr81wloca8iul',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:ctrl.signal}).then(function(r){clearTimeout(timer);if(!r.ok)throw new Error('HTTP '+r.status);done=true;render();setTimeout(function(){window.location.href='/en/thank-you/';},2500);}).catch(function(){
