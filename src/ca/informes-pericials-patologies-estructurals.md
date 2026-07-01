@@ -30,6 +30,8 @@ faq:
     a: "No. Poden ser tèrmiques, de retracció, d'assentament o de fatiga. La determinació de l'origen requereix anàlisi de geometria, obertura, disposició i evolució."
   - q: "Quan és urgent actuar?"
     a: "Quan l'esquerda és activa, afecta elements portants, supera 1 mm amb disposició diagonal o hi ha deformació perceptible."
+  - q: "L'aluminosi pot afectar el meu edifici?"
+    a: 'Laluminosi afecta forjats amb ciment aluminós dels anys 50-70 i només es confirma amb assaig químic. Ho expliquem a <a href="/ca/blog/aluminosi-barcelona-deteccio-peritatge/">la nostra guia sobre aluminosi a Barcelona</a>.'
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
 ---

@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Technical Services for Law Firms and Insurers"
-description: "B2B expert collaboration protocol for construction law firms and insurance companies. Preliminary feasibility report, cross-examination (LEC art. 347) and major risk IRD."
+description: "B2B expert collaboration protocol for construction law firms and insurers: feasibility report, cross-examination (LEC art. 347) and major-risk IRD claims."
 audience: "pro"
 lang: en
 eleventyNavigation:

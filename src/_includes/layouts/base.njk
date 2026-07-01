@@ -18,7 +18,7 @@ AGENTES §5: CSS inline (inyectado por transform), cero
   <title>{{ title }} — {{ metadata.site.title }}</title>
   <meta name="description" content="{{ description }}">
   {% if noindex or seo == "noindex" %}<meta name="robots" content="noindex, nofollow">{% endif %}
-  <link rel="canonical" href="{{ metadata.site.url }}{{ page.url }}">
+  <link rel="canonical" href="{{ metadata.site.url }}{{ canonical | default(page.url) }}">
 
   {# ── Open Graph ── #}
   <meta property="og:title" content="{{ title }}">

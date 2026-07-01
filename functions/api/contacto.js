@@ -1,15 +1,47 @@
 /**
- * Cloudflare Pages Function — /api/contacto
+ * POST /api/contacto — Cloudflare Pages Function (perito.barcelona)
  *
- * Accepts POST from:
- *   1. Intake modal (JSON body from fetch())
- *   2. Home inline form (FormData from <form> submit)
+ * Receives form data from the intake modals (JSON body from fetch()),
+ * validates required fields, discards bots via honeypot, enriches the
+ * payload with metadata, and forwards to Make.com with retry.
  *
- * Forwards payload to Make webhook and redirects to /gracias/.
+ * Returns JSON response for the client-side handler.
  *
- * Variables de entorno requeridas:
+ * Env vars (set in Cloudflare Pages dashboard):
  *   MAKE_WEBHOOK_URL — URL del webhook de Make.com
  */
+
+const CORS_HEADERS = {
+  'Content-Type': 'application/json',
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
+async function forwardWithRetry(url, payload, attempts = 3) {
+  let lastErr;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (res.ok) return true;
+      lastErr = new Error(`Make responded ${res.status}`);
+    } catch (err) {
+      lastErr = err;
+    }
+    if (i < attempts - 1) await new Promise((r) => setTimeout(r, 400 * (i + 1)));
+  }
+  console.error('contacto: forward to Make failed after retries:', lastErr && lastErr.message);
+  return false;
+}
+
+export async function onRequestOptions() {
+  return new Response(null, { status: 204, headers: CORS_HEADERS });
+}
+
 export async function onRequestPost(context) {
   const { request, env } = context;
 
@@ -17,7 +49,6 @@ export async function onRequestPost(context) {
     const contentType = request.headers.get('content-type') || '';
     let data;
 
-    // Parse body based on content type
     if (contentType.includes('application/json')) {
       data = await request.json();
     } else {
@@ -25,61 +56,64 @@ export async function onRequestPost(context) {
       data = Object.fromEntries(formData.entries());
     }
 
+    // Honeypot: hidden field "website" — if filled, it's a bot → fake success
+    if (data.website && String(data.website).trim() !== '') {
+      return new Response(JSON.stringify({ ok: true }), {
+        status: 200,
+        headers: CORS_HEADERS,
+      });
+    }
+
     // Detect language from Referer or payload
     const referer = request.headers.get('referer') || '';
     let lang = data.lang || 'es';
-    if (referer.includes('/ca/')) lang = 'ca';
-    else if (referer.includes('/en/')) lang = 'en';
-    else if (referer.includes('/fr/')) lang = 'fr';
-    else if (referer.includes('/it/')) lang = 'it';
+    if (!data.lang) {
+      if (referer.includes('/ca/')) lang = 'ca';
+      else if (referer.includes('/en/')) lang = 'en';
+    }
 
-    // Build webhook payload
+    // Build enriched payload
     const payload = {
       ...data,
       lang,
-      perfil: data.perfil || '',
       timestamp: data.timestamp || new Date().toISOString(),
       source: data.source || 'perito.barcelona',
       referer,
+      ua: request.headers.get('user-agent') || '',
     };
 
     // Forward to Make webhook
-    const webhookUrl = env.MAKE_WEBHOOK_URL;
-    if (webhookUrl) {
-      await fetch(webhookUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-    } else {
-      console.log('[contacto] No MAKE_WEBHOOK_URL set. Payload:', JSON.stringify(payload));
-    }
-
-    // Redirect to thank you page
-    const redirectMap = {
-      es: '/gracias/',
-      ca: '/ca/gracies/',
-      en: '/en/thank-you/',
-      fr: '/fr/merci/',
-      it: '/it/grazie/',
-    };
-    const redirectUrl = redirectMap[lang] || '/gracias/';
-
-    // For JSON requests (from fetch), return JSON response instead of redirect
-    if (contentType.includes('application/json')) {
-      return new Response(JSON.stringify({ ok: true, redirect: redirectUrl }), {
+    const webhookUrl = env && env.MAKE_WEBHOOK_URL;
+    if (!webhookUrl) {
+      console.error('[contacto] MAKE_WEBHOOK_URL not configured. Payload:', JSON.stringify(payload));
+      // Still return success to client — the lead is "lost" but the error
+      // is in server logs for the admin to see. Better UX than failing.
+      return new Response(JSON.stringify({ ok: true, warning: 'webhook not configured' }), {
         status: 200,
-        headers: { 'Content-Type': 'application/json' },
+        headers: CORS_HEADERS,
       });
     }
 
-    // For form submissions, redirect
-    return Response.redirect(new URL(redirectUrl, request.url).href, 303);
+    const sent = await forwardWithRetry(webhookUrl, payload);
+
+    if (!sent) {
+      // Retries exhausted — respond with error so client shows mailto fallback
+      return new Response(JSON.stringify({ ok: false, error: 'webhook delivery failed' }), {
+        status: 502,
+        headers: CORS_HEADERS,
+      });
+    }
+
+    return new Response(JSON.stringify({ ok: true }), {
+      status: 200,
+      headers: CORS_HEADERS,
+    });
+
   } catch (err) {
-    console.error('Contact form error:', err);
-    return new Response(JSON.stringify({ ok: false, error: 'Error processing form' }), {
+    console.error('contacto error:', err);
+    return new Response(JSON.stringify({ ok: false, error: err.message }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' },
+      headers: CORS_HEADERS,
     });
   }
 }

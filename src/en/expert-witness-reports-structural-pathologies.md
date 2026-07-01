@@ -30,6 +30,8 @@ faq:
     a: "No. They may be thermal, shrinkage, settlement or fatigue cracks. Determining the origin requires analysis of geometry, aperture, pattern and evolution."
   - q: "When is it urgent to act?"
     a: "When the crack is active, affects load-bearing elements, exceeds 1 mm with a diagonal pattern, or there is perceptible deformation."
+  - q: "Could aluminosis affect my building?"
+    a: 'Aluminosis affects floor slabs with high-alumina cement from the 1950s-70s and is only confirmed by chemical testing. See <a href="/en/blog/aluminosis-concrete-barcelona-assessment/">our guide to aluminosis in Barcelona</a>.'
 band_title: "Do you need this report?"
 band_lede: "Free initial consultation. Contractual delivery deadlines."
 ---

@@ -15,7 +15,7 @@ translations:
   - lang: ca
     permalink: /ca/reclamacio-mala-execucio/
   - lang: en
-    permalink: /en/expert-witness-reports/poor-workmanship-claim/
+    permalink: /en/poor-execution-claim/
 permalink: "/reclamacion-mala-ejecucion/"
 svc_num: "EXP·06"
 svc_tag: "Incumplimiento contractual · LOE art. 17"

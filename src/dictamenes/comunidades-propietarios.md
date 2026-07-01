@@ -15,7 +15,7 @@ translations:
   - lang: ca
     permalink: /ca/comunitats-propietaris/
   - lang: en
-    permalink: /en/expert-witness-reports/owners-association/
+    permalink: /en/homeowners-associations/
 permalink: "/comunidades-propietarios/"
 svc_num: "EXP·09"
 svc_tag: "Propiedad horizontal · LPH"
@@ -30,6 +30,8 @@ faq:
     a: "Solo las que afecten a elementos comunes (fachada, cubierta, bajantes, estructura). Si el daño proviene de un elemento privativo, el coste corresponde al propietario."
   - q: "¿Es necesario el informe para aprobar una derrama?"
     a: "No es obligatorio, pero es la base técnica que justifica la derrama ante la junta y, en caso de impugnación, ante el juez."
+  - q: "¿Quién paga una filtración por la cubierta?"
+    a: 'Depende de si el origen es elemento común o privativo. Lo explicamos en <a href="/blog/filtraciones-cubierta-comunidad-reclamar/">esta guía sobre filtraciones en cubierta de comunidad</a>.'
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
 ---

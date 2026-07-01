@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Servicio Técnico para Despachos de Abogados y Aseguradoras"
-description: "Protocolo B2B de colaboración pericial para despachos de construcción y compañías aseguradoras. Informe preliminar de viabilidad, interrogatorio cruzado (LEC art. 347) y grandes riesgos IRD."
+description: "Protocolo B2B de colaboración pericial para despachos y aseguradoras: informe de viabilidad, interrogatorio cruzado (LEC art. 347) y grandes riesgos IRD."
 image: "reclamacion-seguros-construccion.jpg"
 image_alt: "Colaboración técnica con abogados y aseguradoras"
 audience: "pro"

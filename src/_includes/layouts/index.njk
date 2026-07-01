@@ -3,10 +3,10 @@
 {% block content %}
     {# Calcular la fecha del artículo más reciente que aparece en blog-home (solo los 2 primeros publicados) #}
     {% if posts and posts.length > 0 %}
-        {% set sortedPosts = posts | sort(attribute='datePublished') | reverse %}
+        {% set sortedPosts = posts | published | sort(attribute='datePublished') | reverse %}
         {% set visiblePosts = [] %}
         {% for post in sortedPosts %}
-            {% if visiblePosts.length < 2 and (not post.estado or post.estado == "publicado") %}
+            {% if visiblePosts.length < 2 %}
                 {% set visiblePosts = (visiblePosts.push(post), visiblePosts) %}
             {% endif %}
         {% endfor %}

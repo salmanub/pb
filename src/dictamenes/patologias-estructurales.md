@@ -38,6 +38,8 @@ faq:
     a: "No. Pueden ser térmicas, de retracción, de asiento o de fatiga. La determinación del origen requiere análisis de geometría, apertura, disposición y evolución."
   - q: "¿Cuándo es urgente actuar?"
     a: "Cuando la grieta es activa, afecta a elementos portantes, supera 1 mm con disposición diagonal o hay deformación perceptible."
+  - q: "¿La aluminosis puede afectar a mi edificio?"
+    a: 'La aluminosis afecta a forjados con cemento aluminoso de los años 50-70 y solo se confirma con ensayo químico. Lo explicamos en <a href="/blog/aluminosis-barcelona-deteccion-peritaje/">nuestra guía sobre aluminosis en Barcelona</a>.'
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
 ---

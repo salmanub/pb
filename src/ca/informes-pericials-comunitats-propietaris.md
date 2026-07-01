@@ -30,6 +30,8 @@ faq:
     a: "Depèn del cas. Pot encarregar-lo la comunitat, un propietari afectat o el seu advocat. El cost pot repercutir-se al responsable si es guanya la reclamació."
   - q: "Serveix per a reclamar al promotor?"
     a: "Sí. Dins dels terminis de la LOE (art. 17), el dictamen documenta els defectes imputables al promotor o al contractista."
+  - q: "Qui paga una filtració per la coberta?"
+    a: 'Depèn de si lorigen és element comú o privatiu. Ho expliquem a <a href="/ca/blog/filtracions-coberta-comunitat-reclamar/">aquesta guia sobre filtracions en coberta de comunitat</a>.'
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
 ---

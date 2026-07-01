@@ -19,7 +19,7 @@ permalink: "/ca/blog/"
 <div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:clamp(28px,4vw,48px);"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>— § 08 · Recursos tècnics</div>
 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;" class="three-col">
 {% set sortedPosts = posts_ca | sort(attribute="datePublished") | reverse %}
-{% for post in sortedPosts %}{% if post.estado == "publicado" or not post.estado %}
+{% for post in sortedPosts %}{% if post | isPublished %}
 <a href="/ca/blog/{{ post.slug }}/" style="text-decoration:none;display:flex;flex-direction:column;" itemprop="hasPart" itemscope itemtype="https://schema.org/BlogPosting">
 <article style="border-radius:var(--radius-md);border:1px solid {{ 'var(--ink-700)' if loop.index % 3 == 2 else 'var(--border-hairline)' }};background:{{ 'var(--surface-ink)' if loop.index % 3 == 2 else 'var(--surface-card)' }};padding:24px;flex-grow:1;display:flex;flex-direction:column;">
 <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:16px;">

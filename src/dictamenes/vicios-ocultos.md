@@ -4,7 +4,7 @@ templateEngineOverride: njk
 title: "Informe Pericial por Vicios Ocultos"
 image: "inspeccion-vicios-ocultos.jpg"
 image_alt: "Inspección técnica de vicios ocultos en vivienda"
-description: "Defectos graves no aparentes en compraventa de vivienda. Acreditación de preexistencia dentro del plazo de saneamiento de 6 meses. Código Civil art. 1484. Habitabilidad."
+description: "Defectos graves no aparentes en la compraventa de vivienda. Acreditación de preexistencia dentro del plazo de 6 meses. Código Civil art. 1484."
 audience: "particular"
 lang: es
 eleventyNavigation:

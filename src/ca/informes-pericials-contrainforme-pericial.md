@@ -30,6 +30,8 @@ faq:
     a: "Sí. El jutge valora tots els dictàmens conforme a la sana crítica (LEC art. 348). Un contrainforme rigorós pot capgirar la prova."
   - q: "Es pot fer sense visitar l'immoble?"
     a: "Depèn del cas. Sovint la visita independent és necessària per verificar les dades de l'informe original."
+  - q: "Com es rebat un informe pericial contrari?"
+    a: 'Amb un contrainforme que revisa metodologia, dades i normativa, i amb la ratificació a sala. Ho expliquem a <a href="/ca/blog/impugnar-informe-pericial-contrainforme/">aquesta guia per impugnar una pericial contrària</a>.'
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
 ---

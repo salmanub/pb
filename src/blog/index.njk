@@ -17,7 +17,7 @@ permalink: "/blog/"
 {% set langPrefix = "" %}
 {% set sortedPosts = posts | sort(attribute="datePublished") | reverse %}
 {% set publishedPosts = [] %}
-{% for post in sortedPosts %}{% if post.estado == "publicado" or not post.estado %}{% set publishedPosts = publishedPosts.concat([post]) %}{% endif %}{% endfor %}
+{% for post in sortedPosts %}{% if post | isPublished %}{% set publishedPosts = publishedPosts.concat([post]) %}{% endif %}{% endfor %}
 
 {# ── Breadcrumb inline (DS mono) vía partial ── #}
 {% set breadcrumb_inline = true %}

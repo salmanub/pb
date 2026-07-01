@@ -3,7 +3,7 @@ layout: layouts/base.njk
 title: "Despacho de Ingeniería Forense en Barcelona"
 image: "employees/albert_vilardell-ingeniero_civil.jpg"
 image_alt: "Albert Vilardell, ingeniero civil colegiado"
-description: "Despacho técnico dirigido por un ingeniero civil colegiado (ECCAT nº 16448), perito judicial inscrito en el Ministerio de Justicia. Trayectoria profesional, formación técnica y experiencia judicial en edificación y obra civil."
+description: "Despacho de ingeniería forense en Barcelona dirigido por un ingeniero civil colegiado (ECCAT 16448) y perito judicial inscrito en el Ministerio de Justicia."
 audience: "pro"
 lang: es
 eleventyNavigation:

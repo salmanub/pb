@@ -30,6 +30,8 @@ faq:
     a: "It depends on the case. It can be commissioned by the community, an affected owner or their lawyer. The cost may be recovered from the liable party if the claim succeeds."
   - q: "Can it be used to claim against the developer?"
     a: "Yes. Within the LOE deadlines (art. 17), the report documents defects attributable to the developer or contractor."
+  - q: "Who pays for a leak through the roof?"
+    a: 'It depends on whether the origin is a common or private element. See <a href="/en/blog/roof-leaks-homeowners-association-claim/">this guide to roof leaks in a shared building</a>.'
 band_title: "Do you need this report?"
 band_lede: "Free initial consultation. Contractual delivery deadlines."
 ---

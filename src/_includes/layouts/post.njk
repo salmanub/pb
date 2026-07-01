@@ -142,7 +142,7 @@ Clases CSS del DS: .post-header .post-eyebrow .post-h1 .post-lede
 </article>
 
 {# ── 4. ARTÍCULOS RELACIONADOS (DS: 2-col ArtCard) ── #}
-{% set allPosts = posts | sort(attribute="datePublished") | reverse %}
+{% set allPosts = posts | published | sort(attribute="datePublished") | reverse %}
 {% set relCount = 0 %}{% set rel1 = null %}{% set rel2 = null %}
 {% for p in allPosts %}{% if p.slug != post.slug and p.category == post.category and relCount < 2 %}{% if relCount==0
   %}{% set rel1=p %}{% else %}{% set rel2=p %}{% endif %}{% set relCount=relCount + 1 %}{% endif %}{% endfor %} {% if

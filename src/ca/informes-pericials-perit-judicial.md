@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Actuació com a Perit Judicial"
-description: "Per designació del jutjat o de part. Imparcialitat acreditada i defensa oral del dictamen davant interrogatori creuat."
+description: "Perit judicial a Barcelona per designació del jutjat o de part. Imparcialitat acreditada, dictamen conforme a la LEC i defensa oral davant interrogatori creuat."
 image: "ratificacion-perito-judicial.jpg"
 image_alt: "Ratificació de perit judicial en sala"
 audience: "pro"
@@ -30,6 +30,8 @@ faq:
     a: "Per sorteig entre els inscrits a la llista oficial del Ministeri de Justícia, o per acord de les parts (LEC art. 339)."
   - q: "Es pot impugnar el dictamen?"
     a: "Les parts poden taxar el perit o impugnar el dictamen (LEC art. 343). El rigor metodològic de l'informe és la defensa més eficaç."
+  - q: "Quina diferència hi ha entre perit de part i perit judicial?"
+    a: 'El de part el contracta vostè; el judicial el designa el jutjat per llista. Ho detallem a <a href="/ca/blog/designacio-perit-judicial-valor-dictamen/">aquesta guia sobre la designació de perit judicial</a>.'
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
 ---

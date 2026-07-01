@@ -4,7 +4,7 @@ templateEngineOverride: njk
 title: "Poor Workmanship Claim Report"
 image: "reclamacion-mala-ejecucion.jpg"
 image_alt: "Poor workmanship claim on construction site"
-description: "Objective comparison of completed works against contract, specification of materials and lex artis. Quantification of non-compliance and finishing defects. LOE art. 17."
+description: "Objective comparison of the works against contract, specifications and lex artis. Quantification of non-compliance and finishing defects. LOE art. 17."
 audience: "mix"
 lang: en
 eleventyNavigation:

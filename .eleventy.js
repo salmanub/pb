@@ -17,6 +17,8 @@ import cssnano from 'cssnano';
 import { PurgeCSS } from 'purgecss';
 import eleventyNavigationPlugin from '@11ty/eleventy-navigation';
 import { minify } from 'html-minifier-terser';
+import { readFileSync } from 'node:fs';
+import { isPublished, filterPublished, PUBLISH_CUTOFF } from './lib/publish.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -50,6 +52,21 @@ export default function (eleventyConfig) {
     if (!content) return '';
     return md.render(content);
   });
+
+  // ── Publicación programada (zona horaria de Madrid) ──
+  // Ver lib/publish.js. `isPublished` (post → bool) y `published` (array → array)
+  // se usan en los listados; los datos *Published alimentan la paginación
+  // (pagination.data no admite filtros) para no generar páginas de posts futuros.
+  console.log(`[publish] Corte de publicación (Madrid): ${PUBLISH_CUTOFF}`);
+  eleventyConfig.addFilter('isPublished', isPublished);
+  eleventyConfig.addFilter('published', filterPublished);
+  eleventyConfig.addGlobalData('publishCutoff', PUBLISH_CUTOFF);
+
+  const loadPosts = (file) =>
+    JSON.parse(readFileSync(path.resolve(__dirname, 'src', '_data', file), 'utf8'));
+  eleventyConfig.addGlobalData('postsPublished', () => filterPublished(loadPosts('posts.json')));
+  eleventyConfig.addGlobalData('posts_caPublished', () => filterPublished(loadPosts('posts_ca.json')));
+  eleventyConfig.addGlobalData('posts_enPublished', () => filterPublished(loadPosts('posts_en.json')));
 
   eleventyConfig.addFilter('isArray', function (value) {
     return Array.isArray(value);
@@ -292,7 +309,7 @@ export default function (eleventyConfig) {
   // ── Favicon shortcode (Design System/assets/icons/) ──
   eleventyConfig.addShortcode('favicons', function () {
     return `
-      <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+      <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%2316202A'/%3E%3Ctext x='232' y='356' text-anchor='middle' font-family='Georgia, serif' font-weight='500' font-size='372' fill='%23F4F0E8'%3Ep%3C/text%3E%3Ccircle cx='356' cy='332' r='40' fill='%231C7A4A'/%3E%3C/svg%3E">
       <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
       <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16.png">
       <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">

@@ -1051,7 +1051,7 @@ button:not(.cta-light):hover > svg[aria-hidden="true"] {
 /* Any inline text link gets accent color on hover — excludes all CTA buttons */
 p a:hover,
 li a:hover,
-div > a[href]:not([style*="background"]):not(.svc-row):not(.mega-card):not(.splash-link):not(.cta-ink):not(.cta-hero):not(.cta-light):not(.mbb-btn):not(.mbb-btn--call):not(.mbb-btn--form):not(.lang-pill):hover {
+div > a[href]:not([style*="background"]):not(.band-cta__btn):not(.svc-row):not(.mega-card):not(.splash-link):not(.cta-ink):not(.cta-hero):not(.cta-light):not(.mbb-btn):not(.mbb-btn--call):not(.mbb-btn--form):not(.lang-pill):hover {
   color: var(--accent);
 }
 /* Prevent accent-on-accent for any button-style link */

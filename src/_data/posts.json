@@ -360,9 +360,18 @@
     "title": "Estabilidad de taludes y muros de contención: análisis pericial, visita técnica y propuestas de actuación",
     "slug": "estabilidad-taludes-muros-contencion",
     "translations": [
-      { "lang": "es", "permalink": "/blog/estabilidad-taludes-muros-contencion/" },
-      { "lang": "ca", "permalink": "/ca/blog/estabilitat-talussos-murs-contencio/" },
-      { "lang": "en", "permalink": "/en/blog/slope-stability-retaining-walls/" }
+      {
+        "lang": "es",
+        "permalink": "/blog/estabilidad-taludes-muros-contencion/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/estabilitat-talussos-murs-contencio/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/slope-stability-retaining-walls/"
+      }
     ],
     "description": "¿Tu muro de contención se mueve, el vecino ha excavado al pie del talud o tu piscina pierde agua? Análisis de estabilidad de taludes: visita técnica, informe pericial y soluciones de ingeniería en Barcelona.",
     "excerpt": "Un vecino excavó al pie de un muro de 6 metros mientras una piscina filtraba agua en la coronación. Caso real, diagnóstico y soluciones de estabilización.",
@@ -371,15 +380,281 @@
     "dateModified": "2026-06-26",
     "author": "Albert Vilardell Serra",
     "category": "Geotecnia",
-    "tags": ["Estabilidad de taludes", "Muro de contención", "Geotecnia", "Peritaje"],
+    "tags": [
+      "Estabilidad de taludes",
+      "Muro de contención",
+      "Geotecnia",
+      "Peritaje"
+    ],
     "image": {
       "url": "/assets/images/blog/estabilidad-taludes.png",
       "alt": "Vista compuesta de un talud inestable con piscina en coronación y excavación al pie",
       "caption": "Izquierda: vista desde coronación. Derecha: vista desde el pie con excavación y humedad."
     },
     "relatedServices": [
-      { "title": "Peritaje de estabilidad de taludes", "url": "/contacto/particular/" }
+      {
+        "title": "Peritaje de estabilidad de taludes",
+        "url": "/contacto/particular/"
+      }
     ],
     "content": "## ¿Cuándo un talud deja de ser terreno y se convierte en un problema?\n\nUn talud es cualquier superficie de terreno con una inclinación respecto a la horizontal. Lo vemos a diario —en jardines escalonados, parcelas con desnivel, bancales, carreteras— y rara vez nos preocupa. **Hasta que algo cambia.**\n\nUn vecino excava al pie. Una piscina pierde agua durante meses sin que nadie lo note. Un muro de medianera de décadas empieza a inclinarse. Unas grietas que antes no estaban aparecen en el suelo del jardín.\n\nCuando el equilibrio de un talud se rompe, **las consecuencias pueden ser catastróficas** —y la ventana de actuación, muy estrecha.\n\n---\n\n## Un caso real: piscina en coronación, excavación en el pie\n\nHace pocos días atendimos un caso que ilustra perfectamente cómo se combinan varios factores para crear una situación de riesgo grave:\n\n**La situación:**\n- Una vivienda en una parcela elevada, con un **muro de medianera** que salva un desnivel de unos **6 metros** respecto al vecino inferior.\n- En la coronación del talud, nuestro cliente tiene una **piscina** que lleva meses **perdiendo agua** a través de microfisuras en el vaso.\n- El vecino inferior ha **excavado un huerto en el pie del muro**, retirando material de soporte sin ningún tipo de estudio previo.\n\n**Los síntomas:**\n- Grietas nuevas en el muro de medianera.\n- El terreno de coronación presenta **asentamientos** (pequeños hundimientos junto a la piscina).\n- Aparece **humedad constante** en la cara inferior del muro que da al huerto del vecino.\n\n**El diagnóstico:** Estamos ante un **talud con tres factores de inestabilidad simultáneos**:\n\n1. **Sobrecarga en coronación** — El peso de la piscina (más de 40 toneladas con el agua) genera un empuje adicional sobre el muro.\n2. **Saturación del terreno** — La pérdida de agua de la piscina satura el suelo, reduce su cohesión y aumenta la presión hidrostática contra el trasdós del muro.\n3. **Descalce del pie** — La excavación del huerto ha eliminado la cuña de terreno que actuaba como contrapeso natural, reduciendo drásticamente el factor de seguridad.\n\n**Si no se actúa, el muro puede colapsar.** No es una exageración: es mecánica de suelos básica.\n\n---\n\n## ¿Qué desestabiliza un talud? Las causas más frecuentes\n\n### Causas externas\n\n- **Excavación al pie del talud** — Elimina la cuña de soporte pasivo. Frecuencia: muy alta.\n- **Sobrecarga en coronación** — Piscinas, edificaciones, acopio de materiales. Frecuencia: alta.\n- **Filtraciones de agua** — Piscinas, conducciones rotas, riego excesivo. Frecuencia: alta.\n- **Lluvia torrencial prolongada** — Infiltración masiva que eleva el nivel freático.\n- **Vibraciones** — Obras cercanas, tráfico pesado.\n- **Eliminación de vegetación** — Las raíces cohesionan el terreno superficial.\n\n### Causas internas\n\n- **Suelos arcillosos expansivos** — Se hinchan con el agua y pierden resistencia.\n- **Rellenos no controlados** — Tierra vertida sin compactar ni drenar.\n- **Capas permeables/impermeables alternas** — Crean planos de deslizamiento.\n- **Meteorización** — La roca se degrada y pierde capacidad de soporte.\n\n---\n\n## Análisis de estabilidad: qué hacemos\n\n### Fase 1 — Visita técnica e inspección in situ\n\n- Geometría del talud, estado del muro, drenaje visible, indicios de movimiento.\n- Documentación fotográfica exhaustiva con georeferenciación.\n\n### Fase 2 — Estudio y análisis\n\n1. **Caracterización geotécnica** — Calicatas y ensayos de campo (SPT).\n2. **Modelo de cálculo de estabilidad** — Factor de seguridad (Bishop, Janbu, Morgenstern-Price).\n3. **Análisis de empujes sobre muros** — Rankine, Coulomb.\n4. **Verificación estructural del muro.**\n5. **Escenarios de riesgo.**\n\n### Fase 3 — Informe pericial y propuesta de actuación\n\n- Diagnóstico con causa raíz documentada.\n- Cálculos de estabilidad con planos y secciones.\n- Clasificación del riesgo: inmediato, corto o medio plazo.\n- Propuesta de actuación con ingeniería de detalle y estimación de coste.\n- Determinación de responsabilidades.\n\nEl informe tiene validez pericial y puede presentarse como prueba en procedimientos judiciales.\n\n---\n\n## Soluciones de estabilización\n\n### Drenaje\n\nEl agua es el factor desestabilizador número uno.\n\n- **Drenes californianos** — Captan y evacuan agua del interior del terreno.\n- **Zanjas drenantes** — En el pie o base del muro.\n- **Mechinales** — Evacuan la presión hidrostática del trasdós.\n- **Cunetas de coronación** — Canalizan agua superficial.\n\n### Contención y refuerzo\n\n- **Muro de escollera o gaviones** — Económico hasta 4-5 m.\n- **Muro de hormigón armado** — Para desniveles importantes.\n- **Tierra armada / suelo reforzado** — Geotextiles + relleno compactado.\n- **Bulones y anclajes** — Barras de acero ancladas en roca.\n- **Micropilotes** — Recalce de cimentación insuficiente.\n\n### Reperfilado\n\n- **Tendido del talud** — Reducir la pendiente.\n- **Berma de equilibrio** — Plataforma horizontal intermedia.\n- **Relleno en el pie** — Material pesado compactado como contrapeso.\n\n---\n\n## ¿Cuándo necesitas un perito de taludes?\n\nSolicita una valoración técnica urgente si observas:\n\n- **Grietas nuevas** en un muro de contención o en el terreno cercano.\n- **Inclinación o pandeo** de un muro que antes estaba recto.\n- **Humedad permanente** en la base del muro o surgencias de agua.\n- **Asentamientos o hundimientos** en el terreno de coronación.\n- Tu vecino ha **excavado al pie** de tu talud o muro.\n- Tienes una **piscina que pierde agua** cerca de un desnivel.\n- **Lluvias fuertes** han provocado movimientos o desprendimientos.\n- Necesitas un **informe pericial para reclamar** daños.\n\n---\n\n## Preguntas frecuentes\n\n### ¿Cuánto cuesta un estudio de estabilidad de taludes?\n\nUn análisis sencillo con visita + informe parte de **800-1.200 euros**. Si se necesita estudio geotécnico de campo, el coste sube a **2.000-4.000 euros**. Lo que siempre resulta más caro es no actuar a tiempo.\n\n### ¿Puedo reclamar al vecino que ha excavado al pie de mi muro?\n\nSí. El artículo 1902 del Código Civil establece la obligación de reparar el daño causado. Necesitarás un informe pericial que acredite el nexo causal.\n\n### ¿Una piscina puede desestabilizar un talud?\n\nAbsolutamente. Una piscina de 8x4 m con 1,5 m de profundidad contiene 48.000 litros = 48 toneladas de peso concentrado. Si además pierde agua, satura el terreno, reduce la cohesión y multiplica la presión hidrostática sobre el muro.\n\n### ¿Cuánto tiempo tengo para actuar?\n\nSi hay signos visibles de movimiento, la actuación debe ser inmediata. Un talud que ha empezado a moverse no se estabiliza solo."
+  },
+  {
+    "title": "Aluminosis en Barcelona: cómo detectarla y qué hacer",
+    "slug": "aluminosis-barcelona-deteccion-peritaje",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/aluminosis-barcelona-deteccion-peritaje/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/aluminosi-barcelona-deteccio-peritatge/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/aluminosis-concrete-barcelona-assessment/"
+      }
+    ],
+    "description": "Qué es la aluminosis, cómo se detecta con el ensayo de la oxina, en qué se diferencia de la carbonatación y qué hacer si su edificio la tiene.",
+    "excerpt": "El cemento aluminoso de muchos edificios de los años 50-70 puede perder resistencia. Aprenda a reconocer los síntomas y confirmar el diagnóstico.",
+    "estado": "publicado",
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "author": "Albert Vilardell Serra",
+    "category": "Patologías Estructurales",
+    "tags": [
+      "Aluminosis",
+      "Patologías Estructurales",
+      "Forjados",
+      "Barcelona"
+    ],
+    "image": {
+      "url": "/assets/images/patologia-estructural-puente-barcelona.jpg",
+      "alt": "Vigueta de forjado con hormigón deteriorado y armadura expuesta",
+      "caption": "El diagnóstico de la aluminosis requiere ensayo químico, no basta la inspección visual."
+    },
+    "relatedServices": [
+      {
+        "title": "Patologías Estructurales",
+        "url": "/patologias-estructurales/"
+      }
+    ],
+    "content": "## Qué es la aluminosis y por qué preocupa en Barcelona\n\nLa aluminosis es una patología del hormigón fabricado con **cemento aluminoso**, muy utilizado en España entre los años 50 y 70, especialmente en **viguetas de forjado** de edificios de vivienda. Con el tiempo y en presencia de humedad y calor, el cemento aluminoso sufre un proceso llamado **conversión**: su estructura interna cambia, aumenta la porosidad y **pierde resistencia**. El resultado es un hormigón más frágil y una armadura más expuesta a la corrosión.\n\nEn Barcelona y su área metropolitana hay un parque importante de edificios de esa época, por lo que la aluminosis sigue siendo una consulta habitual, sobre todo tras la aparición de fisuras en techos o desprendimientos.\n\n## Cómo se detecta\n\nLa aluminosis **no se diagnostica a simple vista**. Los síntomas que deben ponerle en alerta son:\n\n* Fisuras longitudinales en la cara inferior de las viguetas.\n* Manchas de óxido o coloración marrón en el techo.\n* Desprendimientos del hormigón de recubrimiento (*spalling*).\n* Flechas o deformaciones visibles en el forjado.\n\nLa confirmación requiere un **ensayo químico**: se extrae una muestra del hormigón y se aplica el reactivo de la **oxina** (8-hidroxiquinoleína), que tiñe de amarillo-verdoso el cemento aluminoso bajo luz ultravioleta. A partir de ahí, un peritaje mide el **grado de conversión** y la pérdida de sección para evaluar la capacidad portante real.\n\n## Aluminosis no es lo mismo que carbonatación\n\nEs un error frecuente. La **carbonatación** afecta a la armadura de acero por pérdida de alcalinidad del hormigón; la **aluminosis** afecta al propio hormigón por el tipo de cemento. Un edificio puede tener una, otra o ambas. Distinguirlas es clave, porque el tratamiento y la responsabilidad cambian.\n\n## Qué hacer si sospecha que su edificio tiene aluminosis\n\n1. **No pique ni cargue** la zona afectada mientras no haya diagnóstico.\n2. Solicite un **dictamen pericial** que confirme (o descarte) la aluminosis y cuantifique el riesgo estructural.\n3. Con el informe, la comunidad puede decidir el **refuerzo** adecuado: sustitución de viguetas, refuerzo metálico o con [fibra de carbono](/asesoramiento-estructural/refuerzo-fibra-carbono/).\n\nUn diagnóstico riguroso evita tanto la alarma injustificada como la inacción peligrosa. Si observa fisuras o desprendimientos en un edificio antiguo, nuestro [dictamen de patologías estructurales](/patologias-estructurales/) determina el alcance real y las medidas necesarias.\n\n**¿Tiene dudas sobre el forjado de su edificio?** [Cuéntenos el caso](/contacto/particular/) y le orientamos sin compromiso."
+  },
+  {
+    "title": "¿Cuánto cuesta un informe pericial? Precios y factores en 2026",
+    "slug": "cuanto-cuesta-informe-pericial-precios",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/cuanto-cuesta-informe-pericial-precios/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/quant-costa-informe-pericial-preus/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/how-much-does-expert-report-cost/"
+      }
+    ],
+    "description": "Rangos orientativos de precios de un informe pericial en Barcelona y los factores que hacen variar el honorario. Presupuesto cerrado por escrito.",
+    "excerpt": "¿Cuánto cuesta un peritaje? Rangos de mercado, qué encarece el informe y por qué desconfiar de un precio cerrado por teléfono.",
+    "estado": "programado",
+    "datePublished": "2026-07-08",
+    "dateModified": "2026-07-08",
+    "author": "Albert Vilardell Serra",
+    "category": "Honorarios",
+    "tags": [
+      "Honorarios",
+      "Precios",
+      "Informe Pericial",
+      "Presupuesto"
+    ],
+    "image": {
+      "url": "/assets/images/informe-pericial-patologias-barcelona.jpg",
+      "alt": "Perito revisando documentación técnica de un informe pericial",
+      "caption": "El presupuesto de un dictamen se cierra por escrito tras conocer el alcance del caso."
+    },
+    "relatedServices": [
+      {
+        "title": "Honorarios y coste",
+        "url": "/honorarios-perito-judicial-barcelona/"
+      }
+    ],
+    "content": "## Cuánto cuesta un informe pericial: rangos orientativos\n\nEs la primera pregunta de casi todo el mundo, y la respuesta honesta es: **depende del alcance**. Dicho esto, existen rangos orientativos de mercado en Barcelona que ayudan a hacerse una idea antes de pedir presupuesto:\n\n* **Informe pericial sencillo** (una patología concreta, una estancia, sin ensayos): desde unos **300–500 €**.\n* **Informe de humedades o vicios ocultos** con visita y diagnóstico instrumental: aproximadamente **500–900 €**.\n* **Dictamen de patologías estructurales** con cálculo, ensayos o modelado: **desde 900 €**, y puede superar varios miles según la complejidad.\n* **Ratificación en sede judicial** (comparecencia y defensa oral): a veces incluida, a veces con honorario aparte.\n\nEstos importes son de referencia; el presupuesto real se cierra **por escrito tras conocer el caso**.\n\n## Qué factores hacen variar el precio\n\n1. **Complejidad técnica.** No cuesta lo mismo diagnosticar una mancha de humedad que evaluar la estabilidad de una estructura.\n2. **Ensayos y pruebas.** Termografía, catas, ensayos de laboratorio o modelado estructural encarecen el trabajo, pero aportan prueba objetiva.\n3. **Superficie y desplazamiento.** El tamaño del inmueble y la distancia a la sede influyen.\n4. **Urgencia.** Un plazo muy corto puede tener recargo.\n5. **Uso judicial.** Un dictamen destinado a juicio exige mayor trazabilidad y, en su caso, ratificación oral conforme a la [LEC](/perito-judicial/).\n\n## Por qué desconfiar del \"precio cerrado por teléfono\"\n\nUn honorario dado sin ver el caso suele significar una de dos cosas: o el informe es superficial, o habrá sobrecostes después. Un peritaje serio parte de una **primera consulta** para acotar el alcance y solo entonces emite un **presupuesto cerrado y por escrito**, sin costes variables ocultos. Puede consultar el detalle en nuestra página de [honorarios](/honorarios-perito-judicial-barcelona/).\n\n## El coste frente a lo que está en juego\n\nConviene poner el honorario en contexto: un informe de unos cientos de euros puede ser la prueba que respalde una reclamación de **decenas de miles**. En vicios ocultos, humedades o daños estructurales, el dictamen no es un gasto, sino la **prueba técnica** que sostiene el derecho a reclamar.\n\n**¿Quiere un presupuesto para su caso?** [Cuéntenos qué ocurre](/contacto/profesional/) y le enviamos una propuesta cerrada."
+  },
+  {
+    "title": "Humedades por condensación: diagnóstico y diferencia con la capilaridad",
+    "slug": "humedades-condensacion-diagnostico",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/humedades-condensacion-diagnostico/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/humitats-condensacio-diagnostic/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/condensation-damp-diagnosis/"
+      }
+    ],
+    "description": "Por qué se produce la condensación, cómo distinguirla de capilaridad y filtración, y qué soluciones funcionan de verdad. Diagnóstico con termografía.",
+    "excerpt": "La condensación es la humedad peor diagnosticada. Aprenda a distinguirla de la capilaridad y la filtración, y qué la resuelve.",
+    "estado": "programado",
+    "datePublished": "2026-07-15",
+    "dateModified": "2026-07-15",
+    "author": "Albert Vilardell Serra",
+    "category": "Patologías",
+    "tags": [
+      "Humedades",
+      "Condensación",
+      "Diagnóstico",
+      "Termografía"
+    ],
+    "image": {
+      "url": "/assets/images/deteccion-humedades-termografia.jpg",
+      "alt": "Termografía infrarroja de un muro con puente térmico y condensación",
+      "caption": "La termografía localiza las superficies frías donde condensa el vapor de agua."
+    },
+    "relatedServices": [
+      {
+        "title": "Humedades y Filtraciones",
+        "url": "/humedades-filtraciones/"
+      }
+    ],
+    "content": "## La humedad más confundida de todas\n\nDe todos los tipos de humedad, la **condensación** es la que más se diagnostica mal. Se confunde con filtración o con capilaridad, se aplican tratamientos que no funcionan y el problema reaparece cada invierno. Entender su origen es el primer paso para resolverla.\n\n## Por qué se produce la condensación\n\nEl aire caliente admite más vapor de agua que el aire frío. Cuando el aire interior húmedo entra en contacto con una **superficie fría** —una pared mal aislada, un puente térmico, el canto de un forjado— se enfría, alcanza su **punto de rocío** y el vapor se convierte en agua líquida sobre esa superficie. Por eso aparece en los meses fríos, en esquinas, detrás de armarios y alrededor de ventanas.\n\nHay dos variantes:\n\n* **Condensación superficial:** el agua aparece sobre la cara interior del cerramiento (manchas, moho negro).\n* **Condensación intersticial:** ocurre *dentro* del muro, entre capas, y es más difícil de ver pero igual de dañina.\n\n## Condensación, capilaridad o filtración: cómo distinguirlas\n\n| Señal | Condensación | Capilaridad | Filtración |\n|---|---|---|---|\n| Dónde aparece | Zonas frías, esquinas, ventanas | Base de los muros (hasta ~1,5 m) | Junto al punto de entrada de agua |\n| Cuándo | Meses fríos, empeora al ventilar poco | Constante todo el año | Ligada a lluvia o a una fuga |\n| Aspecto | Moho negro, gotas | Eflorescencias, desconchado bajo | Mancha que se expande desde un foco |\n\nEsta distinción no es académica: **cada origen tiene una responsabilidad y una solución distintas**. Por eso el [dictamen de humedades](/humedades-filtraciones/) empieza siempre por identificar la causa con termografía e higrometría antes de proponer nada.\n\n## Soluciones que sí funcionan\n\nLa condensación **no se cura pintando** con productos antihumedad. Las medidas eficaces atacan el origen:\n\n1. **Mejorar el aislamiento** de la superficie fría (eliminar el puente térmico).\n2. **Ventilación controlada** para evacuar el vapor (mejor que abrir ventanas al azar).\n3. **Reducir la producción de vapor** interior donde sea posible.\n4. En casos complejos, **análisis higrotérmico** del cerramiento para dimensionar la solución.\n\n## Cuándo pedir un peritaje\n\nSi la humedad reaparece pese a las reparaciones, si hay disputa sobre su origen (comunidad, constructora, aislamiento defectuoso de obra nueva) o si necesita **prueba para reclamar**, un dictamen independiente aporta la causa documentada.\n\n**¿Moho recurrente cada invierno?** [Cuéntenos el caso](/contacto/particular/) y le decimos si es condensación y cómo resolverla."
+  },
+  {
+    "title": "Designación de perito judicial: cómo funciona y qué valor tiene el dictamen (LEC)",
+    "slug": "designacion-perito-judicial-valor-dictamen",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/designacion-perito-judicial-valor-dictamen/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/designacio-perit-judicial-valor-dictamen/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/court-appointed-expert-report-value/"
+      }
+    ],
+    "description": "Diferencia entre perito de parte y perito judicial, cómo funciona la designación por lista, y cómo valora el juez la prueba pericial según la LEC.",
+    "excerpt": "Perito de parte o judicial, designación por sorteo y valoración según la sana crítica: lo que todo abogado y afectado debe saber.",
+    "estado": "programado",
+    "datePublished": "2026-07-22",
+    "dateModified": "2026-07-22",
+    "author": "Albert Vilardell Serra",
+    "category": "Legal",
+    "tags": [
+      "Perito Judicial",
+      "LEC",
+      "Designación",
+      "Prueba Pericial"
+    ],
+    "image": {
+      "url": "/assets/images/peritaje-construccion-ingenieros-obra.jpg",
+      "alt": "Ingeniero perito preparando la documentación de un dictamen judicial",
+      "caption": "El valor del dictamen depende de su trazabilidad y de su defensa en sala."
+    },
+    "relatedServices": [
+      {
+        "title": "Actuación como Perito Judicial",
+        "url": "/perito-judicial/"
+      }
+    ],
+    "content": "## Perito de parte y perito judicial: no son lo mismo\n\nCuando un asunto técnico llega a los tribunales, aparece la figura del perito. Pero conviene distinguir dos vías, porque su valor procesal y su forma de designación son distintos.\n\n* **Perito de parte:** lo contrata directamente una de las partes para elaborar un dictamen que aporta con su demanda o contestación. Es la vía más habitual y la que permite preparar el caso con tiempo.\n* **Perito judicial (designación judicial):** lo nombra el juzgado de una **lista oficial**, normalmente por insaculación (sorteo), a petición de parte o de oficio. Su dictamen se percibe como especialmente imparcial por proceder de una designación del propio tribunal.\n\nAmbos dictámenes son **prueba pericial** conforme a la [Ley de Enjuiciamiento Civil](/perito-judicial/); la diferencia está en quién designa y en cómo se valora la independencia.\n\n## Cómo funciona la designación judicial\n\n1. La parte solicita en su escrito que se designe un perito judicial, o el juez lo acuerda.\n2. El juzgado acude a las **listas** remitidas cada año por los colegios profesionales.\n3. Se designa por sorteo al profesional que corresponde por especialidad.\n4. El perito **acepta el cargo**, jura o promete actuar con objetividad y emite el dictamen en plazo.\n5. En el juicio, el perito **ratifica** su informe y responde al interrogatorio de las partes y del juez.\n\n## Qué valor tiene el dictamen\n\nLa prueba pericial se valora según las **reglas de la sana crítica** (art. 348 LEC): el juez no está vinculado automáticamente por el dictamen, pero un informe **trazable, fundado en normativa y bien defendido en sala** tiene un peso decisivo. Ahí está la clave: no basta con concluir, hay que **demostrar cómo se ha llegado a la conclusión** de forma que el tribunal pueda verificarla.\n\n## Qué hace fuerte a un dictamen\n\n* Metodología documentada en cada fase (inspección, ensayos, análisis).\n* Fundamento normativo (CTE, LOE, EHE, Eurocódigos) y en la *lex artis*.\n* Trazabilidad: fotografías fechadas, mediciones, cadena de custodia de muestras.\n* Capacidad de **defensa oral** frente al interrogatorio cruzado.\n\nUn dictamen que reúne estos requisitos resiste el [contrainforme](/contrainforme-pericial/) de la parte contraria.\n\n## Para abogados\n\nSi prepara una reclamación, cuente con el perito **cuanto antes**: la elección de ensayos, el momento de la inspección y la redacción condicionan la solidez de la prueba. Trabajamos habitualmente con despachos en la [colaboración con abogados y aseguradoras](/colaboracion-abogados/).\n\n**¿Necesita un perito para su procedimiento?** [Contacte con el despacho](/contacto/profesional/)."
+  },
+  {
+    "title": "Cómo impugnar un informe pericial contrario: el contrainforme",
+    "slug": "impugnar-informe-pericial-contrainforme",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/impugnar-informe-pericial-contrainforme/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/impugnar-informe-pericial-contrainforme/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/challenge-opposing-expert-report/"
+      }
+    ],
+    "description": "Qué es un contrainforme pericial, qué errores frecuentes detecta en la pericial contraria y cómo se prepara la ratificación para rebatirla en sala.",
+    "excerpt": "Si la pericial contraria contiene errores, el contrainforme los expone técnicamente. Así se rebate un dictamen ante el juez.",
+    "estado": "programado",
+    "datePublished": "2026-07-29",
+    "dateModified": "2026-07-29",
+    "author": "Albert Vilardell Serra",
+    "category": "Legal",
+    "tags": [
+      "Contrainforme",
+      "Impugnación",
+      "Prueba Pericial",
+      "Ratificación"
+    ],
+    "image": {
+      "url": "/assets/images/informe-pericial-patologias-barcelona.jpg",
+      "alt": "Dos informes periciales enfrentados sobre una mesa de despacho",
+      "caption": "El contrainforme revisa la metodología, los datos y la norma del informe contrario."
+    },
+    "relatedServices": [
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      }
+    ],
+    "content": "## Cuando la pericial contraria juega en su contra\n\nEn muchos procedimientos, la parte contraria aporta su propio dictamen pericial. Si ese informe contiene errores, omisiones o conclusiones forzadas, dejarlo sin respuesta puede costar el pleito. La herramienta técnica para rebatirlo es el **contrainforme pericial**.\n\n## Qué es un contrainforme\n\nUn contrainforme es un **dictamen que revisa críticamente** el informe de la parte contraria. No se limita a discrepar: analiza su metodología, verifica sus datos y expone de forma técnica dónde falla, para que el juez pueda valorar ambos con criterio.\n\nUn buen contrainforme responde a tres preguntas:\n\n1. **¿La metodología es correcta?** ¿Hizo los ensayos adecuados, o concluyó a partir de una simple inspección visual?\n2. **¿Los datos sostienen la conclusión?** ¿Hay saltos lógicos, mediciones ausentes o fotografías sin fechar?\n3. **¿La norma aplicada es la que corresponde?** Un error de normativa (CTE, LOE, EHE) puede invalidar toda la argumentación.\n\n## Errores frecuentes en informes de parte\n\n* Conclusiones **sin ensayos** que las respalden.\n* Confusión de causas (por ejemplo, atribuir a condensación lo que es filtración).\n* Valoraciones económicas **sin desglose** ni criterio de medición.\n* Falta de trazabilidad: no se puede reconstruir cómo se llegó a la conclusión.\n* Extralimitación: el perito opina fuera de su especialidad.\n\nDetectar y **documentar** estos puntos es lo que convierte una discrepancia en prueba.\n\n## El momento de la ratificación\n\nEl contrainforme se completa en la **vista**, cuando ambos peritos comparecen. Una preparación rigurosa permite formular al perito contrario las preguntas técnicas precisas que evidencian las debilidades de su informe ante el juez. Esta fase de **defensa oral** es tan importante como el documento escrito.\n\n## No siempre hace falta un contrainforme completo\n\nA veces basta con una **revisión técnica** que sirva al abogado para preparar el interrogatorio; otras, conviene un dictamen alternativo completo. La decisión depende de la solidez del informe contrario y de lo que esté en juego. Lo valoramos caso a caso en el marco de nuestro servicio de [contrainforme pericial](/contrainforme-pericial/) y de la [colaboración con abogados](/colaboracion-abogados/).\n\n**¿Tiene enfrente una pericial que no le convence?** [Envíenosla](/contacto/profesional/) y le decimos si es rebatible y cómo."
+  },
+  {
+    "title": "Filtraciones en cubierta de comunidad: a quién reclamar",
+    "slug": "filtraciones-cubierta-comunidad-reclamar",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/filtraciones-cubierta-comunidad-reclamar/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/filtracions-coberta-comunitat-reclamar/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/roof-leaks-homeowners-association-claim/"
+      }
+    ],
+    "description": "Elemento común o privativo, cómo se localiza el origen real de una filtración de cubierta y el proceso para reclamar a la comunidad, la constructora o el seguro.",
+    "excerpt": "El agua no aparece donde entra. Quién paga una filtración de cubierta depende del origen: así se determina y se reclama.",
+    "estado": "programado",
+    "datePublished": "2026-08-05",
+    "dateModified": "2026-08-05",
+    "author": "Albert Vilardell Serra",
+    "category": "Patologías",
+    "tags": [
+      "Filtraciones",
+      "Cubierta",
+      "Comunidad de Propietarios",
+      "Reclamación"
+    ],
+    "image": {
+      "url": "/assets/images/deteccion-humedades-termografia.jpg",
+      "alt": "Prueba de estanqueidad en la cubierta de un edificio de viviendas",
+      "caption": "La prueba de estanqueidad localiza el punto real de entrada del agua en la cubierta."
+    },
+    "relatedServices": [
+      {
+        "title": "Humedades y Filtraciones",
+        "url": "/humedades-filtraciones/"
+      }
+    ],
+    "content": "## Agua en el último piso: ¿quién paga la reparación?\n\nLas filtraciones por la **cubierta** de un edificio son una de las causas de conflicto más frecuentes en las comunidades de propietarios. El agua entra por la azotea, aparece en el techo del ático o del último piso, y empieza la discusión sobre quién debe asumir el arreglo. La respuesta depende de **dónde esté el origen**, y eso exige un diagnóstico técnico.\n\n## Elemento común o privativo: la clave de la responsabilidad\n\nComo regla general:\n\n* Si la filtración procede de la **cubierta o azotea comunitaria**, de las bajantes generales o de la impermeabilización del edificio, la reparación corresponde a la **comunidad** (elemento común).\n* Si procede de una **terraza de uso privativo**, de una instalación particular o de una obra del propietario, la responsabilidad puede ser **individual**.\n\nEl matiz importa mucho en las **terrazas a nivel** o cubiertas de uso privativo: son de uso particular, pero el **elemento estructural e impermeabilizante** suele ser común. Ahí es donde más pleitos se generan, y donde un dictamen es determinante.\n\n## Por qué el origen no es evidente\n\nEl agua **no aparece donde entra**. Puede filtrarse por un punto de la azotea y recorrer varios metros bajo el pavimento o entre forjados antes de manifestarse en una mancha. Por eso el [dictamen de humedades y filtraciones](/humedades-filtraciones/) localiza el punto real de entrada con pruebas de estanqueidad y termografía, en lugar de reparar a ciegas.\n\n## El proceso para reclamar\n\n1. **Documente** la filtración desde el primer momento (fotos fechadas, parte a la comunidad).\n2. Solicite un **dictamen pericial** que determine el origen y delimite si es elemento común o privativo.\n3. Con el informe, la comunidad (o el propietario afectado) puede **reclamar a quien corresponda**: al seguro del edificio, a la constructora si está en plazo de garantía ([LOE](/reclamacion-mala-ejecucion/)), o a otro propietario.\n4. Si no hay acuerdo, el dictamen sirve como **prueba** en vía judicial.\n\n## El papel del seguro de la comunidad\n\nMuchas pólizas de comunidad cubren los daños por agua, pero **discuten el origen** para no asumir el coste. Un informe independiente que acredite la causa evita que la reclamación se quede bloqueada entre la comunidad, el propietario y la aseguradora.\n\n**¿Filtraciones en su comunidad y nadie asume la reparación?** [Cuéntenos el caso](/contacto/profesional/) y determinamos el origen y la responsabilidad."
   }
 ]

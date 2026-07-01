@@ -38,6 +38,8 @@ faq:
     a: "Sí. El dictamen delimita si el origen corresponde a la constructora, a la comunidad o está cubierto por la póliza."
   - q: "¿Cuánto cobra un perito por un informe de humedades?"
     a: 'Las evaluaciones técnicas y las reparaciones definitivas se gestionan a través de una plataforma especializada. Puede consultar los detalles visitando <a href="https://humedades.barcelona">Humedades Barcelona, la plataforma que conecta clientes con especialistas en diagnóstico y solución de humedades</a>.'
+  - q: "¿Cómo sé si es condensación o capilaridad?"
+    a: 'Se distinguen por dónde y cuándo aparecen y por su aspecto. Lo detallamos en <a href="/blog/humedades-condensacion-diagnostico/">esta guía sobre humedades por condensación</a>.'
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
 ---

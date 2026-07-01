@@ -3,7 +3,7 @@ layout: layouts/base.njk
 title: "Forensic Engineering Firm in Barcelona"
 image: "employees/albert_vilardell-ingeniero_civil.jpg"
 image_alt: "Albert Vilardell, registered civil engineer"
-description: "Technical practice led by a registered civil engineer (ECCAT nº 16448), court-appointed expert registered with the Ministry of Justice. Professional experience, technical training and court experience in building and civil engineering."
+description: "Forensic engineering practice in Barcelona led by a registered civil engineer (ECCAT 16448) and court-appointed expert registered with the Ministry of Justice."
 audience: "pro"
 lang: en
 eleventyNavigation:

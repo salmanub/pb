@@ -11,7 +11,7 @@ eleventyNavigation:
   order: 9
 translations:
   - lang: es
-    permalink: /informes-periciales/obras-publicas/
+    permalink: /obras-publicas/
   - lang: ca
     permalink: /ca/informes-pericials/obres-publiques/
 permalink: "/en/expert-witness-reports/public-works/"

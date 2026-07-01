@@ -2,14 +2,14 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Peritajes Técnicos de Obra Pública e Infraestructuras"
-description: "Dictámenes periciales sobre obra civil e infraestructura en Barcelona. Viaductos, estructuras de fábrica, LCSP, modificados de proyecto, liquidación de contrato y ensayos geotécnicos."
+description: "Dictámenes periciales de obra civil e infraestructura en Barcelona: viaductos, estructuras de fábrica, LCSP, modificados de proyecto y liquidación de contrato."
 audience: "pro"
 lang: es
 translations:
   - lang: ca
-    permalink: /ca/obra-civil/
+    permalink: /ca/informes-pericials/obres-publiques/
   - lang: en
-    permalink: /en/public-works/
+    permalink: /en/expert-witness-reports/public-works/
 permalink: "/obras-publicas/"
 svc_num: "EXP·11"
 svc_tag: "Obra pública · LCSP"

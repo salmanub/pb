@@ -1,7 +1,7 @@
 ﻿<section class="py-20 px-4 md:px-[5%] bg-white relative" itemprop="mentions" itemscope itemtype="https://schema.org/Blog">
     {# Calcular la fecha del artículo más reciente #}
     {% if posts and posts.length > 0 %}
-        {% set sortedPosts = posts | sort(attribute='datePublished') | reverse %}
+        {% set sortedPosts = posts | published | sort(attribute='datePublished') | reverse %}
         {% set latestPost = sortedPosts[0] %}
         <meta itemprop="dateModified" content="{{ latestPost.datePublished }}T00:00:00+01:00">
         <meta itemprop="datePublished" content="{{ latestPost.datePublished }}T00:00:00+01:00">
@@ -26,9 +26,9 @@
         {# Grid de Posts del Blog #}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {% if posts and posts.length > 0 %}
-                {% set sortedPosts = posts | sort(attribute='datePublished') | reverse %}
+                {% set sortedPosts = posts | published | sort(attribute='datePublished') | reverse %}
                 {% for post in sortedPosts %}
-                    {% if loop.index0 < 2 and (not post.estado or post.estado == "publicado") %}
+                    {% if loop.index0 < 2 %}
                     <article class="card-avant group p-0 flex flex-col h-full" itemscope itemtype="https://schema.org/BlogPosting">
                         <a href="/blog/{{ post.slug }}/" class="flex flex-col flex-grow relative z-20" itemprop="url">
                             {% set imgSrc = post.image.url if post.image else metadata.site.placeholderImage %}

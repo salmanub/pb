@@ -24,12 +24,11 @@
   Service-Worker-Allowed: /
   Access-Control-Allow-Origin: same-origin
 
-# Form endpoint
-/form/*
-  Access-Control-Allow-Origin: https://hook.eu2.make.com
+# API endpoint (Cloudflare Function)
+/api/*
+  Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: POST, OPTIONS
-  Access-Control-Allow-Headers: Content-Type, Accept
-  Cross-Origin-Resource-Policy: cross-origin
+  Access-Control-Allow-Headers: Content-Type
 
 # Service Worker
 /sw.js

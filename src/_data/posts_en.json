@@ -1,385 +1,660 @@
 [
-    {
-        "title": "Hidden Defects in Purchase: Rights and Claim Deadlines",
-        "slug": "hidden-defects-purchase-rights-deadlines",
-        "translations": [
-            {
-                "lang": "es",
-                "permalink": "/blog/vicios-ocultos-compraventa-derechos-plazos/"
-            },
-            {
-                "lang": "en",
-                "permalink": "/en/blog/hidden-defects-purchase-rights-deadlines/"
-            },
-            {
-                "lang": "ca",
-                "permalink": "/ca/blog/vicis-ocults-compravenda-drets-terminis/"
-            },
-            {
-                "lang": "fr",
-                "permalink": "/fr/blog/vices-caches-achat-droits-delais/"
-            },
-            {
-                "lang": "it",
-                "permalink": "/it/blog/vizi-occulti-acquisto-diritti-termini/"
-            }
-        ],
-        "description": "Legal and technical information on how to claim for hidden defects after buying a property.",
-        "excerpt": "You bought a home and discovered serious problems the seller hid. Learn your legal rights and deadlines to claim successfully.",
-        "estado": "publicado",
-        "datePublished": "2025-08-10",
-        "dateModified": "2025-08-10",
-        "author": "Albert Vilardell",
-        "category": "Legal",
-        "tags": [
-            "Hidden Defects",
-            "Purchase",
-            "Claim",
-            "Rights"
-        ],
-        "image": {
-            "url": "/assets/images/placeholder-default.jpg",
-            "alt": "Purchase document with magnifying glass",
-            "caption": "Hidden defects must be claimed within the established legal deadlines."
-        },
-        "relatedServices": [
-            {
-                "title": "Hidden Defects Report",
-                "url": "/en/expert-reports/hidden-defects/"
-            }
-        ],
-        "content": "## What are Hidden Defects?\n\nAccording to the Civil Code, a hidden defect is a **serious defect that was not apparent** at the time of the sale and that **renders the item unfit for its use** or diminishes its value such that, had the buyer known of it, they would not have acquired it or would have paid a lower price.\n\n## Legal Requirements\n\nFor a defect to be considered a hidden defect it must be:\n\n1. **Existing at the time of sale** (even if it manifests later)\n2. **Not apparent** during an ordinary inspection\n3. **Serious**, compromising the normal use of the property\n4. **Unknown to the buyer**\n\n## Common Examples of Hidden Defects\n\n* Serious structural problems (cracks hidden by cladding)\n* Persistent dampness due to capillarity or leaks\n* Foundation defects (differential settlements)\n* Hidden defective installations (plumbing, electricity)\n* Concrete cancer (aluminosis) or reinforcement corrosion\n\n## Claim Deadlines\n\n### Redhibitory Action (Contract Resolution)\n\n* **6 months** from delivery to report the defect\n* You can demand the **return of the price** and resolution of the sale\n\n### Estimatory Action (Price Reduction)\n\n* **1 year** from delivery\n* A **proportional price reduction** is demanded\n\n**IMPORTANT:** These deadlines are for expiry, not prescription, so they cannot be extended.\n\n## The Role of the Expert Report\n\nA technical expert report is **essential** to:\n\n1. Prove that the defect existed at the time of purchase\n2. Prove that it was not apparent during an ordinary inspection\n3. Assess the severity of the defect and its impact on the property value\n4. Quantify the cost of repair\n5. Provide solid technical evidence in court\n\n## Claim Strategy\n\n1. **Document immediately** the defect (photos, videos)\n2. **Request an expert report** as soon as possible\n3. **Notify the seller** via certified fax (burofax) of the discovered defect\n4. **Negotiate an amicable solution** (repair or price reduction)\n5. If there is no agreement, **file a lawsuit** before the deadline expires\n\n## Conclusion\n\nTime is crucial in claims for hidden defects. An early expert report can make the difference between recovering your money or keeping a defective property.\n\n**Have you discovered a serious problem after buying your home?** Contact us immediately to assess your case."
+  {
+    "title": "Hidden Defects in Purchase: Rights and Claim Deadlines",
+    "slug": "hidden-defects-purchase-rights-deadlines",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/vicios-ocultos-compraventa-derechos-plazos/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/hidden-defects-purchase-rights-deadlines/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/vicis-ocults-compravenda-drets-terminis/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/vices-caches-achat-droits-delais/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/vizi-occulti-acquisto-diritti-termini/"
+      }
+    ],
+    "description": "Legal and technical information on how to claim for hidden defects after buying a property.",
+    "excerpt": "You bought a home and discovered serious problems the seller hid. Learn your legal rights and deadlines to claim successfully.",
+    "estado": "publicado",
+    "datePublished": "2025-08-10",
+    "dateModified": "2025-08-10",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": [
+      "Hidden Defects",
+      "Purchase",
+      "Claim",
+      "Rights"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Purchase document with magnifying glass",
+      "caption": "Hidden defects must be claimed within the established legal deadlines."
     },
-    {
-        "title": "Structural Reinforcements in Rehabilitation: When is shoring necessary?",
-        "slug": "structural-reinforcement-building-rehabilitation",
-        "translations": [
-            {
-                "lang": "es",
-                "permalink": "/blog/refuerzo-estructural-rehabilitacion-edificios/"
-            },
-            {
-                "lang": "en",
-                "permalink": "/en/blog/structural-reinforcement-building-rehabilitation/"
-            },
-            {
-                "lang": "ca",
-                "permalink": "/ca/blog/reforc-estructural-rehabilitacio-edificis/"
-            },
-            {
-                "lang": "fr",
-                "permalink": "/fr/blog/renforcement-structurel-rehabilitation/"
-            },
-            {
-                "lang": "it",
-                "permalink": "/it/blog/rinforzo-strutturale-riabilitazione/"
-            }
-        ],
-        "description": "Key information for comprehensive renovations: how to identify load-bearing walls and when a reinforcement project is mandatory.",
-        "excerpt": "The desire for 'open spaces' often clashes with structural reality. Learn the risks of knocking down partitions without technical supervision.",
-        "estado": "publicado",
-        "datePublished": "2025-09-10",
-        "dateModified": "2025-09-10",
-        "author": "Albert Vilardell",
-        "category": "Rehabilitation",
-        "tags": [
-            "Renovations",
-            "Structures",
-            "Load Bearing Wall",
-            "Safety"
-        ],
-        "image": {
-            "url": "/assets/images/asesoramiento-refuerzo-estructural-barcelona.jpg",
-            "alt": "Installation of metal reinforcement beam in rehabilitation work",
-            "caption": "Replacement of a load-bearing wall with a metal frame to join spaces."
-        },
-        "relatedServices": [
-            {
-                "title": "Structural Advisory",
-                "url": "/en/structural-advisory/"
-            }
-        ],
-        "content": "## The Danger of 'Open Concept'\n\nThe current trend of joining kitchen and living room implies knocking down partitions. The problem arises when no distinction is made between a simple dividing partition and a **load-bearing wall**. Removing a structural support without adequate reinforcement can cause cracks in the floor of the upper neighbor or, in the worst case, a partial collapse.\n\n## Common Pathologies in Old Buildings\n\nWhen rehabilitating old buildings in Barcelona (Eixample, Ciutat Vella), we often find surprises:\n* **Wood beams with woodworm:** They have lost section and resistance.\n* **Ceramic joists with aluminosis:** They have lost load-bearing capacity.\n* **Deformed walls:** Walls that have buckled over the years.\n\n## The Technical Solution: Shoring and Reinforcements\n\nAny intervention in the structure requires:\n1.  **Load Calculation:** An engineer must calculate how much weight the removed wall supported.\n2.  **Reinforcement Project:** Design the beam (usually HEB or IPE steel profiles) that will replace the wall.\n3.  **Shoring (Propping):** Temporarily support the structure while the work is executed. This is the most critical phase.\n\n## Conclusion\n\nNever knock down a wall 'to see what happens'. A prior structural study is much cheaper than repairing the damage caused by reckless demolition."
+    "relatedServices": [
+      {
+        "title": "Hidden Defects Report",
+        "url": "/en/expert-reports/hidden-defects/"
+      }
+    ],
+    "content": "## What are Hidden Defects?\n\nAccording to the Civil Code, a hidden defect is a **serious defect that was not apparent** at the time of the sale and that **renders the item unfit for its use** or diminishes its value such that, had the buyer known of it, they would not have acquired it or would have paid a lower price.\n\n## Legal Requirements\n\nFor a defect to be considered a hidden defect it must be:\n\n1. **Existing at the time of sale** (even if it manifests later)\n2. **Not apparent** during an ordinary inspection\n3. **Serious**, compromising the normal use of the property\n4. **Unknown to the buyer**\n\n## Common Examples of Hidden Defects\n\n* Serious structural problems (cracks hidden by cladding)\n* Persistent dampness due to capillarity or leaks\n* Foundation defects (differential settlements)\n* Hidden defective installations (plumbing, electricity)\n* Concrete cancer (aluminosis) or reinforcement corrosion\n\n## Claim Deadlines\n\n### Redhibitory Action (Contract Resolution)\n\n* **6 months** from delivery to report the defect\n* You can demand the **return of the price** and resolution of the sale\n\n### Estimatory Action (Price Reduction)\n\n* **1 year** from delivery\n* A **proportional price reduction** is demanded\n\n**IMPORTANT:** These deadlines are for expiry, not prescription, so they cannot be extended.\n\n## The Role of the Expert Report\n\nA technical expert report is **essential** to:\n\n1. Prove that the defect existed at the time of purchase\n2. Prove that it was not apparent during an ordinary inspection\n3. Assess the severity of the defect and its impact on the property value\n4. Quantify the cost of repair\n5. Provide solid technical evidence in court\n\n## Claim Strategy\n\n1. **Document immediately** the defect (photos, videos)\n2. **Request an expert report** as soon as possible\n3. **Notify the seller** via certified fax (burofax) of the discovered defect\n4. **Negotiate an amicable solution** (repair or price reduction)\n5. If there is no agreement, **file a lawsuit** before the deadline expires\n\n## Conclusion\n\nTime is crucial in claims for hidden defects. An early expert report can make the difference between recovering your money or keeping a defective property.\n\n**Have you discovered a serious problem after buying your home?** Contact us immediately to assess your case."
+  },
+  {
+    "title": "Structural Reinforcements in Rehabilitation: When is shoring necessary?",
+    "slug": "structural-reinforcement-building-rehabilitation",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/refuerzo-estructural-rehabilitacion-edificios/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/structural-reinforcement-building-rehabilitation/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/reforc-estructural-rehabilitacio-edificis/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/renforcement-structurel-rehabilitation/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/rinforzo-strutturale-riabilitazione/"
+      }
+    ],
+    "description": "Key information for comprehensive renovations: how to identify load-bearing walls and when a reinforcement project is mandatory.",
+    "excerpt": "The desire for 'open spaces' often clashes with structural reality. Learn the risks of knocking down partitions without technical supervision.",
+    "estado": "publicado",
+    "datePublished": "2025-09-10",
+    "dateModified": "2025-09-10",
+    "author": "Albert Vilardell",
+    "category": "Rehabilitation",
+    "tags": [
+      "Renovations",
+      "Structures",
+      "Load Bearing Wall",
+      "Safety"
+    ],
+    "image": {
+      "url": "/assets/images/asesoramiento-refuerzo-estructural-barcelona.jpg",
+      "alt": "Installation of metal reinforcement beam in rehabilitation work",
+      "caption": "Replacement of a load-bearing wall with a metal frame to join spaces."
     },
-    {
-        "title": "Complete Guide to Rising Damp",
-        "slug": "guide-rising-damp-capillarity",
-        "translations": [
-            {
-                "lang": "es",
-                "permalink": "/blog/guia-humedades-capilaridad/"
-            },
-            {
-                "lang": "en",
-                "permalink": "/en/blog/guide-rising-damp-capillarity/"
-            },
-            {
-                "lang": "ca",
-                "permalink": "/ca/blog/guia-humitats-capillaritat/"
-            },
-            {
-                "lang": "fr",
-                "permalink": "/fr/blog/guide-humidite-capillarite/"
-            },
-            {
-                "lang": "it",
-                "permalink": "/it/blog/guida-umidita-risalita-capillarita/"
-            }
-        ],
-        "description": "Everything you need to know about rising damp: causes, diagnosis, and definitive solutions.",
-        "excerpt": "Rising damp is one of the most common problems in old buildings. Discover how to identify it and what treatments really work.",
-        "estado": "publicado",
-        "datePublished": "2025-09-20",
-        "dateModified": "2025-09-20",
-        "author": "Albert Vilardell",
-        "category": "Pathologies",
-        "tags": [
-            "Dampness",
-            "Capillarity",
-            "Diagnosis",
-            "Repair"
-        ],
-        "image": {
-            "url": "/assets/images/placeholder-default.jpg",
-            "alt": "Rising damp in wall",
-            "caption": "Rising damp leaves a characteristic mark on the lower part of the walls."
-        },
-        "relatedServices": [
-            {
-                "title": "Persistent Damp and Leaks",
-                "url": "/en/expert-reports/damp-leaks/"
-            }
-        ],
-        "content": "## What is Rising Damp?\n\nRising damp is the phenomenon by which groundwater rises through the pores of building materials, impregnating walls and partitions from their base.\n\n## How to Recognize It\n\nTypical signs include:\n\n* Damp patches on the lower part of walls (up to 1-1.5m height)\n* Peeling paint and plaster\n* Saline efflorescence (crystallized white spots)\n* Persistent smell of damp\n* Deterioration of skirting boards and low joinery\n\n## Main Causes\n\n1. **Absence of damp-proof course** in the foundation (common in old buildings)\n2. **High water table** in the ground\n3. **Breaks in the sanitation network** that dampen the perimeter ground\n4. **Very porous materials** (old ceramic bricks, lime mortars)\n\n## Expert Diagnosis\n\nAn expert must:\n\n* Take measurements with a hygrometer to quantify the level of humidity\n* Rule out other causes (leaks, condensation)\n* Identify the source of the water (water table, leaks, rain)\n* Propose the most appropriate technical solution\n\n## Effective Solutions\n\n### Waterproofing Resin Injection\n\nHoles are drilled at the base of the wall and a resin is injected creating a chemical waterproof barrier.\n\n### Electro-osmosis\n\nAn electrical system is installed that reverses the capillary flow, pushing the water back to the ground.\n\n### Perimeter Drainage\n\nExcavation is done around the building and a drainage system is installed to reduce the water table.\n\n## Conclusion\n\nRising damp requires a definitive solution, not patches. An expert report is essential to choose the correct treatment and avoid wasting money on ineffective solutions."
+    "relatedServices": [
+      {
+        "title": "Structural Advisory",
+        "url": "/en/structural-advisory/"
+      }
+    ],
+    "content": "## The Danger of 'Open Concept'\n\nThe current trend of joining kitchen and living room implies knocking down partitions. The problem arises when no distinction is made between a simple dividing partition and a **load-bearing wall**. Removing a structural support without adequate reinforcement can cause cracks in the floor of the upper neighbor or, in the worst case, a partial collapse.\n\n## Common Pathologies in Old Buildings\n\nWhen rehabilitating old buildings in Barcelona (Eixample, Ciutat Vella), we often find surprises:\n* **Wood beams with woodworm:** They have lost section and resistance.\n* **Ceramic joists with aluminosis:** They have lost load-bearing capacity.\n* **Deformed walls:** Walls that have buckled over the years.\n\n## The Technical Solution: Shoring and Reinforcements\n\nAny intervention in the structure requires:\n1.  **Load Calculation:** An engineer must calculate how much weight the removed wall supported.\n2.  **Reinforcement Project:** Design the beam (usually HEB or IPE steel profiles) that will replace the wall.\n3.  **Shoring (Propping):** Temporarily support the structure while the work is executed. This is the most critical phase.\n\n## Conclusion\n\nNever knock down a wall 'to see what happens'. A prior structural study is much cheaper than repairing the damage caused by reckless demolition."
+  },
+  {
+    "title": "Complete Guide to Rising Damp",
+    "slug": "guide-rising-damp-capillarity",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/guia-humedades-capilaridad/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/guide-rising-damp-capillarity/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/guia-humitats-capillaritat/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/guide-humidite-capillarite/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/guida-umidita-risalita-capillarita/"
+      }
+    ],
+    "description": "Everything you need to know about rising damp: causes, diagnosis, and definitive solutions.",
+    "excerpt": "Rising damp is one of the most common problems in old buildings. Discover how to identify it and what treatments really work.",
+    "estado": "publicado",
+    "datePublished": "2025-09-20",
+    "dateModified": "2025-09-20",
+    "author": "Albert Vilardell",
+    "category": "Pathologies",
+    "tags": [
+      "Dampness",
+      "Capillarity",
+      "Diagnosis",
+      "Repair"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Rising damp in wall",
+      "caption": "Rising damp leaves a characteristic mark on the lower part of the walls."
     },
-    {
-        "title": "How to Identify Structural Cracks in Your Home",
-        "slug": "identify-structural-cracks-home",
-        "translations": [
-            {
-                "lang": "es",
-                "permalink": "/blog/identificar-grietas-estructurales-vivienda/"
-            },
-            {
-                "lang": "en",
-                "permalink": "/en/blog/identify-structural-cracks-home/"
-            },
-            {
-                "lang": "ca",
-                "permalink": "/ca/blog/identificar-esquerdes-estructurals-habitatge/"
-            },
-            {
-                "lang": "fr",
-                "permalink": "/fr/blog/identifier-fissures-structurelles-logement/"
-            },
-            {
-                "lang": "it",
-                "permalink": "/it/blog/identificare-crepe-strutturali-casa/"
-            }
-        ],
-        "description": "Practical guide to distinguish between superficial cracks and structural cracks that compromise the safety of your property.",
-        "excerpt": "Not all cracks are the same. Learn to recognize alarm signs indicating a serious structural problem and when it is essential to request an expert report.",
-        "estado": "publicado",
-        "datePublished": "2025-10-15",
-        "dateModified": "2025-10-15",
-        "author": "Albert Vilardell",
-        "category": "Structural Pathologies",
-        "tags": [
-            "Cracks",
-            "Structures",
-            "Diagnosis",
-            "Safety"
-        ],
-        "image": {
-            "url": "/assets/images/placeholder-default.jpg",
-            "alt": "Structural crack in load-bearing wall",
-            "caption": "Diagonal cracks in load-bearing walls can indicate serious foundation problems."
-        },
-        "relatedServices": [
-            {
-                "title": "Structural Pathology Report",
-                "url": "/en/expert-reports/structural-pathologies/"
-            }
-        ],
-        "content": "## Introduction\n\nThe appearance of cracks in a home is one of the problems that generates the most concern among owners, and rightly so. However, it is fundamental to understand that **not all cracks are the same** nor do they all represent a structural danger.\n\n## Types of Cracks: Fissures vs. Structural Cracks\n\n### Superficial Fissures\n\nFissures are breaks in the coating (paint, plaster) with an opening of less than 1mm. They are generally caused by:\n\n* Temperature and humidity changes\n* Normal building movements\n* Defects in the application of the finish\n* Material shrinkage during drying\n\nThese fissures, although unsightly, **do not compromise the structural safety** of the property.\n\n### Structural Cracks\n\nStructural cracks are openings of more than 1mm that go through the entire thickness of the constructive element (wall, slab, beam). They are much more worrying because they can indicate:\n\n* Foundation problems (differential settlements)\n* Overloads not foreseen in the original calculation\n* Serious defects in the execution of the structure\n* Degradation of materials due to corrosion or deterioration\n\n## Warning Signs: When to Worry\n\nYou should request an urgent expert report if you observe:\n\n1. **Diagonal cracks** in the corners of walls or in the form of stairs following the brick joints\n2. **Horizontal cracks** at the base of walls (may indicate ground thrust)\n3. **Cracks that increase in size** over time (active cracks)\n4. **Cracks that go through the entire thickness** of the wall (visible on both faces)\n5. **Cracks accompanied by other symptoms** such as doors that do not close, uneven floors or detachments\n\n## The Importance of a Professional Diagnosis\n\nA structural expert can:\n\n* Determine if the crack is superficial or structural\n* Identify the root cause of the problem (foundation, overloads, construction defects)\n* Evaluate if there is a risk to the safety of the occupants\n* Propose appropriate technical solutions (reinforcements, micropiles, injections)\n* Quantify the cost of repair for a claim\n\n## Conclusion\n\nWhen in doubt, it is always better to be safe than sorry. An early expert report can prevent a minor problem from turning into a serious structural danger or a costly repair.\n\n**Do you have cracks in your home and don't know if they are worrying?** Contact us immediately to assess your case."
+    "relatedServices": [
+      {
+        "title": "Persistent Damp and Leaks",
+        "url": "/en/expert-reports/damp-leaks/"
+      }
+    ],
+    "content": "## What is Rising Damp?\n\nRising damp is the phenomenon by which groundwater rises through the pores of building materials, impregnating walls and partitions from their base.\n\n## How to Recognize It\n\nTypical signs include:\n\n* Damp patches on the lower part of walls (up to 1-1.5m height)\n* Peeling paint and plaster\n* Saline efflorescence (crystallized white spots)\n* Persistent smell of damp\n* Deterioration of skirting boards and low joinery\n\n## Main Causes\n\n1. **Absence of damp-proof course** in the foundation (common in old buildings)\n2. **High water table** in the ground\n3. **Breaks in the sanitation network** that dampen the perimeter ground\n4. **Very porous materials** (old ceramic bricks, lime mortars)\n\n## Expert Diagnosis\n\nAn expert must:\n\n* Take measurements with a hygrometer to quantify the level of humidity\n* Rule out other causes (leaks, condensation)\n* Identify the source of the water (water table, leaks, rain)\n* Propose the most appropriate technical solution\n\n## Effective Solutions\n\n### Waterproofing Resin Injection\n\nHoles are drilled at the base of the wall and a resin is injected creating a chemical waterproof barrier.\n\n### Electro-osmosis\n\nAn electrical system is installed that reverses the capillary flow, pushing the water back to the ground.\n\n### Perimeter Drainage\n\nExcavation is done around the building and a drainage system is installed to reduce the water table.\n\n## Conclusion\n\nRising damp requires a definitive solution, not patches. An expert report is essential to choose the correct treatment and avoid wasting money on ineffective solutions."
+  },
+  {
+    "title": "How to Identify Structural Cracks in Your Home",
+    "slug": "identify-structural-cracks-home",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/identificar-grietas-estructurales-vivienda/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/identify-structural-cracks-home/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/identificar-esquerdes-estructurals-habitatge/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/identifier-fissures-structurelles-logement/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/identificare-crepe-strutturali-casa/"
+      }
+    ],
+    "description": "Practical guide to distinguish between superficial cracks and structural cracks that compromise the safety of your property.",
+    "excerpt": "Not all cracks are the same. Learn to recognize alarm signs indicating a serious structural problem and when it is essential to request an expert report.",
+    "estado": "publicado",
+    "datePublished": "2025-10-15",
+    "dateModified": "2025-10-15",
+    "author": "Albert Vilardell",
+    "category": "Structural Pathologies",
+    "tags": [
+      "Cracks",
+      "Structures",
+      "Diagnosis",
+      "Safety"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Structural crack in load-bearing wall",
+      "caption": "Diagonal cracks in load-bearing walls can indicate serious foundation problems."
     },
-    {
-        "title": "Cracked Industrial Pavements: Ground Failure, Bad Execution or Overload?",
-        "slug": "industrial-pavement-pathologies-cracks",
-        "translations": [
-            {
-                "lang": "es",
-                "permalink": "/blog/patologias-pavimentos-naves-industriales/"
-            },
-            {
-                "lang": "en",
-                "permalink": "/en/blog/industrial-pavement-pathologies-cracks/"
-            },
-            {
-                "lang": "ca",
-                "permalink": "/ca/blog/patologies-paviments-naus-industrials/"
-            },
-            {
-                "lang": "fr",
-                "permalink": "/fr/blog/pathologies-sols-industriels-fissures/"
-            },
-            {
-                "lang": "it",
-                "permalink": "/it/blog/patologie-pavimenti-industriali-crepe/"
-            }
-        ],
-        "description": "Analysis of the most frequent causes of cracks in industrial floors and solutions to avoid activity stoppages.",
-        "excerpt": "A broken floor paralyzes logistics. Discover if your cracks are due to a design failure, bad execution, or misuse, and who should pay for the repair.",
-        "estado": "publicado",
-        "datePublished": "2025-10-25",
-        "dateModified": "2025-10-25",
-        "author": "Albert Vilardell",
-        "category": "Industrial Warehouses",
-        "tags": [
-            "Pavements",
-            "Industrial Warehouses",
-            "Cracks",
-            "Logistics"
-        ],
-        "image": {
-            "url": "/assets/images/peritaje-construccion-ingenieros-obra.jpg",
-            "alt": "Severe crack in industrial concrete pavement",
-            "caption": "Cracks in industrial pavements affect forklift safety and operability."
-        },
-        "relatedServices": [
-            {
-                "title": "Reports for Industrial Warehouses",
-                "url": "/en/expert-reports/industrial-warehouses/"
-            }
-        ],
-        "content": "## The Pavement: The Heart of the Industrial Warehouse\n\nIn a logistics or production warehouse, the floor is not just a surface; it is a work tool. Cracks, unevenness, or subsidence are not only unsightly, but they **damage forklifts, reduce operation speed, and can cause workplace accidents**.\n\n## Common Causes of Slab Pathologies\n\n### 1. Ground Failure (Settlements)\nIf the base on which the concrete was poured was not well compacted, the ground settles over time, leaving voids under the slab. When a load passes, the concrete breaks because it has no support.\n\n### 2. Shrinkage and Lack of Joints\nConcrete shrinks as it dries. If expansion and shrinkage joints were not designed or executed correctly, the material will find its own way to break, creating uncontrolled cracks.\n\n### 3. Usage Overload\nIt is common to see warehouses designed for a specific load that are then used for heavier shelving or machinery for which the floor was not calculated.\n\n## The Expert Diagnosis: Key to Responsibility\n\nDetermining the exact cause is vital, especially in rented or newly built warehouses:\n\n* **If it is bad execution:** The responsibility may lie with the construction company (hidden defects).\n* **If it is misuse:** The responsibility lies with the tenant (post-rental damages).\n* **If it is a design failure:** The responsibility could lie with the engineering or architecture firm.\n\n## Technical Solutions\n\nDepending on the diagnosis, solutions vary from:\n* **Expansive resin injections** to reconsolidate the ground without stopping activity.\n* **Crack stitching** with metal staples and epoxy resin.\n* **Demolition and reconstruction** of the affected slabs (in severe cases).\n\n## Conclusion\n\nDo not ignore cracks in your warehouse. An early diagnosis saves money and avoids costly operational stops."
+    "relatedServices": [
+      {
+        "title": "Structural Pathology Report",
+        "url": "/en/expert-reports/structural-pathologies/"
+      }
+    ],
+    "content": "## Introduction\n\nThe appearance of cracks in a home is one of the problems that generates the most concern among owners, and rightly so. However, it is fundamental to understand that **not all cracks are the same** nor do they all represent a structural danger.\n\n## Types of Cracks: Fissures vs. Structural Cracks\n\n### Superficial Fissures\n\nFissures are breaks in the coating (paint, plaster) with an opening of less than 1mm. They are generally caused by:\n\n* Temperature and humidity changes\n* Normal building movements\n* Defects in the application of the finish\n* Material shrinkage during drying\n\nThese fissures, although unsightly, **do not compromise the structural safety** of the property.\n\n### Structural Cracks\n\nStructural cracks are openings of more than 1mm that go through the entire thickness of the constructive element (wall, slab, beam). They are much more worrying because they can indicate:\n\n* Foundation problems (differential settlements)\n* Overloads not foreseen in the original calculation\n* Serious defects in the execution of the structure\n* Degradation of materials due to corrosion or deterioration\n\n## Warning Signs: When to Worry\n\nYou should request an urgent expert report if you observe:\n\n1. **Diagonal cracks** in the corners of walls or in the form of stairs following the brick joints\n2. **Horizontal cracks** at the base of walls (may indicate ground thrust)\n3. **Cracks that increase in size** over time (active cracks)\n4. **Cracks that go through the entire thickness** of the wall (visible on both faces)\n5. **Cracks accompanied by other symptoms** such as doors that do not close, uneven floors or detachments\n\n## The Importance of a Professional Diagnosis\n\nA structural expert can:\n\n* Determine if the crack is superficial or structural\n* Identify the root cause of the problem (foundation, overloads, construction defects)\n* Evaluate if there is a risk to the safety of the occupants\n* Propose appropriate technical solutions (reinforcements, micropiles, injections)\n* Quantify the cost of repair for a claim\n\n## Conclusion\n\nWhen in doubt, it is always better to be safe than sorry. An early expert report can prevent a minor problem from turning into a serious structural danger or a costly repair.\n\n**Do you have cracks in your home and don't know if they are worrying?** Contact us immediately to assess your case."
+  },
+  {
+    "title": "Cracked Industrial Pavements: Ground Failure, Bad Execution or Overload?",
+    "slug": "industrial-pavement-pathologies-cracks",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/patologias-pavimentos-naves-industriales/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/industrial-pavement-pathologies-cracks/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/patologies-paviments-naus-industrials/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/pathologies-sols-industriels-fissures/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/patologie-pavimenti-industriali-crepe/"
+      }
+    ],
+    "description": "Analysis of the most frequent causes of cracks in industrial floors and solutions to avoid activity stoppages.",
+    "excerpt": "A broken floor paralyzes logistics. Discover if your cracks are due to a design failure, bad execution, or misuse, and who should pay for the repair.",
+    "estado": "publicado",
+    "datePublished": "2025-10-25",
+    "dateModified": "2025-10-25",
+    "author": "Albert Vilardell",
+    "category": "Industrial Warehouses",
+    "tags": [
+      "Pavements",
+      "Industrial Warehouses",
+      "Cracks",
+      "Logistics"
+    ],
+    "image": {
+      "url": "/assets/images/peritaje-construccion-ingenieros-obra.jpg",
+      "alt": "Severe crack in industrial concrete pavement",
+      "caption": "Cracks in industrial pavements affect forklift safety and operability."
     },
-    {
-        "title": "Parking Pillars with Exposed Iron: Diagnosis of Carbonation",
-        "slug": "repair-reinforcement-parking-pillars-barcelona",
-        "translations": [
-            {
-                "lang": "es",
-                "permalink": "/blog/reparacion-refuerzo-pilares-parking-barcelona/"
-            },
-            {
-                "lang": "en",
-                "permalink": "/en/blog/repair-reinforcement-parking-pillars-barcelona/"
-            },
-            {
-                "lang": "ca",
-                "permalink": "/ca/blog/reparacio-reforc-pilars-parking-barcelona/"
-            },
-            {
-                "lang": "fr",
-                "permalink": "/fr/blog/reparation-renfort-piliers-parking-barcelone/"
-            },
-            {
-                "lang": "it",
-                "permalink": "/it/blog/riparazione-rinforzo-pilastri-parcheggio-barcellona/"
-            }
-        ],
-        "description": "Technical explanation of why pillars in garages deteriorate and how carbonation puts the structure at risk.",
-        "excerpt": "Have you seen fallen concrete and rusty irons on the columns of your parking? It is a serious symptom of carbonation that requires urgent intervention.",
-        "estado": "publicado",
-        "datePublished": "2025-11-10",
-        "dateModified": "2025-11-10",
-        "author": "Albert Vilardell",
-        "category": "Structural Pathologies",
-        "tags": [
-            "Structures",
-            "Carbonation",
-            "Parking",
-            "Communities"
-        ],
-        "image": {
-            "url": "/assets/images/patologia-estructural-puente-barcelona.jpg",
-            "alt": "Concrete pillar with exposed rusted reinforcement",
-            "caption": "Concrete spalling reveals advanced corrosion of the interior reinforcement."
-        },
-        "relatedServices": [
-            {
-                "title": "Structural Advisory",
-                "url": "/en/structural-advisory/"
-            }
-        ],
-        "content": "## The Alarm: Concrete that 'Explodes'\n\nIt is a common image in many garages in Barcelona built decades ago: pieces of concrete on the floor and, on the pillar, steel bars exposed and rusted. Many neighbors mistakenly call it 'aluminosis', but in most cases it is **carbonation**.\n\n## What is Carbonation?\n\nHealthy concrete has a high (alkaline) pH that protects the steel from oxidation. Over time and with CO2 from cars, concrete loses that pH (it carbonates). When moisture reaches the unprotected steel, it oxidizes.\n\n**The problem:** Rust occupies more volume than healthy steel, exerting brutal internal pressure that breaks the concrete from within.\n\n## Is it Dangerous?\n\n**Yes.** If left untreated, corrosion reduces the useful section of steel in the pillar. Less steel means less capacity to support the weight of the building. In advanced stages, it can compromise global stability.\n\n## Solutions: Repair vs. Reinforcement\n\nAn expert report will determine the severity:\n\n1.  **Cosmetic Repair (Slight Damage):** Cleaning rust, passivating steel, and rebuilding with structural mortar.\n2.  **Structural Reinforcement (Severe Damage):** If the pillar has lost a lot of capacity, it needs help. Usually applied:\n    * **Metal jacketing:** Surrounding the pillar with a steel cage.\n    * **Carbon Fiber:** High-strength sheets adhered to the pillar.\n\n## Recommendation for Communities\n\nDo not try to cover cracks with normal cement. That only hides the problem while corrosion advances. Request a technical diagnosis to calculate the necessary reinforcement."
+    "relatedServices": [
+      {
+        "title": "Reports for Industrial Warehouses",
+        "url": "/en/expert-reports/industrial-warehouses/"
+      }
+    ],
+    "content": "## The Pavement: The Heart of the Industrial Warehouse\n\nIn a logistics or production warehouse, the floor is not just a surface; it is a work tool. Cracks, unevenness, or subsidence are not only unsightly, but they **damage forklifts, reduce operation speed, and can cause workplace accidents**.\n\n## Common Causes of Slab Pathologies\n\n### 1. Ground Failure (Settlements)\nIf the base on which the concrete was poured was not well compacted, the ground settles over time, leaving voids under the slab. When a load passes, the concrete breaks because it has no support.\n\n### 2. Shrinkage and Lack of Joints\nConcrete shrinks as it dries. If expansion and shrinkage joints were not designed or executed correctly, the material will find its own way to break, creating uncontrolled cracks.\n\n### 3. Usage Overload\nIt is common to see warehouses designed for a specific load that are then used for heavier shelving or machinery for which the floor was not calculated.\n\n## The Expert Diagnosis: Key to Responsibility\n\nDetermining the exact cause is vital, especially in rented or newly built warehouses:\n\n* **If it is bad execution:** The responsibility may lie with the construction company (hidden defects).\n* **If it is misuse:** The responsibility lies with the tenant (post-rental damages).\n* **If it is a design failure:** The responsibility could lie with the engineering or architecture firm.\n\n## Technical Solutions\n\nDepending on the diagnosis, solutions vary from:\n* **Expansive resin injections** to reconsolidate the ground without stopping activity.\n* **Crack stitching** with metal staples and epoxy resin.\n* **Demolition and reconstruction** of the affected slabs (in severe cases).\n\n## Conclusion\n\nDo not ignore cracks in your warehouse. An early diagnosis saves money and avoids costly operational stops."
+  },
+  {
+    "title": "Parking Pillars with Exposed Iron: Diagnosis of Carbonation",
+    "slug": "repair-reinforcement-parking-pillars-barcelona",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/reparacion-refuerzo-pilares-parking-barcelona/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/repair-reinforcement-parking-pillars-barcelona/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/reparacio-reforc-pilars-parking-barcelona/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/reparation-renfort-piliers-parking-barcelone/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/riparazione-rinforzo-pilastri-parcheggio-barcellona/"
+      }
+    ],
+    "description": "Technical explanation of why pillars in garages deteriorate and how carbonation puts the structure at risk.",
+    "excerpt": "Have you seen fallen concrete and rusty irons on the columns of your parking? It is a serious symptom of carbonation that requires urgent intervention.",
+    "estado": "publicado",
+    "datePublished": "2025-11-10",
+    "dateModified": "2025-11-10",
+    "author": "Albert Vilardell",
+    "category": "Structural Pathologies",
+    "tags": [
+      "Structures",
+      "Carbonation",
+      "Parking",
+      "Communities"
+    ],
+    "image": {
+      "url": "/assets/images/patologia-estructural-puente-barcelona.jpg",
+      "alt": "Concrete pillar with exposed rusted reinforcement",
+      "caption": "Concrete spalling reveals advanced corrosion of the interior reinforcement."
     },
-    {
-        "title": "I just bought an apartment and it has serious defects: What is considered a 'Hidden Defect'?",
-        "slug": "claim-hidden-defects-home-purchase",
-        "translations": [
-            {
-                "lang": "es",
-                "permalink": "/blog/reclama-vicios-ocultos-compraventa-vivienda/"
-            },
-            {
-                "lang": "en",
-                "permalink": "/en/blog/claim-hidden-defects-home-purchase/"
-            },
-            {
-                "lang": "ca",
-                "permalink": "/ca/blog/reclamacio-vicis-ocults-compra-habitatge/"
-            },
-            {
-                "lang": "fr",
-                "permalink": "/fr/blog/reclamation-vices-caches-achat-maison/"
-            },
-            {
-                "lang": "it",
-                "permalink": "/it/blog/reclamo-vizi-occulti-acquisto-casa/"
-            }
-        ],
-        "description": "Legal and technical guide for buyers: deadlines, requirements, and process to claim non-visible defects after purchase.",
-        "excerpt": "If damp, termites, or cracks appear after purchase that you didn't see, you may have the right to claim. Learn the difference between hidden defect and wear.",
-        "estado": "publicado",
-        "datePublished": "2025-11-25",
-        "dateModified": "2025-11-25",
-        "author": "Albert Vilardell",
-        "category": "Legal",
-        "tags": [
-            "Hidden Defects",
-            "Purchase",
-            "Claim",
-            "Judicial Expert"
-        ],
-        "image": {
-            "url": "/assets/images/informe-pericial-vicios-ocultos-vivienda-barcelona.jpg",
-            "alt": "Hidden mold behind wallpaper in a newly bought home",
-            "caption": "Many sellers hide defects aesthetically that reappear after the sale."
-        },
-        "relatedServices": [
-            {
-                "title": "Judicial Expert Report",
-                "url": "/en/expert-reports/judicial/"
-            }
-        ],
-        "content": "## The Golden Deadline: 6 Months\n\nMany buyers are unaware that the Civil Code establishes a very strict deadline: you have **6 months** from the handover of keys to claim for hidden defects. After this time, the action expires and you lose the right.\n\n## The 3 Requirements of the Hidden Defect\n\nNot every defect is claimable. For a judge to consider it a 'hidden defect', it must meet three conditions:\n\n1.  **Hidden:** It must not have been visible during the visit. If it was evident (a huge crack), it is assumed you bought knowing it. *Note: If you are an expert (architect, builder), the criteria is stricter.*\n2.  **Serious:** It must make the home unfit for use or decrease its value so much that, had you known, you would not have bought it or would have paid much less.\n3.  **Pre-existing:** The defect must have existed **before** the purchase, even if it manifested later. This is where the expert report is vital to prove the age of the damage.\n\n## Possible Legal Actions\n\nIf the requirements are confirmed, you can choose:\n* **Redhibitory Action:** Undo the purchase (return the apartment and recover the money + expenses).\n* **Quanti Minoris Action:** Keep the property but demand a price reduction proportional to the repair cost.\n\n## Conclusion\n\nIf you discover a serious defect, do not wait. Document everything, do not repair anything yet, and call a judicial expert immediately to certify pre-existence before the deadline runs out."
+    "relatedServices": [
+      {
+        "title": "Structural Advisory",
+        "url": "/en/structural-advisory/"
+      }
+    ],
+    "content": "## The Alarm: Concrete that 'Explodes'\n\nIt is a common image in many garages in Barcelona built decades ago: pieces of concrete on the floor and, on the pillar, steel bars exposed and rusted. Many neighbors mistakenly call it 'aluminosis', but in most cases it is **carbonation**.\n\n## What is Carbonation?\n\nHealthy concrete has a high (alkaline) pH that protects the steel from oxidation. Over time and with CO2 from cars, concrete loses that pH (it carbonates). When moisture reaches the unprotected steel, it oxidizes.\n\n**The problem:** Rust occupies more volume than healthy steel, exerting brutal internal pressure that breaks the concrete from within.\n\n## Is it Dangerous?\n\n**Yes.** If left untreated, corrosion reduces the useful section of steel in the pillar. Less steel means less capacity to support the weight of the building. In advanced stages, it can compromise global stability.\n\n## Solutions: Repair vs. Reinforcement\n\nAn expert report will determine the severity:\n\n1.  **Cosmetic Repair (Slight Damage):** Cleaning rust, passivating steel, and rebuilding with structural mortar.\n2.  **Structural Reinforcement (Severe Damage):** If the pillar has lost a lot of capacity, it needs help. Usually applied:\n    * **Metal jacketing:** Surrounding the pillar with a steel cage.\n    * **Carbon Fiber:** High-strength sheets adhered to the pillar.\n\n## Recommendation for Communities\n\nDo not try to cover cracks with normal cement. That only hides the problem while corrosion advances. Request a technical diagnosis to calculate the necessary reinforcement."
+  },
+  {
+    "title": "I just bought an apartment and it has serious defects: What is considered a 'Hidden Defect'?",
+    "slug": "claim-hidden-defects-home-purchase",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/reclama-vicios-ocultos-compraventa-vivienda/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/claim-hidden-defects-home-purchase/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/reclamacio-vicis-ocults-compra-habitatge/"
+      },
+      {
+        "lang": "fr",
+        "permalink": "/fr/blog/reclamation-vices-caches-achat-maison/"
+      },
+      {
+        "lang": "it",
+        "permalink": "/it/blog/reclamo-vizi-occulti-acquisto-casa/"
+      }
+    ],
+    "description": "Legal and technical guide for buyers: deadlines, requirements, and process to claim non-visible defects after purchase.",
+    "excerpt": "If damp, termites, or cracks appear after purchase that you didn't see, you may have the right to claim. Learn the difference between hidden defect and wear.",
+    "estado": "publicado",
+    "datePublished": "2025-11-25",
+    "dateModified": "2025-11-25",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": [
+      "Hidden Defects",
+      "Purchase",
+      "Claim",
+      "Judicial Expert"
+    ],
+    "image": {
+      "url": "/assets/images/informe-pericial-vicios-ocultos-vivienda-barcelona.jpg",
+      "alt": "Hidden mold behind wallpaper in a newly bought home",
+      "caption": "Many sellers hide defects aesthetically that reappear after the sale."
     },
-    {
-        "title": "Slope Stability and Retaining Walls: Expert Assessment, Site Visit and Engineering Solutions",
-        "slug": "slope-stability-retaining-walls",
-        "translations": [
-            { "lang": "es", "permalink": "/blog/estabilidad-taludes-muros-contencion/" },
-            { "lang": "ca", "permalink": "/ca/blog/estabilitat-talussos-murs-contencio/" },
-            { "lang": "en", "permalink": "/en/blog/slope-stability-retaining-walls/" }
-        ],
-        "description": "Is your retaining wall cracking, has your neighbour excavated at the base, or is your pool leaking near a slope? Slope stability analysis in Barcelona.",
-        "excerpt": "A neighbour excavated at the toe of a 6-metre wall while a pool was leaking at the crest. Real case, diagnosis and stabilisation solutions.",
-        "estado": "publicado",
-        "datePublished": "2026-06-26",
-        "dateModified": "2026-06-26",
-        "author": "Albert Vilardell Serra",
-        "category": "Geotechnics",
-        "tags": ["Slope Stability", "Retaining Wall", "Geotechnics", "Expert Assessment"],
-        "image": {
-            "url": "/assets/images/blog/estabilidad-taludes.png",
-            "alt": "Composite view of an unstable slope with pool at the crest and excavation at the toe",
-            "caption": "Left: crest view. Right: toe with excavation and moisture."
-        },
-        "relatedServices": [
-            { "title": "Slope stability assessment", "url": "/en/contact/particular/" }
-        ],
-        "content": "## When does a slope stop being ground and become a problem?\n\nA slope is any terrain surface inclined with respect to the horizontal. We see them every day and rarely give them a second thought. **Until something changes.**\n\nA neighbour digs at the base. A swimming pool leaks for months. A decades-old party wall starts to lean.\n\nWhen a slope's equilibrium breaks, **the consequences can be catastrophic**.\n\n---\n\n## A real case: pool at the crest, excavation at the toe\n\n**The situation:**\n- A house with a **party wall** bridging a **6-metre** drop.\n- At the top, a **swimming pool** that has been **leaking** for months.\n- The lower neighbour has **excavated a vegetable garden at the toe**.\n\n**The diagnosis:** Three simultaneous destabilising factors:\n\n1. **Surcharge at the crest** — 40+ tonnes of pool.\n2. **Soil saturation** — Leaks reduce cohesion.\n3. **Toe removal** — Excavation eliminates the counterweight.\n\n---\n\n## Stability analysis: what we do\n\n### Phase 1 — Site visit\n\n- Slope geometry, wall condition, drainage, signs of movement.\n- Photographic documentation with georeferencing.\n\n### Phase 2 — Study and analysis\n\n1. Geotechnical characterisation (trial pits, SPT).\n2. Stability model (Bishop, Janbu, Morgenstern-Price).\n3. Earth pressure analysis (Rankine, Coulomb).\n4. Structural verification of the wall.\n\n### Phase 3 — Expert report\n\n- Root cause diagnosis with evidence.\n- Stability calculations with plans.\n- Proposed action with detailed engineering.\n- Liability assessment.\n\n---\n\n## Stabilisation solutions\n\n### Drainage\n- Horizontal drains, drainage trenches, weep holes, crest ditches.\n\n### Retention and reinforcement\n- Riprap or gabion walls, reinforced concrete, reinforced earth, rock bolts, micropiles.\n\n### Re-profiling\n- Slope flattening, equilibrium berm, toe fill.\n\n---\n\n## Frequently asked questions\n\n### How much does it cost?\nSite visit + report: **800-1,200 euros**. With geotechnical study: **2,000-4,000 euros**.\n\n### Can I claim against my neighbour?\nYes. Article 1902 of the Spanish Civil Code establishes the obligation to repair the damage.\n\n### Can a swimming pool destabilise a slope?\nAbsolutely. 48 tonnes of concentrated weight plus leaks that saturate the soil."
-    }
+    "relatedServices": [
+      {
+        "title": "Judicial Expert Report",
+        "url": "/en/expert-reports/judicial/"
+      }
+    ],
+    "content": "## The Golden Deadline: 6 Months\n\nMany buyers are unaware that the Civil Code establishes a very strict deadline: you have **6 months** from the handover of keys to claim for hidden defects. After this time, the action expires and you lose the right.\n\n## The 3 Requirements of the Hidden Defect\n\nNot every defect is claimable. For a judge to consider it a 'hidden defect', it must meet three conditions:\n\n1.  **Hidden:** It must not have been visible during the visit. If it was evident (a huge crack), it is assumed you bought knowing it. *Note: If you are an expert (architect, builder), the criteria is stricter.*\n2.  **Serious:** It must make the home unfit for use or decrease its value so much that, had you known, you would not have bought it or would have paid much less.\n3.  **Pre-existing:** The defect must have existed **before** the purchase, even if it manifested later. This is where the expert report is vital to prove the age of the damage.\n\n## Possible Legal Actions\n\nIf the requirements are confirmed, you can choose:\n* **Redhibitory Action:** Undo the purchase (return the apartment and recover the money + expenses).\n* **Quanti Minoris Action:** Keep the property but demand a price reduction proportional to the repair cost.\n\n## Conclusion\n\nIf you discover a serious defect, do not wait. Document everything, do not repair anything yet, and call a judicial expert immediately to certify pre-existence before the deadline runs out."
+  },
+  {
+    "title": "Slope Stability and Retaining Walls: Expert Assessment, Site Visit and Engineering Solutions",
+    "slug": "slope-stability-retaining-walls",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/estabilidad-taludes-muros-contencion/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/estabilitat-talussos-murs-contencio/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/slope-stability-retaining-walls/"
+      }
+    ],
+    "description": "Is your retaining wall cracking, has your neighbour excavated at the base, or is your pool leaking near a slope? Slope stability analysis in Barcelona.",
+    "excerpt": "A neighbour excavated at the toe of a 6-metre wall while a pool was leaking at the crest. Real case, diagnosis and stabilisation solutions.",
+    "estado": "publicado",
+    "datePublished": "2026-06-26",
+    "dateModified": "2026-06-26",
+    "author": "Albert Vilardell Serra",
+    "category": "Geotechnics",
+    "tags": [
+      "Slope Stability",
+      "Retaining Wall",
+      "Geotechnics",
+      "Expert Assessment"
+    ],
+    "image": {
+      "url": "/assets/images/blog/estabilidad-taludes.png",
+      "alt": "Composite view of an unstable slope with pool at the crest and excavation at the toe",
+      "caption": "Left: crest view. Right: toe with excavation and moisture."
+    },
+    "relatedServices": [
+      {
+        "title": "Slope stability assessment",
+        "url": "/en/contact/particular/"
+      }
+    ],
+    "content": "## When does a slope stop being ground and become a problem?\n\nA slope is any terrain surface inclined with respect to the horizontal. We see them every day and rarely give them a second thought. **Until something changes.**\n\nA neighbour digs at the base. A swimming pool leaks for months. A decades-old party wall starts to lean.\n\nWhen a slope's equilibrium breaks, **the consequences can be catastrophic**.\n\n---\n\n## A real case: pool at the crest, excavation at the toe\n\n**The situation:**\n- A house with a **party wall** bridging a **6-metre** drop.\n- At the top, a **swimming pool** that has been **leaking** for months.\n- The lower neighbour has **excavated a vegetable garden at the toe**.\n\n**The diagnosis:** Three simultaneous destabilising factors:\n\n1. **Surcharge at the crest** — 40+ tonnes of pool.\n2. **Soil saturation** — Leaks reduce cohesion.\n3. **Toe removal** — Excavation eliminates the counterweight.\n\n---\n\n## Stability analysis: what we do\n\n### Phase 1 — Site visit\n\n- Slope geometry, wall condition, drainage, signs of movement.\n- Photographic documentation with georeferencing.\n\n### Phase 2 — Study and analysis\n\n1. Geotechnical characterisation (trial pits, SPT).\n2. Stability model (Bishop, Janbu, Morgenstern-Price).\n3. Earth pressure analysis (Rankine, Coulomb).\n4. Structural verification of the wall.\n\n### Phase 3 — Expert report\n\n- Root cause diagnosis with evidence.\n- Stability calculations with plans.\n- Proposed action with detailed engineering.\n- Liability assessment.\n\n---\n\n## Stabilisation solutions\n\n### Drainage\n- Horizontal drains, drainage trenches, weep holes, crest ditches.\n\n### Retention and reinforcement\n- Riprap or gabion walls, reinforced concrete, reinforced earth, rock bolts, micropiles.\n\n### Re-profiling\n- Slope flattening, equilibrium berm, toe fill.\n\n---\n\n## Frequently asked questions\n\n### How much does it cost?\nSite visit + report: **800-1,200 euros**. With geotechnical study: **2,000-4,000 euros**.\n\n### Can I claim against my neighbour?\nYes. Article 1902 of the Spanish Civil Code establishes the obligation to repair the damage.\n\n### Can a swimming pool destabilise a slope?\nAbsolutely. 48 tonnes of concentrated weight plus leaks that saturate the soil."
+  },
+  {
+    "title": "Aluminosis in Barcelona: how to detect it and what to do",
+    "slug": "aluminosis-concrete-barcelona-assessment",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/aluminosis-barcelona-deteccion-peritaje/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/aluminosi-barcelona-deteccio-peritatge/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/aluminosis-concrete-barcelona-assessment/"
+      }
+    ],
+    "description": "What aluminosis is, how it is detected with the oxine test, how it differs from carbonation, and what to do if your building has it.",
+    "excerpt": "The high-alumina cement in many 1950s-70s buildings can lose strength. Learn to spot the symptoms and confirm the diagnosis.",
+    "estado": "publicado",
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "author": "Albert Vilardell Serra",
+    "category": "Structural Pathologies",
+    "tags": [
+      "Aluminosis",
+      "Structural Pathologies",
+      "Floor slabs",
+      "Barcelona"
+    ],
+    "image": {
+      "url": "/assets/images/patologia-estructural-puente-barcelona.jpg",
+      "alt": "Floor joist with deteriorated concrete and exposed reinforcement",
+      "caption": "Diagnosing aluminosis requires a chemical test; visual inspection is not enough."
+    },
+    "relatedServices": [
+      {
+        "title": "Structural Pathologies",
+        "url": "/en/structural-pathologies/"
+      }
+    ],
+    "content": "## What aluminous cement decay (aluminosis) is and why it matters in Barcelona\n\nAluminosis is a pathology of concrete made with **high-alumina cement**, widely used in Spain between the 1950s and 1970s, especially in **floor-slab joists** of residential buildings. Over time, in the presence of heat and moisture, high-alumina cement undergoes a process called **conversion**: its internal structure changes, porosity increases and it **loses strength**. The result is more brittle concrete and reinforcement that is more exposed to corrosion.\n\nBarcelona and its metropolitan area have a large stock of buildings from that period, so aluminosis is still a common enquiry, particularly after cracks or spalling appear in ceilings.\n\n## How it is detected\n\nAluminosis **cannot be diagnosed by eye**. Warning signs include:\n\n* Longitudinal cracks on the underside of the joists.\n* Rust stains or brown discolouration on the ceiling.\n* Spalling of the concrete cover.\n* Visible deflection or deformation of the slab.\n\nConfirmation requires a **chemical test**: a concrete sample is taken and treated with the **oxine** reagent (8-hydroxyquinoline), which stains high-alumina cement yellow-green under ultraviolet light. From there, an expert assessment measures the **degree of conversion** and loss of section to evaluate the real load-bearing capacity.\n\n## Aluminosis is not the same as carbonation\n\nA common confusion. **Carbonation** attacks the steel reinforcement through loss of concrete alkalinity; **aluminosis** attacks the concrete itself because of the cement type. A building may have one, the other or both. Telling them apart is essential, because the remedy and the liability differ.\n\n## What to do if you suspect aluminosis in your building\n\n1. **Do not chip or load** the affected area until it has been diagnosed.\n2. Request an **expert report** that confirms (or rules out) aluminosis and quantifies the structural risk.\n3. With the report, the owners' association can decide the right **reinforcement**: joist replacement, steel reinforcement or carbon-fibre strengthening.\n\nA rigorous diagnosis prevents both unwarranted alarm and dangerous inaction. If you see cracks or spalling in an older building, our [structural pathology report](/en/structural-pathologies/) establishes the real extent and the measures required.\n\n**Unsure about your building's floor slab?** [Tell us about it](/en/contact/particular/) and we will advise you with no obligation."
+  },
+  {
+    "title": "How much does an expert report cost? Prices and factors in 2026",
+    "slug": "how-much-does-expert-report-cost",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/cuanto-cuesta-informe-pericial-precios/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/quant-costa-informe-pericial-preus/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/how-much-does-expert-report-cost/"
+      }
+    ],
+    "description": "Indicative price ranges for an expert report in Barcelona and the factors that make the fee vary. Fixed written quote.",
+    "excerpt": "How much does an assessment cost? Market ranges, what raises the fee, and why to distrust a fixed price over the phone.",
+    "estado": "programado",
+    "datePublished": "2026-07-08",
+    "dateModified": "2026-07-08",
+    "author": "Albert Vilardell Serra",
+    "category": "Fees",
+    "tags": [
+      "Fees",
+      "Prices",
+      "Expert Report",
+      "Quote"
+    ],
+    "image": {
+      "url": "/assets/images/informe-pericial-patologias-barcelona.jpg",
+      "alt": "Expert reviewing the technical documentation of a report",
+      "caption": "The quote for a report is fixed in writing once the scope of the case is known."
+    },
+    "relatedServices": [
+      {
+        "title": "Fees and cost",
+        "url": "/en/fees/"
+      }
+    ],
+    "content": "## How much an expert report costs: indicative ranges\n\nIt is almost everyone's first question, and the honest answer is: **it depends on the scope**. That said, there are indicative market ranges in Barcelona that help set expectations before asking for a quote:\n\n* **Simple expert report** (one specific pathology, one room, no testing): from around **€300–500**.\n* **Damp or hidden-defect report** with a site visit and instrumental diagnosis: roughly **€500–900**.\n* **Structural pathology report** with calculation, testing or modelling: **from €900**, and it can exceed several thousand depending on complexity.\n* **Court ratification** (attendance and oral defence): sometimes included, sometimes a separate fee.\n\nThese figures are indicative; the real quote is fixed **in writing once the case is known**.\n\n## What makes the price vary\n\n1. **Technical complexity.** Diagnosing a damp patch is not the same as assessing the stability of a structure.\n2. **Testing.** Thermography, test pits, laboratory tests or structural modelling raise the cost but provide objective evidence.\n3. **Area and travel.** The size of the property and the distance from the office matter.\n4. **Urgency.** A very short deadline may carry a surcharge.\n5. **Court use.** A report intended for trial demands greater traceability and, where applicable, oral ratification under the Spanish [Civil Procedure Act (LEC)](/en/court-appointed-expert/).\n\n## Why to distrust a \"fixed price over the phone\"\n\nA fee given without seeing the case usually means one of two things: either the report is superficial, or extra costs will appear later. A serious assessment starts with an **initial consultation** to define the scope and only then issues a **fixed, written quote** with no hidden variable costs. You can see the detail on our [fees](/en/fees/) page.\n\n## Cost versus what is at stake\n\nIt helps to put the fee in context: a report of a few hundred euros can be the evidence that supports a claim worth **tens of thousands**. In hidden defects, damp or structural damage, the report is not an expense but the **technical evidence** that underpins the right to claim.\n\n**Would you like a quote for your case?** [Tell us what is happening](/en/contact/professional/) and we will send you a fixed proposal."
+  },
+  {
+    "title": "Condensation damp: diagnosis and how it differs from rising damp",
+    "slug": "condensation-damp-diagnosis",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/humedades-condensacion-diagnostico/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/humitats-condensacio-diagnostic/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/condensation-damp-diagnosis/"
+      }
+    ],
+    "description": "Why condensation happens, how to tell it apart from rising damp and infiltration, and which solutions actually work. Diagnosis with thermography.",
+    "excerpt": "Condensation is the most misdiagnosed damp. Learn how to tell it apart from rising damp and infiltration, and what resolves it.",
+    "estado": "programado",
+    "datePublished": "2026-07-15",
+    "dateModified": "2026-07-15",
+    "author": "Albert Vilardell Serra",
+    "category": "Pathologies",
+    "tags": [
+      "Damp",
+      "Condensation",
+      "Diagnosis",
+      "Thermography"
+    ],
+    "image": {
+      "url": "/assets/images/deteccion-humedades-termografia.jpg",
+      "alt": "Infrared thermography of a wall with a thermal bridge and condensation",
+      "caption": "Thermography locates the cold surfaces where water vapour condenses."
+    },
+    "relatedServices": [
+      {
+        "title": "Damp and Leaks",
+        "url": "/en/expert-witness-reports/damp-leaks/"
+      }
+    ],
+    "content": "## The most misdiagnosed damp of all\n\nOf all types of damp, **condensation** is the one most often misdiagnosed. It gets confused with infiltration or rising damp, ineffective treatments are applied, and the problem returns every winter. Understanding its origin is the first step to solving it.\n\n## Why condensation happens\n\nWarm air holds more water vapour than cold air. When humid indoor air meets a **cold surface** —a poorly insulated wall, a thermal bridge, the edge of a floor slab— it cools, reaches its **dew point**, and the vapour turns into liquid water on that surface. That is why it appears in cold months, in corners, behind wardrobes and around windows.\n\nThere are two variants:\n\n* **Surface condensation:** water appears on the inner face of the wall (stains, black mould).\n* **Interstitial condensation:** it occurs *inside* the wall, between layers, and is harder to see but just as damaging.\n\n## Condensation, rising damp or infiltration: how to tell them apart\n\n| Sign | Condensation | Rising damp | Infiltration |\n|---|---|---|---|\n| Where it appears | Cold spots, corners, windows | Base of walls (up to ~1.5 m) | Near the point of water entry |\n| When | Cold months, worse with poor ventilation | Constant all year | Tied to rain or a leak |\n| Look | Black mould, droplets | Efflorescence, low-level flaking | Stain spreading from a source |\n\nThis distinction is not academic: **each origin has a different liability and a different solution**. That is why our [damp report](/en/expert-witness-reports/damp-leaks/) always starts by identifying the cause with thermography and hygrometry before proposing anything.\n\n## Solutions that actually work\n\nCondensation **is not cured by painting** with anti-damp products. Effective measures tackle the origin:\n\n1. **Improve the insulation** of the cold surface (remove the thermal bridge).\n2. **Controlled ventilation** to remove vapour (better than opening windows at random).\n3. **Reduce indoor vapour production** where possible.\n4. In complex cases, a **hygrothermal analysis** of the wall to size the solution.\n\n## When to request an assessment\n\nIf damp returns despite repairs, if there is a dispute about its origin (association, builder, defective insulation in a new build) or if you need **evidence to make a claim**, an independent report provides a documented cause.\n\n**Recurring mould every winter?** [Tell us about it](/en/contact/particular/) and we will tell you whether it is condensation and how to resolve it."
+  },
+  {
+    "title": "Court-appointed experts: how appointment works and what the report is worth (LEC)",
+    "slug": "court-appointed-expert-report-value",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/designacion-perito-judicial-valor-dictamen/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/designacio-perit-judicial-valor-dictamen/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/court-appointed-expert-report-value/"
+      }
+    ],
+    "description": "The difference between party- and court-appointed experts, how list appointment works, and how the judge weighs expert evidence under the LEC.",
+    "excerpt": "Party or court expert, appointment by lot and weighing under sound judgement: what every lawyer and affected party should know.",
+    "estado": "programado",
+    "datePublished": "2026-07-22",
+    "dateModified": "2026-07-22",
+    "author": "Albert Vilardell Serra",
+    "category": "Legal",
+    "tags": [
+      "Court Expert",
+      "LEC",
+      "Appointment",
+      "Expert Evidence"
+    ],
+    "image": {
+      "url": "/assets/images/peritaje-construccion-ingenieros-obra.jpg",
+      "alt": "Expert engineer preparing the documentation of a court report",
+      "caption": "The report's weight depends on its traceability and its defence in court."
+    },
+    "relatedServices": [
+      {
+        "title": "Court-Appointed Expert",
+        "url": "/en/court-appointed-expert/"
+      }
+    ],
+    "content": "## Party-appointed and court-appointed experts are not the same\n\nWhen a technical matter reaches the courts, the figure of the expert appears. But it is worth distinguishing two routes, because their procedural weight and how they are appointed differ.\n\n* **Party-appointed expert:** hired directly by one of the parties to produce a report filed with the claim or defence. It is the most common route and the one that allows the case to be prepared with time.\n* **Court-appointed expert:** named by the court from an **official list**, usually by drawing lots, at a party's request or on the court's own motion. The report is perceived as especially impartial because it comes from the court's own appointment.\n\nBoth reports are **expert evidence** under the Spanish [Civil Procedure Act (LEC)](/en/court-appointed-expert/); the difference lies in who appoints and how independence is weighed.\n\n## How court appointment works\n\n1. The party requests in its pleadings that a court expert be appointed, or the judge orders it.\n2. The court turns to the **lists** submitted each year by the professional associations.\n3. The relevant specialist is appointed by lot.\n4. The expert **accepts the office**, swears or promises to act objectively, and issues the report within the deadline.\n5. At trial, the expert **ratifies** the report and answers questions from the parties and the judge.\n\n## What the report is worth\n\nExpert evidence is weighed under the **rules of sound judgement** (art. 348 LEC): the judge is not automatically bound by the report, but one that is **traceable, grounded in regulations and well defended in court** carries decisive weight. That is the key: it is not enough to conclude — you must **show how the conclusion was reached** so the court can verify it.\n\n## What makes a report strong\n\n* Methodology documented at every stage (inspection, testing, analysis).\n* Regulatory grounding (CTE, LOE, EHE, Eurocodes) and the *lex artis*.\n* Traceability: dated photographs, measurements, chain of custody of samples.\n* The ability to **defend it orally** under cross-examination.\n\nA report that meets these requirements withstands the opposing party's [counter-report](/en/counter-report/).\n\n## For lawyers\n\nIf you are preparing a claim, involve the expert **as early as possible**: the choice of tests, the timing of the inspection and the drafting all shape the strength of the evidence. We work regularly with law firms through our [collaboration with lawyers and insurers](/en/lawyer-collaboration/).\n\n**Do you need an expert for your proceedings?** [Contact the firm](/en/contact/professional/)."
+  },
+  {
+    "title": "How to challenge an opposing expert report: the counter-report",
+    "slug": "challenge-opposing-expert-report",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/impugnar-informe-pericial-contrainforme/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/impugnar-informe-pericial-contrainforme/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/challenge-opposing-expert-report/"
+      }
+    ],
+    "description": "What an expert counter-report is, the common flaws it detects in the opposing report, and how ratification is prepared to rebut it in court.",
+    "excerpt": "If the opposing report contains errors, the counter-report exposes them technically. This is how an expert opinion is rebutted before the judge.",
+    "estado": "programado",
+    "datePublished": "2026-07-29",
+    "dateModified": "2026-07-29",
+    "author": "Albert Vilardell Serra",
+    "category": "Legal",
+    "tags": [
+      "Counter-report",
+      "Challenge",
+      "Expert Evidence",
+      "Ratification"
+    ],
+    "image": {
+      "url": "/assets/images/informe-pericial-patologias-barcelona.jpg",
+      "alt": "Two opposing expert reports on an office desk",
+      "caption": "The counter-report reviews the methodology, data and regulations of the opposing report."
+    },
+    "relatedServices": [
+      {
+        "title": "Expert Counter-Report",
+        "url": "/en/counter-report/"
+      }
+    ],
+    "content": "## When the opposing expert report works against you\n\nIn many proceedings, the opposing party files its own expert report. If that report contains errors, omissions or forced conclusions, leaving it unanswered can cost the case. The technical tool to rebut it is the **expert counter-report**.\n\n## What a counter-report is\n\nA counter-report is an **expert opinion that critically reviews** the opposing party's report. It does not merely disagree: it analyses the methodology, checks the data and sets out, in technical terms, where it fails, so the judge can weigh both with proper criteria.\n\nA good counter-report answers three questions:\n\n1. **Is the methodology sound?** Were the right tests carried out, or was the conclusion drawn from a simple visual inspection?\n2. **Do the data support the conclusion?** Are there logical leaps, missing measurements or undated photographs?\n3. **Is the correct regulation applied?** A regulatory error (CTE, LOE, EHE) can invalidate the whole argument.\n\n## Common flaws in party reports\n\n* Conclusions **without supporting tests**.\n* Confused causes (for example, attributing to condensation what is infiltration).\n* Cost assessments **without a breakdown** or measurement criteria.\n* Lack of traceability: it is impossible to reconstruct how the conclusion was reached.\n* Overreach: the expert opines outside their specialty.\n\nDetecting and **documenting** these points is what turns disagreement into evidence.\n\n## The ratification moment\n\nThe counter-report is completed at the **hearing**, when both experts appear. Rigorous preparation makes it possible to put precise technical questions to the opposing expert that expose the weaknesses of their report before the judge. This **oral defence** stage is as important as the written document.\n\n## A full counter-report is not always needed\n\nSometimes a **technical review** is enough to help the lawyer prepare cross-examination; other times, a full alternative report is warranted. The decision depends on the strength of the opposing report and what is at stake. We assess it case by case within our [counter-report](/en/counter-report/) service and our [collaboration with lawyers](/en/lawyer-collaboration/).\n\n**Facing an expert report you are not convinced by?** [Send it to us](/en/contact/professional/) and we will tell you whether it can be rebutted, and how."
+  },
+  {
+    "title": "Roof leaks in a shared building: who to claim from",
+    "slug": "roof-leaks-homeowners-association-claim",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/filtraciones-cubierta-comunidad-reclamar/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/filtracions-coberta-comunitat-reclamar/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/roof-leaks-homeowners-association-claim/"
+      }
+    ],
+    "description": "Common or private element, how the real origin of a roof leak is located, and the process to claim from the association, the builder or the insurer.",
+    "excerpt": "Water does not appear where it gets in. Who pays for a roof leak depends on the origin: here is how it is determined and claimed.",
+    "estado": "programado",
+    "datePublished": "2026-08-05",
+    "dateModified": "2026-08-05",
+    "author": "Albert Vilardell Serra",
+    "category": "Pathologies",
+    "tags": [
+      "Leaks",
+      "Roof",
+      "Owners' Association",
+      "Claim"
+    ],
+    "image": {
+      "url": "/assets/images/deteccion-humedades-termografia.jpg",
+      "alt": "Waterproofing test on the roof of a residential building",
+      "caption": "The waterproofing test locates the real point where water enters the roof."
+    },
+    "relatedServices": [
+      {
+        "title": "Damp and Leaks",
+        "url": "/en/expert-witness-reports/damp-leaks/"
+      }
+    ],
+    "content": "## Water on the top floor: who pays for the repair?\n\nLeaks through a building's **roof** are one of the most frequent sources of conflict in owners' associations. Water gets in through the roof terrace, shows up on the ceiling of the penthouse or top floor, and the argument begins over who should pay for the repair. The answer depends on **where the origin is**, and that requires a technical diagnosis.\n\n## Common or private element: the key to liability\n\nAs a general rule:\n\n* If the leak comes from the **communal roof or terrace**, the general downpipes or the building's waterproofing, the repair falls to the **association** (common element).\n* If it comes from a **privately used terrace**, a private installation or works by the owner, liability may be **individual**.\n\nThe nuance matters greatly for **level terraces** or privately used roofs: they are for private use, but the **structural and waterproofing element** is usually common. That is where most disputes arise, and where a report is decisive.\n\n## Why the origin is not obvious\n\nWater **does not appear where it gets in**. It can seep through one point of the roof and travel several metres under the paving or between slabs before showing up as a stain. That is why our [damp and leak report](/en/expert-witness-reports/damp-leaks/) locates the real entry point with waterproofing tests and thermography, instead of repairing blindly.\n\n## The process to make a claim\n\n1. **Document** the leak from the outset (dated photos, notice to the association).\n2. Request an **expert report** that determines the origin and establishes whether it is a common or private element.\n3. With the report, the association (or the affected owner) can **claim from the right party**: the building's insurer, the builder if within the warranty period ([LOE](/en/poor-execution-claim/)), or another owner.\n4. If there is no agreement, the report serves as **evidence** in court.\n\n## The role of the association's insurance\n\nMany association policies cover water damage but **dispute the origin** to avoid paying. An independent report proving the cause keeps the claim from getting stuck between the association, the owner and the insurer.\n\n**Leaks in your building and no one taking responsibility?** [Tell us about it](/en/contact/professional/) and we will determine the origin and the liability."
+  }
 ]

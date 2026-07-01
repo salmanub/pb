@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Court-Appointed Expert Witness"
-description: "By court appointment or party request. Accredited impartiality and oral defence of the report under cross-examination."
+description: "Court-appointed expert in Barcelona, by court appointment or party request. Accredited impartiality, report compliant with the LEC and oral defence under cross-examination."
 audience: "pro"
 lang: en
 eleventyNavigation:
@@ -28,6 +28,8 @@ faq:
     a: "By lottery among those registered on the official Ministry of Justice list, or by agreement of the parties (LEC art. 339)."
   - q: "Can the report be challenged?"
     a: "The parties may challenge the expert or contest the report (LEC art. 343). The methodological rigour of the report is the most effective defence."
+  - q: "What is the difference between a party expert and a court expert?"
+    a: 'You hire the party expert; the court appoints the court expert from a list. We explain it in <a href="/en/blog/court-appointed-expert-report-value/">this guide to court-appointed experts</a>.'
 band_title: "Do you need this report?"
 band_lede: "Free initial consultation. Contractual delivery deadlines."
 ---

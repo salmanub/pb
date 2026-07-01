@@ -28,6 +28,8 @@ faq:
     a: "Yes. The judge evaluates all reports according to sound judgment (LEC art. 348). A rigorous counter-report can overturn the evidence."
   - q: "Can it be done without visiting the property?"
     a: "It depends on the case. Often an independent site visit is necessary to verify the original report's data."
+  - q: "How do you rebut an opposing expert report?"
+    a: 'With a counter-report reviewing methodology, data and regulations, and with ratification in court. See <a href="/en/blog/challenge-opposing-expert-report/">this guide to challenging an opposing report</a>.'
 band_title: "Do you need this report?"
 band_lede: "Free initial consultation. Contractual delivery deadlines."
 ---

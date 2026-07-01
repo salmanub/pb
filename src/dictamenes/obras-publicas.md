@@ -17,6 +17,7 @@ translations:
   - lang: en
     permalink: /en/expert-witness-reports/public-works/
 permalink: "/informes-periciales/obras-publicas/"
+canonical: "/obras-publicas/"
 svc_num: "EXP·10"
 svc_tag: "Contratación pública · LCSP"
 svc_lsi: ["LCSP", "Contencioso-administrativo", "Pliego de condiciones", "Recepción de obra", "Administración pública"]

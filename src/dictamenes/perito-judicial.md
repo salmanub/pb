@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Actuación como Perito Judicial"
-description: "Por designación del juzgado o de parte. Imparcialidad acreditada y defensa oral del dictamen ante interrogatorio cruzado."
+description: "Perito judicial en Barcelona por designación del juzgado o de parte. Imparcialidad acreditada, dictamen conforme a la LEC y defensa oral ante interrogatorio cruzado."
 image: "ratificacion-perito-judicial.jpg"
 image_alt: "Ratificación de perito judicial en sala"
 audience: "pro"
@@ -30,6 +30,8 @@ faq:
     a: "Por sorteo entre los inscritos en la lista oficial del Ministerio de Justicia, o por acuerdo de las partes (LEC art. 339)."
   - q: "¿Puede impugnarse el dictamen?"
     a: "Las partes pueden tachar al perito o impugnar el dictamen (LEC art. 343). El rigor metodológico del informe es la defensa más eficaz."
+  - q: "¿Qué diferencia hay entre perito de parte y perito judicial?"
+    a: 'El de parte lo contrata usted; el judicial lo designa el juzgado por lista. Lo detallamos en <a href="/blog/designacion-perito-judicial-valor-dictamen/">esta guía sobre la designación de perito judicial</a>.'
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
 ---

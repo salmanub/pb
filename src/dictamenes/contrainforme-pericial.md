@@ -30,6 +30,8 @@ faq:
     a: "Valora libremente su fuerza probatoria conforme a la sana crítica (LEC art. 348). Un contrainforme sólido merma el peso del dictamen contrario."
   - q: "¿Cuánto se tarda?"
     a: "Entre 10 y 20 días hábiles desde la recepción del informe a refutar. Acelerable con plazo procesal próximo."
+  - q: "¿Cómo se rebate un informe pericial contrario?"
+    a: 'Con un contrainforme que revisa metodología, datos y normativa, y con la ratificación en sala. Lo explicamos en <a href="/blog/impugnar-informe-pericial-contrainforme/">esta guía para impugnar una pericial contraria</a>.'
 band_title: "¿Necesitas este dictamen?"
 band_lede: "Consulta inicial sin coste. Plazo de entrega por contrato."
 ---

@@ -15,7 +15,7 @@ translations:
   - lang: es
     permalink: /humedades-filtraciones/
   - lang: en
-    permalink: /en/moisture-water-leakage/
+    permalink: /en/expert-witness-reports/damp-leaks/
 permalink: "/ca/humitats-filtracions/"
 svc_num: "EXP·04"
 svc_tag: "Patologia hídrica"
@@ -37,6 +37,8 @@ faq:
     a: "Depèn de la complexitat. Consulta inicial sense cost: avaluem el cas i emetem pressupost tancat per escrit."
   - q: "Poden detectar l'origen amb termografia?"
     a: "La termografia infraroja detecta diferències de temperatura que indiquen presència d'humitat oculta. Complementada amb higròmetre i proves d'estanquitat, permet localitzar l'origen amb fiabilitat."
+  - q: "Com sé si és condensació o capil·laritat?"
+    a: 'Es distingeixen per on i quan apareixen i pel seu aspecte. Ho detallem a <a href="/ca/blog/humitats-condensacio-diagnostic/">aquesta guia sobre humitats per condensació</a>.'
 band_title: "Necessites aquest dictamen?"
 band_lede: "Consulta inicial sense cost. Termini de lliurament per contracte."
 ---

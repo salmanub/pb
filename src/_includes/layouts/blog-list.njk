@@ -45,7 +45,7 @@
                 
                 {% set sortedPosts = currentPosts | sort(attribute='datePublished') | reverse %}
                 {% for post in sortedPosts %}
-                {% if not post.estado or post.estado == "publicado" %}
+                {% if post | isPublished %}
                 <article class="group/card relative flex flex-col h-full bg-white rounded-[2rem] overflow-hidden shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-teal-900/10 transition-all duration-500 border border-slate-100 hover:border-teal-200 hover:-translate-y-2 isolate"
                          itemprop="itemListElement" itemscope itemtype="https://schema.org/BlogPosting">
                     
