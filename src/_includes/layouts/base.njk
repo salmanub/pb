@@ -63,6 +63,28 @@ AGENTES §5: CSS inline (inyectado por transform), cero
   {# ── Favicons ── #}
   {% favicons %}
 
+  {# ── Speculation Rules: prefetch same-origin pages on hover/pointerdown ── #}
+  <script type="speculationrules">
+  {
+    "prefetch": [
+      {
+        "source": "document",
+        "eagerness": "moderate",
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/*\\?*" } },
+            { "not": { "selector_matches": "[rel~=nofollow]" } },
+            { "not": { "selector_matches": "[target=_blank]" } },
+            { "not": { "selector_matches": "[href^=tel]" } },
+            { "not": { "selector_matches": "[href^=mailto]" } }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
   {# ── CSS: inyectado inline por el transform de .eleventy.js (AGENTES §5) ── #}
   {# NO hay
   <link rel="stylesheet"> — cero CSS externo #}

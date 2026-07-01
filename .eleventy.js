@@ -37,6 +37,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets/favicons');
   eleventyConfig.addPassthroughCopy({ 'Design System/assets/icons': 'assets/icons' });
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
+  // Root-level icon probes (browsers request these at "/" regardless of <link> tags)
+  eleventyConfig.addPassthroughCopy({ 'Design System/assets/icons/favicon.svg': 'favicon.svg' });
+  eleventyConfig.addPassthroughCopy({ 'Design System/assets/icons/apple-touch-icon.png': 'apple-touch-icon.png' });
   eleventyConfig.addPassthroughCopy('src/site.webmanifest');
   eleventyConfig.addPassthroughCopy('src/_redirects');
   eleventyConfig.addPassthroughCopy('src/_headers');
