@@ -69,11 +69,11 @@
   Cache-Control: public, max-age=31536000, immutable
   Cross-Origin-Resource-Policy: same-site
 
-# Analytics (if needed)
-/gtm.js
-  Cache-Control: public, max-age=86400
+# Analytics — first-party GA4 proxy (see functions/gtag/js.js + functions/g/collect.js)
+/gtag/js
+  Cache-Control: public, max-age=3600
   Priority: High
-  
+
 /clarity.js
   Cache-Control: public, max-age=86400
   Priority: Low

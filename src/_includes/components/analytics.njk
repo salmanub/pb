@@ -5,16 +5,19 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
 
-    // Function to inject the GA script.
+    // Function to inject the GA script — served first-party via our own domain.
     function loadGA() {
         var script = document.createElement('script');
-        script.src = "https://www.googletagmanager.com/gtag/js?id={{ metadata.site.googleAnalyticsId }}";
+        script.src = "/gtag/js?id={{ metadata.site.googleAnalyticsId }}";
         script.async = true;
         document.head.appendChild(script);
 
         gtag('js', new Date());
         gtag('config', '{{ metadata.site.googleAnalyticsId }}', {
             'page_location': window.location.href,
+            // Beacons go to /g/collect on this origin (proxied to Google).
+            'transport_url': window.location.origin,
+            'first_party_collection': true,
             'linker': {
                 'domains': ['perito.barcelona', 'webpkgcache.com']
             }
