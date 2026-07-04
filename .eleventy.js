@@ -34,6 +34,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets/images');
   // JS is inlined by the inline-js transform — no passthrough needed
   eleventyConfig.addPassthroughCopy('src/assets/fonts');
+  // Served standalone so the Cloudflare PDF Worker can @import it (fonts from our own domain).
+  eleventyConfig.addPassthroughCopy('src/assets/css/fonts.css');
   eleventyConfig.addPassthroughCopy('src/assets/favicons');
   eleventyConfig.addPassthroughCopy({ 'Design System/assets/icons': 'assets/icons' });
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
