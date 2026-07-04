@@ -1,0 +1,19 @@
+{
+  "name": "vilardell-pdf",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Cloudflare Worker que renderiza HTML -> PDF (Browser Rendering) para facturas y presupuestos de Perito Barcelona.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "secret": "wrangler secret put RENDER_TOKEN",
+    "tail": "wrangler tail"
+  },
+  "dependencies": {
+    "@cloudflare/puppeteer": "^0.0.14"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}

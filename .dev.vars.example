@@ -2,5 +2,6 @@
 # Copy to .dev.vars and fill in real values.
 # https://developers.cloudflare.com/pages/functions/bindings/#environment-variables
 
-# ── Make.com webhook ──
-MAKE_WEBHOOK_URL=https://hook.eu2.make.com/kj6gdinjq1ck5wx7g8sjr81wloca8iul
+# ── Make.com webhooks (set as secrets in CF Pages dashboard) ──
+MAKE_WEBHOOK_PARTICULAR=https://hook.eu2.make.com/vv9km1t8qe8v0s1me7padt807ziuj6xu
+MAKE_WEBHOOK_PROFESIONAL=https://hook.eu2.make.com/kj6gdinjq1ck5wx7g8sjr81wloca8iul

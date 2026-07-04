@@ -8,15 +8,15 @@ eleventyNavigation:
   notshow: true
 translations:
   - lang: ca
-    permalink: /ca/contacte/
+    permalink: /ca/contacte/particular/
   - lang: en
-    permalink: /en/contact/
+    permalink: /en/contact/particular/
 permalink: "/contacto/particular/"
 breadcrumb_parent:
   label: "Contacto"
   url: "/contacto/"
 ---
-{# contacto/particular — Formulario guiado para particulares #}
+{# contacto/particular — Formulario para particulares #}
 <div itemscope itemtype="https://schema.org/Article" style="display: none;" aria-hidden="true"><meta itemprop="headline" content="{{ title }}"><meta itemprop="description" content="{{ description }}"><meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}"><div itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ metadata.author.name }}"></div><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"></div></div>
 {% set ui = es %}
 {% set heroTitle = "Cuéntanos<br>tu caso" %}
@@ -27,29 +27,83 @@ breadcrumb_parent:
 <section style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
 <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(28px,4vw,64px); align-items: start;" class="site-two">
 
-{# ── Formulario guiado (particular) ── #}
+{# ── Formulario (particular) ── #}
 <div>
 <div style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;">
 
 {# Header #}
-<div style="padding: 18px 24px 0;">
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+<div style="padding: 18px 24px; border-bottom: 1px solid var(--border-subtle);">
 <span style="font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);">Cuéntanos tu caso</span>
-<span id="intake-p-counter" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; color: var(--text-faint);">§ 01 / 04</span>
 </div>
-<div style="height: 2px; background: var(--stone-250, #d6d3cd); margin-top: 14px; border-radius: 1px; overflow: hidden;">
-<div id="intake-p-bar" style="height: 100%; width: 25%; background: var(--accent); transition: width 0.4s ease;"></div>
+
+{# Form #}
+<div id="intake-p-body" style="padding: 26px 24px 28px;">
+<form id="intake-p-form" novalidate style="display:flex;flex-direction:column;gap:16px;">
+
+<div>
+<span style="display:block;font-family:var(--font-sans);font-size:0.85rem;font-weight:500;color:var(--text-strong);margin-bottom:8px;">¿Quién eres?</span>
+<div style="display:flex;gap:10px;">
+<label style="flex:1;display:flex;align-items:center;gap:10px;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);cursor:pointer;font-family:var(--font-sans);font-size:0.95rem;color:var(--text-strong);"><input type="radio" name="tipo_cliente" value="particular" checked style="accent-color:var(--accent);">Particular</label>
+<label style="flex:1;display:flex;align-items:center;gap:10px;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);cursor:pointer;font-family:var(--font-sans);font-size:0.95rem;color:var(--text-strong);"><input type="radio" name="tipo_cliente" value="empresa" style="accent-color:var(--accent);">Empresa</label>
 </div>
 </div>
 
-{# Steps container #}
-<div id="intake-p-body" style="padding: 28px 24px 8px; min-height: 280px;">
+<div>
+<label for="ip-nombre" style="display:block;font-family:var(--font-sans);font-size:0.85rem;font-weight:500;color:var(--text-strong);margin-bottom:6px;">Nombre y apellidos</label>
+<input id="ip-nombre" name="nombre" type="text" required placeholder="Tu nombre" style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);outline:none;">
 </div>
 
-{# Footer #}
-<div id="intake-p-footer" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 24px 22px; border-top: 1px solid var(--border-subtle); margin-top: 8px;">
-<button id="intake-p-back" type="button" style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; color: var(--text-muted); background: transparent; border: none; cursor: pointer; padding: 8px 12px; visibility: hidden;">Atrás</button>
-<span id="intake-p-hint" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint);">Selecciona una opción</span>
+<div style="display:flex;gap:14px;flex-wrap:wrap;">
+<div style="flex:1;min-width:180px;">
+<label for="ip-email" style="display:block;font-family:var(--font-sans);font-size:0.85rem;font-weight:500;color:var(--text-strong);margin-bottom:6px;">Correo electrónico</label>
+<input id="ip-email" name="email" type="email" required placeholder="nombre@correo.com" style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);outline:none;">
+</div>
+<div style="flex:1;min-width:180px;">
+<label for="ip-telefono" style="display:block;font-family:var(--font-sans);font-size:0.85rem;font-weight:500;color:var(--text-strong);margin-bottom:6px;">Teléfono</label>
+<input id="ip-telefono" name="telefono" type="tel" required placeholder="+34 ___ ___ ___" style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);outline:none;">
+</div>
+</div>
+
+<div>
+<label for="ip-tipo" style="display:block;font-family:var(--font-sans);font-size:0.85rem;font-weight:500;color:var(--text-strong);margin-bottom:6px;">Tipo de problema</label>
+<select id="ip-tipo" name="tipo" required style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);outline:none;cursor:pointer;">
+<option value="" disabled selected>Selecciona…</option>
+<option value="vicios_ocultos">Vicios ocultos</option>
+<option value="humedades">Humedades o filtraciones</option>
+<option value="grietas_fisuras">Grietas o fisuras</option>
+<option value="otros">Otros</option>
+</select>
+</div>
+
+<div>
+<label for="ip-direccion" style="display:block;font-family:var(--font-sans);font-size:0.85rem;font-weight:500;color:var(--text-strong);margin-bottom:6px;">Dirección del inmueble</label>
+<input id="ip-direccion" name="direccion" type="text" required placeholder="Calle y número" style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);outline:none;">
+</div>
+
+<div style="display:flex;gap:14px;flex-wrap:wrap;">
+<div style="flex:0 0 34%;min-width:120px;">
+<label for="ip-cp" style="display:block;font-family:var(--font-sans);font-size:0.85rem;font-weight:500;color:var(--text-strong);margin-bottom:6px;">Código postal</label>
+<input id="ip-cp" name="cp" type="text" required inputmode="numeric" placeholder="08029" style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);outline:none;">
+</div>
+<div style="flex:1;min-width:150px;">
+<label for="ip-ciudad" style="display:block;font-family:var(--font-sans);font-size:0.85rem;font-weight:500;color:var(--text-strong);margin-bottom:6px;">Ciudad</label>
+<input id="ip-ciudad" name="ciudad" type="text" required placeholder="Barcelona" style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);outline:none;">
+</div>
+</div>
+
+<div>
+<label for="ip-descripcion" style="display:block;font-family:var(--font-sans);font-size:0.85rem;font-weight:500;color:var(--text-strong);margin-bottom:6px;">Explícanos qué ocurre <span style="color:var(--text-faint);font-weight:400;margin-left:6px;">(opcional)</span></label>
+<textarea id="ip-descripcion" name="descripcion" rows="4" placeholder="Cuéntanos qué está pasando en tu inmueble…" style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);resize:vertical;outline:none;"></textarea>
+</div>
+
+<input type="hidden" name="origen" value="perito.barcelona">
+<input type="hidden" name="presupuesto_estimado" value="">
+
+<p id="ip-error" role="alert" style="display:none;margin:0;color:#dc3545;font-family:var(--font-sans);font-size:0.85rem;line-height:1.45;"></p>
+
+<button type="submit" id="ip-submit" style="align-self:flex-start;font-family:var(--font-sans);font-size:0.95rem;font-weight:600;color:var(--accent-on,#fff);background:var(--accent);border:1.5px solid transparent;border-radius:var(--radius-sm);padding:13px 28px;cursor:pointer;line-height:1;letter-spacing:0.005em;transition:opacity 0.2s;">Enviar</button>
+
+</form>
 </div>
 
 </div>
@@ -86,168 +140,75 @@ breadcrumb_parent:
 <script>
 (function(){
   'use strict';
-  var STEPS = [
-    { key: 'problema', eyebrow: '§ 01 · Tu situación', type: 'choice',
-      question: '¿Qué está pasando en tu inmueble?',
-      helper: 'Elige lo que más se acerque. Después podrás detallarlo.',
-      options: ['Humedades o filtraciones', 'Grietas, fisuras o movimientos', 'Vicios ocultos tras comprar', 'Reforma u obra mal ejecutada', 'Otro problema constructivo'] },
-    { key: 'inmueble', eyebrow: '§ 02 · El inmueble', type: 'choice',
-      question: '¿De qué tipo de inmueble hablamos?',
-      options: ['Vivienda particular', 'Comunidad de propietarios', 'Local o nave', 'Edificio u obra pública'] },
-    { key: 'antiguedad', eyebrow: '§ 03 · Desde cuándo', type: 'choice',
-      question: '¿Desde cuándo aparece el problema?',
-      helper: 'Nos ayuda a valorar plazos de garantía y responsabilidad.',
-      options: ['Menos de 6 meses', 'Entre 6 meses y 2 años', 'Más de 2 años', 'No lo sé con certeza'] },
-    { key: 'contacto', eyebrow: '§ 04 · Contacto', type: 'fields',
-      question: '¿Cómo te contactamos?',
-      helper: 'Una primera consulta sin coste. Respondemos en 24 h laborables.',
-      fields: [
-        { name: 'nombre', label: 'Nombre y apellidos', placeholder: 'Tu nombre', required: true },
-        { name: 'direccion', label: 'Dirección del inmueble', placeholder: 'Calle y número', required: true },
-        { name: 'poblacion', label: 'Población', placeholder: 'Ej. Barcelona', required: true },
-        { name: 'email', label: 'Correo electrónico', type: 'email', placeholder: 'nombre@correo.com', required: true },
-        { name: 'telefono', label: 'Teléfono', type: 'tel', placeholder: '+34 ___ ___ ___', required: true },
-        { name: 'detalle', label: 'Cuéntanoslo en una línea', multiline: true, rows: 3, placeholder: 'Lo que creas relevante…', required: false }
-      ] }
-  ];
-  var TOTAL = STEPS.length, current = 0, answers = {}, done = false, doneHTML = '';
+  var form = document.getElementById('intake-p-form');
+  if(!form) return;
+  var submitBtn = document.getElementById('ip-submit');
+  var errorEl = document.getElementById('ip-error');
+  var WEBHOOK = '/api/contacto';
 
-  function pad(n){ return String(n).length < 2 ? '0'+n : String(n); }
-
-  function render(){
-    var body = document.getElementById('intake-p-body');
-    var bar = document.getElementById('intake-p-bar');
-    var counter = document.getElementById('intake-p-counter');
-    var backBtn = document.getElementById('intake-p-back');
-    var hint = document.getElementById('intake-p-hint');
-    var footer = document.getElementById('intake-p-footer');
-    if(!body) return;
-    body.innerHTML = '';
-    var pct = done ? 100 : Math.round(((current+1)/TOTAL)*100);
-    bar.style.width = pct+'%';
-    counter.textContent = '§ '+pad(done?TOTAL:current+1)+' / '+pad(TOTAL);
-    backBtn.style.visibility = current===0 ? 'hidden' : 'visible';
-
-    if(done){
-      footer.style.display = 'none';
-      body.innerHTML = doneHTML;
-      return;
-    }
-
-    var step = STEPS[current];
-    var html = '';
-    if(step.eyebrow) html += '<div style="font-family:var(--font-mono);font-size:var(--fs-mono-label,0.6875rem);letter-spacing:var(--tracking-label,0.14em);text-transform:uppercase;color:var(--text-accent);margin-bottom:12px;">'+step.eyebrow+'</div>';
-    html += '<h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;line-height:1.2;color:var(--text-strong);margin:0;">'+step.question+'</h3>';
-    if(step.helper) html += '<p style="margin:12px 0 0;color:var(--text-muted);font-size:0.95rem;line-height:1.55;">'+step.helper+'</p>';
-
-    if(step.type==='choice'){
-      hint.textContent = 'Selecciona una opción';
-      html += '<div style="display:flex;flex-direction:column;gap:10px;margin-top:22px;">';
-      step.options.forEach(function(opt,k){
-        var letter = String.fromCharCode(65+k);
-        var sel = answers[step.key]===opt;
-        html += '<button type="button" data-choice="'+k+'" style="display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:14px 16px;cursor:pointer;font-family:inherit;font-size:inherit;background:'+(sel?'var(--accent-tint)':'var(--surface-raised,#fff)')+';border:1.5px solid;border-color:'+(sel?'var(--accent)':'var(--border-hairline)')+';border-radius:var(--radius-sm);transition:background 0.15s ease,border-color 0.15s ease;">'+
-          '<span style="width:24px;height:24px;flex-shrink:0;border-radius:var(--radius-xs);border:1px solid;border-color:'+(sel?'var(--accent)':'var(--border-hairline)')+';background:'+(sel?'var(--accent)':'transparent')+';color:'+(sel?'var(--bone-100)':'var(--text-muted)')+';display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.7rem;font-weight:600;">'+letter+'</span>'+
-          '<span style="font-family:var(--font-sans);font-size:0.975rem;color:var(--text-strong);">'+opt+'</span>'+
-          '</button>';
-      });
-      html += '</div>';
-    }
-
-    if(step.type==='fields'){
-      hint.textContent = '';
-      hint.innerHTML = '<button type="button" id="intake-p-submit" style="font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--accent-on,#fff);background:var(--accent);border:1.5px solid transparent;border-radius:var(--radius-sm);padding:10px 20px;cursor:pointer;line-height:1;letter-spacing:0.005em;">Enviar solicitud</button>';
-      html += '<div style="display:flex;flex-direction:column;gap:16px;margin-top:22px;">';
-      step.fields.forEach(function(f){
-        var val = (answers[step.key]&&answers[step.key][f.name]) || '';
-        html += '<div><label for="ip-'+f.name+'" style="display:block;font-family:var(--font-sans);font-size:0.85rem;font-weight:500;color:var(--text-strong);margin-bottom:6px;">'+f.label+(f.required?'':'<span style="color:var(--text-faint);font-weight:400;margin-left:6px;">(opcional)</span>')+'</label>';
-        if(f.multiline){
-          html += '<textarea id="ip-'+f.name+'" name="'+f.name+'" rows="'+(f.rows||3)+'" placeholder="'+(f.placeholder||'')+'" '+(f.required?'required':'')+' style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);resize:vertical;outline:none;">'+val+'</textarea>';
-        } else {
-          html += '<input id="ip-'+f.name+'" type="'+(f.type||'text')+'" name="'+f.name+'" placeholder="'+(f.placeholder||'')+'" value="'+val+'" '+(f.required?'required':'')+' style="width:100%;box-sizing:border-box;font-family:var(--font-sans);font-size:0.95rem;padding:12px 14px;border:1.5px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-raised,#fff);color:var(--text-strong);outline:none;">';
-        }
-        html += '</div>';
-      });
-      html += '</div>';
-    }
-
-    body.innerHTML = html;
-
-    /* Bind choice buttons */
-    body.querySelectorAll('[data-choice]').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        var idx = parseInt(btn.getAttribute('data-choice'));
-        answers[step.key] = step.options[idx];
-        setTimeout(function(){ if(current<TOTAL-1){current++;render();} }, 240);
-        render();
-      });
-    });
-
-    /* Bind field inputs */
-    body.querySelectorAll('input,textarea').forEach(function(inp){
-      inp.addEventListener('input', function(){
-        if(!answers[step.key]) answers[step.key]={};
-        answers[step.key][inp.name] = inp.value;
-      });
-      inp.addEventListener('focus', function(){ inp.style.borderColor='var(--accent)'; });
-      inp.addEventListener('blur', function(){ inp.style.borderColor='var(--border-hairline)'; });
-    });
-
-    /* Bind submit */
-    var submitBtn = document.getElementById('intake-p-submit');
-    if(submitBtn){
-      submitBtn.addEventListener('click', function(){
-        var contactData = answers.contacto || {};
-        var valid = step.fields.every(function(f){
-          if(!f.required) return true;
-          var v = contactData[f.name];
-          return v && v.trim().length > 0;
-        });
-        if(!valid){ alert('Por favor, completa los campos obligatorios.'); return; }
-        submitForm();
-      });
-    }
-  }
-
-  function submitForm(){
-    var contactData = answers.contacto || {};
-    var payload = {
-      tipo_cliente: 'particular',
-      lang: 'es',
-      nombre: contactData.nombre || '',
-      email: contactData.email || '',
-      telefono: contactData.telefono || '',
-      direccion: contactData.direccion || '',
-      ciudad: contactData.poblacion || '',
-      empresa: '',
-      cargo: '',
-      problema: answers.problema || '',
-      inmueble: answers.inmueble || '',
-      importe: answers.antiguedad || '',
-      procesal: '',
-      detalle: contactData.detalle || '',
-      origen: 'perito-encargos',
-      timestamp: new Date().toISOString()
-    };
-    var mailto = 'mailto:{{ metadata.company.email }}?subject=' + encodeURIComponent('Consulta web — Particular — ' + (contactData.nombre || '')) + '&body=' + encodeURIComponent('Nombre: ' + (contactData.nombre||'') + '\nPoblación: ' + (contactData.poblacion||'') + '\nEmail: ' + (contactData.email||'') + '\nTeléfono: ' + (contactData.telefono||'') + '\nProblema: ' + (answers.problema||'') + '\nInmueble: ' + (answers.inmueble||'') + '\nAntigüedad: ' + (answers.antiguedad||'') + '\n\nDetalle:\n' + (contactData.detalle||''));
-    var bd = document.getElementById('intake-p-body');
-    if(bd) bd.innerHTML = '<div style="text-align:center;padding:40px 0;"><div style="width:36px;height:36px;border:3px solid var(--border-hairline);border-top-color:var(--accent);border-radius:50%;margin:0 auto;animation:spin 0.8s linear infinite;"></div><p style="margin:16px 0 0;color:var(--text-muted);font-size:0.95rem;">Enviando…</p></div><style>@keyframes spin{to{transform:rotate(360deg)}}</style>';
-    var ft = document.getElementById('intake-p-footer'); if(ft) ft.style.display = 'none';
-    var ctrl = new AbortController(); var timer = setTimeout(function(){ ctrl.abort(); }, 10000);
-    fetch('https://hook.eu2.make.com/kj6gdinjq1ck5wx7g8sjr81wloca8iul', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:ctrl.signal})
-      .then(function(r){ clearTimeout(timer); if(!r.ok) throw new Error('HTTP '+r.status); done=true; render(); setTimeout(function(){ window.location.href='/gracias/'; }, 2500); })
-      .catch(function(){
-        clearTimeout(timer);
-        var body = document.getElementById('intake-p-body');
-        if(body) body.innerHTML = '<style>@keyframes errorSlideIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes errorPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}</style><div style="padding:20px 0;animation:errorSlideIn 0.4s ease-out;"><div style="text-align:center;margin-bottom:24px;"><div style="width:52px;height:52px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;background:rgba(220,53,69,0.1);animation:errorPulse 1.5s ease-in-out 1;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dc3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;margin:16px 0 0;color:var(--text-strong);">No se ha podido enviar</h3><p style="margin:8px auto 0;max-width:38ch;color:var(--text-muted);font-size:0.9rem;line-height:1.55;">Tus datos están guardados. Usa una de estas opciones:</p></div><div style="display:flex;flex-direction:column;gap:10px;"><a href="' + mailto + '" style="display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:var(--radius-sm);border:1.5px solid var(--accent);background:var(--accent);text-decoration:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-on,#fff)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span style="flex:1;"><span style="display:block;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--accent-on,#fff);">Abrir email con tus datos</span><span style="display:block;font-family:var(--font-mono);font-size:0.7rem;color:rgba(255,255,255,0.7);margin-top:2px;">{{ metadata.company.email }}</span></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a><a href="tel:+34614194985" style="display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:var(--radius-sm);border:1.5px solid var(--border-hairline);background:var(--surface-raised,#fff);text-decoration:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span style="flex:1;"><span style="display:block;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--text-strong);">Llamar ahora</span><span style="display:block;font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);margin-top:2px;">614 194 985</span></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a></div><button type="button" onclick="location.reload()" style="display:block;width:100%;margin-top:16px;padding:10px;font-family:var(--font-sans);font-size:0.8rem;font-weight:500;color:var(--text-muted);background:transparent;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:3px;">Reintentar</button></div>';
-      });
-  }
-
-  document.getElementById('intake-p-back').addEventListener('click', function(){
-    if(current>0){ current--; render(); }
+  form.querySelectorAll('input,select,textarea').forEach(function(inp){
+    if(inp.type==='radio') return;
+    inp.addEventListener('focus', function(){ inp.style.borderColor='var(--accent)'; });
+    inp.addEventListener('blur', function(){ inp.style.borderColor='var(--border-hairline)'; });
   });
 
-  render();
+  function showError(msg){ errorEl.textContent = msg; errorEl.style.display='block'; }
+  function clearError(){ errorEl.style.display='none'; errorEl.textContent=''; }
+  function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    clearError();
+    var checked = form.querySelector('input[name="tipo_cliente"]:checked');
+    var data = {
+      nombre: form.nombre.value.trim(),
+      email: form.email.value.trim(),
+      telefono: form.telefono.value.trim(),
+      tipo: form.tipo.value,
+      tipo_cliente: checked ? checked.value : 'particular',
+      direccion: form.direccion.value.trim(),
+      cp: form.cp.value.trim(),
+      ciudad: form.ciudad.value.trim(),
+      descripcion: form.descripcion.value.trim(),
+      perfil: 'particular',
+      origen: 'perito.barcelona',
+      presupuesto_estimado: ''
+    };
+
+    if(!data.nombre){ return showError('Indica tu nombre y apellidos.'); }
+    if(!validEmail(data.email)){ return showError('Introduce un correo electrónico válido.'); }
+    if(!data.telefono){ return showError('Indica un teléfono de contacto.'); }
+    if(!data.tipo){ return showError('Selecciona el tipo de problema.'); }
+    if(!data.direccion){ return showError('Indica la dirección del inmueble.'); }
+    if(!data.cp){ return showError('Indica el código postal.'); }
+    if(!data.ciudad){ return showError('Indica la ciudad.'); }
+
+    var originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando…';
+    submitBtn.style.opacity = '0.7';
+    submitBtn.style.cursor = 'default';
+
+    fetch(WEBHOOK, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) })
+      .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); showSuccess(); })
+      .catch(function(){
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        submitBtn.style.opacity = '1';
+        submitBtn.style.cursor = 'pointer';
+        showError('No se ha podido enviar. Revisa tu conexión e inténtalo de nuevo.');
+      });
+  });
+
+  function showSuccess(){
+    var body = document.getElementById('intake-p-body');
+    if(!body) return;
+    body.innerHTML = '<div style="text-align:center;padding:28px 8px 32px;">'+
+      '<div style="width:52px;height:52px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;background:rgba(30,100,60,0.09);">'+
+      '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>'+
+      '<h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;margin:20px 0 0;color:var(--text-strong);">Recibido</h3>'+
+      '<p style="margin:12px auto 0;max-width:42ch;color:var(--text-muted);line-height:1.6;">En unos minutos tendrás un email con tu propuesta y las opciones de pago.</p>'+
+      '</div>';
+  }
 })();
 </script>
-

@@ -1,14 +1,14 @@
 /**
  * POST /api/contacto — Cloudflare Pages Function (perito.barcelona)
  *
- * Receives form data from the intake modals (JSON body from fetch()),
- * validates required fields, discards bots via honeypot, enriches the
- * payload with metadata, and forwards to Make.com with retry.
+ * Proxy to Make.com webhooks. Routes to the correct webhook based on
+ * the "perfil" field in the payload:
+ *   - perfil = "particular" → env.MAKE_WEBHOOK_PARTICULAR
+ *   - perfil = "profesional" (or any other / missing) → env.MAKE_WEBHOOK_PROFESIONAL
  *
- * Returns JSON response for the client-side handler.
- *
- * Env vars (set in Cloudflare Pages dashboard):
- *   MAKE_WEBHOOK_URL — URL del webhook de Make.com
+ * Env vars (set in Cloudflare Pages → Settings → Environment variables):
+ *   MAKE_WEBHOOK_PARTICULAR   — webhook URL for homeowner forms
+ *   MAKE_WEBHOOK_PROFESIONAL  — webhook URL for professional forms
  */
 
 const CORS_HEADERS = {
@@ -82,14 +82,17 @@ export async function onRequestPost(context) {
       ua: request.headers.get('user-agent') || '',
     };
 
-    // Forward to Make webhook
-    const webhookUrl = env && env.MAKE_WEBHOOK_URL;
+    // Route to the correct webhook based on perfil
+    const perfil = String(data.perfil || '').toLowerCase();
+    const webhookUrl = perfil === 'particular'
+      ? (env && env.MAKE_WEBHOOK_PARTICULAR)
+      : (env && env.MAKE_WEBHOOK_PROFESIONAL);
+
     if (!webhookUrl) {
-      console.error('[contacto] MAKE_WEBHOOK_URL not configured. Payload:', JSON.stringify(payload));
-      // Still return success to client — the lead is "lost" but the error
-      // is in server logs for the admin to see. Better UX than failing.
-      return new Response(JSON.stringify({ ok: true, warning: 'webhook not configured' }), {
-        status: 200,
+      const missing = perfil === 'particular' ? 'MAKE_WEBHOOK_PARTICULAR' : 'MAKE_WEBHOOK_PROFESIONAL';
+      console.error(`[contacto] ${missing} not configured. Payload:`, JSON.stringify(payload));
+      return new Response(JSON.stringify({ ok: false, error: 'webhook not configured' }), {
+        status: 500,
         headers: CORS_HEADERS,
       });
     }
@@ -97,7 +100,6 @@ export async function onRequestPost(context) {
     const sent = await forwardWithRetry(webhookUrl, payload);
 
     if (!sent) {
-      // Retries exhausted — respond with error so client shows mailto fallback
       return new Response(JSON.stringify({ ok: false, error: 'webhook delivery failed' }), {
         status: 502,
         headers: CORS_HEADERS,

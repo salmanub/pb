@@ -160,7 +160,7 @@
 
         const steps = Array.from(formWrapper.querySelectorAll('.typeform-step'));
         const progress = document.getElementById('typeform-progress');
-        const webhookUrl = 'https://hook.eu2.make.com/kj6gdinjq1ck5wx7g8sjr81wloca8iul';
+        const webhookUrl = '/api/contacto';
         let currentStep = 0;
         
         const questionSteps = steps.filter(step => step.dataset.step && !['loading', 'success', 'error'].includes(step.dataset.step));
@@ -268,7 +268,7 @@
             showStep(steps.findIndex(s => s.id === 'loading-state'));
             
             const formDataToSend = {
-                tipo_cliente: 'particular',
+                tipo_cliente: 'particular', perfil: 'particular',
                 lang: '{{ lang | default("es") }}',
                 nombre: document.getElementById('nombre').value,
                 email: document.getElementById('email').value,

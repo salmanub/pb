@@ -575,7 +575,7 @@
     var caso = document.getElementById('home-c').value.trim();
 
     var payload = {
-      tipo_cliente: 'particular',
+      tipo_cliente: 'particular', perfil: 'particular',
       lang: lang,
       nombre: nombre,
       email: email,
@@ -609,7 +609,7 @@
     var ctrl = new AbortController();
     var timer = setTimeout(function(){ ctrl.abort(); }, 10000);
 
-    fetch('https://hook.eu2.make.com/kj6gdinjq1ck5wx7g8sjr81wloca8iul', {
+    fetch('/api/contacto', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),

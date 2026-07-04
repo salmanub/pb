@@ -1,0 +1,10 @@
+name = "vilardell-pdf"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Binding de Browser Rendering (headless browser)
+browser = { binding = "BROWSER" }
+
+# El token secreto NO va aquí. Se guarda con:
+#   npx wrangler secret put RENDER_TOKEN
