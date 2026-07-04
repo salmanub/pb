@@ -6,5 +6,12 @@ compatibility_flags = ["nodejs_compat"]
 # Binding de Browser Rendering (headless browser)
 browser = { binding = "BROWSER" }
 
+# Ruta en tu propio dominio: perito.barcelona/pdf/* -> este Worker.
+# El resto del sitio lo sigue sirviendo Cloudflare Pages (las rutas de
+# Workers tienen prioridad sobre Pages solo para el path que coincide).
+routes = [
+  { pattern = "perito.barcelona/pdf/*", zone_name = "perito.barcelona" }
+]
+
 # El token secreto NO va aquí. Se guarda con:
 #   npx wrangler secret put RENDER_TOKEN
