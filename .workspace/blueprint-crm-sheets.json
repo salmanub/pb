@@ -1,0 +1,174 @@
+{
+  "name": "Leads → CRM (Sheets directo)",
+  "flow": [
+    {
+      "id": 1,
+      "module": "gateway:CustomWebHook",
+      "version": 1,
+      "mapper": {},
+      "metadata": {
+        "restore": { "parameters": { "hook": { "data": { "editable": "true" }, "label": "Leads Claude webhook" } } },
+        "designer": { "x": 0, "y": 0 },
+        "interface": [
+          { "name": "origen", "type": "text" },
+          { "name": "perfil", "type": "text" },
+          { "name": "nombre", "type": "text" },
+          { "name": "name", "type": "text" },
+          { "name": "email", "type": "text" },
+          { "name": "telefono", "type": "text" },
+          { "name": "phone", "type": "text" },
+          { "name": "poblacion", "type": "text" },
+          { "name": "ciudad", "type": "text" },
+          { "name": "direccion", "type": "text" },
+          { "name": "address", "type": "text" },
+          { "name": "nif", "type": "text" },
+          { "name": "tipo_cliente", "type": "text" },
+          { "name": "descripcion", "type": "text" },
+          { "name": "detalle", "type": "text" },
+          { "name": "mensaje", "type": "text" },
+          { "name": "problema", "type": "text" },
+          { "name": "lang", "type": "text" }
+        ]
+      },
+      "parameters": { "hook": 1260673, "maxResults": 1 }
+    },
+    {
+      "id": 2,
+      "module": "builtin:BasicRouter",
+      "version": 1,
+      "mapper": null,
+      "metadata": { "designer": { "x": 300, "y": 0 } },
+      "routes": [
+        {
+          "flow": [
+            {
+              "id": 10,
+              "module": "google-sheets:addRow",
+              "version": 2,
+              "mapper": {
+                "from": "drive", "mode": "select", "sheetId": "Perito_BCN",
+                "spreadsheetId": "TU_CRM_SPREADSHEET_ID",
+                "includesHeaders": true, "insertDataOption": "INSERT_ROWS", "tableFirstRow": "A1",
+                "values": {
+                  "0": "",
+                  "1": "{{formatDate(now; \"DD/MM/YYYY HH:mm\")}}",
+                  "3": "Lead",
+                  "4": "{{if(1.nombre; 1.nombre; 1.name)}}",
+                  "5": "{{1.email}}",
+                  "6": "{{if(1.telefono; 1.telefono; 1.phone)}}",
+                  "7": "{{if(1.descripcion; 1.descripcion; if(1.detalle; 1.detalle; if(1.mensaje; 1.mensaje; 1.problema)))}}",
+                  "8": "{{if(1.direccion; 1.direccion; 1.address)}}",
+                  "16": "{{1.tipo_cliente}}",
+                  "17": "{{1.nif}}",
+                  "26": "{{if(1.poblacion; 1.poblacion; 1.ciudad)}}",
+                  "35": "{{if(1.poblacion; 1.poblacion; 1.ciudad)}}"
+                }
+              },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "google-restricted" }, "label": "Google Sheets" } } }, "designer": { "x": 600, "y": -300 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:google-restricted", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 3533384 }
+            }
+          ],
+          "filter": { "name": "→ perito", "conditions": [[
+            { "a": "{{if(1.origen; 1.origen; 1.perfil)}}", "b": "refuerzofibra", "o": "text:notcontain" },
+            { "a": "{{if(1.origen; 1.origen; 1.perfil)}}", "b": "urbenis", "o": "text:notcontain" },
+            { "a": "{{if(1.origen; 1.origen; 1.perfil)}}", "b": "navefit", "o": "text:notcontain" }
+          ]] }
+        },
+        {
+          "flow": [
+            {
+              "id": 20,
+              "module": "google-sheets:addRow",
+              "version": 2,
+              "mapper": {
+                "from": "drive", "mode": "select", "sheetId": "Refuerzo_Fibra",
+                "spreadsheetId": "TU_CRM_SPREADSHEET_ID",
+                "includesHeaders": true, "insertDataOption": "INSERT_ROWS", "tableFirstRow": "A1",
+                "values": {
+                  "0": "", "1": "{{formatDate(now; \"DD/MM/YYYY HH:mm\")}}", "3": "Lead",
+                  "4": "{{if(1.nombre; 1.nombre; 1.name)}}", "5": "{{1.email}}",
+                  "6": "{{if(1.telefono; 1.telefono; 1.phone)}}",
+                  "7": "{{if(1.descripcion; 1.descripcion; if(1.detalle; 1.detalle; if(1.mensaje; 1.mensaje; 1.problema)))}}",
+                  "8": "{{if(1.direccion; 1.direccion; 1.address)}}",
+                  "16": "{{1.tipo_cliente}}", "17": "{{1.nif}}",
+                  "26": "{{if(1.poblacion; 1.poblacion; 1.ciudad)}}",
+                  "35": "{{if(1.poblacion; 1.poblacion; 1.ciudad)}}"
+                }
+              },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "google-restricted" }, "label": "Google Sheets" } } }, "designer": { "x": 600, "y": 0 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:google-restricted", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 3533384 }
+            }
+          ],
+          "filter": { "name": "→ refuerzo", "conditions": [[{ "a": "{{1.origen}}", "b": "refuerzofibra", "o": "text:contain" }]] }
+        },
+        {
+          "flow": [
+            {
+              "id": 30,
+              "module": "google-sheets:addRow",
+              "version": 2,
+              "mapper": {
+                "from": "drive", "mode": "select", "sheetId": "Urbenis",
+                "spreadsheetId": "TU_CRM_SPREADSHEET_ID",
+                "includesHeaders": true, "insertDataOption": "INSERT_ROWS", "tableFirstRow": "A1",
+                "values": {
+                  "0": "", "1": "{{formatDate(now; \"DD/MM/YYYY HH:mm\")}}", "3": "Lead",
+                  "4": "{{if(1.nombre; 1.nombre; 1.name)}}", "5": "{{1.email}}",
+                  "6": "{{if(1.telefono; 1.telefono; 1.phone)}}",
+                  "7": "{{if(1.descripcion; 1.descripcion; if(1.detalle; 1.detalle; if(1.mensaje; 1.mensaje; 1.problema)))}}",
+                  "8": "{{if(1.direccion; 1.direccion; 1.address)}}",
+                  "16": "{{1.tipo_cliente}}", "17": "{{1.nif}}",
+                  "26": "{{if(1.poblacion; 1.poblacion; 1.ciudad)}}",
+                  "35": "{{if(1.poblacion; 1.poblacion; 1.ciudad)}}"
+                }
+              },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "google-restricted" }, "label": "Google Sheets" } } }, "designer": { "x": 600, "y": 300 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:google-restricted", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 3533384 }
+            }
+          ],
+          "filter": { "name": "→ urbenis", "conditions": [[{ "a": "{{1.origen}}", "b": "urbenis", "o": "text:contain" }]] }
+        },
+        {
+          "flow": [
+            {
+              "id": 40,
+              "module": "google-sheets:addRow",
+              "version": 2,
+              "mapper": {
+                "from": "drive", "mode": "select", "sheetId": "NaveFit",
+                "spreadsheetId": "TU_CRM_SPREADSHEET_ID",
+                "includesHeaders": true, "insertDataOption": "INSERT_ROWS", "tableFirstRow": "A1",
+                "values": {
+                  "0": "", "1": "{{formatDate(now; \"DD/MM/YYYY HH:mm\")}}", "3": "Lead",
+                  "4": "{{if(1.nombre; 1.nombre; 1.name)}}", "5": "{{1.email}}",
+                  "6": "{{if(1.telefono; 1.telefono; 1.phone)}}",
+                  "7": "{{if(1.descripcion; 1.descripcion; if(1.detalle; 1.detalle; if(1.mensaje; 1.mensaje; 1.problema)))}}",
+                  "8": "{{if(1.direccion; 1.direccion; 1.address)}}",
+                  "16": "{{1.tipo_cliente}}", "17": "{{1.nif}}",
+                  "26": "{{if(1.poblacion; 1.poblacion; 1.ciudad)}}",
+                  "35": "{{if(1.poblacion; 1.poblacion; 1.ciudad)}}"
+                }
+              },
+              "metadata": { "restore": { "parameters": { "__IMTCONN__": { "data": { "scoped": "true", "connection": "google-restricted" }, "label": "Google Sheets" } } }, "designer": { "x": 600, "y": 600 }, "parameters": [{ "name": "__IMTCONN__", "type": "account:google-restricted", "label": "Connection", "required": true }] },
+              "parameters": { "__IMTCONN__": 3533384 }
+            }
+          ],
+          "filter": { "name": "→ navefit", "conditions": [[{ "a": "{{1.origen}}", "b": "navefit", "o": "text:contain" }]] }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "module": "gateway:WebhookRespond",
+      "version": 1,
+      "mapper": { "body": "OK", "status": "200", "headers": [] },
+      "metadata": { "designer": { "x": 900, "y": 0 } }
+    }
+  ],
+  "metadata": {
+    "instant": true,
+    "version": 1,
+    "designer": { "orphans": [] },
+    "scenario": { "dlq": false, "dataloss": false, "maxErrors": 3, "autoCommit": true, "roundtrips": 1, "sequential": false, "confidential": false, "freshVariables": false, "autoCommitTriggerLast": true }
+  }
+}

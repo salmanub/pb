@@ -248,8 +248,86 @@
   }
 
   /* ── Submit ──────────────────────────────────────────── */
+  function detectLang() {
+    var p = (window.location && window.location.pathname) || '';
+    if (p.indexOf('/ca/') !== -1) return 'ca';
+    if (p.indexOf('/en/') !== -1) return 'en';
+    return 'es';
+  }
+
+  function buildPayload() {
+    var c = answers.contacto || {};
+    var descripcion = [
+      answers.problema || '',
+      answers.inmueble ? 'Inmueble: ' + answers.inmueble : '',
+      answers.antiguedad ? 'Antigüedad: ' + answers.antiguedad : '',
+      c.detalle || ''
+    ].filter(Boolean).join('. ');
+    return {
+      origen: 'perito.barcelona',
+      perfil: perfil || 'particular',
+      nombre: c.nombre || '',
+      poblacion: c.poblacion || '',
+      email: c.email || '',
+      telefono: c.telefono || '',
+      descripcion: descripcion,
+      lang: detectLang(),
+      source: 'perito.barcelona (intake modal)'
+    };
+  }
+
   function submitForm() {
     var contactData = answers.contacto || {};
+    var payload = buildPayload();
+
+    /* Pantalla de "enviando" mientras se hace el POST */
+    doneHTML = buildSendingHTML();
+    done = true;
+    render();
+
+    var handled = false;
+    var timeout = setTimeout(function () { if (!handled) { handled = true; showFallback(contactData); } }, 9000);
+
+    try {
+      fetch('/api/contacto', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(function (res) {
+        return res.json().catch(function () { return { ok: res.ok }; });
+      }).then(function (data) {
+        if (handled) return; handled = true; clearTimeout(timeout);
+        if (data && data.ok) { doneHTML = buildSuccessHTML(); render(); }
+        else { showFallback(contactData); }
+      }).catch(function () {
+        if (handled) return; handled = true; clearTimeout(timeout);
+        showFallback(contactData);
+      });
+    } catch (e) {
+      if (!handled) { handled = true; clearTimeout(timeout); showFallback(contactData); }
+    }
+  }
+
+  function buildSendingHTML() {
+    return '<div style="padding:40px 0;text-align:center;">' +
+      '<div style="width:40px;height:40px;margin:0 auto 18px;border:3px solid var(--border-hairline);border-top-color:var(--accent);border-radius:50%;animation:intake-spin 0.8s linear infinite;"></div>' +
+      '<p style="color:var(--text-muted);font-size:0.95rem;">Enviando tu consulta…</p>' +
+      '<style>@keyframes intake-spin{to{transform:rotate(360deg)}}</style>' +
+      '</div>';
+  }
+
+  function buildSuccessHTML() {
+    return '<div style="padding:20px 0;text-align:center;">' +
+      '<div style="width:52px;height:52px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;background:rgba(28,122,74,0.1);">' +
+        '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1C7A4A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
+      '</div>' +
+      '<h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;margin:16px 0 0;color:var(--text-strong);">Consulta recibida</h3>' +
+      '<p style="margin:10px auto 0;max-width:40ch;color:var(--text-muted);font-size:0.95rem;line-height:1.55;">Gracias. Hemos recibido tu caso y te responderemos en un plazo de <strong>24 horas laborables</strong>.</p>' +
+      '<button type="button" onclick="window.closeIntake()" style="margin-top:24px;padding:11px 28px;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--accent-on,#fff);background:var(--accent);border:none;border-radius:var(--radius-sm);cursor:pointer;">Cerrar</button>' +
+      '</div>';
+  }
+
+  function showFallback(contactData) {
     var subject = encodeURIComponent('Consulta web — ' + (perfil === 'pro' ? 'Profesional' : 'Particular') + ' — ' + (contactData.nombre || ''));
     var bodyParts = 'CONSULTA WEB (perito.barcelona)\n========================================\n\n' +
       'Nombre: ' + (contactData.nombre || '') + '\n' +
