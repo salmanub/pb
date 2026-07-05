@@ -2,7 +2,6 @@
  * POST /api/contacto — Cloudflare Pages Function (perito.barcelona)
  *
  * Dual-write: envia al CRM (Apps Script) directamente Y a Make.com.
- * Si Make.com no está configurado, el lead llega igualmente al CRM.
  *
  * Env vars (Cloudflare Pages → Settings → Environment variables):
  *   CRM_WEBAPP_URL             — URL del web app de Apps Script (doPost)
@@ -17,41 +16,66 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Headers': 'Content-Type',
 };
 
-async function postWithRetry(url, payload, attempts = 3) {
+/**
+ * POST to Google Apps Script web app.
+ * GAS redirects POST→GET (losing body), so we use a workaround:
+ * encode the payload as a URL query parameter that doGet can also read,
+ * OR use the Apps Script /exec endpoint which accepts the POST after redirect.
+ *
+ * Strategy: just use fetch with redirect:'follow' and check the response text.
+ * Even if the redirect changes POST to GET, we verify the actual response.
+ */
+async function postToGAS(url, payload, attempts = 3) {
   const body = JSON.stringify(payload);
-  const headers = { 'Content-Type': 'application/json' };
   let lastErr;
 
   for (let i = 0; i < attempts; i++) {
     try {
-      let target = url;
-      let res;
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain' },
+        body: body,
+        redirect: 'follow',
+      });
 
-      // Follow up to 10 redirects manually, preserving POST method
-      for (let hop = 0; hop < 10; hop++) {
-        res = await fetch(target, {
-          method: 'POST',
-          headers,
-          body,
-          redirect: 'manual',
-        });
-
-        if (res.status >= 300 && res.status < 400) {
-          const location = res.headers.get('location');
-          if (location) {
-            target = location;
-            continue;
-          }
-        }
-        break; // not a redirect, we have the final response
+      if (!res.ok) {
+        lastErr = new Error(`HTTP ${res.status}`);
+        continue;
       }
 
+      // Check response body for Apps Script JSON
+      const text = await res.text();
+      try {
+        const json = JSON.parse(text);
+        if (json.ok) return { ok: true, status: res.status, data: json };
+        lastErr = new Error(json.error || 'CRM returned ok:false');
+      } catch (_) {
+        // Response is HTML (redirect landed on a page), not JSON → POST was lost
+        lastErr = new Error('Response was not JSON (redirect lost POST body)');
+      }
+    } catch (err) {
+      lastErr = err;
+    }
+    if (i < attempts - 1) await new Promise((r) => setTimeout(r, 500 * (i + 1)));
+  }
+  return { ok: false, error: lastErr && lastErr.message };
+}
+
+async function postToWebhook(url, payload, attempts = 2) {
+  let lastErr;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
       if (res.ok) return { ok: true, status: res.status };
       lastErr = new Error(`responded ${res.status}`);
     } catch (err) {
       lastErr = err;
     }
-    if (i < attempts - 1) await new Promise((r) => setTimeout(r, 400 * (i + 1)));
+    if (i < attempts - 1) await new Promise((r) => setTimeout(r, 400));
   }
   return { ok: false, error: lastErr && lastErr.message };
 }
@@ -74,15 +98,12 @@ export async function onRequestPost(context) {
       data = Object.fromEntries(formData.entries());
     }
 
-    // Honeypot: hidden field "website" — if filled, it's a bot → fake success
+    // Honeypot
     if (data.website && String(data.website).trim() !== '') {
-      return new Response(JSON.stringify({ ok: true }), {
-        status: 200,
-        headers: CORS_HEADERS,
-      });
+      return new Response(JSON.stringify({ ok: true }), { status: 200, headers: CORS_HEADERS });
     }
 
-    // Detect language from Referer or payload
+    // Detect language
     const referer = request.headers.get('referer') || '';
     let lang = data.lang || 'es';
     if (!data.lang) {
@@ -90,7 +111,7 @@ export async function onRequestPost(context) {
       else if (referer.includes('/en/')) lang = 'en';
     }
 
-    // Build enriched payload
+    // Enriched payload
     const payload = {
       ...data,
       lang,
@@ -100,21 +121,21 @@ export async function onRequestPost(context) {
       ua: request.headers.get('user-agent') || '',
     };
 
-    // ── 1. Envío DIRECTO al CRM (Apps Script web app) ──────────────
+    // ── 1. Send to CRM (Apps Script web app) ──────────────────
     const crmUrl = env && env.CRM_WEBAPP_URL;
     let crmOk = false;
 
     if (crmUrl) {
-      const crmResult = await postWithRetry(crmUrl, payload);
+      const crmResult = await postToGAS(crmUrl, payload);
       crmOk = crmResult.ok;
       if (!crmOk) {
-        console.error('[contacto] CRM direct failed:', crmResult.error);
+        console.error('[contacto] CRM failed:', crmResult.error);
       }
     } else {
-      console.warn('[contacto] CRM_WEBAPP_URL not configured — leads will only go to Make.com');
+      console.warn('[contacto] CRM_WEBAPP_URL not set');
     }
 
-    // ── 2. Envío a Make.com (complementario, para automatizaciones) ─
+    // ── 2. Send to Make.com (optional) ────────────────────────
     const perfil = String(data.perfil || '').toLowerCase();
     const webhookUrl = perfil === 'particular'
       ? (env && env.MAKE_WEBHOOK_PARTICULAR)
@@ -122,36 +143,30 @@ export async function onRequestPost(context) {
 
     let makeOk = false;
     if (webhookUrl) {
-      const makeResult = await postWithRetry(webhookUrl, payload);
+      const makeResult = await postToWebhook(webhookUrl, payload);
       makeOk = makeResult.ok;
-      if (!makeOk) {
-        console.error('[contacto] Make.com webhook failed:', makeResult.error);
-      }
+      if (!makeOk) console.error('[contacto] Make.com failed:', makeResult.error);
     }
 
-    // ── Resultado ──────────────────────────────────────────────────
+    // ── Result ────────────────────────────────────────────────
     if (!crmOk && !makeOk) {
-      // Ninguno de los dos destinos funcionó
       const reason = !crmUrl && !webhookUrl
         ? 'No CRM_WEBAPP_URL nor MAKE_WEBHOOK configured'
         : 'Both CRM and Make.com delivery failed';
-      console.error('[contacto] TOTAL FAILURE:', reason, JSON.stringify(payload));
+      console.error('[contacto] TOTAL FAILURE:', reason);
       return new Response(JSON.stringify({ ok: false, error: reason }), {
-        status: 502,
-        headers: CORS_HEADERS,
+        status: 502, headers: CORS_HEADERS,
       });
     }
 
     return new Response(JSON.stringify({ ok: true, crm: crmOk, make: makeOk }), {
-      status: 200,
-      headers: CORS_HEADERS,
+      status: 200, headers: CORS_HEADERS,
     });
 
   } catch (err) {
     console.error('contacto error:', err);
     return new Response(JSON.stringify({ ok: false, error: err.message }), {
-      status: 500,
-      headers: CORS_HEADERS,
+      status: 500, headers: CORS_HEADERS,
     });
   }
 }
