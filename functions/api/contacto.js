@@ -1,14 +1,13 @@
 /**
  * POST /api/contacto — Cloudflare Pages Function (perito.barcelona)
  *
- * Proxy to Make.com webhooks. Routes to the correct webhook based on
- * the "perfil" field in the payload:
- *   - perfil = "particular" → env.MAKE_WEBHOOK_PARTICULAR
- *   - perfil = "profesional" (or any other / missing) → env.MAKE_WEBHOOK_PROFESIONAL
+ * Dual-write: envia al CRM (Apps Script) directamente Y a Make.com.
+ * Si Make.com no está configurado, el lead llega igualmente al CRM.
  *
- * Env vars (set in Cloudflare Pages → Settings → Environment variables):
- *   MAKE_WEBHOOK_PARTICULAR   — webhook URL for homeowner forms
- *   MAKE_WEBHOOK_PROFESIONAL  — webhook URL for professional forms
+ * Env vars (Cloudflare Pages → Settings → Environment variables):
+ *   CRM_WEBAPP_URL             — URL del web app de Apps Script (doPost)
+ *   MAKE_WEBHOOK_PARTICULAR    — (opcional) webhook Make.com para particulares
+ *   MAKE_WEBHOOK_PROFESIONAL   — (opcional) webhook Make.com para profesionales
  */
 
 const CORS_HEADERS = {
@@ -18,7 +17,7 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Headers': 'Content-Type',
 };
 
-async function forwardWithRetry(url, payload, attempts = 3) {
+async function postWithRetry(url, payload, attempts = 3) {
   let lastErr;
   for (let i = 0; i < attempts; i++) {
     try {
@@ -27,15 +26,14 @@ async function forwardWithRetry(url, payload, attempts = 3) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-      if (res.ok) return true;
-      lastErr = new Error(`Make responded ${res.status}`);
+      if (res.ok) return { ok: true, status: res.status };
+      lastErr = new Error(`responded ${res.status}`);
     } catch (err) {
       lastErr = err;
     }
     if (i < attempts - 1) await new Promise((r) => setTimeout(r, 400 * (i + 1)));
   }
-  console.error('contacto: forward to Make failed after retries:', lastErr && lastErr.message);
-  return false;
+  return { ok: false, error: lastErr && lastErr.message };
 }
 
 export async function onRequestOptions() {
@@ -82,31 +80,49 @@ export async function onRequestPost(context) {
       ua: request.headers.get('user-agent') || '',
     };
 
-    // Route to the correct webhook based on perfil
+    // ── 1. Envío DIRECTO al CRM (Apps Script web app) ──────────────
+    const crmUrl = env && env.CRM_WEBAPP_URL;
+    let crmOk = false;
+
+    if (crmUrl) {
+      const crmResult = await postWithRetry(crmUrl, payload);
+      crmOk = crmResult.ok;
+      if (!crmOk) {
+        console.error('[contacto] CRM direct failed:', crmResult.error);
+      }
+    } else {
+      console.warn('[contacto] CRM_WEBAPP_URL not configured — leads will only go to Make.com');
+    }
+
+    // ── 2. Envío a Make.com (complementario, para automatizaciones) ─
     const perfil = String(data.perfil || '').toLowerCase();
     const webhookUrl = perfil === 'particular'
       ? (env && env.MAKE_WEBHOOK_PARTICULAR)
       : (env && env.MAKE_WEBHOOK_PROFESIONAL);
 
-    if (!webhookUrl) {
-      const missing = perfil === 'particular' ? 'MAKE_WEBHOOK_PARTICULAR' : 'MAKE_WEBHOOK_PROFESIONAL';
-      console.error(`[contacto] ${missing} not configured. Payload:`, JSON.stringify(payload));
-      return new Response(JSON.stringify({ ok: false, error: 'webhook not configured' }), {
-        status: 500,
-        headers: CORS_HEADERS,
-      });
+    let makeOk = false;
+    if (webhookUrl) {
+      const makeResult = await postWithRetry(webhookUrl, payload);
+      makeOk = makeResult.ok;
+      if (!makeOk) {
+        console.error('[contacto] Make.com webhook failed:', makeResult.error);
+      }
     }
 
-    const sent = await forwardWithRetry(webhookUrl, payload);
-
-    if (!sent) {
-      return new Response(JSON.stringify({ ok: false, error: 'webhook delivery failed' }), {
+    // ── Resultado ──────────────────────────────────────────────────
+    if (!crmOk && !makeOk) {
+      // Ninguno de los dos destinos funcionó
+      const reason = !crmUrl && !webhookUrl
+        ? 'No CRM_WEBAPP_URL nor MAKE_WEBHOOK configured'
+        : 'Both CRM and Make.com delivery failed';
+      console.error('[contacto] TOTAL FAILURE:', reason, JSON.stringify(payload));
+      return new Response(JSON.stringify({ ok: false, error: reason }), {
         status: 502,
         headers: CORS_HEADERS,
       });
     }
 
-    return new Response(JSON.stringify({ ok: true }), {
+    return new Response(JSON.stringify({ ok: true, crm: crmOk, make: makeOk }), {
       status: 200,
       headers: CORS_HEADERS,
     });
