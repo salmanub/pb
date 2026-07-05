@@ -21,11 +21,27 @@ async function postWithRetry(url, payload, attempts = 3) {
   let lastErr;
   for (let i = 0; i < attempts; i++) {
     try {
-      const res = await fetch(url, {
+      // Google Apps Script returns 302 redirect → follow it manually to keep POST method
+      let res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
+        redirect: 'manual',
       });
+
+      // Follow redirect manually, preserving POST
+      if (res.status === 302 || res.status === 301 || res.status === 307) {
+        const location = res.headers.get('location');
+        if (location) {
+          res = await fetch(location, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+            redirect: 'follow',
+          });
+        }
+      }
+
       if (res.ok) return { ok: true, status: res.status };
       lastErr = new Error(`responded ${res.status}`);
     } catch (err) {
