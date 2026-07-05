@@ -80,10 +80,10 @@
 /ca/assessorament-estructural/            /asesoramiento-estructural/             301
 /ca/assessorament-estructural/*           /asesoramiento-estructural/             301
 /ca/collaboracio-advocats/                /colaboracion-abogados/                 301
-/ca/casos-d-exit/                         /casos-exito/                           301
-/ca/casos-d-exit/*                        /casos-exito/                           301
-/ca/blog/                                 /ca/                                    301
-/ca/blog/*                                /ca/                                    301
+# /ca/casos-d-exit/ — removed: page now exists in CA
+# /ca/casos-d-exit/* — removed: page now exists in CA
+# /ca/blog/ — removed: page now exists in CA
+# /ca/blog/* — removed: page now exists in CA
 /ca/contacto/                             /ca/contacte/                           301
 
 # --- EN old pages → new ---
@@ -93,10 +93,10 @@
 /en/structural-consulting/*               /asesoramiento-estructural/             301
 /en/expert-witness-fees/                  /en/fees/                               301
 # /en/construction-expert/ — removed: was self-redirect loop
-/en/success-cases/                        /casos-exito/                           301
-/en/success-cases/*                       /casos-exito/                           301
-/en/blog/                                 /en/                                    301
-/en/blog/*                                /en/                                    301
+# /en/success-cases/ — removed: page now exists in EN
+# /en/success-cases/* — removed: page now exists in EN
+# /en/blog/ — removed: page now exists in EN
+# /en/blog/* — removed: page now exists in EN
 /en/contacto/                             /en/contact/                            301
 /en/not-available/                        /en/                                    301
 
