@@ -18,28 +18,32 @@ const CORS_HEADERS = {
 };
 
 async function postWithRetry(url, payload, attempts = 3) {
+  const body = JSON.stringify(payload);
+  const headers = { 'Content-Type': 'application/json' };
   let lastErr;
+
   for (let i = 0; i < attempts; i++) {
     try {
-      // Google Apps Script returns 302 redirect → follow it manually to keep POST method
-      let res = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-        redirect: 'manual',
-      });
+      let target = url;
+      let res;
 
-      // Follow redirect manually, preserving POST
-      if (res.status === 302 || res.status === 301 || res.status === 307) {
-        const location = res.headers.get('location');
-        if (location) {
-          res = await fetch(location, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload),
-            redirect: 'follow',
-          });
+      // Follow up to 10 redirects manually, preserving POST method
+      for (let hop = 0; hop < 10; hop++) {
+        res = await fetch(target, {
+          method: 'POST',
+          headers,
+          body,
+          redirect: 'manual',
+        });
+
+        if (res.status >= 300 && res.status < 400) {
+          const location = res.headers.get('location');
+          if (location) {
+            target = location;
+            continue;
+          }
         }
+        break; // not a redirect, we have the final response
       }
 
       if (res.ok) return { ok: true, status: res.status };
