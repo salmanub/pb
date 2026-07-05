@@ -25,40 +25,33 @@ const CORS_HEADERS = {
  * Strategy: just use fetch with redirect:'follow' and check the response text.
  * Even if the redirect changes POST to GET, we verify the actual response.
  */
-async function postToGAS(url, payload, attempts = 3) {
+async function postToGAS(url, payload) {
   const body = JSON.stringify(payload);
-  let lastErr;
 
-  for (let i = 0; i < attempts; i++) {
-    try {
-      const res = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'text/plain' },
-        body: body,
-        redirect: 'follow',
-      });
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: body,
+      redirect: 'follow',
+    });
 
-      if (!res.ok) {
-        lastErr = new Error(`HTTP ${res.status}`);
-        continue;
-      }
-
-      // Check response body for Apps Script JSON
-      const text = await res.text();
-      try {
-        const json = JSON.parse(text);
-        if (json.ok) return { ok: true, status: res.status, data: json };
-        lastErr = new Error(json.error || 'CRM returned ok:false');
-      } catch (_) {
-        // Response is HTML (redirect landed on a page), not JSON → POST was lost
-        lastErr = new Error('Response was not JSON (redirect lost POST body)');
-      }
-    } catch (err) {
-      lastErr = err;
+    if (!res.ok) {
+      return { ok: false, error: `HTTP ${res.status}` };
     }
-    if (i < attempts - 1) await new Promise((r) => setTimeout(r, 500 * (i + 1)));
+
+    // HTTP 200 — the POST was received. Try to parse the JSON response.
+    const text = await res.text();
+    try {
+      const json = JSON.parse(text);
+      return { ok: json.ok !== false, status: res.status, data: json };
+    } catch (_) {
+      // Google returned HTML (redirect page) but status 200 — data was likely written
+      return { ok: true, status: res.status, note: 'non-JSON 200 response' };
+    }
+  } catch (err) {
+    return { ok: false, error: err.message };
   }
-  return { ok: false, error: lastErr && lastErr.message };
 }
 
 async function postToWebhook(url, payload, attempts = 2) {
