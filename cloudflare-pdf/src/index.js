@@ -110,31 +110,9 @@ export default {
       console.warn('inlineCssImports falló: ' + (e && e.message));
     }
 
-    // Si viene headerHtml/footerHtml, fusionarlos en el HTML principal
-    // en lugar de usar displayHeaderFooter de Puppeteer (que es inestable
-    // en Cloudflare Workers con templates complejos).
-    if (payload.headerHtml || payload.footerHtml) {
-      let headerCss = '';
-      let headerBody = '';
-      let footerBody = '';
-
-      if (payload.headerHtml) {
-        // Inlinear también los @import del header
-        let hdr = payload.headerHtml;
-        try { hdr = await inlineCssImports(hdr); } catch (_) {}
-        headerBody = '<div id="pdf-hdr" style="position:fixed;top:0;left:0;right:0;z-index:999;">' + hdr + '</div>';
-      }
-      if (payload.footerHtml) {
-        let ftr = payload.footerHtml;
-        try { ftr = await inlineCssImports(ftr); } catch (_) {}
-        footerBody = '<div id="pdf-ftr" style="position:fixed;bottom:0;left:0;right:0;z-index:999;">' + ftr + '</div>';
-      }
-
-      // Inyectar header/footer justo después del <body>
-      html = html.replace(/<body([^>]*)>/i, '<body$1>' + headerBody + footerBody);
-    }
-
-    // Opciones del PDF — NO usar displayHeaderFooter
+    // Opciones del PDF — el template ya incluye header/footer en el propio
+    // HTML via CSS @page margins. No usar displayHeaderFooter de Puppeteer
+    // (inestable en Cloudflare Workers) ni inyectar en el body.
     const pdfOpts = {
       format: payload.format || 'A4',
       printBackground: true,
