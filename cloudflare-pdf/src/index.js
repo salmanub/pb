@@ -110,15 +110,36 @@ export default {
       console.warn('inlineCssImports falló: ' + (e && e.message));
     }
 
-    // Opciones del PDF — el template ya incluye header/footer en el propio
-    // HTML via CSS @page margins. No usar displayHeaderFooter de Puppeteer
-    // (inestable en Cloudflare Workers) ni inyectar en el body.
+    // Opciones del PDF
     const pdfOpts = {
       format: payload.format || 'A4',
       printBackground: true,
       preferCSSPageSize: true,
       margin: payload.margin || { top: '0mm', right: '0mm', bottom: '0mm', left: '0mm' }
     };
+
+    // Header/footer: el CRM los envía como HTML separado para que Puppeteer
+    // los renderice en las áreas de margen. Inlinear sus @import antes de
+    // pasarlos para evitar crashes por fuentes colgadas.
+    if (payload.headerHtml || payload.footerHtml) {
+      pdfOpts.displayHeaderFooter = true;
+
+      if (payload.headerHtml) {
+        let hdr = payload.headerHtml;
+        try { hdr = await inlineCssImports(hdr); } catch (_) {}
+        pdfOpts.headerTemplate = hdr;
+      } else {
+        pdfOpts.headerTemplate = '<span></span>';
+      }
+
+      if (payload.footerHtml) {
+        let ftr = payload.footerHtml;
+        try { ftr = await inlineCssImports(ftr); } catch (_) {}
+        pdfOpts.footerTemplate = ftr;
+      } else {
+        pdfOpts.footerTemplate = '<span></span>';
+      }
+    }
 
     // Retry hasta 3 veces con browser fresco
     const MAX = 3;
