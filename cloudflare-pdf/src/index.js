@@ -48,7 +48,7 @@ export default {
       return new Response('Browser Rendering binding "BROWSER" no configurado', { status: 500 });
     }
 
-    // Cuerpo JSON: { html, filename?, format?, margin? }
+    // Cuerpo JSON: { html, filename?, format?, margin?, headerHtml?, footerHtml? }
     let payload;
     try { payload = await request.json(); }
     catch (e) { return new Response('Invalid JSON', { status: 400 }); }
@@ -60,15 +60,63 @@ export default {
     try {
       browser = await acquireBrowser(env);
       const page = await browser.newPage();
-      await page.setContent(html, { waitUntil: 'networkidle0' });
-      // Espera a que las fuentes web (Spectral, IBM Plex) estén listas
-      try { await page.evaluate(() => document.fonts && document.fonts.ready); } catch (e) {}
-      const pdf = await page.pdf({
+
+      // Cargar el HTML — usar 'load' en lugar de 'networkidle0' para evitar
+      // timeouts cuando @import de fuentes tarda. Luego esperar fuentes aparte.
+      await page.setContent(html, { waitUntil: 'load', timeout: 15000 });
+
+      // Espera a que las fuentes web (Spectral, IBM Plex) estén listas,
+      // con timeout propio para no bloquear si las fuentes no cargan.
+      try {
+        await page.evaluate(() => {
+          return Promise.race([
+            document.fonts && document.fonts.ready,
+            new Promise(r => setTimeout(r, 5000))
+          ]);
+        });
+      } catch (e) {
+        console.warn('fonts.ready falló (no bloqueante): ' + (e && e.message));
+      }
+
+      // Breve pausa para que el layout se estabilice tras carga de fuentes
+      await new Promise(r => setTimeout(r, 300));
+
+      // Opciones del PDF
+      const pdfOpts = {
         format: payload.format || 'A4',
         printBackground: true,
         preferCSSPageSize: true,
         margin: payload.margin || { top: '0mm', right: '0mm', bottom: '0mm', left: '0mm' }
-      });
+      };
+
+      // Header/footer template de Puppeteer (si el CRM los envía)
+      if (payload.headerHtml || payload.footerHtml) {
+        pdfOpts.displayHeaderFooter = true;
+        pdfOpts.headerTemplate = payload.headerHtml || '<span></span>';
+        pdfOpts.footerTemplate = payload.footerHtml || '<span></span>';
+      }
+
+      // Generar PDF con retry: a veces el primer intento falla con
+      // "Protocol error (Page.printToPDF)" por timing de renderizado.
+      let pdf;
+      let lastError;
+      for (let attempt = 0; attempt < 3; attempt++) {
+        try {
+          pdf = await page.pdf(pdfOpts);
+          break;
+        } catch (e) {
+          lastError = e;
+          console.warn('printToPDF intento ' + (attempt + 1) + ' falló: ' + (e && e.message));
+          if (attempt < 2) {
+            await new Promise(r => setTimeout(r, 500 * (attempt + 1)));
+          }
+        }
+      }
+
+      if (!pdf) {
+        throw lastError || new Error('printToPDF falló tras 3 intentos');
+      }
+
       const name = String(payload.filename || 'documento').replace(/[^\w.-]/g, '_');
       return new Response(pdf, {
         headers: {
@@ -80,7 +128,13 @@ export default {
       // Error legible en `wrangler tail`; el .gs usará su respaldo interno.
       const msg = (e && e.message) ? e.message : String(e);
       console.error('Render PDF fallo: ' + msg);
-      return new Response('PDF render error: ' + msg, { status: 500 });
+
+      // Distinguir rate limit de otros errores
+      const isRateLimit = msg.includes('Rate limit') || msg.includes('Unable to create');
+      return new Response(
+        JSON.stringify({ error: msg, isRateLimit, suggestion: isRateLimit ? 'Espera 1 min y reintenta' : null }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
     } finally {
       // disconnect mantiene viva la sesión para reutilizarla; Cloudflare
       // cierra las inactivas. Si disconnect no aplica, cerramos.
