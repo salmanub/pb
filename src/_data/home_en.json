@@ -51,6 +51,7 @@
     "lede": "Six areas of practice. All result in a traceable report grounded in regulation and defensible in court.",
     "ver_servicio": "View service",
     "servicio_label": "Service",
+    "view_all": "View all expert reports",
     "items": [
       { "code": "2.1", "slug": "structural-pathologies", "icon": "building-2", "t": "Building pathology", "d": "Cracks, settlements and structural damage. Cause, scope and liability." },
       { "code": "2.2", "slug": "hidden-defects", "icon": "house", "t": "Hidden defects", "d": "Non-apparent defects in property sales or after new-build handover." },
@@ -97,6 +98,12 @@
       { "q": "How long does it take from first contact?", "a": "Between two and four weeks from inspection, depending on the case. Deadlines are always agreed in writing beforehand." },
       { "q": "Do you operate outside Catalonia?", "a": "Yes. The firm is based in Barcelona but we operate throughout Spain, attending in person for inspections and court appearances." }
     ]
+  },
+  "blog_section": {
+    "eyebrow": "Technical blog",
+    "title": "Expert judgement, in writing",
+    "lede": "Articles on building pathologies, procedure and expert evidence.",
+    "cta": "Visit the blog"
   },
   "contact_section": {
     "eyebrow": "§ 07 · First contact",

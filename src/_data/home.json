@@ -51,6 +51,7 @@
     "lede": "Seis áreas de actuación. Todas terminan en un informe trazable, fundado en normativa y defendible ante el juzgado.",
     "ver_servicio": "Ver servicio",
     "servicio_label": "Servicio",
+    "view_all": "Ver todos los dictámenes",
     "items": [
       { "code": "2.1", "slug": "patologias-estructurales", "icon": "building-2", "t": "Patología de la edificación", "d": "Grietas, fisuras, asentamientos y daños estructurales. Causa, alcance y responsabilidad." },
       { "code": "2.2", "slug": "vicios-ocultos", "icon": "house", "t": "Vicios ocultos", "d": "Defectos no aparentes en compraventa o tras la entrega de obra nueva. Art. 1.484 CC y LOE." },
@@ -97,6 +98,12 @@
       { "q": "¿Cuánto se tarda desde que os contacto?", "a": "Entre dos y cuatro semanas desde la inspección, según el caso. Los plazos siempre se acuerdan por escrito de antemano." },
       { "q": "¿Actuáis fuera de Cataluña?", "a": "Sí. La sede está en Barcelona, pero se actúa en toda España, presencialmente para la inspección y la ratificación." }
     ]
+  },
+  "blog_section": {
+    "eyebrow": "Blog técnico",
+    "title": "Criterio pericial, por escrito",
+    "lede": "Artículos sobre patologías de la edificación, procedimiento y prueba pericial.",
+    "cta": "Visitar el blog"
   },
   "contact_section": {
     "eyebrow": "§ 07 · Primer contacto",

@@ -51,6 +51,7 @@
     "lede": "Sis àrees d'actuació. Totes acaben en un informe traçable, fonamentat en normativa i defensable davant el jutjat.",
     "ver_servicio": "Veure servei",
     "servicio_label": "Servei",
+    "view_all": "Veure tots els dictàmens",
     "items": [
       { "code": "2.1", "slug": "patologies-estructurals", "icon": "building-2", "t": "Patologia de l'edificació", "d": "Esquerdes, fissures, assentaments i danys estructurals. Causa, abast i responsabilitat." },
       { "code": "2.2", "slug": "vicis-ocults", "icon": "house", "t": "Vicis ocults", "d": "Defectes no aparents en compravenda o després del lliurament d'obra nova." },
@@ -97,6 +98,12 @@
       { "q": "Quant es tarda des que us contacto?", "a": "Entre dues i quatre setmanes des de la inspecció, segons el cas. Els terminis sempre s'acorden per escrit prèviament." },
       { "q": "Actueu fora de Catalunya?", "a": "Sí. La seu és a Barcelona, però s'actua a tota Espanya, presencialment per a la inspecció i la ratificació." }
     ]
+  },
+  "blog_section": {
+    "eyebrow": "Blog tècnic",
+    "title": "Criteri pericial, per escrit",
+    "lede": "Articles sobre patologies de l'edificació, procediment i prova pericial.",
+    "cta": "Visitar el blog"
   },
   "contact_section": {
     "eyebrow": "§ 07 · Primer contacte",
