@@ -1,5 +1,1932 @@
 [
   {
+    "title": "Peritatge contradictori i tercer perit: què fer si no accepta el peritatge de l'assegurança (art. 38 LCS)",
+    "slug": "peritatge-contradictori-asseguranca-tercer-perit-art-38-lcs",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/peritacion-contradictoria-seguro-tercer-perito-art-38-lcs/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/contradictory-appraisal-insurance-third-expert-art-38-lcs/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/peritatge-contradictori-asseguranca-tercer-perit-art-38-lcs/"
+      }
+    ],
+    "description": "Com funciona el peritatge contradictori de l'assegurança i el nomenament d'un tercer perit segons l'article 38 de la Llei de Contracte d'Assegurança. Terminis, cost i paper del perit de part.",
+    "excerpt": "Quan el perit de l'asseguradora infravalora els danys, l'article 38 LCS obre una via concreta: el peritatge contradictori i, si persisteix el desacord, un tercer perit.",
+    "estado": "publicado",
+    "datePublished": "2026-07-14",
+    "dateModified": "2026-07-14",
+    "author": "Albert Vilardell",
+    "category": "Seguros",
+    "tags": [
+      "Peritatge contradictori",
+      "Article 38 LCS",
+      "Tercer perit",
+      "Asseguradora"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Peritación contradictoria y tercer perito: qué hacer si no acepta el peritaje del seguro (art. 38 LCS)",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      },
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      }
+    ],
+    "content": "Quan l'import que ofereix l'asseguradora no cobreix el dany real, l'assegurat no està obligat a acceptar-lo. L'**article 38 de la Llei 50/1980 de Contracte d'Assegurança (LCS)** regula un procediment específic per resoldre el desacord sobre la quantia: el **peritatge contradictori**.\n\n## Què és el peritatge contradictori\n\nCada part designa un perit. Si tots dos arriben a un acord, aquest vincula assegurat i asseguradora i es reflecteix en una acta conjunta. Si **no hi ha acord**, es nomena un **tercer perit** de comú acord (o, si no, per via judicial). El dictamen dels tres —o el del tercer— determina la indemnització.\n\n## Els terminis que no convé deixar passar\n\nL'article 38 fixa un marc temporal estricte. Des que es comunica el desacord, cada part disposa d'un termini per designar el seu perit; si l'assegurat, requerit per l'asseguradora, no en nomena cap dins del termini, quedarà vinculat pel dictamen del perit de l'asseguradora. Per això, davant una oferta insuficient, **la designació d'un perit de part no s'ha de demorar**.\n\n## Què aporta un perit de part\n\nEl perit de part no es limita a posar una xifra diferent. Documenta l'origen i l'abast del dany amb metodologia verificable, contrasta les partides infravalorades o excloses per l'asseguradora i fixa una valoració defensable. En danys de construcció —incendi, danys per aigua, patologies estructurals— la diferència sol ser substancial.\n\n## Preguntes freqüents\n\n**Qui paga el tercer perit?**\nEls honoraris del tercer perit i les despeses del peritatge contradictori es reparteixen conforme a l'article 38 LCS: cada part abona els del seu perit, i els del tercer es distribueixen segons el resultat.\n\n**Puc utilitzar el meu informe també en judici?**\nSí. Si el procediment de l'article 38 no resol el conflicte, el dictamen de part és prova pericial en la via judicial conforme a la LEC.\n\n**És el mateix que reclamar directament?**\nNo. És el camí previst a la pòlissa per a discrepàncies de quantia. Esgotar-lo ordenadament reforça la posició de l'assegurat."
+  },
+  {
+    "title": "Com reclamar danys per aigua a la teva assegurança amb un informe pericial independent",
+    "slug": "reclamar-danys-per-aigua-asseguranca-informe-pericial",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/reclamar-danos-por-agua-seguro-informe-pericial/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/claim-water-damage-insurance-expert-report/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/reclamar-danys-per-aigua-asseguranca-informe-pericial/"
+      }
+    ],
+    "description": "Guia per reclamar danys per aigua a l'assegurança de la llar o de la comunitat quan la indemnització oferta és insuficient. El paper de l'informe pericial independent i de l'origen del dany.",
+    "excerpt": "Els danys per aigua són el sinistre més freqüent i, alhora, el més discutit. Un informe pericial independent determina l'origen i evita que l'asseguradora traslladi la responsabilitat.",
+    "estado": "publicado",
+    "datePublished": "2026-07-21",
+    "dateModified": "2026-07-21",
+    "author": "Albert Vilardell",
+    "category": "Seguros",
+    "tags": [
+      "Danys per aigua",
+      "Assegurança de la llar",
+      "Reclamació",
+      "Humitats"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Cómo reclamar daños por agua a tu seguro con un informe pericial independiente",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Humitats i Filtracions",
+        "url": "/humedades-filtraciones/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Els danys per aigua són el sinistre més comú a les assegurances de llar i comunitat, i també el que més discrepàncies genera. El motiu quasi sempre és el mateix: **l'asseguradora discuteix l'origen del dany**, perquè d'ell depèn qui paga i què queda cobert per la pòlissa.\n\n## L'origen determina la cobertura\n\nNo és el mateix una filtració per coberta comunitària, un trencament de baixant, una condensació estructural o una humitat per capil·laritat ascendent. Cada origen té un responsable i un encaix diferent a la pòlissa. Un peritatge que no identifica correctament l'origen sol traduir-se en una indemnització parcial o en una negativa de cobertura.\n\n## Què acredita un informe pericial independent\n\nUn dictamen tècnic independent localitza l'origen de l'aigua amb **metodologia no destructiva** —termografia infraroja, higròmetres de profunditat, proves d'estanqueïtat— sense dependre de la versió de l'asseguradora. A partir d'aquí, quantifica els danys i delimita responsabilitats. Aquest document és la base per negociar una indemnització ajustada o per activar el peritatge contradictori de l'article 38 LCS.\n\n## La reparació és un pas posterior\n\nConvé no confondre dues fases. L'informe pericial acredita l'origen, l'abast i la responsabilitat —és la fase de **prova**. La **reparació** del dany (impermeabilització, sanejat, tractament) és una fase diferent que executa un contractista especialitzat. Per al tractament d'humitats a Barcelona hi ha solucions específiques que queden fora de l'objecte del dictamen pericial.\n\n## Preguntes freqüents\n\n**Cobreix l'assegurança de la llar les humitats per filtració?**\nDepèn de l'origen i de les condicions de la pòlissa. La filtració accidental sol estar coberta; la humitat per capil·laritat o per defecte constructiu preexistent, sovint no. L'informe pericial és el que distingeix un cas de l'altre.\n\n**Qui respon si la filtració ve de la coberta de la comunitat?**\nSi l'origen és en un element comú, la responsabilitat recau sobre la comunitat de propietaris i la seva assegurança.\n\n**I si l'assegurança m'ofereix menys del que costa reparar?**\nPot rebutjar l'oferta i sol·licitar el peritatge contradictori (art. 38 LCS), aportant el seu propi informe."
+  },
+  {
+    "title": "Peritatge després d'un incendi en nau industrial: causa, origen i reclamació a l'assegurança",
+    "slug": "peritatge-incendi-nau-industrial-causa-origen-rscei",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/peritaje-incendio-nave-industrial-causa-origen-rscei/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/industrial-warehouse-fire-assessment-cause-origin-rscei/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/peritatge-incendi-nau-industrial-causa-origen-rscei/"
+      }
+    ],
+    "description": "Com es periten els danys per incendi en una nau industrial: determinació de causa i origen, avaluació de l'estructura metàl·lica, compliment del RSCIEI i reclamació a l'asseguradora.",
+    "excerpt": "Un incendi industrial reuneix dues disputes alhora: la causa i origen del sinistre i l'abast dels danys. Totes dues condicionen la indemnització i la responsabilitat.",
+    "estado": "publicado",
+    "datePublished": "2026-07-28",
+    "dateModified": "2026-07-28",
+    "author": "Albert Vilardell",
+    "category": "Naves Industriales",
+    "tags": [
+      "Incendi industrial",
+      "RSCIEI",
+      "Estructura metàl·lica",
+      "Peritatge assegurança"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Peritaje tras un incendio en nave industrial: causa, origen y reclamación al seguro",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritatge de Naus Industrials",
+        "url": "/naves-industriales/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Un incendi en una nau logística o industrial concentra sinistres de gran quantia i disputes tècniques complexes. El peritatge ha de resoldre dues qüestions que l'asseguradora examinarà amb detall: **la causa i l'origen** del foc, i **l'abast real dels danys** a l'estructura i al continent.\n\n## Causa i origen: el punt de partida\n\nLa determinació de causa i origen condiciona la cobertura. No és el mateix una fallada elèctrica, una negligència en l'ús, un defecte d'instal·lació o una causa externa. L'anàlisi es basa en el patró de danys, els focus de més temperatura i la traçabilitat del foc, i ha de ser coherent amb la documentació del sinistre.\n\n## Danys a l'estructura metàl·lica\n\nLa calor degrada l'acer molt abans de fondre'l: la pèrdua de resistència de perfils i corretges, la fatiga de soldadures i la deformació de cobertes obliguen a avaluar si l'estructura conserva capacitat portant o requereix substitució. Aquesta avaluació és determinant en la valoració, perquè marca la diferència entre reparar i reconstruir.\n\n## Compliment del RSCIEI\n\nEl **Reglament de Seguretat Contra Incendis en Establiments Industrials (RD 2267/2004)** fixa les condicions que havia de complir la nau. Verificar-ne el compliment en el moment del sinistre és una part habitual del dictamen, perquè un incompliment previ pot incidir en la cobertura o en el repartiment de responsabilitats.\n\n## Reclamació i peritatge contradictori\n\nQuan l'oferta de l'asseguradora no cobreix el dany acreditat, l'assegurat pot activar el peritatge contradictori de l'article 38 LCS aportant el seu propi dictamen. En sinistres industrials, la diferència de valoració sol justificar sobradament el procediment.\n\n## Preguntes freqüents\n\n**Què cal fer en les primeres hores després d'un incendi industrial?**\nPreservar l'escena en la mesura del possible, documentar l'estat amb fotografia i no retirar restes fins que s'hagi fet la inspecció de causa i origen.\n\n**L'estructura que va resistir el foc és segura?**\nNo necessàriament. L'acer pot haver perdut capacitat portant sense col·lapsar. Requereix avaluació tècnica abans de reutilitzar la nau.\n\n**Puc reclamar el lucre cessant?**\nLa cobertura de pèrdua de beneficis depèn de la pòlissa. El dictamen documenta el temps i les obres necessàries per a la reposició."
+  },
+  {
+    "title": "Danys en una nau en finalitzar el lloguer: què és ús normal i què es pot reclamar",
+    "slug": "danys-nau-industrial-fi-lloguer-us-normal-reclamacio",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/danos-nave-industrial-fin-alquiler-uso-normal-reclamacion/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/warehouse-damage-end-of-lease-normal-wear-claim/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/danys-nau-industrial-fi-lloguer-us-normal-reclamacio/"
+      }
+    ],
+    "description": "Com distingir el desgast per ús normal dels danys imputables a l'arrendatari en finalitzar el lloguer d'una nau industrial: paviments, estructura, instal·lacions i modificacions no autoritzades.",
+    "excerpt": "En tornar una nau industrial, la frontera entre desgast normal i dany imputable a l'inquilí decideix qui assumeix la reparació. Un dictamen objectiu fixa aquesta frontera.",
+    "estado": "publicado",
+    "datePublished": "2026-08-04",
+    "dateModified": "2026-08-04",
+    "author": "Albert Vilardell",
+    "category": "Naves Industriales",
+    "tags": [
+      "Danys post-lloguer",
+      "Arrendament",
+      "Paviment industrial",
+      "Estat de conservació"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Daños en una nave al finalizar el alquiler: qué es uso normal y qué se puede reclamar",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritatge de Naus Industrials",
+        "url": "/naves-industriales/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "En acabar l'arrendament d'una nau logística o industrial, arrendador i arrendatari solen discrepar sobre l'estat de devolució. La qüestió de fons és sempre la mateixa: **què correspon al desgast normal per l'ús pactat i què constitueix un dany imputable a l'arrendatari**.\n\n## La frontera entre ús normal i dany\n\nL'ús ordinari d'una nau produeix un desgast esperable. El dany imputable, en canvi, deriva d'un ús indegut, de sobrecàrregues no previstes o de modificacions no autoritzades. El dictamen contrasta l'estat de devolució amb l'estat inicial, el contracte d'arrendament i les càrregues d'ús previstes.\n\n## Els focus habituals de conflicte\n\nEls **paviments logístics** concentren bona part de les disputes: fissures per sobrecàrrega, deteriorament de juntes, punxonament per prestatgeries o carretons. També ho són les modificacions de l'estructura o de les instal·lacions —perforacions, ancoratges, alteracions de la protecció contra incendis— i els danys en molls de càrrega i tancaments.\n\n## Per què convé un dictamen objectiu\n\nSense un document tècnic, la negociació es converteix en una discussió de percepcions. L'informe pericial fixa amb criteri verificable quins danys existeixen, quina és la causa i quant costa subsanar-los, separant el reclamable del que és simple desgast. Aquest document serveix tant per a la negociació com per a l'execució de la fiança o la reclamació judicial.\n\n## Preguntes freqüents\n\n**Pot l'arrendador retenir la fiança per desgast normal?**\nNo. La fiança respon dels danys imputables a l'arrendatari, no del deteriorament propi de l'ús pactat.\n\n**Serveix l'inventari inicial d'entrada?**\nÉs molt útil. L'estat documentat a l'entrada és la referència davant la qual es valora l'estat de sortida.\n\n**Qui encarrega el peritatge?**\nEl pot encarregar qualsevol de les parts com a informe de part. Un dictamen rigorós sol facilitar l'acord sense arribar a judici."
+  },
+  {
+    "title": "Modificats i sobrecostos en obra pública: l'informe pericial en contractes LCSP",
+    "slug": "reclamar-modificats-sobrecostos-obra-publica-lcsp-informe-pericial",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/reclamar-modificados-sobrecostes-obra-publica-lcsp-informe-pericial/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/claim-variations-cost-overruns-public-works-lcsp/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/reclamar-modificats-sobrecostos-obra-publica-lcsp-informe-pericial/"
+      }
+    ],
+    "description": "Com fonamentar la reclamació de modificats de projecte, sobrecostos i liquidació de contracte en obra pública mitjançant un informe pericial conforme a la Llei de Contractes del Sector Públic.",
+    "excerpt": "En la contractació pública, els sobrecostos i els modificats no reconeguts es reclamen amb suport tècnic. L'informe pericial tradueix l'obra executada al llenguatge del contracte i de la LCSP.",
+    "estado": "publicado",
+    "datePublished": "2026-08-11",
+    "dateModified": "2026-08-11",
+    "author": "Albert Vilardell",
+    "category": "Obra Pública",
+    "tags": [
+      "LCSP",
+      "Modificats d'obra",
+      "Sobrecostos",
+      "Liquidació de contracte"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Modificados y sobrecostes en obra pública: el informe pericial en contratos LCSP",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritatge d'Obra Pública i Infraestructura",
+        "url": "/obras-publicas/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "En l'obra pública, la distància entre el projectat i el realment executat genera algunes de les reclamacions de més quantia. Modificats no reconeguts, unitats d'obra no previstes, sobrecostos per circumstàncies sobrevingudes o discrepàncies en la liquidació del contracte: totes elles requereixen **suport tècnic verificable** per prosperar davant l'Administració.\n\n## El marc: la Llei de Contractes del Sector Públic\n\nLa **LCSP** regula les modificacions del contracte, la revisió de preus i la liquidació. Una reclamació sòlida no discuteix en abstracte: contrasta l'obra executada amb el projecte, el plec i la normativa contractual, i encaixa cada partida en el supòsit legal que correspon. L'informe pericial és l'instrument que fa aquesta traducció.\n\n## Què documenta el dictamen\n\nEl peritatge mesura i valora el realment executat, identifica les unitats no previstes o modificades, analitza les causes —errors de projecte, condicions del terreny, ordres de la direcció facultativa— i quantifica el sobrecost amb criteris objectius. En la liquidació del contracte, delimita les partides pendents i les penalitzacions discutides.\n\n## Per què el rigor és decisiu aquí\n\nDavant una Administració, la càrrega de justificar tècnicament la reclamació recau sobre el contractista. Un dictamen que documenta cada partida amb mesuraments, referències contractuals i càlcul és el que sosté la reclamació en via administrativa i, si escau, en la jurisdicció contenciosa administrativa.\n\n## Preguntes freqüents\n\n**Es pot reclamar un modificat ja executat però no formalitzat?**\nÉs una situació freqüent i complexa. El dictamen documenta la realitat de l'obra executada, que és la base fàctica de la reclamació, sens perjudici de l'anàlisi jurídica del lletrat.\n\n**Quina diferència hi ha entre modificat i obra complementària?**\nTenen encaix diferent a la LCSP. L'informe pericial aporta les dades tècniques que permeten classificar correctament cada actuació.\n\n**Serveix per a la liquidació del contracte?**\nSí. La liquidació és un dels moments on el suport pericial resulta més útil per fixar el saldo real entre les parts."
+  },
+  {
+    "title": "Defectes en obra nova: com reclamar a la promotora amb la LOE (terminis d'1, 3 i 10 anys)",
+    "slug": "defectes-obra-nova-reclamar-promotora-loe-terminis",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/defectos-obra-nueva-reclamar-promotora-loe-plazos/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/new-build-defects-claim-developer-loe-deadlines/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/defectes-obra-nova-reclamar-promotora-loe-terminis/"
+      }
+    ],
+    "description": "Quins defectes cobreix la Llei d'Ordenació de l'Edificació, els terminis de garantia d'1, 3 i 10 anys i com un informe pericial acredita el defecte i la responsabilitat davant promotora i constructora.",
+    "excerpt": "La LOE estableix tres nivells de garantia segons la gravetat del defecte. Saber en quin encaixa el seu problema —i acreditar-ho a temps— és el que decideix una reclamació d'obra nova.",
+    "estado": "publicado",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": [
+      "LOE",
+      "Obra nova",
+      "Defectes constructius",
+      "Garantia desenal"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Defectos en obra nueva: cómo reclamar a la promotora con la LOE (plazos de 1, 3 y 10 años)",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Mala Execució d'Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      },
+      {
+        "title": "Informe per Patologies Estructurals",
+        "url": "/patologias-estructurales/"
+      }
+    ],
+    "content": "Quan apareixen defectes en un habitatge o promoció d'obra nova, la via de reclamació la marca la **Llei 38/1999 d'Ordenació de l'Edificació (LOE)**. El seu article 17 organitza la responsabilitat en tres nivells de garantia segons la gravetat del defecte, cadascun amb el seu propi termini.\n\n## Els tres terminis de la LOE\n\n**Un any** per als defectes d'acabat. **Tres anys** per als defectes que afecten l'habitabilitat —humitats, aïllament, instal·lacions—. **Deu anys** per als danys que comprometen l'estabilitat i la seguretat estructural de l'edifici. Els terminis es compten des de la recepció de l'obra, i són de garantia: el defecte s'ha de manifestar dins del termini corresponent.\n\n## Qui respon\n\nLa LOE distingeix entre promotor, constructor, projectista i direcció facultativa. La responsabilitat pot ser individual o solidària segons es pugui o no individualitzar la causa. Determinar l'origen del defecte —projecte, direcció o execució— és precisament el que permet dirigir la reclamació a qui correspon.\n\n## El paper de l'informe pericial\n\nEl dictamen acredita tres coses: que el defecte existeix, en quin nivell de garantia de la LOE encaixa i a quin agent és imputable. A més, quantifica el cost de subsanació. Sense aquest suport, la reclamació queda en una afirmació sense prova; amb ell, es converteix en una posició defensable.\n\n## No confondre amb el Codi Civil\n\nEls defectes d'obra nova es regeixen per la LOE; els vicis ocults en una compravenda entre particulars, pel Codi Civil, amb terminis diferents. Encaixar bé el cas des del principi evita perdre terminis.\n\n## Preguntes freqüents\n\n**Des de quan compten els terminis?**\nDes de la data de l'acta de recepció de l'obra, no des de l'escriptura de compra.\n\n**Què és la garantia desenal?**\nÉs la cobertura de deu anys per a danys estructurals, avalada per l'assegurança desenal obligatòria del promotor.\n\n**He de reclamar abans que aparegui el dany?**\nNo. El dany s'ha de manifestar dins del termini de garantia; un cop apareix, es disposa a més d'un termini addicional per exercitar l'acció."
+  },
+  {
+    "title": "Assentaments diferencials a la fonamentació: com es diagnostiquen i es proven",
+    "slug": "assentaments-diferencials-fonamentacio-diagnostic-informe-pericial",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/asientos-diferenciales-cimentacion-diagnostico-informe-pericial/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/differential-settlement-foundation-diagnosis-report/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/assentaments-diferencials-fonamentacio-diagnostic-informe-pericial/"
+      }
+    ],
+    "description": "Què són els assentaments diferencials, com es distingeixen d'altres patologies, quines esquerdes els delaten i com un informe pericial acredita la causa i l'abast per reclamar o intervenir.",
+    "excerpt": "Un assentament diferencial deixa una firma reconeixible a les esquerdes de l'edifici. Diagnosticar-ne la causa —terreny, fonamentació o entorn— és el pas previ a qualsevol reparació o reclamació.",
+    "estado": "publicado",
+    "datePublished": "2026-08-25",
+    "dateModified": "2026-08-25",
+    "author": "Albert Vilardell",
+    "category": "Patologías Estructurales",
+    "tags": [
+      "Assentaments diferencials",
+      "Fonamentació",
+      "Esquerdes",
+      "Geotècnia"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Asientos diferenciales en la cimentación: cómo se diagnostican y se prueban",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Patologies Estructurals",
+        "url": "/patologias-estructurales/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Quan una part de l'edifici s'assenta més que una altra, apareixen els **assentaments diferencials**: un dels mecanismes de dany estructural més seriosos i, alhora, un dels que deixa una firma més reconeixible a la façana i als envans.\n\n## Com es reconeixen\n\nL'assentament diferencial sol manifestar-se amb **esquerdes inclinades** que segueixen una trajectòria coherent amb el moviment del terreny, amb més obertura cap a la zona que més ha descendit. Sovint s'acompanyen de desploms, portes que deixen d'ajustar i desnivells al paviment. El patró, l'obertura i l'evolució de les esquerdes són la primera pista diagnòstica.\n\n## Les causes possibles\n\nL'origen pot estar en el terreny —sòls expansius, replens mal compactats, canvis d'humitat—, en la mateixa fonamentació —insuficient o mal executada— o en l'entorn: excavacions veïnes, fuites de xarxa que arrosseguen fins, arbres pròxims. Determinar la causa exigeix combinar la inspecció de les patologies amb l'anàlisi geotècnica.\n\n## Què acredita l'informe pericial\n\nEl dictamen estableix si l'assentament està **actiu o estabilitzat**, quina és la causa i quins elements estructurals estan compromesos, amb referència al CTE DB-SE. Aquesta informació és imprescindible tant per dirigir una reclamació com per dimensionar la intervenció.\n\n## La reparació és una altra fase\n\nEstabilitzar un assentament —mitjançant recalçament de la fonamentació, injeccions o altres tècniques— és una obra especialitzada que executa un contractista tècnic un cop determinada la causa. El dictamen acota el problema; la solució constructiva es projecta a partir d'ell.\n\n## Preguntes freqüents\n\n**Totes les esquerdes indiquen assentament?**\nNo. Moltes són tèrmiques, de retracció o d'envà. L'assentament diferencial té un patró característic.\n\n**Com sé si l'assentament segueix actiu?**\nMitjançant el seguiment de testimonis i la comparació de mesuraments en el temps.\n\n**Pot afectar la seguretat de l'edifici?**\nEn els casos greus, sí. Per això el diagnòstic precoç és rellevant."
+  },
+  {
+    "title": "ITE desfavorable a Barcelona: què significa i com actuar si hi ha deficiències greus",
+    "slug": "ite-desfavorable-barcelona-deficiencies-greus-que-fer",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/ite-desfavorable-barcelona-deficiencias-graves-que-hacer/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/unfavourable-building-inspection-barcelona-serious-defects/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/ite-desfavorable-barcelona-deficiencies-greus-que-fer/"
+      }
+    ],
+    "description": "Què implica una Inspecció Tècnica d'Edificis amb resultat desfavorable o deficiències greus a Barcelona, quins terminis obre i com prioritzar les intervencions amb criteri tècnic independent.",
+    "excerpt": "Una ITE desfavorable no és el final del tràmit: obre terminis i obligacions. Entendre l'abast real de les deficiències evita tant l'alarma com la inacció.",
+    "estado": "publicado",
+    "datePublished": "2026-09-01",
+    "dateModified": "2026-09-01",
+    "author": "Albert Vilardell",
+    "category": "ITE",
+    "tags": [
+      "ITE",
+      "Inspecció Tècnica d'Edificis",
+      "Deficiències greus",
+      "Barcelona"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "ITE desfavorable en Barcelona: qué significa y cómo actuar si hay deficiencias graves",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Patologies Estructurals",
+        "url": "/patologias-estructurales/"
+      },
+      {
+        "title": "Assessorament Estructural",
+        "url": "/asesoramiento-estructural/"
+      }
+    ],
+    "content": "La **Inspecció Tècnica d'Edificis (ITE)** és obligatòria a Catalunya per als edificis a partir de certa antiguitat. Quan el resultat és **desfavorable** o detecta **deficiències greus**, moltes comunitats reaccionen amb alarma o, al contrari, amb inacció. Cap de les dues ajuda: el que cal és entendre l'abast real del que s'ha detectat.\n\n## Què significa un resultat desfavorable\n\nUna ITE desfavorable indica que l'edifici presenta deficiències que afecten el seu estat de conservació i que s'han de subsanar. La qualificació comporta terminis i l'obligació d'escometre les obres, i pot condicionar ajuts i tràmits. Les deficiències **greus** o **molt greus** exigeixen actuar amb prioritat i, de vegades, adoptar mesures cautelars immediates.\n\n## El risc d'intervenir sense diagnòstic\n\nL'informe de la ITE descriu símptomes, però no sempre aprofundeix en la causa ni en la solució òptima. Escometre obres sense un diagnòstic previ pot portar a tractar el símptoma i no l'origen —molt habitual en humitats i patologies estructurals— i a gastar en reparacions que no resolen el problema.\n\n## Com prioritzar amb criteri independent\n\nUna anàlisi tècnica independent ordena les deficiències per gravetat i urgència, distingeix l'estructural del que no ho és, i defineix què s'ha d'intervenir primer i com. Aquest criteri permet a la comunitat planificar la despesa i evitar tant la paràlisi com les decisions precipitades.\n\n## Quan hi ha responsabilitats pel mig\n\nSi les deficiències deriven de defectes constructius encara en garantia (LOE) o d'una actuació d'un tercer, el diagnòstic pot obrir a més una via de reclamació. En aquest cas, l'informe passa a tenir valor probatori.\n\n## Preguntes freqüents\n\n**Quins edificis han de passar la ITE a Barcelona?**\nEls que superen l'antiguitat fixada per la normativa catalana, amb renovació periòdica.\n\n**Què passa si no se subsanen les deficiències?**\nL'incompliment pot comportar sancions i la pèrdua d'accés a ajuts, a més del risc per a l'edifici.\n\n**La ITE avalua la causa de les patologies?**\nNo en profunditat. Per determinar causa, responsabilitat i solució cal un estudi específic."
+  },
+  {
+    "title": "Reforma mal executada: com reclamar amb un informe pericial",
+    "slug": "reforma-mal-executada-reclamar-informe-pericial-lex-artis",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/reforma-mal-ejecutada-reclamar-informe-pericial-lex-artis/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/poorly-executed-renovation-claim-expert-report/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/reforma-mal-executada-reclamar-informe-pericial-lex-artis/"
+      }
+    ],
+    "description": "Com reclamar una reforma mal feta: contrast del que s'ha executat amb el pressupost i la memòria de qualitats, la lex artis constructiva i el paper de l'informe pericial en la reclamació al contractista.",
+    "excerpt": "Materials inferiors als pactats, partides cobrades i no executades, acabats deficients. Una reforma mal executada es reclama contrastant el promès amb el realment fet.",
+    "estado": "publicado",
+    "datePublished": "2026-09-08",
+    "dateModified": "2026-09-08",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": [
+      "Reforma mal executada",
+      "Lex artis",
+      "Memòria de qualitats",
+      "Reclamació"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Reforma mal ejecutada: cómo reclamar con un informe pericial",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Mala Execució d'Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Una reforma que no respon al pactat és una de les reclamacions més freqüents entre particulars i comunitats. Acabats deficients, materials de qualitat inferior a l'acordada, partides pressupostades i cobrades però no executades: el problema no és de percepció, és de **contrast entre el promès i el realment fet**.\n\n## Contra què es compara l'obra\n\nEl peritatge contrasta el que s'ha executat amb tres referències: el **contracte i el pressupost**, la **memòria de qualitats** i la **bona pràctica constructiva** o *lex artis*. Aquest triple contrast permet objectivar els incompliments: què es va pactar, què es va cobrar i què es va executar realment, i amb quin nivell de qualitat.\n\n## Què documenta el dictamen\n\nL'informe identifica cada deficiència, en determina la causa, valora el cost de subsanar-la i quantifica, si escau, les partides no executades. Aquest document és la base de la reclamació, tant si es resol de manera amistosa com si acaba als tribunals.\n\n## El procés habitual de reclamació\n\nEn molts casos, un dictamen professional n'hi ha prou perquè el contractista accepti subsanar sense arribar a judici. Si no hi ha acord, cap la mediació amb base tècnica i, com a última via, la reclamació judicial, en què l'informe pericial és la prova clau. La ratificació del dictamen davant el jutge forma part del servei.\n\n## Preguntes freqüents\n\n**Necessito un informe per reclamar una reforma mal feta?**\nNo és obligatori en la fase extrajudicial, però és l'eina més eficaç perquè el contractista accepti subsanar. En via judicial, és pràcticament imprescindible.\n\n**S'aplica la LOE a una reforma?**\nDepèn de l'abast. Les reformes que no constitueixen obra d'edificació completa solen regir-se pel contracte i el Codi Civil; l'encaix concret correspon a l'anàlisi jurídica.\n\n**Puc reclamar si ja he pagat la reforma?**\nSí. Haver abonat l'obra no impedeix reclamar els defectes ni les partides no executades."
+  },
+  {
+    "title": "Errors freqüents en un informe pericial de construcció (i com es refuten)",
+    "slug": "errors-frequents-informe-pericial-contrari-contrainforme",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/errores-frecuentes-informe-pericial-contrario-contrainforme/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/common-errors-opposing-expert-report-counter-report/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/errors-frequents-informe-pericial-contrari-contrainforme/"
+      }
+    ],
+    "description": "Les fallades metodològiques més habituals als dictàmens de construcció de la part contrària i com un contrainforme pericial els detecta i els rebat conforme a la sana crítica (LEC art. 348).",
+    "excerpt": "No tot informe pericial és sòlid. Un contrainforme no elabora un altre dictamen: demostra que el contrari és incomplet, incorrecte o metodològicament deficient.",
+    "estado": "publicado",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": [
+      "Contrainforme",
+      "Impugnar informe pericial",
+      "LEC 348",
+      "Metodologia pericial"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Errores frecuentes en un informe pericial de construcción (y cómo se refutan)",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "No tots els dictàmens que es presenten en un procediment resisteixen una anàlisi tècnica rigorosa. Quan l'informe de la part contrària conté mancances, la resposta no és elaborar un altre dictamen sobre la patologia, sinó un **contrainforme**: un document que demostra que les conclusions de l'informe rival són incorrectes, incompletes o metodològicament deficients.\n\n## Els errors més habituals\n\n**Inspecció insuficient:** conclusions categòriques a partir d'una visita superficial, sense assajos ni mesuraments que les avalin. **Referències normatives incorrectes** o citades fora de context —CTE, EHE-08, LOE aplicades on no correspon—. **Salt lògic** entre les dades recollides i les conclusions. **Quantificació econòmica** sense justificació de mesuraments o preus. **Confusió de causes**: atribuir a un origen el que correspon a un altre.\n\n## Què analitza el contrainforme\n\nEl contrainforme revisa el rigor metodològic de la inspecció, la correcció de les referències normatives, la coherència entre dades i conclusions i la solidesa de la valoració. No desqualifica en abstracte: assenyala, punt per punt, on el dictamen contrari deixa de ser defensable.\n\n## Per què funciona davant el jutge\n\nEl jutge valora la prova pericial conforme a la **sana crítica (LEC art. 348)**. No està obligat a acceptar un dictamen pel fet d'existir. Un contrainforme que demostra deficiències concretes minva el pes probatori de l'informe contrari.\n\n## Preguntes freqüents\n\n**Pot el jutge rebutjar un informe pericial?**\nEl jutge no el rebutja formalment, però en valora lliurement la força probatòria. Un contrainforme sòlid redueix el crèdit que se li atorga al dictamen contrari.\n\n**Quant es triga a elaborar un contrainforme?**\nDepèn del volum de l'informe a rebatre; habitualment entre deu i vint dies hàbils.\n\n**És el mateix que la tatxa del perit?**\nNo. La tatxa qüestiona la imparcialitat del perit (LEC art. 343); el contrainforme, el contingut tècnic. Es poden emprar de manera complementària."
+  },
+  {
+    "title": "Perit de part i perit judicial: diferències i quan s'usa cadascun",
+    "slug": "diferencia-perit-part-perit-judicial",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/diferencia-perito-parte-perito-judicial/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/difference-party-appointed-court-appointed-expert/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/diferencia-perit-part-perit-judicial/"
+      }
+    ],
+    "description": "Diferències entre el perit de part i el perit judicial: qui els designa, quina validesa tenen i quan convé cada figura en un procediment de construcció.",
+    "excerpt": "Tots dos elaboren el mateix tipus de dictamen amb idèntica metodologia; el que canvia és qui els designa i en quin moment del conflicte intervenen.",
+    "estado": "publicado",
+    "datePublished": "2026-09-22",
+    "dateModified": "2026-09-22",
+    "author": "Albert Vilardell",
+    "category": "Proceso",
+    "tags": [
+      "Perit de part",
+      "Perit judicial",
+      "LEC",
+      "Designació"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Perito de parte y perito judicial: diferencias y cuándo se usa cada uno",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Actuació com a Perit Judicial",
+        "url": "/perito-judicial/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "En un conflicte de construcció apareixen dues figures que sovint es confonen: el **perit de part** i el **perit judicial**. La metodologia del dictamen és la mateixa; el que canvia és **qui l'encarrega i en quina fase del procediment intervé**.\n\n## El perit de part\n\nL'encarrega directament una de les parts —o el seu lletrat— per investigar la realitat tècnica dels fets i fonamentar la seva postura. És plenament vàlid com a mitjà de prova conforme a la **LEC (arts. 335 i ss.)**. S'usa abans d'una demanda per avaluar la solidesa del cas, durant una negociació extrajudicial, o com a prova pericial en judici.\n\n## El perit judicial\n\nEl designa el jutjat, habitualment per sorteig entre els inscrits a la llista oficial del Ministeri de Justícia, o per acord de les parts (**LEC art. 339**). La seva nota distintiva és la **imparcialitat acreditada**. Ha de ratificar el dictamen verbalment davant el jutge i sotmetre's a l'interrogatori croat dels dos lletrats (**LEC art. 347**).\n\n## Quan convé cadascun\n\nEl de part és l'instrument per **construir** la seva posició: aporta iniciativa i control. El judicial aporta el pes de la neutralitat institucional. En molts litigis coexisteixen.\n\n## Preguntes freqüents\n\n**Té menys valor un informe de part per no ser \"imparcial\"?**\nNo. La LEC el reconeix com a prova pericial. El jutge en valora la força probatòria pel rigor del treball, no per qui el va encarregar.\n\n**Pot el mateix perit actuar com a de part i com a judicial?**\nEn procediments diferents, sí. En el mateix assumpte, el paper el determina qui el designa.\n\n**Quin és més car?**\nEls honoraris depenen de la complexitat del cas, no de la figura."
+  },
+  {
+    "title": "Què ha de contenir un informe pericial conforme a la LEC",
+    "slug": "que-ha-de-contenir-informe-pericial-lec",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/que-debe-contener-informe-pericial-lec/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/what-an-expert-report-must-contain-lec/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/que-ha-de-contenir-informe-pericial-lec/"
+      }
+    ],
+    "description": "Estructura i continguts que ha de reunir un informe pericial de construcció per ser sòlid conforme a la Llei d'Enjudiciament Civil: objecte, metodologia, anàlisi, conclusions i ratificació.",
+    "excerpt": "Un dictamen no val per la seva extensió, sinó per la seva traçabilitat: que cada conclusió es pugui seguir des de les dades fins a la norma aplicada.",
+    "estado": "publicado",
+    "datePublished": "2026-09-29",
+    "dateModified": "2026-09-29",
+    "author": "Albert Vilardell",
+    "category": "Proceso",
+    "tags": [
+      "Informe pericial",
+      "LEC 335",
+      "Metodologia",
+      "Dictamen"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Qué debe contener un informe pericial conforme a la LEC",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      },
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      }
+    ],
+    "content": "Un informe pericial de construcció no es mesura per la seva extensió, sinó per la seva **traçabilitat**: que cada conclusió es pugui seguir des de les dades fins a la norma aplicada. La **LEC (arts. 335 i ss.)** no imposa un format rígid, però la pràctica ha consolidat els continguts que fan sòlid un dictamen.\n\n## Objecte i metodologia\n\nL'informe ha de definir amb precisió **què se li pregunta** i **quin mètode** s'ha emprat per respondre: inspecció visual, assajos, mesuraments, modelatge. La metodologia és el primer que examinarà un contrainforme, de manera que ha de ser explícita i reproduïble.\n\n## Dades, anàlisi i normativa\n\nLes dades recollides in situ (fissures, humitats, deformacions) es documenten amb fotografia i referència. L'anàlisi les interpreta a la llum de la norma aplicable —**CTE, EHE-08, LOE**— sense salts lògics. La quantificació econòmica es justifica amb mesuraments i preus.\n\n## Conclusions i ratificació\n\nLes conclusions responen, una a una, a les preguntes plantejades, amb el grau de certesa que permeten les dades. El perit ha d'estar en condicions de **ratificar** el dictamen i defensar-lo davant l'interrogatori croat.\n\n## Preguntes freqüents\n\n**És obligatori un format concret?**\nNo. La LEC no l'exigeix, però un dictamen ordenat és més difícil de rebatre.\n\n**Què diferencia un bon informe d'un de feble?**\nLa coherència entre dades i conclusions i la correcció de les referències normatives.\n\n**Inclou la valoració de la reparació?**\nHabitualment sí, quan l'objecte de l'encàrrec ho requereix."
+  },
+  {
+    "title": "Com demostrar vicis ocults: la prova de preexistència",
+    "slug": "com-demostrar-vicis-ocults-preexistencia-perit",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/como-demostrar-vicios-ocultos-preexistencia-perito/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/how-to-prove-hidden-defects-pre-existence/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/com-demostrar-vicis-ocults-preexistencia-perit/"
+      }
+    ],
+    "description": "Com s'acredita tècnicament un vici ocult en la compravenda d'habitatge: provar que el defecte és greu, no aparent i anterior a la venda dins del termini del Codi Civil.",
+    "excerpt": "La clau d'una reclamació per vicis ocults no és que el defecte existeixi, sinó demostrar que ja existia abans de la compra. Això es prova tècnicament.",
+    "estado": "publicado",
+    "datePublished": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "author": "Albert Vilardell",
+    "category": "Vicios Ocultos",
+    "tags": [
+      "Vicis ocults",
+      "Preexistència",
+      "Codi Civil",
+      "Prova"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Cómo demostrar vicios ocultos: la prueba de preexistencia",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Vicis Ocults",
+        "url": "/vicios-ocultos/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "En una reclamació per vicis ocults, el defecte sol ser evident quan es descobreix. El difícil —i el decisiu— és demostrar que **ja existia abans de la compra** i que **no era aparent** en una inspecció ordinària. És aquí on l'informe pericial marca la diferència.\n\n## Què exigeix el Codi Civil\n\nEl **CC (arts. 1484 i ss.)** exigeix que el vici sigui greu, no aparent i anterior a la venda. El comprador disposa de **6 mesos** des del lliurament per exercitar l'acció (art. 1490), un termini de caducitat que corre en contra seva. L'informe s'ha d'obtenir dins d'aquest termini.\n\n## Com es prova la preexistència\n\nLa preexistència s'acredita analitzant el **grau de desenvolupament** de la patologia. Una humitat per capil·laritat, l'evolució d'una fissura o l'estat d'una corrosió permeten estimar-ne l'antiguitat: un dany no apareix de forma instantània, i la seva maduresa tècnica delata que ja era present en el moment de la compravenda.\n\n## Gravetat i no-aparença\n\nEl dictamen també estableix que el defecte **compromet l'ús** de l'immoble (gravetat) i que **no era detectable** en una visita normal.\n\n## Preguntes freqüents\n\n**Quant temps tinc per reclamar?**\n6 mesos des del lliurament (CC art. 1490).\n\n**I si el venedor diu que el dany és nou?**\nPrecisament l'anàlisi del grau de desenvolupament de la patologia permet rebatre aquesta afirmació amb criteri tècnic.\n\n**Serveix qualsevol defecte?**\nNo. Ha de ser greu, ocult i anterior a la venda."
+  },
+  {
+    "title": "Humitats en comunitat: element comú o privatiu?",
+    "slug": "humitats-comunitat-element-comu-privatiu",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/humedades-comunidad-elemento-comun-privativo/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/damp-homeowners-association-common-or-private/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/humitats-comunitat-element-comu-privatiu/"
+      }
+    ],
+    "description": "Com es determina si una humitat en una comunitat de propietaris procedeix d'un element comú o privatiu, qui ha d'assumir la reparació i com ho acredita un informe pericial.",
+    "excerpt": "En una comunitat, la pregunta que decideix qui paga és d'on ve l'aigua. La resposta la dona el diagnòstic de l'origen, no la ubicació del dany.",
+    "estado": "publicado",
+    "datePublished": "2026-10-13",
+    "dateModified": "2026-10-13",
+    "author": "Albert Vilardell",
+    "category": "Humedades",
+    "tags": [
+      "Humitats",
+      "Comunitat de propietaris",
+      "Element comú",
+      "Reclamació"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Humedades en comunidad: ¿elemento común o privativo?",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Humitats i Filtracions",
+        "url": "/humedades-filtraciones/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Quan apareix una humitat en un edifici en règim de propietat horitzontal, el conflicte quasi mai és tècnic al principi: és sobre **qui paga**. I aquesta resposta depèn d'una sola qüestió: si l'aigua procedeix d'un **element comú** o d'un de **privatiu**.\n\n## Per què l'origen ho decideix tot\n\nSi la humitat prové d'un element comú —coberta, façana, baixants generals, forjats— la reparació correspon a la **comunitat**. Si procedeix d'un element privatiu —una instal·lació interior d'un habitatge— correspon al **propietari**. El dany es pot manifestar en un pis i tenir l'origen a la coberta comunitària: per això la ubicació de la taca no n'hi ha prou.\n\n## El diagnòstic de l'origen\n\nLocalitzar l'origen exigeix metodologia no destructiva: **termografia infraroja**, higròmetres de profunditat, proves d'estanqueïtat. El dictamen determina el punt exacte d'entrada de l'aigua i el seu recorregut, i atribueix la responsabilitat conforme a la Llei de Propietat Horitzontal.\n\n## La reparació, després\n\nUn cop determinat l'origen i la responsabilitat, la reparació l'executa un contractista especialitzat; per al tractament d'humitats a Barcelona hi ha solucions específiques que queden fora de l'objecte del dictamen.\n\n## Preguntes freqüents\n\n**Qui paga si la filtració ve de la coberta?**\nLa coberta és element comú: respon la comunitat i, si escau, la seva assegurança.\n\n**I si l'origen és a la terrassa d'ús privatiu d'un veí?**\nLes terrasses solen ser element comú d'ús privatiu; la responsabilitat es reparteix segons el títol i la causa. El dictamen ho delimita.\n\n**Puc reclamar a la comunitat amb un informe de part?**\nSí. És l'eina habitual per fonamentar la reclamació en junta o per via judicial."
+  },
+  {
+    "title": "Filtracions per façana: origen, responsabilitat i reclamació",
+    "slug": "filtracions-facana-origen-responsabilitat-reclamacio",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/filtraciones-fachada-origen-responsabilidad-reclamacion/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/facade-leaks-origin-liability-claim/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/filtracions-facana-origen-responsabilitat-reclamacio/"
+      }
+    ],
+    "description": "Causes de les filtracions per façana (juntes, fusteries, fissures, façana ventilada), com es diagnostica l'origen i com es delimita la responsabilitat per reclamar.",
+    "excerpt": "La façana és una de les vies d'entrada d'aigua més difícils de diagnosticar: el punt d'entrada i el d'aparició del dany rarament coincideixen.",
+    "estado": "publicado",
+    "datePublished": "2026-10-20",
+    "dateModified": "2026-10-20",
+    "author": "Albert Vilardell",
+    "category": "Humedades",
+    "tags": [
+      "Filtracions",
+      "Façana",
+      "CTE DB-HS",
+      "Reclamació"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Filtraciones por fachada: origen, responsabilidad y reclamación",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Humitats i Filtracions",
+        "url": "/humedades-filtraciones/"
+      },
+      {
+        "title": "Informe per Mala Execució d'Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      }
+    ],
+    "content": "Les filtracions per façana són entre les patologies hídriques més difícils de diagnosticar: l'aigua entra per un punt i apareix en un altre, després de recórrer l'interior del tancament. Sense un diagnòstic rigorós, les reparacions s'acumulen sense resoldre el problema.\n\n## Les causes habituals\n\n**Juntes i segellats** degradats, **fusteries** mal rebudes o sense barrera d'aigua, **fissures** al revestiment, defectes en **façanes ventilades** o en les trobades amb coberta i balcons. El **CTE DB-HS 1** fixa les exigències d'estanqueïtat; el seu incompliment sol estar a l'origen de la patologia.\n\n## Com es localitza l'origen\n\nEl diagnòstic combina inspecció del detall constructiu, **termografia** i proves d'estanqueïtat dirigides que reprodueixen l'entrada d'aigua de forma controlada. L'objectiu és identificar el punt real d'entrada, no el símptoma visible.\n\n## Responsabilitat i reclamació\n\nDeterminat l'origen, el dictamen delimita la responsabilitat: constructora (defecte d'execució dins del termini de la **LOE**), comunitat (element comú) o cobertura de l'assegurança. La reparació posterior correspon a un contractista especialitzat.\n\n## Preguntes freqüents\n\n**Per què han fallat les reparacions anteriors?**\nPerquè probablement es va tractar el símptoma (la taca) sense identificar el punt d'entrada de l'aigua.\n\n**La filtració per façana la cobreix l'assegurança?**\nDepèn de l'origen i de la pòlissa. Un defecte constructiu preexistent sol quedar fora.\n\n**Entra dins de la garantia de la LOE?**\nL'estanqueïtat afecta l'habitabilitat: garantia de 3 anys (LOE art. 17)."
+  },
+  {
+    "title": "Carbonatació del formigó: diagnòstic pericial (no és aluminosi)",
+    "slug": "carbonatacio-formigo-diagnostic-pericial",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/carbonatacion-hormigon-diagnostico-pericial/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/concrete-carbonation-expert-diagnosis/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/carbonatacio-formigo-diagnostic-pericial/"
+      }
+    ],
+    "description": "Què és la carbonatació del formigó, com es diagnostica amb l'assaig de fenolftaleïna, en què es diferencia de l'aluminosi i quin abast té el dany estructural.",
+    "excerpt": "La carbonatació i l'aluminosi es confonen sovint, però són fenòmens diferents amb causes i pronòstics diferents. Distingir-los canvia la reclamació.",
+    "estado": "publicado",
+    "datePublished": "2026-10-27",
+    "dateModified": "2026-10-27",
+    "author": "Albert Vilardell",
+    "category": "Patologías Estructurales",
+    "tags": [
+      "Carbonatació",
+      "Formigó",
+      "Corrosió",
+      "Diagnòstic"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Carbonatación del hormigón: diagnóstico pericial (no es aluminosis)",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Patologies Estructurals",
+        "url": "/patologias-estructurales/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Quan apareix ferro oxidat en pilars, forjats o bigues, es parla de seguida d'\"aluminosi\". Però moltes vegades el fenomen és la **carbonatació**, un procés diferent que convé diagnosticar correctament perquè canvia la causa, el pronòstic i la reclamació.\n\n## Què és la carbonatació\n\nEl formigó protegeix les armadures perquè el seu medi és alcalí. Amb el temps, el **CO₂** ambiental penetra i **redueix l'alcalinitat** (la \"carbonata\"); quan el front de carbonatació arriba a l'armadura, aquesta perd la protecció i comença a **corroir-se**. La corrosió expandeix l'acer, fissura el formigó i provoca despreniments.\n\n## Com es diagnostica\n\nL'assaig de referència és el de **fenolftaleïna**: aplicada sobre una fractura recent del formigó, tenyeix de rosa la zona sana (alcalina) i deixa incolora la carbonatada. Combinat amb la mesura de la profunditat del front i del recobriment real de les armadures, permet estimar l'abast.\n\n## Diferència amb l'aluminosi\n\nL'**aluminosi** deriva de l'ús de ciment aluminós (habitual en forjats dels anys 50-70); es detecta amb assajos específics (oxina). La carbonatació afecta qualsevol formigó per envelliment. El diagnòstic diferencial és essencial.\n\nLa reparació (passivat, reforç) és una fase posterior que executa un contractista tècnic especialitzat.\n\n## Preguntes freqüents\n\n**És perillosa la carbonatació?**\nDepèn de l'abast de la corrosió i de la secció d'armadura perduda. El dictamen avalua la capacitat portant residual.\n\n**Es pot aturar?**\nLa reparació busca restaurar la protecció de l'armadura. La viabilitat la determina el diagnòstic.\n\n**Aluminosi o carbonatació cobreixen la garantia desenal?**\nDepèn de l'antiguitat de l'edifici i de l'origen; en obra nova, un defecte estructural encaixa en la garantia desenal de la LOE."
+  },
+  {
+    "title": "Corrosió d'armadures: diagnòstic i abast del dany",
+    "slug": "corrosio-armadures-diagnostic-abast",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/corrosion-armaduras-diagnostico-alcance/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/rebar-corrosion-diagnosis-extent/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/corrosio-armadures-diagnostic-abast/"
+      }
+    ],
+    "description": "Com es diagnostica la corrosió d'armadures en formigó, què la provoca (carbonatació, clorurs), com es mesura la pèrdua de secció i què implica per a la seguretat estructural.",
+    "excerpt": "La corrosió d'armadures no és només estètica: redueix la secció resistent de l'acer i compromet la capacitat portant. El dictamen mesura quant.",
+    "estado": "publicado",
+    "datePublished": "2026-11-03",
+    "dateModified": "2026-11-03",
+    "author": "Albert Vilardell",
+    "category": "Patologías Estructurales",
+    "tags": [
+      "Corrosió",
+      "Armadures",
+      "Formigó armat",
+      "Seguretat estructural"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Corrosión de armaduras: diagnóstico y alcance del daño",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Patologies Estructurals",
+        "url": "/patologias-estructurales/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "La corrosió de les armadures és la patologia més freqüent del formigó armat envellit, i també una de les pitjor avaluades: l'òxid visible és només el símptoma. El rellevant és **quanta secció d'acer s'ha perdut** i què significa per a l'estructura.\n\n## Què la provoca\n\nDues causes principals: la **carbonatació** del formigó (pèrdua d'alcalinitat per CO₂) i la presència de **clorurs** (ambients marins, sals de desglaç). Totes dues trenquen la capa protectora de l'acer i activen la corrosió.\n\n## Com es mesura l'abast\n\nEl diagnòstic determina la **profunditat de carbonatació** o el contingut de clorurs, el **recobriment real** i, sobretot, la **pèrdua de secció** de les barres. Amb aquesta dada s'avalua la capacitat portant residual conforme a la normativa estructural (EHE-08 / Eurocodi 2).\n\n## Què aporta l'informe\n\nEl dictamen distingeix entre un problema **estètic o superficial** i un que **afecta l'estabilitat**, i fixa la urgència de la intervenció. La reparació o el reforç els executa un contractista especialitzat.\n\n## Preguntes freqüents\n\n**L'òxid a la vista significa perill immediat?**\nNo necessàriament. Pot ser superficial o indicar una pèrdua de secció rellevant. Només la mesura ho determina.\n\n**Es pot reparar sense substituir l'estructura?**\nEn molts casos sí, mitjançant sanejat, passivat i reforç. La viabilitat la fixa el diagnòstic.\n\n**Qui respon en un edifici recent?**\nUn defecte estructural en obra nova encaixa en la garantia desenal de la LOE."
+  },
+  {
+    "title": "Fissura o esquerda: com es diferencien i quan preocupen",
+    "slug": "fissura-o-esquerda-diferencia-quan-preocupen",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/fisura-o-grieta-diferencia-cuando-preocupan/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/crack-or-fissure-difference-when-to-worry/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/fissura-o-esquerda-diferencia-quan-preocupen/"
+      }
+    ],
+    "description": "Diferència entre fissura i esquerda, com interpretar-ne el traçat, obertura i evolució, i quan una esquerda indica un problema estructural que requereix informe pericial.",
+    "excerpt": "No tota esquerda és estructural, però algunes ho són. El traçat, l'obertura i l'evolució són les tres pistes que separen el cosmètic del greu.",
+    "estado": "publicado",
+    "datePublished": "2026-11-10",
+    "dateModified": "2026-11-10",
+    "author": "Albert Vilardell",
+    "category": "Patologías Estructurales",
+    "tags": [
+      "Fissures",
+      "Esquerdes",
+      "Patologia estructural",
+      "Diagnòstic"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Fisura o grieta: cómo se diferencian y cuándo preocupan",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Patologies Estructurals",
+        "url": "/patologias-estructurales/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Una esquerda a casa genera alarma, però no totes indiquen un problema estructural. Distingir una **fissura** superficial d'una **esquerda** que compromet l'estructura és el primer pas, i depèn de llegir correctament tres senyals.\n\n## Fissura davant esquerda\n\nDe manera orientativa, es parla de **fissura** quan l'obertura és fina i afecta el revestiment, i d'**esquerda** quan és més ampla i travessa l'element. Però l'amplada per si sola no n'hi ha prou: el determinant és l'**origen**.\n\n## Les tres pistes\n\n**Traçat:** les esquerdes estructurals solen seguir una trajectòria coherent amb el mecanisme de dany. **Obertura:** per sobre de cert llindar i amb disposició diagonal, la sospita estructural augmenta. **Evolució:** una esquerda **activa**, que creix amb el temps, és més preocupant que una d'estabilitzada.\n\n## Altres causes\n\nMoltes fissures són **tèrmiques**, de **retracció** o d'**envà**, sense transcendència estructural. El dictamen diferencia l'origen abans d'atribuir gravetat.\n\n## Quan convé un informe\n\nQuan l'esquerda és activa, afecta elements portants, supera el mil·límetre amb disposició diagonal, o s'acompanya de deformacions.\n\n## Preguntes freqüents\n\n**Una esquerda que no creix és segura?**\nUna esquerda estabilitzada preocupa menys que una activa, però convé confirmar-ne l'origen.\n\n**Com sé si està activa?**\nMitjançant testimonis i mesuraments repetits en el temps.\n\n**Puc tapar l'esquerda i ja està?**\nTapar sense diagnosticar amaga el símptoma. Si l'origen és estructural, reapareixerà."
+  },
+  {
+    "title": "Paviments industrials: toleràncies TR-34 i disputes de planor",
+    "slug": "paviment-industrial-toleracies-tr34-disputes",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/pavimento-industrial-tolerancias-tr34-disputas/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/industrial-flooring-tr34-tolerances-disputes/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/paviment-industrial-toleracies-tr34-disputes/"
+      }
+    ],
+    "description": "Com es periten els defectes en paviments industrials: fissuració, planor per a equips VNA, toleràncies segons la norma TR-34 i responsabilitat per mala execució de la solera.",
+    "excerpt": "En logística, uns mil·límetres de planor decideixen si una prestatgeria VNA pot operar. El peritatge contrasta la solera executada amb la tolerància contractual.",
+    "estado": "publicado",
+    "datePublished": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "author": "Albert Vilardell",
+    "category": "Naves Industriales",
+    "tags": [
+      "Paviment industrial",
+      "TR-34",
+      "Planor",
+      "Solera"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Pavimentos industriales: tolerancias TR-34 y disputas de planitud",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritatge de Naus Industrials",
+        "url": "/naves-industriales/"
+      },
+      {
+        "title": "Informe per Mala Execució d'Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      }
+    ],
+    "content": "En una nau logística, el paviment no és un acabat: és una superfície de treball amb toleràncies exigents. Un defecte de planor o una fissuració generalitzada poden impedir l'operació de prestatgeries de gran alçada (VNA) i generar disputes de quantia considerable.\n\n## Les patologies habituals\n\n**Fissuració** per retracció o assentament de la solera, **juntes** mal executades o mal segellades, **descrostament** superficial i, sobretot, **manca de planor** per als equips previstos. Cadascuna té una causa diferent —terreny, dosificació, cura, execució— que el diagnòstic ha de separar.\n\n## El paper de la norma TR-34\n\nLa referència tècnica per a toleràncies de planor i regularitat de soleres industrials és la norma **TR-34** (Concrete Society). El peritatge contrasta la planor **realment executada** amb la classe de tolerància **contractualment exigida** segons el tipus de trànsit. Aquest contrast objectiva l'incompliment.\n\n## Prova i reparació, dues fases\n\nEl dictamen determina la causa, mesura la desviació respecte a la tolerància i valora l'abast —és la fase de **prova** per reclamar a la constructora conforme a la **LOE**. La **reparació** de la solera (regeneració, tractament de juntes, paviments de resina) és una fase diferent que executa un contractista tècnic especialitzat.\n\n## Preguntes freqüents\n\n**Unes fissures a la solera són sempre un defecte?**\nNo. Certa fissuració de retracció és esperable. El rellevant és la seva magnitud, la causa i si supera l'admissible.\n\n**Què és la planor VNA?**\nLa regularitat exigida per a passadissos de prestatgeries de molt gran alçada, molt més estricta que el trànsit lliure.\n\n**A qui es reclama?**\nA la constructora, si el defecte deriva de l'execució, dins dels terminis de la LOE."
+  },
+  {
+    "title": "Valoració de danys en nau industrial per a l'asseguradora",
+    "slug": "valoracio-danys-nau-industrial-asseguradora",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/valoracion-danos-nave-industrial-aseguradora/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/industrial-warehouse-damage-valuation-insurer/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/valoracio-danys-nau-industrial-asseguradora/"
+      }
+    ],
+    "description": "Com es valoren els danys d'una nau industrial per a un expedient d'assegurança: continent, existències, estructura metàl·lica i pèrdua d'explotació, amb criteri pericial contrastable.",
+    "excerpt": "En un sinistre industrial, la valoració decideix la indemnització. Un dictamen tècnic contrastable evita que la taxació de l'asseguradora es quedi curta.",
+    "estado": "publicado",
+    "datePublished": "2026-11-24",
+    "dateModified": "2026-11-24",
+    "author": "Albert Vilardell",
+    "category": "Naves Industriales",
+    "tags": [
+      "Valoració de danys",
+      "Assegurança",
+      "Nau industrial",
+      "Sinistre"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Valoración de daños en nave industrial para la aseguradora",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritatge de Naus Industrials",
+        "url": "/naves-industriales/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Quan una nau industrial pateix un sinistre —incendi, inundació, col·lapse—, la indemnització depèn de com es **valorin els danys**. Una taxació superficial sol infravalorar partides rellevants; un dictamen tècnic contrastable les documenta.\n\n## Què es valora\n\nUn expedient complet distingeix diversos conceptes: el **continent** (estructura, tancaments, coberta, instal·lacions fixes), el **contingut** o existències, i, segons la pòlissa, la **pèrdua d'explotació** (lucre cessant) durant la reposició. Cadascun requereix un criteri de valoració diferent.\n\n## L'estructura, el punt crític\n\nEn incendis, la clau és avaluar si l'**estructura metàl·lica** conserva capacitat portant o s'ha de substituir: la calor degrada l'acer abans de fondre'l. Aquesta decisió —reparar davant reconstruir— és la que més incideix en la quantia.\n\n## Per què convé un dictamen de part\n\nSi l'oferta de l'asseguradora no cobreix el dany acreditat, l'assegurat pot aportar el seu propi dictamen i activar el **peritatge contradictori (art. 38 LCS)**.\n\n## Preguntes freqüents\n\n**Inclou la valoració el lucre cessant?**\nNomés si la pòlissa cobreix pèrdua d'explotació. El dictamen documenta el temps i les obres de reposició.\n\n**Es valora a nou o amb depreciació?**\nDepèn de la modalitat de la pòlissa (valor de reposició a nou o valor real).\n\n**Puc discutir la taxació de l'assegurança?**\nSí, mitjançant el peritatge contradictori de l'art. 38 LCS."
+  },
+  {
+    "title": "Liquidació del contracte d'obra pública: discrepàncies freqüents",
+    "slug": "liquidacio-contracte-obra-publica-discrepancies",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/liquidacion-contrato-obra-publica-discrepancias/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/public-works-contract-settlement-disputes/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/liquidacio-contracte-obra-publica-discrepancies/"
+      }
+    ],
+    "description": "Discrepàncies habituals en la liquidació d'un contracte d'obra pública (mesuraments, unitats no previstes, penalitzacions, revisió de preus) i el paper de l'informe pericial conforme a la LCSP.",
+    "excerpt": "La liquidació és on afloren les diferències acumulades de tota l'obra. Un informe pericial tradueix l'obra executada al saldo real conforme a la LCSP.",
+    "estado": "publicado",
+    "datePublished": "2026-12-01",
+    "dateModified": "2026-12-01",
+    "author": "Albert Vilardell",
+    "category": "Obra Pública",
+    "tags": [
+      "LCSP",
+      "Liquidació",
+      "Obra pública",
+      "Mesuraments"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Liquidación del contrato de obra pública: discrepancias frecuentes",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritatge d'Obra Pública i Infraestructura",
+        "url": "/obras-publicas/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "La liquidació d'un contracte d'obra pública és el moment en què es tanquen els comptes de tota l'obra, i precisament per això concentra les discrepàncies acumulades entre el contractista i l'Administració. Resoldre-les requereix suport tècnic rigorós conforme a la **LCSP**.\n\n## On sorgeixen les diferències\n\nLes més freqüents: **mesuraments** finals discutits, **unitats d'obra no previstes** executades per necessitats de l'obra, **penalitzacions** per termini o qualitat, **revisió de preus** i el tractament dels **modificats** no formalitzats.\n\n## Què aporta l'informe pericial\n\nEl dictamen mesura i valora el **realment executat**, el contrasta amb el projecte, el plec i les certificacions, i encaixa cada partida en el supòsit legal corresponent. Davant l'Administració, la càrrega de justificar tècnicament la reclamació recau sobre el contractista.\n\n## Un document per negociar i per litigar\n\nUn dictamen sòlid facilita l'acord en la mateixa liquidació; si no n'hi ha, és la prova pericial en la impugnació.\n\n## Preguntes freqüents\n\n**Es poden reclamar unitats executades però no certificades?**\nEl dictamen documenta la realitat de l'obra executada, base fàctica de la reclamació.\n\n**Quin termini hi ha per a la liquidació?**\nLa LCSP fixa els terminis del procediment de liquidació; convé actuar-hi dins amb el suport tècnic preparat.\n\n**Inclou la revisió de preus?**\nSí, quan escau conforme al contracte i a la normativa aplicable."
+  },
+  {
+    "title": "Patologies en formigó pretesat: peritatge en obra civil",
+    "slug": "patologies-formigo-pretensat-obra-civil",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/patologias-hormigon-pretensado-obra-civil/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/prestressed-concrete-pathologies-civil-works/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/patologies-formigo-pretensat-obra-civil/"
+      }
+    ],
+    "description": "Peritatge de patologies en estructures de formigó pretesat (viaductes, ponts, taulers): fissuració, corrosió de tendons, pèrdues de pretesat i avaluació de seguretat estructural.",
+    "excerpt": "El formigó pretesat concentra les patologies més delicades de l'obra civil: una fallada als tendons no es veu, però compromet tota l'estructura.",
+    "estado": "publicado",
+    "datePublished": "2026-12-08",
+    "dateModified": "2026-12-08",
+    "author": "Albert Vilardell",
+    "category": "Obra Pública",
+    "tags": [
+      "Formigó pretesat",
+      "Viaducte",
+      "Obra civil",
+      "Patologia estructural"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Patologías en hormigón pretensado: peritaje en obra civil",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritatge d'Obra Pública i Infraestructura",
+        "url": "/obras-publicas/"
+      },
+      {
+        "title": "Informe per Patologies Estructurals",
+        "url": "/patologias-estructurales/"
+      }
+    ],
+    "content": "Les estructures de formigó pretesat —viaductes, ponts, taulers, grans forjats— són de les més eficients de l'enginyeria civil i, alhora, de les que exigeixen un diagnòstic més especialitzat quan presenten patologies. Una fallada al pretesat rarament és visible, però afecta el conjunt.\n\n## Les patologies característiques\n\n**Fissuració** anòmala per pèrdua de pretesat o per defectes d'execució, **corrosió dels tendons** (afavorida per defectes d'injecció de les beines), **pèrdues de tesat** i danys en ancoratges. A això se sumen les patologies comunes al formigó armat: carbonatació, clorurs, assentaments d'aparells de suport.\n\n## Per què requereix criteri específic\n\nEl comportament del pretesat no es pot analitzar amb els mateixos criteris que una estructura armada convencional. El diagnòstic combina inspecció, assajos i **modelatge estructural** conforme a l'Eurocodi per avaluar la capacitat portant residual i la seguretat.\n\n## Context pericial\n\nAquestes patologies solen aparèixer en contextos d'alt valor: contenciosos amb la constructora, reclamacions a l'Administració o expedients de responsabilitat. El dictamen diferencia responsabilitats amb referència normativa.\n\n## Preguntes freqüents\n\n**Es pot avaluar el pretesat sense destruir l'estructura?**\nEn bona mesura sí, mitjançant tècniques d'inspecció i assajos no destructius, complementats amb càlcul.\n\n**Una fissura en un tauler és greu?**\nDepèn del seu origen i disposició. En pretesat, certes fissures delaten pèrdua de tesat.\n\n**Qui respon d'aquests danys?**\nSegons l'origen: projecte, execució o conservació. El dictamen ho delimita."
+  },
+  {
+    "title": "Perit de part davant l'asseguradora: com es prepara la reclamació",
+    "slug": "perit-de-part-davant-asseguradora-reclamacio",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/perito-de-parte-frente-aseguradora-reclamacion/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/party-expert-against-insurer-claim/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/perit-de-part-davant-asseguradora-reclamacio/"
+      }
+    ],
+    "description": "Com prepara l'assegurat una reclamació davant la seva companyia amb un perit de part: documentació del sinistre, valoració independent i vies de l'article 38 LCS.",
+    "excerpt": "Quan la companyia infravalora o rebutja el sinistre, l'assegurat no està indefens: un perit de part reequilibra la relació amb l'asseguradora.",
+    "estado": "publicado",
+    "datePublished": "2026-12-15",
+    "dateModified": "2026-12-15",
+    "author": "Albert Vilardell",
+    "category": "Seguros",
+    "tags": [
+      "Perit de part",
+      "Asseguradora",
+      "Reclamació",
+      "Art. 38 LCS"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Perito de parte frente a la aseguradora: cómo se prepara la reclamación",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      },
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      }
+    ],
+    "content": "En un sinistre de construcció, la relació entre l'assegurat i la seva companyia és asimètrica: l'asseguradora disposa de perits propis i de criteri per valorar el dany. Un **perit de part** reequilibra aquesta relació aportant una valoració tècnica independent.\n\n## Quan intervé\n\nQuan la companyia **infravalora** el dany, **exclou** partides o **rebutja** la cobertura al·legant un origen no cobert. En tots aquests casos, la discrepància és tècnica abans que jurídica.\n\n## Com es prepara la reclamació\n\nEl perit documenta el sinistre amb metodologia verificable, determina l'**origen** del dany —dada de la qual depèn la cobertura—, quantifica l'abast i contrasta les partides discutides. Aquest dictamen és la base per negociar i, si no hi ha acord, per activar el **peritatge contradictori (art. 38 LCS)** o la via judicial.\n\n## El valor d'actuar aviat\n\nCom més aviat es documenti el sinistre, millor es preserva la prova. Retirar restes o reparar sense dictamen pot debilitar la reclamació.\n\n## Preguntes freqüents\n\n**Puc reclamar encara que ja hagi acceptat un pagament a compte?**\nUn pagament a compte no impedeix reclamar la diferència si el dany real és superior.\n\n**Què passa si la companyia no accepta el meu informe?**\nS'activa el peritatge contradictori de l'art. 38 LCS.\n\n**És el mateix que un contrainforme?**\nNo. El contrainforme rebat el dictamen del perit contrari; l'informe de part fonamenta la seva pròpia reclamació."
+  },
+  {
+    "title": "Perit de danys per inundació: què documenta el dictamen",
+    "slug": "perit-danys-inundacio-dictamen",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/perito-danos-inundacion-dictamen/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/flood-damage-expert-report/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/perit-danys-inundacio-dictamen/"
+      }
+    ],
+    "description": "Què documenta un informe pericial després d'una inundació: origen de l'aigua, abast en estructura i instal·lacions, danys diferits i valoració per a la reclamació a l'assegurança o al responsable.",
+    "excerpt": "Després d'una inundació, bona part del dany no és visible el primer dia. El dictamen documenta també el dany diferit, que la taxació ràpida sol ignorar.",
+    "estado": "publicado",
+    "datePublished": "2026-12-22",
+    "dateModified": "2026-12-22",
+    "author": "Albert Vilardell",
+    "category": "Seguros",
+    "tags": [
+      "Inundació",
+      "Danys per aigua",
+      "Peritatge",
+      "Valoració"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Perito de daños por inundación: qué documenta el dictamen",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      },
+      {
+        "title": "Informe per Humitats i Filtracions",
+        "url": "/humedades-filtraciones/"
+      }
+    ],
+    "content": "Les inundacions —per pluja extraordinària, desbordament o trencament de xarxa— deixen un dany que rarament es limita al que es veu el primer dia. Un dictamen pericial documenta tant el dany immediat com el **diferit**, que és on la valoració ràpida sol quedar-se curta.\n\n## Què documenta el dictamen\n\nL'**origen i la mecànica** de l'entrada d'aigua (dada clau per a la cobertura), l'**abast** en estructura, tancaments, instal·lacions (elèctrica, climatització) i acabats, i els **danys diferits**: humitats residuals, corrosió, pèrdua d'aïllament, patologies que es manifesten setmanes després.\n\n## Per què el dany diferit importa\n\nUna taxació feta en calent pot infravalorar el sinistre en no contemplar l'evolució de la humitat en materials i estructura. El dictamen anticipa aquests efectes amb criteri tècnic.\n\n## Context de la reclamació\n\nSegons el cas, la reclamació es dirigeix a l'**assegurança**, a un **tercer responsable** o a l'Administració. La reparació i l'assecatge els executa després un contractista especialitzat.\n\n## Preguntes freqüents\n\n**Cobreix l'assegurança de la llar una inundació?**\nDepèn de l'origen i de la pòlissa; els danys per fenòmens extraordinaris poden correspondre al Consorci de Compensació d'Assegurances.\n\n**Quan convé peritar, en calent o després?**\nCom més aviat per preservar la prova, amb seguiment del dany diferit.\n\n**Es pot reclamar a un veí per una fuita?**\nSi l'origen és a la seva instal·lació, sí; el dictamen determina l'origen."
+  },
+  {
+    "title": "Tatxa del perit (LEC 343): quan procedeix i com es planteja",
+    "slug": "tatxa-del-perit-lec-343",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/tacha-del-perito-lec-343/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/challenging-expert-impartiality-lec-343/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/tatxa-del-perit-lec-343/"
+      }
+    ],
+    "description": "Què és la tatxa de perits a l'article 343 de la LEC, en què es diferencia de la recusació, quan procedeix i com afecta el valor probatori del dictamen contrari.",
+    "excerpt": "La tatxa no discuteix el contingut del dictamen, sinó la imparcialitat del perit. És una eina diferent —i complementària— del contrainforme.",
+    "estado": "publicado",
+    "datePublished": "2026-12-29",
+    "dateModified": "2026-12-29",
+    "author": "Albert Vilardell",
+    "category": "Contrainforme",
+    "tags": [
+      "Tatxa de perits",
+      "LEC 343",
+      "Imparcialitat",
+      "Prova pericial"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Tacha del perito (LEC 343): cuándo procede y cómo se plantea",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "En un procediment amb prova pericial, qüestionar el dictamen contrari té dues vies diferents: atacar-ne el **contingut tècnic** (el contrainforme) o qüestionar la **imparcialitat del perit** (la tatxa). Convé no confondre-les.\n\n## Què és la tatxa\n\nLa **tatxa de perits** (**LEC art. 343**) es dirigeix contra els perits **autors de dictàmens aportats per les parts** —no els designats judicialment— quan concorren circumstàncies que fan dubtar de la seva imparcialitat: parentiu, interès en l'assumpte, amistat o enemistat, dependència. No anul·la el dictamen, però **el jutge la valora**.\n\n## Diferència amb la recusació\n\nLa **recusació** es reserva per als perits designats pel tribunal i, si prospera, aparta el perit. La **tatxa** afecta els perits de part i opera sobre la **credibilitat**.\n\n## Com s'articula amb el contrainforme\n\nLa tatxa qüestiona **qui** signa; el contrainforme, **què** diu. Emprades juntes, reforcen la impugnació davant la sana crítica del jutge (**LEC art. 348**).\n\n## Preguntes freqüents\n\n**La tatxa invalida l'informe?**\nNo. El jutge la té en compte en valorar la prova, però el dictamen segueix al procediment.\n\n**Quan es planteja?**\nEn el moment processal previst, habitualment en conèixer el dictamen i el perit.\n\n**N'hi ha prou amb la tatxa per guanyar?**\nRarament. L'eficaç és combinar-la amb un contrainforme."
+  },
+  {
+    "title": "Com preparar la prova pericial per al judici: guia per a advocats",
+    "slug": "preparar-prova-pericial-judici-advocats",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/preparar-prueba-pericial-juicio-abogados/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/preparing-expert-evidence-for-trial-lawyers/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/preparar-prova-pericial-judici-advocats/"
+      }
+    ],
+    "description": "Guia pràctica per a advocats sobre com preparar i aprofitar la prova pericial de construcció en judici: elecció del perit, objecte del dictamen, ratificació i interrogatori.",
+    "excerpt": "La prova pericial guanya o perd en la preparació: un dictamen sòlid i un perit que el defensa amb solvència pesen més que qualsevol al·legació.",
+    "estado": "publicado",
+    "datePublished": "2027-01-05",
+    "dateModified": "2027-01-05",
+    "author": "Albert Vilardell",
+    "category": "Contrainforme",
+    "tags": [
+      "Prova pericial",
+      "Advocats",
+      "Ratificació",
+      "Judici"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Cómo preparar la prueba pericial para el juicio: guía para abogados",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      },
+      {
+        "title": "Actuació com a Perit Judicial",
+        "url": "/perito-judicial/"
+      }
+    ],
+    "content": "Per a un despatx, la prova pericial de construcció és sovint la que decideix el plet. La seva eficàcia es juga en la **preparació**: triar bé el perit, acotar l'objecte i anticipar la ratificació.\n\n## Elecció i encàrrec\n\nEl perit ha de reunir competència tècnica acreditada i capacitat de **defensar el dictamen** oralment. L'encàrrec ha de definir amb precisió l'**objecte**: les preguntes tècniques que el dictamen ha de respondre, alineades amb l'estratègia processal.\n\n## El dictamen com a prova\n\nUn bon dictamen és **traçable**: cada conclusió es segueix des de les dades i la norma (**CTE, EHE-08, LOE**). Anticipa les objeccions del perit contrari i documenta la quantificació.\n\n## Ratificació i interrogatori\n\nLa **ratificació** oral (**LEC art. 347**) és on el dictamen se sosté o es debilita. Coordinar amb antelació les línies de l'interrogatori i les possibles preguntes de la part contrària és part del treball del lletrat amb el seu perit.\n\n## Preguntes freqüents\n\n**Informe de part o sol·licitar perit judicial?**\nDepèn de l'estratègia. El de part dona control i iniciativa; el judicial aporta neutralitat.\n\n**Pot el perit assistir al judici encara que no ratifiqui aquell dia?**\nLa ratificació es practica a la vista; convé planificar-ne la disponibilitat.\n\n**Què diferencia un dictamen que guanya?**\nLa solidesa metodològica i una ratificació clara i serena."
+  },
+  {
+    "title": "Garantia desenal i assegurança desenal: com s'activa",
+    "slug": "garantia-desenal-asseguranca-desenal-activar",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/garantia-decenal-seguro-decenal-activar/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/ten-year-warranty-decennial-insurance/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/garantia-desenal-asseguranca-desenal-activar/"
+      }
+    ],
+    "description": "Què cobreix la garantia desenal de la LOE, com funciona l'assegurança desenal obligatòria del promotor i quin paper té l'informe pericial per activar la cobertura davant danys estructurals.",
+    "excerpt": "La garantia desenal cobreix els danys que comprometen l'estabilitat de l'edifici durant deu anys. Activar-la exigeix acreditar l'origen estructural del dany.",
+    "estado": "publicado",
+    "datePublished": "2027-01-12",
+    "dateModified": "2027-01-12",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": [
+      "Garantia desenal",
+      "Assegurança desenal",
+      "LOE",
+      "Danys estructurals"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Garantía decenal y seguro decenal: cómo se activa",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Mala Execució d'Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      },
+      {
+        "title": "Informe per Patologies Estructurals",
+        "url": "/patologias-estructurales/"
+      }
+    ],
+    "content": "La **garantia desenal** és la cobertura de més abast de la **LOE (art. 17)**: protegeix durant **deu anys** davant els danys que **comprometen l'estabilitat i la resistència** de l'edifici. Activar-la requereix acreditar tècnicament l'origen estructural del dany.\n\n## Què cobreix\n\nNomés els danys que afecten els **elements estructurals** —fonamentació, bigues, forjats, murs de càrrega— i que comprometen la seguretat. No cobreix defectes d'habitabilitat (garantia de 3 anys) ni d'acabat (1 any). El termini compta des de la **recepció de l'obra**.\n\n## L'assegurança desenal\n\nEl promotor està obligat a subscriure una **assegurança desenal** que avala aquesta garantia. En cas de dany estructural, la reclamació pot dirigir-se a l'asseguradora de l'assegurança desenal, a més dels agents responsables conforme al règim de responsabilitat de la LOE.\n\n## El paper de l'informe pericial\n\nEl dictamen acredita que el dany és **estructural**, que **compromet l'estabilitat** i a quin agent és **imputable**, a més de quantificar la reparació. Sense aquest suport, la reclamació no prospera.\n\n## Preguntes freqüents\n\n**Tota esquerda activa la desenal?**\nNo. Només els danys que afecten l'estabilitat estructural.\n\n**Des de quan compten els deu anys?**\nDes de l'acta de recepció de l'obra.\n\n**A qui reclamo, al promotor o a l'asseguradora?**\nPot dirigir-se a tots dos; el dictamen i el lletrat determinen la via més eficaç."
+  },
+  {
+    "title": "Qui paga el perit en un judici?",
+    "slug": "qui-paga-el-perit-en-un-judici",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/quien-paga-el-perito-en-un-juicio/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/who-pays-the-expert-in-a-lawsuit/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/qui-paga-el-perit-en-un-judici/"
+      }
+    ],
+    "description": "Qui assumeix els honoraris del perit en un procediment civil: perit de part, perit judicial, provisió de fons i l'efecte de la condemna en costes.",
+    "excerpt": "Cada part avança el seu perit; el repartiment final depèn del tipus de designació i de la condemna en costes. Convé entendre-ho abans de litigar.",
+    "estado": "publicado",
+    "datePublished": "2027-01-19",
+    "dateModified": "2027-01-19",
+    "author": "Albert Vilardell",
+    "category": "Proceso",
+    "tags": [
+      "Honoraris",
+      "Perit judicial",
+      "Costes",
+      "Provisió de fons"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "¿Quién paga el perito en un juicio?",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Honoraris i cost",
+        "url": "/honorarios-perito-judicial-barcelona/"
+      },
+      {
+        "title": "Actuació com a Perit Judicial",
+        "url": "/perito-judicial/"
+      }
+    ],
+    "content": "Un dels primers dubtes de qui afronta un litigi de construcció és qui paga el perit. La resposta depèn de si el perit és **de part** o **judicial**, i del resultat del procediment.\n\n## El perit de part\n\nL'abona **la part que l'encarrega**. És una inversió sota el seu control. Si el procediment acaba amb **condemna en costes** a la part contrària, els honoraris del perit de part es poden incloure, dins dels límits de la taxació de costes.\n\n## El perit judicial\n\nQuan el designa el jutjat, aquest fixa una **provisió de fons** que, per regla general, avança la part que ha sol·licitat la prova. El repartiment definitiu s'ajusta amb la resolució i, si escau, amb la condemna en costes.\n\n## L'efecte de les costes\n\nEn termes generals, la part les pretensions de la qual són rebutjades pot ser condemnada a pagar les costes, que poden incloure els honoraris pericials dins dels límits legals.\n\n## Preguntes freqüents\n\n**Recupero el que vaig pagar al perit si guanyo?**\nPot recuperar-se totalment o parcialment via condemna en costes, amb els límits de la taxació.\n\n**Què és la provisió de fons?**\nL'import que el jutjat fixa per al perit judicial abans d'emetre el dictamen.\n\n**Quant costa un informe pericial?**\nDepèn de la complexitat del cas; convé demanar pressupost detallat de l'abast."
+  },
+  {
+    "title": "La ratificació del dictamen a la sala: què és i per què pesa",
+    "slug": "ratificacio-informe-pericial-sala",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/ratificacion-informe-pericial-sala/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/expert-report-ratification-in-court/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/ratificacio-informe-pericial-sala/"
+      }
+    ],
+    "description": "Què és la ratificació d'un informe pericial al judici, com transcorre l'interrogatori croat i per què la defensa oral del dictamen determina la seva força probatòria.",
+    "excerpt": "Un dictamen impecable pot perdre valor si no es defensa amb solvència a la sala. La ratificació és on l'informe se sosté davant el jutge.",
+    "estado": "publicado",
+    "datePublished": "2027-01-26",
+    "dateModified": "2027-01-26",
+    "author": "Albert Vilardell",
+    "category": "Proceso",
+    "tags": [
+      "Ratificació",
+      "Interrogatori",
+      "LEC 347",
+      "Prova pericial"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "La ratificación del dictamen en sala: qué es y por qué pesa",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Actuació com a Perit Judicial",
+        "url": "/perito-judicial/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Un informe pericial no acaba quan es lliura: es completa en la **ratificació**, el moment en què el perit defensa el dictamen verbalment davant el jutge i els lletrats. És una fase que molts subestimen i que, tanmateix, determina bona part de la seva força probatòria.\n\n## Què és la ratificació\n\nConforme a la **LEC (art. 347)**, en el judici el perit ratifica el seu dictamen i respon a les preguntes de les parts i del tribunal. La ratificació converteix el document en prova viva, sotmesa a contradicció.\n\n## L'interrogatori croat\n\nEls lletrats de totes dues parts poden interrogar el perit per reforçar o desmuntar les seves conclusions. Un perit solvent explica amb claredat qüestions tècniques complexes i no es contradiu sota pressió. La **solidesa d'aquesta defensa** és el que el jutge pondera.\n\n## Per què pesa tant\n\nEl jutge valora la prova pericial segons la **sana crítica (LEC art. 348)**. Entre dos informes contradictoris, tendirà a donar més crèdit al perit que defensa el seu dictamen amb rigor i serenitat.\n\n## Preguntes freqüents\n\n**És obligatori ratificar?**\nSi una part ho sol·licita, el perit ha d'anar a ratificar; si no, el dictamen pot perdre eficàcia.\n\n**Es cobra a part la ratificació?**\nDepèn del professional. Convé confirmar si està inclosa a l'encàrrec.\n\n**Pot el jutge preguntar directament al perit?**\nSí. El tribunal pot demanar aclariments per formar el seu criteri."
+  },
+  {
+    "title": "Vicis ocults o defectes d'obra nova: LOE o Codi Civil?",
+    "slug": "vicis-ocults-vs-defectes-obra-nova-loe-cc",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/vicios-ocultos-vs-defectos-obra-nueva-loe-cc/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/hidden-defects-vs-new-build-defects-loe-cc/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/vicis-ocults-vs-defectes-obra-nova-loe-cc/"
+      }
+    ],
+    "description": "Com distingir si una reclamació per defectes en un habitatge es regeix per la LOE (obra nova) o pel Codi Civil (vicis ocults en compravenda), i per què l'encaix condiciona terminis i responsables.",
+    "excerpt": "El mateix defecte es pot reclamar per dues vies legals diferents segons com es va adquirir l'habitatge. Triar malament la via és perdre terminis i responsables.",
+    "estado": "publicado",
+    "datePublished": "2027-02-02",
+    "dateModified": "2027-02-02",
+    "author": "Albert Vilardell",
+    "category": "Vicios Ocultos",
+    "tags": [
+      "Vicis ocults",
+      "LOE",
+      "Codi Civil",
+      "Defectes constructius"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Vicios ocultos o defectos de obra nueva: ¿LOE o Código Civil?",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Vicis Ocults",
+        "url": "/vicios-ocultos/"
+      },
+      {
+        "title": "Informe per Mala Execució d'Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      }
+    ],
+    "content": "Un mateix defecte —una humitat, una esquerda, una instal·lació deficient— es pot reclamar per dues vies legals diferents segons el context de l'adquisició. Encaixar-lo bé des del principi és decisiu, perquè **terminis i responsables canvien**.\n\n## La via de la LOE\n\nEls defectes d'un **habitatge d'obra nova** es regeixen per la **Llei d'Ordenació de l'Edificació**. El seu art. 17 organitza la responsabilitat dels agents amb terminis de garantia d'**1, 3 i 10 anys** segons la gravetat, comptats des de la recepció de l'obra.\n\n## La via del Codi Civil\n\nEls **vicis ocults** en una **compravenda** (típicament entre particulars, o de segona mà) es regeixen pel **Codi Civil (arts. 1484 i ss.)**, amb un termini de **6 mesos** des del lliurament per al sanejament.\n\n## Per què importa l'encaix\n\nEls terminis i els subjectes responsables són diferents. Aplicar la via equivocada pot portar a reclamar fora de termini. L'informe pericial aporta els **fets tècnics** —origen, gravetat, antiguitat—; l'encaix jurídic correspon al lletrat.\n\n## Preguntes freqüents\n\n**Vaig comprar sobre plànol, LOE o Codi Civil?**\nLa compra d'obra nova al promotor sol situar-se en l'àmbit de la LOE.\n\n**I si vaig comprar de segona mà?**\nLa via habitual és la de vicis ocults del Codi Civil, amb el termini de 6 mesos.\n\n**Pot coexistir més d'una acció?**\nEn certs casos sí. El dictamen tècnic serveix a qualsevol d'elles."
+  },
+  {
+    "title": "Termografia en el peritatge d'humitats: què detecta i què no",
+    "slug": "termografia-peritatge-humitats-que-detecta",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/termografia-peritaje-humedades-que-detecta/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/thermography-damp-assessment-what-it-detects/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/termografia-peritatge-humitats-que-detecta/"
+      }
+    ],
+    "description": "Com s'utilitza la termografia infraroja en el peritatge d'humitats, què permet detectar, els seus límits i per què es combina amb altres tècniques per localitzar l'origen de l'aigua.",
+    "excerpt": "La termografia és l'eina estrella del diagnòstic d'humitats, però no veu l'aigua: interpreta patrons tèrmics. Saber llegir-los és el que la fa útil.",
+    "estado": "publicado",
+    "datePublished": "2027-02-09",
+    "dateModified": "2027-02-09",
+    "author": "Albert Vilardell",
+    "category": "Humedades",
+    "tags": [
+      "Termografia",
+      "Humitats",
+      "Diagnòstic",
+      "CTE DB-HS"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Termografía en el peritaje de humedades: qué detecta y qué no",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Humitats i Filtracions",
+        "url": "/humedades-filtraciones/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "La **termografia infraroja** s'ha convertit en l'eina de referència del diagnòstic d'humitats, fins al punt que de vegades se li atribueixen poders que no té. Convé entendre què detecta realment —i què no.\n\n## Què detecta\n\nLa càmera termogràfica no \"veu\" l'aigua: mesura **temperatures superficials**. Una zona humida sol estar més freda per evaporació, i els materials amb diferent humitat mostren patrons tèrmics diferents. Interpretant aquests patrons, el tècnic localitza àrees afectades i **anomalies** que orienten cap a l'origen.\n\n## Què no detecta per si sola\n\nLa termografia no quantifica la humitat ni confirma la seva naturalesa. Per això es **combina** amb higròmetres de profunditat, proves d'estanqueïtat i anàlisi del detall constructiu. A més, depèn de les condicions: requereix un contrast tèrmic suficient i la lectura experta dels resultats.\n\n## El seu paper al dictamen\n\nEmprada correctament, la termografia permet un diagnòstic **no destructiu**: localitzar l'origen sense obrir obra. És una peça del mètode, no un veredicte per si mateixa (**CTE DB-HS**).\n\n## Preguntes freqüents\n\n**N'hi ha prou amb una foto termogràfica per reclamar?**\nNo. És un element del diagnòstic; el dictamen la integra amb altres proves.\n\n**Serveix en qualsevol moment?**\nNecessita contrast tèrmic. Hi ha condicions més favorables que altres.\n\n**Detecta humitats dins del mur?**\nDetecta els seus efectes en superfície; la profunditat es confirma amb higròmetres."
+  },
+  {
+    "title": "Obertures en murs de càrrega: peritatge d'intervencions mal executades",
+    "slug": "obertures-murs-carrega-intervencions-mal-executades",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/aperturas-muros-carga-intervenciones-mal-ejecutadas/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/openings-in-load-bearing-walls-poor-execution/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/obertures-murs-carrega-intervencions-mal-executades/"
+      }
+    ],
+    "description": "Riscos d'obrir buits en murs de càrrega sense projecte ni reforç adequat, com es periten les intervencions mal executades i quins danys estructurals poden derivar-se'n.",
+    "excerpt": "Obrir un buit en un mur de càrrega sense càlcul ni reforç és una de les causes més freqüents de dany estructural en reformes. El peritatge ho acredita.",
+    "estado": "publicado",
+    "datePublished": "2027-02-16",
+    "dateModified": "2027-02-16",
+    "author": "Albert Vilardell",
+    "category": "Patologías Estructurales",
+    "tags": [
+      "Mur de càrrega",
+      "Reforma",
+      "Reforç",
+      "Intervenció estructural"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Aperturas en muros de carga: peritaje de intervenciones mal ejecutadas",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Mala Execució d'Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      },
+      {
+        "title": "Informe per Patologies Estructurals",
+        "url": "/patologias-estructurales/"
+      }
+    ],
+    "content": "Obrir un buit en un mur de càrrega és una intervenció estructural, encara que sovint s'executi com si fos una reforma menor. Quan es fa sense projecte, càlcul ni reforç adequat, apareix un dels danys estructurals més freqüents en edificació residencial.\n\n## Per què és delicat\n\nUn mur de càrrega transmet les càrregues de les plantes superiors. En obrir un buit, aquestes càrregues s'han de desviar mitjançant una **llinda o reforç** correctament dimensionat i recolzat. Si el reforç és insuficient, està mal executat o falta l'estintolament durant l'obra, el mur i els elements que hi graviten pateixen: apareixen esquerdes, descensos i, en casos greus, risc de col·lapse local.\n\n## Què acredita el peritatge\n\nEl dictamen determina si la intervenció es va fer conforme a la bona pràctica (**lex artis**) i a la normativa estructural, si el reforç és adequat a les càrregues reals, i quins danys deriven d'una execució deficient. Distingeix la responsabilitat i valora la reparació.\n\n## Prova i solució\n\nEl dictamen prova el defecte i el seu abast; el **reforç correctiu** el projecta i executa després un contractista especialitzat a partir del diagnòstic.\n\n## Preguntes freqüents\n\n**Necessito permís per obrir un buit en un mur de càrrega?**\nSí: requereix projecte tècnic i llicència. Fer-ho sense ells agreuja la responsabilitat.\n\n**Com sé si el meu mur és de càrrega?**\nNo sempre és evident; la seva identificació forma part del diagnòstic tècnic.\n\n**Puc reclamar a qui va fer la reforma?**\nSi la intervenció va ser deficient, el dictamen fonamenta la reclamació per mala execució."
+  },
+  {
+    "title": "RSCIEI: incompliments freqüents i el seu efecte en un sinistre",
+    "slug": "rscei-incompliments-frequents-sinistre",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/rscei-incumplimientos-frecuentes-siniestro/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/rscei-common-breaches-in-a-claim/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/rscei-incompliments-frequents-sinistre/"
+      }
+    ],
+    "description": "Què és el RSCIEI, els incompliments més habituals en naus industrials i com afecten la cobertura de l'assegurança i el repartiment de responsabilitats després d'un incendi.",
+    "excerpt": "El compliment del reglament d'incendis industrials no només evita sancions: en un sinistre, condiciona la cobertura i el repartiment de responsabilitats.",
+    "estado": "publicado",
+    "datePublished": "2027-02-23",
+    "dateModified": "2027-02-23",
+    "author": "Albert Vilardell",
+    "category": "Naves Industriales",
+    "tags": [
+      "RSCIEI",
+      "Incendi",
+      "Nau industrial",
+      "Normativa"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "RSCIEI: incumplimientos frecuentes y su efecto en un siniestro",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritatge de Naus Industrials",
+        "url": "/naves-industriales/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "El **RSCIEI** —Reglament de Seguretat Contra Incendis en Establiments Industrials (RD 2267/2004)— fixa les condicions de protecció contra incendis que ha de complir una nau. La seva rellevància no és només administrativa: en un sinistre, **l'incompliment previ pot condicionar la cobertura de l'assegurança i el repartiment de responsabilitats**.\n\n## Incompliments freqüents\n\nSectorització insuficient, **estabilitat al foc** de l'estructura inferior a l'exigida, instal·lacions de protecció (detecció, ruixadors, hidrants) inexistents o sense manteniment, sortides d'evacuació inadequades, o una **caracterització de risc** incorrecta.\n\n## Efecte en un sinistre\n\nDesprés d'un incendi, el peritatge verifica si la nau complia el RSCIEI **en el moment del sinistre**. Un incompliment rellevant pot agreujar l'abast del dany, incidir en la **cobertura** de la pòlissa i afectar el **repartiment de responsabilitats**.\n\n## Què documenta el dictamen\n\nL'informe contrasta la situació real amb les exigències reglamentàries, relaciona els incompliments amb l'evolució del sinistre i aporta la base tècnica per a la reclamació o la defensa.\n\n## Preguntes freqüents\n\n**Un incompliment anul·la sempre la cobertura?**\nNo necessàriament; depèn de la seva rellevància i de la seva relació causal amb el dany.\n\n**Qui respon d'un incompliment del RSCIEI?**\nSegons el cas: la propietat, el projectista de la instal·lació o el mantenidor.\n\n**Afecta només incendis?**\nEl RSCIEI és específic d'incendis industrials, però el seu compliment també incideix en la valoració del risc."
+  },
+  {
+    "title": "Perit per reclamar a la constructora: què necessita el seu cas",
+    "slug": "perit-reclamar-constructora-que-necessita",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/perito-reclamar-constructora-que-necesita/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/expert-to-claim-against-builder-what-you-need/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/perit-reclamar-constructora-que-necessita/"
+      }
+    ],
+    "description": "Quina documentació i anàlisi tècnica necessita una reclamació a la constructora per defectes o mala execució: contracte, memòria de qualitats, proves del defecte i quantificació.",
+    "excerpt": "Reclamar a la constructora sense suport tècnic és una discussió de paraula contra paraula. El dictamen converteix la queixa en una posició defensable.",
+    "estado": "publicado",
+    "datePublished": "2027-03-02",
+    "dateModified": "2027-03-02",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": [
+      "Reclamar constructora",
+      "Mala execució",
+      "LOE",
+      "Defectes"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Perito para reclamar a la constructora: qué necesita su caso",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Mala Execució d'Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Reclamar a una constructora per defectes o incompliments, sense suport tècnic, sol acabar en una discussió de percepcions. Un dictamen pericial converteix aquesta queixa en una **posició defensable**, en negociació o en judici.\n\n## Quina documentació ajuda\n\nEl cas es reforça amb el **contracte d'obra**, el **pressupost**, la **memòria de qualitats**, el projecte i qualsevol comunicació amb la constructora. Davant aquests documents, el peritatge contrasta el **realment executat**.\n\n## Què analitza el dictamen\n\nL'informe identifica cada **defecte o incompliment**, en determina la **causa**, l'encaixa en el termini de garantia corresponent (**LOE art. 17**: 1, 3 o 10 anys) i **quantifica** el cost de subsanació.\n\n## El procés de reclamació\n\nSovint, un dictamen professional n'hi ha prou perquè la constructora **subsani** sense arribar a judici. Si no hi ha acord, cap la mediació amb base tècnica i, com a última via, la reclamació judicial, amb **ratificació** inclosa.\n\n## Preguntes freqüents\n\n**Necessito el contracte per reclamar?**\nAjuda molt, però no és imprescindible: la bona pràctica constructiva (lex artis) serveix de referència.\n\n**I si ja he pagat tota l'obra?**\nHaver pagat no impedeix reclamar els defectes ni les partides no executades.\n\n**Quant triga?**\nEl diagnòstic depèn de l'abast; convé actuar dins dels terminis de garantia de la LOE."
+  },
+  {
+    "title": "Disconformitat amb el peritatge de l'assegurança: opcions de l'assegurat",
+    "slug": "disconformitat-peritatge-asseguranca-opcions",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/disconformidad-peritacion-seguro-opciones/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/disagreement-with-insurance-appraisal-options/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/disconformitat-peritatge-asseguranca-opcions/"
+      }
+    ],
+    "description": "Què pot fer l'assegurat quan no està d'acord amb el peritatge de la seva companyia: revisió, informe de part, peritatge contradictori de l'art. 38 LCS i via judicial.",
+    "excerpt": "No acceptar el peritatge de la companyia no significa quedar-se sense opcions: la llei preveu un camí ordenat per discrepar de la quantia.",
+    "estado": "publicado",
+    "datePublished": "2027-03-09",
+    "dateModified": "2027-03-09",
+    "author": "Albert Vilardell",
+    "category": "Seguros",
+    "tags": [
+      "Peritatge",
+      "Disconformitat",
+      "Art. 38 LCS",
+      "Asseguradora"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Disconformidad con la peritación del seguro: opciones del asegurado",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      },
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      }
+    ],
+    "content": "Quan el peritatge de la companyia no reflecteix el dany real, l'assegurat no està obligat a acceptar-lo. La normativa d'assegurances preveu un camí ordenat per discrepar, i convé recórrer-lo en l'ordre adequat.\n\n## Primer: entendre i documentar\n\nEl punt de partida és un **informe de part** independent que determini l'origen del dany i la seva valoració real. Sense aquest suport, la discrepància és una afirmació; amb ell, és una posició tècnica.\n\n## El peritatge contradictori (art. 38 LCS)\n\nSi persisteix el desacord sobre la **quantia**, l'**article 38 de la Llei de Contracte d'Assegurança** preveu el peritatge contradictori: cada part designa un perit i, si no hi ha acord, es nomena un **tercer perit**. El procediment té terminis estrictes.\n\n## Després: la via judicial\n\nSi el procediment de l'art. 38 no resol, el dictamen de part és prova pericial en la reclamació judicial. També cap qüestionar el dictamen del perit de l'asseguradora mitjançant un **contrainforme**.\n\n## Preguntes freqüents\n\n**Puc negar-me a signar l'acta de la companyia?**\nSí. Signar de conformitat pot tancar la reclamació; davant el dubte, convé assessorar-se abans.\n\n**Quant costa discrepar?**\nEl cost del perit propi i, si escau, del procediment de l'art. 38.\n\n**Hi ha termini per reaccionar?**\nSí, i és estricte en el peritatge contradictori. Convé actuar sense demora."
+  },
+  {
+    "title": "Diferència entre ITE i IEE: què avalua cadascuna",
+    "slug": "diferencia-ite-iee",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/diferencia-ite-iee/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/difference-between-ite-and-iee/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/diferencia-ite-iee/"
+      }
+    ],
+    "description": "Diferències entre la Inspecció Tècnica d'Edificis (ITE) i l'Informe d'Avaluació d'Edificis (IEE): què avalua cadascun, quan són obligatoris i com es relacionen.",
+    "excerpt": "ITE i IEE es confonen però no són el mateix: una avalua l'estat de conservació; l'altre hi afegeix accessibilitat i eficiència energètica.",
+    "estado": "publicado",
+    "datePublished": "2027-03-16",
+    "dateModified": "2027-03-16",
+    "author": "Albert Vilardell",
+    "category": "ITE",
+    "tags": [
+      "ITE",
+      "IEE",
+      "Inspecció d'edificis",
+      "Normativa"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Diferencia entre ITE e IEE: qué evalúa cada una",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Patologies Estructurals",
+        "url": "/patologias-estructurales/"
+      },
+      {
+        "title": "Assessorament Estructural",
+        "url": "/asesoramiento-estructural/"
+      }
+    ],
+    "content": "La **ITE** i l'**IEE** es mencionen sovint com a sinònims, però avaluen coses diferents. Entendre'n la diferència evita confusions sobre què és obligatori i quina informació aporta cada document.\n\n## La ITE\n\nLa **Inspecció Tècnica d'Edificis** avalua l'**estat de conservació** de l'edifici: estructura, façanes, cobertes, instal·lacions comunes. El seu objectiu és detectar deficiències que afectin la seguretat i obligar-ne la subsanació. És obligatòria per als edificis a partir de certa antiguitat.\n\n## L'IEE\n\nL'**Informe d'Avaluació d'Edificis** és més ampli: incorpora l'estat de conservació (equivalent a la ITE) i hi afegeix l'avaluació de les **condicions d'accessibilitat** i de l'**eficiència energètica**. Sol exigir-se en determinats tràmits, com l'accés a ajuts de rehabilitació.\n\n## Com es relacionen\n\nA la pràctica, l'IEE **engloba** la ITE en el seu apartat de conservació i la complementa. Quan la inspecció detecta deficiències estructurals, convé un **estudi específic** que determini causa, abast i solució.\n\n## Preguntes freqüents\n\n**He de fer ITE i IEE per separat?**\nDepèn del tràmit i de la normativa aplicable. En molts casos, l'IEE cobreix també l'exigència de conservació.\n\n**Qui pot signar-los?**\nTècnics competents (arquitectes, arquitectes tècnics, enginyers segons el cas).\n\n**Què faig si detecten deficiències greus?**\nConvé un diagnòstic específic que determini la causa i prioritzi les obres."
+  },
+  {
+    "title": "Perit de vicis ocults a Barcelona: quan encarregar l'informe",
+    "slug": "perit-vicis-ocults-barcelona-quan-encarregar",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/perito-vicios-ocultos-barcelona-cuando-encargar/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/hidden-defects-expert-barcelona-when-to-commission/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/perit-vicis-ocults-barcelona-quan-encarregar/"
+      }
+    ],
+    "description": "En quin moment convé encarregar un informe pericial per vicis ocults després de comprar un habitatge a Barcelona, per no perdre el termini de 6 mesos del Codi Civil.",
+    "excerpt": "En vicis ocults, el temps juga en contra: el termini de 6 mesos corre des del lliurament. Encarregar l'informe aviat és el que salva la reclamació.",
+    "estado": "publicado",
+    "datePublished": "2027-03-23",
+    "dateModified": "2027-03-23",
+    "author": "Albert Vilardell",
+    "category": "Vicios Ocultos",
+    "tags": [
+      "Vicis ocults",
+      "Barcelona",
+      "Termini",
+      "Compravenda"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Perito de vicios ocultos en Barcelona: cuándo encargar el informe",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Vicis Ocults",
+        "url": "/vicios-ocultos/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Si acaba de comprar un habitatge a Barcelona i ha descobert un defecte greu que no era visible, la pregunta clau no és només si té dret a reclamar, sinó **quan** encarregar l'informe pericial. En vicis ocults, el temps és determinant.\n\n## El termini que ho condiciona tot\n\nEl **Codi Civil (art. 1490)** fixa **6 mesos** des del lliurament de l'immoble per exercitar les accions per vicis ocults. És un termini de **caducitat**: no s'interromp i no s'amplia. L'informe pericial s'ha d'obtenir **dins** d'aquest termini per acreditar l'existència, la gravetat i la **preexistència** del defecte.\n\n## Per què encarregar-lo aviat\n\nCom més aviat es documenti el defecte, millor es prova que **ja existia** abans de la compra i més marge queda per negociar abans d'esgotar el termini. Esperar redueix les opcions.\n\n## Què fer en detectar el problema\n\nDocumentar de seguida el defecte (fotografies, dates), sol·licitar l'informe pericial i coordinar amb el lletrat la notificació al venedor.\n\n## Preguntes freqüents\n\n**Des de quan compten els 6 mesos?**\nDes del lliurament de l'immoble, no des que es descobreix el defecte.\n\n**I si descobreixo el defecte al cinquè mes?**\nCal actuar amb urgència: encarregar l'informe i reclamar abans del venciment.\n\n**Serveix per a habitatge de segona mà?**\nSí, és el supòsit típic dels vicis ocults del Codi Civil."
+  },
+  {
+    "title": "Segon perit per contradir un informe: quan aporta valor",
+    "slug": "segon-perit-contradir-informe-quan",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/segundo-perito-contradecir-informe-cuando/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/second-expert-to-contradict-a-report-when/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/segon-perit-contradir-informe-quan/"
+      }
+    ],
+    "description": "Quan convé aportar un segon perit o contrainforme per rebatre un dictamen contrari, què ha de demostrar i com influeix en la valoració del jutge.",
+    "excerpt": "Aportar un segon perit no sempre suma: aporta quan demostra deficiències concretes del dictamen contrari, no quan només ofereix una altra opinió.",
+    "estado": "publicado",
+    "datePublished": "2027-03-30",
+    "dateModified": "2027-03-30",
+    "author": "Albert Vilardell",
+    "category": "Contrainforme",
+    "tags": [
+      "Segon perit",
+      "Contrainforme",
+      "Prova pericial",
+      "LEC 348"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Segundo perito para contradecir un informe: cuándo aporta valor",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Quan la part contrària aporta un dictamen desfavorable, sorgeix el dubte de si convé un **segon perit** que el contradigui. La resposta depèn de què pugui demostrar aquest segon informe: aporta valor quan assenyala **deficiències concretes**, no quan només ofereix una opinió diferent.\n\n## Opinió diferent davant deficiència demostrada\n\nUn jutge, davant dos perits que discrepen, valora la prova segons la **sana crítica (LEC art. 348)**. Si el segon informe es limita a sostenir el contrari sense més, el resultat és un empat tècnic. En canvi, un **contrainforme** que demostra que el dictamen contrari és incomplet, incorrecte o metodològicament deficient **inclina la balança**.\n\n## Què ha de demostrar\n\nEl contrainforme analitza el rigor de la inspecció, la correcció de les referències normatives, la coherència entre dades i conclusions i la solidesa de la quantificació.\n\n## Quan convé\n\nQuan el dictamen contrari presenta mancances reals; quan l'import en joc justifica el cost; i quan hi ha marge processal per aportar-lo.\n\n## Preguntes freqüents\n\n**N'hi ha prou amb dir que no estic d'acord?**\nNo. Cal demostrar per què el dictamen contrari és deficient.\n\n**Quant triga un contrainforme?**\nHabitualment entre 10 i 20 dies hàbils.\n\n**Es combina amb la tatxa del perit?**\nSí; la tatxa qüestiona la imparcialitat i el contrainforme el contingut. Són complementaris."
+  },
+  {
+    "title": "Provisió de fons i honoraris del perit designat",
+    "slug": "provisio-fons-honoraris-perit-designat",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/provision-fondos-honorarios-perito-designado/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/advance-of-funds-fees-appointed-expert/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/provisio-fons-honoraris-perit-designat/"
+      }
+    ],
+    "description": "Com funciona la provisió de fons d'un perit designat judicialment, qui l'abona, com es fixen els honoraris i què passa si una part no la consigna.",
+    "excerpt": "La provisió de fons és l'avançament que ordena el jutjat abans que el perit treballi. Entendre'n la mecànica evita sorpreses en el procediment.",
+    "estado": "publicado",
+    "datePublished": "2027-04-06",
+    "dateModified": "2027-04-06",
+    "author": "Albert Vilardell",
+    "category": "Proceso",
+    "tags": [
+      "Provisió de fons",
+      "Honoraris",
+      "Perit judicial",
+      "LEC"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Provisión de fondos y honorarios del perito designado",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Honoraris i cost",
+        "url": "/honorarios-perito-judicial-barcelona/"
+      },
+      {
+        "title": "Actuació com a Perit Judicial",
+        "url": "/perito-judicial/"
+      }
+    ],
+    "content": "Quan el jutjat designa un perit, abans que aquest comenci a treballar sol fixar-se una **provisió de fons**: un avançament dels seus honoraris. Conèixer-ne la mecànica evita sorpreses durant el procediment.\n\n## Què és i qui l'abona\n\nLa provisió de fons és la quantitat que el perit sol·licita i el tribunal aprova com a **garantia i avançament** dels seus honoraris. Per regla general la consigna la **part que ha proposat la prova**; si interessa a totes dues, es pot repartir.\n\n## Com es fixen els honoraris\n\nEls honoraris depenen de la **complexitat** del dictamen: abast, assajos, desplaçaments, temps d'anàlisi i ratificació. No es fixen per la figura (de part o judicial), sinó pel treball.\n\n## Si una part no consigna\n\nSi qui ha de consignar la provisió no ho fa, la prova pericial pot **no arribar a practicar-se**, amb les conseqüències processals que això comporta.\n\n## Preguntes freqüents\n\n**La provisió és el cost final?**\nÉs un avançament; l'import definitiu s'ajusta al treball realitzat.\n\n**Es recupera amb les costes?**\nPot recuperar-se totalment o parcialment via condemna en costes.\n\n**Puc demanar pressupost abans?**\nEn l'informe de part, sí: convé un pressupost detallat de l'abast."
+  },
+  {
+    "title": "Partides cobrades i no executades: com es proven",
+    "slug": "partides-cobrades-no-executades-prova",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/partidas-cobradas-no-ejecutadas-prueba/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/billed-but-unexecuted-works-how-to-prove/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/partides-cobrades-no-executades-prova/"
+      }
+    ],
+    "description": "Com s'acredita tècnicament que una constructora va cobrar partides d'obra que no va executar o va executar amb materials inferiors, contrastant pressupost, memòria de qualitats i obra real.",
+    "excerpt": "Cobrar pel que no s'ha fet és un dels incompliments més freqüents i, alhora, dels més demostrables: n'hi ha prou amb contrastar el facturat amb l'executat.",
+    "estado": "publicado",
+    "datePublished": "2027-04-13",
+    "dateModified": "2027-04-13",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": [
+      "Partides no executades",
+      "Pressupost",
+      "Mala execució",
+      "Prova"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Partidas cobradas y no ejecutadas: cómo se prueban",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe per Mala Execució d'Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Un dels incompliments més freqüents en obres i reformes és cobrar per partides que no s'han executat, o fer-ho amb materials inferiors als pressupostats. És també un dels més **demostrables**, perquè es prova per contrast documental i tècnic.\n\n## Contra què es contrasta\n\nEl peritatge compara tres referències amb l'**obra realment executada**: el **pressupost** acceptat, la **memòria de qualitats** i les **certificacions o factures** emeses. D'aquest contrast emergeixen les partides facturades que no es van executar, les executades parcialment i les fetes amb qualitats inferiors.\n\n## Com es quantifica\n\nEl dictamen mesura l'executat, identifica les **desviacions** respecte al facturat i valora econòmicament la diferència: import de partides no executades, sobrepreu per materials inferiors, i cost de completar o corregir l'obra.\n\n## El valor probatori\n\nUn contrast documentat, amb mesuraments i fotografia, és difícil de rebatre. Sol ser suficient per forçar un ajust en la negociació.\n\n## Preguntes freqüents\n\n**I si no tinc un pressupost detallat?**\nEs dificulta, però la memòria de qualitats i la bona pràctica constructiva serveixen de referència.\n\n**Es pot reclamar el ja pagat?**\nSí: el cobrat per partides no executades és una quantitat indegudament percebuda.\n\n**Com es prova un material inferior?**\nPer inspecció i, si cal, assajos que identifiquen la qualitat realment emprada."
+  },
+  {
+    "title": "Reclamar danys a l'Administració en obra civil",
+    "slug": "reclamacio-danys-administracio-obra-civil",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/reclamacion-danos-administracion-obra-civil/"
+      },
+      {
+        "lang": "en",
+        "permalink": "/en/blog/claim-damages-public-administration-civil-works/"
+      },
+      {
+        "lang": "ca",
+        "permalink": "/ca/blog/reclamacio-danys-administracio-obra-civil/"
+      }
+    ],
+    "description": "Com es fonamenta una reclamació de danys davant l'Administració en obra civil i infraestructura: responsabilitat patrimonial, nexe causal i el paper de l'informe pericial.",
+    "excerpt": "Reclamar a l'Administració per danys d'una obra pública exigeix provar el nexe causal entre l'obra i el dany. Aquí és on el dictamen és decisiu.",
+    "estado": "publicado",
+    "datePublished": "2027-04-20",
+    "dateModified": "2027-04-20",
+    "author": "Albert Vilardell",
+    "category": "Obra Pública",
+    "tags": [
+      "Responsabilitat patrimonial",
+      "Administració",
+      "Obra civil",
+      "Nexe causal"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Reclamar daños a la Administración en obra civil",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritatge d'Obra Pública i Infraestructura",
+        "url": "/obras-publicas/"
+      },
+      {
+        "title": "Informe Pericial de Part",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Quan una obra pública o d'infraestructura causa danys a tercers —a edificis veïns, a instal·lacions, a una activitat—, cap reclamar a l'Administració per **responsabilitat patrimonial**. L'èxit d'aquesta reclamació depèn, en gran mesura, de la prova tècnica del **nexe causal**.\n\n## Què cal provar\n\nLa responsabilitat patrimonial exigeix, en essència, un **dany efectiu**, avaluable i individualitzat, i una **relació de causalitat** entre el funcionament del servei públic (aquí, l'obra) i aquest dany. El punt crític sol ser el nexe causal.\n\n## El paper de l'informe pericial\n\nEl dictamen documenta el dany, n'analitza el **mecanisme** i el vincula tècnicament amb l'actuació de l'obra, descartant causes alternatives. Per exemple, relaciona els assentaments o esquerdes d'un edifici amb una excavació veïna mitjançant l'anàlisi del patró de dany i de la seqüència temporal.\n\n## Context procedimental\n\nLa reclamació es tramita en via administrativa i, si no, en la jurisdicció contenciosa administrativa, amb terminis propis. El suport pericial és transversal a tot el procediment.\n\n## Preguntes freqüents\n\n**Qualsevol dany prop d'una obra és indemnitzable?**\nNo. Cal provar que l'obra és la causa; la coincidència en el temps no n'hi ha prou.\n\n**Quin termini tinc?**\nLa reclamació de responsabilitat patrimonial té terminis específics; convé actuar sense demora.\n\n**Serveix per a danys al meu habitatge per una obra municipal?**\nSí, si s'acredita el nexe causal entre l'obra i el dany."
+  },
+  {
     "title": "Vicis Ocults en Compravenda: Drets i Terminis de Reclamació",
     "slug": "vicis-ocults-compravenda-drets-terminis",
     "translations": [
@@ -443,32 +2370,31 @@
     "content": "## Què és l'aluminosi i per què preocupa a Barcelona\n\nL'aluminosi és una patologia del formigó fabricat amb **ciment aluminós**, molt utilitzat a Espanya entre els anys 50 i 70, especialment en **biguetes de forjat** d'edificis d'habitatge. Amb el temps i en presència d'humitat i calor, el ciment aluminós pateix un procés anomenat **conversió**: la seva estructura interna canvia, augmenta la porositat i **perd resistència**. El resultat és un formigó més fràgil i una armadura més exposada a la corrosió.\n\nA Barcelona i la seva àrea metropolitana hi ha un parc important d'edificis d'aquella època, de manera que l'aluminosi continua sent una consulta habitual, sobretot després de l'aparició de fissures en sostres o despreniments.\n\n## Com es detecta\n\nL'aluminosi **no es diagnostica a simple vista**. Els símptomes que l'han d'alertar són:\n\n* Fissures longitudinals a la cara inferior de les biguetes.\n* Taques d'òxid o coloració marró al sostre.\n* Despreniments del formigó de recobriment (*spalling*).\n* Fletxes o deformacions visibles al forjat.\n\nLa confirmació requereix un **assaig químic**: s'extreu una mostra del formigó i s'aplica el reactiu de l'**oxina** (8-hidroxiquinoleïna), que tenyeix de groc-verdós el ciment aluminós sota llum ultraviolada. A partir d'aquí, un peritatge mesura el **grau de conversió** i la pèrdua de secció per avaluar la capacitat portant real.\n\n## Aluminosi no és el mateix que carbonatació\n\nÉs un error freqüent. La **carbonatació** afecta l'armadura d'acer per pèrdua d'alcalinitat del formigó; l'**aluminosi** afecta el mateix formigó pel tipus de ciment. Un edifici pot tenir-ne una, l'altra o totes dues. Distingir-les és clau, perquè el tractament i la responsabilitat canvien.\n\n## Què fer si sospita que el seu edifici té aluminosi\n\n1. **No piqui ni carregui** la zona afectada mentre no hi hagi diagnòstic.\n2. Sol·liciti un **dictamen pericial** que confirmi (o descarti) l'aluminosi i quantifiqui el risc estructural.\n3. Amb l'informe, la comunitat pot decidir el **reforç** adequat: substitució de biguetes, reforç metàl·lic o reforç amb fibra de carboni.\n\nUn diagnòstic rigorós evita tant l'alarma injustificada com la inacció perillosa. Si observa fissures o despreniments en un edifici antic, el nostre [dictamen de patologies estructurals](/ca/patologies-estructurals/) determina l'abast real i les mesures necessàries.\n\n**Té dubtes sobre el forjat del seu edifici?** [Expliqui'ns el cas](/ca/contacte/particular/) i l'orientem sense compromís."
   },
   {
-    "title": "Quant costa un informe pericial? Preus i factors el 2026",
-    "slug": "quant-costa-informe-pericial-preus",
+    "title": "Quant costa un informe pericial? Factors que determinen el cost",
+    "slug": "quant-costa-informe-pericial",
     "translations": [
       {
         "lang": "es",
-        "permalink": "/blog/cuanto-cuesta-informe-pericial-precios/"
+        "permalink": "/blog/cuanto-cuesta-informe-pericial/"
       },
       {
         "lang": "ca",
-        "permalink": "/ca/blog/quant-costa-informe-pericial-preus/"
+        "permalink": "/ca/blog/quant-costa-informe-pericial/"
       },
       {
         "lang": "en",
         "permalink": "/en/blog/how-much-does-expert-report-cost/"
       }
     ],
-    "description": "Rangs orientatius de preus d'un informe pericial a Barcelona i els factors que fan variar l'honorari. Pressupost tancat per escrit.",
-    "excerpt": "Quant costa un peritatge? Rangs de mercat, què encareix l'informe i per què desconfiar d'un preu tancat per telèfon.",
+    "description": "Factors que determinen el cost d'un informe pericial a Barcelona: complexitat, assaigs, ús judicial i més. Pressupost tancat per escrit després de consulta inicial.",
+    "excerpt": "Quant costa un peritatge? Els factors que influeixen en l'honorari i com s'elabora un pressupost seriós.",
     "estado": "programado",
     "datePublished": "2026-07-08",
-    "dateModified": "2026-07-08",
+    "dateModified": "2026-07-11",
     "author": "Albert Vilardell Serra",
     "category": "Honoraris",
     "tags": [
       "Honoraris",
-      "Preus",
       "Informe Pericial",
       "Pressupost"
     ],
@@ -483,7 +2409,7 @@
         "url": "/ca/honoraris/"
       }
     ],
-    "content": "## Quant costa un informe pericial: rangs orientatius\n\nÉs la primera pregunta de gairebé tothom, i la resposta honesta és: **depèn de l'abast**. Dit això, hi ha rangs orientatius de mercat a Barcelona que ajuden a fer-se una idea abans de demanar pressupost:\n\n* **Informe pericial senzill** (una patologia concreta, una estança, sense assaigs): des d'uns **300–500 €**.\n* **Informe d'humitats o vicis ocults** amb visita i diagnòstic instrumental: aproximadament **500–900 €**.\n* **Dictamen de patologies estructurals** amb càlcul, assaigs o modelatge: **des de 900 €**, i pot superar diversos milers segons la complexitat.\n* **Ratificació en seu judicial** (compareixença i defensa oral): de vegades inclosa, de vegades amb honorari a part.\n\nAquests imports són de referència; el pressupost real es tanca **per escrit després de conèixer el cas**.\n\n## Quins factors fan variar el preu\n\n1. **Complexitat tècnica.** No costa el mateix diagnosticar una taca d'humitat que avaluar l'estabilitat d'una estructura.\n2. **Assaigs i proves.** Termografia, cales, assaigs de laboratori o modelatge estructural encareixen la feina, però aporten prova objectiva.\n3. **Superfície i desplaçament.** La mida de l'immoble i la distància a la seu hi influeixen.\n4. **Urgència.** Un termini molt curt pot tenir recàrrec.\n5. **Ús judicial.** Un dictamen destinat a judici exigeix més traçabilitat i, si escau, ratificació oral conforme a la [LEC](/ca/perit-judicial/).\n\n## Per què desconfiar del \"preu tancat per telèfon\"\n\nUn honorari donat sense veure el cas sol significar una de dues coses: o l'informe és superficial, o hi haurà sobrecostos després. Un peritatge seriós parteix d'una **primera consulta** per acotar l'abast i només aleshores emet un **pressupost tancat i per escrit**, sense costos variables ocults. Podeu consultar-ne el detall a la nostra pàgina d'[honoraris](/ca/honoraris/).\n\n## El cost enfront del que hi ha en joc\n\nConvé posar l'honorari en context: un informe d'uns centenars d'euros pot ser la prova que dona suport a una reclamació de **desenes de milers**. En vicis ocults, humitats o danys estructurals, el dictamen no és una despesa, sinó la **prova tècnica** que sosté el dret a reclamar.\n\n**Vol un pressupost per al seu cas?** [Expliqui'ns què passa](/ca/contacte/professional/) i li enviem una proposta tancada."
+    "content": "## De què depèn el cost d'un informe pericial\n\nÉs la primera pregunta de gairebé tothom, i la resposta honesta és: **depèn de l'abast**. Un peritatge no és un producte estàndard; cada cas presenta unes condicions tècniques, un volum de feina i una finalitat diferents. Per això l'honorari es calcula **cas per cas** i es tanca **per escrit** abans de començar.\n\n## Factors que determinen l'honorari\n\n1. **Complexitat tècnica.** No requereix el mateix esforç diagnosticar una taca d'humitat que avaluar l'estabilitat d'una estructura completa.\n2. **Assaigs i proves.** Termografia, cales, assaigs de laboratori o modelatge estructural aporten prova objectiva, però impliquen més recursos i temps.\n3. **Superfície i desplaçament.** La mida de l'immoble i la distància a la seu del perit influeixen en la dedicació total.\n4. **Urgència.** Un termini molt ajustat pot comportar recàrrec, ja que obliga a reorganitzar l'agenda.\n5. **Ús judicial.** Un dictamen destinat a judici exigeix més rigor formal, traçabilitat documental i, si escau, ratificació oral conforme a la [LEC](/ca/perit-judicial/).\n6. **Nombre de patologies.** Un informe que aborda diversos danys simultàniament requereix més hores d'inspecció i redacció que un centrat en una única patologia.\n\n## Com s'elabora un pressupost seriós\n\nUn honorari donat sense conèixer el cas sol significar una de dues coses: o l'informe serà superficial, o apareixeran sobrecostos després. Un peritatge professional segueix aquests passos:\n\n1. **Consulta inicial** per entendre què passa i què necessita el client.\n2. **Definició de l'abast**: s'acota què s'inspeccionarà, quins assaigs poden ser necessaris i quina és la finalitat de l'informe.\n3. **Pressupost tancat i per escrit**, sense costos variables ocults.\n\nNomés així el client sap per endavant quant invertirà. Podeu consultar-ne el detall a la nostra pàgina d'[honoraris](/ca/honoraris/).\n\n## El cost enfront del que hi ha en joc\n\nConvé valorar l'honorari en el seu context: un informe pericial pot ser la prova tècnica que doni suport a una reclamació de quantia molt superior. En vicis ocults, humitats o danys estructurals, el dictamen no és una despesa, sinó la **prova que sosté el dret a reclamar**.\n\n**Vol un pressupost per al seu cas?** [Expliqui'ns què passa](/ca/contacte/professional/) i li enviem una proposta tancada sense compromís."
   },
   {
     "title": "Humitats per condensació: diagnòstic i diferència amb la capil·laritat",
