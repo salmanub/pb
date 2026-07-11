@@ -1,0 +1,45 @@
+# keepalive.yml — perito.barcelona
+# ---------------------------------------------------------------------------
+# PROBLEMA QUE RESUELVE
+# GitHub Actions DESACTIVA automáticamente los workflows con `schedule:` (cron)
+# cuando el repositorio no registra actividad (commits) durante 60 días.
+# Si eso ocurre, el rebuild diario de `deploy-sxg.yml` deja de ejecutarse y
+# los posts programados dejan de publicarse solos.
+#
+# SOLUCIÓN
+# Este workflow se ejecuta una vez por semana y, cuando detecta que el último
+# commit está cerca del límite de inactividad, hace un commit "vacío" que
+# reinicia el contador. Así los crons (incluido el de publicación) NUNCA se
+# desactivan, sin intervención humana.
+#
+# REQUISITO
+# El secret `GH_PAT` (ya existente en este repo, se usa en deploy-sxg.yml) debe
+# ser un Personal Access Token con permiso `repo` y `workflow`.
+# ---------------------------------------------------------------------------
+
+name: Keepalive (mantener crons activos)
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'   # Lunes 03:00 UTC (~05:00 Europe/Madrid)
+  workflow_dispatch:        # permite lanzarlo a mano desde la pestaña Actions
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reiniciar el contador de inactividad
+        uses: gautamkrishnar/keepalive-workflow@v2
+        with:
+          gh_token: ${{ secrets.GH_PAT }}
+          # Solo actúa cuando el último commit tiene 45+ días: no genera ruido.
+          committer_username: "perito-keepalive-bot"
+          committer_email: "info@perito.barcelona"
+          commit_message: "chore: keepalive para mantener activo el cron de publicación"
+          days_before_keepalive: 45

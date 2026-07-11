@@ -9,8 +9,8 @@ usando la infraestructura que **ya existe** en tu repo 11ty.
 
 1. El motor de publicación programada **ya está construido y funciona** (`lib/publish.js` + `src/blog/post.njk` + cron diario en `deploy-sxg.yml`). No hay que recodificar `.eleventy.js`.
 2. Para publicar un artículo en una fecha, basta con **añadir su objeto a `src/_data/posts.json`** con `datePublished` en esa fecha (formato `YYYY-MM-DD`). El post se genera y aparece **solo** cuando llega el día.
-3. Los 10 primeros artículos ya están redactados en **`content-queue-2026.json`**. Solo hay que fusionarlos en `posts.json`.
-4. Añade **`keepalive.yml`** para que GitHub no desactive el cron tras 60 días de inactividad. Con esto, el sistema es **100 % manos libres**.
+3. Los **41 artículos del calendario ya están redactados y fusionados** en `src/_data/posts.json` (14 originales + 41 nuevos = 55), cada uno con su `datePublished` semanal (jul-2026 → abr-2027). La cola completa queda en `content-queue-2026.json` como referencia.
+4. Mueve **`keepalive-workflow.yml`** (raíz del repo) a `.github/workflows/keepalive.yml` para que GitHub no desactive el cron tras 60 días de inactividad. Con esto, el sistema es **100 % manos libres**.
 
 ---
 

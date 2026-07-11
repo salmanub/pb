@@ -388,5 +388,1214 @@
       }
     ],
     "content": "No todos los dictámenes que se presentan en un procedimiento resisten un análisis técnico riguroso. Cuando el informe de la parte contraria contiene carencias, la respuesta no es elaborar otro dictamen sobre la patología, sino un **contrainforme**: un documento que demuestra que las conclusiones del informe rival son incorrectas, incompletas o metodológicamente deficientes.\n\n## Los errores más habituales\n\n**Inspección insuficiente:** conclusiones categóricas a partir de una visita superficial, sin ensayos ni mediciones que las respalden. **Referencias normativas incorrectas** o citadas fuera de contexto —CTE, EHE-08, LOE aplicadas donde no corresponde—. **Salto lógico** entre los datos recogidos y las conclusiones, sin trazabilidad. **Cuantificación económica** sin justificación de mediciones o precios. **Confusión de causas**: atribuir a un origen lo que corresponde a otro (por ejemplo, tratar como estructural una grieta térmica).\n\n## Qué analiza el contrainforme\n\nEl contrainforme revisa el rigor metodológico de la inspección, la corrección de las referencias normativas, la coherencia entre datos y conclusiones y la solidez de la valoración. No descalifica en abstracto: señala, punto por punto, dónde el dictamen contrario deja de ser defendible.\n\n## Por qué funciona ante el juez\n\nEl juez valora la prueba pericial conforme a la **sana crítica (LEC art. 348)**. No está obligado a aceptar un dictamen por el hecho de existir. Un contrainforme que demuestra deficiencias concretas merma el peso probatorio del informe contrario y refuerza la posición de quien lo aporta.\n\n## Preguntas frecuentes\n\n**¿Puede el juez rechazar un informe pericial?**\nEl juez no lo rechaza formalmente, pero valora libremente su fuerza probatoria. Un contrainforme sólido reduce el crédito que se le otorga al dictamen contrario.\n\n**¿Cuánto se tarda en elaborar un contrainforme?**\nDepende del volumen del informe a rebatir; habitualmente entre diez y veinte días hábiles, acelerables si hay un plazo procesal próximo.\n\n**¿Es lo mismo que la tacha del perito?**\nNo. La tacha cuestiona la imparcialidad del perito (LEC art. 343); el contrainforme cuestiona el contenido técnico del dictamen. Pueden emplearse de forma complementaria."
+  },
+  {
+    "title": "Perito de parte y perito judicial: diferencias y cuándo se usa cada uno",
+    "slug": "diferencia-perito-parte-perito-judicial",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/diferencia-perito-parte-perito-judicial/"
+      }
+    ],
+    "description": "Diferencias entre el perito de parte y el perito judicial: quién los designa, qué validez tienen y cuándo conviene cada figura en un procedimiento de construcción.",
+    "excerpt": "Ambos elaboran el mismo tipo de dictamen con idéntica metodología; lo que cambia es quién los designa y en qué momento del conflicto intervienen.",
+    "estado": "publicado",
+    "datePublished": "2026-09-22",
+    "dateModified": "2026-09-22",
+    "author": "Albert Vilardell",
+    "category": "Proceso",
+    "tags": [
+      "Perito de parte",
+      "Perito judicial",
+      "LEC",
+      "Designación"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Perito de parte y perito judicial: diferencias y cuándo se usa cada uno",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Actuación como Perito Judicial",
+        "url": "/perito-judicial/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "En un conflicto de construcción aparecen dos figuras que se confunden con frecuencia: el **perito de parte** y el **perito judicial**. La metodología del dictamen es la misma; lo que cambia es **quién lo encarga y en qué fase del procedimiento interviene**.\n\n## El perito de parte\n\nLo encarga directamente una de las partes —o su letrado— para investigar la realidad técnica de los hechos y fundamentar su postura. Es plenamente válido como medio de prueba conforme a la **LEC (arts. 335 y ss.)**. Se usa antes de una demanda para evaluar la solidez del caso, durante una negociación extrajudicial, o como prueba pericial en juicio.\n\n## El perito judicial\n\nLo designa el juzgado, habitualmente por sorteo entre los inscritos en la lista oficial del Ministerio de Justicia, o por acuerdo de las partes (**LEC art. 339**). Su nota distintiva es la **imparcialidad acreditada**: no responde a ninguna de las partes. Debe ratificar el dictamen verbalmente ante el juez y someterse al interrogatorio cruzado de ambos letrados (**LEC art. 347**).\n\n## Cuándo conviene cada uno\n\nEl de parte es el instrumento para **construir** su posición: aporta iniciativa y control sobre el momento y el enfoque. El judicial aporta el peso de la neutralidad institucional. En muchos litigios coexisten: cada parte aporta su informe de parte y, si el juez lo estima, se designa además un perito judicial.\n\n## Preguntas frecuentes\n\n**¿Tiene menos valor un informe de parte por no ser \"imparcial\"?**\nNo. La LEC lo reconoce como prueba pericial. El juez valora su fuerza probatoria conforme a la sana crítica, atendiendo al rigor del trabajo, no a quién lo encargó.\n\n**¿Puede el mismo perito actuar como de parte y como judicial?**\nEn procedimientos distintos, sí. En el mismo asunto, su papel lo determina quién lo designa.\n\n**¿Cuál es más caro?**\nLos honorarios dependen de la complejidad del caso, no de la figura. En el judicial, la provisión de fondos la fija el juzgado."
+  },
+  {
+    "title": "Qué debe contener un informe pericial conforme a la LEC",
+    "slug": "que-debe-contener-informe-pericial-lec",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/que-debe-contener-informe-pericial-lec/"
+      }
+    ],
+    "description": "Estructura y contenidos que debe reunir un informe pericial de construcción para ser sólido conforme a la Ley de Enjuiciamiento Civil: objeto, metodología, análisis, conclusiones y ratificación.",
+    "excerpt": "Un dictamen no vale por su extensión, sino por su trazabilidad: que cada conclusión se pueda seguir desde los datos recogidos hasta la norma aplicada.",
+    "estado": "publicado",
+    "datePublished": "2026-09-29",
+    "dateModified": "2026-09-29",
+    "author": "Albert Vilardell",
+    "category": "Proceso",
+    "tags": [
+      "Informe pericial",
+      "LEC 335",
+      "Metodología",
+      "Dictamen"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Qué debe contener un informe pericial conforme a la LEC",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      },
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      }
+    ],
+    "content": "Un informe pericial de construcción no se mide por su extensión, sino por su **trazabilidad**: que cada conclusión pueda seguirse desde los datos hasta la norma aplicada. La **LEC (arts. 335 y ss.)** no impone un formato rígido, pero la práctica y la jurisprudencia han consolidado los contenidos que hacen sólido un dictamen.\n\n## Objeto y metodología\n\nEl informe debe definir con precisión **qué se le pregunta** y **qué método** se ha empleado para responder: inspección visual, ensayos, mediciones, modelado. La metodología es lo primero que examinará un contrainforme, de modo que debe ser explícita y reproducible.\n\n## Datos, análisis y normativa\n\nLos datos recogidos in situ (fisuras, humedades, deformaciones) se documentan con fotografía y referencia. El análisis los interpreta a la luz de la norma aplicable —**CTE, EHE-08, LOE**— sin saltos lógicos entre lo observado y lo concluido. La cuantificación económica se justifica con mediciones y precios.\n\n## Conclusiones y ratificación\n\nLas conclusiones responden, una a una, a las preguntas planteadas, con el grado de certeza que permiten los datos. El perito debe estar en condiciones de **ratificar** el dictamen y defenderlo ante el interrogatorio cruzado; esa defensa forma parte del valor del informe.\n\n## Preguntas frecuentes\n\n**¿Es obligatorio un formato concreto?**\nNo. La LEC no lo exige, pero un dictamen ordenado (objeto, método, análisis, conclusiones, anexos) es más difícil de rebatir.\n\n**¿Qué diferencia un buen informe de uno débil?**\nLa coherencia entre datos y conclusiones y la corrección de las referencias normativas. Un informe categórico sin ensayos que lo respalden es vulnerable.\n\n**¿Incluye la valoración de la reparación?**\nHabitualmente sí, cuando el objeto del encargo lo requiere: origen, alcance y coste de subsanación."
+  },
+  {
+    "title": "Cómo demostrar vicios ocultos: la prueba de preexistencia",
+    "slug": "como-demostrar-vicios-ocultos-preexistencia-perito",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/como-demostrar-vicios-ocultos-preexistencia-perito/"
+      }
+    ],
+    "description": "Cómo se acredita técnicamente un vicio oculto en la compraventa de vivienda: probar que el defecto es grave, no aparente y anterior a la venta dentro del plazo del Código Civil.",
+    "excerpt": "La clave de una reclamación por vicios ocultos no es que el defecto exista, sino demostrar que ya existía antes de la compra. Eso se prueba técnicamente.",
+    "estado": "publicado",
+    "datePublished": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "author": "Albert Vilardell",
+    "category": "Vicios Ocultos",
+    "tags": [
+      "Vicios ocultos",
+      "Preexistencia",
+      "Código Civil",
+      "Prueba"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Cómo demostrar vicios ocultos: la prueba de preexistencia",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Vicios Ocultos",
+        "url": "/vicios-ocultos/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "En una reclamación por vicios ocultos, el defecto suele ser evidente cuando se descubre. Lo difícil —y lo decisivo— es demostrar que **ya existía antes de la compra** y que **no era aparente** en una inspección ordinaria. Es ahí donde el informe pericial marca la diferencia.\n\n## Qué exige el Código Civil\n\nEl **CC (arts. 1484 y ss.)** exige que el vicio sea grave, no aparente y anterior a la venta. El comprador dispone de **6 meses** desde la entrega para ejercitar la acción (art. 1490), un plazo de caducidad que corre en su contra. El informe debe obtenerse dentro de ese plazo.\n\n## Cómo se prueba la preexistencia\n\nLa preexistencia se acredita analizando el **grado de desarrollo** de la patología. Una humedad por capilaridad, la evolución de una fisura o el estado de una corrosión permiten estimar su antigüedad: un daño no aparece de forma instantánea, y su madurez técnica delata que ya estaba presente en el momento de la compraventa.\n\n## Gravedad y no aparencia\n\nEl dictamen también establece que el defecto **compromete el uso** del inmueble (gravedad) y que **no era detectable** en una visita normal, porque estaba oculto tras revestimientos o solo se manifiesta en determinadas condiciones.\n\n## Preguntas frecuentes\n\n**¿Cuánto tiempo tengo para reclamar?**\n6 meses desde la entrega (CC art. 1490). Es imprescindible actuar dentro de ese plazo.\n\n**¿Y si el vendedor dice que el daño es nuevo?**\nPrecisamente el análisis del grado de desarrollo de la patología permite rebatir esa afirmación con criterio técnico.\n\n**¿Sirve cualquier defecto?**\nNo. Debe ser grave, oculto y anterior a la venta. El dictamen valora si se cumplen los tres requisitos."
+  },
+  {
+    "title": "Humedades en comunidad: ¿elemento común o privativo?",
+    "slug": "humedades-comunidad-elemento-comun-privativo",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/humedades-comunidad-elemento-comun-privativo/"
+      }
+    ],
+    "description": "Cómo se determina si una humedad en una comunidad de propietarios procede de un elemento común o privativo, quién debe asumir la reparación y cómo lo acredita un informe pericial.",
+    "excerpt": "En una comunidad, la pregunta que decide quién paga es de dónde viene el agua. La respuesta la da el diagnóstico del origen, no la ubicación del daño.",
+    "estado": "publicado",
+    "datePublished": "2026-10-13",
+    "dateModified": "2026-10-13",
+    "author": "Albert Vilardell",
+    "category": "Humedades",
+    "tags": [
+      "Humedades",
+      "Comunidad de propietarios",
+      "Elemento común",
+      "Reclamación"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Humedades en comunidad: ¿elemento común o privativo?",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Humedades y Filtraciones",
+        "url": "/humedades-filtraciones/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Cuando aparece una humedad en un edificio en régimen de propiedad horizontal, el conflicto casi nunca es técnico al principio: es sobre **quién paga**. Y esa respuesta depende de una sola cuestión: si el agua procede de un **elemento común** o de uno **privativo**.\n\n## Por qué el origen lo decide todo\n\nSi la humedad proviene de un elemento común —cubierta, fachada, bajantes generales, forjados— la reparación corresponde a la **comunidad**. Si procede de un elemento privativo —una instalación interior de una vivienda— corresponde a su **propietario**. El daño puede manifestarse en un piso y tener el origen en la cubierta comunitaria: por eso la ubicación de la mancha no basta.\n\n## El diagnóstico del origen\n\nLocalizar el origen exige metodología no destructiva: **termografía infrarroja**, higrómetros de profundidad, pruebas de estanqueidad. El dictamen determina el punto exacto de entrada del agua y su recorrido, y con ello atribuye la responsabilidad conforme a la Ley de Propiedad Horizontal y al título constitutivo.\n\n## La reparación, después\n\nUna vez determinado el origen y la responsabilidad, la reparación (impermeabilización, saneado) la ejecuta un contratista especializado; para el tratamiento de humedades en Barcelona existen soluciones específicas que quedan fuera del objeto del dictamen pericial.\n\n## Preguntas frecuentes\n\n**¿Quién paga si la filtración viene de la cubierta?**\nLa cubierta es elemento común: responde la comunidad y, en su caso, su seguro.\n\n**¿Y si el origen está en la terraza de uso privativo de un vecino?**\nLas terrazas suelen ser elemento común de uso privativo; la responsabilidad se reparte según el título y la causa (uso indebido o defecto del elemento). El dictamen lo delimita.\n\n**¿Puedo reclamar a la comunidad con un informe de parte?**\nSí. Es la herramienta habitual para fundamentar la reclamación en junta o por vía judicial."
+  },
+  {
+    "title": "Filtraciones por fachada: origen, responsabilidad y reclamación",
+    "slug": "filtraciones-fachada-origen-responsabilidad-reclamacion",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/filtraciones-fachada-origen-responsabilidad-reclamacion/"
+      }
+    ],
+    "description": "Causas de las filtraciones por fachada (juntas, carpinterías, fisuras, fachada ventilada), cómo se diagnostica el origen y cómo se delimita la responsabilidad para reclamar.",
+    "excerpt": "La fachada es una de las vías de entrada de agua más difíciles de diagnosticar: el punto de entrada y el de aparición del daño rara vez coinciden.",
+    "estado": "publicado",
+    "datePublished": "2026-10-20",
+    "dateModified": "2026-10-20",
+    "author": "Albert Vilardell",
+    "category": "Humedades",
+    "tags": [
+      "Filtraciones",
+      "Fachada",
+      "CTE DB-HS",
+      "Reclamación"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Filtraciones por fachada: origen, responsabilidad y reclamación",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Humedades y Filtraciones",
+        "url": "/humedades-filtraciones/"
+      },
+      {
+        "title": "Informe por Mala Ejecución de Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      }
+    ],
+    "content": "Las filtraciones por fachada están entre las patologías hídricas más difíciles de diagnosticar: el agua entra por un punto y aparece en otro, tras recorrer el interior del cerramiento. Sin un diagnóstico riguroso, las reparaciones se acumulan sin resolver el problema.\n\n## Las causas habituales\n\n**Juntas y sellados** degradados, **carpinterías** mal recibidas o sin barrera de agua, **fisuras** en el revestimiento, defectos en **fachadas ventiladas** o en los encuentros con cubierta y balcones. El **CTE DB-HS 1** fija las exigencias de estanqueidad; su incumplimiento suele estar en el origen de la patología.\n\n## Cómo se localiza el origen\n\nEl diagnóstico combina inspección del detalle constructivo, **termografía**, y pruebas de estanqueidad dirigidas que reproducen la entrada de agua de forma controlada. El objetivo es identificar el punto real de entrada, no el síntoma visible.\n\n## Responsabilidad y reclamación\n\nDeterminado el origen, el dictamen delimita la responsabilidad: constructora (defecto de ejecución dentro del plazo de la **LOE**), comunidad (elemento común) o cobertura del seguro. Esa atribución es la base de la reclamación. La reparación posterior —impermeabilización, sustitución de sellados— corresponde a un contratista especializado.\n\n## Preguntas frecuentes\n\n**¿Por qué han fallado las reparaciones anteriores?**\nPorque probablemente se trató el síntoma (la mancha) sin identificar el punto de entrada del agua.\n\n**¿La filtración por fachada la cubre el seguro?**\nDepende del origen y de la póliza. Un defecto constructivo preexistente suele quedar fuera; un daño accidental, cubierto. El dictamen lo distingue.\n\n**¿Entra dentro de la garantía de la LOE?**\nLa estanqueidad afecta a la habitabilidad: garantía de 3 años (LOE art. 17), a contar desde la recepción de la obra."
+  },
+  {
+    "title": "Carbonatación del hormigón: diagnóstico pericial (no es aluminosis)",
+    "slug": "carbonatacion-hormigon-diagnostico-pericial",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/carbonatacion-hormigon-diagnostico-pericial/"
+      }
+    ],
+    "description": "Qué es la carbonatación del hormigón, cómo se diagnostica con el ensayo de fenolftaleína, en qué se diferencia de la aluminosis y qué alcance tiene el daño estructural.",
+    "excerpt": "La carbonatación y la aluminosis se confunden a menudo, pero son fenómenos distintos con causas y pronósticos diferentes. Distinguirlos cambia la reclamación.",
+    "estado": "publicado",
+    "datePublished": "2026-10-27",
+    "dateModified": "2026-10-27",
+    "author": "Albert Vilardell",
+    "category": "Patologías Estructurales",
+    "tags": [
+      "Carbonatación",
+      "Hormigón",
+      "Corrosión",
+      "Diagnóstico"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Carbonatación del hormigón: diagnóstico pericial (no es aluminosis)",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Patologías Estructurales",
+        "url": "/patologias-estructurales/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Cuando aparece hierro oxidado en pilares, forjados o vigas, se habla enseguida de \"aluminosis\". Pero muchas veces el fenómeno es la **carbonatación**, un proceso distinto que conviene diagnosticar correctamente porque cambia la causa, el pronóstico y la reclamación.\n\n## Qué es la carbonatación\n\nEl hormigón protege a las armaduras porque su medio es alcalino. Con el tiempo, el **CO₂** ambiental penetra y **reduce la alcalinidad** (la \"carbonata\"); cuando el frente de carbonatación alcanza la armadura, esta pierde su protección y comienza a **corroerse**. La corrosión expande el acero, fisura el hormigón y provoca desprendimientos.\n\n## Cómo se diagnostica\n\nEl ensayo de referencia es el de **fenolftaleína**: aplicada sobre una fractura reciente del hormigón, tiñe de rosa la zona sana (alcalina) y deja incolora la carbonatada. Combinado con la medición de la profundidad del frente y del recubrimiento real de las armaduras, permite estimar el alcance y la evolución.\n\n## Diferencia con la aluminosis\n\nLa **aluminosis** deriva del uso de cemento aluminoso (habitual en forjados de los años 50-70) y de su conversión con el tiempo; se detecta con ensayos específicos (oxina). La carbonatación afecta a cualquier hormigón por envejecimiento. El diagnóstico diferencial es esencial: un dictamen que confunde ambas fracasa.\n\nLa reparación (pasivado, refuerzo) es una fase posterior que ejecuta un contratista técnico especializado.\n\n## Preguntas frecuentes\n\n**¿Es peligrosa la carbonatación?**\nDepende del alcance de la corrosión y de la sección de armadura perdida. El dictamen evalúa la capacidad portante residual.\n\n**¿Se puede detener?**\nLa reparación busca restaurar la protección de la armadura. La viabilidad la determina el diagnóstico.\n\n**¿Aluminosis o carbonatación cubren la garantía decenal?**\nDepende de la antigüedad del edificio y del origen; en obra nueva, un defecto estructural encaja en la garantía decenal de la LOE."
+  },
+  {
+    "title": "Corrosión de armaduras: diagnóstico y alcance del daño",
+    "slug": "corrosion-armaduras-diagnostico-alcance",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/corrosion-armaduras-diagnostico-alcance/"
+      }
+    ],
+    "description": "Cómo se diagnostica la corrosión de armaduras en hormigón, qué la provoca (carbonatación, cloruros), cómo se mide la pérdida de sección y qué implica para la seguridad estructural.",
+    "excerpt": "La corrosión de armaduras no es solo estética: reduce la sección resistente del acero y compromete la capacidad portante. El dictamen mide cuánto.",
+    "estado": "publicado",
+    "datePublished": "2026-11-03",
+    "dateModified": "2026-11-03",
+    "author": "Albert Vilardell",
+    "category": "Patologías Estructurales",
+    "tags": [
+      "Corrosión",
+      "Armaduras",
+      "Hormigón armado",
+      "Seguridad estructural"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Corrosión de armaduras: diagnóstico y alcance del daño",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Patologías Estructurales",
+        "url": "/patologias-estructurales/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "La corrosión de las armaduras es la patología más frecuente del hormigón armado envejecido, y también una de las peor evaluadas: el óxido visible es solo el síntoma. Lo relevante es **cuánta sección de acero se ha perdido** y qué significa para la estructura.\n\n## Qué la provoca\n\nDos causas principales: la **carbonatación** del hormigón (pérdida de alcalinidad por CO₂) y la presencia de **cloruros** (ambientes marinos, sales de deshielo). Ambas rompen la capa protectora del acero y activan la corrosión, que expande el metal, fisura el recubrimiento y lo desprende.\n\n## Cómo se mide el alcance\n\nEl diagnóstico determina la **profundidad de carbonatación** o el contenido de cloruros, el **recubrimiento real** y, sobre todo, la **pérdida de sección** de las barras. Con ese dato se evalúa la capacidad portante residual del elemento conforme a la normativa estructural (EHE-08 / Eurocódigo 2) y se establece si la seguridad está comprometida.\n\n## Qué aporta el informe\n\nEl dictamen distingue entre un problema **estético o superficial** y uno que **afecta a la estabilidad**, y fija la urgencia de la intervención. Esa gradación es la base tanto de la reclamación —si hay responsabilidad de proyecto o ejecución— como de la decisión de reparar. La reparación o el refuerzo los ejecuta un contratista especializado.\n\n## Preguntas frecuentes\n\n**¿El óxido a la vista significa peligro inmediato?**\nNo necesariamente. Puede ser superficial o indicar una pérdida de sección relevante. Solo la medición lo determina.\n\n**¿Se puede reparar sin sustituir la estructura?**\nEn muchos casos sí, mediante saneado, pasivado y refuerzo. La viabilidad la fija el diagnóstico.\n\n**¿Quién responde en un edificio reciente?**\nUn defecto estructural en obra nueva encaja en la garantía decenal de la LOE."
+  },
+  {
+    "title": "Fisura o grieta: cómo se diferencian y cuándo preocupan",
+    "slug": "fisura-o-grieta-diferencia-cuando-preocupan",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/fisura-o-grieta-diferencia-cuando-preocupan/"
+      }
+    ],
+    "description": "Diferencia entre fisura y grieta, cómo interpretar su trazado, apertura y evolución, y cuándo una grieta indica un problema estructural que requiere informe pericial.",
+    "excerpt": "No toda grieta es estructural, pero algunas lo son. El trazado, la apertura y la evolución son las tres pistas que separan lo cosmético de lo grave.",
+    "estado": "publicado",
+    "datePublished": "2026-11-10",
+    "dateModified": "2026-11-10",
+    "author": "Albert Vilardell",
+    "category": "Patologías Estructurales",
+    "tags": [
+      "Fisuras",
+      "Grietas",
+      "Patología estructural",
+      "Diagnóstico"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Fisura o grieta: cómo se diferencian y cuándo preocupan",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Patologías Estructurales",
+        "url": "/patologias-estructurales/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Una grieta en casa genera alarma, pero no todas indican un problema estructural. Distinguir una **fisura** superficial de una **grieta** que compromete la estructura es el primer paso, y depende de leer correctamente tres señales.\n\n## Fisura frente a grieta\n\nDe forma orientativa, se habla de **fisura** cuando la abertura es fina y afecta al revestimiento, y de **grieta** cuando es más ancha y atraviesa el elemento. Pero la anchura por sí sola no basta: lo determinante es el **origen**.\n\n## Las tres pistas\n\n**Trazado:** las grietas estructurales suelen seguir una trayectoria coherente con el mecanismo de daño (diagonales por asiento, verticales por empuje). **Apertura:** por encima de cierto umbral y con disposición diagonal, la sospecha estructural aumenta. **Evolución:** una grieta **activa**, que crece con el tiempo, es más preocupante que una estabilizada. El seguimiento con testigos permite determinarlo.\n\n## Otras causas\n\nMuchas fisuras son **térmicas** (dilatación), de **retracción** (fraguado) o de **tabiquería**, sin trascendencia estructural. El dictamen diferencia el origen antes de atribuir gravedad.\n\n## Cuándo conviene un informe\n\nCuando la grieta es activa, afecta a elementos portantes, supera el milímetro con disposición diagonal, o se acompaña de deformaciones, puertas que dejan de ajustar o desniveles. En esos casos el diagnóstico temprano evita males mayores.\n\n## Preguntas frecuentes\n\n**¿Una grieta que no crece es segura?**\nUna grieta estabilizada preocupa menos que una activa, pero conviene confirmar su origen.\n\n**¿Cómo sé si está activa?**\nMediante testigos y mediciones repetidas en el tiempo.\n\n**¿Puedo tapar la grieta y ya está?**\nTapar sin diagnosticar oculta el síntoma. Si el origen es estructural, reaparecerá."
+  },
+  {
+    "title": "Pavimentos industriales: tolerancias TR-34 y disputas de planitud",
+    "slug": "pavimento-industrial-tolerancias-tr34-disputas",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/pavimento-industrial-tolerancias-tr34-disputas/"
+      }
+    ],
+    "description": "Cómo se peritan los defectos en pavimentos industriales: fisuración, planitud para equipos VNA, tolerancias según la norma TR-34 y responsabilidad por mala ejecución de la solera.",
+    "excerpt": "En logística, unos milímetros de planitud deciden si una estantería VNA puede operar. El peritaje contrasta la solera ejecutada con la tolerancia contractual.",
+    "estado": "publicado",
+    "datePublished": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "author": "Albert Vilardell",
+    "category": "Naves Industriales",
+    "tags": [
+      "Pavimento industrial",
+      "TR-34",
+      "Planitud",
+      "Solera"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Pavimentos industriales: tolerancias TR-34 y disputas de planitud",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritaje de Naves Industriales",
+        "url": "/naves-industriales/"
+      },
+      {
+        "title": "Informe por Mala Ejecución de Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      }
+    ],
+    "content": "En una nave logística, el pavimento no es un acabado: es una superficie de trabajo con tolerancias exigentes. Un defecto de planitud o una fisuración generalizada pueden impedir la operación de estanterías de gran altura (VNA) y generar disputas de cuantía considerable.\n\n## Las patologías habituales\n\n**Fisuración** por retracción o asiento de la solera, **juntas** mal ejecutadas o mal selladas, **descascarillado** superficial y, sobre todo, **falta de planitud** para los equipos previstos. Cada una tiene una causa distinta —terreno, dosificación, curado, ejecución— que el diagnóstico debe separar.\n\n## El papel de la norma TR-34\n\nLa referencia técnica para tolerancias de planitud y regularidad de soleras industriales es la norma **TR-34** (Concrete Society). El peritaje contrasta la planitud **realmente ejecutada** con la clase de tolerancia **contractualmente exigida** según el tipo de tráfico (VNA, tráfico libre). Ese contraste objetiva el incumplimiento.\n\n## Prueba y reparación, dos fases\n\nEl dictamen determina la causa, mide la desviación respecto a la tolerancia y valora el alcance —es la fase de **prueba** para reclamar a la constructora conforme a la **LOE**. La **reparación** de la solera (regeneración, tratamiento de juntas, pavimentos de resina) es una fase distinta que ejecuta un contratista técnico especializado.\n\n## Preguntas frecuentes\n\n**¿Unas fisuras en la solera son siempre un defecto?**\nNo. Cierta fisuración de retracción es esperable. Lo relevante es su magnitud, su causa y si supera lo admisible.\n\n**¿Qué es la planitud VNA?**\nLa regularidad exigida para pasillos de estanterías de muy gran altura operados por carretillas trilaterales, mucho más estricta que el tráfico libre.\n\n**¿A quién se reclama?**\nA la constructora, si el defecto deriva de la ejecución, dentro de los plazos de la LOE."
+  },
+  {
+    "title": "Valoración de daños en nave industrial para la aseguradora",
+    "slug": "valoracion-danos-nave-industrial-aseguradora",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/valoracion-danos-nave-industrial-aseguradora/"
+      }
+    ],
+    "description": "Cómo se valoran los daños de una nave industrial para un expediente de seguro: continente, existencias, estructura metálica y pérdida de explotación, con criterio pericial contrastable.",
+    "excerpt": "En un siniestro industrial, la valoración decide la indemnización. Un dictamen técnico contrastable evita que la tasación de la aseguradora se quede corta.",
+    "estado": "publicado",
+    "datePublished": "2026-11-24",
+    "dateModified": "2026-11-24",
+    "author": "Albert Vilardell",
+    "category": "Naves Industriales",
+    "tags": [
+      "Valoración de daños",
+      "Seguro",
+      "Nave industrial",
+      "Siniestro"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Valoración de daños en nave industrial para la aseguradora",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritaje de Naves Industriales",
+        "url": "/naves-industriales/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Cuando una nave industrial sufre un siniestro —incendio, inundación, colapso—, la indemnización depende de cómo se **valoren los daños**. Una tasación superficial suele infravalorar partidas relevantes; un dictamen técnico contrastable las documenta.\n\n## Qué se valora\n\nUn expediente completo distingue varios conceptos: el **continente** (estructura, cerramientos, cubierta, instalaciones fijas), el **contenido** o existencias, y, según la póliza, la **pérdida de explotación** (lucro cesante) durante la reposición. Cada uno requiere un criterio de valoración distinto.\n\n## La estructura, el punto crítico\n\nEn incendios, la clave es evaluar si la **estructura metálica** conserva capacidad portante o debe sustituirse: el calor degrada el acero antes de fundirlo. Esta decisión —reparar frente a reconstruir— es la que más incide en la cuantía, y debe apoyarse en criterio técnico, no en una estimación visual.\n\n## Por qué conviene un dictamen de parte\n\nSi la oferta de la aseguradora no cubre el daño acreditado, el asegurado puede aportar su propio dictamen y activar la **peritación contradictoria (art. 38 LCS)**. En siniestros industriales, la diferencia de valoración suele justificar sobradamente el procedimiento.\n\n## Preguntas frecuentes\n\n**¿Incluye la valoración el lucro cesante?**\nSolo si la póliza cubre pérdida de explotación. El dictamen documenta el tiempo y las obras de reposición, base de esa reclamación.\n\n**¿Se valora a nuevo o con depreciación?**\nDepende de la modalidad de la póliza (valor de reposición a nuevo o valor real). El informe se ajusta a la cobertura.\n\n**¿Puedo discutir la tasación del seguro?**\nSí, mediante la peritación contradictoria del art. 38 LCS, aportando informe propio."
+  },
+  {
+    "title": "Liquidación del contrato de obra pública: discrepancias frecuentes",
+    "slug": "liquidacion-contrato-obra-publica-discrepancias",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/liquidacion-contrato-obra-publica-discrepancias/"
+      }
+    ],
+    "description": "Discrepancias habituales en la liquidación de un contrato de obra pública (mediciones, unidades no previstas, penalizaciones, revisión de precios) y el papel del informe pericial conforme a la LCSP.",
+    "excerpt": "La liquidación es donde afloran las diferencias acumuladas de toda la obra. Un informe pericial traduce la obra ejecutada al saldo real conforme a la LCSP.",
+    "estado": "publicado",
+    "datePublished": "2026-12-01",
+    "dateModified": "2026-12-01",
+    "author": "Albert Vilardell",
+    "category": "Obra Pública",
+    "tags": [
+      "LCSP",
+      "Liquidación",
+      "Obra pública",
+      "Mediciones"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Liquidación del contrato de obra pública: discrepancias frecuentes",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritaje de Obra Pública e Infraestructura",
+        "url": "/obras-publicas/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "La liquidación de un contrato de obra pública es el momento en que se cierran las cuentas de toda la obra, y precisamente por eso concentra las discrepancias acumuladas entre el contratista y la Administración. Resolverlas requiere soporte técnico riguroso conforme a la **LCSP**.\n\n## Dónde surgen las diferencias\n\nLas más frecuentes: **mediciones** finales discutidas, **unidades de obra no previstas** ejecutadas por necesidades de la obra, **penalizaciones** por plazo o calidad, **revisión de precios** y el tratamiento de los **modificados** no formalizados. Cada una tiene un encaje distinto en la normativa de contratación.\n\n## Qué aporta el informe pericial\n\nEl dictamen mide y valora lo **realmente ejecutado**, lo contrasta con el proyecto, el pliego y las certificaciones, y encuadra cada partida en el supuesto legal correspondiente. Frente a la Administración, la carga de justificar técnicamente la reclamación recae sobre el contratista: el informe es lo que la sostiene en vía administrativa y, en su caso, contencioso-administrativa.\n\n## Un documento para negociar y para litigar\n\nUn dictamen sólido facilita el acuerdo en la propia liquidación; si no lo hay, es la prueba pericial en la impugnación. En ambos casos, la clave es la trazabilidad de cada partida.\n\n## Preguntas frecuentes\n\n**¿Se pueden reclamar unidades ejecutadas pero no certificadas?**\nEl dictamen documenta la realidad de la obra ejecutada, base fáctica de la reclamación, sin perjuicio del análisis jurídico del letrado.\n\n**¿Qué plazo hay para la liquidación?**\nLa LCSP fija los plazos del procedimiento de liquidación; conviene actuar dentro de ellos con el soporte técnico preparado.\n\n**¿Incluye la revisión de precios?**\nSí, cuando procede conforme al contrato y a la normativa aplicable."
+  },
+  {
+    "title": "Patologías en hormigón pretensado: peritaje en obra civil",
+    "slug": "patologias-hormigon-pretensado-obra-civil",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/patologias-hormigon-pretensado-obra-civil/"
+      }
+    ],
+    "description": "Peritaje de patologías en estructuras de hormigón pretensado (viaductos, puentes, tableros): fisuración, corrosión de tendones, pérdidas de pretensado y evaluación de seguridad estructural.",
+    "excerpt": "El hormigón pretensado concentra las patologías más delicadas de la obra civil: un fallo en los tendones no se ve, pero compromete toda la estructura.",
+    "estado": "publicado",
+    "datePublished": "2026-12-08",
+    "dateModified": "2026-12-08",
+    "author": "Albert Vilardell",
+    "category": "Obra Pública",
+    "tags": [
+      "Hormigón pretensado",
+      "Viaducto",
+      "Obra civil",
+      "Patología estructural"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Patologías en hormigón pretensado: peritaje en obra civil",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritaje de Obra Pública e Infraestructura",
+        "url": "/obras-publicas/"
+      },
+      {
+        "title": "Informe por Patologías Estructurales",
+        "url": "/patologias-estructurales/"
+      }
+    ],
+    "content": "Las estructuras de hormigón pretensado —viaductos, puentes, tableros, grandes forjados— son de las más eficientes de la ingeniería civil y, a la vez, de las que exigen un diagnóstico más especializado cuando presentan patologías. Un fallo en el pretensado rara vez es visible, pero afecta al conjunto.\n\n## Las patologías características\n\n**Fisuración** anómala por pérdida de pretensado o por defectos de ejecución, **corrosión de los tendones** (favorecida por defectos de inyección de las vainas), **pérdidas de tesado** y daños en anclajes. A ello se suman las patologías comunes al hormigón armado: carbonatación, cloruros, asientos de apoyos.\n\n## Por qué requiere criterio específico\n\nEl comportamiento del pretensado no puede analizarse con los mismos criterios que una estructura armada convencional. El diagnóstico combina inspección, ensayos, y **modelado estructural** conforme al Eurocódigo y a la normativa de aplicación, para evaluar la capacidad portante residual y la seguridad.\n\n## Contexto pericial\n\nEstas patologías suelen aparecer en contextos de alto valor: contenciosos con la constructora, reclamaciones a la Administración o expedientes de responsabilidad. El dictamen diferencia responsabilidades —proyecto, ejecución, conservación— con referencia normativa.\n\n## Preguntas frecuentes\n\n**¿Se puede evaluar el pretensado sin destruir la estructura?**\nEn buena medida sí, mediante técnicas de inspección y ensayos no destructivos, complementados con cálculo.\n\n**¿Una fisura en un tablero es grave?**\nDepende de su origen y disposición. En pretensado, ciertas fisuras delatan pérdida de tesado y requieren análisis inmediato.\n\n**¿Quién responde de estos daños?**\nSegún el origen: proyecto, ejecución o conservación. El dictamen lo delimita."
+  },
+  {
+    "title": "Perito de parte frente a la aseguradora: cómo se prepara la reclamación",
+    "slug": "perito-de-parte-frente-aseguradora-reclamacion",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/perito-de-parte-frente-aseguradora-reclamacion/"
+      }
+    ],
+    "description": "Cómo prepara el asegurado una reclamación frente a su compañía con un perito de parte: documentación del siniestro, valoración independiente y vías del artículo 38 LCS.",
+    "excerpt": "Cuando la compañía infravalora o rechaza el siniestro, el asegurado no está inerme: un perito de parte reequilibra la relación con la aseguradora.",
+    "estado": "publicado",
+    "datePublished": "2026-12-15",
+    "dateModified": "2026-12-15",
+    "author": "Albert Vilardell",
+    "category": "Seguros",
+    "tags": [
+      "Perito de parte",
+      "Aseguradora",
+      "Reclamación",
+      "Art. 38 LCS"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Perito de parte frente a la aseguradora: cómo se prepara la reclamación",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      },
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      }
+    ],
+    "content": "En un siniestro de construcción, la relación entre el asegurado y su compañía es asimétrica: la aseguradora dispone de peritos propios y de criterio para valorar el daño. Un **perito de parte** reequilibra esa relación aportando una valoración técnica independiente.\n\n## Cuándo interviene\n\nCuando la compañía **infravalora** el daño, **excluye** partidas o **rechaza** la cobertura alegando un origen no cubierto. En todos esos casos, la discrepancia es técnica antes que jurídica, y se resuelve con un diagnóstico riguroso del origen y del alcance.\n\n## Cómo se prepara la reclamación\n\nEl perito documenta el siniestro con metodología verificable, determina el **origen** del daño —dato del que depende la cobertura—, cuantifica el alcance y contrasta las partidas discutidas. Ese dictamen es la base para negociar y, si no hay acuerdo, para activar la **peritación contradictoria (art. 38 LCS)** o la vía judicial.\n\n## El valor de actuar pronto\n\nCuanto antes se documente el siniestro, mejor se preserva la prueba. Retirar restos o reparar sin dictamen puede debilitar la reclamación.\n\n## Preguntas frecuentes\n\n**¿Puedo reclamar aunque ya haya aceptado un pago a cuenta?**\nUn pago a cuenta no impide reclamar la diferencia si el daño real es superior. El dictamen la cuantifica.\n\n**¿Qué pasa si la compañía no acepta mi informe?**\nSe activa la peritación contradictoria del art. 38 LCS, con nombramiento de un tercer perito si persiste el desacuerdo.\n\n**¿Es lo mismo que un contrainforme?**\nNo. El contrainforme rebate el dictamen del perito contrario; el informe de parte fundamenta su propia reclamación. Pueden combinarse."
+  },
+  {
+    "title": "Perito de daños por inundación: qué documenta el dictamen",
+    "slug": "perito-danos-inundacion-dictamen",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/perito-danos-inundacion-dictamen/"
+      }
+    ],
+    "description": "Qué documenta un informe pericial tras una inundación: origen del agua, alcance en estructura e instalaciones, daños diferidos y valoración para la reclamación al seguro o al responsable.",
+    "excerpt": "Tras una inundación, buena parte del daño no es visible el primer día. El dictamen documenta también el daño diferido, que la tasación rápida suele ignorar.",
+    "estado": "publicado",
+    "datePublished": "2026-12-22",
+    "dateModified": "2026-12-22",
+    "author": "Albert Vilardell",
+    "category": "Seguros",
+    "tags": [
+      "Inundación",
+      "Daños por agua",
+      "Peritaje",
+      "Valoración"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Perito de daños por inundación: qué documenta el dictamen",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      },
+      {
+        "title": "Informe por Humedades y Filtraciones",
+        "url": "/humedades-filtraciones/"
+      }
+    ],
+    "content": "Las inundaciones —por lluvia extraordinaria, desbordamiento o rotura de red— dejan un daño que rara vez se limita a lo que se ve el primer día. Un dictamen pericial documenta tanto el daño inmediato como el **diferido**, que es donde la valoración rápida suele quedarse corta.\n\n## Qué documenta el dictamen\n\nEl **origen y la mecánica** de la entrada de agua (dato clave para la cobertura y para atribuir responsabilidad), el **alcance** en estructura, cerramientos, instalaciones (eléctrica, climatización) y acabados, y los **daños diferidos**: humedades residuales, corrosión, pérdida de aislamiento, patologías que se manifiestan semanas después.\n\n## Por qué el daño diferido importa\n\nUna tasación realizada en caliente puede infravalorar el siniestro al no contemplar la evolución de la humedad en materiales y estructura. El dictamen anticipa esos efectos con criterio técnico, para que la indemnización cubra el daño real y no solo el aparente.\n\n## Contexto de la reclamación\n\nSegún el caso, la reclamación se dirige al **seguro** (daños por agua, según póliza), a un **tercero responsable** (rotura en instalación ajena) o a la Administración. El dictamen aporta la base técnica en todos ellos. La reparación y el secado los ejecuta después un contratista especializado.\n\n## Preguntas frecuentes\n\n**¿Cubre el seguro del hogar una inundación?**\nDepende del origen y de la póliza; los daños por fenómenos extraordinarios pueden corresponder al Consorcio de Compensación de Seguros. El dictamen ayuda a encuadrarlo.\n\n**¿Cuándo conviene peritar, en caliente o después?**\nCuanto antes para preservar la prueba, con seguimiento del daño diferido.\n\n**¿Se puede reclamar a un vecino por una fuga?**\nSi el origen está en su instalación, sí; el dictamen determina el origen."
+  },
+  {
+    "title": "Tacha del perito (LEC 343): cuándo procede y cómo se plantea",
+    "slug": "tacha-del-perito-lec-343",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/tacha-del-perito-lec-343/"
+      }
+    ],
+    "description": "Qué es la tacha de peritos en el artículo 343 de la LEC, en qué se diferencia de la recusación, cuándo procede y cómo afecta al valor probatorio del dictamen contrario.",
+    "excerpt": "La tacha no discute el contenido del dictamen, sino la imparcialidad del perito. Es una herramienta distinta —y complementaria— del contrainforme.",
+    "estado": "publicado",
+    "datePublished": "2026-12-29",
+    "dateModified": "2026-12-29",
+    "author": "Albert Vilardell",
+    "category": "Contrainforme",
+    "tags": [
+      "Tacha de peritos",
+      "LEC 343",
+      "Imparcialidad",
+      "Prueba pericial"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Tacha del perito (LEC 343): cuándo procede y cómo se plantea",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "En un procedimiento con prueba pericial, cuestionar el dictamen contrario tiene dos vías distintas: atacar su **contenido técnico** (el contrainforme) o cuestionar la **imparcialidad del perito** (la tacha). Conviene no confundirlas.\n\n## Qué es la tacha\n\nLa **tacha de peritos** (**LEC art. 343**) se dirige contra los peritos **autores de dictámenes aportados por las partes** —no los designados judicialmente— cuando concurren circunstancias que hacen dudar de su imparcialidad: relación de parentesco, interés en el asunto, amistad o enemistad, dependencia, entre otras. No anula el dictamen, pero **el juez la valora** al ponderar su fuerza probatoria.\n\n## Diferencia con la recusación\n\nLa **recusación** se reserva para los peritos designados por el tribunal y, de prosperar, aparta al perito. La **tacha** afecta a los peritos de parte y opera sobre la **credibilidad**, no sobre la validez formal del dictamen.\n\n## Cómo se articula con el contrainforme\n\nLa tacha cuestiona **quién** firma; el contrainforme cuestiona **qué** dice. Empleadas juntas, refuerzan la impugnación: un dictamen técnicamente débil emitido por un perito cuya imparcialidad se cuestiona pierde peso ante la sana crítica del juez (**LEC art. 348**).\n\n## Preguntas frecuentes\n\n**¿La tacha invalida el informe?**\nNo. El juez la tiene en cuenta al valorar la prueba, pero el dictamen sigue en el procedimiento.\n\n**¿Cuándo se plantea?**\nEn el momento procesal previsto, habitualmente al conocerse el dictamen y el perito. El asesoramiento del letrado fija el cauce.\n\n**¿Basta con la tacha para ganar?**\nRaramente. Lo eficaz es combinarla con un contrainforme que demuestre las deficiencias técnicas."
+  },
+  {
+    "title": "Cómo preparar la prueba pericial para el juicio: guía para abogados",
+    "slug": "preparar-prueba-pericial-juicio-abogados",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/preparar-prueba-pericial-juicio-abogados/"
+      }
+    ],
+    "description": "Guía práctica para abogados sobre cómo preparar y aprovechar la prueba pericial de construcción en juicio: elección del perito, objeto del dictamen, ratificación e interrogatorio.",
+    "excerpt": "La prueba pericial gana o pierde en la preparación: un dictamen sólido y un perito que lo defiende con solvencia pesan más que cualquier alegación.",
+    "estado": "publicado",
+    "datePublished": "2027-01-05",
+    "dateModified": "2027-01-05",
+    "author": "Albert Vilardell",
+    "category": "Contrainforme",
+    "tags": [
+      "Prueba pericial",
+      "Abogados",
+      "Ratificación",
+      "Juicio"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Cómo preparar la prueba pericial para el juicio: guía para abogados",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      },
+      {
+        "title": "Actuación como Perito Judicial",
+        "url": "/perito-judicial/"
+      }
+    ],
+    "content": "Para un despacho, la prueba pericial de construcción es a menudo la que decide el pleito. Su eficacia se juega en la **preparación**: elegir bien al perito, acotar el objeto y anticipar la ratificación.\n\n## Elección y encargo\n\nEl perito debe reunir competencia técnica acreditada y capacidad de **defender el dictamen** oralmente. El encargo debe definir con precisión el **objeto**: las preguntas técnicas que el dictamen ha de responder, alineadas con la estrategia procesal. Un objeto difuso produce un informe difuso.\n\n## El dictamen como prueba\n\nUn buen dictamen es **trazable**: cada conclusión se sigue desde los datos y la norma (**CTE, EHE-08, LOE**). Anticipa las objeciones del perito contrario y documenta la cuantificación. Conviene coordinar el informe con el resto de la prueba para que no haya contradicciones internas.\n\n## Ratificación e interrogatorio\n\nLa **ratificación** oral (**LEC art. 347**) es donde el dictamen se sostiene o se debilita. El perito debe estar preparado para el interrogatorio cruzado y para explicar con claridad al juez cuestiones técnicas complejas. Coordinar con antelación las líneas del interrogatorio y las posibles preguntas de la parte contraria es parte del trabajo del letrado con su perito.\n\n## Preguntas frecuentes\n\n**¿Informe de parte o solicitar perito judicial?**\nDepende de la estrategia. El de parte da control e iniciativa; el judicial aporta neutralidad. A menudo conviene el de parte y, si procede, complementarlo.\n\n**¿Puede el perito asistir al juicio aunque no ratifique ese día?**\nLa ratificación se practica en la vista; conviene planificar su disponibilidad y la coordinación con el letrado.\n\n**¿Qué diferencia a un dictamen que gana?**\nLa solidez metodológica y una ratificación clara y serena ante el interrogatorio."
+  },
+  {
+    "title": "Garantía decenal y seguro decenal: cómo se activa",
+    "slug": "garantia-decenal-seguro-decenal-activar",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/garantia-decenal-seguro-decenal-activar/"
+      }
+    ],
+    "description": "Qué cubre la garantía decenal de la LOE, cómo funciona el seguro decenal obligatorio del promotor y qué papel tiene el informe pericial para activar la cobertura ante daños estructurales.",
+    "excerpt": "La garantía decenal cubre los daños que comprometen la estabilidad del edificio durante diez años. Activarla exige acreditar el origen estructural del daño.",
+    "estado": "publicado",
+    "datePublished": "2027-01-12",
+    "dateModified": "2027-01-12",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": [
+      "Garantía decenal",
+      "Seguro decenal",
+      "LOE",
+      "Daños estructurales"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Garantía decenal y seguro decenal: cómo se activa",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Mala Ejecución de Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      },
+      {
+        "title": "Informe por Patologías Estructurales",
+        "url": "/patologias-estructurales/"
+      }
+    ],
+    "content": "La **garantía decenal** es la cobertura de mayor alcance de la **LOE (art. 17)**: protege durante **diez años** frente a los daños que **comprometen la estabilidad y la resistencia** del edificio. Activarla requiere acreditar técnicamente el origen estructural del daño.\n\n## Qué cubre\n\nSolo los daños que afectan a los **elementos estructurales** —cimentación, vigas, forjados, muros de carga— y que comprometen la seguridad. No cubre defectos de habitabilidad (garantía de 3 años) ni de acabado (1 año). El plazo cuenta desde la **recepción de la obra**.\n\n## El seguro decenal\n\nEl promotor está obligado a suscribir un **seguro decenal** que respalda esta garantía. En caso de daño estructural, la reclamación puede dirigirse a la aseguradora del seguro decenal, además de a los agentes responsables (promotor, constructor, proyectista, dirección facultativa) conforme al régimen de responsabilidad de la LOE.\n\n## El papel del informe pericial\n\nLa aseguradora y los responsables solo responden si el daño encaja en la garantía decenal. El dictamen acredita que el daño es **estructural**, que **compromete la estabilidad** y a qué agente es **imputable**, además de cuantificar la reparación. Sin ese soporte, la reclamación no prospera.\n\n## Preguntas frecuentes\n\n**¿Toda grieta activa la decenal?**\nNo. Solo los daños que afectan a la estabilidad estructural. Una fisura de tabiquería no encaja.\n\n**¿Desde cuándo cuentan los diez años?**\nDesde el acta de recepción de la obra.\n\n**¿A quién reclamo, al promotor o a la aseguradora?**\nPuede dirigirse a ambos; el dictamen y el letrado determinan la vía más eficaz."
+  },
+  {
+    "title": "¿Quién paga el perito en un juicio?",
+    "slug": "quien-paga-el-perito-en-un-juicio",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/quien-paga-el-perito-en-un-juicio/"
+      }
+    ],
+    "description": "Quién asume los honorarios del perito en un procedimiento civil: perito de parte, perito judicial, provisión de fondos y el efecto de la condena en costas.",
+    "excerpt": "Cada parte adelanta su perito; el reparto final depende del tipo de designación y de la condena en costas. Conviene entenderlo antes de litigar.",
+    "estado": "publicado",
+    "datePublished": "2027-01-19",
+    "dateModified": "2027-01-19",
+    "author": "Albert Vilardell",
+    "category": "Proceso",
+    "tags": [
+      "Honorarios",
+      "Perito judicial",
+      "Costas",
+      "Provisión de fondos"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "¿Quién paga el perito en un juicio?",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Honorarios y coste",
+        "url": "/honorarios-perito-judicial-barcelona/"
+      },
+      {
+        "title": "Actuación como Perito Judicial",
+        "url": "/perito-judicial/"
+      }
+    ],
+    "content": "Una de las primeras dudas de quien afronta un litigio de construcción es quién paga al perito. La respuesta depende de si el perito es **de parte** o **judicial**, y del resultado del procedimiento.\n\n## El perito de parte\n\nLo abona **la parte que lo encarga**. Es una inversión bajo su control: decide cuándo y con qué alcance. Si el procedimiento termina con **condena en costas** a la parte contraria, los honorarios del perito de parte pueden incluirse, dentro de los límites que fije la tasación de costas.\n\n## El perito judicial\n\nCuando lo designa el juzgado, este fija una **provisión de fondos** que, por regla general, adelanta la parte que ha solicitado la prueba (o ambas, si interesa a las dos). El reparto definitivo se ajusta con la resolución y, en su caso, con la condena en costas.\n\n## El efecto de las costas\n\nEn términos generales, la parte cuyas pretensiones son rechazadas puede ser condenada a pagar las costas, que pueden incluir los honorarios periciales dentro de los límites legales. Por eso el coste del perito no debe verse aislado, sino en el marco del resultado del pleito.\n\n## Preguntas frecuentes\n\n**¿Recupero lo que pagué al perito si gano?**\nPuede recuperarse total o parcialmente vía condena en costas, con los límites de la tasación. No está garantizado en todos los casos.\n\n**¿Qué es la provisión de fondos?**\nEl importe que el juzgado fija para el perito judicial antes de emitir el dictamen.\n\n**¿Cuánto cuesta un informe pericial?**\nDepende de la complejidad del caso; conviene pedir presupuesto detallado del alcance."
+  },
+  {
+    "title": "La ratificación del dictamen en sala: qué es y por qué pesa",
+    "slug": "ratificacion-informe-pericial-sala",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/ratificacion-informe-pericial-sala/"
+      }
+    ],
+    "description": "Qué es la ratificación de un informe pericial en el juicio, cómo transcurre el interrogatorio cruzado y por qué la defensa oral del dictamen determina su fuerza probatoria.",
+    "excerpt": "Un dictamen impecable puede perder valor si no se defiende con solvencia en sala. La ratificación es donde el informe se sostiene ante el juez.",
+    "estado": "publicado",
+    "datePublished": "2027-01-26",
+    "dateModified": "2027-01-26",
+    "author": "Albert Vilardell",
+    "category": "Proceso",
+    "tags": [
+      "Ratificación",
+      "Interrogatorio",
+      "LEC 347",
+      "Prueba pericial"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "La ratificación del dictamen en sala: qué es y por qué pesa",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Actuación como Perito Judicial",
+        "url": "/perito-judicial/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Un informe pericial no termina cuando se entrega: se completa en la **ratificación**, el momento en que el perito defiende el dictamen verbalmente ante el juez y los letrados. Es una fase que muchos subestiman y que, sin embargo, determina buena parte de su fuerza probatoria.\n\n## Qué es la ratificación\n\nConforme a la **LEC (art. 347)**, en el juicio el perito ratifica su dictamen y responde a las preguntas de las partes y del tribunal. La ratificación convierte el documento en prueba viva, sometida a contradicción.\n\n## El interrogatorio cruzado\n\nLos letrados de ambas partes pueden interrogar al perito para reforzar o desmontar sus conclusiones. Un perito solvente explica con claridad cuestiones técnicas complejas, mantiene la coherencia con su informe y no se contradice bajo presión. La **solidez de esa defensa** es lo que el juez pondera al otorgar peso al dictamen.\n\n## Por qué pesa tanto\n\nEl juez valora la prueba pericial según la **sana crítica (LEC art. 348)**. Entre dos informes contradictorios, tenderá a dar más crédito al perito que defiende su dictamen con rigor y serenidad. Por eso la disponibilidad para ratificar sin demoras y la preparación de la vista forman parte del servicio pericial.\n\n## Preguntas frecuentes\n\n**¿Es obligatorio ratificar?**\nSi una parte lo solicita, el perito debe acudir a ratificar; de lo contrario, el dictamen puede perder eficacia.\n\n**¿Se cobra aparte la ratificación?**\nDepende del profesional. Conviene confirmar si está incluida en el encargo.\n\n**¿Puede el juez preguntar directamente al perito?**\nSí. El tribunal puede pedir aclaraciones para formar su criterio."
+  },
+  {
+    "title": "Vicios ocultos o defectos de obra nueva: ¿LOE o Código Civil?",
+    "slug": "vicios-ocultos-vs-defectos-obra-nueva-loe-cc",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/vicios-ocultos-vs-defectos-obra-nueva-loe-cc/"
+      }
+    ],
+    "description": "Cómo distinguir si una reclamación por defectos en una vivienda se rige por la LOE (obra nueva) o por el Código Civil (vicios ocultos en compraventa), y por qué el encuadre condiciona plazos y responsables.",
+    "excerpt": "El mismo defecto puede reclamarse por dos vías legales distintas según cómo se adquirió la vivienda. Elegir mal la vía es perder plazos y responsables.",
+    "estado": "publicado",
+    "datePublished": "2027-02-02",
+    "dateModified": "2027-02-02",
+    "author": "Albert Vilardell",
+    "category": "Vicios Ocultos",
+    "tags": [
+      "Vicios ocultos",
+      "LOE",
+      "Código Civil",
+      "Defectos constructivos"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Vicios ocultos o defectos de obra nueva: ¿LOE o Código Civil?",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Vicios Ocultos",
+        "url": "/vicios-ocultos/"
+      },
+      {
+        "title": "Informe por Mala Ejecución de Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      }
+    ],
+    "content": "Un mismo defecto —una humedad, una grieta, una instalación deficiente— puede reclamarse por dos vías legales distintas según el contexto de la adquisición. Encuadrarlo bien desde el principio es decisivo, porque **plazos y responsables cambian**.\n\n## La vía de la LOE\n\nLos defectos de una **vivienda de obra nueva** se rigen por la **Ley de Ordenación de la Edificación**. Su art. 17 organiza la responsabilidad de los agentes (promotor, constructor, proyectista, dirección) con plazos de garantía de **1, 3 y 10 años** según la gravedad, contados desde la recepción de la obra.\n\n## La vía del Código Civil\n\nLos **vicios ocultos** en una **compraventa** (típicamente entre particulares, o de segunda mano) se rigen por el **Código Civil (arts. 1484 y ss.)**, con un plazo de **6 meses** desde la entrega para el saneamiento, y requieren que el defecto sea grave, oculto y anterior a la venta.\n\n## Por qué importa el encuadre\n\nLos plazos y los sujetos responsables son distintos. Aplicar la vía equivocada puede llevar a reclamar fuera de plazo o a dirigirse contra quien no responde. El informe pericial aporta los **hechos técnicos** —origen, gravedad, antigüedad del defecto—; el encaje jurídico corresponde al letrado, pero se apoya en ese diagnóstico.\n\n## Preguntas frecuentes\n\n**¿Compré sobre plano, LOE o Código Civil?**\nLa compra de obra nueva al promotor suele situarse en el ámbito de la LOE; conviene confirmarlo con el letrado.\n\n**¿Y si compré de segunda mano?**\nLa vía habitual es la de vicios ocultos del Código Civil, con el plazo de 6 meses.\n\n**¿Puede coexistir más de una acción?**\nEn ciertos casos sí. El dictamen técnico sirve a cualquiera de ellas."
+  },
+  {
+    "title": "Termografía en el peritaje de humedades: qué detecta y qué no",
+    "slug": "termografia-peritaje-humedades-que-detecta",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/termografia-peritaje-humedades-que-detecta/"
+      }
+    ],
+    "description": "Cómo se usa la termografía infrarroja en el peritaje de humedades, qué permite detectar, sus límites y por qué se combina con otras técnicas para localizar el origen del agua.",
+    "excerpt": "La termografía es la herramienta estrella del diagnóstico de humedades, pero no ve el agua: interpreta patrones térmicos. Saber leerlos es lo que la hace útil.",
+    "estado": "publicado",
+    "datePublished": "2027-02-09",
+    "dateModified": "2027-02-09",
+    "author": "Albert Vilardell",
+    "category": "Humedades",
+    "tags": [
+      "Termografía",
+      "Humedades",
+      "Diagnóstico",
+      "CTE DB-HS"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Termografía en el peritaje de humedades: qué detecta y qué no",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Humedades y Filtraciones",
+        "url": "/humedades-filtraciones/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "La **termografía infrarroja** se ha convertido en la herramienta de referencia del diagnóstico de humedades, hasta el punto de que a veces se le atribuyen poderes que no tiene. Conviene entender qué detecta realmente —y qué no— para valorar su utilidad.\n\n## Qué detecta\n\nLa cámara termográfica no \"ve\" el agua: mide **temperaturas superficiales**. Una zona húmeda suele estar más fría por evaporación, y los materiales con distinta humedad muestran patrones térmicos diferentes. Interpretando esos patrones, el técnico localiza áreas afectadas y **anomalías** que orientan hacia el origen: un puente térmico, una filtración activa, una capilaridad.\n\n## Qué no detecta por sí sola\n\nLa termografía no cuantifica la humedad ni confirma su naturaleza. Por eso se **combina** con higrómetros de profundidad, pruebas de estanqueidad y análisis del detalle constructivo. Además, depende de las condiciones: requiere un contraste térmico suficiente y la lectura experta de los resultados, porque muchos patrones admiten más de una interpretación.\n\n## Su papel en el dictamen\n\nEmpleada correctamente, la termografía permite un diagnóstico **no destructivo**: localizar el origen sin abrir obra. Es una pieza del método, no un veredicto por sí misma. El dictamen integra sus resultados con el resto de la evidencia para establecer origen, causa y responsabilidad (**CTE DB-HS**).\n\n## Preguntas frecuentes\n\n**¿Basta una foto termográfica para reclamar?**\nNo. Es un elemento del diagnóstico; el dictamen la integra con otras pruebas.\n\n**¿Sirve en cualquier momento?**\nNecesita contraste térmico. Hay condiciones más favorables que otras para obtener lecturas fiables.\n\n**¿Detecta humedades dentro del muro?**\nDetecta sus efectos en superficie; la profundidad se confirma con higrómetros."
+  },
+  {
+    "title": "Aperturas en muros de carga: peritaje de intervenciones mal ejecutadas",
+    "slug": "aperturas-muros-carga-intervenciones-mal-ejecutadas",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/aperturas-muros-carga-intervenciones-mal-ejecutadas/"
+      }
+    ],
+    "description": "Riesgos de abrir huecos en muros de carga sin proyecto ni refuerzo adecuado, cómo se peritan las intervenciones mal ejecutadas y qué daños estructurales pueden derivarse.",
+    "excerpt": "Abrir un hueco en un muro de carga sin cálculo ni refuerzo es una de las causas más frecuentes de daño estructural en reformas. El peritaje lo acredita.",
+    "estado": "publicado",
+    "datePublished": "2027-02-16",
+    "dateModified": "2027-02-16",
+    "author": "Albert Vilardell",
+    "category": "Patologías Estructurales",
+    "tags": [
+      "Muro de carga",
+      "Reforma",
+      "Refuerzo",
+      "Intervención estructural"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Aperturas en muros de carga: peritaje de intervenciones mal ejecutadas",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Mala Ejecución de Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      },
+      {
+        "title": "Informe por Patologías Estructurales",
+        "url": "/patologias-estructurales/"
+      }
+    ],
+    "content": "Abrir un hueco en un muro de carga es una intervención estructural, aunque a menudo se ejecute como si fuera una reforma menor. Cuando se hace sin proyecto, cálculo ni refuerzo adecuado, aparece uno de los daños estructurales más frecuentes en edificación residencial.\n\n## Por qué es delicado\n\nUn muro de carga transmite las cargas de las plantas superiores. Al abrir un hueco, esas cargas deben desviarse mediante un **dintel o refuerzo** correctamente dimensionado y apoyado. Si el refuerzo es insuficiente, está mal ejecutado o falta el apeo durante la obra, el muro y los elementos que gravitan sobre él sufren: aparecen grietas, descensos y, en casos graves, riesgo de colapso local.\n\n## Qué acredita el peritaje\n\nEl dictamen determina si la intervención se realizó conforme a la buena práctica (**lex artis**) y a la normativa estructural, si el refuerzo es adecuado a las cargas reales, y qué daños se derivan de una ejecución deficiente. Distingue la responsabilidad —proyecto, dirección o ejecución— y valora la reparación.\n\n## Prueba y solución\n\nEl dictamen prueba el defecto y su alcance; el **refuerzo correctivo** (perimetral, con perfilería o materiales compuestos) lo proyecta y ejecuta después un contratista especializado a partir del diagnóstico.\n\n## Preguntas frecuentes\n\n**¿Necesito permiso para abrir un hueco en un muro de carga?**\nSí: requiere proyecto técnico y licencia. Hacerlo sin ellos agrava la responsabilidad.\n\n**¿Cómo sé si mi muro es de carga?**\nNo siempre es evidente; su identificación forma parte del diagnóstico técnico.\n\n**¿Puedo reclamar al que hizo la reforma?**\nSi la intervención fue deficiente, el dictamen fundamenta la reclamación por mala ejecución."
+  },
+  {
+    "title": "RSCIEI: incumplimientos frecuentes y su efecto en un siniestro",
+    "slug": "rscei-incumplimientos-frecuentes-siniestro",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/rscei-incumplimientos-frecuentes-siniestro/"
+      }
+    ],
+    "description": "Qué es el RSCIEI, los incumplimientos más habituales en naves industriales y cómo afectan a la cobertura del seguro y al reparto de responsabilidades tras un incendio.",
+    "excerpt": "El cumplimiento del reglamento de incendios industriales no solo evita sanciones: en un siniestro, condiciona la cobertura y el reparto de responsabilidades.",
+    "estado": "publicado",
+    "datePublished": "2027-02-23",
+    "dateModified": "2027-02-23",
+    "author": "Albert Vilardell",
+    "category": "Naves Industriales",
+    "tags": [
+      "RSCIEI",
+      "Incendio",
+      "Nave industrial",
+      "Normativa"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "RSCIEI: incumplimientos frecuentes y su efecto en un siniestro",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritaje de Naves Industriales",
+        "url": "/naves-industriales/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "El **RSCIEI** —Reglamento de Seguridad Contra Incendios en Establecimientos Industriales (RD 2267/2004)— fija las condiciones de protección contra incendios que debe cumplir una nave. Su relevancia no es solo administrativa: en un siniestro, **el incumplimiento previo puede condicionar la cobertura del seguro y el reparto de responsabilidades**.\n\n## Incumplimientos frecuentes\n\nSectorización insuficiente, **estabilidad al fuego** de la estructura inferior a la exigida, instalaciones de protección (detección, rociadores, hidrantes) inexistentes o sin mantenimiento, salidas de evacuación inadecuadas, o una **caracterización de riesgo** incorrecta que ha llevado a exigir menos protección de la debida.\n\n## Efecto en un siniestro\n\nTras un incendio, el peritaje verifica si la nave cumplía el RSCIEI **en el momento del siniestro**. Un incumplimiento relevante puede: agravar el alcance del daño (por ejemplo, ausencia de sectorización que permite la propagación), incidir en la **cobertura** de la póliza (que suele exigir el cumplimiento normativo), y afectar al **reparto de responsabilidades** entre propiedad, proyectista y mantenedor.\n\n## Qué documenta el dictamen\n\nEl informe contrasta la situación real con las exigencias reglamentarias, relaciona los incumplimientos con la evolución del siniestro y aporta la base técnica para la reclamación o la defensa.\n\n## Preguntas frecuentes\n\n**¿Un incumplimiento anula siempre la cobertura?**\nNo necesariamente; depende de su relevancia y de su relación causal con el daño. El dictamen la analiza.\n\n**¿Quién responde de un incumplimiento del RSCIEI?**\nSegún el caso: la propiedad, el proyectista de la instalación o el mantenedor. El informe lo delimita.\n\n**¿Afecta solo a incendios?**\nEl RSCIEI es específico de incendios industriales, pero su cumplimiento también incide en la valoración del riesgo."
+  },
+  {
+    "title": "Perito para reclamar a la constructora: qué necesita su caso",
+    "slug": "perito-reclamar-constructora-que-necesita",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/perito-reclamar-constructora-que-necesita/"
+      }
+    ],
+    "description": "Qué documentación y análisis técnico necesita una reclamación a la constructora por defectos o mala ejecución: contrato, memoria de calidades, pruebas del defecto y cuantificación.",
+    "excerpt": "Reclamar a la constructora sin soporte técnico es una discusión de palabra contra palabra. El dictamen convierte la queja en una posición defendible.",
+    "estado": "publicado",
+    "datePublished": "2027-03-02",
+    "dateModified": "2027-03-02",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": [
+      "Reclamar constructora",
+      "Mala ejecución",
+      "LOE",
+      "Defectos"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Perito para reclamar a la constructora: qué necesita su caso",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Mala Ejecución de Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Reclamar a una constructora por defectos o incumplimientos, sin soporte técnico, suele acabar en una discusión de percepciones. Un dictamen pericial convierte esa queja en una **posición defendible**, en negociación o en juicio.\n\n## Qué documentación ayuda\n\nEl caso se refuerza con el **contrato de obra**, el **presupuesto**, la **memoria de calidades**, el proyecto y cualquier comunicación con la constructora. Frente a esos documentos, el peritaje contrasta lo **realmente ejecutado**.\n\n## Qué analiza el dictamen\n\nEl informe identifica cada **defecto o incumplimiento** (materiales inferiores a los pactados, partidas cobradas y no ejecutadas, acabados deficientes, defectos de habitabilidad o estructurales), determina su **causa**, lo encuadra en el plazo de garantía correspondiente (**LOE art. 17**: 1, 3 o 10 años) y **cuantifica** el coste de subsanación.\n\n## El proceso de reclamación\n\nCon frecuencia, un dictamen profesional basta para que la constructora **subsane** sin llegar a juicio. Si no hay acuerdo, cabe la mediación con base técnica y, como última vía, la reclamación judicial, en la que el informe es la prueba pericial clave, con **ratificación** incluida.\n\n## Preguntas frecuentes\n\n**¿Necesito el contrato para reclamar?**\nAyuda mucho, pero no es imprescindible: la buena práctica constructiva (lex artis) sirve de referencia aunque falte documentación.\n\n**¿Y si ya pagué toda la obra?**\nHaber pagado no impide reclamar los defectos ni las partidas no ejecutadas.\n\n**¿Cuánto tarda?**\nEl diagnóstico depende del alcance; conviene actuar dentro de los plazos de garantía de la LOE."
+  },
+  {
+    "title": "Disconformidad con la peritación del seguro: opciones del asegurado",
+    "slug": "disconformidad-peritacion-seguro-opciones",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/disconformidad-peritacion-seguro-opciones/"
+      }
+    ],
+    "description": "Qué puede hacer el asegurado cuando no está de acuerdo con la peritación de su compañía: revisión, informe de parte, peritación contradictoria del art. 38 LCS y vía judicial.",
+    "excerpt": "No aceptar la peritación de la compañía no significa quedarse sin opciones: la ley prevé un camino ordenado para discrepar de la cuantía.",
+    "estado": "publicado",
+    "datePublished": "2027-03-09",
+    "dateModified": "2027-03-09",
+    "author": "Albert Vilardell",
+    "category": "Seguros",
+    "tags": [
+      "Peritación",
+      "Disconformidad",
+      "Art. 38 LCS",
+      "Aseguradora"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Disconformidad con la peritación del seguro: opciones del asegurado",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      },
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      }
+    ],
+    "content": "Cuando la peritación de la compañía no refleja el daño real, el asegurado no está obligado a aceptarla. La normativa de seguros prevé un camino ordenado para discrepar, y conviene recorrerlo en el orden adecuado.\n\n## Primero: entender y documentar\n\nEl punto de partida es un **informe de parte** independiente que determine el origen del daño y su valoración real. Sin ese soporte, la discrepancia es una afirmación; con él, es una posición técnica.\n\n## La peritación contradictoria (art. 38 LCS)\n\nSi persiste el desacuerdo sobre la **cuantía**, el **artículo 38 de la Ley de Contrato de Seguro** prevé la peritación contradictoria: cada parte designa un perito y, si no hay acuerdo, se nombra un **tercer perito**. El procedimiento tiene plazos estrictos; no designar perito en plazo puede vincular al asegurado a la valoración de la compañía.\n\n## Después: la vía judicial\n\nSi el procedimiento del art. 38 no resuelve, el dictamen de parte es prueba pericial en la reclamación judicial. También cabe cuestionar el dictamen del perito de la aseguradora mediante un **contrainforme**.\n\n## Preguntas frecuentes\n\n**¿Puedo negarme a firmar el acta de la compañía?**\nSí. Firmar de conformidad puede cerrar la reclamación; ante la duda, conviene asesorarse antes.\n\n**¿Cuánto cuesta discrepar?**\nEl coste del perito propio y, en su caso, del procedimiento del art. 38. En siniestros de entidad, suele justificarse por la diferencia de valoración.\n\n**¿Hay plazo para reaccionar?**\nSí, y es estricto en la peritación contradictoria. Conviene actuar sin demora."
+  },
+  {
+    "title": "Diferencia entre ITE e IEE: qué evalúa cada una",
+    "slug": "diferencia-ite-iee",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/diferencia-ite-iee/"
+      }
+    ],
+    "description": "Diferencias entre la Inspección Técnica de Edificios (ITE) y el Informe de Evaluación de Edificios (IEE): qué evalúa cada uno, cuándo son obligatorios y cómo se relacionan.",
+    "excerpt": "ITE e IEE se confunden pero no son lo mismo: una evalúa el estado de conservación; el otro añade accesibilidad y eficiencia energética.",
+    "estado": "publicado",
+    "datePublished": "2027-03-16",
+    "dateModified": "2027-03-16",
+    "author": "Albert Vilardell",
+    "category": "ITE",
+    "tags": [
+      "ITE",
+      "IEE",
+      "Inspección de edificios",
+      "Normativa"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Diferencia entre ITE e IEE: qué evalúa cada una",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Patologías Estructurales",
+        "url": "/patologias-estructurales/"
+      },
+      {
+        "title": "Asesoramiento Estructural",
+        "url": "/asesoramiento-estructural/"
+      }
+    ],
+    "content": "La **ITE** y el **IEE** se mencionan a menudo como sinónimos, pero evalúan cosas distintas. Entender la diferencia evita confusiones sobre qué es obligatorio y qué información aporta cada documento.\n\n## La ITE\n\nLa **Inspección Técnica de Edificios** evalúa el **estado de conservación** del edificio: estructura, fachadas, cubiertas, instalaciones comunes. Su objetivo es detectar deficiencias que afecten a la seguridad y obligar a su subsanación. Es obligatoria para los edificios a partir de cierta antigüedad, con periodicidad, según la normativa autonómica y municipal.\n\n## El IEE\n\nEl **Informe de Evaluación de Edificios** es más amplio: incorpora el estado de conservación (equivalente a la ITE) y añade la evaluación de las **condiciones de accesibilidad** y de la **eficiencia energética**. Suele exigirse en determinados trámites, como el acceso a ayudas de rehabilitación.\n\n## Cómo se relacionan\n\nEn la práctica, el IEE **engloba** la ITE en su apartado de conservación y la complementa. La confusión surge porque la parte de conservación es común. Cuando la inspección detecta deficiencias estructurales, conviene un **estudio específico** que determine causa, alcance y solución, más allá de la mera descripción del síntoma.\n\n## Preguntas frecuentes\n\n**¿Tengo que hacer ITE e IEE por separado?**\nDepende del trámite y de la normativa aplicable. En muchos casos, el IEE cubre también la exigencia de conservación.\n\n**¿Quién puede firmarlos?**\nTécnicos competentes (arquitectos, arquitectos técnicos, ingenieros según el caso).\n\n**¿Qué hago si detectan deficiencias graves?**\nConviene un diagnóstico específico que determine la causa y priorice las obras."
+  },
+  {
+    "title": "Perito de vicios ocultos en Barcelona: cuándo encargar el informe",
+    "slug": "perito-vicios-ocultos-barcelona-cuando-encargar",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/perito-vicios-ocultos-barcelona-cuando-encargar/"
+      }
+    ],
+    "description": "En qué momento conviene encargar un informe pericial por vicios ocultos tras comprar una vivienda en Barcelona, para no perder el plazo de 6 meses del Código Civil.",
+    "excerpt": "En vicios ocultos, el tiempo juega en contra: el plazo de 6 meses corre desde la entrega. Encargar el informe pronto es lo que salva la reclamación.",
+    "estado": "publicado",
+    "datePublished": "2027-03-23",
+    "dateModified": "2027-03-23",
+    "author": "Albert Vilardell",
+    "category": "Vicios Ocultos",
+    "tags": [
+      "Vicios ocultos",
+      "Barcelona",
+      "Plazo",
+      "Compraventa"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Perito de vicios ocultos en Barcelona: cuándo encargar el informe",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Vicios Ocultos",
+        "url": "/vicios-ocultos/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Si acaba de comprar una vivienda en Barcelona y ha descubierto un defecto grave que no era visible, la pregunta clave no es solo si tiene derecho a reclamar, sino **cuándo** encargar el informe pericial. En vicios ocultos, el tiempo es determinante.\n\n## El plazo que condiciona todo\n\nEl **Código Civil (art. 1490)** fija **6 meses** desde la entrega del inmueble para ejercitar las acciones por vicios ocultos. Es un plazo de **caducidad**: no se interrumpe y no se amplía. El informe pericial debe obtenerse **dentro** de ese plazo para acreditar la existencia, la gravedad y la **preexistencia** del defecto.\n\n## Por qué encargarlo pronto\n\nCuanto antes se documente el defecto, mejor se prueba que **ya existía** antes de la compra —a través del grado de desarrollo de la patología— y más margen queda para negociar antes de agotar el plazo. Esperar reduce las opciones: si el plazo vence sin informe ni reclamación, la vía de los vicios ocultos se cierra.\n\n## Qué hacer al detectar el problema\n\nDocumentar de inmediato el defecto (fotografías, fechas), solicitar el informe pericial y coordinar con el letrado la notificación al vendedor. El dictamen es la prueba técnica que sostiene toda la reclamación.\n\n## Preguntas frecuentes\n\n**¿Desde cuándo cuentan los 6 meses?**\nDesde la entrega del inmueble, no desde que se descubre el defecto.\n\n**¿Y si descubro el defecto en el mes quinto?**\nHay que actuar con urgencia: encargar el informe y reclamar antes del vencimiento.\n\n**¿Sirve para vivienda de segunda mano?**\nSí, es el supuesto típico de los vicios ocultos del Código Civil."
+  },
+  {
+    "title": "Segundo perito para contradecir un informe: cuándo aporta valor",
+    "slug": "segundo-perito-contradecir-informe-cuando",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/segundo-perito-contradecir-informe-cuando/"
+      }
+    ],
+    "description": "Cuándo conviene aportar un segundo perito o contrainforme para rebatir un dictamen contrario, qué debe demostrar y cómo influye en la valoración del juez.",
+    "excerpt": "Aportar un segundo perito no siempre suma: aporta cuando demuestra deficiencias concretas del dictamen contrario, no cuando solo ofrece otra opinión.",
+    "estado": "publicado",
+    "datePublished": "2027-03-30",
+    "dateModified": "2027-03-30",
+    "author": "Albert Vilardell",
+    "category": "Contrainforme",
+    "tags": [
+      "Segundo perito",
+      "Contrainforme",
+      "Prueba pericial",
+      "LEC 348"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Segundo perito para contradecir un informe: cuándo aporta valor",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Contrainforme Pericial",
+        "url": "/contrainforme-pericial/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Cuando la parte contraria aporta un dictamen desfavorable, surge la duda de si conviene un **segundo perito** que lo contradiga. La respuesta depende de qué pueda demostrar ese segundo informe: aporta valor cuando señala **deficiencias concretas**, no cuando solo ofrece una opinión distinta.\n\n## Opinión distinta frente a deficiencia demostrada\n\nUn juez, ante dos peritos que discrepan, valora la prueba según la **sana crítica (LEC art. 348)**. Si el segundo informe se limita a sostener lo contrario sin más, el resultado es un empate técnico que el juez resolverá por otros criterios. En cambio, un **contrainforme** que demuestra que el dictamen contrario es incompleto, incorrecto o metodológicamente deficiente **inclina la balanza**.\n\n## Qué debe demostrar\n\nEl contrainforme analiza el rigor de la inspección, la corrección de las referencias normativas, la coherencia entre datos y conclusiones y la solidez de la cuantificación. No descalifica en abstracto: identifica, punto por punto, dónde el dictamen contrario deja de ser defendible.\n\n## Cuándo conviene\n\nCuando el dictamen contrario presenta carencias reales; cuando el importe en juego justifica el coste; y cuando hay margen procesal para aportarlo. Si el informe contrario es sólido, a veces la estrategia es otra.\n\n## Preguntas frecuentes\n\n**¿Basta con decir que no estoy de acuerdo?**\nNo. Hay que demostrar por qué el dictamen contrario es deficiente.\n\n**¿Cuánto tarda un contrainforme?**\nHabitualmente entre 10 y 20 días hábiles, según el volumen del informe a rebatir.\n\n**¿Se combina con la tacha del perito?**\nSí; la tacha cuestiona la imparcialidad y el contrainforme el contenido. Son complementarios."
+  },
+  {
+    "title": "Provisión de fondos y honorarios del perito designado",
+    "slug": "provision-fondos-honorarios-perito-designado",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/provision-fondos-honorarios-perito-designado/"
+      }
+    ],
+    "description": "Cómo funciona la provisión de fondos de un perito designado judicialmente, quién la abona, cómo se fijan los honorarios y qué ocurre si una parte no la consigna.",
+    "excerpt": "La provisión de fondos es el anticipo que ordena el juzgado antes de que el perito trabaje. Entender su mecánica evita sorpresas en el procedimiento.",
+    "estado": "publicado",
+    "datePublished": "2027-04-06",
+    "dateModified": "2027-04-06",
+    "author": "Albert Vilardell",
+    "category": "Proceso",
+    "tags": [
+      "Provisión de fondos",
+      "Honorarios",
+      "Perito judicial",
+      "LEC"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Provisión de fondos y honorarios del perito designado",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Honorarios y coste",
+        "url": "/honorarios-perito-judicial-barcelona/"
+      },
+      {
+        "title": "Actuación como Perito Judicial",
+        "url": "/perito-judicial/"
+      }
+    ],
+    "content": "Cuando el juzgado designa un perito, antes de que este empiece a trabajar suele fijarse una **provisión de fondos**: un anticipo de sus honorarios. Conocer su mecánica evita sorpresas durante el procedimiento.\n\n## Qué es y quién la abona\n\nLa provisión de fondos es la cantidad que el perito solicita y el tribunal aprueba como **garantía y anticipo** de sus honorarios. Por regla general la consigna la **parte que ha propuesto la prueba**; si interesa a ambas, puede repartirse. El perito puede supeditar el inicio de su trabajo a que se consigne.\n\n## Cómo se fijan los honorarios\n\nLos honorarios dependen de la **complejidad** del dictamen: alcance, ensayos, desplazamientos, tiempo de análisis y ratificación. No se fijan por la figura (de parte o judicial), sino por el trabajo. En el ámbito judicial, el tribunal puede revisar la provisión si la considera desproporcionada.\n\n## Si una parte no consigna\n\nSi quien debe consignar la provisión no lo hace, la prueba pericial puede **no llegar a practicarse**, con las consecuencias procesales que ello conlleva para quien la había propuesto. Por eso conviene prever este coste al planificar la estrategia.\n\n## Preguntas frecuentes\n\n**¿La provisión es el coste final?**\nEs un anticipo; el importe definitivo se ajusta al trabajo realizado y puede requerir complemento o generar devolución.\n\n**¿Se recupera con las costas?**\nPuede recuperarse total o parcialmente vía condena en costas, con los límites de la tasación.\n\n**¿Puedo pedir presupuesto antes?**\nEn el informe de parte, sí: conviene un presupuesto detallado del alcance antes de encargarlo."
+  },
+  {
+    "title": "Partidas cobradas y no ejecutadas: cómo se prueban",
+    "slug": "partidas-cobradas-no-ejecutadas-prueba",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/partidas-cobradas-no-ejecutadas-prueba/"
+      }
+    ],
+    "description": "Cómo se acredita técnicamente que una constructora cobró partidas de obra que no ejecutó o ejecutó con materiales inferiores, contrastando presupuesto, memoria de calidades y obra real.",
+    "excerpt": "Cobrar por lo que no se ha hecho es uno de los incumplimientos más frecuentes y, a la vez, de los más demostrables: basta contrastar lo facturado con lo ejecutado.",
+    "estado": "publicado",
+    "datePublished": "2027-04-13",
+    "dateModified": "2027-04-13",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": [
+      "Partidas no ejecutadas",
+      "Presupuesto",
+      "Mala ejecución",
+      "Prueba"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Partidas cobradas y no ejecutadas: cómo se prueban",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe por Mala Ejecución de Obra",
+        "url": "/reclamacion-mala-ejecucion/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Uno de los incumplimientos más frecuentes en obras y reformas es cobrar por partidas que no se han ejecutado, o hacerlo con materiales inferiores a los presupuestados. Es también uno de los más **demostrables**, porque se prueba por contraste documental y técnico.\n\n## Contra qué se contrasta\n\nEl peritaje compara tres referencias con la **obra realmente ejecutada**: el **presupuesto** aceptado, la **memoria de calidades** y las **certificaciones o facturas** emitidas. De ese contraste emergen las partidas facturadas que no se ejecutaron, las ejecutadas parcialmente y las realizadas con calidades inferiores a las pactadas.\n\n## Cómo se cuantifica\n\nEl dictamen mide lo ejecutado, identifica las **desviaciones** respecto a lo facturado y valora económicamente la diferencia: importe de partidas no ejecutadas, sobreprecio por materiales inferiores, y coste de completar o corregir la obra. Esa cuantificación es la base de la reclamación de la cantidad indebidamente cobrada.\n\n## El valor probatorio\n\nUn contraste documentado, con mediciones y fotografía, es difícil de rebatir. Suele bastar para forzar un ajuste en la negociación; si no, es prueba pericial en juicio.\n\n## Preguntas frecuentes\n\n**¿Y si no tengo un presupuesto detallado?**\nSe dificulta, pero la memoria de calidades y la buena práctica constructiva sirven de referencia.\n\n**¿Se puede reclamar lo ya pagado?**\nSí: lo cobrado por partidas no ejecutadas es una cantidad indebidamente percibida.\n\n**¿Cómo se prueba un material inferior?**\nPor inspección y, si es necesario, ensayos que identifican la calidad realmente empleada."
+  },
+  {
+    "title": "Reclamar daños a la Administración en obra civil",
+    "slug": "reclamacion-danos-administracion-obra-civil",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/reclamacion-danos-administracion-obra-civil/"
+      }
+    ],
+    "description": "Cómo se fundamenta una reclamación de daños frente a la Administración en obra civil e infraestructura: responsabilidad patrimonial, nexo causal y el papel del informe pericial.",
+    "excerpt": "Reclamar a la Administración por daños de una obra pública exige probar el nexo causal entre la obra y el daño. Ahí es donde el dictamen es decisivo.",
+    "estado": "publicado",
+    "datePublished": "2027-04-20",
+    "dateModified": "2027-04-20",
+    "author": "Albert Vilardell",
+    "category": "Obra Pública",
+    "tags": [
+      "Responsabilidad patrimonial",
+      "Administración",
+      "Obra civil",
+      "Nexo causal"
+    ],
+    "image": {
+      "url": "/assets/images/placeholder-default.jpg",
+      "alt": "Reclamar daños a la Administración en obra civil",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Peritaje de Obra Pública e Infraestructura",
+        "url": "/obras-publicas/"
+      },
+      {
+        "title": "Informe Pericial de Parte",
+        "url": "/informe-de-parte/"
+      }
+    ],
+    "content": "Cuando una obra pública o de infraestructura causa daños a terceros —a edificios colindantes, a instalaciones, a una actividad—, cabe reclamar a la Administración por **responsabilidad patrimonial**. El éxito de esa reclamación depende, en gran medida, de la prueba técnica del **nexo causal**.\n\n## Qué hay que probar\n\nLa responsabilidad patrimonial exige, en esencia, un **daño efectivo**, evaluable e individualizado, y una **relación de causalidad** entre el funcionamiento del servicio público (aquí, la obra) y ese daño. El punto crítico suele ser el nexo causal: demostrar que la obra —excavaciones, vibraciones, alteración del terreno o de la escorrentía— es la causa real del daño, y no otra.\n\n## El papel del informe pericial\n\nEl dictamen documenta el daño, analiza su **mecanismo** y lo vincula técnicamente con la actuación de la obra, descartando causas alternativas. Por ejemplo, relaciona los asientos o grietas de un edificio con una excavación colindante mediante el análisis del patrón de daño y de la secuencia temporal. Esa demostración es la que sostiene la reclamación.\n\n## Contexto procedimental\n\nLa reclamación se tramita en vía administrativa y, en su defecto, en la jurisdicción contencioso-administrativa, con plazos propios. El soporte pericial es transversal a todo el procedimiento.\n\n## Preguntas frecuentes\n\n**¿Cualquier daño junto a una obra es indemnizable?**\nNo. Hay que probar que la obra es la causa; la coincidencia en el tiempo no basta.\n\n**¿Qué plazo tengo?**\nLa reclamación de responsabilidad patrimonial tiene plazos específicos; conviene actuar sin demora con el soporte técnico preparado.\n\n**¿Sirve para daños a mi vivienda por una obra municipal?**\nSí, si se acredita el nexo causal entre la obra y el daño."
   }
 ]
