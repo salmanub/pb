@@ -156,6 +156,11 @@
         </label>
       </div>
 
+      {# Turnstile (anti-bot): el widget inyecta el token cf-turnstile-response
+         en el form nativo → viaja en el POST y lo valida la Function. #}
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAD06XsyzFHZ1bBxZ" style="margin-top: 20px;"></div>
+      <script src="https://challenges.cloudflare.com/turnstile/api.js" async defer></script>
+
       <div style="margin-top: 24px; display: flex; justify-content: space-between;">
         <a href="#step-2"
            style="display: inline-flex; align-items: center; justify-content: center;

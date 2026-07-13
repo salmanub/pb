@@ -12,6 +12,43 @@
 ;(function () {
   'use strict';
 
+  /* ── Turnstile (anti-bot) ──────────────────────────────────
+     El asistente postea JSON hecho a mano (sin <form>), así que renderizamos un
+     widget "managed" oculto al ABRIR el intake y capturamos el token; se incluye
+     en el payload y la Function lo valida server-side. Fail-open sin secreto. */
+  var TURNSTILE_SITEKEY = '0x4AAAAAAD06XsyzFHZ1bBxZ';
+  var turnstileToken = '';
+  var turnstileWidgetId = null;
+  function ensureTurnstile() {
+    if (turnstileWidgetId !== null) return; // ya renderizado
+    if (!document.querySelector('script[data-turnstile]')) {
+      var s = document.createElement('script');
+      s.src = 'https://challenges.cloudflare.com/turnstile/api.js?render=explicit';
+      s.async = true; s.defer = true; s.setAttribute('data-turnstile', '1');
+      document.head.appendChild(s);
+    }
+    (function tryRender() {
+      if (window.turnstile && turnstileWidgetId === null) {
+        var box = document.getElementById('intake-turnstile');
+        if (!box) {
+          box = document.createElement('div');
+          box.id = 'intake-turnstile';
+          box.style.position = 'fixed'; box.style.left = '-9999px'; box.style.top = '0';
+          document.body.appendChild(box);
+        }
+        try {
+          turnstileWidgetId = window.turnstile.render(box, {
+            sitekey: TURNSTILE_SITEKEY,
+            callback: function (t) { turnstileToken = t || ''; },
+            'error-callback': function () { turnstileToken = ''; }
+          });
+        } catch (_) { /* noop */ }
+      } else if (turnstileWidgetId === null) {
+        setTimeout(tryRender, 300);
+      }
+    })();
+  }
+
   /* ── Steps (from DS INTAKE_STEPS) ──────────────────────── */
   var STEPS = [
     { key: 'problema', eyebrow: '§ 01 · Tu situación', type: 'choice',
@@ -272,6 +309,7 @@
       telefono: c.telefono || '',
       descripcion: descripcion,
       lang: detectLang(),
+      'cf-turnstile-response': turnstileToken,
       source: 'perito.barcelona (intake modal)'
     };
   }
@@ -413,6 +451,7 @@
     current = 0;
     answers = {};
     done = false;
+    ensureTurnstile(); // prepara el token anti-bot mientras el usuario rellena
     createOverlay();
     render();
     document.body.style.overflow = 'hidden';

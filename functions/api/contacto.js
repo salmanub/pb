@@ -73,6 +73,32 @@ async function postToWebhook(url, payload, attempts = 2) {
   return { ok: false, error: lastErr && lastErr.message };
 }
 
+/**
+ * Verifica el token de Cloudflare Turnstile SERVER-SIDE.
+ *  - Sin TURNSTILE_SECRET → true (FAIL-OPEN: dev/preview y despliegue previo a
+ *    poner el secreto no rompen la captación).
+ *  - Con secreto y token ausente/inválido → false (rechazo). Red que no concluye
+ *    con el secreto puesto → false (fail-closed: si activas Turnstile, se exige).
+ */
+async function verificarTurnstile(secret, token, ip) {
+  if (!secret) return true; // fail-open sin secreto
+  if (typeof token !== 'string' || token.trim() === '') return false;
+  const form = new URLSearchParams({ secret, response: token });
+  if (ip) form.set('remoteip', ip);
+  try {
+    const r = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: form.toString(),
+    });
+    if (!r.ok) return false;
+    const data = await r.json();
+    return data.success === true;
+  } catch (_) {
+    return false; // configurado pero verificación no concluye → rechazo
+  }
+}
+
 export async function onRequestOptions() {
   return new Response(null, { status: 204, headers: CORS_HEADERS });
 }
@@ -94,6 +120,18 @@ export async function onRequestPost(context) {
     // Honeypot
     if (data.website && String(data.website).trim() !== '') {
       return new Response(JSON.stringify({ ok: true }), { status: 200, headers: CORS_HEADERS });
+    }
+
+    // Turnstile (anti-bot). Fail-open sin secreto; con secreto exige token válido.
+    const tsOk = await verificarTurnstile(
+      env && env.TURNSTILE_SECRET,
+      data['cf-turnstile-response'],
+      request.headers.get('cf-connecting-ip'),
+    );
+    if (!tsOk) {
+      return new Response(JSON.stringify({ ok: false, error: 'captcha' }), {
+        status: 403, headers: CORS_HEADERS,
+      });
     }
 
     // Detect language

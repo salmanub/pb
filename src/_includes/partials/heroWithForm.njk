@@ -54,10 +54,12 @@
                                 <option value="judicial">Informe Judicial</option>
                             </select>
                         </div>
+                        <div class="cf-turnstile mt-3" data-sitekey="0x4AAAAAAD06XsyzFHZ1bBxZ"></div>
                         <button type="submit" class="w-full btn-primary bg-gradient-to-r from-teal-600 to-blue-600 hover:shadow-teal-500/25">
                             Solicitar Evaluación
                         </button>
                     </form>
+                    <script src="https://challenges.cloudflare.com/turnstile/api.js" async defer></script>
                     <div id="express-success" class="hidden mt-4 text-green-600 font-medium text-sm text-center bg-green-50 rounded-none p-3 border border-green-100">¡Solicitud enviada correctamente! En breve nos pondremos en contacto.</div>
                     <div id="express-error" class="hidden mt-4 text-red-600 font-medium text-sm text-center bg-red-50 rounded-none p-3 border border-red-100">Error al enviar. Por favor, intente de nuevo.</div>
                     
@@ -89,6 +91,7 @@
                                     procesal: '',
                                     detalle: 'Solicitud de Evaluación Exprés desde la Home',
                                     origen: 'perito-express',
+                                    'cf-turnstile-response': formData.get('cf-turnstile-response') || '',
                                     timestamp: new Date().toISOString()
                                 };
 
