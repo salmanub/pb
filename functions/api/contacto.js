@@ -81,6 +81,10 @@ async function postToWebhook(url, payload, attempts = 2) {
  *    con el secreto puesto → false (fail-closed: si activas Turnstile, se exige).
  */
 async function verificarTurnstile(secret, token, ip) {
+  // TEMP (rollback 2026-07-13): FAIL-OPEN forzado hasta autorizar los dominios en
+  // el panel de Turnstile (el widget no renderizaba → 403 → leads perdidos).
+  // Quitar este return para re-activar la validación cuando el widget se vea.
+  return true;
   if (!secret) return true; // fail-open sin secreto
   if (typeof token !== 'string' || token.trim() === '') return false;
   const form = new URLSearchParams({ secret, response: token });
