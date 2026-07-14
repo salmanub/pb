@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+lang: ca
+title: "Casos · Case Studies Pericials"
+description: "Case studies de peritatge d'enginyeria en edificació i obra civil: preexistències en naus industrials, diagnosi de patologies del terreny i actuació pericial per a asseguradores, despatxos i administracions."
+permalink: "/ca/casos/"
+translations:
+  - lang: es
+    permalink: /casos/
+  - lang: en
+    permalink: /en/case-studies/
+---
+{% set ui = ca %}
+
+{% set breadcrumb_inline = true %}
+{% set breadcrumb_items = [ { label: "Inici", url: "/ca/" }, { label: "Casos" } ] %}
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-top: clamp(20px,3vw,32px);">
+  {% include "partials/breadcrumb.njk" %}
+</div>
+{% set breadcrumb_inline = false %}
+
+<section class="page-hero">
+  <div class="page-hero__eyebrow" aria-hidden="true"><span class="page-hero__eyebrow-line"></span>§ Case studies</div>
+  <h1 class="page-hero__h1">Casos pericials<br>documentats</h1>
+  <p class="page-hero__lede">Expedients reals de peritatge d'enginyeria, anonimitzats. Cada cas mostra el mètode —de l'encàrrec a la diagnosi— i el seu valor per a asseguradores, despatxos, administracions i gestors de patrimoni.</p>
+</section>
+
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter) var(--section-y);">
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,2.5vw,28px);" class="three-col">
+    {%- for item in collections.casoEstudio -%}
+    {%- if item.data.lang == "ca" and not item.data.draft -%}
+    <a href="{{ item.url }}" class="caso-rel-card" style="text-decoration:none;">
+      <div style="font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-accent); margin-bottom: 10px;">{{ item.data.comarca }}</div>
+      <h2 style="font-family: var(--font-serif); font-size: var(--fs-h3); font-weight: 400; line-height: 1.25; color: var(--text-strong); margin: 0 0 12px;">{{ item.data.title }}</h2>
+      <p style="font-size: var(--fs-body-sm); line-height: 1.6; color: var(--text-muted); margin: 0;">{{ item.data.resumen | truncate(150) }}</p>
+      <div style="margin-top: 16px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-accent); display: flex; align-items: center; gap: 6px;">Veure cas <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+    {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>

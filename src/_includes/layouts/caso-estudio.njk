@@ -1,0 +1,109 @@
+---
+layout: layouts/base.njk
+---
+{#
+  caso-estudio.njk — Layout de case study high-ticket B2B (CONTENT-CS-01)
+  El front matter DEBE ir al inicio absoluto del archivo (un comentario previo
+  rompería el encadenado de layouts). Sistema de diseño canónico del repo:
+  Spectral (serif), IBM Plex Sans/Mono, acento oxide-green (--accent). Reutiliza
+  .caso-eyebrow, chips --surface-ink (negro), qual.njk (sidebar) y .band-cta--ink.
+  Microdatos: Article + Service (opcional). NUNCA JSON-LD.
+
+  Front matter esperado en cada caso:
+    lang, title, description, permalink, translations
+    eyebrow (EXPEDIENTE · TIPO · COMARCA · MM/AAAA), resumen, comarca,
+    breadcrumbLabel, sections[] {eyebrow?, h, html}, chips[], qualItems[] {num,text},
+    audience "pro", serviceName/serviceDescription (activa Service),
+    datePublished/dateModified, ctaEyebrow/ctaTitle/ctaLede/ctaBtn/ctaHref,
+    draft: true → noindex + fuera de sitemap + fuera del índice (un solo campo).
+#}
+{% if not ui %}{% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}{% endif %}
+{% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
+{% set _contactPro = "/contacto/profesional/" if (not lang or lang == "es") else ("/en/contact/professional/" if lang == "en" else "/ca/contacte/professional/") %}
+{% set _casosUrl = "/casos/" if (not lang or lang == "es") else ("/en/case-studies/" if lang == "en" else "/ca/casos/") %}
+{% set _casosLabel = "Casos" if (not lang or lang == "es") else ("Case studies" if lang == "en" else "Casos") %}
+{% set _normLabel = "Normativa y técnica aplicada" if (not lang or lang == "es") else ("Regulations & standards applied" if lang == "en" else "Normativa i tècnica aplicada") %}
+
+{# ── Microdatos: Article (+ Service si serviceName) ── #}
+<div itemscope itemtype="https://schema.org/Article" style="display:none;" aria-hidden="true">
+  <meta itemprop="headline" content="{{ title }}">
+  <meta itemprop="description" content="{{ description }}">
+  <meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}">
+  <meta itemprop="datePublished" content="{{ datePublished }}">
+  <meta itemprop="dateModified" content="{{ dateModified | default(datePublished) }}">
+  <div itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ metadata.author.name }}"></div>
+  <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"></div>
+</div>
+{% if serviceName %}
+<div itemscope itemtype="https://schema.org/Service" style="display:none;" aria-hidden="true">
+  <meta itemprop="name" content="{{ serviceName }}">
+  <meta itemprop="serviceType" content="{{ serviceName }}">
+  <meta itemprop="description" content="{{ serviceDescription | default(description) }}">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/ProfessionalService"><meta itemprop="name" content="{{ metadata.company.name }}"></div>
+  <meta itemprop="areaServed" content="España">
+</div>
+{% endif %}
+
+{# ── BREADCRUMB ── #}
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-top: clamp(20px,3vw,32px);">
+  {% set breadcrumb_inline = true %}
+  {% set breadcrumb_items = [
+    { label: ui.breadcrumb.inicio, url: (langPrefix + "/") },
+    { label: _casosLabel, url: _casosUrl },
+    { label: breadcrumbLabel | default(comarca) }
+  ] %}
+  {% include "partials/breadcrumb.njk" %}
+  {% set breadcrumb_inline = false %}
+</div>
+
+{# ── HERO: eyebrow de expediente → H1 → resumen ejecutivo ── #}
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: clamp(24px,4vw,44px) var(--gutter) clamp(26px,4vw,44px);">
+  <div class="caso-eyebrow" style="margin-bottom: 16px;">{{ eyebrow }}</div>
+  <h1 style="font-family: var(--font-serif); font-size: var(--fs-display-1); line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0; font-weight: 400; max-width: 22ch;">{{ title }}</h1>
+  <p style="margin-top: 22px; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 64ch;">{{ resumen }}</p>
+</section>
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter);"><hr style="border: none; border-top: 1px solid var(--border-hairline); margin: 0;"></div>
+
+{# ── CUERPO + SIDEBAR STICKY DE CUALIFICACIÓN ── #}
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: clamp(40px,6vw,72px) var(--gutter) var(--section-y);">
+  <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(40px,5vw,72px); align-items: start;" class="site-two">
+    <div>
+      {% for s in sections %}
+      <div style="margin-bottom: clamp(30px,4vw,46px);">
+        {% if s.eyebrow %}<div class="caso-eyebrow" style="margin-bottom: 12px;">§ {{ s.eyebrow }}</div>{% endif %}
+        <h2 style="font-family: var(--font-serif); font-size: var(--fs-h2); font-weight: 500; color: var(--text-strong); margin: 0 0 16px; line-height: 1.2;">{{ s.h }}</h2>
+        <div class="cs-prose" style="font-size: 1.0625rem; line-height: 1.8; color: var(--text-body); max-width: 64ch;">{{ s.html | safe }}</div>
+      </div>
+      {% endfor %}
+
+      {% if chips %}
+      <div style="margin-top: clamp(30px,4vw,44px); padding-top: clamp(24px,3vw,32px); border-top: 1px solid var(--border-hairline);">
+        <div style="font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;">{{ _normLabel }}</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          {% for c in chips %}<span style="display: inline-flex; align-items: center; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; padding: 6px 11px; border-radius: var(--radius-xs); background: var(--surface-ink); color: var(--text-on-dark);">{{ c }}</span>{% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <aside>
+      {% include "partials/qual.njk" %}
+    </aside>
+  </div>
+</section>
+
+{# ── BAND CTA ── #}
+<section class="band-cta band-cta--ink">
+  <div style="max-width: var(--container-wide); margin: 0 auto;">
+    <div class="band-cta__eyebrow"><span class="page-hero__eyebrow-line"></span>§ {{ ctaEyebrow }}</div>
+    <h2 class="band-cta__h2">{{ ctaTitle }}</h2>
+    <p class="band-cta__lede">{{ ctaLede }}</p>
+    <div class="band-cta__btn-wrap">
+      <a href="{{ ctaHref | default(_contactPro) }}" class="band-cta__btn">
+        {{ ctaBtn }}
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    {% if not draft %}<div style="margin-top: 16px;"><a href="{{ _casosUrl }}" style="font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-on-dark-muted); text-decoration: none;">← {{ _casosLabel }}</a></div>{% endif %}
+  </div>
+</section>
