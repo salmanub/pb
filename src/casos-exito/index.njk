@@ -48,7 +48,7 @@ eleventyComputed:
 <section class="ds-sec" itemscope itemtype="https://schema.org/CollectionPage">
   <meta itemprop="name" content="{{ title }}">
   <meta itemprop="description" content="{{ description }}">
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;view-transition-name:casos-list;" class="three-col">
+  <div data-casos-grid style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;view-transition-name:casos-list;" class="three-col">
     {% for caso in casosPage %}
     {% set isDark = "case-card--dark" if (loop.index0 % 3 == 1) else "" %}
     <a href="/casos-exito/{{ caso.slug }}/" class="case-card {{ isDark }}" itemprop="hasPart" itemscope itemtype="https://schema.org/Article">
@@ -78,7 +78,7 @@ eleventyComputed:
 
   {# ── Paginación ── #}
   {% if pagination.hrefs.length > 1 %}
-  <nav class="casos-pager" aria-label="Paginación de casos" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:clamp(36px,5vw,56px);font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;">
+  <nav data-casos-pager class="casos-pager" aria-label="Paginación de casos" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:clamp(36px,5vw,56px);font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;">
     {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}" rel="prev" style="color:var(--text-accent);text-decoration:none;padding:8px 12px;border:1px solid var(--border-hairline);border-radius:var(--radius-xs);">← Anteriores</a>{% endif %}
     {% for pageUrl in pagination.hrefs %}
     {% set n = loop.index %}

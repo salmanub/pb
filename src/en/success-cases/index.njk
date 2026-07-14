@@ -28,7 +28,7 @@ eleventyComputed:
 <meta itemprop="name" content="{{ title }}">
 <meta itemprop="description" content="{{ description }}">
 <div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:clamp(28px,4vw,48px);"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>— § 04 · Verified cases</div>
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; view-transition-name: casos-list;" class="three-col">
+<div data-casos-grid style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; view-transition-name: casos-list;" class="three-col">
 {% for caso in casosPage %}
 <a href="/en/success-cases/{{ caso.slug }}/" style="text-decoration:none;display:block;" itemprop="hasPart" itemscope itemtype="https://schema.org/Article">
 <article style="border-radius: var(--radius-md); border: 1px solid {{ 'var(--ink-700)' if loop.index % 3 == 2 else 'var(--border-hairline)' }}; background: {{ 'var(--surface-ink)' if loop.index % 3 == 2 else 'var(--surface-card)' }}; padding: 24px; height: 100%; box-sizing: border-box; display:flex; flex-direction:column;">
@@ -45,7 +45,7 @@ eleventyComputed:
 {% endfor %}
 </div>
 {% if pagination.hrefs.length > 1 %}
-<nav aria-label="Case pagination" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:clamp(36px,5vw,56px);font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;">
+<nav data-casos-pager aria-label="Case pagination" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:clamp(36px,5vw,56px);font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;">
 {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}" rel="prev" style="color:var(--text-accent);text-decoration:none;padding:8px 12px;border:1px solid var(--border-hairline);border-radius:var(--radius-xs);">← Previous</a>{% endif %}
 {% for pageUrl in pagination.hrefs %}{% set n = loop.index %}<a href="{{ pageUrl }}" aria-current="{{ 'page' if loop.index0 == pagination.pageNumber else 'false' }}" style="padding:8px 13px;border-radius:var(--radius-xs);text-decoration:none;border:1px solid {{ 'var(--accent)' if loop.index0 == pagination.pageNumber else 'var(--border-hairline)' }};color:{{ 'var(--accent-on)' if loop.index0 == pagination.pageNumber else 'var(--text-muted)' }};background:{{ 'var(--accent)' if loop.index0 == pagination.pageNumber else 'transparent' }};">{{ n }}</a>{% endfor %}
 {% if pagination.href.next %}<a href="{{ pagination.href.next }}" rel="next" style="color:var(--text-accent);text-decoration:none;padding:8px 12px;border:1px solid var(--border-hairline);border-radius:var(--radius-xs);">Next →</a>{% endif %}

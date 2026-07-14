@@ -163,7 +163,7 @@ AGENTES §5: CSS inline (inyectado por transform), cero
   {# ── Google Analytics (deferred load) ── #}
   {% include "components/analytics.njk" %}
 
-  {# ── View Transitions: dirección con Navigation API (progressive enhancement) ── #}
+  {# ── View Transitions + Navigation API (progressive enhancement) ── #}
   <script>
     (function () {
       if (!("startViewTransition" in document)) return;
@@ -174,10 +174,11 @@ AGENTES §5: CSS inline (inyectado por transform), cero
         } catch (e) { return 1; }
       }
       function setDir(fromUrl, toUrl) {
-        var dir = "forward";
-        if (fromUrl && toUrl) dir = pageNum(toUrl) < pageNum(fromUrl) ? "back" : "forward";
-        document.documentElement.dataset.navDir = dir;
+        document.documentElement.dataset.navDir =
+          (fromUrl && toUrl && pageNum(toUrl) < pageNum(fromUrl)) ? "back" : "forward";
       }
+
+      // Transiciones cross-document (navegaciones completas, p. ej. listado -> ficha)
       window.addEventListener("pageswap", function (e) {
         if (!e.viewTransition) return;
         var a = e.activation;
@@ -187,6 +188,45 @@ AGENTES §5: CSS inline (inyectado por transform), cero
         if (!e.viewTransition) return;
         var a = (window.navigation && navigation.activation) || null;
         if (a && a.from && a.entry) setDir(a.from.url, a.entry.url);
+      });
+
+      // Paginacion de casos en el MISMO documento: sin recarga, sin salto al top
+      if (!window.navigation) return;
+      var LIST_RE = /^\/(?:casos-exito|ca\/casos-d-exit|en\/success-cases)\/(?:(?:pagina|page)\/\d+\/)?$/;
+      function isList(u) { try { return LIST_RE.test(new URL(u, location.origin).pathname); } catch (e) { return false; } }
+
+      navigation.addEventListener("navigate", function (e) {
+        if (!e.canIntercept || e.hashChange || e.downloadRequest || e.formData) return;
+        var dest = e.destination.url;
+        if (!isList(dest) || !isList(location.href) || dest === location.href) return;
+        var fromUrl = location.href;
+        e.intercept({
+          scroll: "manual",
+          handler: function () {
+            return fetch(dest).then(function (r) { return r.text(); }).then(function (html) {
+              var doc = new DOMParser().parseFromString(html, "text/html");
+              var newGrid = doc.querySelector("[data-casos-grid]");
+              var newPager = doc.querySelector("[data-casos-pager]");
+              var curGrid = document.querySelector("[data-casos-grid]");
+              var curPager = document.querySelector("[data-casos-pager]");
+              if (!newGrid || !curGrid) { location.assign(dest); return; }
+              setDir(fromUrl, dest);
+              var t = document.startViewTransition(function () {
+                curGrid.replaceWith(newGrid);
+                if (curPager && newPager) curPager.replaceWith(newPager);
+                else if (curPager) curPager.remove();
+                if (doc.title) document.title = doc.title;
+              });
+              return t.updateCallbackDone.then(function () {
+                var g = document.querySelector("[data-casos-grid]");
+                if (g) {
+                  var y = g.getBoundingClientRect().top + window.scrollY - 96;
+                  window.scrollTo(0, y > 0 ? y : 0);
+                }
+              });
+            });
+          }
+        });
       });
     })();
   </script>
