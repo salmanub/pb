@@ -14,8 +14,8 @@ translations:
     permalink: /ca/casos-d-exit/
   - lang: en
     permalink: /en/success-cases/
+permalink: "/casos-exito/{% if pagination.pageNumber > 0 %}pagina/{{ pagination.pageNumber + 1 }}/{% endif %}"
 eleventyComputed:
-  permalink: "{{ '/casos-exito/' if pagination.pageNumber == 0 else '/casos-exito/pagina/' + (pagination.pageNumber + 1) + '/' }}"
   eleventyNavigation:
     key: "{{ 'Casos' if pagination.pageNumber == 0 else '' }}"
     order: 3
@@ -47,7 +47,7 @@ eleventyComputed:
 <section class="ds-sec" itemscope itemtype="https://schema.org/CollectionPage">
   <meta itemprop="name" content="{{ title }}">
   <meta itemprop="description" content="{{ description }}">
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="three-col">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;view-transition-name:casos-list;" class="three-col">
     {% for caso in casosPage %}
     {% set isDark = "case-card--dark" if (loop.index0 % 3 == 1) else "" %}
     <a href="/casos-exito/{{ caso.slug }}/" class="case-card {{ isDark }}" itemprop="hasPart" itemscope itemtype="https://schema.org/Article">

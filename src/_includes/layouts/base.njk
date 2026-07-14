@@ -89,6 +89,26 @@ AGENTES §5: CSS inline (inyectado por transform), cero
   {# ── CSS: inyectado inline por el transform de .eleventy.js (AGENTES §5) ── #}
   {# NO hay
   <link rel="stylesheet"> — cero CSS externo #}
+
+  {# ── View Transitions cross-document (sobria, acorde a la marca) ── #}
+  <style>
+    @view-transition { navigation: auto; }
+    @media (prefers-reduced-motion: no-preference) {
+      ::view-transition-old(root) { animation: pb-vt-out 200ms cubic-bezier(0.4, 0, 0.2, 1) both; }
+      ::view-transition-new(root) { animation: pb-vt-in 300ms cubic-bezier(0.4, 0, 0.2, 1) both; }
+      ::view-transition-group(casos-list) { animation-duration: 340ms; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+      html[data-nav-dir="forward"]::view-transition-old(casos-list) { animation: pb-slide-out-left 260ms cubic-bezier(0.4, 0, 0.2, 1) both; }
+      html[data-nav-dir="forward"]::view-transition-new(casos-list) { animation: pb-slide-in-right 340ms cubic-bezier(0.4, 0, 0.2, 1) both; }
+      html[data-nav-dir="back"]::view-transition-old(casos-list) { animation: pb-slide-out-right 260ms cubic-bezier(0.4, 0, 0.2, 1) both; }
+      html[data-nav-dir="back"]::view-transition-new(casos-list) { animation: pb-slide-in-left 340ms cubic-bezier(0.4, 0, 0.2, 1) both; }
+    }
+    @keyframes pb-vt-out { to { opacity: 0; transform: translateY(-6px); } }
+    @keyframes pb-vt-in { from { opacity: 0; transform: translateY(8px); } }
+    @keyframes pb-slide-out-left { to { opacity: 0; transform: translateX(-28px); } }
+    @keyframes pb-slide-in-right { from { opacity: 0; transform: translateX(28px); } }
+    @keyframes pb-slide-out-right { to { opacity: 0; transform: translateX(28px); } }
+    @keyframes pb-slide-in-left { from { opacity: 0; transform: translateX(-28px); } }
+  </style>
 </head>
 
 <body>
@@ -142,6 +162,34 @@ AGENTES §5: CSS inline (inyectado por transform), cero
   {# ── openIntake toast removed — CTAs now link to /contacto/particular/ or /contacto/profesional/ ── #}
   {# ── Google Analytics (deferred load) ── #}
   {% include "components/analytics.njk" %}
+
+  {# ── View Transitions: dirección con Navigation API (progressive enhancement) ── #}
+  <script>
+    (function () {
+      if (!("startViewTransition" in document)) return;
+      function pageNum(url) {
+        try {
+          var m = new URL(url, location.origin).pathname.match(/\/(?:pagina|page)\/(\d+)\//);
+          return m ? parseInt(m[1], 10) : 1;
+        } catch (e) { return 1; }
+      }
+      function setDir(fromUrl, toUrl) {
+        var dir = "forward";
+        if (fromUrl && toUrl) dir = pageNum(toUrl) < pageNum(fromUrl) ? "back" : "forward";
+        document.documentElement.dataset.navDir = dir;
+      }
+      window.addEventListener("pageswap", function (e) {
+        if (!e.viewTransition) return;
+        var a = e.activation;
+        if (a && a.from && a.entry) setDir(a.from.url, a.entry.url);
+      });
+      window.addEventListener("pagereveal", function (e) {
+        if (!e.viewTransition) return;
+        var a = (window.navigation && navigation.activation) || null;
+        if (a && a.from && a.entry) setDir(a.from.url, a.entry.url);
+      });
+    })();
+  </script>
 </body>
 
 </html>

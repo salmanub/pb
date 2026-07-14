@@ -14,8 +14,8 @@ translations:
     permalink: /casos-exito/
   - lang: ca
     permalink: /ca/casos-d-exit/
+permalink: "/en/success-cases/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 eleventyComputed:
-  permalink: "{{ '/en/success-cases/' if pagination.pageNumber == 0 else '/en/success-cases/page/' + (pagination.pageNumber + 1) + '/' }}"
   eleventyNavigation:
     key: "{{ 'Casos' if pagination.pageNumber == 0 else '' }}"
     order: 3
@@ -27,7 +27,7 @@ eleventyComputed:
 <meta itemprop="name" content="{{ title }}">
 <meta itemprop="description" content="{{ description }}">
 <div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:clamp(28px,4vw,48px);"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>— § 04 · Verified cases</div>
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;" class="three-col">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; view-transition-name: casos-list;" class="three-col">
 {% for caso in casosPage %}
 <a href="/en/success-cases/{{ caso.slug }}/" style="text-decoration:none;display:block;" itemprop="hasPart" itemscope itemtype="https://schema.org/Article">
 <article style="border-radius: var(--radius-md); border: 1px solid {{ 'var(--ink-700)' if loop.index % 3 == 2 else 'var(--border-hairline)' }}; background: {{ 'var(--surface-ink)' if loop.index % 3 == 2 else 'var(--surface-card)' }}; padding: 24px; height: 100%; box-sizing: border-box; display:flex; flex-direction:column;">
