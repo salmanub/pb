@@ -813,17 +813,17 @@
         "summary": [
             { "label": "Ubicación", "value": "Vallès Occidental" },
             { "label": "Tipo de Actuación", "value": "Diagnosis de causa de hundimiento en vía pública" },
-            { "label": "Encargo", "value": "Empresa mixta municipal de gestión de aguas" },
+            { "label": "Encargo", "value": "Gestor de servicios de aguas" },
             { "label": "Resultado", "value": "Base técnica para la atribución de responsabilidades" }
         ],
         "image": { "url": "/assets/images/placeholder-default.png", "alt": "Diagnosis pericial de un hundimiento en vial urbano" },
         "amount": "—",
         "category": "Obra Civil",
-        "cliente": "Empresa mixta municipal de gestión de aguas",
+        "cliente": "Gestor de servicios de aguas",
         "plazo": "—",
         "jurisdiccion": "RC patrimonial · Vallès Occidental",
         "resultado": "Base técnica para la atribución de responsabilidades",
-        "encargo": "Ante la aparición de un socavón en un vial urbano del Vallès Occidental, una empresa mixta municipal de gestión de aguas requirió la actuación pericial para ordenar la respuesta. La pregunta que gobierna el expediente no es cómo se repara, sino por qué se ha producido, porque de la causa depende quién responde.",
+        "encargo": "Ante la aparición de un socavón en un vial urbano del Vallès Occidental, una entidad gestora de servicios de aguas requirió la actuación pericial para ordenar la respuesta. La pregunta que gobierna el expediente no es cómo se repara, sino por qué se ha producido, porque de la causa depende quién responde.",
         "instruccion": "Primera medida: aseguramiento del perímetro y verificación de que la patología no se extendía más allá de la cavidad visible. Estabilizada la situación, se definió y coordinó la campaña de reconocimiento —inspección geológica de detalle y dos ensayos de penetración dinámica continua superpesada (DPSH)—. El estudio geotécnico de campo lo ejecutó un gabinete geológico especializado bajo coordinación pericial; el rol del perito es dirigir la investigación e integrar sus resultados en una diagnosis de causa, no ejecutar los ensayos.",
         "dictamen": "Los reconocimientos permitieron construir un modelo geológico local con unidades geotécnicas diferenciadas: un nivel superficial de pavimento y explanada sobre un terraplén compactado y, bajo él, el sustrato. Los DPSH acotaron el espesor de los rellenos superficiales y la profundidad del terreno competente. A la profundidad de influencia del hundimiento se descartó la presencia de un acuífero local, lo que reorienta la causa hacia el comportamiento de los rellenos y de las conducciones —fuga de red, rellenos mal compactados o erosión interna—, cada hipótesis con un responsable distinto.",
         "resultadoNarr": "El expediente entrega a la propiedad y a sus aseguradoras un modelo del terreno en el punto de hundimiento y una diagnosis de causa apoyada en reconocimientos objetivos. La actuación pericial ordena la cadena de decisión —aseguramiento, investigación, diagnosis y atribución— como base para repartir responsabilidades entre administración, concesionaria y compañías de RC patrimonial. Actuación dirigida a administraciones locales, concesionarias de servicios y aseguradoras de responsabilidad civil patrimonial."

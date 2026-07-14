@@ -813,17 +813,17 @@
         "summary": [
             { "label": "Location", "value": "Vallès Occidental" },
             { "label": "Type of work", "value": "Cause diagnosis of a public-road sinkhole" },
-            { "label": "Instruction", "value": "Municipal water-management company" },
+            { "label": "Instruction", "value": "Water-services operator" },
             { "label": "Result", "value": "Technical basis for allocating responsibility" }
         ],
         "image": { "url": "/assets/images/placeholder-default.png", "alt": "Forensic investigation of an urban road sinkhole" },
         "amount": "—",
         "category": "Civil works",
-        "cliente": "Municipal water-management company",
+        "cliente": "Water-services operator",
         "plazo": "—",
         "jurisdiccion": "Public liability · Vallès Occidental",
         "resultado": "Technical basis for allocating responsibility",
-        "encargo": "When a sinkhole opened in an urban road in Vallès Occidental (Barcelona province), a municipal water-management company instructed the forensic engineer to order the response. The question that governs the file is not how it is repaired, but why it happened, because responsibility depends on the cause.",
+        "encargo": "When a sinkhole opened in an urban road in Vallès Occidental (Barcelona province), a water-services operator instructed the forensic engineer to order the response. The question that governs the file is not how it is repaired, but why it happened, because responsibility depends on the cause.",
         "instruccion": "First measure: securing the perimeter and confirming the failure did not extend beyond the visible cavity. With the situation stabilised, the ground investigation was defined and coordinated —a detailed geological inspection and two super-heavy dynamic probing (DPSH) tests—. The field investigation was carried out by a specialist geological practice under forensic coordination; the expert's role is to direct the investigation and integrate its results into a diagnosis of cause, not to carry out the tests.",
         "dictamen": "The investigation allowed a local ground model to be built, with distinct geotechnical units: a near-surface layer of pavement and formation over compacted fill and, beneath it, the natural stratum. The DPSH tests bounded the thickness of the surface made ground and the depth of competent ground. At the depth relevant to the collapse a local aquifer was ruled out, steering the cause towards the behaviour of the fill and the buried services —a service leak, poorly compacted fill or internal erosion—, each hypothesis pointing to a different responsible party.",
         "resultadoNarr": "The file gives the owner and its insurers a ground model at the collapse point and a diagnosis of cause supported by objective investigation. The forensic action orders the decision chain —make safe, investigate, diagnose and attribute— as the basis for allocating responsibility between the authority, the concessionaire and the public-liability insurers. Work aimed at local authorities, service concessionaires and public-liability insurers."

@@ -813,17 +813,17 @@
         "summary": [
             { "label": "Ubicació", "value": "Vallès Occidental" },
             { "label": "Tipus d'Actuació", "value": "Diagnosi de causa d'enfonsament en via pública" },
-            { "label": "Encàrrec", "value": "Empresa mixta municipal de gestió d'aigües" },
+            { "label": "Encàrrec", "value": "Gestor de serveis d'aigües" },
             { "label": "Resultat", "value": "Base tècnica per a l'atribució de responsabilitats" }
         ],
         "image": { "url": "/assets/images/placeholder-default.png", "alt": "Diagnosi pericial d'un enfonsament en vial urbà" },
         "amount": "—",
         "category": "Obra Civil",
-        "cliente": "Empresa mixta municipal de gestió d'aigües",
+        "cliente": "Gestor de serveis d'aigües",
         "plazo": "—",
         "jurisdiccion": "RC patrimonial · Vallès Occidental",
         "resultado": "Base tècnica per a l'atribució de responsabilitats",
-        "encargo": "Davant l'aparició d'un esvoranc en un vial urbà del Vallès Occidental, una empresa mixta municipal de gestió d'aigües va requerir l'actuació pericial per ordenar la resposta. La pregunta que governa l'expedient no és com es repara, sinó per què s'ha produït, perquè de la causa depèn qui respon.",
+        "encargo": "Davant l'aparició d'un esvoranc en un vial urbà del Vallès Occidental, una entitat gestora de serveis d'aigües va requerir l'actuació pericial per ordenar la resposta. La pregunta que governa l'expedient no és com es repara, sinó per què s'ha produït, perquè de la causa depèn qui respon.",
         "instruccion": "Primera mesura: assegurament del perímetre i verificació que la patologia no s'estenia més enllà de la cavitat visible. Estabilitzada la situació, es va definir i coordinar la campanya de reconeixement —inspecció geològica de detall i dos assaigs de penetració dinàmica contínua superpesada (DPSH)—. L'estudi geotècnic de camp el va executar un gabinet geològic especialitzat sota coordinació pericial; el rol del perit és dirigir la investigació i integrar-ne els resultats en una diagnosi de causa, no executar els assaigs.",
         "dictamen": "Els reconeixements van permetre construir un model geològic local amb unitats geotècniques diferenciades: un nivell superficial de paviment i esplanada sobre un terraplè compactat i, a sota, el substrat. Els DPSH van acotar el gruix dels rebliments superficials i la profunditat del terreny competent. A la profunditat d'influència de l'enfonsament es va descartar la presència d'un aqüífer local, la qual cosa reorienta la causa cap al comportament dels rebliments i de les conduccions —fuita de xarxa, rebliments mal compactats o erosió interna—, cada hipòtesi amb un responsable diferent.",
         "resultadoNarr": "L'expedient lliura a la propietat i a les seves asseguradores un model del terreny en el punt d'enfonsament i una diagnosi de causa recolzada en reconeixements objectius. L'actuació pericial ordena la cadena de decisió —assegurament, investigació, diagnosi i atribució— com a base per repartir responsabilitats entre administració, concessionària i companyies de RC patrimonial. Actuació adreçada a administracions locals, concessionàries de serveis i asseguradores de responsabilitat civil patrimonial."
