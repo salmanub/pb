@@ -73,7 +73,10 @@
     {% for svc in metadata.services %}
     <div itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
       <meta itemprop="name" content="{{ svc.name }}">
-      <meta itemprop="url" content="{{ metadata.site.url }}{{ langPrefix }}/informes-periciales/{{ svc.path }}/">
+      {# ES: URL real del servicio (href explícito o /{slug}/ en raíz) para no apuntar a rutas redirigidas.
+         CA/EN se dejan intactos (fuera del alcance de SEO-CTR-01). #}
+      {% set _svcUrl = (svc.href if svc.href else ("/" + svc.path + "/")) if (not lang or lang == "es") else (langPrefix + "/informes-periciales/" + svc.path + "/") %}
+      <meta itemprop="url" content="{{ metadata.site.url }}{{ _svcUrl }}">
       <div itemprop="itemOffered" itemscope itemtype="https://schema.org/Service">
         <meta itemprop="name" content="{{ svc.name }}">
         <meta itemprop="description" content="{{ svc.description | default(svc.name) }}">
