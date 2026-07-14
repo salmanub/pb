@@ -1,19 +1,24 @@
-﻿---
+---
 layout: layouts/base.njk
 title: "Casos d'Èxit · Informes Pericials Resolts"
 description: "Selecció d'expedients pericials reals en edificació, obra civil i assegurances. Patologies documentades, quanties peritades i resultats obtinguts per als nostres clients."
 image: "auditoria-informe-tecnico.jpg"
 image_alt: "Perit revisant documentació de casos en Barcelona"
 lang: ca
-eleventyNavigation:
-  key: Casos
-  order: 3
+pagination:
+  data: casosExitoPub_ca
+  size: 6
+  alias: casosPage
 translations:
   - lang: es
     permalink: /casos-exito/
   - lang: en
     permalink: /en/success-cases/
-permalink: "/ca/casos-d-exit/"
+eleventyComputed:
+  permalink: "{{ '/ca/casos-d-exit/' if pagination.pageNumber == 0 else '/ca/casos-d-exit/pagina/' + (pagination.pageNumber + 1) + '/' }}"
+  eleventyNavigation:
+    key: "{{ 'Casos' if pagination.pageNumber == 0 else '' }}"
+    order: 3
 ---
 {% set ui = ca %}
 {% set heroTitle = "Casos d'Èxit<br>en Peritatge" %}
@@ -23,8 +28,7 @@ permalink: "/ca/casos-d-exit/"
 <meta itemprop="description" content="{{ description }}">
 <div style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:var(--fw-medium);color:var(--text-accent);margin-bottom:clamp(28px,4vw,48px);"><span style="width:24px;height:1.5px;background:var(--accent);display:inline-block;"></span>— § 04 · Expedients ratificats</div>
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;" class="three-col">
-{% for caso in casosExito_ca %}
-{% if caso.estado == "publicado" %}
+{% for caso in casosPage %}
 <a href="/ca/casos-d-exit/{{ caso.slug }}/" style="text-decoration:none;display:block;" itemprop="hasPart" itemscope itemtype="https://schema.org/Article">
 <article style="border-radius: var(--radius-md); border: 1px solid {{ 'var(--ink-700)' if loop.index % 3 == 2 else 'var(--border-hairline)' }}; background: {{ 'var(--surface-ink)' if loop.index % 3 == 2 else 'var(--surface-card)' }}; padding: 24px; height: 100%; box-sizing: border-box; display:flex; flex-direction:column;">
 <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:16px;">
@@ -37,9 +41,15 @@ permalink: "/ca/casos-d-exit/"
 <div style="margin-top:18px;font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-accent);display:flex;align-items:center;gap:6px;">Llegir cas <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
 </article>
 </a>
-{% endif %}
 {% endfor %}
 </div>
+{% if pagination.pages.length > 1 %}
+<nav aria-label="Paginació de casos" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:clamp(36px,5vw,56px);font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;">
+{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}" style="color:var(--text-accent);text-decoration:none;padding:8px 12px;border:1px solid var(--border-hairline);border-radius:var(--radius-xs);">← Anteriors</a>{% endif %}
+{% for pageUrl in pagination.pages %}{% set n = loop.index %}<a href="{{ pageUrl }}" aria-current="{{ 'page' if loop.index0 == pagination.pageNumber else 'false' }}" style="padding:8px 13px;border-radius:var(--radius-xs);text-decoration:none;border:1px solid {{ 'var(--accent)' if loop.index0 == pagination.pageNumber else 'var(--border-hairline)' }};color:{{ 'var(--accent-on)' if loop.index0 == pagination.pageNumber else 'var(--text-muted)' }};background:{{ 'var(--accent)' if loop.index0 == pagination.pageNumber else 'transparent' }};">{{ n }}</a>{% endfor %}
+{% if pagination.href.next %}<a href="{{ pagination.href.next }}" style="color:var(--text-accent);text-decoration:none;padding:8px 12px;border:1px solid var(--border-hairline);border-radius:var(--radius-xs);">Següents →</a>{% endif %}
+</nav>
+{% endif %}
 </section>
 <section style="background: var(--surface-tint); border-top: 1px solid var(--oxide-200);">
 <div style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter); text-align: center;">
@@ -49,4 +59,3 @@ permalink: "/ca/casos-d-exit/"
 <div style="margin-top:28px;"><a href="/ca/contacte/professional/" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 28px;font-family:var(--font-sans);font-size:var(--fs-body);font-weight:var(--fw-semibold);line-height:1;letter-spacing:0.005em;border-radius:var(--radius-sm);border:1.5px solid transparent;background:var(--accent);color:var(--accent-on);text-decoration:none;">Consultar el meu cas <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
 </div>
 </section>
-
