@@ -76,14 +76,14 @@ eleventyComputed:
   </div>
 
   {# ── Paginación ── #}
-  {% if pagination.pages.length > 1 %}
+  {% if pagination.hrefs.length > 1 %}
   <nav class="casos-pager" aria-label="Paginación de casos" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:clamp(36px,5vw,56px);font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;">
-    {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}" style="color:var(--text-accent);text-decoration:none;padding:8px 12px;border:1px solid var(--border-hairline);border-radius:var(--radius-xs);">← Anteriores</a>{% endif %}
-    {% for pageUrl in pagination.pages %}
+    {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}" rel="prev" style="color:var(--text-accent);text-decoration:none;padding:8px 12px;border:1px solid var(--border-hairline);border-radius:var(--radius-xs);">← Anteriores</a>{% endif %}
+    {% for pageUrl in pagination.hrefs %}
     {% set n = loop.index %}
     <a href="{{ pageUrl }}" aria-current="{{ 'page' if loop.index0 == pagination.pageNumber else 'false' }}" style="padding:8px 13px;border-radius:var(--radius-xs);text-decoration:none;border:1px solid {{ 'var(--accent)' if loop.index0 == pagination.pageNumber else 'var(--border-hairline)' }};color:{{ 'var(--accent-on)' if loop.index0 == pagination.pageNumber else 'var(--text-muted)' }};background:{{ 'var(--accent)' if loop.index0 == pagination.pageNumber else 'transparent' }};">{{ n }}</a>
     {% endfor %}
-    {% if pagination.href.next %}<a href="{{ pagination.href.next }}" style="color:var(--text-accent);text-decoration:none;padding:8px 12px;border:1px solid var(--border-hairline);border-radius:var(--radius-xs);">Siguientes →</a>{% endif %}
+    {% if pagination.href.next %}<a href="{{ pagination.href.next }}" rel="next" style="color:var(--text-accent);text-decoration:none;padding:8px 12px;border:1px solid var(--border-hairline);border-radius:var(--radius-xs);">Siguientes →</a>{% endif %}
   </nav>
   {% endif %}
 </section>
