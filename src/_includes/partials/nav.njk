@@ -118,8 +118,8 @@ Datos: metadata.json (navBar, services, contact) + {lang}.json (nav.*)
   "Blog": ui.nav.blog,
   "Despacho": ui.nav.despacho
   } %}
-  {% set svcBasePath = "/informes-pericials/" if currentLang == "ca" else ("/" if currentLang ==
-  "en" else "/informes-periciales/") %}
+  {# ES service pages now live at root (/{slug}/) after the restructuring; only CA still uses the /informes-pericials/ prefix. #}
+  {% set svcBasePath = "/informes-pericials/" if currentLang == "ca" else "/" %}
   {% set megaFooterText = "Veure tots els dictàmens" if currentLang == "ca" else ("View all reports" if currentLang ==
   "en" else "Ver todos los dictámenes") %}
   {% set topNav = collections.all | filterByLang(currentLang) | eleventyNavigation %}

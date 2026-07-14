@@ -1,10 +1,10 @@
 ---
 layout: layouts/base.njk
 templateEngineOverride: njk
-title: "Perito Construcción Barcelona"
+title: "Perito de Construcción en Barcelona · Dictámenes de Obra"
 image: "perito-construccion-barcelona-profesional.jpg"
 image_alt: "Perito de construcción revisando estructura en Barcelona"
-description: "Ingenieros Peritos en Barcelona especializados en construcción. Expertos en vicios ocultos, control de obras y defensa técnica en juicios. Consulte ahora."
+description: "Informes periciales de construcción: mala ejecución, defectos de obra y control de calidad. 340+ dictámenes ratificados sin impugnación. Presupuesto cerrado en 24 h."
 lang: es
 audience: "mix"
 eleventyNavigation:

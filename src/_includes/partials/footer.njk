@@ -40,7 +40,9 @@
       </div>
 
       {# ── Col 2: Dictámenes ── #}
-      {% set fSvcBase = "/informes-pericials/" if lang == "ca" else ("/expert-witness-reports/" if lang == "en" else "/informes-periciales/") %}
+      {% set fSvcHub = "/informes-pericials/" if lang == "ca" else ("/expert-witness-reports/" if lang == "en" else "/informes-periciales/") %}
+      {# ES dictamen pages now live at root (/{slug}/); the catalog link still points to the /informes-periciales/ hub. #}
+      {% set fSvcBase = "/informes-pericials/" if lang == "ca" else ("/expert-witness-reports/" if lang == "en" else "/") %}
       <div>
         <div style="font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.14em;
                     text-transform: uppercase; color: var(--text-on-dark-muted); margin-bottom: 18px;">
@@ -53,7 +55,7 @@
           <li><a href="{{ langPrefix + fSvcBase + fSlug + '/' }}"
                  style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ fName }}</a></li>
           {% endif %}{% endfor %}
-          <li><a href="{{ langPrefix + fSvcBase }}"
+          <li><a href="{{ langPrefix + fSvcHub }}"
                  style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.footer.ver_catalogo }}</a></li>
         </ul>
       </div>
@@ -92,6 +94,17 @@
           <li><a href="mailto:{{ metadata.company.email }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ metadata.company.email }}</a></li>
         </ul>
       </div>
+    </div>
+
+    {# ── Red profesional (referral entre marcas — enlace de marca, no keyword) ── #}
+    <div class="red-marcas" style="margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--ink-700);
+                display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
+                font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.1em;
+                text-transform: uppercase; color: var(--text-on-dark-muted);">
+      <span style="opacity: 0.7;">{{ ui.footer.red_profesional }}</span>
+      <a href="https://refuerzofibra.es" style="color: var(--bone-100); opacity: 0.82;">refuerzofibra.es</a>
+      <span style="opacity: 0.4;">·</span>
+      <a href="https://urbenis.com" style="color: var(--bone-100); opacity: 0.82;">urbenis.com</a>
     </div>
 
     {# ── Bottom bar ── #}

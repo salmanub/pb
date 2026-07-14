@@ -1,8 +1,8 @@
 ﻿---
 layout: layouts/base.njk
 templateEngineOverride: njk
-title: "Coste y Honorarios de Informes Periciales"
-description: "Presupuesto cerrado por escrito antes del inicio. Honorarios fijos sin costes variables. Ratificación en sala incluida. Hoja de encargo detallada."
+title: "¿Cuánto Cuesta un Informe Pericial? Honorarios y Ejemplos"
+description: "Presupuesto cerrado por escrito antes de empezar, sin costes variables. Ratificación en sala incluida. Le orientamos sobre el coste de su caso en una consulta sin compromiso."
 image: "elaboracion-informe-pericial.jpg"
 image_alt: "Presupuesto de informe pericial"
 audience: "pro"
@@ -34,4 +34,3 @@ band_lede: "Primera consulta sin coste y presupuesto cerrado por escrito."
 band_cta: "Solicitar presupuesto"
 ---
 {% include "layouts/service.njk" %}
-

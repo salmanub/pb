@@ -40,8 +40,9 @@ AGENTES §5: CSS inline (inyectado por transform), cero
   {% for t in translations %}
   <link rel="alternate" hreflang="{{ t.lang }}" href="{{ metadata.site.url }}{{ t.permalink }}">
   {% endfor %}
+  {% set _esAlt = (translations | selectattr('lang', 'equalto', 'es') | first).permalink if lang and lang != 'es' else page.url %}
   <link rel="alternate" hreflang="x-default"
-    href="{{ metadata.site.url }}{{ page.url if lang == 'es' or not lang else ('/' if lang != 'es' else page.url) }}">
+    href="{{ metadata.site.url }}{{ _esAlt | default(page.url) }}">
   {% else %}
   {% set alternates = page.url | hreflangAlternates(i18n.pages) %}
   {% for alt in alternates %}

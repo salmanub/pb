@@ -1,8 +1,8 @@
 ---
 layout: layouts/base.njk
 templateEngineOverride: njk
-title: "Consultoría y Asesoramiento Estructural"
-description: "Diagnosis estructural y asesoramiento en ingeniería civil en Barcelona: recalce de cimentaciones, estabilidad de edificios e intervención técnica previa a la compra."
+title: "Asesoramiento Técnico y Pericial de Estructuras · Barcelona"
+description: "Diagnosis estructural, recalce de cimentaciones y segunda opinión técnica previa a compra u obra. Ingeniero civil colegiado, con respaldo pericial si el caso llega a juicio."
 audience: "pro"
 lang: es
 translations:

@@ -12,6 +12,7 @@
                 "blog":  "Blog"
             },
     "footer":  {
+                   "red_profesional": "Xarxa professional",
                    "col_dictamenes":  "Dictàmens",
                    "col_despacho":  "Despatx",
                    "col_contacto":  "Contacte",
@@ -32,6 +33,26 @@
                        "aria":  "Sou aquí",
                        "label":  "Sou aquí"
                    },
+    "caso":  {
+        "importe": "Import peritat",
+        "cliente": "Client",
+        "plazo": "Termini de lliurament",
+        "jurisdiccion": "Jurisdicció",
+        "resultado": "Resultat",
+        "paso_a_paso": "El cas, pas a pas",
+        "fase_encargo": "L'encàrrec",
+        "fase_instruccion": "La instrucció tècnica",
+        "fase_dictamen": "El dictamen",
+        "fase_resultado": "El resultat",
+        "normativa": "Normativa i tècnica aplicada",
+        "otros": "Altres casos",
+        "relacionados": "Casos relacionats",
+        "ver_todos": "Veure tots els casos",
+        "cta_eyebrow": "El seu cas",
+        "cta_title": "Té un cas de quantia rellevant?",
+        "cta_lede": "Briefing tècnic amb lletrat o director de sinistres. Anàlisi prèvia de viabilitat sense cost, honoraris fixos per escrit.",
+        "cta_btn": "Plantejar el cas"
+    },
     "form":  {
                  "titulo":  "Sol·licitar dictamen",
                  "subtitulo":  "Consulta preliminar sense cost. Resposta en 24 h laborables.",

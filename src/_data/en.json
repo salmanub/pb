@@ -12,6 +12,7 @@
                 "blog":  "Blog"
             },
     "footer":  {
+                   "red_profesional": "Professional network",
                    "col_dictamenes":  "Expert Reports",
                    "col_despacho":  "The Firm",
                    "col_contacto":  "Contact",
@@ -32,6 +33,26 @@
                        "aria":  "You are here",
                        "label":  "You are here"
                    },
+    "caso":  {
+        "importe": "Assessed amount",
+        "cliente": "Client",
+        "plazo": "Delivery time",
+        "jurisdiccion": "Jurisdiction",
+        "resultado": "Result",
+        "paso_a_paso": "The case, step by step",
+        "fase_encargo": "The assignment",
+        "fase_instruccion": "The technical investigation",
+        "fase_dictamen": "The expert report",
+        "fase_resultado": "The outcome",
+        "normativa": "Standards and techniques applied",
+        "otros": "Other cases",
+        "relacionados": "Related cases",
+        "ver_todos": "View all cases",
+        "cta_eyebrow": "Your case",
+        "cta_title": "Do you have a high-value case?",
+        "cta_lede": "Technical briefing with your lawyer or claims director. Free preliminary viability analysis, fixed written fees.",
+        "cta_btn": "Present your case"
+    },
     "form":  {
                  "titulo":  "Request a report",
                  "subtitulo":  "Free preliminary consultation. Response within 24 business hours.",

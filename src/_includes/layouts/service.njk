@@ -223,7 +223,7 @@ NOTE: All HTML on single lines to prevent Markdown <p> wrapping in .md files
       {% set currentUrl = page.url %}
       {% set count = { v: 0 } %}
       {% for svc in sitedata.svcs %}
-      {% set svcUrl = ('/en/' + svc.slug_en + '/') if lang == 'en' else (('/ca/' + svc.slug_ca + '/') if lang == 'ca' else ('/informes-periciales/' + svc.slug + '/')) %}
+      {% set svcUrl = ('/en/' + svc.slug_en + '/') if lang == 'en' else (('/ca/' + svc.slug_ca + '/') if lang == 'ca' else ('/' + svc.slug + '/')) %}
       {% if svcUrl != currentUrl and count.v < 4 %}
         <article itemprop="hasPart" itemscope itemtype="https://schema.org/Article" style="display: contents;">
         <a itemprop="url" href="{{ svcUrl }}"

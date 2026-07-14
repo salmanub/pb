@@ -45,7 +45,7 @@ permalink: "/informes-periciales/"
   <div style="display: flex; flex-direction: column; gap: 0;">
     {% for svc in metadata.services %}{% if svc.cat == "Informes periciales" %}
     <article itemprop="hasPart" itemscope itemtype="https://schema.org/Article" style="display: contents;">
-    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/informes-periciales/' + svc.path + '/') }}"
+    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/' + svc.path + '/') }}"
        style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center;
               border-top: 1px solid var(--border-hairline); padding: 16px 12px;
               text-decoration: none; color: inherit;" class="svc-row">
@@ -77,7 +77,7 @@ permalink: "/informes-periciales/"
   <div style="display: flex; flex-direction: column; gap: 0;">
     {% for svc in metadata.services %}{% if svc.cat == "Patologías" %}
     <article itemprop="hasPart" itemscope itemtype="https://schema.org/Article" style="display: contents;">
-    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/informes-periciales/' + svc.path + '/') }}"
+    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/' + svc.path + '/') }}"
        style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center;
               border-top: 1px solid var(--border-hairline); padding: 16px 12px;
               text-decoration: none; color: inherit;" class="svc-row">
@@ -109,7 +109,7 @@ permalink: "/informes-periciales/"
   <div style="display: flex; flex-direction: column; gap: 0;">
     {% for svc in metadata.services %}{% if svc.cat == "Especialidades" %}
     <article itemprop="hasPart" itemscope itemtype="https://schema.org/Article" style="display: contents;">
-    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/informes-periciales/' + svc.path + '/') }}"
+    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/' + svc.path + '/') }}"
        style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center;
               border-top: 1px solid var(--border-hairline); padding: 16px 12px;
               text-decoration: none; color: inherit;" class="svc-row">
@@ -141,7 +141,7 @@ permalink: "/informes-periciales/"
   <div style="display: flex; flex-direction: column; gap: 0;">
     {% for svc in metadata.services %}{% if svc.cat == "Ingeniería" %}
     <article itemprop="hasPart" itemscope itemtype="https://schema.org/Article" style="display: contents;">
-    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/informes-periciales/' + svc.path + '/') }}"
+    <a itemprop="url" href="{{ svc.href if svc.href else (langPrefix + '/' + svc.path + '/') }}"
        style="display: grid; grid-template-columns: 1fr 24px; gap: 14px; align-items: center;
               border-top: 1px solid var(--border-hairline); padding: 16px 12px;
               text-decoration: none; color: inherit;" class="svc-row">

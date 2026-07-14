@@ -12,6 +12,7 @@
                 "blog":  "Blog"
             },
     "footer":  {
+                   "red_profesional": "Red profesional",
                    "col_dictamenes":  "Dictámenes",
                    "col_despacho":  "Despacho",
                    "col_contacto":  "Contacto",
@@ -32,6 +33,26 @@
                        "aria":  "Estás aquí",
                        "label":  "Estás aquí"
                    },
+    "caso":  {
+        "importe": "Importe peritado",
+        "cliente": "Cliente",
+        "plazo": "Plazo de entrega",
+        "jurisdiccion": "Jurisdicción",
+        "resultado": "Resultado",
+        "paso_a_paso": "El caso, paso a paso",
+        "fase_encargo": "El encargo",
+        "fase_instruccion": "La instrucción técnica",
+        "fase_dictamen": "El dictamen",
+        "fase_resultado": "El resultado",
+        "normativa": "Normativa y técnica aplicada",
+        "otros": "Otros casos",
+        "relacionados": "Casos relacionados",
+        "ver_todos": "Ver todos los casos",
+        "cta_eyebrow": "Su caso",
+        "cta_title": "¿Tiene un caso de cuantía relevante?",
+        "cta_lede": "Briefing técnico con letrado o director de siniestros. Análisis previo de viabilidad sin coste, honorarios fijos por escrito.",
+        "cta_btn": "Plantear el caso"
+    },
     "form":  {
                  "titulo":  "Solicitar dictamen",
                  "subtitulo":  "Consulta preliminar sin coste. Respuesta en 24 h laborables.",

@@ -24,7 +24,7 @@ layout: layouts/base.njk
   {# Breadcrumb inline vía partial #}
   {% set breadcrumb_inline = true %}
   {% set breadcrumb_items = [
-    { label: "Inicio", url: "/" },
+    { label: ui.breadcrumb.inicio, url: (langPrefix + "/") },
     { label: _casosLabel, url: _casosUrl },
     { label: caso.category | default(caso.tags[0]) }
   ] %}
@@ -51,7 +51,7 @@ layout: layouts/base.njk
     {# Importe derecha #}
     {% if caso.amount and caso.amount != "—" %}
     <div class="caso-imp">
-      <div class="caso-imp__label">Importe peritado</div>
+      <div class="caso-imp__label">{{ ui.caso.importe }}</div>
       <div class="caso-imp__value">{{ caso.amount }}</div>
     </div>
     {% endif %}
@@ -62,19 +62,19 @@ layout: layouts/base.njk
 <section style="max-width:var(--container-wide);margin:0 auto;padding:0 var(--gutter);">
   <div class="method-grid--caso">
     <div class="fact-cell">
-      <div class="fact-cell__label">Cliente</div>
+      <div class="fact-cell__label">{{ ui.caso.cliente }}</div>
       <div class="fact-cell__value">{{ caso.cliente | default("—") }}</div>
     </div>
     <div class="fact-cell">
-      <div class="fact-cell__label">Plazo de entrega</div>
+      <div class="fact-cell__label">{{ ui.caso.plazo }}</div>
       <div class="fact-cell__value">{{ caso.plazo | default("—") }}</div>
     </div>
     <div class="fact-cell">
-      <div class="fact-cell__label">Jurisdicción</div>
+      <div class="fact-cell__label">{{ ui.caso.jurisdiccion }}</div>
       <div class="fact-cell__value">{{ caso.jurisdiccion | default("—") }}</div>
     </div>
     <div class="fact-cell">
-      <div class="fact-cell__label">Resultado</div>
+      <div class="fact-cell__label">{{ ui.caso.resultado }}</div>
       <div class="fact-cell__value">{{ caso.resultado | default(caso.summary[3].value if caso.summary else "—") }}</div>
     </div>
   </div>
@@ -90,14 +90,14 @@ layout: layouts/base.njk
 
 {# ── 4. NARRATIVA PHASE 01-04 (.caso-narrative + .phase-row) ── #}
 <section class="caso-narrative">
-  <div class="caso-eyebrow">§ El caso, paso a paso</div>
+  <div class="caso-eyebrow">§ {{ ui.caso.paso_a_paso }}</div>
 
   <div style="margin-top:var(--space-4);">
     {% if caso.encargo %}
     <div class="phase-row">
       <div class="phase-row__num">01</div>
       <div>
-        <h3 class="phase-row__title">El encargo</h3>
+        <h3 class="phase-row__title">{{ ui.caso.fase_encargo }}</h3>
         <p class="phase-row__body">{{ caso.encargo }}</p>
       </div>
     </div>
@@ -107,7 +107,7 @@ layout: layouts/base.njk
     <div class="phase-row">
       <div class="phase-row__num">02</div>
       <div>
-        <h3 class="phase-row__title">La instrucción técnica</h3>
+        <h3 class="phase-row__title">{{ ui.caso.fase_instruccion }}</h3>
         <p class="phase-row__body">{{ caso.instruccion }}</p>
       </div>
     </div>
@@ -117,7 +117,7 @@ layout: layouts/base.njk
     <div class="phase-row">
       <div class="phase-row__num">03</div>
       <div>
-        <h3 class="phase-row__title">El dictamen</h3>
+        <h3 class="phase-row__title">{{ ui.caso.fase_dictamen }}</h3>
         <p class="phase-row__body">{{ caso.dictamen }}</p>
       </div>
     </div>
@@ -127,7 +127,7 @@ layout: layouts/base.njk
     <div class="phase-row">
       <div class="phase-row__num">04</div>
       <div>
-        <h3 class="phase-row__title">El resultado</h3>
+        <h3 class="phase-row__title">{{ ui.caso.fase_resultado }}</h3>
         <p class="phase-row__body">{{ caso.resultadoNarr }}</p>
       </div>
     </div>
@@ -137,7 +137,7 @@ layout: layouts/base.njk
   {# ── 5. NORMATIVA (.caso-norm) ── #}
   {% if caso.tags %}
   <div class="caso-norm">
-    <div class="caso-norm__label">Normativa y técnica aplicada</div>
+    <div class="caso-norm__label">{{ ui.caso.normativa }}</div>
     <div class="caso-norm__tags">
       {% for tag in caso.tags %}<span class="caso-norm__tag">{{ tag }}</span>{% endfor %}
     </div>
@@ -146,7 +146,8 @@ layout: layouts/base.njk
 </section>
 
 {# ── 6. CASOS RELACIONADOS (.caso-related + .caso-rel-card × 3) ── #}
-{% set allCasos = casosExito | sort(attribute="datePublished") | reverse %}
+{% set _casosData = casosExito if (not lang or lang == "es") else (casosExito_en if lang == "en" else casosExito_ca) %}
+{% set allCasos = _casosData | sort(attribute="datePublished") | reverse %}
 {% set relCount = 0 %}{% set rel1 = null %}{% set rel2 = null %}{% set rel3 = null %}
 {% for c in allCasos %}{% if c.slug != caso.slug and relCount < 3 %}{% if relCount == 0 %}{% set rel1 = c %}{% elif relCount == 1 %}{% set rel2 = c %}{% else %}{% set rel3 = c %}{% endif %}{% set relCount = relCount + 1 %}{% endif %}{% endfor %}
 
@@ -154,17 +155,17 @@ layout: layouts/base.njk
 <section class="caso-related">
   <div class="caso-related__head">
     <div>
-      <div class="caso-related__eyebrow"><span class="page-hero__eyebrow-line"></span>§ Otros casos</div>
-      <h2 class="caso-related__h2">Casos relacionados</h2>
+      <div class="caso-related__eyebrow"><span class="page-hero__eyebrow-line"></span>§ {{ ui.caso.otros }}</div>
+      <h2 class="caso-related__h2">{{ ui.caso.relacionados }}</h2>
     </div>
-    <a href="{{ langPrefix }}{{ _casosUrl }}" class="caso-related__link">
-      Ver todos los casos
+    <a href="{{ _casosUrl }}" class="caso-related__link">
+      {{ ui.caso.ver_todos }}
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.5vw,32px);" class="three-col">
     {% for rc in [rel1, rel2, rel3] %}{% if rc %}
-    <a href="{{ langPrefix }}/casos-exito/{{ rc.slug }}/" class="caso-rel-card">
+    <a href="{{ _casosUrl }}{{ rc.slug }}/" class="caso-rel-card">
       <div class="caso-rel-card__img">
         {% if rc.image and rc.image.url and "placeholder" not in rc.image.url %}
         <img src="{{ rc.image.url }}" alt="{{ rc.image.alt | default(rc.title) }}" loading="lazy" decoding="async">
@@ -184,15 +185,15 @@ layout: layouts/base.njk
 {# ── 7. BAND CTA INK (.band-cta--ink) ── #}
 <section class="band-cta band-cta--ink">
   <div style="max-width:var(--container-wide);margin:0 auto;">
-    <div class="band-cta__eyebrow"><span class="page-hero__eyebrow-line"></span>§ Su caso</div>
-    <h2 class="band-cta__h2">¿Tiene un caso de cuantía relevante?</h2>
-    <p class="band-cta__lede">Briefing técnico con letrado o director de siniestros. Análisis previo de viabilidad sin coste, honorarios fijos por escrito.</p>
+    <div class="band-cta__eyebrow"><span class="page-hero__eyebrow-line"></span>§ {{ ui.caso.cta_eyebrow }}</div>
+    <h2 class="band-cta__h2">{{ ui.caso.cta_title }}</h2>
+    <p class="band-cta__lede">{{ ui.caso.cta_lede }}</p>
     <div class="band-cta__btn-wrap">
       <a href="{{ _contactPro }}" class="band-cta__btn">
-        Plantear el caso
+        {{ ui.caso.cta_btn }}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
-    <div style="margin-top:16px;"><a href="{{ langPrefix }}{{ _casosUrl }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-on-dark-muted);text-decoration:none;">← {{ _casosLabel }}</a></div>
+    <div style="margin-top:16px;"><a href="{{ _casosUrl }}" style="font-family:var(--font-mono);font-size:var(--fs-mono-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-on-dark-muted);text-decoration:none;">← {{ _casosLabel }}</a></div>
   </div>
 </section>
