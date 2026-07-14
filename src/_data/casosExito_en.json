@@ -765,5 +765,67 @@
         "instruccion": "Full review of certifications, comparison against actual on-site measurements, verification of unit prices and analysis of the contractual and specification documents.",
         "dictamen": "The report identified significant discrepancies between what was certified and what was executed, with detailed quantification of each incorrectly certified item.",
         "resultadoNarr": "The hotel chain recovered part of the incorrectly certified amount through an agreement with the builder, avoiding court proceedings."
+    },
+    {
+        "title": "Pre-lease Condition Survey of an Industrial Unit",
+        "slug": "pre-lease-condition-survey-industrial-unit",
+        "translations": [
+            { "lang": "es", "permalink": "/casos-exito/preexistencias-nave-industrial/" },
+            { "lang": "ca", "permalink": "/ca/casos-d-exit/preexistencies-nau-industrial/" },
+            { "lang": "en", "permalink": "/en/success-cases/pre-lease-condition-survey-industrial-unit/" }
+        ],
+        "description": "A pre-lease schedule of condition for a 1,320 m² industrial unit in Baix Llobregat (Barcelona): documented pre-existing defects and maintenance responsibilities allocated in writing to prevent dilapidations disputes at lease end.",
+        "estado": "publicado",
+        "datePublished": "2026-01",
+        "dateModified": "2026-01",
+        "tags": [ "RIPCI (RD 513/2017)", "CTE DB-SI", "CTE DB-HS" ],
+        "summary": [
+            { "label": "Location", "value": "Baix Llobregat" },
+            { "label": "Property type", "value": "Industrial unit, 1,320 m² (928 m² ground + 392 m² offices)" },
+            { "label": "Instruction", "value": "Pre-lease schedule of condition" },
+            { "label": "Result", "value": "Maintenance responsibilities allocated before signing" }
+        ],
+        "image": { "url": "/assets/images/placeholder-default.png", "alt": "Pre-lease technical inspection of an industrial unit" },
+        "amount": "—",
+        "category": "Industrial units",
+        "cliente": "Incoming tenant",
+        "plazo": "—",
+        "jurisdiccion": "Preventive · Baix Llobregat",
+        "resultado": "Responsibilities allocated before signing",
+        "encargo": "Before signing the lease, an incoming tenant commissioned a technical record of the condition of a 1,320 m² industrial unit in Baix Llobregat (Barcelona province). The aim: to document the property's pre-existing defects so as not to be liable at lease end for damage that already existed before entry.",
+        "instruccion": "Visual technical inspection of the whole unit —928 m² at ground floor and 392 m² of first-floor offices— and functional testing of the building services. Each element was assessed against its governing regulation and its maintenance status, distinguishing a genuine defect from acceptable wear.",
+        "dictamen": "The inspection graded the severity of the pre-existing defects. Functional shortfalls: emergency lighting that failed to operate correctly or lacked autonomy (a breach of means-of-escape conditions); hose reels and extinguishers without a current annual service record (operability not guaranteed under RIPCI); a deck-type roof with active water ingress —staining, tide marks and efflorescence on the suspended ceiling—, the item with the greatest cost exposure; and degraded weather seals to the office glazing. Against these, a cracked façade cladding panel was scoped as strictly cosmetic, compromising neither fixing nor weathertightness: scoping a defect down matters as much as flagging a serious one.",
+        "resultadoNarr": "The report fixes the condition of the property at a certain date and allocates maintenance responsibilities between landlord and tenant before signing. The fire-protection and emergency-lighting shortfalls are documented as pre-existing, not attributable to the incoming tenant; the roof water ingress as an item to resolve before entry. It is a preventive, recurring tool for companies leasing or handing back units, industrial asset managers and their advisers, and applies equally to the periodic certification of a unit's condition across its service life."
+    },
+    {
+        "title": "Forensic Investigation of a Road Sinkhole",
+        "slug": "sinkhole-road-forensic-investigation",
+        "translations": [
+            { "lang": "es", "permalink": "/casos-exito/hundimiento-vial-diagnosis-pericial/" },
+            { "lang": "ca", "permalink": "/ca/casos-d-exit/enfonsament-vial-diagnosi-pericial/" },
+            { "lang": "en", "permalink": "/en/success-cases/sinkhole-road-forensic-investigation/" }
+        ],
+        "description": "Forensic response to a sinkhole in an urban road in Vallès Occidental (Barcelona): making safe, coordination of the ground investigation and a technical basis for allocating public-liability responsibility.",
+        "estado": "borrador",
+        "datePublished": "2026",
+        "dateModified": "2026",
+        "tags": [ "Dynamic probing (DPSH)", "Geotechnical diagnosis", "Public liability" ],
+        "summary": [
+            { "label": "Location", "value": "Vallès Occidental" },
+            { "label": "Type of work", "value": "Cause diagnosis of a public-road sinkhole" },
+            { "label": "Instruction", "value": "Municipal water-management company" },
+            { "label": "Result", "value": "Technical basis for allocating responsibility" }
+        ],
+        "image": { "url": "/assets/images/placeholder-default.png", "alt": "Forensic investigation of an urban road sinkhole" },
+        "amount": "—",
+        "category": "Civil works",
+        "cliente": "Municipal water-management company",
+        "plazo": "—",
+        "jurisdiccion": "Public liability · Vallès Occidental",
+        "resultado": "Technical basis for allocating responsibility",
+        "encargo": "When a sinkhole opened in an urban road in Vallès Occidental (Barcelona province), a municipal water-management company instructed the forensic engineer to order the response. The question that governs the file is not how it is repaired, but why it happened, because responsibility depends on the cause.",
+        "instruccion": "First measure: securing the perimeter and confirming the failure did not extend beyond the visible cavity. With the situation stabilised, the ground investigation was defined and coordinated —a detailed geological inspection and two super-heavy dynamic probing (DPSH) tests—. The field investigation was carried out by a specialist geological practice under forensic coordination; the expert's role is to direct the investigation and integrate its results into a diagnosis of cause, not to carry out the tests.",
+        "dictamen": "The investigation allowed a local ground model to be built, with distinct geotechnical units: a near-surface layer of pavement and formation over compacted fill and, beneath it, the natural stratum. The DPSH tests bounded the thickness of the surface made ground and the depth of competent ground. At the depth relevant to the collapse a local aquifer was ruled out, steering the cause towards the behaviour of the fill and the buried services —a service leak, poorly compacted fill or internal erosion—, each hypothesis pointing to a different responsible party.",
+        "resultadoNarr": "The file gives the owner and its insurers a ground model at the collapse point and a diagnosis of cause supported by objective investigation. The forensic action orders the decision chain —make safe, investigate, diagnose and attribute— as the basis for allocating responsibility between the authority, the concessionaire and the public-liability insurers. Work aimed at local authorities, service concessionaires and public-liability insurers."
     }
 ]

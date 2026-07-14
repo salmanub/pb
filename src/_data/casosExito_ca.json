@@ -765,5 +765,67 @@
         "instruccion": "Revisió completa de certificacions, contrast amb mesuraments reals a l'obra, verificació de preus unitaris i anàlisi de la documentació contractual i de qualitats.",
         "dictamen": "El dictamen va identificar discrepàncies significatives entre allò certificat i allò executat, amb quantificació detallada de cada partida incorrectament certificada.",
         "resultadoNarr": "La cadena hotelera va recuperar part de l'import incorrectament certificat mitjançant acord amb la constructora, evitant el procediment judicial."
+    },
+    {
+        "title": "Informe de Preexistències en Nau Industrial abans de l'Arrendament",
+        "slug": "preexistencies-nau-industrial",
+        "translations": [
+            { "lang": "es", "permalink": "/casos-exito/preexistencias-nave-industrial/" },
+            { "lang": "ca", "permalink": "/ca/casos-d-exit/preexistencies-nau-industrial/" },
+            { "lang": "en", "permalink": "/en/success-cases/pre-lease-condition-survey-industrial-unit/" }
+        ],
+        "description": "Certificació tècnica de l'estat d'una nau industrial de 1.320 m² al Baix Llobregat abans de signar l'arrendament: preexistències documentades i responsabilitats de manteniment delimitades per evitar litigis en retornar les claus.",
+        "estado": "publicado",
+        "datePublished": "2026-01",
+        "dateModified": "2026-01",
+        "tags": [ "RIPCI (RD 513/2017)", "CTE DB-SI", "CTE DB-HS" ],
+        "summary": [
+            { "label": "Ubicació", "value": "Baix Llobregat" },
+            { "label": "Tipus d'Immoble", "value": "Nau industrial de 1.320 m² (928 m² PB + 392 m² oficines)" },
+            { "label": "Encàrrec", "value": "Certificació de preexistències prèvia a l'arrendament" },
+            { "label": "Resultat", "value": "Responsabilitats de manteniment delimitades abans de signar" }
+        ],
+        "image": { "url": "/assets/images/placeholder-default.png", "alt": "Inspecció tècnica de l'estat d'una nau industrial abans de l'arrendament" },
+        "amount": "—",
+        "category": "Naus industrials",
+        "cliente": "Empresa arrendatària",
+        "plazo": "—",
+        "jurisdiccion": "Preventiu · Baix Llobregat",
+        "resultado": "Responsabilitats delimitades abans de signar",
+        "encargo": "Abans de signar l'arrendament, una empresa arrendatària va encarregar la certificació tècnica de l'estat d'una nau industrial de 1.320 m² al Baix Llobregat. L'objectiu: documentar les preexistències de l'immoble per no respondre al final del contracte per danys que ja existien abans de l'entrada.",
+        "instruccion": "Inspecció tècnica ocular del conjunt —928 m² en planta baixa i 392 m² d'oficines en planta primera— i comprovació funcional de les instal·lacions. Cada element es va avaluar contra la seva normativa de referència i el seu estat de manteniment, distingint el defecte real del desgast admissible.",
+        "dictamen": "La inspecció va graduar la gravetat de les preexistències. Deficiències funcionals: enllumenat d'emergència sense funcionament correcte o sense autonomia (incompliment de les condicions d'evacuació); BIEs i extintors sense la revisió anual acreditada (operativitat no garantida sota RIPCI); coberta tipus deck amb vies d'aigua actives —taques, cèrcols i eflorescències al fals sostre—, la patologia de més recorregut econòmic; i juntes d'estanquitat degradades en el vidre de les oficines. Davant d'això, el trencament d'un plafó d'aplacat de façana es va acotar com a estrictament estètic, sense compromís de fixació ni estanquitat: delimitar a la baixa és tan important com assenyalar el defecte greu.",
+        "resultadoNarr": "L'informe fixa l'estat de l'immoble en data certa i reparteix les responsabilitats de manteniment entre arrendador i arrendatari abans de la signatura. Les deficiències de protecció contra incendis i enllumenat d'emergència queden documentades com a preexistents, no imputables al futur llogater; les vies d'aigua de coberta, com a qüestió a resoldre abans de l'entrada. És una eina preventiva i recurrent per a empreses que lloguen o lliuren naus, gestors de patrimoni industrial i assessories, aplicable també a la certificació periòdica de l'estat d'una nau al llarg de la seva vida útil."
+    },
+    {
+        "title": "Diagnosi Pericial d'un Enfonsament en Vial Urbà",
+        "slug": "enfonsament-vial-diagnosi-pericial",
+        "translations": [
+            { "lang": "es", "permalink": "/casos-exito/hundimiento-vial-diagnosis-pericial/" },
+            { "lang": "ca", "permalink": "/ca/casos-d-exit/enfonsament-vial-diagnosi-pericial/" },
+            { "lang": "en", "permalink": "/en/success-cases/sinkhole-road-forensic-investigation/" }
+        ],
+        "description": "Actuació pericial davant d'un esvoranc en un vial urbà del Vallès Occidental: assegurament, coordinació de la campanya de reconeixement geotècnic i base tècnica per a l'atribució de responsabilitats per RC patrimonial.",
+        "estado": "borrador",
+        "datePublished": "2026",
+        "dateModified": "2026",
+        "tags": [ "DPSH", "Diagnosi geotècnica", "RC patrimonial" ],
+        "summary": [
+            { "label": "Ubicació", "value": "Vallès Occidental" },
+            { "label": "Tipus d'Actuació", "value": "Diagnosi de causa d'enfonsament en via pública" },
+            { "label": "Encàrrec", "value": "Empresa mixta municipal de gestió d'aigües" },
+            { "label": "Resultat", "value": "Base tècnica per a l'atribució de responsabilitats" }
+        ],
+        "image": { "url": "/assets/images/placeholder-default.png", "alt": "Diagnosi pericial d'un enfonsament en vial urbà" },
+        "amount": "—",
+        "category": "Obra Civil",
+        "cliente": "Empresa mixta municipal de gestió d'aigües",
+        "plazo": "—",
+        "jurisdiccion": "RC patrimonial · Vallès Occidental",
+        "resultado": "Base tècnica per a l'atribució de responsabilitats",
+        "encargo": "Davant l'aparició d'un esvoranc en un vial urbà del Vallès Occidental, una empresa mixta municipal de gestió d'aigües va requerir l'actuació pericial per ordenar la resposta. La pregunta que governa l'expedient no és com es repara, sinó per què s'ha produït, perquè de la causa depèn qui respon.",
+        "instruccion": "Primera mesura: assegurament del perímetre i verificació que la patologia no s'estenia més enllà de la cavitat visible. Estabilitzada la situació, es va definir i coordinar la campanya de reconeixement —inspecció geològica de detall i dos assaigs de penetració dinàmica contínua superpesada (DPSH)—. L'estudi geotècnic de camp el va executar un gabinet geològic especialitzat sota coordinació pericial; el rol del perit és dirigir la investigació i integrar-ne els resultats en una diagnosi de causa, no executar els assaigs.",
+        "dictamen": "Els reconeixements van permetre construir un model geològic local amb unitats geotècniques diferenciades: un nivell superficial de paviment i esplanada sobre un terraplè compactat i, a sota, el substrat. Els DPSH van acotar el gruix dels rebliments superficials i la profunditat del terreny competent. A la profunditat d'influència de l'enfonsament es va descartar la presència d'un aqüífer local, la qual cosa reorienta la causa cap al comportament dels rebliments i de les conduccions —fuita de xarxa, rebliments mal compactats o erosió interna—, cada hipòtesi amb un responsable diferent.",
+        "resultadoNarr": "L'expedient lliura a la propietat i a les seves asseguradores un model del terreny en el punt d'enfonsament i una diagnosi de causa recolzada en reconeixements objectius. L'actuació pericial ordena la cadena de decisió —assegurament, investigació, diagnosi i atribució— com a base per repartir responsabilitats entre administració, concessionària i companyies de RC patrimonial. Actuació adreçada a administracions locals, concessionàries de serveis i asseguradores de responsabilitat civil patrimonial."
     }
 ]

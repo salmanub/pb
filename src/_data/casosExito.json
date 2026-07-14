@@ -765,5 +765,67 @@
         "instruccion":  "Revisión completa de certificaciones, contraste con mediciones reales en obra, verificación de precios unitarios y análisis de la documentación contractual y de calidades.",
         "dictamen":  "El dictamen identificó discrepancias significativas entre lo certificado y lo ejecutado, con cuantificación detallada de cada partida incorrectamente certificada.",
         "resultadoNarr":  "La cadena hotelera recuperó parte del importe incorrectamente certificado mediante acuerdo con la constructora, evitando el procedimiento judicial."
+    },
+    {
+        "title": "Informe de Preexistencias en Nave Industrial antes del Arrendamiento",
+        "slug": "preexistencias-nave-industrial",
+        "translations": [
+            { "lang": "es", "permalink": "/casos-exito/preexistencias-nave-industrial/" },
+            { "lang": "ca", "permalink": "/ca/casos-d-exit/preexistencies-nau-industrial/" },
+            { "lang": "en", "permalink": "/en/success-cases/pre-lease-condition-survey-industrial-unit/" }
+        ],
+        "description": "Certificación técnica del estado de una nave industrial de 1.320 m² en el Baix Llobregat antes de firmar el arrendamiento: preexistencias documentadas y responsabilidades de mantenimiento delimitadas para evitar litigios al devolver las llaves.",
+        "estado": "publicado",
+        "datePublished": "2026-01",
+        "dateModified": "2026-01",
+        "tags": [ "RIPCI (RD 513/2017)", "CTE DB-SI", "CTE DB-HS" ],
+        "summary": [
+            { "label": "Ubicación", "value": "Baix Llobregat" },
+            { "label": "Tipo de Inmueble", "value": "Nave industrial de 1.320 m² (928 m² PB + 392 m² oficinas)" },
+            { "label": "Encargo", "value": "Certificación de preexistencias previa al arrendamiento" },
+            { "label": "Resultado", "value": "Responsabilidades de mantenimiento delimitadas antes de firmar" }
+        ],
+        "image": { "url": "/assets/images/placeholder-default.png", "alt": "Inspección técnica del estado de una nave industrial antes del arrendamiento" },
+        "amount": "—",
+        "category": "Naves industriales",
+        "cliente": "Empresa arrendataria",
+        "plazo": "—",
+        "jurisdiccion": "Preventivo · Baix Llobregat",
+        "resultado": "Responsabilidades delimitadas antes de firmar",
+        "encargo": "Antes de firmar el arrendamiento, una empresa arrendataria encargó la certificación técnica del estado de una nave industrial de 1.320 m² en el Baix Llobregat. El objetivo: documentar las preexistencias del inmueble para no responder al final del contrato por daños que ya existían antes de la entrada.",
+        "instruccion": "Inspección técnica ocular del conjunto —928 m² en planta baja y 392 m² de oficinas en planta primera— y comprobación funcional de las instalaciones. Cada elemento se evaluó contra su normativa de referencia y su estado de mantenimiento, distinguiendo el defecto real del desgaste admisible.",
+        "dictamen": "La inspección graduó la gravedad de las preexistencias. Deficiencias funcionales: alumbrado de emergencia sin funcionamiento correcto o sin autonomía (incumplimiento de las condiciones de evacuación); BIEs y extintores sin la revisión anual acreditada (operatividad no garantizada bajo RIPCI); cubierta tipo deck con vías de agua activas —manchas, cercos y eflorescencias en el falso techo—, la patología de mayor recorrido económico; y juntas de estanqueidad degradadas en el acristalamiento de oficinas. Frente a ello, la rotura de un panel de aplacado de fachada se acotó como estrictamente estética, sin compromiso de fijación ni estanqueidad: delimitar a la baja es tan importante como señalar el defecto grave.",
+        "resultadoNarr": "El informe fija el estado del inmueble en fecha cierta y reparte las responsabilidades de mantenimiento entre arrendador y arrendatario antes de la firma. Las deficiencias de protección contra incendios y alumbrado de emergencia quedan documentadas como preexistentes, no imputables al futuro inquilino; las vías de agua de cubierta, como cuestión a resolver antes de la entrada. Es una herramienta preventiva y recurrente para empresas que alquilan o entregan naves, gestores de patrimonio industrial y asesorías, aplicable también a la certificación periódica del estado de una nave a lo largo de su vida útil."
+    },
+    {
+        "title": "Diagnosis Pericial de un Hundimiento en Vial Urbano",
+        "slug": "hundimiento-vial-diagnosis-pericial",
+        "translations": [
+            { "lang": "es", "permalink": "/casos-exito/hundimiento-vial-diagnosis-pericial/" },
+            { "lang": "ca", "permalink": "/ca/casos-d-exit/enfonsament-vial-diagnosi-pericial/" },
+            { "lang": "en", "permalink": "/en/success-cases/sinkhole-road-forensic-investigation/" }
+        ],
+        "description": "Actuación pericial ante un socavón en un vial urbano del Vallès Occidental: aseguramiento, coordinación de la campaña de reconocimiento geotécnico y base técnica para la atribución de responsabilidades por RC patrimonial.",
+        "estado": "borrador",
+        "datePublished": "2026",
+        "dateModified": "2026",
+        "tags": [ "DPSH", "Diagnosis geotécnica", "RC patrimonial" ],
+        "summary": [
+            { "label": "Ubicación", "value": "Vallès Occidental" },
+            { "label": "Tipo de Actuación", "value": "Diagnosis de causa de hundimiento en vía pública" },
+            { "label": "Encargo", "value": "Empresa mixta municipal de gestión de aguas" },
+            { "label": "Resultado", "value": "Base técnica para la atribución de responsabilidades" }
+        ],
+        "image": { "url": "/assets/images/placeholder-default.png", "alt": "Diagnosis pericial de un hundimiento en vial urbano" },
+        "amount": "—",
+        "category": "Obra Civil",
+        "cliente": "Empresa mixta municipal de gestión de aguas",
+        "plazo": "—",
+        "jurisdiccion": "RC patrimonial · Vallès Occidental",
+        "resultado": "Base técnica para la atribución de responsabilidades",
+        "encargo": "Ante la aparición de un socavón en un vial urbano del Vallès Occidental, una empresa mixta municipal de gestión de aguas requirió la actuación pericial para ordenar la respuesta. La pregunta que gobierna el expediente no es cómo se repara, sino por qué se ha producido, porque de la causa depende quién responde.",
+        "instruccion": "Primera medida: aseguramiento del perímetro y verificación de que la patología no se extendía más allá de la cavidad visible. Estabilizada la situación, se definió y coordinó la campaña de reconocimiento —inspección geológica de detalle y dos ensayos de penetración dinámica continua superpesada (DPSH)—. El estudio geotécnico de campo lo ejecutó un gabinete geológico especializado bajo coordinación pericial; el rol del perito es dirigir la investigación e integrar sus resultados en una diagnosis de causa, no ejecutar los ensayos.",
+        "dictamen": "Los reconocimientos permitieron construir un modelo geológico local con unidades geotécnicas diferenciadas: un nivel superficial de pavimento y explanada sobre un terraplén compactado y, bajo él, el sustrato. Los DPSH acotaron el espesor de los rellenos superficiales y la profundidad del terreno competente. A la profundidad de influencia del hundimiento se descartó la presencia de un acuífero local, lo que reorienta la causa hacia el comportamiento de los rellenos y de las conducciones —fuga de red, rellenos mal compactados o erosión interna—, cada hipótesis con un responsable distinto.",
+        "resultadoNarr": "El expediente entrega a la propiedad y a sus aseguradoras un modelo del terreno en el punto de hundimiento y una diagnosis de causa apoyada en reconocimientos objetivos. La actuación pericial ordena la cadena de decisión —aseguramiento, investigación, diagnosis y atribución— como base para repartir responsabilidades entre administración, concesionaria y compañías de RC patrimonial. Actuación dirigida a administraciones locales, concesionarias de servicios y aseguradoras de responsabilidad civil patrimonial."
     }
 ]

@@ -9,4 +9,5 @@ eleventyComputed:
   title: "{{ caso.title }}"
   description: "{{ caso.description }}"
   lang: en
+  draft: "{{ 'true' if caso.estado != 'publicado' else '' }}"
 ---
