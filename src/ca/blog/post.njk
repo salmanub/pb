@@ -4,6 +4,7 @@ pagination:
   data: posts_caPublished
   size: 1
   alias: post
+  addAllPagesToCollections: true
 eleventyComputed:
   permalink: "{{ '/ca/blog/' + post.slug + '/' }}"
   title: "{{ post.title }}"

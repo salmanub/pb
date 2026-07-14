@@ -5,6 +5,9 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    {# ── URLs reales ya generadas (para no duplicarlas en el loop i18n) ── #}
+    {%- set realUrls = [] -%}
+    {%- for page in collections.all -%}{%- set _ = realUrls.push(page.url) -%}{%- endfor -%}
     {# ── Pages from collections ── #}
     {% for page in collections.all %}
        {% if not page.data.draft and not page.data.notshow %}
@@ -29,7 +32,7 @@ eleventyExcludeFromCollections: true
     {# ── i18n alternate URLs not yet as pages ── #}
     {% for key, langs in i18n.pages %}
     {% for altLang, altUrl in langs %}
-    {% if altLang != "es" %}
+    {% if altLang != "es" and not (altUrl in realUrls) %}
         <url>
             <loc>{{ metadata.site.url }}{{ altUrl }}</loc>
             {% for l2, u2 in langs %}
