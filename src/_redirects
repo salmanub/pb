@@ -74,6 +74,12 @@
 /es/blog/                                 /                                       301
 /es/blog/*                                /                                       301
 
+# --- Anti-canibalización de RED: "reparación de hormigón" es territorio de
+#     urbenis.com. La página se retiró de perito en la migración; 301 cruzado
+#     para preservar el equity residual hacia el dominio dueño.
+/asesoramiento-estructural/reparacion-hormigon/ https://urbenis.com/sistemas/reparacion-hormigon/ 301
+/asesoramiento-estructural/reparacion-hormigon https://urbenis.com/sistemas/reparacion-hormigon/ 301
+
 # --- CA old pages → new ---
 /ca/enginyeria-forense-construccio/       /ca/informes-pericials/                 301
 /ca/especialitats-forenses/               /ca/informes-pericials/                 301
