@@ -23,7 +23,7 @@ body_blocks:
   - h: "Ingenieros al servicio de su defensa"
     p: "Como peritos de construcción en Barcelona, nuestra labor va más allá de la inspección. Actuamos como el nexo entre la ingeniería y el derecho, traduciendo patologías constructivas complejas en argumentos técnicos comprensibles y sólidos para Tribunales de Justicia."
   - h: "Problemas que resolvemos"
-    p: "Informes de Parte y Judiciales · Inspección de Vicios Ocultos tras compraventa · Control de Calidad y Auditoría de Obras · Informes por Siniestros (incendios, inundaciones, colapsos) · Reclamaciones por mala ejecución y reformas defectuosas."
+    p: "Informes de Parte y Judiciales · <a href='/vicios-ocultos/'>Perito de vicios ocultos</a> tras la compraventa de vivienda · Control de Calidad y Auditoría de Obras · Informes por Siniestros (incendios, inundaciones, colapsos) · Reclamaciones por mala ejecución y reformas defectuosas."
   - h: "Nuestra autoridad técnica"
     p: "Nuestra formación como <b>Ingenieros Civiles colegiados (ECCAT)</b> nos permite analizar la estructura y la cimentación con un nivel de detalle que otros técnicos no alcanzan. Experiencia acreditada en ratificación judicial ante los juzgados de Barcelona."
 faq:
