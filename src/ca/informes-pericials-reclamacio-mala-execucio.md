@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Peritatge per Mala Execució d'Obres"
-image: "reclamacion-mala-ejecucion.jpg"
 image_alt: "Reclamació per mala execució d'obres"
 description: "Contrast objectiu de l'obra front a contracte, memòria de qualitats i lex artis. Quantificació d'incompliments i defectes d'acabats. LOE art. 17."
 audience: "mix"

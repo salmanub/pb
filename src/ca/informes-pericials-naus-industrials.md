@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Informes Pericials per a Naus Industrials"
-image: "peritaje-nave-industrial.jpg"
 image_alt: "Peritatge tècnic de nau industrial"
 description: "Paviments logístics, estructures metàl·liques, fatiga de soldadures, danys post-lloguer i compliment RSCIEI. Per a asseguradores i operadors industrials."
 audience: "pro"

@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Dictamen de Patologies Estructurals"
-image: "analisis-grietas-estructurales.jpg"
 image_alt: "Mesurament tècnic d'esquerdes i patologies estructurals en pilar de formigó"
 description: "Esquerdes actives, fissures en forjats, assentament diferencial i deformacions crítiques. Càlcul estructural, modelat FEM i assajos in situ. CTE DB-SE · EHE-08."
 audience: "mix"

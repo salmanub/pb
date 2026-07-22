@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Peritatge d'Humitats i Filtracions"
-image: "deteccion-humedades-termografia.jpg"
 image_alt: "Detecció d'humitats amb termografia infraroja"
 description: "Diagnòstic de l'origen hídric mitjançant termografia infraroja i proves d'estanquitat. Dictamen per reclamar a constructora, comunitat o asseguradora. CTE DB-HS."
 audience: "particular"

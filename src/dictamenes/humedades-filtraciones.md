@@ -3,7 +3,6 @@ layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Peritaje de Humedades y Filtraciones"
 description: "Diagnóstico del origen hídrico mediante termografía infrarroja y pruebas de estanqueidad. Dictamen para reclamar a constructora, comunidad o aseguradora. CTE DB-HS."
-image: "deteccion-humedades-termografia.jpg"
 image_alt: "Detección de humedades mediante termografía infrarroja"
 audience: "particular"
 lang: es

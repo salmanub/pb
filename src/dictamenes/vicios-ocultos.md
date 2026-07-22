@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Perito de Vicios Ocultos en Vivienda | Informe Pericial"
-image: "inspeccion-vicios-ocultos.jpg"
 image_alt: "Inspección técnica de vicios ocultos en vivienda"
 description: "Perito de vicios ocultos en vivienda: el informe pericial que prueba el defecto, su gravedad y su preexistencia dentro del plazo de 6 meses (CC art. 1490). Barcelona · Consulta sin coste."
 audience: "particular"

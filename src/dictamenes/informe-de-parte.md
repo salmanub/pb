@@ -3,7 +3,6 @@ layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Informe Pericial de Parte"
 description: "Dictamen encargado por una de las partes para fundamentar su postura en negociación, mediación o demanda. Plena validez probatoria."
-image: "elaboracion-informe-pericial.jpg"
 image_alt: "Elaboración de informe pericial de parte"
 audience: "pro"
 lang: es

@@ -1,7 +1,6 @@
 ---
 layout: layouts/base.njk
 title: "Expert Witness Reports for Building and Civil Engineering"
-image: "informe-pericial-patologias-barcelona.jpg"
 image_alt: "Expert report on building pathologies in Barcelona"
 description: "Party-appointed, court-appointed and counter-expert reports. Documentary evidence in accordance with the LEC, drafted by a registered expert witness. Court ratification included."
 audience: "pro"

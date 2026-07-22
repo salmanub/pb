@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Dictamen Pericial para Comunidades de Propietarios"
-image: "inspeccion-fachada-comunidad.jpg"
 image_alt: "Inspección de fachada en comunidad de propietarios"
 description: "Dictamen técnico para comunidades: responsabilidad de daños en elementos comunes, derramas, obligaciones del promotor y del contratista."
 audience: "mix"

@@ -3,7 +3,6 @@ layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Actuació com a Perit Judicial"
 description: "Perit judicial a Barcelona per designació del jutjat o de part. Imparcialitat acreditada, dictamen conforme a la LEC i defensa oral davant interrogatori creuat."
-image: "ratificacion-perito-judicial.jpg"
 image_alt: "Ratificació de perit judicial en sala"
 audience: "pro"
 lang: ca

@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Moisture and Water Leakage Assessment"
-image: "deteccion-humedades-termografia.jpg"
 image_alt: "Moisture detection with infrared thermography"
 description: "Diagnosis of water origin with infrared thermography and waterproofing tests. Expert report to claim against builder, association or insurer. CTE DB-HS."
 audience: "particular"

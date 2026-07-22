@@ -3,7 +3,6 @@ layout: layouts/base.njk
 templateEngineOverride: njk
 title: "¿Cuánto Cuesta un Informe Pericial? Honorarios y Ejemplos"
 description: "Presupuesto cerrado por escrito antes de empezar, sin costes variables. Ratificación en sala incluida. Le orientamos sobre el coste de su caso en una consulta sin compromiso."
-image: "elaboracion-informe-pericial.jpg"
 image_alt: "Presupuesto de informe pericial"
 audience: "pro"
 lang: es

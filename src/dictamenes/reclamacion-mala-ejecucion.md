@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Peritaje por Mala Ejecución de Obras"
-image: "reclamacion-mala-ejecucion.jpg"
 image_alt: "Documentación de mala ejecución de obra"
 description: "Contraste objetivo de la obra frente a contrato, memoria de calidades y lex artis. Cuantificación de incumplimientos y defectos de acabados. LOE art. 17."
 audience: "mix"

@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Expert Report for Homeowner Associations"
-image: "inspeccion-fachada-comunidad.jpg"
 image_alt: "Façade inspection in homeowner community"
 description: "Technical report for homeowner associations: liability for damage to common elements, special assessments, builder and contractor obligations."
 audience: "mix"

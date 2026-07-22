@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Dictamen de Patologías Estructurales"
-image: "analisis-grietas-estructurales.jpg"
 image_alt: "Medición técnica de grietas y patologías estructurales en pilar de hormigón"
 description: "Grietas activas, fisuras en forjados, asiento diferencial y deformaciones críticas. Cálculo estructural, modelado FEM y ensayos in situ. CTE DB-SE · EHE-08."
 audience: "mix"

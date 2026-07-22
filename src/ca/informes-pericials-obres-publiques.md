@@ -3,7 +3,6 @@ layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Obres Públiques"
 description: "Peritatge en contractació pública, contenciosos administratius i reclamacions per incompliment de plec. Disponibilitat a tota Espanya."
-image: "auditoria-de-obra-control-costes-barcelona.jpg"
 image_alt: "Auditoria d'obra i control de costos"
 audience: "pro"
 lang: ca

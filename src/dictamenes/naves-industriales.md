@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Informes Periciales para Naves Industriales"
-image: "peritaje-nave-industrial.jpg"
 image_alt: "Peritaje técnico de nave industrial"
 description: "Pavimentos logísticos, estructuras metálicas, fatiga de soldaduras, daños post-alquiler y cumplimiento RSCIEI. Para aseguradoras y operadores industriales."
 audience: "pro"

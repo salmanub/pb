@@ -3,7 +3,6 @@ layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Contrainformes Pericials i Peritatges Contradictoris"
 description: "Refutació tècnica i anàlisi crítica de dictàmens de la part contrària. Detecció de mancances metodològiques. Ratificació en judici oral."
-image: "auditoria-informe-tecnico.jpg"
 image_alt: "Auditoria d'informe tècnic"
 audience: "pro"
 lang: ca

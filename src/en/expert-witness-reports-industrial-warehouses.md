@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Industrial Warehouse Expert Reports"
-image: "peritaje-nave-industrial.jpg"
 image_alt: "Technical assessment of industrial warehouse"
 description: "Logistics pavements, steel structures, weld fatigue, post-lease damage and RSCIEI compliance. For insurers and industrial operators."
 audience: "pro"

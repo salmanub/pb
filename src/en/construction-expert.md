@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Construction Expert in Barcelona"
-image: "perito-construccion-barcelona-profesional.jpg"
 image_alt: "Professional construction expert in Barcelona"
 description: "Construction expert in Barcelona: technical reports on hidden defects, poor workmanship and construction defects, in accordance with the Spanish Building Code (CTE)."
 audience: "mix"

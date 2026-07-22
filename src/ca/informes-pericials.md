@@ -1,7 +1,6 @@
 ---
 layout: layouts/base.njk
 title: "Informes Pericials d'Edificació i Obra Civil"
-image: "informe-pericial-patologias-barcelona.jpg"
 image_alt: "Informe pericial de patologies a Barcelona"
 description: "Dictàmens pericials de part, judicials i contrainformes. Prova documental conforme a la LEC, redactada per perit de part col·legiat. Ratificació en sala inclosa."
 audience: "pro"

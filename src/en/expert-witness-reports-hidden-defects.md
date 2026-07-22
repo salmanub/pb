@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Hidden Defects Expert Report"
-image: "inspeccion-vicios-ocultos.jpg"
 image_alt: "Technical inspection for hidden defects in property"
 description: "Serious non-apparent defects in property transactions. Evidence of pre-existence within the 6-month warranty period. Civil Code art. 1484. Habitability."
 audience: "particular"

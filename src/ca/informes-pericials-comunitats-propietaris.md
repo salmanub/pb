@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Dictamen Pericial per a Comunitats de Propietaris"
-image: "inspeccion-fachada-comunidad.jpg"
 image_alt: "Inspecció de façana en comunitat de propietaris"
 description: "Dictamen tècnic per a comunitats: responsabilitat de danys en elements comuns, derrames, obligacions del promotor i del contractista."
 audience: "mix"

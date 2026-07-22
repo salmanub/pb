@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Informe Pericial per Vicis Ocults"
-image: "inspeccion-vicios-ocultos.jpg"
 image_alt: "Inspecció tècnica de vicis ocults en habitatge"
 description: "Defectes greus no aparents en compravenda d'habitatge. Acreditació de preexistència dins del termini de sanejament de 6 mesos. Codi Civil art. 1484. Habitabilitat."
 audience: "particular"

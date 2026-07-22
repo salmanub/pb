@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Contrainformes Periciales y Peritajes Contradictorios"
-image: "auditoria-informe-tecnico.jpg"
 image_alt: "Auditoría de informe técnico pericial"
 description: "Refutación técnica y análisis crítico de dictámenes de la parte contraria. Detección de carencias metodológicas. Ratificación en juicio oral."
 audience: "pro"

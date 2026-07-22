@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Perit de construcció a Barcelona"
-image: "perito-construccion-barcelona-profesional.jpg"
 image_alt: "Perit de construcció professional a Barcelona"
 description: "Perit de construcció a Barcelona. Dictamen tècnic sobre vicis ocults, mala execució, defectes d'obra i reformes. Actuació conforme al Codi Tècnic de l'Edificació (CTE)."
 audience: "mix"

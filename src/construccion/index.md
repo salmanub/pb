@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Perito de Construcción en Barcelona · Dictámenes de Obra"
-image: "perito-construccion-barcelona-profesional.jpg"
 image_alt: "Perito de construcción revisando estructura en Barcelona"
 description: "Informes periciales de construcción: mala ejecución, defectos de obra y control de calidad. 340+ dictámenes ratificados sin impugnación. Presupuesto cerrado en 24 h."
 lang: es

@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 title: "Servei Tècnic per a Despatxos d'Advocats i Asseguradores"
 description: "Protocol B2B de col·laboració pericial per a despatxos i asseguradores: informe de viabilitat, interrogatori creuat (LEC art. 347) i grans riscos IRD."
-image: "reclamacion-seguros-construccion.jpg"
 image_alt: "Col·laboració tècnica amb advocats"
 audience: "pro"
 lang: ca

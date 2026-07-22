@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Structural Pathology Assessment Report"
-image: "analisis-grietas-estructurales.jpg"
 image_alt: "Technical measurement of cracks and structural pathologies in concrete column"
 description: "Active cracks, slab fissures, differential settlement and critical deformations. Structural analysis, FEM modelling and in-situ testing. CTE DB-SE · EHE-08."
 audience: "mix"

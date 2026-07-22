@@ -3,7 +3,6 @@ layout: layouts/base.njk
 templateEngineOverride: njk
 title: "Informe Pericial de Part"
 description: "Dictamen encarregat per una de les parts per fonamentar la seva postura en negociació, mediació o demanda. Plena validesa probatòria."
-image: "elaboracion-informe-pericial.jpg"
 image_alt: "Elaboració d'informe pericial de part"
 audience: "pro"
 lang: ca
