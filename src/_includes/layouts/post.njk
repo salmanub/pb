@@ -32,13 +32,15 @@ Textos i18n: ui.post.* desde es.json / ca.json / en.json
   </div>
 </div>
 
-{# ── BREADCRUMB banda verde full-width (fuera del article) ── #}
+{# ── BREADCRUMB (banda verde contenida al ancho del cuerpo, como en service.njk) ── #}
 {% set breadcrumb_items = [
   { label: ui.post.breadcrumb_home, url: "/" },
   { label: _blogLabel, url: _blogUrl },
   { label: post.category }
 ] %}
-{% include "partials/breadcrumb.njk" %}
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-top: clamp(20px,3vw,32px);">
+  {% include "partials/breadcrumb.njk" %}
+</div>
 
 {# ── 1. CABECERA (DS Post — .post-header max 820px center) ── #}
 <article>

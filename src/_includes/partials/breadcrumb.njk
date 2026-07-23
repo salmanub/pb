@@ -56,7 +56,7 @@ Activar con: {% set breadcrumb_inline = true %}
   {% for crumb in _trail %}
   <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
     {% if crumb.url %}
-    {% set _crumbHref = crumb.url if (crumb.url.startsWith('/en/') or crumb.url.startsWith('/ca/') or crumb.url == '/' or not langPrefix) else (langPrefix + crumb.url) %}
+    {% set _crumbHref = crumb.url if (crumb.url.startsWith('/en/') or crumb.url.startsWith('/ca/') or not langPrefix) else (langPrefix + crumb.url) %}
     <a itemprop="item" href="{{ _crumbHref }}">
       <span itemprop="name">{{ crumb.label }}</span>
     </a>
@@ -92,7 +92,7 @@ MODO BANDA (por defecto: banda verde full-width)
         style="display:inline-block;flex-shrink:0;opacity:0.45">
         <path d="m9 18 6-6-6-6" />
       </svg>{% endif %}<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"
-        style="flex-shrink:0">{% if crumb.url %}{% set _crumbHref = crumb.url if (crumb.url.startsWith('/en/') or crumb.url.startsWith('/ca/') or crumb.url == '/' or not langPrefix) else (langPrefix + crumb.url) %}<a itemprop="item" href="{{ _crumbHref }}"
+        style="flex-shrink:0">{% if crumb.url %}{% set _crumbHref = crumb.url if (crumb.url.startsWith('/en/') or crumb.url.startsWith('/ca/') or not langPrefix) else (langPrefix + crumb.url) %}<a itemprop="item" href="{{ _crumbHref }}"
           style="color:var(--text-muted);text-decoration:none" onmouseenter="this.style.color='var(--accent)'"
           onmouseleave="this.style.color='var(--text-muted)'"><span itemprop="name">{{ crumb.label }}</span></a>{% else
         %}<span itemprop="name" style="color:var(--text-strong);font-weight:600;white-space:normal">{{ crumb.label if

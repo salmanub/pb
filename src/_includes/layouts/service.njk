@@ -6,7 +6,7 @@ Cadena: content.md → service.njk → base.njk
 Datos: frontmatter (svc_*, faq, body_blocks) + {lang}.json + metadata.json
 NOTE: All HTML on single lines to prevent Markdown <p> wrapping in .md files
   #}
-  {% if not ui %}{% set ui = es %}{% endif %}
+  {% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
   {% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
   {% set _contactPro = "/contacto/profesional/" if (not lang or lang == "es") else ("/en/contact/professional/" if lang == "en" else "/ca/contacte/professional/") %}
   {% set _contactPart = "/contacto/particular/" if (not lang or lang == "es") else ("/en/contact/particular/" if lang == "en" else "/ca/contacte/particular/") %}
@@ -172,19 +172,15 @@ NOTE: All HTML on single lines to prevent Markdown <p> wrapping in .md files
       </div>
       {% endif %}
     </div>
+    {# Textos centralizados en {es,ca,en}.json → ui.qual.* (nunca hardcodear idioma aquí) #}
     {% if not qualLabel %}
-    {% set qualLabel = "Expediente · " + (svc_num | default("")) %}
+    {% set qualLabel = ui.qual.expediente + " · " + (svc_num | default("")) %}
     {% endif %}
     {% if not qualItems or qualItems | length == 0 %}
-    {% set qualItems = svc_qual | default([
-    { num: "01", text: "Tipo de dictamen — parte, judicial o contrainforme" },
-    { num: "02", text: "Complejidad técnica del caso" },
-    { num: "03", text: "Ratificación en sala incluida" },
-    { num: "04", text: "Desplazamiento a toda España 24–48h" }
-    ]) %}
+    {% set qualItems = svc_qual | default(ui.qual.items) %}
     {% endif %}
     {% if not qualCta %}
-    {% set qualCta = "Consultar este dictamen" %}
+    {% set qualCta = ui.qual.cta_dictamen %}
     {% endif %}
     {% include "partials/qual.njk" %}
   </div>

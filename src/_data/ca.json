@@ -81,7 +81,15 @@
                  "label":  "Qualificació del cas",
                  "consulta_sin_coste":  "Consulta sense cost",
                  "consultar_caso":  "Consultar cas",
-                 "nota":  "Ratificació inclosa · Tota Espanya"
+                 "nota":  "Ratificació inclosa · Tota Espanya",
+                 "expediente":  "Expedient",
+                 "cta_dictamen":  "Consultar aquest dictamen",
+                 "items":  [
+                     { "num": "01", "text": "Tipus de dictamen — part, judicial o contrainforme" },
+                     { "num": "02", "text": "Complexitat tècnica del cas" },
+                     { "num": "03", "text": "Ratificació en sala inclosa" },
+                     { "num": "04", "text": "Desplaçament a tota Espanya 24–48h" }
+                 ]
              },
     "schema":  {
                    "services_offered":  "Serveis pericials oferts",

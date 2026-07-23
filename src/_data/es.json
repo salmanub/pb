@@ -81,7 +81,15 @@
                  "label":  "Cualificación del caso",
                  "consulta_sin_coste":  "Consulta sin coste",
                  "consultar_caso":  "Consultar caso",
-                 "nota":  "Ratificación incluida · Toda España"
+                 "nota":  "Ratificación incluida · Toda España",
+                 "expediente":  "Expediente",
+                 "cta_dictamen":  "Consultar este dictamen",
+                 "items":  [
+                     { "num": "01", "text": "Tipo de dictamen — parte, judicial o contrainforme" },
+                     { "num": "02", "text": "Complejidad técnica del caso" },
+                     { "num": "03", "text": "Ratificación en sala incluida" },
+                     { "num": "04", "text": "Desplazamiento a toda España 24–48h" }
+                 ]
              },
     "schema":  {
                    "services_offered":  "Servicios periciales ofrecidos",

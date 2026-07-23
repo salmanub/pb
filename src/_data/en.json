@@ -81,7 +81,15 @@
                  "label":  "Case qualification",
                  "consulta_sin_coste":  "Free consultation",
                  "consultar_caso":  "Discuss your case",
-                 "nota":  "Court ratification included · All Spain"
+                 "nota":  "Court ratification included · All Spain",
+                 "expediente":  "Case file",
+                 "cta_dictamen":  "Discuss this report",
+                 "items":  [
+                     { "num": "01", "text": "Type of report — party-appointed, court-appointed or counter-report" },
+                     { "num": "02", "text": "Technical complexity of the case" },
+                     { "num": "03", "text": "Court ratification included" },
+                     { "num": "04", "text": "Travel anywhere in Spain within 24–48h" }
+                 ]
              },
     "schema":  {
                    "services_offered":  "Expert witness services offered",
