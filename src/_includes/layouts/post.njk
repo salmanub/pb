@@ -7,6 +7,7 @@ Clases CSS del DS: .post-header .post-eyebrow .post-h1 .post-lede
 .post-author .post-banner .post-grid .post-prose
 .post-aside .post-aside-refs .post-aside-cta
 .post-author-bio .art-card .band-cta--tint
+Textos i18n: ui.post.* desde es.json / ca.json / en.json
 #}
 {% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
 {% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
@@ -31,19 +32,17 @@ Clases CSS del DS: .post-header .post-eyebrow .post-h1 .post-lede
   </div>
 </div>
 
+{# ── BREADCRUMB banda verde full-width (fuera del article) ── #}
+{% set breadcrumb_items = [
+  { label: ui.post.breadcrumb_home, url: "/" },
+  { label: _blogLabel, url: _blogUrl },
+  { label: post.category }
+] %}
+{% include "partials/breadcrumb.njk" %}
+
 {# ── 1. CABECERA (DS Post — .post-header max 820px center) ── #}
 <article>
   <div class="post-header">
-
-    {# Breadcrumb inline vía partial #}
-    {% set breadcrumb_inline = true %}
-    {% set breadcrumb_items = [
-    { label: "Inicio", url: "/" },
-    { label: _blogLabel, url: _blogUrl },
-    { label: post.category }
-    ] %}
-    {% include "partials/breadcrumb.njk" %}
-    {% set breadcrumb_inline = false %}
 
     {# Eyebrow: categoría + audiencia #}
     <div class="post-eyebrow">
@@ -66,7 +65,7 @@ Clases CSS del DS: .post-header .post-eyebrow .post-h1 .post-lede
       <div>
         <div class="post-author__name">{{ post.author | default("Albert Vilardell Serra") }}</div>
         <div class="post-author__meta">{{ post.datePublished | replace("-", " / ") | truncate(8, true, "") }}{% if
-          post.readTime %} · {{ post.readTime }} de lectura{% endif %}</div>
+          post.readTime %} · {{ post.readTime }} {{ ui.post.read_time }}{% endif %}</div>
       </div>
     </div>
   </div>
@@ -94,7 +93,7 @@ Clases CSS del DS: .post-header .post-eyebrow .post-h1 .post-lede
       {% if post.tags and post.tags | length > 0 %}
       {# Referencias card #}
       <div class="post-aside-refs">
-        <div class="post-aside-refs__label">Referencias</div>
+        <div class="post-aside-refs__label">{{ ui.post.aside_refs_label }}</div>
         <div style="display:flex;flex-direction:column;gap:9px;">
           {% for tag in post.tags %}
           <div class="post-aside-refs__item">
@@ -105,13 +104,13 @@ Clases CSS del DS: .post-header .post-eyebrow .post-h1 .post-lede
       </div>
       {% endif %}
 
-      {# CTA oscuro "¿Le afecta a usted?" #}
+      {# CTA oscuro i18n #}
       <div class="post-aside-cta">
-        <div class="post-aside-cta__title">¿Le afecta a usted?</div>
-        <p class="post-aside-cta__lede">Primera valoración técnica sin coste. Respondemos en 24 h laborables.</p>
+        <div class="post-aside-cta__title">{{ ui.post.aside_cta_title }}</div>
+        <p class="post-aside-cta__lede">{{ ui.post.aside_cta_lede }}</p>
         <a href="{{ _contactPart }}" class="band-cta__btn"
           style="width:100%;box-sizing:border-box;justify-content:center;">
-          Plantear mi caso
+          {{ ui.post.aside_cta_btn }}
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7" />
@@ -121,8 +120,7 @@ Clases CSS del DS: .post-header .post-eyebrow .post-h1 .post-lede
         <div style="margin-top:16px;border-top:1px solid var(--ink-700);padding-top:16px;">
           <div
             style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-on-dark-muted);margin-bottom:10px;">
-            {{ "Servicios relacionados" if (not lang or lang == "es") else ("Related services" if lang == "en" else
-            "Serveis relacionats") }}</div>
+            {{ ui.footer.col_dictamenes }}</div>
           {% for svc in post.relatedServices %}
           <a href="{{ svc.url }}"
             style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--ink-700);text-decoration:none;">
@@ -142,7 +140,8 @@ Clases CSS del DS: .post-header .post-eyebrow .post-h1 .post-lede
 </article>
 
 {# ── 4. ARTÍCULOS RELACIONADOS (DS: 2-col ArtCard) ── #}
-{% set allPosts = posts | published | sort(attribute="datePublished") | reverse %}
+{% set _postsData = posts if (not lang or lang == "es") else (posts_en if lang == "en" else posts_ca) %}
+{% set allPosts = _postsData | published | sort(attribute="datePublished") | reverse %}
 {% set relCount = 0 %}{% set rel1 = null %}{% set rel2 = null %}
 {% for p in allPosts %}{% if p.slug != post.slug and p.category == post.category and relCount < 2 %}{% if relCount==0
   %}{% set rel1=p %}{% else %}{% set rel2=p %}{% endif %}{% set relCount=relCount + 1 %}{% endif %}{% endfor %} {% if
@@ -152,11 +151,11 @@ Clases CSS del DS: .post-header .post-eyebrow .post-h1 .post-lede
   <section class="post-related">
     <div class="sec-head">
       <div class="sec-head__left">
-        <div class="sec-head__eyebrow"><span class="page-hero__eyebrow-line"></span>§ Seguir leyendo</div>
-        <h2 class="sec-head__title">Notas relacionadas</h2>
+        <div class="sec-head__eyebrow"><span class="page-hero__eyebrow-line"></span>{{ ui.post.related_eyebrow }}</div>
+        <h2 class="sec-head__title">{{ ui.post.related_title }}</h2>
       </div>
       <a href="{{ _blogUrl }}" class="caso-related__link">
-        Ver todas
+        {{ ui.post.related_all }}
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M5 12h14M12 5l7 7-7 7" />
@@ -165,7 +164,7 @@ Clases CSS del DS: .post-header .post-eyebrow .post-h1 .post-lede
     </div>
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(28px,4vw,56px);" class="two-col">
       {% for rp in [rel1, rel2] %}{% if rp %}
-      <a href="{{ langPrefix }}/blog/{{ rp.slug }}/" class="art-card">
+      <a href="{{ _blogUrl }}{{ rp.slug }}/" class="art-card">
         <div class="art-card__img-wrap">
           {% if rp.image and rp.image.url and "placeholder" not in rp.image.url %}
           <img src="{{ rp.image.url }}" alt="{{ rp.image.alt | default(rp.title) }}" loading="lazy" decoding="async">
@@ -193,16 +192,15 @@ Clases CSS del DS: .post-header .post-eyebrow .post-h1 .post-lede
   </section>
   {% endif %}
 
-  {# ── 5. BAND CTA (DS: band-cta--tint) ── #}
+  {# ── 5. BAND CTA (DS: band-cta--tint) i18n ── #}
   <section class="band-cta band-cta--tint">
     <div style="max-width:var(--container-wide);margin:0 auto;">
-      <div class="band-cta__eyebrow"><span class="page-hero__eyebrow-line"></span>§ Consulta</div>
-      <h2 class="band-cta__h2">Primera consulta<br>Sin coste</h2>
-      <p class="band-cta__lede">Valoramos si su caso tiene recorrido pericial. Respuesta en 24 horas laborables sin
-        compromiso.</p>
+      <div class="band-cta__eyebrow"><span class="page-hero__eyebrow-line"></span>{{ ui.post.band_eyebrow }}</div>
+      <h2 class="band-cta__h2">{{ ui.post.band_title }}<br>{{ ui.post.band_title2 }}</h2>
+      <p class="band-cta__lede">{{ ui.post.band_lede }}</p>
       <div class="band-cta__btn-wrap">
         <a href="{{ _contactPart }}" class="band-cta__btn">
-          Solicitar consulta
+          {{ ui.post.band_btn }}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7" />

@@ -1,8 +1,19 @@
-﻿{% extends "layouts/base.njk" %}
+{% extends "layouts/base.njk" %}
 
 {% block content %}
 <main class="pt-[70px] lg:pt-[120px]" itemscope itemtype="https://schema.org/CollectionPage">
-    
+
+    {# ── Breadcrumb banda verde ── #}
+    {% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
+    {% set blogBaseUrl = "/blog/" %}
+    {% if lang == 'en' %}{% set blogBaseUrl = "/en/blog/" %}{% endif %}
+    {% if lang == 'ca' %}{% set blogBaseUrl = "/ca/blog/" %}{% endif %}
+    {% set breadcrumb_items = [
+      { label: ui.breadcrumb.inicio, url: "/" },
+      { label: "Blog", url: blogBaseUrl }
+    ] %}
+    {% include "partials/breadcrumb.njk" %}
+
     <!-- Hero Section -->
     {% set currentPosts = posts %}
     {% if lang == 'en' %}{% set currentPosts = posts_en %}{% endif %}

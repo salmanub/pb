@@ -1,4 +1,4 @@
-﻿{
+{
     "nav":  {
                 "construccion":  "Construction Expert",
                 "dictamenes":  "Expert Reports",
@@ -86,5 +86,21 @@
     "schema":  {
                    "services_offered":  "Expert witness services offered",
                    "areas_served":  "Areas of operation"
-               }
+               },
+    "post": {
+        "breadcrumb_home":  "Home",
+        "read_time":  "read",
+        "aside_refs_label":  "References",
+        "aside_cta_title":  "Does this affect you?",
+        "aside_cta_lede":  "Free initial technical assessment. We respond within 24 business hours.",
+        "aside_cta_btn":  "Present your case",
+        "related_eyebrow":  "\u00a7 Keep reading",
+        "related_title":  "Related notes",
+        "related_all":  "View all",
+        "band_eyebrow":  "\u00a7 Consultation",
+        "band_title":  "Free initial",
+        "band_title2":  "consultation",
+        "band_lede":  "We assess whether your case has expert witness potential. Response within 24 business hours, no commitment.",
+        "band_btn":  "Request consultation"
+    }
 }

@@ -1,4 +1,4 @@
-﻿{
+{
     "nav":  {
                 "construccion":  "Perito Construcción",
                 "dictamenes":  "Dictámenes",
@@ -86,5 +86,21 @@
     "schema":  {
                    "services_offered":  "Servicios periciales ofrecidos",
                    "areas_served":  "Áreas de actuación"
-               }
+               },
+    "post": {
+        "breadcrumb_home":  "Inicio",
+        "read_time":  "de lectura",
+        "aside_refs_label":  "Referencias",
+        "aside_cta_title":  "¿Le afecta a usted?",
+        "aside_cta_lede":  "Primera valoración técnica sin coste. Respondemos en 24 h laborables.",
+        "aside_cta_btn":  "Plantear mi caso",
+        "related_eyebrow":  "§ Seguir leyendo",
+        "related_title":  "Notas relacionadas",
+        "related_all":  "Ver todas",
+        "band_eyebrow":  "§ Consulta",
+        "band_title":  "Primera consulta",
+        "band_title2":  "Sin coste",
+        "band_lede":  "Valoramos si su caso tiene recorrido pericial. Respuesta en 24 horas laborables sin compromiso.",
+        "band_btn":  "Solicitar consulta"
+    }
 }

@@ -1,4 +1,4 @@
-﻿{
+{
     "nav":  {
                 "construccion":  "Perit Construcció",
                 "dictamenes":  "Dictàmens",
@@ -86,5 +86,21 @@
     "schema":  {
                    "services_offered":  "Serveis pericials oferts",
                    "areas_served":  "Àrees d\u0027actuació"
-               }
+               },
+    "post": {
+        "breadcrumb_home":  "Inici",
+        "read_time":  "de lectura",
+        "aside_refs_label":  "Refer\u00e8ncies",
+        "aside_cta_title":  "Li afecta a vost\u00e8?",
+        "aside_cta_lede":  "Primera valoraci\u00f3 t\u00e8cnica sense cost. Responem en 24 h laborables.",
+        "aside_cta_btn":  "Plantejar el meu cas",
+        "related_eyebrow":  "\u00a7 Continuar llegint",
+        "related_title":  "Notes relacionades",
+        "related_all":  "Veure totes",
+        "band_eyebrow":  "\u00a7 Consulta",
+        "band_title":  "Primera consulta",
+        "band_title2":  "Sense cost",
+        "band_lede":  "Valorem si el seu cas t\u00e9 recorregut pericial. Resposta en 24 hores laborables sense compromis.",
+        "band_btn":  "Sol\u00b7licitar consulta"
+    }
 }
