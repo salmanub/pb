@@ -18,13 +18,15 @@ layout: layouts/base.njk
 {# Schema SEO invisible #}
 <div itemscope itemtype="https://schema.org/Article" style="display:none;" aria-hidden="true"><meta itemprop="headline" content="{{ caso.title }}"><meta itemprop="description" content="{{ caso.description }}"><meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}"><meta itemprop="datePublished" content="{{ caso.datePublished }}"><meta itemprop="dateModified" content="{{ caso.dateModified }}"><div itemprop="author" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"></div></div>
 
-{# ── Breadcrumb banda verde (full-width) ── #}
+{# ── Breadcrumb banda verde, contenida al ancho del cuerpo (como service.njk/post.njk) ── #}
 {% set breadcrumb_items = [
   { label: ui.breadcrumb.inicio, url: "/" },
   { label: _casosLabel, url: _casosUrl },
   { label: caso.category | default(caso.tags[0]) }
 ] %}
-{% include "partials/breadcrumb.njk" %}
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter); padding-top: clamp(20px,3vw,32px);">
+  {% include "partials/breadcrumb.njk" %}
+</div>
 
 {# ── 1. HERO SECTION ── #}
 <section style="max-width:var(--container-wide);margin:0 auto;padding:clamp(36px,6vw,84px) var(--gutter) var(--space-10);">
