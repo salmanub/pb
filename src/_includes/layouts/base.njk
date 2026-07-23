@@ -190,15 +190,24 @@ AGENTES §5: CSS inline (inyectado por transform), cero
         if (a && a.from && a.entry) setDir(a.from.url, a.entry.url);
       });
 
-      // Paginacion de casos en el MISMO documento: sin recarga, sin salto al top
+      // Paginacion de casos en el MISMO documento: sin recarga, sin salto al top.
+      // Devuelve la base del listado (idioma incluido) o null. Solo se intercepta
+      // si origen y destino son EL MISMO listado: asi el selector de idioma
+      // (/casos-exito/ -> /en/success-cases/) navega de verdad y no se intercepta.
       if (!window.navigation) return;
-      var LIST_RE = /^\/(?:casos-exito|ca\/casos-d-exit|en\/success-cases)\/(?:(?:pagina|page)\/\d+\/)?$/;
-      function isList(u) { try { return LIST_RE.test(new URL(u, location.origin).pathname); } catch (e) { return false; } }
+      var LIST_RE = /^\/(casos-exito|ca\/casos-d-exit|en\/success-cases)\/(?:(?:pagina|page)\/\d+\/)?$/;
+      function listBase(u) {
+        try {
+          var m = new URL(u, location.origin).pathname.match(LIST_RE);
+          return m ? m[1] : null;
+        } catch (e) { return null; }
+      }
 
       navigation.addEventListener("navigate", function (e) {
         if (!e.canIntercept || e.hashChange || e.downloadRequest || e.formData) return;
         var dest = e.destination.url;
-        if (!isList(dest) || !isList(location.href) || dest === location.href) return;
+        var toBase = listBase(dest), fromBase = listBase(location.href);
+        if (!toBase || toBase !== fromBase || dest === location.href) return;
         var fromUrl = location.href;
         e.intercept({
           scroll: "manual",
