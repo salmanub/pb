@@ -45,6 +45,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/site.webmanifest');
   eleventyConfig.addPassthroughCopy('src/_redirects');
   eleventyConfig.addPassthroughCopy('src/_headers');
+  // Tarjeta digital de Albert
+  eleventyConfig.addPassthroughCopy('src/og-tarjeta.png');
+  eleventyConfig.addPassthroughCopy('src/albert-vilardell.vcf');
 
   // Ignore optimized images rebuild loop
   eleventyConfig.watchIgnores.add('src/assets/images/optimized/');
