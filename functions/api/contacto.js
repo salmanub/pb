@@ -170,31 +170,16 @@ export async function onRequestPost(context) {
       console.warn('[contacto] CRM_WEBAPP_URL not set');
     }
 
-    // ── 2. Send to Make.com (optional) ────────────────────────
-    const perfil = String(data.perfil || '').toLowerCase();
-    const webhookUrl = perfil === 'particular'
-      ? (env && env.MAKE_WEBHOOK_PARTICULAR)
-      : (env && env.MAKE_WEBHOOK_PROFESIONAL);
-
-    let makeOk = false;
-    if (webhookUrl) {
-      const makeResult = await postToWebhook(webhookUrl, payload);
-      makeOk = makeResult.ok;
-      if (!makeOk) console.error('[contacto] Make.com failed:', makeResult.error);
-    }
-
-    // ── Result ────────────────────────────────────────────────
-    if (!crmOk && !makeOk) {
-      const reason = !crmUrl && !webhookUrl
-        ? 'No CRM_WEBAPP_URL nor MAKE_WEBHOOK configured'
-        : 'Both CRM and Make.com delivery failed';
-      console.error('[contacto] TOTAL FAILURE:', reason);
+    // ── Result (CRM-only; Make.com retirado) ──────────────────
+    if (!crmOk) {
+      const reason = !crmUrl ? 'No CRM_WEBAPP_URL configured' : 'CRM delivery failed';
+      console.error('[contacto] FAILURE:', reason);
       return new Response(JSON.stringify({ ok: false, error: reason }), {
         status: 502, headers: CORS_HEADERS,
       });
     }
 
-    return new Response(JSON.stringify({ ok: true, crm: crmOk, make: makeOk }), {
+    return new Response(JSON.stringify({ ok: true, crm: crmOk }), {
       status: 200, headers: CORS_HEADERS,
     });
 

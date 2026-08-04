@@ -62,7 +62,11 @@
       question: '¿Desde cuándo aparece el problema?',
       helper: 'Nos ayuda a valorar plazos de garantía y responsabilidad.',
       options: ['Menos de 6 meses', 'Entre 6 meses y 2 años', 'Más de 2 años', 'No lo sé con certeza'] },
-    { key: 'contacto', eyebrow: '§ 04 · Contacto', type: 'fields',
+    { key: 'comparecencia', eyebrow: '§ 04 · Vía judicial', type: 'choice',
+      question: '¿Necesitará que el perito ratifique el informe en el juicio?',
+      helper: 'Si el caso va a juicio, la comparecencia y ratificación en sala van incluidas en el presupuesto.',
+      options: ['Sí, es para un juicio', 'No, solo necesito el informe', 'Todavía no lo sé'] },
+    { key: 'contacto', eyebrow: '§ 05 · Contacto', type: 'fields',
       question: '¿Cómo te contactamos?',
       helper: 'Una primera consulta sin coste. Respondemos en 24 h laborables.',
       fields: [
@@ -71,6 +75,8 @@
         { name: 'email', label: 'Correo electrónico', type: 'email', placeholder: 'nombre@correo.com', required: true },
         { name: 'telefono', label: 'Teléfono', type: 'tel', placeholder: '+34 ___ ___ ___', required: false },
         { name: 'detalle', label: 'Cuéntanoslo en una línea', multiline: true, rows: 3, placeholder: 'Lo que creas relevante…', required: false },
+        { name: 'fotos', label: 'Fotos del problema', type: 'file', accept: 'image/*', multiple: true, required: false, hint: 'Opcional, pero muy útil para valorar sin visita. Hasta 4 imágenes.' },
+        { name: 'consentimiento', label: 'Consentimiento', type: 'checkbox', required: true },
       ] },
   ];
 
@@ -188,8 +194,11 @@
 
       /* Fields */
       if (step.type === 'fields') {
+        var _iab = iaBanner(); if (_iab) content.appendChild(_iab);
         var fieldList = el('div', { style: { display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '22px' } });
         step.fields.forEach(function (f) {
+          if (f.type === 'checkbox') { fieldList.appendChild(renderConsent(step, f)); return; }
+          if (f.type === 'file') { fieldList.appendChild(renderFileField(step, f)); return; }
           var fieldWrap = el('div');
           var labelEl = el('label', { for: 'intake-' + f.name, style: { display: 'block', fontFamily: 'var(--font-sans)', fontSize: '0.85rem', fontWeight: '500', color: 'var(--text-strong)', marginBottom: '6px' } });
           labelEl.textContent = f.label;
@@ -265,10 +274,50 @@
   /* ── Navigation ──────────────────────────────────────── */
   function chooseAndAdvance(key, val) {
     answers[key] = val;
+    if (key === 'comparecencia') { answers._ia = null; requestAssist(); }
     setTimeout(function () {
       if (current < TOTAL - 1) { current++; render(); }
     }, 240);
     render(); // immediate re-render to show selected state
+  }
+
+  /* ── Intervención IA en vivo (fail-open) ─────────────────
+     Llama a /api/form-assist para clasificar el caso y traer el rango orientativo.
+     Si falla o no hay API key, el formulario sigue funcionando igual. */
+  function requestAssist() {
+    if (answers._ia || answers._iaLoading) return;
+    answers._iaLoading = true;
+    var c = answers.contacto || {};
+    try {
+      fetch('/api/form-assist', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          problema: answers.problema || '', inmueble: answers.inmueble || '',
+          antiguedad: answers.antiguedad || '', comparecencia: answers.comparecencia || '',
+          detalle: c.detalle || '', lang: detectLang()
+        })
+      }).then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) { answers._iaLoading = false; if (d) answers._ia = d; render(); })
+        .catch(function () { answers._iaLoading = false; render(); });
+    } catch (e) { answers._iaLoading = false; }
+  }
+  function fmtEur(n) { try { return Number(n).toLocaleString('es-ES') + ' \u20ac'; } catch (e) { return n + ' \u20ac'; } }
+  function iaBanner() {
+    if (answers._iaLoading && !answers._ia) {
+      return el('div', { style: { marginTop: '20px', padding: '12px 14px', borderRadius: 'var(--radius-sm)', background: 'var(--surface-muted, #f5f4f0)', border: '1px solid var(--border-hairline)', fontFamily: 'var(--font-sans)', fontSize: '0.85rem', color: 'var(--text-muted)' } }, 'Analizando tu caso\u2026');
+    }
+    var ia = answers._ia;
+    if (!ia) return null;
+    var box = el('div', { style: { marginTop: '20px', padding: '14px 16px', borderRadius: 'var(--radius-sm)', background: 'var(--accent-tint)', border: '1px solid var(--accent)' } });
+    var tipoTxt = 'Informe pericial de ' + (ia.tipo_label || 'su caso') + (ia.comparecencia_judicial === false ? ' (sin comparecencia)' : (ia.comparecencia_judicial === true ? ' con comparecencia judicial' : ''));
+    box.appendChild(el('div', { style: { fontFamily: 'var(--font-sans)', fontSize: '0.9rem', fontWeight: '600', color: 'var(--text-strong)' } }, tipoTxt));
+    var r = ia.rango;
+    if (r && r.configurado && r.max > 0) {
+      box.appendChild(el('div', { style: { fontFamily: 'var(--font-serif)', fontSize: '1.25rem', color: 'var(--text-strong)', marginTop: '6px' } }, 'Rango orientativo: ' + fmtEur(r.min) + ' \u2013 ' + fmtEur(r.max)));
+      if (r.incluye) box.appendChild(el('div', { style: { fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '4px' } }, 'Incluye: ' + r.incluye));
+    }
+    box.appendChild(el('div', { style: { fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '8px', lineHeight: '1.5' } }, (r && r.disclaimer) || 'Presupuesto cerrado tras revisar tu documentación.'));
+    return box;
   }
 
   function goBack() {
@@ -280,8 +329,69 @@
     return step.fields.every(function (f) {
       if (!f.required) return true;
       var val = answers[step.key] && answers[step.key][f.name];
-      return val && val.trim().length > 0;
+      if (f.type === 'checkbox') return val === true;
+      return val && String(val).trim().length > 0;
     });
+  }
+
+  /* ── Campos especiales: consentimiento RGPD + subida de fotos ──── */
+  function renderConsent(step, f) {
+    var wrap = el('div', { style: { display: 'flex', alignItems: 'flex-start', gap: '10px', marginTop: '4px' } });
+    var cb = el('input', { type: 'checkbox', id: 'intake-' + f.name, style: { marginTop: '3px', width: '16px', height: '16px', flexShrink: '0', cursor: 'pointer', accentColor: 'var(--accent)' } });
+    cb.checked = !!(answers[step.key] && answers[step.key][f.name]);
+    cb.addEventListener('change', function (e) { if (!answers[step.key]) answers[step.key] = {}; answers[step.key][f.name] = e.target.checked; });
+    var lab = el('label', { for: 'intake-' + f.name, style: { fontFamily: 'var(--font-sans)', fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: '1.5', cursor: 'pointer' } });
+    lab.innerHTML = 'He le\u00eddo y acepto la <a href="/privacidad/" target="_blank" rel="noopener" style="color:var(--text-accent);text-decoration:underline;">pol\u00edtica de privacidad</a> y el tratamiento de mis datos para gestionar mi consulta.';
+    wrap.appendChild(cb); wrap.appendChild(lab);
+    return wrap;
+  }
+  function renderFileField(step, f) {
+    var wrap = el('div');
+    var labelEl = el('label', { style: { display: 'block', fontFamily: 'var(--font-sans)', fontSize: '0.85rem', fontWeight: '500', color: 'var(--text-strong)', marginBottom: '6px' } });
+    labelEl.textContent = f.label;
+    labelEl.appendChild(el('span', { style: { color: 'var(--text-faint)', fontWeight: '400', marginLeft: '6px' } }, '(opcional)'));
+    wrap.appendChild(labelEl);
+    if (f.hint) wrap.appendChild(el('div', { style: { fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '8px' } }, f.hint));
+    var inp = el('input', { type: 'file', id: 'intake-' + f.name, accept: f.accept || 'image/*', style: { fontFamily: 'var(--font-sans)', fontSize: '0.8rem', color: 'var(--text-muted)' } });
+    if (f.multiple) inp.setAttribute('multiple', '');
+    var preview = el('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '10px' } });
+    ((answers[step.key] && answers[step.key][f.name]) || []).forEach(function (im) {
+      preview.appendChild(el('img', { src: im.dataUrl, style: { width: '56px', height: '56px', objectFit: 'cover', borderRadius: 'var(--radius-xs)', border: '1px solid var(--border-hairline)' } }));
+    });
+    inp.addEventListener('change', function (e) { handleFiles(step.key, f.name, e.target.files, preview); });
+    wrap.appendChild(inp); wrap.appendChild(preview);
+    return wrap;
+  }
+  function handleFiles(stepKey, name, fileList, preview) {
+    if (!answers[stepKey]) answers[stepKey] = {};
+    var arr = answers[stepKey][name] || [];
+    var files = Array.prototype.slice.call(fileList);
+    files.forEach(function (file) {
+      if (!/^image\//.test(file.type) || arr.length >= 4) return;
+      readAndResize(file, function (dataUrl) {
+        if (!dataUrl || arr.length >= 4) return;
+        arr.push({ name: file.name, dataUrl: dataUrl });
+        answers[stepKey][name] = arr;
+        preview.appendChild(el('img', { src: dataUrl, style: { width: '56px', height: '56px', objectFit: 'cover', borderRadius: 'var(--radius-xs)', border: '1px solid var(--border-hairline)' } }));
+      });
+    });
+  }
+  function readAndResize(file, cb) {
+    var reader = new FileReader();
+    reader.onload = function (ev) {
+      var img = new Image();
+      img.onload = function () {
+        var max = 1600, w = img.width, h = img.height;
+        if (w > max || h > max) { var r = Math.min(max / w, max / h); w = Math.round(w * r); h = Math.round(h * r); }
+        var cnv = document.createElement('canvas'); cnv.width = w; cnv.height = h;
+        cnv.getContext('2d').drawImage(img, 0, 0, w, h);
+        try { cb(cnv.toDataURL('image/jpeg', 0.7)); } catch (e) { cb(null); }
+      };
+      img.onerror = function () { cb(null); };
+      img.src = ev.target.result;
+    };
+    reader.onerror = function () { cb(null); };
+    reader.readAsDataURL(file);
   }
 
   /* ── Submit ──────────────────────────────────────────── */
@@ -294,10 +404,12 @@
 
   function buildPayload() {
     var c = answers.contacto || {};
+    var ia = answers._ia || {};
     var descripcion = [
       answers.problema || '',
       answers.inmueble ? 'Inmueble: ' + answers.inmueble : '',
       answers.antiguedad ? 'Antigüedad: ' + answers.antiguedad : '',
+      answers.comparecencia ? 'Comparecencia judicial: ' + answers.comparecencia : '',
       c.detalle || ''
     ].filter(Boolean).join('. ');
     return {
@@ -308,6 +420,15 @@
       email: c.email || '',
       telefono: c.telefono || '',
       descripcion: descripcion,
+      comparecencia_judicial: answers.comparecencia || '',
+      tipo_informe: ia.tipo_informe || '',
+      tipo_label: ia.tipo_label || '',
+      clave_rango: ia.clave_rango || '',
+      rango_orientativo_min: (ia.rango && ia.rango.configurado) ? ia.rango.min : '',
+      rango_orientativo_max: (ia.rango && ia.rango.configurado) ? ia.rango.max : '',
+      resumen_ia: ia.resumen_ia || '',
+      fotos: c.fotos || [],
+      consentimiento_rgpd: c.consentimiento === true,
       lang: detectLang(),
       'cf-turnstile-response': turnstileToken,
       source: 'perito.barcelona (intake modal)'
@@ -354,14 +475,21 @@
       '</div>';
   }
 
+  function buildPagoHTML() {
+    /* El pago es POSTERIOR: tras revisar el caso y aprobar el importe, se envía el
+       presupuesto con el enlace de cobro. Aquí solo se informa de las formas de pago. */
+    return '<p style="margin:14px auto 0;max-width:44ch;color:var(--text-faint);font-size:0.8rem;line-height:1.5;">Cuando revisemos tu caso y aprobemos el importe te enviaremos el presupuesto, que podrás pagar por <strong>Stripe</strong> (tarjeta) o <strong>Wise</strong>.</p>';
+  }
   function buildSuccessHTML() {
     return '<div style="padding:20px 0;text-align:center;">' +
       '<div style="width:52px;height:52px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;background:rgba(28,122,74,0.1);">' +
         '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1C7A4A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
       '</div>' +
       '<h3 style="font-family:var(--font-serif);font-size:var(--fs-h2,1.75rem);font-weight:400;margin:16px 0 0;color:var(--text-strong);">Consulta recibida</h3>' +
-      '<p style="margin:10px auto 0;max-width:40ch;color:var(--text-muted);font-size:0.95rem;line-height:1.55;">Gracias. Hemos recibido tu caso y te responderemos en un plazo de <strong>24 horas laborables</strong>.</p>' +
-      '<button type="button" onclick="window.closeIntake()" style="margin-top:24px;padding:11px 28px;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--accent-on,#fff);background:var(--accent);border:none;border-radius:var(--radius-sm);cursor:pointer;">Cerrar</button>' +
+      '<p style="margin:10px auto 0;max-width:40ch;color:var(--text-muted);font-size:0.95rem;line-height:1.55;">Gracias. Hemos recibido tu caso y te responderemos con el presupuesto en un plazo de <strong>24 horas laborables</strong>.</p>' +
+      '<p style="margin:14px auto 0;max-width:42ch;color:var(--text-faint);font-size:0.8rem;line-height:1.5;border-top:1px solid var(--border-subtle);padding-top:14px;">El presupuesto <strong>no incluye catas ni ensayos de laboratorio</strong>; si el caso lo requiere, se presupuestan aparte.</p>' +
+      buildPagoHTML() +
+      '<button type="button" onclick="window.closeIntake()" style="margin-top:22px;padding:11px 28px;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--accent-on,#fff);background:var(--accent);border:none;border-radius:var(--radius-sm);cursor:pointer;">Cerrar</button>' +
       '</div>';
   }
 
