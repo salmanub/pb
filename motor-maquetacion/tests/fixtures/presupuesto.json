@@ -73,8 +73,8 @@
           "tipo": "lista",
           "estilo": "simple",
           "items": [
-            { "texto": "Comparecencia en sala", "detalle": "350,00 € por sesión" },
-            { "texto": "Visita adicional", "detalle": "180,00 €" }
+            { "texto": "Comparecencia en sala", "detalle": "350,00 € por sesión" },
+            { "texto": "Visita adicional", "detalle": "180,00 €" }
           ]
         }
       ]
@@ -99,16 +99,16 @@
                   "detalle": "Inspección instrumental, termografía y diagnóstico del origen."
                 },
                 { "texto": "1" },
-                { "texto": "1 400,00 €" },
-                { "texto": "1 400,00 €" }
+                { "texto": "1.400,00 €" },
+                { "texto": "1.400,00 €" }
               ]
             },
             {
               "celdas": [
                 { "texto": "Toma de muestras y ensayo de humedad" },
                 { "texto": "2" },
-                { "texto": "150,00 €" },
-                { "texto": "300,00 €" }
+                { "texto": "150,00 €" },
+                { "texto": "300,00 €" }
               ]
             }
           ]
@@ -165,5 +165,5 @@
       { "etiqueta": "Total", "importe": 2057, "total": true }
     ]
   },
-  "pieResumen": "2 057,00 € · Válido hasta 29/09/2026 · Ingeniero Civil"
+  "pieResumen": "2.057,00 € · Válido hasta 29/09/2026 · Ingeniero Civil"
 }

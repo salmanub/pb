@@ -25,6 +25,7 @@
     "@cloudflare/workers-types": "^5.20260830.1",
     "@tailwindcss/postcss": "^4.0.17",
     "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^26.4.0",
     "cssnano": "^7.0.6",
     "html-minifier-terser": "^7.2.0",
     "markdown-it": "^14.1.0",

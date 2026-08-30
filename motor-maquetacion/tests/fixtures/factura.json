@@ -56,8 +56,8 @@
                   "detalle": "Revisión documental y contraste en obra."
                 },
                 { "texto": "1" },
-                { "texto": "3 200,00 €" },
-                { "texto": "3 200,00 €" }
+                { "texto": "3.200,00 €" },
+                { "texto": "3.200,00 €" }
               ]
             }
           ]
@@ -110,5 +110,5 @@
       { "etiqueta": "Total a pagar", "importe": 3392, "total": true }
     ]
   },
-  "pieResumen": "3 392,00 € · Venc. 29/09/2026 · Ingeniero Civil"
+  "pieResumen": "3.392,00 € · Venc. 29/09/2026 · Ingeniero Civil"
 }

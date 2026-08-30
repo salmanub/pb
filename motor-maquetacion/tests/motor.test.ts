@@ -257,9 +257,9 @@ describe('escapado', () => {
 
   it('eur formatea con miles, coma decimal y signo menos tipográfico', () => {
     // El separador de miles y el previo al símbolo son espacios duros (U+00A0).
-    expect(eur(1700)).toBe('1 700,00 €');
+    expect(eur(1700)).toBe('1.700,00 €');
     expect(eur(-480)).toBe('−480,00 €');
-    expect(eur(2057.5)).toBe('2 057,50 €');
+    expect(eur(1234567.5)).toBe('1.234.567,50 €');
   });
 });
 
