@@ -36,6 +36,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets/fonts');
   // Served standalone so the Cloudflare PDF Worker can @import it (fonts from our own domain).
   eleventyConfig.addPassthroughCopy('src/assets/css/fonts.css');
+  // Design system Jornada (Lora / Archivo / JetBrains Mono): lo @import el motor
+  // de maquetación para presupuestos, facturas e informes. El sitio no lo usa.
+  eleventyConfig.addPassthroughCopy('src/assets/css/fonts-jornada.css');
   eleventyConfig.addPassthroughCopy('src/assets/favicons');
   eleventyConfig.addPassthroughCopy({ 'Design System/assets/icons': 'assets/icons' });
   eleventyConfig.addPassthroughCopy('src/favicon.ico');

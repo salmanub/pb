@@ -265,6 +265,43 @@ describe('escapado', () => {
 
 // (e) ─────────────────────────────────────────────────────────────────────
 
+describe('fuentes autoalojadas', () => {
+  it('el CSS importa el fonts-jornada.css del dominio, no Google Fonts', () => {
+    const html = renderHtml(Documento.parse(factura));
+    expect(html).toContain('@import url("https://perito.barcelona/assets/css/fonts-jornada.css")');
+    expect(html).not.toContain('fonts.googleapis.com');
+    expect(html).not.toContain('fonts.gstatic.com');
+  });
+
+  it('la URL de las fuentes debe ser absoluta: page.setContent() no tiene URL base', () => {
+    const html = renderHtml(Documento.parse(factura));
+    const importado = html.match(/@import url\("([^"]+)"\)/)?.[1];
+    expect(importado).toMatch(/^https:\/\//);
+  });
+
+  it('un despliegue de preview sirve las fuentes desde sí mismo', () => {
+    const html = renderHtml(Documento.parse(factura), 'https://abc123.pb.pages.dev');
+    expect(html).toContain('@import url("https://abc123.pb.pages.dev/assets/css/fonts-jornada.css")');
+  });
+
+  it('el handler toma el origen de la propia petición', async () => {
+    const req = new Request('https://abc123.pb.pages.dev/motor/render', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-auth-token': TOKEN },
+      body: JSON.stringify({ documento: factura }),
+    });
+    const html = await (await manejarPeticion(req, ENV)).text();
+    expect(html).toContain('https://abc123.pb.pages.dev/assets/css/fonts-jornada.css');
+  });
+
+  it('las tres familias de Jornada están declaradas con respaldo local', () => {
+    const html = renderHtml(Documento.parse(factura));
+    expect(html).toContain('"Lora",Georgia');
+    expect(html).toContain('"Archivo","Helvetica Neue",Arial');
+    expect(html).toContain('"JetBrains Mono"');
+  });
+});
+
 describe('snapshots', () => {
   it('presupuesto', () => {
     expect(renderHtml(Documento.parse(presupuesto))).toMatchSnapshot();

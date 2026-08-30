@@ -6,7 +6,7 @@
  * del destinatario y el orden fijo de título → partes → secciones → totales.
  */
 import type { Documento } from '../schema';
-import { CSS, MARGENES } from './estilos';
+import { css, MARGENES, ORIGEN_ASSETS } from './estilos';
 import { esc } from './escape';
 import { cabecera, partes, pie, secciones, titulo, totales } from './parciales';
 
@@ -18,7 +18,7 @@ export interface PdfPayload {
   margin: { top: string; right: string; bottom: string; left: string };
 }
 
-function armazon(doc: Documento, rotuloCliente: string): string {
+function armazon(doc: Documento, rotuloCliente: string, origen: string): string {
   const cuerpo =
     titulo(doc.tipo, doc.meta) +
     partes(doc.emisor, doc.cliente, rotuloCliente) +
@@ -31,7 +31,7 @@ function armazon(doc: Documento, rotuloCliente: string): string {
     '<head>' +
     '<meta charset="utf-8">' +
     '<title>' + esc(doc.meta.numero) + '</title>' +
-    '<style>' + CSS + '</style>' +
+    '<style>' + css(origen) + '</style>' +
     '</head>' +
     '<body>' +
     cabecera(doc.emisor) +
@@ -42,16 +42,16 @@ function armazon(doc: Documento, rotuloCliente: string): string {
   );
 }
 
-export function renderPresupuesto(doc: Documento): string {
-  return armazon(doc, 'Para');
+export function renderPresupuesto(doc: Documento, origen = ORIGEN_ASSETS): string {
+  return armazon(doc, 'Para', origen);
 }
 
-export function renderFactura(doc: Documento): string {
-  return armazon(doc, 'Facturar a');
+export function renderFactura(doc: Documento, origen = ORIGEN_ASSETS): string {
+  return armazon(doc, 'Facturar a', origen);
 }
 
-export function renderInforme(doc: Documento): string {
-  return armazon(doc, 'Destinatario');
+export function renderInforme(doc: Documento, origen = ORIGEN_ASSETS): string {
+  return armazon(doc, 'Destinatario', origen);
 }
 
 const POR_TIPO = {
@@ -60,9 +60,14 @@ const POR_TIPO = {
   informe: renderInforme,
 } as const;
 
-/** Documento HTML completo, autónomo y server-rendered. Cero JavaScript. */
-export function renderHtml(doc: Documento): string {
-  return POR_TIPO[doc.tipo](doc);
+/**
+ * Documento HTML completo, autónomo y server-rendered. Cero JavaScript.
+ * `origen` es el dominio desde el que se sirven las fuentes: por defecto
+ * producción, pero el handler pasa el suyo propio para que un despliegue de
+ * preview no dependa de que producción ya tenga el CSS.
+ */
+export function renderHtml(doc: Documento, origen = ORIGEN_ASSETS): string {
+  return POR_TIPO[doc.tipo](doc, origen);
 }
 
 /**
@@ -70,8 +75,8 @@ export function renderHtml(doc: Documento): string {
  * pie de Puppeteer, que son las únicas que saben numerar páginas.
  * La cabecera y el pie fijos del CSS se ocultan para no duplicarlos.
  */
-export function renderPdfPayload(doc: Documento): PdfPayload {
-  const html = renderHtml(doc).replace(
+export function renderPdfPayload(doc: Documento, origen = ORIGEN_ASSETS): PdfPayload {
+  const html = renderHtml(doc, origen).replace(
     '</style>',
     '@media print{.repetida{display:none}.hoja{padding-top:0}}</style>',
   );

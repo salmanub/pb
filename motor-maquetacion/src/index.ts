@@ -70,12 +70,15 @@ export async function manejarPeticion(request: Request, env: Entorno): Promise<R
   }
 
   const { documento, salida } = analisis.data;
+  // Las fuentes se sirven desde el mismo despliegue que atiende la petición,
+  // así un preview en *.pages.dev no depende de que producción ya las tenga.
+  const origen = new URL(request.url).origin;
 
   try {
     if (salida === 'pdf-payload') {
-      return json(renderPdfPayload(documento), 200);
+      return json(renderPdfPayload(documento, origen), 200);
     }
-    return new Response(renderHtml(documento), {
+    return new Response(renderHtml(documento, origen), {
       status: 200,
       headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' },
     });

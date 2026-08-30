@@ -5,17 +5,31 @@
  * Papel #F2EFE9 · tinta #26241F · teal #0E6A64 · ámbar #8A5A00.
  * Sin border-radius en ningún elemento.
  *
- * Nota: las tres familias no están autoalojadas en perito.barcelona (allí sólo
- * hay Spectral / IBM Plex). Se cargan de Google Fonts, que el navegador del
- * Worker de Browser Rendering sí puede alcanzar, con pila de respaldo local.
+ * Las tres familias están autoalojadas en el propio dominio
+ * (src/assets/css/fonts-jornada.css, generado por download-fonts-jornada.mjs),
+ * así que generar una factura no depende de que Google Fonts responda.
  */
 
-export const FUENTES_URL =
-  'https://fonts.googleapis.com/css2' +
-  '?family=Archivo:wght@500;600;700' +
-  '&family=JetBrains+Mono:wght@400;500;600' +
-  '&family=Lora:ital,wght@0,400;0,500;0,600;1,400' +
-  '&display=swap';
+/**
+ * Origen por defecto de los assets. El motor sabe su propia URL, así que en
+ * despliegues de preview (*.pages.dev) sirve las fuentes desde el propio
+ * despliegue y no desde producción.
+ */
+export const ORIGEN_ASSETS = 'https://perito.barcelona';
+
+/**
+ * CSS de las tres familias, autoalojado en el dominio.
+ * Se genera con `node download-fonts-jornada.mjs` y se sirve desde
+ * src/assets/css/fonts-jornada.css (passthrough de Eleventy).
+ *
+ * Tiene que ser una URL absoluta: el Worker de PDF hace page.setContent(),
+ * que carga el HTML sin URL base, así que una ruta relativa no resolvería.
+ * Las urls de dentro del CSS sí son relativas, y resuelven contra el propio
+ * CSS — el mismo mecanismo que ya usaba la plantilla anterior.
+ */
+export function fuentesUrl(origen: string = ORIGEN_ASSETS): string {
+  return origen.replace(/\/+$/, '') + '/assets/css/fonts-jornada.css';
+}
 
 /** Alto reservado en el margen de página para cabecera y pie repetidos. */
 export const MARGENES = {
@@ -25,8 +39,9 @@ export const MARGENES = {
   left: '0mm',
 } as const;
 
-export const CSS = `
-@import url("${FUENTES_URL}");
+export function css(origen: string = ORIGEN_ASSETS): string {
+  return `
+@import url("${fuentesUrl(origen)}");
 
 :root{
   --papel:#F2EFE9;
@@ -370,3 +385,4 @@ table.totales tr.total td{
   padding-top:8px;
 }
 `;
+}
