@@ -10,7 +10,10 @@
     "optimize-images": "node src/scripts/optimize-images.js",
     "optimize-images-debug": "node src/scripts/optimize-images-debug.js",
     "optimize-images-force": "node src/scripts/optimize-images-force.js",
-    "images": "node optimize-images.mjs"
+    "images": "node optimize-images.mjs",
+    "test:motor": "vitest run --root motor-maquetacion",
+    "test:motor:watch": "vitest --root motor-maquetacion",
+    "typecheck:motor": "tsc -p motor-maquetacion/tsconfig.json"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +22,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-navigation": "^1.0.5",
+    "@cloudflare/workers-types": "^5.20260830.1",
     "@tailwindcss/postcss": "^4.0.17",
     "@tailwindcss/typography": "^0.5.16",
     "cssnano": "^7.0.6",
@@ -27,10 +31,13 @@
     "postcss": "^8.5.3",
     "purgecss": "^7.0.2",
     "sharp": "^0.35.2",
-    "tailwindcss": "^4.0.17"
+    "tailwindcss": "^4.0.17",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.9"
   },
   "dependencies": {
     "@11ty/eleventy-img": "^6.0.4",
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "zod": "^3.25.76"
   }
 }

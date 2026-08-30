@@ -1,0 +1,169 @@
+{
+  "tipo": "presupuesto",
+  "meta": {
+    "numero": "PRE-2026/0042",
+    "fecha": "30/08/2026",
+    "expediente": "PB-2026-0117",
+    "idioma": "es",
+    "vigencia": "Válido hasta el 29/09/2026"
+  },
+  "emisor": {
+    "nombre": "Albert Vilardell Serra",
+    "rol": "Ingeniero Civil · Colegiado ECCAT 16448",
+    "firma": "Perito Barcelona",
+    "nif": "12345678Z",
+    "direccion": "Carrer Exemple 12, 08001 Barcelona",
+    "telefono": "+34 614 194 985",
+    "email": "info@perito.barcelona",
+    "web": "perito.barcelona"
+  },
+  "cliente": {
+    "nombre": "Comunidad de Propietarios Riera Alta 8",
+    "nif": "H08123456",
+    "direccion": "Carrer de la Riera Alta 8, 08001 Barcelona",
+    "telefono": "+34 933 000 000"
+  },
+  "secciones": [
+    {
+      "id": "datos",
+      "variante": "normal",
+      "bloques": [
+        {
+          "tipo": "campos",
+          "items": [
+            { "clave": "Nº presupuesto", "valor": "PRE-2026/0042" },
+            { "clave": "Fecha", "valor": "30/08/2026" },
+            { "clave": "Válido hasta", "valor": "29/09/2026", "destacado": true },
+            { "clave": "Expediente", "valor": "PB-2026-0117" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "objeto",
+      "titulo": "Objeto",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Dictamen pericial sobre las filtraciones detectadas en el forjado de la planta primera, con determinación del origen y valoración de la reparación."
+        }
+      ]
+    },
+    {
+      "id": "alcance",
+      "titulo": "Servicios incluidos",
+      "bloques": [
+        {
+          "tipo": "lista",
+          "estilo": "marcas",
+          "items": [
+            { "texto": "Visita técnica" },
+            { "texto": "Informe pericial" },
+            { "texto": "Preparación con el abogado" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ampliaciones",
+      "titulo": "Ampliaciones disponibles (coste aparte)",
+      "variante": "discreta",
+      "bloques": [
+        {
+          "tipo": "lista",
+          "estilo": "simple",
+          "items": [
+            { "texto": "Comparecencia en sala", "detalle": "350,00 € por sesión" },
+            { "texto": "Visita adicional", "detalle": "180,00 €" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conceptos",
+      "titulo": "Conceptos",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "columnas": [
+            { "titulo": "Concepto", "alineacion": "izquierda", "ancho": "52%" },
+            { "titulo": "Uds.", "alineacion": "centro", "ancho": "12%" },
+            { "titulo": "Precio", "alineacion": "derecha", "ancho": "18%" },
+            { "titulo": "Importe", "alineacion": "derecha", "ancho": "18%" }
+          ],
+          "filas": [
+            {
+              "celdas": [
+                {
+                  "texto": "Dictamen pericial por filtraciones",
+                  "detalle": "Inspección instrumental, termografía y diagnóstico del origen."
+                },
+                { "texto": "1" },
+                { "texto": "1 400,00 €" },
+                { "texto": "1 400,00 €" }
+              ]
+            },
+            {
+              "celdas": [
+                { "texto": "Toma de muestras y ensayo de humedad" },
+                { "texto": "2" },
+                { "texto": "150,00 €" },
+                { "texto": "300,00 €" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "condiciones",
+      "titulo": "Condiciones",
+      "variante": "normal",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "texto": "Pago del 100 % a la aceptación del presupuesto. Transferencia a ES17 0182 9003 9502 0688 0826. Ratificación en sala incluida sin sobrecoste."
+        }
+      ]
+    },
+    {
+      "id": "observaciones",
+      "titulo": "Observaciones",
+      "variante": "discreta",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "tono": "nota",
+          "texto": "Presupuesto válido durante 30 días. La factura se emitirá una vez abonado. Documento confidencial de uso pericial."
+        }
+      ]
+    },
+    {
+      "id": "aceptacion",
+      "titulo": "Aceptación del presupuesto",
+      "variante": "caja",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "tono": "nota",
+          "texto": "La conformidad con este presupuesto implica la aceptación de sus condiciones."
+        },
+        { "tipo": "firma", "etiquetas": ["Firma del cliente", "Fecha"] }
+      ]
+    },
+    {
+      "id": "anexos",
+      "titulo": "Anexos",
+      "bloques": []
+    }
+  ],
+  "totales": {
+    "moneda": "EUR",
+    "lineas": [
+      { "etiqueta": "Base imponible", "importe": 1700 },
+      { "etiqueta": "IVA (21 %)", "importe": 357 },
+      { "etiqueta": "Total", "importe": 2057, "total": true }
+    ]
+  },
+  "pieResumen": "2 057,00 € · Válido hasta 29/09/2026 · Ingeniero Civil"
+}
