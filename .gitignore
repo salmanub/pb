@@ -5,3 +5,6 @@ dist
 .env
 .DS_Store
 *.log
+
+# Artefactos locales de wrangler (miniflare, bundles de pages dev)
+.wrangler
