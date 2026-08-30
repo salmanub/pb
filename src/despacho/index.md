@@ -21,6 +21,9 @@ body_blocks:
     p: "La actuación del despacho se concentra en dictámenes periciales para litigios de edificación y obra civil. La experiencia judicial acumulada — más de 340 ratificaciones en sede judicial — permite abordar procedimientos de alta cuantía con el rigor procesal que exige la LEC."
   - h: "Principios de trabajo"
     p: "<b>Independencia técnica</b> — innegociable, sin exclusivas. <b>Plazos por contrato</b> — si no se puede garantizar, no se acepta el encargo. <b>Honorarios fijos</b> — acordados antes del inicio, ratificación incluida. <b>Claridad técnica</b> — un dictamen que no se entiende en sala carece de valor probatorio."
+claustro_block:
+  h: "Claustro de expertos académicos"
+  p: "Cuando la materia controvertida exige el estado del arte de una disciplina —el modelo de cálculo, la caracterización de un material, la interacción suelo-estructura—, el dictamen se firma junto a un catedrático o profesor titular de universidad especializado en esa materia. La dirección pericial mantiene la interlocución y la responsabilidad procesal. Puede consultar la composición del <a href='/claustro-de-expertos/'>claustro de expertos</a> y el criterio con el que se asigna cada expediente."
 qualLabel: "Habilitación profesional"
 qualItems:
   - { num: "TÍT", text: "Ingeniero Civil — ETSECCPB · UPC" }

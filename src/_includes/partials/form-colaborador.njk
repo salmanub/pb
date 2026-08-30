@@ -1,0 +1,112 @@
+{#
+  form-colaborador.njk — Alta de perito colaborador. ZERO-JS.
+
+  AGENTES §5.6: formulario multipaso con :target + validación HTML5 nativa.
+  No carga ningún script: la navegación entre pasos es CSS puro y el envío es
+  un POST nativo del formulario. La Pages Function /api/contacto devuelve un
+  303 hacia `redirect` cuando el POST NO es JSON (envío nativo sin JS).
+
+  Mecánica del wizard (3 reglas CSS, sin bucles):
+    1. Todos los pasos visibles por defecto.
+    2. `.colab-step:target ~ .colab-step` oculta los posteriores al paso activo.
+    3. Sin ningún paso en :target, `.colab-step + .colab-step` deja solo el 1º.
+  Resultado: revelado ACUMULATIVO. Los pasos ya completados siguen en pantalla
+  y, por tanto, siguen siendo enfocables — condición imprescindible para que
+  `required` funcione: un control required dentro de `display:none` bloquea el
+  envío sin mostrar mensaje al usuario.
+
+  AGENTES §5.1 — cero texto hardcodeado: toda la copia llega del frontmatter.
+
+  Variables esperadas en frontmatter:
+    form_eyebrow, form_redirect, form_origen
+    form_labels  { next, submit, optional, required_note, progress, honeypot }
+    form_consent { text, link_label, url }
+    form_steps[] { key, eyebrow, question, helper, type: choice|fields,
+                   options[] | fields[]{name,label,type,placeholder,required,multiline,rows,note} }
+#}
+{% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
+{% set _nSteps = form_steps | length %}
+
+<style>
+.colab-wiz .colab-step{display:block;scroll-margin-top:112px}
+.colab-wiz .colab-step:target ~ .colab-step{display:none}
+.colab-wiz:not(:has(.colab-step:target)) .colab-step + .colab-step{display:none}
+.colab-wiz .colab-opt{display:flex;align-items:center;gap:11px;padding:13px 15px;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);cursor:pointer;font-size:0.9rem;line-height:1.45;color:var(--text-body);background:var(--surface-card);transition:border-color .2s ease,background-color .2s ease}
+.colab-wiz .colab-opt:hover{border-color:var(--accent)}
+.colab-wiz .colab-opt:has(input:checked){border-color:var(--accent);background:var(--surface-tint)}
+.colab-wiz .colab-opt input{accent-color:var(--accent);width:16px;height:16px;flex-shrink:0}
+.colab-wiz .colab-in{width:100%;padding:12px 14px;font-family:var(--font-sans);font-size:var(--fs-body);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-card);color:var(--text-body);transition:border-color .2s ease}
+.colab-wiz .colab-in:focus{outline:none;border-color:var(--accent)}
+.colab-wiz textarea.colab-in{resize:vertical;line-height:1.6}
+.colab-wiz .colab-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+</style>
+
+<div class="colab-wiz" style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;">
+<form action="/api/contacto" method="POST" style="margin: 0;">
+<input type="hidden" name="lang" value="{{ lang | default('es') }}">
+<input type="hidden" name="origen" value="{{ form_origen | default('perito-alta-colaborador') }}">
+<input type="hidden" name="source" value="perito.barcelona">
+<input type="hidden" name="redirect" value="{{ form_redirect | default('/gracias/') }}">
+<input type="hidden" name="redirect_error" value="{{ form_redirect_error | default('/contacto/') }}">
+<p class="colab-hp" aria-hidden="true"><label for="colab-website">{{ form_labels.honeypot }}</label><input type="text" id="colab-website" name="website" tabindex="-1" autocomplete="off"></p>
+
+{% for step in form_steps %}
+<section class="colab-step" id="colab-p{{ loop.index }}" aria-label="{{ step.eyebrow }}">
+
+{# ── Cabecera del paso: etiqueta mono + contador + barra de progreso ── #}
+<div style="padding: 18px 24px 0;">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+<span style="font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);">{{ form_eyebrow }}</span>
+<span style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; color: var(--text-faint);">{{ '%02d' | format(loop.index) }} {{ form_labels.progress }} {{ '%02d' | format(_nSteps) }}</span>
+</div>
+<div style="height: 2px; background: var(--stone-250, #d6d3cd); margin-top: 14px; border-radius: 1px; overflow: hidden;"><div style="height: 100%; width: {{ (100 * loop.index / _nSteps) | round }}%; background: var(--accent);"></div></div>
+</div>
+
+{# ── Cuerpo del paso ── #}
+<div style="padding: 26px 24px 8px;">
+<div style="font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-accent); margin-bottom: 10px;">{{ step.eyebrow }}</div>
+<h3 style="font-family: var(--font-serif); font-size: var(--fs-h3); font-weight: 500; color: var(--text-strong); margin: 0 0 8px; line-height: 1.3;">{{ step.question }}</h3>
+{% if step.helper %}<p style="margin: 0 0 20px; font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); max-width: 56ch;">{{ step.helper }}</p>{% endif %}
+
+{% if step.type == "choice" %}
+<div style="display: flex; flex-direction: column; gap: 9px;">
+{% for opt in step.options %}
+<label class="colab-opt"><input type="radio" name="{{ step.key }}" value="{{ opt }}" required>{{ opt }}</label>
+{% endfor %}
+</div>
+{% else %}
+<div style="display: flex; flex-direction: column; gap: 16px;">
+{% for field in step.fields %}
+<div>
+<label for="colab-{{ field.name }}" style="display: block; font-size: var(--fs-body-sm, 0.85rem); font-weight: var(--fw-medium); color: var(--text-strong); margin-bottom: 6px;">{{ field.label }}{% if not field.required %} <span style="color: var(--text-faint); font-weight: 400;">{{ form_labels.optional }}</span>{% endif %}</label>
+{% if field.multiline %}
+<textarea class="colab-in" id="colab-{{ field.name }}" name="{{ field.name }}" rows="{{ field.rows | default(4) }}" placeholder="{{ field.placeholder }}"{% if field.required %} required{% endif %}></textarea>
+{% else %}
+<input class="colab-in" type="{{ field.type | default('text') }}" id="colab-{{ field.name }}" name="{{ field.name }}" placeholder="{{ field.placeholder }}"{% if field.autocomplete %} autocomplete="{{ field.autocomplete }}"{% endif %}{% if field.required %} required{% endif %}>
+{% endif %}
+{% if field.note %}<p style="margin: 6px 0 0; font-size: 0.78rem; line-height: 1.55; color: var(--text-faint);">{{ field.note }}</p>{% endif %}
+</div>
+{% endfor %}
+</div>
+{% endif %}
+
+{# ── Consentimiento RGPD: solo en el último paso, junto al envío ── #}
+{% if loop.last and form_consent %}
+<label style="display: flex; align-items: flex-start; gap: 10px; margin-top: 20px; font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); cursor: pointer;"><input type="checkbox" name="privacidad" value="1" required style="accent-color: var(--accent); margin-top: 3px; width: 16px; height: 16px; flex-shrink: 0;"><span>{{ form_consent.text }} <a href="{{ form_consent.url }}" style="color: var(--text-accent); text-decoration: underline;">{{ form_consent.link_label }}</a>.</span></label>
+{% endif %}
+</div>
+
+{# ── Pie del paso: avanzar o enviar ── #}
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 24px 22px; border-top: 1px solid var(--border-subtle); margin-top: 8px;">
+<span style="font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint);">{% if loop.last %}{{ form_labels.required_note }}{% endif %}</span>
+{% if loop.last %}
+<button type="submit" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; font-family: var(--font-sans); font-size: 0.9375rem; font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid transparent; background: var(--accent); color: var(--accent-on); cursor: pointer;">{{ form_labels.submit }}<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+{% else %}
+<a href="#colab-p{{ loop.index + 1 }}" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; font-family: var(--font-sans); font-size: 0.9375rem; font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid transparent; background: var(--accent); color: var(--accent-on); text-decoration: none;">{{ form_labels.next }}<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+{% endif %}
+</div>
+
+</section>
+{% endfor %}
+</form>
+</div>

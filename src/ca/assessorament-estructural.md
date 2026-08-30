@@ -25,6 +25,8 @@ body_blocks:
     p: "La verificació de l'<b>estabilitat d'edificis</b> és obligatòria quan es projecta un canvi d'ús, una ampliació de planta o una modificació de la distribució de càrregues. L'assessorament estableix si l'estructura existent admet les noves sol·licitacions o requereix reforç, determinant l'abast de la intervenció conforme a l'Eurocodi 2 i la normativa sismoresistent aplicable."
   - h: "Direcció tècnica de reforços"
     p: "El despatx proporciona direcció tècnica en l'execució de reforços estructurals: fibra de carboni (CFRP), xapes metàl·liques encolades, recrescuts de formigó armat i posttesat exterior. La supervisió abasta des del projecte de reforç fins a la recepció de l'obra, amb certificació de la capacitat portant resultant."
+  - h: "Prescripció tècnica de sistemes constructius"
+    p: "Determinada la solució, queda definir-la: quin sistema, amb quines prestacions normalitzades i sota quines condicions de posada en obra. El despatx redacta aquesta <a href='/ca/prescripcio-tecnica-sistemes-constructius/'>prescripció tècnica per prestacions</a> —no per marca— i assisteix a la reunió amb la propietat o la direcció facultativa per defensar-la. Sense vinculació amb cap fabricant."
 related_services:
   - "patologias-estructurales"
   - "naves-industriales"

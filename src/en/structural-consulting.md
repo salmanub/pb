@@ -25,6 +25,8 @@ body_blocks:
     p: "Verifying <b>building stability</b> is mandatory when planning a change of use, a floor extension or a change in load distribution. The consulting establishes whether the existing structure can take the new demands or requires strengthening, defining the scope of the intervention in accordance with Eurocode 2 and the applicable seismic regulations."
   - h: "Technical supervision of strengthening works"
     p: "The practice provides technical supervision for structural strengthening: carbon fibre (CFRP), bonded steel plates, reinforced-concrete enlargements and external post-tensioning. Supervision spans from the strengthening design to project handover, with certification of the resulting load-bearing capacity."
+  - h: "Technical specification of building systems"
+    p: "Once the solution is established, it has to be defined: which system, to what standardised performance and under what site conditions. The firm writes that <a href='/en/technical-specification-building-systems/'>performance-based technical specification</a> —not brand-based— and attends the meeting with the client or the design team to defend it. With no ties to any manufacturer."
 related_services:
   - "patologias-estructurales"
   - "naves-industriales"

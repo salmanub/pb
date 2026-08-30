@@ -21,6 +21,9 @@ body_blocks:
     p: "L'actuació del despatx es concentra en dictàmens pericials per a litigis d'edificació i obra civil. L'experiència judicial acumulada — més de 340 ratificacions en seu judicial — permet abordar procediments d'alta quantia amb el rigor processal que exigeix la LEC."
   - h: "Principis de treball"
     p: "<b>Independència tècnica</b> — innegociable, sense exclusives. <b>Terminis per contracte</b> — si no es pot garantir, no s'accepta l'encàrrec. <b>Honoraris fixos</b> — acordats abans de l'inici, ratificació inclosa. <b>Claredat tècnica</b> — un dictamen que no s'entén en sala manca de valor probatori."
+claustro_block:
+  h: "Claustre d'experts acadèmics"
+  p: "Quan la matèria controvertida exigeix l'estat de l'art d'una disciplina —el model de càlcul, la caracterització d'un material, la interacció sòl-estructura—, el dictamen se signa juntament amb un catedràtic o professor titular d'universitat especialitzat en aquesta matèria. La direcció pericial manté la interlocució i la responsabilitat processal. Pot consultar la composició del <a href='/ca/claustre-experts/'>claustre d'experts</a> i el criteri amb què s'assigna cada expedient."
 qualLabel: "Habilitació professional"
 qualItems:
   - { num: "TÍT", text: "Enginyer Civil — ETSECCPB · UPC" }

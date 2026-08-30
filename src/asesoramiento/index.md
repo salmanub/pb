@@ -25,6 +25,8 @@ body_blocks:
     p: "La verificación de la <b>estabilidad de edificios</b> es obligatoria cuando se proyecta un cambio de uso, una ampliación de planta o una modificación de la distribución de cargas. El asesoramiento establece si la estructura existente admite las nuevas solicitaciones o requiere refuerzo, determinando el alcance de la intervención conforme al Eurocódigo 2 y la normativa sismorresistente aplicable."
   - h: "Dirección técnica de refuerzos"
     p: "El despacho proporciona dirección técnica en la ejecución de refuerzos estructurales: fibra de carbono (CFRP), chapas metálicas encoladas, recrecidos de hormigón armado y postesado exterior. La supervisión abarca desde el proyecto de refuerzo hasta la recepción de la obra, con certificación de la capacidad portante resultante."
+  - h: "Prescripción técnica de sistemas constructivos"
+    p: "Determinada la solución, queda definirla: qué sistema, con qué prestaciones normalizadas y bajo qué condiciones de puesta en obra. El despacho redacta esa <a href='/prescripcion-tecnica-sistemas-constructivos/'>prescripción técnica por prestaciones</a> —no por marca— y asiste a la reunión con la propiedad o la dirección facultativa para defenderla. Sin vinculación con ningún fabricante."
 related_services:
   - "patologias-estructurales"
   - "naves-industriales"

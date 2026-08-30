@@ -103,6 +103,21 @@ async function verificarTurnstile(secret, token, ip) {
   }
 }
 
+/**
+ * Envío NATIVO del formulario (zero-JS): el navegador espera un documento, no
+ * JSON. En ese caso se responde con un 303 hacia una ruta del propio sitio.
+ * Solo se aceptan rutas relativas internas ("/algo/") — así el endpoint no se
+ * convierte en un open redirect si alguien manipula el campo oculto.
+ */
+function redirigir(request, ruta, fallback) {
+  const valida = typeof ruta === 'string' && /^\/(?!\/)[\w\-/]*\/?(\?[\w\-=&%.]*)?$/.test(ruta);
+  const destino = valida ? ruta : fallback;
+  return new Response(null, {
+    status: 303,
+    headers: { Location: new URL(destino, request.url).toString() },
+  });
+}
+
 export async function onRequestOptions() {
   return new Response(null, { status: 204, headers: CORS_HEADERS });
 }
@@ -121,8 +136,14 @@ export async function onRequestPost(context) {
       data = Object.fromEntries(formData.entries());
     }
 
+    // Envío nativo (sin JS): hay que devolver un documento, no JSON.
+    const esEnvioNativo = !contentType.includes('application/json');
+    const rutaOk = data.redirect || '/gracias/';
+    const rutaError = data.redirect_error || '/contacto/';
+
     // Honeypot
     if (data.website && String(data.website).trim() !== '') {
+      if (esEnvioNativo) return redirigir(request, rutaOk, '/gracias/');
       return new Response(JSON.stringify({ ok: true }), { status: 200, headers: CORS_HEADERS });
     }
 
@@ -133,6 +154,7 @@ export async function onRequestPost(context) {
       request.headers.get('cf-connecting-ip'),
     );
     if (!tsOk) {
+      if (esEnvioNativo) return redirigir(request, rutaError, '/contacto/');
       return new Response(JSON.stringify({ ok: false, error: 'captcha' }), {
         status: 403, headers: CORS_HEADERS,
       });
@@ -174,10 +196,13 @@ export async function onRequestPost(context) {
     if (!crmOk) {
       const reason = !crmUrl ? 'No CRM_WEBAPP_URL configured' : 'CRM delivery failed';
       console.error('[contacto] FAILURE:', reason);
+      if (esEnvioNativo) return redirigir(request, rutaError, '/contacto/');
       return new Response(JSON.stringify({ ok: false, error: reason }), {
         status: 502, headers: CORS_HEADERS,
       });
     }
+
+    if (esEnvioNativo) return redirigir(request, rutaOk, '/gracias/');
 
     return new Response(JSON.stringify({ ok: true, crm: crmOk }), {
       status: 200, headers: CORS_HEADERS,
@@ -185,6 +210,9 @@ export async function onRequestPost(context) {
 
   } catch (err) {
     console.error('contacto error:', err);
+    if (!(request.headers.get('content-type') || '').includes('application/json')) {
+      return redirigir(request, '/contacto/', '/contacto/');
+    }
     return new Response(JSON.stringify({ ok: false, error: err.message }), {
       status: 500, headers: CORS_HEADERS,
     });

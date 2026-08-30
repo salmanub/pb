@@ -36,6 +36,18 @@
 <h3 style="font-family: var(--font-serif); font-size: var(--fs-h3); font-weight: 500; color: var(--text-strong); margin: 26px 0 10px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); display: inline-block;">{{ block.h }}</h3>
 <p style="font-size: 1rem; line-height: 1.75; color: var(--text-muted); margin: 0 0 12px; max-width: 62ch;">{{ block.p | safe }}</p>
 {% endfor %}
+
+{# ── Enlace al claustro de expertos académicos ────────────────────────────────
+   Solo se pinta si HAY perfiles publicados en src/_data/catedraticos.json.
+   Con el fichero vacío, la sección de expertos de /claustro-de-expertos/ no se
+   renderiza; enlazarla desde aquí llevaría a una página sin claustro. El enlace
+   aparece solo cuando hay a quién enseñar, sin tocar nada más.
+   Texto: frontmatter `claustro_block` {h, p} (AGENTES §5.1). #}
+{% if claustro_block and (catedraticos.miembros | default([]) | selectattr("publicado") | length) > 0 %}
+<h3 style="font-family: var(--font-serif); font-size: var(--fs-h3); font-weight: 500; color: var(--text-strong); margin: 26px 0 10px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); display: inline-block;">{{ claustro_block.h }}</h3>
+<p style="font-size: 1rem; line-height: 1.75; color: var(--text-muted); margin: 0 0 12px; max-width: 62ch;">{{ claustro_block.p | safe }}</p>
+{% endif %}
+
 {% set linkedinTitle = "Perfil a LinkedIn" if lang == "ca" else ("LinkedIn profile" if lang == "en" else "Perfil en LinkedIn") %}
 <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-hairline); display: flex; align-items: center; gap: 14px;">
 {% if about_image %}

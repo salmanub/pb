@@ -1,0 +1,113 @@
+{#
+  colaborador.njk — Layout de la capa de captación de peritos colaboradores.
+  Capa 2 de 2: dirigida al propio catedrático / profesor, no al cliente final.
+  La capa pública de autoridad vive en claustro.njk.
+
+  AGENTES §6 microdata: Article + FAQPage + Organization (potentialAction).
+  DECISIÓN DELIBERADA: NO se marca como schema.org/JobPosting. No hay vacante
+  abierta ni encargo inmediato garantizado — marcarlo como oferta de empleo lo
+  publicaría en Google Jobs y contradiría de plano la gestión de expectativas
+  que es el eje de esta página.
+
+  AGENTES §5.1: cero texto hardcodeado — todo llega por frontmatter.
+  Cadena: content.md → colaborador.njk → base.njk
+  NOTE: All HTML on single lines to prevent Markdown <p> wrapping
+#}
+{% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
+{% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
+
+<div itemscope itemtype="https://schema.org/Article" style="display: none;" aria-hidden="true"><meta itemprop="headline" content="{{ title }}"><meta itemprop="description" content="{{ description }}"><meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}"><div itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ metadata.author.name }}"></div><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"><meta itemprop="url" content="{{ metadata.company.url }}"></div></div>
+
+{# ===== HERO + BREADCRUMB ===== #}
+{% include "partials/page-hero.njk" %}
+
+{# ── Enlace-puente hacia la capa pública ── #}
+{% if bridge_url %}
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 12px var(--gutter) 0; border-top: 1px solid var(--border-subtle);"><span style="font-size: var(--fs-small, 0.8rem); color: var(--text-muted);">{{ bridge_text }} </span><a href="{{ bridge_url }}" style="font-size: var(--fs-small, 0.8rem); color: var(--text-accent); text-decoration: none; border-bottom: 1px solid transparent;" onmouseenter="this.style.borderBottomColor='var(--accent)'" onmouseleave="this.style.borderBottomColor='transparent'">{{ bridge_link }}</a></div>
+{% endif %}
+
+{# ===== CUERPO + PROCESO ===== #}
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: clamp(40px,6vw,72px) var(--gutter) 0;">
+<div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(40px,5vw,72px); align-items: start;" class="site-two">
+<div>
+{% if profiles %}
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: clamp(28px,4vw,40px);">{%- for tag in profiles %}<span style="display: inline-flex; align-items: center; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; padding: 5px 10px; border-radius: var(--radius-xs); background: var(--surface-ink); color: var(--text-on-dark);">{{ tag }}</span>{%- endfor %}</div>
+{% endif %}
+{% for block in body_blocks %}
+<div style="margin-bottom: clamp(28px,4vw,40px);">
+<h2 style="font-family: var(--font-serif); font-size: var(--fs-h3); font-weight: 500; color: var(--text-strong); margin: 0 0 14px; padding-bottom: 10px; border-bottom: 2px solid var(--accent); display: inline-block;">{{ block.h }}</h2>
+<p style="font-size: 1rem; line-height: 1.8; color: var(--text-body); margin: 0; max-width: 62ch;">{{ block.p | safe }}</p>
+</div>
+{% endfor %}
+</div>
+
+{# ── Sidebar: reparto de roles ── #}
+{% if split_items %}
+<div>
+<div style="position: sticky; top: 92px;">
+<div style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; border-bottom: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);">{{ split_label }}</div>
+<div style="padding: 22px 22px 24px;">
+<div style="font-family: var(--font-serif); font-style: italic; font-size: 1.5rem; color: var(--text-accent); margin-bottom: 4px; line-height: 1.25;">{{ split_headline }}</div>
+<div style="margin-top: 14px;">
+{% for item in split_items %}<div style="display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border-subtle); font-size: 0.9rem; color: var(--text-body); line-height: 1.5;"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; flex-shrink: 0; padding-top: 2px;">{{ item.num }}</span><span>{{ item.text | safe }}</span></div>{% endfor %}
+</div>
+{% if split_note %}<div style="margin-top: 16px; text-align: center; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint);">{{ split_note }}</div>{% endif %}
+</div>
+</div>
+</div>
+</div>
+{% endif %}
+</div>
+</section>
+
+{# ===== GESTIÓN DE EXPECTATIVAS — bloque destacado ===== #}
+{% if expectations_title %}
+<section style="background: var(--surface-tint); border-top: 1px solid var(--oxide-200); border-bottom: 1px solid var(--oxide-200); margin-top: clamp(40px,6vw,72px);">
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
+<div style="max-width: 68ch;">
+<div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 16px;"><span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span> {{ expectations_eyebrow }}</div>
+<h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0 0 22px;">{{ expectations_title }}</h2>
+{% for p in expectations_body %}<p style="font-size: 1.02rem; line-height: 1.8; color: var(--text-body); margin: 0 0 16px;">{{ p | safe }}</p>{% endfor %}
+{% if expectations_points %}
+<div style="margin-top: 26px; border-top: 1px solid var(--oxide-200); padding-top: 8px;">
+{% for pt in expectations_points %}<div style="display: grid; grid-template-columns: 28px 1fr; gap: 14px; align-items: start; padding: 14px 0; border-bottom: 1px solid var(--oxide-200);"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; padding-top: 3px;">{{ '%02d' | format(loop.index) }}</span><span style="font-size: 0.95rem; line-height: 1.65; color: var(--text-body);">{{ pt | safe }}</span></div>{% endfor %}
+</div>
+{% endif %}
+</div>
+</div>
+</section>
+{% endif %}
+
+{# ===== FORMULARIO DE ALTA + FAQ ===== #}
+<section id="alta" style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
+<div style="margin-bottom: clamp(28px,4vw,40px);">
+<div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 10px;"><span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span> {{ form_section_eyebrow }}</div>
+<h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0;">{{ form_section_title }}</h2>
+{% if form_section_lede %}<p style="margin: 14px 0 0; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 60ch;">{{ form_section_lede }}</p>{% endif %}
+</div>
+
+<div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(28px,4vw,64px); align-items: start;" class="site-two">
+<div>{% include "partials/form-colaborador.njk" %}</div>
+
+<div>
+{% if faq %}
+<div itemscope itemtype="https://schema.org/FAQPage">
+<meta itemprop="name" content="{{ faq_title }}">
+<h3 style="font-family: var(--font-serif); font-size: var(--fs-h3); font-weight: 500; color: var(--text-strong); margin: 0 0 8px;">{{ faq_title }}</h3>
+{% for item in faq %}
+<details style="border-top: 1px solid var(--border-hairline);" class="ds-faq" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" {{ 'open' if loop.first }}>
+<summary style="padding: 16px 0; cursor: pointer; display: grid; grid-template-columns: 30px 1fr 24px; gap: 12px; align-items: center; list-style: none;"><span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-faint); letter-spacing: 0.06em; font-variant-numeric: tabular-nums;">{{ '%02d' | format(loop.index) }}</span><span itemprop="name" style="font-family: var(--font-serif); font-size: 1rem; font-weight: 500; color: var(--text-strong); line-height: 1.35;">{{ item.q }}</span><span class="ds-faq-icon" style="color: var(--text-faint); font-size: 1.1rem; font-weight: 300; display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">+</span></summary>
+<div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" style="padding: 0 0 20px 42px; font-size: 0.9rem; color: var(--text-muted); line-height: 1.7;"><span itemprop="text">{{ item.a | safe }}</span></div>
+</details>
+{% endfor %}
+</div>
+{% endif %}
+{% if privacy_note %}
+<div style="margin-top: 22px; display: flex; gap: 12px; padding: 16px 20px; border-radius: var(--radius-md); background: rgba(30,100,60,0.04); border: 1px solid rgba(30,100,60,0.1);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div><div style="font-family: var(--font-sans); font-weight: 600; font-size: 0.85rem; color: var(--text-strong); margin-bottom: 3px;">{{ privacy_title }}</div><div style="font-size: 0.82rem; line-height: 1.55; color: var(--text-muted);">{{ privacy_note | safe }}</div></div></div>
+{% endif %}
+</div>
+</div>
+</section>
+
+{{ content | safe }}

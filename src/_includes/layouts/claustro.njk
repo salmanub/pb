@@ -1,0 +1,132 @@
+{#
+  claustro.njk — Layout para el escaparate público de expertos académicos
+  Capa 1 de 2 (capa pública / autoridad). La capa de captación vive en colaborador.njk
+  AGENTES §6 microdata: ItemList → Person (+ worksFor CollegeOrUniversity, knowsAbout)
+  AGENTES §5.1: cero texto hardcodeado — todo llega por frontmatter
+  Cadena: content.md → claustro.njk → base.njk
+  NOTE: All HTML on single lines to prevent Markdown <p> wrapping
+
+  ── PERFILES: fuente única `src/_data/catedraticos.json` ──────────────────────
+  Los perfiles NO viven en el frontmatter: se leen de `catedraticos.miembros`,
+  compartido por los tres idiomas (una ficha por persona, no tres). El fichero
+  documenta su propio esquema en la clave `_plantilla`.
+
+  Si no hay ningún perfil publicado, NO se renderiza la sección: ni el eyebrow,
+  ni el H2, ni la entradilla. La página pasa directamente de la introducción a
+  la banda de captación.
+
+  Solo se pintan los perfiles con `"publicado": true`. Es una lista blanca
+  deliberada: una ficha incompleta o no autorizada no sale por descuido.
+  Los campos jobTitle / bio / specialties / publications aceptan tanto un valor
+  plano como un objeto {es, ca, en}; si falta el idioma activo, cae a `es`.
+#}
+{% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
+{% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
+{% set _lc = lang | default("es") %}
+{% set faculty = (catedraticos.miembros | default([])) | selectattr("publicado") %}
+
+{# ── Microdata Article (coherente con about.njk / service.njk) ── #}
+<div itemscope itemtype="https://schema.org/Article" style="display: none;" aria-hidden="true"><meta itemprop="headline" content="{{ title }}"><meta itemprop="description" content="{{ description }}"><meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}"><div itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ metadata.author.name }}"></div><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"></div></div>
+
+{# ===== HERO + BREADCRUMB ===== #}
+{% include "partials/page-hero.njk" %}
+
+{# ===== DIVIDER ===== #}
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter);"><hr style="border: none; border-top: 1px solid var(--border-hairline); margin: 0;"></div>
+
+{# ===== INTRO + DISCIPLINAS ===== #}
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: clamp(40px,6vw,72px) var(--gutter) 0;">
+<div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(40px,5vw,72px); align-items: start;" class="site-two">
+<div>
+{% if disciplines %}
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: clamp(28px,4vw,40px);">{%- for tag in disciplines %}<span style="display: inline-flex; align-items: center; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; padding: 5px 10px; border-radius: var(--radius-xs); background: var(--surface-ink); color: var(--text-on-dark);">{{ tag }}</span>{%- endfor %}</div>
+{% endif %}
+{% for block in body_blocks %}
+<div style="margin-bottom: clamp(28px,4vw,40px);">
+<h2 style="font-family: var(--font-serif); font-size: var(--fs-h3); font-weight: 500; color: var(--text-strong); margin: 0 0 14px; padding-bottom: 10px; border-bottom: 2px solid var(--accent); display: inline-block;">{{ block.h }}</h2>
+<p style="font-size: 1rem; line-height: 1.8; color: var(--text-body); margin: 0; max-width: 62ch;">{{ block.p | safe }}</p>
+</div>
+{% endfor %}
+</div>
+{% include "partials/qual.njk" %}
+</div>
+</section>
+
+{# ===== CLAUSTRO — ItemList de Person ===== #}
+{# Sin perfiles publicados no se pinta nada: ni sección, ni título, ni entradilla #}
+{% if faculty | length > 0 %}
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: clamp(40px,6vw,72px) var(--gutter) var(--section-y);" itemscope itemtype="https://schema.org/ItemList">
+<meta itemprop="name" content="{{ faculty_title }}">
+<meta itemprop="numberOfItems" content="{{ faculty | length }}">
+<div style="margin-bottom: clamp(28px,4vw,44px);">
+<div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 10px;"><span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span> {{ faculty_eyebrow }}</div>
+<h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0;">{{ faculty_title }}</h2>
+{% if faculty_lede %}<p style="margin: 14px 0 0; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 62ch;">{{ faculty_lede }}</p>{% endif %}
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(20px,2.5vw,28px);" class="two-col">
+{% for member in faculty %}
+{% set _job = member.jobTitle[_lc] or member.jobTitle.es or member.jobTitle %}
+{% set _bio = member.bio[_lc] or member.bio.es or member.bio %}
+{% set _specs = member.specialties[_lc] or member.specialties.es or member.specialties %}
+{% set _pubs = member.publications[_lc] or member.publications.es or member.publications %}
+<article itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="border: 1px solid var(--border-hairline); border-radius: var(--radius-md); background: var(--surface-card); overflow: hidden; display: flex; flex-direction: column;">
+<meta itemprop="position" content="{{ loop.index }}">
+<div itemprop="item" itemscope itemtype="https://schema.org/Person" style="display: flex; flex-direction: column; height: 100%;">
+
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);"><span>{{ faculty_ref_prefix }} · {{ '%02d' | format(loop.index) }}</span>{% if member.borrador %}<span style="color: #fff; background: #b45309; padding: 2px 8px; border-radius: var(--radius-xs); font-size: 0.6rem; letter-spacing: 0.1em;">{{ faculty_placeholder_badge }}</span>{% endif %}</div>
+
+<div style="padding: 22px 20px 24px; display: flex; flex-direction: column; flex: 1;">
+<div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+{% if member.image %}
+<img itemprop="image" src="/assets/images/{{ member.image }}" alt="{{ member.name }}" loading="lazy" decoding="async" width="72" height="72" style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover; object-position: center top; border: 1px solid var(--border-subtle); flex-shrink: 0;">
+{% else %}
+<div aria-hidden="true" style="width: 72px; height: 72px; border-radius: 50%; background: var(--surface-tint); border: 1px dashed var(--border-hairline); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+{% endif %}
+<div>
+<h3 itemprop="name" style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 500; color: var(--text-strong); margin: 0; line-height: 1.25;">{{ member.name }}</h3>
+<div itemprop="jobTitle" style="margin-top: 4px; font-size: 0.9rem; color: var(--text-accent); line-height: 1.4;">{{ _job }}</div>
+</div>
+</div>
+
+{% if member.university %}
+<div itemprop="worksFor" itemscope itemtype="https://schema.org/CollegeOrUniversity" style="display: flex; align-items: center; gap: 8px; padding: 10px 0; border-top: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted);"><meta itemprop="name" content="{{ member.university }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>{{ member.university }}</div>
+{% endif %}
+
+{% if _bio %}<p itemprop="description" style="margin: 14px 0 0; font-size: 0.94rem; line-height: 1.7; color: var(--text-body);">{{ _bio | safe }}</p>{% endif %}
+
+{% if _specs %}
+<div style="margin-top: auto; padding-top: 18px;">
+<div style="font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 10px;">{{ faculty_specialties_label }}</div>
+<div style="display: flex; flex-wrap: wrap; gap: 7px;">{%- for s in _specs %}<span itemprop="knowsAbout" style="display: inline-flex; align-items: center; font-family: var(--font-sans); font-size: 0.8rem; padding: 5px 11px; border-radius: var(--radius-xs); background: var(--surface-tint); border: 1px solid var(--border-subtle); color: var(--text-body);">{{ s }}</span>{%- endfor %}</div>
+</div>
+{% endif %}
+
+{% if _pubs %}
+<div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border-subtle);">
+<div style="font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 8px;">{{ faculty_publications_label }}</div>
+{%- for pub in _pubs %}<div style="display: flex; gap: 10px; align-items: flex-start; padding: 6px 0; font-size: 0.85rem; line-height: 1.55; color: var(--text-muted);"><span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-accent); padding-top: 3px; flex-shrink: 0;">§</span><span>{{ pub }}</span></div>{%- endfor %}
+</div>
+{% endif %}
+
+</div>
+</div>
+</article>
+{% endfor %}
+</div>
+</section>
+{% endif %}
+
+{# ===== BAND CTA → capa de captación ===== #}
+{% if band_title %}
+<section style="background: var(--surface-tint); border-top: 1px solid var(--oxide-200);">
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter); text-align: center;">
+<div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 18px;">{{ band_eyebrow }}</div>
+<h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); color: var(--text-strong); margin: 0;">{{ band_title }}</h2>
+{% if band_lede %}<p style="margin: 14px auto 0; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 54ch;">{{ band_lede }}</p>{% endif %}
+<div style="margin-top: 28px;"><a href="{{ band_url }}" style="display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; font-family: var(--font-sans); font-size: var(--fs-body); font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid transparent; background: var(--accent); color: var(--accent-on); text-decoration: none; transition: background-color 0.3s;" onmouseenter="this.style.backgroundColor='#145a38'" onmouseleave="this.style.backgroundColor='var(--accent)'">{{ band_cta }}</a></div>
+</div>
+</section>
+{% endif %}
+
+{{ content | safe }}

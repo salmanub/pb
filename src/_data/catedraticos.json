@@ -1,0 +1,30 @@
+{
+  "_leeme": "Perfiles del claustro de expertos academicos. Los renderiza src/_includes/layouts/claustro.njk en /claustro-de-expertos/, /ca/claustre-experts/ y /en/academic-panel/. Si 'miembros' esta vacio, la seccion entera no se pinta: ni el eyebrow, ni el titulo, ni la entradilla. Una ficha por persona, compartida por los tres idiomas. Nombre de fichero sin guiones a proposito: la clave de datos de Eleventy es el nombre del fichero, y un guion obliga a notacion de corchetes en Nunjucks.",
+
+  "_plantilla": {
+    "_uso": "Copiar este objeto dentro de 'miembros', quitar las claves que empiezan por guion bajo y rellenar. Los campos jobTitle, bio, specialties y publications admiten un valor plano (se usa igual en los tres idiomas) o un objeto {es, ca, en}; si falta el idioma activo, cae al castellano.",
+    "name": "Nombre y apellidos — obligatorio, se marca como schema.org/Person > name",
+    "publicado": "OBLIGATORIO para que la ficha salga. Es una lista blanca: sin 'publicado': true el perfil no se pinta, aunque este completo. Asi una ficha a medias o no autorizada no sale por descuido.",
+    "borrador": "true muestra el distintivo naranja de borrador en la cabecera de la ficha. Quitarlo cuando los datos esten validados.",
+    "university": "Nombre de la universidad — se marca como worksFor > CollegeOrUniversity",
+    "image": "Ruta relativa dentro de src/assets/images/, p. ej. 'employees/nombre-apellido.jpg'. Si falta, se pinta un avatar generico.",
+    "jobTitle": {
+      "es": "Profesor titular — Departamento de …",
+      "ca": "Professor titular — Departament de …",
+      "en": "Tenured professor — Department of …"
+    },
+    "bio": {
+      "es": "Dos o tres frases sobre el tipo de asunto en el que interviene. Admite HTML.",
+      "ca": "…",
+      "en": "…"
+    },
+    "specialties": {
+      "es": ["Materia 1", "Materia 2"],
+      "ca": ["Materia 1", "Materia 2"],
+      "en": ["Subject 1", "Subject 2"]
+    },
+    "publications": ["Referencia bibliografica 1", "Referencia bibliografica 2"]
+  },
+
+  "miembros": []
+}
