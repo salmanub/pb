@@ -42,7 +42,7 @@
       {# ── Col 2: Dictámenes ── #}
       {% set fSvcHub = "/informes-pericials/" if lang == "ca" else ("/expert-witness-reports/" if lang == "en" else "/informes-periciales/") %}
       {# ES dictamen pages now live at root (/{slug}/); the catalog link still points to the /informes-periciales/ hub. #}
-      {% set fSvcBase = "/informes-pericials/" if lang == "ca" else ("/expert-witness-reports/" if lang == "en" else "/") %}
+      {% set fSvcBase = "/" %}{# páginas de servicio PLANAS en los tres idiomas; la forma anidada 301ea (mismo bug que se corrigió en nav.njk el 30/08) #}
       <div>
         <div style="font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.14em;
                     text-transform: uppercase; color: var(--text-on-dark-muted); margin-bottom: 18px;">
@@ -66,6 +66,7 @@
       {% set fAbogados = "/collaboracio-advocats/" if lang == "ca" else ("/lawyer-collaboration/" if lang == "en" else "/colaboracion-abogados/") %}
       {% set fHonorarios = "/honoraris/" if lang == "ca" else ("/fees/" if lang == "en" else "/honorarios-perito-judicial-barcelona/") %}
       {% set fDespacho = "/el-despatx/" if lang == "ca" else ("/the-firm/" if lang == "en" else "/el-despacho/") %}
+      {% set fExpertos = "/quadre-experts/" if lang == "ca" else ("/expert-panel/" if lang == "en" else "/cuadro-de-expertos/") %}
       <div>
         <div style="font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.14em;
                     text-transform: uppercase; color: var(--text-on-dark-muted); margin-bottom: 18px;">
@@ -76,6 +77,7 @@
           <li><a href="{{ langPrefix + fCasos }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.footer.casos_ratificados }}</a></li>
           <li><a href="{{ langPrefix + fAbogados }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.footer.abogados_seguros }}</a></li>
           <li><a href="{{ langPrefix + fHonorarios }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.nav.honorarios }}</a></li>
+          <li><a href="{{ langPrefix + fExpertos }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.footer.cuadro_expertos }}</a></li>
           <li><a href="{{ langPrefix + fDespacho }}" style="color: var(--bone-100); font-size: 0.9rem; opacity: 0.82;">{{ ui.footer.el_despacho }}</a></li>
         </ul>
       </div>

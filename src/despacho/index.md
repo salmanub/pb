@@ -22,8 +22,8 @@ body_blocks:
   - h: "Principios de trabajo"
     p: "<b>Independencia técnica</b> — innegociable, sin exclusivas. <b>Plazos por contrato</b> — si no se puede garantizar, no se acepta el encargo. <b>Honorarios fijos</b> — acordados antes del inicio, ratificación incluida. <b>Claridad técnica</b> — un dictamen que no se entiende en sala carece de valor probatorio."
 claustro_block:
-  h: "Claustro pericial"
-  p: "Cuando la materia controvertida exige el estado del arte de una disciplina —el modelo de cálculo, la caracterización de un material, la interacción suelo-estructura—, el dictamen se firma junto a un catedrático o profesor universitario especializado en esa materia, mientras la dirección pericial mantiene la interlocución y la responsabilidad procesal. Puede consultar las cinco disciplinas del <a href='/claustro-pericial/'>claustro pericial</a>; si es usted quien da clase en la universidad, aquí están las condiciones de <a href='/colaboracion-peritos/'>colaboración de peritos</a>."
+  h: "Cuadro de expertos"
+  p: "Cuando la materia controvertida exige el estado del arte de una disciplina —el modelo de cálculo, la caracterización de un material, la interacción suelo-estructura—, el dictamen se firma junto a un catedrático o profesor universitario especializado en esa materia, mientras la dirección pericial mantiene la interlocución y la responsabilidad procesal. Puede consultar las seis materias del <a href='/cuadro-de-expertos/'>cuadro de expertos</a>; si es usted quien da clase en la universidad, aquí están las condiciones de <a href='/colaboracion-peritos/'>colaboración de peritos</a>."
 qualLabel: "Habilitación profesional"
 qualItems:
   - { num: "TÍT", text: "Ingeniero Civil — ETSECCPB · UPC" }

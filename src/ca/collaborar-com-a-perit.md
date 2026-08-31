@@ -11,11 +11,11 @@ translations:
     permalink: /colaboracion-peritos/
   - lang: en
     permalink: /en/expert-collaboration/
-title: "Col·laboració de Perits | Alta d'Expert Acadèmic Signant"
-description: "Alta de catedràtics, professors titulars i professionals amb activitat docent com a perits signants. Sense càrrega comercial ni administrativa. Llegeixi abans les condicions i la disponibilitat real d'encàrrecs."
+title: "Col·laboració de Perits | Registre de Perits Signants"
+description: "Registre de perits col·laboradors signants: perfils acadèmics, sènior d'obra, especialistes de nínxol i laboratori. Condicions de col·laboració i disponibilitat real d'encàrrecs."
 breadcrumb_parent:
-  label: "Claustre Pericial"
-  url: "/ca/claustre-pericial/"
+  label: "Quadre d'Experts"
+  url: "/ca/quadre-experts/"
 
 # ── ESBORRANY — pendent de validació per l'Albert ────────────────────────────
 # Tots els textos d'aquesta pàgina són un primer esborrany redactat sobre
@@ -26,35 +26,34 @@ breadcrumb_parent:
 heroTitle: "Col·laboració<br>de perits"
 
 bridge_text: "Busca un perit per al seu assumpte?"
-bridge_url: "/ca/claustre-pericial/"
-bridge_link: "Veure el claustre pericial →"
+bridge_url: "/ca/quadre-experts/"
+bridge_link: "Veure el quadre d'experts →"
 
 
 protocols_eyebrow: "§ Protocols"
-protocols_title: "Dues maneres de col·laborar"
-protocols_lede: "El protocol no canvia la feina tècnica: canvia la disponibilitat, la forma de contractar i la càrrega administrativa que assumim nosaltres."
+protocols_title: "Dues vies d'acreditació"
+protocols_lede: "El protocol no canvia la feina tècnica ni els honoraris: canvia què acredita el signant davant el tribunal. Cap de les dues vies és subsidiària de l'altra."
 protocols:
-  - ref: "Protocol A — Càtedra i titularitat"
-    title: "Per a catedràtics i professors titulars"
-    lede: "Perfil acadèmic a temps complet, amb dedicació docent i investigadora i compatibilitat subjecta a la Llei 53/1984."
+  - ref: "Protocol A — Aval acadèmic"
+    title: "Universitat i docència"
+    lede: "Catedràtics, professors titulars i professorat associat que compatibilitza la docència amb exercici professional propi."
     items:
-      - "Intervenció per dictamen, sense volum compromès"
-      - "Encàrrec delimitat: abast tancat i pregunta tècnica concreta"
-      - "Publicacions i comitès de normalització com a aval davant el tribunal"
-      - "Ratificació en sala pactada i retribuïda des de l'inici (LEC art. 347)"
-      - "Tota la relació amb el lletrat i l'asseguradora la portem nosaltres"
+      - "Publicacions i comitès de normalització com a trajectòria documental"
+      - "Intervenció per dictamen, sense volum compromès ni exclusivitat"
+      - "Compatibilitat subjecta a la Llei 53/1984 per al personal funcionari"
+      - "Facturació com a professional independent o segons conveni de la universitat"
+      - "Ratificació en sala pactada i retribuïda des de l'inici — LEC art. 347"
     cta: "Donar-me d'alta"
-  - ref: "Protocol B — Docència i exercici propi"
-    title: "Per a professors amb activitat professional pròpia"
-    lede: "Professor associat o col·laborador que fa classe a la universitat i factura com a autònom. És avui el perfil més habitual entre els nostres col·laboradors."
+  - ref: "Protocol B — Aval professional"
+    title: "Obra, especialitat, indústria i col·legi"
+    lede: "Sènior d'obra, especialistes de nínxol, antics tècnics de fabricant o laboratori i perits inscrits en altres col·legis. L'experiència d'exercici acredita per si sola: no s'exigeix trajectòria docent."
     items:
-      - "Compatible amb la seva pròpia cartera de clients, sense exclusivitat"
-      - "Facturació com a professional independent, honoraris tancats per encàrrec"
-      - "La docència universitària és l'aval; l'exercici propi, l'experiència d'obra"
-      - "Sense captació comercial ni redacció formal: només criteri tècnic i signatura"
-      - "Possibilitat d'intervenir com a assessor tècnic sense signar, si ho prefereix"
+      - "Anys de direcció d'obra, col·legiació o acreditació ENAC com a aval"
+      - "Compatible amb cartera de clients pròpia, sense exclusivitat"
+      - "Cobertura territorial fora de Catalunya mitjançant llistes d'altres col·legis"
+      - "Desvinculació acreditada del fabricant, quan el perfil ve de la indústria"
+      - "Possibilitat d'intervenir com a assessor tècnic sense signar el dictamen"
     cta: "Donar-me d'alta"
-
 body_blocks:
   - h: "Què fem nosaltres i què fa vostè"
     p: "Nosaltres captem l'assumpte, el qualifiquem tècnicament, negociem honoraris i terminis amb el lletrat o l'asseguradora, instruïm l'expedient, gestionem la facturació i assumim la interlocució comercial. Vostè rep un encàrrec ja delimitat: abast tancat, documentació ordenada i una pregunta tècnica concreta. Hi aporta el criteri, valida la metodologia, signa el dictamen i el ratifica en sala si el procediment ho requereix."
@@ -78,19 +77,19 @@ split_items:
     text: "Facturació, seguiment i tracte amb el lletrat"
 split_note: "Vostè: criteri tècnic, signatura i ratificació"
 
-expectations_eyebrow: "Llegeixi-ho abans de donar-se d'alta"
-expectations_title: "No li podem prometre encàrrecs immediats"
+expectations_eyebrow: "Condicions del registre"
+expectations_title: "Disponibilitat real d'encàrrecs"
 expectations_body:
-  - "Convé dir-ho sense embuts: donar-se d'alta en aquest registre <strong>no significa que rebrà un encàrrec aviat</strong>, ni que n'hagi de rebre cap. Seria fàcil escriure el contrari i quedaria millor en aquesta pàgina, però no seria cert."
-  - "La demanda de peritatges singulars i d'alt perfil ha crescut, i amb ella l'exigència d'encaix: els assumptes que justifiquen recórrer a un expert acadèmic són, per definició, poc freqüents i molt específics. Un catedràtic en geotècnia no resol un litigi sobre instal·lacions elèctriques, i trucar-lo per això només li faria perdre el temps a vostè i credibilitat a nosaltres."
-  - "Per això el plantejament és el contrari al d'una borsa de treball: <strong>deixi'ns les seves dades ara perquè, quan entri un cas que encaixi al 100 % amb la seva especialitat, puguem anar directes a vostè</strong>. Pot passar un mes o pot passar un any. El que no passarà és que el truquem per a un encàrrec que no va amb vostè."
+  - "L'alta al registre no comporta assignació d'encàrrecs. La freqüència depèn que entri un assumpte la matèria del qual coincideixi amb l'especialitat declarada, i aquesta coincidència és infreqüent per definició: els expedients que justifiquen incorporar un perit extern són, precisament, els que la direcció pericial no pot resoldre tota sola."
+  - "El criteri d'assignació és la coincidència de matèria, no la disponibilitat. Un especialista en geotècnia no rep un assumpte d'instal·lacions elèctriques. Aquesta restricció és deliberada: un dictamen signat fora de l'especialitat acreditada del signant no resisteix el contrainterrogatori."
+  - "El registre funciona com a directori de consulta, no com a borsa de treball. Les dades es conserven per localitzar el perit el dia que la matèria coincideix, sense termini previsible: pot ser qüestió de setmanes o no arribar a produir-se."
+expectations_points_label: "Termes"
 expectations_points:
-  - "L'alta no genera cap compromís per cap de les dues parts, ni exclusivitat."
-  - "No hi ha un volum mínim d'encàrrecs garantit, ni una previsió que li puguem donar per escrit."
-  - "Quan sorgeixi un cas compatible, el trucarem amb l'abast i els honoraris ja definits, perquè decideixi amb dades."
-  - "Si l'assumpte no encaixa amb la seva especialitat, no li escriurem. Preferim el silenci a la llista de correu."
-  - "Pot sol·licitar la baixa i la supressió de les seves dades en qualsevol moment escrivint a l'adreça de contacte."
-
+  - "L'alta no genera obligació ni exclusivitat per a cap de les dues parts."
+  - "No es garanteix un volum mínim d'encàrrecs ni s'emet previsió per escrit."
+  - "El contacte es produeix amb l'abast i els honoraris ja definits, per decidir amb dades."
+  - "No es trameten comunicacions fora d'un encàrrec compatible amb l'especialitat declarada."
+  - "Baixa i supressió de dades a sol·licitud, en qualsevol moment — Reglament UE 2016/679."
 form_section_eyebrow: "Alta de col·laborador"
 form_section_title: "Deixi'ns el seu perfil tècnic"
 form_section_lede: "Cinc passos. No demanem noms de clients, números d'expedient ni cap dada subjecta a confidencialitat: només la matèria sobre la qual ha peritat."
@@ -114,17 +113,18 @@ form_consent:
   url: "/ca/privadesa/"
 
 form_steps:
-  - key: "perfil_academico"
+  - key: "perfil"
     eyebrow: "§ 01 · Perfil"
     type: "choice"
-    question: "Quina és la seva situació acadèmica actual?"
-    helper: "Si compatibilitza docència i exercici per compte propi, seleccioni l'opció que ho reflecteixi millor."
+    question: "Què acredita avui el seu criteri tècnic?"
+    helper: "Determina la via d'acreditació, no la prioritat. Cap opció té preferència sobre les altres."
     options:
-      - "Catedràtic/a d'universitat"
-      - "Professor/a titular d'universitat"
-      - "Professor/a associat/da o col·laborador/a amb exercici professional propi"
-      - "Personal docent i investigador (contractat doctor, ajudant doctor)"
-      - "Un altre perfil docent o investigador"
+      - "Càtedra o titularitat d'universitat"
+      - "Docència universitària compatibilitzada amb exercici professional propi"
+      - "Direcció d'obra, cap d'obra o direcció tècnica"
+      - "Especialitat instrumental (PCI, acústica, geotècnia de camp, termografia, metrologia)"
+      - "Laboratori d'assaigs o antiga responsabilitat tècnica en fabricant"
+      - "Inscripció en llista de perits d'un col·legi professional"
   - key: "formacion"
     eyebrow: "§ 02 · Formació i especialitat"
     type: "fields"
@@ -191,6 +191,8 @@ form_steps:
 
 faq_title: "Abans de donar-se d'alta"
 faq:
+  - q: "Cal ser professor d'universitat?"
+    a: "No. El registre és obert a perfils d'obra, especialistes instrumentals, laboratoris acreditats i perits inscrits en llistes d'altres col·legis. El que s'acredita davant el tribunal és la trajectòria del signant en la matèria concreta, i una direcció d'obra de vint-i-cinc anys és trajectòria documental igual que una publicació."
   - q: "Quant trigaré a rebre un encàrrec?"
     a: "No li podem donar un termini. Depèn completament que entri un assumpte la matèria del qual coincideixi amb la seva especialitat. Pot ser en setmanes o pot no arribar a produir-se. Aquesta pàgina existeix precisament per no generar-li una expectativa que no podem sostenir."
   - q: "Com es fixen els honoraris?"

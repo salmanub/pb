@@ -352,6 +352,19 @@
       "description_ca": "Consultoria CFRP, direcció tècnica i Eurocodi 2",
       "description_en": "CFRP consultancy, technical management and Eurocode 2",
       "cat": "Ingeniería"
+    },
+    {
+      "name": "Prescripción técnica",
+      "name_ca": "Prescripció tècnica",
+      "name_en": "Technical specification",
+      "path": "prescripcion-tecnica",
+      "href": "/asesoramiento-estructural/prescripcion-tecnica/",
+      "href_ca": "/ca/assessorament-estructural/prescripcio-tecnica/",
+      "href_en": "/en/structural-consulting/technical-specification/",
+      "description": "Sistemas prescritos por prestaciones y criterio de aceptación, no por marca",
+      "description_ca": "Sistemes prescrits per prestacions i criteri d'acceptació, no per marca",
+      "description_en": "Systems specified by performance and acceptance criteria, not by brand",
+      "cat": "Ingeniería"
     }
   ],
   "translations": {

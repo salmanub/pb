@@ -11,72 +11,73 @@ translations:
     permalink: /ca/collaboracio-perits/
   - lang: en
     permalink: /en/expert-collaboration/
-title: "Colaboración de Peritos | Alta de Experto Académico Firmante"
-description: "Alta de catedráticos, profesores titulares y profesionales con actividad docente como peritos firmantes. Sin carga comercial ni administrativa. Lea antes las condiciones y la disponibilidad real de encargos."
+title: "Colaboración de Peritos | Registro de Peritos Firmantes"
+description: "Registro de peritos colaboradores firmantes: perfiles académicos, sénior de obra, especialistas de nicho y laboratorio. Condiciones de colaboración y disponibilidad real de encargos."
 breadcrumb_parent:
-  label: "Claustro Pericial"
-  url: "/claustro-pericial/"
+  label: "Cuadro de Expertos"
+  url: "/cuadro-de-expertos/"
 
 # ── BORRADOR — pendiente de validación por Albert ────────────────────────────
-# Todos los textos de esta página son un primer borrador redactado sobre el
-# enfoque acordado (gestión honesta de expectativas + perfil mixto académico /
-# autónomo). Revisar tono y condiciones antes de quitar `noindex: true`.
+# Primer borrador sobre el enfoque acordado: registro abierto a perfil académico
+# y profesional, con gestión honesta de expectativas. Revisar antes de quitar
+# `noindex: true`.
 # ─────────────────────────────────────────────────────────────────────────────
 
 heroTitle: "Colaboración<br>de peritos"
 
 bridge_text: "¿Busca un perito para su asunto?"
-bridge_url: "/claustro-pericial/"
-bridge_link: "Ver el claustro pericial →"
+bridge_url: "/cuadro-de-expertos/"
+bridge_link: "Ver el cuadro de expertos →"
 
-expectations_eyebrow: "Léalo antes de darse de alta"
-expectations_title: "No podemos prometerle encargos inmediatos"
+expectations_eyebrow: "Condiciones del registro"
+expectations_title: "Disponibilidad real de encargos"
 expectations_body:
-  - "Conviene decirlo sin rodeos y antes que nada: darse de alta en este registro <strong>no significa que vaya a recibir un encargo pronto</strong>, ni que vaya a recibirlo en absoluto. Sería fácil escribir lo contrario y quedaría mejor en esta página, pero no sería cierto."
-  - "La demanda de peritajes singulares y de alto perfil ha crecido, y con ella la exigencia de encaje: los asuntos que justifican recurrir a un experto académico son, por definición, poco frecuentes y muy específicos. Un catedrático en geotecnia no resuelve un litigio sobre instalaciones eléctricas, y llamarle para eso solo le haría perder el tiempo a usted y credibilidad a nosotros."
-  - "Por eso el planteamiento es el contrario al de una bolsa de trabajo: <strong>déjenos sus datos ahora para que, cuando entre un caso que encaje al 100 % con su especialidad, podamos ir directos a usted</strong>. Puede pasar un mes o puede pasar un año. Lo que no va a pasar es que le llamemos para un encargo que no va con usted."
+  - "El alta en el registro no comporta asignación de encargos. La frecuencia depende de que entre un asunto cuya materia coincida con la especialidad declarada, y esa coincidencia es infrecuente por definición: los expedientes que justifican incorporar a un perito externo son, precisamente, los que la dirección pericial no puede resolver por sí sola."
+  - "El criterio de asignación es la coincidencia de materia, no la disponibilidad. Un especialista en geotecnia no recibe un asunto de instalaciones eléctricas. Esa restricción es deliberada: un dictamen firmado fuera de la especialidad acreditada del firmante no resiste el contrainterrogatorio."
+  - "El registro funciona como directorio de consulta, no como bolsa de trabajo. Los datos se conservan para localizar al perito el día que la materia coincide, sin plazo previsible: puede ser cuestión de semanas o no llegar a producirse."
+expectations_points_label: "Términos"
 expectations_points:
-  - "El alta no genera ningún compromiso por ninguna de las dos partes, ni exclusividad."
-  - "No hay un volumen mínimo de encargos garantizado, ni una previsión que podamos darle por escrito."
-  - "Cuando surja un caso compatible, le llamaremos con el alcance y los honorarios ya definidos, para que decida con datos."
-  - "Si el asunto no encaja con su especialidad, no le escribiremos. Preferimos el silencio a la lista de correo."
-  - "Puede solicitar la baja y la supresión de sus datos en cualquier momento escribiendo a la dirección de contacto."
+  - "El alta no genera obligación ni exclusividad para ninguna de las dos partes."
+  - "No se garantiza un volumen mínimo de encargos ni se emite previsión por escrito."
+  - "El contacto se produce con el alcance y los honorarios ya definidos, para decidir con datos."
+  - "No se remiten comunicaciones fuera de un encargo compatible con la especialidad declarada."
+  - "Baja y supresión de datos a solicitud, en cualquier momento — Reglamento UE 2016/679."
 
 protocols_eyebrow: "§ Protocolos"
-protocols_title: "Dos formas de colaborar"
-protocols_lede: "El protocolo no cambia el trabajo técnico: cambia la disponibilidad, la forma de contratar y la carga administrativa que asumimos nosotros."
+protocols_title: "Dos vías de acreditación"
+protocols_lede: "El protocolo no cambia el trabajo técnico ni los honorarios: cambia qué acredita al firmante ante el tribunal. Ninguna de las dos vías es subsidiaria de la otra."
 protocols:
-  - ref: "Protocolo A — Cátedra y titularidad"
-    title: "Para catedráticos y profesores titulares"
-    lede: "Perfil académico a tiempo completo, con dedicación docente e investigadora y compatibilidad sujeta a la Ley 53/1984."
+  - ref: "Protocolo A — Aval académico"
+    title: "Universidad y docencia"
+    lede: "Catedráticos, profesores titulares y profesorado asociado que compatibiliza la docencia con ejercicio profesional propio."
     items:
-      - "Intervención por dictamen, sin volumen comprometido"
-      - "Encargo delimitado: alcance cerrado y pregunta técnica concreta"
-      - "Publicaciones y comités de normalización como aval ante el tribunal"
-      - "Ratificación en sala pactada y retribuida desde el inicio (LEC art. 347)"
-      - "Toda la relación con el letrado y la aseguradora la llevamos nosotros"
+      - "Publicaciones y comités de normalización como trayectoria documental"
+      - "Intervención por dictamen, sin volumen comprometido ni exclusividad"
+      - "Compatibilidad sujeta a la Ley 53/1984 para el personal funcionario"
+      - "Facturación como profesional independiente o según convenio de la universidad"
+      - "Ratificación en sala pactada y retribuida desde el inicio — LEC art. 347"
     cta: "Darme de alta"
-  - ref: "Protocolo B — Docencia y ejercicio propio"
-    title: "Para profesores con actividad profesional propia"
-    lede: "Profesor asociado o colaborador que da clase en la universidad y factura como autónomo. Es hoy el perfil más habitual entre nuestros colaboradores."
+  - ref: "Protocolo B — Aval profesional"
+    title: "Obra, especialidad, industria y colegio"
+    lede: "Sénior de obra, especialistas de nicho, antiguos técnicos de fabricante o laboratorio y peritos inscritos en otros colegios. La experiencia de ejercicio acredita por sí sola: no se exige trayectoria docente."
     items:
-      - "Compatible con su propia cartera de clientes, sin exclusividad"
-      - "Facturación como profesional independiente, honorarios cerrados por encargo"
-      - "La docencia universitaria es el aval; el ejercicio propio, la experiencia de obra"
-      - "Sin captación comercial ni redacción formal: solo criterio técnico y firma"
-      - "Posibilidad de intervenir como asesor técnico sin firmar, si lo prefiere"
+      - "Años de dirección de obra, colegiación o acreditación ENAC como aval"
+      - "Compatible con cartera de clientes propia, sin exclusividad"
+      - "Cobertura territorial fuera de Cataluña a través de listas de otros colegios"
+      - "Desvinculación acreditada del fabricante, cuando el perfil procede de la industria"
+      - "Posibilidad de intervenir como asesor técnico sin firmar el dictamen"
     cta: "Darme de alta"
 
 body_blocks:
-  - h: "Qué hacemos nosotros y qué hace usted"
-    p: "Nosotros captamos el asunto, lo cualificamos técnicamente, negociamos honorarios y plazos con el letrado o la aseguradora, instruimos el expediente, gestionamos la facturación y asumimos la interlocución comercial. Usted recibe un encargo ya delimitado: alcance cerrado, documentación ordenada y una pregunta técnica concreta. Aporta el criterio, valida la metodología, firma el dictamen y lo ratifica en sala si el procedimiento lo requiere."
+  - h: "Qué hace el despacho y qué hace el perito colaborador"
+    p: "El despacho capta el asunto, lo cualifica técnicamente, negocia honorarios y plazos con el letrado o la aseguradora, instruye el expediente, gestiona la facturación y asume la interlocución comercial. El colaborador recibe un encargo delimitado: alcance cerrado, documentación ordenada y una pregunta técnica concreta. Aporta el criterio, valida la metodología, firma el dictamen y lo ratifica en sala cuando el procedimiento lo requiere."
   - h: "Qué tipo de asuntos llegan"
-    p: "Casos en los que la controversia se dirime en el modelo de cálculo, en la caracterización de un material o en la interpretación de una norma técnica: patología estructural con recálculo, interacción suelo-estructura, fallos de servicio en instalaciones, comportamiento de sistemas constructivos fuera de su norma de producto. Son expedientes técnicamente exigentes; ese es precisamente el motivo por el que se recurre a un perfil académico."
+    p: "Expedientes en los que la controversia se dirime en el modelo de cálculo, en la caracterización de un material, en la causa raíz de un fallo de servicio o en la práctica constructiva efectivamente ejecutada. Esta última categoría es la que reclama perfil de obra: cómo se ejecutó realmente el detalle, qué tolerancia se admitió y qué consecuencia tuvo. Es un dato que no se deduce del proyecto ni del modelo."
   - h: "Compatibilidad e independencia"
-    p: "La actuación pericial es compatible con la actividad docente y con el ejercicio privado, pero la compatibilidad concreta depende del régimen de dedicación de cada universidad y, en el caso del personal funcionario, de la Ley 53/1984 de incompatibilidades. Es responsabilidad de cada colaborador verificar su situación. Por nuestra parte, el dictamen se rige por el deber de imparcialidad del perito (art. 335.2 LEC): se firma lo que resulta del análisis, favorezca o no a quien lo encarga."
+    p: "La actuación pericial es compatible con la actividad docente y con el ejercicio privado, pero la compatibilidad concreta depende del régimen de dedicación de cada universidad y, para el personal funcionario, de la Ley 53/1984 de incompatibilidades. Su verificación corresponde a cada colaborador. El dictamen se rige por el deber de imparcialidad del perito (art. 335.2 LEC): se firma lo que resulta del análisis, favorezca o no a quien lo encarga. No se aceptan encargos condicionados a un resultado."
 
 split_label: "Reparto de roles"
-split_headline: "Usted aporta criterio. Nosotros, todo lo demás."
+split_headline: "Usted aporta criterio. El despacho, todo lo demás."
 split_items:
   - num: "01"
     text: "Captación del cliente y cualificación técnica del asunto"
@@ -92,7 +93,7 @@ split_note: "Usted: criterio técnico, firma y ratificación"
 
 form_section_eyebrow: "Alta de colaborador"
 form_section_title: "Déjenos su perfil técnico"
-form_section_lede: "Cinco pasos. No pedimos nombres de clientes, números de expediente ni ningún dato sujeto a confidencialidad: solo la materia sobre la que ha peritado."
+form_section_lede: "Cinco pasos. No se piden nombres de clientes, números de expediente ni ningún dato sujeto a confidencialidad: solo la materia sobre la que ha peritado."
 
 form_eyebrow: "Alta de colaborador"
 form_origen: "perito-alta-colaborador"
@@ -113,26 +114,27 @@ form_consent:
   url: "/privacidad/"
 
 form_steps:
-  - key: "perfil_academico"
+  - key: "perfil"
     eyebrow: "§ 01 · Perfil"
     type: "choice"
-    question: "¿Cuál es su situación académica actual?"
-    helper: "Si compatibiliza docencia y ejercicio por cuenta propia, seleccione la opción que mejor lo refleje."
+    question: "¿Qué acredita hoy su criterio técnico?"
+    helper: "Determina la vía de acreditación, no la prioridad. Ninguna opción tiene preferencia sobre las demás."
     options:
-      - "Catedrático/a de universidad"
-      - "Profesor/a titular de universidad"
-      - "Profesor/a asociado/a o colaborador/a con ejercicio profesional propio"
-      - "Personal docente e investigador (contratado doctor, ayudante doctor)"
-      - "Otro perfil docente o investigador"
+      - "Cátedra o titularidad de universidad"
+      - "Docencia universitaria compatibilizada con ejercicio profesional propio"
+      - "Dirección de obra, jefatura de obra o dirección técnica"
+      - "Especialidad instrumental (PCI, acústica, geotecnia de campo, termografía, metrología)"
+      - "Laboratorio de ensayos o antigua responsabilidad técnica en fabricante"
+      - "Inscripción en lista de peritos de un colegio profesional"
   - key: "formacion"
     eyebrow: "§ 02 · Formación y especialidad"
     type: "fields"
     question: "¿Cuál es su titulación y su materia de expertise?"
-    helper: "La especialidad es el campo que usamos para cruzar su perfil con la materia de cada asunto."
+    helper: "La especialidad es el campo que se cruza con la materia de cada asunto."
     fields:
       - name: "titulacion"
-        label: "Titulación"
-        placeholder: "Dr. Ingeniero de Caminos, Canales y Puertos"
+        label: "Titulación y colegiación"
+        placeholder: "Ingeniero de Caminos · Col. 00000"
         required: true
       - name: "especialidad"
         label: "Especialidad o materia de expertise"
@@ -150,21 +152,21 @@ form_steps:
   - key: "experiencia_detalle"
     eyebrow: "§ 04 · Materias periciadas"
     type: "fields"
-    question: "¿Sobre qué materias ha peritado?"
-    helper: "Solo la naturaleza técnica del peritaje. No indique nombres de clientes, partes, números de procedimiento ni ningún dato sujeto a confidencialidad."
+    question: "¿Sobre qué materias ha peritado o dictaminado?"
+    helper: "Solo la naturaleza técnica del trabajo. No indique nombres de clientes, partes, números de procedimiento ni ningún dato sujeto a confidencialidad."
     fields:
       - name: "materias"
-        label: "Naturaleza y materia de los peritajes"
+        label: "Naturaleza y materia de los trabajos"
         multiline: true
         rows: 4
-        placeholder: "Ej.: patología estructural en edificación residencial; fallos de cimentación por asientos diferenciales; dictámenes de parte en jurisdicción civil."
+        placeholder: "Ej.: patología estructural en edificación residencial; fallos de cimentación por asientos diferenciales; dirección de ejecución de refuerzos con CFRP."
         required: false
-        note: "Si ha marcado que no ha peritado antes, puede dejarlo en blanco o describir su experiencia técnica equivalente."
+        note: "Sin experiencia pericial previa, describa la experiencia técnica equivalente: obras dirigidas, ensayos firmados o instalaciones puestas en servicio."
   - key: "contacto"
     eyebrow: "§ 05 · Contacto"
     type: "fields"
     question: "¿Cómo le localizamos?"
-    helper: "Le escribiremos únicamente cuando haya un asunto compatible con su especialidad."
+    helper: "Solo se le escribirá cuando haya un asunto compatible con su especialidad."
     fields:
       - name: "nombre"
         label: "Nombre completo"
@@ -174,7 +176,7 @@ form_steps:
       - name: "email"
         label: "Correo electrónico"
         type: "email"
-        placeholder: "nombre@universidad.edu"
+        placeholder: "nombre@dominio.com"
         autocomplete: "email"
         required: true
       - name: "telefono"
@@ -184,24 +186,24 @@ form_steps:
         autocomplete: "tel"
         required: true
       - name: "institucion"
-        label: "Universidad o institución"
-        placeholder: "Nombre de la universidad, departamento o despacho propio"
+        label: "Universidad, empresa, laboratorio o despacho propio"
+        placeholder: "Entidad a la que está vinculado"
         required: false
 
 faq_title: "Antes de darse de alta"
 faq:
-  - q: "¿Cuánto tardaré en recibir un encargo?"
-    a: "No podemos darle un plazo. Depende por completo de que entre un asunto cuya materia coincida con su especialidad. Puede ser en semanas o puede no llegar a producirse. Esta página existe precisamente para no generarle una expectativa que no podemos sostener."
+  - q: "¿Hay que ser profesor de universidad?"
+    a: "No. El registro está abierto a perfiles de obra, especialistas instrumentales, laboratorios acreditados y peritos inscritos en listas de otros colegios. Lo que se acredita ante el tribunal es la trayectoria del firmante en la materia concreta, y una dirección de obra de veinticinco años es trayectoria documental igual que una publicación."
+  - q: "¿Cuánto se tarda en recibir un encargo?"
+    a: "No se puede dar un plazo. Depende de que entre un asunto cuya materia coincida con la especialidad declarada. Esta página existe para no generar una expectativa que no se puede sostener."
   - q: "¿Cómo se fijan los honorarios?"
-    a: "Se pactan caso por caso antes de aceptar el encargo, en función del alcance, la complejidad técnica y si se prevé ratificación en sala. Recibirá la propuesta cerrada por escrito y decide entonces: no hay compromiso previo por darse de alta."
+    a: "Se pactan caso por caso antes de aceptar el encargo, según alcance, complejidad técnica y previsión de ratificación en sala. La propuesta se recibe cerrada y por escrito: darse de alta no comporta compromiso previo."
   - q: "¿Es compatible con mi dedicación en la universidad?"
-    a: "Depende de su régimen de dedicación y, en el caso del personal funcionario, de la Ley 53/1984 de incompatibilidades. Es una verificación que corresponde a cada colaborador con su universidad. Nosotros no podemos hacerla por usted."
-  - q: "¿Tengo que buscar clientes o negociar?"
-    a: "No. La captación, la negociación de honorarios, la instrucción del expediente y la facturación son nuestras. Su intervención empieza cuando el encargo ya está definido y aceptado."
-  - q: "¿Debo firmar el dictamen y ratificarlo en sala?"
-    a: "Sí. La firma es el núcleo de la colaboración: quien suscribe el dictamen es quien lo defiende. Si el procedimiento requiere ratificación, se acuerda desde el inicio y se retribuye como parte del encargo (art. 347 LEC)."
+    a: "Depende del régimen de dedicación y, para el personal funcionario, de la Ley 53/1984 de incompatibilidades. La verificación corresponde a cada colaborador con su universidad."
+  - q: "Vengo de un fabricante. ¿Es un problema para la independencia?"
+    a: "Lo es si la vinculación sigue viva. Con la desvinculación acreditada, el conocimiento interno del sistema es un activo: permite evaluar prestaciones declaradas y equivalencias reales entre productos sin representar a ninguna marca."
   - q: "¿Qué pasa si el dictamen perjudica a quien lo encarga?"
-    a: "Se emite igualmente. El perito debe actuar con objetividad y manifestarlo así bajo juramento o promesa (art. 335.2 LEC). No aceptamos encargos condicionados a un resultado, y no le pediremos nunca que ajuste una conclusión."
+    a: "Se emite igualmente. El perito debe actuar con objetividad y manifestarlo así bajo juramento o promesa (art. 335.2 LEC). No se aceptan encargos condicionados a un resultado ni se pide ajustar una conclusión."
 
 privacy_title: "Tratamiento de sus datos"
 privacy_note: "Sus datos se incorporan a un registro interno de peritos colaboradores con la única finalidad de contactarle ante un encargo compatible con su especialidad. No se ceden a terceros. Puede ejercer los derechos de acceso, rectificación y supresión escribiendo a la dirección de contacto del despacho, conforme al Reglamento UE 2016/679."

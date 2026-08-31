@@ -1,0 +1,42 @@
+{
+  "_leeme": "Registro de peritos colaboradores del cuadro de expertos. Lo renderiza src/_includes/layouts/claustro.njk en /cuadro-de-expertos/, /ca/quadre-experts/ y /en/expert-panel/. Una ficha por persona, compartida por los tres idiomas. La pagina pinta una Card por MATERIA pericial: si una materia tiene persona publicada muestra su perfil; si no, muestra el Tag 'Plaza abierta'. Sustituye a catedraticos.json: el cuadro ya no es solo academico.",
+
+  "_materias": "El campo 'materia' debe coincidir EXACTAMENTE con la key de una materia del frontmatter de la pagina. Las seis keys son: estructuras | geotecnia | edificacion | instalaciones | materiales | obra-publica. Una materia sin coincidencia deja la ficha sin pintar.",
+
+  "_familias": "El campo 'familia' describe DE DONDE viene el aval del perito y decide el texto del chip de procedencia. Valores: academico | mixto | obra | nicho | industria | colegio. Ver el frontmatter de /colaboracion-peritos/ para la definicion de cada uno.",
+
+  "_plantilla": {
+    "_uso": "Copiar este objeto dentro de 'miembros', quitar las claves que empiezan por guion bajo y rellenar. Los campos jobTitle, bio y specialties admiten un valor plano (se usa igual en los tres idiomas) o un objeto {es, ca, en}; si falta el idioma activo, cae al castellano.",
+    "materia": "estructuras",
+    "familia": "mixto",
+    "publicado": "OBLIGATORIO para que la ficha salga. Es una lista blanca: sin 'publicado': true el perfil no se pinta, aunque este completo. Asi una ficha a medias o no autorizada no sale por descuido.",
+    "borrador": "true muestra el distintivo naranja de borrador en la cabecera de la ficha. Quitarlo cuando los datos esten validados.",
+    "name": "Nombre y apellidos — se marca como schema.org/Person > name",
+    "organization": "Universidad, empresa, laboratorio o despacho propio — se marca como worksFor. Usar 'organizationType': 'CollegeOrUniversity' para universidad, 'Organization' para el resto.",
+    "organizationType": "CollegeOrUniversity",
+    "image": "Ruta relativa dentro de src/assets/images/, p. ej. 'employees/nombre-apellido.jpg'. Si falta, la Card usa el icono de la materia.",
+    "linkedin": "URL completa del perfil — se marca como sameAs y pinta el icono en el pie de la Card",
+    "jobTitle": {
+      "es": "Cargo o funcion — p. ej. 'Profesor titular, Dpto. de …' o 'Director tecnico de obra'",
+      "ca": "…",
+      "en": "…"
+    },
+    "bio": {
+      "es": "Dos o tres frases sobre el tipo de asunto en el que interviene. Admite HTML.",
+      "ca": "…",
+      "en": "…"
+    },
+    "specialties": {
+      "es": ["Materia 1", "Materia 2"],
+      "ca": ["Materia 1", "Materia 2"],
+      "en": ["Subject 1", "Subject 2"]
+    },
+    "chips": [
+      { "k": "TÍT", "v": "Titulacion — centro" },
+      { "k": "COL", "v": "Colegio profesional y numero" },
+      { "k": "EXP", "v": "Anos de ejercicio o docencia" }
+    ]
+  },
+
+  "miembros": []
+}

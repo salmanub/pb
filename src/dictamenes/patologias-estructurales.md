@@ -32,6 +32,8 @@ body_blocks:
     p: "Una patología estructural es cualquier alteración de los elementos portantes que afecte a la capacidad resistente o a la estabilidad. El diagnóstico correcto es el punto de partida de cualquier intervención técnica o reclamación jurídica."
   - h: "Metodología"
     p: "Inspección visual y cartografía de fisuras · testigos de yeso y ensayos no destructivos · modelado estructural conforme al Eurocódigo 2 y CTE DB-SE · diagnóstico con origen, gravedad y cuantificación. El dictamen diferencia responsabilidades: proyecto, dirección de obra o ejecución (LOE art. 17)."
+  - h: "Materias que se resuelven con experto externo"
+    p: "Cuando el objeto del dictamen excede la competencia acreditada del perito firmante, el apartado correspondiente lo redacta un experto de la materia, cuya autoría consta en el informe. El <a href=\"/cuadro-de-expertos/\">cuadro de expertos</a> relaciona las seis materias en las que se produce esa incorporación y la procedencia del aval exigida en cada caso."
 faq:
   - q: "¿Todas las grietas son estructurales?"
     a: "No. Pueden ser térmicas, de retracción, de asiento o de fatiga. La determinación del origen requiere análisis de geometría, apertura, disposición y evolución."

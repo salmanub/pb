@@ -23,7 +23,7 @@ body_blocks:
     p: "<b>Technical independence</b> — non-negotiable, no exclusivity arrangements. <b>Contractual deadlines</b> — if it cannot be guaranteed, the engagement is not accepted. <b>Fixed fees</b> — agreed before commencement, ratification included. <b>Technical clarity</b> — a report that cannot be understood in court lacks evidentiary value."
 claustro_block:
   h: "Expert panel"
-  p: "When the disputed subject demands the state of the art of a discipline —the calculation model, the characterisation of a material, soil-structure interaction— the report is signed together with a university professor specialising in that subject, while the forensic lead keeps the client relationship and the procedural responsibility. You can review the five disciplines of the <a href='/en/expert-panel/'>expert panel</a>; if you are the one teaching at the university, the terms are set out under <a href='/en/expert-collaboration/'>expert collaboration</a>."
+  p: "When the disputed subject demands the state of the art of a discipline —the calculation model, the characterisation of a material, soil-structure interaction— the report is signed together with a university professor specialising in that subject, while the forensic lead keeps the client relationship and the procedural responsibility. You can review the six subjects of the <a href='/en/expert-panel/'>expert panel</a>; if you are the one teaching at the university, the terms are set out under <a href='/en/expert-collaboration/'>expert collaboration</a>."
 qualLabel: "Professional credentials"
 qualItems:
   - { num: "DEG", text: "Civil Engineer — ETSECCPB · UPC" }

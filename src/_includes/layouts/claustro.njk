@@ -1,21 +1,26 @@
 {#
-  claustro.njk — /claustro-pericial/ · escaparate público del claustro pericial
+  claustro.njk — /cuadro-de-expertos/ · escaparate público del cuadro de peritos
   Capa 1 de 2 (autoridad, cara al cliente). La captación vive en colaborador.njk.
+  (El fichero conserva el nombre `claustro.njk` por no romper includes; la página
+  se llama «Cuadro de expertos» desde el 31/08/2026, cuando dejó de ser solo
+  académica.)
 
-  Spec 30/08: sin hero image, directo a la rejilla. Cinco disciplinas fijas, cada
-  una una Card con refCode mono (§ ESP. 0N) e icono propio. Diferenciación por
-  icono + refCode, NUNCA por color: acento único oxide en toda la página.
+  Sin hero image, directo a la rejilla. La rejilla va por MATERIA PERICIAL, no por
+  disciplina universitaria: es lo que busca el cliente y admite cualquier perfil
+  —académico, sénior de obra, laboratorio o especialista de nicho—. Cada Card
+  lleva refCode mono (§ MAT. 0N) e icono propio. Diferenciación por icono y
+  refCode, NUNCA por color: acento único oxide en toda la página.
 
   ── DATOS ────────────────────────────────────────────────────────────────────
-  Las 5 disciplinas son copy de página → frontmatter `categories` (traducido).
-  Las personas son un registro compartido → `src/_data/catedraticos.json`, donde
-  cada ficha lleva `categoria` (la key de la disciplina) y `publicado: true`.
-  Una Card por disciplina: si hay persona publicada en esa disciplina se pinta su
-  perfil (foto, cargo, universidad, chips, LinkedIn); si no, Tag «Plaza abierta».
+  Las materias son copy de página → frontmatter `materias` (traducido).
+  Las personas son un registro compartido → `src/_data/expertos.json`, donde cada
+  ficha lleva `materia` (la key), `familia` (procedencia del aval) y
+  `publicado: true`. Una Card por materia: si hay persona publicada se pinta su
+  perfil; si no, Tag «Plaza abierta».
 
-  AGENTES §6 microdata: ItemList → ListItem → Person (+ worksFor
-  CollegeOrUniversity, knowsAbout, sameAs). La Card vacía es un ListItem con
-  `name` pero SIN Person: no se marca como persona algo que no lo es.
+  AGENTES §6 microdata: ItemList → ListItem → Person (+ worksFor, knowsAbout,
+  sameAs). La Card vacía es un ListItem con `name` pero SIN Person: no se marca
+  como persona algo que no lo es.
   AGENTES §5.1: cero texto hardcodeado — todo llega por frontmatter.
   Cadena: content.md → claustro.njk → base.njk
   NOTE: All HTML on single lines to prevent Markdown <p> wrapping
@@ -23,59 +28,61 @@
 {% set ui = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
 {% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
 {% set _lc = lang | default("es") %}
-{% set _people = (catedraticos.miembros | default([])) | selectattr("publicado") %}
+{% set _people = (expertos.miembros | default([])) | selectattr("publicado") %}
 {# OJO Nunjucks 3.2.4: `selectattr(attr, "equalto", valor)` NO funciona — ignora
-   el test y filtra por veracidad del atributo. Por eso el cruce disciplina ↔
+   el test y filtra por veracidad del atributo. Por eso el cruce materia ↔
    persona se hace con `groupby`, que sí respeta el valor. #}
-{% set _byCat = _people | groupby("categoria") %}
+{% set _byMat = _people | groupby("materia") %}
 
 <div itemscope itemtype="https://schema.org/Article" style="display: none;" aria-hidden="true"><meta itemprop="headline" content="{{ title }}"><meta itemprop="description" content="{{ description }}"><meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}"><div itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ metadata.author.name }}"></div><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"></div></div>
 
 {# ===== HERO (sin imagen) + BREADCRUMB ===== #}
 {% include "partials/page-hero.njk" %}
 
-{# ===== REJILLA DE DISCIPLINAS — ItemList ===== #}
-{% if categories %}
+{# ===== REJILLA DE MATERIAS — ItemList ===== #}
+{% if materias %}
 <section style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter) var(--section-y);" itemscope itemtype="https://schema.org/ItemList">
 <meta itemprop="name" content="{{ grid_title }}">
-<meta itemprop="numberOfItems" content="{{ categories | length }}">
+<meta itemprop="numberOfItems" content="{{ materias | length }}">
 
 {% if grid_title %}
 <div style="margin-bottom: clamp(24px,3.5vw,36px);">
 <div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 10px;"><span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span> {{ grid_eyebrow }}</div>
 <h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0;">{{ grid_title }}</h2>
-{% if grid_lede %}<p style="margin: 14px 0 0; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 62ch;">{{ grid_lede }}</p>{% endif %}
+{% if grid_lede %}<p style="margin: 14px 0 0; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 68ch;">{{ grid_lede }}</p>{% endif %}
 </div>
 {% endif %}
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(18px,2.2vw,24px);" class="two-col">
-{% for cat in categories %}
-{% set _p = (_byCat[cat.key] | default([]) | first) %}
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px,2.2vw,24px);" class="site-three">
+{% for mat in materias %}
+{% set _p = (_byMat[mat.key] | default([]) | first) %}
 {% set _job = _p.jobTitle[_lc] or _p.jobTitle.es or _p.jobTitle %}
 {% set _bio = _p.bio[_lc] or _p.bio.es or _p.bio %}
 {% set _specs = _p.specialties[_lc] or _p.specialties.es or _p.specialties %}
+{% set _famLabel = familia_labels[_p.familia] if _p and _p.familia else "" %}
 
 <article itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="border: 1px solid var(--border-hairline); border-radius: var(--radius-md); background: var(--surface-card); overflow: hidden; display: flex; flex-direction: column;">
 <meta itemprop="position" content="{{ loop.index }}">
-<meta itemprop="name" content="{{ cat.name }}">
+<meta itemprop="name" content="{{ mat.name }}">
 
 {# ── Cabecera: refCode mono + Tag ── #}
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 11px 20px; border-bottom: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);"><span>{{ cat.ref }}</span>{% if not _p %}<span style="border: 1px solid var(--oxide-200); background: var(--accent-tint); color: var(--text-accent); padding: 2px 9px; border-radius: var(--radius-xs); font-size: 0.6rem; letter-spacing: 0.1em;">{{ open_seat_tag }}</span>{% elif _p.borrador %}<span style="color: #fff; background: #b45309; padding: 2px 9px; border-radius: var(--radius-xs); font-size: 0.6rem; letter-spacing: 0.1em;">{{ draft_tag }}</span>{% endif %}</div>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 11px 18px; border-bottom: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);"><span>{{ mat.ref }}</span>{% if not _p %}<span style="border: 1px solid var(--oxide-200); background: var(--accent-tint); color: var(--text-accent); padding: 2px 9px; border-radius: var(--radius-xs); font-size: 0.6rem; letter-spacing: 0.1em;">{{ open_seat_tag }}</span>{% elif _p.borrador %}<span style="color: #fff; background: #b45309; padding: 2px 9px; border-radius: var(--radius-xs); font-size: 0.6rem; letter-spacing: 0.1em;">{{ draft_tag }}</span>{% elif _famLabel %}<span style="border: 1px solid var(--border-hairline); color: var(--text-muted); padding: 2px 9px; border-radius: var(--radius-xs); font-size: 0.6rem; letter-spacing: 0.1em;">{{ _famLabel }}</span>{% endif %}</div>
 
-<div style="padding: 22px 20px 22px; display: flex; flex-direction: column; flex: 1;">
+<div style="padding: 20px 18px 20px; display: flex; flex-direction: column; flex: 1;">
 
-{# ── Identidad: icono de disciplina o foto de la persona ── #}
-<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+{# ── Identidad: icono de materia o foto de la persona ── #}
+<div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
 {% if _p and _p.image %}
-<img src="/assets/images/{{ _p.image }}" alt="{{ _p.name }}" loading="lazy" decoding="async" width="64" height="64" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: center top; border: 1px solid var(--border-subtle); flex-shrink: 0;">
+<img src="/assets/images/{{ _p.image }}" alt="{{ _p.name }}" loading="lazy" decoding="async" width="56" height="56" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; object-position: center top; border: 1px solid var(--border-subtle); flex-shrink: 0;">
 {% else %}
-<div aria-hidden="true" style="width: 64px; height: 64px; border-radius: var(--radius-sm); background: var(--surface-tint); border: 1px solid var(--oxide-200); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent);">
-<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-{%- if cat.icon == "caminos" %}<path d="m8 3 4 8 5-5 5 15H2L8 3z"/><path d="M12 11v10"/>
-{%- elif cat.icon == "arquitectura" %}<path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 11h.01"/><path d="M15 11h.01"/>
-{%- elif cat.icon == "materiales" %}<path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/>
-{%- elif cat.icon == "industrial" %}<path d="M2 20h20"/><path d="M4 20V9l5 3.5V9l5 3.5V9l5 3.5V20"/><path d="M4 9 3 4h3l-1 5"/>
-{%- else %}<rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="8" x2="8" y1="11" y2="11"/><line x1="12" x2="12" y1="11" y2="11"/><line x1="16" x2="16" y1="11" y2="11"/><line x1="8" x2="8" y1="15" y2="15"/><line x1="12" x2="12" y1="15" y2="15"/><line x1="16" x2="16" y1="15" y2="19"/>
+<div aria-hidden="true" style="width: 56px; height: 56px; border-radius: var(--radius-sm); background: var(--surface-tint); border: 1px solid var(--oxide-200); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent);">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+{%- if mat.icon == "estructuras" %}<rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="8" x2="8" y1="11" y2="11"/><line x1="12" x2="12" y1="11" y2="11"/><line x1="16" x2="16" y1="11" y2="11"/><line x1="8" x2="8" y1="15" y2="15"/><line x1="12" x2="12" y1="15" y2="15"/><line x1="16" x2="16" y1="15" y2="19"/>
+{%- elif mat.icon == "geotecnia" %}<path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/>
+{%- elif mat.icon == "edificacion" %}<path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 11h.01"/><path d="M15 11h.01"/>
+{%- elif mat.icon == "instalaciones" %}<path d="M2 20h20"/><path d="M4 20V9l5 3.5V9l5 3.5V9l5 3.5V20"/><path d="M4 9 3 4h3l-1 5"/>
+{%- elif mat.icon == "materiales" %}<path d="M9 3h6"/><path d="M10 3v6.5L5.2 18A2 2 0 0 0 7 21h10a2 2 0 0 0 1.8-3L14 9.5V3"/><path d="M7.5 15h9"/>
+{%- else %}<path d="M6 4v16"/><path d="M18 4v16"/><path d="M2 11h20"/><path d="M4 11a8 8 0 0 1 16 0"/>
 {%- endif %}
 </svg>
 </div>
@@ -83,32 +90,32 @@
 <div>
 {% if _p %}
 <div itemprop="item" itemscope itemtype="https://schema.org/Person">
-<h3 itemprop="name" style="font-family: var(--font-serif); font-size: 1.2rem; font-weight: 500; color: var(--text-strong); margin: 0; line-height: 1.25;">{{ _p.name }}</h3>
-<div itemprop="jobTitle" style="margin-top: 3px; font-size: 0.86rem; color: var(--text-accent); line-height: 1.4;">{{ _job }}</div>
-{% if _p.university %}<div itemprop="worksFor" itemscope itemtype="https://schema.org/CollegeOrUniversity" style="margin-top: 3px; font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted);"><meta itemprop="name" content="{{ _p.university }}">{{ _p.university }}</div>{% endif %}
+<h3 itemprop="name" style="font-family: var(--font-serif); font-size: 1.12rem; font-weight: 500; color: var(--text-strong); margin: 0; line-height: 1.25;">{{ _p.name }}</h3>
+<div itemprop="jobTitle" style="margin-top: 3px; font-size: 0.84rem; color: var(--text-accent); line-height: 1.4;">{{ _job }}</div>
+{% if _p.organization %}<div itemprop="worksFor" itemscope itemtype="https://schema.org/{{ _p.organizationType | default('Organization') }}" style="margin-top: 3px; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted);"><meta itemprop="name" content="{{ _p.organization }}">{{ _p.organization }}</div>{% endif %}
 {% if _specs %}{%- for s in _specs %}<meta itemprop="knowsAbout" content="{{ s }}">{%- endfor %}{% endif %}
 {% if _p.linkedin %}<link itemprop="sameAs" href="{{ _p.linkedin }}">{% endif %}
 </div>
 {% else %}
-<h3 style="font-family: var(--font-serif); font-size: 1.2rem; font-weight: 500; color: var(--text-strong); margin: 0; line-height: 1.3;">{{ cat.name }}</h3>
+<h3 style="font-family: var(--font-serif); font-size: 1.12rem; font-weight: 500; color: var(--text-strong); margin: 0; line-height: 1.3;">{{ mat.name }}</h3>
 {% endif %}
 </div>
 </div>
 
-{# ── Cuerpo: bio de la persona o descripción de la disciplina ── #}
-<p style="margin: 0; font-size: 0.92rem; line-height: 1.7; color: var(--text-body);">{{ (_bio if _p else cat.desc) | safe }}</p>
+{# ── Cuerpo: bio de la persona o descripción de la materia ── #}
+<p style="margin: 0; font-size: 0.9rem; line-height: 1.65; color: var(--text-body);">{{ (_bio if _p else mat.desc) | safe }}</p>
 
 {# ── Chips de acreditación (patrón TÍT/COL/JUD/IRD de /el-despacho/) ── #}
 {% if _p and _p.chips %}
-<div style="margin-top: 15px; display: flex; flex-direction: column;">{%- for chip in _p.chips %}<div style="display: grid; grid-template-columns: 42px 1fr; gap: 12px; align-items: baseline; padding: 7px 0; border-top: 1px solid var(--border-subtle); font-size: 0.84rem; color: var(--text-body); line-height: 1.45;"><span style="font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.1em; color: var(--text-accent); font-weight: 600;">{{ chip.k }}</span><span>{{ chip.v }}</span></div>{%- endfor %}</div>
+<div style="margin-top: 14px; display: flex; flex-direction: column;">{%- for chip in _p.chips %}<div style="display: grid; grid-template-columns: 40px 1fr; gap: 10px; align-items: baseline; padding: 6px 0; border-top: 1px solid var(--border-subtle); font-size: 0.82rem; color: var(--text-body); line-height: 1.45;"><span style="font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.1em; color: var(--text-accent); font-weight: 600;">{{ chip.k }}</span><span>{{ chip.v }}</span></div>{%- endfor %}</div>
 {% elif not _p %}
-<div style="margin-top: 14px; font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint);">{{ cat.field_label }}</div>
+<div style="margin-top: 13px; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint);">{{ mat.field_label }}</div>
 {% endif %}
 
 {# ── Pie: enlace a la página pilar + LinkedIn si hay persona ── #}
-<div style="margin-top: auto; padding-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
-<a href="{{ cat.pillar_url }}" style="display: inline-flex; align-items: center; gap: 7px; font-size: 0.84rem; color: var(--text-accent); text-decoration: none; border-bottom: 1px solid transparent;" onmouseenter="this.style.borderBottomColor='var(--accent)'" onmouseleave="this.style.borderBottomColor='transparent'">{{ cat.pillar_label }}<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-{% if _p and _p.linkedin %}<a href="{{ _p.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="{{ _p.name }} · LinkedIn" style="color: var(--text-faint); display: inline-flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>{% endif %}
+<div style="margin-top: auto; padding-top: 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+<a href="{{ mat.pillar_url }}" style="display: inline-flex; align-items: center; gap: 7px; font-size: 0.82rem; color: var(--text-accent); text-decoration: none; border-bottom: 1px solid transparent;" onmouseenter="this.style.borderBottomColor='var(--accent)'" onmouseleave="this.style.borderBottomColor='transparent'">{{ mat.pillar_label }}<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+{% if _p and _p.linkedin %}<a href="{{ _p.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="{{ _p.name }} · LinkedIn" style="color: var(--text-faint); display: inline-flex;"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>{% endif %}
 </div>
 
 </div>
@@ -118,8 +125,26 @@
 </section>
 {% endif %}
 
+{# ===== PROCEDENCIA DEL AVAL — de dónde salen los peritos del cuadro ===== #}
+{% if familias %}
+<section style="background: var(--surface-tint); border-top: 1px solid var(--oxide-200); border-bottom: 1px solid var(--oxide-200);">
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
+<div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(32px,4vw,64px); align-items: start;" class="site-two">
+<div>
+<div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 12px;"><span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span> {{ familias_eyebrow }}</div>
+<h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0;">{{ familias_title }}</h2>
+{% if familias_lede %}<p style="margin: 14px 0 0; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 46ch;">{{ familias_lede }}</p>{% endif %}
+</div>
+<div>
+{% for fam in familias %}<div style="display: grid; grid-template-columns: 132px 1fr; gap: 16px; align-items: baseline; padding: 13px 0; border-top: 1px solid var(--oxide-200);" class="two-col"><span style="font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-accent); font-weight: 600;">{{ fam.k }}</span><span style="font-size: 0.93rem; line-height: 1.6; color: var(--text-body);">{{ fam.v | safe }}</span></div>{% endfor %}
+</div>
+</div>
+</div>
+</section>
+{% endif %}
+
 {# ===== CÓMO SE INTEGRA + SIDEBAR ===== #}
-<section style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter) var(--section-y); border-top: 1px solid var(--border-hairline); padding-top: clamp(40px,6vw,64px);">
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
 <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(40px,5vw,72px); align-items: start;" class="site-two">
 <div>
 {% for block in body_blocks %}
@@ -135,12 +160,12 @@
 
 {# ===== BAND CTA → capa de captación ===== #}
 {% if band_title %}
-<section style="background: var(--surface-tint); border-top: 1px solid var(--oxide-200);">
+<section style="background: var(--surface-ink, #18211c);">
 <div style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter); text-align: center;">
-<div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 18px;">{{ band_eyebrow }}</div>
-<h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); color: var(--text-strong); margin: 0;">{{ band_title }}</h2>
-{% if band_lede %}<p style="margin: 14px auto 0; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 54ch;">{{ band_lede }}</p>{% endif %}
-<div style="margin-top: 28px;"><a href="{{ band_url }}" style="display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; font-family: var(--font-sans); font-size: var(--fs-body); font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid transparent; background: var(--accent); color: var(--accent-on); text-decoration: none; transition: background-color 0.3s;" onmouseenter="this.style.backgroundColor='var(--accent-press)'" onmouseleave="this.style.backgroundColor='var(--accent)'">{{ band_cta }}</a></div>
+<div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--accent); margin-bottom: 18px;">{{ band_eyebrow }}</div>
+<h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); color: var(--text-on-dark, #f1f1ea); margin: 0;">{{ band_title }}</h2>
+{% if band_lede %}<p style="margin: 14px auto 0; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-on-dark-muted, #b9beb8); max-width: 60ch;">{{ band_lede }}</p>{% endif %}
+<div style="margin-top: 28px;"><a href="{{ band_url }}" style="display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; font-family: var(--font-sans); font-size: var(--fs-body); font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid transparent; background: var(--accent); color: var(--accent-on); text-decoration: none; transition: background-color 0.3s;" onmouseenter="this.style.backgroundColor='var(--accent-hover)'" onmouseleave="this.style.backgroundColor='var(--accent)'">{{ band_cta }}</a></div>
 </div>
 </section>
 {% endif %}
