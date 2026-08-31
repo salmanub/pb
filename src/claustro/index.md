@@ -3,6 +3,7 @@ layout: layouts/base.njk
 templateEngineOverride: njk
 permalink: /claustro-pericial/
 lang: es
+noindex: true
 eleventyNavigation:
   notshow: true
 translations:
@@ -16,7 +17,8 @@ breadcrumb_parent:
   label: "El Despacho"
   url: "/el-despacho/"
 
-# ── VALIDADO por Albert (31/08/2026) — publicado ─────────────────────────────
+# ── DESPUBLICADO por Albert (31/08/2026) ─────────────────────────────────────
+# Vuelve a borrador (noindex): pendiente de nueva validación antes de indexar.
 # Las personas NO están aquí: viven en `src/_data/catedraticos.json`, cada
 # ficha con `categoria` (la key de la disciplina) y `publicado: true`. Mientras
 # una disciplina no tenga persona publicada, su Card sale con el Tag «Plaza
