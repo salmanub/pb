@@ -431,6 +431,64 @@
   </div>
 </section>
 
+{# ===== CUADRO DE EXPERTOS ===== #}
+{% if h.experts_section %}
+<section id="cuadro-de-expertos" style="background: var(--paper-50); border-top: 1px solid var(--border-subtle);">
+  <div style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px,5vw,72px); align-items: start;" class="two-col">
+      <div>
+        <div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono);
+                    font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label);
+                    text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 18px;">
+          <span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span>
+          {{ h.experts_section.eyebrow }}
+        </div>
+        <h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400;
+                   line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0;">
+          {{ h.experts_section.title }}
+        </h2>
+        <p style="margin-top: 14px; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 56ch;">
+          {{ h.experts_section.lede }}
+        </p>
+      </div>
+      <div>
+        <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr;
+                   gap: 0; border-top: 1px solid var(--border-hairline);" class="experts-grid">
+          {% for mat in h.experts_section.materias %}
+          <li style="display: flex; align-items: baseline; gap: 10px; padding: 13px 4px;
+                     border-bottom: 1px solid var(--border-hairline);">
+            <span style="font-family: var(--font-mono); font-size: var(--fs-mono-label);
+                         letter-spacing: var(--tracking-label); color: var(--text-accent);">
+              {{ "%02d" | format(loop.index) }}
+            </span>
+            <span style="font-size: 0.95rem; color: var(--text-strong);">{{ mat }}</span>
+          </li>
+          {% endfor %}
+        </ol>
+        <div style="display: flex; gap: 22px; flex-wrap: wrap; align-items: center; margin-top: 26px;">
+          <a href="{{ h.experts_section.url }}"
+             style="display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono);
+                    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+                    font-weight: 600; color: var(--text-accent); text-decoration: none;">
+            {{ h.experts_section.cta }}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="{{ h.experts_section.url_alt }}" rel="nofollow"
+             style="font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em;
+                    text-transform: uppercase; font-weight: 500; color: var(--text-muted); text-decoration: none;
+                    border-bottom: 1px solid var(--border-hairline);">
+            {{ h.experts_section.cta_alt }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {# ===== FAQ ===== #}
 <section style="background: var(--paper-50); border-top: 1px solid var(--border-subtle);">
   <div style="max-width: 880px; margin: 0 auto; padding: var(--section-y) var(--gutter);"

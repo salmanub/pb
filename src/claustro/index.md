@@ -4,7 +4,8 @@ templateEngineOverride: njk
 permalink: /cuadro-de-expertos/
 lang: es
 eleventyNavigation:
-  notshow: true
+  key: Expertos
+  order: 7
 translations:
   - lang: ca
     permalink: /ca/quadre-experts/

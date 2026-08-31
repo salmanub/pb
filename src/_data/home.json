@@ -1,4 +1,4 @@
-﻿{
+{
   "hero": {
     "eyebrow": "Ingeniería forense · Peritos judiciales · Barcelona",
     "h1": "Peritajes de Ingeniería Civil<br>y Edificación en Barcelona",
@@ -89,8 +89,18 @@
     "tags": ["Ingeniero civil · ECCAT 16448", "Perito judicial · Min. Justicia", "Perito de seguros · IRD", "Actuación en toda España"],
     "quote": "«Mi trabajo consiste en documentar la causa de forma que el juez pueda verificarla por sí mismo.»"
   },
+  "experts_section": {
+    "eyebrow": "§ 06 · Cuadro de expertos",
+    "title": "Seis materias, seis procedencias del aval",
+    "lede": "Cuando la materia controvertida excede la competencia acreditada del perito firmante, el dictamen incorpora a un perito de esa materia, cuya autoría consta en el informe. El aval procede de la universidad, de la dirección de obra, de una especialidad instrumental, de la industria ya desvinculada o de listas de otros colegios: ninguna procedencia es subsidiaria de las demás.",
+    "materias": ["Estructuras y cálculo", "Geotecnia y cimentación", "Edificación y habitabilidad", "Instalaciones y proceso industrial", "Materiales y ensayos", "Obra pública y contrato"],
+    "cta": "Ver el cuadro de expertos",
+    "url": "/cuadro-de-expertos/",
+    "cta_alt": "Colaborar como perito firmante",
+    "url_alt": "/colaboracion-peritos/"
+  },
   "faq": {
-    "eyebrow": "§ 06 · Preguntas frecuentes",
+    "eyebrow": "§ 07 · Preguntas frecuentes",
     "title": "Antes de encargar un dictamen",
     "items": [
       { "q": "¿Cuánto cuesta un dictamen pericial?", "a": "Depende del alcance y la complejidad. Tras una primera consulta sin coste recibirás un presupuesto cerrado por escrito antes de iniciar cualquier trabajo." },
@@ -106,7 +116,7 @@
     "cta": "Visitar el blog"
   },
   "contact_section": {
-    "eyebrow": "§ 07 · Primer contacto",
+    "eyebrow": "§ 08 · Primer contacto",
     "title": "Cuéntanos el caso",
     "lede": "Una primera consulta sin coste para orientarte sobre si necesitas un dictamen y con qué alcance. Respondemos en 24 h laborables.",
     "field_nombre": "Nombre",

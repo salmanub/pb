@@ -1,4 +1,4 @@
-﻿{
+{
   "hero": {
     "eyebrow": "Forensic Engineering · Expert Witnesses · Barcelona",
     "h1": "Civil Engineering<br>& Building Expert Reports in Barcelona",
@@ -89,8 +89,18 @@
     "tags": ["Civil engineer · ECCAT 16448", "Court expert · Min. of Justice", "Insurance expert · IRD", "Operating throughout Spain"],
     "quote": "\"My job is to document the cause in a way that the judge can verify it independently.\""
   },
+  "experts_section": {
+    "eyebrow": "§ 06 · Expert panel",
+    "title": "Six subjects, six origins of standing",
+    "lede": "Where the disputed subject exceeds the signing expert's accredited competence, the report brings in an expert in that subject, attributed as author within the report. Standing comes from the university, from site management, from an instrumental specialism, from industry already left behind, or from the lists of other professional bodies: no origin is subsidiary to the others.",
+    "materias": ["Structures and calculation", "Geotechnics and foundations", "Building and habitability", "Services and industrial process", "Materials and testing", "Public works and contract"],
+    "cta": "View the expert panel",
+    "url": "/en/expert-panel/",
+    "cta_alt": "Collaborate as a signing expert",
+    "url_alt": "/en/expert-collaboration/"
+  },
   "faq": {
-    "eyebrow": "§ 06 · Frequently asked questions",
+    "eyebrow": "§ 07 · Frequently asked questions",
     "title": "Before commissioning a report",
     "items": [
       { "q": "How much does an expert report cost?", "a": "It depends on the scope and complexity. After a free initial consultation you will receive a fixed written quote before any work begins." },
@@ -106,7 +116,7 @@
     "cta": "Visit the blog"
   },
   "contact_section": {
-    "eyebrow": "§ 07 · First contact",
+    "eyebrow": "§ 08 · First contact",
     "title": "Tell us about your case",
     "lede": "A free initial consultation to advise whether you need a report and its scope. We respond within 24 business hours.",
     "field_nombre": "Name",

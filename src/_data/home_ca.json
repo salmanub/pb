@@ -1,4 +1,4 @@
-﻿{
+{
   "hero": {
     "eyebrow": "Enginyeria forense · Perits judicials · Barcelona",
     "h1": "Peritatges d'Enginyeria Civil<br>i Edificació a Barcelona",
@@ -89,8 +89,18 @@
     "tags": ["Enginyer civil · ECCAT 16448", "Perit judicial · Min. Justícia", "Perit d'assegurances · IRD", "Actuació a tota Espanya"],
     "quote": "«La meva feina consisteix a documentar la causa de manera que el jutge pugui verificar-la per si mateix.»"
   },
+  "experts_section": {
+    "eyebrow": "§ 06 · Quadre d'experts",
+    "title": "Sis matèries, sis procedències de l'aval",
+    "lede": "Quan la matèria controvertida excedeix la competència acreditada del perit signant, el dictamen incorpora un perit d'aquesta matèria, l'autoria del qual consta a l'informe. L'aval prové de la universitat, de la direcció d'obra, d'una especialitat instrumental, de la indústria ja desvinculada o de llistes d'altres col·legis: cap procedència no és subsidiària de les altres.",
+    "materias": ["Estructures i càlcul", "Geotècnia i fonamentació", "Edificació i habitabilitat", "Instal·lacions i procés industrial", "Materials i assaigs", "Obra pública i contracte"],
+    "cta": "Veure el quadre d'experts",
+    "url": "/ca/quadre-experts/",
+    "cta_alt": "Col·laborar com a perit signant",
+    "url_alt": "/ca/collaboracio-perits/"
+  },
   "faq": {
-    "eyebrow": "§ 06 · Preguntes freqüents",
+    "eyebrow": "§ 07 · Preguntes freqüents",
     "title": "Abans d'encarregar un dictamen",
     "items": [
       { "q": "Quant costa un dictamen pericial?", "a": "Depèn de l'abast i la complexitat. Després d'una primera consulta sense cost rebràs un pressupost tancat per escrit abans d'iniciar qualsevol treball." },
@@ -106,7 +116,7 @@
     "cta": "Visitar el blog"
   },
   "contact_section": {
-    "eyebrow": "§ 07 · Primer contacte",
+    "eyebrow": "§ 08 · Primer contacte",
     "title": "Explica'ns el cas",
     "lede": "Una primera consulta sense cost per orientar-te sobre si necessites un dictamen i amb quin abast. Responem en 24 h laborables.",
     "field_nombre": "Nom",
