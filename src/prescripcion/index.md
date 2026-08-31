@@ -17,9 +17,8 @@ breadcrumb_parent:
   label: "Asesoramiento Estructural"
   url: "/asesoramiento-estructural/"
 
-# ── BORRADOR — pendiente de validación por Albert ────────────────────────────
-# Textos de un primer borrador sobre el enfoque acordado: expertos en los
-# sistemas, pero independientes de la marca.
+# ── VALIDADO por Albert (31/08/2026) — publicado ─────────────────────────────
+# Enfoque acordado: expertos en los sistemas, pero independientes de la marca.
 # NO se cita ninguna obra concreta como caso de referencia. Decisión de Albert
 # (30/08/2026): la obra de equipamiento cultural está en fase de oferta, no
 # adjudicada; nombrarla en el futuro será una decisión explícita suya.

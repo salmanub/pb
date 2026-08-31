@@ -16,11 +16,11 @@ breadcrumb_parent:
   label: "El Despacho"
   url: "/el-despacho/"
 
-# ── BORRADOR — pendiente de validación por Albert ────────────────────────────
-# Textos de un primer borrador. Las personas NO están aquí: viven en
-# `src/_data/catedraticos.json`, cada ficha con `categoria` (la key de la
-# disciplina) y `publicado: true`. Mientras una disciplina no tenga persona
-# publicada, su Card sale con el Tag «Plaza abierta».
+# ── VALIDADO por Albert (31/08/2026) — publicado ─────────────────────────────
+# Las personas NO están aquí: viven en `src/_data/catedraticos.json`, cada
+# ficha con `categoria` (la key de la disciplina) y `publicado: true`. Mientras
+# una disciplina no tenga persona publicada, su Card sale con el Tag «Plaza
+# abierta».
 # ─────────────────────────────────────────────────────────────────────────────
 
 heroTitle: "Claustro<br>pericial"
