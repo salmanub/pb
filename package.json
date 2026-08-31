@@ -10,10 +10,7 @@
     "optimize-images": "node src/scripts/optimize-images.js",
     "optimize-images-debug": "node src/scripts/optimize-images-debug.js",
     "optimize-images-force": "node src/scripts/optimize-images-force.js",
-    "images": "node optimize-images.mjs",
-    "test:motor": "vitest run --root motor-maquetacion",
-    "test:motor:watch": "vitest --root motor-maquetacion",
-    "typecheck:motor": "tsc -p motor-maquetacion/tsconfig.json"
+    "images": "node optimize-images.mjs"
   },
   "keywords": [],
   "author": "",
@@ -38,7 +35,6 @@
   },
   "dependencies": {
     "@11ty/eleventy-img": "^6.0.4",
-    "dotenv": "^17.2.3",
-    "zod": "^3.25.76"
+    "dotenv": "^17.2.3"
   }
 }
