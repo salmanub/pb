@@ -27,6 +27,8 @@ body_blocks:
     p: "El despacho proporciona dirección técnica en la ejecución de refuerzos estructurales: fibra de carbono (CFRP), chapas metálicas encoladas, recrecidos de hormigón armado y postesado exterior. La supervisión abarca desde el proyecto de refuerzo hasta la recepción de la obra, con certificación de la capacidad portante resultante."
   - h: "Prescripción técnica de sistemas constructivos"
     p: "Determinada la solución, queda definirla: qué sistema, con qué prestaciones normalizadas y bajo qué condiciones de puesta en obra. El despacho redacta esa <a href='/asesoramiento-estructural/prescripcion-tecnica/'>prescripción técnica por prestaciones</a> —no por marca— y asiste a la reunión con la propiedad o la dirección facultativa para defenderla. Sin vinculación con ningún fabricante."
+  - h: "Materias que se resuelven con experto externo"
+    p: "Cuando el objeto del dictamen excede la competencia acreditada del perito firmante, el apartado correspondiente lo redacta un experto de la materia, cuya autoría consta en el informe. El <a href=\"/cuadro-de-expertos/\">cuadro de expertos</a> relaciona las seis materias en las que se produce esa incorporación y la procedencia del aval exigida en cada caso."
 related_services:
   - "patologias-estructurales"
   - "naves-industriales"

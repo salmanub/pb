@@ -23,6 +23,8 @@ body_blocks:
     p: "Public works disputes have specific legal and technical particularities: technical specifications, administrative contracting, provisional and final acceptance, and the administrative litigation process. The expert provides the technical objectivity required by the procedure."
   - h: "Scope of action"
     p: "Roads, bridges, drainage networks, public buildings, urbanisation. The report documents non-compliance with specifications, construction defects, design flaws and quantifies the remediation cost in accordance with applicable regulations."
+  - h: "Fields resolved with an external expert"
+    p: "Where the subject matter of the report exceeds the signing expert’s accredited competence, the corresponding section is drafted by an expert in that field and attributed to him in the report. The <a href=\"/en/expert-panel/\">expert panel</a> lists the six fields in which this occurs and the basis of standing required in each."
 faq:
   - q: "Can public works be assessed?"
     a: "Yes. The expert report is a means of evidence in administrative litigation (LJCA art. 60) just as in civil proceedings."

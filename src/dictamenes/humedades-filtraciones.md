@@ -36,6 +36,8 @@ body_blocks:
     p: "<b>Filtración:</b> el agua líquida franquea la envolvente del edificio por un fallo en la impermeabilización o una rotura de conducciones bajo presión.<br><b>Condensación:</b> el vapor de agua alcanza su punto de rocío al contactar con superficies frías, indicando deficiencias en el aislamiento (puentes térmicos) o desequilibrios en la ventilación.<br><b>Capilaridad:</b> ascensión de agua freática contra la gravedad a través de la red porosa de los materiales constructivos, gobernada por la ley de Jurin."
   - h: "¿Qué incluye el dictamen de humedades?"
     p: "<b>1. Identificación del origen:</b> conclusiones claras sobre la causa de la humedad, con medidores de humedad y termografía infrarroja.<br><b>2. Mapeo de daños:</b> descripción detallada de las zonas afectadas y la gravedad de los daños.<br><b>3. Propuesta de solución técnica:</b> especificamos el tratamiento adecuado para erradicar el problema de raíz.<br><b>4. Derivación ejecutiva:</b> al finalizar el dictamen le facilitamos el contacto con el experto idóneo a través de <a href=\"https://humedades.barcelona\">Humedades Barcelona</a>."
+  - h: "Materias que se resuelven con experto externo"
+    p: "Cuando el objeto del dictamen excede la competencia acreditada del perito firmante, el apartado correspondiente lo redacta un experto de la materia, cuya autoría consta en el informe. El <a href=\"/cuadro-de-expertos/\">cuadro de expertos</a> relaciona las seis materias en las que se produce esa incorporación y la procedencia del aval exigida en cada caso."
 faq:
   - q: "¿La termografía basta para localizar el origen?"
     a: "Es la herramienta de detección no destructiva principal, complementada con higrómetros de profundidad y análisis del detalle constructivo."

@@ -24,6 +24,8 @@ body_blocks:
     p: "Las naves logísticas tienen normativa propia. Principales disputas: <b>daños post-alquiler, siniestros de incendio, fallos en pavimentos y cumplimiento RSCIEI</b>."
   - h: "Pavimentos logísticos e incendios"
     p: "Fisuras por retracción o asiento de solera · planitud insuficiente para equipos VNA · juntas mal ejecutadas. Tolerancias conforme a la norma TR-34. En incendios: causa y origen, daño a estructura metálica y verificación del cumplimiento RSCIEI en el momento del siniestro."
+  - h: "Materias que se resuelven con experto externo"
+    p: "Cuando el objeto del dictamen excede la competencia acreditada del perito firmante, el apartado correspondiente lo redacta un experto de la materia, cuya autoría consta en el informe. El <a href=\"/cuadro-de-expertos/\">cuadro de expertos</a> relaciona las seis materias en las que se produce esa incorporación y la procedencia del aval exigida en cada caso."
 faq:
   - q: "¿Qué es el RSCIEI?"
     a: "El Reglamento de Seguridad Contra Incendios en Establecimientos Industriales (RD 2267/2004). Su incumplimiento es causa frecuente de conflicto."

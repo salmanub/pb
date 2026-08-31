@@ -24,6 +24,8 @@ body_blocks:
     p: "Serious non-apparent defects in a property sale that prevent adequate use of the property. Regulated under CC arts. 1484 et seq.: right to rescind (redhibitory action) or reduce the price (estimatory action). They must be serious, pre-existing to the sale and unknown to the buyer."
   - h: "The 6-month deadline"
     p: "CC art. 1490 establishes 6 months from delivery to exercise legal actions. The expert report must be obtained within this period to technically evidence the existence, severity and pre-existence of the defect. <b>If you have just discovered the problem, time is against you: contact us as soon as possible.</b>"
+  - h: "Fields resolved with an external expert"
+    p: "Where the subject matter of the report exceeds the signing expert’s accredited competence, the corresponding section is drafted by an expert in that field and attributed to him in the report. The <a href=\"/en/expert-panel/\">expert panel</a> lists the six fields in which this occurs and the basis of standing required in each."
 faq:
   - q: "What is the deadline to file a claim?"
     a: "6 months from property delivery (CC art. 1490). It is essential to act within this period."

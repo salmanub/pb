@@ -31,6 +31,8 @@ body_blocks:
     p: "No totes les humitats tenen el mateix origen ni la mateixa solució. Poden ser per filtració, per capil·laritat, per condensació o per avaria d'instal·lacions. L'informe pericial identifica la causa amb proves objectives com termografia infraroja, proves d'estanquitat, higròmetre i determina les responsabilitats conforme al CTE DB-HS."
   - h: "Quan cal un dictamen?"
     p: "Quan la humitat reapareix després de reparacions, quan l'origen és discutit entre comunitat i propietari, quan cal reclamar a la constructora dins del termini de garantia (LOE art. 17) o quan l'asseguradora rebutja el sinistre."
+  - h: "Matèries que es resolen amb expert extern"
+    p: "Quan l’objecte del dictamen excedeix la competència acreditada del perit signant, l’apartat corresponent el redacta un expert de la matèria, i la seva autoria consta a l’informe. El <a href=\"/ca/quadre-experts/\">quadre d’experts</a> relaciona les sis matèries en què es produeix aquesta incorporació i la procedència de l’aval exigida en cada cas."
 faq:
   - q: "Quant costa un peritatge d'humitats?"
     a: "Depèn de la complexitat. Consulta inicial sense cost: avaluem el cas i emetem pressupost tancat per escrit."

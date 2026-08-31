@@ -24,6 +24,8 @@ body_blocks:
     p: "Una patologia estructural és qualsevol alteració dels elements portants que afecti la capacitat resistent o l'estabilitat. El diagnòstic correcte és el punt de partida de qualsevol intervenció tècnica o reclamació jurídica."
   - h: "Metodologia"
     p: "Inspecció visual i cartografia de fissures · testimonis de guix i assajos no destructius · modelat estructural conforme a l'Eurocodi 2 i CTE DB-SE · diagnòstic amb origen, gravetat i quantificació. El dictamen diferencia responsabilitats: projecte, direcció d'obra o execució (LOE art. 17)."
+  - h: "Matèries que es resolen amb expert extern"
+    p: "Quan l’objecte del dictamen excedeix la competència acreditada del perit signant, l’apartat corresponent el redacta un expert de la matèria, i la seva autoria consta a l’informe. El <a href=\"/ca/quadre-experts/\">quadre d’experts</a> relaciona les sis matèries en què es produeix aquesta incorporació i la procedència de l’aval exigida en cada cas."
 faq:
   - q: "Totes les esquerdes són estructurals?"
     a: "No. Poden ser tèrmiques, de retracció, d'assentament o de fatiga. La determinació de l'origen requereix anàlisi de geometria, obertura, disposició i evolució."

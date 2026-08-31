@@ -24,6 +24,8 @@ body_blocks:
     p: "A structural pathology is any alteration of load-bearing elements that affects the resistant capacity or stability. An accurate diagnosis is the starting point for any technical intervention or legal claim."
   - h: "Methodology"
     p: "Visual inspection and crack mapping · plaster witnesses and non-destructive testing · structural modelling in accordance with Eurocode 2 and CTE DB-SE · diagnosis including origin, severity and quantification. The report differentiates responsibilities: design, site supervision or construction (LOE art. 17)."
+  - h: "Fields resolved with an external expert"
+    p: "Where the subject matter of the report exceeds the signing expert’s accredited competence, the corresponding section is drafted by an expert in that field and attributed to him in the report. The <a href=\"/en/expert-panel/\">expert panel</a> lists the six fields in which this occurs and the basis of standing required in each."
 faq:
   - q: "Are all cracks structural?"
     a: "No. They may be thermal, shrinkage, settlement or fatigue cracks. Determining the origin requires analysis of geometry, aperture, pattern and evolution."

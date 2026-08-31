@@ -24,6 +24,8 @@ body_blocks:
     p: "Les disputes en obra pública tenen particularitats jurídiques i tècniques pròpies: plec de prescripcions tècniques, contractació administrativa, recepció provisional i definitiva, i la via contenciós-administrativa. El perit aporta l'objectivitat tècnica que requereix el procediment."
   - h: "Àmbit d'actuació"
     p: "Carreteres, ponts, xarxes de sanejament, edificació pública, urbanització. El dictamen documenta incompliments del plec, defectes d'execució, vicis de projecte i quantifica el cost de subsanació conforme a la normativa aplicable."
+  - h: "Matèries que es resolen amb expert extern"
+    p: "Quan l’objecte del dictamen excedeix la competència acreditada del perit signant, l’apartat corresponent el redacta un expert de la matèria, i la seva autoria consta a l’informe. El <a href=\"/ca/quadre-experts/\">quadre d’experts</a> relaciona les sis matèries en què es produeix aquesta incorporació i la procedència de l’aval exigida en cada cas."
 faq:
   - q: "Es pot peritar una obra pública?"
     a: "Sí. L'informe pericial és mitjà de prova en la via contenciós-administrativa (LJCA art. 60) igual que en la civil."

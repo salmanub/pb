@@ -24,6 +24,8 @@ body_blocks:
     p: "Not all moisture issues have the same origin or the same solution. They may be caused by infiltration, rising damp, condensation or plumbing failures. The expert report identifies the cause with objective evidence — infrared thermography, waterproofing tests, hygrometer — and determines responsibilities under CTE DB-HS."
   - h: "When is an expert report needed?"
     p: "When moisture reappears after repairs, when the origin is disputed between the homeowner association and the property owner, when a claim needs to be filed against the builder within the warranty period (LOE art. 17), or when the insurer rejects the claim."
+  - h: "Fields resolved with an external expert"
+    p: "Where the subject matter of the report exceeds the signing expert’s accredited competence, the corresponding section is drafted by an expert in that field and attributed to him in the report. The <a href=\"/en/expert-panel/\">expert panel</a> lists the six fields in which this occurs and the basis of standing required in each."
 faq:
   - q: "How much does a moisture assessment cost?"
     a: "It depends on the complexity. Free initial consultation: we assess the case and issue a fixed written quote."

@@ -24,6 +24,8 @@ body_blocks:
     p: "Logistics warehouses have their own regulations. Main disputes: <b>post-lease damage, fire claims, pavement failures and RSCIEI compliance</b>."
   - h: "Logistics pavements and fires"
     p: "Shrinkage or settlement cracks in floor slabs · insufficient flatness for VNA equipment · poorly executed joints. Tolerances in accordance with TR-34 standard. In fires: cause and origin, damage to steel structure and verification of RSCIEI compliance at the time of the incident."
+  - h: "Fields resolved with an external expert"
+    p: "Where the subject matter of the report exceeds the signing expert’s accredited competence, the corresponding section is drafted by an expert in that field and attributed to him in the report. The <a href=\"/en/expert-panel/\">expert panel</a> lists the six fields in which this occurs and the basis of standing required in each."
 faq:
   - q: "What is the RSCIEI?"
     a: "The Industrial Fire Safety Regulation (RD 2267/2004). Non-compliance is a frequent cause of dispute."

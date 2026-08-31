@@ -24,6 +24,8 @@ body_blocks:
     p: "Defectes greus no aparents en la compravenda que impedeixen l'ús adequat del bé. Regulats al CC arts. 1484 i ss.: dret a rescindir (acció redhibitòria) o reduir el preu (acció estimatòria). Han de ser greus, anteriors a la venda i desconeguts pel comprador."
   - h: "El termini de 6 mesos"
     p: "El CC art. 1490 estableix 6 mesos des del lliurament per exercitar les accions. L'informe pericial s'ha d'obtenir dins d'aquest termini per acreditar tècnicament existència, gravetat i preexistència del defecte. <b>Si acaba de detectar el problema, el temps corre en contra seva: contacti com més aviat millor.</b>"
+  - h: "Matèries que es resolen amb expert extern"
+    p: "Quan l’objecte del dictamen excedeix la competència acreditada del perit signant, l’apartat corresponent el redacta un expert de la matèria, i la seva autoria consta a l’informe. El <a href=\"/ca/quadre-experts/\">quadre d’experts</a> relaciona les sis matèries en què es produeix aquesta incorporació i la procedència de l’aval exigida en cada cas."
 faq:
   - q: "Quin termini tinc per reclamar?"
     a: "6 mesos des del lliurament de l'immoble (CC art. 1490). És imprescindible actuar dins d'aquest termini."

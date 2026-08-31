@@ -25,6 +25,8 @@ body_blocks:
     p: "Las disputas en obra pública tienen particularidades jurídicas y técnicas propias: pliego de prescripciones técnicas, contratación administrativa, recepción provisional y definitiva, y la vía contencioso-administrativa. El perito aporta la objetividad técnica que requiere el procedimiento."
   - h: "Ámbito de actuación"
     p: "Carreteras, puentes, redes de saneamiento, edificación pública, urbanización. El dictamen documenta incumplimientos del pliego, defectos de ejecución, vicios de proyecto y cuantifica el coste de subsanación conforme a la normativa aplicable."
+  - h: "Materias que se resuelven con experto externo"
+    p: "Cuando el objeto del dictamen excede la competencia acreditada del perito firmante, el apartado correspondiente lo redacta un experto de la materia, cuya autoría consta en el informe. El <a href=\"/cuadro-de-expertos/\">cuadro de expertos</a> relaciona las seis materias en las que se produce esa incorporación y la procedencia del aval exigida en cada caso."
 faq:
   - q: "¿Se puede peritar una obra pública?"
     a: "Sí. El informe pericial es medio de prueba en la vía contencioso-administrativa (LJCA art. 60) igual que en la civil."

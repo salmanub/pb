@@ -27,6 +27,8 @@ body_blocks:
     p: "El despatx proporciona direcció tècnica en l'execució de reforços estructurals: fibra de carboni (CFRP), xapes metàl·liques encolades, recrescuts de formigó armat i posttesat exterior. La supervisió abasta des del projecte de reforç fins a la recepció de l'obra, amb certificació de la capacitat portant resultant."
   - h: "Prescripció tècnica de sistemes constructius"
     p: "Determinada la solució, queda definir-la: quin sistema, amb quines prestacions normalitzades i sota quines condicions de posada en obra. El despatx redacta aquesta <a href='/ca/assessorament-estructural/prescripcio-tecnica/'>prescripció tècnica per prestacions</a> —no per marca— i assisteix a la reunió amb la propietat o la direcció facultativa per defensar-la. Sense vinculació amb cap fabricant."
+  - h: "Matèries que es resolen amb expert extern"
+    p: "Quan l’objecte del dictamen excedeix la competència acreditada del perit signant, l’apartat corresponent el redacta un expert de la matèria, i la seva autoria consta a l’informe. El <a href=\"/ca/quadre-experts/\">quadre d’experts</a> relaciona les sis matèries en què es produeix aquesta incorporació i la procedència de l’aval exigida en cada cas."
 related_services:
   - "patologias-estructurales"
   - "naves-industriales"

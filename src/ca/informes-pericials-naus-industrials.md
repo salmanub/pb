@@ -24,6 +24,8 @@ body_blocks:
     p: "Les naus logístiques tenen normativa pròpia. Principals disputes: <b>danys post-lloguer, sinistres d'incendi, fallades en paviments i compliment RSCIEI</b>."
   - h: "Paviments logístics i incendis"
     p: "Fissures per retracció o assentament de solera · planitud insuficient per a equips VNA · juntes mal executades. Toleràncies conforme a la norma TR-34. En incendis: causa i origen, dany a estructura metàl·lica i verificació del compliment RSCIEI en el moment del sinistre."
+  - h: "Matèries que es resolen amb expert extern"
+    p: "Quan l’objecte del dictamen excedeix la competència acreditada del perit signant, l’apartat corresponent el redacta un expert de la matèria, i la seva autoria consta a l’informe. El <a href=\"/ca/quadre-experts/\">quadre d’experts</a> relaciona les sis matèries en què es produeix aquesta incorporació i la procedència de l’aval exigida en cada cas."
 faq:
   - q: "Què és el RSCIEI?"
     a: "El Reglament de Seguretat Contra Incendis en Establiments Industrials (RD 2267/2004). El seu incompliment és causa freqüent de conflicte."
