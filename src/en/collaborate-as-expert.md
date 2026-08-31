@@ -25,7 +25,7 @@ breadcrumb_parent:
 
 heroTitle: "Expert<br>collaboration"
 
-bridge_text: "Looking for an expert for your case?"
+bridge_text: "This page is addressed to experts. To consult an expert by subject:"
 bridge_url: "/en/expert-panel/"
 bridge_link: "See the expert panel →"
 
@@ -63,7 +63,7 @@ body_blocks:
     p: "Acting as an expert witness is compatible with university teaching and with private practice, but the specific position depends on each university's terms of engagement and, for civil servants, on Spanish Act 53/1984 on incompatibilities. Verifying that is each collaborator's responsibility. On our side, the report is governed by the expert's duty of impartiality (art. 335.2 LEC): what the analysis shows is what gets signed, whether or not it favours the instructing party."
 
 split_label: "Division of roles"
-split_headline: "You bring the judgement. We handle everything else."
+split_headline: "The collaborator supplies the technical judgement; the practice, the rest of the file."
 split_items:
   - num: "01"
     text: "Client acquisition and technical qualification of the matter"
@@ -75,7 +75,7 @@ split_items:
     text: "Formal drafting, layout and procedural filing"
   - num: "05"
     text: "Invoicing, follow-up and dealings with counsel"
-split_note: "You: technical judgement, signature and court confirmation"
+split_note: "Collaborator: technical judgement, signature and court confirmation"
 
 expectations_eyebrow: "Terms of the register"
 expectations_title: "Real availability of instructions"
@@ -91,7 +91,7 @@ expectations_points:
   - "No communications are sent outside an instruction compatible with the declared specialism."
   - "Removal and erasure of data on request, at any time — EU Regulation 2016/679."
 form_section_eyebrow: "Expert registration"
-form_section_title: "Leave us your technical profile"
+form_section_title: "Technical profile declaration"
 form_section_lede: "Five steps. We do not ask for client names, case numbers or anything subject to confidentiality: only the subject matter you have reported on."
 
 form_eyebrow: "Expert registration"

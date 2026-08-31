@@ -89,7 +89,7 @@ materias:
     pillar_label: "Peritatge d'obra pública"
 
 familias_eyebrow: "§ Procedència de l'aval"
-familias_title: "L'autoritat tècnica no ve d'un sol lloc"
+familias_title: "Sis procedències de l'aval, cap de subsidiària de les altres"
 familias_lede: "Un dictamen se sosté sobre allò que el seu signant pot acreditar davant el tribunal. Aquesta acreditació té sis orígens diferents, i cap substitueix els altres."
 familias:
   - k: "Universitat"
@@ -97,7 +97,7 @@ familias:
   - k: "Docència i exercici"
     v: "Professorat associat que compatibilitza la universitat amb exercici professional propi. Suma criteri acadèmic i pràctica d'encàrrec real."
   - k: "Obra"
-    v: "Direcció i cap d'obra i direcció tècnica amb dues o tres dècades d'exercici. Aporta el comportament real de la solució construïda, que no es dedueix del model."
+    v: "Direcció i cap d'obra i direcció tècnica amb dues o tres dècades d'exercici. L'experiència de camp acredita per si sola: no s'exigeix credencial acadèmica ni docència. Aporta el comportament real de la solució construïda, que no es dedueix del model."
   - k: "Especialitat"
     v: "Protecció contra incendis, acústica, geotècnia de camp, termografia i metrologia. Matèries que apareixen poc i exigeixen instrumentació pròpia."
   - k: "Indústria"
@@ -114,8 +114,8 @@ body_blocks:
     p: "Un signant amb trajectòria documental —publicacions, col·legiació, anys de direcció d'obra acreditats, acreditació ENAC del laboratori— ofereix al tribunal un element verificable. Davant del contrainterrogatori, aquesta trajectòria és un fet, no una afirmació de part."
 
 band_eyebrow: "Col·laboració"
-band_title: "La seva especialitat encaixa amb alguna d'aquestes matèries?"
-band_lede: "El registre és obert a perfils acadèmics i professionals. Abans de deixar-nos les seves dades, llegeixi les condicions i la disponibilitat real d'encàrrecs."
+band_title: "Alta al registre de perits col·laboradors"
+band_lede: "El registre admet perfil acadèmic i perfil professional en igualtat de condicions. Les condicions de col·laboració i la disponibilitat real d'encàrrecs consten a la pàgina d'alta."
 band_cta: "Col·laborar com a perit signant"
 band_url: "/ca/collaboracio-perits/"
 

@@ -89,7 +89,7 @@ materias:
     pillar_label: "Public works reports"
 
 familias_eyebrow: "§ Where the standing comes from"
-familias_title: "Technical authority has more than one source"
+familias_title: "Six origins of standing, none subsidiary to the others"
 familias_lede: "A report stands on what its signatory can evidence before the court. That evidence has six different origins, and none of them substitutes for the others."
 familias:
   - k: "University"
@@ -97,7 +97,7 @@ familias:
   - k: "Teaching and practice"
     v: "Associate lecturers who combine the university with their own professional practice. Academic judgement plus real instructions."
   - k: "Site"
-    v: "Site management, technical and production direction with two or three decades of practice. Brings how the built solution actually behaves, which the model does not tell you."
+    v: "Site management, technical and production direction with two or three decades of practice. Field experience is standing in itself: no academic credential or teaching role is required. Brings how the built solution actually behaves, which the model does not show."
   - k: "Specialism"
     v: "Fire protection, acoustics, field geotechnics, thermography and metrology. Subjects that come up rarely and require their own instrumentation."
   - k: "Industry"
@@ -114,8 +114,8 @@ body_blocks:
     p: "A signatory whose record is documentary — publications, professional registration, evidenced years of site direction, laboratory accreditation — gives the court something it can verify. Under cross-examination, that record is fact rather than a party's assertion."
 
 band_eyebrow: "Collaboration"
-band_title: "Does your specialism match any of these subjects?"
-band_lede: "The register is open to academic and professional profiles alike. Before leaving your details, read the terms and the real availability of instructions."
+band_title: "Registration in the collaborating experts register"
+band_lede: "The register admits academic and professional profiles on equal terms. The terms of collaboration and the real availability of instructions are set out on the registration page."
 band_cta: "Collaborate as a signing expert"
 band_url: "/en/expert-collaboration/"
 

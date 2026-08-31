@@ -90,7 +90,7 @@ materias:
     pillar_label: "Peritaje de obra pública"
 
 familias_eyebrow: "§ Procedencia del aval"
-familias_title: "La autoridad técnica no viene de un solo sitio"
+familias_title: "Seis procedencias del aval, ninguna subsidiaria de las demás"
 familias_lede: "Un dictamen se sostiene sobre lo que su firmante puede acreditar ante el tribunal. Esa acreditación tiene seis orígenes distintos, y ninguno sustituye a los demás."
 familias:
   - k: "Universidad"
@@ -98,7 +98,7 @@ familias:
   - k: "Docencia y ejercicio"
     v: "Profesorado asociado que compatibiliza la universidad con ejercicio profesional propio. Suma criterio académico y práctica de encargo real."
   - k: "Obra"
-    v: "Jefatura de obra, dirección técnica y de producción con dos o tres décadas de ejercicio. Aporta el comportamiento real de la solución construida, que no se deduce del modelo."
+    v: "Jefatura de obra, dirección técnica y de producción con dos o tres décadas de ejercicio. La experiencia de campo acredita por sí sola: no se exige credencial académica ni docencia. Aporta el comportamiento real de la solución construida, que no se deduce del modelo."
   - k: "Especialidad"
     v: "Protección contra incendios, acústica, geotecnia de campo, termografía y metrología. Materias que aparecen poco y exigen instrumentación propia."
   - k: "Industria"
@@ -115,8 +115,8 @@ body_blocks:
     p: "Un firmante cuya trayectoria es documental —publicaciones, colegiación, años de dirección de obra acreditados, acreditación ENAC del laboratorio— ofrece al tribunal un elemento verificable. Frente al contrainterrogatorio, esa trayectoria es un hecho, no una afirmación de parte."
 
 band_eyebrow: "Colaboración"
-band_title: "¿Su especialidad encaja con alguna de estas materias?"
-band_lede: "El registro está abierto a perfiles académicos y profesionales. Antes de dejarnos sus datos, lea las condiciones y la disponibilidad real de encargos."
+band_title: "Alta en el registro de peritos colaboradores"
+band_lede: "El registro admite perfil académico y perfil profesional en igualdad de condiciones. Las condiciones de colaboración y la disponibilidad real de encargos constan en la página de alta."
 band_cta: "Colaborar como perito firmante"
 band_url: "/colaboracion-peritos/"
 

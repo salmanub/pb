@@ -25,7 +25,7 @@ breadcrumb_parent:
 
 heroTitle: "Col·laboració<br>de perits"
 
-bridge_text: "Busca un perit per al seu assumpte?"
+bridge_text: "Pàgina adreçada a perits. Per consultar un perit per matèria:"
 bridge_url: "/ca/quadre-experts/"
 bridge_link: "Veure el quadre d'experts →"
 
@@ -63,7 +63,7 @@ body_blocks:
     p: "L'actuació pericial és compatible amb l'activitat docent i amb l'exercici privat, però la compatibilitat concreta depèn del règim de dedicació de cada universitat i, en el cas del personal funcionari, de la Llei 53/1984 d'incompatibilitats. És responsabilitat de cada col·laborador verificar la seva situació. Per la nostra banda, el dictamen es regeix pel deure d'imparcialitat del perit (art. 335.2 LEC): se signa allò que resulta de l'anàlisi, afavoreixi o no qui l'encarrega."
 
 split_label: "Repartiment de rols"
-split_headline: "Vostè aporta criteri. Nosaltres, tota la resta."
+split_headline: "El col·laborador aporta el criteri tècnic; el despatx, la resta de l'expedient."
 split_items:
   - num: "01"
     text: "Captació del client i qualificació tècnica de l'assumpte"
@@ -75,7 +75,7 @@ split_items:
     text: "Redacció formal, maquetació i presentació processal"
   - num: "05"
     text: "Facturació, seguiment i tracte amb el lletrat"
-split_note: "Vostè: criteri tècnic, signatura i ratificació"
+split_note: "Col·laborador: criteri tècnic, signatura i ratificació"
 
 expectations_eyebrow: "Condicions del registre"
 expectations_title: "Disponibilitat real d'encàrrecs"
@@ -91,7 +91,7 @@ expectations_points:
   - "No es trameten comunicacions fora d'un encàrrec compatible amb l'especialitat declarada."
   - "Baixa i supressió de dades a sol·licitud, en qualsevol moment — Reglament UE 2016/679."
 form_section_eyebrow: "Alta de col·laborador"
-form_section_title: "Deixi'ns el seu perfil tècnic"
+form_section_title: "Declaració de perfil tècnic"
 form_section_lede: "Cinc passos. No demanem noms de clients, números d'expedient ni cap dada subjecta a confidencialitat: només la matèria sobre la qual ha peritat."
 
 form_eyebrow: "Alta de col·laborador"

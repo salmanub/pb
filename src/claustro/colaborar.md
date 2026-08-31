@@ -25,7 +25,7 @@ breadcrumb_parent:
 
 heroTitle: "Colaboración<br>de peritos"
 
-bridge_text: "¿Busca un perito para su asunto?"
+bridge_text: "Página dirigida a peritos. Para consultar un perito por materia:"
 bridge_url: "/cuadro-de-expertos/"
 bridge_link: "Ver el cuadro de expertos →"
 
@@ -77,7 +77,7 @@ body_blocks:
     p: "La actuación pericial es compatible con la actividad docente y con el ejercicio privado, pero la compatibilidad concreta depende del régimen de dedicación de cada universidad y, para el personal funcionario, de la Ley 53/1984 de incompatibilidades. Su verificación corresponde a cada colaborador. El dictamen se rige por el deber de imparcialidad del perito (art. 335.2 LEC): se firma lo que resulta del análisis, favorezca o no a quien lo encarga. No se aceptan encargos condicionados a un resultado."
 
 split_label: "Reparto de roles"
-split_headline: "Usted aporta criterio. El despacho, todo lo demás."
+split_headline: "El colaborador aporta el criterio técnico; el despacho, el resto del expediente."
 split_items:
   - num: "01"
     text: "Captación del cliente y cualificación técnica del asunto"
@@ -89,10 +89,10 @@ split_items:
     text: "Redacción formal, maquetación y presentación procesal"
   - num: "05"
     text: "Facturación, seguimiento y trato con el letrado"
-split_note: "Usted: criterio técnico, firma y ratificación"
+split_note: "Colaborador: criterio técnico, firma y ratificación"
 
 form_section_eyebrow: "Alta de colaborador"
-form_section_title: "Déjenos su perfil técnico"
+form_section_title: "Declaración de perfil técnico"
 form_section_lede: "Cinco pasos. No se piden nombres de clientes, números de expediente ni ningún dato sujeto a confidencialidad: solo la materia sobre la que ha peritado."
 
 form_eyebrow: "Alta de colaborador"
