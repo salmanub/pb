@@ -1,13 +1,20 @@
 {#
-  colaborador.njk — Layout de la capa de captación de peritos colaboradores.
-  Capa 2 de 2: dirigida al propio catedrático / profesor, no al cliente final.
-  La capa pública de autoridad vive en claustro.njk.
+  colaborador.njk — /colaboracion-peritos/ · capa de captación de peritos.
+  Capa 2 de 2: dirigida al catedrático o profesor, no al cliente final.
+  El escaparate público vive en claustro.njk.
 
-  AGENTES §6 microdata: Article + FAQPage + Organization (potentialAction).
+  Spec 30/08: espejo de /colaboracion-abogados/ — mismo esqueleto de DOS
+  PROTOCOLOS en dos columnas, con la misma Card (borde superior de acento,
+  eyebrow mono, checklist con check) que usa esa página. Aquí los dos protocolos
+  son los dos perfiles de colaborador: académico puro y mixto docencia+ejercicio.
+  El mensaje de gestión de expectativas va CERCA DEL FOLD, antes de los
+  protocolos y del formulario: es lo primero que debe leer quien se da de alta.
+
+  AGENTES §6 microdata: Article + FAQPage.
   DECISIÓN DELIBERADA: NO se marca como schema.org/JobPosting. No hay vacante
   abierta ni encargo inmediato garantizado — marcarlo como oferta de empleo lo
   publicaría en Google Jobs y contradiría de plano la gestión de expectativas
-  que es el eje de esta página.
+  que es el eje de la página.
 
   AGENTES §5.1: cero texto hardcodeado — todo llega por frontmatter.
   Cadena: content.md → colaborador.njk → base.njk
@@ -23,16 +30,59 @@
 
 {# ── Enlace-puente hacia la capa pública ── #}
 {% if bridge_url %}
-<div style="max-width: var(--container-wide); margin: 0 auto; padding: 12px var(--gutter) 0; border-top: 1px solid var(--border-subtle);"><span style="font-size: var(--fs-small, 0.8rem); color: var(--text-muted);">{{ bridge_text }} </span><a href="{{ bridge_url }}" style="font-size: var(--fs-small, 0.8rem); color: var(--text-accent); text-decoration: none; border-bottom: 1px solid transparent;" onmouseenter="this.style.borderBottomColor='var(--accent)'" onmouseleave="this.style.borderBottomColor='transparent'">{{ bridge_link }}</a></div>
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter) 4px;"><span style="font-size: var(--fs-small, 0.8rem); color: var(--text-muted);">{{ bridge_text }} </span><a href="{{ bridge_url }}" style="font-size: var(--fs-small, 0.8rem); color: var(--text-accent); text-decoration: none; border-bottom: 1px solid transparent;" onmouseenter="this.style.borderBottomColor='var(--accent)'" onmouseleave="this.style.borderBottomColor='transparent'">{{ bridge_link }}</a></div>
 {% endif %}
 
-{# ===== CUERPO + PROCESO ===== #}
-<section style="max-width: var(--container-wide); margin: 0 auto; padding: clamp(40px,6vw,72px) var(--gutter) 0;">
+{# ===== GESTIÓN DE EXPECTATIVAS — cerca del fold, antes de todo lo demás ===== #}
+{% if expectations_title %}
+<section style="background: var(--surface-tint); border-top: 1px solid var(--oxide-200); border-bottom: 1px solid var(--oxide-200); margin-top: clamp(24px,3vw,36px);">
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
+<div style="max-width: 68ch;">
+<div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 16px;"><span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span> {{ expectations_eyebrow }}</div>
+<h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0 0 22px;">{{ expectations_title }}</h2>
+{% for p in expectations_body %}<p style="font-size: 1.02rem; line-height: 1.8; color: var(--text-body); margin: 0 0 16px;">{{ p | safe }}</p>{% endfor %}
+{% if expectations_points %}
+<div style="margin-top: 26px; border-top: 1px solid var(--oxide-200); padding-top: 8px;">
+{% for pt in expectations_points %}<div style="display: grid; grid-template-columns: 28px 1fr; gap: 14px; align-items: start; padding: 14px 0; border-bottom: 1px solid var(--oxide-200);"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; padding-top: 3px;">{{ '%02d' | format(loop.index) }}</span><span style="font-size: 0.95rem; line-height: 1.65; color: var(--text-body);">{{ pt | safe }}</span></div>{% endfor %}
+</div>
+{% endif %}
+</div>
+</div>
+</section>
+{% endif %}
+
+{# ===== DOS PROTOCOLOS — espejo de /colaboracion-abogados/ ===== #}
+{% if protocols %}
+<section itemscope itemtype="https://schema.org/CollectionPage" style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
+<meta itemprop="name" content="{{ protocols_title }}">
+<meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}">
+{% if protocols_title %}
+<div style="margin-bottom: clamp(24px,3.5vw,36px);">
+<div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 10px;"><span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span> {{ protocols_eyebrow }}</div>
+<h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0;">{{ protocols_title }}</h2>
+{% if protocols_lede %}<p style="margin: 14px 0 0; font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--text-muted); max-width: 62ch;">{{ protocols_lede }}</p>{% endif %}
+</div>
+{% endif %}
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;" class="site-two">
+{% for proto in protocols %}
+<article itemprop="hasPart" itemscope itemtype="https://schema.org/Article" style="padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); border-top: 3px solid var(--accent);">
+<div style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-accent);">{{ proto.ref }}</div>
+<h3 itemprop="name" style="font-family: var(--font-serif); font-size: var(--fs-h2); font-weight: 400; color: var(--text-strong); margin: 10px 0 0;">{{ proto.title }}</h3>
+{% if proto.lede %}<p itemprop="description" style="margin: 12px 0 0; font-size: 0.95rem; line-height: 1.7; color: var(--text-muted);">{{ proto.lede | safe }}</p>{% endif %}
+<ul style="list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px;">
+{% for item in proto.items %}<li style="display: flex; gap: 11px; align-items: flex-start; font-size: 0.95rem; color: var(--text-body); line-height: 1.5;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px; flex-shrink: 0; display: inline-block;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>{{ item }}</li>{% endfor %}
+</ul>
+<div style="margin-top: 24px;"><a href="#alta" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; font-family: var(--font-sans); font-size: var(--fs-body-sm, 0.9rem); font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid var(--ink-900); background: transparent; color: var(--ink-900); text-decoration: none;">{{ proto.cta }} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+</article>
+{% endfor %}
+</div>
+</section>
+{% endif %}
+
+{# ===== REPARTO DE ROLES + CUERPO ===== #}
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter) var(--section-y);">
 <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(40px,5vw,72px); align-items: start;" class="site-two">
 <div>
-{% if profiles %}
-<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: clamp(28px,4vw,40px);">{%- for tag in profiles %}<span style="display: inline-flex; align-items: center; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; padding: 5px 10px; border-radius: var(--radius-xs); background: var(--surface-ink); color: var(--text-on-dark);">{{ tag }}</span>{%- endfor %}</div>
-{% endif %}
 {% for block in body_blocks %}
 <div style="margin-bottom: clamp(28px,4vw,40px);">
 <h2 style="font-family: var(--font-serif); font-size: var(--fs-h3); font-weight: 500; color: var(--text-strong); margin: 0 0 14px; padding-bottom: 10px; border-bottom: 2px solid var(--accent); display: inline-block;">{{ block.h }}</h2>
@@ -40,8 +90,6 @@
 </div>
 {% endfor %}
 </div>
-
-{# ── Sidebar: reparto de roles ── #}
 {% if split_items %}
 <div>
 <div style="position: sticky; top: 92px;">
@@ -61,26 +109,8 @@
 </div>
 </section>
 
-{# ===== GESTIÓN DE EXPECTATIVAS — bloque destacado ===== #}
-{% if expectations_title %}
-<section style="background: var(--surface-tint); border-top: 1px solid var(--oxide-200); border-bottom: 1px solid var(--oxide-200); margin-top: clamp(40px,6vw,72px);">
-<div style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
-<div style="max-width: 68ch;">
-<div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 16px;"><span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span> {{ expectations_eyebrow }}</div>
-<h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0 0 22px;">{{ expectations_title }}</h2>
-{% for p in expectations_body %}<p style="font-size: 1.02rem; line-height: 1.8; color: var(--text-body); margin: 0 0 16px;">{{ p | safe }}</p>{% endfor %}
-{% if expectations_points %}
-<div style="margin-top: 26px; border-top: 1px solid var(--oxide-200); padding-top: 8px;">
-{% for pt in expectations_points %}<div style="display: grid; grid-template-columns: 28px 1fr; gap: 14px; align-items: start; padding: 14px 0; border-bottom: 1px solid var(--oxide-200);"><span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-accent); font-weight: 600; padding-top: 3px;">{{ '%02d' | format(loop.index) }}</span><span style="font-size: 0.95rem; line-height: 1.65; color: var(--text-body);">{{ pt | safe }}</span></div>{% endfor %}
-</div>
-{% endif %}
-</div>
-</div>
-</section>
-{% endif %}
-
 {# ===== FORMULARIO DE ALTA + FAQ ===== #}
-<section id="alta" style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter);">
+<section id="alta" style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter) var(--section-y); border-top: 1px solid var(--border-hairline); padding-top: clamp(40px,6vw,64px);">
 <div style="margin-bottom: clamp(28px,4vw,40px);">
 <div style="display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; font-weight: var(--fw-medium); color: var(--text-accent); margin-bottom: 10px;"><span style="width: 24px; height: 1.5px; background: var(--accent); display: inline-block;"></span> {{ form_section_eyebrow }}</div>
 <h2 style="font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 400; line-height: var(--lh-display); letter-spacing: var(--tracking-tight); color: var(--text-strong); margin: 0;">{{ form_section_title }}</h2>
@@ -104,7 +134,7 @@
 </div>
 {% endif %}
 {% if privacy_note %}
-<div style="margin-top: 22px; display: flex; gap: 12px; padding: 16px 20px; border-radius: var(--radius-md); background: rgba(30,100,60,0.04); border: 1px solid rgba(30,100,60,0.1);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div><div style="font-family: var(--font-sans); font-weight: 600; font-size: 0.85rem; color: var(--text-strong); margin-bottom: 3px;">{{ privacy_title }}</div><div style="font-size: 0.82rem; line-height: 1.55; color: var(--text-muted);">{{ privacy_note | safe }}</div></div></div>
+<div style="margin-top: 22px; display: flex; gap: 12px; padding: 16px 20px; border-radius: var(--radius-md); background: var(--accent-tint); border: 1px solid var(--oxide-200);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div><div style="font-family: var(--font-sans); font-weight: 600; font-size: 0.85rem; color: var(--text-strong); margin-bottom: 3px;">{{ privacy_title }}</div><div style="font-size: 0.82rem; line-height: 1.55; color: var(--text-muted);">{{ privacy_note | safe }}</div></div></div>
 {% endif %}
 </div>
 </div>

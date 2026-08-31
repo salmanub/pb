@@ -1,13 +1,17 @@
 {
-  "_leeme": "Perfiles del claustro de expertos academicos. Los renderiza src/_includes/layouts/claustro.njk en /claustro-de-expertos/, /ca/claustre-experts/ y /en/academic-panel/. Si 'miembros' esta vacio, la seccion entera no se pinta: ni el eyebrow, ni el titulo, ni la entradilla. Una ficha por persona, compartida por los tres idiomas. Nombre de fichero sin guiones a proposito: la clave de datos de Eleventy es el nombre del fichero, y un guion obliga a notacion de corchetes en Nunjucks.",
+  "_leeme": "Registro de peritos academicos del claustro pericial. Lo renderiza src/_includes/layouts/claustro.njk en /claustro-pericial/, /ca/claustre-pericial/ y /en/expert-panel/. Una ficha por persona, compartida por los tres idiomas. La pagina pinta una Card por disciplina: si una disciplina tiene persona publicada muestra su perfil; si no, muestra el Tag 'Plaza abierta'. Nombre de fichero sin guiones a proposito: la clave de datos de Eleventy es el nombre del fichero, y un guion obliga a notacion de corchetes en Nunjucks.",
+
+  "_disciplinas": "El campo 'categoria' debe coincidir EXACTAMENTE con la key de una disciplina del frontmatter de la pagina. Las cinco keys son: caminos | arquitectura | materiales | industrial | estructuras. Una categoria sin coincidencia deja la ficha sin pintar.",
 
   "_plantilla": {
-    "_uso": "Copiar este objeto dentro de 'miembros', quitar las claves que empiezan por guion bajo y rellenar. Los campos jobTitle, bio, specialties y publications admiten un valor plano (se usa igual en los tres idiomas) o un objeto {es, ca, en}; si falta el idioma activo, cae al castellano.",
-    "name": "Nombre y apellidos — obligatorio, se marca como schema.org/Person > name",
+    "_uso": "Copiar este objeto dentro de 'miembros', quitar las claves que empiezan por guion bajo y rellenar. Los campos jobTitle, bio y specialties admiten un valor plano (se usa igual en los tres idiomas) o un objeto {es, ca, en}; si falta el idioma activo, cae al castellano.",
+    "categoria": "estructuras",
     "publicado": "OBLIGATORIO para que la ficha salga. Es una lista blanca: sin 'publicado': true el perfil no se pinta, aunque este completo. Asi una ficha a medias o no autorizada no sale por descuido.",
     "borrador": "true muestra el distintivo naranja de borrador en la cabecera de la ficha. Quitarlo cuando los datos esten validados.",
+    "name": "Nombre y apellidos — se marca como schema.org/Person > name",
     "university": "Nombre de la universidad — se marca como worksFor > CollegeOrUniversity",
-    "image": "Ruta relativa dentro de src/assets/images/, p. ej. 'employees/nombre-apellido.jpg'. Si falta, se pinta un avatar generico.",
+    "image": "Ruta relativa dentro de src/assets/images/, p. ej. 'employees/nombre-apellido.jpg'. Si falta, la Card usa el icono de la disciplina.",
+    "linkedin": "URL completa del perfil — se marca como sameAs y pinta el icono en el pie de la Card",
     "jobTitle": {
       "es": "Profesor titular — Departamento de …",
       "ca": "Professor titular — Departament de …",
@@ -23,7 +27,11 @@
       "ca": ["Materia 1", "Materia 2"],
       "en": ["Subject 1", "Subject 2"]
     },
-    "publications": ["Referencia bibliografica 1", "Referencia bibliografica 2"]
+    "chips": [
+      { "k": "TÍT", "v": "Titulacion — Universidad" },
+      { "k": "COL", "v": "Colegio profesional y numero" },
+      { "k": "DOC", "v": "Departamento y asignatura" }
+    ]
   },
 
   "miembros": []

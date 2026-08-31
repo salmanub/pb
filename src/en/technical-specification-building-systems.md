@@ -1,17 +1,16 @@
 ---
 layout: layouts/base.njk
 templateEngineOverride: njk
-permalink: /en/technical-specification-building-systems/
+permalink: /en/structural-consulting/technical-specification/
 lang: en
-noindex: true
 audience: pro
 eleventyNavigation:
   notshow: true
 translations:
   - lang: es
-    permalink: /prescripcion-tecnica-sistemas-constructivos/
+    permalink: /asesoramiento-estructural/prescripcion-tecnica/
   - lang: ca
-    permalink: /ca/prescripcio-tecnica-sistemes-constructius/
+    permalink: /ca/assessorament-estructural/prescripcio-tecnica/
 title: "Technical Specification of Building Systems"
 description: "Independent specification of repair, waterproofing and structural strengthening systems, with attendance at meetings to defend it before the client or the design team. No ties to any manufacturer."
 breadcrumb_parent:
@@ -19,9 +18,11 @@ breadcrumb_parent:
   url: "/en/structural-consulting/"
 
 # ── DRAFT — pending Albert's approval ────────────────────────────────────────
-# Copy written on the agreed approach: expert in these systems, but independent
-# of any brand. NO specific project is cited as a reference, and no project not
-# yet awarded. Review before removing `noindex: true`.
+# First-draft copy on the agreed approach: expert in these systems, but
+# independent of any brand.
+# NO specific project is cited as a reference case. Albert's decision
+# (30/08/2026): the cultural-facility project is at tender stage, not awarded;
+# naming it in future will be an explicit decision of his.
 # ─────────────────────────────────────────────────────────────────────────────
 
 svc_num: "PRESC·01"
@@ -35,9 +36,37 @@ svc_lsi:
   - "Concrete repair"
   - "Structural strengthening"
 
+subsystems_eyebrow: "§ 2.7 Subsystems"
+subsystems_title: "Three subsystems, one method"
+subsystems_lede: "Each subsystem is specified by standardised performance and measurable acceptance criteria. The resulting document can be bid on by any manufacturer whose product meets them."
+subsystems:
+  - ref: "§ 2.7.1"
+    icon: "impermeabilizacion"
+    name: "Waterproofing"
+    desc: "Roofs, basements, tanks and buried elements. The system is defined from the actual substrate and the service demands, with detailing resolved at the difficult points: junctions, joints, drains and service penetrations."
+    norms:
+      - "CTE DB-HS 1"
+      - "EN 13967"
+  - ref: "§ 2.7.2"
+    icon: "pavimentos"
+    name: "Technical flooring"
+    desc: "Seamless industrial and public-building floors. Required mechanical and chemical performance, substrate preparation, joint treatment and acceptance criteria measurable on site rather than in a catalogue."
+    norms:
+      - "EN 13813"
+      - "EN 1504-2"
+  - ref: "§ 2.7.3"
+    icon: "refuerzo"
+    name: "Structural strengthening"
+    desc: "Recovering or increasing load-bearing capacity: carbon fibre, concrete overlays, bonded steel plate or external post-tensioning. The specification starts from the reassessment, not from the product at hand."
+    norms:
+      - "EN 1504-4"
+      - "Spanish Structural Code"
+
 body_blocks:
   - h: "What an independent technical specification is"
     p: "It is the documented definition of the building system that resolves a specific pathology: which product family, to what standardised performance, on which substrate, with what surface preparation, at what thicknesses and under what site conditions. It is written from the diagnosis, not from a catalogue. The result is a document any manufacturer with a conforming product can bid on."
+  - h: "Liability does not transfer with the catalogue"
+    p: "Whoever signs a design or supervises the works answers for the solution adopted. The manufacturer answers for its product — that it performs as its CE marking and data sheet declare — not for that product being the right one for this substrate, this pathology and these service conditions. These are two different liabilities and they are not interchangeable. Accepting a brand's technical department proposal does not shift the liability for the choice onto that brand: it leaves it exactly where it was, with the design team, but now resting on reasoning that is not their own and that they cannot defend with their own documentation."
   - h: "Independent means we do not sell product"
     p: "We know the systems of the sector's main manufacturers and work with them on site every day, but we do not distribute, we do not install and we take no commission from any brand. The specification is written by performance and product standards — not by trade name — so the client keeps the ability to tender and compare offers without being tied to one supplier."
   - h: "Why specifications so often go wrong"

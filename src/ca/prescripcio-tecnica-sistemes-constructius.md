@@ -1,17 +1,16 @@
 ---
 layout: layouts/base.njk
 templateEngineOverride: njk
-permalink: /ca/prescripcio-tecnica-sistemes-constructius/
+permalink: /ca/assessorament-estructural/prescripcio-tecnica/
 lang: ca
-noindex: true
 audience: pro
 eleventyNavigation:
   notshow: true
 translations:
   - lang: es
-    permalink: /prescripcion-tecnica-sistemas-constructivos/
+    permalink: /asesoramiento-estructural/prescripcion-tecnica/
   - lang: en
-    permalink: /en/technical-specification-building-systems/
+    permalink: /en/structural-consulting/technical-specification/
 title: "Prescripció Tècnica de Sistemes Constructius"
 description: "Prescripció independent de sistemes de reparació, impermeabilització i reforç estructural, amb assistència a la reunió per defensar-la davant la propietat o la direcció facultativa. Sense vinculació amb cap fabricant."
 breadcrumb_parent:
@@ -19,9 +18,11 @@ breadcrumb_parent:
   url: "/ca/assessorament-estructural/"
 
 # ── ESBORRANY — pendent de validació per l'Albert ────────────────────────────
-# Textos redactats sobre l'enfocament acordat: experts en els sistemes, però
-# independents de la marca. NO se cita cap obra concreta com a referència ni
-# cap projecte no adjudicat. Revisar abans de treure `noindex: true`.
+# Textos d'un primer esborrany sobre l'enfocament acordat: experts en els
+# sistemes, però independents de la marca.
+# NO se cita cap obra concreta com a cas de referència. Decisió de l'Albert
+# (30/08/2026): l'obra d'equipament cultural és en fase d'oferta, no
+# adjudicada; anomenar-la en el futur serà una decisió explícita seva.
 # ─────────────────────────────────────────────────────────────────────────────
 
 svc_num: "PRESC·01"
@@ -35,9 +36,37 @@ svc_lsi:
   - "Reparació de formigó"
   - "Reforç estructural"
 
+subsystems_eyebrow: "§ 2.7 Subsistemes"
+subsystems_title: "Tres subsistemes, un mateix mètode"
+subsystems_lede: "Cada subsistema es prescriu per prestacions normalitzades i criteris d'acceptació mesurables. El document resultant el pot ofertar qualsevol fabricant el producte del qual els compleixi."
+subsystems:
+  - ref: "§ 2.7.1"
+    icon: "impermeabilizacion"
+    name: "Impermeabilització"
+    desc: "Cobertes, soterranis, dipòsits i elements enterrats. Definició del sistema segons el suport real i les sol·licitacions de servei, amb punts singulars resolts en detall: trobades, juntes, embornals i passos d'instal·lació."
+    norms:
+      - "CTE DB-HS 1"
+      - "UNE-EN 13967"
+  - ref: "§ 2.7.2"
+    icon: "pavimentos"
+    name: "Paviments tècnics"
+    desc: "Paviments continus industrials i d'equipament públic. Prestació mecànica i química exigible, preparació del suport, tractament de juntes i criteris de recepció mesurables a l'obra, no al catàleg."
+    norms:
+      - "UNE-EN 13813"
+      - "UNE-EN 1504-2"
+  - ref: "§ 2.7.3"
+    icon: "refuerzo"
+    name: "Reforç estructural"
+    desc: "Recuperació o increment de capacitat portant: fibra de carboni, recrescuts, xapa encolada o postesat exterior. La prescripció parteix del recàlcul, no del producte disponible."
+    norms:
+      - "UNE-EN 1504-4"
+      - "Codi Estructural"
+
 body_blocks:
   - h: "Què és una prescripció tècnica independent"
     p: "És la definició documentada del sistema constructiu que resol una patologia concreta: quina família de productes, amb quines prestacions normalitzades, sobre quin suport, amb quina preparació prèvia, en quins gruixos i sota quines condicions de posada en obra. Es redacta a partir del diagnòstic, no del catàleg. El resultat és un document que qualsevol fabricant amb producte conforme pot ofertar."
+  - h: "La responsabilitat no es transfereix amb el catàleg"
+    p: "Qui signa un projecte o dirigeix una obra respon de la solució adoptada. El fabricant respon del seu producte —que compleixi allò que declara el seu marcatge CE i la seva fitxa tècnica—, no que aquest producte sigui l'adequat per a aquest suport, aquesta patologia i aquestes condicions de servei. Són dues responsabilitats diferents i no són intercanviables. Acceptar la proposta del departament tècnic d'una marca no trasllada a aquesta marca la responsabilitat de l'elecció: la deixa on era, a la direcció facultativa, però ara sostinguda per un criteri que no és propi i que no es pot defensar amb documentació pròpia."
   - h: "Independent significa que no venem producte"
     p: "Coneixem els sistemes dels principals fabricants del sector i hi treballem cada dia a l'obra, però no distribuïm, no apliquem i no percebem comissió de cap marca. La prescripció es redacta per prestacions i normes de producte —no per nom comercial—, de manera que la propietat conserva la capacitat de licitar i comparar ofertes sense quedar captiva d'un proveïdor."
   - h: "Per què es prescriu malament sovint"

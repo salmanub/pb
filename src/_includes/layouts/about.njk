@@ -37,13 +37,13 @@
 <p style="font-size: 1rem; line-height: 1.75; color: var(--text-muted); margin: 0 0 12px; max-width: 62ch;">{{ block.p | safe }}</p>
 {% endfor %}
 
-{# ── Enlace al claustro de expertos académicos ────────────────────────────────
-   Solo se pinta si HAY perfiles publicados en src/_data/catedraticos.json.
-   Con el fichero vacío, la sección de expertos de /claustro-de-expertos/ no se
-   renderiza; enlazarla desde aquí llevaría a una página sin claustro. El enlace
-   aparece solo cuando hay a quién enseñar, sin tocar nada más.
+{# ── Enlace al claustro pericial y a la captación de peritos ──────────────────
+   /claustro-pericial/ tiene contenido siempre (las cinco disciplinas son fijas
+   y las que no tienen persona salen como «Plaza abierta»), así que el enlace no
+   necesita condición. Spec 30/08: se enlaza desde el main de /el-despacho/, sin
+   tocar el nav principal.
    Texto: frontmatter `claustro_block` {h, p} (AGENTES §5.1). #}
-{% if claustro_block and (catedraticos.miembros | default([]) | selectattr("publicado") | length) > 0 %}
+{% if claustro_block %}
 <h3 style="font-family: var(--font-serif); font-size: var(--fs-h3); font-weight: 500; color: var(--text-strong); margin: 26px 0 10px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); display: inline-block;">{{ claustro_block.h }}</h3>
 <p style="font-size: 1rem; line-height: 1.75; color: var(--text-muted); margin: 0 0 12px; max-width: 62ch;">{{ claustro_block.p | safe }}</p>
 {% endif %}

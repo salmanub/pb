@@ -1,39 +1,77 @@
 ---
 layout: layouts/base.njk
 templateEngineOverride: njk
-permalink: /en/academic-panel/
+permalink: /en/expert-panel/
 lang: en
-noindex: true
 eleventyNavigation:
   notshow: true
 translations:
   - lang: es
-    permalink: /claustro-de-expertos/
+    permalink: /claustro-pericial/
   - lang: ca
-    permalink: /ca/claustre-experts/
-title: "Academic Panel | Collaborating University Professors"
-description: "Expert reports signed by full and tenured university professors in structural analysis, geotechnics, industrial engineering and architecture. Academic authority applied to technical litigation."
+    permalink: /ca/claustre-pericial/
+title: "Expert Panel | Collaborating University Professors"
+description: "Five university disciplines that sign expert reports when the dispute demands the state of the art: civil engineering, architecture, construction materials, industrial engineering and structural analysis."
 breadcrumb_parent:
   label: "The Firm"
   url: "/en/the-firm/"
 
 # ── DRAFT — pending Albert's approval ────────────────────────────────────────
-# The copy on this page is a draft. The panel profiles do NOT live here: they
-# are in `src/_data/catedraticos.json` (one record per person, shared across the
-# three languages). While that file has no published profile, the experts
-# section is not rendered at all — no heading, no lede.
-# Review the copy and add at least one real profile before removing `noindex`.
+# First-draft copy. The people are NOT here: they live in
+# `src/_data/catedraticos.json`, each record with `categoria` (the discipline
+# key) and `publicado: true`. While a discipline has no published person, its
+# Card shows the «Open seat» tag.
 # ─────────────────────────────────────────────────────────────────────────────
 
-heroTitle: "Academic<br>panel"
+heroTitle: "Expert<br>panel"
 
-disciplines:
-  - "Structural analysis"
-  - "Geotechnics"
-  - "Civil engineering"
-  - "Industrial engineering"
-  - "Architecture"
-  - "Materials science"
+grid_eyebrow: "§ Disciplines"
+grid_title: "Five disciplines, one report"
+grid_lede: "A matter is assigned to the discipline the dispute actually turns on, not to whoever is available. When none of them fits, the instruction is declined."
+open_seat_tag: "Open seat"
+draft_tag: "Draft"
+
+categories:
+  - key: "caminos"
+    ref: "§ ESP. 01"
+    icon: "caminos"
+    name: "Civil Engineering — Roads, Canals and Ports"
+    desc: "Civil works, infrastructure and public procurement: viaducts, bridge structures, earthworks and contract settlement. The dispute usually sits in the design and its variations, not in the workmanship."
+    field_label: "Civil works · Infrastructure · Procurement"
+    pillar_url: "/en/expert-witness-reports/public-works/"
+    pillar_label: "Public works reports"
+  - key: "arquitectura"
+    ref: "§ ESP. 02"
+    icon: "arquitectura"
+    name: "Architecture"
+    desc: "Buildings, habitability and compliance with the Spanish Building Code. Design and site-supervision defects, conditions of use, and the always-contested line between apparent and hidden defects."
+    field_label: "Buildings · Building Code · Habitability"
+    pillar_url: "/en/hidden-defects/"
+    pillar_label: "Hidden defects reports"
+  - key: "materiales"
+    ref: "§ ESP. 03"
+    icon: "materiales"
+    name: "Construction Materials Engineering"
+    desc: "Characterisation of concrete, mortars, steels and repair systems. Testing campaigns, interpretation of results, and the behaviour of a material operating outside its product standard."
+    field_label: "Testing · Concrete · Durability"
+    pillar_url: "/en/structural-pathologies/"
+    pillar_label: "Structural pathology reports"
+  - key: "industrial"
+    ref: "§ ESP. 04"
+    icon: "industrial"
+    name: "Industrial Engineering"
+    desc: "Installations, process and equipment. Root cause determination in service failures, machinery safety, and the assessment of loss of profit from production downtime."
+    field_label: "Installations · Root cause · Process"
+    pillar_url: "/en/industrial-warehouses/"
+    pillar_label: "Industrial building reports"
+  - key: "estructuras"
+    ref: "§ ESP. 05"
+    icon: "estructuras"
+    name: "Structural Engineering and Analysis"
+    desc: "Calculation model, reassessment of load-bearing capacity, finite element analysis and soil-structure interaction. This is the discipline that settles matters where the model itself is in dispute."
+    field_label: "Analysis · Reassessment · FEA"
+    pillar_url: "/en/structural-consulting/"
+    pillar_label: "Structural consulting"
 
 body_blocks:
   - h: "Why an expert report signed from within the university"
@@ -43,19 +81,11 @@ body_blocks:
   - h: "What it brings before the court"
     p: "An expert with a verifiable teaching and research record offers the court something it can check: peer-reviewed publications, participation in standardisation committees and formal teaching in the subject on which they are reporting. Under cross-examination, that record is documentary fact rather than a party's assertion."
 
-faculty_eyebrow: "Collaborating profiles"
-faculty_title: "Academic experts on the panel"
-faculty_lede: "Each matter is assigned to the profile whose specialism matches the disputed subject. No file is opened without that match."
-faculty_specialties_label: "Fields of expertise"
-faculty_publications_label: "Published research"
-faculty_placeholder_badge: "Draft"
-faculty_ref_prefix: "PROFILE"
-
 band_eyebrow: "Academic collaboration"
 band_title: "Are you a university professor?"
 band_lede: "If your specialism matches the subject of an expert report, we want to know how to reach you. Read how we work and on what terms before leaving us your details."
 band_cta: "Collaborate as a signing expert"
-band_url: "/en/collaborate-as-expert/"
+band_url: "/en/expert-collaboration/"
 
 qualLabel: "Case assignment"
 qualItems:

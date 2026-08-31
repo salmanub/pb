@@ -1,21 +1,21 @@
 ---
 layout: layouts/base.njk
 templateEngineOverride: njk
-permalink: /en/collaborate-as-expert/
+permalink: /en/expert-collaboration/
 lang: en
 noindex: true
 eleventyNavigation:
   notshow: true
 translations:
   - lang: es
-    permalink: /colaborar-como-perito/
+    permalink: /colaboracion-peritos/
   - lang: ca
-    permalink: /ca/collaborar-com-a-perit/
-title: "Collaborate as a Signing Expert | Academic Expert Registration"
+    permalink: /ca/collaboracio-perits/
+title: "Expert Collaboration | Academic Signing Expert Registration"
 description: "Registration for university professors and academics in professional practice as signing expert witnesses. No commercial or administrative burden. Read the terms and the real availability of instructions first."
 breadcrumb_parent:
-  label: "Academic Panel"
-  url: "/en/academic-panel/"
+  label: "Expert Panel"
+  url: "/en/expert-panel/"
 
 # ── DRAFT — pending Albert's approval ────────────────────────────────────────
 # All copy on this page is a first draft written on the agreed approach
@@ -23,21 +23,39 @@ breadcrumb_parent:
 # Review tone and terms before removing `noindex: true`.
 # ─────────────────────────────────────────────────────────────────────────────
 
-heroTitle: "Collaborate as<br>a signing expert"
+heroTitle: "Expert<br>collaboration"
 
 bridge_text: "Looking for an expert for your case?"
-bridge_url: "/en/academic-panel/"
-bridge_link: "See the academic panel →"
+bridge_url: "/en/expert-panel/"
+bridge_link: "See the expert panel →"
 
-profiles:
-  - "Full professors"
-  - "Tenured professors"
-  - "Associate lecturers"
-  - "Self-employed with teaching"
+
+protocols_eyebrow: "§ Protocols"
+protocols_title: "Two ways to collaborate"
+protocols_lede: "The protocol does not change the technical work: it changes availability, how the engagement is contracted, and how much administrative load we take on."
+protocols:
+  - ref: "Protocol A — Full academic post"
+    title: "For full and tenured professors"
+    lede: "Full-time academic profile, with teaching and research duties and compatibility governed by Spanish Act 53/1984."
+    items:
+      - "Engagement report by report, with no committed volume"
+      - "A scoped instruction: defined limits and a specific technical question"
+      - "Publications and standardisation committees as your standing before the court"
+      - "Court confirmation agreed and paid from the outset (art. 347 LEC)"
+      - "All dealings with counsel and the insurer stay with us"
+    cta: "Register"
+  - ref: "Protocol B — Teaching plus own practice"
+    title: "For lecturers in independent practice"
+    lede: "The associate or adjunct lecturer who teaches at the university and invoices as a self-employed professional. Today the most common profile among our collaborators."
+    items:
+      - "Compatible with your own client base, with no exclusivity"
+      - "Invoiced as an independent professional, fixed fees per instruction"
+      - "University teaching is the standing; own practice is the site experience"
+      - "No client acquisition and no formal drafting: technical judgement and signature"
+      - "Option to act as a technical adviser without signing, if you prefer"
+    cta: "Register"
 
 body_blocks:
-  - h: "Who this is for"
-    p: "For full and tenured university professors and — explicitly — for those who combine teaching with independent professional practice: the associate or adjunct lecturer who teaches at the university and invoices as a self-employed professional. That mixed profile is today the most common among our collaborators, and the copy on this page is written with them in mind, not only the full-time academic."
   - h: "What we do and what you do"
     p: "We bring in the matter, qualify it technically, negotiate fees and deadlines with counsel or the insurer, prepare the case file, handle invoicing and take on all commercial contact. You receive an instruction that is already scoped: defined limits, ordered documentation and a specific technical question. You bring the judgement, validate the methodology, sign the report and confirm it in court if the proceedings require it."
   - h: "The kind of matters that come in"

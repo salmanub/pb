@@ -118,8 +118,16 @@ Datos: metadata.json (navBar, services, contact) + {lang}.json (nav.*)
   "Blog": ui.nav.blog,
   "Despacho": ui.nav.despacho
   } %}
-  {# ES service pages now live at root (/{slug}/) after the restructuring; only CA still uses the /informes-pericials/ prefix. #}
-  {% set svcBasePath = "/informes-pericials/" if currentLang == "ca" else "/" %}
+  {# Las páginas de servicio son PLANAS en los tres idiomas: /vicios-ocultos/,
+     /ca/vicis-ocults/, /en/hidden-defects/. Lo confirma src/_redirects §1
+     («URL SHORTENING — dictámenes /informes-periciales/X → /X»), con 301 de la
+     forma anidada a la plana en ES y en CA.
+     El prefijo "/informes-pericials/" que había aquí para CA hacía que TODOS
+     los enlaces de servicio del mega-menú catalán apuntasen a la forma
+     anidada y se comiesen un 301 por clic. Corregido a plano. (2026-08-30)
+     Excepción: obras-publicas sigue anidada en CA y EN — se resuelve con
+     href_ca / href_en en metadata.services, no con este prefijo. #}
+  {% set svcBasePath = "/" %}
   {% set megaFooterText = "Veure tots els dictàmens" if currentLang == "ca" else ("View all reports" if currentLang ==
   "en" else "Ver todos los dictámenes") %}
   {% set topNav = collections.all | filterByLang(currentLang) | eleventyNavigation %}
@@ -197,7 +205,7 @@ Datos: metadata.json (navBar, services, contact) + {lang}.json (nav.*)
                 {% set svcName = svc["name_" + currentLang] if svc["name_" + currentLang] else svc.name %}
                 {% set svcDesc = svc["description_" + currentLang] if svc["description_" + currentLang] else svc.description %}
                 {% set svcSlug = svc["path_" + currentLang] if svc["path_" + currentLang] else svc.path %}
-                <a href="{{ svc.href if svc.href else (langPrefix + svcBasePath + svcSlug + '/') }}" class="mega-card"
+                <a href="{{ svc["href_" + currentLang] if svc["href_" + currentLang] else (svc.href if svc.href else (langPrefix + svcBasePath + svcSlug + '/')) }}" class="mega-card"
                   itemprop="url">
                   <meta itemprop="name" content="{{ svcName }}">
                   <span class="mega-card__title">{{ svcName }}</span>
@@ -209,7 +217,7 @@ Datos: metadata.json (navBar, services, contact) + {lang}.json (nav.*)
                 {% set svcName = svc["name_" + currentLang] if svc["name_" + currentLang] else svc.name %}
                 {% set svcDesc = svc["description_" + currentLang] if svc["description_" + currentLang] else svc.description %}
                 {% set svcSlug = svc["path_" + currentLang] if svc["path_" + currentLang] else svc.path %}
-                <a href="{{ svc.href if svc.href else (langPrefix + '/' + svcSlug + '/') }}" class="mega-card"
+                <a href="{{ svc["href_" + currentLang] if svc["href_" + currentLang] else (svc.href if svc.href else (langPrefix + '/' + svcSlug + '/')) }}" class="mega-card"
                   itemprop="url">
                   <meta itemprop="name" content="{{ svcName }}">
                   <span class="mega-card__title">{{ svcName }}</span>

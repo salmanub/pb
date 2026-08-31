@@ -1,21 +1,21 @@
 ---
 layout: layouts/base.njk
 templateEngineOverride: njk
-permalink: /ca/collaborar-com-a-perit/
+permalink: /ca/collaboracio-perits/
 lang: ca
 noindex: true
 eleventyNavigation:
   notshow: true
 translations:
   - lang: es
-    permalink: /colaborar-como-perito/
+    permalink: /colaboracion-peritos/
   - lang: en
-    permalink: /en/collaborate-as-expert/
-title: "Col·laborar com a Perit Signant | Alta d'Expert Acadèmic"
+    permalink: /en/expert-collaboration/
+title: "Col·laboració de Perits | Alta d'Expert Acadèmic Signant"
 description: "Alta de catedràtics, professors titulars i professionals amb activitat docent com a perits signants. Sense càrrega comercial ni administrativa. Llegeixi abans les condicions i la disponibilitat real d'encàrrecs."
 breadcrumb_parent:
-  label: "Claustre d'Experts"
-  url: "/ca/claustre-experts/"
+  label: "Claustre Pericial"
+  url: "/ca/claustre-pericial/"
 
 # ── ESBORRANY — pendent de validació per l'Albert ────────────────────────────
 # Tots els textos d'aquesta pàgina són un primer esborrany redactat sobre
@@ -23,21 +23,39 @@ breadcrumb_parent:
 # autònom). Revisar to i condicions abans de treure `noindex: true`.
 # ─────────────────────────────────────────────────────────────────────────────
 
-heroTitle: "Col·laborar com<br>a perit signant"
+heroTitle: "Col·laboració<br>de perits"
 
 bridge_text: "Busca un perit per al seu assumpte?"
-bridge_url: "/ca/claustre-experts/"
-bridge_link: "Veure el claustre d'experts →"
+bridge_url: "/ca/claustre-pericial/"
+bridge_link: "Veure el claustre pericial →"
 
-profiles:
-  - "Catedràtics"
-  - "Professors titulars"
-  - "Professors associats"
-  - "Autònoms amb docència"
+
+protocols_eyebrow: "§ Protocols"
+protocols_title: "Dues maneres de col·laborar"
+protocols_lede: "El protocol no canvia la feina tècnica: canvia la disponibilitat, la forma de contractar i la càrrega administrativa que assumim nosaltres."
+protocols:
+  - ref: "Protocol A — Càtedra i titularitat"
+    title: "Per a catedràtics i professors titulars"
+    lede: "Perfil acadèmic a temps complet, amb dedicació docent i investigadora i compatibilitat subjecta a la Llei 53/1984."
+    items:
+      - "Intervenció per dictamen, sense volum compromès"
+      - "Encàrrec delimitat: abast tancat i pregunta tècnica concreta"
+      - "Publicacions i comitès de normalització com a aval davant el tribunal"
+      - "Ratificació en sala pactada i retribuïda des de l'inici (LEC art. 347)"
+      - "Tota la relació amb el lletrat i l'asseguradora la portem nosaltres"
+    cta: "Donar-me d'alta"
+  - ref: "Protocol B — Docència i exercici propi"
+    title: "Per a professors amb activitat professional pròpia"
+    lede: "Professor associat o col·laborador que fa classe a la universitat i factura com a autònom. És avui el perfil més habitual entre els nostres col·laboradors."
+    items:
+      - "Compatible amb la seva pròpia cartera de clients, sense exclusivitat"
+      - "Facturació com a professional independent, honoraris tancats per encàrrec"
+      - "La docència universitària és l'aval; l'exercici propi, l'experiència d'obra"
+      - "Sense captació comercial ni redacció formal: només criteri tècnic i signatura"
+      - "Possibilitat d'intervenir com a assessor tècnic sense signar, si ho prefereix"
+    cta: "Donar-me d'alta"
 
 body_blocks:
-  - h: "A qui ens adrecem"
-    p: "A catedràtics i professors titulars d'universitat i, també —de manera expressa—, a qui compatibilitza la docència amb exercici professional per compte propi: el professor associat o col·laborador que fa classe a la universitat i factura com a autònom. Aquest perfil mixt és avui el més habitual entre els nostres col·laboradors i el text d'aquesta pàgina està escrit comptant amb ell, no només amb l'acadèmic a temps complet."
   - h: "Què fem nosaltres i què fa vostè"
     p: "Nosaltres captem l'assumpte, el qualifiquem tècnicament, negociem honoraris i terminis amb el lletrat o l'asseguradora, instruïm l'expedient, gestionem la facturació i assumim la interlocució comercial. Vostè rep un encàrrec ja delimitat: abast tancat, documentació ordenada i una pregunta tècnica concreta. Hi aporta el criteri, valida la metodologia, signa el dictamen i el ratifica en sala si el procediment ho requereix."
   - h: "Quin tipus d'assumptes arriben"

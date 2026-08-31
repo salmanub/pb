@@ -26,7 +26,7 @@ body_blocks:
   - h: "Technical supervision of strengthening works"
     p: "The practice provides technical supervision for structural strengthening: carbon fibre (CFRP), bonded steel plates, reinforced-concrete enlargements and external post-tensioning. Supervision spans from the strengthening design to project handover, with certification of the resulting load-bearing capacity."
   - h: "Technical specification of building systems"
-    p: "Once the solution is established, it has to be defined: which system, to what standardised performance and under what site conditions. The firm writes that <a href='/en/technical-specification-building-systems/'>performance-based technical specification</a> —not brand-based— and attends the meeting with the client or the design team to defend it. With no ties to any manufacturer."
+    p: "Once the solution is established, it has to be defined: which system, to what standardised performance and under what site conditions. The firm writes that <a href='/en/structural-consulting/technical-specification/'>performance-based technical specification</a> —not brand-based— and attends the meeting with the client or the design team to defend it. With no ties to any manufacturer."
 related_services:
   - "patologias-estructurales"
   - "naves-industriales"

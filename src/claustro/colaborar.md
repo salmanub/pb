@@ -1,21 +1,21 @@
 ---
 layout: layouts/base.njk
 templateEngineOverride: njk
-permalink: /colaborar-como-perito/
+permalink: /colaboracion-peritos/
 lang: es
 noindex: true
 eleventyNavigation:
   notshow: true
 translations:
   - lang: ca
-    permalink: /ca/collaborar-com-a-perit/
+    permalink: /ca/collaboracio-perits/
   - lang: en
-    permalink: /en/collaborate-as-expert/
-title: "Colaborar como Perito Firmante | Alta de Experto Académico"
+    permalink: /en/expert-collaboration/
+title: "Colaboración de Peritos | Alta de Experto Académico Firmante"
 description: "Alta de catedráticos, profesores titulares y profesionales con actividad docente como peritos firmantes. Sin carga comercial ni administrativa. Lea antes las condiciones y la disponibilidad real de encargos."
 breadcrumb_parent:
-  label: "Claustro de Expertos"
-  url: "/claustro-de-expertos/"
+  label: "Claustro Pericial"
+  url: "/claustro-pericial/"
 
 # ── BORRADOR — pendiente de validación por Albert ────────────────────────────
 # Todos los textos de esta página son un primer borrador redactado sobre el
@@ -23,21 +23,51 @@ breadcrumb_parent:
 # autónomo). Revisar tono y condiciones antes de quitar `noindex: true`.
 # ─────────────────────────────────────────────────────────────────────────────
 
-heroTitle: "Colaborar como<br>perito firmante"
+heroTitle: "Colaboración<br>de peritos"
 
 bridge_text: "¿Busca un perito para su asunto?"
-bridge_url: "/claustro-de-expertos/"
-bridge_link: "Ver el claustro de expertos →"
+bridge_url: "/claustro-pericial/"
+bridge_link: "Ver el claustro pericial →"
 
-profiles:
-  - "Catedráticos"
-  - "Profesores titulares"
-  - "Profesores asociados"
-  - "Autónomos con docencia"
+expectations_eyebrow: "Léalo antes de darse de alta"
+expectations_title: "No podemos prometerle encargos inmediatos"
+expectations_body:
+  - "Conviene decirlo sin rodeos y antes que nada: darse de alta en este registro <strong>no significa que vaya a recibir un encargo pronto</strong>, ni que vaya a recibirlo en absoluto. Sería fácil escribir lo contrario y quedaría mejor en esta página, pero no sería cierto."
+  - "La demanda de peritajes singulares y de alto perfil ha crecido, y con ella la exigencia de encaje: los asuntos que justifican recurrir a un experto académico son, por definición, poco frecuentes y muy específicos. Un catedrático en geotecnia no resuelve un litigio sobre instalaciones eléctricas, y llamarle para eso solo le haría perder el tiempo a usted y credibilidad a nosotros."
+  - "Por eso el planteamiento es el contrario al de una bolsa de trabajo: <strong>déjenos sus datos ahora para que, cuando entre un caso que encaje al 100 % con su especialidad, podamos ir directos a usted</strong>. Puede pasar un mes o puede pasar un año. Lo que no va a pasar es que le llamemos para un encargo que no va con usted."
+expectations_points:
+  - "El alta no genera ningún compromiso por ninguna de las dos partes, ni exclusividad."
+  - "No hay un volumen mínimo de encargos garantizado, ni una previsión que podamos darle por escrito."
+  - "Cuando surja un caso compatible, le llamaremos con el alcance y los honorarios ya definidos, para que decida con datos."
+  - "Si el asunto no encaja con su especialidad, no le escribiremos. Preferimos el silencio a la lista de correo."
+  - "Puede solicitar la baja y la supresión de sus datos en cualquier momento escribiendo a la dirección de contacto."
+
+protocols_eyebrow: "§ Protocolos"
+protocols_title: "Dos formas de colaborar"
+protocols_lede: "El protocolo no cambia el trabajo técnico: cambia la disponibilidad, la forma de contratar y la carga administrativa que asumimos nosotros."
+protocols:
+  - ref: "Protocolo A — Cátedra y titularidad"
+    title: "Para catedráticos y profesores titulares"
+    lede: "Perfil académico a tiempo completo, con dedicación docente e investigadora y compatibilidad sujeta a la Ley 53/1984."
+    items:
+      - "Intervención por dictamen, sin volumen comprometido"
+      - "Encargo delimitado: alcance cerrado y pregunta técnica concreta"
+      - "Publicaciones y comités de normalización como aval ante el tribunal"
+      - "Ratificación en sala pactada y retribuida desde el inicio (LEC art. 347)"
+      - "Toda la relación con el letrado y la aseguradora la llevamos nosotros"
+    cta: "Darme de alta"
+  - ref: "Protocolo B — Docencia y ejercicio propio"
+    title: "Para profesores con actividad profesional propia"
+    lede: "Profesor asociado o colaborador que da clase en la universidad y factura como autónomo. Es hoy el perfil más habitual entre nuestros colaboradores."
+    items:
+      - "Compatible con su propia cartera de clientes, sin exclusividad"
+      - "Facturación como profesional independiente, honorarios cerrados por encargo"
+      - "La docencia universitaria es el aval; el ejercicio propio, la experiencia de obra"
+      - "Sin captación comercial ni redacción formal: solo criterio técnico y firma"
+      - "Posibilidad de intervenir como asesor técnico sin firmar, si lo prefiere"
+    cta: "Darme de alta"
 
 body_blocks:
-  - h: "A quién nos dirigimos"
-    p: "A catedráticos y profesores titulares de universidad, y también —de forma expresa— a quien compatibiliza la docencia con ejercicio profesional por cuenta propia: el profesor asociado o colaborador que da clase en la universidad y factura como autónomo. Ese perfil mixto es hoy el más habitual entre nuestros colaboradores y el copy de esta página está escrito contando con él, no solo con el académico a tiempo completo."
   - h: "Qué hacemos nosotros y qué hace usted"
     p: "Nosotros captamos el asunto, lo cualificamos técnicamente, negociamos honorarios y plazos con el letrado o la aseguradora, instruimos el expediente, gestionamos la facturación y asumimos la interlocución comercial. Usted recibe un encargo ya delimitado: alcance cerrado, documentación ordenada y una pregunta técnica concreta. Aporta el criterio, valida la metodología, firma el dictamen y lo ratifica en sala si el procedimiento lo requiere."
   - h: "Qué tipo de asuntos llegan"
@@ -59,19 +89,6 @@ split_items:
   - num: "05"
     text: "Facturación, seguimiento y trato con el letrado"
 split_note: "Usted: criterio técnico, firma y ratificación"
-
-expectations_eyebrow: "Léalo antes de darse de alta"
-expectations_title: "No podemos prometerle encargos inmediatos"
-expectations_body:
-  - "Conviene decirlo sin rodeos: darse de alta en este registro <strong>no significa que vaya a recibir un encargo pronto</strong>, ni que vaya a recibirlo en absoluto. Sería fácil escribir lo contrario y quedaría mejor en esta página, pero no sería cierto."
-  - "La demanda de peritajes singulares y de alto perfil ha crecido, y con ella la exigencia de encaje: los asuntos que justifican recurrir a un experto académico son, por definición, poco frecuentes y muy específicos. Un catedrático en geotecnia no resuelve un litigio sobre instalaciones eléctricas, y llamarle para eso solo le haría perder el tiempo a usted y credibilidad a nosotros."
-  - "Por eso el planteamiento es el contrario al de una bolsa de trabajo: <strong>déjenos sus datos ahora para que, cuando entre un caso que encaje al 100 % con su especialidad, podamos ir directos a usted</strong>. Puede pasar un mes o puede pasar un año. Lo que no va a pasar es que le llamemos para un encargo que no va con usted."
-expectations_points:
-  - "El alta no genera ningún compromiso por ninguna de las dos partes, ni exclusividad."
-  - "No hay un volumen mínimo de encargos garantizado, ni una previsión que podamos darle por escrito."
-  - "Cuando surja un caso compatible, le llamaremos con el alcance y los honorarios ya definidos, para que decida con datos."
-  - "Si el asunto no encaja con su especialidad, no le escribiremos. Preferimos el silencio a la lista de correo."
-  - "Puede solicitar la baja y la supresión de sus datos en cualquier momento escribiendo a la dirección de contacto."
 
 form_section_eyebrow: "Alta de colaborador"
 form_section_title: "Déjenos su perfil técnico"
