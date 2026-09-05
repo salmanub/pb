@@ -108,6 +108,14 @@ form_labels:
   progress: "/"
   required_note: "Camps obligatoris marcats pel navegador"
   honeypot: "No ompli aquest camp"
+  sending: "Enviant l'alta…"
+  sent_title: "Alta rebuda"
+  sent_text: "Les seves dades ja consten al registre de perits col·laboradors. Se li escriurà únicament quan entri un assumpte compatible amb la seva especialitat."
+  error_title: "No s'ha pogut registrar l'alta"
+  error_text: "Les seves dades segueixen al formulari, no s’han perdut. Faci servir una d’aquestes vies o torni-ho a provar."
+  error_email: "Enviar l'alta per correu"
+  error_call: "Trucar al despatx"
+  retry: "Tornar-ho a provar"
 
 form_consent:
   text: "He llegit i accepto la"

@@ -108,6 +108,14 @@ form_labels:
   progress: "/"
   required_note: "Required fields flagged by your browser"
   honeypot: "Do not fill in this field"
+  sending: "Submitting your registration…"
+  sent_title: "Registration received"
+  sent_text: "Your details are now on the register of collaborating experts. You will only be contacted when an instruction compatible with your specialism comes in."
+  error_title: "The registration could not be recorded"
+  error_text: "Your details are still in the form, nothing has been lost. Use one of these routes or try again."
+  error_email: "Send the registration by email"
+  error_call: "Call the firm"
+  retry: "Try again"
 
 form_consent:
   text: "I have read and accept the"

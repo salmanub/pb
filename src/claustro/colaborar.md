@@ -109,6 +109,14 @@ form_labels:
   progress: "/"
   required_note: "Campos obligatorios marcados por el navegador"
   honeypot: "No rellene este campo"
+  sending: "Enviando el alta…"
+  sent_title: "Alta recibida"
+  sent_text: "Sus datos ya constan en el registro de peritos colaboradores. Se le escribirá únicamente cuando entre un asunto compatible con su especialidad."
+  error_title: "No se ha podido registrar el alta"
+  error_text: "Sus datos siguen en el formulario, no se han perdido. Use una de estas vías o vuelva a intentarlo."
+  error_email: "Enviar el alta por correo"
+  error_call: "Llamar al despacho"
+  retry: "Reintentar"
 
 form_consent:
   text: "He leído y acepto la"

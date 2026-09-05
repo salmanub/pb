@@ -53,10 +53,19 @@
 .colab-wiz .colab-in:focus{outline:none;border-color:var(--accent)}
 .colab-wiz textarea.colab-in{resize:vertical;line-height:1.6}
 .colab-wiz .colab-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.colab-wiz [hidden]{display:none}
+.colab-wiz .colab-panel{padding:44px 24px 48px;text-align:center}
+.colab-wiz .colab-spin{width:34px;height:34px;margin:0 auto;border:3px solid var(--border-hairline);border-top-color:var(--accent);border-radius:50%;animation:colabSpin .8s linear infinite}
+@keyframes colabSpin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.colab-wiz .colab-spin{animation-duration:2.4s}}
+.colab-wiz .colab-panel h3{font-family:var(--font-serif);font-size:var(--fs-h3);font-weight:500;color:var(--text-strong);margin:16px 0 0;line-height:1.3}
+.colab-wiz .colab-panel p{margin:10px auto 0;max-width:44ch;font-size:0.9rem;line-height:1.65;color:var(--text-muted)}
+.colab-wiz .colab-via{display:flex;align-items:center;gap:11px;padding:13px 16px;border-radius:var(--radius-sm);border:1px solid var(--border-hairline);background:var(--surface-raised,#fff);text-decoration:none;font-family:var(--font-sans);font-size:0.88rem;font-weight:var(--fw-semibold);color:var(--text-strong);text-align:left}
+.colab-wiz .colab-via:hover{border-color:var(--accent)}
 </style>
 
-<div class="colab-wiz" style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;">
-<form action="/api/contacto" method="POST" style="margin: 0;">
+<div class="colab-wiz" id="colab-wiz" style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;">
+<form action="/api/contacto" method="POST" style="margin: 0;" id="colab-form">
 <input type="hidden" name="lang" value="{{ lang | default('es') }}">
 <input type="hidden" name="origen" value="{{ form_origen | default('perito-alta-colaborador') }}">
 <input type="hidden" name="source" value="perito.barcelona">
@@ -133,4 +142,142 @@
 </section>
 {% endfor %}
 </form>
+
+{# ── Estados del envío ──────────────────────────────────────────────────────
+   Los tres paneles se sirven ya renderizados y ocultos, no los construye el
+   script con cadenas de HTML: así la copia sigue llegando del frontmatter
+   (AGENTES §5.1) y sigue traducida sin que el JS sepa de idiomas. Sin JS
+   nunca se muestran y el envío es el POST nativo de siempre. #}
+<div class="colab-panel" id="colab-enviando" role="status" aria-live="polite" hidden>
+<div class="colab-spin" aria-hidden="true"></div>
+<h3>{{ form_labels.sending }}</h3>
 </div>
+
+<div class="colab-panel" id="colab-ok" role="status" aria-live="polite" hidden>
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+<h3>{{ form_labels.sent_title }}</h3>
+<p>{{ form_labels.sent_text }}</p>
+</div>
+
+<div class="colab-panel" id="colab-error" role="alert" hidden>
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--caution)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block"><circle cx="12" cy="12" r="10"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>
+<h3>{{ form_labels.error_title }}</h3>
+<p>{{ form_labels.error_text }}</p>
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 34ch; margin: 22px auto 0;">
+<a class="colab-via" id="colab-mailto" href="mailto:{{ metadata.company.email }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>{{ form_labels.error_email }}</a>
+<a class="colab-via" href="tel:{{ metadata.contact.phoneNumber | replace(' ', '') }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>{{ form_labels.error_call }}</a>
+</div>
+<button type="button" id="colab-retry" style="margin-top: 16px; padding: 10px; font-family: var(--font-sans); font-size: 0.82rem; font-weight: var(--fw-medium); color: var(--text-muted); background: transparent; border: none; cursor: pointer; text-decoration: underline; text-underline-offset: 3px;">{{ form_labels.retry }}</button>
+</div>
+</div>
+
+<script>
+/* Envío del alta con estados visibles. MEJORA PROGRESIVA: si este script no
+   corre, el formulario sigue siendo el POST nativo de siempre y la Function
+   responde con un 303 al /gracias/ del idioma. Aquí sólo se sustituye la
+   navegación del navegador por un fetch, para poder pintar «enviando» y, sobre
+   todo, para distinguir «entregado al CRM» de «no entregado»: el POST nativo
+   redirige igual de silencioso en los dos casos y no había forma de saberlo.  */
+(function () {
+  'use strict';
+  var form = document.getElementById('colab-form');
+  if (!form || !window.fetch) return;
+
+  var wiz = document.getElementById('colab-wiz');
+  var pEnv = document.getElementById('colab-enviando');
+  var pOk = document.getElementById('colab-ok');
+  var pErr = document.getElementById('colab-error');
+  var mailto = document.getElementById('colab-mailto');
+  var retry = document.getElementById('colab-retry');
+
+  /* Los pasos se ocultan con `hidden` sobre el <form> entero, no borrando su
+     contenido: si el envío falla, «Reintentar» devuelve el formulario con todo
+     lo que la persona ya había escrito. Reconstruirlo perdería 5 pantallas. */
+  function estado(panel) {
+    form.hidden = !!panel;
+    [pEnv, pOk, pErr].forEach(function (p) { p.hidden = p !== panel; });
+    if (panel && wiz.scrollIntoView) wiz.scrollIntoView({ block: 'nearest' });
+  }
+
+  /* Etiqueta legible de un campo, para el correo de respaldo: la del <label>
+     asociado si existe y, en los pasos de opción única, la pregunta del paso. */
+  function etiqueta(el) {
+    var lab = el.id && form.querySelector('label[for="' + el.id + '"]');
+    if (lab) return lab.textContent.trim();
+    var paso = el.closest && el.closest('.colab-step');
+    var h = paso && paso.querySelector('h3');
+    return h ? h.textContent.trim() : el.name;
+  }
+
+  var INTERNOS = ['lang', 'origen', 'source', 'redirect', 'redirect_error', 'website', 'privacidad'];
+
+  function datos() {
+    var fd = new FormData(form), out = {}, lineas = [];
+    fd.forEach(function (v, k) { out[k] = v; });
+    Array.prototype.forEach.call(form.elements, function (el) {
+      if (!el.name || INTERNOS.indexOf(el.name) !== -1) return;
+      if ((el.type === 'radio' || el.type === 'checkbox') && !el.checked) return;
+      if (!el.value) return;
+      lineas.push(etiqueta(el) + ': ' + el.value);
+    });
+    return { payload: out, texto: lineas.join('\n') };
+  }
+
+  form.addEventListener('submit', function (ev) {
+    /* Con JS la validación se pide explícitamente. Es lo que convierte el
+       bloqueo mudo del navegador —un required dentro de un paso oculto no es
+       enfocable y el envío se cancela sin mensaje— en algo que se ve.
+       Ojo: reportValidity() sobre un control oculto es igual de mudo, así que
+       primero se salta al paso que lo contiene y sólo después se pide el
+       mensaje. Con la puerta de avance no debería llegarse aquí; esto es el
+       cinturón por si se entra con un #colab-pN escrito a mano. */
+    if (!form.checkValidity()) {
+      ev.preventDefault();
+      var malo = form.querySelector(':invalid');
+      var paso = malo && malo.closest && malo.closest('.colab-step');
+      if (paso && paso.id) window.location.hash = paso.id;
+      form.reportValidity();
+      return;
+    }
+    ev.preventDefault();
+
+    var d = datos();
+    estado(pEnv);
+
+    var ctrl = new AbortController();
+    var reloj = setTimeout(function () { ctrl.abort(); }, 15000);
+
+    fetch(form.getAttribute('action'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(d.payload),
+      signal: ctrl.signal,
+    })
+      .then(function (r) {
+        clearTimeout(reloj);
+        return r.json().catch(function () { return {}; }).then(function (j) {
+          /* La Function responde 502 {ok:false} cuando el CRM no ha aceptado
+             el alta. Un 200 con ok:false no debe leerse como éxito: sería
+             confirmar un registro que no existe. */
+          if (!r.ok || j.ok === false) throw new Error(j.error || ('HTTP ' + r.status));
+          return j;
+        });
+      })
+      .then(function () {
+        estado(pOk);
+        var destino = (form.querySelector('[name="redirect"]') || {}).value;
+        if (destino) setTimeout(function () { window.location.href = destino; }, 2200);
+      })
+      .catch(function () {
+        clearTimeout(reloj);
+        var asunto = 'Alta de perito colaborador — ' + (d.payload.nombre || '');
+        mailto.setAttribute('href', 'mailto:{{ metadata.company.email }}' +
+          '?subject=' + encodeURIComponent(asunto) +
+          '&body=' + encodeURIComponent(d.texto));
+        estado(pErr);
+      });
+  });
+
+  retry.addEventListener('click', function () { estado(null); });
+})();
+</script>
