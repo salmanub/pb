@@ -8,7 +8,11 @@
 {% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
 {% set _contactPro = "/contacto/profesional/" if (not lang or lang == "es") else ("/en/contact/professional/" if lang == "en" else "/ca/contacte/professional/") %}
 
-<div style="background: var(--ink-900); color: var(--bone-100);">
+{# El hairline superior separa el footer de la sección que lo precede. Sin él, una
+   banda CTA oscura (la de /cuadro-de-expertos/, p. ej.) y el footer comparten tono
+   y se leen como una sola masa. `--ink-700` es el hairline sobre oscuro que este
+   mismo footer ya usa en sus separadores internos: no se introduce color nuevo. #}
+<div style="background: var(--ink-900); color: var(--bone-100); border-top: 1px solid var(--ink-700);">
   <div style="max-width: var(--container-wide); margin: 0 auto; padding: 80px var(--gutter) 48px;">
     <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px;" class="footer-grid">
 

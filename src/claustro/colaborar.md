@@ -102,6 +102,8 @@ form_redirect_error: "/contacto/"
 
 form_labels:
   next: "Continuar"
+  back: "Atrás"
+  step_hint: "Complete este paso para continuar"
   submit: "Enviar alta"
   optional: "(opcional)"
   progress: "/"

@@ -6,20 +6,26 @@
   un POST nativo del formulario. La Pages Function /api/contacto devuelve un
   303 hacia `redirect` cuando el POST NO es JSON (envío nativo sin JS).
 
-  Mecánica del wizard (3 reglas CSS, sin bucles):
-    1. Todos los pasos visibles por defecto.
-    2. `.colab-step:target ~ .colab-step` oculta los posteriores al paso activo.
+  Mecánica del wizard (CSS puro, sin bucles). UN SOLO PASO VISIBLE a la vez, en
+  la misma posición — mismo comportamiento que el wizard de «Consulta»:
+    1. `.colab-step:target ~ .colab-step` oculta los pasos POSTERIORES al activo.
+    2. `.colab-step:has(~ .colab-step:target)` oculta los ANTERIORES.
     3. Sin ningún paso en :target, `.colab-step + .colab-step` deja solo el 1º.
-  Resultado: revelado ACUMULATIVO. Los pasos ya completados siguen en pantalla
-  y, por tanto, siguen siendo enfocables — condición imprescindible para que
-  `required` funcione: un control required dentro de `display:none` bloquea el
-  envío sin mostrar mensaje al usuario.
+    4. Puerta de avance: `.colab-step:has(:invalid)` sustituye el enlace
+       «Continuar» por un botón deshabilitado.
+
+  La regla 4 no es cosmética. Al ocultar los pasos anteriores, un control
+  `required` sin rellenar queda dentro de un `display:none` y el navegador
+  bloquea el envío SIN mostrar mensaje. Impidiendo saltar un paso incompleto,
+  ese estado no se puede alcanzar. Es el equivalente zero-JS a la validación
+  por paso del wizard de «Consulta».
 
   AGENTES §5.1 — cero texto hardcodeado: toda la copia llega del frontmatter.
 
   Variables esperadas en frontmatter:
     form_eyebrow, form_redirect, form_origen
-    form_labels  { next, submit, optional, required_note, progress, honeypot }
+    form_labels  { next, back, step_hint, submit, optional, required_note,
+                   progress, honeypot }
     form_consent { text, link_label, url }
     form_steps[] { key, eyebrow, question, helper, type: choice|fields,
                    options[] | fields[]{name,label,type,placeholder,required,multiline,rows,note} }
@@ -30,7 +36,15 @@
 <style>
 .colab-wiz .colab-step{display:block;scroll-margin-top:112px}
 .colab-wiz .colab-step:target ~ .colab-step{display:none}
+.colab-wiz .colab-step:has(~ .colab-step:target){display:none}
 .colab-wiz:not(:has(.colab-step:target)) .colab-step + .colab-step{display:none}
+.colab-wiz .colab-next{display:inline-flex}
+.colab-wiz .colab-next-off,.colab-wiz .colab-hint{display:none}
+.colab-wiz .colab-step:has(:invalid) .colab-next{display:none}
+.colab-wiz .colab-step:has(:invalid) .colab-next-off{display:inline-flex}
+.colab-wiz .colab-step:has(:invalid) .colab-hint{display:inline}
+.colab-wiz .colab-back{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-sans);font-size:0.85rem;font-weight:var(--fw-medium);color:var(--text-muted);text-decoration:none;border-bottom:1px solid transparent;flex-shrink:0}
+.colab-wiz .colab-back:hover{color:var(--text-accent);border-bottom-color:var(--accent)}
 .colab-wiz .colab-opt{display:flex;align-items:center;gap:11px;padding:13px 15px;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);cursor:pointer;font-size:0.9rem;line-height:1.45;color:var(--text-body);background:var(--surface-card);transition:border-color .2s ease,background-color .2s ease}
 .colab-wiz .colab-opt:hover{border-color:var(--accent)}
 .colab-wiz .colab-opt:has(input:checked){border-color:var(--accent);background:var(--surface-tint)}
@@ -96,13 +110,23 @@
 {% endif %}
 </div>
 
-{# ── Pie del paso: avanzar o enviar ── #}
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 24px 22px; border-top: 1px solid var(--border-subtle); margin-top: 8px;">
-<span style="font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint);">{% if loop.last %}{{ form_labels.required_note }}{% endif %}</span>
+{# ── Pie del paso: volver, avanzar o enviar ── #}
+{# El enlace «Atrás» es imprescindible desde que solo hay un paso en pantalla:
+   los pasos anteriores ya no quedan visibles para revisarlos o corregirlos. #}
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 24px 22px; border-top: 1px solid var(--border-subtle); margin-top: 8px;">
+<div style="display: flex; align-items: center; gap: 14px; min-width: 0;">
+{% if not loop.first %}<a class="colab-back" href="#colab-p{{ loop.index - 1 }}"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>{{ form_labels.back }}</a>{% endif %}
+<span style="font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); line-height: 1.4;">{% if loop.last %}{{ form_labels.required_note }}{% else %}<span class="colab-hint">{{ form_labels.step_hint }}</span>{% endif %}</span>
+</div>
 {% if loop.last %}
-<button type="submit" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; font-family: var(--font-sans); font-size: 0.9375rem; font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid transparent; background: var(--accent); color: var(--accent-on); cursor: pointer;">{{ form_labels.submit }}<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+<button type="submit" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; font-family: var(--font-sans); font-size: 0.9375rem; font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid transparent; background: var(--accent); color: var(--accent-on); cursor: pointer; flex-shrink: 0;">{{ form_labels.submit }}<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
 {% else %}
-<a href="#colab-p{{ loop.index + 1 }}" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; font-family: var(--font-sans); font-size: 0.9375rem; font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid transparent; background: var(--accent); color: var(--accent-on); text-decoration: none;">{{ form_labels.next }}<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+{# El `display` de los dos gemelos vive en la hoja de estilos, no aquí: en línea
+   ganaría a la regla que los alterna y se pintarían los dos a la vez. #}
+<a class="colab-next" href="#colab-p{{ loop.index + 1 }}" style="align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; font-family: var(--font-sans); font-size: 0.9375rem; font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid transparent; background: var(--accent); color: var(--accent-on); text-decoration: none; flex-shrink: 0;">{{ form_labels.next }}<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+{# Gemelo deshabilitado del enlace anterior: al estar `disabled` queda fuera del
+   orden de tabulación, así que el paso tampoco se salta con teclado. #}
+<button type="button" class="colab-next-off" disabled tabindex="-1" aria-hidden="true" style="align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; font-family: var(--font-sans); font-size: 0.9375rem; font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid var(--border-hairline); background: var(--surface-muted); color: var(--text-faint); cursor: not-allowed; flex-shrink: 0;">{{ form_labels.next }}<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
 {% endif %}
 </div>
 

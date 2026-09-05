@@ -101,6 +101,8 @@ form_redirect_error: "/ca/contacte/"
 
 form_labels:
   next: "Continuar"
+  back: "Enrere"
+  step_hint: "Completi aquest pas per continuar"
   submit: "Enviar alta"
   optional: "(opcional)"
   progress: "/"

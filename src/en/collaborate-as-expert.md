@@ -101,6 +101,8 @@ form_redirect_error: "/en/contact/"
 
 form_labels:
   next: "Continue"
+  back: "Back"
+  step_hint: "Complete this step to continue"
   submit: "Submit registration"
   optional: "(optional)"
   progress: "/"
