@@ -64,6 +64,18 @@
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Embedder-Policy: require-corp
 
+# RUM — librería web-vitals vendorizada.
+# Se carga por URL ABSOLUTA desde la copia en caché de Google
+# (webpkgcache.com), así que es una subpetición cross-origin. Con el
+# Cross-Origin-Embedder-Policy: require-corp que llevan los HTML, un CORP
+# same-site la bloquearía: tiene que ser cross-origin. Debe ir ANTES de la
+# regla genérica /assets/*, que sí pone same-site.
+/assets/js/vendor/*
+  Content-Type: application/javascript; charset=utf-8
+  Cache-Control: public, max-age=31536000, immutable
+  Cross-Origin-Resource-Policy: cross-origin
+  Access-Control-Allow-Origin: *
+
 # Other static assets
 /assets/*
   Cache-Control: public, max-age=31536000, immutable

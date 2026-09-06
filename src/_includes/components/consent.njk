@@ -1,0 +1,191 @@
+{#
+consent.njk — Banner de consentimiento propio (RGPD art. 6/7 + LSSI 22.2, criterios AEPD 2023).
+
+TODO EL RAZONAMIENTO VA EN ESTE BLOQUE, no dentro del <script>. `minifyJS: false`
+en el transform html-minify de .eleventy.js: cada línea de comentario dentro del
+script se multiplica por las ~400 páginas del build. Aquí abajo es gratis.
+
+QUIÉN LO INCLUYE
+No se incluye desde base.njk sino desde components/analytics.njk, que es quien
+lo necesita y quien está dentro de la guarda `metadata.site.googleAnalyticsId`.
+Consecuencia deliberada: sin GA4 configurado no hay cookies que consentir y el
+banner no se renderiza. analytics.njk lo intercala entre su bloque de
+`consent default` y el bloque que decide si hace `consent update`, para que el
+orden sea siempre: default denegado → lectura de la elección → update.
+
+POR QUÉ BANNER PROPIO Y NO CMP
+Una CMP de terceros son 40-80 KB de JS de otro origen, un TBT notable y un
+tercero más al que ceder datos. Aquí sólo hay una categoría de cookies (analítica
+GA4) y una decisión binaria: cabe en ~2 KB sin dependencias.
+
+CRITERIO AEPD QUE CONDICIONA EL DISEÑO
+La Guía de cookies de la AEPD exige que rechazar sea tan fácil como aceptar.
+Los dos botones comparten clase, tamaño, peso, radio y color: no hay «primario»
+verde y «secundario» gris. El acento del DS se reserva para el enlace de
+información y el anillo de foco. Si alguien pide más adelante «que Aceptar
+destaque», eso es exactamente lo que la guía prohíbe.
+
+POR QUÉ BARRA FIJA Y NO MODAL
+Un modal bloquea el contenido antes de que Google (y el usuario) lo lean, y los
+muros de cookies están en el punto de mira de la AEPD. La barra es
+`position: fixed`, o sea fuera del flujo: no puede desplazar nada y por tanto no
+puede aportar CLS. El markup se emite siempre con `hidden` y el JS lo quita si
+procede, así que un visitante que ya eligió tampoco ve un parpadeo.
+
+INTERACCIÓN CON LA BARRA MÓVIL
+`.mobile-bottom-bar` de main.css es también `position: fixed; bottom: 0` con
+z-index 55 y ~56 px de alto por debajo de 1024 px. El banner sube por encima de
+ella en ese breakpoint (no la tapa) y usa z-index 60 para quedar por delante.
+
+PERSISTENCIA Y CADUCIDAD
+localStorage, clave `pb_consent`, `{v, estado, ts}`. Se usa localStorage y no
+cookie a propósito: guardar la negativa en una cookie obliga a justificar esa
+cookie. Se vuelve a preguntar a los 12 meses (vigencia máxima que la AEPD
+considera razonable) o cuando suba VERSION, que es la versión de la política:
+si cambia lo que se declara en /cookies/, hay que volver a pedir permiso.
+
+LÍMITE CONOCIDO: CACHÉ SXG DE GOOGLE
+Cuando la página se sirve desde webpkgcache.com el origen es otro, así que su
+localStorage es otro y la elección hecha en perito.barcelona no se ve allí (ni
+al revés). No se intenta sincronizar: haría falta un iframe cross-origin
+permanente, que es peor remedio que la enfermedad. El usuario que llega desde el
+prefetch de la SERP verá el banner una vez en ese origen; en cuanto navega, ya
+está en perito.barcelona. Efecto colateral aceptado y medible: `hostname` e
+`is_sxg_cache` son dimensiones de pbDims, así que ese tráfico se puede aislar.
+
+TOLERANCIA A localStorage QUE LANZA
+Safari en modo restringido, iframes con storage particionado o el propio origen
+de la caché pueden hacer que getItem/setItem lancen. Toda lectura y escritura va
+en try/catch; si falla, el estado se trata como «sin elección» pero se conserva
+en la variable `memoria`, de modo que dentro de la misma página la elección se
+respeta y el banner no reaparece en bucle.
+#}
+<style>
+.pbc{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;flex-wrap:wrap;
+gap:14px 24px;align-items:center;justify-content:space-between;
+padding:14px var(--gutter);padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));
+background:var(--surface-card);border-top:1px solid var(--border-hairline);
+box-shadow:var(--shadow-overlay);font-family:var(--font-sans);
+font-size:var(--fs-small);line-height:1.5;color:var(--text-body)}
+.pbc[hidden]{display:none}
+.pbc-txt{margin:0;max-width:84ch}
+.pbc-lnk{color:var(--accent);text-decoration:underline;white-space:nowrap}
+.pbc-acc{display:flex;gap:10px;flex:0 0 auto}
+.pbc-btn{font:inherit;font-weight:var(--fw-medium);line-height:1.2;padding:10px 22px;
+cursor:pointer;border:1px solid var(--ink-900);border-radius:var(--radius-sm);
+background:var(--ink-900);color:var(--bone-100)}
+.pbc-btn:hover{background:var(--ink-700);border-color:var(--ink-700)}
+.pbc-btn:focus-visible,.pbc-lnk:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:1024px){.pbc{bottom:calc(56px + env(safe-area-inset-bottom,0px));padding-bottom:14px}}
+@media(max-width:680px){.pbc{padding-left:20px;padding-right:20px}.pbc-acc{width:100%}.pbc-btn{flex:1}}
+</style>
+{% set uiC = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
+{% set pfxC = "" if not lang or lang == "es" else ("/" + lang) %}
+<div id="pb-consent" class="pbc" role="region" aria-label="{{ uiC.consent.aria }}" hidden>
+  <p class="pbc-txt">{{ uiC.consent.texto }}
+    <a class="pbc-lnk" href="{{ pfxC }}/cookies/">{{ uiC.consent.mas_info }}</a>
+  </p>
+  <div class="pbc-acc">
+    <button type="button" class="pbc-btn" data-pbc="no">{{ uiC.consent.rechazar }}</button>
+    <button type="button" class="pbc-btn" data-pbc="si">{{ uiC.consent.aceptar }}</button>
+  </div>
+</div>
+<script>
+  (function () {
+    'use strict';
+    var CLAVE = 'pb_consent';
+    var VERSION = 1;
+    var VIGENCIA = 31536000000; // 12 meses
+    var caja = document.getElementById('pb-consent');
+    if (!caja) return;
+
+    function leer() {
+      try {
+        var o = JSON.parse(localStorage.getItem(CLAVE) || 'null');
+        if (!o || o.v !== VERSION || !o.ts || Date.now() - o.ts > VIGENCIA) return null;
+        return (o.estado === 'granted' || o.estado === 'denied') ? o.estado : null;
+      } catch (e) { return null; }
+    }
+
+    var memoria = leer();
+
+    function fijar(estado) {
+      memoria = estado; // si el almacén falla, la elección vive al menos en esta página
+      try {
+        localStorage.setItem(CLAVE, JSON.stringify({ v: VERSION, estado: estado, ts: Date.now() }));
+      } catch (e) { /* modo restringido */ }
+      caja.hidden = true;
+    }
+
+    function aceptar() {
+      fijar('granted');
+      if (typeof window.gtag === 'function') {
+        window.gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+    }
+    function rechazar() {
+      fijar('denied');
+      // Sí hace falta el update, aunque el default ya sea denied: quien aceptó
+      // antes y revoca ahora tiene el consentimiento CONCEDIDO en esta página.
+      // Sin esto seguiría concedido hasta la siguiente carga, y retirar el
+      // consentimiento tiene que surtir efecto igual de rápido que darlo.
+      if (typeof window.gtag === 'function') {
+        window.gtag('consent', 'update', {
+          analytics_storage: 'denied', ad_storage: 'denied',
+          ad_user_data: 'denied', ad_personalization: 'denied'
+        });
+      }
+      borrarGA();
+    }
+
+    // Las _ga* ya escritas no se van solas: hay que caducarlas a mano, y en el
+    // dominio con punto delante, que es como las pone gtag.js.
+    function borrarGA() {
+      try {
+        var host = location.hostname.replace(/^www\./, '');
+        document.cookie.split(';').forEach(function (c) {
+          var n = c.split('=')[0].trim();
+          if (n.indexOf('_ga') !== 0) return;
+          ['/', location.pathname].forEach(function (ruta) {
+            ['', '.' + host, host].forEach(function (dom) {
+              document.cookie = n + '=; Max-Age=0; path=' + ruta + (dom ? '; domain=' + dom : '');
+            });
+          });
+        });
+      } catch (e) { /* nunca puede romper la página */ }
+    }
+    function abrir() {
+      caja.hidden = false;
+      var b = caja.querySelector('.pbc-btn');
+      if (b) b.focus();
+    }
+
+    function diana(ev, sel) {
+      var t = ev.target;
+      return (t && t.closest) ? t.closest(sel) : null;
+    }
+
+    caja.addEventListener('click', function (ev) {
+      var b = diana(ev, '[data-pbc]');
+      if (!b) return;
+      if (b.getAttribute('data-pbc') === 'si') aceptar(); else rechazar();
+    });
+
+    // Enlace «Cookies» del footer. Delegado en document porque el footer se
+    // pinta antes que este script y no queremos JS en línea en el partial.
+    document.addEventListener('click', function (ev) {
+      if (!diana(ev, '[data-pb-consent-open]')) return;
+      ev.preventDefault();
+      abrir();
+    });
+
+    window.pbConsent = {
+      estado: function () { return memoria; },
+      aceptar: aceptar,
+      rechazar: rechazar,
+      abrir: abrir
+    };
+
+    if (memoria === null) caja.hidden = false;
+  })();
+</script>

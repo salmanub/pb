@@ -1,5 +1,10 @@
 {% set formLang = currentLanguage or lang or 'es' %}
-<div id="typeform-wrapper" class="flex flex-col h-full font-onest">
+{# form_id del embudo GA4: este asistente no tiene <form> nativo (divs + fetch), así que
+   el identificador vive en el contenedor y lo recoge components/ga-funnel.njk con su
+   selector 'form,[data-form-id]'. Se reutiliza contactFormOrigin cuando la página lo
+   define, para que el form_id de GA4 y el origen del CRM sean la misma cadena. #}
+{% set _formId = contactFormId or contactFormOrigin or 'contacto-wizard-v2' %}
+<div id="typeform-wrapper" data-form-id="{{ _formId }}" class="flex flex-col h-full font-onest">
     <div class="text-center mb-10">
         <h3 class="text-3xl lg:text-4xl font-black text-slate-900 mb-3 tracking-tight">{{ metadata.ctaForm[formLang].formTitle }}</h3>
         <p class="text-lg text-slate-600 font-light max-w-lg mx-auto leading-relaxed">{{ metadata.ctaForm[formLang].formSubtitle }}</p>
@@ -265,8 +270,9 @@
                 return;
             }
 
+            if (window.pbFormSubmit) window.pbFormSubmit('{{ _formId }}');
             showStep(steps.findIndex(s => s.id === 'loading-state'));
-            
+
             const formDataToSend = {
                 tipo_cliente: 'particular', perfil: 'particular',
                 lang: '{{ lang | default("es") }}',
@@ -292,6 +298,7 @@
                     body: JSON.stringify(formDataToSend)
                 });
                 if (!response.ok) throw new Error('Network response was not ok');
+                if (window.pbLeadConfirmed) window.pbLeadConfirmed('{{ _formId }}');
                 showStep(steps.findIndex(s => s.id === 'success-message'));
             } catch (error) {
                 console.error('Error:', error);

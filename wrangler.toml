@@ -1,0 +1,37 @@
+# ================================================================
+#  perito.barcelona — configuración de Cloudflare Pages
+# ----------------------------------------------------------------
+#  LEE ESTO ANTES DE HACER COMMIT DE ESTE FICHERO.
+#
+#  El proyecto NO tenía wrangler.toml: la build y las variables se
+#  configuraban en el panel de Cloudflare. En cuanto este fichero
+#  existe en la raíz del repositorio, Pages DEJA DE LEER la
+#  configuración del panel y manda éste. Si el panel tiene alguna
+#  variable o binding que no esté aquí, se pierde en el siguiente
+#  despliegue.
+#
+#  Antes de subirlo:
+#    Pages → perito-barcelona → Settings, y copia aquí lo que haya en
+#    Variables and Secrets y en Functions → Bindings. Los secretos NO
+#    van en este fichero: se siguen poniendo en el panel o con
+#    `npx wrangler pages secret put NOMBRE`.
+#
+#  SI PREFIERES NO ASUMIR ESE RIESGO —y es una preferencia
+#  razonable—, borra este fichero y da de alta el binding a mano:
+#    Pages → Settings → Functions → Analytics Engine bindings
+#    Variable name: RUM      Dataset: rum_pb
+#  El código funciona igual; sin binding, /api/rum descarta los
+#  beacons en silencio y no rompe nada.
+# ================================================================
+
+name = "perito-barcelona"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-09-06"
+
+# ── Workers Analytics Engine ──────────────────────────────────────
+#  Lo escribe functions/api/rum.js. El dataset se crea solo con el
+#  primer writeDataPoint: no hay que darlo de alta en ninguna parte.
+#  Es gratuito en el plan Workers Paid con los límites del plan.
+[[analytics_engine_datasets]]
+binding = "RUM"
+dataset = "rum_pb"

@@ -1,6 +1,11 @@
 {# Componente de formulario de contacto reutilizable #}
+{# form_id del embudo GA4: no hay <form> nativo (asistente de <div> + fetch), así que
+   el identificador va en el contenedor y lo recoge components/ga-funnel.njk por su
+   selector 'form,[data-form-id]'. Se reutiliza contactFormOrigin cuando la página lo
+   define para que el form_id de GA4 y el origen del CRM sean la misma cadena. #}
+{% set _formId = contactFormId or contactFormOrigin or 'contacto-wizard' %}
 <div class="bg-white rounded-none shadow-xl p-8 lg:p-12 border border-slate-100">
-    <div id="typeform-wrapper" class="flex flex-col h-full">
+    <div id="typeform-wrapper" data-form-id="{{ _formId }}" class="flex flex-col h-full">
         <div class="text-center mb-8">
             <h3 class="text-2xl font-bold text-slate-800 mb-2">{{ metadata.ctaForm[lang].formTitle }}</h3>
             <p class="text-slate-600">{{ metadata.ctaForm[lang].formSubtitle }}</p>
@@ -122,8 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        if (window.pbFormSubmit) window.pbFormSubmit('{{ _formId }}');
         showStep(steps.findIndex(s => s.id === 'loading-state'));
-        
+
         const formDataToSend = {
             tipo_cliente: 'particular', perfil: 'particular',
             lang: '{{ lang | default("es") }}',
@@ -149,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify(formDataToSend)
             });
             if (!response.ok) throw new Error('Network response was not ok');
+            if (window.pbLeadConfirmed) window.pbLeadConfirmed('{{ _formId }}');
             showStep(steps.findIndex(s => s.id === 'success-message'));
         } catch (error) {
             console.error('Error:', error);

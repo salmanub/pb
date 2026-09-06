@@ -1,4 +1,4 @@
-<header class="relative mt-[70px] lg:mt-[100px] min-h-[85vh] flex items-center bg-white overflow-hidden isolate border-b border-slate-100">
+<header data-position="hero" class="relative mt-[70px] lg:mt-[100px] min-h-[85vh] flex items-center bg-white overflow-hidden isolate border-b border-slate-100">
     <!-- Background Elements -->
     <div class="absolute inset-0 z-0">
         <div class="absolute top-0 right-0 w-2/3 h-full bg-slate-50 skew-x-[-12deg] translate-x-1/4 origin-top opacity-50"></div>
@@ -22,7 +22,7 @@
                     </p>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contacto" class="btn-primary">
+                    <a href="#contacto" class="btn-primary" data-cta-id="hero-solicitar">
                         Solicitar Ahora
                     </a>
                 </div>
@@ -36,7 +36,7 @@
                     <h2 class="text-2xl font-bold text-slate-900 mb-2">EVALUACIÓN EXPRÉS</h2>
                     <p class="text-slate-500 mb-6 text-sm">Respuesta profesional en menos de 24 horas</p>
                     
-                    <form id="express-form" class="space-y-4" action="/api/contacto" method="POST">
+                    <form id="express-form" data-form-id="express-hero" class="space-y-4" action="/api/contacto" method="POST">
                         <div>
                             <input type="text" name="nombre" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all outline-none text-slate-900 placeholder:text-slate-400" placeholder="Nombre y Apellidos" required>
                         </div>
@@ -103,6 +103,7 @@
                                     });
 
                                     if (response.ok) {
+                                        if (window.pbLeadConfirmed) window.pbLeadConfirmed('express-hero');
                                         form.style.display = 'none';
                                         document.getElementById('express-success').classList.remove('hidden');
                                         document.getElementById('express-error').classList.add('hidden');

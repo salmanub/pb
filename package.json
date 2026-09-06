@@ -10,7 +10,8 @@
     "optimize-images": "node src/scripts/optimize-images.js",
     "optimize-images-debug": "node src/scripts/optimize-images-debug.js",
     "optimize-images-force": "node src/scripts/optimize-images-force.js",
-    "images": "node optimize-images.mjs"
+    "images": "node optimize-images.mjs",
+    "vendor:web-vitals": "node src/scripts/vendor-web-vitals.mjs"
   },
   "keywords": [],
   "author": "",

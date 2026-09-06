@@ -30,6 +30,14 @@
                    "cuadro_expertos":  "Quadre d'experts",
                    "el_despacho":  "El Despatx"
                },
+    "consent":  {
+                   "aria":  "Avís de galetes",
+                   "texto":  "Fem servir galetes d'analítica (Google Analytics) per saber com es fa servir el lloc. Només s'activen si vostè les accepta; sense el seu permís el mesurament és anònim i sense galetes.",
+                   "mas_info":  "Més informació",
+                   "aceptar":  "Acceptar",
+                   "rechazar":  "Rebutjar",
+                   "abrir":  "Canviar preferències de galetes"
+               },
     "breadcrumb":  {
                        "inicio":  "Inici",
                        "aria":  "Sou aquí",

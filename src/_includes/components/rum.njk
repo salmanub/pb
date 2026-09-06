@@ -1,0 +1,124 @@
+{#
+rum.njk — RUM de Core Web Vitals segmentado por tipo de entrega.
+
+TODO EL RAZONAMIENTO VA EN ESTE BLOQUE, no dentro del <script>.
+Nunjucks se come este comentario al renderizar, pero el JS se
+incrusta tal cual en cada página: `minifyJS: false` en el transform
+html-minify de .eleventy.js, porque el resto del JS del sitio ya llega
+minificado. Un párrafo de explicación dentro del <script> se multiplica
+por las ~400 páginas del build. Aquí abajo es gratis.
+Documentación completa: docs/RUM-SXG.md
+
+POR QUÉ EXISTE
+El sitio se sirve por dos caminos: navegación normal contra
+perito.barcelona, y prefetch desde la SERP de Google, donde Chrome
+descarga el Signed Exchange firmado y lo sirve desde su caché
+(webpkgcache.com). El segundo debería ser bastante más rápido, pero
+«debería» no es un dato. Esto lo mide.
+
+QUÉ MANDA, Y QUÉ NO
+Las cinco métricas de web-vitals con las dimensiones que permiten separar
+ambos caminos. Ni cookies, ni identificador, ni nada que permita seguir a
+una persona entre páginas: sólo la métrica y cómo llegó el documento. Por
+eso no necesita consentimiento (RGPD art. 6.1.f, datos técnicos anónimos,
+sin lectura ni escritura en el terminal). Es lo que lo distingue de GA4,
+que sí está detrás del banner.
+
+DECISIONES QUE NO SE VEN EN EL CÓDIGO
+
+· `enCache` — desde la caché de Google el documento vive en
+  webpkgcache.com. Cambia el origen del beacon, el pathname y la propia
+  interpretación de la medida, así que se detecta primero.
+
+· `ruta()` — el pathname en la caché es /doc/-/s/perito.barcelona/x/, no
+  /x/. Sin normalizar, la misma página saldría como dos rutas distintas y
+  no se podrían comparar, que es justo lo que se quiere hacer.
+
+· `delivery` — PerformanceNavigationTiming.deliveryType:
+  'navigational-prefetch' = llegó precargada (el caso SXG), 'cache' =
+  caché HTTP, '' = red. Chrome lo expone desde la 121; sin soporte queda
+  'normal'. Ojo al leer los datos: ese cubo mezcla «vino por red» y «el
+  navegador no sabe decirlo».
+
+· Un solo envío, al ocultarse la página. Es el único momento en que INP y
+  CLS están cerrados. Se escucha visibilitychange Y pagehide: en Safari e
+  iOS el primero no siempre llega, y en bfcache tampoco. `enviar()` es
+  idempotente, así que oír los dos no duplica.
+
+· Blob text/plain con JSON dentro, no application/json: éste último
+  provoca un preflight OPTIONS, y desde webpkgcache.com el beacon es
+  cross-origin. El endpoint parsea el texto.
+
+· La librería va con defer en el <head>, no aquí: así se registra antes
+  de DOMContentLoaded y los observers de INP llegan a tiempo. Si no ha
+  cargado, esto no hace nada y la página ni se entera.
+
+AGENTES §5.6 dice «zero-JS cliente». Esto es un override consciente, como
+intake.js o analytics.njk: sin JS no hay forma de medir Core Web Vitals,
+que es precisamente lo que esa regla persigue proteger. Coste: ~1,6 KB en
+línea y una petición diferida, cacheada un año y compartida por todas las
+páginas.
+#}
+<script>
+  (function () {
+    'use strict';
+    var URL_RUM = 'https://perito.barcelona/api/rum';
+    var enCache = /(^|\.)webpkgcache\.com$/.test(location.hostname);
+
+    function ruta() {
+      var p = location.pathname, m;
+      if (enCache && (m = p.match(/^\/doc\/-\/s\/[^/]+(\/.*)$/))) p = m[1];
+      return p.slice(0, 200);
+    }
+    function deGoogle() {
+      try {
+        return !!document.referrer &&
+          /(^|\.)google\.[a-z.]+$/.test(new URL(document.referrer).hostname);
+      } catch (e) { return false; }
+    }
+
+    var nav = (performance.getEntriesByType('navigation') || [])[0];
+    var ua = navigator.userAgentData;
+    var dim = {
+      delivery: (nav && nav.deliveryType) || 'normal',
+      fromGoogle: deGoogle(),
+      isSXGCache: enCache,
+      path: ruta(),
+      lang: document.documentElement.lang || 'es',
+      ua_mobile: (ua && ua.mobile) != null ? ua.mobile : /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent),
+      connection: (navigator.connection && navigator.connection.effectiveType) || 'unknown'
+    };
+
+    var cola = [], enviado = false;
+
+    function enviar() {
+      if (enviado || !cola.length) return;
+      enviado = true;
+      var cuerpo = JSON.stringify({ d: dim, m: cola });
+      cola = [];
+      try {
+        navigator.sendBeacon(URL_RUM, new Blob([cuerpo], { type: 'text/plain;charset=UTF-8' }));
+      } catch (e) { /* medir no puede romper la página */ }
+    }
+
+    addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'hidden') enviar();
+    }, { capture: true });
+    addEventListener('pagehide', enviar, { capture: true });
+
+    function registrar() {
+      var wv = window.webVitals;
+      if (!wv) return;
+      ['onLCP', 'onINP', 'onCLS', 'onFCP', 'onTTFB'].forEach(function (fn) {
+        if (typeof wv[fn] === 'function') {
+          wv[fn](function (m) {
+            cola.push({ metric: m.name, value: Math.round(m.value * 1000) / 1000, rating: m.rating });
+          });
+        }
+      });
+    }
+
+    if (window.webVitals) registrar();
+    else addEventListener('DOMContentLoaded', registrar, { once: true });
+  })();
+</script>

@@ -64,6 +64,25 @@ AGENTES §5: CSS inline (inyectado por transform), cero
   {# ── Favicons ── #}
   {% favicons %}
 
+  {# ── RUM · librería web-vitals ──────────────────────────────────────────
+     URL ABSOLUTA a propósito, por dos motivos que se refuerzan:
+       · desde la copia en caché de Google (webpkgcache.com) una ruta relativa
+         apuntaría al host de la caché, no a nuestro origen;
+       · el transform inline-js de .eleventy.js sólo captura src="/assets/js/…",
+         así que una URL absoluta se queda como petición externa — que es lo que
+         interesa: un fichero cacheado un año y compartido por todas las páginas,
+         en vez de 9 KB incrustados en cada HTML.
+     defer, no async: así se ejecuta antes de DOMContentLoaded y los observers
+     de INP se registran a tiempo, sin bloquear el parseo ni tocar el LCP. #}
+  <script src="https://perito.barcelona/assets/js/vendor/web-vitals.js" defer></script>
+
+  {# ── GA4 · funnel de formularios y eventos de intención ──────────────────
+     Mismo patrón y mismos motivos que la línea de arriba. `defer` además
+     garantiza el orden que necesita: los scripts diferidos se ejecutan tras el
+     parseo, o sea DESPUÉS de los scripts en línea del final del body, que es
+     donde analytics.njk define window.pbTrack. Ver docs/GA4-FUNNEL.md. #}
+  <script src="https://perito.barcelona/assets/js/vendor/ga-funnel.js" defer></script>
+
   {# ── Speculation Rules: prefetch same-origin pages on hover/pointerdown ── #}
   <script type="speculationrules">
   {
@@ -162,6 +181,10 @@ AGENTES §5: CSS inline (inyectado por transform), cero
   {# ── openIntake toast removed — CTAs now link to /contacto/particular/ or /contacto/profesional/ ── #}
   {# ── Google Analytics (deferred load) ── #}
   {% include "components/analytics.njk" %}
+
+  {# ── RUM · Core Web Vitals segmentados por tipo de entrega (SXG vs normal) ── #}
+  {% include "components/rum.njk" %}
+
 
   {# ── View Transitions + Navigation API (progressive enhancement) ── #}
   <script>

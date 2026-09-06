@@ -30,6 +30,14 @@
                    "cuadro_expertos":  "Cuadro de expertos",
                    "el_despacho":  "El Despacho"
                },
+    "consent":  {
+                   "aria":  "Aviso de cookies",
+                   "texto":  "Usamos cookies de analítica (Google Analytics) para saber cómo se usa el sitio. Solo se activan si usted las acepta; sin su permiso la medición es anónima y sin cookies.",
+                   "mas_info":  "Más información",
+                   "aceptar":  "Aceptar",
+                   "rechazar":  "Rechazar",
+                   "abrir":  "Cambiar preferencias de cookies"
+               },
     "breadcrumb":  {
                        "inicio":  "Inicio",
                        "aria":  "Estás aquí",

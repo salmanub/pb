@@ -29,3 +29,46 @@ permalink: "/gracias/"
     Volver al inicio
   </a>
 </section>
+
+{#
+lead_confirmed — la confirmación del lead para los formularios que SÍ redirigen aquí:
+partials/form.njk (POST nativo a /api/contacto) y el asistente de colaborador, cuyo
+motor hace location.href = '/gracias/' tras un envío correcto. Los que se quedan en la
+misma página con un panel de éxito lo disparan por su cuenta llamando a
+window.pbLeadConfirmed(formId) en su rama de respuesta OK: ver el bloque de
+components/ga-funnel.njk.
+
+POR QUÉ sessionStorage Y NO UN PARÁMETRO EN LA URL
+ga-funnel.njk guarda el form_id en 'pb_form' al disparar form_submit. Leerlo aquí es
+lo que permite cerrar el embudo por formulario (form_view → … → lead_confirmed) sin
+tocar la Pages Function ni ensuciar la URL de gracias, que es una página indexable y
+compartible. Si el usuario llega a /gracias/ por otro camino (marcador, enlace suelto)
+no hay clave y el evento sale con form_id 'desconocido', que es lo honesto.
+Se borra después: recargar la página de gracias no debe volver a contar un lead.
+
+Se prefiere window.pbLeadConfirmed cuando existe, porque ya es idempotente; el camino
+directo con pbTrack es el respaldo por si base.njk todavía no incluye ga-funnel.njk.
+No se recalcula ninguna dimensión común: de eso se encarga pbTrack.
+
+POR QUÉ ESPERA A DOMContentLoaded
+El contenido de la página se inserta en base.njk ANTES de los includes de
+components/analytics.njk y components/ga-funnel.njk, que van justo antes de cerrar
+body. En el momento en que este script se ejecuta, pbTrack todavía no existe: sin la
+espera, el único evento de conversión del sitio se perdería en todas las visitas.
+#}
+<script>
+  (function () {
+    'use strict';
+    function enviar() {
+      var id = '';
+      try {
+        id = sessionStorage.getItem('pb_form') || '';
+        sessionStorage.removeItem('pb_form');
+      } catch (e) { /* almacén restringido */ }
+      if (window.pbLeadConfirmed) window.pbLeadConfirmed(id);
+      else if (window.pbTrack) window.pbTrack('lead_confirmed', { form_id: id || 'desconocido' });
+    }
+    if (document.readyState === 'loading') addEventListener('DOMContentLoaded', enviar, { once: true });
+    else enviar();
+  })();
+</script>

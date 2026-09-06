@@ -1,52 +1,160 @@
+{#
+analytics.njk — GA4 con Consent Mode v2 + dimensiones comunes del funnel.
+
+TODO EL RAZONAMIENTO VA EN ESTE BLOQUE, no dentro del <script>. `minifyJS: false`
+en el transform html-minify de .eleventy.js: lo que se escriba dentro del script
+viaja a las ~400 páginas del build.
+
+ORDEN DE LOS TRES BLOQUES (importa, y no es reordenable)
+ 1. dataLayer + gtag + `consent default` DENEGADO. Tiene que ser la primera
+    llamada a gtag de la página: si gtag.js arrancase sin default, escribiría
+    _ga antes de que nadie haya dicho nada.
+ 2. include de consent.njk — pinta el banner y define window.pbConsent leyendo
+    la elección persistida.
+ 3. `consent update` si esa elección fue «aceptar», y sólo después el resto.
+
+`wait_for_update: 500` da medio segundo a que llegue un update antes de mandar
+nada. Aquí el update es síncrono (el bloque 3 corre en el mismo tick), pero el
+parámetro cubre el caso de aceptación por clic mientras hay pings en vuelo.
+
+POR QUÉ SE CONSERVA LA CARGA DIFERIDA
+GA4 se sigue cargando a la primera interacción o a los 5 s, pase lo que pase con
+el consentimiento. Con analytics_storage denegado gtag.js no escribe cookies:
+manda cookieless pings anónimos (sin client_id persistente). Se pierde la
+identidad entre sesiones, no el funnel. Si sólo cargásemos GA tras aceptar,
+el denominador de todo embudo estaría sesgado hacia quien acepta.
+
+CONTRATO CON EL PARTIAL DE EVENTOS DE FUNNEL
+Otro partial consume tres globales; no cambiar sus firmas sin avisar:
+ · window.pbDims()          → objeto NUEVO con las dimensiones comunes.
+ · window.pbTrack(nombre, params) → gtag('event', ...) con pbDims() mezclado.
+   Es seguro llamarlo antes de que gtag.js haya cargado: gtag() sólo empuja a
+   dataLayer, que existe desde el bloque 1. Y nunca lanza: un try/catch envuelve
+   todo, porque medir no puede romper la página.
+ · window.pbConsent         → lo define consent.njk.
+
+DIMENSIONES, Y POR QUÉ CADA UNA
+ · page_path — normalizado igual que en components/rum.njk: desde la caché de
+   Google el pathname es /doc/-/s/perito.barcelona/x/ en vez de /x/, y sin
+   normalizar la misma página aparecería como dos rutas distintas.
+ · hostname + is_sxg_cache — permiten aislar (o excluir) el tráfico servido
+   desde webpkgcache.com, que es un origen distinto con su propio localStorage.
+ · delivery — PerformanceNavigationTiming.deliveryType:
+   'navigational-prefetch' = SXG precargado, 'cache' = caché HTTP, '' = red.
+   Ojo: sin soporte del navegador también queda 'normal'.
+ · utm_* — se leen de la query la primera vez y se guardan en sessionStorage
+   (`pb_utm`) para que sobrevivan a la navegación interna: sin eso, sólo la
+   landing de entrada llevaría atribución y el resto del embudo saldría
+   «(direct)». sessionStorage y no localStorage: la atribución caduca con la
+   sesión, no con el navegador.
+#}
 {% if metadata.site.googleAnalyticsId %}
-<!-- Google Analytics 4 (Optimized for Performance) -->
 <script>
-    // Define dataLayer and the gtag function.
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
 
-    // Function to inject the GA script — served first-party via our own domain.
-    function loadGA() {
-        var script = document.createElement('script');
-        script.src = "/gtag/js?id={{ metadata.site.googleAnalyticsId }}";
-        script.async = true;
-        document.head.appendChild(script);
+  // Consent Mode v2: todo denegado antes de cualquier otra llamada a gtag.
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+</script>
 
-        gtag('js', new Date());
-        gtag('config', '{{ metadata.site.googleAnalyticsId }}', {
-            'page_location': window.location.href,
-            // Beacons go to /g/collect on this origin (proxied to Google).
-            'transport_url': window.location.origin,
-            'first_party_collection': true,
-            'linker': {
-                'domains': ['perito.barcelona', 'webpkgcache.com']
-            }
-        });
+{% include "components/consent.njk" %}
+
+<script>
+  (function () {
+    'use strict';
+    var GA_ID = '{{ metadata.site.googleAnalyticsId }}';
+
+    if (window.pbConsent && window.pbConsent.estado() === 'granted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
     }
 
-    // Optimization: Load GA only after user interaction or delay
-    const loadEvents = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
-    let loaded = false;
+    var enCache = /(^|\.)webpkgcache\.com$/.test(location.hostname);
 
-    function triggerLoad() {
-        if (loaded) return;
-        loaded = true;
-        
-        // Clean up event listeners immediately
-        loadEvents.forEach(e => window.removeEventListener(e, triggerLoad));
+    function ruta() {
+      var p = location.pathname, m;
+      if (enCache && (m = p.match(/^\/doc\/-\/s\/[^/]+(\/.*)$/))) p = m[1];
+      return p.slice(0, 200);
+    }
 
-        // Use requestIdleCallback if available, otherwise run immediately
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(() => loadGA());
-        } else {
-            loadGA();
+    var CLAVES_UTM = ['utm_source', 'utm_medium', 'utm_campaign'];
+    var utmCache = null;
+
+    function utm() {
+      if (utmCache) return utmCache;
+      var o = {}, hay = false, i, v;
+      try {
+        var q = new URLSearchParams(location.search);
+        for (i = 0; i < CLAVES_UTM.length; i++) {
+          v = q.get(CLAVES_UTM[i]);
+          if (v) { o[CLAVES_UTM[i]] = v.slice(0, 100); hay = true; }
         }
+      } catch (e) { /* sin URLSearchParams no hay atribución, no pasa nada */ }
+      try {
+        if (hay) sessionStorage.setItem('pb_utm', JSON.stringify(o));
+        else o = JSON.parse(sessionStorage.getItem('pb_utm') || 'null') || {};
+      } catch (e) { /* almacén restringido */ }
+      utmCache = o;
+      return o;
     }
 
-    // Add event listeners for user interaction
-    loadEvents.forEach(e => window.addEventListener(e, triggerLoad, { passive: true }));
+    // Eager, no perezoso: si la landing de entrada no dispara ningún evento
+    // antes de que el usuario navegue, la atribución se perdería para siempre.
+    utm();
 
-    // Fallback: load after 5 seconds if no interaction occurs
-    setTimeout(triggerLoad, 5000);
+    window.pbDims = function () {
+      var nav = (performance.getEntriesByType('navigation') || [])[0] || {};
+      return Object.assign({
+        brand: 'perito-barcelona',
+        page_path: ruta(),
+        lang: document.documentElement.lang || 'es',
+        delivery: nav.deliveryType || 'normal',
+        is_sxg_cache: enCache,
+        hostname: location.hostname
+      }, utm());
+    };
+
+    window.pbTrack = function (nombre, params) {
+      try {
+        gtag('event', nombre, Object.assign(window.pbDims(), params || {}));
+      } catch (e) { /* medir no puede romper la página */ }
+    };
+
+    function cargarGA() {
+      var s = document.createElement('script');
+      s.src = '/gtag/js?id=' + GA_ID; // proxy first-party, mismo origen
+      s.async = true;
+      document.head.appendChild(s);
+
+      gtag('js', new Date());
+      gtag('config', GA_ID, {
+        page_location: location.href,
+        transport_url: location.origin, // los beacons van a /g/collect de este origen
+        first_party_collection: true,
+        linker: { domains: ['perito.barcelona', 'webpkgcache.com'] }
+      });
+    }
+
+    var EVENTOS = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
+    var cargado = false;
+
+    function disparar() {
+      if (cargado) return;
+      cargado = true;
+      for (var i = 0; i < EVENTOS.length; i++) window.removeEventListener(EVENTOS[i], disparar);
+      if ('requestIdleCallback' in window) requestIdleCallback(cargarGA);
+      else cargarGA();
+    }
+
+    for (var i = 0; i < EVENTOS.length; i++) {
+      window.addEventListener(EVENTOS[i], disparar, { passive: true });
+    }
+    setTimeout(disparar, 5000);
+  })();
 </script>
 {% endif %}

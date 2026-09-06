@@ -116,6 +116,14 @@
     {# ── Bottom bar ── #}
     {% set fLegal = "/avis-legal/" if lang == "ca" else ("/legal-notice/" if lang == "en" else "/aviso-legal/") %}
     {% set fPriv = "/privadesa/" if lang == "ca" else ("/privacy/" if lang == "en" else "/privacidad/") %}
+    {# «Cookies» es el punto de revocación permanente que exige el RGPD: retirar el
+       consentimiento tiene que ser tan fácil como darlo. `data-pb-consent-open` lo
+       recoge el listener delegado de components/consent.njk, que reabre el banner en
+       la propia página en vez de navegar. El href sigue apuntando a /cookies/ para que
+       sin JS —o si GA4 no está configurado y el banner no se renderiza— el enlace lleve
+       igualmente a la política. Slug idéntico en los tres idiomas: sólo cambia el
+       prefijo, porque «cookies» no se traduce en ninguno de los tres. #}
+    {% set fCookies = "/cookies/" %}
     <div style="margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--ink-700);
                 display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
                 font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.08em;
@@ -125,6 +133,9 @@
         <a href="{{ langPrefix + fLegal }}" style="color: inherit;">{{ ui.footer.aviso_legal }}</a>
         ·
         <a href="{{ langPrefix + fPriv }}" style="color: inherit;">{{ ui.footer.privacidad }}</a>
+        ·
+        <a href="{{ langPrefix + fCookies }}" style="color: inherit;"
+           data-pb-consent-open aria-label="{{ ui.consent.abrir }}">{{ ui.footer.cookies }}</a>
       </span>
     </div>
   </div>
