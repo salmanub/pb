@@ -234,9 +234,23 @@ form_steps:
         label: "Universidad, empresa, laboratorio o despacho propio"
         placeholder: "Entidad a la que está vinculado"
         required: false
+      - name: "perfil"
+        label: "Perfil público, CV en línea o ficha en su universidad"
+        placeholder: "https://linkedin.com/in/… · ORCID · Dialnet · web del departamento"
+        required: false
+        note: "Un perfil público verificable vale más que un currículum adjunto: está actualizado y el tribunal puede contrastarlo. No hace falta enviar el CV."
+      - name: "mensaje"
+        label: "Lo que quiera añadir"
+        multiline: true
+        rows: 4
+        placeholder: "Ej.: su especialidad no encaja en ninguna de las materias del listado; instrumentación poco habitual; disponibilidad; cualquier cosa que no se le haya preguntado."
+        required: false
+        note: "No indique nombres de clientes, partes, números de procedimiento ni ningún dato sujeto a confidencialidad."
 
 faq_title: "Antes de darse de alta"
 faq:
+  - q: "¿Hace falta enviar el currículum?"
+    a: "No. Con la titulación, la especialidad y un perfil público verificable —LinkedIn, ORCID, Dialnet, la ficha de su departamento o la acreditación del laboratorio— hay suficiente para valorar el encaje. Si un asunto concreto lo requiere, se le pedirá entonces y por correo. Este registro no es un proceso de selección."
   - q: "¿Tengo que ir al juzgado?"
     a: "No. El dictamen lo firma la dirección pericial y es quien comparece y responde de él. Su intervención termina con la entrega del estudio. Dicho eso, lea «Lo que no se le puede garantizar»: la parte contraria puede pedir que se cite a quien hizo un estudio incorporado a un dictamen. Es infrecuente, no depende del despacho, y por eso está escrito en esta página y no en la letra pequeña."
   - q: "¿Tengo que firmar el estudio?"

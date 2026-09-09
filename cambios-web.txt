@@ -1,0 +1,835 @@
+d3367162 2026-09-09 make git
+
+M	src/_generate/sitemap.njk
+983ca565 2026-09-09 make git
+
+M	src/_data/home.json
+M	src/_data/home_ca.json
+M	src/_data/home_en.json
+M	src/_includes/layouts/claustro.njk
+M	src/_includes/layouts/colaborador.njk
+M	src/_includes/layouts/home.njk
+562d42e0 2026-09-06 make git
+
+M	src/_data/ca.json
+M	src/_data/en.json
+M	src/_data/es.json
+M	src/_includes/layouts/base.njk
+bab15653 2026-08-31 make git
+
+M	src/_data/ca.json
+M	src/_data/en.json
+M	src/_data/es.json
+M	src/_data/home.json
+M	src/_data/home_ca.json
+M	src/_data/home_en.json
+M	src/_includes/layouts/home.njk
+bb5b9f21 2026-08-31 make git
+
+M	src/_data/ca.json
+M	src/_data/catedraticos.json
+M	src/_data/en.json
+M	src/_data/es.json
+A	src/_data/expertos.json
+M	src/_data/metadata.json
+M	src/_includes/layouts/claustro.njk
+M	src/_includes/layouts/colaborador.njk
+M	src/_redirects
+dd0e4861 2026-08-31 make git
+
+M	src/_data/catedraticos.json
+M	src/_data/metadata.json
+M	src/_includes/layouts/about.njk
+M	src/_includes/layouts/claustro.njk
+M	src/_includes/layouts/colaborador.njk
+M	src/_includes/layouts/service.njk
+2643549d 2026-08-30 make git
+
+A	src/_data/catedraticos.json
+M	src/_includes/layouts/about.njk
+A	src/_includes/layouts/claustro.njk
+A	src/_includes/layouts/colaborador.njk
+e292c09d 2026-07-23 fix(casos): el selector de idioma ya no se intercepta como paginación
+
+M	src/_includes/layouts/base.njk
+232e44a7 2026-07-23 fix(caso): banda del breadcrumb contenida al ancho del cuerpo
+
+M	src/_includes/layouts/caso.njk
+451c3cf1 2026-07-23 fix(i18n): sidebar en el idioma de la página, textos centralizados y breadcrumb
+
+M	src/_data/ca.json
+M	src/_data/en.json
+M	src/_data/es.json
+M	src/_includes/layouts/post.njk
+M	src/_includes/layouts/service.njk
+4cb3cbaf 2026-07-23 make git
+
+M	src/_data/ca.json
+M	src/_data/en.json
+M	src/_data/es.json
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/caso.njk
+M	src/_includes/layouts/post.njk
+c8dde8b3 2026-07-23 make git
+
+M	src/_includes/layouts/home.njk
+0272ca10 2026-07-19 feat(asesoramiento): add patology diagnosis and update carbon fiber reinforcement
+
+M	src/_redirects
+8c7039a0 2026-07-14 chore(caso-2): refuerza anonimización del cliente (expediente no cerrado)
+
+M	src/_data/casosExito.json
+M	src/_data/casosExito_ca.json
+M	src/_data/casosExito_en.json
+48ebf9e0 2026-07-14 feat(casos): paginación SPA con Navigation API + View Transitions (sin salto al top)
+
+M	src/_includes/layouts/base.njk
+7f8c2e2e 2026-07-14 fix(sitemap): incluye todo el contenido paginado + elimina duplicados
+
+M	src/_data/casosExito_ca.json
+M	src/_data/casosExito_en.json
+M	src/_generate/sitemap.njk
+06214606 2026-07-14 fix(casos): paginación con URLs reales + View Transitions cross-document
+
+M	src/_includes/layouts/base.njk
+4462cfc4 2026-07-14 make git
+
+A	src/_data/casosExitoPub.js
+A	src/_data/casosExitoPub_ca.js
+A	src/_data/casosExitoPub_en.js
+6b064182 2026-07-14 make git
+
+M	src/_data/casosExito.json
+M	src/_data/casosExito_ca.json
+M	src/_data/casosExito_en.json
+D	src/_includes/layouts/caso-estudio.njk
+b735fcf2 2026-07-14 content(cs-01): dos case studies high-ticket trilingües (ES/CA/EN)
+
+M	src/_includes/layouts/base.njk
+A	src/_includes/layouts/caso-estudio.njk
+426dda5c 2026-07-14 fix(casos-exito): rellena contenido EN y CA (encargo/instrucción/dictamen/facts)
+
+M	src/_data/ca.json
+M	src/_data/casosExito_ca.json
+M	src/_data/casosExito_en.json
+M	src/_data/en.json
+M	src/_data/es.json
+M	src/_data/posts.json
+M	src/_includes/layouts/base.njk
+M	src/_includes/layouts/caso.njk
+M	src/_includes/layouts/service.njk
+M	src/index.njk
+4710dc0a 2026-07-11 make git
+
+M	src/_data/home.json
+M	src/_data/home_ca.json
+M	src/_data/home_en.json
+M	src/_includes/layouts/home.njk
+d3eb3eb3 2026-07-11 make git
+
+A	src/_data/_to_delete/posts_es.json_TMP
+M	src/_data/posts.json
+M	src/_data/posts_ca.json
+M	src/_data/posts_en.json
+b5d963e0 2026-07-11 make git
+
+M	src/_data/posts.json
+308742a3 2026-07-11 SEO: 10 posts programados + keepalive del cron de publicación
+
+M	src/_data/posts.json
+30fe43ec 2026-07-05 fix: remove 301 redirects for EN/CA blog and success-cases (pages now exist)
+
+M	src/_redirects
+f3eb1477 2026-07-04 make git
+
+M	src/_includes/layouts/home.njk
+a68436c9 2026-07-01 make git
+
+M	src/_includes/layouts/base.njk
+f14126aa 2026-07-01 make git
+
+M	src/_data/posts.json
+M	src/_data/posts_ca.json
+M	src/_data/posts_en.json
+M	src/_includes/layouts/base.njk
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/index.njk
+M	src/_includes/layouts/post.njk
+c54bf417 2026-06-27 make git
+
+M	src/_data/posts.json
+M	src/_data/posts_ca.json
+M	src/_data/posts_en.json
+67d33e46 2026-06-27 fix: move image to assets/images/ (passthrough dir) and update paths in JSONs
+
+M	src/_data/posts.json
+M	src/_data/posts_ca.json
+M	src/_data/posts_en.json
+d14e13bb 2026-06-27 fix: restore clean JSONs from git, add taludes entries with proper UTF-8, remove author bio
+
+M	src/_data/posts.json
+M	src/_data/posts_ca.json
+M	src/_data/posts_en.json
+a5d1d9b0 2026-06-27 fix: add content to blog JSON entries, remove redundant .md files, remove author bio from posts
+
+M	src/_data/posts.json
+M	src/_data/posts_ca.json
+M	src/_data/posts_en.json
+M	src/_includes/layouts/post.njk
+c8cf15fb 2026-06-27 make git
+
+M	src/_includes/layouts/post.njk
+M	src/_includes/layouts/service.njk
+54a6de5b 2026-06-25 feat: unify all forms to single Make webhook + add origen field (perito-express / perito-encargos)
+
+M	src/_includes/layouts/home.njk
+829e3a6b 2026-06-25 ui: prominent spinner + slide-in animations for home form states
+
+M	src/_includes/layouts/home.njk
+7b6c3961 2026-06-25 fix: audit all forms - POST to webhook, fix origen, fix EN Professional
+
+M	src/_includes/layouts/home.njk
+40e6e57b 2026-06-24 make git
+
+M	src/_includes/layouts/caso.njk
+M	src/_includes/layouts/post.njk
+469782ec 2026-06-24 make git
+
+M	src/_data/casosExito.json
+M	src/_includes/layouts/caso.njk
+M	src/_includes/layouts/post.njk
+d846f036 2026-06-24 make git
+
+M	src/_includes/layouts/caso.njk
+M	src/_includes/layouts/post.njk
+921bdddb 2026-06-24 make git
+
+M	src/_includes/layouts/caso.njk
+M	src/_includes/layouts/post.njk
+185ddd59 2026-06-24 feat: casos-exito cards — category label in green + amount in large tabular nums (matching old design pattern); add amount+category fields to casosExito.json
+
+M	src/_data/casosExito.json
+be656dba 2026-06-24 feat: multilang blog+casos (CA/EN) + Blog in nav — add ca/casos-d-exit/index, en/success-cases/index, fix cas.njk→casosExito_ca, case.njk→casosExito_en, remove legacy conflict MDs
+
+M	src/_data/ca.json
+M	src/_data/en.json
+M	src/_data/es.json
+99afb798 2026-06-24 feat: post sidebar — related services use svc-row DS format (font-serif + arrow), CTA replaced with qual.njk partial
+
+M	src/_includes/layouts/post.njk
+9d4502b8 2026-06-24 fix: post.njk uses page-hero.njk (same as service pages) + 2-col body layout (article 65% + sidebar 35% with related services & CTA card)
+
+M	src/_includes/layouts/post.njk
+03329a92 2026-06-24 fix: caso.njk uses breadcrumb.njk + custom 2-col hero (title left / ficha right) — prose centered with container-text 720px; add --container-prose CSS var
+
+M	src/_includes/layouts/caso.njk
+M	src/_includes/layouts/post.njk
+c174e186 2026-06-24 fix: use partials/breadcrumb.njk + partials/page-hero.njk in post.njk and caso.njk — margins and DS now match rest of site
+
+M	src/_includes/layouts/caso.njk
+M	src/_includes/layouts/post.njk
+5fddf26b 2026-06-24 fix: add layout: layouts/base.njk frontmatter to caso.njk and post.njk — pages now get CSS, nav and footer
+
+M	src/_includes/layouts/caso.njk
+M	src/_includes/layouts/post.njk
+8be30739 2026-06-24 feat: add blog (ES/CA/EN) and casos-exito pages with Design System layout (post.njk + caso.njk + 6 paginator files + 3 listing pages)
+
+A	src/_includes/layouts/caso.njk
+A	src/_includes/layouts/post.njk
+5e815dc1 2026-06-24 fix: footer copyright → Perito Barcelona, hero perito → peritos (plural) in ES/CA/EN
+
+M	src/_data/ca.json
+M	src/_data/en.json
+M	src/_data/es.json
+M	src/_data/home.json
+M	src/_data/home_ca.json
+M	src/_data/home_en.json
+5fdb5ba6 2026-06-24 make git
+
+M	src/_includes/layouts/legal.njk
+6deb016a 2026-06-24 make git
+
+M	src/_data/sitedata.json
+M	src/_includes/layouts/service.njk
+64bd805b 2026-06-24 make git
+
+M	src/_includes/layouts/base.njk
+M	src/_includes/layouts/legal.njk
+e2a14432 2026-06-24 make git
+
+M	src/_data/home.json
+M	src/_data/home_ca.json
+M	src/_data/home_en.json
+M	src/_includes/layouts/home.njk
+f1beb7ee 2026-06-23 make git
+
+M	src/_includes/layouts/base.njk
+0c4986b9 2026-06-23 make git
+
+M	src/_data/home_ca.json
+M	src/_data/home_en.json
+M	src/_includes/layouts/home.njk
+M	src/_includes/layouts/service.njk
+44029bfa 2026-06-23 make git
+
+M	src/_includes/layouts/home.njk
+M	src/_includes/layouts/service.njk
+ac3c45b2 2026-06-23 fix: EN service URLs use flat paths (/en/slug/) + hide breadcrumb label on mobile
+
+M	src/_includes/layouts/service.njk
+d54bb8cd 2026-06-23 feat: add visible 'You are here' label to breadcrumb (ES/CA/EN)
+
+M	src/_data/ca.json
+M	src/_data/en.json
+M	src/_data/es.json
+483c843f 2026-06-23 fix: localize related services titles in EN and CA (i18n svc.t_en/t_ca)
+
+M	src/_data/sitedata.json
+M	src/_includes/layouts/service.njk
+eecca9eb 2026-06-23 feat: connect homepage contact form to /api/contacto via fetch() with spinner, success and error states (ES/CA/EN)
+
+M	src/_data/home.json
+M	src/_data/home_ca.json
+M	src/_data/home_en.json
+M	src/_includes/layouts/home.njk
+10917fd9 2026-06-23 make git
+
+M	src/_redirects
+4088a8ec 2026-06-23 make git
+
+M	src/_data/casos-exito.json
+M	src/_data/casosExito.json
+M	src/_data/casosExito_ca.json
+M	src/_data/casosExito_en.json
+M	src/_data/i18n.json
+M	src/_data/posts.json
+M	src/_data/posts_ca.json
+M	src/_redirects
+409cf7e5 2026-06-23 make git
+
+A	src/_data/ca.json
+A	src/_data/casos.json
+D	src/_data/casosExito_fr.json
+D	src/_data/casosExito_it.json
+A	src/_data/design.json
+A	src/_data/en.json
+A	src/_data/es.json
+A	src/_data/home.json
+A	src/_data/home_ca.json
+A	src/_data/home_en.json
+A	src/_data/i18n.json
+M	src/_data/metadata.json
+D	src/_data/posts_fr.json
+D	src/_data/posts_it.json
+A	src/_data/sitedata.json
+M	src/_generate/sitemap.njk
+M	src/_includes/layouts/404.njk
+A	src/_includes/layouts/about.njk
+M	src/_includes/layouts/base.njk
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/blog-post.njk
+M	src/_includes/layouts/collaboration.njk
+M	src/_includes/layouts/contact.njk
+D	src/_includes/layouts/contact.temp.njk
+M	src/_includes/layouts/despacho.njk
+A	src/_includes/layouts/home.njk
+M	src/_includes/layouts/honorarios.njk
+M	src/_includes/layouts/legal.njk
+M	src/_includes/layouts/not-available.njk
+M	src/_includes/layouts/service-child.njk
+M	src/_includes/layouts/service-pillar.njk
+M	src/_includes/layouts/service-semi-pillar-v2.njk
+M	src/_includes/layouts/service-semi-pillar.njk
+A	src/_includes/layouts/service.njk
+M	src/_includes/layouts/services-overview.njk
+M	src/_includes/layouts/success-case.njk
+M	src/_includes/layouts/success-cases.njk
+M	src/_redirects
+A	src/index.njk
+ab934081 2026-05-05 make git
+
+M	src/_includes/layouts/base.njk
+ebd04e61 2026-04-29 make git
+
+M	src/_includes/layouts/base.njk
+aa956d66 2026-04-26 make git
+
+M	src/_includes/layouts/collaboration.njk
+c54df812 2026-04-26 make git
+
+M	src/_includes/layouts/collaboration.njk
+ec906b04 2026-04-26 make git
+
+M	src/_includes/layouts/base.njk
+M	src/_includes/layouts/service-child.njk
+M	src/_includes/layouts/service-pillar.njk
+eb8e0119 2026-04-25 make git
+
+M	src/_data/casos-exito.json
+M	src/_data/casosExito.json
+M	src/_data/casosExito_ca.json
+M	src/_data/casosExito_en.json
+M	src/_data/casosExito_fr.json
+M	src/_data/casosExito_it.json
+M	src/_data/metadata.json
+M	src/_redirects
+8b997091 2026-03-14 make git
+
+M	src/_includes/layouts/despacho.njk
+M	src/_includes/layouts/honorarios.njk
+74965b05 2026-03-11 make git
+
+M	src/_includes/layouts/blog-post.njk
+M	src/_includes/layouts/service-child.njk
+M	src/_includes/layouts/service-pillar.njk
+M	src/_includes/layouts/success-case.njk
+bd6457d9 2026-03-10 make git
+
+M	src/_includes/layouts/despacho.njk
+5f0ce8eb 2026-03-10 make git
+
+M	src/_includes/layouts/blog-list.njk
+A	src/_includes/layouts/despacho.njk
+A	src/_includes/layouts/honorarios.njk
+M	src/_includes/layouts/service-child.njk
+M	src/_includes/layouts/service-pillar.njk
+M	src/_includes/layouts/success-case.njk
+M	src/_includes/layouts/success-cases.njk
+e45f6193 2026-03-07 make git
+
+M	src/_data/casosExito_it.json
+0e88f012 2026-02-28 make git
+
+M	src/_data/casosExito.json
+M	src/_data/casosExito_ca.json
+M	src/_data/casosExito_en.json
+M	src/_data/casosExito_fr.json
+6a113ecc 2026-02-28 make git
+
+M	src/_data/casosExito_ca.json
+M	src/_data/casosExito_en.json
+M	src/_data/casosExito_fr.json
+M	src/_data/casosExito_it.json
+12f26fb5 2026-02-28 make git
+
+M	src/_data/casosExito.json
+M	src/_data/casosExito_ca.json
+M	src/_data/casosExito_en.json
+M	src/_data/casosExito_fr.json
+M	src/_data/casosExito_it.json
+95110c39 2026-02-28 make git
+
+M	src/_redirects
+b333961c 2026-02-28 make git
+
+M	src/_redirects
+3cce2587 2026-02-28 make git
+
+M	src/_data/casos-exito.json
+M	src/_data/casosExito.json
+94c77e79 2026-02-28 make git
+
+M	src/_data/casosExito_ca.json
+M	src/_data/casosExito_en.json
+M	src/_data/casosExito_fr.json
+M	src/_data/casosExito_it.json
+d6f4f1bc 2026-02-28 make git
+
+M	src/_data/casos-exito.json
+M	src/_data/casosExito.json
+M	src/_data/casosExito_ca.json
+M	src/_data/casosExito_en.json
+M	src/_data/casosExito_fr.json
+M	src/_data/casosExito_it.json
+6e4f3a62 2026-02-27 make git
+
+M	src/_redirects
+01219853 2026-02-27 make git
+
+M	src/_includes/layouts/service-child.njk
+d082a315 2026-02-27 make git
+
+M	src/_includes/layouts/service-pillar.njk
+18eb3600 2026-02-27 make git
+
+M	src/_redirects
+821c0de3 2026-02-17 make git
+
+M	src/_includes/layouts/404.njk
+22c5c9f3 2026-02-17 make git
+
+M	src/_data/metadata.json
+M	src/_includes/layouts/404.njk
+M	src/_redirects
+ec402d3f 2026-02-16 make git
+
+M	src/_redirects
+938ceeba 2026-02-16 make git
+
+M	src/_includes/layouts/service-child.njk
+2a0031fe 2026-02-16 make git
+
+M	src/_includes/layouts/service-pillar.njk
+4ffead1f 2026-02-15 make git
+
+M	src/_includes/layouts/success-cases.njk
+4d9d4a6d 2026-02-15 make git
+
+M	src/_includes/layouts/success-cases.njk
+25776964 2026-02-15 make git
+
+M	src/_includes/layouts/success-cases.njk
+3e75fd7a 2026-02-15 make git
+
+M	src/_includes/layouts/success-cases.njk
+732d35e3 2026-02-15 make git
+
+M	src/_includes/layouts/base.njk
+d6151400 2026-02-15 Disable instant navigation and remove faulty middleware to fix 503 errors
+
+M	src/_includes/layouts/base.njk
+5fbe346a 2026-02-15 style(ui): remove deprecated floating notice to prevent CTA conflicts
+
+M	src/_includes/layouts/base.njk
+0d9c1977 2026-02-15 fix(ui): remove duplicate mobile floating CTA and cleanup related JS
+
+M	src/_includes/layouts/base.njk
+5bf72f12 2026-02-15 feat(ui): add persistent mobile bottom bar and restore desktop floating notice
+
+M	src/_includes/layouts/base.njk
+16c2cb27 2026-02-15 fix: disable aggressive link preloading (instant-nav) and repair CSP header to resolve 503 errors and console warnings
+
+M	src/_includes/layouts/base.njk
+1e9941c0 2026-01-25 make git
+
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/service-pillar.njk
+97436d75 2026-01-24 make git
+
+M	src/_includes/layouts/collaboration.njk
+f547c6de 2026-01-24 make git
+
+M	src/_includes/layouts/collaboration.njk
+6750e2d7 2026-01-24 make git
+
+M	src/_includes/layouts/collaboration.njk
+M	src/_includes/layouts/success-cases.njk
+d3a20461 2026-01-16 make git
+
+M	src/_includes/layouts/base.njk
+adb73f91 2026-01-16 make git
+
+M	src/_includes/layouts/base.njk
+1fd678d6 2026-01-16 make git
+
+M	src/_includes/layouts/base.njk
+f0e317b5 2026-01-15 make git
+
+M	src/_data/metadata.json
+M	src/_includes/layouts/base.njk
+c6aa477d 2026-01-15 make git
+
+M	src/_includes/layouts/base.njk
+4bca1d69 2025-12-28 make git
+
+M	src/_generate/sitemap.njk
+e0531320 2025-12-28 make git
+
+M	src/_generate/sitemap.njk
+1fe0e03f 2025-12-26 fix: chatbot URL de producción y teléfono dinámico en mensajes de error
+
+M	src/_data/chatbot.json
+091f18e2 2025-12-26 make git
+
+A	src/_data/chatbot.json
+M	src/_data/metadata.json
+M	src/_includes/layouts/base.njk
+M	src/_includes/layouts/blog-post.njk
+7ad85917 2025-12-21 make git
+
+M	src/_includes/layouts/blog-post.njk
+4c4d618c 2025-12-21 make git
+
+M	src/_data/metadata.json
+M	src/_includes/layouts/blog-post.njk
+d53b2187 2025-12-21 make git
+
+M	src/_data/metadata.json
+M	src/_includes/layouts/base.njk
+M	src/_includes/layouts/success-case.njk
+7a3e6bd8 2025-12-21 make git
+
+M	src/_data/casosExito.json
+A	src/_data/casosExito_ca.json
+A	src/_data/casosExito_en.json
+A	src/_data/casosExito_fr.json
+A	src/_data/casosExito_it.json
+M	src/_data/posts.json
+A	src/_data/posts_ca.json
+A	src/_data/posts_en.json
+A	src/_data/posts_fr.json
+A	src/_data/posts_it.json
+M	src/_includes/layouts/404.njk
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/service-child.njk
+M	src/_includes/layouts/service-pillar.njk
+M	src/_includes/layouts/service-semi-pillar-v2.njk
+M	src/_includes/layouts/service-semi-pillar.njk
+M	src/_includes/layouts/success-cases.njk
+3ae3c6f6 2025-12-21 make git
+
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/contact.njk
+M	src/_includes/layouts/success-cases.njk
+4f702084 2025-12-21 make git
+
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/contact.njk
+M	src/_includes/layouts/success-cases.njk
+b15def6a 2025-12-20 make git
+
+M	src/_includes/layouts/blog-post.njk
+82bda068 2025-12-20 make git
+
+M	src/_data/posts.json
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/blog-post.njk
+e07acd4d 2025-12-20 make git
+
+M	src/_includes/layouts/base.njk
+b29087f6 2025-12-20 make git
+
+M	src/_includes/layouts/contact.njk
+23417ea3 2025-12-20 make git
+
+M	src/_data/posts.json
+M	src/_includes/layouts/404.njk
+M	src/_includes/layouts/base.njk
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/blog-post.njk
+M	src/_includes/layouts/collaboration.njk
+M	src/_includes/layouts/contact.njk
+M	src/_includes/layouts/legal.njk
+M	src/_includes/layouts/service-child.njk
+M	src/_includes/layouts/service-pillar.njk
+M	src/_includes/layouts/service-semi-pillar-v2.njk
+M	src/_includes/layouts/service-semi-pillar.njk
+M	src/_includes/layouts/services-overview.njk
+M	src/_includes/layouts/success-case.njk
+M	src/_includes/layouts/success-cases.njk
+e8d37ce3 2025-12-20 make git
+
+M	src/_includes/layouts/base.njk
+M	src/_includes/layouts/contact.njk
+M	src/_includes/layouts/index.njk
+781db93a 2025-12-12 make git
+
+M	src/_includes/layouts/index.njk
+ff121331 2025-12-12 make git
+
+M	src/_includes/layouts/success-case.njk
+03e2c559 2025-12-12 make git
+
+M	src/_data/posts.json
+b5278fa6 2025-12-12 make git
+
+M	src/_data/posts.json
+e7337781 2025-12-08 make git
+
+M	src/_data/posts.json
+9b01489f 2025-12-08 make git
+
+M	src/_data/posts.json
+2dce584c 2025-11-21 make git
+
+M	src/_data/casos-exito.json
+e591f491 2025-11-21 make git
+
+A	src/_data/casos-exito.json
+ed2d47e4 2025-11-21 make git
+
+M	src/_data/casosExito.json
+b7750745 2025-11-20 make git
+
+M	src/_data/casosExito.json
+d7bef178 2025-11-20 make git
+
+M	src/_data/casosExito.json
+3ea33802 2025-11-18 make git
+
+M	src/_redirects
+e94124be 2025-10-21 make git
+
+M	src/_data/posts.json
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/blog-post.njk
+M	src/_includes/layouts/success-case.njk
+47acb26e 2025-10-21 make git
+
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/blog-post.njk
+M	src/_includes/layouts/success-case.njk
+3ffd28ab 2025-10-21 make git
+
+M	src/_data/casosExito.json
+ad037fee 2025-10-21 make git
+
+M	src/_data/metadata.json
+M	src/_data/posts.json
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/blog-post.njk
+M	src/_includes/layouts/success-case.njk
+e3a9e7a9 2025-10-21 make git
+
+M	src/_includes/layouts/blog-post.njk
+M	src/_includes/layouts/index.njk
+da3c8f67 2025-10-21 make git
+
+M	src/_includes/layouts/blog-post.njk
+70d0069a 2025-10-21 make git
+
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/blog-post.njk
+M	src/_includes/layouts/success-case.njk
+daa00380 2025-10-21 make git
+
+M	src/_data/posts.json
+M	src/_includes/layouts/blog-list.njk
+589a2486 2025-10-21 make git
+
+M	src/_includes/layouts/blog-list.njk
+93e9333f 2025-10-21 make git
+
+M	src/_includes/layouts/blog-list.njk
+M	src/_includes/layouts/blog-post.njk
+f24f1104 2025-10-21 make git
+
+M	src/_includes/layouts/success-case.njk
+cd439ea9 2025-10-21 make git
+
+M	src/_includes/layouts/success-case.njk
+f31e8a65 2025-10-21 make git
+
+M	src/_data/casosExito.json
+5b9e7fbc 2025-10-21 make git
+
+M	src/_data/casosExito.json
+A	src/_data/posts.json
+A	src/_includes/layouts/blog-list.njk
+A	src/_includes/layouts/blog-post.njk
+0358d665 2025-10-21 make git
+
+M	src/_data/casosExito.json
+M	src/_includes/layouts/success-case.njk
+34dbb4b4 2025-10-21 make git
+
+M	src/_data/casosExito.json
+4b086a3a 2025-10-21 make git
+
+D	src/_data/casos-exito.json
+D	src/_data/casos.json
+M	src/_data/casosExito.json
+M	src/_includes/layouts/success-case.njk
+M	src/_includes/layouts/success-cases.njk
+9910e50d 2025-10-21 make git
+
+M	src/_includes/layouts/success-case.njk
+dc15cba5 2025-10-21 make git
+
+M	src/_data/casosExito.json
+M	src/_includes/layouts/success-case.njk
+M	src/_includes/layouts/success-cases.njk
+64e0f151 2025-09-28 make git
+
+M	src/_includes/layouts/success-cases.njk
+4f0da3eb 2025-09-28 make git
+
+M	src/_includes/layouts/success-cases.njk
+d4e61532 2025-09-28 make git
+
+M	src/_includes/layouts/success-cases.njk
+0df3030a 2025-09-28 make git
+
+M	src/_data/casosExito.json
+8d84bc2e 2025-09-28 make git
+
+M	src/_data/casosExito.json
+M	src/_includes/layouts/success-case.njk
+M	src/_includes/layouts/success-cases.njk
+9726dba3 2025-09-28 make git
+
+M	src/_data/casosExito.json
+501ccd08 2025-09-28 make git
+
+M	src/_includes/layouts/success-case.njk
+acec1f7c 2025-09-28 make git
+
+M	src/_data/metadata.json
+M	src/_includes/layouts/success-case.njk
+a8cbb973 2025-09-27 make git
+
+M	src/_includes/layouts/success-case.njk
+M	src/_includes/layouts/success-cases.njk
+e2095aec 2025-09-27 make git
+
+A	src/_data/casos-exito.json
+A	src/_data/casosExito.json
+M	src/_includes/layouts/success-case.njk
+M	src/_includes/layouts/success-cases.njk
+41ae9c14 2025-09-23 make git
+
+M	src/_includes/layouts/contact.njk
+60d4ef03 2025-09-21 make git
+
+M	src/_includes/layouts/contact.njk
+67c8c06a 2025-09-16 make git
+
+M	src/_data/metadata.json
+8482e22b 2025-09-07 make git
+
+M	src/_redirects
+4c7f32bf 2025-09-04 make git
+
+M	src/_redirects
+1b0112e2 2025-09-04 make git
+
+M	src/_redirects
+130d375b 2025-09-04 make git
+
+M	src/_redirects
+e3f97cf4 2025-09-03 make git
+
+A	src/_includes/layouts/contact.temp.njk
+M	src/_includes/layouts/service-child.njk
+M	src/_includes/layouts/service-pillar.njk
+04404e25 2025-09-03 make git
+
+M	src/_data/metadata.json
+M	src/_includes/layouts/base.njk
+D	src/_includes/layouts/contact.temp.njk
+M	src/_includes/layouts/index.njk
+M	src/_includes/layouts/service-child.njk
+M	src/_includes/layouts/service-pillar.njk
+M	src/_includes/layouts/success-case.njk
+03b44230 2025-09-03 make git
+
+M	src/_includes/layouts/service-child.njk
+M	src/_includes/layouts/service-pillar.njk
+M	src/_includes/layouts/success-case.njk
+5ecdf369 2025-09-01 make git
+
+M	src/_includes/layouts/service-child.njk
+M	src/_includes/layouts/service-pillar.njk
+ca9f85cf 2025-09-01 make git
+
+M	src/_includes/layouts/service-child.njk
+M	src/_includes/layouts/service-pillar.njk
+2ac238c6 2025-09-01 make git
+
+M	src/_data/metadata.json
+M	src/_includes/layouts/base.njk
+M	src/_includes/layouts/service-child.njk
+M	src/_includes/layouts/service-pillar.njk
+c4a1ef43 2025-09-01 make git
+
+M	src/_includes/layouts/base.njk

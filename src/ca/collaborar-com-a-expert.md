@@ -211,9 +211,23 @@ form_steps:
         label: "Universitat, empresa, laboratori o despatx propi"
         placeholder: "Entitat a la qual està vinculat"
         required: false
+      - name: "perfil"
+        label: "Perfil públic, CV en línia o fitxa a la seva universitat"
+        placeholder: "https://linkedin.com/in/… · ORCID · Dialnet · web del departament"
+        required: false
+        note: "Un perfil públic verificable val més que un currículum adjunt: està actualitzat i el tribunal el pot contrastar. No cal enviar el CV."
+      - name: "mensaje"
+        label: "El que vulgui afegir"
+        multiline: true
+        rows: 4
+        placeholder: "Ex.: la seva especialitat no encaixa en cap de les matèries del llistat; instrumentació poc habitual; disponibilitat; qualsevol cosa que no se li hagi preguntat."
+        required: false
+        note: "No indiqui noms de clients, parts, números de procediment ni cap dada subjecta a confidencialitat."
 
 faq_title: "Abans de donar-se d'alta"
 faq:
+  - q: "Cal enviar el currículum?"
+    a: "No. Amb la titulació, l'especialitat i un perfil públic verificable —LinkedIn, ORCID, Dialnet, la fitxa del seu departament o l'acreditació del laboratori— n'hi ha prou per valorar l'encaix. Si un assumpte concret ho requereix, se li demanarà llavors i per correu. Aquest registre no és un procés de selecció."
   - q: "He d'anar al jutjat?"
     a: "No. El dictamen el signa la direcció pericial i és qui compareix i en respon. La seva intervenció acaba amb el lliurament de l'estudi. Dit això, llegeixi «El que no se li pot garantir»: la part contrària pot demanar que se citi qui ha fet un estudi incorporat a un dictamen. És infreqüent, no depèn del despatx, i per això està escrit en aquesta pàgina i no a la lletra petita."
   - q: "He de signar l'estudi?"

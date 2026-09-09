@@ -202,9 +202,23 @@ form_steps:
         label: "University or institution"
         placeholder: "University, department or own practice"
         required: false
+      - name: "perfil"
+        label: "Public profile, online CV or university staff page"
+        placeholder: "https://linkedin.com/in/… · ORCID · Google Scholar · department page"
+        required: false
+        note: "A verifiable public profile is worth more than an attached CV: it stays current and the court can check it. There is no need to send a CV."
+      - name: "mensaje"
+        label: "Anything you want to add"
+        multiline: true
+        rows: 4
+        placeholder: "e.g. your speciality fits none of the subjects listed; unusual instrumentation; availability; anything you were not asked about."
+        required: false
+        note: "Do not give client or party names, case numbers or anything subject to confidentiality."
 
 faq_title: "Before you register"
 faq:
+  - q: "Do I need to send a CV?"
+    a: "No. Your qualification, your field and a verifiable public profile — LinkedIn, ORCID, Google Scholar, your department page or your laboratory's accreditation — are enough to assess the fit. If a specific matter calls for more, you will be asked then, by email. This register is not a selection process."
   - q: "Do I have to be a university lecturer?"
     a: "No. The register is open to site profiles, instrumental specialists, accredited laboratories and experts listed with other professional bodies. What is evidenced before the court is the signatory's record in the specific subject, and twenty-five years of site direction is a documentary record just as a publication is."
   - q: "How long before I receive an instruction?"

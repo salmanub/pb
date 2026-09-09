@@ -211,9 +211,23 @@ form_steps:
         label: "University, company, laboratory or own practice"
         placeholder: "The organisation you are attached to"
         required: false
+      - name: "perfil"
+        label: "Public profile, online CV or university staff page"
+        placeholder: "https://linkedin.com/in/… · ORCID · Google Scholar · department page"
+        required: false
+        note: "A verifiable public profile is worth more than an attached CV: it stays current and the court can check it. There is no need to send a CV."
+      - name: "mensaje"
+        label: "Anything you want to add"
+        multiline: true
+        rows: 4
+        placeholder: "e.g. your speciality fits none of the subjects listed; unusual instrumentation; availability; anything you were not asked about."
+        required: false
+        note: "Do not give client or party names, case numbers or anything subject to confidentiality."
 
 faq_title: "Before you register"
 faq:
+  - q: "Do I need to send a CV?"
+    a: "No. Your qualification, your field and a verifiable public profile — LinkedIn, ORCID, Google Scholar, your department page or your laboratory's accreditation — are enough to assess the fit. If a specific matter calls for more, you will be asked then, by email. This register is not a selection process."
   - q: "Do I have to go to court?"
     a: "No. The report is signed by the forensic lead, who appears and is answerable for it. Your involvement ends with the delivery of the study. That said, read «What cannot be guaranteed to you»: the opposing party may ask for the author of a study included in a report to be summoned. It is infrequent, it is not within the practice's control, and that is why it is written on this page rather than in the small print."
   - q: "Do I have to sign the study?"

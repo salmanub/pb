@@ -203,9 +203,23 @@ form_steps:
         label: "Universidad, empresa, laboratorio o despacho propio"
         placeholder: "Entidad a la que está vinculado"
         required: false
+      - name: "perfil"
+        label: "Perfil público, CV en línea o ficha en su universidad"
+        placeholder: "https://linkedin.com/in/… · ORCID · Dialnet · web del departamento"
+        required: false
+        note: "Un perfil público verificable vale más que un currículum adjunto: está actualizado y el tribunal puede contrastarlo. No hace falta enviar el CV."
+      - name: "mensaje"
+        label: "Lo que quiera añadir"
+        multiline: true
+        rows: 4
+        placeholder: "Ej.: su especialidad no encaja en ninguna de las materias del listado; instrumentación poco habitual; disponibilidad; cualquier cosa que no se le haya preguntado."
+        required: false
+        note: "No indique nombres de clientes, partes, números de procedimiento ni ningún dato sujeto a confidencialidad."
 
 faq_title: "Antes de darse de alta"
 faq:
+  - q: "¿Hace falta enviar el currículum?"
+    a: "No. Con la titulación, la especialidad y un perfil público verificable —LinkedIn, ORCID, Dialnet, la ficha de su departamento o la acreditación del laboratorio— hay suficiente para valorar el encaje. Si un asunto concreto lo requiere, se le pedirá entonces y por correo. Este registro no es un proceso de selección."
   - q: "¿Hay que ser profesor de universidad?"
     a: "No. El registro está abierto a perfiles de obra, especialistas instrumentales, laboratorios acreditados y peritos inscritos en listas de otros colegios. Lo que se acredita ante el tribunal es la trayectoria del firmante en la materia concreta, y una dirección de obra de veinticinco años es trayectoria documental igual que una publicación."
   - q: "¿Cuánto se tarda en recibir un encargo?"

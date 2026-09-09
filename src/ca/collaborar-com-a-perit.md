@@ -202,9 +202,23 @@ form_steps:
         label: "Universitat o institució"
         placeholder: "Nom de la universitat, departament o despatx propi"
         required: false
+      - name: "perfil"
+        label: "Perfil públic, CV en línia o fitxa a la seva universitat"
+        placeholder: "https://linkedin.com/in/… · ORCID · Dialnet · web del departament"
+        required: false
+        note: "Un perfil públic verificable val més que un currículum adjunt: està actualitzat i el tribunal el pot contrastar. No cal enviar el CV."
+      - name: "mensaje"
+        label: "El que vulgui afegir"
+        multiline: true
+        rows: 4
+        placeholder: "Ex.: la seva especialitat no encaixa en cap de les matèries del llistat; instrumentació poc habitual; disponibilitat; qualsevol cosa que no se li hagi preguntat."
+        required: false
+        note: "No indiqui noms de clients, parts, números de procediment ni cap dada subjecta a confidencialitat."
 
 faq_title: "Abans de donar-se d'alta"
 faq:
+  - q: "Cal enviar el currículum?"
+    a: "No. Amb la titulació, l'especialitat i un perfil públic verificable —LinkedIn, ORCID, Dialnet, la fitxa del seu departament o l'acreditació del laboratori— n'hi ha prou per valorar l'encaix. Si un assumpte concret ho requereix, se li demanarà llavors i per correu. Aquest registre no és un procés de selecció."
   - q: "Cal ser professor d'universitat?"
     a: "No. El registre és obert a perfils d'obra, especialistes instrumentals, laboratoris acreditats i perits inscrits en llistes d'altres col·legis. El que s'acredita davant el tribunal és la trajectòria del signant en la matèria concreta, i una direcció d'obra de vint-i-cinc anys és trajectòria documental igual que una publicació."
   - q: "Quant trigaré a rebre un encàrrec?"
