@@ -3,3 +3,6 @@
 src/pages/
 node_modules/
 Design System/
+
+# Notas de diseño junto al código (no son páginas del sitio)
+src/assets/**/*.md

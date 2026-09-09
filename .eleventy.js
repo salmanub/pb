@@ -42,7 +42,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets/favicons');
   // Único JS que NO se inlinea: la librería web-vitals vendorizada. Ver el
   // comentario de cabecera del propio fichero y el transform inline-js de abajo.
-  eleventyConfig.addPassthroughCopy('src/assets/js/vendor');
+  eleventyConfig.addPassthroughCopy('src/assets/js/vendor/*.js');
   eleventyConfig.addPassthroughCopy({ 'Design System/assets/icons': 'assets/icons' });
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
   // Root-level icon probes (browsers request these at "/" regardless of <link> tags)
