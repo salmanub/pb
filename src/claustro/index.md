@@ -26,6 +26,27 @@ breadcrumb_parent:
 
 heroTitle: "Cuadro<br>de expertos"
 
+# ── Dos formas de participar (08/09/2026) ────────────────────────────────────
+# Va ANTES de la rejilla: quien llega con miedo a comparecer se autoexcluye si
+# lo primero que lee son seis plazas de perito firmante. Ver
+# claude/pb-dos-figuras-colaborador-2026-09-07.md
+modes_eyebrow: "Dos formas de participar"
+modes_title: "No todo el que aporta conocimiento tiene que ir a un juicio"
+modes_lede: "En un dictamen hay dos trabajos distintos. Uno es el estudio técnico de una materia concreta. Otro es redactar el informe, firmarlo y sostenerlo ante un tribunal. Se pueden hacer los dos, o sólo el primero."
+modes:
+  - ref: "§ COL. 01"
+    icon: "balanza"
+    name: "Perito colaborador"
+    desc: "Asume el encargo completo: estudia, redacta el dictamen, lo firma y lo ratifica en sala si el procedimiento lo requiere. La responsabilidad pericial es suya y los honorarios corresponden al encargo entero."
+    cta: "Cómo colaborar como perito"
+    url: "/colaboracion-peritos/"
+  - ref: "§ COL. 02"
+    icon: "matraz"
+    name: "Experto consultor"
+    desc: "Hace el estudio de su materia y nada más. El dictamen lo redacta y lo firma la dirección pericial, que es quien responde de él y quien comparece. El experto no redacta, no firma y no declara."
+    cta: "Cómo colaborar como experto"
+    url: "/colaboracion-expertos/"
+
 grid_eyebrow: "§ Materias"
 grid_title: "Seis materias, un criterio de asignación"
 grid_lede: "El expediente se asigna a la materia de la que depende la controversia. Cuando ninguna encaja con el asunto, el encargo no se acepta."
@@ -111,15 +132,17 @@ body_blocks:
   - h: "Cuándo se incorpora un perito del cuadro"
     p: "Cuando la materia controvertida exige un conocimiento que la dirección pericial no puede acreditar por sí misma: el estado del arte de una disciplina, una campaña de ensayos con instrumentación específica o la práctica de un procedimiento constructivo concreto. La incorporación se decide por la materia del asunto, no por la disponibilidad del colaborador."
   - h: "Cómo se integra en el dictamen"
-    p: "La dirección pericial mantiene la interlocución con el letrado, la instrucción del expediente y la responsabilidad procesal. El perito colaborador interviene donde su criterio es determinante —modelo de cálculo, campaña de ensayos, interpretación de resultados— y redacta las conclusiones técnicas de su ámbito. Firma lo que suscribe y lo ratifica en sala conforme al artículo 347 LEC."
+    p: "La dirección pericial mantiene en todos los casos la interlocución con el letrado, la instrucción del expediente y la responsabilidad procesal.<br><br><strong>El perito colaborador</strong> interviene donde su criterio es determinante —modelo de cálculo, campaña de ensayos, interpretación de resultados— y redacta las conclusiones técnicas de su ámbito. Firma lo que suscribe y lo ratifica en sala conforme al artículo 347 LEC.<br><br><strong>El experto consultor</strong> entrega el estudio de su materia y ahí termina su intervención. El dictamen lo redacta y lo firma la dirección pericial, que responde de él y comparece si el procedimiento lo requiere. El estudio se incorpora como anexo, con la autoría del experto si él la autoriza."
   - h: "Qué aporta ante el tribunal"
     p: "Un firmante cuya trayectoria es documental —publicaciones, colegiación, años de dirección de obra acreditados, acreditación ENAC del laboratorio— ofrece al tribunal un elemento verificable. Frente al contrainterrogatorio, esa trayectoria es un hecho, no una afirmación de parte."
 
 band_eyebrow: "Colaboración"
-band_title: "Alta en el registro de peritos colaboradores"
-band_lede: "El registro admite perfil académico y perfil profesional en igualdad de condiciones. Las condiciones de colaboración y la disponibilidad real de encargos constan en la página de alta."
+band_title: "Alta en el registro de colaboradores"
+band_lede: "El registro admite perfil académico y perfil profesional en igualdad de condiciones, firme o no firme el dictamen. Las condiciones de colaboración y la disponibilidad real de encargos constan en cada página de alta."
 band_cta: "Colaborar como perito firmante"
 band_url: "/colaboracion-peritos/"
+band_cta2: "Colaborar como experto consultor"
+band_url2: "/colaboracion-expertos/"
 
 qualLabel: "Asignación de expediente"
 qualItems:

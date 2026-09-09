@@ -9,10 +9,27 @@
     "badge_text": "Perits judicials i d'assegurances (IRD)"
   },
   "stats": [
-    { "value": "€2,8 M", "label": "Major import peritat en un únic dictamen", "source": "EXP. 22-074", "accent": true },
-    { "value": "340+", "label": "Dictàmens en edificació i obra civil", "source": "2009 – 2025" },
-    { "value": "100 %", "label": "Dictàmens ratificats en seu judicial", "source": "Sense impugnació pericial" },
-    { "value": "16 anys", "label": "Col·legiat ECCAT núm. 16448", "source": "Enginyeria civil" }
+    {
+      "value": "€2,8 M",
+      "label": "Major import peritat en un únic dictamen",
+      "source": "EXP. 22-074",
+      "accent": true
+    },
+    {
+      "value": "340+",
+      "label": "Dictàmens en edificació i obra civil",
+      "source": "2009 – 2025"
+    },
+    {
+      "value": "100 %",
+      "label": "Dictàmens ratificats en seu judicial",
+      "source": "Sense impugnació pericial"
+    },
+    {
+      "value": "16 anys",
+      "label": "Col·legiat ECCAT núm. 16448",
+      "source": "Enginyeria civil"
+    }
   ],
   "audience": {
     "eyebrow": "§ 01 · A qui acompanyem",
@@ -53,12 +70,49 @@
     "servicio_label": "Servei",
     "view_all": "Veure tots els dictàmens",
     "items": [
-      { "code": "2.1", "slug": "patologies-estructurals", "icon": "building-2", "t": "Patologia de l'edificació", "d": "Esquerdes, fissures, assentaments i danys estructurals. Causa, abast i responsabilitat." },
-      { "code": "2.2", "slug": "vicis-ocults", "icon": "house", "t": "Vicis ocults", "d": "Defectes no aparents en compravenda o després del lliurament d'obra nova." },
-      { "code": "2.3", "slug": "humitats-filtracions", "icon": "droplets", "t": "Humitats i filtracions", "d": "L'origen real de la humitat, no el símptoma. Diagnòstic instrumental i solució valorada." },
-      { "code": "2.4", "slug": "obres-publiques", "href": "/ca/informes-pericials/obres-publiques/", "icon": "hard-hat", "t": "Obra civil i infraestructura", "d": "Dictàmens sobre viaductes, estructures de fàbrica, modificats de projecte i compliment LCSP." },
-      { "code": "2.5", "slug": "reclamacio-mala-execucio", "icon": "scale", "t": "Valoració de danys", "d": "Quantificació pericial del cost de reparació i del perjudici per a reclamació o judici." },
-      { "code": "2.6", "slug": "contrainforme-pericial", "icon": "file-check-2", "t": "Contrainforme i ratificació", "d": "Revisió crítica de dictàmens de la part contrària i compareixença en seu judicial." }
+      {
+        "code": "2.1",
+        "slug": "patologies-estructurals",
+        "icon": "building-2",
+        "t": "Patologia de l'edificació",
+        "d": "Esquerdes, fissures, assentaments i danys estructurals. Causa, abast i responsabilitat."
+      },
+      {
+        "code": "2.2",
+        "slug": "vicis-ocults",
+        "icon": "house",
+        "t": "Vicis ocults",
+        "d": "Defectes no aparents en compravenda o després del lliurament d'obra nova."
+      },
+      {
+        "code": "2.3",
+        "slug": "humitats-filtracions",
+        "icon": "droplets",
+        "t": "Humitats i filtracions",
+        "d": "L'origen real de la humitat, no el símptoma. Diagnòstic instrumental i solució valorada."
+      },
+      {
+        "code": "2.4",
+        "slug": "obres-publiques",
+        "href": "/ca/informes-pericials/obres-publiques/",
+        "icon": "hard-hat",
+        "t": "Obra civil i infraestructura",
+        "d": "Dictàmens sobre viaductes, estructures de fàbrica, modificats de projecte i compliment LCSP."
+      },
+      {
+        "code": "2.5",
+        "slug": "reclamacio-mala-execucio",
+        "icon": "scale",
+        "t": "Valoració de danys",
+        "d": "Quantificació pericial del cost de reparació i del perjudici per a reclamació o judici."
+      },
+      {
+        "code": "2.6",
+        "slug": "contrainforme-pericial",
+        "icon": "file-check-2",
+        "t": "Contrainforme i ratificació",
+        "d": "Revisió crítica de dictàmens de la part contrària i compareixença en seu judicial."
+      }
     ]
   },
   "method": {
@@ -66,10 +120,26 @@
     "title": "De l'indici a la prova",
     "lede": "Un procediment documentat en cada fase. La traçabilitat és el que fa que un dictamen es sostingui.",
     "steps": [
-      { "n": "01", "t": "Inspecció", "d": "Visita tècnica documentada: mesuraments, assaigs i registre fotogràfic datat." },
-      { "n": "02", "t": "Anàlisi", "d": "Diagnòstic de la causa conforme a normativa (CTE, LOE, EHE) i a la lex artis." },
-      { "n": "03", "t": "Dictamen", "d": "Informe traçable amb conclusions fonamentades i valoració econòmica del dany." },
-      { "n": "04", "t": "Ratificació", "d": "Defensa del dictamen a sala, davant el jutge i la pericial contrària." }
+      {
+        "n": "01",
+        "t": "Inspecció",
+        "d": "Visita tècnica documentada: mesuraments, assaigs i registre fotogràfic datat."
+      },
+      {
+        "n": "02",
+        "t": "Anàlisi",
+        "d": "Diagnòstic de la causa conforme a normativa (CTE, LOE, EHE) i a la lex artis."
+      },
+      {
+        "n": "03",
+        "t": "Dictamen",
+        "d": "Informe traçable amb conclusions fonamentades i valoració econòmica del dany."
+      },
+      {
+        "n": "04",
+        "t": "Ratificació",
+        "d": "Defensa del dictamen a sala, davant el jutge i la pericial contrària."
+      }
     ]
   },
   "cases_section": {
@@ -77,36 +147,80 @@
     "title": "La prova, en xifres verificables",
     "lede": "Una selecció d'expedients recents. Els imports corresponen al dany peritat; els números d'expedient són reals al sistema intern del despatx.",
     "items": [
-      { "exp": "EXP. 22-074", "loc": "Barcelona", "t": "Defectes estructurals en promoció de 84 habitatges", "amount": "€2,84 M", "tag": "Ratificat" },
-      { "exp": "EXP. 23-119", "loc": "Girona", "t": "Filtracions a coberta d'equipament públic", "amount": "€640 K", "tag": "Acord" },
-      { "exp": "EXP. 24-058", "loc": "Tarragona", "t": "Vicis ocults en compravenda d'habitatge unifamiliar", "amount": "€118 K", "tag": "Ratificat" }
+      {
+        "exp": "EXP. 22-074",
+        "loc": "Barcelona",
+        "t": "Defectes estructurals en promoció de 84 habitatges",
+        "amount": "€2,84 M",
+        "tag": "Ratificat"
+      },
+      {
+        "exp": "EXP. 23-119",
+        "loc": "Girona",
+        "t": "Filtracions a coberta d'equipament públic",
+        "amount": "€640 K",
+        "tag": "Acord"
+      },
+      {
+        "exp": "EXP. 24-058",
+        "loc": "Tarragona",
+        "t": "Vicis ocults en compravenda d'habitatge unifamiliar",
+        "amount": "€118 K",
+        "tag": "Ratificat"
+      }
     ]
   },
   "about_section": {
     "eyebrow": "§ 05 · El perit",
     "title": "Enginyeria forense i experiència judicial",
     "lede": "Despatx tècnic dirigit per un enginyer civil col·legiat (ECCAT núm. 16448), perit judicial inscrit al Ministeri de Justícia i perit d'assegurances IRD. Disset anys d'experiència en enginyeria forense, amb més de 340 ratificacions en seu judicial.",
-    "tags": ["Enginyer civil · ECCAT 16448", "Perit judicial · Min. Justícia", "Perit d'assegurances · IRD", "Actuació a tota Espanya"],
+    "tags": [
+      "Enginyer civil · ECCAT 16448",
+      "Perit judicial · Min. Justícia",
+      "Perit d'assegurances · IRD",
+      "Actuació a tota Espanya"
+    ],
     "quote": "«La meva feina consisteix a documentar la causa de manera que el jutge pugui verificar-la per si mateix.»"
   },
   "experts_section": {
     "eyebrow": "§ 06 · Quadre d'experts",
     "title": "Sis matèries, sis procedències de l'aval",
-    "lede": "Quan la matèria controvertida excedeix la competència acreditada del perit signant, el dictamen incorpora un perit d'aquesta matèria, l'autoria del qual consta a l'informe. L'aval prové de la universitat, de la direcció d'obra, d'una especialitat instrumental, de la indústria ja desvinculada o de llistes d'altres col·legis: cap procedència no és subsidiària de les altres.",
-    "materias": ["Estructures i càlcul", "Geotècnia i fonamentació", "Edificació i habitabilitat", "Instal·lacions i procés industrial", "Materials i assaigs", "Obra pública i contracte"],
+    "lede": "Quan la matèria controvertida excedeix la competència acreditada del perit signant, el dictamen incorpora un especialista d'aquesta matèria. La seva autoria consta a l'informe quan signa; quan només aporta l'estudi, la responsabilitat del dictamen és de la direcció pericial. L'aval prové de la universitat, de la direcció d'obra, d'una especialitat instrumental, de la indústria ja desvinculada o de llistes d'altres col·legis: cap procedència no és subsidiària de les altres. I no cal signar el dictamen per aportar-hi: hi ha qui només fa l'estudi de la seva matèria.",
+    "materias": [
+      "Estructures i càlcul",
+      "Geotècnia i fonamentació",
+      "Edificació i habitabilitat",
+      "Instal·lacions i procés industrial",
+      "Materials i assaigs",
+      "Obra pública i contracte"
+    ],
     "cta": "Veure el quadre d'experts",
     "url": "/ca/quadre-experts/",
     "cta_alt": "Col·laborar com a perit signant",
-    "url_alt": "/ca/collaboracio-perits/"
+    "url_alt": "/ca/collaboracio-perits/",
+    "cta_alt2": "Col·laborar com a expert consultor",
+    "url_alt2": "/ca/collaboracio-experts/"
   },
   "faq": {
     "eyebrow": "§ 07 · Preguntes freqüents",
     "title": "Abans d'encarregar un dictamen",
     "items": [
-      { "q": "Quant costa un dictamen pericial?", "a": "Depèn de l'abast i la complexitat. Després d'una primera consulta sense cost rebràs un pressupost tancat per escrit abans d'iniciar qualsevol treball." },
-      { "q": "L'informe serveix davant un jutge o només davant la meva asseguradora?", "a": "Serveix per a ambdós. Cada dictamen es redacta conforme a la LEC i a la normativa tècnica aplicable, amb la traçabilitat necessària per ser ratificat en seu judicial." },
-      { "q": "Quant es tarda des que us contacto?", "a": "Entre dues i quatre setmanes des de la inspecció, segons el cas. Els terminis sempre s'acorden per escrit prèviament." },
-      { "q": "Actueu fora de Catalunya?", "a": "Sí. La seu és a Barcelona, però s'actua a tota Espanya, presencialment per a la inspecció i la ratificació." }
+      {
+        "q": "Quant costa un dictamen pericial?",
+        "a": "Depèn de l'abast i la complexitat. Després d'una primera consulta sense cost rebràs un pressupost tancat per escrit abans d'iniciar qualsevol treball."
+      },
+      {
+        "q": "L'informe serveix davant un jutge o només davant la meva asseguradora?",
+        "a": "Serveix per a ambdós. Cada dictamen es redacta conforme a la LEC i a la normativa tècnica aplicable, amb la traçabilitat necessària per ser ratificat en seu judicial."
+      },
+      {
+        "q": "Quant es tarda des que us contacto?",
+        "a": "Entre dues i quatre setmanes des de la inspecció, segons el cas. Els terminis sempre s'acorden per escrit prèviament."
+      },
+      {
+        "q": "Actueu fora de Catalunya?",
+        "a": "Sí. La seu és a Barcelona, però s'actua a tota Espanya, presencialment per a la inspecció i la ratificació."
+      }
     ]
   },
   "blog_section": {

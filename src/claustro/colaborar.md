@@ -29,6 +29,10 @@ bridge_text: "Página dirigida a peritos. Para consultar un perito por materia:"
 bridge_url: "/cuadro-de-expertos/"
 bridge_link: "Ver el cuadro de expertos →"
 
+bridge2_text: "¿Prefiere hacer sólo el estudio técnico de su materia, sin redactar el informe ni comparecer?"
+bridge2_url: "/colaboracion-expertos/"
+bridge2_link: "Colaborar como experto consultor →"
+
 expectations_eyebrow: "Condiciones del registro"
 expectations_title: "Disponibilidad real de encargos"
 expectations_body:
@@ -65,7 +69,7 @@ protocols:
       - "Compatible con cartera de clientes propia, sin exclusividad"
       - "Cobertura territorial fuera de Cataluña a través de listas de otros colegios"
       - "Desvinculación acreditada del fabricante, cuando el perfil procede de la industria"
-      - "Posibilidad de intervenir como asesor técnico sin firmar el dictamen"
+      - "Se puede empezar como experto consultor, sin firmar, y pasar a firmar más adelante"
     cta: "Darme de alta"
 
 body_blocks:
@@ -210,6 +214,10 @@ faq:
     a: "Se pactan caso por caso antes de aceptar el encargo, según alcance, complejidad técnica y previsión de ratificación en sala. La propuesta se recibe cerrada y por escrito: darse de alta no comporta compromiso previo."
   - q: "¿Es compatible con mi dedicación en la universidad?"
     a: "Depende del régimen de dedicación y, para el personal funcionario, de la Ley 53/1984 de incompatibilidades. La verificación corresponde a cada colaborador con su universidad."
+  - q: "¿Tengo que buscar clientes o negociar honorarios?"
+    a: "No. La captación del cliente, la negociación de honorarios y plazos, la instrucción del expediente y la facturación las asume el despacho. Su intervención empieza con el encargo ya definido y aceptado."
+  - q: "¿Debo firmar el dictamen y ratificarlo en sala?"
+    a: "En esta modalidad, sí: la firma es el núcleo de la colaboración pericial, y quien suscribe el dictamen es quien lo defiende. Si el procedimiento requiere ratificación, se pacta desde el inicio y se retribuye dentro del encargo (art. 347 LEC). Si prefiere aportar su criterio técnico sin firmar ni comparecer, la vía es el <a href=\"/colaboracion-expertos/\">registro de expertos consultores</a>."
   - q: "Vengo de un fabricante. ¿Es un problema para la independencia?"
     a: "Lo es si la vinculación sigue viva. Con la desvinculación acreditada, el conocimiento interno del sistema es un activo: permite evaluar prestaciones declaradas y equivalencias reales entre productos sin representar a ninguna marca."
   - q: "¿Qué pasa si el dictamen perjudica a quien lo encarga?"

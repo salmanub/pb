@@ -25,6 +25,24 @@ breadcrumb_parent:
 
 heroTitle: "Quadre<br>d'experts"
 
+# ── Dues maneres de participar (08/09/2026) ──────────────────────────────────
+modes_eyebrow: "Dues maneres de participar"
+modes_title: "No tothom que aporta coneixement ha d'anar a un judici"
+modes_lede: "En un dictamen hi ha dues feines diferents. Una és l'estudi tècnic d'una matèria concreta. L'altra és redactar l'informe, signar-lo i sostenir-lo davant d'un tribunal. Es poden fer totes dues, o només la primera."
+modes:
+  - ref: "§ COL. 01"
+    icon: "balanza"
+    name: "Perit col·laborador"
+    desc: "Assumeix l'encàrrec complet: estudia, redacta el dictamen, el signa i el ratifica a sala si el procediment ho requereix. La responsabilitat pericial és seva i els honoraris corresponen a l'encàrrec sencer."
+    cta: "Com col·laborar com a perit"
+    url: "/ca/collaboracio-perits/"
+  - ref: "§ COL. 02"
+    icon: "matraz"
+    name: "Expert consultor"
+    desc: "Fa l'estudi de la seva matèria i res més. El dictamen el redacta i el signa la direcció pericial, que és qui en respon i qui compareix. L'expert no redacta, no signa i no declara."
+    cta: "Com col·laborar com a expert"
+    url: "/ca/collaboracio-experts/"
+
 grid_eyebrow: "§ Matèries"
 grid_title: "Sis matèries, un criteri d'assignació"
 grid_lede: "L'expedient s'assigna a la matèria de la qual depèn la controvèrsia. Quan cap encaixa amb l'assumpte, l'encàrrec no s'accepta."
@@ -110,15 +128,17 @@ body_blocks:
   - h: "Quan s'incorpora un perit del quadre"
     p: "Quan la matèria controvertida exigeix un coneixement que la direcció pericial no pot acreditar per si mateixa: l'estat de l'art d'una disciplina, una campanya d'assaigs amb instrumentació específica o la pràctica d'un procediment constructiu concret. La incorporació es decideix per la matèria de l'assumpte, no per la disponibilitat del col·laborador."
   - h: "Com s'integra en el dictamen"
-    p: "La direcció pericial manté la interlocució amb el lletrat, la instrucció de l'expedient i la responsabilitat processal. El perit col·laborador intervé on el seu criteri és determinant —model de càlcul, campanya d'assaigs, interpretació de resultats— i redacta les conclusions tècniques del seu àmbit. Signa allò que subscriu i ho ratifica en sala conforme a l'article 347 LEC."
+    p: "La direcció pericial manté en tots els casos la interlocució amb el lletrat, la instrucció de l'expedient i la responsabilitat processal.<br><br><strong>El perit col·laborador</strong> intervé on el seu criteri és determinant —model de càlcul, campanya d'assaigs, interpretació de resultats— i redacta les conclusions tècniques del seu àmbit. Signa allò que subscriu i ho ratifica en sala conforme a l'article 347 LEC.<br><br><strong>L'expert consultor</strong> lliura l'estudi de la seva matèria i aquí acaba la seva intervenció. El dictamen el redacta i el signa la direcció pericial, que en respon i compareix si el procediment ho requereix. L'estudi s'incorpora com a annex, amb l'autoria de l'expert si ell l'autoritza."
   - h: "Què aporta davant el tribunal"
     p: "Un signant amb trajectòria documental —publicacions, col·legiació, anys de direcció d'obra acreditats, acreditació ENAC del laboratori— ofereix al tribunal un element verificable. Davant del contrainterrogatori, aquesta trajectòria és un fet, no una afirmació de part."
 
 band_eyebrow: "Col·laboració"
-band_title: "Alta al registre de perits col·laboradors"
-band_lede: "El registre admet perfil acadèmic i perfil professional en igualtat de condicions. Les condicions de col·laboració i la disponibilitat real d'encàrrecs consten a la pàgina d'alta."
+band_title: "Alta al registre de col·laboradors"
+band_lede: "El registre admet perfil acadèmic i perfil professional en igualtat de condicions, signi o no signi el dictamen. Les condicions de col·laboració i la disponibilitat real d'encàrrecs consten a cada pàgina d'alta."
 band_cta: "Col·laborar com a perit signant"
 band_url: "/ca/collaboracio-perits/"
+band_cta2: "Col·laborar com a expert consultor"
+band_url2: "/ca/collaboracio-experts/"
 
 qualLabel: "Assignació d'expedient"
 qualItems:

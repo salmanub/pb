@@ -9,10 +9,27 @@
     "badge_text": "Peritos judiciales y de seguros (IRD)"
   },
   "stats": [
-    { "value": "€2,8 M", "label": "Mayor importe peritado en un único dictamen", "source": "EXP. 22-074", "accent": true },
-    { "value": "340+", "label": "Dictámenes en edificación y obra civil", "source": "2009 – 2025" },
-    { "value": "100 %", "label": "Dictámenes ratificados en sede judicial", "source": "Sin impugnación pericial" },
-    { "value": "16 años", "label": "Colegiado ECCAT nº 16448", "source": "Ingeniería civil" }
+    {
+      "value": "€2,8 M",
+      "label": "Mayor importe peritado en un único dictamen",
+      "source": "EXP. 22-074",
+      "accent": true
+    },
+    {
+      "value": "340+",
+      "label": "Dictámenes en edificación y obra civil",
+      "source": "2009 – 2025"
+    },
+    {
+      "value": "100 %",
+      "label": "Dictámenes ratificados en sede judicial",
+      "source": "Sin impugnación pericial"
+    },
+    {
+      "value": "16 años",
+      "label": "Colegiado ECCAT nº 16448",
+      "source": "Ingeniería civil"
+    }
   ],
   "audience": {
     "eyebrow": "§ 01 · A quién acompañamos",
@@ -53,12 +70,49 @@
     "servicio_label": "Servicio",
     "view_all": "Ver todos los dictámenes",
     "items": [
-      { "code": "2.1", "slug": "patologias-estructurales", "icon": "building-2", "t": "Patología de la edificación", "d": "Grietas, fisuras, asentamientos y daños estructurales. Causa, alcance y responsabilidad." },
-      { "code": "2.2", "slug": "vicios-ocultos", "icon": "house", "t": "Vicios ocultos", "d": "Defectos no aparentes en compraventa o tras la entrega de obra nueva. Art. 1.484 CC y LOE." },
-      { "code": "2.3", "slug": "humedades-filtraciones", "icon": "droplets", "t": "Humedades y filtraciones", "d": "Origen real de la humedad, no el síntoma. Diagnóstico instrumental y solución valorada." },
-      { "code": "2.4", "slug": "obras-publicas", "href": "/obras-publicas/", "icon": "hard-hat", "t": "Obra civil e infraestructura", "d": "Dictámenes sobre viaductos, estructuras de fábrica, modificados de proyecto, liquidación de contrato y cumplimiento LCSP." },
-      { "code": "2.5", "slug": "reclamacion-mala-ejecucion", "icon": "scale", "t": "Valoración de daños", "d": "Cuantificación pericial del coste de reparación y del perjuicio para reclamación o juicio." },
-      { "code": "2.6", "slug": "contrainforme-pericial", "icon": "file-check-2", "t": "Contrainforme y ratificación", "d": "Revisión crítica de dictámenes de la parte contraria y comparecencia en sede judicial." }
+      {
+        "code": "2.1",
+        "slug": "patologias-estructurales",
+        "icon": "building-2",
+        "t": "Patología de la edificación",
+        "d": "Grietas, fisuras, asentamientos y daños estructurales. Causa, alcance y responsabilidad."
+      },
+      {
+        "code": "2.2",
+        "slug": "vicios-ocultos",
+        "icon": "house",
+        "t": "Vicios ocultos",
+        "d": "Defectos no aparentes en compraventa o tras la entrega de obra nueva. Art. 1.484 CC y LOE."
+      },
+      {
+        "code": "2.3",
+        "slug": "humedades-filtraciones",
+        "icon": "droplets",
+        "t": "Humedades y filtraciones",
+        "d": "Origen real de la humedad, no el síntoma. Diagnóstico instrumental y solución valorada."
+      },
+      {
+        "code": "2.4",
+        "slug": "obras-publicas",
+        "href": "/obras-publicas/",
+        "icon": "hard-hat",
+        "t": "Obra civil e infraestructura",
+        "d": "Dictámenes sobre viaductos, estructuras de fábrica, modificados de proyecto, liquidación de contrato y cumplimiento LCSP."
+      },
+      {
+        "code": "2.5",
+        "slug": "reclamacion-mala-ejecucion",
+        "icon": "scale",
+        "t": "Valoración de daños",
+        "d": "Cuantificación pericial del coste de reparación y del perjuicio para reclamación o juicio."
+      },
+      {
+        "code": "2.6",
+        "slug": "contrainforme-pericial",
+        "icon": "file-check-2",
+        "t": "Contrainforme y ratificación",
+        "d": "Revisión crítica de dictámenes de la parte contraria y comparecencia en sede judicial."
+      }
     ]
   },
   "method": {
@@ -66,10 +120,26 @@
     "title": "Del indicio a la prueba",
     "lede": "Un procedimiento documentado en cada fase. La trazabilidad es lo que hace que un dictamen se sostenga.",
     "steps": [
-      { "n": "01", "t": "Inspección", "d": "Visita técnica documentada: mediciones, ensayos y registro fotográfico fechado." },
-      { "n": "02", "t": "Análisis", "d": "Diagnóstico de la causa conforme a normativa (CTE, LOE, EHE) y a la lex artis." },
-      { "n": "03", "t": "Dictamen", "d": "Informe trazable con conclusiones fundadas y valoración económica del daño." },
-      { "n": "04", "t": "Ratificación", "d": "Defensa del dictamen en sala, frente al juez y a la pericial contraria." }
+      {
+        "n": "01",
+        "t": "Inspección",
+        "d": "Visita técnica documentada: mediciones, ensayos y registro fotográfico fechado."
+      },
+      {
+        "n": "02",
+        "t": "Análisis",
+        "d": "Diagnóstico de la causa conforme a normativa (CTE, LOE, EHE) y a la lex artis."
+      },
+      {
+        "n": "03",
+        "t": "Dictamen",
+        "d": "Informe trazable con conclusiones fundadas y valoración económica del daño."
+      },
+      {
+        "n": "04",
+        "t": "Ratificación",
+        "d": "Defensa del dictamen en sala, frente al juez y a la pericial contraria."
+      }
     ]
   },
   "cases_section": {
@@ -77,36 +147,80 @@
     "title": "La prueba, en cifras verificables",
     "lede": "Una selección de expedientes recientes. Los importes corresponden al daño peritado; los números de expediente son reales en el sistema interno del despacho.",
     "items": [
-      { "exp": "EXP. 22-074", "loc": "Barcelona", "t": "Defectos estructurales en promoción de 84 viviendas", "amount": "€2,84 M", "tag": "Ratificado" },
-      { "exp": "EXP. 23-119", "loc": "Girona", "t": "Filtraciones en cubierta de equipamiento público", "amount": "€640 K", "tag": "Acuerdo" },
-      { "exp": "EXP. 24-058", "loc": "Tarragona", "t": "Vicios ocultos tras compraventa de vivienda unifamiliar", "amount": "€118 K", "tag": "Ratificado" }
+      {
+        "exp": "EXP. 22-074",
+        "loc": "Barcelona",
+        "t": "Defectos estructurales en promoción de 84 viviendas",
+        "amount": "€2,84 M",
+        "tag": "Ratificado"
+      },
+      {
+        "exp": "EXP. 23-119",
+        "loc": "Girona",
+        "t": "Filtraciones en cubierta de equipamiento público",
+        "amount": "€640 K",
+        "tag": "Acuerdo"
+      },
+      {
+        "exp": "EXP. 24-058",
+        "loc": "Tarragona",
+        "t": "Vicios ocultos tras compraventa de vivienda unifamiliar",
+        "amount": "€118 K",
+        "tag": "Ratificado"
+      }
     ]
   },
   "about_section": {
     "eyebrow": "§ 05 · El perito",
     "title": "Ingeniería forense y experiencia judicial",
     "lede": "Despacho técnico dirigido por un ingeniero civil colegiado (ECCAT nº 16448), perito judicial inscrito en el Ministerio de Justicia y perito de seguros IRD. Diecisiete años de experiencia en ingeniería forense, con más de 340 ratificaciones en sede judicial.",
-    "tags": ["Ingeniero civil · ECCAT 16448", "Perito judicial · Min. Justicia", "Perito de seguros · IRD", "Actuación en toda España"],
+    "tags": [
+      "Ingeniero civil · ECCAT 16448",
+      "Perito judicial · Min. Justicia",
+      "Perito de seguros · IRD",
+      "Actuación en toda España"
+    ],
     "quote": "«Mi trabajo consiste en documentar la causa de forma que el juez pueda verificarla por sí mismo.»"
   },
   "experts_section": {
     "eyebrow": "§ 06 · Cuadro de expertos",
     "title": "Seis materias, seis procedencias del aval",
-    "lede": "Cuando la materia controvertida excede la competencia acreditada del perito firmante, el dictamen incorpora a un perito de esa materia, cuya autoría consta en el informe. El aval procede de la universidad, de la dirección de obra, de una especialidad instrumental, de la industria ya desvinculada o de listas de otros colegios: ninguna procedencia es subsidiaria de las demás.",
-    "materias": ["Estructuras y cálculo", "Geotecnia y cimentación", "Edificación y habitabilidad", "Instalaciones y proceso industrial", "Materiales y ensayos", "Obra pública y contrato"],
+    "lede": "Cuando la materia controvertida excede la competencia acreditada del perito firmante, el dictamen incorpora a un especialista de esa materia. Su autoría consta en el informe cuando firma; cuando sólo aporta el estudio, la responsabilidad del dictamen es de la dirección pericial. El aval procede de la universidad, de la dirección de obra, de una especialidad instrumental, de la industria ya desvinculada o de listas de otros colegios: ninguna procedencia es subsidiaria de las demás. Y no hace falta firmar el dictamen para aportar: hay quien sólo hace el estudio de su materia.",
+    "materias": [
+      "Estructuras y cálculo",
+      "Geotecnia y cimentación",
+      "Edificación y habitabilidad",
+      "Instalaciones y proceso industrial",
+      "Materiales y ensayos",
+      "Obra pública y contrato"
+    ],
     "cta": "Ver el cuadro de expertos",
     "url": "/cuadro-de-expertos/",
     "cta_alt": "Colaborar como perito firmante",
-    "url_alt": "/colaboracion-peritos/"
+    "url_alt": "/colaboracion-peritos/",
+    "cta_alt2": "Colaborar como experto consultor",
+    "url_alt2": "/colaboracion-expertos/"
   },
   "faq": {
     "eyebrow": "§ 07 · Preguntas frecuentes",
     "title": "Antes de encargar un dictamen",
     "items": [
-      { "q": "¿Cuánto cuesta un dictamen pericial?", "a": "Depende del alcance y la complejidad. Tras una primera consulta sin coste recibirás un presupuesto cerrado por escrito antes de iniciar cualquier trabajo." },
-      { "q": "¿El informe sirve ante un juez o solo ante mi aseguradora?", "a": "Sirve para ambos. Cada dictamen se redacta conforme a la LEC y a la normativa técnica aplicable, con la trazabilidad necesaria para ser ratificado en sede judicial." },
-      { "q": "¿Cuánto se tarda desde que os contacto?", "a": "Entre dos y cuatro semanas desde la inspección, según el caso. Los plazos siempre se acuerdan por escrito de antemano." },
-      { "q": "¿Actuáis fuera de Cataluña?", "a": "Sí. La sede está en Barcelona, pero se actúa en toda España, presencialmente para la inspección y la ratificación." }
+      {
+        "q": "¿Cuánto cuesta un dictamen pericial?",
+        "a": "Depende del alcance y la complejidad. Tras una primera consulta sin coste recibirás un presupuesto cerrado por escrito antes de iniciar cualquier trabajo."
+      },
+      {
+        "q": "¿El informe sirve ante un juez o solo ante mi aseguradora?",
+        "a": "Sirve para ambos. Cada dictamen se redacta conforme a la LEC y a la normativa técnica aplicable, con la trazabilidad necesaria para ser ratificado en sede judicial."
+      },
+      {
+        "q": "¿Cuánto se tarda desde que os contacto?",
+        "a": "Entre dos y cuatro semanas desde la inspección, según el caso. Los plazos siempre se acuerdan por escrito de antemano."
+      },
+      {
+        "q": "¿Actuáis fuera de Cataluña?",
+        "a": "Sí. La sede está en Barcelona, pero se actúa en toda España, presencialmente para la inspección y la ratificación."
+      }
     ]
   },
   "blog_section": {

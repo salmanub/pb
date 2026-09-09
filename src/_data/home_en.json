@@ -9,10 +9,27 @@
     "badge_text": "Court-appointed and insurance experts (IRD)"
   },
   "stats": [
-    { "value": "€2.8 M", "label": "Largest single-report amount assessed", "source": "FILE 22-074", "accent": true },
-    { "value": "340+", "label": "Reports on building and civil engineering", "source": "2009 – 2025" },
-    { "value": "100 %", "label": "Reports ratified in court", "source": "No expert challenges" },
-    { "value": "16 years", "label": "ECCAT Member No. 16448", "source": "Civil engineering" }
+    {
+      "value": "€2.8 M",
+      "label": "Largest single-report amount assessed",
+      "source": "FILE 22-074",
+      "accent": true
+    },
+    {
+      "value": "340+",
+      "label": "Reports on building and civil engineering",
+      "source": "2009 – 2025"
+    },
+    {
+      "value": "100 %",
+      "label": "Reports ratified in court",
+      "source": "No expert challenges"
+    },
+    {
+      "value": "16 years",
+      "label": "ECCAT Member No. 16448",
+      "source": "Civil engineering"
+    }
   ],
   "audience": {
     "eyebrow": "§ 01 · Who we serve",
@@ -53,12 +70,49 @@
     "servicio_label": "Service",
     "view_all": "View all expert reports",
     "items": [
-      { "code": "2.1", "slug": "structural-pathologies", "icon": "building-2", "t": "Building pathology", "d": "Cracks, settlements and structural damage. Cause, scope and liability." },
-      { "code": "2.2", "slug": "hidden-defects", "icon": "house", "t": "Hidden defects", "d": "Non-apparent defects in property sales or after new-build handover." },
-      { "code": "2.3", "slug": "moisture-water-leakage", "icon": "droplets", "t": "Damp and leaks", "d": "The real source of moisture, not just the symptom. Instrumental diagnosis and costed solution." },
-      { "code": "2.4", "slug": "public-works", "href": "/en/expert-witness-reports/public-works/", "icon": "hard-hat", "t": "Civil works & infrastructure", "d": "Reports on bridges, masonry structures, project modifications and public procurement compliance." },
-      { "code": "2.5", "slug": "poor-execution-claim", "icon": "scale", "t": "Damage assessment", "d": "Expert quantification of repair costs and loss for claims or litigation." },
-      { "code": "2.6", "slug": "counter-report", "icon": "file-check-2", "t": "Counter-report & ratification", "d": "Critical review of opposing expert reports and court appearance." }
+      {
+        "code": "2.1",
+        "slug": "structural-pathologies",
+        "icon": "building-2",
+        "t": "Building pathology",
+        "d": "Cracks, settlements and structural damage. Cause, scope and liability."
+      },
+      {
+        "code": "2.2",
+        "slug": "hidden-defects",
+        "icon": "house",
+        "t": "Hidden defects",
+        "d": "Non-apparent defects in property sales or after new-build handover."
+      },
+      {
+        "code": "2.3",
+        "slug": "moisture-water-leakage",
+        "icon": "droplets",
+        "t": "Damp and leaks",
+        "d": "The real source of moisture, not just the symptom. Instrumental diagnosis and costed solution."
+      },
+      {
+        "code": "2.4",
+        "slug": "public-works",
+        "href": "/en/expert-witness-reports/public-works/",
+        "icon": "hard-hat",
+        "t": "Civil works & infrastructure",
+        "d": "Reports on bridges, masonry structures, project modifications and public procurement compliance."
+      },
+      {
+        "code": "2.5",
+        "slug": "poor-execution-claim",
+        "icon": "scale",
+        "t": "Damage assessment",
+        "d": "Expert quantification of repair costs and loss for claims or litigation."
+      },
+      {
+        "code": "2.6",
+        "slug": "counter-report",
+        "icon": "file-check-2",
+        "t": "Counter-report & ratification",
+        "d": "Critical review of opposing expert reports and court appearance."
+      }
     ]
   },
   "method": {
@@ -66,10 +120,26 @@
     "title": "From clue to evidence",
     "lede": "A documented procedure at every stage. Traceability is what makes a report stand up.",
     "steps": [
-      { "n": "01", "t": "Inspection", "d": "Documented site visit: measurements, tests and dated photographic record." },
-      { "n": "02", "t": "Analysis", "d": "Root-cause diagnosis under applicable standards (CTE, LOE, EHE) and best practice." },
-      { "n": "03", "t": "Report", "d": "Traceable report with reasoned conclusions and economic damage assessment." },
-      { "n": "04", "t": "Ratification", "d": "Defence of the report in court, before the judge and opposing experts." }
+      {
+        "n": "01",
+        "t": "Inspection",
+        "d": "Documented site visit: measurements, tests and dated photographic record."
+      },
+      {
+        "n": "02",
+        "t": "Analysis",
+        "d": "Root-cause diagnosis under applicable standards (CTE, LOE, EHE) and best practice."
+      },
+      {
+        "n": "03",
+        "t": "Report",
+        "d": "Traceable report with reasoned conclusions and economic damage assessment."
+      },
+      {
+        "n": "04",
+        "t": "Ratification",
+        "d": "Defence of the report in court, before the judge and opposing experts."
+      }
     ]
   },
   "cases_section": {
@@ -77,36 +147,80 @@
     "title": "The evidence, in verifiable figures",
     "lede": "A selection of recent files. Amounts refer to the assessed damage; file numbers are real references in the firm's internal system.",
     "items": [
-      { "exp": "FILE 22-074", "loc": "Barcelona", "t": "Structural defects in 84-unit residential development", "amount": "€2.84 M", "tag": "Ratified" },
-      { "exp": "FILE 23-119", "loc": "Girona", "t": "Roof leaks in public facility", "amount": "€640 K", "tag": "Settlement" },
-      { "exp": "FILE 24-058", "loc": "Tarragona", "t": "Hidden defects after single-family home sale", "amount": "€118 K", "tag": "Ratified" }
+      {
+        "exp": "FILE 22-074",
+        "loc": "Barcelona",
+        "t": "Structural defects in 84-unit residential development",
+        "amount": "€2.84 M",
+        "tag": "Ratified"
+      },
+      {
+        "exp": "FILE 23-119",
+        "loc": "Girona",
+        "t": "Roof leaks in public facility",
+        "amount": "€640 K",
+        "tag": "Settlement"
+      },
+      {
+        "exp": "FILE 24-058",
+        "loc": "Tarragona",
+        "t": "Hidden defects after single-family home sale",
+        "amount": "€118 K",
+        "tag": "Ratified"
+      }
     ]
   },
   "about_section": {
     "eyebrow": "§ 05 · The expert",
     "title": "Forensic engineering and courtroom experience",
     "lede": "A technical practice led by a chartered civil engineer (ECCAT No. 16448), court-appointed expert witness registered with the Ministry of Justice and insurance expert (IRD). Seventeen years of forensic engineering experience, with over 340 court ratifications.",
-    "tags": ["Civil engineer · ECCAT 16448", "Court expert · Min. of Justice", "Insurance expert · IRD", "Operating throughout Spain"],
+    "tags": [
+      "Civil engineer · ECCAT 16448",
+      "Court expert · Min. of Justice",
+      "Insurance expert · IRD",
+      "Operating throughout Spain"
+    ],
     "quote": "\"My job is to document the cause in a way that the judge can verify it independently.\""
   },
   "experts_section": {
     "eyebrow": "§ 06 · Expert panel",
     "title": "Six subjects, six origins of standing",
-    "lede": "Where the disputed subject exceeds the signing expert's accredited competence, the report brings in an expert in that subject, attributed as author within the report. Standing comes from the university, from site management, from an instrumental specialism, from industry already left behind, or from the lists of other professional bodies: no origin is subsidiary to the others.",
-    "materias": ["Structures and calculation", "Geotechnics and foundations", "Building and habitability", "Services and industrial process", "Materials and testing", "Public works and contract"],
+    "lede": "Where the disputed subject exceeds the signing expert's accredited competence, the report brings in a specialist in that subject. They are credited as author when they sign; when they only contribute the study, responsibility for the report stays with the forensic lead. Standing comes from the university, from site management, from an instrumental specialism, from industry already left behind, or from the lists of other professional bodies: no origin is subsidiary to the others. And signing the report is not a condition of contributing: some only carry out the study in their field.",
+    "materias": [
+      "Structures and calculation",
+      "Geotechnics and foundations",
+      "Building and habitability",
+      "Services and industrial process",
+      "Materials and testing",
+      "Public works and contract"
+    ],
     "cta": "View the expert panel",
     "url": "/en/expert-panel/",
     "cta_alt": "Collaborate as a signing expert",
-    "url_alt": "/en/expert-collaboration/"
+    "url_alt": "/en/expert-collaboration/",
+    "cta_alt2": "Collaborate as a specialist consultant",
+    "url_alt2": "/en/specialist-collaboration/"
   },
   "faq": {
     "eyebrow": "§ 07 · Frequently asked questions",
     "title": "Before commissioning a report",
     "items": [
-      { "q": "How much does an expert report cost?", "a": "It depends on the scope and complexity. After a free initial consultation you will receive a fixed written quote before any work begins." },
-      { "q": "Does the report work in court or only with my insurer?", "a": "Both. Every report is drafted under the Spanish Civil Procedure Act and applicable technical standards, with the traceability required for judicial ratification." },
-      { "q": "How long does it take from first contact?", "a": "Between two and four weeks from inspection, depending on the case. Deadlines are always agreed in writing beforehand." },
-      { "q": "Do you operate outside Catalonia?", "a": "Yes. The firm is based in Barcelona but we operate throughout Spain, attending in person for inspections and court appearances." }
+      {
+        "q": "How much does an expert report cost?",
+        "a": "It depends on the scope and complexity. After a free initial consultation you will receive a fixed written quote before any work begins."
+      },
+      {
+        "q": "Does the report work in court or only with my insurer?",
+        "a": "Both. Every report is drafted under the Spanish Civil Procedure Act and applicable technical standards, with the traceability required for judicial ratification."
+      },
+      {
+        "q": "How long does it take from first contact?",
+        "a": "Between two and four weeks from inspection, depending on the case. Deadlines are always agreed in writing beforehand."
+      },
+      {
+        "q": "Do you operate outside Catalonia?",
+        "a": "Yes. The firm is based in Barcelona but we operate throughout Spain, attending in person for inspections and court appearances."
+      }
     ]
   },
   "blog_section": {

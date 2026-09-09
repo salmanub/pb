@@ -1,63 +1,212 @@
 {#
-  form-colaborador.njk — Formulario guiado de alta de perito colaborador.
+  form-colaborador.njk — Asistente de alta de colaborador, ZERO-JS (AGENTES §5.6).
 
-  Reutiliza el patrón de wizard ya existente en /contacto/profesional/ y
-  /contacto/particular/ (mismo chasis visual: cabecera mono + barra de progreso
-  + cuerpo de pasos + pie), pero el motor vive en un único fichero compartido:
-  src/assets/js/intake-colaborador.js — así no se duplica por idioma.
+  ⚠️ RECONSTRUIDO EL 08/09/2026. Este fichero había vuelto a la versión antigua
+  basada en JS (un <div id="colab-body"> vacío que rellenaba
+  /assets/js/intake-colaborador.js, hoy un stub marcado OBSOLETO). El árbol de
+  trabajo coincidía con el índice de git, así que la reescritura zero-JS era un
+  cambio sin guardar que se descartó: no estaba en ningún commit. Se ha
+  reconstruido a partir del HTML de `dist/colaboracion-peritos/index.html`, que
+  sí la contenía, y de las páginas en producción. Si aparece el original en
+  algún stash, compárense antes de descartar cualquiera de los dos.
 
-  Envía a la MISMA Pages Function que el resto de formularios del sitio
-  (/api/contacto), con origen `perito-alta-colaborador` para poder segmentar
-  en el CRM sin tocar la function.
+  ── CÓMO FUNCIONA SIN JAVASCRIPT ────────────────────────────────────────────
+  Los pasos son <section class="colab-step"> dentro de un único <form>, y la
+  navegación son anclas `#colab-pN`. El CSS hace el resto:
+
+    · `.colab-step:target ~ .colab-step` oculta todo lo posterior al paso activo
+      y `:has(~ .colab-step:target)` todo lo anterior. Sin `:target` (primera
+      carga) se muestra sólo el primero.
+    · La puerta de avance es `:has(:invalid)`: mientras el paso tenga un control
+      inválido, el enlace «Continuar» se oculta y en su lugar aparece un botón
+      deshabilitado con la pista. No es decorativo — evita que se llegue al
+      submit con un `required` dentro de un paso oculto, que el navegador
+      cancela sin mensaje visible.
+
+  Todos los campos viven en el DOM desde el principio: el POST nativo los envía
+  todos aunque su paso esté oculto, y por eso funciona sin JS. El <script> del
+  final es MEJORA PROGRESIVA: sustituye la navegación por un fetch para poder
+  pintar «enviando» y, sobre todo, para distinguir «entregado al CRM» de «no
+  entregado» — el POST nativo redirige igual de silencioso en los dos casos.
+
+  Envía a /api/contacto con `origen` distinto por página, para segmentar en el
+  CRM sin tocar la Function.
 
   AGENTES §5.1 — cero texto hardcodeado: toda la copia llega del frontmatter.
 
-  Variables esperadas en frontmatter:
-    form_eyebrow            — etiqueta mono de la cabecera de la tarjeta
-    form_labels             — objeto con las etiquetas de UI del motor
-    form_steps              — array de pasos ({key, eyebrow, question, helper, type, options|fields})
+  Variables esperadas:
+    form_eyebrow · form_origen · form_redirect · form_redirect_error
+    form_labels{next,back,step_hint,submit,optional,required_note,honeypot,
+                sending,sent_title,sent_text,error_title,error_text,
+                error_email,error_call,retry}
+    form_consent{text,link_label,url}
+    form_steps[] — {key, eyebrow, question, helper, type:'choice'|'fields',
+                    options[] | fields[{name,label,type,placeholder,autocomplete,
+                                        required,multiline,rows,note}]}
+    form_id — id del embudo GA4 (docs/GA4-FUNNEL.md). Por defecto «colaborador».
 #}
-{# form_id del embudo GA4. Este asistente no tiene <form>: intake-colaborador.js pinta
-   cada paso dentro de #colab-body después de cargar, así que el identificador va en la
-   tarjeta que sí existe al parsear el HTML. components/ga-funnel.njk delega los eventos
-   en document y resuelve el formulario con closest('form,[data-form-id]'), de modo que
-   los campos inyectados más tarde se miden igual, sin MutationObserver.
-   PENDIENTE (no es de este agente): intake-colaborador.js no dispara ningún evento
-   nativo de submit. Para tener form_submit y generate_lead de este formulario hay que
-   añadir una línea en su rama de envío — window.pbFormSubmit && window.pbFormSubmit('colaborador').
-   Mientras tanto sí se miden form_view, form_start, form_field_complete, form_error y
-   form_abandon, y el lead se confirma en /gracias/, adonde redirige el motor. #}
-<div data-form-id="colaborador" style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;">
+{% set _pasos = form_steps | length %}
+<style>.colab-wiz .colab-step{display:block;scroll-margin-top:112px}
+.colab-wiz .colab-step:target ~ .colab-step{display:none}
+.colab-wiz .colab-step:has(~ .colab-step:target){display:none}
+.colab-wiz:not(:has(.colab-step:target)) .colab-step + .colab-step{display:none}
+.colab-wiz .colab-next{display:inline-flex}
+.colab-wiz .colab-next-off,.colab-wiz .colab-hint{display:none}
+.colab-wiz .colab-step:has(:invalid) .colab-next{display:none}
+.colab-wiz .colab-step:has(:invalid) .colab-next-off{display:inline-flex}
+.colab-wiz .colab-step:has(:invalid) .colab-hint{display:inline}
+.colab-wiz .colab-back{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-sans);font-size:0.85rem;font-weight:var(--fw-medium);color:var(--text-muted);text-decoration:none;border-bottom:1px solid transparent;flex-shrink:0}
+.colab-wiz .colab-back:hover{color:var(--text-accent);border-bottom-color:var(--accent)}
+.colab-wiz .colab-opt{display:flex;align-items:center;gap:11px;padding:13px 15px;border:1px solid var(--border-hairline);border-radius:var(--radius-sm);cursor:pointer;font-size:0.9rem;line-height:1.45;color:var(--text-body);background:var(--surface-card);transition:border-color .2s ease,background-color .2s ease}
+.colab-wiz .colab-opt:hover{border-color:var(--accent)}
+.colab-wiz .colab-opt:has(input:checked){border-color:var(--accent);background:var(--surface-tint)}
+.colab-wiz .colab-opt input{accent-color:var(--accent);width:16px;height:16px;flex-shrink:0}
+.colab-wiz .colab-in{width:100%;padding:12px 14px;font-family:var(--font-sans);font-size:var(--fs-body);border:1px solid var(--border-hairline);border-radius:var(--radius-sm);background:var(--surface-card);color:var(--text-body);transition:border-color .2s ease}
+.colab-wiz .colab-in:focus{outline:none;border-color:var(--accent)}
+.colab-wiz textarea.colab-in{resize:vertical;line-height:1.6}
+.colab-wiz .colab-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.colab-wiz [hidden]{display:none}
+.colab-wiz .colab-panel{padding:44px 24px 48px;text-align:center}
+.colab-wiz .colab-spin{width:34px;height:34px;margin:0 auto;border:3px solid var(--border-hairline);border-top-color:var(--accent);border-radius:50%;animation:colabSpin .8s linear infinite}
+@keyframes colabSpin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.colab-wiz .colab-spin{animation-duration:2.4s}}
+.colab-wiz .colab-panel h3{font-family:var(--font-serif);font-size:var(--fs-h3);font-weight:500;color:var(--text-strong);margin:16px 0 0;line-height:1.3}
+.colab-wiz .colab-panel p{margin:10px auto 0;max-width:44ch;font-size:0.9rem;line-height:1.65;color:var(--text-muted)}
+.colab-wiz .colab-via{display:flex;align-items:center;gap:11px;padding:13px 16px;border-radius:var(--radius-sm);border:1px solid var(--border-hairline);background:var(--surface-raised,#fff);text-decoration:none;font-family:var(--font-sans);font-size:0.88rem;font-weight:var(--fw-semibold);color:var(--text-strong);text-align:left}
+.colab-wiz .colab-via:hover{border-color:var(--accent)}</style>
+<div class="colab-wiz" id="colab-wiz" style="border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); overflow: hidden;"><form action="/api/contacto" method="POST" style="margin: 0;" id="colab-form" data-form-id="{{ form_id | default('colaborador') }}"><input type="hidden" name="lang" value="{{ lang | default('es') }}"> <input type="hidden" name="origen" value="{{ form_origen }}"> <input type="hidden" name="source" value="perito.barcelona"> <input type="hidden" name="redirect" value="{{ form_redirect | default('/gracias/') }}"> <input type="hidden" name="redirect_error" value="{{ form_redirect_error | default('/contacto/') }}"><p class="colab-hp" aria-hidden="true"><label for="colab-website">{{ form_labels.honeypot }}</label><input id="colab-website" name="website" tabindex="-1" autocomplete="off"></p>
+{%- for paso in form_steps %}
+<section class="colab-step" id="colab-p{{ loop.index }}" aria-label="{{ paso.eyebrow }}"><div style="padding: 18px 24px 0;"><div style="display: flex; align-items: center; justify-content: space-between; gap: 16px;"><span style="font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);">{{ form_eyebrow }}</span> <span style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; color: var(--text-faint);">{{ '%02d' | format(loop.index) }} {{ form_labels.progress | default('/') }} {{ '%02d' | format(_pasos) }}</span></div><div style="height: 2px; background: var(--stone-250, #d6d3cd); margin-top: 14px; border-radius: 1px; overflow: hidden;"><div style="height: 100%; width: {{ (100 * loop.index / _pasos) | round }}%; background: var(--accent);"></div></div></div><div style="padding: 26px 24px 8px;"><div style="font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-accent); margin-bottom: 10px;">{{ paso.eyebrow }}</div><h3 style="font-family: var(--font-serif); font-size: var(--fs-h3); font-weight: 500; color: var(--text-strong); margin: 0 0 8px; line-height: 1.3;">{{ paso.question }}</h3>{% if paso.helper %}<p style="margin: 0 0 20px; font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); max-width: 56ch;">{{ paso.helper }}</p>{% endif %}
+{%- if paso.type == "choice" %}
+<div style="display: flex; flex-direction: column; gap: 9px;">{% for op in paso.options %}<label class="colab-opt"><input type="radio" name="{{ paso.key }}" value="{{ op }}" required>{{ op }}</label> {% endfor %}</div>
+{%- else %}
+<div style="display: flex; flex-direction: column; gap: 16px;">{% for f in paso.fields %}<div><label for="colab-{{ f.name }}" style="display: block; font-size: var(--fs-body-sm, 0.85rem); font-weight: var(--fw-medium); color: var(--text-strong); margin-bottom: 6px;">{{ f.label }}{% if not f.required %} <span style="color: var(--text-faint); font-weight: 400;">{{ form_labels.optional }}</span>{% endif %}</label> {% if f.multiline %}<textarea class="colab-in" id="colab-{{ f.name }}" name="{{ f.name }}" rows="{{ f.rows | default(4) }}" placeholder="{{ f.placeholder }}"{% if f.required %} required{% endif %}></textarea>{% else %}<input class="colab-in"{% if f.type %} type="{{ f.type }}"{% endif %} id="colab-{{ f.name }}" name="{{ f.name }}" placeholder="{{ f.placeholder }}"{% if f.autocomplete %} autocomplete="{{ f.autocomplete }}"{% endif %}{% if f.required %} required{% endif %}>{% endif %}{% if f.note %}<p style="margin: 6px 0 0; font-size: 0.78rem; line-height: 1.55; color: var(--text-faint);">{{ f.note }}</p>{% endif %}</div>{% endfor %}</div>
+{%- endif %}
+{%- if loop.last and form_consent %}
+<label style="display: flex; align-items: flex-start; gap: 10px; margin-top: 20px; font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); cursor: pointer;"><input type="checkbox" name="privacidad" value="1" required style="accent-color: var(--accent); margin-top: 3px; width: 16px; height: 16px; flex-shrink: 0;"><span>{{ form_consent.text }} <a href="{{ form_consent.url }}" style="color: var(--text-accent); text-decoration: underline;">{{ form_consent.link_label }}</a>.</span></label>
+{%- endif %}
+</div><div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 24px 22px; border-top: 1px solid var(--border-subtle); margin-top: 8px;"><div style="display: flex; align-items: center; gap: 14px; min-width: 0;">{% if not loop.first %}<a class="colab-back" href="#colab-p{{ loop.index - 1 }}"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>{{ form_labels.back }}</a> {% endif %}<span style="font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); line-height: 1.4;">{% if loop.last %}{{ form_labels.required_note }}{% else %}<span class="colab-hint">{{ form_labels.step_hint }}</span>{% endif %}</span></div>{% if loop.last %}<button type="submit" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; font-family: var(--font-sans); font-size: 0.9375rem; font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid transparent; background: var(--accent); color: var(--accent-on); cursor: pointer; flex-shrink: 0;">{{ form_labels.submit }}<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>{% else %}<a class="colab-next" href="#colab-p{{ loop.index + 1 }}" style="align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; font-family: var(--font-sans); font-size: 0.9375rem; font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid transparent; background: var(--accent); color: var(--accent-on); text-decoration: none; flex-shrink: 0;">{{ form_labels.next }}<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a><button type="button" class="colab-next-off" disabled="disabled" tabindex="-1" aria-hidden="true" style="align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; font-family: var(--font-sans); font-size: 0.9375rem; font-weight: var(--fw-semibold); line-height: 1; border-radius: var(--radius-sm); border: 1.5px solid var(--border-hairline); background: var(--surface-muted); color: var(--text-faint); cursor: not-allowed; flex-shrink: 0;">{{ form_labels.next }}<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>{% endif %}</div></section>
+{%- endfor %}
+</form><div class="colab-panel" id="colab-enviando" role="status" aria-live="polite" hidden><div class="colab-spin" aria-hidden="true"></div><h3>{{ form_labels.sending }}</h3></div><div class="colab-panel" id="colab-ok" role="status" aria-live="polite" hidden><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><h3>{{ form_labels.sent_title }}</h3><p>{{ form_labels.sent_text }}</p></div><div class="colab-panel" id="colab-error" role="alert" hidden><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--caution)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block"><circle cx="12" cy="12" r="10"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg><h3>{{ form_labels.error_title }}</h3><p>{{ form_labels.error_text }}</p><div style="display: flex; flex-direction: column; gap: 10px; max-width: 34ch; margin: 22px auto 0;"><a class="colab-via" id="colab-mailto" href="mailto:{{ metadata.company.email }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>{{ form_labels.error_email }}</a> <a class="colab-via" href="tel:{{ metadata.contact.phoneNumber | replace(' ', '') }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>{{ form_labels.error_call }}</a></div><button type="button" id="colab-retry" style="margin-top: 16px; padding: 10px; font-family: var(--font-sans); font-size: 0.82rem; font-weight: var(--fw-medium); color: var(--text-muted); background: transparent; border: none; cursor: pointer; text-decoration: underline; text-underline-offset: 3px;">{{ form_labels.retry }}</button></div></div>
+<script>/* Envío del alta con estados visibles. MEJORA PROGRESIVA: si este script no
+   corre, el formulario sigue siendo el POST nativo de siempre y la Function
+   responde con un 303 al /gracias/ del idioma. Aquí sólo se sustituye la
+   navegación del navegador por un fetch, para poder pintar «enviando» y, sobre
+   todo, para distinguir «entregado al CRM» de «no entregado»: el POST nativo
+   redirige igual de silencioso en los dos casos y no había forma de saberlo.  */
+(function () {
+  'use strict';
+  var form = document.getElementById('colab-form');
+  if (!form || !window.fetch) return;
 
-<div style="padding: 18px 24px 0;">
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px;">
-<span style="font-family: var(--font-mono); font-size: var(--fs-mono-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-muted);">{{ form_eyebrow }}</span>
-<span id="colab-counter" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; color: var(--text-faint);">§ 01 / {{ '%02d' | format(form_steps | length) }}</span>
-</div>
-<div style="height: 2px; background: var(--stone-250, #d6d3cd); margin-top: 14px; border-radius: 1px; overflow: hidden;">
-<div id="colab-bar" style="height: 100%; width: {{ (100 / (form_steps | length)) | round }}%; background: var(--accent); transition: width 0.4s ease;"></div>
-</div>
-</div>
+  var wiz = document.getElementById('colab-wiz');
+  var pEnv = document.getElementById('colab-enviando');
+  var pOk = document.getElementById('colab-ok');
+  var pErr = document.getElementById('colab-error');
+  var mailto = document.getElementById('colab-mailto');
+  var retry = document.getElementById('colab-retry');
 
-<div id="colab-body" style="padding: 28px 24px 8px; min-height: 300px;"></div>
+  /* Los pasos se ocultan con `hidden` sobre el <form> entero, no borrando su
+     contenido: si el envío falla, «Reintentar» devuelve el formulario con todo
+     lo que la persona ya había escrito. Reconstruirlo perdería 5 pantallas. */
+  function estado(panel) {
+    form.hidden = !!panel;
+    [pEnv, pOk, pErr].forEach(function (p) { p.hidden = p !== panel; });
+    /* `center`, no `nearest`. Al ocultarse el formulario la página encoge unos
+       400 px de golpe y el navegador conserva el scroll: el panel se desplaza
+       hacia arriba y puede quedar fuera de la vista. `nearest` no corrige eso
+       —si el elemento ya está parcialmente visible no mueve nada— y el aviso
+       de «enviando» se perdería justo cuando más falta hace. */
+    if (panel && wiz.scrollIntoView) {
+      try { wiz.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+      catch (_) { wiz.scrollIntoView(); }
+    }
+  }
 
-<div id="colab-footer" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 24px 22px; border-top: 1px solid var(--border-subtle); margin-top: 8px;">
-<button id="colab-back" type="button" style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 500; color: var(--text-muted); background: transparent; border: none; cursor: pointer; padding: 8px 12px; visibility: hidden;">{{ form_labels.back }}</button>
-<span id="colab-hint" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint);">{{ form_labels.select }}</span>
-</div>
+  /* Etiqueta legible de un campo, para el correo de respaldo: la del <label>
+     asociado si existe y, en los pasos de opción única, la pregunta del paso. */
+  function etiqueta(el) {
+    var lab = el.id && form.querySelector('label[for="' + el.id + '"]');
+    if (lab) return lab.textContent.trim();
+    var paso = el.closest && el.closest('.colab-step');
+    var h = paso && paso.querySelector('h3');
+    return h ? h.textContent.trim() : el.name;
+  }
 
-</div>
+  var INTERNOS = ['lang', 'origen', 'source', 'redirect', 'redirect_error', 'website', 'privacidad'];
 
-{# ── Configuración del motor: toda la copia viaja como JSON desde el frontmatter ── #}
-<script type="application/json" id="colab-intake-config">{{ {
-  "lang": lang | default("es"),
-  "endpoint": "/api/contacto",
-  "redirect": form_redirect | default("/gracias/"),
-  "email": metadata.company.email,
-  "phone": metadata.contact.phoneNumber | replace("+34 ", ""),
-  "phoneHref": metadata.contact.phoneNumber | replace(" ", ""),
-  "labels": form_labels,
-  "steps": form_steps
-} | dump | safe }}</script>
+  function datos() {
+    var fd = new FormData(form), out = {}, lineas = [];
+    fd.forEach(function (v, k) { out[k] = v; });
+    Array.prototype.forEach.call(form.elements, function (el) {
+      if (!el.name || INTERNOS.indexOf(el.name) !== -1) return;
+      if ((el.type === 'radio' || el.type === 'checkbox') && !el.checked) return;
+      if (!el.value) return;
+      lineas.push(etiqueta(el) + ': ' + el.value);
+    });
+    return { payload: out, texto: lineas.join('\n') };
+  }
 
-<script src="/assets/js/intake-colaborador.js"></script>
+  form.addEventListener('submit', function (ev) {
+    /* Con JS la validación se pide explícitamente. Es lo que convierte el
+       bloqueo mudo del navegador —un required dentro de un paso oculto no es
+       enfocable y el envío se cancela sin mensaje— en algo que se ve.
+       Ojo: reportValidity() sobre un control oculto es igual de mudo, así que
+       primero se salta al paso que lo contiene y sólo después se pide el
+       mensaje. Con la puerta de avance no debería llegarse aquí; esto es el
+       cinturón por si se entra con un #colab-pN escrito a mano. */
+    if (!form.checkValidity()) {
+      ev.preventDefault();
+      var malo = form.querySelector(':invalid');
+      var paso = malo && malo.closest && malo.closest('.colab-step');
+      if (paso && paso.id) window.location.hash = paso.id;
+      form.reportValidity();
+      return;
+    }
+    ev.preventDefault();
+
+    var d = datos();
+    estado(pEnv);
+
+    var ctrl = new AbortController();
+    var reloj = setTimeout(function () { ctrl.abort(); }, 15000);
+
+    fetch(form.getAttribute('action'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(d.payload),
+      signal: ctrl.signal,
+    })
+      .then(function (r) {
+        clearTimeout(reloj);
+        return r.json().catch(function () { return {}; }).then(function (j) {
+          /* La Function responde 502 {ok:false} cuando el CRM no ha aceptado
+             el alta. Un 200 con ok:false no debe leerse como éxito: sería
+             confirmar un registro que no existe. */
+          if (!r.ok || j.ok === false) throw new Error(j.error || ('HTTP ' + r.status));
+          return j;
+        });
+      })
+      .then(function () {
+        /* Embudo GA4 (docs/GA4-FUNNEL.md). Este formulario no dispara un submit
+           nativo —se hace preventDefault siempre—, así que sin esta línea
+           aportaba todo el embudo menos form_submit y generate_lead. Va en la
+           rama de éxito, no antes del fetch: contar como enviado un alta que el
+           CRM ha rechazado es peor que no contarla. */
+        if (window.pbFormSubmit) window.pbFormSubmit(form.getAttribute('data-form-id') || 'colaborador');
+        estado(pOk);
+        var destino = (form.querySelector('[name="redirect"]') || {}).value;
+        if (destino) setTimeout(function () { window.location.href = destino; }, 2200);
+      })
+      .catch(function () {
+        clearTimeout(reloj);
+        var asunto = {{ (form_section_eyebrow | default("Alta de colaborador")) | dump | safe }} + ' — ' + (d.payload.nombre || '');
+        mailto.setAttribute('href', 'mailto:{{ metadata.company.email }}' +
+          '?subject=' + encodeURIComponent(asunto) +
+          '&body=' + encodeURIComponent(d.texto));
+        estado(pErr);
+      });
+  });
+
+  retry.addEventListener('click', function () { estado(null); });
+})();</script>

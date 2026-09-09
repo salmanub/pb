@@ -29,6 +29,10 @@ bridge_text: "Pàgina adreçada a perits. Per consultar un perit per matèria:"
 bridge_url: "/ca/quadre-experts/"
 bridge_link: "Veure el quadre d'experts →"
 
+bridge2_text: "Prefereix fer només l'estudi tècnic de la seva matèria, sense redactar l'informe ni comparèixer?"
+bridge2_url: "/ca/collaboracio-experts/"
+bridge2_link: "Col·laborar com a expert consultor →"
+
 
 protocols_eyebrow: "§ Protocols"
 protocols_title: "Dues vies d'acreditació"
@@ -52,7 +56,7 @@ protocols:
       - "Compatible amb cartera de clients pròpia, sense exclusivitat"
       - "Cobertura territorial fora de Catalunya mitjançant llistes d'altres col·legis"
       - "Desvinculació acreditada del fabricant, quan el perfil ve de la indústria"
-      - "Possibilitat d'intervenir com a assessor tècnic sense signar el dictamen"
+      - "Es pot començar com a expert consultor, sense signar, i passar a signar més endavant"
     cta: "Donar-me d'alta"
 body_blocks:
   - h: "Què fem nosaltres i què fa vostè"
@@ -120,7 +124,7 @@ form_labels:
 form_consent:
   text: "He llegit i accepto la"
   link_label: "política de privadesa"
-  url: "/ca/privadesa/"
+  url: "/ca/privacitat/"
 
 form_steps:
   - key: "perfil"
@@ -212,7 +216,9 @@ faq:
   - q: "He de buscar clients o negociar?"
     a: "No. La captació, la negociació d'honoraris, la instrucció de l'expedient i la facturació són nostres. La seva intervenció comença quan l'encàrrec ja està definit i acceptat."
   - q: "He de signar el dictamen i ratificar-lo en sala?"
-    a: "Sí. La signatura és el nucli de la col·laboració: qui subscriu el dictamen és qui el defensa. Si el procediment requereix ratificació, s'acorda des de l'inici i es retribueix com a part de l'encàrrec (art. 347 LEC)."
+    a: "En aquesta modalitat, sí: la signatura és el nucli de la col·laboració pericial, i qui subscriu el dictamen és qui el defensa. Si el procediment requereix ratificació, s'acorda des de l'inici i es retribueix com a part de l'encàrrec (art. 347 LEC). Si prefereix aportar el seu criteri tècnic sense signar ni comparèixer, la via és el <a href=\"/ca/collaboracio-experts/\">registre d'experts consultors</a>."
+  - q: "Vinc d'un fabricant. És un problema per a la independència?"
+    a: "Ho és si la vinculació continua viva. Amb la desvinculació acreditada, el coneixement intern del sistema és un actiu: permet avaluar prestacions declarades i equivalències reals entre productes sense representar cap marca."
   - q: "Què passa si el dictamen perjudica qui l'encarrega?"
     a: "S'emet igualment. El perit ha d'actuar amb objectivitat i manifestar-ho així sota jurament o promesa (art. 335.2 LEC). No acceptem encàrrecs condicionats a un resultat, i no li demanarem mai que ajusti una conclusió."
 

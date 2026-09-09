@@ -115,7 +115,12 @@
 
     {# ── Bottom bar ── #}
     {% set fLegal = "/avis-legal/" if lang == "ca" else ("/legal-notice/" if lang == "en" else "/aviso-legal/") %}
-    {% set fPriv = "/privadesa/" if lang == "ca" else ("/privacy/" if lang == "en" else "/privacidad/") %}
+    {# «/ca/privadesa/» NO EXISTE. Comprobado en producción el 06/09/2026: devuelve
+       200 sirviendo la portada, por el catch-all de _redirects, así que el enlace
+       parecía funcionar y no lo hacía. La página real es /ca/privacitat/
+       (src/legal/ca/privacitat.md). Con el RGPD encima, la política de privacidad
+       tiene que ser alcanzable en los tres idiomas. #}
+    {% set fPriv = "/privacitat/" if lang == "ca" else ("/privacy/" if lang == "en" else "/privacidad/") %}
     {# «Cookies» es el punto de revocación permanente que exige el RGPD: retirar el
        consentimiento tiene que ser tan fácil como darlo. `data-pb-consent-open` lo
        recoge el listener delegado de components/consent.njk, que reabre el banner en

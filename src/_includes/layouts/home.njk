@@ -482,6 +482,19 @@
                     border-bottom: 1px solid var(--border-hairline);">
             {{ h.experts_section.cta_alt }}
           </a>
+          {# Tercer enlace (08/09/2026): la segunda figura de colaborador, la que
+             no firma ni comparece. Va aquí porque es la que nadie encuentra por
+             sí sola: quien busca «colaborar como perito» ya llega, quien teme el
+             juzgado no busca nada. `rel="nofollow"` mientras la página siga
+             `noindex`; al indexarla hay que quitarlo. #}
+          {% if h.experts_section.cta_alt2 %}
+          <a href="{{ h.experts_section.url_alt2 }}" rel="nofollow"
+             style="font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em;
+                    text-transform: uppercase; font-weight: 500; color: var(--text-muted); text-decoration: none;
+                    border-bottom: 1px solid var(--border-hairline);">
+            {{ h.experts_section.cta_alt2 }}
+          </a>
+          {% endif %}
         </div>
       </div>
     </div>

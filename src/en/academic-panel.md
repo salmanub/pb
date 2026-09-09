@@ -25,6 +25,24 @@ breadcrumb_parent:
 
 heroTitle: "Expert<br>panel"
 
+# ── Two ways to take part (08/09/2026) ───────────────────────────────────────
+modes_eyebrow: "Two ways to take part"
+modes_title: "Contributing expertise does not mean going to court"
+modes_lede: "An expert report involves two distinct pieces of work. One is the technical study of a specific subject. The other is writing the report, signing it and defending it before a court. You can do both, or only the first."
+modes:
+  - ref: "§ COL. 01"
+    icon: "balanza"
+    name: "Collaborating expert witness"
+    desc: "Takes on the full engagement: studies, writes the report, signs it and ratifies it in court where the proceedings require it. The expert-witness liability is theirs, and the fee covers the whole engagement."
+    cta: "How to collaborate as an expert witness"
+    url: "/en/expert-collaboration/"
+  - ref: "§ COL. 02"
+    icon: "matraz"
+    name: "Specialist consultant"
+    desc: "Carries out the study in their field and nothing more. The report is written and signed by the forensic lead, who is answerable for it and who appears in court. The consultant does not write, does not sign and does not testify."
+    cta: "How to collaborate as a consultant"
+    url: "/en/specialist-collaboration/"
+
 grid_eyebrow: "§ Subjects"
 grid_title: "Six subjects, one assignment rule"
 grid_lede: "A matter is assigned to the subject the dispute actually turns on. When none of them fits, the instruction is declined."
@@ -110,15 +128,17 @@ body_blocks:
   - h: "When a panel expert is brought in"
     p: "When the disputed subject requires knowledge the forensic lead cannot evidence on their own: the state of the art of a discipline, a testing campaign with specific instrumentation, or hands-on practice of a particular construction procedure. The decision follows the subject of the matter, not the availability of the collaborator."
   - h: "How they fit into the report"
-    p: "The forensic lead keeps the relationship with counsel, the preparation of the case file and the procedural responsibility. The collaborating expert intervenes where their judgement is decisive — the calculation model, the testing campaign, the interpretation of results — and drafts the technical conclusions within their field. They sign what they endorse and confirm it in court under article 347 of the Spanish Civil Procedure Act."
+    p: "In every case the forensic lead keeps the relationship with counsel, the preparation of the case file and the procedural responsibility.<br><br><strong>The collaborating expert witness</strong> intervenes where their judgement is decisive — the calculation model, the testing campaign, the interpretation of results — and drafts the technical conclusions within their field. They sign what they endorse and confirm it in court under article 347 of the Spanish Civil Procedure Act.<br><br><strong>The specialist consultant</strong> delivers the study in their field and their involvement ends there. The report is written and signed by the forensic lead, who is answerable for it and appears in court if the proceedings require it. The study is included as an annex, credited to the consultant if they authorise it."
   - h: "What it brings before the court"
     p: "A signatory whose record is documentary — publications, professional registration, evidenced years of site direction, laboratory accreditation — gives the court something it can verify. Under cross-examination, that record is fact rather than a party's assertion."
 
 band_eyebrow: "Collaboration"
-band_title: "Registration in the collaborating experts register"
-band_lede: "The register admits academic and professional profiles on equal terms. The terms of collaboration and the real availability of instructions are set out on the registration page."
+band_title: "Registration in the collaborators register"
+band_lede: "The register admits academic and professional profiles on equal terms, whether or not they sign the report. The terms of collaboration and the real availability of instructions are set out on each registration page."
 band_cta: "Collaborate as a signing expert"
 band_url: "/en/expert-collaboration/"
+band_cta2: "Collaborate as a specialist consultant"
+band_url2: "/en/specialist-collaboration/"
 
 qualLabel: "Case assignment"
 qualItems:

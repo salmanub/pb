@@ -29,6 +29,10 @@ bridge_text: "This page is addressed to experts. To consult an expert by subject
 bridge_url: "/en/expert-panel/"
 bridge_link: "See the expert panel →"
 
+bridge2_text: "Would you rather carry out only the technical study in your field, without writing the report or appearing in court?"
+bridge2_url: "/en/specialist-collaboration/"
+bridge2_link: "Collaborate as a specialist consultant →"
+
 
 protocols_eyebrow: "§ Protocols"
 protocols_title: "Two routes to standing"
@@ -52,7 +56,7 @@ protocols:
       - "Compatible with your own client base, with no exclusivity"
       - "Territorial coverage outside Catalonia through other professional rosters"
       - "Evidenced separation from the manufacturer, where the profile comes from industry"
-      - "Option to act as a technical adviser without signing the report"
+      - "You may start as a specialist consultant, without signing, and move to signing later"
     cta: "Register"
 body_blocks:
   - h: "What we do and what you do"
@@ -212,7 +216,9 @@ faq:
   - q: "Do I have to find clients or negotiate?"
     a: "No. Client acquisition, fee negotiation, file preparation and invoicing are ours. Your involvement begins once the instruction is defined and accepted."
   - q: "Must I sign the report and confirm it in court?"
-    a: "Yes. The signature is the core of the collaboration: whoever endorses the report is the one who defends it. If the proceedings require confirmation in court, it is agreed from the outset and paid as part of the instruction (art. 347 LEC)."
+    a: "In this route, yes: the signature is the core of expert-witness collaboration, and whoever endorses the report is the one who defends it. If the proceedings require confirmation in court, it is agreed from the outset and paid as part of the instruction (art. 347 LEC). If you would rather contribute your technical judgement without signing or appearing, the route is the <a href=\"/en/specialist-collaboration/\">specialist consultants register</a>."
+  - q: "I come from a manufacturer. Is that a problem for independence?"
+    a: "It is if the relationship is still live. Once separation is evidenced, inside knowledge of the system is an asset: it allows declared performance and real equivalence between products to be assessed without representing any brand."
   - q: "What if the report harms the instructing party?"
     a: "It is issued all the same. The expert must act objectively and state so under oath or promise (art. 335.2 LEC). We do not accept instructions conditioned on an outcome, and we will never ask you to adjust a conclusion."
 

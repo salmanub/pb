@@ -33,6 +33,13 @@
 <div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter) 4px;"><span style="font-size: var(--fs-small, 0.8rem); color: var(--text-muted);">{{ bridge_text }} </span><a href="{{ bridge_url }}" style="font-size: var(--fs-small, 0.8rem); color: var(--text-accent); text-decoration: none; border-bottom: 1px solid transparent;" onmouseenter="this.style.borderBottomColor='var(--accent)'" onmouseleave="this.style.borderBottomColor='transparent'">{{ bridge_link }}</a></div>
 {% endif %}
 
+{# ── Puente hacia la OTRA modalidad de colaboración (08/09/2026) ──
+   Las dos páginas de alta se apuntan mutuamente. Quien llega a la de peritos
+   con miedo a comparecer tiene que encontrar la salida arriba, no al final. #}
+{% if bridge2_url %}
+<div style="max-width: var(--container-wide); margin: 0 auto; padding: 0 var(--gutter) 4px;"><span style="font-size: var(--fs-small, 0.8rem); color: var(--text-muted);">{{ bridge2_text }} </span><a href="{{ bridge2_url }}" style="font-size: var(--fs-small, 0.8rem); color: var(--text-accent); text-decoration: none; border-bottom: 1px solid transparent;" onmouseenter="this.style.borderBottomColor='var(--accent)'" onmouseleave="this.style.borderBottomColor='transparent'">{{ bridge2_link }}</a></div>
+{% endif %}
+
 {# ===== GESTIÓN DE EXPECTATIVAS — cerca del fold, antes de todo lo demás ===== #}
 {% if expectations_title %}
 <section style="background: var(--surface-tint); border-top: 1px solid var(--oxide-200); border-bottom: 1px solid var(--oxide-200); margin-top: clamp(24px,3vw,36px);">
@@ -58,6 +65,20 @@
 {% endif %}
 </div>
 </div>
+</section>
+{% endif %}
+
+{# ===== EL LÍMITE, DICHO POR DELANTE (08/09/2026) =====
+   Sólo lo usa /colaboracion-expertos/. No se puede prometer «nunca irás a un
+   juzgado» en términos absolutos —la parte contraria puede pedir que se cite a
+   quien hizo un estudio incorporado a un dictamen, y la LEC contempla el
+   testigo-perito (art. 370.4)—. Decir el límite por delante capta más que una
+   promesa redonda que un catedrático desmonta en treinta segundos: a esa gente
+   la contratan precisamente por saber leer la letra pequeña.
+   Va ANTES de los protocolos y del formulario, no escondido al final. #}
+{% if caveat_title %}
+<section style="max-width: var(--container-wide); margin: 0 auto; padding: var(--section-y) var(--gutter) 0;">
+<div style="display: flex; gap: 16px; padding: 24px 28px; border-radius: var(--radius-md); background: var(--accent-tint); border: 1px solid var(--oxide-200); max-width: 92ch;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;" aria-hidden="true"><path d="M12 9v4"/><path d="M10.363 3.591 2.257 17.125a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636-2.871L13.637 3.591a1.914 1.914 0 0 0-3.274 0Z"/><path d="M12 17h.01"/></svg><div><div style="font-family: var(--font-serif); font-size: var(--fs-h3); font-weight: 500; color: var(--text-strong); margin-bottom: 10px;">{{ caveat_title }}</div>{% for p in caveat_body %}<p style="font-size: 0.98rem; line-height: 1.75; color: var(--text-body); margin: 0 0 12px;">{{ p | safe }}</p>{% endfor %}</div></div>
 </section>
 {% endif %}
 
