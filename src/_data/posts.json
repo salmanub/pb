@@ -1,4 +1,135 @@
-[
+[[
+  {
+    "title": "Certificado de aluminosis en Cataluña: qué es, cuándo se exige y cómo se obtiene",
+    "slug": "certificado-aluminosis-cataluna",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/certificado-aluminosis-cataluna/"
+      }
+    ],
+    "description": "Qué acredita un certificado de aluminosis, en qué casos se solicita (compraventa, subvenciones de rehabilitación, tranquilidad del propietario) y cómo se emite con ensayos en Cataluña.",
+    "excerpt": "El certificado de aluminosis acredita, con ensayos, si un forjado de cemento aluminoso tiene riesgo estructural. Cuándo se exige y qué debe contener.",
+    "estado": "publicado",
+    "datePublished": "2026-09-22",
+    "dateModified": "2026-09-22",
+    "author": "Albert Vilardell",
+    "category": "Patologías Estructurales",
+    "tags": [
+      "aluminosis",
+      "cemento aluminoso",
+      "certificado",
+      "Cataluña",
+      "patología estructural"
+    ],
+    "image": {
+      "url": "/assets/images/blog/aluminosis.jpg",
+      "alt": "Vigueta de hormigón con cemento aluminoso",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Dictamen de patologías estructurales",
+        "url": "/patologias-estructurales/"
+      },
+      {
+        "title": "Solicitar valoración del caso",
+        "url": "/contacto/"
+      }
+    ],
+    "content": "El **certificado de aluminosis** es el documento técnico que acredita, mediante ensayos, si los forjados de un edificio contienen **cemento aluminoso** y, sobre todo, si ese cemento ha derivado en un **riesgo estructural real**. No es un trámite estético: es la diferencia entre vender o comprar con seguridad jurídica y hacerlo a ciegas.\n\n## Qué acredita exactamente\n\nLa aluminosis afecta a viguetas de hormigón fabricadas mayoritariamente entre los años 50 y 70 con cemento aluminoso. Con el tiempo, el material puede sufrir un proceso de **conversión** que reduce su resistencia y aumenta su porosidad. El certificado responde a dos preguntas distintas:\n\n1. **¿Hay cemento aluminoso?** Se determina con un **ensayo químico de la oxina** (reactivo) sobre muestras del forjado y, para confirmar, con **difracción de rayos X (DRX)**.\n2. **¿Hay daño estructural?** La presencia de cemento aluminoso no equivale a ruina. Se valora el estado real de las viguetas (pérdida de sección, corrosión de armaduras, flechas, fisuración) para clasificar el riesgo.\n\nUn certificado serio no se queda en \"sí/no hay aluminosis\": cuantifica el estado y concluye sobre la seguridad.\n\n## Cuándo se solicita\n\n- **Compraventa de vivienda** de la época: el comprador (o su entidad financiera) quiere saber a qué se expone; el vendedor, evitar una reclamación posterior por vicio oculto.\n- **Subvenciones y ayudas de rehabilitación** en Cataluña: los programas de rehabilitación suelen exigir el diagnóstico previo del estado estructural.\n- **Comunidades de propietarios** que detectan síntomas (manchas de óxido en techos, fisuras, desprendimientos) y necesitan decidir si actuar.\n- **Tranquilidad del propietario** ante la duda razonable por la antigüedad del inmueble.\n\n## Cómo se emite\n\nEl proceso habitual: inspección visual, cata en una o varias viguetas representativas, toma de muestras, ensayo de oxina in situ, confirmación por DRX en laboratorio y **valoración estructural** por técnico competente. El resultado es un informe con metodología, resultados de ensayo, clasificación del riesgo y recomendaciones.\n\nEs importante separar dos fases que a menudo se confunden: **la detección/certificación** (determinar y documentar el estado, con validez técnica y, si hace falta, judicial) y **la reparación o refuerzo** (la obra posterior). El certificado pertenece a la primera; la ejecución del refuerzo, a empresas especializadas en obra. Como perito, el papel es diagnosticar y certificar con imparcialidad, no vender la obra.\n\n## Preguntas frecuentes\n\n**¿Tener cemento aluminoso significa que el edificio se va a caer?**\nNo. El cemento aluminoso puede estar presente y mantener capacidad suficiente. Lo que decide el riesgo es el estado real de las viguetas (sección, corrosión, deformación), que es justo lo que valora el certificado.\n\n**¿Cómo se detecta la aluminosis de forma fiable?**\nCon el ensayo químico de la oxina como cribado y la difracción de rayos X (DRX) como confirmación, acompañados de una valoración del estado estructural. No es fiable \"a ojo\" ni solo por la antigüedad.\n\n**¿Sirve el certificado para reclamar en una compraventa?**\nSí. Si documenta que el defecto existía y no era detectable en una inspección normal, respalda una reclamación por vicios ocultos. Para ese uso conviene que el informe esté redactado por un perito y sea ratificable."
+  },
+  {
+    "title": "Asesoramiento técnico pericial para abogados y despachos",
+    "slug": "asesoramiento-pericial-abogados",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/asesoramiento-pericial-abogados/"
+      }
+    ],
+    "description": "Cómo un perito de la construcción apoya al abogado en litigios de edificación y obra: viabilidad técnica del caso, informe de parte, contrainforme y ratificación en sala (arts. 335-347 LEC).",
+    "excerpt": "El abogado lleva el derecho; el perito, la prueba técnica. Cómo se coordina el asesoramiento pericial en litigios de construcción, del análisis de viabilidad a la ratificación.",
+    "estado": "publicado",
+    "datePublished": "2026-09-29",
+    "dateModified": "2026-09-29",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": [
+      "asesoramiento pericial",
+      "abogados",
+      "informe de parte",
+      "contrainforme",
+      "LEC",
+      "ratificación"
+    ],
+    "image": {
+      "url": "/assets/images/blog/asesoramiento-abogados.jpg",
+      "alt": "Perito y abogado revisando documentación técnica de una obra",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe pericial de parte",
+        "url": "/dictamenes/"
+      },
+      {
+        "title": "Contrainforme pericial",
+        "url": "/contrainforme/"
+      },
+      {
+        "title": "Solicitar valoración del caso",
+        "url": "/contacto/"
+      }
+    ],
+    "content": "En un litigio de construcción, el abogado domina el derecho y la estrategia procesal; lo que a menudo decide el resultado es la **prueba técnica**. Ahí es donde un perito de la edificación y la obra civil trabaja **al lado del despacho**: no para opinar sobre derecho, sino para construir —y sostener— la parte técnica del caso.\n\n## En qué apoya un perito al abogado\n\n- **Viabilidad técnica del caso.** Antes de demandar, una valoración honesta de si el defecto es demostrable, qué ensayos harán falta y qué margen hay. Evita pleitos perdidos de antemano.\n- **Informe pericial de parte.** El dictamen que acompaña a la demanda o la contestación, con metodología, nexo causal y valoración económica de la reparación (art. 336 LEC: aportación con demanda o contestación).\n- **Contrainforme.** Análisis crítico del dictamen de la parte contraria: qué afirma, qué prueba de verdad y dónde falla técnicamente. Muchas veces es el documento que da la vuelta a un caso.\n- **Asistencia en la fase probatoria.** Formulación de preguntas técnicas para el interrogatorio del perito contrario y preparación de la **ratificación** propia (art. 347 LEC).\n- **Documentación y prueba.** Qué fotografiar, catar o ensayar y en qué momento, para que la prueba no se pierda ni se impugne.\n\n## Materias habituales\n\nEdificación (vicios ocultos, defectos constructivos, humedades, grietas, aluminosis), obra civil (asentamientos, patología estructural, infraestructuras) y valoración de daños para reclamaciones y seguros. En cada una, el valor añadido es el **cruce técnico-jurídico**: traducir la patología a los términos que el juzgado necesita para resolver.\n\n## Cómo se coordina el trabajo\n\nEl flujo típico: el despacho traslada el caso y la documentación; el perito emite una **valoración preliminar de viabilidad**; si procede, se acuerda el alcance (inspección, ensayos, informe) y se fija la provisión de honorarios; se entrega el dictamen en plazo para acompañarlo al escrito procesal; y, llegado el juicio, el perito **ratifica y defiende** su informe. La imparcialidad no es negociable: un informe que no se sostiene en sala no sirve, y un perito ratificable lo sabe desde la primera línea.\n\n## Preguntas frecuentes\n\n**¿Qué diferencia hay entre un informe de parte y un perito designado judicialmente?**\nEl informe de parte lo encarga y aporta cada litigante con su escrito (arts. 335-336 LEC). El perito judicial lo designa el juzgado de una lista, a petición de parte (arts. 339-340). Ambos deben ser imparciales y ratificarse; cambian la vía de designación y el momento procesal.\n\n**¿Cuándo conviene un contrainforme en lugar de un informe propio?**\nCuando la otra parte ya ha aportado un dictamen y la estrategia es desmontarlo técnicamente. A menudo se combinan: informe propio que prueba el defecto y contrainforme que rebate el ajeno.\n\n**¿El perito puede asesorar sin llegar a firmar un informe?**\nSí. Una parte del trabajo es la valoración de viabilidad y el apoyo técnico al abogado (preguntas para el interrogatorio, lectura crítica de la documentación), aunque el caso no requiera finalmente un dictamen firmado."
+  },
+  {
+    "title": "La prueba pericial en la LEC: guía de los artículos 335 a 347",
+    "slug": "prueba-pericial-lec-335-347",
+    "translations": [
+      {
+        "lang": "es",
+        "permalink": "/blog/prueba-pericial-lec-335-347/"
+      }
+    ],
+    "description": "Guía práctica de la prueba pericial en la Ley de Enjuiciamiento Civil: dictamen de parte (335-336), aportación posterior (337), designación judicial (339-340) y ratificación en juicio (346-347).",
+    "excerpt": "Qué dicen los artículos 335 a 347 de la LEC sobre la prueba pericial, explicados para quien tiene un caso entre manos: del dictamen de parte a la ratificación en sala.",
+    "estado": "publicado",
+    "datePublished": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "author": "Albert Vilardell",
+    "category": "Legal",
+    "tags": [
+      "LEC",
+      "prueba pericial",
+      "artículo 335",
+      "artículo 337",
+      "artículo 347",
+      "ratificación"
+    ],
+    "image": {
+      "url": "/assets/images/blog/lec-prueba-pericial.jpg",
+      "alt": "Ley de Enjuiciamiento Civil y documentación pericial",
+      "caption": ""
+    },
+    "relatedServices": [
+      {
+        "title": "Informe pericial de parte",
+        "url": "/dictamenes/"
+      },
+      {
+        "title": "Asesoramiento pericial para abogados",
+        "url": "/blog/asesoramiento-pericial-abogados/"
+      },
+      {
+        "title": "Solicitar valoración del caso",
+        "url": "/contacto/"
+      }
+    ],
+    "content": "La prueba pericial se regula en la **Ley de Enjuiciamiento Civil (LEC)**, artículos 335 a 352. Conocer las reglas básicas evita errores que cuestan el pleito: aportar el dictamen tarde, elegir mal la vía de designación o no preparar la ratificación. Esta es una guía práctica de los artículos que más se citan, sin sustituir el criterio del abogado.\n\n## Dictamen de parte: arts. 335 y 336\n\nEl **art. 335** define el objeto de la prueba pericial (cuando son necesarios conocimientos técnicos para valorar hechos) y exige al perito manifestar, bajo juramento o promesa, que **actúa con la mayor objetividad posible**. El **art. 336** establece que los dictámenes de parte se aportan, con carácter general, **con la demanda o la contestación**. Es la regla de oro: el informe llega, salvo excepciones, al inicio.\n\n## Aportación posterior: art. 337\n\nEl **art. 337** es la excepción práctica más importante: si al presentar la demanda o contestación **no se pudo aportar** el dictamen, la parte puede **anunciarlo** y presentarlo después, con antelación a la audiencia previa o al juicio. De ahí que \"337 LEC\" sea una búsqueda tan frecuente: es la vía para el informe que no estaba listo el primer día.\n\n## Designación judicial del perito: arts. 339 y 340\n\nCuando una parte no aporta perito propio, puede pedir que el juzgado **designe uno de la lista** (art. 339). El **art. 340** fija las condiciones del perito: titulación oficial adecuada a la materia o, en su defecto, entendido en ella. La designación judicial no lo hace \"más neutral\" que un buen perito de parte —ambos deben ser objetivos—, pero cambia quién lo nombra y quién adelanta los honorarios.\n\n## Emisión, traslado y ratificación: arts. 346 y 347\n\nEl **art. 346** regula la emisión del dictamen por el perito designado judicialmente y su traslado a las partes. El **art. 347** es el decisivo en la práctica: la **posible intervención del perito en el juicio**, donde explica, aclara y responde a las preguntas de las partes y del tribunal. Es la **ratificación**: el momento en que el informe se pone a prueba en sala. Un dictamen técnicamente impecable que no se sostiene en el interrogatorio pierde fuerza.\n\n## Preguntas frecuentes\n\n**¿Cuándo hay que aportar el dictamen pericial?**\nComo regla, con la demanda o la contestación (art. 336). Si no fue posible, se anuncia y se aporta antes de la audiencia previa o del juicio conforme al art. 337.\n\n**¿Qué es la ratificación del art. 347 LEC?**\nEs la intervención del perito en el juicio para explicar y defender su dictamen, respondiendo a las preguntas de las partes y del tribunal. Es donde se valora de verdad la solidez de la prueba pericial.\n\n**¿Un dictamen de parte vale menos que uno judicial?**\nNo por sí mismo. Ambos deben ser objetivos y ratificarse. El tribunal valora su motivación, método y coherencia, no la vía por la que se nombró al perito.\n\n*Esta guía es informativa y no sustituye el asesoramiento jurídico; la aplicación de cada artículo depende del caso concreto.*"
+  }
+],
   {
     "title": "Peritación contradictoria y tercer perito: qué hacer si no acepta el peritaje del seguro (art. 38 LCS)",
     "slug": "peritacion-contradictoria-seguro-tercer-perito-art-38-lcs",
