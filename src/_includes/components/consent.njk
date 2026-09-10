@@ -69,7 +69,10 @@ logotipo, con 1610 px de vacío hasta los botones. A 1440 px el desvío es de
 POR QUÉ EL CSS NO LLEVA COMENTARIOS
 Por lo mismo que el script: este `<style>` viaja en línea en las ~200 páginas
 que renderizan el banner. Cada línea de comentario se publica 200 veces. Aquí
-arriba, dentro del bloque `{#…#}` de Nunjucks, no llega al HTML.
+arriba, dentro de este bloque de comentario de Nunjucks, no llega al HTML.
+(Y por eso mismo aquí no se puede escribir la pareja de delimitadores literal:
+los comentarios de Nunjucks NO anidan, así que el cierre lo cortaría en seco y
+el resto del bloque —markup incluido— saldría publicado o se perdería.)
 
 PERSISTENCIA Y CADUCIDAD
 localStorage, clave `pb_consent`, `{v, estado, ts}`. Se usa localStorage y no
