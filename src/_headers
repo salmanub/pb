@@ -1,4 +1,27 @@
 # Global headers for all paths
+#
+# AQUÍ NO SE PONE Cache-Control. NUNCA.
+#
+# Cloudflare Pages NO sustituye las cabeceras de una regla más específica: las
+# CONCATENA. Con un Cache-Control global, /assets/* acababa sirviendo
+#
+#   Cache-Control: public, max-age=604800, ..., public, max-age=31536000, immutable
+#
+# y el navegador se queda con el PRIMER max-age. O sea que la regla global no
+# era un valor por defecto: pisaba todas las demás reglas del fichero. Con 7 días
+# ahí puestos, el efecto era:
+#
+#   · cada página quedaba congelada una semana en el navegador de cada visitante,
+#     así que un despliegue no se veía hasta 7 días después;
+#   · /sw.js —que pide max-age=0 justamente para poder actualizarse— también se
+#     cacheaba 7 días, de modo que ni el service worker podía renovarse;
+#   · /assets/* perdía su `immutable` de un año.
+#
+# Sin regla global, cada ruta con regla propia sirve un único valor, y el HTML
+# (que son URLs de directorio: /cuadro-de-expertos/, no *.html, y por eso la
+# regla /*.html de más abajo NO les aplica) se queda con el valor por defecto de
+# Pages para documentos, que es `public, max-age=0, must-revalidate`: revalida
+# siempre contra el servidor y un despliegue se ve al instante.
 /*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
@@ -6,7 +29,6 @@
   Referrer-Policy: no-referrer-when-downgrade
   Permissions-Policy: interest-cohort=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
 
 
 # SXG Certificate Chain
@@ -58,9 +80,12 @@
   Cross-Origin-Resource-Policy: same-site
 
 # HTML files
+# OJO: esto sólo cubre URLs que terminan literalmente en .html (/tarjeta.html).
+# Las páginas del sitio son URLs de directorio y NO pasan por aquí; su caché es
+# la de por defecto de Pages. Ver la nota del bloque /* de arriba.
 /*.html
   Content-Type: text/html; charset=utf-8
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Embedder-Policy: require-corp
 
