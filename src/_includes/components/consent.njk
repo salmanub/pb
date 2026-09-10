@@ -34,8 +34,42 @@ procede, así que un visitante que ya eligió tampoco ve un parpadeo.
 
 INTERACCIÓN CON LA BARRA MÓVIL
 `.mobile-bottom-bar` de main.css es también `position: fixed; bottom: 0` con
-z-index 55 y ~56 px de alto por debajo de 1024 px. El banner sube por encima de
-ella en ese breakpoint (no la tapa) y usa z-index 60 para quedar por delante.
+z-index 55 y ~56 px de alto en `@media (max-width: 1024px)`. El banner sube por
+encima de ella en ese breakpoint (no la tapa) y usa z-index 60 para quedar por
+delante.
+
+MOBILE-FIRST: QUÉ ES BASE Y QUÉ ES AÑADIDO
+Las reglas sin media query son las del móvil, y las dos consultas son
+`min-width`. El orden importa para entender el fichero:
+
+  · Base (hasta 680 px). Barra apoyada sobre `.mobile-bottom-bar`
+    (`bottom: 56px + safe-area`), gutter fijo de 20 px, los botones en su propia
+    fila a ancho completo y `flex: 1` para que midan EXACTAMENTE lo mismo. Esto
+    último no es estética: es el criterio AEPD de arriba: en la pantalla donde
+    menos sitio hay es donde más tienta hacer «Aceptar» más grande.
+  · `min-width: 681px`. El gutter pasa al `--gutter` del DS y los botones
+    recuperan su ancho intrínseco al lado del texto.
+  · `min-width: 1025px`. Ya no hay barra móvil debajo: `bottom: 0`, y el
+    safe-area se traslada de `bottom` al `padding-bottom`.
+
+Los cortes son 681 y 1025 —no 680 y 1024— porque son el complemento exacto del
+`max-width: 1024px` con el que main.css muestra la barra móvil, y porque es la
+convención que ya usa ese fichero (tiene un `min-width: 769px and max-width:
+1024px`). Con `min-width: 1024px` el banner se creería de escritorio a 1024 px
+justos, donde la barra móvil todavía está en pantalla, y se solaparían.
+
+ALINEACIÓN CON EL RESTO DEL SITIO
+El fondo va a sangre —es una barra de sistema, como el footer— pero `.pbc-in`
+usa la misma caja que el contenedor del sitio: `max-width: var(--container-wide)`
+más `padding: var(--gutter)`. Sin eso la barra se pega a los bordes del viewport
+y en una pantalla de 2560 px el texto arranca 540 px a la izquierda del
+logotipo, con 1610 px de vacío hasta los botones. A 1440 px el desvío es de
+21 px y no se nota; de ahí para arriba crece con la pantalla.
+
+POR QUÉ EL CSS NO LLEVA COMENTARIOS
+Por lo mismo que el script: este `<style>` viaja en línea en las ~200 páginas
+que renderizan el banner. Cada línea de comentario se publica 200 veces. Aquí
+arriba, dentro del bloque `{#…#}` de Nunjucks, no llega al HTML.
 
 PERSISTENCIA Y CADUCIDAD
 localStorage, clave `pb_consent`, `{v, estado, ts}`. Se usa localStorage y no
@@ -61,33 +95,39 @@ en la variable `memoria`, de modo que dentro de la misma página la elección se
 respeta y el banner no reaparece en bucle.
 #}
 <style>
-.pbc{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;flex-wrap:wrap;
-gap:14px 24px;align-items:center;justify-content:space-between;
-padding:14px var(--gutter);padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));
+.pbc{position:fixed;left:0;right:0;
+bottom:calc(56px + env(safe-area-inset-bottom,0px));z-index:60;
 background:var(--surface-card);border-top:1px solid var(--border-hairline);
 box-shadow:var(--shadow-overlay);font-family:var(--font-sans);
 font-size:var(--fs-small);line-height:1.5;color:var(--text-body)}
 .pbc[hidden]{display:none}
+.pbc-in{max-width:var(--container-wide);margin-inline:auto;
+display:flex;flex-wrap:wrap;gap:14px 32px;align-items:center;
+justify-content:space-between;padding:14px 20px}
 .pbc-txt{margin:0;max-width:84ch}
 .pbc-lnk{color:var(--accent);text-decoration:underline;white-space:nowrap}
-.pbc-acc{display:flex;gap:10px;flex:0 0 auto}
+.pbc-acc{display:flex;gap:10px;flex:0 0 auto;width:100%}
 .pbc-btn{font:inherit;font-weight:var(--fw-medium);line-height:1.2;padding:10px 22px;
-cursor:pointer;border:1px solid var(--ink-900);border-radius:var(--radius-sm);
+flex:1;cursor:pointer;border:1px solid var(--ink-900);border-radius:var(--radius-sm);
 background:var(--ink-900);color:var(--bone-100)}
 .pbc-btn:hover{background:var(--ink-700);border-color:var(--ink-700)}
 .pbc-btn:focus-visible,.pbc-lnk:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-@media(max-width:1024px){.pbc{bottom:calc(56px + env(safe-area-inset-bottom,0px));padding-bottom:14px}}
-@media(max-width:680px){.pbc{padding-left:20px;padding-right:20px}.pbc-acc{width:100%}.pbc-btn{flex:1}}
+@media(min-width:681px){.pbc-in{padding-left:var(--gutter);padding-right:var(--gutter)}
+.pbc-acc{width:auto}.pbc-btn{flex:0 1 auto}}
+@media(min-width:1025px){.pbc{bottom:0}
+.pbc-in{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px))}}
 </style>
 {% set uiC = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
 {% set pfxC = "" if not lang or lang == "es" else ("/" + lang) %}
 <div id="pb-consent" class="pbc" role="region" aria-label="{{ uiC.consent.aria }}" hidden>
-  <p class="pbc-txt">{{ uiC.consent.texto }}
-    <a class="pbc-lnk" href="{{ pfxC }}/cookies/">{{ uiC.consent.mas_info }}</a>
-  </p>
-  <div class="pbc-acc">
-    <button type="button" class="pbc-btn" data-pbc="no">{{ uiC.consent.rechazar }}</button>
-    <button type="button" class="pbc-btn" data-pbc="si">{{ uiC.consent.aceptar }}</button>
+  <div class="pbc-in">
+    <p class="pbc-txt">{{ uiC.consent.texto }}
+      <a class="pbc-lnk" href="{{ pfxC }}/cookies/">{{ uiC.consent.mas_info }}</a>
+    </p>
+    <div class="pbc-acc">
+      <button type="button" class="pbc-btn" data-pbc="no">{{ uiC.consent.rechazar }}</button>
+      <button type="button" class="pbc-btn" data-pbc="si">{{ uiC.consent.aceptar }}</button>
+    </div>
   </div>
 </div>
 <script>
