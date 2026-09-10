@@ -1,4 +1,4 @@
-[[
+[
   {
     "title": "Certificado de aluminosis en Cataluña: qué es, cuándo se exige y cómo se obtiene",
     "slug": "certificado-aluminosis-cataluna",
@@ -23,8 +23,8 @@
       "patología estructural"
     ],
     "image": {
-      "url": "/assets/images/blog/aluminosis.jpg",
-      "alt": "Vigueta de hormigón con cemento aluminoso",
+      "url": "/assets/images/informe-pericial-patologias-barcelona.jpg",
+      "alt": "Inspección pericial de patologías estructurales en un edificio",
       "caption": ""
     },
     "relatedServices": [
@@ -64,18 +64,18 @@
       "ratificación"
     ],
     "image": {
-      "url": "/assets/images/blog/asesoramiento-abogados.jpg",
+      "url": "/assets/images/placeholder-default.jpg",
       "alt": "Perito y abogado revisando documentación técnica de una obra",
       "caption": ""
     },
     "relatedServices": [
       {
         "title": "Informe pericial de parte",
-        "url": "/dictamenes/"
+        "url": "/informe-de-parte/"
       },
       {
         "title": "Contrainforme pericial",
-        "url": "/contrainforme/"
+        "url": "/contrainforme-pericial/"
       },
       {
         "title": "Solicitar valoración del caso",
@@ -109,14 +109,14 @@
       "ratificación"
     ],
     "image": {
-      "url": "/assets/images/blog/lec-prueba-pericial.jpg",
+      "url": "/assets/images/placeholder-default.jpg",
       "alt": "Ley de Enjuiciamiento Civil y documentación pericial",
       "caption": ""
     },
     "relatedServices": [
       {
         "title": "Informe pericial de parte",
-        "url": "/dictamenes/"
+        "url": "/informe-de-parte/"
       },
       {
         "title": "Asesoramiento pericial para abogados",
@@ -128,8 +128,7 @@
       }
     ],
     "content": "La prueba pericial se regula en la **Ley de Enjuiciamiento Civil (LEC)**, artículos 335 a 352. Conocer las reglas básicas evita errores que cuestan el pleito: aportar el dictamen tarde, elegir mal la vía de designación o no preparar la ratificación. Esta es una guía práctica de los artículos que más se citan, sin sustituir el criterio del abogado.\n\n## Dictamen de parte: arts. 335 y 336\n\nEl **art. 335** define el objeto de la prueba pericial (cuando son necesarios conocimientos técnicos para valorar hechos) y exige al perito manifestar, bajo juramento o promesa, que **actúa con la mayor objetividad posible**. El **art. 336** establece que los dictámenes de parte se aportan, con carácter general, **con la demanda o la contestación**. Es la regla de oro: el informe llega, salvo excepciones, al inicio.\n\n## Aportación posterior: art. 337\n\nEl **art. 337** es la excepción práctica más importante: si al presentar la demanda o contestación **no se pudo aportar** el dictamen, la parte puede **anunciarlo** y presentarlo después, con antelación a la audiencia previa o al juicio. De ahí que \"337 LEC\" sea una búsqueda tan frecuente: es la vía para el informe que no estaba listo el primer día.\n\n## Designación judicial del perito: arts. 339 y 340\n\nCuando una parte no aporta perito propio, puede pedir que el juzgado **designe uno de la lista** (art. 339). El **art. 340** fija las condiciones del perito: titulación oficial adecuada a la materia o, en su defecto, entendido en ella. La designación judicial no lo hace \"más neutral\" que un buen perito de parte —ambos deben ser objetivos—, pero cambia quién lo nombra y quién adelanta los honorarios.\n\n## Emisión, traslado y ratificación: arts. 346 y 347\n\nEl **art. 346** regula la emisión del dictamen por el perito designado judicialmente y su traslado a las partes. El **art. 347** es el decisivo en la práctica: la **posible intervención del perito en el juicio**, donde explica, aclara y responde a las preguntas de las partes y del tribunal. Es la **ratificación**: el momento en que el informe se pone a prueba en sala. Un dictamen técnicamente impecable que no se sostiene en el interrogatorio pierde fuerza.\n\n## Preguntas frecuentes\n\n**¿Cuándo hay que aportar el dictamen pericial?**\nComo regla, con la demanda o la contestación (art. 336). Si no fue posible, se anuncia y se aporta antes de la audiencia previa o del juicio conforme al art. 337.\n\n**¿Qué es la ratificación del art. 347 LEC?**\nEs la intervención del perito en el juicio para explicar y defender su dictamen, respondiendo a las preguntas de las partes y del tribunal. Es donde se valora de verdad la solidez de la prueba pericial.\n\n**¿Un dictamen de parte vale menos que uno judicial?**\nNo por sí mismo. Ambos deben ser objetivos y ratificarse. El tribunal valora su motivación, método y coherencia, no la vía por la que se nombró al perito.\n\n*Esta guía es informativa y no sustituye el asesoramiento jurídico; la aplicación de cada artículo depende del caso concreto.*"
-  }
-],
+  },
   {
     "title": "Peritación contradictoria y tercer perito: qué hacer si no acepta el peritaje del seguro (art. 38 LCS)",
     "slug": "peritacion-contradictoria-seguro-tercer-perito-art-38-lcs",
