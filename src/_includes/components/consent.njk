@@ -25,6 +25,32 @@ verde y «secundario» gris. El acento del DS se reserva para el enlace de
 información y el anillo de foco. Si alguien pide más adelante «que Aceptar
 destaque», eso es exactamente lo que la guía prohíbe.
 
+POR QUÉ LA BARRA VA EN TINTA Y NO EN PAPEL
+Estaba en `--surface-card` (#FAFAF4) sobre una página en `--surface-page`
+(#F1F1EA): 1,08:1 de contraste entre las dos. Es decir, ninguno. La barra se
+leía como un trozo más de la página y no como algo superpuesto que pide una
+decisión, que es justo lo que tiene que parecer. Ahora usa `--surface-ink`
+(#18211C): 14,5:1 contra la página. No es un color nuevo — el sitio ya usa esa
+superficie en las pills del blog y en las tarjetas de casos de éxito.
+
+Invertir el fondo obliga a invertir lo que va encima, y hay dos trampas:
+  · Los botones eran tinta sobre papel; sobre la barra oscura habrían
+    desaparecido. Pasan a bone-100 con texto ink-900 (14,5:1). Siguen siendo
+    los dos EXACTAMENTE iguales: el criterio AEPD de aquí arriba no se toca.
+  · El enlace de información y el anillo de foco usaban `--accent`
+    (oxide-500). Sobre tinta eso da 3,09:1 y no llega al 4,5:1 de AA. Se
+    quedan en el acento, pero en su variante clara `--oxide-200`: 10,35:1.
+    Si alguien vuelve a poner `--accent` aquí, rompe el contraste.
+
+TAMAÑO DE TEXTO Y ALTURA
+El cuerpo estaba en `--fs-small` (13 px), que es tamaño de pie de foto para un
+texto legal que hay que leer para decidir. Sube a `--fs-body-sm` (15 px). Los
+botones llevan `min-height: 44px` — con `box-sizing: border-box` global eso es
+el alto real, no el del contenido — que es el objetivo táctil de WCAG 2.5.5.
+El aire de la barra pasa de 14 a 18 px arriba y abajo (y el `padding-bottom`
+del breakpoint de 1025 va con él: son el mismo número, si cambia uno cambia
+el otro).
+
 POR QUÉ BARRA FIJA Y NO MODAL
 Un modal bloquea el contenido antes de que Google (y el usuario) lo lean, y los
 muros de cookies están en el punto de mira de la AEPD. La barra es
@@ -100,25 +126,25 @@ respeta y el banner no reaparece en bucle.
 <style>
 .pbc{position:fixed;left:0;right:0;
 bottom:calc(56px + env(safe-area-inset-bottom,0px));z-index:60;
-background:var(--surface-card);border-top:1px solid var(--border-hairline);
+background:var(--surface-ink);border-top:1px solid var(--ink-700);
 box-shadow:var(--shadow-overlay);font-family:var(--font-sans);
-font-size:var(--fs-small);line-height:1.5;color:var(--text-body)}
+font-size:var(--fs-body-sm);line-height:1.5;color:var(--text-on-dark)}
 .pbc[hidden]{display:none}
 .pbc-in{max-width:var(--container-wide);margin-inline:auto;
-display:flex;flex-wrap:wrap;gap:14px 32px;align-items:center;
-justify-content:space-between;padding:14px 20px}
+display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;
+justify-content:space-between;padding:18px 20px}
 .pbc-txt{margin:0;max-width:84ch}
-.pbc-lnk{color:var(--accent);text-decoration:underline;white-space:nowrap}
-.pbc-acc{display:flex;gap:10px;flex:0 0 auto;width:100%}
-.pbc-btn{font:inherit;font-weight:var(--fw-medium);line-height:1.2;padding:10px 22px;
-flex:1;cursor:pointer;border:1px solid var(--ink-900);border-radius:var(--radius-sm);
-background:var(--ink-900);color:var(--bone-100)}
-.pbc-btn:hover{background:var(--ink-700);border-color:var(--ink-700)}
-.pbc-btn:focus-visible,.pbc-lnk:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pbc-lnk{color:var(--oxide-200);text-decoration:underline;white-space:nowrap}
+.pbc-acc{display:flex;gap:12px;flex:0 0 auto;width:100%}
+.pbc-btn{font:inherit;font-weight:var(--fw-medium);line-height:1.2;padding:12px 24px;
+min-height:44px;flex:1;cursor:pointer;border:1px solid var(--bone-100);
+border-radius:var(--radius-sm);background:var(--bone-100);color:var(--ink-900)}
+.pbc-btn:hover{background:var(--stone-200);border-color:var(--stone-200)}
+.pbc-btn:focus-visible,.pbc-lnk:focus-visible{outline:2px solid var(--oxide-200);outline-offset:2px}
 @media(min-width:681px){.pbc-in{padding-left:var(--gutter);padding-right:var(--gutter)}
 .pbc-acc{width:auto}.pbc-btn{flex:0 1 auto}}
 @media(min-width:1025px){.pbc{bottom:0}
-.pbc-in{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px))}}
+.pbc-in{padding-bottom:calc(18px + env(safe-area-inset-bottom,0px))}}
 </style>
 {% set uiC = es if not lang or lang == "es" else (ca if lang == "ca" else en) %}
 {% set pfxC = "" if not lang or lang == "es" else ("/" + lang) %}
