@@ -1,42 +1,65 @@
 {#
-analytics.njk — GA4 con Consent Mode v2 + dimensiones comunes del funnel.
+analytics.njk — Plausible (sin cookies) + dimensiones comunes del funnel.
 
 TODO EL RAZONAMIENTO VA EN ESTE BLOQUE, no dentro del <script>. `minifyJS: false`
 en el transform html-minify de .eleventy.js: lo que se escriba dentro del script
 viaja a las ~400 páginas del build.
 
-ORDEN DE LOS TRES BLOQUES (importa, y no es reordenable)
- 1. dataLayer + gtag + `consent default` DENEGADO. Tiene que ser la primera
-    llamada a gtag de la página: si gtag.js arrancase sin default, escribiría
-    _ga antes de que nadie haya dicho nada.
- 2. include de consent.njk — pinta el banner y define window.pbConsent leyendo
-    la elección persistida.
- 3. `consent update` si esa elección fue «aceptar», y sólo después el resto.
+POR QUÉ YA NO HAY BANNER DE CONSENTIMIENTO
+Plausible no escribe cookies ni localStorage, no guarda identificador persistente
+y no almacena la IP: el visitante se deriva de un hash diario (sal rotatoria + IP
++ User-Agent) que se descarta al calcularlo. Sin almacenamiento en el terminal no
+aplica el art. 22.2 LSSI, que es lo que obligaba al consentimiento previo con
+GA4, así que components/consent.njk y todo el Consent Mode v2 desaparecieron.
+Consecuencia deliberada y buscada: la medición cubre el 100 % del tráfico, no
+sólo a quien aceptaba. El embudo tiene por fin un denominador honesto.
+(La política de /cookies/ sigue describiendo ese banner: hay que reescribirla.)
 
-`wait_for_update: 500` da medio segundo a que llegue un update antes de mandar
-nada. Aquí el update es síncrono (el bloque 3 corre en el mismo tick), pero el
-parámetro cubre el caso de aceptación por clic mientras hay pings en vuelo.
+SCRIPT v2 (pa-*.js), NO script.js
+Plausible sirve dos generaciones de script. Ésta es la nueva: el sitio va
+CODIFICADO en el nombre del fichero (`pa-<id>.js`), no en un atributo
+`data-domain`, y la configuración va por `plausible.init({...})` en vez de por
+atributos `data-*`. De ahí que metadata.json guarde `plausibleScriptId` y no un
+dominio: cambiar de propiedad en Plausible es cambiar ese id.
+El id viaja a functions/js/pb.js como query (`/js/pb.js?id=...`) para que
+metadata.json siga siendo la única fuente de verdad; la Function valida su
+formato antes de reenviar, porque si no sería un proxy abierto a plausible.io.
 
-POR QUÉ SE CONSERVA LA CARGA DIFERIDA
-GA4 se sigue cargando a la primera interacción o a los 5 s, pase lo que pase con
-el consentimiento. Con analytics_storage denegado gtag.js no escribe cookies:
-manda cookieless pings anónimos (sin client_id persistente). Se pierde la
-identidad entre sesiones, no el funnel. Si sólo cargásemos GA tras aceptar,
-el denominador de todo embudo estaría sesgado hacia quien acepta.
+POR QUÉ CARGA EAGER Y NO A LA PRIMERA INTERACCIÓN
+Con GA4 el script se difería hasta la primera interacción o los 5 s porque eran
+~90 KB de tercero. Éste son ~1,5 KB del propio origen, y aquel retardo tenía un
+coste real: quien rebotaba sin tocar nada en menos de 5 s no se contaba jamás,
+que es precisamente el visitante que más interesa medir. `async` y listo, como
+el snippet oficial: el orden da igual porque el stub de abajo encola.
 
-CONTRATO CON EL PARTIAL DE EVENTOS DE FUNNEL
-Otro partial consume tres globales; no cambiar sus firmas sin avisar:
+EL PAGEVIEW LO DISPARAMOS NOSOTROS: autoCapturePageviews: false
+Para poder pasar la `url` normalizada. Desde la caché SXG de Google el pathname
+es /doc/-/s/perito.barcelona/x/ en vez de /x/: con la captura automática la misma
+página saldría como dos rutas distintas en el panel. Mismo criterio que rum.njk.
+Sólo hay un pageview por carga: components/instant-nav.njk hace prefetch, no
+navegación por cliente, así que no hay que reemitir nada al navegar.
+
+POR QUÉ NO SE USA LA OPCIÓN customProperties
+plausible.init acepta `customProperties` como función para colgar props en todos
+los eventos, que sería el sitio «idiomático» de pbDims(). No se usa a propósito:
+no está documentado si esas props se fusionan con las del sitio de llamada o las
+sustituyen, y de ese detalle depende que cada evento del embudo lleve o no sus
+dimensiones. pbTrack hace la fusión él mismo, que es determinista y no depende de
+un orden de precedencia sin documentar. Si algún día se activa la autocaptura de
+`outboundLinks` / `formSubmissions`, esos eventos SÍ necesitarían
+`customProperties` para llevar dimensiones: hay que revisarlo entonces.
+
+CONTRATO CON LA INSTRUMENTACIÓN DEL FUNNEL
+assets/js/vendor/pb-funnel.js y gracias.njk consumen dos globales; no cambiar sus
+firmas sin avisar:
  · window.pbDims()          → objeto NUEVO con las dimensiones comunes.
- · window.pbTrack(nombre, params) → gtag('event', ...) con pbDims() mezclado.
-   Es seguro llamarlo antes de que gtag.js haya cargado: gtag() sólo empuja a
-   dataLayer, que existe desde el bloque 1. Y nunca lanza: un try/catch envuelve
-   todo, porque medir no puede romper la página.
- · window.pbConsent         → lo define consent.njk.
+ · window.pbTrack(nombre, params) → plausible(nombre, {props}) con pbDims()
+   mezclado. Es seguro llamarlo antes de que el script haya cargado: el stub
+   encola en plausible.q, que es la cola que el script vacía al arrancar. Y nunca
+   lanza: un try/catch lo envuelve, porque medir no puede romper la página.
+(window.pbConsent ya no existe. Lo definía consent.njk.)
 
 DIMENSIONES, Y POR QUÉ CADA UNA
- · page_path — normalizado igual que en components/rum.njk: desde la caché de
-   Google el pathname es /doc/-/s/perito.barcelona/x/ en vez de /x/, y sin
-   normalizar la misma página aparecería como dos rutas distintas.
  · hostname + is_sxg_cache — permiten aislar (o excluir) el tráfico servido
    desde webpkgcache.com, que es un origen distinto con su propio localStorage.
  · delivery — PerformanceNavigationTiming.deliveryType:
@@ -46,33 +69,37 @@ DIMENSIONES, Y POR QUÉ CADA UNA
    (`pb_utm`) para que sobrevivan a la navegación interna: sin eso, sólo la
    landing de entrada llevaría atribución y el resto del embudo saldría
    «(direct)». sessionStorage y no localStorage: la atribución caduca con la
-   sesión, no con el navegador.
+   sesión, no con el navegador. Ojo: Plausible ya deriva la fuente de la URL y
+   del referrer él solo, pero sólo en la página de entrada; éstos son los que
+   arrastran la atribución hasta el evento de conversión.
+ · page_path ya NO va como prop: es la `url` del pageview, y Plausible indexa por
+   URL. Duplicarlo gastaría una de las props sin añadir nada.
+
+LÍMITES DE PLAUSIBLE QUE CONDICIONAN ESTO
+Máximo 30 props por evento (aquí van 5 + hasta 3 utm) y los valores han de ser
+cadena, número o booleano; `String()` sobre lo que no lo sea de nacimiento. Cada
+combinación nombre=valor es una fila en el panel, así que los valores se recortan
+igual que antes para que un parámetro absurdo no genere miles de filas.
 #}
-{% if metadata.site.googleAnalyticsId %}
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-
-  // Consent Mode v2: todo denegado antes de cualquier otra llamada a gtag.
-  gtag('consent', 'default', {
-    analytics_storage: 'denied',
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    wait_for_update: 500
-  });
-</script>
-
-{% include "components/consent.njk" %}
-
+{% if metadata.site.plausibleScriptId %}
+<script async src="/js/pb.js?id={{ metadata.site.plausibleScriptId }}"></script>
 <script>
   (function () {
     'use strict';
-    var GA_ID = '{{ metadata.site.googleAnalyticsId }}';
 
-    if (window.pbConsent && window.pbConsent.estado() === 'granted') {
-      gtag('consent', 'update', { analytics_storage: 'granted' });
-    }
+    // Stub oficial: permite llamar a plausible() y a plausible.init() antes de
+    // que el script asíncrono haya cargado.
+    window.plausible = window.plausible || function () {
+      (window.plausible.q = window.plausible.q || []).push(arguments);
+    };
+    window.plausible.init = window.plausible.init || function (o) {
+      window.plausible.o = o || {};
+    };
+
+    window.plausible.init({
+      endpoint: '/api/event',
+      autoCapturePageviews: false
+    });
 
     var enCache = /(^|\.)webpkgcache\.com$/.test(location.hostname);
 
@@ -111,50 +138,26 @@ DIMENSIONES, Y POR QUÉ CADA UNA
       var nav = (performance.getEntriesByType('navigation') || [])[0] || {};
       return Object.assign({
         brand: 'perito-barcelona',
-        page_path: ruta(),
         lang: document.documentElement.lang || 'es',
         delivery: nav.deliveryType || 'normal',
-        is_sxg_cache: enCache,
+        is_sxg_cache: String(enCache),
         hostname: location.hostname
       }, utm());
     };
 
     window.pbTrack = function (nombre, params) {
       try {
-        gtag('event', nombre, Object.assign(window.pbDims(), params || {}));
+        window.plausible(nombre, { props: Object.assign(window.pbDims(), params || {}) });
       } catch (e) { /* medir no puede romper la página */ }
     };
 
-    function cargarGA() {
-      var s = document.createElement('script');
-      s.src = '/gtag/js?id=' + GA_ID; // proxy first-party, mismo origen
-      s.async = true;
-      document.head.appendChild(s);
-
-      gtag('js', new Date());
-      gtag('config', GA_ID, {
-        page_location: location.href,
-        transport_url: location.origin, // los beacons van a /g/collect de este origen
-        first_party_collection: true,
-        linker: { domains: ['perito.barcelona', 'webpkgcache.com'] }
+    // La vista de página, con la URL normalizada. Ver el bloque de arriba.
+    try {
+      window.plausible('pageview', {
+        url: location.origin + ruta() + location.search,
+        props: window.pbDims()
       });
-    }
-
-    var EVENTOS = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
-    var cargado = false;
-
-    function disparar() {
-      if (cargado) return;
-      cargado = true;
-      for (var i = 0; i < EVENTOS.length; i++) window.removeEventListener(EVENTOS[i], disparar);
-      if ('requestIdleCallback' in window) requestIdleCallback(cargarGA);
-      else cargarGA();
-    }
-
-    for (var i = 0; i < EVENTOS.length; i++) {
-      window.addEventListener(EVENTOS[i], disparar, { passive: true });
-    }
-    setTimeout(disparar, 5000);
+    } catch (e) { /* medir no puede romper la página */ }
   })();
 </script>
 {% endif %}

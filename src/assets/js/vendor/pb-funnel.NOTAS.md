@@ -1,29 +1,32 @@
-# ga-funnel.js — notas de diseño
+# pb-funnel.js — notas de diseño
 
 Este texto era el comentario Nunjucks del partial `components/ga-funnel.njk`,
 que se convirtió en fichero externo para no repetir 7,6 KB en cada página.
+Con la migración de GA4 a Plausible el fichero pasó de `ga-funnel.js` a
+`pb-funnel.js`; el nombre del partial original se conserva aquí sólo para que
+los commits antiguos sigan siendo rastreables.
 
-ga-funnel.njk — Instrumentación GA4 del embudo de formularios y de la fuga de leads.
+pb-funnel.js — Instrumentación del embudo de formularios y de la fuga de leads.
 
 TODO EL RAZONAMIENTO VA EN ESTE BLOQUE, nunca dentro del <script>. `minifyJS: false`
 en el transform html-minify de .eleventy.js: cada carácter escrito dentro del script
-viaja a las ~400 páginas del build. Aquí abajo es gratis (Nunjucks se come el bloque).
-Documentación de eventos, informes y dimensiones: docs/GA4-FUNNEL.md
+viaja a las ~400 páginas del build. Aquí abajo es gratis.
+Documentación de eventos, informes y propiedades: docs/PLAUSIBLE-FUNNEL.md
 
 DÓNDE SE INCLUYE
-Detrás de components/analytics.njk en layouts/base.njk, porque depende de que
-window.pbTrack ya esté definido. Una línea, justo después del include de analytics:
-
-    {% include "components/ga-funnel.njk" %}
-
-A fecha de este commit base.njk todavía NO lo incluye: ese fichero es de otro agente.
-Sin esa línea este componente no llega a ninguna página. Está anotado en el informe.
+Se carga con URL absoluta y `defer` desde layouts/base.njk, por delante del include
+de components/analytics.njk. El orden funciona igual: `defer` retrasa la ejecución
+hasta después del parseo, o sea después de los scripts en línea del final del body,
+que es donde analytics.njk define window.pbTrack.
 
 CONTRATO CON analytics.njk (no se redefine nada de allí)
- · window.pbTrack(nombre, params) — mezcla brand, page_path, lang, delivery,
-   is_sxg_cache, hostname y los utm_* persistidos. Es seguro llamarlo antes de que
-   gtag.js haya cargado y no lanza. TODO evento del funnel sale por aquí.
+ · window.pbTrack(nombre, params) — mezcla brand, lang, delivery, is_sxg_cache,
+   hostname y los utm_* persistidos, y llama a plausible(nombre, {props}). Es seguro
+   llamarlo antes de que el script de Plausible haya cargado —el stub encola en
+   plausible.q— y no lanza. TODO evento del funnel sale por aquí.
  · window.pbDims() — no se usa: pbTrack ya las mezcla. Recalcularlas sería duplicar.
+ · page_path ya no es una propiedad: es la `url` del pageview, y Plausible indexa
+   por URL.
 
 POR QUÉ UN SELECTOR Y NO UNA LISTA DE FORMULARIOS
 Los formularios del sitio son cinco partials distintos, tres de ellos generaciones
@@ -93,20 +96,21 @@ selector a nav, los roles ARIA y .mobile-bottom-bar, y se admite un data-positio
 explícito para cuando alguien quiera afinarlo sin tocar este fichero.
 .mobile-bottom-bar (la barra fija de "Llamar / Enviar email" de base.njk) devuelve
 'sticky-bar' y no 'footer': en móvil es la fuente principal de click_tel y meterla
-en el mismo cubo que el pie haría ilegible el informe. Documentado en GA4-FUNNEL.md.
+en el mismo cubo que el pie haría ilegible el informe. Documentado en
+PLAUSIBLE-FUNNEL.md.
 
 QUÉ NO SE PUEDE MEDIR SOLO CON DELEGACIÓN, Y LOS DOS GANCHOS QUE LO ARREGLAN
 form_submit se apoya en el evento nativo 'submit'. Los formularios de verdad
 (form.njk, heroWithForm.njk) lo disparan, incluso el que hace preventDefault, porque
 el evento existe antes de cancelarse. Los tres asistentes tipo typeform NO: su botón
 es type="button" y el envío sale de un manejador de clic, así que sin ayuda no habría
-form_submit ni generate_lead para ellos, que son precisamente los formularios largos
-donde el embudo importa. De ahí dos globales, invocadas con una línea guardada dentro
-de la rama que ya existía en cada partial:
+form_submit para ellos, que son precisamente los formularios largos donde el embudo
+importa. De ahí dos globales, invocadas con una línea guardada dentro de la rama que
+ya existía en cada partial:
 
- · window.pbFormSubmit(formId)   — form_submit + generate_lead, idempotente. Se llama
-   al empezar el envío (validación ya superada), que es el equivalente exacto al
-   evento nativo. Marca el formulario como enviado, así no cuenta como abandono.
+ · window.pbFormSubmit(formId)   — form_submit, idempotente. Se llama al empezar el
+   envío (validación ya superada), que es el equivalente exacto al evento nativo.
+   Marca el formulario como enviado, así no cuenta como abandono.
  · window.pbLeadConfirmed(formId) — lead_confirmed, una vez por página. Para las
    respuestas OK que NO redirigen (el hero y los dos asistentes muestran un panel de
    éxito en la misma página). Si se llama sin formId, lo recupera de sessionStorage.
@@ -114,3 +118,10 @@ de la rama que ya existía en cada partial:
 Los que sí redirigen (form.njk por POST nativo, el colaborador desde su motor JS)
 disparan lead_confirmed en src/gracias.njk, que lee ese mismo sessionStorage para
 saber de qué formulario venía el lead.
+
+EL EVENTO generate_lead YA NO EXISTE
+pbFormSubmit emitía además 'generate_lead' con el mismo payload que 'form_submit',
+porque en GA4 era uno de los eventos recomendados y eso le daba trato de conversión.
+Plausible no tiene esa noción —la conversión se define como objetivo en el panel,
+sobre cualquier nombre de evento—, así que el duplicado sólo inflaba el recuento.
+El objetivo se monta sobre 'form_submit'.

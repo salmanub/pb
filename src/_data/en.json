@@ -30,14 +30,6 @@
                    "cuadro_expertos":  "Expert panel",
                    "el_despacho":  "The Firm"
                },
-    "consent":  {
-                   "aria":  "Cookie notice",
-                   "texto":  "We use analytics cookies (Google Analytics) to understand how this site is used. They are only set if you accept; without your permission measurement stays anonymous and cookie-free.",
-                   "mas_info":  "More information",
-                   "aceptar":  "Accept",
-                   "rechazar":  "Reject",
-                   "abrir":  "Change cookie preferences"
-               },
     "breadcrumb":  {
                        "inicio":  "Home",
                        "aria":  "You are here",

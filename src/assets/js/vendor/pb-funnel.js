@@ -1,5 +1,5 @@
 /*!
- * ga-funnel.js — instrumentación GA4 del funnel de formularios y de los
+ * pb-funnel.js — instrumentación Plausible del funnel de formularios y de los
  * eventos de intención (tel / WhatsApp / email / CTA / scroll profundo).
  *
  * Vive aquí y no en un partial .njk por una razón medible: no usa ni una
@@ -14,7 +14,7 @@
  *     línea del final del body — que es donde analytics.njk define pbTrack,
  *     del que esto depende.
  *
- * Documentación de eventos y parámetros: docs/GA4-FUNNEL.md
+ * Documentación de eventos y propiedades: docs/PLAUSIBLE-FUNNEL.md
  */
   (function () {
     'use strict';
@@ -92,8 +92,12 @@
       if (e.submit) return;
       e.submit = 1;
       try { sessionStorage.setItem('pb_form', id); } catch (x) { /* almacén restringido */ }
+      // Aquí se emitía además 'generate_lead' con el mismo payload, porque en GA4
+      // era uno de los eventos recomendados y eso le daba trato de conversión.
+      // Plausible no tiene esa noción —la conversión se define como objetivo en
+      // el panel, sobre cualquier nombre de evento—, así que el duplicado sólo
+      // inflaba el recuento. El objetivo se monta sobre 'form_submit'.
       track('form_submit', { form_id: id });
-      track('generate_lead', { form_id: id });
     };
 
     window.pbLeadConfirmed = function (formId) {

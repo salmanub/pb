@@ -106,8 +106,8 @@
   Cache-Control: public, max-age=31536000, immutable
   Cross-Origin-Resource-Policy: same-site
 
-# Analytics — first-party GA4 proxy (see functions/gtag/js.js + functions/g/collect.js)
-/gtag/js
+# Analytics — proxy first-party de Plausible (ver functions/js/pb.js + functions/api/event.js)
+/js/pb.js
   Cache-Control: public, max-age=3600
   Priority: High
 

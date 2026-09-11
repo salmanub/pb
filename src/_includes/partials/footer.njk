@@ -121,13 +121,12 @@
        (src/legal/ca/privacitat.md). Con el RGPD encima, la política de privacidad
        tiene que ser alcanzable en los tres idiomas. #}
     {% set fPriv = "/privacitat/" if lang == "ca" else ("/privacy/" if lang == "en" else "/privacidad/") %}
-    {# «Cookies» es el punto de revocación permanente que exige el RGPD: retirar el
-       consentimiento tiene que ser tan fácil como darlo. `data-pb-consent-open` lo
-       recoge el listener delegado de components/consent.njk, que reabre el banner en
-       la propia página en vez de navegar. El href sigue apuntando a /cookies/ para que
-       sin JS —o si GA4 no está configurado y el banner no se renderiza— el enlace lleve
-       igualmente a la política. Slug idéntico en los tres idiomas: sólo cambia el
-       prefijo, porque «cookies» no se traduce en ninguno de los tres. #}
+    {# «Cookies» ya es un enlace normal a la política. Llevaba `data-pb-consent-open`
+       para reabrir el banner de consentimiento en la propia página —el punto de
+       revocación que exige el RGPD—, pero con Plausible no hay nada que revocar: no se
+       escriben cookies ni localStorage, así que no hay consentimiento que retirar y
+       components/consent.njk ya no existe. Slug idéntico en los tres idiomas: sólo
+       cambia el prefijo, porque «cookies» no se traduce en ninguno de los tres. #}
     {% set fCookies = "/cookies/" %}
     <div style="margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--ink-700);
                 display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
@@ -139,8 +138,7 @@
         ·
         <a href="{{ langPrefix + fPriv }}" style="color: inherit;">{{ ui.footer.privacidad }}</a>
         ·
-        <a href="{{ langPrefix + fCookies }}" style="color: inherit;"
-           data-pb-consent-open aria-label="{{ ui.consent.abrir }}">{{ ui.footer.cookies }}</a>
+        <a href="{{ langPrefix + fCookies }}" style="color: inherit;">{{ ui.footer.cookies }}</a>
       </span>
     </div>
   </div>

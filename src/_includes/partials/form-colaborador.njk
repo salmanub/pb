@@ -43,7 +43,7 @@
     form_steps[] — {key, eyebrow, question, helper, type:'choice'|'fields',
                     options[] | fields[{name,label,type,placeholder,autocomplete,
                                         required,multiline,rows,note}]}
-    form_id — id del embudo GA4 (docs/GA4-FUNNEL.md). Por defecto «colaborador».
+    form_id — id del embudo de Plausible (docs/PLAUSIBLE-FUNNEL.md). Por defecto «colaborador».
 #}
 {% set _pasos = form_steps | length %}
 <style>.colab-wiz .colab-step{display:block;scroll-margin-top:112px}
@@ -188,7 +188,7 @@
         });
       })
       .then(function () {
-        /* Embudo GA4 (docs/GA4-FUNNEL.md). Este formulario no dispara un submit
+        /* Embudo de Plausible (docs/PLAUSIBLE-FUNNEL.md). Este formulario no dispara un submit
            nativo —se hace preventDefault siempre—, así que sin esta línea
            aportaba todo el embudo menos form_submit y generate_lead. Va en la
            rama de éxito, no antes del fetch: contar como enviado un alta que el

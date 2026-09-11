@@ -1,8 +1,8 @@
 {# Componente de formulario de contacto reutilizable #}
-{# form_id del embudo GA4: no hay <form> nativo (asistente de <div> + fetch), así que
-   el identificador va en el contenedor y lo recoge components/ga-funnel.njk por su
+{# form_id del embudo de Plausible: no hay <form> nativo (asistente de <div> + fetch), así que
+   el identificador va en el contenedor y lo recoge assets/js/vendor/pb-funnel.js por su
    selector 'form,[data-form-id]'. Se reutiliza contactFormOrigin cuando la página lo
-   define para que el form_id de GA4 y el origen del CRM sean la misma cadena. #}
+   define para que el form_id de la analítica y el origen del CRM sean la misma cadena. #}
 {% set _formId = contactFormId or contactFormOrigin or 'contacto-wizard' %}
 <div class="bg-white rounded-none shadow-xl p-8 lg:p-12 border border-slate-100">
     <div id="typeform-wrapper" data-form-id="{{ _formId }}" class="flex flex-col h-full">

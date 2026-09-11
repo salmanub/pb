@@ -76,12 +76,12 @@ AGENTES §5: CSS inline (inyectado por transform), cero
      de INP se registran a tiempo, sin bloquear el parseo ni tocar el LCP. #}
   <script src="https://perito.barcelona/assets/js/vendor/web-vitals.js" defer></script>
 
-  {# ── GA4 · funnel de formularios y eventos de intención ──────────────────
+  {# ── Plausible · funnel de formularios y eventos de intención ────────────
      Mismo patrón y mismos motivos que la línea de arriba. `defer` además
      garantiza el orden que necesita: los scripts diferidos se ejecutan tras el
      parseo, o sea DESPUÉS de los scripts en línea del final del body, que es
-     donde analytics.njk define window.pbTrack. Ver docs/GA4-FUNNEL.md. #}
-  <script src="https://perito.barcelona/assets/js/vendor/ga-funnel.js" defer></script>
+     donde analytics.njk define window.pbTrack. Ver docs/PLAUSIBLE-FUNNEL.md. #}
+  <script src="https://perito.barcelona/assets/js/vendor/pb-funnel.js" defer></script>
 
   {# ── Speculation Rules: prefetch same-origin pages on hover/pointerdown ── #}
   <script type="speculationrules">
@@ -179,7 +179,7 @@ AGENTES §5: CSS inline (inyectado por transform), cero
     {% include "components/instant-nav.njk" %}
   </script>
   {# ── openIntake toast removed — CTAs now link to /contacto/particular/ or /contacto/profesional/ ── #}
-  {# ── Google Analytics (deferred load) ── #}
+  {# ── Plausible · analítica sin cookies (ver components/analytics.njk) ── #}
   {% include "components/analytics.njk" %}
 
   {# ── RUM · Core Web Vitals segmentados por tipo de entrega (SXG vs normal) ── #}

@@ -1,8 +1,8 @@
 {% set formLang = currentLanguage or lang or 'es' %}
-{# form_id del embudo GA4: este asistente no tiene <form> nativo (divs + fetch), así que
-   el identificador vive en el contenedor y lo recoge components/ga-funnel.njk con su
+{# form_id del embudo de Plausible: este asistente no tiene <form> nativo (divs + fetch), así que
+   el identificador vive en el contenedor y lo recoge assets/js/vendor/pb-funnel.js con su
    selector 'form,[data-form-id]'. Se reutiliza contactFormOrigin cuando la página lo
-   define, para que el form_id de GA4 y el origen del CRM sean la misma cadena. #}
+   define, para que el form_id de la analítica y el origen del CRM sean la misma cadena. #}
 {% set _formId = contactFormId or contactFormOrigin or 'contacto-wizard-v2' %}
 <div id="typeform-wrapper" data-form-id="{{ _formId }}" class="flex flex-col h-full font-onest">
     <div class="text-center mb-10">
