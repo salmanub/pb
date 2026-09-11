@@ -1,5 +1,5 @@
 /**
- * GET /js/pb.js?id=pa-xxxx — proxy first-party del script de Plausible.
+ * GET /js/pb?id=pa-xxxx — proxy first-party del script de Plausible.
  *
  * Sirve la analítica desde perito.barcelona en vez de plausible.io, para que los
  * bloqueadores que filtran por hostname no la eliminen y todo sea same-origin.
@@ -21,6 +21,14 @@
  *
  * El script son ~1,5 KB y no cambia casi nunca; una hora de caché de borde es de
  * sobra y mantiene el TTL que ya tenía /gtag/js en src/_headers.
+ *
+ * OJO CON LA RUTA: Cloudflare Pages QUITA la extensión del nombre del fichero para
+ * derivar la ruta, así que este fichero se sirve en `/js/pb`, NO en `/js/pb.js`.
+ * Pedir `/js/pb.js` no da 404: cae en el catch-all de _redirects y devuelve la
+ * portada en HTML, con lo que el `<script>` no falla visiblemente y la analítica
+ * deja de registrar visitas en silencio. Fue exactamente el fallo del despliegue
+ * inicial. Si se cambia la ruta, cambiar también el src de components/analytics.njk
+ * y el bloque de src/_headers.
  */
 
 const ID_VALIDO = /^pa-[A-Za-z0-9_-]{1,64}$/;

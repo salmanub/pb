@@ -1,14 +1,21 @@
-# GA4 · Embudo de formularios y fuga de leads
+# Plausible · Embudo de formularios y fuga de leads
 
-Instrumentación de `src/assets/js/vendor/ga-funnel.js` (+ el evento de
+Instrumentación de `src/assets/js/vendor/pb-funnel.js` (+ el evento de
 confirmación en `src/gracias.njk`). Mide el recorrido completo desde que un
 formulario aparece en pantalla hasta que el lead se confirma, y — sobre todo —
 **dónde se cae la gente por el camino**.
 
-Complementa a `components/analytics.njk` (GA4 + Consent Mode v2 + dimensiones
+Complementa a `components/analytics.njk` (script de Plausible + propiedades
 comunes) y a `docs/RUM-SXG.md` (Core Web Vitals). No duplica nada de los dos:
-todos los eventos salen por `window.pbTrack()`, que ya mezcla las dimensiones
+todos los eventos salen por `window.pbTrack()`, que ya mezcla las propiedades
 comunes.
+
+> **Migración desde GA4.** Este documento sustituye a `docs/GA4-FUNNEL.md`. Los
+> nombres de evento y de propiedad se conservaron tal cual para no romper el
+> histórico de nombres ni los partials, con **una excepción**: `generate_lead`
+> desapareció (ver §2). Lo que cambió de raíz es la capa de configuración: ya no
+> hay Consent Mode, ni banner de cookies, ni alta previa de dimensiones
+> personalizadas.
 
 ---
 
@@ -17,7 +24,7 @@ comunes.
 Cargado desde `src/_includes/layouts/base.njk`, en el `<head>`:
 
 ```html
-<script src="https://perito.barcelona/assets/js/vendor/ga-funnel.js" defer></script>
+<script src="https://perito.barcelona/assets/js/vendor/pb-funnel.js" defer></script>
 ```
 
 **Fichero externo y no partial en línea**, al contrario que `rum.njk`: la
@@ -38,28 +45,65 @@ es una petición diferida, cacheada un año (`_headers`, bloque
   garantizado sin acoplar nada.
 
 El razonamiento largo de cada decisión de la instrumentación está en
-`src/assets/js/vendor/ga-funnel.NOTAS.md`.
+`src/assets/js/vendor/pb-funnel.NOTAS.md`.
 
 Coste: **8,5 KB** el fichero (una vez, cacheado), más 539 B en línea en
 `/gracias/`.
 
+### Proxy first-party
+
+Ni el script de Plausible ni sus beacons salen a `plausible.io` desde el
+navegador. Van por dos Pages Functions del propio dominio:
+
+| Ruta | Function | Upstream |
+|---|---|---|
+| `/js/pb?id=<scriptId>` | `functions/js/pb.js` | `https://plausible.io/js/<scriptId>.js` |
+| `/api/event` | `functions/api/event.js` | `https://plausible.io/api/event` |
+
+Es el mismo patrón que tenían `/gtag/js` y `/g/collect` con GA4: esquiva a los
+bloqueadores que filtran por hostname y deja todo same-origin. El endpoint se le
+indica al script con `plausible.init({ endpoint: '/api/event' })`.
+
+`functions/api/event.js` **tiene que** reenviar `X-Forwarded-For`
+(← `CF-Connecting-IP`) y `User-Agent`: Plausible deriva el visitante de un hash
+diario de sal + IP + UA. Sin esas dos cabeceras todo el tráfico colapsa en un
+único visitante con la IP del centro de datos de Cloudflare.
+
+### Sin consentimiento previo
+
+Plausible no escribe cookies ni `localStorage`, no guarda identificador
+persistente y no almacena la IP. Sin almacenamiento en el terminal no aplica el
+art. 22.2 LSSI, así que no hay banner: `components/consent.njk` se eliminó junto
+con GA4. **Consecuencia para leer el embudo:** el denominador ya no está sesgado
+hacia quien aceptaba cookies. Las series anteriores y posteriores a la migración
+no son comparables en volumen absoluto.
+
 ---
 
-## 1. Dimensiones comunes (las pone `pbTrack`, van en **todos** los eventos)
+## 1. Propiedades comunes (las pone `pbTrack`, van en **todos** los eventos)
 
-| Parámetro | Origen | Ejemplo |
+| Propiedad | Origen | Ejemplo |
 |---|---|---|
 | `brand` | fijo | `perito-barcelona` |
-| `page_path` | pathname normalizado (quita el prefijo `/doc/-/s/perito.barcelona` de la caché SXG) | `/servicios/grietas-estructurales/` |
 | `lang` | `<html lang>` | `es`, `ca`, `en` |
 | `delivery` | `PerformanceNavigationTiming.deliveryType` | `navigational-prefetch` (SXG precargado), `cache`, `normal` |
-| `is_sxg_cache` | hostname en `*.webpkgcache.com` | `true` / `false` |
+| `is_sxg_cache` | hostname en `*.webpkgcache.com` | `true` / `false` (texto) |
 | `hostname` | `location.hostname` | `perito.barcelona`, `perito-barcelona.webpkgcache.com` |
 | `utm_source` `utm_medium` `utm_campaign` | query de entrada, persistidos en `sessionStorage.pb_utm` | `google` / `cpc` / `aluminosis-bcn` |
+
+`page_path` **ya no es una propiedad**. Plausible indexa por URL y el pageview se
+dispara a mano con la `url` ya normalizada (ver §7), así que la ruta se consulta
+en la sección de páginas del panel, no como propiedad. Mantenerla habría gastado
+un hueco de los 30 sin añadir nada.
 
 `delivery` mezcla en `normal` dos cosas distintas: «vino por red» y «el navegador
 no sabe decirlo» (Chrome expone `deliveryType` desde la 121). Tenerlo en cuenta al
 leer el informe (c).
+
+Límites de Plausible que afectan a esto: **30 propiedades por evento** (aquí van
+5 + hasta 3 `utm_*`, sobra margen) y valores de cadena, número o booleano. Cada
+combinación nombre=valor es una fila en el panel, de ahí que los valores se
+recorten en origen.
 
 ---
 
@@ -69,7 +113,7 @@ leer el informe (c).
 
 Todos llevan `form_id`. Ver el inventario en §3.
 
-| Evento | Cuándo | Parámetros propios | Frecuencia |
+| Evento | Cuándo | Propiedades propias | Frecuencia |
 |---|---|---|---|
 | `form_view` | el formulario entra en viewport (`IntersectionObserver`, umbral 0,2) | `form_id` | 1 × página × formulario |
 | `form_start` | primer `focusin` o `input` en cualquier campo | `form_id` | 1 × página × formulario |
@@ -77,8 +121,14 @@ Todos llevan `form_id`. Ver el inventario en §3.
 | `form_error` | evento nativo `invalid` (captura) | `form_id`, `field_name`, `error_type` | sin límite |
 | `form_abandon` | hubo `form_start` y no hubo envío, al ocultarse la pestaña | `form_id`, **`last_field`** | 1 × página × formulario |
 | `form_submit` | envío (evento nativo `submit`, o `pbFormSubmit()` en los asistentes) | `form_id` | 1 × página × formulario |
-| `generate_lead` | junto a `form_submit` (evento recomendado de GA4) | `form_id` | idem |
 | `lead_confirmed` | `/gracias/`, o respuesta OK sin redirección | `form_id` | 1 × página |
+
+> **`generate_lead` ya no existe.** Se emitía junto a `form_submit`, con el mismo
+> payload, porque en GA4 era un evento *recomendado* y eso le daba trato de
+> conversión sin depender de un nombre propio. Plausible no tiene esa noción: la
+> conversión es un objetivo que se define en el panel sobre cualquier nombre de
+> evento, así que el duplicado sólo inflaba el recuento. **El objetivo se monta
+> sobre `form_submit`** (§4).
 
 `error_type` se deriva de `field.validity`:
 
@@ -105,7 +155,7 @@ fuga.
 
 Un único listener delegado en `document`, pasivo.
 
-| Evento | Disparador | Parámetros propios |
+| Evento | Disparador | Propiedades propias |
 |---|---|---|
 | `click_tel` | `a[href^="tel:"]` | `position` |
 | `click_whatsapp` | enlace a `wa.me` o `api.whatsapp.com` | `position` |
@@ -127,11 +177,11 @@ Un único listener delegado en `document`, pasivo.
 `sticky-bar` es un quinto valor añadido a propósito: en móvil esa barra es la
 fuente principal de `click_tel`, y meterla en el mismo cubo que el pie haría el
 informe ilegible. Si en algún momento se prefiere consolidar, basta con agrupar
-`sticky-bar` + `footer` en la exploración.
+`sticky-bar` + `footer` al leer la tabla de propiedades.
 
 `nav.njk` y `footer.njk` **no usan los landmarks** `<header>` / `<footer>`, sino
 `<div>`. Se cubren con `nav` y con los roles ARIA, pero la forma limpia de afinar
-esto —sin tocar `ga-funnel.js`— es añadir `data-position="header"` /
+esto —sin tocar `pb-funnel.js`— es añadir `data-position="header"` /
 `data-position="footer"` a los contenedores de esos dos partials cuando el agente
 que los posee los toque.
 
@@ -155,8 +205,8 @@ microdatos. El sufijo importa: `ProfessionalService` del footer no termina en
 | `partials/form-colaborador.njk` | `colaborador` | `div[data-form-id]` (los campos los inyecta `intake-colaborador.js`) | `fetch` → redirige a `/gracias/` |
 
 Los dos asistentes reutilizan `contactFormOrigin` cuando la página lo define, para
-que el `form_id` de GA4 y el `origen` que llega al CRM sean **la misma cadena** y se
-puedan cruzar sin tabla de equivalencias.
+que el `form_id` de la analítica y el `origen` que llega al CRM sean **la misma
+cadena** y se puedan cruzar sin tabla de equivalencias.
 
 Cualquier `<form>` futuro sin `data-form-id` entra igualmente en el embudo con
 `form.id` o, en último caso, `form-<índice>`. Poner el atributo es lo que hace que
@@ -164,125 +214,107 @@ el identificador sea estable entre despliegues.
 
 ### Ganchos para los asistentes sin `<form>`
 
-`ga-funnel.js` expone dos globales, invocadas con una línea guardada dentro de la
+`pb-funnel.js` expone dos globales, invocadas con una línea guardada dentro de la
 rama que ya existía en cada partial:
 
 ```js
-window.pbFormSubmit('mi-form');     // form_submit + generate_lead, idempotente
+window.pbFormSubmit('mi-form');     // form_submit, idempotente
 window.pbLeadConfirmed('mi-form');  // lead_confirmed, 1 vez por página
 ```
 
-**Pendiente:** `src/assets/js/intake-colaborador.js` (fuera del alcance de este
-cambio) no dispara ningún `submit` nativo. Hasta que se le añada
+**Pendiente:** `src/assets/js/intake-colaborador.js` no dispara ningún `submit`
+nativo. Hasta que se le añada
 `window.pbFormSubmit && window.pbFormSubmit('colaborador')` en su rama de envío, el
 formulario del colaborador aporta `form_view`, `form_start`,
-`form_field_complete`, `form_error` y `form_abandon`, pero su `form_submit` /
-`generate_lead` no existen; el lead sí se cuenta en `/gracias/`, adonde redirige.
+`form_field_complete`, `form_error` y `form_abandon`, pero su `form_submit` no
+existe; el lead sí se cuenta en `/gracias/`, adonde redirige.
 
 ---
 
-## 4. Key events (antes «conversiones»)
+## 4. Objetivos (goals) — **paso obligatorio**
 
-Marcar **`form_submit`** y **`click_tel`**.
+Éste es el equivalente de los *key events* de GA4, y en Plausible **no es
+opcional**: un evento personalizado que no tenga objetivo definido no aparece en
+el panel. Los hits se reciben, pero no se muestran. Es el error clásico de la
+migración.
 
-`Admin` → `Visualización de datos` → `Eventos` → localizar el evento en la tabla →
-activar el interruptor **`Marcar como evento clave`** de la última columna.
+`Site settings` → `Goals` → `+ Add goal` → `Custom event` → nombre exacto del
+evento → `Add goal`.
 
-Un evento personalizado sólo aparece en esa lista **después** de haberse recibido
-(hasta 24 h). Para no esperar: `Admin` → `Eventos clave` → `Nuevo evento clave` →
-escribir el nombre exacto (`form_submit`, `click_tel`) y guardar. Al llegar el
-primer evento con ese nombre queda enlazado.
+El nombre tiene que coincidir **carácter por carácter**, mayúsculas incluidas.
+Alta recomendada, en este orden de prioridad:
 
-`generate_lead` es un evento **recomendado** de GA4 y se envía junto a
-`form_submit` precisamente para que quede disponible como conversión en Google Ads
-sin depender del nombre propio. No hace falta marcarlo también como key event
-salvo que se quiera duplicar la métrica.
+| Objetivo | Para qué |
+|---|---|
+| `form_submit` | La conversión principal. Es el que sustituye a `generate_lead`. |
+| `lead_confirmed` | Conversión confirmada: mide la pérdida entre el envío y la página de gracias. |
+| `form_view` | Primer escalón del embudo (a). |
+| `form_start` | Segundo escalón del embudo (a). |
+| `form_abandon` | El informe de la fuga (b). |
+| `click_tel` | Conversión secundaria. |
+| `form_error` | Diagnóstico de validación. |
+| `form_field_complete` | Opcional: sólo si se quiere el embudo campo a campo. |
+| `click_whatsapp`, `click_email`, `cta_click`, `scroll_deep` | Según interese. |
 
-Con `click_tel` como key event, ojo al leer la tasa de conversión de la sesión:
-una llamada y un formulario no valen lo mismo. Se recomienda dejarlas separadas en
-los informes en vez de sumarlas.
+Con `click_tel` como objetivo, ojo al leer la tasa de conversión: una llamada y un
+formulario no valen lo mismo. Conviene dejarlas separadas en vez de sumarlas.
 
----
+### Lo que YA NO hay que hacer (y ahorra tiempo)
 
-## 5. Dimensiones personalizadas (Admin → Definiciones personalizadas)
+- **Nada de dar de alta dimensiones personalizadas.** GA4 exigía registrar las 15
+  propiedades en `Definiciones personalizadas` antes de desplegar, sin efecto
+  retroactivo. Plausible las ingiere sin alta previa: se consultan desglosando la
+  conversión del objetivo en la sección de propiedades del panel.
+- **Nada de Consent Mode ni de DebugView con banner aceptado.**
 
-**Sin dar de alta estos parámetros no aparecen en ninguna exploración.** Es el
-error clásico: los eventos llegan, los datos están en el hit, pero los informes no
-los ofrecen. GA4 sólo empieza a recogerlos **a partir del alta**; no hay efecto
-retroactivo, así que conviene hacerlo antes de desplegar.
+### Aviso: no activar la autocaptura de formularios
 
-`Admin` → `Definiciones personalizadas` → `Dimensiones personalizadas` →
-`Crear dimensiones personalizadas`, y para cada fila:
-*Nombre de la dimensión* (libre) · *Ámbito* = **Evento** · *Parámetro del evento* =
-el nombre exacto de la columna.
+`plausible.init()` acepta `formSubmissions: true`, que captura los envíos **por su
+cuenta**. Si se activa, cada envío se cuenta **dos veces** (el suyo y nuestro
+`form_submit`) y el embudo queda inservible. Lo mismo con `outboundLinks: true`,
+que solaparía con `click_tel` / `click_email` / `click_whatsapp`.
+`autoCapturePageviews` **sí** está desactivado a propósito (§7): el pageview lo
+dispara `analytics.njk` con la URL normalizada.
 
-| Parámetro del evento | Nombre sugerido | Ámbito | Para qué |
-|---|---|---|---|
-| `form_id` | Formulario | Evento | Desglose de todo el embudo |
-| `field_name` | Campo | Evento | `form_field_complete` y `form_error` |
-| `error_type` | Tipo de error | Evento | `form_error` |
-| `last_field` | Último campo | Evento | **Informe (b): la fuga** |
-| `cta_id` | CTA | Evento | `cta_click` |
-| `position` | Posición | Evento | `click_tel`, `click_whatsapp`, `click_email`, `cta_click` |
-| `delivery` | Tipo de entrega | Evento | **Informe (c): SXG vs normal** |
-| `is_sxg_cache` | Caché SXG | Evento | Filtrar/aislar `webpkgcache.com` (llega como texto `true` / `false`) |
-| `page_path` | Ruta normalizada | Evento | Sustituye a la ruta nativa (ver §7) |
-| `lang` | Idioma | Evento | `es` / `ca` / `en` |
-| `brand` | Marca | Evento | Preparado para consolidar varios dominios en una propiedad |
-| `hostname` | Hostname del evento | Evento | Diagnóstico SXG |
-| `utm_source` | UTM source | Evento | Atribución persistida en la sesión |
-| `utm_medium` | UTM medium | Evento | idem |
-| `utm_campaign` | UTM campaign | Evento | idem |
-
-Son 15 de las 50 dimensiones de ámbito de evento del plan estándar: hay margen.
-
-`percent_scrolled` **no hay que darlo de alta**: GA4 ya trae la dimensión
-predefinida *Porcentaje desplazado* asociada a ese parámetro.
-
-`brand`, `lang`, `utm_*` y `hostname` son opcionales si sólo se va a mirar este
-dominio; el resto son imprescindibles para los tres informes de §6.
-
-### Aviso importante: desactivar «Interacciones con formularios»
-
-La medición mejorada de GA4 recoge **por su cuenta** eventos llamados `form_start`
-y `form_submit`, con sus propios parámetros (`form_id` = atributo `id` del HTML,
-`form_name`, `form_destination`, `form_submit_text`). Si se deja activa, cada envío
-se cuenta **dos veces** y el parámetro `form_id` mezcla dos esquemas distintos —los
-`id` del DOM con nuestros identificadores— y el embudo queda inservible.
-
-`Admin` → `Flujos de datos` → el flujo web → `Medición mejorada` (rueda dentada) →
-desmarcar **`Interacciones con formularios`**. El resto (scroll al 90 %, clics
-salientes, búsqueda interna) puede quedarse: no colisiona con `scroll_deep`, que es
-un nombre propio al 75 %.
+Si algún día se activa alguna autocaptura, esos eventos **no** pasarán por
+`pbTrack` y por tanto no llevarán las propiedades comunes: habría que pasar a
+configurar `customProperties` en `plausible.init()` (ver la nota en
+`components/analytics.njk`).
 
 ---
 
-## 6. Los tres informes
+## 5. Los tres informes
 
-Todos en `Explorar` → `Crear una exploración`. Poner un rango de fechas amplio: el
-volumen de un sitio de servicios profesionales es bajo y con 7 días no se ve nada.
+El volumen de un sitio de servicios profesionales es bajo: poner siempre un rango
+de fechas amplio, con 7 días no se ve nada.
 
-### (a) Embudo `form_view → form_start → form_submit` por `form_id`
+### (a) Embudo `form_view → form_start → form_submit`
 
-Es el informe que responde «¿qué formulario pierde gente, y en qué escalón?».
+Es el informe que responde «¿en qué escalón se pierde la gente?».
 
-1. `Explorar` → plantilla **`Exploración de embudo`**.
-2. `Pasos` → icono del lápiz → borrar los pasos de ejemplo y crear cuatro:
-   - Paso 1 · *Ve el formulario* → `Evento` `form_view`
-   - Paso 2 · *Empieza* → `Evento` `form_start`
-   - Paso 3 · *Envía* → `Evento` `form_submit`
-   - Paso 4 · *Lead confirmado* → `Evento` `lead_confirmed` (opcional, mide la
-     pérdida entre el envío y la página de gracias: errores de red, Turnstile,
-     rebotes de la Function)
-3. En cada paso, `Es indirectamente seguido por` (embudo abierto). Con
-   `directamente seguido por` cualquier evento intermedio —un `form_error`, un
-   `click_tel`— rompería el paso y el informe mentiría.
-4. `Mostrar embudo abierto` → **desactivado** (sólo cuentan quienes empezaron por
-   el paso 1).
-5. `Desglose` → arrastrar la dimensión **`Formulario`** (`form_id`).
-   `Filas de desglose` = 10.
-6. `Tipo de embudo` = *Estándar*. Activar `Mostrar tiempo transcurrido` para ver
-   cuánto tardan en rellenarlo.
+**Requiere plan Business** (el análisis de embudos no está en el plan Growth). Si
+no se tiene, el sustituto razonable es comparar los recuentos de los cuatro
+objetivos en la sección de conversiones y calcular los ratios a mano.
+
+1. `Site settings` → `Funnels` → `Add funnel`.
+2. Cuatro pasos (mínimo 2, máximo 8), en este orden:
+   - Paso 1 · `form_view`
+   - Paso 2 · `form_start`
+   - Paso 3 · `form_submit`
+   - Paso 4 · `lead_confirmed` (mide la pérdida entre el envío y la página de
+     gracias: errores de red, Turnstile, rebotes de la Function)
+3. Dejar **activada** `Allow other activity in between funnel steps`, que es el
+   modo secuencial por defecto. Con el modo estricto, cualquier evento
+   intermedio —un `form_error`, un `click_tel`— rompería el paso y el informe
+   mentiría.
+4. Guardar. El embudo aparece en el panel.
+
+**Desglose por formulario.** Plausible no tiene el «desglose» de GA4 dentro del
+embudo. Para ver un formulario concreto hay dos caminos:
+- filtrar el panel por la propiedad `form_id` y volver a abrir el embudo; o
+- crear un embudo por formulario usando objetivos filtrados por propiedad
+  (`form_submit` con `form_id = contacto-express`), que es lo que Plausible llama
+  *property-filtered goals*.
 
 Lectura: la caída `form_view → form_start` es un problema de propuesta o de
 diseño (el formulario no invita); la caída `form_start → form_submit` es fricción
@@ -290,19 +322,17 @@ dentro del formulario, y ahí se pasa al informe (b).
 
 ### (b) `form_abandon` por `last_field`
 
-El informe de la fuga: qué campo es el que hace que la gente se vaya.
+El informe de la fuga: qué campo es el que hace que la gente se vaya. No necesita
+plan Business.
 
-1. `Explorar` → plantilla **`Formato libre`**.
-2. `Segmentos`/`Filtros`: en la pestaña de configuración, `Filtros` →
-   `Nombre del evento` `exactamente` `form_abandon`.
-3. `Filas` → **`Último campo`** (`last_field`); segunda fila → **`Formulario`**
-   (`form_id`).
-4. `Valores` → `Recuento de eventos`.
-5. `Tipo de visualización` = tabla; ordenar por recuento descendente.
-6. Añadir una segunda pestaña con `Filas` = **`Campo`** (`field_name`) y
-   **`Tipo de error`** (`error_type`), filtrando por `form_error`: cruzar las dos
-   tablas dice si el campo que provoca el abandono es el mismo que estaba dando
-   error de validación.
+1. En el panel, sección de conversiones (`Goal conversions`), pulsar
+   **`form_abandon`**.
+2. Se abre el desglose de propiedades de ese objetivo: elegir **`last_field`**.
+   Ordenado por recuento descendente, ésa es la tabla de la fuga.
+3. Cambiar la propiedad a **`form_id`** para saber en qué formulario pasa.
+4. Para cruzarlo con la validación: volver atrás, abrir **`form_error`** y mirar
+   `field_name` y `error_type`. Si el campo que provoca el abandono es el mismo
+   que estaba dando error, el problema es la validación, no el campo.
 
 Lectura típica: si `last_field` = `telefono` domina, el teléfono obligatorio está
 costando leads; si domina `privacidad`, el problema es el checkbox legal o su
@@ -311,83 +341,77 @@ empezarlo.
 
 ### (c) Conversión por `delivery` (¿convierte mejor el tráfico SXG?)
 
-1. `Explorar` → **`Formato libre`**.
-2. `Filas` → **`Tipo de entrega`** (`delivery`).
-3. `Columnas` → `Nombre del evento`.
-4. `Valores` → `Recuento de eventos`.
-5. `Filtros` → `Nombre del evento` `coincide con la expresión regular`
-   `^(form_view|form_start|form_submit|lead_confirmed|click_tel)$`.
-6. Segunda pestaña, para la tasa por sesión: `Filas` = `Tipo de entrega`,
-   `Valores` = `Sesiones` + `Sesiones con interacción` + `Recuento de eventos` de
-   `form_submit`; la tasa se calcula fuera, GA4 no hace columnas derivadas en las
-   exploraciones.
-7. Comparativa alternativa, más limpia: en `Segmentos` crear dos segmentos de
-   sesión, `delivery = navigational-prefetch` y `delivery = normal`, y arrastrarlos
-   a `Comparaciones`.
+1. Filtrar el panel por propiedad: `delivery = navigational-prefetch`. Anotar
+   visitantes y las conversiones de `form_submit` y `click_tel`.
+2. Repetir con `delivery = normal`.
+3. La tasa se calcula fuera: Plausible no hace columnas derivadas.
 
 Advertencias al interpretar:
+
 - `navigational-prefetch` sólo aparece en Chrome ≥ 121 y sólo en visitas que
   vienen de la SERP con el SXG ya precargado: **es una submuestra sesgada hacia
-  Google orgánico**. Comparar contra `normal` mezcla fuentes; conviene filtrar
-  además por `utm_medium`/`Fuente de la sesión` = orgánico.
+  Google orgánico**. Comparar contra `normal` mezcla fuentes; conviene añadir al
+  filtro la fuente = `Google` o `utm_medium` orgánico.
 - `normal` incluye «vino por red» y «el navegador no lo sabe decir».
 - Cruzar este informe con `docs/RUM-SXG.md`: si el SXG mejora LCP pero no la
   conversión, el cuello de botella no es la velocidad.
 
 ---
 
-## 7. La caché SXG y el `hostname`
+## 6. La caché SXG y el `hostname`
 
 Cuando Chrome sirve la página desde el Signed Exchange precargado, el documento
-vive en `perito-barcelona.webpkgcache.com`, **no** en `perito.barcelona`. Eso
-afecta a tres cosas:
+vive en `perito-barcelona.webpkgcache.com`, **no** en `perito.barcelona`. Con
+Plausible eso afecta a menos cosas que con GA4, porque no hay cookie de sesión
+que romper:
 
-1. **`hostname`** llega como `…webpkgcache.com`, y la dimensión predefinida
-   *Nombre de host* de GA4 también.
-2. **La ruta nativa** de GA4 (*Ruta de página + clase de pantalla*, derivada de
-   `page_location`) llega como `/doc/-/s/perito.barcelona/servicios/x/`. La misma
-   página aparecería partida en dos filas.
-3. El origen es distinto, así que tiene su propio `localStorage` /
-   `sessionStorage`: la persistencia de UTM y la clave `pb_form` **no cruzan**
-   entre `webpkgcache.com` y `perito.barcelona`. Un lead que empieza en la caché y
-   acaba en `/gracias/` del dominio real llega con `form_id = desconocido`. Es una
-   limitación del transporte, no un fallo del código.
-
-Cómo se resuelve, por orden de preferencia:
-
-- **Unificar: usar siempre `page_path`, nunca la ruta nativa.** `analytics.njk` ya
-  normaliza el pathname quitando el prefijo `/doc/-/s/<dominio>`. En todas las
-  exploraciones de este documento, la dimensión de página debe ser la
-  personalizada **`Ruta normalizada`** (`page_path`), no *Ruta de página*. Con eso
-  las dos entregas se suman en la misma fila.
-- **Aislar cuando interese:** filtro `Caché SXG` (`is_sxg_cache`) `exactamente`
-  `true` o `false`. Llega como texto, no como booleano.
-- **Excluir del todo** (no recomendado, se pierde tráfico real): filtro
-  `is_sxg_cache = false`, o `Nombre de host` `no contiene` `webpkgcache.com`.
-- **No** usar un filtro de datos de exclusión interna a nivel de propiedad para
-  esto: eliminaría los eventos de forma irreversible.
-
-`analytics.njk` ya declara `linker: { domains: ['perito.barcelona',
-'webpkgcache.com'] }`, de modo que la sesión no se rompe al pasar de la caché al
-dominio real y `webpkgcache.com` no aparece como *referral* propio. Si en el
-informe de adquisición apareciera igualmente, añadirlo en
-`Admin` → `Flujos de datos` → el flujo → `Configurar los ajustes de la etiqueta` →
-`Lista de referencias no deseadas`.
+1. **La sesión sí sobrevive.** Plausible identifica al visitante por un hash de
+   sal diaria + IP + User-Agent, y las tres cosas son idénticas en los dos
+   orígenes. No hay auto-referral ni sesión partida, así que no hace falta nada
+   parecido al `linker: { domains: [...] }` que necesitaba GA4 (esa opción
+   desapareció con la migración, y con ella la lista de referencias no deseadas).
+2. **La URL sí se partiría en dos filas**, porque desde la caché el pathname es
+   `/doc/-/s/perito.barcelona/servicios/x/`. Por eso `analytics.njk` desactiva
+   `autoCapturePageviews` y dispara el pageview a mano con la `url` normalizada.
+   **Si alguien reactiva la captura automática, las páginas se duplican en el
+   panel.**
+3. **`hostname` llega como `…webpkgcache.com`.** Es una propiedad precisamente
+   para poder aislar ese tráfico: filtro por `is_sxg_cache = true` / `false`
+   (llega como texto) o por `hostname`.
+4. **El almacenamiento del navegador NO cruza.** El origen es distinto, así que
+   tiene su propio `sessionStorage`: la persistencia de UTM y la clave `pb_form`
+   no pasan de `webpkgcache.com` a `perito.barcelona`. Un lead que empieza en la
+   caché y acaba en `/gracias/` del dominio real llega con
+   `form_id = desconocido`. Es una limitación del transporte, no un fallo del
+   código.
 
 ---
 
-## 8. Comprobación tras el despliegue
+## 7. Comprobación tras el despliegue
 
-1. `Admin` → `DebugView`, con la extensión *Google Analytics Debugger* o
-   `?debug_mode=1` en la URL.
-2. Aceptar el banner de cookies (con consentimiento denegado los eventos llegan
-   igual, como pings sin `client_id`, pero cuesta más seguirlos en DebugView).
-3. Recorrer: cargar una página con formulario (`form_view`), tocar un campo
-   (`form_start`), rellenar uno bien (`form_field_complete`), dejar otro mal
-   (`form_error`), cambiar de pestaña sin enviar (`form_abandon` con `last_field`),
-   volver, enviar (`form_submit` + `generate_lead`) y llegar a `/gracias/`
+No hay DebugView. La comprobación se hace con la consola, la pestaña de red y el
+panel en tiempo real:
+
+1. **Que el script carga:** pestaña de red → `/js/pb?id=pa-…` debe devolver
+   **200** y `content-type: application/javascript`. Un **400** significa que el
+   `id` no encaja con el formato que valida `functions/js/pb.js`; comprobar
+   `site.plausibleScriptId` en `src/_data/metadata.json`.
+2. **Que los eventos salen:** filtrar la red por `event`. Cada evento es un POST
+   a `/api/event` con respuesta **202**. Si aparecen peticiones a
+   `plausible.io`, el `endpoint` de `plausible.init()` no se está aplicando.
+3. **Trazas en consola:** añadir temporalmente `logging: true` a la llamada de
+   `plausible.init()` en `components/analytics.njk`. En `localhost` hace falta
+   además `captureOnLocalhost: true`, o el script no manda nada (y lo dice por
+   consola).
+4. **Recorrido funcional:** cargar una página con formulario (`form_view`), tocar
+   un campo (`form_start`), rellenar uno bien (`form_field_complete`), dejar otro
+   mal (`form_error`), cambiar de pestaña sin enviar (`form_abandon` con
+   `last_field`), volver, enviar (`form_submit`) y llegar a `/gracias/`
    (`lead_confirmed` con el `form_id` correcto).
-4. Bajar al 75 % de una página de servicio (`scroll_deep`) y pulsar el teléfono de
+5. Bajar al 75 % de una página de servicio (`scroll_deep`) y pulsar el teléfono de
    la barra móvil (`click_tel` con `position = sticky-bar`).
-5. Verificar en cada evento que `form_id`, `page_path` y `delivery` traen valor.
-   Si `page_path` viene vacío, `pbTrack` no está definido: falta el include de §0.
+6. **En el cuerpo de cada POST**, verificar que `props` trae `form_id`, `lang` y
+   `delivery`. Si `props` viene vacío o sin las comunes, `pbTrack` no está
+   definido: falta el include de §0.
+7. **En el panel**, los eventos sólo se ven si tienen objetivo dado de alta (§4).
+   Si el POST devuelve 202 pero el panel no muestra nada, es eso, casi siempre.

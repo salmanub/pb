@@ -107,7 +107,7 @@
   Cross-Origin-Resource-Policy: same-site
 
 # Analytics — proxy first-party de Plausible (ver functions/js/pb.js + functions/api/event.js)
-/js/pb.js
+/js/pb
   Cache-Control: public, max-age=3600
   Priority: High
 

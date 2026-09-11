@@ -21,7 +21,7 @@ CODIFICADO en el nombre del fichero (`pa-<id>.js`), no en un atributo
 `data-domain`, y la configuración va por `plausible.init({...})` en vez de por
 atributos `data-*`. De ahí que metadata.json guarde `plausibleScriptId` y no un
 dominio: cambiar de propiedad en Plausible es cambiar ese id.
-El id viaja a functions/js/pb.js como query (`/js/pb.js?id=...`) para que
+El id viaja a functions/js/pb.js como query (`/js/pb?id=...`) para que
 metadata.json siga siendo la única fuente de verdad; la Function valida su
 formato antes de reenviar, porque si no sería un proxy abierto a plausible.io.
 
@@ -82,7 +82,7 @@ combinación nombre=valor es una fila en el panel, así que los valores se recor
 igual que antes para que un parámetro absurdo no genere miles de filas.
 #}
 {% if metadata.site.plausibleScriptId %}
-<script async src="/js/pb.js?id={{ metadata.site.plausibleScriptId }}"></script>
+<script async src="/js/pb?id={{ metadata.site.plausibleScriptId }}"></script>
 <script>
   (function () {
     'use strict';
