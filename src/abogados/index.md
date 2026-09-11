@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: "Servicio Técnico para Despachos de Abogados y Aseguradoras"
-description: "Protocolo B2B de colaboración pericial para despachos y aseguradoras: informe de viabilidad, interrogatorio cruzado (LEC art. 347) y grandes riesgos IRD."
+title: "Asesoramiento Técnico Pericial para Abogados y Aseguradoras"
+description: "Asesoramiento técnico pericial para despachos y aseguradoras: viabilidad técnica del caso en 48 h, informe de parte, contrainforme y ratificación en sala (LEC art. 347)."
 image_alt: "Colaboración técnica con abogados y aseguradoras"
 audience: "pro"
 lang: es
@@ -20,7 +20,7 @@ permalink: "/colaboracion-abogados/"
 <div itemscope itemtype="https://schema.org/Article" style="display: none;" aria-hidden="true"><meta itemprop="headline" content="{{ title }}"><meta itemprop="description" content="{{ description }}"><meta itemprop="url" content="{{ metadata.site.url }}{{ page.url }}"><div itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ metadata.author.name }}"></div><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ metadata.company.name }}"></div></div>
 {% set ui = es %}
 {% set langPrefix = "" if not lang or lang == "es" else ("/" + lang) %}
-{% set heroTitle = "Servicio técnico para<br>despachos y aseguradoras" %}
+{% set heroTitle = "Asesoramiento técnico pericial<br>para despachos y aseguradoras" %}
 
 {# PageHero (breadcrumb inside container) #}
 {% include "partials/page-hero.njk" %}
