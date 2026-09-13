@@ -9,6 +9,8 @@
  *   MAKE_WEBHOOK_PROFESIONAL   — (opcional) webhook Make.com para profesionales
  */
 
+import { enviarAPeritia } from './_peritia.js';
+
 const CORS_HEADERS = {
   'Content-Type': 'application/json',
   'Access-Control-Allow-Origin': '*',
@@ -190,6 +192,28 @@ export async function onRequestPost(context) {
       }
     } else {
       console.warn('[contacto] CRM_WEBAPP_URL not set');
+    }
+
+    // ── 2. Copia al CRM nuevo (pruebas) ───────────────────────
+    // En paralelo y sin tocar la respuesta: gestorCRM sigue siendo el que
+    // decide si el envío ha ido bien. Se manda aunque gestorCRM haya fallado,
+    // para que el lead no se pierda en los dos sitios a la vez.
+    {
+      const { nombre, email, telefono, mensaje, asunto, direccion, ...resto } = payload;
+      delete resto['cf-turnstile-response'];
+      delete resto.website;
+      context.waitUntil(enviarAPeritia(env, 'perito.barcelona', {
+        nombre,
+        email,
+        telefono,
+        idioma: lang,
+        asunto: asunto || data.origen,
+        mensaje: mensaje || data.descripcion,
+        direccion: direccion || data.direccionVisita,
+        campos: resto,
+        origen_url: referer,
+        referencia_externa: crypto.randomUUID(),
+      }));
     }
 
     // ── Result (CRM-only; Make.com retirado) ──────────────────
