@@ -12,9 +12,11 @@
 # reinicia el contador. Así los crons (incluido el de publicación) NUNCA se
 # desactivan, sin intervención humana.
 #
-# REQUISITO
-# El secret `GH_PAT` (ya existente en este repo, se usa en deploy-sxg.yml) debe
-# ser un Personal Access Token con permiso `repo` y `workflow`.
+# CÓMO
+# Con el token del propio workflow (`permissions: contents: write`) y seis
+# líneas de shell. Antes lo hacía `gautamkrishnar/keepalive-workflow`, que
+# GitHub bloqueó por ToS en abril de 2025: como Actions resuelve todas las
+# acciones antes de ejecutar nada, ese `uses:` tumbaba el job entero.
 # ---------------------------------------------------------------------------
 
 name: Keepalive (mantener crons activos)
@@ -35,11 +37,23 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Reiniciar el contador de inactividad
-        uses: gautamkrishnar/keepalive-workflow@v2
-        with:
-          gh_token: ${{ secrets.GH_PAT }}
-          # Solo actúa cuando el último commit tiene 45+ días: no genera ruido.
-          committer_username: "perito-keepalive-bot"
-          committer_email: "info@perito.barcelona"
-          commit_message: "chore: keepalive para mantener activo el cron de publicación"
-          days_before_keepalive: 45
+        run: |
+          # GitHub DESACTIVA los workflows con `schedule:` cuando el repositorio
+          # pasa 60 días sin commits. Esto reinicia ese contador con un commit
+          # vacío, y solo cuando de verdad hace falta.
+          #
+          # Antes lo hacía `gautamkrishnar/keepalive-workflow`, que GitHub
+          # bloqueó por ToS (abril de 2025): al resolver las acciones antes de
+          # empezar, ese `uses:` daba «Repository access blocked» y tumbaba el
+          # job entero aunque este paso ni siquiera llegara a correr. Son seis
+          # líneas de shell; no hacía falta una dependencia para esto.
+          dias=$(( ( $(date +%s) - $(git log -1 --format=%ct) ) / 86400 ))
+          echo "Último commit hace $dias días."
+          if [ "$dias" -ge 45 ]; then
+            git config user.name "perito-keepalive-bot"
+            git config user.email "info@perito.barcelona"
+            git commit --allow-empty -m "chore: keepalive para mantener activo el cron de publicación"
+            git push
+          else
+            echo "Faltan $(( 45 - dias )) días para que haga falta: no se toca nada."
+          fi
