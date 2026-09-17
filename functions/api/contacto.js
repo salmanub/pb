@@ -210,7 +210,8 @@ export async function onRequestPost(context) {
         asunto: asunto || data.origen,
         mensaje: mensaje || data.descripcion,
         direccion: direccion || data.direccionVisita,
-        campos: resto,
+        // De qué formulario viene, para verlo en la bandeja del CRM.
+        campos: { ...resto, formulario: data.origen || data.form_id || "contacto" },
         origen_url: referer,
         referencia_externa: crypto.randomUUID(),
       }));
